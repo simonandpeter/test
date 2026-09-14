@@ -64,7 +64,7 @@ export const GLYPH_PATHS = {
   saint: '<path d="M12 3v18M9 6h6M6 10h12M9.5 20h5M8 15.5l8 1.5"/>',
 };
 
-export const glyphMarkup = (kind) =>
+const glyphMarkup = (kind) =>
   `<svg class="row-glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"
     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${GLYPH_PATHS[kind] ?? GLYPH_PATHS.saint}</svg>`;
 
@@ -157,7 +157,7 @@ function mediaHTML(saint) {
  * and live once it is open, which is where a reader who wants the whole life
  * asks for it.
  */
-export function tileHTML(saint) {
+function tileHTML(saint) {
   const name = saintName(saint);
   const sub = formatSubtext(saint);
   const href = state.router.href(`/saints/${saint.slug}`);

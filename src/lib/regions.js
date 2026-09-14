@@ -24,7 +24,7 @@
  */
 
 // Each entry: [west, south, east, north].
-export const REGIONS = [
+const REGIONS = [
   // Africa first: Egypt before the Maghreb so the Libyan box cannot claim the
   // western desert, and both before Iberia and Italy so the straits resolve.
   { id: 'egypt', display_name: 'Egypt', bboxes: [[24, 21.5, 34.2, 32]] },

@@ -4,26 +4,24 @@
  * beneath it — the projection says where a place *is*, this says which part of
  * that the reader is being shown.
  *
- * Kept apart from the view for the usual reason: panning that walks the world
- * off the edge of its own box, and zooming that drifts away from the point
- * being zoomed at, are both bugs you can state as arithmetic and neither is
- * pleasant to chase through a canvas.
+ * The two bugs it exists to state as arithmetic — a pan that walks the world
+ * off the edge of its own box, a zoom that drifts away from the point being
+ * zoomed at — are held by `the world never comes away from the edges of its
+ * box` and `zooming at a point leaves that point where it was` in
+ * `tests/map-view.test.mjs`.
  */
 
 /**
  * How much of the world is visible along each axis at scale 1, in a box of
  * `w` by `h`, for a projection whose natural width-over-height is `aspect`.
  *
- * **The map covers its box rather than fitting inside it**, which is the whole
- * reason this function exists. The stage is the browser window now (author,
- * 2026-08-29) and a window is whatever shape the reader made it, so the
- * projection's own 1.12 will not match it. *Fitting* would letterbox — at
- * 1280x860 that is 313 px of dead ground down the sides, and on a phone the map
- * would occupy less than half the window it was asked to fill. So the world is
- * drawn large enough to cover, and the axis with the surplus is cropped.
+ * **The map covers its box rather than fitting inside it**, so one of the two
+ * returned fractions is always exactly 1 — the world fits that axis — and the
+ * other is the one you can pan along even at scale 1. `the world covers its
+ * box rather than fitting inside it` in `tests/map-view.test.mjs` holds both
+ * halves.
  *
- * One of the two returned fractions is therefore always exactly 1: the world
- * fits that axis, and the other is the one you can pan along even at scale 1.
+ * `docs/SRC-DECISIONS.md § src/lib/map-view.js — covering, not fitting`.
  */
 export function coverFractions(w, h, aspect) {
   const base = Math.max(w, h * aspect);
@@ -37,24 +35,11 @@ export const WHOLE = { fx: 1, fy: 1 };
 export const MIN_SCALE = 1;
 
 /**
- * 240 — doubled from 120 (2026-09-01, "zoom in further all over the place",
- * prompted by the crowd of saints at Constantinople), matched to a doubled
- * coastline precision rather than outrunning it as the previous doubling did.
- *
- * `land.js`/`water.js` now round to a hundredth of a degree (~1.1 km,
- * `make-land.mjs`'s own `PRECISION`, raised 2026-09-01 from a tenth), so 240
- * is the coastline's own honest ceiling at this precision — ten times finer
- * than the tenth-of-a-degree rounding that made 24 the ceiling before it, and
- * 240 is ten times 24. Past it the polygon would be visibly coarse again and
- * §6b's objection — a map that keeps zooming into detail it does not have is
- * lying about its own precision — would apply the same way it did at 120
- * under the old rounding. What still earns zooming this far, honest or not,
- * is that the reason is never really the coastline: it is prising apart two
- * saints who died in the same town, and `declutter`'s spread is a fixed
- * number of *screen* pixels, so more zoom is the only thing that turns that
- * fixed spread into readable distance. The labels' leader lines
- * (`views/map.js`) are the other half of that answer and do not need zoom at
- * all; this is for the reader who wants to see the ground as well.
+ * The deepest zoom on a desk-width picture; `maxScaleFor` scales it for
+ * narrower glass. It is the coastline's own honest ceiling at `make-land.mjs`'s
+ * `PRECISION` of a hundredth of a degree — past it the polygon is visibly
+ * coarse and the map is zooming into detail it does not have.
+ * `docs/SRC-DECISIONS.md § src/lib/map-view.js — the ceiling is 240`.
  */
 export const MAX_SCALE = 240;
 
@@ -62,34 +47,24 @@ export const MAX_SCALE = 240;
  * The picture 240 was measured against. A ceiling in *scale* is only a claim
  * about what the reader can resolve if you also say how wide the glass is.
  */
-export const REFERENCE_W = 1280;
+const REFERENCE_W = 1280;
 
 /**
- * How far a picture `w` px wide may zoom (author, 2026-09-01: "match zoom
- * capabilities on mobile to what we now have on desktop, because we cant see
- * the individual dots on mobile").
+ * How far a picture `w` px wide may zoom.
  *
  * **The ceiling is about resolving power, not about scale.** What 240 buys is
  * a constellation of stacked saints about fourteen pixels across
  * (`SPREAD_DEG`) — and that arithmetic has the picture's width in it, so the
- * same 240 on a 360 px phone buys four pixels and the crowd stays a smudge.
- * So the ceiling is 240 scaled by how much narrower the glass is than the
- * desk it was measured on.
+ * same 240 on a 360 px phone buys four and the crowd stays a smudge. Never
+ * below the desktop ceiling, and capped at four times it: a very narrow window
+ * would otherwise ask for a zoom where the coastline is a coarse polygon and
+ * nothing but the ring is legible anyway.
  *
- * **That brings a phone into the same order, not to the same number**, and
- * the difference is `coverFractions`: the world covers the box, so on a tall
- * narrow window the horizontal axis is cropped and a degree is worth more
- * pixels than the width alone predicts. Measured at the Kyiv Caves, where two
- * saints share a coordinate exactly: 28 px apart at the ceiling on a 1280x780
- * desk and 56 on a 360x780 phone. Overshooting is the safe direction — the
- * complaint this answers was that the phone could not separate them at all —
- * and folding the frame into this would make the ceiling depend on the
- * window's shape as well as its width, which is a harder number to reason
- * about for a gain nobody asked for.
- *
- * Never below the desktop ceiling, and capped at four times it: a very narrow
- * window would otherwise ask for a zoom where the coastline is a coarse
- * polygon and nothing but the ring is legible anyway.
+ * `the desk keeps the ceiling it was measured on`, `a narrower picture is
+ * allowed further in, in proportion`, `the ceiling stops at four times the
+ * desk, however narrow the glass` and `a picture with no width yet falls back
+ * rather than dividing by zero` in `tests/map-view.test.mjs`.
+ * `docs/SRC-DECISIONS.md § src/lib/map-view.js — the phone's own ceiling`.
  */
 export function maxScaleFor(w) {
   if (!w || w <= 0) return MAX_SCALE;
@@ -107,8 +82,8 @@ const clamp = (n, lo, hi) => Math.min(hi, Math.max(lo, n));
  * the centre can travel no nearer an edge than half of that. Where an axis
  * shows the whole world — `f` of 1 at scale 1 — the range collapses to exactly
  * 0.5 and there is nowhere to go, which is what stops a drag from sliding the
- * Atlantic off the side. On the cropped axis there is somewhere to go from the
- * very first frame, which is the point of covering.
+ * Atlantic off the side (`there is nowhere to pan on the axis that already
+ * shows everything`, `tests/map-view.test.mjs`).
  */
 export function clampCentre(cx, cy, scale, frame = WHOLE) {
   const hx = frame.fx / (2 * scale);
@@ -142,10 +117,11 @@ export const toWorld = ({ scale, cx, cy }, ax, ay, frame = WHOLE) => ({
  * Zoom by `factor` about a fixed point in the box — the pointer, a pinch's
  * midpoint, or the centre for a button.
  *
- * **The anchor stays put**, which is the whole difference between zooming at
- * something and zooming and then hunting for it again. Take the world point
- * under the anchor, change the scale, and choose the centre that puts that same
- * world point back under the same anchor.
+ * **The anchor stays put**: take the world point under the anchor, change the
+ * scale, and choose the centre that puts that same world point back under the
+ * same anchor. `zooming at a point leaves that point where it was` and
+ * `zooming at a point still holds it still in a cropped box` in
+ * `tests/map-view.test.mjs`.
  *
  * The clamp is applied after, so a zoom that would push the centre past an edge
  * slides rather than refusing; near a corner the anchor drifts, and it has to,
@@ -162,20 +138,17 @@ export function zoomAbout(view, factor, ax = 0.5, ay = 0.5, frame = WHOLE, max =
 }
 
 /**
- * Pan by a drag measured in fractions of the box. A drag of the full width at
- * scale 1 would be the whole visible span; at scale 4 it is a quarter of it,
- * which is what dividing by the scale buys — the land keeps pace with the
- * finger at every zoom instead of racing it.
- */
-/*
- * **`max` matters even though a pan never changes `scale`** (2026-09-02).
- * `clampView` re-clamps the scale it is handed, and its own default is the
- * desktop ceiling — so a pan on a narrower window, where `maxScaleFor` had
- * legitimately allowed a scale past `MAX_SCALE`, silently dragged the reader
- * back to 240x on the next pointer move. Desktop never saw it: its own
- * ceiling *is* `MAX_SCALE`, so clamping against the wrong default was a
- * no-op there. Every caller now needs its own `ceilingOf(canvas)`, the same
- * one `zoomAbout` already takes.
+ * Pan by a drag measured in fractions of the box. Dividing by the scale is what
+ * keeps the land pacing the finger at every zoom instead of racing it.
+ *
+ * **`max` matters even though a pan never changes `scale`**: `clampView`
+ * re-clamps the scale it is handed and its own default is the desktop ceiling,
+ * so a caller that omits it drags a narrower window back to 240x on the next
+ * pointer move. Every caller needs its own `ceilingOf(canvas)`, the same one
+ * `zoomAbout` already takes. `a pan does not clamp the scale to the desktop
+ * ceiling on a narrower window` in `tests/map-view.test.mjs`;
+ * `docs/SRC-DECISIONS.md § src/lib/map-view.js — the pan that undid the
+ * phone's ceiling`.
  */
 export const panBy = (view, dxFraction, dyFraction, frame = WHOLE, max = MAX_SCALE) =>
   clampView(
@@ -197,41 +170,28 @@ export const MERGE_PX = 10;
 
 /**
  * How far apart saints recorded at one identical coordinate are drawn, **in
- * degrees on the ground** (author, 2026-09-01: "now that we can zoom in
- * further, spread the dots around as coordinates on the map if they're
- * stacked. Spread them to be still pretty tightly spaced when zoomed in fully
- * to communicate proximity").
+ * degrees on the ground** — and the unit is the whole point. A ground offset is
+ * sub-pixel when the whole world is on screen, so `mergeDots` still collapses
+ * the group into one honest mark, and it grows with the zoom until the members
+ * separate. **It is still an invented position**, which is why it is this
+ * small: at every zoom below the last few it is inside the dot it came from,
+ * and it never claims a distance the corpus did not record.
  *
- * **A ground offset is not the fan this map already threw away, and the unit
- * is the whole difference.** The fan was a fixed number of *screen* pixels,
- * so it covered more country the further out the reader went — the crowd at
- * Constantinople reaching into the Black Sea — and it never resolved, being
- * the same ring at 1× as at 240×. A ground offset does the opposite of both:
- * it is sub-pixel when the whole world is on screen, so `mergeDots` still
- * collapses the group into one honest mark, and it grows with the zoom until
- * the members separate into a tight little constellation.
- *
- * 0.0167° is about 1.8 km, chosen from the ceiling backwards: at `MAX_SCALE`
- * a 900 px-wide picture shows 1.5° across, so this is ~10 px between
- * neighbours — tight enough to read as "these are the same place" and far
- * enough apart to count them. It scales with the picture, so a 1280 px window
- * gets ~14 px and a 360 px phone ~4 px; the phone is the weak end of that and
- * is the reason this is not smaller.
- *
- * **It is still an invented position**, which is why it is this small: at
- * every zoom below the last few it is inside the dot it came from, and it
- * never claims a distance the corpus did not record.
+ * `the crowd is small enough to be inside its own dot at rest` and `and large
+ * enough to be countable at the deepest zoom` in `tests/map-view.test.mjs`.
+ * `docs/SRC-DECISIONS.md § src/lib/map-view.js — a ground offset, not a fan`.
  */
-export const SPREAD_DEG = 0.0167;
+const SPREAD_DEG = 0.0167;
 
 /**
  * A seeded, deterministic 32-bit generator — mulberry32 — so a group's own
  * scatter is a pure function of its coordinate and holds still across every
  * repaint rather than reshuffling under the reader's own drag. Seeded from an
  * FNV-1a hash of the group's key, the same hashing shape `shuffleKey`
- * (`lib/index-filters.js`) already uses for the Index's own shuffle, kept
- * local rather than imported — this file is pure and dependency-free on
- * purpose, and the two features share nothing else.
+ * (`lib/index-filters.js`) already uses, kept local rather than imported —
+ * this file is pure and dependency-free on purpose. `the scatter is a pure
+ * function of the coordinate, not a fresh roll every paint` in
+ * `tests/map-view.test.mjs`.
  */
 function scatterRand(key) {
   let h = 0x811c9dc5;
@@ -252,24 +212,16 @@ function scatterRand(key) {
 
 /**
  * A crowd at one coordinate settles into an organic cluster rather than a
- * wheel (author, 2026-09-04: "make the dot scatter according to this logic",
- * a standalone mockup comparing four candidates against the shipped rings —
- * `scatter-mockup/index.html`, not part of the app — at the Nicomedia
- * martyrs' own count. Random start, min-separation relaxation was the one
- * chosen; twenty-four points seeded at random inside a disc, then pushed
- * apart in place wherever a pair is closer than `radiusDeg` — the same
- * spacing the ring version's own neighbours never closed either — repeated
- * until the crowd stops overlapping itself. `discR` still grows with
- * `sqrt(n)`, which is the ring layout's own reason twenty-four martyrs sit
- * inside a cluster three rings wide rather than a wheel three times as wide;
- * only the packing inside that disc changed, from a machined lattice to
- * something that reads as a real crowd standing in a place rather than a
- * diagram of one.
+ * wheel: `n` points seeded at random inside a disc whose radius grows with
+ * `sqrt(n)`, then pushed apart in place wherever a pair is closer than
+ * `radiusDeg`, until the crowd stops overlapping itself.
  *
- * Exported despite being `spreadShared`'s own detail, the way `mergeDots` and
- * `fitBounds` already are: it is where the packing itself is worth pinning —
- * `spreadShared` only adds the squash correction on top, and testing that
- * composition needs the raw, unsquashed points this returns.
+ * Returns offsets in an idealised **unsquashed** unit, not degrees —
+ * `spreadShared` adds the Mercator correction on top, and that is why this is
+ * exported at all: testing the composition needs the raw points.
+ * `a bigger group grows as the square root, not with the count` in
+ * `tests/map-view.test.mjs`.
+ * `docs/SRC-DECISIONS.md § src/lib/map-view.js — a crowd, not a wheel`.
  */
 export function relaxLayout(n, radiusDeg, key) {
   const rand = scatterRand(key);

@@ -10,23 +10,13 @@ import {
 import { AxeBuilder } from '@axe-core/playwright';
 
 /**
- * The brief's §13 quality floor, as an executable gate. Every item here is non-negotiable and is meant to fail the build when it regresses.
- *
- * Part of the browser suite, which was one file of 9,308 lines until
- * 2026-08-27 and is now one file per surface. **The tests themselves are
- * unchanged** — each carries the instruction that caused it and the date it
- * was written, which is where this suite's provenance has always lived; what
- * moved is only which file it sits in. `helpers.js` holds the shared fixtures.
+ * The brief's §13 quality floor, as an executable gate. Every item here is
+ * non-negotiable and is meant to fail the build when it regresses.
+ * docs/E2E-DECISIONS.md#quality-floorspecjs
  */
 
-/*
- * All Saints opens on the carousel, and almost every test that visits it was
- * written about the other mode. The suite states which face it is testing
- * rather than each of forty-odd tests growing a line to press the toggle —
- * `searchMode` in helpers.js argues it. **Every spec file needs this**: it was
- * one `beforeEach` over one file, and dropping it from any of them would hand
- * those tests the carousel instead.
- */
+// **Every spec file needs this**: dropping it hands these tests the carousel
+// instead of the search face they were written about (`searchMode`, helpers.js).
 test.beforeEach(async ({ page }) => {
   await searchMode(page);
 });
@@ -43,18 +33,10 @@ for (const [label, path, prepare] of ROUTES) {
   });
 
   /*
-   * The same sweep in vigil mode, which until 2026-08-28 nothing ran at all —
-   * CLAUDE.md said so plainly ("dark mode is not covered by the axe/contrast
-   * tests") and it cost a real WCAG AA failure four days of standing: dark
-   * `--rubric` at 3.93:1 on the field, on the token carrying the current nav
-   * item and today's date. PLAN.md had it recorded as a live defect the whole
-   * time. What finally said it out loud was Lighthouse, whose headless Chrome
-   * happens to ask for dark — an accident, and not a thing to leave a gate
-   * resting on.
-   *
    * `tests/contrast.test.mjs` holds the *tokens* to the floor and is much the
    * faster check. This one holds the **compositions**: a token pair no test
-   * thought to look at is exactly how the last one hid.
+   * thought to look at is exactly how the last dark-mode AA failure hid.
+   * docs/E2E-DECISIONS.md#quality-floorspecjs
    */
   test(`no axe violations in vigil mode: ${label}`, async ({ page }) => {
     await page.emulateMedia({ colorScheme: 'dark' });
@@ -83,20 +65,12 @@ for (const [label, path, prepare] of ROUTES) {
 
 /*
  * Brief §13: "No layout shift when data arrives — skeletons must match final
- * dimensions." HANDOFF.md called this criterion green for weeks and **nothing
- * measured it** — there was no CLS assertion anywhere in `e2e/` until now.
+ * dimensions."
  *
- * The measurement is the browser's own `layout-shift` entries rather than a
- * before/after `getBoundingClientRect`: a rect pair catches the shift a test
- * thought to look for, and the layout-shift buffer catches the one it did not.
- * `hadRecentInput` drops shifts a reader caused by pressing something, which is
- * the whole point — growing when asked is not a defect, growing on its own is.
- *
- * The budget is 0.02, not the 0.1 of Core Web Vitals "good". The brief says
- * *no* shift; 0.1 is the threshold below which Google stops complaining, and
- * adopting it here would license eight times the movement the brief allows. The
- * value is what the site actually scores with room for the runner's rounding,
- * and it should be argued down rather than up.
+ * The budget is 0.02, not the 0.1 of Core Web Vitals "good": the brief says
+ * *no* shift, and 0.1 would license eight times the movement it allows.
+ * **It should be argued down rather than up.**
+ * docs/E2E-DECISIONS.md#quality-floorspecjs
  */
 const CLS_BUDGET = 0.02;
 
@@ -135,13 +109,10 @@ for (const [label, path, prepare] of ROUTES) {
     await ready(page);
     await page.goto(path, { waitUntil: 'networkidle' });
     /*
-     * The Daily page's hymns are the late arrival this criterion is about:
-     * `fillSaintHymns` waits on the hero saint's detail payload, lands after
-     * `networkidle` has already been declared, and grows the panel by ~500 px.
-     * Whether that *shifts* anything is the question — growth below the fold is
-     * not a shift — so the wait has to outlast it either way. That second fetch
-     * starts *after* the first `networkidle` is declared, so waiting for idle
-     * again is what actually straddles it; the timeout then buys the paint.
+     * Idle **again**, deliberately, and then a timeout. The late arrival this
+     * criterion is about — the Daily page's hymns — starts its fetch *after*
+     * the first `networkidle` is declared, so only a second wait straddles it;
+     * the timeout then buys the paint.
      */
     await page.waitForLoadState('networkidle');
     await page.waitForTimeout(800);
@@ -151,43 +122,19 @@ for (const [label, path, prepare] of ROUTES) {
 }
 
 /*
- * Brief §13: "All colour information duplicated in text or shape." PLAN.md
- * calls this the §7 greyscale test — remove every colour and the reader loses
- * nothing — and §2 makes it the first of the three conditions that keep the
- * fast's colour-by-kind honest. It had never been audited, executably or by
- * hand, until 2026-08-28.
+ * Brief §13: "All colour information duplicated in text or shape" — PLAN.md's
+ * §7 greyscale test. Both of the grid's channels are held, because the grid
+ * uses a different one per mark: a **shape** (rules under and above the
+ * numeral, solid for the strict fast and dashed for the fish day) and the
+ * **words**, in the cell's own accessible name.
  *
- * **Rewritten for the month grid on 2026-09-12**, in the same commit that
- * deleted the week rail rather than after it: the obligation is an
- * accessibility floor, and there must be no commit in which nothing is holding
- * it. What it used to watch was `.week-strip .day-marks` — up to three 5 px
- * discs under a date, one `border-radius: 50%` in three hues, differing in
- * `background` and in nothing else. The rail is gone; `views/daily/sidebar.js`
- * draws the month instead, and a day's marks are carried by the numeral itself
- * rather than by dots beside it.
- *
- * So the floor is tested on both of the grid's channels, because the grid uses
- * a different one for each mark:
- *
- * - **every mark has a shape** — the feast a rule under the numeral, the strict
- *   fast a solid rule above it, the fish day a dashed one — and the assertion is
- *   deliberately about shape and *not* hue: it compares the non-colour computed
- *   styles, with every colour in them masked out. Asserting the colours differ
- *   would pass on the defect.
- * - **every mark has its words**, in the cell's own accessible name, which is
- *   the cell a reader lands on rather than an `aria-hidden` dot beside it.
- *
- * **The fast and the fish day were once the gap this comment described.** Until
- * 2026-09-12 they were the same numeral in two hues — `--fast-strict` and
- * `--fast-fish` on `.cal-day`, and nothing else — so a sighted reader who could
- * not separate the two hues had only the accessible name to tell them apart,
- * which is exactly the reader the 2026-08-28 audit was written for. The gap is
- * closed in `daily-sidebar.css`: every cell carries a transparent `border-top`
- * so none shifts when a mark appears, the strict fast takes it solid and the
- * fish day dashed. Hence `borderTopStyle` in the probe below and not only
+ * The shape assertion is deliberately about shape and *not* hue — every colour
+ * is masked out before the comparison, because asserting the colours differ
+ * would pass on the defect. Hence `borderTopStyle` below and not only
  * `borderTopWidth`: solid and dashed are the same width, and a pair told apart
- * by width alone would be a thinner line rather than a different one — green
- * here and silent to the reader. Two weights would pass; they must not.
+ * by width alone is a thinner line rather than a different one — green here and
+ * silent to the reader. **Two weights would pass; they must not.**
+ * docs/E2E-DECISIONS.md#quality-floorspecjs
  */
 test('a day in the month grid is told apart by shape and by words, not only by hue', async ({ page }) => {
   await ready(page);
@@ -196,37 +143,30 @@ test('a day in the month grid is told apart by shape and by words, not only by h
   const shapes = await page.evaluate(() => {
     /*
      * Probe cells mounted in the real grid rather than whichever marks this
-     * month happens to carry. The rail's first version read the live dots and
-     * asserted its own premise, which is how it reported that 30 January's
-     * week stands only a strict fast: one kind, and a comparison of one thing
-     * against itself is green for the wrong reason. The question is "do these
-     * classes draw differently with the colour taken away", which is a fact
-     * about the stylesheet and not about the corpus — and the corpus is free
-     * to stop having a fish week.
+     * month happens to carry: the question is whether these classes draw
+     * differently with the colour taken away, which is a fact about the
+     * stylesheet, and the corpus is free to stop having a fish week. Reading
+     * the live cells instead once compared one kind against itself.
      */
     const grid = document.querySelector('.cal');
     const out = {};
     for (const kind of ['plain', 'is-fast', 'is-fish', 'is-feast']) {
-      // A button, because that is what the grid renders since 2026-09-12 — a
-      // probe built from a span would be measuring the styles of an element
-      // this page does not draw, and the button's own borders are reset in a
-      // rule the span never matches.
+      // A button, because that is what the grid renders: a span would measure
+      // an element this page does not draw, and the button's own borders are
+      // reset in a rule a span never matches.
       const el = document.createElement('button');
       el.className = kind === 'plain' ? 'cal-day' : `cal-day ${kind}`;
       el.textContent = '8';
       grid.append(el);
       const s = getComputedStyle(el);
       /*
-       * Everything a reader could tell the cells apart by *except* colour: any
-       * colour inside a border, a shadow or an outline is masked, so a rule
-       * that differs only in its ink reads here as no rule at all.
+       * Everything a reader could tell the cells apart by *except* colour, so
+       * a rule that differs only in its ink reads here as no rule at all.
        *
-       * A *fully transparent* colour is not masked to the same token, because
-       * it is not a hue anybody could confuse with another hue — it is the
-       * absence of the mark. Every `.cal-day` carries a transparent
-       * `border-top` so that no cell moves when one appears, and if that
-       * placeholder masked to the same string as an inked rule then a day with
-       * a fast would read here exactly like a day without one.
+       * A *fully transparent* colour masks to its own token, not to `C`: every
+       * `.cal-day` carries a transparent `border-top` so no cell moves when a
+       * mark appears, and collapsing that placeholder into an inked rule would
+       * make a day with a fast read exactly like a day without one.
        */
       const noInk = (v) =>
         String(v)
@@ -271,11 +211,8 @@ test('a day in the month grid is told apart by shape and by words, not only by h
     shapes['is-fish'],
   );
 
-  /*
-   * The words, off the live grid. Every cell the month marks has to name its
-   * mark in its own accessible name — the fast, the allowance, the feast — so
-   * the numeral's colour is never the only thing that says it.
-   */
+  // The words, off the live grid: every marked cell names its mark in its own
+  // accessible name, so the numeral's colour is never the only thing saying it.
   const said = await page.evaluate(() => {
     const cells = [...document.querySelectorAll('.cal-day')];
     const marked = cells.filter((c) => ['is-fast', 'is-fish', 'is-feast'].some((k) => c.classList.contains(k)));
@@ -300,11 +237,9 @@ test('no console errors on load', async ({ page }) => {
   const errors = [];
   page.on('pageerror', (e) => errors.push(String(e)));
   page.on('console', (m) => {
-    // The SPA deep-link fallback makes GitHub Pages return a 404 status whose
-    // body is the app shell; the resulting resource error is inherent to the
-    // technique and is not a fault.
-    // And under COLD_FACE the rehearsal refuses the webfont itself, so the
-    // failed request is the harness talking, not the page (fixtures.js).
+    // Two exemptions, both the harness rather than the page: the SPA deep-link
+    // fallback answers 404 with the app shell, and COLD_FACE refuses the
+    // webfont itself (fixtures.js).
     const mine = process.env.COLD_FACE && m.text().includes('net::ERR_FAILED');
     if (m.type() === 'error' && !m.text().includes('404') && !mine) errors.push(m.text());
   });
@@ -331,10 +266,9 @@ test('every interactive element takes visible keyboard focus', async ({ page }) 
 
 test('the heading takes focus on navigation but not on arrival', async ({ page }) => {
   // Moving focus to the new h1 is how a single-page app tells a screen reader
-  // the page changed. On the first page of a visit there is no change to
-  // announce, and Chrome scores a programmatic focus with no interaction
-  // behind it as keyboard-driven — which put a focus ring around the heading
-  // of every freshly loaded page until the reader clicked it away.
+  // the page changed — but on the first page of a visit there is nothing to
+  // announce, and Chrome scores a programmatic focus with no interaction behind
+  // it as keyboard-driven, ringing the heading of every fresh load.
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   expect(await page.evaluate(() => document.activeElement?.tagName)).not.toBe('H1');
@@ -375,16 +309,11 @@ test('no axe violations on the first visit, with the two marks standing', async 
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.locator('#church-open').click();
   /*
-   * Once it has arrived. The panel fades in over 160 ms since 2026-08-26
-   * evening and axe reads an opacity as a new colour — 303 contrast
-   * violations at 2.71:1 on the frame this used to sample, every one of them
-   * a colour that is at full strength a sixth of a second later.
-   *
-   * That is *not* the mistake PLAN.md keeps catching. The peek fade
-   * (2.1:1) and the cycle line's opacity (4.17:1) were permanent washes over
-   * text a reader had to read; this is a transient that lands at full
-   * strength and stays there. What the gate is for is the resting state, and
-   * the resting state is what this now measures.
+   * Once it has arrived: axe reads an opacity as a new colour, and the panel
+   * fades in, so sampling mid-flight indicts colours that are at full strength
+   * a sixth of a second later. **Not** the mistake PLAN.md keeps catching — a
+   * permanent wash over text is a real defect; this is a transient. The gate is
+   * for the resting state. docs/E2E-DECISIONS.md#quality-floorspecjs
    */
   await panelSettled(page);
   const open = await new AxeBuilder({ page })

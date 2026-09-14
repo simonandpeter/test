@@ -27,7 +27,7 @@ const ICON_GLOBE = `<svg viewBox="0 0 24 24" width="15" height="15" fill="none" 
 /** The question and the five, the same inside wherever it stands — the
  *  header's panel, and (since 2026-08-25 evening) the calendar's first-visit
  *  gate, where it stands beside the calendar question. */
-export function renderLanguageChooser(current = currentLanguage()) {
+function renderLanguageChooser(current = currentLanguage()) {
   return (
     `<h2 class="ask-heading">${STRINGS.language.heading}</h2>` +
     `<div class="ask-choices" role="group" aria-label="${STRINGS.language.groupLabel}">${renderChoices(current)}</div>`

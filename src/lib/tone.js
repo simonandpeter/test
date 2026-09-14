@@ -24,7 +24,7 @@
  */
 const GREEK_NUMERAL = { α: 1, β: 2, γ: 3, δ: 4, ε: 5, ϛ: 6, ζ: 7, η: 8 };
 
-export const TONES = 8;
+const TONES = 8;
 
 /**
  * `1`–`8`, or null where the string says something this does not know.

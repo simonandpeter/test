@@ -1,45 +1,22 @@
 /**
- * A saint's name in the reader's language (author, 2026-08-26: "there are
- * names like 'The Twenty-three Martyrs' who do not translate across
- * languages, and the names are not printed in cyrillic when the Russian
- * language is chosen. Same with the Greek and Serbian. Every saint name needs
- * to have the equivalent in the displayed language").
- *
- * **The corpus already holds these.** Every one of the 708 folders carries a
- * `names` array of forms with their language, transcribed from the same
- * calendar entries the attestations were read from — «Феврония Муромская»,
- * «Άγιος Άνθιμος Ιερομάρτυρας επίσκοπος Νικομήδειας», „Sfântul Sfințit
- * Mucenic Antim, Episcopul Nicomidiei". They were shown on the saint page
- * under "Also called" until the author removed that block and
- * have been in the data, unused, since. Nothing here is invented; this only
- * chooses which recorded form to print.
- *
- * **Where a language has no form, the reason is usually not a gap.** A saint
- * has a Romanian name when a Romanian calendar names them, and 116 of 708 do;
- * for the rest there is no Romanian source to take a name from, and English
- * stands. Counted against the churches that actually keep each saint the
- * coverage is 393/393 Russian, 331/344 Greek, 116/122 Romanian, 116/129
- * Serbian — so the fallback is nearly always "this church does not keep this
- * saint", not "nobody looked".
+ * A saint's name in the reader's language: one recorded form per language,
+ * chosen from the `names` the corpus already carries. Nothing here is
+ * invented — it only chooses which recorded form to print, and a language with
+ * no usable form is left out rather than filled with the English.
  *
  * Two rules decide what is usable, and both exist because a calendar entry is
- * not a name field:
- *
- * 1. **A form naming several people is not this saint's name.** The Greek
- *    entry for Agathocleia is «Άγιοι Εύοδος, Καλλίστη, Αγαθόκλεια και
- *    Ερμογένης» — the whole company of that day. Printing it over one of them
- *    would be a false claim about who is commemorated. Detected by the
- *    language's own conjunction rather than by punctuation, because a comma
- *    in these entries is usually an apposition ("Osie, Episcopul Cordobei")
- *    and rejecting those would throw away good names. A saint whose *English*
- *    name is itself a company keeps the listed form, because there the list
- *    is the name.
- * 2. **The honorific and rank are stripped.** The site prints its own — St. /
- *    Sf. / Св. / Άγ. / Св., `lib/honorific.js` — and «Св. Св. Аврамије» is
- *    what leaving them in produces.
+ * not a name field: **a form naming several people is not this saint's name**,
+ * and **the honorific and rank are stripped**, because the site prints its own
+ * (`lib/honorific.js`). `tests/saint-name.test.mjs` holds both — `a form
+ * naming the whole company is not one saint’s name` and `a recorded form is
+ * used, with its honorific, rank and office stripped`.
  *
  * The choosing happens at build time (`scripts/build-manifest.mjs`) so the
  * manifest carries one clean form per language and the runtime is a lookup.
+ *
+ * The author's ask, the corpus coverage behind the fallback, and the cases
+ * each rule below was written against:
+ * `docs/SRC-DECISIONS.md § src/lib/saint-name.js`.
  */
 
 /* Honorifics and ranks, longest first, applied repeatedly: an entry may open
@@ -71,22 +48,12 @@ const PREFIXES = {
     'Preot Mucenic',
     'Mucenic', 'Muceniță', 'Martir', 'Ierarh', 'Cuvios', 'Cuvioasa', 'Cuvioasă', 'Cuviosul',
     'Proorocul', 'Proorocița', 'Apostol', 'Dreptul', 'Dreapta', 'Fericitul', 'Fericita',
-    /* The bare forms as well as the definite ones: the Romanian entries write
-       «Sfântul Cuvios Mărturisitor Sofian» and «Sfânta Împărăteasă Pulheria»,
-       where the list reached the honorific, then the rank behind it, and
-       stopped at a third word it did not know — so the name a Romanian reader
-       was shown began *Mărturisitor* and *Împărăteasă*. */
+    /* The bare forms as well as the definite ones: `the strip list reaches a
+       rank standing behind another rank` (tests/saint-name.test.mjs). */
     'Mărturisitorul', 'Mărturisitoarea', 'Mărturisitor', 'Mărturisitoare',
     'Împăratul', 'Împărăteasa', 'Împărat', 'Împărăteasă',
-    /*
-     * The princely title, which is a rank like any other here and was the one
-     * the Romanian list had no answer for: «Sfântul Voievod Neagoe Basarab»
-     * lost its `Sfântul` and kept its `Voievod`, so the name a Romanian
-     * reader was shown began with a title (2026-09-07, found by the language
-     * audit while looking at a saint the author had named). Russian's own
-     * equivalent for a ruler-saint, `Благоверный`, has been in that list
-     * since it was written.
-     */
+    /* The princely title, a rank like any other here:
+       `docs/SRC-DECISIONS.md § src/lib/saint-name.js` — the Romanian rank list. */
     'Voievodul', 'Voievod', 'Domnitorul', 'Domnitor',
   ],
   sr: [

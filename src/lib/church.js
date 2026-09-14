@@ -21,7 +21,7 @@ import { isWide } from './viewport.js';
 export const churchIds = () => enabledChurches().map((c) => c.id);
 
 /** The stored choice, if the registry still holds it; null otherwise. */
-export function storedChurch() {
+function storedChurch() {
   const id = readSettings().church;
   const church = typeof id === 'string' ? CHURCHES_BY_ID[id] : null;
   return church && church.enabled !== false ? id : null;

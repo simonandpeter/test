@@ -46,7 +46,7 @@ export const CALENDAR_LABELS = {
  * month name does not depend on which year it is in, in any of these
  * languages, and the day-of-month is not being formatted here.
  */
-export function monthName(calendar, month) {
+function monthName(calendar, month) {
   if (month < 1 || month > 12) return String(month);
   if (currentLanguage() === 'en') return MONTHS[month - 1];
   return formatDate({ month: 'long', timeZone: 'UTC' }, new Date(Date.UTC(2001, month - 1, 15)));

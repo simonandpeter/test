@@ -1,19 +1,20 @@
 /**
  * The saint's own page (brief §7, §8.1). Two loading layers meet here: the
- * manifest already holds the name, the image box, the dates and the badge, so
- * the page paints complete-looking from data the reader has had since load,
- * and the fetch fills in only what is genuinely per-saint — the name forms in
- * their own scripts, the life, the citations, the image credit.
- *
- * That is also why nothing here is a spinner. The skeleton is the real layout
- * at the real dimensions, and the parts that arrive later arrive into boxes
- * already the right size.
+ * manifest holds the name, the image box, the dates and the badge, so the page
+ * paints complete from data the reader already has, and the fetch fills in only
+ * what is genuinely per-saint — the life, the citations, the image credit.
+ * Nothing here is a spinner: the skeleton is the real layout at the real
+ * dimensions.
  *
  * Veneration is shown church by church, with each church's own titles, its
  * feast in its own reckoning, and the source it rests on — including the
  * churches we have not sourced, which say so. The rite × communion matrix
- * (§9.2) is a Phase 3 view and is deliberately not this: this page lists
- * churches, that one crosses them with rites.
+ * (§9.2) is a Phase 3 view and is deliberately not this.
+ *
+ * The column arrangement, the reversals and the alternatives refused:
+ * `docs/SRC-DECISIONS.md § src/views/saint.js`. What the page does is held by
+ * `e2e/saint.spec.js`, and its freedom from layout shift by `nothing shifts as
+ * the data arrives` in `e2e/quality-floor.spec.js`.
  */
 
 import { CHURCHES } from '../data/churches.js';
@@ -132,17 +133,11 @@ export function render(el, { data, params, router, cameFrom }) {
       if (mine !== generation) return;
       const body = el.querySelector('[data-detail]');
       /*
-       * Offline is not a hiccup (brief §12): an uncached saint gets the plain
-       * truth - the network is away and this one was never stored - rather
-       * than a retry button pointed at no network.
-       *
-       * Read off the failure, not only off `navigator.onLine`: the flag stays
-       * true under DevTools' and Playwright's request-level offline (found
-       * writing the test), and a reader on broken wifi is offline in every way
-       * that matters with the flag still up. A fetch that died without a
-       * status - `TypeError: Failed to fetch`, or the worker's `HTTP 0` for a
-       * total cache miss - is the network being away; a real 404 or 500 keeps
-       * the hiccup wording, because there the network answered.
+       * Offline is not a hiccup (brief §12). **Read off the failure, not only
+       * off `navigator.onLine`** - the flag stays true under request-level
+       * offline, so a fetch that died without a status (`TypeError: Failed to
+       * fetch`, or the worker's `HTTP 0`) is the network being away, while a
+       * real 404 or 500 keeps the hiccup wording because the network answered.
        */
       const away =
         navigator.onLine === false || error?.name === 'TypeError' || /HTTP 0/.test(String(error ?? ''));
@@ -157,16 +152,8 @@ export function render(el, { data, params, router, cameFrom }) {
 /* ---- the manifest-only shell ------------------------------------------- */
 
 function shell(card, backLabel) {
-  /*
-   * The picture, and *not* its licence (author, 2026-08-26: "'Public domain' as
-   * the image caption is metadata that belongs at the bottom"). A caption under
-   * an icon is a place a reader expects to be told what they are looking at,
-   * and "Public Domain Mark 1.0" answers a question nobody standing in front of
-   * an icon is asking. The line itself is unchanged and still says everything
-   * lib/licence.js requires — including, where a licence is unsettled, the
-   * whole paragraph saying so — it now stands at the foot of the page with the
-   * sources, which is where the rest of the page's apparatus lives.
-   */
+  /* The picture, and *not* its licence: that line stands at the foot with the
+     sources. `docs/SRC-DECISIONS.md § src/views/saint.js — the caption` */
   const media = card.image
     ? `<figure class="saint-media" style="aspect-ratio:${card.image.aspect};background-image:url('${BASE + card.image.lqip}')">
         <img src="${BASE + card.image.src}" alt="" width="${card.image.w}" height="${card.image.h}"
@@ -175,29 +162,11 @@ function shell(card, backLabel) {
     : '';
 
   /*
-   * The info line: what a saint *was*. Rank from `types`, then the offices
-   * and epithets the calendars themselves give — "Hierarch, Archbishop of
-   * Constantinople", "Venerable, the Great" — which until 2026-08-25 were
-   * printed only inside the veneration register, one church at a time, so a
-   * reader glancing at the head of the page never met them (author: "this
-   * sort of stuff should be listed in the small info session for each
-   * saint").
-   *
-   * Deduplicated across the churches, against `types`, and against `office`
-   * where one is recorded — a title that only repeats the office in different
-   * words ("Archbishop of Constantinople" from a church's own titles, beside
-   * an `office` field reading the same) would otherwise print twice on the
-   * same line. Only 20 attestations in the corpus carry titles at all, so for
-   * most saints this line is exactly what it was.
-   *
-   * **The deduplication stays in English and the printing does not**
-   * (2026-09-08). `translateOffice` runs over the office and the titles alike
-   * — a title is the same kind of phrase from the same kind of source, and
-   * `Bishop of Hippo` is one entry in a pack whichever field it arrived in —
-   * but the `seen` set below compares the *recorded* strings, because that is
-   * where two churches saying the same thing is visible. Comparing the
-   * translations instead would make the duplicate test depend on whether a
-   * pack happened to render two different English phrases the same way.
+   * The info line: what a saint *was*, deduplicated across the churches and
+   * against `types` and `office`. **`seen` compares the recorded English, not
+   * the translations** — comparing the rendered forms would make "these two
+   * churches said the same thing" depend on the pack.
+   * `docs/SRC-DECISIONS.md § src/views/saint.js — the info line`
    */
   const seen = new Set((card.types ?? []).map((t) => t.toLowerCase()));
   if (card.office) seen.add(String(card.office).toLowerCase());
@@ -210,20 +179,11 @@ function shell(card, backLabel) {
       titles.push(title);
     }
   }
-  /*
-   * Rank, then offices, and *not* the sex (author, 2026-08-26: "'Male' in the
-   * subtitle reads oddly for a devotional page (keep it as a filter, drop it
-   * from the heading line)"). It is still in the data, still a facet on the
-   * Index, and still what `saints.sexLabel` names there — it is only no longer
-   * announced under a saint's name, where it read as a database field that had
-   * wandered onto a page about a person.
-   */
+  /* Rank, then offices, and *not* the sex — PLAN.md §6. The rank is taken out
+     of the types because the heading above already prints it; `the facts line
+     stops repeating the rank the name already prints`, tests/honorific.test.mjs. */
   const beside = typesBeside(card);
   const facts = [
-    // The office first, where one is recorded: it is the most particular
-    // thing this line knows, and since 2026-08-27 it is no longer in the
-    // name. The types follow with the rank taken out of them, the rank being
-    // the first word of the heading above.
     card.office ? translateOffice(card.office) : null,
     beside.length ? typeNames(beside) : null,
     titles.length ? titles.map(translateOffice).join(', ') : null,
@@ -246,24 +206,12 @@ function shell(card, backLabel) {
       <p class="resume-note utility" data-resume hidden></p>
     </header>
 
-    <!--
-      **Two columns on a desktop since 2026-09-02** (author: "split the left
-      column into 2x columns, left column for the image and
-      birth/death/office/veneration information, and new centre column for the
-      main body text").
-
-      The apparatus goes left with the picture — the dates and places register,
-      the historicity line, and the veneration table, which was under the life
-      from 2026-08-27 and is beside it now. The life keeps the centre to
-      itself. Below the breakpoint both boxes are display:contents and the page
-      is the single column it has always been, in the same reading order:
-      picture, register, life, then the rest.
-
-      The aside is a box rather than a class on each part, because the
-      veneration table arrives with the payload long after the register does,
-      and a box that exists from the first paint is what stops it landing in
-      the other column when it comes.
-    -->
+    <!-- Two columns on a desktop, one below the breakpoint, same reading order
+         either way. The aside is a box rather than a class on each part: the
+         veneration table arrives with the payload long after the register
+         does, and a box that exists from the first paint is what stops it
+         landing in the other column when it comes.
+         docs/SRC-DECISIONS.md § src/views/saint.js — two columns -->
     <div class="saint-body">
     <div class="saint-aside" data-aside>
       <div class="saint-intro${media ? ' has-media' : ''}">
@@ -275,41 +223,18 @@ function shell(card, backLabel) {
       </div>
     </div>
 
-    <!-- The life first, the apparatus beside or under it (author, 2026-08-27
-         for the order, 2026-09-02 for the column). The page is about a person:
-         the prose that says who they were is what a reader came for, and the
-         church-by-church register is the apparatus behind it. -->
+    <!-- The life first, the apparatus beside or under it. Held by "the life
+         comes before the veneration on a saint page", e2e/saint.spec.js.
+         docs/SRC-DECISIONS.md § src/views/saint.js — the life first -->
     <div class="saint-main" data-detail>
       <h2 class="register-heading">${STRINGS.saint.life}</h2>
       <div class="life" data-life>${skeletonLines(6)}</div>
-      <!--
-        Everything below the life waits for the payload rather than standing
-        in the flow while it is fetched, and this is the shape of brief §13's
-        "no layout shift when data arrives" on this page.
-
-        A skeleton can only hold a box open honestly when its final size is
-        knowable, and the life's is not: six skeleton lines stood in for a life
-        that runs anywhere from two lines to sixty. On Christopher it measured
-        six and arrived at sixty-one, so the Veneration heading was painted at
-        y=528 — a third of the way down a 780 px phone — and landed at y=1307.
-        779 px, on the one criterion the brief spells out, and nothing measured
-        it until e2e/quality-floor.spec.js grew a CLS assertion on 2026-08-28.
-
-        Nothing here can be sized ahead of the fetch either: the sources are a
-        list of the documents the life was written from, and the veneration
-        register is four rows or one depending on the churches that attest.
-        Their skeletons were furniture in the §5b sense — they held a shape
-        that was not the shape that arrived.
-
-        So the rule is *append below*, not *reserve above*: the life grows or
-        shrinks into a box with nothing under it, and this block arrives
-        underneath whatever height it settled at. An insertion below the last
-        laid-out element moves nothing, whichever way the life went.
-
-        Sources stay under the life — they are text.sources, and they followed
-        it before this too. The error path replaces [data-detail] wholesale,
-        so a payload that never comes discards this rather than stranding it.
-      -->
+      <!-- **Append below, never reserve above.** Nothing under the life can be
+           sized ahead of the fetch, so this box waits rather than standing in
+           the flow with a skeleton that holds the wrong shape; an insertion
+           below the last laid-out element moves nothing. Brief §13, held by
+           "nothing shifts as the data arrives" in e2e/quality-floor.spec.js.
+           docs/SRC-DECISIONS.md § src/views/saint.js — append below -->
       <div data-late hidden>
         <div data-sources></div>
         <div data-hymns-box></div>
@@ -317,52 +242,26 @@ function shell(card, backLabel) {
         <p class="image-credit utility" data-credit></p>
       </div>
     </div>
-    <!--
-      Veneration, rendered here — after the life, where it has been since
-      2026-08-27 and where a phone reads it — and **moved into the aside above
-      by wireColumns when the window is wide**.
-
-      It is moved rather than placed by CSS, and that is the second attempt.
-      The first put it in the grid's own second row and let the life span
-      both, which reads correctly and lays out badly: a spanning item hands
-      its height to the rows it crosses, so a long life pushed veneration
-      hundreds of pixels down its own column to line up with nothing (author,
-      2026-09-02: "the left column Veneration on Righteous Elizabeth ... is
-      very far down, looks like it might be because its trying to line up with
-      the hymns in the right column"). Independently scrolling columns need it
-      inside the box that scrolls in any case, and a box is a box in the DOM.
-
-      Which leaves one node in two possible parents, so the document order is
-      the reading order at both widths and nothing is ordered around by CSS —
-      a screen reader hears the life before the veneration on a phone, and the
-      apparatus as one column beside it on a desktop.
-    -->
+    <!-- Veneration is rendered here, after the life, and **moved into the aside
+         above by wireColumns when the window is wide** - one node with two
+         possible parents, so the document order is the reading order at both
+         widths and nothing is ordered around by CSS.
+         docs/SRC-DECISIONS.md § src/views/saint.js — moving the register -->
     <div class="saint-veneration" data-veneration-box hidden>
       <h2 class="register-heading">${STRINGS.saint.veneration}</h2>
       <div data-veneration></div>
     </div>
     </div>
-    <!--
-      **Continue reading, at the foot, on a phone** (author, 2026-09-07: "add
-      the 'continue reading' section to the bottom of every saint profile page
-      on mobile").
+    <!-- Continue reading, at the foot, on a phone. **Outside the late box**,
+         which is the one thing to get right: that box is hidden until the
+         payload lands and the error path replaces the whole of data-detail, so
+         a shelf inside either would vanish along with a life that failed to
+         arrive. It is the reader's own record and owes nothing to this folder.
+         Held by "a phone gets Continue reading under the life, and a desk does
+         not", e2e/saint.spec.js.
 
-      The Daily page has carried the reader's own two shelves since the shelves
-      existed; this page has carried nothing under the life, because past
-      1024 px the apparatus column beside it holds their search and below it
-      that column is not drawn at all. So a phone reached the end of a life and
-      the page stopped.
-
-      **Outside the late box**, and that is the one thing to get right: it is
-      hidden until the payload lands, and the error path replaces the whole
-      of data-detail — so a shelf inside either would vanish along with a life
-      that failed to arrive, which is exactly the moment a reader most wants a
-      way onward. It is the reader's own record and owes nothing to this
-      saint's folder.
-
-      (No backticks in this comment, and that is not a style: it sits inside a
-      template literal, and one of them ends the string.)
-    -->
+         (No backticks in this comment, and that is not a style: it sits inside
+         a template literal, and one of them ends the string.) -->
     <div class="saint-shelves" data-shelves></div>
   </article>`;
 }
@@ -370,41 +269,29 @@ function shell(card, backLabel) {
 /* ---- the column beside the life (2026-09-01) ---------------------------- */
 
 /**
- * Whether the column is folded away, for the rest of this visit.
- *
- * Module scope rather than the settings store, and the line is where the
- * author drew it: the register's Cards/List choice was asked to be remembered
- * ("site remembers what you left it as") and this one was not — it is a
- * minimise, which is a thing you do to the page in front of you. So it holds
- * across the saints opened in one visit, which is the span over which folding
- * it once and having it come back on the next name would be the annoyance, and
- * a reload opens it again.
+ * Whether the column is folded away, for the rest of this visit. Module scope,
+ * not the settings store — it is a minimise, not a remembered preference.
+ * `docs/SRC-DECISIONS.md § src/views/saint.js — the fold`
  */
 let sideFolded = false;
 
 /**
  * How far down the search column the reader had scrolled, kept across the
- * saints opened in one visit (author, 2026-09-02).
- *
- * Module scope for the same reason `sideFolded` is: the page is rebuilt per
- * saint, so anything the reader did *to the column* rather than to a saint has
- * to live outside the render. A reload starts at the top again, which is where
- * a fresh visit's list starts anyway.
- *
- * Reset when the set itself changes — a position measured against 862 rows
- * means nothing against the eleven a filter left.
+ * saints opened in one visit. Module scope for the same reason `sideFolded`
+ * is: the page is rebuilt per saint. **Reset when the set itself changes** —
+ * a position measured against 862 rows means nothing against the eleven a
+ * filter left.
  */
 let sideAt = 0;
 
 /**
  * The saints the reader had in front of them when they opened this one.
  *
- * `lastSearch()` is the Index's own snapshot (views/index/place.js) and holds
- * the slugs it had matched, in the order it had them — so this column is not a
- * second search that happens to agree with the first, it is the first one's
- * result. A reader who arrived by another road — a deep link, the map, the
- * Daily page — has no snapshot, and gets the corpus in its own order rather
- * than an empty column claiming they searched for nothing.
+ * `lastSearch()` is the Index's own snapshot (views/index/place.js) — the same
+ * slugs in the same order, not a second search that agrees with the first. A
+ * reader who arrived by another road has no snapshot and gets the corpus in
+ * its own order, rather than an empty column claiming they searched for
+ * nothing.
  */
 function searchResults(data) {
   const snap = lastSearch();
@@ -418,22 +305,11 @@ function searchResults(data) {
  * The right column: what the reader searched, as rows, with the saint they are
  * reading marked in it.
  *
- * Author, 2026-09-01: "for where the right column would be on Daily Page,
- * provide a row view scroll of the advanced search results in All Saints where
- * you just came from ... Add an option to minimise the search at the very top
- * of this right column."
- *
  * **The rows are the Index's own**, from `card(item, router, { rows: true })`,
- * rather than a shape that resembles them: the instruction says "the row view",
- * and a copy would drift from it the first time either changed. The wrapper is
- * a list item here instead of the virtualiser's absolutely positioned div, and
- * saint.css puts it back into flow — that is the whole of the difference.
- *
- * Not virtualised, and that is a decision rather than an omission. The Index's
- * grid is virtualised because it lays 862 cards against a scroll position that
- * moves; this list is built once when the page opens and scrolls inside its own
- * box. 862 list items is a few hundred kilobytes of DOM built once, against the
- * complexity of a second virtualiser wired to a different scroll container.
+ * rather than a shape that resembles them; the wrapper is a list item here
+ * instead of the virtualiser's absolutely positioned div, and saint.css puts
+ * it back into flow. Not virtualised, on purpose.
+ * `docs/SRC-DECISIONS.md § src/views/saint.js — the column beside the life`
  */
 function sideColumn(data, router, current) {
   const results = searchResults(data);
@@ -449,13 +325,11 @@ function sideColumn(data, router, current) {
       <input class="search-field" type="search" data-side-query
         aria-label="${esc(STRINGS.saint.sideSearch)}"
         placeholder="${esc(STRINGS.saint.sideSearch)}" />
-      <!--
-        The Index's own facet chips (author, 2026-09-02: "make sure the filters
-        are visible in the search column on the right"). They arrive ticked as
-        the reader left them on All Saints, so the column shows the search
-        rather than merely its result — and they narrow the list here, over the
-        whole corpus, through the same applyFilters the Index runs.
-      -->
+      <!-- The Index's own facet chips, arriving ticked as the reader left them
+           on All Saints, and narrowing over the whole corpus through the same
+           applyFilters the Index runs. Held by "the filters in the search
+           column are chips, however the reader reached the page",
+           e2e/saint.spec.js. -->
       <div class="facets side-facets" data-side-facets>${facetGroups(
         facetsOf(data.saints),
         { ...EMPTY_FILTERS, ...(lastSearch()?.filters ?? {}) },
@@ -472,13 +346,10 @@ const countLine = (n) =>
   n === 1 ? STRINGS.saint.sideCountOne : fill(STRINGS.saint.sideCount, { n: String(n) });
 
 /**
- * Whether a saint answers to what was typed.
- *
- * The name as the row prints it, and every form the manifest records — so a
- * reader shown "Venerable Moses the Hungarian" can type either that or
- * «Моисей», exactly as the Index's own field allows. The office and the types
- * are deliberately not searched here: this is a sieve over a list the reader
- * can see, and matching on a word that is not on the row would look like a bug.
+ * Whether a saint answers to what was typed: the name as the row prints it and
+ * every form the manifest records. The office and the types are deliberately
+ * not searched — this is a sieve over a list the reader can see, and matching
+ * on a word that is not on the row would look like a bug.
  */
 function matches(item, needle) {
   if (saintName(item).toLowerCase().includes(needle)) return true;
@@ -492,19 +363,12 @@ function sideRow(item, router, current) {
 }
 
 /**
- * How many rows are put in the document at a time.
- *
- * **The list is paged rather than rendered whole** (2026-09-01). It was all 862
- * at once, which the page itself carried without complaint — `content-visibility`
- * keeps the ones outside the scroller from being laid out — but the DOM is still
- * 862 subtrees, and everything that *walks* the document pays for them: the
- * accessibility audit on this page went from three seconds to twenty-three, near
- * enough its own timeout to start failing under a loaded machine.
- *
- * Sixty is about three screens of rows, so the next chunk is fetched long before
- * the reader can reach the end of the one they are in, and the count above the
- * list is the whole set either way — nothing here is hidden from the reader, it
- * is only late.
+ * How many rows are put in the document at a time — about three screens, so
+ * the next chunk lands long before the reader reaches the end of this one. The
+ * count above the list is the whole set either way; nothing is hidden, only
+ * late. **The list is paged rather than rendered whole** because everything
+ * that walks the document pays for 862 subtrees:
+ * `docs/SRC-DECISIONS.md § src/views/saint.js — paging the column`
  */
 const SIDE_CHUNK = 60;
 
@@ -512,17 +376,13 @@ const SIDE_CHUNK = 60;
  * The column's two controls: the fold, and the field that narrows the list.
  *
  * **The field narrows what is already there; it does not search the corpus
- * again.** The heading says "Your search", and a field that could add saints
- * the reader had filtered out would make that heading false. It is a plain
- * substring match over the names the row prints and the forms the manifest
- * records, which is the honest description of a filter over a list — and
- * deliberately not the Index's own MiniSearch, whose prefix and fuzzy matching
- * belong to a search over the corpus rather than to a sieve over a dozen rows.
- *
- * **It filters the set, not the rendered rows**, which is what the paging above
- * makes necessary: hiding list items would have searched only as far as the
- * reader had scrolled, and a search that answers differently depending on where
- * you were is worse than no search.
+ * again** — the heading says "Your search", and a field that could add saints
+ * the reader had filtered out would make that heading false. **And it filters
+ * the set, not the rendered rows**, which the paging above makes necessary:
+ * hiding list items would search only as far as the reader had scrolled.
+ * Held by `the column beside the life is the search the reader came from, and
+ * narrows within it` in `e2e/saint.spec.js`.
+ * `docs/SRC-DECISIONS.md § src/views/saint.js — the field, not MiniSearch`
  */
 function wireSide(el, { data, router, current }) {
   const side = el.querySelector('[data-saint-side]');

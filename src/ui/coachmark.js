@@ -1,33 +1,18 @@
 /**
- * The two things a first visit is not told, said where they are done (author,
- * 2026-08-26): "Replace the language and calendar pop-ups on first opening
- * with a fade-in glowing tool tip with an arrow pointing to each of the two
- * buttons, explaining you can select your church from here, and language from
- * here. Text as minimal as possible."
+ * A mark under each of the header's two controls on a first visit, saying which
+ * one changes the church and which changes the language. They are chrome and
+ * not the calendar's, so they are mounted once at boot and stand on whatever
+ * page the visit begins on.
  *
- * **This reverses the first-visit gate**, and the reversal is worth stating
- * plainly because PLAN.md rests on it. From
- * 2026-08-21 the calendar asked which church the reader kept and *showed
- * nothing until it was answered*: the page below waited, deliberately, because
- * a calendar with no church chosen would have been the site picking one and
- * not saying so. A second block joined it on 2026-08-25 for the language.
+ * Four ways out: the ×, a swipe on a touch screen, the second scroll input
+ * either way, and opening the control the mark points at — plus Escape, because
+ * anything that takes focus and dismisses has to answer it. `a first visit is
+ * shown where the two controls are, and the day is not held back` in
+ * `e2e/chrome.spec.js` holds that set.
  *
- * What replaces it says the same two things and asks neither: the site opens
- * on a calendar, and a mark under each control says which control changes it.
- * The honesty the gate was buying is bought instead by `defaultChurch()` in
- * lib/church.js — the guess is made from the browser's own language, it is
- * never written to settings, and `hasChosen()` still knows the difference — and
- * by the header, which has named the church on every page since 2026-08-24.
- * That control did not exist when the gate was designed.
- *
- * The marks are chrome, not the calendar's: they point at header buttons, so
- * they are mounted once at boot and stand on whatever page the visit begins on.
- *
- * Four ways out, and the reader is expected to take one of them (author, same
- * instruction): the ×, a swipe on a touch screen, the second scroll input
- * either way, and — not asked for but obviously right — opening the control it
- * points at, which is the mark having done its job. Escape too, because
- * anything that takes focus and dismisses has to answer Escape.
+ * The first-visit gate this reversed, the author's instruction behind it, and
+ * what bought back the honesty the gate was buying:
+ * `docs/SRC-DECISIONS.md § src/ui/coachmark.js`.
  */
 
 import { hasChosen } from '../lib/church.js';
@@ -38,16 +23,15 @@ import { STRINGS } from './strings.js';
 import { reducedMotion } from '../lib/motion.js';
 
 /**
- * How many scroll inputs it survives. Two, at the author's word: the first
- * scroll is a reader looking at the page they arrived on, and taking the mark
- * away on it would mean most readers never see it at all.
+ * How many scroll inputs it survives. Two, at the author's word — the first
+ * scroll is a reader looking at the page they arrived on. `a coachmark goes on
+ * the second scroll, and not on the first` in `e2e/chrome.spec.js`.
  */
 const SCROLLS = 2;
 /**
  * What counts as *one* input. A wheel notch or a finger's flick fires scroll
  * events every frame for a few hundred milliseconds, so counting raw events
- * would spend both on one gesture. Movement that stops for this long has
- * ended, and the next movement is the next input.
+ * would spend both on one gesture.
  */
 const SCROLL_GAP = 400;
 /** Far enough to be a scroll rather than a settle, in px. */
@@ -60,18 +44,11 @@ const CLOSE =
   '<path d="M5.5 5.5l9 9M14.5 5.5l-9 9" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" fill="none"/></svg>';
 
 /**
- * Which marks this browser has already been shown. **Shown, not answered**
- * (found in review, 2026-08-27): the gate was `hasChosen()` alone, so a reader
- * who is content with the guessed calendar and with English answers neither
- * question and was met by both marks on every load, for ever. The two
- * conditions are different questions and the mark wants the second one.
- *
- * Written when the mark is *mounted* rather than when it is dismissed, which
- * is the literal reading of "has been shown" and the only one that cannot
- * leak: a reader who closes the tab without touching either mark has still
- * seen it, and a dismissal-only flag would bring both back the next morning.
- * The four ways out stay exactly as they were; they are how a reader gets rid
- * of the mark *now*, not what stops it coming back.
+ * Which marks this browser has already been shown. **Shown, not answered**, and
+ * written when the mark is *mounted* rather than when it is dismissed — `a
+ * coachmark is shown once, and a guess is still not an answer` in
+ * `e2e/chrome.spec.js`. Why the gate is not `hasChosen()` alone:
+ * `docs/SRC-DECISIONS.md § src/ui/coachmark.js`.
  */
 const seenMarks = () => {
   const seen = readSettings().coachSeen;
@@ -79,9 +56,9 @@ const seenMarks = () => {
 };
 
 /**
- * Mounts whichever marks this visit is owed, and returns a teardown. Nothing
- * is mounted for a reader who has answered both questions, or for one who has
- * been shown both marks once.
+ * Mounts whichever marks this visit is owed and returns a teardown. Nothing is
+ * mounted for a reader who has answered both questions, or for one who has
+ * already been shown both marks.
  */
 export function mountCoachmarks() {
   const seen = seenMarks();
@@ -108,38 +85,30 @@ export function mountCoachmarks() {
     for (const mark of live.splice(0)) mark.close();
   };
 
-  /* Positions are document coordinates, so a mark travels with the page the
-     way the fast bubble does. A resize moves the header under them — the
-     calendar control changes line at 560 px — so they are placed again rather
-     than dismissed: a reader turning a phone has not answered anything. */
+  /* Positions are document coordinates, so a mark travels with the page. A
+     resize moves the header under them — the calendar control changes line at
+     560 px — so they are placed again rather than dismissed: a reader turning a
+     phone has not answered anything. */
   const onResize = () => layout(live);
 
   /*
-   * **Whatever is doing the scrolling, not the window** (2026-09-01). The
-   * Daily page stopped scrolling that day — its two columns each carry their
-   * own scrollbar and the page itself is fixed to the glass — so a mark that
-   * only watched `window.scrollY` sat there through any amount of reading.
-   * Scroll events do not bubble, but they are dispatched at the element and
-   * can be taken in the capture phase from `document`, which is what catches
-   * a column's scroll and the page's alike.
+   * **Whatever is doing the scrolling, not the window.** Scroll events do not
+   * bubble, but they are dispatched at the element and can be taken in the
+   * capture phase from `document`, which catches a column's scroll and the
+   * page's alike — the Daily page's two columns each carry their own scrollbar
+   * and the page itself is fixed to the glass.
    */
   const position = (target) =>
     !target || target === document || target === document.documentElement ? window.scrollY : target.scrollTop;
 
   /**
-   * **And only from something that scrolls the way a reader reads** (2026-09-08,
-   * from a profile of All Saints rather than from a report). Listening on
-   * `document` in the capture phase catches every scroll on the page, and this
-   * site has two that are nobody's reading: the carousel drifts by itself sixty
-   * times a second, and the phone's nav strip is turned by `ui/nav-scroll.js`.
-   * Each of those events reached `position`, which reads `scrollTop` — a
-   * *forced layout*, on a frame the drift has already dirtied. It measured
-   * **460 ms of an eight-second All Saints profile at 4x CPU**, second only to
-   * the drift loop itself, on a page where the mark is usually not even shown.
-   *
-   * The answer a horizontal scroller gives is also meaningless: its `scrollTop`
-   * is 0 for ever, so every one of those events was a comparison against a
-   * number that could not change.
+   * **And only from something that scrolls the way a reader reads.** Listening
+   * on `document` in the capture phase also catches the carousel's own drift
+   * and the phone's nav strip, and `position` reads `scrollTop` — a *forced
+   * layout*, on a frame the drift has already dirtied — for an answer a
+   * horizontal scroller cannot give. Re-derive the cost with
+   * `node scratchpad/cpu-profile.mjs`; what it read is in
+   * `docs/SRC-DECISIONS.md § src/ui/coachmark.js`.
    *
    * Decided once per element and remembered, because the question itself costs
    * layout: an element that can scroll vertically is one a reader can read in.
@@ -259,11 +228,10 @@ const APART = 10;
 const INSET = 8;
 
 /**
- * Under the control, arrow over it, and never off the side of the page — the
- * same arithmetic the fast bubble uses, and for the same reason: the box is
- * clamped into the viewport and the arrow stays with the button, so a control
- * at the very edge of a 320 px screen still gets a mark that points at it
- * rather than one that has slid away from what it means.
+ * Under the control, arrow over it, and never off the side of the page: the box
+ * is clamped into the viewport while the arrow stays with the button, so a
+ * control at the very edge of a 320 px screen still gets a mark that points at
+ * it rather than one that has slid away from what it means.
  */
 function place(el, target, left = null) {
   const b = target.getBoundingClientRect();
@@ -278,22 +246,19 @@ function place(el, target, left = null) {
 }
 
 /**
- * Both marks, placed so neither covers the other.
+ * Both marks, placed so neither covers the other — `on a first visit the two
+ * marks clear the fold, and so does the day` in `e2e/chrome.spec.js` fails if
+ * they overlap.
  *
- * Centring each under its own control is right on a phone, where the calendar
- * control is at the start of the header's second line and the language control
- * is at the end of its first — a screen apart. On a desktop they are two
- * buttons in the same corner, four pixels between them, and two centred boxes
- * overlapped by ninety: the language mark covered the church mark's ×, and the
- * × could be seen but not pressed. (Found by the browser suite, which timed out
- * clicking it; a hit test at the button's own coordinates came back
- * `SPAN.coachmark-text` — the wrong mark's.)
+ * Each is centred under its own control, which is right on a phone where the
+ * two controls are a screen apart. When they collide they open outwards from
+ * the midpoint between the controls instead, each keeping its arrow over its
+ * own button because the arrow is set from the control's centre and not from
+ * the box's. Two marks is all there has ever been and all this handles; a third
+ * would want a different idea, not a loop.
  *
- * So when they collide they open outwards from the midpoint between the two
- * controls: the left one ends before it, the right one begins after it, and
- * each keeps its arrow over its own button because the arrow is set from the
- * control's centre and not from the box's. Two marks is all there has ever
- * been and all this handles; a third would want a different idea, not a loop.
+ * What the desktop's two buttons in one corner did to the first version:
+ * `docs/SRC-DECISIONS.md § src/ui/coachmark.js`.
  */
 function layout(marks) {
   const placed = marks.map((mark) => ({ mark, at: place(mark.el, mark.target) }));

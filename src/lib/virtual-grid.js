@@ -14,7 +14,7 @@
  * because equal size is doing that mode's equality-of-standing work (§8.2).
  */
 
-export const MIN_COLUMN = 190;
+const MIN_COLUMN = 190;
 
 export function columnsFor(width, { min = MIN_COLUMN, gap = 16, max = 4 } = {}) {
   if (!(width > 0)) return 1;

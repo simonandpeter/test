@@ -205,7 +205,7 @@ no module keeps a copy, and that rule is what makes the split safe. `paint.js`
 `nav-scroll.js` (the phone's nav strip), `loop-scroll.js` (the carousel's endless
 engine and its image queue), `panel-control.js` (both chooser disclosures),
 `fly.js`, `shelf.js`, `save.js`, `coachmark.js`, `hymns.js`, `datefacts.js`,
-`grain.js` / `grain-drag.js` (gesture primitives), `wordmark.js` (generated).
+`grain-drag.js` (gesture primitive), `wordmark.js` (generated).
 
 **`src/lib/`** — pure logic, unit-tested. `calendar-page.js` (date stepping, hero
 pick, interval display), `i18n.js` (language, `PACK_ONLY`), `date-display.js` (a

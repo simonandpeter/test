@@ -80,7 +80,7 @@ const GATEWAY = { en: 'NKJV', ru: 'RUSV', ro: 'RMNN' };
  * including a second passage after a semicolon ("Luke 10:38-42; 11:27-28"),
  * because a reference is a quotation of the calendar and is not rewritten.
  */
-export function parseRef(ref) {
+function parseRef(ref) {
   const text = String(ref ?? '').trim();
   const book = Object.keys(BOOKS).find((b) => text.startsWith(`${b} `));
   if (!book) return { book: null, rest: text, chapter: null, entry: null };

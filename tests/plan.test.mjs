@@ -108,7 +108,7 @@ test('the duration table is DUR and tokens.css together', () => {
     assert.equal(DUR[key], Number(ms), `DUR.${key} disagrees with PLAN.md's ${ms}`);
   }
   const inCss = [...TOKENS.matchAll(/^\s*(--dur-[\w-]+):/gm)].map((m) => m[1]);
-  const unlisted = inCss.filter((t) => !rows.some((r) => r[0] === t) && t !== '--dur-shimmer');
+  const unlisted = inCss.filter((t) => !rows.some((r) => r[0] === t));
   assert.deepEqual(unlisted, [], `tokens.css has durations PLAN.md does not list: ${unlisted}`);
 });
 

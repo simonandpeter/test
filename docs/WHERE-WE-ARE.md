@@ -81,3 +81,11 @@ one branch to reverse if it ever reads wrong on the page.
 `index-grid.spec.js:1539` under `COLD_FACE`; `map.spec.js:3580` and
 `index-controls.spec.js:634` (All Saints load flakes, pass alone); local
 Lighthouse FCP, which CI's own run passes.
+
+**Before adding to that list, read `docs/PROBES.md`.** Three of the four names
+above are "passes alone, fails under load", which is the shape
+`throttle-probe.mjs` exists to settle — it turned three such flakes from a day
+of guessing into minutes on 2026-09-09, and two of the explanations it
+disproved had already been written into the test files as fact. The shelf-swipe
+flake above is the gesture half of the same question, and `nav-swipe.mjs` and
+`fling-write.mjs` are where a swipe that will not reproduce goes.

@@ -105,8 +105,6 @@ export function loadDetail(slug) {
   return hit;
 }
 
-export const isLoaded = (slug) => cache.has(slug);
-
 function pump() {
   while (speculative.size < MAX_IN_FLIGHT && waiting.length) {
     const slug = waiting.shift();

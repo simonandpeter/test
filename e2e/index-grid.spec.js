@@ -1748,7 +1748,7 @@ test('a row draws its thumbnail from a card derivative, never from the original'
   /*
    * **The carousel stopped fetching `icon.jpg` on 2026-09-06 and the grid did
    * not.** Measured on the production build at 360 px, DPR 1
-   * (`scratchpad/screenful-bytes.mjs`): the search face's first screenful was
+   * (`scripts/screenful-bytes.mjs`): the search face's first screenful was
    * **1,005 kB of pictures to draw two**, one of them a 1200x1500, 765 kB
    * original inside a 48x48 CSS row thumbnail — four times the carousel's
    * bill for a picture a fifth the size.

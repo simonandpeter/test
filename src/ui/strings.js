@@ -7,26 +7,19 @@
 export const STRINGS = {
   site: {
     /*
-     * **The name is a mark, not a string** (author, 2026-08-28: "it no longer
-     * gets translated, it stays constant as a stamp of branding"; reaffirmed
-     * 2026-09-12 when the site became AGIOS). The same five outlines serve
-     * every language, so this key carries one value in all five packs — it
-     * stays in the packs only so the coverage script sees one key set.
-     *
      * **What the reader sees is not this string.** It is the outlined SVG that
      * `scripts/make_wordmark.py` draws from `WORDS`, inlined into both of
      * index.html's slots at build time; `LABEL` in that script is its
-     * accessible name. PLAN.md §3 "The name" lists every place the brand is
-     * written down, because it is written down in fourteen of them.
+     * accessible name. This key is drawn by nothing and carries one value in
+     * all five packs, so the coverage script sees one key set —
+     * `tests/strings-shape.test.mjs`. PLAN.md §3 "The name" lists the fourteen
+     * places the brand is written down.
+     * `docs/SRC-DECISIONS.md § src/ui/strings.js — the name is a mark`
      */
     name: 'AGIOS',
     /*
-     * The tab, the bookmark and the 404. **One name everywhere since
-     * 2026-09-12** (author). Until then the head carried a second, translated
-     * name — "The Orthodox Saint". Four comments justified that split by
-     * citing a numbered amendment; chased on 2026-09-12, the number turned out
-     * to name a corpus batch of 559 saint folders and to say nothing about
-     * titles. The split is gone and so is the citation.
+     * The tab, the bookmark and the 404, one name everywhere.
+     * `docs/SRC-DECISIONS.md § src/ui/strings.js — the name is a mark`
      */
     tabName: 'AGIOS',
     tagline: 'The saints of the Orthodox Church, church by church - Russian, Romanian, Greek and Serbian, each in its own calendar.',
@@ -36,17 +29,9 @@ export const STRINGS = {
     calendar: 'Daily',
     /*
      * What the Daily button reads while the reader is on the Daily page
-     * looking at a day that is not today (author, 2026-08-26 evening) — press
-     * it and it takes them back. Off that page it is Daily again.
-     *
-     * **In the four packs that are not English this is the word they already
-     * use for Daily** — «Сегодня», Astăzi, Σήμερα, Данас all mean Today — so
-     * the label does not visibly change there. The control still does what
-     * the word says; what is lost is only the change of state. Giving those
-     * packs a distinct base label («Ежедневно», Zilnic, Καθημερινά, Дневно)
-     * is the fix and it is the author's, because it changes a nav label they
-     * have reviewed a dozen times and because those words are longer, which
-     * is the 320 px chrome line's whole budget.
+     * looking at a day that is not today — press it and it takes them back.
+     * Off that page it is Daily again.
+     * `docs/SRC-DECISIONS.md § src/ui/strings.js — Today, and the four packs`
      */
     today: 'Today',
     saints: 'All Saints',
@@ -75,18 +60,17 @@ export const STRINGS = {
      * The other two days a reader can name without counting. `relativeDayWord`
      * (views/daily/format.js) prints one of these three, and the weekday's own
      * name for anything further out: a page three weeks back is a Thursday,
-     * not a "yesterday", and "Today" alone left the two steps either side of it
-     * printing a bare date where the reader expected a word.
+     * not a "yesterday".
      */
     yesterday: 'Yesterday',
     tomorrow: 'Tomorrow',
     prevDay: 'Previous day',
     nextDay: 'Next day',
     /*
-     * The two steps beside the date on a desktop (author, 2026-09-01). The
-     * words a reader sees; `prevDay`/`nextDay` above are what a screen reader
-     * hears, because "Yesterday" on a page showing a day three weeks back is
-     * the wrong word for the thing the button does.
+     * The words a reader sees on the desktop steppers; `prevDay`/`nextDay`
+     * above are what a screen reader hears, because "Yesterday" on a page
+     * showing a day three weeks back is the wrong word for the thing the
+     * button does.
      */
     prevWeek: 'Previous week',
     nextWeek: 'Next week',
@@ -94,14 +78,11 @@ export const STRINGS = {
     nextMonth: 'Next month',
     monthView: 'Month view',
     /*
-     * The reckoning the page reads a fixed day by (author, 2026-09-02). The
-     * button prints the answer — "Revised Julian" — and the label is what a
-     * screen reader is given for the control, because the answer alone does
-     * not say what question it is answering.
-     *
-     * `reckoningFollow` is the way back to the church's own default rather
-     * than a third calendar: a reader who has overridden it should be able to
-     * stop overriding it, and "Julian" would not say that.
+     * The reckoning the page reads a fixed day by. The button prints the
+     * answer — "Revised Julian" — and this label is what a screen reader is
+     * given for the control, because the answer alone does not say what
+     * question it is answering. `reckoningFollow` is the way back to the
+     * church's own default rather than a third calendar.
      */
     reckoningLabel: 'The calendar this page is read by',
     reckoningFollow: 'Follow my church',
@@ -111,19 +92,18 @@ export const STRINGS = {
      * either side of it and, once the column narrows, 19rem to hold all of it
      * (docs/daily-desktop-visuals.md §3.3).
      *
-     * Only the longest name is abbreviated, in every pack: the point is to fit
-     * the one that does not, not to shorten three words on principle. The
-     * chooser's own rows keep the full names, and so does the button's
-     * accessible label — a screen reader is read the whole calendar's name and
-     * is never handed the abbreviation the layout needed.
+     * **Only the longest name is abbreviated, in every pack.** The chooser's
+     * own rows keep the full names, and so does the button's accessible
+     * label — a screen reader is never handed the abbreviation the layout
+     * needed.
      */
     reckoningShort: { julian: 'Julian', 'revised-julian': 'R. Julian', gregorian: 'Gregorian' },
     /*
      * The same day counted the old way, under the date the page is read by.
      * A caption and not a second date: the number beside it is already a date,
-     * and what the reader needs told is which reckoning produced it. Carries
-     * the date rather than standing beside it so a language that puts the
-     * reckoning first can.
+     * and what the reader needs told is which reckoning produced it. It
+     * carries the `{date}` rather than standing beside it, so a language that
+     * puts the reckoning first can.
      */
     byJulian: '{date} by the Julian calendar',
     byCivil: '{date} by the civil calendar',

@@ -170,8 +170,6 @@
      reaching a card. Deliberately outside the four: it is not answering
      anybody, and the author asked for it slower still. */
   --dur-linger: 900ms;
-  /* A loop, not a transition: the skeleton's shimmer. */
-  --dur-shimmer: 2s;
 
   --ease: cubic-bezier(0.2, 0, 0, 1); /* the default: decisive, arrives calm */
   --ease-out: cubic-bezier(0, 0, 0.2, 1); /* leaves at once, eases in to rest */

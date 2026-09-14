@@ -16,46 +16,27 @@ import {
 } from './helpers.js';
 
 /**
- * The chrome: the header, its two choosers, the coachmarks, the shelf and the theme.
- *
- * Part of the browser suite, which was one file of 9,308 lines until
- * 2026-08-27 and is now one file per surface. **The tests themselves are
- * unchanged** — each carries the instruction that caused it and the date it
- * was written, which is where this suite's provenance has always lived; what
- * moved is only which file it sits in. `helpers.js` holds the shared fixtures.
+ * The chrome: the header, its two choosers, the coachmarks, the shelf and the
+ * theme. docs/E2E-DECISIONS.md#chromespecjs
  */
 
-/*
- * All Saints opens on the carousel, and almost every test that visits it was
- * written about the other mode. The suite states which face it is testing
- * rather than each of forty-odd tests growing a line to press the toggle —
- * `searchMode` in helpers.js argues it. **Every spec file needs this**: it was
- * one `beforeEach` over one file, and dropping it from any of them would hand
- * those tests the carousel instead.
- */
+// **Every spec file needs this**: dropping it hands these tests the carousel
+// instead of the search face they were written about (`searchMode`, helpers.js).
 test.beforeEach(async ({ page }) => {
   await searchMode(page);
 });
 
 /**
- * **Where the shelf is read, since the Daily rebuild of 2026-09-12.**
+ * **Where the shelf is read.** `mountShelves` has exactly one caller —
+ * `views/saint.js`, below 1024 px, where a phone reaching the end of a life
+ * would otherwise meet a page that stops. So these tests state the surface
+ * rather than assume it: a narrow window and a saint's page. The width is the
+ * one thing that had to be said out loud, because a desk keeps its search column
+ * and is deliberately given no shelf.
  *
- * Every test below used to open a Daily page to find the reader's own shelves
- * under it. Daily does not carry them any more (plan §11.5, "shelves come off
- * Daily"): the page is a standing column of the day's facts and a grid of its
- * saints, and a third list of saints under that is the thing the rebuild took
- * out. `mountShelves` has exactly one caller now — `views/saint.js`, below
- * 1024 px, where a phone reaching the end of a life would otherwise meet a
- * page that stops.
- *
- * So these tests state the surface rather than assume it: a narrow window and
- * a saint's page. Nothing they claim is about the Daily page — the shelf's
- * rows, its ×, its swipe and its store are the subject, and all four are
- * unchanged. The width is the one thing that had to be said out loud, because
- * a desk keeps its search column and is deliberately given no shelf.
- *
- * `except` drops the page's own slug from the shelf, so the saint this stands
- * on is never one of the saints the test has just read.
+ * `except` drops the page's own slug from the shelf, so the saint this stands on
+ * is never one of the saints the test has just read.
+ * docs/E2E-DECISIONS.md#chromespecjs
  */
 const SHELF_HOST = '/saints/christopher';
 
@@ -65,22 +46,19 @@ const onShelfPage = async (page) => {
 };
 
 /**
- * Where a shelf row is, once it has stopped moving.
- *
- * Three things have to be true before a pointer can be aimed at one, and none
- * of them is true the moment the navigation settles:
+ * Where a shelf row is, once it has stopped moving. Three things have to be
+ * true before a pointer can be aimed at one, and none is true the moment the
+ * navigation settles:
  *
  *  - the shelf is built from two IndexedDB reads *after* the page has painted;
- *  - opening the saint records the visit, which fires the store's own
- *    subscription and repaints the shelf a beat later — so a row measured
- *    straight away is an element that is about to be replaced, and a rect read
- *    across that repaint comes back `null`;
+ *  - opening the saint records the visit, which repaints the shelf a beat
+ *    later — so a row measured straight away is about to be replaced, and a rect
+ *    read across that repaint comes back `null`;
  *  - it is the last thing on the page, so its coordinate is below the fold and
  *    the mouse would clamp away from it.
  *
- * So: wait for the row, bring it into the glass, and take the rect only once
- * two consecutive readings agree. On the Daily page the shelf was part of the
- * first paint and none of this was needed.
+ * So: wait for the row, bring it into the glass, and take the rect only once two
+ * consecutive readings agree.
  */
 const settledBox = async (locator) => {
   await expect(locator).toBeVisible();
@@ -108,30 +86,23 @@ test('Continue reading reappears after a saint has been opened', async ({ page }
   await expect(shelf).toContainText('Continue reading');
   await expect(shelf.locator('a[data-prefetch="moses-the-hungarian"]')).toHaveCount(1);
 
-  // The shelf wears the Index's own row dress (author, 2026-08-24): the same
-  // card classes, so the two read as one register. **The mark that stood at
-  // its trailing edge went on 2026-08-28** ("Remove bookmark on continue
-  // reading row cards"), which is the last row on the site to lose one — the
-  // Index's rows lost theirs the day before and this one was still copying a
-  // dress that had moved on. The × below is now the only control on the row.
+  // The shelf wears the Index's own row dress: the same card classes, so the two
+  // read as one register. The × below is the only control on the row.
   const shelfRow = shelf.locator('.index-card.is-row.shelf-row').first();
   await expect(shelfRow).toBeVisible();
   await expect(shelfRow.locator('.index-name')).toContainText('Moses the Hungarian');
   await expect(shelfRow.locator('.bookmark')).toHaveCount(0);
   /*
-   * The × came back on 2026-08-25, *on the desktop only* and to the right of
-   * the bookmark: a mouse has the swipe too, but a visible control is the
-   * faster hand where there is a cursor to aim it. It is the same button
-   * either way — always in the markup, carrying the whole sentence as its
-   * accessible name, let out of its clip by `(hover: hover) and (pointer:
-   * fine)`.
+   * The × is the desktop's own affordance — a mouse has the swipe too, but a
+   * visible control is the faster hand where there is a cursor. It is the same
+   * button either way: always in the markup, carrying the whole sentence as its
+   * accessible name, let out of its clip by `(hover: hover) and (pointer: fine)`.
    *
-   * Both of this suite's projects are Desktop Chrome — mobile-360 is a narrow
-   * viewport, not a touch device (playwright.config.js) — so both take the
-   * hovering branch here, and the query is read at runtime rather than
-   * assumed from the project's name. The touch half has a test of its own
-   * below, on a real touch device, because a branch asserted only where it
-   * cannot run is not asserted at all.
+   * **Both of this suite's projects are Desktop Chrome** — mobile-360 is a narrow
+   * viewport, not a touch device — so both take the hovering branch, and the
+   * query is read at runtime rather than assumed from the project's name. The
+   * touch half has a test of its own below, on a real touch device, because a
+   * branch asserted only where it cannot run is not asserted at all.
    */
   const placed = await shelfRow.evaluate((row) => {
     const card = row.getBoundingClientRect();
@@ -151,14 +122,9 @@ test('Continue reading reappears after a saint has been opened', async ({ page }
   // context an "×" says nothing.
   expect(placed.quietText).toBe('Remove Moses the Hungarian from Continue reading');
   const cardMid = placed.card.top + placed.card.height / 2;
-  /*
-   * **The × is placed against the row itself now** (2026-08-28). It used to be
-   * measured from the bookmark it stood beside — "after the mark, and the mark
-   * centred on the row" — and the author took that mark off these rows. Every
-   * claim the × makes on its own account survives: an ×, visible where there
-   * is a cursor to aim it, centred on the row, at the trailing edge, carrying
-   * the whole sentence as its name.
-   */
+  // Every claim the × makes on its own account: an ×, visible where there is a
+  // cursor to aim it, centred on the row, at the trailing edge, carrying the
+  // whole sentence as its name.
   if (placed.hovers) {
     expect(placed.quietWidth).toBeGreaterThan(8);
     expect(placed.glyph).toContain('×');
@@ -182,15 +148,10 @@ test('Continue reading reappears after a saint has been opened', async ({ page }
 
 test('a Continue reading row is swiped away, and a short push springs back', async ({ page }) => {
   /*
-   * Author, 2026-08-24: the × goes and "if you swipe across on them they get
-   * removed". Pointer events, so the mouse does it too — the same reversal
-   * the week rail made when it took the desktop drag.
-   *
-   * The spring-back half is the one worth pinning hardest: a row that
-   * vanished on any push at all would make the shelf unscrollable by touch,
-   * and a row that never moved would read as a dead press. So: a short push
-   * leaves the row exactly where it was and still on the shelf, and a long
-   * one takes it off.
+   * Pointer events, so the mouse does it too. **The spring-back half is the one
+   * worth pinning hardest**: a row that vanished on any push at all would make
+   * the shelf unscrollable by touch, and a row that never moved would read as a
+   * dead press. docs/E2E-DECISIONS.md#chromespecjs
    */
   await ready(page);
   await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
@@ -201,13 +162,12 @@ test('a Continue reading row is swiped away, and a short push springs back', asy
   await expect(rows).toHaveCount(2);
   // The push starts on the saint's *name*, which is where a reader's finger
   // or cursor lands and — as the first rendering of this gesture showed — the
-  // one place it can be stolen: a row is a link with a picture in it, and
-  // dragging a link starts a native drag that cancels the pointer stream.
-  // Pushing from the thumbnail instead would pass with that defect present.
-  // `pause` is what separates a haul from a flick: 30 ms a step is a hand
-  // moving deliberately, 0 is a hand snapping. The shelf measures the last
-  // 80 ms of travel at the release, so the two produce velocities an order of
-  // magnitude apart from the same distance.
+  // The push starts on the saint's *name*, which is where a reader's finger or
+  // cursor lands and the one place it can be stolen: a row is a link with a
+  // picture in it, and dragging a link starts a native drag that cancels the
+  // pointer stream. Pushing from the thumbnail would pass with that defect
+  // present. `pause` is what separates a haul from a flick — the shelf measures
+  // the last 80 ms of travel at the release.
   const push = async (distance, pause = 0) => {
     const name = rows.first().locator('.index-name');
     const box = await settledBox(name);
@@ -223,26 +183,17 @@ test('a Continue reading row is swiped away, and a short push springs back', asy
   };
 
   /*
-   * **The two halves parted on 2026-08-26** (author: "Make the swipe on the
-   * Continue Reading row cards easier, it snaps back too easily making it too
-   * hard to remove"). Until then "short" was the whole test of intent, and 70 px
-   * pushed at any speed sprang back.
-   *
-   * A short push is now two different gestures and the shelf reads them
-   * differently: a short *slow* one is a reader nudging a row and it springs
-   * back; a short *fast* one is a flick and the row goes. That second reading is
-   * the fix — a real swipe across a row is over in about a tenth of a second and
-   * covers a third of the width, which the old distance-only test called a miss.
-   *
-   * So this pushes slowly, with the moves spaced in time, and the flick has a
-   * test of its own below.
+   * A short push is two different gestures and the shelf reads them differently:
+   * a short *slow* one is a reader nudging a row and it springs back; a short
+   * *fast* one is a flick and the row goes. So this pushes slowly, with the moves
+   * spaced in time, and the flick has a test of its own below.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   await push(70, 30);
-  // A real wait, and it has to be: a removal is a 200 ms flight and only then
-  // a repaint, so asserting the count straight after the push passes while
-  // the row is still on screen on its way out. (Caught by backing the
-  // threshold out to zero and watching this test pass regardless.) Past the
-  // flight, a row that was going is gone and a row that sprang back is home.
+  // A real wait, and it has to be: a removal is a flight and only then a
+  // repaint, so asserting the count straight after the push passes while the row
+  // is still on screen on its way out. (Caught by backing the threshold out to
+  // zero and watching this test pass regardless.)
   await page.waitForTimeout(500);
   await expect(rows).toHaveCount(2);
   // Home again, not left hanging where the hand let go.
@@ -258,14 +209,13 @@ test('a Continue reading row is swiped away, and a short push springs back', asy
 
 test('on a touch device the shelf row carries no ×, and the swipe still clears it', async ({ browser }) => {
   /*
-   * The other half of 2026-08-25's instruction: the × came back "on desktop
-   * only". A phone keeps the swipe alone, because a control sized for a
-   * fingertip beside a bookmark on a 48 px row is how a reader clears a shelf
-   * they meant to scroll past.
+  /*
+   * A phone keeps the swipe alone, because a control sized for a fingertip on a
+   * 48 px row is how a reader clears a shelf they meant to scroll past.
    *
-   * This needs a real touch device — both of the suite's own projects are
-   * Desktop Chrome, one of them merely narrow, and both report a fine
-   * hovering pointer — so the media query that hides the × never fires there.
+   * **This needs a real touch device** — both of the suite's projects are Desktop
+   * Chrome, one merely narrow, and both report a fine hovering pointer, so the
+   * media query that hides the × never fires there.
    */
   const ctx = await browser.newContext({ ...devices['Pixel 5'] });
   const page = await ctx.newPage();
@@ -360,29 +310,18 @@ test('toggling the theme does not move the header, and the toggle is two-way', a
 
 test('the header carries no date, and the controls keep their places at both widths', async ({ page }) => {
   /*
-   * Today's date stood under the theme control from 2026-08-21 to 2026-08-22
-   * and is withdrawn. Wide, the row is unchanged: the calendar control — which
-   * names the church the site reads — then the language control and the icon
-   * toggle, all on one line, the bar no taller than it was with the date
-   * (61 px). Narrow, the author rearranged it twice: on 2026-08-24 the name
-   * spanned the top with the calendar control down on the nav's line, and on
-   * 2026-08-25 that became **one line of chrome** — calendar control, name,
-   * language and theme — with the four pages centred on a row beneath it,
-   * "in one line across all screen sizes". So the "one line" assertion is
-   * the wide branch's alone, and the narrow branch pins the arrangement that
-   * replaced both: the three controls level with the name and in order across
-   * it, the nav centred underneath, down to a 320 px phone.
+   * Wide, the row is one line: the calendar control, then the language control
+   * and the icon toggle. Narrow, it is **one line of chrome** — calendar, name,
+   * language, theme — with the four pages centred on a row beneath, down to a
+   * 320 px phone. So the "one line" assertion is the wide branch's alone.
    *
-   * **The wide branch is measured in a wide utility face**, the
-   * lesson applied to the header: `--font-utility` is the reader's own system
-   * stack, so the same row is a different width on every machine — Segoe UI on
-   * Windows, DejaVu Sans on a bare Linux runner. This row had 6 px of slack in
-   * Segoe and was 20 px over in DejaVu, so it held one line on the desk that
-   * built it and wrapped to 76 px in CI, unseen, from the start (which put
-   * the language control in the corner) until CI said so then. The
-   * face is forced here, and the native one is printed to the run's log, so
-   * the assertion is one width on every machine and the runner still says in
-   * numbers what its own face costs.
+   * **The wide branch is measured in a wide utility face** (trap 2).
+   * `--font-utility` is the reader's own system stack, so the same row is a
+   * different width on every machine, and this row held one line on the desk
+   * that built it while wrapping in CI, unseen, from the start. The face is
+   * forced here and the native one printed to the log, so the assertion is one
+   * width everywhere and the runner still says what its own face costs.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
@@ -394,10 +333,10 @@ test('the header carries no date, and the controls keep their places at both wid
     return `${h.getBoundingClientRect().height.toFixed(2)} px, utility face ${face}`;
   });
   console.log(`[header, native utility face] ${nativeHeight}`);
-  // DejaVu Sans is what a bare ubuntu runner has and is among the widest
-  // faces a reader will meet; Verdana is its Windows/macOS equivalent in
-  // width, and fontconfig aliases Verdana to DejaVu on Linux. Either way the
-  // header is measured against the widest realistic chrome, not the local one.
+  // DejaVu Sans is what a bare ubuntu runner has and is among the widest faces a
+  // reader will meet; Verdana is its Windows/macOS equivalent in width, and
+  // fontconfig aliases Verdana to DejaVu on Linux. Either way the header is
+  // measured against the widest realistic chrome, not the local one.
   await page.addStyleTag({
     content: ':root { --font-utility: "DejaVu Sans", Verdana, sans-serif !important; }',
   });
@@ -446,18 +385,15 @@ test('the header carries no date, and the controls keep their places at both wid
 
 test('the chrome line holds down to a 320 px phone, in every language', async ({ browser }) => {
   /*
-   * Author, 2026-08-25: the calendar control, the name and the two toggles
-   * "remain in one line across all screen sizes". 320 px is the narrowest
-   * phone the site meets, and the name is the elastic part — it gives up size
-   * and then tail rather than pushing a control off the line, because a
-   * calendar control that says nothing is worse than a smaller masthead.
+   * 320 px is the narrowest phone the site meets, and the name is the elastic
+   * part: it gives up size and then tail rather than pushing a control off the
+   * line, because a calendar control that says nothing is worse than a smaller
+   * masthead.
    *
-   * The first cut of this layout failed here in a way worth keeping a note
-   * of: the name's track was a bare `1fr`, whose automatic minimum is
-   * min-content, so a long name widened the track instead of ellipsising and
-   * printed straight across the controls — at 320 px in English and at 360 in
-   * Russian. `minmax(0, 1fr)` is the fix, and the same trap caught the
-   * month's own span then.
+   * **The landmine**: a bare `1fr` track has an automatic minimum of min-content,
+   * so a long name widens the track instead of ellipsising and prints straight
+   * across the controls. `minmax(0, 1fr)` is the fix, and the same trap caught
+   * the month's own span. docs/E2E-DECISIONS.md#chromespecjs
    */
   for (const [width, language] of [[320, 'en'], [360, 'ru'], [360, 'el'], [412, 'ro']]) {
     const ctx = await browser.newContext({ viewport: { width, height: 780 } });
@@ -531,25 +467,20 @@ test('the calendar is remembered, and the header changes it', async ({ page }) =
 
 test('an answered panel shrinks into the control that changes it', async ({ page }) => {
   /*
-   * Author, 2026-08-25 evening: "have an animation showing the pop-up shrink
-   * and fade into the button it comes from so people remember where to click
-   * to make changes."
-   *
-   * It is a teaching gesture, not decoration: the site hides both answers
-   * behind two small controls in the header, and a reader who answers and
-   * never sees where the answer went has to hunt for it next time. So the
-   * assertion is about *direction* — the panel is travelling towards the
-   * control, and has not simply faded where it stood.
+   * A teaching gesture, not decoration: the site hides both answers behind two
+   * small controls in the header, and a reader who answers and never sees where
+   * the answer went has to hunt for it next time. So the assertion is about
+   * *direction* — the panel is travelling towards the control, and has not
+   * simply faded where it stood. docs/E2E-DECISIONS.md#chromespecjs
    */
   await ready(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   const button = page.locator('#church-open');
   const before = await button.boundingBox();
   await button.click();
-  // The panel arrives with a flight of its own since 2026-08-26 evening, so
-  // let it land before asking where it is: a box halfway through arriving is
-  // at neither end of its journey, and the direction below is measured from
-  // this rect.
+  // The panel arrives with a flight of its own, so let it land before asking
+  // where it is: a box halfway through arriving is at neither end of its
+  // journey, and the direction below is measured from this rect.
   await panelSettled(page);
   const panel = page.locator('#church-panel .church-panel-inner');
   const from = await panel.boundingBox();
@@ -599,38 +530,21 @@ test('under reduced motion the panel does not fly, it is simply gone', async ({ 
 
 test('a first visit is shown where the two controls are, and the day is not held back', async ({ page }) => {
   /*
-   * **This reverses the first-visit gate**, at the author's instruction of
-   * 2026-08-26: "Replace the language and calendar pop-ups on first opening
-   * with a fade-in glowing tool tip with an arrow pointing to each of the two
-   * buttons, explaining you can select your church from here, and language from
-   * here."
-   *
-   * What the gate was for is worth restating, because it was not decoration.
-   * From 2026-08-21 the calendar asked which church the reader kept and showed
-   * *nothing* until it was answered — no strip, no date, no day — on the
-   * argument that a calendar with no church chosen is the site picking one and
-   * not saying so. A second block joined it on 2026-08-25 evening for the
-   * language, and that one was an offer rather than a gate, because English is
-   * a default the reader is already reading.
-   *
-   * The argument is answered rather than dropped, and this is where that is
-   * pinned. The guess is `defaultChurch()` — the reader's own browser language,
-   * never written to settings — the header has named the church on every page
-   * since 2026-08-24, and a mark under that control says which control changes
-   * it. `hasChosen()` is untouched: the marks come back next visit, and the
-   * three pages that can do without a calendar still do (`chosenChurch`).
+   * **This reverses the first-visit gate**, which showed *nothing* until the
+   * reader said which church they kept. The argument is answered rather than
+   * dropped: the guess is `defaultChurch()` — the reader's own browser language,
+   * never written to settings — the header names the church on every page, and a
+   * mark under that control says which control changes it. `hasChosen()` is
+   * untouched, so the marks come back next visit.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   // The gate itself, gone: no panel, no blocks, and nothing hidden behind them.
   await expect(page.locator('[data-ask]')).toHaveCount(0);
   await expect(page.locator('.cal-gate')).toHaveCount(0);
-  /*
-   * The picker, which is one grain at every width since the rebuild of
-   * 2026-09-12: the week rail went with the register (plan §6) and the month
-   * grid it used to toggle against stands in the sidebar wherever the page is
-   * read. What this line is really saying is that the day is not held back
-   * behind a gate, which is true whichever grain draws it.
-   */
+  // The picker is one grain at every width: the month grid stands in the
+  // sidebar wherever the page is read. What this line says is that the day is
+  // not held back behind a gate.
   await expect(page.locator('.day-side [data-cal] .cal-day[data-iso]').first()).toBeVisible();
   // The day's leading saint is the first tile of the grid now (plan §6: the
   // hero card is gone), and the tile at the head of the grid is the one
@@ -659,12 +573,11 @@ test('a first visit is shown where the two controls are, and the day is not held
     expect(Math.abs(pointing[i] - (target.x + target.width / 2))).toBeLessThan(2);
   }
 
-  // A mark is still not an answer: nothing about the *church* is stored by
-  // being shown one, which is what keeps the guess a guess.
-  // Not `toBeUndefined`: since 2026-08-27 being *shown* a mark writes the
-  // seen list, and `writeSetting` persists the whole settings object, so
-  // `church` is stored as an explicit null. Every reader of it — `hasChosen`
-  // above all — asks whether it is null, so nothing about the guess changes.
+  // A mark is still not an answer: nothing about the *church* is stored by being
+  // shown one, which is what keeps the guess a guess. Not `toBeUndefined` —
+  // being shown a mark writes the seen list and `writeSetting` persists the
+  // whole settings object, so `church` is stored as an explicit null, which is
+  // what every reader of it asks about.
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings') ?? '{}').church ?? null)).toBeNull();
   await page.locator('.coachmark-close').first().click();
   await expect(marks).toHaveCount(1);
@@ -680,12 +593,10 @@ test('a first visit is shown where the two controls are, and the day is not held
 
 test('a coachmark goes on the second scroll, and not on the first', async ({ page }) => {
   /*
-   * Author, 2026-08-26: "It also disappears after the second scroll input, down
-   * or up." Two, not one, and the reason is that the first scroll is a reader
-   * looking at the page they arrived on — dismissing on it would mean most
-   * readers never read the mark at all.
+   * Two scroll inputs, not one: the first is a reader looking at the page they
+   * arrived on, and dismissing on it would mean most readers never read the mark.
    *
-   * What counts as *one* input is the part worth pinning: a wheel notch fires
+   * **What counts as *one* input is the part worth pinning**: a wheel notch fires
    * scroll events every frame for a few hundred milliseconds, so counting raw
    * events would spend both on one gesture. ui/coachmark.js separates them by a
    * pause, which is what the waits below are.
@@ -695,13 +606,10 @@ test('a coachmark goes on the second scroll, and not on the first', async ({ pag
   await expect(page.locator('.coachmark')).toHaveCount(2);
 
   /*
-   * The pointer has to be over something that scrolls. Since 2026-09-01 the
-   * Daily page's own columns carry the scrolling and the page does not, so a
-   * wheel spun over the header — where the mouse sits by default — reaches
-   * nothing at all. `ui/coachmark.js` takes the event from whichever element
-   * scrolled; this puts the mouse over one. Since the rebuild of 2026-09-12
-   * that scroller is `.td-scroll`, the strip the day's saints are read down,
-   * with the standing column over its left edge (plan §5).
+   * The pointer has to be over something that scrolls: the Daily page's own
+   * columns carry the scrolling and the page does not, so a wheel spun over the
+   * header — where the mouse sits by default — reaches nothing at all.
+   * `ui/coachmark.js` takes the event from whichever element scrolled.
    */
   const column = await page.locator('.td-scroll').boundingBox();
   await page.mouse.move(column.x + column.width / 2, column.y + column.height / 2);
@@ -718,30 +626,19 @@ test('a coachmark goes on the second scroll, and not on the first', async ({ pag
 
 test('on a first visit the two marks clear the fold, and so does the day', async ({ page }) => {
   /*
-   * The exception this test was written for is gone with the gate (2026-08-26).
-   * From 2026-08-21 to 2026-08-26 a first visit saw the question and nothing
-   * else, and what had to clear the fold was the question and every one of its
-   * answers — which is why the rule above about the saint's name clearing the
-   * fold had to make an exception for the first visit.
+   * A first visit gets the day *and* is told where the two controls are. Both
+   * marks stand clear of the fold on a 360x780 phone, and so does the day under
+   * them.
    *
-   * There is no exception now, and that is the stronger claim: a first visit
-   * gets the day *and* is told where the two controls are. Both marks stand
-   * clear of the fold on a 360x780 phone, and so does the day under them,
-   * which no first visit could see at all before.
+   * **What "the day" is has changed, and the assertion with it** (plan §5, §7):
+   * a phone reads the standing column first and the saints under it, so the
+   * hero's *name* is past the fold by design and what has to clear it is the
+   * day's own date and the first saint's tile.
    *
-   * **What "the day" is has changed, and the assertion with it** (plan §5,
-   * §7). It was the hero's name, the first thing under the marks on the old
-   * page. A phone now reads the standing column first — the date, the
-   * reckoning, the cycle and the fast — and the saints under it, and the
-   * leading saint's card opens with its picture. So the name itself is past
-   * the fold by design, and what has to clear it is the day's own date and the
-   * first saint's tile: the reader is looking at the day and at a saint, which
-   * is what this has always been about.
-   *
-   * The marks must also not overlap each other. They sit under controls at
+   * **The marks must also not overlap each other.** They sit under controls at
    * opposite ends of the header, and a 30ch box under each overlapped in the
-   * middle of a 390 px screen — the one drawn second covering the ×  of the one
-   * drawn first. Found by rendering it and looking; kept honest here.
+   * middle of a 390 px screen, the second covering the × of the first.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   await page.setViewportSize({ width: 360, height: 780 });
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
@@ -768,28 +665,15 @@ test('on a first visit the two marks clear the fold, and so does the day', async
 
 test('a first visit opens on a calendar it did not choose, and is told which', async ({ page }) => {
   /*
-   * Addendum H7–H8 said the strip, the date and the day stay hidden until the
-   * reader has said which calendar they keep (author, 2026-08-22). **Superseded
-   * 2026-08-26**, with the coachmarks: the day opens on a guessed calendar and
-   * the guess is named in the header, which is the whole of what makes it
-   * honest. The test is kept and turned around, because the property it guards
-   * is the same one — the reader must never be shown a calendar without being
-   * told which it is.
+   * The reader must never be shown a calendar without being told which it is:
+   * the day opens on a guessed calendar and the guess is named in the header,
+   * which is the whole of what makes it honest.
    *
    * The guess is the browser's own language and nothing else about the reader.
    * This context is en-US, which none of the four churches claims, so it falls
-   * through to Russian — the calendar with the most to show: 426 of the 742
-   * folders and day records running to January where the Greek and Serbian stop
-   * in September.
+   * through to Russian. docs/E2E-DECISIONS.md#chromespecjs
    */
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
-  /*
-   * The picker, which is one grain at every width since the rebuild of
-   * 2026-09-12: the week rail went with the register (plan §6) and the month
-   * grid it used to toggle against stands in the sidebar wherever the page is
-   * read. What this line is really saying is that the day is not held back
-   * behind a gate, which is true whichever grain draws it.
-   */
   await expect(page.locator('.day-side [data-cal] .cal-day[data-iso]').first()).toBeVisible();
   // The day's leading saint is the first tile of the grid now (plan §6: the
   // hero card is gone), and the tile at the head of the grid is the one
@@ -805,13 +689,6 @@ test('a first visit opens on a calendar it did not choose, and is told which', a
   await page.locator('#church-panel [data-church="russian"]').click();
   // Choosing the same calendar the guess had picked still changes something:
   // it is stored, and the marks stop.
-  /*
-   * The picker, which is one grain at every width since the rebuild of
-   * 2026-09-12: the week rail went with the register (plan §6) and the month
-   * grid it used to toggle against stands in the sidebar wherever the page is
-   * read. What this line is really saying is that the day is not held back
-   * behind a gate, which is true whichever grain draws it.
-   */
   await expect(page.locator('.day-side [data-cal] .cal-day[data-iso]').first()).toBeVisible();
   await expect(page.locator('[data-which]')).toHaveCount(0);
   await expect(page.locator('#church-open')).toHaveText('Russian');
@@ -853,12 +730,10 @@ test('the theme follows the system until it is touched, and holds once it is', a
 });
 
 test('the site is named in the reader\u2019s own language, and the habit page is Daily', async ({ page }) => {
-  // Author, 2026-08-23. The name in the head and the page's nav label. The
-  // head and the corner carried two deliberately different names until
-  // 2026-09-12, when the author ended the split: both are AGIOS now, in every
-  // language. The veil carried the head's name until 2026-08-24 and now
-  // carries the corner's; that has a test of its own below. The route stays
-  // /calendar so no link breaks.
+  // The name in the head and the page's nav label. The head and the corner
+  // carried two deliberately different names until the author ended the split;
+  // both are AGIOS now, in every language. The route stays /calendar so no link
+  // breaks. docs/E2E-DECISIONS.md#chromespecjs
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(page).toHaveTitle(/AGIOS/);
@@ -866,18 +741,15 @@ test('the site is named in the reader\u2019s own language, and the habit page is
   // the mark's label. What this test is about — that the corner carries the
   // site's name and the nav's word for the habit page moves — is unchanged.
   await expect(page.locator('.site-name .brand-mark')).toHaveAttribute('aria-label', 'AGIOS');
+  // On a day that is not today the button reads **Today**. The claim here is
+  // about the *base* word, so it is read where the base word shows: on today
+  // itself, and on any page that is not the Daily one.
   /*
-   * On a day that is not today the button reads **Today** since 2026-08-26
-   * evening — press it and it goes back. The claim this test makes is about
-   * the *base* word, so it is read where the base word is what shows: on
-   * today itself, and on any page that is not the Daily one.
-   */
-  /*
-   * `[aria-current="page"]` rather than `.first()` of every `href$="/"` link
-   * (2026-09-07): the phone's endless nav (`ui/nav-scroll.js`) renders the
-   * calendar link twice more as plain, non-fading buffered clones, and
-   * `.first()` in DOM order meets one of those before the one real link that
-   * ever wears `Today`. Exactly one link answers `aria-current` at any width.
+   * `[aria-current="page"]` rather than `.first()` of every `href$="/"` link:
+   * the phone's endless nav (`ui/nav-scroll.js`) renders the calendar link twice
+   * more as plain, non-fading buffered clones, and `.first()` in DOM order meets
+   * one of those before the one real link that ever wears `Today`. Exactly one
+   * link answers `aria-current` at any width.
    */
   await page.goto(await aDayThatIsNotToday(page), { waitUntil: 'networkidle' });
   await expect(page.locator('.site-nav a[aria-current="page"]')).toHaveText('Today');
@@ -890,22 +762,16 @@ test('the site is named in the reader\u2019s own language, and the habit page is
 
 test('the veil names the site the way the header does', async ({ page }) => {
   /*
-   * Author, 2026-08-24. The loading veil read one name and the corner another;
-   * the first thing a reader sees painted and the name in the corner it fades
-   * into are the same
-   * words, and the split survives only where a reader meets it in a tab or a
-   * bookmark.
-   *
-   * The veil is removed 300 ms after the manifest lands, so it is read out of
-   * the served HTML rather than raced for in a live page.
+   * The loading veil and the corner are the same words. The veil is removed 300
+   * ms after the manifest lands, so it is read out of the served HTML rather
+   * than raced for in a live page. docs/E2E-DECISIONS.md#chromespecjs
    */
   const html = await (await page.request.get('/')).text();
   /*
-   * **The veil carries the mark, not the words** (2026-08-28). The claim is
-   * unchanged and so is the reason for reading the served HTML rather than the
-   * live page: the veil is what a reader sees before the modules parse, so the
-   * name has to be in the markup. It is now an SVG of the stamp face's own
-   * outlines, which is what stopped it being painted in Literata first.
+  /*
+   * **The veil carries the mark, not the words**, and it is read out of the
+   * served HTML rather than the live page: the veil is what a reader sees before
+   * the modules parse, so the name has to be in the markup.
    */
   expect(html).toContain('class="veil-name" data-site-name><svg');
   expect(html).not.toContain('AGIOS</div>');
@@ -914,20 +780,12 @@ test('the veil names the site the way the header does', async ({ page }) => {
   expect(html).toContain('<title>AGIOS</title>');
 
   /*
-   * **And neither printed name follows the language any more** (author,
-   * 2026-08-28: "make sure this new website title is applied to all languages,
-   * it no longer gets translated, it stays constant as a stamp of branding").
-   *
-   * This supersedes 2026-08-25's "change the title on header and loading screen
-   * to the picked language" rather than reversing it: what that instruction was
-   * fixing was a name hard-coded in index.html and stale by a rename, and the
-   * name still comes from exactly one place — the outlined mark that
-   * `scripts/make_wordmark.py` draws. What has changed is that the place is
-   * not the pack. PLAN.md §3 "The name" lists every surface it reaches.
-   *
-   * The markup's own English is now simply right rather than a placeholder the
-   * pack paints over, which is why the assertion above can read it out of the
-   * served HTML at all.
+   * **And neither printed name follows the language.** The name comes from
+   * exactly one place — the outlined mark `scripts/make_wordmark.py` draws — and
+   * that place is not the pack. PLAN.md §3 "The name" lists every surface it
+   * reaches; the markup's own English is simply right rather than a placeholder
+   * the pack paints over, which is why the assertion above can read it out of
+   * the served HTML at all. docs/E2E-DECISIONS.md#chromespecjs
    */
   await page.addInitScript(() =>
     localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'russian', language: 'ro' })),
@@ -938,28 +796,21 @@ test('the veil names the site the way the header does', async ({ page }) => {
   // site's name and the nav's word for the habit page moves — is unchanged.
   await expect(page.locator('.site-name .brand-mark')).toHaveAttribute('aria-label', 'AGIOS');
   // And the tab carries the same name. It used to carry a second, translated
-  // one; the author ended that split on 2026-09-12, so this line is now the
-  // assertion that there is only one name rather than that there are two.
+  // one, so this line asserts that there is only one name rather than two.
   await expect(page).toHaveTitle(/AGIOS/);
 });
 
 test('the site mark is the Orthodox cross, in gold by instruction', async ({ page }) => {
   /*
-   * Author, 2026-08-24. The favicon was one gold cell — the attested mark of
-   * the veneration badge, which was removed whole then, so it had
-   * been standing for a thing that no longer exists. It is now the
-   * eight-pointed cross: upright, titulus, crossbar, and the slanted
+   * The eight-pointed cross: upright, titulus, crossbar, and the slanted
    * footrest, whose slant is the whole of what makes it Orthodox rather than
    * Latin.
    *
-   * It was drawn in ink for exactly one day. PLAN.md reserves gold for a
-   * finding about veneration and nothing else, and a site mark is not one —
-   * which is why the gold was taken out. *The author put it back on
-   * 2026-08-25* ("make the site icon gold colour orthodox cross"), and §2
-   * records the exception in place: gold is spent here and nowhere else on
-   * the site. So this pins the two gold tokens exactly — a mark drifting to
-   * some other yellow would be the failure now — and the "spent nowhere else"
-   * half is still guarded by its own test over the rendered pages.
+   * **Gold is spent here and nowhere else on the site** — PLAN.md §2 records the
+   * exception in place. So this pins the two gold tokens exactly, a mark
+   * drifting to some other yellow being the failure now; the "spent nowhere
+   * else" half has its own test over the rendered pages.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   const html = await (await page.request.get('/')).text();
   const href = html.match(/<link rel="icon" href="([^"]+)"/)?.[1];
@@ -991,16 +842,11 @@ test('the site mark is the Orthodox cross, in gold by instruction', async ({ pag
 
 test('the calendar chooser asks its question and offers the four, with nothing between', async ({ page }) => {
   /*
-   * Author, 2026-08-24: the paragraph under the heading is removed outright.
-   * It named the four churches and their two calendars in prose directly
-   * above four buttons each printing exactly that, so it said the choices
-   * twice and put four lines between the question and the answer.
-   *
-   * **One host since 2026-08-26**, where there were two. The component drew the
-   * calendar page's first-visit gate as well as the header's panel; the gate is
-   * gone with the coachmarks that replaced it, so the header's panel is the
-   * whole of where this question is now asked — which is also where the marks
-   * point.
+   * The paragraph under the heading is removed outright: it named the four
+   * churches and their two calendars in prose directly above four buttons each
+   * printing exactly that, so it said the choices twice and put four lines
+   * between the question and the answer.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
@@ -1013,15 +859,11 @@ test('the calendar chooser asks its question and offers the four, with nothing b
 
 test('the header names the church with a mark, not with the word calendar', async ({ page }) => {
   /*
-   * Author, 2026-08-24: the control read "{church} calendar" and now wears a
-   * calendar mark and the church's name alone, to give the header its width
-   * back. The mark is the same drawing as the month toggle on the calendar
-   * page, one size down.
-   *
    * The accessible name is the part that must not thin out with the visible
    * text: an icon says nothing to a screen reader, and the aria-label used to
    * swallow the church's name while the visible text carried it. It now says
    * which church as well as what a press does.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   await ready(page, { church: 'romanian' });
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
@@ -1031,13 +873,10 @@ test('the header names the church with a mark, not with the word calendar', asyn
   await expect(open).toHaveAttribute('aria-label', /Romanian calendar/);
   await expect(open).toHaveAttribute('aria-label', /change which church/i);
   /*
-   * Shorter than the sentence it replaced, which was the point of the change:
-   * "Romanian calendar" at this face is comfortably past 130 px.
-   *
-   * Scaled by the control's own size since 2026-09-01, when the chrome
-   * doubled past 1024 px: 130 was a measurement of 13.5 px type, and a bound
-   * that ignores the type size stops being a claim about the *label* and
-   * becomes one about the breakpoint.
+   * Shorter than the sentence it replaced, which was the point of the change.
+   * **Scaled by the control's own size**: the bound was measured at 13.5 px type,
+   * and a bound that ignores the type size stops being a claim about the *label*
+   * and becomes one about the breakpoint.
    */
   const box = await open.boundingBox();
   const size = await open.evaluate((el) => parseFloat(getComputedStyle(el).fontSize));
@@ -1046,11 +885,9 @@ test('the header names the church with a mark, not with the word calendar', asyn
 
 test('About states the privacy policy, and states it as the code behaves', async ({ page }) => {
   /*
-   * Author, 2026-08-24. Written against lib/settings.js and lib/store.js
-   * rather than as boilerplate: the four things kept are the reading
-   * position, the saved and recently-opened saints, the church and the theme,
-   * and how the Index was left. A privacy policy that has drifted from the
-   * code is worse than none, because a reader has no way to tell.
+   * Written against lib/settings.js and lib/store.js rather than as boilerplate.
+   * A privacy policy that has drifted from the code is worse than none, because
+   * a reader has no way to tell.
    */
   await ready(page);
   await page.goto('/about', { waitUntil: 'networkidle' });
@@ -1077,12 +914,10 @@ test('About states the privacy policy, and states it as the code behaves', async
 
 test('the language control offers five, each naming itself in its own tongue', async ({ page }) => {
   /*
-   * Author, 2026-08-24. A globe mark and the current code between the
-   * calendar control and the theme toggle; the panel offers each language in
-   * its own name — «Русский», not "Russian" — because the reader who needs
-   * the control is precisely the one who may not read the language the site
-   * is currently in. Each choice carries its own lang attribute so a screen
-   * reader pronounces it in that language.
+   * The panel offers each language in its own name — «Русский», not "Russian" —
+   * because the reader who needs the control is precisely the one who may not
+   * read the language the site is currently in. Each choice carries its own
+   * `lang` so a screen reader pronounces it in that language.
    */
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
@@ -1103,20 +938,16 @@ test('the language control offers five, each naming itself in its own tongue', a
 });
 
 test('choosing Russian redraws the page in Russian, dates included, and it holds across a reload', async ({ page }) => {
-  // Julian, not `ready()`'s own explicit-Gregorian default: the Dormition
-  // fast this test reads (26 August civil) is dated by the Russian church's
-  // own Julian reckoning, and a forced Gregorian reckoning here would price
-  // the fast off the wrong 14 days entirely (see daily-panel.spec.js's own note
-  // on this, and lib/church.js's `calendarFor`).
+  // Julian, not `ready()`'s own explicit-Gregorian default: the Dormition fast
+  // this test reads is dated by the Russian church's own Julian reckoning, and a
+  // forced Gregorian reckoning here would price it off the wrong 14 days
+  // entirely (lib/church.js's `calendarFor`).
   await ready(page, { reckoning: null });
   /*
-   * **And past 1024 px, since 2026-09-12**, for the same reason: below that
-   * width the reckoning is fixed Gregorian whatever the church keeps (author,
-   * "a phone is Gregorian only"; `lib/viewport.js`), so following the church
-   * is a thing only a desk does and the Julian numerals below exist only
-   * here. What this test is about is the *language*, which is the same at
-   * both widths — `daily-panel.spec.js`'s first test is where the phone's own
-   * reading of this rule is pinned.
+   * **And past 1024 px**, for the same reason: below that width the reckoning is
+   * fixed Gregorian whatever the church keeps (`lib/viewport.js`), so the Julian
+   * numerals below exist only here. What this test is about is the *language*,
+   * which is the same at both widths.
    */
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto('/calendar/2026-08-26', { waitUntil: 'networkidle' });
@@ -1130,43 +961,20 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
   expect(await page.evaluate(() => document.documentElement.lang)).toBe('ru');
   /*
    * **All Saints and not Daily.** The first nav link is the one word in the
-   * chrome that changes with the *date*, and this page is a hardcoded one:
-   * on 26 August the button reads «Ежедневно» and on every other day
-   * «Сегодня». It read the same either way until 2026-08-27, when the packs
-   * were given a distinct base word, and CI went red the same evening because
-   * the runner's clock was on the 26th. What this test is claiming — that the
-   * whole chrome redraws in Russian — is made by a word that stands still;
-   * the Daily button's two words have two tests of their own.
+   * chrome that changes with the *date*, and this page is a hardcoded one, so on
+   * one day of the year it reads «Ежедневно» and on every other «Сегодня». The
+   * claim here — that the whole chrome redraws in Russian — is made by a word
+   * that stands still; the Daily button's two words have two tests of their own.
    */
   await expect(page.locator('.site-nav a').nth(1)).toHaveText('Все святые');
   await expect(page.locator('#church-open')).toHaveText('Русская');
-  // Capitalised, and the month's own abbreviation dot dropped (author,
-  // 2026-08-25). Said plainly because it is a departure: lower case is
-  // correct Russian orthography for a weekday and a month, and «авг.» wants
-  // its dot; the author asked for capitals and no dot, and only the weekday
-  // and month parts are touched — the literal «2026 г.» keeps the dot that
-  // belongs to a different word.
-  // The month in full since 2026-09-01, in every pack: `headingFmt` asks Intl
-  // for `month: 'long'` where it asked for `short`.
   /*
-   * The month is abbreviated at this width since 2026-09-02 - and it is the
-   * *pack's* own abbreviation, which is the half of that change worth pinning
-   * here: «Авг» rather than a English "Aug" leaking into a Russian heading.
-   *
-   * **13, not 26** (2026-09-05, following the "Follow my church" fix):
-   * unset reckoning now truly follows the Russian church's own default,
-   * Julian, and the numerals are the reckoned ones — 26 August civil is 13
-   * August Julian. The weekday alone stays civil («Среда» is still right for
-   * the 26th), which is CLAUDE.md's own rule for `reckonedHeading`.
-   */
-  /*
-   * **Two lines rather than one, since the rebuild of 2026-09-12.** The day's
-   * heading was one `h1` reading "Среда, 13 Авг 2026 г."; the standing column
-   * prints the weekday as its own small label over the date (plan §5), and
-   * the date is set in full where the old heading abbreviated the month to fit
-   * a strip. Both halves are asserted, because the claim has always been that
-   * the whole heading redraws in Russian and the weekday is the half that is
-   * still read off the civil day.
+   * Two lines rather than one: the standing column prints the weekday as its own
+   * small label over the date (plan §5). **The weekday alone stays civil** —
+   * «Среда» is right for the 26th while the numerals are Julian — which is
+   * CLAUDE.md's own rule for `reckonedHeading`, and the half of this that a
+   * reckoning change would silently break.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   await expect(page.locator('[data-day-word]')).toHaveText('Среда');
   await expect(page.locator('.day-date')).toHaveText(/^13 Авг(уста)? 2026 г\.$/);
@@ -1175,19 +983,13 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
   // Russian page still says AGIOS while everything above it is Russian.
   await expect(page).toHaveTitle(/AGIOS/);
   // The fast line: label and recurring reason translated, the cycle line
-  // deliberately not — it is composed in English by lib/liturgy.js, the
-  // recorded seam.
-  // 26 August: days.pravoslavie.ru printed «Успенский пост; сухоядение», so
-  // the grade leads the line, in Russian, from the pack's own vocabulary —
-  // naming the *type* of fast since 2026-08-26 rather than the technical
-  // term, which is why this reads Строгий пост and not Сухоядение.
+  // deliberately not — it is composed in English by lib/liturgy.js, the recorded
+  // seam. The grade leads the line and names the *type* of fast rather than the
+  // technical term, which is why this reads Строгий пост and not Сухоядение.
   /*
-   * The fast and its occasion are one tag now rather than a line and a chip
-   * beside it (plan §6: the fast bubble and its controls are gone), and the
-   * cycle and the tone have the sidebar's own line. Every fact survives the
-   * move, which is what this asserts — the grade in Russian, the occasion it
-   * belongs to, and the tone — and none of them is read off the same element
-   * as before.
+   * The fast and its occasion are one tag rather than a line and a chip beside
+   * it (plan §6), and the cycle and tone have the sidebar's own line. Every fact
+   * survives the move, which is what this asserts.
    */
   await expect(page.locator('.day-tags .tag[data-fast]')).toHaveText(/^Строгий пост/);
   await expect(page.locator('.day-tags .tag[data-fast]')).toContainText('Успенский пост');
@@ -1202,12 +1004,10 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
 
 test('About offers a way to write, and it goes to the repository', async ({ page }) => {
   /*
-   * Author, 2026-08-25: a contact option, "or even better if they can be
-   * stored in the github repo by some built-in affordance so my name doesn't
-   * get too involved". Issues are that affordance: no address is printed, no
-   * form is posted anywhere, and a static site needs no server to receive
-   * one. The trade - that an issue is public - is told to the reader before
-   * they open one rather than after.
+   * Issues are the affordance: no address is printed, no form is posted
+   * anywhere, and a static site needs no server to receive one. The trade — that
+   * an issue is public — is told to the reader before they open one.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   await ready(page);
   await page.goto('/about', { waitUntil: 'networkidle' });
@@ -1223,21 +1023,13 @@ test('About offers a way to write, and it goes to the repository', async ({ page
 
 test('the four pages hold one line in every pack, at every width', async ({ browser }) => {
   /*
-   * Author, 2026-08-25 evening: switching to Russian "the buttons for Daily,
-   * All Saints, Map and About pages go into two rows because the content
-   * column on the screen is too narrow. Make sure this never displays like
-   * that."
-   *
    * The header's wide grid used to hand the nav the *leftovers* of a `1fr`
-   * track, and in Russian, Greek and Serbian what was left was narrower than
-   * the four labels. Which of the two gives way is the whole decision, and
-   * the nav wins: the four pages are how the site is used, the masthead is a
-   * constant learnt once. So the nav has its own `auto` track and the name
-   * pays in lines — «Ορθοδοξία / Καθημερινά», every word intact.
-   *
-   * The arithmetic is why there is no third option: at the 72ch column the
-   * one-line row needs 678 px in Russian, 695 in Greek and 672 in Serbian
-   * where 580 exist. Those three cannot hold one line at any gap.
+   * track, and in Russian, Greek and Serbian what was left was narrower than the
+   * four labels. Which of the two gives way is the whole decision, and **the nav
+   * wins**: the four pages are how the site is used, the masthead is a constant
+   * learnt once. So the nav has its own `auto` track and the name pays in lines.
+   * There is no third option — the arithmetic is in
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   // One context per pack, resized across the widths, rather than thirty cold
   // loads: the header is laid out from the same stylesheet either way, and
@@ -1261,14 +1053,11 @@ test('the four pages hold one line in every pack, at every width', async ({ brow
     for (const width of [320, 360, 480, 560, 700, 1280]) {
       await page.setViewportSize({ width, height: 900 });
       /*
-       * Crossing the nav's own 759.98px breakpoint rebuilds the row —
-       * `main.js`'s endless strip on one side, the plain row on the other —
-       * off a `resize` listener, which is a real DOM event and so fires a
-       * tick after `setViewportSize` resolves rather than inside it. A test
-       * that measured in the same tick read the *outgoing* shape at the new
-       * width: fifteen buffered links, most of them clones, laid out as a
-       * plain nowrap row well past 560 px. A double frame is the same wait
-       * this file already gives a style or font change elsewhere to land.
+       * Crossing the nav's own 759.98px breakpoint rebuilds the row off a
+       * `resize` listener, which fires a tick after `setViewportSize` resolves
+       * rather than inside it — a test that measured in the same tick read the
+       * *outgoing* shape at the new width. A double frame is the same wait this
+       * file gives a style or font change elsewhere.
        */
       await page.evaluate(() => new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r))));
       const seen = await page.evaluate(() => {
@@ -1282,10 +1071,9 @@ test('the four pages hold one line in every pack, at every width', async ({ brow
           tallest: Math.max(...links.map((a) => a.getBoundingClientRect().height)),
           /*
            * One line, measured against the line the pack is actually set in
-           * rather than against 28 px. The chrome doubles past 1024 px
-           * (2026-09-01), so a single line at 1280 is 39 px and a constant
-           * bound would read that as a wrap; a second line is twice this
-           * however large the type, which is what the assertion wants.
+           * rather than against a constant: the chrome doubles past 1024 px, so a
+           * fixed bound would read a single line at 1280 as a wrap. A second line
+           * is twice this however large the type.
            */
           line: parseFloat(getComputedStyle(links[0]).lineHeight),
           overhang: Math.max(...links.map((a) => a.getBoundingClientRect().right)) - box.right,
@@ -1297,20 +1085,16 @@ test('the four pages hold one line in every pack, at every width', async ({ brow
       expect(seen.tallest, where).toBeLessThan(seen.line * 1.6);
       /*
        * Below the nav's own breakpoint (759.98px, base.css) the row is
-       * `ui/nav-scroll.js`'s endless strip (2026-09-07), and its links
-       * legitimately run past the track's own right edge — that overflow is
-       * contained (`overhang`'s premise) rather than absent, which is what
-       * `seen.doc` below still catches if it ever leaked onto the page.
+       * `ui/nav-scroll.js`'s endless strip, and its links legitimately run past
+       * the track's right edge — that overflow is contained rather than absent,
+       * which `seen.doc` below still catches if it ever leaked onto the page.
        */
       if (width >= 760) expect(seen.overhang, where).toBeLessThan(1);
       /*
-       * Not `toBe(0)` since 2026-09-01. Past 1024 px the root holds the
-       * scrollbar's room open on every route (`scrollbar-gutter: stable`,
-       * base.css) so the header is laid out in the same box whether the page
-       * under it scrolls or not — which leaves the content legitimately a
-       * gutter's width *narrower* than the client box. What this line is for is
-       * the other sign: anything above zero is the page running off the side,
-       * and that is still caught exactly as it was.
+       * Not `toBe(0)`: past 1024 px the root holds the scrollbar's room open on
+       * every route (`scrollbar-gutter: stable`), which leaves the content
+       * legitimately a gutter's width *narrower* than the client box. Anything
+       * above zero is the page running off the side, caught exactly as before.
        */
       expect(seen.doc, where).toBeLessThanOrEqual(0);
     }
@@ -1320,18 +1104,15 @@ test('the four pages hold one line in every pack, at every width', async ({ brow
 
 test('the chrome prints no em dashes, in any language', async ({ browser }) => {
   /*
-   * Author, 2026-08-25 evening: "replace all emm dashes with normal dashes."
-   * Swept across every string the site prints — ui/strings.js, the four
-   * packs, the phrases lib/liturgy.js composes, the document title — by a
-   * scanner that knows a string literal from a comment, so the house's own
-   * prose keeps its em dashes and the reader gets none.
+   * Swept across every string the site prints by a scanner that knows a string
+   * literal from a comment, so the house's own prose keeps its em dashes and the
+   * reader gets none.
    *
-   * What is deliberately *not* swept is the corpus. Those em dashes are
-   * inside quoted source text and citation lines transcribed from four
-   * synaxaria — 3,638 of them — and editing a quotation for typography is the
-   * one thing the corpus's no-invention rule forbids. So this reads the chrome, element by
-   * element, rather than the whole page: the exception is real and is named
-   * here rather than left to be discovered.
+   * **What is deliberately not swept is the corpus.** Those em dashes are inside
+   * quoted source text and citation lines transcribed from four synaxaria, and
+   * editing a quotation for typography is the one thing the corpus's
+   * no-invention rule forbids. So this reads the chrome element by element
+   * rather than the whole page. docs/E2E-DECISIONS.md#chromespecjs
    */
   for (const [language, church] of [
     ['en', 'russian'],
@@ -1361,14 +1142,10 @@ test('the chrome prints no em dashes, in any language', async ({ browser }) => {
           '.reg-title',
           'h1',
           'h2',
-          /*
-           * The About page's own body, added 2026-08-29 with the editorial
-           * policy. It is the site's own prose rather than the corpus's, so the
-           * author's "replace all emm dashes" applies to it in full — and the
-           * separator between a church and its calendar was an em dash for one
-           * build, printed on every language, because this list read the chrome
-           * around the page and not the page.
-           */
+          // The About page's own body: it is the site's own prose rather than
+          // the corpus's, so "replace all emm dashes" applies to it in full. The
+          // separator between a church and its calendar was an em dash for one
+          // build because this list read the chrome around the page, not the page.
           'section[aria-labelledby="policy"]',
           'section[aria-labelledby="calendars"]',
           'section[aria-labelledby="sourcing"]',
@@ -1391,15 +1168,11 @@ test('the chrome prints no em dashes, in any language', async ({ browser }) => {
 
 test('the panel flies home in half the time, and the page closes behind it', async ({ page }) => {
   /*
-   * Author, 2026-08-26: "make the animation of the calendar and language tabs
-   * shrinking back to their buttons twice as fast, and make the rest of the
-   * page go back up smoothly not just clicking into place higher on the page."
-   *
-   * The second half is the interesting one. These panels sit in the flow, so
-   * hiding one at the end of its flight dropped everything below it by the
-   * panel's whole height in a single frame — the flight was smooth and its
-   * consequence was not. The space closes over the same duration now, and the
-   * flier is pinned out of flow first so the closing box cannot clip it.
+   * These panels sit in the flow, so hiding one at the end of its flight dropped
+   * everything below it by the panel's whole height in a single frame — the
+   * flight was smooth and its consequence was not. The space closes over the
+   * same duration now, and the flier is pinned out of flow first so the closing
+   * box cannot clip it. docs/E2E-DECISIONS.md#chromespecjs
    */
   await ready(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
@@ -1422,12 +1195,10 @@ test('the panel flies home in half the time, and the page closes behind it', asy
   await page.locator('#church-panel [data-church="greek"]').click();
   /*
    * The **last** frame on which the flier is still pinned, found by watching
-   * rather than by sleeping a fraction of the duration. This read
-   * `waitForTimeout(60)` until 2026-09-09, which was a comfortable sample
-   * point in a 160 ms flight and a marginal one in the 140 ms the motion
-   * scale gave it: at mobile-360 the flier was sometimes already gone and the
-   * test failed reading `duration` off null. Watching the state costs nothing
-   * and survives the next change to the number.
+   * rather than by sleeping a fraction of the duration: a fixed sample point is
+   * comfortable in one flight and marginal in the next, and at mobile-360 the
+   * flier was sometimes already gone. Watching the state survives the next
+   * change to the number.
    */
   const midFlight = await page.evaluate(async () => {
     const box = document.querySelector('#church-panel');
@@ -1454,10 +1225,8 @@ test('the panel flies home in half the time, and the page closes behind it', asy
   });
   expect(midFlight, 'the flier was never caught in the air').not.toBeNull();
   /*
-   * `--dur-answer`, 140 ms. This read 160 — halved from the 320 it flew at for
-   * one day — until the motion scale landed on 2026-09-08 and `fly.js` took
-   * the nearest named step. The 20 ms is not the point of the test; that the
-   * panel and its closing band move for the *same* duration is.
+   * `--dur-answer`. **The number is not the point of the test**; that the panel
+   * and its closing band move for the *same* duration is.
    */
   expect(midFlight.duration).toMatch(/^0\.14s/);
   expect(midFlight.panelDuration).toMatch(/^0\.14s/);
@@ -1471,12 +1240,11 @@ test('the panel flies home in half the time, and the page closes behind it', asy
 
 test('a panel reopened mid-flight is not emptied by the flight it interrupted', async ({ page }) => {
   /*
-   * The regression the flight introduced, and the reason it has a test of its
-   * own: closing pins the panel out of flow and collapses the band over 160
-   * ms, and the callback that hides and empties it runs at the end. Reopen
-   * inside that window and the old callback landed on the *new* panel —
-   * leaving it open, empty and nought pixels tall, with its buttons
-   * unclickable. A token cancels a flight the reader has overtaken.
+   * The regression the flight introduced. Closing pins the panel out of flow and
+   * collapses the band, and the callback that hides and empties it runs at the
+   * end — so a reopen inside that window landed the old callback on the *new*
+   * panel, leaving it open, empty and unclickable. A token cancels a flight the
+   * reader has overtaken.
    */
   await ready(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
@@ -1504,17 +1272,11 @@ test('a panel reopened mid-flight is not emptied by the flight it interrupted', 
 
 test('a flick clears a Continue reading row that a slow push of the same length does not', async ({ page }) => {
   /*
-   * The other half of 2026-08-26's "Make the swipe on the Continue Reading row
-   * cards easier, it snaps back too easily making it too hard to remove", and
-   * the half that actually fixes it.
-   *
    * Distance alone was the test of intent, and a real swipe fails it: the
-   * natural gesture is a quick push across a third of the row, over in about a
-   * tenth of a second. So the release is measured as well — the last 80 ms of
-   * travel, the same window the week rail reads its throw from — and a flick
-   * dismisses whatever the distance.
-   *
-   * Same distance in both halves, so the only variable is the speed.
+   * natural gesture is a quick push across a third of the row. So the release is
+   * measured too — the last 80 ms of travel — and a flick dismisses whatever the
+   * distance. **Same distance in both halves**, so the only variable is speed.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   await ready(page);
   await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
@@ -1526,11 +1288,10 @@ test('a flick clears a Continue reading row that a slow push of the same length 
 
   /*
    * `steps` matters as much as `pause`, and the reason is the harness rather
-   * than the shelf. Every mouse.move is a round trip to the browser, and under
-   * a fully parallel suite those round trips are slow enough that eight of them
-   * turn a flick into a haul — this test failed once that way and passed alone.
-   * Three moves is still a gesture with a direction and a speed, and it leaves
-   * the reading well clear of the threshold on a loaded machine.
+   * than the shelf: every mouse.move is a round trip, and under a fully
+   * parallel suite eight of them turn a flick into a haul. Three moves is still
+   * a gesture with a direction and a speed, and leaves the reading well clear of
+   * the threshold on a loaded machine.
    */
   const push = async (distance, { pause = 0, steps = 8 } = {}) => {
     const name = rows.first().locator('.index-name');
@@ -1559,20 +1320,12 @@ test('a flick clears a Continue reading row that a slow push of the same length 
 
 test('a chooser panel arrives the way it leaves, and the page comes with it', async ({ page }) => {
   /*
-   * Author, 2026-08-26 evening: "when you click on the language or church
-   * selector, please add the same animations to the popups (and the other
-   * items on the page that move out of the way to accommodate the popups) as
-   * the animations when you close them. the exact reverse."
-   *
-   * Closing had had a flight and a collapse since 2026-08-25; opening had
-   * neither, so the panel appeared from nowhere and everything under the
-   * header jumped down by its whole height in one frame. The two directions
-   * share `journey()` in ui/fly.js now, so they cannot drift apart the first
-   * time either is tuned.
+   * The two directions share `journey()` in ui/fly.js, so they cannot drift
+   * apart the first time either is tuned.
    *
    * Sampled frame by frame rather than asserted at one instant: what is under
    * test is that the panel *travels*, and a single reading cannot tell a
-   * journey from a jump.
+   * journey from a jump. docs/E2E-DECISIONS.md#chromespecjs
    */
   await ready(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
@@ -1642,11 +1395,10 @@ test('a chooser panel arrives the way it leaves, and the page comes with it', as
 
 test('under reduced motion a chooser panel is simply there, arriving as well as leaving', async ({ browser }) => {
   /*
-   * PLAN.md: reduced motion **removes**, never shortens. The close has
-   * had its own test since the flight was written; the arrival needed one the
-   * moment it gained an animation of its own, and it is the same rule — no
-   * flight, no band opening, the panel simply at its full size on the first
-   * frame after the press.
+   * PLAN.md: reduced motion **removes**, never shortens. The close has had its
+   * own test since the flight was written; the arrival needed one the moment it
+   * gained an animation — no flight, no band opening, the panel simply at full
+   * size on the first frame after the press.
    */
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
@@ -1676,27 +1428,25 @@ test('pressing a chooser twice inside its flight does not send it the wrong way'
   /*
    * The defect the two directions introduced between them, and the reason
    * ui/fly.js returns its `finish`. `flyInto` decides where to fly *from* by
-   * reading the box's rect; a panel halfway through arriving is at neither
-   * end of its journey, so a close that began mid-arrival set off in the
-   * wrong direction and by the wrong distance. the rule — land what
-   * is still moving before the next move starts — met for the fifth time.
+   * reading the box's rect; a panel halfway through arriving is at neither end
+   * of its journey, so a close that began mid-arrival set off the wrong way and
+   * by the wrong distance. Land what is still moving before the next move
+   * starts.
    *
-   * The header's control sits at the top right on a desktop, so a panel
-   * flying home travels *up*. That is the assertion, made after a press that
-   * lands 40 ms into the opening flight.
+   * The header's control sits at the top right on a desktop, so a panel flying
+   * home travels *up*. That is the assertion, made after a press that lands 40
+   * ms into the opening flight.
    */
   await ready(page);
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
 
   /*
-   * The symptom is not the direction — a shrunken box still sits roughly
-   * where the whole one did, so the flight still travels broadly upward. It
-   * is the *place the flight starts from*. `flyInto` pins the flier out of
-   * flow at the rect it read, so a rect read mid-arrival makes the panel jump
-   * to a half-size box near the control and fly from there. Measured with the
-   * landing removed: pinned at 583 x 38 and 295 px wide, against a resting
-   * 334 x 61 and 612 px. That jump is what this asserts away.
+   * The symptom is not the direction — a shrunken box still sits roughly where
+   * the whole one did — it is the *place the flight starts from*. `flyInto`
+   * pins the flier out of flow at the rect it read, so a rect read mid-arrival
+   * makes the panel jump to a half-size box near the control and fly from
+   * there. That jump is what this asserts away.
    */
   const flight = await page.evaluate(
     () =>
@@ -1749,14 +1499,9 @@ test('pressing a chooser twice inside its flight does not send it the wrong way'
 
 test('the Daily button offers Today when the reader has left it, and only there', async ({ page }) => {
   /*
-   * Author, 2026-08-26 evening: "when today's date is scrolled away from on
-   * the Daily page, the text 'Daily' on the Daily button fades and is
-   * replaced by 'Today', so when you press it, it takes you to today's date.
-   * But it only says 'Today' while on the Daily page."
-   *
-   * The word only ever offers what the page it is on can give: on the Index
-   * the button is how you reach the Daily page at all, so it says Daily
-   * whatever day that page was last showing.
+   * The word only ever offers what the page it is on can give: on the Index the
+   * button is how you reach the Daily page at all, so it says Daily whatever day
+   * that page was last showing. docs/E2E-DECISIONS.md#chromespecjs
    */
   await ready(page);
   const label = page.locator('[data-nav-label]');
@@ -1775,13 +1520,9 @@ test('the Daily button offers Today when the reader has left it, and only there'
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await expect(label).toHaveText('Daily');
 
-  /*
-   * And stepping the day inside the page is what changes it, not only a fresh
-   * load. The gesture is the sidebar's own `›` since the rebuild of
-   * 2026-09-12: the week rail carried a keyboard step and went with the rail
-   * (plan §6), and the two arrows either side of the day's word are what a
-   * reader has to move a day with now.
-   */
+  // And stepping the day inside the page changes it, not only a fresh load.
+  // The gesture is the sidebar's own `›`: the week rail carried a keyboard step
+  // and went with the rail (plan §6).
   await page.goto('/', { waitUntil: 'networkidle' });
   await expect(label).toHaveText('Daily');
   await page.locator('.day-head .day-step[data-step="1"]').click();
@@ -1790,14 +1531,9 @@ test('the Daily button offers Today when the reader has left it, and only there'
   await page.locator('.site-nav a[data-nav-daily]').click();
   await expect(label).toHaveText('Daily');
   /*
-   * And the month grid says which day the page is showing, which on this one
-   * is the day it actually is. `aria-current="date"` was the week rail's
-   * button, and is the grid's selected cell again since 2026-09-12, when those
-   * cells went back to being buttons that pick a day. They were spans that
-   * picked nothing for a few hours, and this comment recorded it as the design
-   * rather than as the defect it was — so the mark is `.is-today`, and the date it
-   * carries is asserted rather than the class alone, or this would pass with
-   * the mark on any square of the month.
+   * And the month grid says which day the page is showing. The mark is
+   * `.is-today`, and **the date it carries is asserted rather than the class
+   * alone** — otherwise this passes with the mark on any square of the month.
    */
   const marked = page.locator('.day-side .cal-day.is-today');
   await expect(marked).toHaveCount(1);
@@ -1812,22 +1548,15 @@ test('the Daily button offers Today when the reader has left it, and only there'
 
 test('the header is sticky, shorter, and the phone gets an endless centred nav', async ({ page }) => {
   /*
-   * Three of the evening's instructions, which are one bar: "Make the site
-   * header a sticky header", "make the header slightly shorter in height by
-   * cropping more from the top margin", and — on a phone, 2026-09-07, once
-   * Texts joined the other four — "make the header a horizontal scroll header
-   * where the selected one is in the centre, and you can swipe across to the
-   * next or click on it. Infinite scroll header." (Desktop keeps the plain
-   * row the 2026-08-26 instruction first pinned; only the phone's own shape
-   * changed, which is why that part of this test changed with it.)
+   * Three instructions, which are one bar: sticky, shorter, and — on a phone —
+   * an endless centred strip. Desktop keeps the plain row.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   /*
-   * 900 rather than 1280 since 2026-09-01: past 1024 the chrome is deliberately
-   * twice the size ("make header items 2x bigger and span across the whole
-   * width of the window"), so the 2026-08-26 instruction this pins — a bar
-   * made *shorter* by cropping its top margin — is about the sizes below that
-   * breakpoint. The taller bar has its own pin: `the header reserves the
-   * height it settles at`, which measures all three widths.
+   * 900 rather than 1280: past 1024 the chrome is deliberately twice the size,
+   * so the instruction this pins — a bar made *shorter* by cropping its top
+   * margin — is about the sizes below that breakpoint. The taller bar has its
+   * own pin, `the header reserves the height it settles at`.
    */
   await page.setViewportSize({ width: 900, height: 800 });
   await ready(page);
@@ -1854,9 +1583,9 @@ test('the header is sticky, shorter, and the phone gets an endless centred nav',
   await expect(header).not.toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
 
   // The phone's nav: a strip, edge to edge, with the current page centred on
-  // it — exactly five links, the same five the wide row has, never cloned
-  // (`ui/nav-scroll.js`'s own note on why: the rest of the suite already
-  // holds `.site-nav a[href$="/saints"]` to be one element in a dozen places).
+  // it — exactly five links, the same five the wide row has, never cloned. That
+  // the clones are never `/saints` is held by `the suite's positional nav
+  // selectors match exactly one link, at every width` below.
   await page.setViewportSize({ width: 360, height: 780 });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
@@ -1903,19 +1632,16 @@ test('the header is sticky, shorter, and the phone gets an endless centred nav',
   await expect(page).toHaveURL(/\/map$/);
 
   // And the loop is real: dragging the strip to its own rendered end and
-  // letting the gesture settle brings a fifth page across the DOM to sit
-  // beside it (`ui/nav-scroll.js`'s `rotate`), rather than leaving a blank
-  // run-off — and the count of distinct pages on the strip never changes.
+  // letting the gesture settle brings a fifth page across the DOM to sit beside
+  // it (`ui/nav-scroll.js`'s `rotate`) rather than leaving a blank run-off.
   await page.goto('/map', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   const before = await page.evaluate(() => document.querySelector('.site-nav').outerHTML);
   await page.evaluate(() => {
     const track = document.querySelector('.site-nav');
     // `ui/nav-scroll.js` only ever rotates in answer to a `pointerdown` or
-    // `wheel` it has itself seen on the track — a `scrollLeft` write alone,
-    // this test's own or the browser's own late correction of one, is not
-    // enough, on purpose (its own header explains the regression that rule
-    // fixed). A `wheel` event is the cheapest of the two to synthesise.
+    // `wheel` it has itself seen on the track — a `scrollLeft` write alone is
+    // not enough, on purpose. A `wheel` event is the cheaper to synthesise.
     track.dispatchEvent(new WheelEvent('wheel'));
     track.scrollLeft = track.scrollWidth; // past the true trailing edge
     track.dispatchEvent(new Event('scrollend'));
@@ -1936,33 +1662,64 @@ test('the header is sticky, shorter, and the phone gets an endless centred nav',
   expect(after2.inBounds, 'the compensated scrollLeft left the scrollable range').toBe(true);
 });
 
+test('the suite’s positional nav selectors match exactly one link, at every width', async ({ page }) => {
+  /*
+   * The invariant a dozen other places in this suite spend without asserting:
+   * `.site-nav a[href$="/saints"]` — and its four siblings — is **one element**.
+   * A `locator.click()` on a selector that matched two would throw in strict
+   * mode, but `toHaveText`, `boundingBox` and `evaluate` on a two-match locator
+   * fail in ways that read as a defect in the thing under test rather than in
+   * the selector.
+   *
+   * It is not free: `ui/nav-scroll.js` builds the phone's endless strip, and a
+   * buffered clone of any of these pages would break every one of those callers
+   * at once. Both widths, and a route where the strip has rotated, because that
+   * is the state a clone would appear in.
+   */
+  const ONE = ['/saints', '/map', '/about', '/texts'];
+  await ready(page);
+  for (const width of [1280, 360]) {
+    await page.setViewportSize({ width, height: 780 });
+    for (const route of [INDEX, '/map', '/']) {
+      await page.goto(route, { waitUntil: 'networkidle' });
+      await page.evaluate(() => document.fonts.ready);
+      const at = `${route} at ${width}`;
+      for (const href of ONE) {
+        await expect(
+          page.locator(`.site-nav a[href$="${href}"]`),
+          `${at}: .site-nav a[href$="${href}"] is not one element`,
+        ).toHaveCount(1);
+      }
+      // The two the suite addresses by role rather than by href, for the same
+      // reason: the Daily link is the one `ui/nav-scroll.js` was said to clone.
+      await expect(page.locator('.site-nav a[data-nav-daily]'), `${at}: the Daily link`).toHaveCount(1);
+      await expect(
+        page.locator('.site-nav a[aria-current="page"]'),
+        `${at}: more than one link claims to be the current page`,
+      ).toHaveCount(1);
+    }
+  }
+});
+
 test('an aggressive swipe carries the nav strip, and the ring turns under it', async ({ browser }) => {
   /*
-   * **The 2026-09-12 defect, and the only test that can see it.**
-   *
    * `ui/nav-scroll.js` turned the ring on every scroll event and wrote
-   * `scrollLeft` to hold the picture still while it did. Measured, that write
-   * does not "cut iOS momentum short": it ends the gesture. A 320 px fling
-   * moved the strip 45 px of its 450 px range, jumped backwards nine times and
-   * settled on the page it started from — three runs of three, identically.
-   * `scratchpad/fling-write.mjs` isolates the mechanism on a bare scroller
-   * with none of this site in it: no write, 350 px of travel; one write, 350
-   * dragged back to 315; a write per scroll event, 45.
+   * `scrollLeft` to hold the picture still while it did. That write does not
+   * "cut iOS momentum short": it ends the gesture. Re-derive the numbers on a
+   * bare scroller with none of this site in it: `scripts/fling-write.mjs`.
    *
    * Two things had to change and this test fails if either is put back — the
    * turn is once a gesture, and the settle is 150 ms of stillness rather than
    * `scrollend`, which a mandatory-snap scroller fires every time it snaps.
-   * Both were backed out one at a time and both failed it at 40 px.
    *
-   * **A real touch fling, through CDP** (trap 11, and `map.spec.js` takes the
-   * same route for the same reason): a dispatched `PointerEvent` is not an
-   * active pointer and produces no momentum at all, so it would report this
-   * row as perfectly well behaved whichever way the code was written.
+   * **A real touch fling, through CDP** (trap 11): a dispatched `PointerEvent`
+   * is not an active pointer and produces no momentum at all, so it would
+   * report this row as perfectly well behaved whichever way it was written.
    *
    * The assertions are on travel and on arrival, which are independent (trap
-   * 14): the row has to *go* — past a threshold no snap-back can reach — and
-   * it has to *arrive* somewhere else, with the ring turned so the page it
-   * arrived at still has neighbours either side.
+   * 14): the row has to *go*, past a threshold no snap-back can reach, and it
+   * has to *arrive* somewhere else with the ring turned.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   const ctx = await browser.newContext({
     viewport: { width: 360, height: 780 },
@@ -2064,8 +1821,8 @@ test('an aggressive swipe carries the nav strip, and the ring turns under it', a
 /**
  * The strip as read left to right on the screen, which is *not* the DOM order:
  * `ui/nav-scroll.js` turns the ring with a flex `order` per link, so the
- * document keeps the site's own order (and with it the tab ring and every
- * positional selector in this suite) while the picture rotates.
+ * document keeps the site's own order — and with it the tab ring and every
+ * positional selector in this suite — while the picture rotates.
  */
 const stripOrder = (page) =>
   page.evaluate(() =>
@@ -2078,25 +1835,20 @@ const stripOrder = (page) =>
 /**
  * Presses a page on the strip and counts the *distinct positions the track
  * passed through*, per frame. Read in the page rather than over the wire
- * because that is the only place the frames are: "animated ... instead of just
- * jumping" is a claim about what happens in between, and a before/after pair
- * cannot tell a travel from an assignment.
+ * because that is the only place the frames are: a before/after pair cannot
+ * tell a travel from an assignment.
  *
  * The press is `el.click()` rather than `locator.click()` because the latter
  * scrolls its target into view first (trap 3) — on this strip that is the very
- * scroll under test, and Playwright would have centred the link before the
- * page ever navigated.
+ * scroll under test.
  */
 const watchPress = async (href) => {
   const track = document.querySelector('.site-nav');
   /*
-   * Whether the press ran a view transition, which is the other half of "the
-   * animation is separate from the loading below" and the half `movedAt`
-   * cannot see: a transition covers the document with a snapshot for its
+   * Whether the press ran a view transition — the half `movedAt` cannot see
+   * (trap 14): a transition covers the document with a snapshot for its
    * duration, so the strip's `scrollLeft` moves on time and the reader watches
-   * a still picture. Reverting only the skipped fade would leave `movedAt`
-   * reading 36 ms and the header frozen — an instrument blind to its own
-   * subject, which is the shape of mistake this file has now made twice.
+   * a still picture.
    */
   let transitions = 0;
   if (document.startViewTransition) {
@@ -2108,10 +1860,9 @@ const watchPress = async (href) => {
   }
   const seen = [Math.round(track.scrollLeft)];
   /*
-   * And the widest blank strip beyond whichever links are actually on screen,
-   * per frame — the author's second report on this row is exactly that number
-   * ("they should be visible as the animation is happening"). It read 85 px
-   * against a 360 px window before the ring learned to turn mid-journey.
+   * And the widest blank strip beyond whichever links are on screen, per frame
+   * — the author's second report on this row is exactly that number ("they
+   * should be visible as the animation is happening").
    */
   let gap = 0;
   let movedAt = null;
@@ -2146,19 +1897,12 @@ const watchPress = async (href) => {
 
 test('the phone strip is balanced at rest, and a press glides into the centre', async ({ page }) => {
   /*
-   * Three findings on the 2026-09-07 strip, all one message (author,
-   * 2026-09-08): "first it needs to be an infinite horizontal scroll, next to
-   * Daily page on the left needs to be the About section, and when you select
-   * one it should be animated to click into the centre gently instead of just
-   * jumping with no smoothness."
-   *
-   * The first two are one repair. The row only rotated once a swipe had
-   * *already* settled with an edge page centred, so at rest the current page
-   * stood at one end of the five with blank strip beside it — on the Daily
-   * page, nothing at all to its left. Balancing every settle so the centred
-   * page sits in the middle of the five is what makes the ring's own
-   * neighbours the ones a reader meets, and About is left of Daily because the
-   * ring says so.
+  /*
+   * The row only rotated once a swipe had *already* settled with an edge page
+   * centred, so at rest the current page stood at one end of the five with blank
+   * strip beside it. Balancing every settle so the centred page sits in the
+   * middle of the five is what makes the ring's own neighbours the ones a reader
+   * meets. docs/E2E-DECISIONS.md#chromespecjs
    */
   await page.setViewportSize({ width: 360, height: 780 });
   await ready(page);
@@ -2182,27 +1926,20 @@ test('the phone strip is balanced at rest, and a press glides into the centre', 
   // started and where it landed. The measured run is nineteen.
   expect(glided.steps, `the strip moved through ${glided.steps} positions`).toBeGreaterThan(4);
   /*
-   * **And the row is never seen to run out** (author, 2026-09-08: "they should
-   * be visible as the animation is happening, true infinite scroll"). Two
-   * things together give this and either alone fails it: the ring turns on
-   * every frame of the journey rather than at the end of it, and the five
-   * links are `min-width: 28vw` so the ring is longer than the window — it
-   * measured 339 px inside a 360 px window before, which no amount of turning
-   * could have filled.
+   * **And the row is never seen to run out.** Two things together give this and
+   * either alone fails it: the ring turns on every frame of the journey rather
+   * than at the end of it, and the five links are `min-width: 28vw` so the ring
+   * is longer than the window.
    */
   expect(glided.gap, `${glided.gap} px of empty strip showed during the press`).toBeLessThan(2);
   expect(glided.offCentre, 'the pressed page did not land on the midline').toBeLessThan(6);
   /*
-   * **And the strip answers the press itself, not the navigation behind it**
-   * (author, 2026-09-08: "I want the animation to be separate from the loading
-   * below ... It should be a smooth instant response, and the loading below
-   * should happen independently").
-   *
+   * **And the strip answers the press itself, not the navigation behind it.**
    * It used to be armed in `renderNav` and let go from `show()` once the view
    * transition's `finished` settled, so a press bought a quarter-second of
-   * nothing and then the row moved. Both numbers are read from the same clock
-   * as the press, and what the assertion is really about is that *neither
-   * waits for the other*.
+   * nothing. Both numbers are read from the same clock as the press, and the
+   * assertion is that *neither waits for the other*.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   expect(glided.movedAt, `the strip did not move until ${glided.movedAt} ms`).toBeLessThan(120);
   expect(glided.transitions, 'the press ran a view transition, which freezes the strip under a snapshot').toBe(0);
@@ -2214,15 +1951,11 @@ test('the phone strip is balanced at rest, and a press glides into the centre', 
     .toEqual(['texts', 'map', 'about', 'calendar', 'saints']);
 
   /*
-   * **All five pages are on screen, and the outer two by about half** (author,
-   * 2026-09-08: "you should be able to see the other 2 header buttons even if
-   * its just half of them, and then have a fade on the edges so it looks like
-   * they're fading out into the edges of the screen").
-   *
-   * Half the *box* and half the *word* are the same thing only at `min-width:
-   * 25vw`, which is why the number is what it is: a label is centred in its
-   * box, so at 26vw the 42% that showed was the box's outer edge and the last
-   * few letters of the word. base.css carries the arithmetic.
+   * **All five pages are on screen, and the outer two by about half.** Half the
+   * *box* and half the *word* are the same thing only at `min-width: 25vw`,
+   * which is why the number is what it is: a label is centred in its box, so at
+   * 26vw what shows is the box's outer edge and the last few letters of the
+   * word. base.css carries the arithmetic.
    */
   const seen = await page.evaluate(() => {
     const track = document.querySelector('.site-nav');
@@ -2272,17 +2005,13 @@ test('under reduced motion the strip is simply centred, with no journey', async 
 
 test('a coachmark is shown once, and a guess is still not an answer', async ({ page }) => {
   /*
-   * Found in review, 2026-08-27: both marks came back on every load, for ever.
-   * They were gated on `hasChosen()` and `hasChosenLanguage()` — *has
-   * answered* — and a reader content with the guessed calendar and with
-   * English never answers either question. The reviewer met them on the fifth
-   * visit and the fiftieth.
-   *
-   * The gate is *has been shown* now, written when the mark is mounted. What
-   * must not go with it is the honesty the guess rests on: being shown a mark
-   * still stores nothing about the church, so `hasChosen()` keeps its own
-   * meaning, the header still names a guess as a guess, and the Index still
-   * calls that church's saints a selection rather than the corpus.
+   * The gate is *has been shown*, written when the mark is mounted — not *has
+   * answered*, which a reader content with the guess never becomes. What must
+   * not go with it is the honesty the guess rests on: being shown a mark stores
+   * nothing about the church, so `hasChosen()` keeps its meaning, the header
+   * still names a guess as a guess, and the Index still calls that church's
+   * saints a selection rather than the corpus.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await expect(page.locator('.coachmark')).toHaveCount(2);
@@ -2310,16 +2039,11 @@ test('a coachmark is shown once, and a guess is still not an answer', async ({ p
 
 test('the Daily button says Daily on today, and wears gold when it says Today', async ({ page }) => {
   /*
-   * Author, 2026-08-27, two instructions on one control. First: "if you press
-   * 'Today' and you go back to the current date, the text 'Today' does not
-   * change back to 'Daily', you need to press it again ... The rule should be,
-   * if you are on the current date, it should say Daily, not Today." Second:
-   * "to make it more obvious the 'Today' fade in has a specific
-   * functionality, print 'Today' in gold whenever it is showing."
-   *
-   * The first was a race between two paints in one tick — the nav rebuilt for
-   * the new route while the view had not yet said which day it was showing —
-   * and the fade's own timer landing last. main.js has the whole account.
+   * Two instructions on one control, and the first was a race between two
+   * paints in one tick — the nav rebuilt for the new route while the view had
+   * not yet said which day it was showing, with the fade's own timer landing
+   * last. main.js has the whole account.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   await ready(page);
   const away = await aDayThatIsNotToday(page);
@@ -2361,19 +2085,14 @@ test('the Daily button says Daily on today, and wears gold when it says Today', 
 
 test('a section is remembered where the reader left it, and a second press goes to the top', async ({ page }) => {
   /*
-   * Author, 2026-08-27: "when you switch between them ... you come back to the
-   * same spot. However, if you click on the page header button a second time,
-   * it will scroll you back to the top of that page."
-   *
    * Kept by section rather than by path — the Daily page is one place to a
    * reader whichever day it is showing — and in memory rather than in the
    * store, because it is where this visit left off and not a preference.
    *
-   * **The presses are dispatched rather than clicked.** Playwright scrolls a
-   * target into view before pressing it and the header is sticky, so an
-   * ordinary `click()` can move the page to the top *before* the navigation
-   * reads where the reader was — which is the one thing this test is about. A
-   * reader pressing a bar already under their thumb does no such thing.
+   * **The presses are dispatched rather than clicked** (trap 3). The header is
+   * sticky, so an ordinary `click()` can move the page to the top *before* the
+   * navigation reads where the reader was, which is the one thing this test is
+   * about. docs/E2E-DECISIONS.md#chromespecjs
    */
   const press = (sel) => page.evaluate((q) => document.querySelector(q).click(), sel);
 
@@ -2407,24 +2126,14 @@ test('a section is remembered where the reader left it, and a second press goes 
 
 test('a second press of the current page eases to the top over a fixed span, not a jump', async ({ page }) => {
   /*
-   * 2026-08-27, a reader, right after the test above shipped: "when you press
-   * the current page header button, make sure it scrolld back to the top
-   * instead of just jumping back with no animation. make sure its a set time
-   * animation so if you scroll really far down it doesn't take ages to
-   * animate back to the top."
-   *
    * Two things pinned together. First, motion: `window.scrollY` is sampled on
-   * every animation frame for a second after the press, entirely inside the
-   * page — a click-then-sample round-tripped through Node instead, one
-   * `page.evaluate` at a time, turned out to be measuring this suite's own
-   * IPC latency as often as the animation: a real ease calls `scrollTo`
-   * several times, at least one of them strictly between the start and 0; a
-   * jump goes straight to 0 and every sample after the first frame reads it.
-   * Second, *fixed* span: a scroll five times deeper must still settle inside
-   * the same rough deadline, which is the difference between this
-   * hand-rolled tween and the platform's own `scrollTo({ behavior: 'smooth'
-   * })` — Chrome scales that one's duration with distance, which is exactly
-   * "takes ages" for a long page.
+   * every animation frame entirely **inside the page** — a click-then-sample
+   * round-tripped through Node measures this suite's own IPC latency as often
+   * as the animation. Second, *fixed* span: a scroll five times deeper must
+   * still settle inside the same deadline, which is the difference between this
+   * hand-rolled tween and `scrollTo({ behavior: 'smooth' })` — Chrome scales
+   * that one's duration with distance, which is "takes ages" for a long page.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   await ready(page);
   await page.setViewportSize({ width: 1280, height: 800 });
@@ -2482,20 +2191,12 @@ test('under reduced motion the same press still lands at the top, with no ease',
 
 test('the remembered spot is where the fade lands, not where it starts', async ({ page }) => {
   /*
-   * Author, 2026-08-27, a follow-up to the test above: the section restore
-   * used to run only after the cross-fade finished (`.finished.finally(...)`),
-   * so the fade itself always ran from the top of the page and then jumped to
-   * the remembered spot once the animation was over — the restore was real,
-   * the fade lying about it was the bug. The fix moved the restore into
-   * `swap`, after the view has rendered, so it lands before
-   * `startViewTransition`'s new-state snapshot is taken and the fade crosses
-   * into the right spot instead of past it.
-   *
    * Measured through the transition's own `ready` promise rather than a fixed
-   * wait: `ready` resolves once that snapshot has been captured and before
-   * the animation runs, so whatever `window.scrollY` reads at that instant is
-   * what the reader's fade actually shows. A `waitForTimeout` would be
-   * measuring a clock rather than the moment the transition itself keys off.
+   * wait: `ready` resolves once the new-state snapshot has been captured and
+   * before the animation runs, so whatever `window.scrollY` reads at that
+   * instant is what the reader's fade actually shows. A `waitForTimeout` would
+   * be measuring a clock rather than the moment the transition keys off.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   const press = (sel) => page.evaluate((q) => document.querySelector(q).click(), sel);
 
@@ -2523,18 +2224,11 @@ test('the remembered spot is where the fade lands, not where it starts', async (
 
 test('the die is square, and the header rule sits on the buttons', async ({ page }) => {
   /*
-   * Two of the author's smaller instructions, 2026-08-27: "make the dice
-   * button square proportions. Keep the same corner fillet, just make it as
-   * wide as it is tall", and "there is a horizontal line under the header
-   * buttons ... There should be no margin. The bottom of the buttons should
-   * coincide with that line."
-   *
-   * The die took its height from `--facet-h` on 2026-08-26 and its width did
-   * not follow, which is what left it an upright pill; both read the same
-   * token now, so a chip's padding change moves the two together. The row's
-   * budget paid 3.3 px for it and another 14 for Church becoming Calendar —
+   * The die took its height from `--facet-h` and its width did not follow,
+   * which left it an upright pill; both read the same token now, so a chip's
+   * padding change moves the two together. The row's budget paid for it —
    * `the filter row still holds one line with the die in it` is where that
-   * arithmetic lives.
+   * arithmetic lives. docs/E2E-DECISIONS.md#chromespecjs
    */
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
@@ -2550,12 +2244,11 @@ test('the die is square, and the header rule sits on the buttons', async ({ page
   expect(parseFloat(die.radius)).toBeGreaterThan(die.w / 2 - 1);
 
   /*
-   * Nothing between the bar's contents and its rule. On a phone the four page
-   * buttons are the header's own last row, so the two coincide to the pixel;
-   * on a desk the nav shares a line with the taller calendar control, and what
-   * touches the rule there is whichever of them is tallest. So the padding is
-   * asserted at both widths and the coincidence at the one where the buttons
-   * are the thing in question.
+   * Nothing between the bar's contents and its rule. On a phone the page
+   * buttons are the header's own last row, so the two coincide to the pixel; on
+   * a desk the nav shares a line with the taller calendar control and what
+   * touches the rule is whichever is tallest. So the padding is asserted at
+   * both widths and the coincidence only where the buttons are in question.
    */
   await expect(page.locator('header.chrome')).toHaveCSS('padding-bottom', '0px');
   await page.setViewportSize({ width: 360, height: 780 });
@@ -2576,16 +2269,9 @@ test('the die is square, and the header rule sits on the buttons', async ({ page
 
 test('the calendar panel follows a language change while it is open', async ({ page }) => {
   /*
-   * Author, 2026-08-27: "when switching languages, make sure the choose church
-   * calendar pop-up, which may still be open when changing languages, also
-   * shows the updated language without having to close it first to see it
-   * update."
-   *
-   * The button repainted on a language change and the panel did not, so a
-   * reader who changed language with the calendar chooser open was left
-   * reading the old one until they closed and reopened it. The panel is a
-   * disclosure in the page's flow rather than a dialogue, so being open while
-   * something else changes is its normal state, not an edge case.
+   * The panel is a disclosure in the page's flow rather than a dialogue, so
+   * being open while something else changes is its normal state, not an edge
+   * case. docs/E2E-DECISIONS.md#chromespecjs
    */
   await ready(page, { church: 'russian', language: 'en' });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
@@ -2603,10 +2289,10 @@ test('the calendar panel follows a language change while it is open', async ({ p
   await expect(page.locator('#church-panel')).toContainText('По какому календарю вы живёте?');
 
   /*
-   * And live, with the calendar panel open the whole time — which is the
-   * author's own case. The two panels are independent disclosures and both can
-   * stand open at once, so the language one is opened *over* the calendar one
-   * and the calendar one is never pressed again.
+   * And live, with the calendar panel open the whole time. The two panels are
+   * independent disclosures and both can stand open at once, so the language
+   * one is opened *over* the calendar one and the calendar one is never
+   * pressed again.
    */
   await page.locator('#lang-open').click();
   await expect(page.locator('#lang-panel')).toBeVisible();
@@ -2619,12 +2305,9 @@ test('the calendar panel follows a language change while it is open', async ({ p
 
 test('the chooser panels travel with the sticky header', async ({ page }) => {
   /*
-   * Author, 2026-08-27: "Have the calendar and language popups stick to the
-   * sticky header so you can access them at the bottom of a scrolled page."
-   *
    * Asserted where it matters - far down a long page - because in the flow at
-   * the top of the document a panel under the header looks identical whether
-   * it sticks or not.
+   * the top of the document a panel under the header looks identical whether it
+   * sticks or not. docs/E2E-DECISIONS.md#chromespecjs
    */
   await ready(page);
   await page.setViewportSize({ width: 1280, height: 700 });
@@ -2633,11 +2316,11 @@ test('the chooser panels travel with the sticky header', async ({ page }) => {
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(1000);
 
   /*
-   * **Dispatched, not clicked.** Playwright scrolls a target into view before
-   * pressing it, and pressing a control in a sticky bar that way scrolls the
-   * page back to the top — which is the one condition this test exists to get
-   * away from. Backed out against a non-sticky bar, the `click()` version
-   * passed: it had scrolled itself somewhere the claim was trivially true.
+   * **Dispatched, not clicked** (trap 3): pressing a control in a sticky bar
+   * the ordinary way scrolls the page back to the top, which is the one
+   * condition this test exists to get away from. Backed out against a
+   * non-sticky bar, the `click()` version passed — it had scrolled itself
+   * somewhere the claim was trivially true.
    */
   await page.evaluate(() => document.querySelector('#church-open').click());
   const geo = await page.evaluate(() => {
@@ -2663,15 +2346,11 @@ test('the chooser panels travel with the sticky header', async ({ page }) => {
 
 test('a restored section never touches zero on the way', async ({ page }) => {
   /*
-   * Author, 2026-08-27: "the website header still sometimes jumps up and down
-   * when changing pages."
-   *
-   * The header element does not move — measured across six navigations at two
-   * widths, it is pinned at 0 throughout. What moved was the *page*, and on a
-   * phone the header rides it: the restore used to reset to 0 and scroll to
-   * the remembered position a moment later, and arriving at 0 tells the
-   * browser the reader is at the top, so it begins showing its URL bar and
-   * then has to put it away again. One scroll, one direction, no bounce.
+   * The header element does not move; what moved was the *page*, and on a phone
+   * the header rides it. The restore used to reset to 0 and scroll to the
+   * remembered position a moment later, and arriving at 0 tells the browser the
+   * reader is at the top, so it begins showing its URL bar and then has to put
+   * it away again. One scroll, one direction, no bounce.
    */
   const press = (sel) => page.evaluate((q) => document.querySelector(q).click(), sel);
   await ready(page);
@@ -2686,13 +2365,11 @@ test('a restored section never touches zero on the way', async ({ page }) => {
   });
   await page.goto('/', { waitUntil: 'networkidle' });
   /*
-   * **The depth is taken from the page** (2026-08-28). A literal 1200 is a
-   * measurement of one day's content: this is `/`, which is today, and the
-   * corpus's saints run out before its liturgical records do — on 28 August
-   * the page had readings, hymns and a fast but no saints, and 1200 px of
-   * scroll simply was not there to be had. What the test is about is the
-   * *route* the restore takes, which is the same at any depth that is not the
-   * top.
+   * **The depth is taken from the page.** A literal is a measurement of one
+   * day's content, and the corpus's saints run out before its liturgical
+   * records do — a day with readings and no saints has no 1200 px to scroll.
+   * What this is about is the *route* the restore takes, the same at any depth
+   * that is not the top.
    */
   const deep = await page.evaluate(() => {
     window.scrollTo(0, 1200);
@@ -2717,38 +2394,20 @@ test('a restored section never touches zero on the way', async ({ page }) => {
 
 test('the name is a stamp: the same mark in every language, in the stamp face', async ({ page }) => {
   /*
-   * Author, 2026-08-28: "make sure this new website title is applied to all
-   * languages, it no longer gets translated, it stays constant as a stamp of
-   * branding."
-   *
-   * It superseded 2026-08-25's "change the title on header and loading screen
-   * to the picked language" rather than reversing it: what that instruction was
-   * fixing was a name hard-coded in index.html and stale by a rename, and the
-   * name still comes from one place.
-   *
-   * **The mark draws AGIOS since 2026-09-10** (author: "Replace the current
-   * wordmark SVG with 'AGIOS' set in the mockup's display font, converted to
-   * outlines"), and it is one word where it was two, so the half-space gap
-   * this test was written around — "Make the space between 'DAILY' and 'DOX'
-   * half as wide" — has nothing left to sit between. `scripts/make_wordmark.py`
-   * keeps the arithmetic for the day a second word comes back.
-   *
-   * **Its accessible name is deliberately still the site's**, which is the
-   * other half of that instruction: the mark is a mark, and AGIOS is what
-   * the PWA manifest, the README and the `<title>` split all still say. So a
-   * pack that translated *either* fails here.
+   * **Its accessible name is deliberately still the site's**: the mark is a
+   * mark, and AGIOS is what the PWA manifest, the README and the `<title>` all
+   * say. A pack that translated *either* fails here.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   for (const language of ['en', 'ru', 'el']) {
     await ready(page, { language });
     await page.goto('/', { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
     /*
-     * **The stamp is outlines** (author, 2026-08-28), so the face and the
-     * tracking are baked into the paths rather than resolved at render:
-     * `scripts/make_wordmark.py` reads base.css's numbers and draws the glyphs
-     * from src/fonts/gfs-nicefore.woff2. What this test still asserts is the
-     * part that is about the packs — that every language gets the same mark,
-     * and that none of them translates it.
+     * **The stamp is outlines**, so the face and the tracking are baked into the
+     * paths rather than resolved at render. What this asserts is the part that
+     * is about the packs — every language gets the same mark, and none of them
+     * translates it.
      */
     const stamp = await page.evaluate(() => {
       const mark = document.querySelector('.site-name .brand-mark');
@@ -2771,17 +2430,12 @@ test('the name is a stamp: the same mark in every language, in the stamp face', 
 
 test('the brand face is allowed to arrive late rather than never', async ({ page }) => {
   /*
-   * Author, 2026-08-28: "Sometimes on mobile, the title does not render in the
-   * new font, but in the old font."
-   *
-   * That is `font-display: optional` keeping its promise: a few frames for the
-   * file, and if the network has not answered, the fallback for the *life of
-   * the page*. A phone on a slow connection got Literata in the masthead
-   * permanently and a warm reload got the stamp — two mastheads for one reader,
-   * which is the one thing a brand cannot be. It is `swap` now, alone among
-   * this project's faces: the body text keeps `optional`, because that policy
-   * is there to protect a page of prose from reflowing, and the masthead is two
-   * words in a fixed box.
+   * `font-display: optional` keeping its promise is the defect here: a phone on
+   * a slow connection got Literata in the masthead permanently and a warm
+   * reload got the stamp — two mastheads for one reader. It is `swap` now,
+   * **alone among this project's faces**: the body text keeps `optional`,
+   * because that policy protects a page of prose from reflowing and the
+   * masthead is two words in a fixed box.
    */
   await ready(page);
   await page.setViewportSize({ width: 360, height: 780 });
@@ -2806,18 +2460,10 @@ test('the brand face is allowed to arrive late rather than never', async ({ page
 
 test('a Continue reading row carries no mark, and the shelf still clears', async ({ page }) => {
   /*
-   * Author, 2026-08-28: "Remove bookmark on continue reading row cards. And why
-   * was it even on the left side to begin with?"
-   *
-   * It was there because the row copied the Index's, which had one until
-   * 2026-08-27; the Index's rows lost theirs that day and this was the last row
-   * still wearing it. The left was the same borrowing half-undone: the row
-   * builds image, body, tools, and the Index's rows had been re-ordered to
-   * name-first with the picture trailing while this one was not.
-   *
-   * **The shelf now has no Save control at all** — the Saved shelf's own rows
-   * never had one — so this also pins that the *other* way off a reading row
-   * still works: the swipe, and the × a pointer gets.
+   * **The shelf has no Save control at all** — the Saved shelf's own rows never
+   * had one — so this also pins that the *other* ways off a reading row still
+   * work: the swipe, and the × a pointer gets.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   await ready(page);
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
@@ -2835,33 +2481,23 @@ test('a Continue reading row carries no mark, and the shelf still clears', async
 
 test('the masthead is outlines in the served HTML, not text waiting for a face', async ({ page }) => {
   /*
-   * Author, 2026-08-28: "AGIOS still sometimes opens with literata on
-   * loading screen and title before updating to the new font. Is this because
-   * the browser has to download? If it is, can you create an .svg yourself
-   * based on the title and replace it with that so it always has the intended
-   * font".
+   * GFS Nicefore is the only face here at `font-display: swap` and the only one
+   * not preloaded, so a cold load printed the name in Literata and swapped it
+   * when the file landed. **This reverses Addendum G6's rejection of an SVG
+   * wordmark**, which was rejected in favour of preloading the *body* subsets.
    *
-   * It was. GFS Nicefore is the only face here at `font-display: swap` and the
-   * only one not preloaded, so a cold load printed the name in Literata and
-   * swapped it when the file landed. **This reverses Addendum G6's rejection of
-   * an SVG wordmark** — that was rejected in favour of preloading the *body*
-   * subsets, which never addressed the masthead.
-   *
-   * Asserted against the **raw HTML** rather than the rendered page, because
-   * the whole claim is about the first paint: the veil is what a reader looks
-   * at while the modules are still parsing, so a mark injected by JavaScript
-   * would be exactly as late as the font was.
+   * Asserted against the **raw HTML** rather than the rendered page: the veil is
+   * what a reader looks at while the modules are still parsing, so a mark
+   * injected by JavaScript would be exactly as late as the font was.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   const html = await (await page.request.get('/')).text();
   const marks = [...html.matchAll(/<svg[^>]*class="brand-mark"/g)];
   expect(marks.length, 'the veil and the masthead should both carry the mark').toBe(2);
   /*
-   * **The body, not the document.** This read the whole of the HTML until
-   * 2026-09-12, when the site became AGIOS and `<title>AGIOS</title>` started
-   * matching the probe — a test that had never been run against a build since
-   * the rename, and so went red the first time it was. The claim was always
-   * about the *masthead*: the tab's title is text on purpose and is not a
-   * thing a face can arrive late for.
+   * **The body, not the document.** `<title>AGIOS</title>` matches this probe;
+   * the claim has always been about the *masthead*, and the tab's title is text
+   * on purpose — not a thing a face can arrive late for.
    */
   const body = html.slice(html.indexOf('<body'));
   expect(body, 'the wordmark should not still be live text').not.toContain('>AGIOS<');
@@ -2884,18 +2520,14 @@ test('the masthead is outlines in the served HTML, not text waiting for a face',
 
 test('the two Latin subsets are preloaded, and only those', async ({ page }) => {
   /*
-   * Addendum G6, decided by the author on 2026-08-28: "ignore svg, just preload
-   * texts as recommended". An SVG wordmark was the alternative considered and
-   * rejected, so GFS Nicefore stays a face and this is the whole of the fix.
-   *
-   * `font-display: optional` stands and is *why* this matters: optional gives
-   * the file about a hundred milliseconds and then keeps the fallback for the
-   * life of the page. A preload starts the request with the HTML rather than
-   * after the stylesheet is parsed and matched, which puts the face inside that
-   * window on most loads without the layout shift `swap` would cost.
+   * Addendum G6. `font-display: optional` stands and is *why* this matters:
+   * optional gives the file about a hundred milliseconds and then keeps the
+   * fallback for the life of the page, so a preload is what puts the face
+   * inside that window without the layout shift `swap` would cost.
    *
    * Read out of the served HTML rather than off a live page: this is a claim
    * about what the document says before anything runs.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   const html = await (await page.request.get('/')).text();
   const links = [...html.matchAll(/<link[^>]*rel="preload"[^>]*>/g)].map((m) => m[0]);
@@ -2904,11 +2536,9 @@ test('the two Latin subsets are preloaded, and only those', async ({ page }) => 
   const latin = links.find((tag) => /literata-normal-latin-[^"]*\.woff2/.test(tag) && !/latin-ext/.test(tag));
   const ext = links.find((tag) => /literata-normal-latin-ext-[^"]*\.woff2/.test(tag));
   /*
-   * **Two different files.** The first build of this shipped the same subset
-   * twice: Vite's hash can itself begin with a hyphen, so a pattern loose
-   * enough to match a hash after `literata-normal-latin-` also matches `ext-`.
-   * The plugin asks the bundle which source each asset came from now, and this
-   * is the assertion that would have caught it.
+   * **Two different files.** Vite's hash can itself begin with a hyphen, so a
+   * pattern loose enough to match a hash after `literata-normal-latin-` also
+   * matches `ext-`, and the first build shipped the same subset twice.
    */
   expect(latin, 'the plain Latin subset is not preloaded').toBeTruthy();
   expect(ext, 'the Latin-ext subset is not preloaded').toBeTruthy();
@@ -2921,28 +2551,22 @@ test('the two Latin subsets are preloaded, and only those', async ({ page }) => 
     expect(tag).toContain('as="font"');
   }
 
-  /*
-   * And not the italics, nor the Greek and Cyrillic subsets. The budget is the
-   * point: italic appears inside lives and quotations rather than at first
-   * paint, and a reader in one script should not be made to fetch three others.
-   */
+  // And not the italics, nor the Greek and Cyrillic subsets: italic appears
+  // inside lives rather than at first paint, and a reader in one script should
+  // not be made to fetch three others.
   expect(links.join(' ')).not.toContain('italic');
   expect(links.join(' ')).not.toContain('cyrillic');
   expect(links.join(' ')).not.toContain('greek');
 });
 
 /*
- * The reserved header height, pinned against the height the header actually
- * settles at. `--chrome-h-reserve` in base.css exists to stop the bar growing into
- * place at boot, which was the site's whole layout shift (brief §13); reserving
- * the wrong number restores the shift when it is short and leaves a permanent
- * strip of dead air when it is long, and neither says anything on the page.
+ * `--chrome-h-reserve` in base.css exists to stop the bar growing into place at
+ * boot, which was the site's whole layout shift (brief §13). Reserving the
+ * wrong number restores the shift when it is short and leaves a permanent strip
+ * of dead air when it is long, and neither says anything on the page.
  *
  * All three breakpoints, because the narrow header is two rows and the wide one
- * is one, and it is the *narrow* value that no desktop-only run would ever
- * check. The third arrived on 2026-09-01 with the doubled chrome — "make header
- * items 2x bigger and span across the whole width of the window" — which is a
- * change to a row height and so is exactly what this table exists to catch.
+ * is one — and it is the *narrow* value that no desktop-only run would check.
  */
 for (const [label, width, expected] of [
   ['narrow, two rows', 360, 75.5625],
@@ -2961,12 +2585,10 @@ for (const [label, width, expected] of [
     const [reserved, settled] = await page.evaluate(() => {
       const header = document.querySelector('header.chrome');
       /*
-       * The declared value, not a probe element's rect. A probe was the first
-       * version and it reported 76 for a 75.5625 px reservation, because a box
-       * is snapped to device pixels while the header — sized by its own
-       * content — keeps the fraction. That is trap 9's cousin: the property
-       * resolves fine here, since it holds a plain length rather than a
-       * `clamp()`, and it is the *rendering* that rounds.
+       * The declared value, not a probe element's rect: a box is snapped to
+       * device pixels while the header, sized by its own content, keeps the
+       * fraction. Trap 9's cousin — the property resolves fine, holding a plain
+       * length rather than a `clamp()`, and it is the *rendering* that rounds.
        */
       const declared = getComputedStyle(document.documentElement).getPropertyValue('--chrome-h-reserve');
       return [parseFloat(declared), header.getBoundingClientRect().height];
@@ -2974,11 +2596,10 @@ for (const [label, width, expected] of [
 
     expect(reserved, `--chrome-h-reserve is ${reserved} at ${width} px, not the ${expected} this pins`).toBeCloseTo(expected, 2);
     /*
-     * Exactly, not "at least". A settled header taller than the reservation is
-     * the shift coming back; shorter is dead air. The height is face-
+     * Exactly, not "at least": a settled header taller than the reservation is
+     * the shift coming back, shorter is dead air. The height is face-
      * independent — it comes from the controls' line-heights and the nav is
-     * forbidden to wrap — so this holds under COLD_FACE as well, which is the
-     * claim that makes a pixel constant safe to write down here at all.
+     * forbidden to wrap — which is what makes a pixel constant safe here.
      */
     expect(settled, `the header settles at ${settled} but reserves ${reserved}`).toBeCloseTo(reserved, 1);
     await ctx.close();
@@ -2989,11 +2610,10 @@ for (const [label, width, expected] of [
 
 test('About states the coverage from the corpus, not from memory', async ({ page }) => {
   /*
-   * Brief §8.4 wants the coverage statistics on this page, and the whole point
-   * of putting them here is that they are *read* — `loadManifestMeta()` finally
-   * has a caller. So the assertion is against the file itself: whatever
-   * `manifest.meta.json` says today is what the page has to print, and a number
-   * typed into a sentence would fail this the next time a folder is added.
+   * Brief §8.4 wants the coverage statistics here, and the point of putting
+   * them on the page is that they are *read* — so the assertion is against
+   * `manifest.meta.json` itself. A number typed into a sentence would fail the
+   * next time a folder was added.
    */
   await ready(page);
   await page.goto('/about', { waitUntil: 'networkidle' });
@@ -3012,12 +2632,10 @@ test('About states the coverage from the corpus, not from memory', async ({ page
 
 test('About names the publications the corpus actually cites', async ({ page }) => {
   /*
-   * Not the registry's prose. `src/data/churches.js` names the source each
-   * church's *daily calendar* comes from, and that is not always the
-   * publication the attestations were read from — 121 of the 127 Romanian
-   * attestations cite doxologia.ro while the registry note names Basilica.
-   * `by_source` in the build counts what is actually cited, and this is what
-   * stops the page drifting back to the prose.
+   * Not the registry's prose: `src/data/churches.js` names the source each
+   * church's *daily calendar* comes from, which is not always the publication
+   * the attestations were read from. `by_source` in the build counts what is
+   * actually cited, and this is what stops the page drifting back to the prose.
    */
   await ready(page);
   await page.goto('/about', { waitUntil: 'networkidle' });
@@ -3040,11 +2658,9 @@ test('About says which reckoning each church keeps, and says it from the registr
   await page.goto('/about', { waitUntil: 'networkidle' });
 
   /*
-   * The two Old Calendar churches and the two New. Read off `default_calendar`
-   * in the registry rather than restated in prose, so a church whose reckoning
-   * changed changes this section with it — the assertion here is that the page
-   * and the registry agree, which is the only way that promise is worth
-   * anything.
+   * Read off `default_calendar` in the registry rather than restated in prose,
+   * so a church whose reckoning changed changes this section with it. The
+   * assertion is that the page and the registry agree.
    */
   const said = await page.locator('section[aria-labelledby="calendars"] li').allTextContents();
   const line = (name) => said.find((t) => t.startsWith(name)) ?? '';
@@ -3068,13 +2684,9 @@ test('About no longer promises the page it now is', async ({ page }) => {
 /* ---- export / import (Session 8's surviving third, 2026-08-29) ---------- */
 
 test('the reader can take their data with them, and bring it back', async ({ page }) => {
-  /*
-   * Brief §11: "Export / Import as JSON ... real cross-device portability for
-   * zero backend." The claim worth a browser test is the round trip through
-   * the real controls: a save made, a file downloaded, the device wiped, the
-   * file imported, the save standing again. The store's merge rules have unit
-   * tests; this is the promise as a reader meets it.
-   */
+  // Brief §11: "Export / Import as JSON ... real cross-device portability for
+  // zero backend." The store's merge rules have unit tests; this is the round
+  // trip through the real controls, as a reader meets it.
   await ready(page);
   await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
   await page.locator('[data-save]').first().click();
@@ -3112,24 +2724,16 @@ test('a file that is not an export changes nothing and says so', async ({ page }
 
 test('the header takes one measure on every route, Daily included', async ({ page }) => {
   /*
-   * Author, 2026-09-01: "The header on Daily and Map page are different widths
-   * from the All Saints and About page, make sure they are the same."
-   *
-   * Nothing in the stylesheet made them different — the header takes one
-   * measure on every route (`--page-max`, base.css) and this suite has pinned
-   * that since the masthead doubled. What made them different was the window.
-   * Daily and Map hold the page still (`html { overflow: hidden }`, one so the
-   * columns can scroll themselves and one so the canvas can fill the glass), so
-   * neither draws a classic scrollbar while All Saints and About do — 15 px of
-   * window on Windows and Linux, and the masthead sitting 7 px further left on
-   * half the site than on the other half.
+   * The header takes one measure on every route (`--page-max`, base.css).
+   * What made four routes differ was the *window*: Daily and Map hold the page
+   * still, so neither draws a classic scrollbar while All Saints and About do.
    *
    * **The geometry half of this test cannot see that**, and saying so is the
-   * point of this paragraph: the browser these tests run in has overlay
-   * scrollbars, where the four routes measure the same either way. So the fix
-   * is pinned where it can be seen — the declaration that reserves the room —
-   * and the geometry is pinned beside it because it is the thing that would
-   * break if a route ever took its own measure again.
+   * point: the browser these tests run in has overlay scrollbars, where the
+   * four routes measure the same either way. So the fix is pinned where it can
+   * be seen — the declaration that reserves the room — and the geometry beside
+   * it, because that is what breaks if a route takes its own measure again.
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   const routes = ['/calendar/2026-08-25', '/saints', '/about', '/map'];
   const seen = [];
@@ -3151,8 +2755,8 @@ test('the header takes one measure on every route, Daily included', async ({ pag
           corner: r('header.chrome .chrome-corner'),
           // Daily alone: the strip its saints are read down, and the standing
           // column over its left edge. Measured off the boxes rather than read
-          // off `--td-side-w`, which is a `clamp()` and does not compute to
-          // pixels through a custom property (trap 9).
+          // off `--td-side-w`, a `clamp()` that does not compute through a
+          // custom property (trap 9).
           bar: r('.chrome-bar'),
           column: document.querySelector('.td-scroll') ? r('.td-scroll') : null,
           side: document.querySelector('.day-side') ? r('.day-side') : null,
@@ -3162,34 +2766,17 @@ test('the header takes one measure on every route, Daily included', async ({ pag
   }
 
   /*
-   * **The mark's whole rect again, since 2026-09-10.** It was narrowed to the
-   * left edge alone earlier the same day, when docs/daily-desktop-visuals.md
-   * §2.2 scoped `--text-mast-wide: 22px` to the Daily route and Daily's
-   * masthead was therefore a different size from the other three. The author
-   * reversed that within the day — one size everywhere — so the whole rect is
-   * the claim once more, and it is the stronger one: a left edge alone would
-   * pass a masthead that started in the right place at any size at all, which
-   * is exactly the state this line was relaxed into.
+   * The mark's **whole rect**, not its left edge: a left edge alone passes a
+   * masthead that starts in the right place at any size at all.
    *
-   * **And the corner's *right* edge, not its whole box, since 2026-09-10.**
-   * Past 1024 px the Daily page's three controls are in the sidebar's head
-   * (§2.2 route (c), step 6 of §10.12), so `.chrome-corner` is an empty box
-   * there and collapses to a point. Its right edge is where it always was —
-   * `justify-self: end` in the header's grid, so it is the header's own
-   * content edge — which is the number this line has always been standing for.
-   * Where those controls went is asserted on Daily itself, in
-   * `daily-panel.spec.js`, rather than inferred from a width here.
+   * The corner's **right edge**, not its whole box: past 1024 px Daily's three
+   * controls are in the sidebar's head, so `.chrome-corner` is an empty box
+   * there and collapses to a point. Its right edge is the header's own content
+   * edge, which is the number this has always stood for. Where those controls
+   * went is asserted in `daily-panel.spec.js`, not inferred from a width here.
    *
-   * **Daily has no exception left, since the rebuild of 2026-09-12.** From
-   * 2026-09-10 that page's bar was its left column's own head: it stopped
-   * where the column stopped, with the sidebar standing beside it, and this
-   * test carried a derivation for the one route allowed to differ. The
-   * rebuilt page stands its column *inside* the view instead — the day is over
-   * the strip of saints, not the first cell of it (plan §5) — so the bar runs
-   * the full measure like every other route's. The four are asserted as four
-   * rather than as three and a special case, which is both the stronger claim
-   * and the one this test was written for: one box, one measure, whether or
-   * not the page under them scrolls.
+   * The four routes are asserted as four rather than as three and a special
+   * case. docs/E2E-DECISIONS.md#chromespecjs
    */
   const [daily] = routes;
   for (const [i, route] of routes.entries()) {
@@ -3200,13 +2787,11 @@ test('the header takes one measure on every route, Daily included', async ({ pag
     expect(seen[i].bar, `${route} draws the chrome bar in its own box`).toEqual(seen[0].bar);
   }
 
-  /*
-   * And Daily's own two boxes are still what they claim to be: the strip runs
-   * the width of the page, and the standing column is *over* its left edge
-   * rather than beside it — which is the arrangement that stopped the bar
-   * needing an exception. Asserted here because this is the test that would
-   * otherwise go green on a Daily page that had quietly lost its column.
-   */
+  // And Daily's own two boxes are what they claim: the strip runs the width of
+  // the page and the column stands *over* its left edge rather than beside it,
+  // which is what stopped the bar needing an exception. Asserted here because
+  // this is the test that would otherwise go green on a Daily page that had
+  // quietly lost its column.
   const d = seen[0];
   expect(d.column, `premise: ${daily} draws no strip of saints at 1280`).not.toBeNull();
   expect(d.side, `premise: ${daily} draws no standing column at 1280`).not.toBeNull();
@@ -3215,9 +2800,8 @@ test('the header takes one measure on every route, Daily included', async ({ pag
 
   /*
    * And not on a phone, which the author scoped out ("make sure 5 6 7 are on
-   * desktop only") and which has nothing to hold room for: a 7 px gutter out of
-   * 360 is a real cost against a scrollbar that is drawn over the page rather
-   * than beside it.
+   * desktop only"): a 7 px gutter out of 360 is a real cost against a
+   * scrollbar drawn over the page rather than beside it.
    */
   await page.setViewportSize({ width: 360, height: 780 });
   await page.goto('/saints', { waitUntil: 'networkidle' });
@@ -3228,45 +2812,21 @@ test('the header takes one measure on every route, Daily included', async ({ pag
 
 test('the masthead is one box on all six routes, at both widths and in both themes', async ({ page }) => {
   /*
-   * **Twice Playwright's budget, for the same reason `map.spec.js` has one**
-   * (2026-09-12). This test makes twenty-four `networkidle` navigations — six
-   * routes, two widths, two themes — and two of them are the map, whose tile
-   * warm-up alone is ~2.7 s. It ran in 22 s of its 30 until the Daily rebuild,
-   * and the rebuilt day fetches a payload per saint of the day on paint (plan
-   * §11.7 f) where the old page fetched the hero's: four of those navigations
-   * are Daily, and the total crossed the line. Nothing it measures has changed
-   * and nothing is being waited for less carefully — the budget is the thing
-   * that was wrong, and a geometry test that times out reports a defect in the
-   * masthead it never looked at.
+   * **Twice Playwright's budget**, for the same reason `map.spec.js` has one:
+   * twenty-four `networkidle` navigations, two of them the map and four of
+   * them the Daily page. A geometry test that times out reports a defect in
+   * the masthead it never looked at.
    */
   test.setTimeout(60_000);
   /*
-   * Author, 2026-09-10: "Match the Daily page's site title to its size on
-   * every other route… one size everywhere", and "make sure it sits in the
-   * same place on all six routes. Shoot every route at 1280 and 1440 in both
-   * themes and prove the rect is identical, rather than asserting it from the
-   * CSS."
-   *
-   * It replaces "Daily wears a smaller, quieter masthead", written earlier the
-   * same day for docs/daily-desktop-visuals.md §2.2's
-   * `html[data-route='calendar'] { --text-mast-wide: 22px }`. That scoping is
-   * gone; what survives of §2.2 is the *ink* — Daily's masthead is 74% of the
-   * way from the ground to the ink where the rest of the site's is at full
-   * strength — because only the size was reversed, and that half is asserted
-   * below rather than dropped with the rule it used to sit beside.
-   *
    * **Measured, not read off the token, and that is the instruction.** A
    * `--text-mast-wide` assertion passes on a route whose masthead a second
-   * rule then sets in pixels, and it says nothing at all about *where* the
-   * mark lands. So this reads the drawn box on every route — six routes × two
-   * widths × two themes, 24 readings — and requires the twelve at each width
-   * to be one rect.
+   * rule then sets in pixels, and says nothing about *where* the mark lands.
    *
-   * **Both themes, because the mark is a picture of a word.** It is
-   * `fill: currentColor` over paths whose advances are baked in, so a theme
-   * cannot move it — which is a claim worth failing on rather than assuming,
-   * since it is the kind of thing a route-scoped colour rule with a different
-   * font-size in it would break silently.
+   * **Both themes, because the mark is a picture of a word**: `fill:
+   * currentColor` over paths whose advances are baked in, so a theme cannot
+   * move it — which a route-scoped colour rule with its own font-size would
+   * break silently. docs/E2E-DECISIONS.md#chromespecjs
    */
   const routes = ['/calendar/2026-09-05', '/saints', '/saints/anthony-the-great', '/map', '/texts', '/about'];
   await ready(page);
@@ -3326,31 +2886,18 @@ test('the masthead is one box on all six routes, at both widths and in both them
 
 test('Daily’s two boxes start on one line, and stand clear of the bar', async ({ page }) => {
   /*
-   * **What this test was, and what the rebuild left of it.** It pinned
-   * docs/daily-desktop-visuals.md §2.2's last piece: the nav's rule and the
-   * rule under the sidebar bubble's control row were one line across the
-   * gutter, because in the mockup the nav sat inside the grid's first column.
-   * The rebuilt page has no bubble and no control row to rule off (plan §5,
-   * §6) — the standing column is a plain opaque block over the strip of
-   * saints — so the levelling it asserted has no boxes left to be about.
-   *
-   * Three claims of the four survive the change, and they are the three that
-   * were about the reader rather than about that particular ornament:
+   * Three claims, all about the reader rather than about the ornament this
+   * test was first written for (docs/E2E-DECISIONS.md#chromespecjs):
    *
    *  - **The day's two boxes start on the same line.** The column and the
-   *    strip it stands over are the whole page, and a column that began a head
-   *    below the saints — or above them — is the defect the levelling was
-   *    written against, in the arrangement that replaced it.
-   *  - **They stand off the ceiling by a real margin**, rather than touching
-   *    the bar (author, 2026-09-10: "The sidebar's top currently touches the
-   *    ceiling of the page. Give it a margin"). `--space-6`, read off the drawn
-   *    boxes rather than off the declaration.
+   *    strip it stands over are the whole page.
+   *  - **They stand off the ceiling by a real margin** (`--space-6`), read off
+   *    the drawn boxes rather than off the declaration.
    *  - **They are clear of the bar's own box.** The bar is `position: sticky`
    *    at `z-index: 20`, and a page raised into its band would have live
-   *    controls lying under an invisible sheet. Geometry alone cannot see that,
-   *    so two controls — the header's church button and the sidebar's own day
-   *    step, one either side of the seam — are asked what is on top of them at
-   *    their own centres.
+   *    controls lying under an invisible sheet. Geometry alone cannot see
+   *    that, so two controls either side of the seam are asked what is on top
+   *    of them at their own centres.
    *
    * At both widths, and in a wide utility face: every box here is sized from
    * text and `--chrome-h-reserve` is a measured constant.
@@ -3397,19 +2944,9 @@ test('Daily’s two boxes start on one line, and stand clear of the bar', async 
 
 test('a press outside a chooser closes it', async ({ page }) => {
   /*
-   * Author, 2026-09-02: "when you click off the pop-ups for language or
-   * calendar that they close. E.g. if they are open and I click outside their
-   * bubble they should close."
-   *
-   * They never did. Both opened in the page's own flow, where a disclosure
-   * that waits to be answered or dismissed by its own button is ordinary; the
-   * same afternoon they began floating over the page on a desktop, and a panel
-   * that ignores the page underneath is one the reader has to go back and find
-   * the switch for.
-   *
    * `pointerdown` is what closes them, so this presses rather than clicks — a
-   * click would also fire, but pressing is the moment the reader has said they
-   * are done with the panel.
+   * click would fire too, but pressing is the moment the reader has said they
+   * are done with the panel. docs/E2E-DECISIONS.md#chromespecjs
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
@@ -3429,12 +2966,10 @@ test('a press outside a chooser closes it', async ({ page }) => {
   }
 
   /*
-   * **And the other chooser is not "outside"**, which is the standing
-   * behaviour of 2026-08-27 this could easily have taken away: the two are
-   * independent disclosures, both may stand open at once, and reaching for the
-   * second is not dismissing the first. It did take it away for one build —
-   * `the calendar panel follows a language change while it is open` went red,
-   * which is the test that exists for exactly that case.
+   * **And the other chooser is not "outside"**: the two are independent
+   * disclosures, both may stand open at once, and reaching for the second is
+   * not dismissing the first. It was taken away for one build, and `the
+   * calendar panel follows a language change while it is open` caught it.
    */
   await page.locator('#church-open').click();
   await expect(page.locator('#church-panel')).toBeVisible();
@@ -3444,15 +2979,11 @@ test('a press outside a chooser closes it', async ({ page }) => {
 });
 
 test('the masthead stands the same distance off the nav as the nav’s own words do', async ({ page }) => {
-  /*
-   * Author, 2026-09-02: "the gap between the wordmark svg and Daily should match
-   * the gap between Daily and All Saints."
-   *
-   * The header's five tracks are `space-3` apart, a number measured for the
-   * narrow row where four gaps decide whether Romanian fits on one line; the
-   * nav's own labels went to `space-8` on a desktop the day before, so one gap
-   * in a row of four was a third the size of the others.
-   */
+  // The header's five tracks are `space-3` apart, a number measured for the
+  // narrow row where four gaps decide whether Romanian fits on one line; the
+  // nav's own labels are at `space-8` on a desktop, so one gap in a row of
+  // four would otherwise be a third the size of the others.
+  // docs/E2E-DECISIONS.md#chromespecjs
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
@@ -3475,36 +3006,21 @@ test('the masthead stands the same distance off the nav as the nav’s own words
 
 test('the theme crosses in one movement: nothing snaps and nothing lags, on every route', async ({ page }) => {
   /*
-   * Author, 2026-09-10: "the screen's corners fading at a different rate from
-   * the rest, and the header possibly differently again."
+   * **This is the instrument**; the three unit tests beside it in
+   * `tests/design-tokens.test.mjs` are the cheap guards on the way here.
+   * Nothing in a stylesheet can say which elements the reader watches — that
+   * is a fact about the rendered page, and the old arrangement read as a
+   * deliberate, complete-looking rule for three weeks.
    *
-   * They were, and so was most of the page. The fade was
-   * `background-color, color` on `body`, `header` and `main` and on nothing
-   * else, so an element with a colour of its own — the chrome bar's fill, the
-   * header's rule, the sidebar bubble and the four notch crosses that stand on
-   * the page's own ground at its corners, every chip, mat and hairline — had
-   * no transition at all and arrived on the first frame while its neighbours
-   * eased for 300 ms. Measured on Daily at 1280 before the fix: **91 painted
-   * things snapped against 16 that eased**, and the 16 were the ones with no
-   * colour of their own, riding `body`'s inherited `color`.
+   * **It synchronises on the ground rather than on the clock.** A sample at a
+   * fixed number of milliseconds measures this machine; the frame is chosen by
+   * `body`'s own progress instead, and every element read inside it.
    *
-   * **This is the instrument, and the three unit tests beside it in
-   * `tests/design-tokens.test.mjs` are only the cheap guards on the way here.**
-   * Nothing in the stylesheet could have said which elements the reader
-   * watches — that is a fact about the rendered page, and the old arrangement
-   * read as a deliberate, complete-looking rule for three weeks.
-   *
-   * **It synchronises on the ground rather than on the clock.** A sample taken
-   * at a fixed number of milliseconds measures this machine; instead the frame
-   * is chosen by `body`'s own progress, and every element is read inside that
-   * same frame. So the assertion is "at the moment the ground is halfway,
-   * where is everything else" — which is the question, and which a slow runner
-   * cannot change the answer to.
-   *
-   * Two failures are then possible and both are checked, because a colour that
-   * crosses at the *wrong* rate and one that does not cross at all are
-   * different defects: at the synchronising frame nothing may have arrived
-   * (the snap), and after the fade nothing may still be travelling (the lag).
+   * Two failures are possible and both are checked, because a colour crossing
+   * at the *wrong* rate and one not crossing at all are different defects: at
+   * the synchronising frame nothing may have arrived (the snap), and after the
+   * fade nothing may still be travelling (the lag).
+   * docs/E2E-DECISIONS.md#chromespecjs
    */
   const routes = ['/calendar/2026-01-30', '/saints', '/saints/anthony-the-great', '/map', '/texts', '/about'];
   await ready(page);
@@ -3517,9 +3033,9 @@ test('the theme crosses in one movement: nothing snaps and nothing lags, on ever
     const seen = await page.evaluate(async () => {
       /*
        * Only what a reader can watch change on *this* element. `color` on a
-       * box with no text of its own, and the four border colours of a box with
-       * no border, are one inherited number reported five times over — and
-       * counting those was what made the original defect look like a tie.
+       * box with no text, and four border colours on a box with no border, are
+       * one inherited number reported five times — counting those made the
+       * original defect look like a tie.
        */
       const PROPS = ['backgroundColor', 'color', 'borderTopColor', 'borderBottomColor',
         'borderLeftColor', 'borderRightColor', 'fill', 'stroke'];
@@ -3568,13 +3084,11 @@ test('the theme crosses in one movement: nothing snaps and nothing lags, on ever
       const settle = () => new Promise((r) => setTimeout(r, 800));
 
       /*
-       * **Both ends are learned before the journey that is measured**, and
-       * that is not fussiness: read a second after the press and the "end"
-       * value is the transition's own first frame, so every progress figure
-       * comes out near zero and the test passes by measuring nothing. The
-       * first press is therefore spent finding out where the page lands, and
-       * the press after it is the one watched — the return leg, which crosses
-       * the same fifteen tokens the other way.
+       * **Both ends are learned before the journey that is measured.** Read
+       * the "end" value a second after the press and it is the transition's
+       * own first frame, so every progress figure comes out near zero and the
+       * test passes by measuring nothing. The first press finds where the page
+       * lands; the press after it is the one watched.
        */
       const ground = () => getComputedStyle(document.body).backgroundColor;
       const start = read();

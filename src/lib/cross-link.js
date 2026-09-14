@@ -94,7 +94,7 @@ export function buildNameIndex(saints) {
    caches for the life of the page. */
 const cache = new WeakMap();
 
-export function nameIndex(saints) {
+function nameIndex(saints) {
   if (!saints) return { bySlug: new Map(), pattern: null };
   if (!cache.has(saints)) cache.set(saints, buildNameIndex(saints));
   return cache.get(saints);

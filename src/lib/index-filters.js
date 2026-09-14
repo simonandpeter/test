@@ -19,8 +19,6 @@
 
 import { isUndated, makeInterval, overlaps, within } from './dates.js';
 
-export const RANGE_MODES = ['overlaps', 'within'];
-
 export const EMPTY_FILTERS = {
   query: '',
   churches: [],
@@ -264,7 +262,7 @@ const SHOWCASE = [0, 2];
  * it cannot fix: the alternative is inventing an order for a page that has no
  * pictures to lead with.
  */
-export function leadWithImages(cards) {
+function leadWithImages(cards) {
   const out = cards.slice();
   for (const place of SHOWCASE) {
     if (place >= out.length || out[place].image) continue;

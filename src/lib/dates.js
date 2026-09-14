@@ -11,8 +11,6 @@
  * rather than being filtered as if they were everywhere.
  */
 
-export const BASES = ['attested', 'traditional', 'inferred', 'unknown'];
-
 export function makeInterval(raw) {
   if (raw == null) return { earliest: null, latest: null, display: null, basis: 'unknown' };
   return {

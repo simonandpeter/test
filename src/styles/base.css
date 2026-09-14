@@ -1659,8 +1659,8 @@ html[data-swipe-nav='right']::view-transition-new(root) {
 }
 
 /* ---- salvaged from calendar.css, 2026-09-12 -------------------------------
-   These belong to `ui/church-chooser.js`, `ui/language-chooser.js` and
-   `ui/grain.js` — shared chrome and a shared gesture, none of which is the
+   These belong to `ui/church-chooser.js` and `ui/language-chooser.js` —
+   shared chrome, none of which is the
    Daily page's. They lived in `calendar.css` because that is where the
    first-visit question used to stand, and when that stylesheet went with the
    rebuild they went with it and were styled by nothing at all: the chooser
@@ -1670,25 +1670,6 @@ html[data-swipe-nav='right']::view-transition-new(root) {
    These were not, and the pixel diff that found them was aimed at something
    else — so the lesson is the one in trap 6: a green build says nothing about
    a code move, and neither does a passing suite about a stylesheet's death. */
-
-.grain-track {
-  position: relative;
-}
-
-.grain-track.is-settling {
-  transition: transform var(--dur-settle) var(--ease);
-}
-
-/* The grain either side, parked a viewport width away. For the length of a
-   move the document holds two or three of every date, so the copies say what
-   they are — and being out of reach is not belt and braces: a copy laid over
-   the live row swallows the click that would move the grain again. */
-.grain-side {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  pointer-events: none;
-}
 
 .ask-heading {
   font-size: var(--text-xl);

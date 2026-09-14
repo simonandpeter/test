@@ -4,18 +4,11 @@ import { ready } from './helpers.js';
 /**
  * App mode (brief §12): the manifest, the worker, and the offline promises.
  *
- * The worker registers on every production page load, which is what `vite
- * preview` serves — so every test in the suite already runs *with* the worker,
- * and the console-error and quality-floor sweeps have been passing over it.
- * What this file adds are the claims the rest of the suite cannot make: that
- * the caches fill, and that the site still answers when the network is gone.
- *
- * Offline is Playwright's own (`context.setOffline`), which severs the network
- * *under* the service worker — exactly a phone in a tunnel. Each offline test
- * loads once online first, because the offline promise is about what a visit
- * leaves behind, and asserts its premise (a controlling worker) before
- * cutting the cord: an offline test with no worker would fail for the boring
- * reason and report the interesting one.
+ * Offline is `context.setOffline`, which severs the network *under* the worker
+ * rather than stubbing it. Every offline test therefore loads once online and
+ * asserts its premise (a controlling worker) first — without that it would
+ * fail for the boring reason and report the interesting one.
+ * Rationale: docs/E2E-DECISIONS.md#pwaspecjs
  */
 
 /** Registered, active, and controlling this page — the premise of every offline claim. */
@@ -81,12 +74,8 @@ test('offline, the site still opens', async ({ page, context }) => {
 
   await context.setOffline(true);
   try {
-    /*
-     * A different route than the one that was loaded, deliberately: what is
-     * cached is the *shell*, and the navigation fallback serves it for any
-     * path — the router reads the address and takes it from there. That is
-     * the whole of offline routing for a single-page app.
-     */
+    // A different route than the one loaded, deliberately: what is cached is
+    // the *shell*, and the navigation fallback serves it for any path.
     await page.goto('/about', { waitUntil: 'domcontentloaded' });
     await expect(page.locator('h1')).toHaveText('About');
   } finally {
@@ -98,13 +87,8 @@ test('a saint once read stays readable offline', async ({ page, context }) => {
   await ready(page);
   await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
   expect(await controlled(page), 'premise: the worker controls the page').toBe(true);
-  /*
-   * Read *again*, now controlled. The very first page view's fetches race the
-   * worker's install and go straight to the network - a worker only sees
-   * requests made after it claims - so "cache on read" starts from the second
-   * read of a fresh browser, which is what this reload is. The promise under
-   * test is about what a controlled read leaves behind.
-   */
+  // Read *again*, now controlled: a worker only sees requests made after it
+  // claims, so "cache on read" starts from the second read of a fresh browser.
   await page.reload({ waitUntil: 'networkidle' });
   await expect(page.locator('.life p').first()).toBeVisible();
 
@@ -128,12 +112,9 @@ test('a saint never read says so offline, honestly', async ({ page, context }) =
   try {
     /*
      * Brief §12: "uncached saints show a clear 'Not available offline' state,
-     * not a broken card." Christopher was never opened in this context, so his
-     * payload is not in any cache — the shell boots (navigation fallback), the
-     * manifest names him (it is in the shell cache), and the *detail* fetch is
-     * the one that fails. The page must say what is actually true: nothing
-     * stored, network needed once — and not offer a retry-shaped apology about
-     * hiccups.
+     * not a broken card." Christopher was never opened in this context, so the
+     * shell boots and the manifest names him while the *detail* fetch fails —
+     * which is the only arrangement that exercises the note.
      */
     await page.goto('/saints/christopher', { waitUntil: 'domcontentloaded' });
     await expect(page.locator('.error-note')).toBeVisible();

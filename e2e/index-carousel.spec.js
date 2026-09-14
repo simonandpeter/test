@@ -8,35 +8,15 @@ import {
 } from './helpers.js';
 
 /**
- * All Saints, the carousel: the loop, its drift and its wheel, the cards it deals, the mode toggle, and the seed a shuffle writes.
+ * All Saints, the carousel: the loop, its drift and its wheel, the cards it
+ * deals, the mode toggle, and the seed a shuffle writes.
  *
- * Part of the browser suite, which was one file of 9,308 lines until
- * 2026-08-27 and is now one file per surface. **The tests themselves are
- * unchanged** — each carries the instruction that caused it and the date it
- * was written, which is where this suite's provenance has always lived; what
- * moved is only which file it sits in. `helpers.js` holds the shared fixtures.
- *
- * **Split again on 2026-09-05** (cleanup plan item 6, on the author's word:
- * "Items 5 and 6"), by surface *within* the page rather than by the date a
- * test was written, once the one file had reached 4,895 lines. The rule
- * is the first split's: the tests are unchanged, each still carries
- * the instruction and the date that caused it, and only the file moved. The
- * `---- round ----` dividers are the rounds the tests were written in and
- * are repeated in whichever file holds a member of that round, so a test
- * still says which round it belongs to; the tests above the first divider
- * are the ones written before the file had any. The seam between the three
- * files is a judgement, not a measurement: a test that reads two surfaces
- * sits with the one its title names.
+ * The `---- round ----` dividers are the rounds the tests were written in.
+ * docs/E2E-DECISIONS.md#index-carouselspecjs
  */
 
-/*
- * All Saints opens on the carousel, and almost every test that visits it was
- * written about the other mode. The suite states which face it is testing
- * rather than each of forty-odd tests growing a line to press the toggle —
- * `searchMode` in helpers.js argues it. **Every spec file needs this**: it was
- * one `beforeEach` over one file, and dropping it from any of them would hand
- * those tests the carousel instead.
- */
+// **Every spec file needs this**: dropping it hands these tests the carousel
+// instead of the search face they were written about (`searchMode`, helpers.js).
 test.beforeEach(async ({ page }) => {
   await searchMode(page);
 });
@@ -46,20 +26,16 @@ test.beforeEach(async ({ page }) => {
 
 test('the Index opens on the carousel however the reader left it', async ({ browser }) => {
   /*
-   * Author, 2026-08-28: "have it default to Carousel mode on first open, and if
-   * the site is refreshed or opened again in a different tab, have it still
-   * default to Carousel mode. It only doesnt default while you are still on the
-   * site without refreshing."
-   *
-   * `switchMode` wrote `settings.indexMode`, so the choice outlived the visit.
-   * It no longer writes it. The setting is still *read* on open, deliberately:
-   * that is how the rest of this suite asks for the other face without pressing
-   * anything, and a future "remember my choice" wants the write back rather
-   * than a new mechanism.
+   * `switchMode` wrote `settings.indexMode`, so the choice outlived the visit. It
+   * no longer writes it. The setting is still *read* on open, deliberately: that
+   * is how the rest of this suite asks for the other face without pressing
+   * anything, and a future "remember my choice" wants the write back rather than
+   * a new mechanism.
    *
    * Its own context, with no `searchMode` stamp — this test is about what a
    * reader with nothing stored gets, and the suite's `beforeEach` would answer
    * the question before it was asked.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   const ctx = await browser.newContext();
   const page = await ctx.newPage();
@@ -90,17 +66,11 @@ test('the Index opens on the carousel however the reader left it', async ({ brow
 
 test('a search too short to fill the row stops it, left-justified, each saint once', async ({ page }) => {
   /*
-   * Author, 2026-08-28: "When you search for a saint in the carousel, only
-   * display 1 instance of each saint, not multiple as it currently happens to
-   * complete the carousel. If there are not enough saints to complete the auto
-   * scroll carousel, have the scroll gently stop and display left justified.
-   * The auto scroll resumes when there are enough cards to reach both ends of
-   * the window size."
-   *
    * `loopSafe` repeated a short run to a floor of ten so the period was long
    * enough not to judder — honest about the data and not about the reading: a
    * search matching two saints showed each of them five times. A run that does
    * not fill the track no longer loops at all.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
@@ -131,10 +101,8 @@ test('a search too short to fill the row stops it, left-justified, each saint on
   expect(row.scroll, 'a row that fits should not be scrolled into a buffer').toBe(0);
   expect(row.overflow, 'a row that fits has nothing to scroll').toBeLessThanOrEqual(1);
 
-  /*
-   * And the drift comes back when the set is big enough to reach both ends —
-   * the other half of the instruction, and the reason this is one test.
-   */
+  // And the drift comes back when the set is big enough to reach both ends — the
+  // other half of the instruction, and the reason this is one test.
   await page.locator('[data-query]').fill('');
   await expect(track).not.toHaveClass(/is-static/);
   await expect
@@ -145,14 +113,10 @@ test('a search too short to fill the row stops it, left-justified, each saint on
 
 test('the carousel fades out and back in when the search changes it', async ({ page }) => {
   /*
-   * Author, 2026-08-28: "When searching for saints in the carousel, fade out
-   * and fade in when loading the new displays." Without it the whole track was
-   * replaced between two frames, which reads as a flicker.
-   *
    * Watched through the class rather than sampled at a moment: the rebuild is
    * deferred behind the fade, so what is claimed is that the row goes *before*
-   * its content changes, which a snapshot of opacity cannot tell from a row
-   * that was already dark.
+   * its content changes — which a snapshot of opacity cannot tell from a row that
+   * was already dark. docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
@@ -185,19 +149,16 @@ test('the carousel fades out and back in when the search changes it', async ({ p
 
 test('a press on a carousel card opens the saint', async ({ page }) => {
   /*
-   * Author, 2026-08-28: "On desktop you can no longer click on any card in the
-   * carousel to take you to the profile page for some reason."
-   *
-   * `loop-scroll.js` took `setPointerCapture` on `pointerdown` so a haul would
-   * keep following the mouse past the track's edge. Capture also makes the
-   * track the target the `click` is dispatched at, rather than the `<a>` under
-   * the finger — so the router's delegated handler found no anchor and the
-   * press did nothing at all. Capture is taken when a press *becomes* a haul
-   * now, past the same 4 px that already told a haul from a click.
+   * `loop-scroll.js` takes `setPointerCapture` so a haul keeps following the
+   * mouse past the track's edge — and capture also makes the track the target the
+   * `click` is dispatched at, rather than the `<a>` under the finger, so the
+   * router's delegated handler found no anchor. Capture is taken when a press
+   * *becomes* a haul now, past the same 4 px that already told a haul from a click.
    *
    * Its own test rather than a line in `the row can be hauled with the mouse`,
-   * which asserted only that a haul moves the row and stayed green throughout.
-   * A press and a haul are two claims and they broke independently.
+   * which asserted only that a haul moves the row and stayed green throughout: a
+   * press and a haul are two claims and they broke independently.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
@@ -232,16 +193,10 @@ test('a press on a carousel card opens the saint', async ({ page }) => {
 
 test('All Saints opens on the carousel, and the toggle names where it goes', async ({ browser }) => {
   /*
-   * Author, 2026-08-27: "The All Saints page should default to horizontal
-   * carousel mode, which only has the search bar and the carousel underneath
-   * it. The button toggle to the right of 'All Saints' should say 'Advanced
-   * search', and when you click it the horizontal carousel mode changes to the
-   * advanced search mode which shows all the filters. When the mode has
-   * changed, the button toggle then says 'Carousel mode'."
-   *
-   * A fresh context, and deliberately without the suite's `searchMode`
-   * default: this is the one test about the face a reader who has never chosen
-   * is shown, so it must not be handed an answer.
+   * A fresh context, and deliberately without the suite's `searchMode` default:
+   * this is the one test about the face a reader who has never chosen is shown,
+   * so it must not be handed an answer.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   const ctx = await browser.newContext();
   const page = await ctx.newPage();
@@ -284,11 +239,10 @@ test('All Saints opens on the carousel, and the toggle names where it goes', asy
 
 test('the carousel is a real loop: periodic content, and no dead end at either edge', async ({ page }) => {
   /*
-   * The infinite scroll, which is the part of the old build's carousel the
-   * author asked to bring forward. It rests on one invariant: the rendered row
-   * is *periodic*, so a correction of exactly one period lands on identical
-   * content and cannot be seen. Everything else - the clone buffer, measuring
-   * real offsets rather than a stride - exists to keep that true.
+   * The infinite scroll rests on one invariant: **the rendered row is periodic**,
+   * so a correction of exactly one period lands on identical content and cannot
+   * be seen. Everything else — the clone buffer, measuring real offsets rather
+   * than a stride — exists to keep that true.
    *
    * Asserted on the DOM rather than by watching it drift, because a drift
    * assertion is a measurement of one machine's frame rate.
@@ -320,17 +274,11 @@ test('the carousel is a real loop: periodic content, and no dead end at either e
       max: track.scrollWidth - track.clientWidth,
     };
   });
-  /*
-   * **The run is the whole matched set** (author, 2026-08-28: "the carousel
-   * does not cycle through all saints just a limited number and then it cycles
-   * back to the start of that pool? It should be able to show all of them").
-   * It was capped at a 48-saint sample, which is the decision this reverses;
-   * what makes the corpus affordable is `windowImages`, which holds only the
-   * bitmaps near the viewport.
-   */
-  /* Cells, not saints: a column holds up to four since the row started packing
-     by height, so the run is shorter than the corpus while still carrying all
-     of it. The count that matters is the saints, asserted below. */
+  /* Cells, not saints: a column holds several since the row started packing by
+     height, so the run is shorter than the corpus while still carrying all of
+     it. The count that matters is the saints, asserted below. What makes the
+     whole corpus affordable is `windowImages`, which holds only the bitmaps near
+     the viewport. docs/E2E-DECISIONS.md#index-carouselspecjs */
   expect(shape.count, 'the run should be most of the corpus in columns').toBeGreaterThan(150);
   expect(shape.saints, 'every matched saint should be in the run').toBeGreaterThan(700);
   expect(shape.total).toBe(shape.count + 24);
@@ -344,16 +292,12 @@ test('the carousel is a real loop: periodic content, and no dead end at either e
 
   /*
    * **Waited for the loop to have measured, not sampled straight after paint**
-   * (2026-08-28). `loopScroll` re-measures from its own frame until the
-   * geometry is real, and only then knows a period to correct against. With a
-   * 48-saint sample that landed on the first frame and this block could follow
-   * the paint; carrying the whole corpus it takes a few more, and both edges
-   * then read as dead ends because there is no period yet — the row is fine and
-   * the test was early. CLAUDE.md has warned since 2026-08-27 that this loop is
-   * not measurable until it says so.
+   * (trap 8). `loopScroll` re-measures from its own frame until the geometry is
+   * real, and only then knows a period to correct against; until it does, both
+   * edges read as dead ends because there is no period yet.
    *
-   * A started loop is one sitting at its own head rather than at the DOM's
-   * edge, which is the assertion just above turned into a wait.
+   * A started loop is one sitting at its own head rather than at the DOM's edge,
+   * which is the assertion just above turned into a wait.
    */
   await expect
     .poll(() => page.evaluate(() => document.querySelector('[data-carousel-track]').scrollLeft), {
@@ -365,12 +309,10 @@ test('the carousel is a real loop: periodic content, and no dead end at either e
    * Neither edge is a dead end: pushed hard against each, the track comes back
    * into the middle rather than stopping.
    *
-   * **Polled, not settled for 400 ms** (2026-08-28). The correction runs on the
-   * track's own scroll event and the drift's next frame, and a fixed wait is a
-   * measurement of how quickly this machine gets round to both — which with a
-   * 48-saint sample was always inside 400 ms and with the whole corpus is
-   * sometimes not. A wait that ends when the thing has happened says the same
-   * thing and cannot be outrun; a correction that never comes still fails it.
+   * **Polled, not settled for a fixed wait.** The correction runs on the track's
+   * own scroll event and the drift's next frame, and a fixed wait measures how
+   * quickly this machine gets round to both. A correction that never comes still
+   * fails this.
    */
   const at = () => page.evaluate(() => document.querySelector('[data-carousel-track]').scrollLeft);
 
@@ -396,15 +338,12 @@ test('the carousel is a real loop: periodic content, and no dead end at either e
 
 test('the carousel drifts on its own, and keeps drifting under the pointer', async ({ page }) => {
   /*
-   * The heir of 'stands still while a reader is on it', inverted at the
-   * author's instruction (2026-08-27: "on desktop, when hovering over a saint,
-   * the carousel stops, but it should keep going"). A mouse over a full-bleed
-   * row is where a desktop cursor simply *is* — it has to rest somewhere, and
-   * the row runs the width of the window — so pausing on hover meant the row
-   * was stopped for most of the time anyone was looking at it.
-   *
-   * What still stops it is a reader who has actually taken hold: a touch, or
+   * A mouse over a full-bleed row is where a desktop cursor simply *is* — it has
+   * to rest somewhere, and the row runs the width of the window — so pausing on
+   * hover meant the row was stopped for most of the time anyone was looking at
+   * it. What still stops it is a reader who has actually taken hold: a touch, or
    * the keyboard tabbing into the track. Those have their own tests.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
@@ -414,16 +353,12 @@ test('the carousel drifts on its own, and keeps drifting under the pointer', asy
   const at = () => page.evaluate(() => document.querySelector('[data-carousel-track]').scrollLeft);
 
   /*
-   * **Wait for the row to have somewhere to drift before timing the drift.**
-   * All Saints packs all 862 captions in one blocking task before it can paint
-   * a column — the defect that is item 7 in PLAN.md — and under six parallel
-   * workers that task was eating the drift's whole 4 s budget, which is why
-   * this test and `a carousel card is sized by the window height` were the two
-   * things still flaking on CI once the map's tests were fixed (2026-09-09;
-   * both pass 24 of 24 run alone, so it was never the drift).
-   *
-   * Separating the two means the 4 s below measures the drift and nothing
-   * else. When item 7 lands this wait becomes instant rather than wrong.
+   * **Wait for the row to have somewhere to drift before timing the drift.** All
+   * Saints packs every caption in one blocking task before it can paint a column
+   * — PLAN.md item 7 — and under parallel workers that task was eating the
+   * drift's whole budget. Separating the two means the 4 s below measures the
+   * drift and nothing else; when item 7 lands this wait becomes instant rather
+   * than wrong. docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await expect
     .poll(
@@ -441,19 +376,14 @@ test('the carousel drifts on its own, and keeps drifting under the pointer', asy
 
   /*
    * **`hover()` cannot be used on the thing this test exists to prove is
-   * moving.** Playwright waits for its target to be *stable* — the same
-   * bounding box across two consecutive frames — before it will act, and a row
-   * drifting by design never is. It passed here for weeks because the drift is
-   * about 0.4 px a frame on this desk and rounds to equal often enough; on a
-   * two-core runner the frames are longer, the step is bigger, and it never
-   * rounds. That is the whole of the CI failure on `024897a`, and it
-   * reproduces locally at `Emulation.setCPUThrottlingRate` 20 —
-   * `scratchpad/throttle-probe.mjs hover` succeeds at 1x and times out at 20x.
+   * moving.** Playwright waits for its target to be *stable* — the same bounding
+   * box across two consecutive frames — before it will act, and a row drifting by
+   * design never is. Re-derive it under throttling:
+   * `scripts/throttle-probe.mjs hover` succeeds at 1x and times out at 20x.
    *
-   * `mouse.move` has no actionability gate: it puts the pointer at a
-   * coordinate and the page sees the same thing. The track's own box is the
-   * coordinate to use, since it is the one rectangle here that does not move.
-   * CLAUDE.md's third trap is this shape for `click`.
+   * `mouse.move` has no actionability gate: it puts the pointer at a coordinate
+   * and the page sees the same thing. The track's own box is the coordinate to
+   * use, since it is the one rectangle here that does not move (trap 3's shape).
    */
   const row = await page.locator('[data-carousel-track]').boundingBox();
   await page.mouse.move(row.x + row.width / 2, row.y + row.height / 2);
@@ -489,11 +419,10 @@ test('under reduced motion the carousel does not drift, and the modes swap witho
   });
   expect(opening.at, 'the row opened inside the head clones').toBe(opening.firstReal);
 
-  // The swap is immediate: the face is not left mid-fade a frame after the
-  // press. `.is-leaving` is the class the fade would be wearing (index.css),
-  // and the facets being visible already is the same claim from the other end
-  // — a class that no longer existed anywhere would satisfy the first of these
-  // on its own, so both are asserted.
+  // The swap is immediate: the face is not left mid-fade a frame after the press.
+  // `.is-leaving` is the class the fade would be wearing (index.css), and the
+  // facets being visible already is the same claim from the other end — a class
+  // that no longer existed anywhere would satisfy the first on its own.
   await page.locator('[data-mode-toggle]').click();
   expect(await page.locator('.is-leaving').count()).toBe(0);
   await expect(page.locator('.facets')).toBeVisible();
@@ -503,10 +432,10 @@ test('under reduced motion the carousel does not drift, and the modes swap witho
 
 test('a second press inside the fade lands the first one rather than racing it', async ({ page }) => {
   /*
-   * the rule, in the shape the mode swap needs: while two flights are
-   * in the air, exactly one is current. `land` reads the mode off `state`, so
-   * two overlapping fades would leave the *stale* timer with the last word —
-   * pressing twice quickly could settle on the mode you had just left.
+   * While two flights are in the air, exactly one is current. `land` reads the
+   * mode off `state`, so two overlapping fades would leave the *stale* timer with
+   * the last word — pressing twice quickly could settle on the mode you had just
+   * left.
    */
   await carouselMode(page);
   await ready(page);
@@ -536,12 +465,6 @@ test('a second press inside the fade lands the first one rather than racing it',
 
 
 test('a carousel card prints the whole name, the office and the dates, and shows the icon entire', async ({ page }) => {
-  /*
-   * Author, 2026-08-27: "make sure the full name is printed and is not
-   * shortened with '...'. Also dont crop the images, but fix their width to
-   * what they currently are. Also include their office and dating under their
-   * names in carousel mode."
-   */
   await carouselMode(page);
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
@@ -570,13 +493,10 @@ test('a carousel card prints the whole name, the office and the dates, and shows
     expect(c.nameOverflows, 'a name is cut off by its box').toBe(false);
   }
   /*
-   * **One column width for every card in its own kind of column**, and two
-   * kinds since 2026-09-07: a column holding a picture is `--cx-w`, one
-   * holding only names is `--cx-w-text`. The instruction this line pins is
-   * "fix their width to what they currently are" — a fact about the pictures,
-   * which is why it is the picture columns that must still agree to the pixel.
-   * The name columns agree among themselves too, which is the same claim made
-   * of the other width.
+   * **One column width for every card in its own kind of column**, and there are
+   * two kinds: a column holding a picture is `--cx-w`, one holding only names is
+   * `--cx-w-text`. The instruction is a fact about the pictures, which is why it
+   * is the picture columns that must still agree to the pixel.
    */
   for (const kind of [false, true]) {
     const widths = new Set(cards.filter((c) => c.names === kind).map((c) => c.width));
@@ -584,17 +504,12 @@ test('a carousel card prints the whole name, the office and the dates, and shows
   }
   // Never `cover`, which is the crop the author asked to remove.
   /*
-   * **`cover`, not `contain`, since 2026-09-02** (author: "apply the same
-   * aspect ratio limitations to crop any saint card display ... in the same
-   * way it applies to the main saint card on Daily page desktop").
-   *
-   * This line pinned the instruction of 2026-08-27 — "dont crop the images" —
-   * which held while a card's box was the picture's own shape and nothing
-   * bounded it. The box is a decision now, clamped to 1:1.6 at the tallest,
-   * and `contain` inside a box that is not the picture's shape letterboxes the
-   * very icons the clamp exists to crop. The uncropped promise survives for
-   * every icon inside the limits, which is 119 of the 130: their box is still
-   * their own shape, so `cover` takes nothing off them.
+   * **`cover`, not `contain`.** A card's box is a decision now, clamped to 1:1.6
+   * at the tallest, and `contain` inside a box that is not the picture's shape
+   * letterboxes the very icons the clamp exists to crop. The uncropped promise
+   * survives for every icon inside the limits — their box is still their own
+   * shape, so `cover` takes nothing off them.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   for (const c of cards.filter((c) => c.fit)) expect(c.fit).toBe('cover');
   // And the subtext is there for the saints who have one to show.
@@ -604,14 +519,12 @@ test('a carousel card prints the whole name, the office and the dates, and shows
 
 test('the carousel holds only the pictures near it, and the empty boxes keep their size', async ({ page }) => {
   /*
-   * Author, 2026-08-27: "It is also quite slow and laggy, maybe only render
-   * whats on screen and 2-3 cards just off screen as well."
-   *
-   * The nodes stay — `ui/loop-scroll.js` measures real offsets and taking
-   * cards out would move every offset after them — so what is asserted is the
-   * *sources*: far fewer than the 72 cards in the row, and the boxes of the
-   * ones without a source exactly as tall as the boxes of the ones with, which
-   * is the property that makes releasing a src free of reflow.
+   * The nodes stay — `ui/loop-scroll.js` measures real offsets and taking cards
+   * out would move every offset after them — so what is asserted is the
+   * *sources*: far fewer than the cards in the row, and the boxes of the ones
+   * without a source exactly as tall as the boxes of the ones with, which is the
+   * property that makes releasing a src free of reflow.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
@@ -658,13 +571,9 @@ test('the carousel holds only the pictures near it, and the empty boxes keep the
 
 test('a carousel card is half again as wide on a desktop', async ({ page }) => {
   /*
-   * Author, 2026-08-27: "Make the carousel images larger on desktop they are
-   * tiny at the moment. The width should be at least 1.5x on desktop."
-   *
-   * Both widths are taken in one test rather than left to the two projects,
-   * because the claim is a *ratio* between them and neither project can see
-   * the other. It is a CSS pixel measure either way, so no face reads into it
-   * (CLAUDE.md's second standing trap).
+   * **Both widths are taken in one test** rather than left to the two projects,
+   * because the claim is a *ratio* between them and neither project can see the
+   * other. It is a CSS pixel measure either way, so no face reads into it (trap 2).
    */
   await carouselMode(page);
   await ready(page);
@@ -689,17 +598,12 @@ test('a carousel card is half again as wide on a desktop', async ({ page }) => {
 
 test('the wheel carries the carousel back, and no faster than its cap', async ({ page }) => {
   /*
-   * Author, 2026-08-27: "allow a bit of horizontal scrolling on desktop with
-   * the mouse wheel ... This is so if something goes off screen that caught
-   * your interest your can go back. But limit the scroll speed so the images
-   * load well."
-   *
    * Two claims, and the second is the one that needs a test at all: *back* is
-   * easy to see, but a cap is invisible until something is spun hard enough to
-   * exceed it. So the wheel is spun far harder than any reader would, and the
-   * row is asked how fast it actually went. The cap is what gives
-   * `windowImages`' fixed distance a guaranteed decode time; without it the
-   * two halves of the answer do not hold together.
+   * easy to see, but **a cap is invisible until something is spun hard enough to
+   * exceed it** — so the wheel is spun far harder than any reader would. The cap
+   * is what gives `windowImages`' fixed distance a guaranteed decode time;
+   * without it the two halves of the answer do not hold together.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
@@ -711,25 +615,13 @@ test('the wheel carries the carousel back, and no faster than its cap', async ({
     const start = track.scrollLeft;
     const frame = () => new Promise((r) => requestAnimationFrame(r));
     /*
-     * **Fifteen frames, not two** (2026-08-29). This assertion failed about one
-     * local run in three at 1116-1161 px/s against a 900 px/s clamp, on a clean
-     * checkout — the mistake in its third costume. The old version
-     * read the position across two rAF callbacks, but the loop integrates in
-     * *its own* rAF, and the two are not the same clock: a dropped frame put up
-     * to a frame and a half of integrated distance inside the test's measured
-     * window, which overstates the speed by half a frame's worth. One uneven
-     * frame decided the verdict.
-     *
-     * So the speed is now an average over ~250 ms, which measures the clamp
-     * rather than one frame's luck. A notch is dispatched *every* frame to hold
-     * the velocity pinned at the cap for the whole window — the loop's own
-     * comment says a reader who keeps spinning holds the clamp for as long as
-     * they spin, and that is the state in which the cap is the only thing
-     * deciding the speed. The boundary frames can still leak: the window opens
-     * and closes on the test's clock, not the loop's, so up to one integration
-     * frame of distance lands just inside or outside either edge. Over fifteen
-     * frames that is a ~7% error bar, which the 1100 ceiling absorbs; over two
-     * it was 50%, which nothing could.
+     * **Fifteen frames, not two.** The old version read the position across two
+     * rAF callbacks, but the loop integrates in *its own* rAF and the two are not
+     * the same clock: a dropped frame put up to a frame and a half of integrated
+     * distance inside the measured window, and one uneven frame decided the
+     * verdict. The speed is an average over ~250 ms now, which measures the clamp
+     * rather than one frame's luck, and a notch is dispatched *every* frame to
+     * hold the velocity pinned at the cap for the whole window.
      */
     const spin = () =>
       track.dispatchEvent(new WheelEvent('wheel', { deltaY: -240, bubbles: true, cancelable: true }));
@@ -761,14 +653,11 @@ test('the wheel carries the carousel back, and no faster than its cap', async ({
 
 test('the carousel fades in rather than appearing, and comes back where it was left', async ({ page }) => {
   /*
-   * Author, 2026-08-27: "The carousel mode doesnt fade back in, it just
-   * appears. Also make sure when you switch back to carousel mode, the site
-   * saves the location the carousel was in so you go back there."
-   *
    * The fade failed for a reason worth pinning: the arriving state is held for
-   * two frames, and with a transition on it the opacity only *began*
-   * travelling toward 0 before being released, so there was nothing to fade
-   * up from. The snap is what makes the second beat visible.
+   * two frames, and with a transition on it the opacity only *began* travelling
+   * toward 0 before being released, so there was nothing to fade up from. **The
+   * snap is what makes the second beat visible.**
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
@@ -776,13 +665,11 @@ test('the carousel fades in rather than appearing, and comes back where it was l
   await expect(page.locator('.cx-card').first()).toBeVisible();
 
   /*
-   * Compared as an offset within a card's width, not as the name at the head
-   * of the row. The row is *drifting* the whole time — that is the mode — so
-   * between the reading before the switch and the reading after it the answer
-   * moves by however long the two mode changes took, and a leading-card test
-   * flips the moment that crosses a card boundary. What is being claimed is
-   * "it comes back where it was", and a card's width is the resolution at
-   * which that claim means anything.
+   * Compared as an offset within a card's width, not as the name at the head of
+   * the row: the row is *drifting* the whole time, so between the reading before
+   * the switch and the one after it the answer moves by however long the two mode
+   * changes took. A card's width is the resolution at which "it comes back where
+   * it was" means anything.
    */
   const cardWidth = await page.evaluate(
     () => document.querySelector('.cx-card').getBoundingClientRect().width,
@@ -790,21 +677,11 @@ test('the carousel fades in rather than appearing, and comes back where it was l
 
   /*
    * **Wait for the loop to have started before writing a position into it**
-   * (2026-08-28). This was the flake: 7 of 24 under `COLD_FACE=1` at ten
-   * workers, measured on an unmodified tree so it could not be blamed on the
-   * change it was found beside.
-   *
-   * `loopScroll` re-measures from its own frame until the geometry is real, and
-   * only then applies the clone buffer's offset. Until that happens the track
-   * sits at **0**, and a `scrollLeft` written into it is discarded when the loop
-   * finally measures — the row then opens wherever the buffer puts it. The
-   * failures said so exactly: every one of them had read `before` as a bare
-   * 2400, meaning the `+= 2400` had landed on a track still at zero, and the
-   * row came back at 2752 or 1965. Every run that had started first read `before`
-   * as 4374 or 5165 — the buffer's offset plus the seed — and passed.
-   *
-   * So the row is waited for rather than the page: a started loop is one whose
-   * track is past 0, which is the buffer's own offset and never zero.
+   * (trap 8). `loopScroll` re-measures from its own frame until the geometry is
+   * real, and only then applies the clone buffer's offset. Until that happens the
+   * track sits at **0**, and a `scrollLeft` written into it is discarded when the
+   * loop finally measures. A started loop is one whose track is past 0.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await expect
     .poll(() => page.evaluate(() => document.querySelector('[data-carousel-track]').scrollLeft))
@@ -812,11 +689,9 @@ test('the carousel fades in rather than appearing, and comes back where it was l
 
   /*
    * **Both readings are taken in the turn they belong to.** The row drifts every
-   * frame — that is the mode — so a position read on one round trip and compared
-   * with one read on another is a measurement of how long the round trips took,
-   * and the tolerance of one card is then a budget for wall time. The seed and
-   * the reading are one evaluate, and the reading back happens on the first
-   * frame the carousel is unhidden, before the drift has anywhere to go.
+   * frame, so a position read on one round trip and compared with one read on
+   * another is a measurement of how long the round trips took, and the tolerance
+   * of one card becomes a budget for wall time.
    */
   const before = await page.evaluate(() => {
     const track = document.querySelector('[data-carousel-track]');
@@ -905,21 +780,15 @@ test('the mode toggle wears no frame, and its word crosses over', async ({ page 
 
 test('leaving a saint puts the carousel back where it was', async ({ page }) => {
   /*
-   * Author, 2026-08-27: "When exiting a saint card from the carousel, make
-   * sure you return to where you came from, just like you do when you leave
-   * advanced search and come back to the carousel, you return to the last
-   * position you were at."
-   *
-   * The offset already survived a *mode* switch — `switchMode` reads the
-   * track's `scrollLeft` before hiding it, because a hidden element reports 0
-   * — but not a navigation, because the snapshot the saint page's × comes back
-   * to kept the filters and the vertical scroll and not this. It does now.
+   * The offset already survived a *mode* switch — `switchMode` reads the track's
+   * `scrollLeft` before hiding it, because a hidden element reports 0 — but not a
+   * navigation.
    *
    * **Reduced motion, so the row is standing still.** The drift writes
    * `scrollLeft` every frame; under `prefers-reduced-motion` it does not run at
-   * all, which turns "roughly where it was" into an exact number and makes the
-   * test worth having. The restore itself is not animated, so nothing being
-   * measured is switched off by this.
+   * all, which turns "roughly where it was" into an exact number. The restore
+   * itself is not animated, so nothing being measured is switched off by this.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   const ctx = await page.context().browser().newContext({
     viewport: { width: 1280, height: 900 },
@@ -958,27 +827,21 @@ test('leaving a saint puts the carousel back where it was', async ({ page }) => 
 
 test('a carousel card is sized by the window height as well as its width', async ({ page }) => {
   /*
-   * Author, 2026-08-28: "On desktop, the saint images in the carousel stay the
-   * same width which is good in full screen BUT not good when window is
-   * resized. Make the icon width adjust with the window height to keep the
-   * display of the images in a differently sized window on desktop."
-   *
    * The row is sized off the picture, whose height is its own, so a fixed width
    * in a short window pushes the captions off the fold. `--cx-w` is a clamp on
-   * `vh` now: a full-screen desk is exactly what it was, and a short window
-   * gets a smaller card rather than a cropped one.
+   * `vh`: a full-screen desk is exactly what it was, and a short window gets a
+   * smaller card rather than a cropped one.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   /*
-   * **A column with a picture in it**, since 2026-09-07: a column of names
-   * alone is drawn at `--cx-w-text`, which is the narrower of the two widths
-   * the row now has, and which one the DOM's first cell happens to be depends
-   * on the shuffle. `--cx-w` is what this test has always been about — the
-   * instruction was about the *images* — and `:not(.is-names)` is where it
-   * still governs. The narrow column has a test of its own below.
+   * **A column with a picture in it.** A column of names alone is drawn at
+   * `--cx-w-text`, the narrower of the two widths the row has, and which one the
+   * DOM's first cell happens to be depends on the shuffle. `--cx-w` is what this
+   * test is about — the instruction was about the *images*.
    */
   const cell = page.locator('.cx-cell:not(.is-names)').first();
   await expect(cell).toBeVisible();
@@ -990,26 +853,16 @@ test('a carousel card is sized by the window height as well as its width', async
 
   /*
    * **Wait for a narrower width that is not zero.** Mid-repack the cell reports
-   * 0 — CLAUDE.md's seventh trap, a hidden element measuring nothing — and a
-   * poll for "smaller than before" is satisfied by exactly that, exits happy,
-   * and then fails the floor below on 0 < 150. That is the whole of the flake
-   * this test carried on four CI runs across both projects (2026-09-09).
-   *
-   * Measured with `scratchpad/throttle-probe.mjs resize` at
-   * `Emulation.setCPUThrottlingRate`: at 1x the width goes 300 → 164 in 97 ms
-   * and the zero is never seen, which is why this desk never caught it. At 6x,
-   * 20x and 50x the first reading after the resize is **0**, and the real 164
-   * lands at 1.1 s, 3.5 s and 4.5 s — inside the ten below, but only if the
-   * zero is not accepted first.
+   * 0 (trap 7), and a poll for "smaller than before" is satisfied by exactly
+   * that, exits happy, and then fails the floor below on 0 < 150. Re-derive the
+   * timings at each CPU rate: `scripts/throttle-probe.mjs resize`.
    */
   /*
    * **Settled, and asserted on the reading that settled** — not on a fresh one
-   * taken afterwards. The first attempt at this polled until the width was
-   * non-zero and narrower, then re-read for the assertions, and the re-read
-   * came back 0 again: the width does not fall to its new value once, it
-   * oscillates through 0 while the row repacks. Waiting for two consecutive
-   * equal readings is the difference between catching a state and catching a
-   * frame of one.
+   * taken afterwards. The width does not fall to its new value once: it
+   * oscillates through 0 while the row repacks, so a poll that re-reads for the
+   * assertions gets 0 again. Two consecutive equal readings is the difference
+   * between catching a state and catching a frame of one.
    */
   const settled = async () => {
     let last = null;
@@ -1026,28 +879,21 @@ test('a carousel card is sized by the window height as well as its width', async
   expect(short, `${short} px in a 560 px window against ${tall} in a 900`).toBeLessThan(tall);
   // Never below the phone's own 150, however short the window.
   expect(short).toBeGreaterThanOrEqual(150);
-  /* 300 since 2026-08-28 ("Make the carousel images slightly bigger on
-     desktop"), and it is a clamp on `--cx-space` — the room between the top of
-     the track and the bottom of the window — rather than on `vh`, because the
-     row's top depends on the header and the controls above it. */
+  /* A clamp on `--cx-space` — the room between the top of the track and the
+     bottom of the window — rather than on `vh`, because the row's top depends on
+     the header and the controls above it. */
   expect(tall).toBe(300);
 });
 
 
 test('the row comes back on its own after a press, and takes the wheel while it waits', async ({ page }) => {
   /*
-   * Author, 2026-08-28: "if you click and then instantly try to scroll, it cant
-   * scroll. You have to wait" — and "If you click a second time, the auto
-   * scroll stops completely? ... It seems like the auto scroll can get reset by
-   * pressing the Advanced search button and then back to the Carousel mode."
-   *
-   * Both were the same latch. A press focuses the track (it is `tabindex="0"`)
-   * and `focused` held the row until focus went elsewhere, which a second press
-   * on the same row never does — so it stopped for the rest of the visit, and
-   * the only thing that cleared it was the mode toggle, because leaving the
-   * carousel destroys the loop and coming back builds a fresh one. A pointer
-   * press now holds the drift for a moment and lets go; the keyboard still
-   * holds it, because a reader tabbing through cards cannot be chasing them.
+   * Both reports were the same latch. A press focuses the track (it is
+   * `tabindex="0"`) and `focused` held the row until focus went elsewhere, which
+   * a second press on the same row never does. A pointer press now holds the
+   * drift for a moment and lets go; **the keyboard still holds it**, because a
+   * reader tabbing through cards cannot be chasing them.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
@@ -1058,18 +904,13 @@ test('the row comes back on its own after a press, and takes the wheel while it 
 
   /*
    * The track itself, not a card, which would navigate away — and **the only
-   * place left where those are different is the track's own padding**
-   * (2026-09-01). This pressed eight pixels below the track's top edge, which
-   * was empty ground while the columns were dealt low, high and mid inside the
-   * row; the author asked for a filled stack that evening, the columns became
-   * flush, and that point became a saint's picture. The press opened her page,
-   * the track went with the view, and the wheel had nothing left to move.
+   * place left where those are different is the track's own padding**. The
+   * columns are flush, so a point that was once empty ground inside the row is
+   * now a saint's picture, and a press there opens her page.
    *
-   * The foot rather than the head, because there is twice as much of it: the
-   * track's padding is 8 px above the cells and 16 px below them, so this has
-   * eight pixels of margin either side rather than four. Asserted rather than
-   * assumed below, so the day some future layout closes that gap this says so
-   * instead of navigating away again.
+   * The foot rather than the head, because there is twice as much of it. Asserted
+   * rather than assumed below, so the day some future layout closes that gap this
+   * says so instead of navigating away again.
    */
   const box = await track.boundingBox();
   const press = { x: box.x + 40, y: box.y + box.height - 8 };
@@ -1099,10 +940,9 @@ test('the row comes back on its own after a press, and takes the wheel while it 
 
 
 test('the row can be hauled with the mouse, and a haul is not a click', async ({ page }) => {
-  // Author, 2026-08-28: "Also add a hold and drag scroll function with the
-  // mouse." A touch has had this from the platform all along; a mouse had only
-  // the wheel. A drag past 4 px swallows the click in the capture phase, or
-  // every haul across the row would open whichever saint it started on.
+  // A touch has had this from the platform all along; a mouse had only the
+  // wheel. A drag past 4 px swallows the click in the capture phase, or every
+  // haul across the row would open whichever saint it started on.
   await carouselMode(page);
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
@@ -1111,20 +951,19 @@ test('the row can be hauled with the mouse, and a haul is not a click', async ({
   await expect(track).toHaveCSS('cursor', 'grab');
 
   /*
-   * Pressed at the track's own centre, not on `.cx-card` first — the first card
-   * in the DOM is a buffer clone sitting off the leading edge at a negative x,
-   * and a press dispatched there lands outside the window. The virtualisation
-   * trap in CLAUDE.md in its other form: the first child is not the first
-   * thing on screen.
+   * Pressed at the track's own box, not on `.cx-card` first — the first card in
+   * the DOM is a buffer clone sitting off the leading edge at a negative x, and a
+   * press dispatched there lands outside the window. Trap 1 in its other form:
+   * the first child is not the first thing on screen.
    */
   const box = await track.boundingBox();
   /*
-   * The foot of the track, not its centre, and for the reason the test above
-   * gives at length: the columns are flush since 2026-09-01, so the middle of
-   * the row is a saint's picture. A *drag* would be swallowed by the 4 px rule
-   * whatever it started on — which is the half this test is about — but the
-   * pointer has to go down somewhere that is not a link, or the browser starts
-   * a native image drag instead of giving us the pointermoves.
+   * The foot of the track, not its centre, for the reason the test above gives:
+   * the columns are flush, so the middle of the row is a saint's picture. A
+   * *drag* would be swallowed by the 4 px rule whatever it started on — which is
+   * the half this test is about — but the pointer has to go down somewhere that
+   * is not a link, or the browser starts a native image drag instead of giving
+   * us the pointermoves.
    */
   const from = { x: box.x + box.width / 2, y: box.y + box.height - 8 };
   const before = await track.evaluate((el) => el.scrollLeft);
@@ -1145,17 +984,12 @@ test('the row can be hauled with the mouse, and a haul is not a click', async ({
 
 test('a phone pairs the wide icons and stands the row at varied heights', async ({ page }) => {
   /*
-   * Author, 2026-08-28: "On mobile, make the carousel a bit more organic and
-   * double stack any saint images and texts that are wide aspect ratio, and
-   * arrange them a bit more spread out vertically, not all lined up at the
-   * bottom, but make sure they render on all mobile screen sizes at appropriate
-   * spreads and not out of the page."
-   *
-   * A track child is a *cell* now — one tall saint, or two wide ones sharing a
-   * column. The loop works out its period from the offset between children, so
-   * two saints in one child leaves its arithmetic untouched; a two-row grid
-   * over the track itself would have packed each period from wherever the last
-   * one ended, which is a drift the wrap cannot correct.
+   * A track child is a *cell*: one tall saint, or several sharing a column. The
+   * loop works out its period from the offset between children, so more than one
+   * saint in a child leaves its arithmetic untouched — where a two-row grid over
+   * the track itself would have packed each period from wherever the last one
+   * ended, which is a drift the wrap cannot correct.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
@@ -1180,32 +1014,25 @@ test('a phone pairs the wide icons and stands the row at varied heights', async 
       touch: getComputedStyle(track).touchAction,
     };
   });
-  /* **Columns of one to four, not pairs** (2026-08-28). The row packed wide
-     icons two at a time; it packs any column by height now, so a stack is
-     "more than one" rather than "exactly two" and text-only saints — which
-     carry no picture and so no media box — go deepest. */
+  /* **Columns of one to four, not pairs**: the row packs any column by height,
+     so a stack is "more than one" rather than "exactly two", and text-only
+     saints — which carry no picture and so no media box — go deepest. */
   expect(row.stacked, 'nothing was stacked on a phone').toBeGreaterThan(2);
   expect(row.pairs, 'pairs are a subset of stacks now, not the whole of them').toBeLessThanOrEqual(row.stacked);
-  /* **And they stand on one line** (author, 2026-09-01: "just make it a fully
-     filled horizontally scrolling stack"). This asserted the opposite until
-     then — three dealt resting places, from "not all lined up at the bottom"
-     (2026-08-28) — and the assertion is inverted rather than deleted because
-     the scatter is exactly what the author is now asking to have closed up. */
+  /* **And they stand on one line.** This asserted the opposite until the author
+     asked for a fully filled stack, and it is inverted rather than deleted
+     because the scatter is exactly what was asked to be closed up. */
   expect(row.tops, 'the columns are still scattered vertically').toBe(1);
   expect(row.escapes, 'a cell hangs out of the row').toBe(0);
   expect(row.touch).toContain('pan-y');
 
   /*
-   * **A desk stacks too now, when the window is tall enough** (author,
-   * 2026-08-28: "There is no double stacking on desktop carousel that I can
-   * see ... depending on resize bring them closer together / remove double
-   * stacks"). The test used to assert the opposite, and it was right about the
-   * build rather than about what was wanted: `stacking()` was a width query,
-   * so a desk never paired at any height.
-   *
-   * It is a *height* query now, which is the thing a stack actually needs, so
-   * the same desk answers both ways depending on the window — which is what
-   * makes this pair of assertions worth having rather than one.
+   * **A desk stacks too, when the window is tall enough.** `stacking()` was a
+   * width query, so a desk never paired at any height; it is a *height* query
+   * now, which is the thing a stack actually needs, so the same desk answers
+   * both ways depending on the window — which is what makes this pair of
+   * assertions worth having rather than one.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.reload({ waitUntil: 'networkidle' });
@@ -1217,10 +1044,9 @@ test('a phone pairs the wide icons and stands the row at varied heights', async 
 
   /*
    * And a short window packs *shallower* rather than cramming the same columns
-   * in — "depending on resize bring them closer together / remove double
-   * stacks". Not to zero: a saint with no picture is a caption 64 px tall, and
-   * two of those fit a window that no longer has room for two icons. What has
-   * to fall is the depth.
+   * in. Not to zero: a saint with no picture is a short caption, and two of
+   * those fit a window that no longer has room for two icons. What has to fall
+   * is the depth.
    */
   const deepest = () =>
     page.evaluate(() =>
@@ -1245,52 +1071,27 @@ test('a phone pairs the wide icons and stands the row at varied heights', async 
  * **Wait for the whole run to be in the track before reading the run.**
  *
  * The first paint packs only `CX_PREFIX` and the rest arrives on
- * `requestIdleCallback` — PLAN.md item 2, the half of it that landed — so when
- * `.cx-card` first becomes visible the track holds a prefix, and *which*
- * saints are in it is not the membership the settled row has. Anything
- * asserting the row's contents, its length or its order has to wait for the
- * repack; anything asserting one card's geometry does not.
- *
- * **Measured directly, at the three quantities these tests read**
- * (`scratchpad/row-reads-probe.mjs` against a built preview, four CPU rates,
- * three passes each). The reading at the instant `.cx-card` is visible,
- * against the reading after this poll:
- *
- * | | at first card | after the poll |
- * | --- | ---: | ---: |
- * | cells in the track | 60 | 198 |
- * | `img` in the track | 40 | 147 |
- * | first ten slugs | — | **different, 12 of 12** |
- *
- * **Identical at 1x, 6x, 10x and 20x**, which is the finding: this is not a
- * slow-machine race that load makes likelier. The prefix is what is there when
- * the first card paints, always, and the tests that read the row were racing
- * the repack at every speed — they passed on the gap between the read and the
- * repack, not on the machine.
- *
- * Three of them were caught inside two full runs on 2026-09-11: "the row is
- * not the full rendered run" at 38 against a floor of 40 — and the bare read
- * is *exactly* 40, which that floor wants strictly more than — "the whole run
- * is not in the track" at 76 against 100, and "the same seed dealt a different
- * hand", which was one hand read before the repack and one after.
+ * `requestIdleCallback` (PLAN.md item 2), so when `.cx-card` first becomes
+ * visible the track holds a prefix, and *which* saints are in it is not the
+ * membership the settled row has. Anything asserting the row's contents, its
+ * length or its order has to wait for the repack; anything asserting one card's
+ * geometry does not. Re-derive the three quantities, at four CPU rates:
+ * `scratchpad/row-reads-probe.mjs`.
  *
  * **Two waits that look right and measure as useless**, both tried before this
- * one, because this suite's history is explanations written into the code and
- * later disproved:
+ * one — this suite's history is explanations written into the code and later
+ * disproved:
  *
  * - The row wider than its own viewport — `the carousel drifts on its own`
- *   waits for exactly that, and it is already true at 60 cells.
- * - Two consecutive equal readings, which trap 7's resize case teaches —
- *   it **settles on the prefix**, because at 6x and above the repack has not
- *   begun, the count sits still, and the poll exits inside 250 ms. It read as
- *   fixed at 1x and fixed nothing.
+ *   waits for exactly that, and it is already true of the prefix.
+ * - Two consecutive equal readings, which trap 7's resize case teaches. It
+ *   **settles on the prefix**, because above 1x the repack has not begun, the
+ *   count sits still, and the poll exits inside 250 ms.
  *
- * A fixed sleep is the third, and it is the one that hid this longest: 700 ms
- * in `the carousel holds only the pictures near it`, which was doing two jobs
- * at once. It keeps the sleep, for the picture-release settle it was actually
- * for, and waits for the pack first.
- *
- * When the pack's remaining half lands, this returns at once.
+ * A fixed sleep is the third, and it hid this longest: the 700 ms in `the
+ * carousel holds only the pictures near it` was doing two jobs at once. It keeps
+ * the sleep, for the picture-release settle it was actually for, and waits for
+ * the pack first. docs/E2E-DECISIONS.md#index-carouselspecjs
  */
 const packedRow = (page) =>
   expect
@@ -1315,11 +1116,10 @@ const dealtOrder = (page, n = 10) =>
 
 test('a shared seed deals the same hand, and the address bar carries it', async ({ page }) => {
   /*
-   * The third survivor of cancelled Session 6. The random order is a pure
-   * function of the seed (`shuffleKey`), so the seed *is* the shuffle, and a
-   * URL carrying it is a dealt row one reader can hand to another. Two visits
-   * with the same seed must agree exactly; the assertion is the first ten
-   * slugs, which 742! orderings do not survive by luck.
+   * The random order is a pure function of the seed (`shuffleKey`), so the seed
+   * *is* the shuffle, and a URL carrying it is a dealt row one reader can hand to
+   * another. The assertion is the first ten slugs, which no shuffle survives by
+   * luck.
    */
   await carouselMode(page);
   await ready(page);
@@ -1360,8 +1160,7 @@ test('Shuffle deals a new hand and writes the new seed', async ({ page }) => {
   /*
    * Dispatched rather than clicked: the row under it is drifting sideways, and
    * `locator.click()` re-resolves positions in a way a moving layout can turn
-   * into a miss (CLAUDE.md trap 3's cousin). The press itself is what is under
-   * test, not the hit-testing.
+   * into a miss (trap 3's cousin).
    */
   await shuffle.dispatchEvent('click');
 
@@ -1376,22 +1175,14 @@ test('Shuffle deals a new hand and writes the new seed', async ({ page }) => {
 
 test('the shuffle stands on both faces, and deals the filtered set again without changing it', async ({ page }) => {
   /*
-   * Author, 2026-09-01: "add also in Advanced search mode, keep the shuffle
-   * button from Carousel mode and make it so it shuffles the current filtered
-   * search, changing only the order type but keeping the other filters
-   * unchanged."
+   * **This reverses the test it replaces**, which pinned the button as hidden on
+   * the search face. The worry it rested on is answered rather than ignored — the
+   * press writes Random into the sort control, so the two agree.
    *
-   * **This reverses the test it replaces**, which pinned the button as hidden
-   * on the search face on the reasoning that the sort control there already
-   * owns chance and a second control writing the same state would be two
-   * controls disagreeing. The second worry is answered rather than ignored —
-   * the press writes Random into the sort control, so they agree — and the
-   * first missed that Random is usually already selected, where re-selecting it
-   * deals no new hand at all.
-   *
-   * What has to hold is the "unchanged" half: same filters, same matched set,
-   * a different order. So the query is narrowed first and the *set* is compared
+   * What has to hold is the "unchanged" half: same filters, same matched set, a
+   * different order. So the query is narrowed first and the *set* is compared
    * before and after, not just the order.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await searchMode(page);
   await ready(page);
@@ -1408,11 +1199,9 @@ test('the shuffle stands on both faces, and deals the filtered set again without
   /*
    * **How many matched is read off the page's own summary, not off the DOM.**
    * The grid is virtualised, so `.index-card` is the window of cards near the
-   * viewport and its size moves with the cards' heights — a reshuffle changes
-   * which saints are at the top and therefore how many of them are mounted.
-   * Counting nodes would have this test reporting that the shuffle changed the
-   * matched set when all it changed was the order, which is precisely the claim
-   * under examination. `[data-set-aside]` is the page saying "29 of 862".
+   * viewport and a reshuffle changes how many are mounted — counting nodes would
+   * have this test reporting that the shuffle changed the matched set when all
+   * it changed was the order, which is the claim under examination.
    */
   const state = async () => {
     await page.evaluate(() => window.scrollTo(0, 0));
@@ -1451,12 +1240,10 @@ test('the shuffle stands on both faces, and deals the filtered set again without
 
 test('arrow keys step the focused row', async ({ page }) => {
   /*
-   * The first survivor. The track is tabindex="0" and keyboard focus holds the
-   * drift still (loop-scroll's focus rule), so the keys act on a stationary
-   * row. The assertion is the scroll position, before and after, in both
-   * directions - and the premise that focus really did stop the drift is
-   * asserted first, because a drifting row would move on its own and pass the
-   * "it moved" half without the keys doing anything.
+   * The track is `tabindex="0"` and keyboard focus holds the drift still, so the
+   * keys act on a stationary row. **The premise that focus really did stop the
+   * drift is asserted first**, because a drifting row would move on its own and
+   * pass the "it moved" half without the keys doing anything.
    */
   await carouselMode(page);
   await ready(page);
@@ -1466,13 +1253,10 @@ test('arrow keys step the focused row', async ({ page }) => {
 
   await track.focus();
   /*
-   * Focus holds the drift, but the page may still owe the row one rebuild — a
-   * late repaint whose packing changed as fonts and pictures settled, which
+   * Focus holds the drift, but the page may still owe the row one rebuild, which
    * repositions the track once. So the premise is polled to *stillness* rather
    * than read twice at a fixed delay: still means two reads a beat apart agree,
-   * which outlives any rebuild rather than racing it. (The rebuild used to
-   * drop the focus hold entirely; loop-scroll adopts an existing focus at
-   * construction now, and this test is what found that.)
+   * which outlives any rebuild rather than racing it.
    */
   let still = await track.evaluate((el) => el.scrollLeft);
   await expect
@@ -1489,17 +1273,14 @@ test('arrow keys step the focused row', async ({ page }) => {
     .toBeLessThan(1);
 
   /*
-   * **Baseline and press in one evaluate**, because the page still owes the row
-   * a late rebuild on a cold load, and a rebuild repositions the track: a
-   * baseline read in one round-trip and a key pressed in the next left a
-   * window for the rebuild to move the goalposts, which read as "ArrowRight
-   * did not step the row" about one run in three on mobile-360. Dispatching
-   * the key is the same listener the real key reaches — the handler is on the
-   * track and calls preventDefault, so there is no default action being
-   * skipped — and it is the suite's own idiom for a press whose target moves
-   * (trap 3). The step is an instant write, so the read that follows it is the
-   * answer — no animation to outwait, which is also why the step survives the
-   * loop's wrap teleports (the write and the wrap land in the same breath).
+   * **Baseline and press in one evaluate**: the page still owes the row a late
+   * rebuild on a cold load, and a rebuild repositions the track, so a baseline
+   * read in one round-trip and a key pressed in the next left a window for the
+   * rebuild to move the goalposts. Dispatching the key reaches the same listener
+   * — the handler is on the track and calls preventDefault, so no default action
+   * is being skipped — and it is the suite's idiom for a press whose target
+   * moves (trap 3). The step is an instant write, which is also why it survives
+   * the loop's wrap teleports.
    */
   const step = (key) =>
     track.evaluate((el, k) => {
@@ -1515,24 +1296,18 @@ test('arrow keys step the focused row', async ({ page }) => {
 
 test('the row is a filled stack: every column reaches the foot, and no saint twice', async ({ page }) => {
   /*
-   * Author, 2026-09-01: "You've pretty much arranged them in a horizontal grid
-   * of columns with randomised occupation. Just fill in the gaps in the same mix
-   * of randomised imageless and imaged saint cards and just make it a fully
-   * filled horizontally scrolling stack."
-   *
-   * Three things had to change together and all three are measured here,
-   * because each of them alone leaves a hole the other two cannot close:
+   * Three things had to change together and all three are measured here, because
+   * each of them alone leaves a hole the other two cannot close:
    *
    *   - the packer reaches forward for a saint who fits, instead of closing a
    *     column the moment the next one is too tall (`LOOKAHEAD`);
    *   - the columns stand on one line instead of being dealt low, high or mid;
-   *   - a column is at least as deep as the room it was packed against, so the
-   *     row reaches the foot of the window.
+   *   - a column is at least as deep as the room it was packed against.
    *
-   * The instrument for the first is the *gap*, not the slack. Slack is zero
+   * **The instrument for the first is the *gap*, not the slack.** Slack is zero
    * whatever the packer does, because `align-content: space-between` hands
-   * whatever is left to the gaps — so the way a short column shows itself is
-   * the size of those gaps, and taking the reach out inflates them at once.
+   * whatever is left to the gaps — so the way a short column shows itself is the
+   * size of those gaps. docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
@@ -1561,9 +1336,8 @@ test('the row is a filled stack: every column reaches the foot, and no saint twi
     }
     const mid = (xs) => [...xs].sort((a, b) => a - b)[xs.length >> 1];
     /*
-     * One period of the loop: `loopSlice` puts twelve clone cells either side,
-     * so what is between them is the run, and every saint in the run should be
-     * a saint the reader has not already met in it.
+     * One period of the loop: `loopSlice` puts twelve clone cells either side, so
+     * what is between them is the run.
      */
     const period = cells.slice(12, cells.length - 12);
     const slugs = period.flatMap((c) => [...c.querySelectorAll('[data-prefetch]')].map((a) => a.dataset.prefetch));
@@ -1585,33 +1359,29 @@ test('the row is a filled stack: every column reaches the foot, and no saint twi
   expect(row.worstSlack, 'a stacked column stops short of the foot of the row').toBeLessThan(2);
   /*
    * A column holding *one* saint has no gap to hand its remainder to, so it can
-   * end short — but never by more than the card that would have gone under it.
-   * That is the caption the packer budgets (64) and the gap above it (12), plus
-   * the difference between that budget and a caption's real height: the budget
-   * is deliberately generous, because a name that wraps to three lines really is
-   * 64 tall and under-budgeting puts the last card past the fold. A one-line
-   * caption renders at 46, so a lone column can be 96 short and every pixel of
-   * it accounted for. Beyond that is a saint the packer could have fitted.
+   * end short — but never by more than the card that would have gone under it:
+   * the caption the packer budgets, the gap above it, and the difference between
+   * that budget and a caption's real height. The budget is deliberately generous,
+   * because a name that wraps to three lines really is that tall and
+   * under-budgeting puts the last card past the fold. Beyond it is a saint the
+   * packer could have fitted.
    */
   expect(row.worstLoneSlack, 'a column had room for another saint and left it empty').toBeLessThan(97);
   // And they all start on it, which is the scatter having gone.
   expect(row.tops, 'the columns are still dealt different heights').toBe(1);
   /*
-   * The row fills the room it was measured against, which is the window less
-   * the page's own bottom padding — 64 px that used to be counted as the row's
-   * and put a scrollbar on the page (2026-09-01 evening; the carousel's own fit
-   * test covers that half). Plus the 40 px the packer rounds its room down to,
-   * which is not slop that could be tidied away: it is what keeps the run — and
-   * so the reader's remembered place in it — from changing between two paints
+   * The row fills the room it was measured against: the window less the page's
+   * own bottom padding, plus the step the packer rounds its room down to. That
+   * step is not slop that could be tidied away — it is what keeps the run, and
+   * so the reader's remembered place in it, from changing between two paints
    * taken a frame apart (see `space` in views/index/modes.js).
    */
   expect(row.windowBottom - row.trackBottom, 'the row does not reach the foot of its room').toBeLessThan(110);
   expect(row.trackBottom - row.windowBottom, 'the row runs past the foot of the window').toBeLessThan(3);
   /*
    * Densely, not by spreading three cards over a window's height. Both of these
-   * fail on the packer as it stood before the reach was added: it closed
-   * columns two and three deep, and `space-between` then opened 200 px between
-   * their cards.
+   * fail on the packer as it stood before the reach was added: it closed columns
+   * two and three deep, and `space-between` then opened the rest.
    */
   expect(row.medianDepth, 'the columns are packed too shallow to be filled').toBeGreaterThanOrEqual(3);
   expect(row.medianGap, 'the cards are spread rather than stacked').toBeLessThan(90);
@@ -1623,54 +1393,31 @@ test('the row is a filled stack: every column reaches the foot, and no saint twi
 
 test('the carousel fits the window at every size, so the page never scrolls behind it', async ({ page }) => {
   /*
-   * Author, 2026-09-01: "The carousel mode in All Saints should not have a
-   * scroll bar at all on the highest window size possible on any screen. The
-   * images should instead scale/stack appropriately."
+   * The row sizes itself to the room between its own top and the foot of the
+   * window, and "the room" once meant the track's padding and nothing else — so
+   * the page's bottom padding was room the row believed it had, and the page
+   * scrolled by the difference at every window size.
    *
-   * The row already sized itself to the room between its own top and the foot
-   * of the window — but "the room" was the track's own padding and nothing
-   * else, so the page's bottom padding was 64 px the row believed it had. It
-   * ended 33 px above the fold, the padding hung below it, and the page scrolled
-   * by the difference. At every window size, on a page whose whole content is
-   * one row that fits.
-   *
-   * Seven windows, because the defect was invisible at any one of them and the
-   * author found it on a monitor this suite does not run at. The short one is
-   * here for the other half of the fix: the row's room is quantised to 40 px so
-   * the packing is stable across paints, and rounding to the *nearest* 40 could
-   * round up — eleven pixels of room that was not there, which at 1440x620 was
-   * enough to put the bar back on its own.
+   * Six windows, because the defect was invisible at any one of them. The short
+   * one is here for the other half of the fix: the row's room is quantised so
+   * the packing is stable across paints, and rounding to the *nearest* step
+   * could round *up* — room that was not there, which put the bar back on its own.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
   /*
-   * **Loaded at each size, not resized into it** (2026-09-01 evening, after CI).
+   * **Loaded at each size, not resized into it.** "The highest window size
+   * possible on any screen" is a window you *open*, and resizing into it
+   * asserted something extra that does not hold: dragged from 1280 down to 360,
+   * the page keeps about twelve pixels of scroll a fresh 360 does not, with the
+   * row itself ending well clear of the fold. Whatever that is, it is above the
+   * row and is not the carousel.
    *
-   * The first cut opened the page once and resized, which was faster and read
-   * as the truer gesture. It is not the gesture the instruction is about — "the
-   * highest window size possible on any screen" is a window you *open* — and it
-   * asserted something extra that turns out not to hold: dragged from 1280 down
-   * to 360, the page keeps about twelve pixels of scroll that a fresh 360 does
-   * not, with the row itself ending fifty pixels clear of the fold. So whatever
-   * that is, it is above the row and is not the carousel. Written down here
-   * rather than chased, because nothing was asked about it and the row is not
-   * the thing at fault.
-   *
-   * `domcontentloaded` and then waiting on the row itself, rather than
-   * `networkidle` seven times over: that is twenty seconds on an idle machine
-   * and past this test's own timeout on a loaded one, which is how it first
-   * went red.
-   */
-  /*
-   * **Desktop windows only, which is the instruction.** "The highest window
-   * size possible on any screen" is what was asked about and where the fault
-   * was; a phone is in the list below by omission rather than by oversight.
-   * Measured there, the page keeps between one and thirteen pixels of scroll
-   * under load while the row itself ends fifty to sixty clear of the fold — so
-   * whatever those pixels are, they are above the row and are not this. A
-   * phone's Index also has a heading, a toggle and a search field over the row
-   * and no claim was made that they must fit; asserting it here would be this
-   * test failing for someone else's reasons.
+   * **Desktop windows only, which is the instruction.** A phone is absent by
+   * omission rather than by oversight: its Index also has a heading, a toggle
+   * and a search field over the row, and no claim was made that they must fit.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   for (const size of [
     { width: 1024, height: 560 },
@@ -1684,10 +1431,9 @@ test('the carousel fits the window at every size, so the page never scrolls behi
     await page.goto(INDEX, { waitUntil: 'domcontentloaded' });
     /*
      * Fifteen seconds, not the default five: `domcontentloaded` returns before
-     * the manifest has been fetched and the row built, and on a machine running
-     * eight of these at once that gap is longer than a wait sized for an idle
-     * one. The load is deliberately the cheap kind — seven `networkidle` loads
-     * is past this test's own timeout — so the waiting moves here.
+     * the manifest has been fetched and the row built. The load is deliberately
+     * the cheap kind — seven `networkidle` loads is past this test's own timeout
+     * — so the waiting moves here.
      */
     await expect(page.locator('.cx-card').first()).toBeVisible({ timeout: 15000 });
     await page.evaluate(() => document.fonts.ready);
@@ -1704,15 +1450,11 @@ test('the carousel fits the window at every size, so the page never scrolls behi
       });
 
     /*
-     * All three polled together, because they settle together and no one of
-     * them can say the row is packed: the page stops scrolling as soon as the
-     * row is *shorter* than the window, which is true long before the row has
-     * been packed to fill it. The gap under the row catches that, and the card
-     * count catches an empty one. What the poll prints when it runs out is the
-     * three numbers that came nearest.
-     *
-     * It fits by *filling*: no page scroll, and the row ending within the
-     * page's own bottom padding of the fold rather than half a window up.
+     * All three polled together, because they settle together and no one of them
+     * can say the row is packed: the page stops scrolling as soon as the row is
+     * *shorter* than the window, which is true long before it has been packed to
+     * fill it. The gap under the row catches that, and the card count catches an
+     * empty one. It fits by *filling*.
      */
     await expect
       .poll(
@@ -1731,13 +1473,10 @@ test('the carousel fits the window at every size, so the page never scrolls behi
 
 test('a phone gives the row more of the screen than the chrome above it', async ({ page }) => {
   /*
-   * Author, 2026-09-02: "move the 'All Saints' text and search bar and filters
-   * further up the page on All Saints page on mobile, increasing the screen
-   * space available for the carousel and search results."
-   *
    * Measured as *where the saints start*, which is the thing the instruction is
    * about, rather than as a set of margins: a margin is how it was done and
    * would go stale the first time it was done differently.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
@@ -1752,10 +1491,9 @@ test('a phone gives the row more of the screen than the chrome above it', async 
     return { row: Math.round(row.top), head: Math.round(head.top), win: window.innerHeight };
   });
   /*
-   * Under a quarter of the screen spent before the first saint. 195 px of 780
-   * is the budget; it was over that before this round and the row began below
-   * it. A ratio rather than a pixel count, so a taller phone is held to the
-   * same bargain rather than to a number measured on this one.
+   * Under a quarter of the screen spent before the first saint — a ratio rather
+   * than a pixel count, so a taller phone is held to the same bargain rather
+   * than to a number measured on this one.
    */
   expect(top.row, 'the chrome above the row takes more than a quarter of the screen').toBeLessThan(top.win / 4);
   expect(top.head, 'the heading is not near the top of the page').toBeLessThan(90);
@@ -1764,15 +1502,9 @@ test('a phone gives the row more of the screen than the chrome above it', async 
 
 test('the row comes back where it was after a trip to another page', async ({ page }) => {
   /*
-   * Author, 2026-09-02: "when you click away from the All Saints page while on
-   * Carousel to any other page, lets say About page, then back to All Saints,
-   * the Carousel starts at the beginning location again. Make sure it
-   * remembers the location as it does when switching back from Advanced
-   * search, so that if you spot a saint as you switch pages you can switch
-   * back and see it where it was."
-   *
-   * The nav is the road, not the saint page's x: those two already restored
-   * the whole snapshot, and this is the plain return that did not.
+   * The nav is the road, not the saint page's ×: those two already restored the
+   * whole snapshot, and this is the plain return that did not.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
@@ -1796,8 +1528,7 @@ test('the row comes back where it was after a trip to another page', async ({ pa
   /*
    * Within a card of where it was, not to the pixel: the loop corrects its own
    * period on the way in, so the honest claim is that the reader is looking at
-   * the saint they left rather than at the head of the row. A card is 150-300
-   * px wide; the failure this replaces was thousands of pixels away.
+   * the saint they left rather than at the head of the row.
    */
   await expect
     .poll(async () => Math.abs((await track.evaluate((el) => el.scrollLeft)) - before), { timeout: 6000 })
@@ -1808,24 +1539,15 @@ test('the row comes back where it was after a trip to another page', async ({ pa
 
 test('the row draws the card derivative, never the full icon', async ({ page }) => {
   /*
-   * Author, 2026-09-06: "use the thumb files (not icon.jpg)".
+   * `image.card` is the same picture at a card's own size (`make_thumbs.py`).
+   * It is *not* `image.lqip`: that one is blurred at a quarter scale on purpose,
+   * which is what makes it a placeholder.
    *
-   * The row was handing every card `image.src` — the original, a median of
-   * 283 kB and a maximum of 1.04 MB — to draw a picture 150 px wide on a
-   * phone. `image.card` is the same picture at a card's own size (median
-   * 49 kB, `make_thumbs.py`). It is *not* `image.lqip`: that one is blurred
-   * at a quarter scale on purpose, which is what makes it a placeholder.
-   *
-   * Asserted on `data-src` rather than `src`, because `src` is only present
-   * on the pictures the window is currently holding, and the claim is about
-   * every card in the row.
-   *
-   * **Either card derivative since 2026-09-12**, when a second and narrower
-   * one arrived and the row began choosing between them by the card's width
-   * and the screen's density (`views/index/modes.js`). Which of the two is
-   * `a phone takes the narrow card file`'s subject and not this one's; what
-   * this test has always been about is that the *original* never reaches a
-   * card, and that claim is unchanged and still asserted below.
+   * Asserted on `data-src` rather than `src`, because `src` is only present on
+   * the pictures the window is currently holding, and the claim is about every
+   * card in the row. Which of the two card derivatives is
+   * `a phone takes the narrow card file`'s subject, not this one's.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
@@ -1845,29 +1567,21 @@ test('the row draws the card derivative, never the full icon', async ({ page }) 
 
 test('the row loads what is on screen before what is off it, a few at a time', async ({ browser }) => {
   /*
-   * Author, 2026-09-06: "load what is on screen first ... don't fetch every
-   * thumb at once".
+   * Two claims, and they are one mechanism: the queue orders by where the
+   * reader is, and the cap is what stops the band ahead crowding out the screen.
    *
-   * Two claims, and they are one mechanism. Handing every picture inside the
-   * band its source in one observer callback put eleven requests and 3.4 MB
-   * on one connection to paint the two icons a phone can actually see, which
-   * took 12.2 seconds on throttled 4G. The queue orders by where the reader
-   * is, and the cap is what stops the band ahead crowding out the screen.
+   * **Under reduced motion, because the row must hold still to be asked.** The
+   * drift moves the row between the pump that hands the sources out and the read
+   * that checks them, and the on-screen set is then not the set the order was
+   * decided against. Nothing here is about motion.
    *
-   * **Under reduced motion, because the row must hold still to be asked.**
-   * The drift moves the row a few pixels between the pump that hands the
-   * sources out and the read that checks them, and the on-screen set is then
-   * not the set the order was decided against. Nothing here is about motion,
-   * so removing it costs the test nothing.
-   *
-   * The order is read off `data-cx-seq`, which `windowImages` writes as it
-   * hands each source out. It is the only window into it — the order is
-   * invisible once the pictures have arrived — and it is also the answer to
-   * "what would this look like if it were doing nothing": no picture would
-   * carry the attribute at all. Concurrency comes from the browser's own
-   * resource timing rather than from `page.route`, since the suite runs with
-   * the service worker registered and a route that matches nothing fails open
-   * (CLAUDE.md's thirteenth trap).
+   * The order is read off `data-cx-seq`, which `windowImages` writes as it hands
+   * each source out — the only window into it, and also the answer to "what
+   * would this look like if it were doing nothing": no picture would carry the
+   * attribute at all. Concurrency comes from the browser's own resource timing
+   * rather than from `page.route`, since the suite runs with the service worker
+   * registered and a route that matches nothing fails open (trap 13).
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
@@ -1902,7 +1616,7 @@ test('the row loads what is on screen before what is off it, a few at a time', a
       for (const b of cards) if (b.startTime <= a.startTime && b.responseEnd > a.startTime) n += 1;
       peak = Math.max(peak, n);
     }
-    return { onScreen, offScreen, blankOnScreen, total: cards.length, cells: track.children.length };
+    return { onScreen, offScreen, blankOnScreen, peak, total: cards.length, cells: track.children.length };
   });
 
   expect(seen.onScreen.length, 'no icon is on screen to have been prioritised').toBeGreaterThan(0);
@@ -1912,34 +1626,34 @@ test('the row loads what is on screen before what is off it, a few at a time', a
     Math.min(...seen.offScreen),
   );
 
-  /*
-   * The band is wider than the screen on purpose, so this is not "only the
-   * screen was fetched" — it is that the screen was never made to queue
-   * behind it. The rendered run is over eight hundred cells.
-   */
+  // The band is wider than the screen on purpose, so this is not "only the
+  // screen was fetched" — it is that the screen was never made to queue behind
+  // it.
   expect(seen.cells, 'the whole run is not in the track').toBeGreaterThan(200);
   expect(seen.total, 'the row is fetching the whole band at once again').toBeLessThan(20);
-  expect(seen.peak ?? 0, 'more pictures were in flight than the cap allows').toBeLessThanOrEqual(6);
+  /*
+   * **`peak` was computed and never returned**, so this read `undefined ?? 0`
+   * and passed on every run without looking at anything — the cap was the one
+   * claim in the paragraph above with nothing behind it. The premise is asserted
+   * beside it now, because a screenful that fetched one picture would satisfy a
+   * ceiling of six by having nothing in flight.
+   */
+  expect(seen.peak, 'nothing was ever in flight, so the cap was not tested').toBeGreaterThan(0);
+  expect(seen.peak, 'more pictures were in flight than the cap allows').toBeLessThanOrEqual(6);
   await ctx.close();
 });
 
 test('the row prefetches the way it is travelling, not the way it came', async ({ browser }) => {
   /*
-   * Author, 2026-09-06: "prefetch the next cells in the scroll direction".
+   * The band reaches equally far either side of the row, and only one of those
+   * sides is where the reader is going. `loopScroll` publishes its own heading —
+   * this element's `scrollLeft` is corrected by a whole period every so often,
+   * so its own deltas cannot be read for it.
    *
-   * The band reaches equally far either side of the row, and only one of
-   * those sides is where the reader is going. `loopScroll` publishes its own
-   * heading — this element's `scrollLeft` is corrected by a whole period
-   * every so often, so its own deltas cannot be read for it — and
-   * `windowImages` fills the leading side first.
-   *
-   * Read off `data-cx-seq`, which the scheduler writes as it hands each
-   * source out: the order is otherwise invisible the moment the pictures have
-   * arrived, and with the scheduler doing nothing no picture carries it at
-   * all. Counted on the *off-screen* half alone — a card coming into view is
-   * fetched first whichever way the queue is sorted, because it is on screen,
-   * so what tells the two arrangements apart is which of the pictures nobody
-   * can see yet were spent on.
+   * **Counted on the *off-screen* half alone**: a card coming into view is
+   * fetched first whichever way the queue is sorted, so what tells the two
+   * arrangements apart is which of the pictures nobody can see yet were spent on.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
@@ -1956,14 +1670,11 @@ test('the row prefetches the way it is travelling, not the way it came', async (
    * Sampled as it goes rather than read at the end, and that is not fussiness:
    * every card slides toward the trailing edge as the row moves, so a picture
    * sourced while on screen has drifted well off the *back* by the time the
-   * journey finishes. Reading positions once at the end therefore reports the
-   * direction of travel backwards, which is how this test first passed one
-   * leg and failed the other with the mechanism working correctly.
+   * journey finishes. Reading positions once at the end reports the direction
+   * of travel backwards.
    *
-   * Far enough to leave the band behind, too: it reaches 1,100 px either side
-   * on a phone, so a shorter journey travels almost entirely over ground that
-   * was already prefetched and hands out two sources for the whole trip —
-   * a true measurement of nothing.
+   * Far enough to leave the band behind, too: a shorter journey travels almost
+   * entirely over ground that was already prefetched and measures nothing.
    */
   const sidesAfter = async (direction) => {
     let mark = await page.evaluate(() =>
@@ -2023,25 +1734,15 @@ test('a picture stands in every second column at least, and the names between th
   page,
 }) => {
   /*
-   * Author, 2026-09-07: "Saints with icons are too sparse: sometimes five
-   * columns in a row show names only. Only ~140 of 862 saints have an icon.
-   * Change the cell packing so that at least every second column contains a
-   * saint with an image, and make the text-only saints more compact ... so the
-   * strip reads as pictures with names between them rather than long stretches
-   * of text."
-   *
    * Read over the *whole* rendered run rather than the opening screenful, and
    * by geometry rather than by class where the claim is about pictures: a
-   * column has a picture when it has a `.cx-media` in it, whatever it is
-   * called. The run measured 5 barren columns in a row at 360 px and 3 at
-   * 1280 before this; both are the author's own report.
+   * column has a picture when it has a `.cx-media` in it, whatever it is called.
    *
-   * **Two, not one, and the two is the tail.** The guarantee is what the
-   * corpus can support: when the last icon has been placed, whatever imageless
-   * saints remain have nowhere to go but a column of their own, and at 360 px
-   * that is two columns at the very end of the run. Everywhere else the
-   * alternation holds. Pinning 1 would be pinning the corpus's own ratio of
-   * icons to saints, which the next folder changes.
+   * **Two, not one, and the two is the tail.** When the last icon has been
+   * placed, whatever imageless saints remain have nowhere to go but a column of
+   * their own. Pinning 1 would be pinning the corpus's own ratio of icons to
+   * saints, which the next folder changes.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
@@ -2082,14 +1783,11 @@ test('a picture stands in every second column at least, and the names between th
   expect(packed.misnamed, 'a column marked as names only has a picture in it').toBe(0);
   expect(packed.longestTextRun, 'a stretch of columns with no picture in any of them').toBeLessThanOrEqual(2);
   /*
-   * Half, and it cannot honestly be more at every window. "Every second
-   * column" *is* a half, and at 1280x720 the run is 244 columns against the
-   * corpus's 130 icons — a shorter window packs shallower columns and so more
-   * of them, and the ceiling this ratio can reach is the icons divided by the
-   * columns. It measured 0.54 at 360 px and 0.68 at a full-height desk before
-   * this change and 0.74 / 0.76 after, but those are facts about one window
-   * and one shuffle. The run above is the claim; this only refuses a packing
-   * that met it by dealing two enormous columns.
+   * Half, and it cannot honestly be more at every window: "every second
+   * column" *is* a half, and the ceiling this ratio can reach is the corpus's
+   * icons divided by the columns, which a shorter window makes more of. The run
+   * above is the claim; this only refuses a packing that met it by dealing two
+   * enormous columns.
    */
   expect(
     packed.withPicture / packed.cells,
@@ -2097,11 +1795,10 @@ test('a picture stands in every second column at least, and the names between th
   ).toBeGreaterThanOrEqual(0.5);
 
   /*
-   * And the names between them are narrower — at a desk. On a phone `--cx-w`
-   * is already 150 px, which is as narrow as these names stand, and
-   * `--cx-w-text` is deliberately the same number there; so this half of the
-   * instruction is asserted where it applies and its absence is asserted
-   * where it does not, rather than the test running at one width only.
+   * And the names between them are narrower — **at a desk**. On a phone
+   * `--cx-w` is already as narrow as these names stand and `--cx-w-text` is
+   * deliberately the same number, so the instruction is asserted where it
+   * applies and its absence where it does not.
    */
   if (packed.viewport >= 700) {
     expect(packed.nameWidth, 'a column of names is no narrower than one with a picture').toBeLessThan(
@@ -2116,19 +1813,15 @@ test('a picture stands in every second column at least, and the names between th
 
 test('a column of names carries more of them than its worst caption would allow', async ({ page }) => {
   /*
-   * The other half of the same instruction: "make the text-only saints more
-   * compact (more names per column ...)".
-   *
-   * The packer budgeted one of two constants for every caption — 94 px on a
-   * phone, 64 at a desk — chosen against the *worst* caption in the corpus,
-   * because under-estimating pushes the last card of a column past the fold
-   * and only that error is visible to a reader. The common caption is 46, so
-   * a column of names was mostly air. It counts each name's own lines now
-   * (`lib/name-lines.js`), which is what lets eight stand where five did.
+   * The packer budgeted one flat constant per caption, chosen against the
+   * *worst* caption in the corpus, because under-estimating pushes the last
+   * card of a column past the fold and only that error is visible to a reader.
+   * It counts each name's own lines now (`lib/name-lines.js`).
    *
    * Asserted as *more than the flat budget would have allowed*, which is the
    * claim, rather than as a number: how many names fit is the window's
    * business and the test runs at two of them.
+   * docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   await carouselMode(page);
   await ready(page);
@@ -2160,23 +1853,14 @@ test('a column of names carries more of them than its worst caption would allow'
 
 test('the search face is not laid out while the carousel is showing', async ({ page }) => {
   /*
-   * **PLAN item 2's other half** (2026-09-12). The row's caption pack went
-   * lazy on 2026-09-09 and the page still spent most of a second before it
-   * could paint — because `update()` runs before `applyMode()`, so the grid
-   * laid out all 862 saints, mounted a screenful of cards, and *then* the
-   * carousel hid it. A reader who never asks for the search face was paying
-   * for its layout on every visit.
+   * **PLAN item 2's other half.** `update()` runs before `applyMode()`, so the
+   * grid laid out every saint, mounted a screenful of cards, and *then* the
+   * carousel hid it — a reader who never asks for the search face was paying
+   * for its layout on every visit. Re-derive the boot cost:
+   * `scratchpad/phase-cost.mjs`.
    *
-   * Measured with `scratchpad/phase-cost.mjs`, five interleaved A/B pairs
-   * against one dev server at 10x CPU: `layout()` ran twice before the first
-   * card, for **394-606 ms**, the largest single item in the boot; the second
-   * call is the resize observer the hiding itself provokes. Blocking time
-   * before the first card fell from ~2,200 ms to ~1,750 in four of the five.
-   *
-   * What the reader can be shown, and therefore what this asserts, is that
-   * nothing of the grid exists while the row is up and all of it exists the
-   * moment the other face is asked for. Both halves, because the first alone
-   * would pass just as well if the deferral never paid up.
+   * Both halves are asserted, because the first alone would pass just as well
+   * if the deferral never paid up.
    */
   await carouselMode(page);
   await ready(page);
@@ -2207,16 +1891,9 @@ test('the search face is not laid out while the carousel is showing', async ({ p
 
 test('a phone takes the narrow card file, and a dense screen takes the wide one', async ({ browser }) => {
   /*
-   * **A phone was downloading a 560 px file to draw a 150 px card**
-   * (HANDOFF's third known defect). Measured on the production build at
-   * 360 px, DPR 1 (`scratchpad/screenful-bytes.mjs`): the first screenful
-   * fetched 11 pictures for **525 kB** to draw two of them, one a 560x373
-   * file inside a 150x100 CSS box.
-   *
-   * `make_thumbs.py` now writes a second card size and the row names both,
-   * with the packer's own resolved card width as `sizes` — so the choice is
-   * the browser's, made against the reader's real screen, rather than the
-   * build's made against nobody's.
+   * **A phone was downloading a wide file to draw a 150 px card** (HANDOFF's
+   * third known defect). Re-derive the screenful's bytes:
+   * `scripts/screenful-bytes.mjs`.
    *
    * `currentSrc` and `naturalWidth` are the assertions, not the attribute: a
    * markup check would pass on a `data-src` nothing ever fetched, and what
@@ -2224,16 +1901,16 @@ test('a phone takes the narrow card file, and a dense screen takes the wide one'
    *
    * **Both directions, in two contexts of their own.** The suite's mobile-360
    * project is a narrow desktop at one device pixel, and the whole choice this
-   * pins is a function of the density — a rule that always took the narrow
-   * file would pass a one-sided test and hand a modern phone a picture at half
-   * the resolution of its screen.
+   * pins is a function of the density — a rule that always took the narrow file
+   * would pass a one-sided test and hand a modern phone half the resolution of
+   * its screen. docs/E2E-DECISIONS.md#index-carouselspecjs
    */
   /** The first picture a reader can actually see, once it has really loaded. */
   const shownPicture = (page) =>
     page.evaluate(() => {
       /*
        * **On screen, not merely in the track** (trap 1, and trap 7's cousin).
-       * The row is forty thousand pixels wide and `.cx-cell` carries
+       * The row is tens of thousands of pixels wide and `.cx-cell` carries
        * `content-visibility: auto`, so a cell past the fold reports a box of
        * zero and a picture no reader has been shown.
        */
@@ -2278,17 +1955,12 @@ test('a phone takes the narrow card file, and a dense screen takes the wide one'
       // to make by accident.
       expect(picked.src, `a dense screen took ${picked.src}`).not.toContain('-card-sm.jpg');
       /*
-       * **Against the box, not against 280.** This read `> 280` and went red
-       * on the first full run it met: the picture that happened to be first on
-       * screen decoded at 262, because `make_thumbs.py` cannot cut a card
-       * wider than the icon it was given and some of the corpus's icons are
-       * narrow. That is a fact about one saint's source file, not about the
-       * choice this test exists to pin — and *which* saint is first is a race
-       * between eleven pictures for the network (trap 5).
-       *
-       * What the dense half actually claims is the line above: the browser
-       * took the wide file. This is the sanity check beside it — whatever it
-       * took has more pixels than the box it is drawn in.
+       * **Against the box, not against 280.** `make_thumbs.py` cannot cut a
+       * card wider than the icon it was given, and some of the corpus's icons
+       * are narrow — so a fixed floor here is a fact about one saint's source
+       * file, and *which* saint is first is a race between eleven pictures for
+       * the network (trap 5). The claim is the line above; this is the sanity
+       * check beside it.
        */
       expect(picked.natural, `${picked.natural} px into a ${picked.drawn} px box`).toBeGreaterThan(picked.drawn);
     }

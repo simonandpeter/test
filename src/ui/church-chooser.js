@@ -62,7 +62,7 @@ export function renderChoices(current = currentChurch()) {
  * choices twice and delayed them by four lines. `STRINGS.church.lede` is
  * deleted rather than left dark.
  */
-export function renderChooser({ current = currentChurch(), heading = C.heading } = {}) {
+function renderChooser({ current = currentChurch(), heading = C.heading } = {}) {
   return (
     `<h2 class="ask-heading">${heading}</h2>` +
     `<div class="ask-choices" role="group" aria-label="${esc(C.groupLabel)}">${renderChoices(current)}</div>`
@@ -73,7 +73,7 @@ export function renderChooser({ current = currentChurch(), heading = C.heading }
  * Delegated: any `[data-church]` button under `root` chooses, repaints the
  * pressed state in place, and calls `onChange(id)`. Returns a teardown.
  */
-export function wireChooser(root, { onChange = () => {} } = {}) {
+function wireChooser(root, { onChange = () => {} } = {}) {
   const onClick = (e) => {
     const button = e.target.closest('[data-church]');
     if (!button || !root.contains(button)) return;

@@ -18,7 +18,7 @@ import { state } from './state.js';
  * through every intermediate number would be unusable, so the tween is
  * aria-hidden and the final figure is what a screen reader is told.
  */
-export function paintCount(next, animate) {
+function paintCount(next, animate) {
   const row = state.el.querySelector('[data-count-row]');
   if (!row.firstChild) {
     row.innerHTML = `<span data-count aria-hidden="true">0</span>
@@ -51,7 +51,7 @@ export function paintCount(next, animate) {
  * saint with no bound at either end, so they are set aside and counted rather
  * than silently dropped — an honest gap, styled as one.
  */
-export function paintTray(undated) {
+function paintTray(undated) {
   const tray = state.el.querySelector('[data-tray]');
   if (!undated.length) {
     tray.innerHTML = '';

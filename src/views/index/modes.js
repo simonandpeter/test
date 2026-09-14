@@ -14,47 +14,22 @@ import { state } from './state.js';
 /* The site's base path, declared per file as every other view does. */
 const BASE = import.meta.env.BASE_URL;
 
-/*
- * **The carousel drew from a sample of 48 until 2026-08-28**, on the reasoning
- * that a track carrying all 742 plus its clone buffer is ~800 nodes and 742
- * pictures the reader will never reach. The author reversed it — "It should be
- * able to show all of them" — and the cost half of that reasoning had already
- * been paid down by `windowImages`, which holds only the bitmaps near the
- * viewport, and by the width/height attributes that keep an empty box the size
- * of a full one. What is left is nodes, which are cheap, rather than decoded
- * images, which are not.
- */
-
 /**
- * How far either side of the track a picture is held (author, 2026-08-28:
- * "increasing the loading distance off screen for mobile").
- *
- * A phone's cards are 150 px against a desk's 240, so a flat margin buys a
- * phone *fewer* cards of warning than a desk while being the surface where a
- * picture arriving late is most obvious. Roughly seven cards ahead on a phone
- * and three at a desk; the desk's number is unchanged, because that is the
- * surface the author called laggy and more held bitmaps is the wrong direction
- * there.
+ * How far either side of the track a picture is held, in px — wider on a phone,
+ * whose 150 px cards mean a flat margin buys it fewer cards of warning than a
+ * desk's 240 px ones.
+ * `docs/SRC-DECISIONS.md § src/views/index/modes.js — the whole corpus, not a sample of 48`.
  */
 const imageMargin = () => (stacking() ? 1100 : 700);
 
 /**
- * How many pictures the row may have on the wire at once, and **fewer on a
- * phone** (author, 2026-09-08: "cap the fade ins and number of loading
- * saints/images so they flicker in more slowly and it lags less").
+ * How many pictures the row may have on the wire at once, fewer on a phone.
  *
- * Honest about what it buys: the pictures are **not** where this page's lag
- * comes from. Blocking every card image outright and profiling again moved
- * eight seconds of blocked main thread at 4x CPU from 1,835 ms to 1,738 ms —
- * about 5%, all of it decode. What the row actually spends its time on was the
- * drift loop's own forced layouts and a document-level scroll listener in
- * `ui/coachmark.js`, both of which are fixed at their own sites.
- *
- * This is kept anyway and for its own reasons: two at a time on a narrow
- * screen is a smaller burst of bytes on a phone's connection, and paired with
- * `FADE_GAP_MS` it is what makes the row fill in one picture at a time rather
- * than in fours. It is a look and a data bill, not a frame budget, and saying
- * so is the point of this note.
+ * **A look and a data bill, not a frame budget** — the pictures are not where
+ * this page's lag comes from, and the measurement that says so is in
+ * `docs/SRC-DECISIONS.md § src/views/index/modes.js — the picture cap buys a look, not a frame budget`.
+ * `the row loads what is on screen before what is off it, a few at a time`
+ * (`e2e/index-carousel.spec.js`) holds it.
  */
 const imageInflight = () => (window.matchMedia('(max-width: 699.98px)').matches ? 2 : 4);
 
@@ -63,48 +38,25 @@ const imageInflight = () => (window.matchMedia('(max-width: 699.98px)').matches 
 const CAROUSEL_BUFFER = 12;
 
 /**
- * How many saints the first paint packs.
- *
- * Enough that the widest desk is filled twice over — a 1440 px window holds
- * about nine 150 px columns, and a cell carries one to four saints — so the
- * row the reader sees first is a real row and not a stub, while the pack it
- * costs is a fifth of the corpus rather than all of it.
+ * How many saints the first paint packs: enough to fill the widest desk twice
+ * over, so the row the reader meets first is a real row and not a stub.
  */
 const CX_PREFIX = 180;
 
 /**
- * The Index's two faces, and the toggle between them.
+ * Which of the page's two faces is showing.
  *
- * The carousel and the search grid are one page in two modes, not two pages,
- * and the machinery here is what keeps that true: the mode is a stored
- * setting, the toggle names the *other* face, and switching reads the track's
- * position before it hides it. That last is a real ordering dependency and not
- * incidental — `switchMode` takes the carousel's scrollLeft while the element
- * is still laid out, because a hidden element measures zero.
- *
- * The row's own mechanics are `ui/loop-scroll.js`, which is already a module
- * and wants no splitting; this owns which face is showing and what it costs to
- * change.
- */
-
-/**
- * Which of the page's two faces is showing (author, 2026-08-27).
- *
- * Carousel is the page as it opens: the heading, its toggle, the search field,
- * and a drifting row of saints under it. Advanced search is everything else the
- * Index has always been. The parts are the same DOM either way — the mode is a
- * class on the view, so nothing is rebuilt to change face and the reader's
- * filters survive a trip through the carousel and back.
+ * The parts are the same DOM either way — the mode is a class on the view, so
+ * nothing is rebuilt to change face and the reader's filters survive a trip
+ * through the carousel and back.
  */
 export function applyMode() {
   const { el, mode } = state;
   const carousel = mode === 'carousel';
   /*
    * **Read the row's offset before anything is hidden.** A `display: none`
-   * element reports `scrollLeft` 0 and ignores writes — the pitfall
-   * `ui/loop-scroll.js` opens by warning about, walked into three lines later
-   * by hiding the carousel and *then* asking where it was. The answer was
-   * always 0, so coming back always reopened at the start.
+   * element reports `scrollLeft` 0 and ignores writes, so asking after the
+   * hide always answered 0 and coming back always reopened at the start.
    */
   if (!carousel && state.loop) {
     state.carouselAt = el.querySelector('[data-carousel-track]').scrollLeft;
@@ -120,8 +72,9 @@ export function applyMode() {
   if (carousel) paintCarousel();
   else {
     // The grid's layout is skipped while the carousel is showing, and this is
-    // the moment it stops being: after the `hidden` above came off, or the
-    // layout would be computed against a width of 0 (trap 7).
+    // the moment it stops being — *after* the `hidden` above came off, or it
+    // would be computed against a width of 0. `the search face is not laid out
+    // while the carousel is showing` (`e2e/index-carousel.spec.js`) holds both.
     state.layoutGrid?.();
     // The offset was taken above, while the row could still answer.
     state.loop?.destroy();
@@ -135,13 +88,15 @@ export function applyMode() {
 }
 
 /**
- * The toggle's word, crossed over rather than snapped (author, 2026-08-27).
+ * The toggle's word, crossed over rather than snapped: the span fades out, the
+ * word is swapped while nothing can be read, and it fades back, so the button's
+ * box never changes under the pointer.
  *
- * The span fades out, the word is swapped while nothing can be read, and it
- * fades back — so the button's box never changes under the pointer. A second
- * press inside the fade overtakes the first: `pending` is what the label is on
- * its way to, so the comparison is against where it is *going*, not where it
- * is, which is the bug the Daily nav label had to be taught (main.js).
+ * **`modePending` is what the label is on its way to**, and the comparison is
+ * against that rather than against what it currently reads — a second press
+ * inside the fade otherwise sets the word back. `the mode toggle wears no
+ * frame, and its word crosses over` (`e2e/index-carousel.spec.js`) holds it,
+ * and the 140 ms below is `DUR.answer`, pinned by `tests/index-modes.test.mjs`.
  */
 let modeFade = null;
 let modePending = null;
@@ -361,7 +316,7 @@ function footUnder(track) {
   return padding + below + 4;
 }
 
-export function publishCarouselSpace() {
+function publishCarouselSpace() {
   const track = state?.el?.querySelector('[data-carousel-track]');
   const carousel = state?.el?.querySelector('.carousel');
   if (!track || !carousel) return 0;
@@ -768,7 +723,7 @@ function pictureHeight(item, cardWidth, space = Infinity, pen = null) {
  * Nothing is lost — the cursor finds them again, and an imaged saint the fill
  * passes over becomes the seed of a picture column of their own.
  */
-export function carouselCells(pool, { space = 0, cardWidth = 150, textWidth = cardWidth, pen = null } = {}) {
+function carouselCells(pool, { space = 0, cardWidth = 150, textWidth = cardWidth, pen = null } = {}) {
   if (!space) return pool.map((item) => [item]);
   const cells = [];
   const taken = new Array(pool.length).fill(false);
@@ -973,7 +928,7 @@ export function carouselCells(pool, { space = 0, cardWidth = 150, textWidth = ca
 }
 
 /** Whether a cell is a column of names, which is drawn at `--cx-w-text`. */
-export const isNameCell = (cell) => cell.every((item) => !item.image);
+const isNameCell = (cell) => cell.every((item) => !item.image);
 
 /**
  * Fills the track from what the filters have left, and wires it once.

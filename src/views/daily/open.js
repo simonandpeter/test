@@ -52,7 +52,7 @@ const publish = () => {
  * every saint is read in the same spot rather than wherever the tile happened
  * to have been.
  */
-export function openRow(i, { bring = true } = {}) {
+function openRow(i, { bring = true } = {}) {
   if (!rows.length || !grid) return;
   const next = Math.max(0, Math.min(rows.length - 1, i));
   rows[openIdx]?.classList.remove('is-open');
@@ -69,12 +69,6 @@ export function openRow(i, { bring = true } = {}) {
     scroller.scrollTo({ top: 0, behavior: reducedMotion() ? 'auto' : 'smooth' });
   }
 }
-
-/** The live rows, in the day's own order — not the order the grid shows. */
-export const currentRows = () => rows;
-
-/** Which of them is open, or -1 before the first paint. */
-export const currentOpen = () => openIdx;
 
 /**
  * Called after every day paint: the grid's children are the day's rows, the

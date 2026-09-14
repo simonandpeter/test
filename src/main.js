@@ -5,28 +5,14 @@ import './styles/base.css';
 import './styles/saint.css';
 import './styles/index.css';
 /*
- * **`map.css` is not here, and that is a first-paint decision.** Every sheet
- * imported by this module is concatenated into one render-blocking stylesheet
- * that every route waits for before it paints anything. The map's 27 kB is
- * more than a third of it and is read by one route in six.
- *
- * Measured on 2026-09-10, when `npm run test:lighthouse` went red on a
- * 1,248-byte diff: first contentful paint steps by exactly one 150 ms round
- * trip somewhere between 73.9 kB and 75.1 kB of that sheet — 1357 ms and
- * 1507 ms on CI, 1535 and 1690 on this desk — and emptying `map.css` at the
- * larger size put it back to 1534. Taking 9.6 kB out of the JavaScript moved
- * nothing, because the script is deferred and was never on that path.
- *
- * `views/map.js` imports it dynamically instead, which is the same arrangement
- * the map's own coastline data has had since it shipped: fetched as its own
- * chunk beside the boot, never in front of the first paint.
- *
- * **`theme-fade.css` is the second one missing from this list**, and
- * `lib/theme.js` imports it the same way. It is the cross-fade's `@property`
- * registrations and its one transition rule, needed only when a reader presses
- * the toggle — and on 2026-09-10 the step above was pinned to the byte: 73,629
- * green and 73,688 red, found by adding 57 bytes of CSS matching no element to
- * a tree that had just gone green.
+ * **`map.css` and `theme-fade.css` are missing from this list on purpose.**
+ * Every sheet imported here is concatenated into one render-blocking
+ * stylesheet that every route waits for, and this bundle sits on a congestion
+ * boundary where first contentful paint steps by a whole round trip over a few
+ * dozen bytes — so a sheet one route in six reads is imported dynamically
+ * instead, by `views/map.js` and `lib/theme.js`. `npm run test:lighthouse` is
+ * the gate that catches a sheet added back here.
+ * `docs/SRC-DECISIONS.md § src/main.js — the render-blocking sheet`.
  */
 import './styles/about.css';
 
