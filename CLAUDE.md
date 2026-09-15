@@ -238,7 +238,7 @@ written when that route is next worked on.
 `format.js`, `record.js` (readings, hymns), `panel.js` (hero, register),
 `picker.js` (week rail *and* month — one control), `fullcal.js`.
 `calendar.js` owns *which day*; nothing in `daily/` calls back into it.
-Two columns past 1024 px, `display: contents` below it.
+Four columns past 1024 px, `display: contents` below it.
 
 **`views/index/`** — `state.js`, `modes.js` (carousel, column packing, the mode
 toggle), `grid.js` (virtualised and absolutely positioned), `controls.js`,

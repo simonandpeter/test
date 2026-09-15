@@ -13,6 +13,7 @@ import { STRINGS, fill } from '../../ui/strings.js';
 import { allEntriesFor, dayRecordFor, entriesFor, reachInWords } from './entries.js';
 import { fillSaintHymns, hymnsMarkup, readingsMarkup } from './record.js';
 import { state } from './state.js';
+import { isWide } from '../../lib/viewport.js';
 
 /* The site's base path, declared per file as every other view does: it is a
    build-time constant, not shared state. */
@@ -35,11 +36,17 @@ const BASE = import.meta.env.BASE_URL;
  * only — the CSS hides the box below 760 px, where the hero has no spare
  * column and the life is a scroll away under the register anyway.
  */
-function fillHeroLede(panel, slug, iso, card) {
+/*
+ * `places` is the panel the two place names are written into, which is not the
+ * panel holding the lede past 1024 px: the saint's identity stands in one
+ * column and what is read of them in the next, and both arrive in the same
+ * fetched payload. One call, two boxes, rather than two fetches.
+ */
+function fillHeroLede(panel, slug, iso, card, places = panel) {
   loadDetail(slug).then(
     (payload) => {
       if (!state || state.selected !== iso) return;
-      fillHeroPlaces(panel, payload);
+      fillHeroPlaces(places, payload);
       const box = panel.querySelector('[data-hero-lede]');
       if (!box) return;
       const text = firstParagraphText(payload?.life);
@@ -286,8 +293,17 @@ const glyphMarkup = (kind) =>
         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${GLYPH_PATHS[kind]}</svg>`
     : '';
 
-function registerRow(saint, title, transition, seq = 0) {
+/**
+ * `chosen` is the slug standing in the middle columns, or null where the row
+ * chooses nothing — below 1024 px, where there is one hero and no column to
+ * put a second saint in. When it is given, the row is the choosing surface:
+ * `calendar.js` delegates on `data-choose` and lets the two anchors through to
+ * the saint's own page.
+ */
+function registerRow(saint, title, transition, seq = 0, chosen = null) {
   const subtext = formatSubtext(saint);
+  const picked = chosen !== null && saint.slug === chosen;
+  const picks = chosen === null ? '' : ` data-choose="${esc(saint.slug)}"${picked ? ' aria-current="true"' : ''}`;
   /*
    * **The mat and the picture are two boxes now** (§10.2, 2026-09-10). The mat
    * is 60 px wide whatever the icon is — 48 of picture and 6 of padding either
@@ -328,7 +344,7 @@ function registerRow(saint, title, transition, seq = 0) {
    * is what the phone puts back — see `registerOrder` below and the
    * `max-width: 1023.98px` rule in calendar.css.
    */
-  return `<li class="reg-card" style="--reg-seq:${seq}">
+  return `<li class="reg-card${picked ? ' is-picked' : ''}" style="--reg-seq:${seq}"${picks}>
     <span class="reg-body">
       <a class="reg-name" href="${state.router.href(`/saints/${saint.slug}`)}"
         data-prefetch="${saint.slug}"${transition}>${esc(saintName(saint))}</a>
@@ -518,18 +534,12 @@ async function fillRegisterLives(panel, iso) {
 
 export { fitLede };
 
-export function paintDay({ main, side }) {
-  const { data, selected } = state;
-  const entries = entriesFor(selected, data);
-
-  if (entries.length === 0) {
-    main.innerHTML = `<div class="empty-day"><p>${emptyDayNote(selected)}</p></div>`;
-    side.innerHTML = `${readingsMarkup(selected, state.calendar)}${hymnsMarkup(selected, state.calendar)}`;
-    return;
-  }
-
-  const heroSlug = pickHero(selected, entries, data.bySlug, state.calendar);
-  const hero = data.bySlug.get(heroSlug);
+/**
+ * The hero's picture and the shape it is drawn at, in one place because the
+ * two are one decision — and used twice since 2026-09-16: the desk paints
+ * this into a column of its own and the phone into the top of the day panel.
+ */
+function heroPicture(hero) {
 
   // The image opens the saint too (author, 2026-08-21). Hidden from the
   // accessibility tree and out of the tab order on purpose: the name beside it
@@ -589,19 +599,50 @@ export function paintDay({ main, side }) {
         </a>
       </div>`
     : '';
+  return { media, ratio };
+}
 
-  // One calendar, one church: the register needs no church heading, and a
-  // saint can appear in it only once. The shared element is the first row
-  // that names them all the same, because the hero already carries its own.
-  const registerEntries = entries.filter((e) => e.slug !== heroSlug);
+export function paintDay(panels) {
+  const { main, side, saint: saintCol, content: readCol, shelf: shelfCol } = panels;
+  const { data, selected } = state;
+  const entries = entriesFor(selected, data);
+  const wide = isWide();
+  for (const box of [saintCol, readCol, shelfCol]) if (box) box.innerHTML = '';
+
+  if (entries.length === 0) {
+    const note = `<div class="empty-day"><p>${emptyDayNote(selected)}</p></div>`;
+    main.innerHTML = wide ? '' : note;
+    if (wide && readCol) readCol.innerHTML = note;
+    side.innerHTML = `${readingsMarkup(selected, state.calendar)}${hymnsMarkup(selected, state.calendar)}`;
+    return;
+  }
+
+  const heroSlug = chosenSlug(entries);
+  const hero = data.bySlug.get(heroSlug);
+  const { media, ratio } = heroPicture(hero);
+
+  /*
+   * One calendar, one church: the register needs no church heading, and a
+   * saint can appear in it only once. The shared element is the first row
+   * that names them all the same, because the hero already carries its own.
+   *
+   * **Past 1024 px the shelf is the whole day and not the remainder of it**
+   * (2026-09-16). The reader chooses who stands in the two middle columns, so
+   * every saint of the day has to have a row to be chosen by; the one being
+   * read is marked rather than left out, and the stylesheet takes it out of
+   * the column while it is in the card. Below the breakpoint the hero is the
+   * page's own choice and cannot be changed, so the row would be a second
+   * printing of the saint above it and is filtered out as it always was.
+   */
+  const registerEntries = wide ? entries : entries.filter((e) => e.slug !== heroSlug);
   const named = new Set([heroSlug]);
   const rows = registerOrder(registerEntries, data)
     .map(({ entry: e, seq }) => {
-      const saint = data.bySlug.get(e.slug);
-      const title = titleFor(saint, e.church);
-      const transition = named.has(saint.slug) ? '' : ` style="view-transition-name:s-${saint.slug}-name"`;
-      named.add(saint.slug);
-      return registerRow(saint, title, transition, seq);
+      const person = data.bySlug.get(e.slug);
+      const title = titleFor(person, e.church);
+      const transition = named.has(person.slug) ? '' : ` style="view-transition-name:s-${person.slug}-name"`;
+      named.add(person.slug);
+      return registerRow(person, title, transition, seq, wide ? heroSlug : null);
     })
     .join('');
   /*
@@ -645,14 +686,13 @@ export function paintDay({ main, side }) {
    * on this identical query at paint time — and it costs the same thing here
    * and less of it: a window dragged across 1024 px keeps the heading it
    * arrived with until the next paint, which any day step, church change or
-   * language change performs.
+   * language change performs — and, since 2026-09-16, a crossing of 1024 px
+   * itself, because the columns are not the same boxes on the two sides of it.
    *
    * The phone keeps *Also commemorated* in all five packs, which is a
    * difference the author was told about and asked for anyway.
    */
-  const heading = window.matchMedia('(min-width: 1024px)').matches
-    ? STRINGS.calendar.alsoToday
-    : STRINGS.calendar.alsoCommemorated;
+  const heading = wide ? STRINGS.calendar.alsoToday : STRINGS.calendar.alsoCommemorated;
   const register = registerEntries.length
     ? `<div class="register-head">
          <h2 class="register-heading">${esc(heading)}</h2>
@@ -684,66 +724,159 @@ export function paintDay({ main, side }) {
    * `display: contents` and document order is the layout: the name days now
    * follow the register instead of the hymns.
    */
-  main.innerHTML = `
-    <article class="hero ${hero.image ? 'has-media' : ''}" style="--hero-r:${ratio}">
-      ${media}
-      <div class="hero-body">
-        <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
-          <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(saintName(hero))}</a>
-        </h2>
-        <p class="hero-dates utility">${esc(formatSubtext(hero))}</p>
-        <!--
-          Where they were born and where they died, under the office and the
-          years (author, 2026-09-01: "add office and locations of birth and
-          death under the name on the main saint card"). The office is already
-          in the line above — formatSubtext has carried it since it became a
-          field — so what is new here is the two places.
+  /*
+   * **Two boxes below 1024 px, four above it, and the pieces are the same
+   * pieces.** The phone's day is one hero — picture, name, dates, the opening
+   * of the life — with the register under it, and that has not changed. The
+   * desk takes the same hero apart at one seam: who the saint is goes in the
+   * saint column, what is being read of them goes in the next, and the rest of
+   * the day stands in the shelf. Nothing here is drawn twice; `heroIdentity`
+   * and `heroOpening` are the two halves of `.hero-body` and they are printed
+   * either together or one to a column.
+   *
+   * **The left column has to be one box, and that is what moves the name
+   * days.** They were the panel's last child, after the hymns, and the first
+   * attempt kept them there and placed them in column 1 by hand. It does not
+   * work: a grid item spanning two rows gives its height to the rows it
+   * spans, so a long day of hymns inflated the second row and drove the name
+   * days to the foot of the page, hundreds of pixels below the register they
+   * belong to. Only one item per column flows independently of the other
+   * column's length.
+   */
 
-          Filled late, like the lede, and for the same reason: the manifest
-          carries a location's coordinates and not its name (build-manifest.mjs
-          keeps the names in the folder), so the words come with the saint's
-          own payload. Empty until then and empty for good where the corpus has
-          no place, because a line that says "Born:" and nothing else is the
-          furniture STRUCTURE.md refuses.
-        -->
-        <p class="hero-places utility" data-hero-places hidden></p>
-        <!-- The opening of the life, on a wide screen only (author,
-             2026-08-25: "because there is space on the left of the saint card
-             under their name"). It arrives with the fetched life rather than
-             from the manifest, so the box is here from the first paint and
-             fills a moment later; empty until then, and empty for good where
-             a saint has no life recorded, because a heading over nothing is
-             the furniture STRUCTURE.md refuses.
-
-             The way into the life is now the last words *of this paragraph*
-             (author, 2026-09-01: "make the '...continue reading' part of the
-             actual preview paragraph"), written into it by fillHeroLede once
-             the text is there and trimmed to fit — see fitLede below. -->
-        <p class="hero-lede" data-hero-lede hidden></p>
-        <!--
-          The same way in, for the width where the preview is not shown.
-          Below 760 px the lede is not displayed and the link inside it goes
-          with it, and the author asked for the link on the phone as well as
-          the desktop (2026-09-01, the round before the one that moved it into
-          the paragraph). Exactly one of the two is ever laid out: this is
-          hidden from 760 px up, where the paragraph appears.
-        -->
-        <a class="hero-more hero-more-alone" href="${state.router.href(`/saints/${hero.slug}`)}"
-          data-prefetch="${hero.slug}"
-          aria-label="${esc(fill(STRINGS.calendar.continueReadingOf, { name: saintName(hero) }))}"
-          >${esc(STRINGS.calendar.continueReading)}<span class="hero-more-chevron" aria-hidden="true"></span></a>
-      </div>
-    </article>
-    ${register}`;
-
+  /* The day's own record, and one section of it changes column past 1024 px:
+     what is sung belongs beside the life rather than under the readings, being
+     a text of the saint and not a fact about the date. */
   side.innerHTML = `
     ${readingsMarkup(selected, state.calendar)}
-    ${hymnsMarkup(selected, state.calendar)}
+    ${wide ? '' : hymnsMarkup(selected, state.calendar)}
     ${nameDaysMarkup(entries, data)}`;
+
+  if (wide) {
+    main.innerHTML = '';
+    saintCol.innerHTML = heroArticle(hero, media, ratio, heroIdentity(hero));
+    readCol.innerHTML = readingColumn(hero, selected);
+    shelfCol.innerHTML = register;
+    fillSaintHymns(readCol, hero.slug, selected);
+    fillHeroLede(readCol, hero.slug, selected, hero, saintCol);
+    fillRegisterLives(shelfCol, selected);
+    return;
+  }
+
+  main.innerHTML = `${heroArticle(hero, media, ratio, `${heroIdentity(hero)}${heroOpening(hero)}`)}
+    ${register}`;
 
   fillSaintHymns(side, hero.slug, selected);
   fillHeroLede(main, hero.slug, selected, hero);
   fillRegisterLives(main, selected);
+}
+
+/*
+ * The reading column, past 1024 px: the opening of the life and what is sung.
+ *
+ * The `.hero-body` wrapper is not decoration. `fillHeroLede` appends the way
+ * into the life to the card's text column, and this column *is* that column
+ * now — without the box the link has nowhere to land and the phone's
+ * standalone copy stands in for it, which is the pair of controls the
+ * 2026-09-02 rule spent a commit collapsing back into one.
+ */
+const readingColumn = (hero, iso) =>
+  `<div class="hero-body">${heroOpening(hero)}</div>${hymnsMarkup(iso, state.calendar)}`;
+
+const heroArticle = (hero, media, ratio, body) => `
+    <article class="hero ${hero.image ? 'has-media' : ''}" style="--hero-r:${ratio}">
+      ${media}
+      <div class="hero-body">${body}</div>
+    </article>`;
+
+/**
+ * Who the saint is: the name, the office and the years, and the two places.
+ *
+ * The places are filled late, like the lede, and for the same reason: the
+ * manifest carries a location's coordinates and not its name
+ * (build-manifest.mjs keeps the names in the folder), so the words come with
+ * the saint's own payload. Empty until then and empty for good where the
+ * corpus has no place, because a line that says "Born:" and nothing else is
+ * the furniture STRUCTURE.md refuses. Author, 2026-09-01: "add office and
+ * locations of birth and death under the name on the main saint card."
+ */
+const heroIdentity = (hero) => `
+        <h2 class="hero-name" style="view-transition-name:s-${hero.slug}-name">
+          <a href="${state.router.href(`/saints/${hero.slug}`)}" data-prefetch="${hero.slug}">${esc(saintName(hero))}</a>
+        </h2>
+        <p class="hero-dates utility">${esc(formatSubtext(hero))}</p>
+        <p class="hero-places utility" data-hero-places hidden></p>`;
+
+/**
+ * The opening of the life, on a wide screen only (author, 2026-08-25:
+ * "because there is space on the left of the saint card under their name").
+ * It arrives with the fetched life rather than from the manifest, so the box
+ * is here from the first paint and fills a moment later; empty until then, and
+ * empty for good where a saint has no life recorded.
+ *
+ * The way into the life is the last words *of this paragraph* (author,
+ * 2026-09-01: "make the '...continue reading' part of the actual preview
+ * paragraph"), written into it by `fillHeroLede` once the text is there and
+ * trimmed to fit — see `fitLede`, which past 1024 px has nothing left to trim
+ * against, the picture having moved to a column of its own.
+ *
+ * The anchor under it is the same way in for the width where the preview is
+ * not shown: below 760 px the lede is not displayed and the link inside it
+ * goes with it, and the author asked for the link on the phone as well as the
+ * desktop. Exactly one of the two is ever laid out.
+ */
+const heroOpening = (hero) => `
+        <p class="hero-lede" data-hero-lede hidden></p>
+        <a class="hero-more hero-more-alone" href="${state.router.href(`/saints/${hero.slug}`)}"
+          data-prefetch="${hero.slug}"
+          aria-label="${esc(fill(STRINGS.calendar.continueReadingOf, { name: saintName(hero) }))}"
+          >${esc(STRINGS.calendar.continueReading)}<span class="hero-more-chevron" aria-hidden="true"></span></a>`;
+
+/**
+ * Which saint the two middle columns are showing: the reader's choice where
+ * they have made one and it is still a saint of this day, and the day's own
+ * pick otherwise. The guard is not decoration — a church change repaints the
+ * day without stepping it, and the chosen saint may not be in the new church's
+ * calendar at all.
+ */
+function chosenSlug(entries) {
+  const own = pickHero(state.selected, entries, state.data.bySlug, state.calendar);
+  return entries.some((e) => e.slug === state.picked) ? state.picked : own;
+}
+
+/**
+ * **A press chooses; nothing else moves.** Only the two middle columns are
+ * rewritten, so the shelf keeps its scroll, the month keeps its place and the
+ * day's readings are not repainted under a reader in the middle of them.
+ *
+ * Past 1024 px only. Below it there are no such columns, and `state.picked` is
+ * never written because there is nothing to press.
+ */
+export function paintChosen({ saint: saintCol, content: readCol }) {
+  if (!isWide() || !saintCol || !readCol) return;
+  const { data, selected } = state;
+  const entries = entriesFor(selected, data);
+  if (!entries.length) return;
+  const hero = data.bySlug.get(chosenSlug(entries));
+  const { media, ratio } = heroPicture(hero);
+  saintCol.innerHTML = heroArticle(hero, media, ratio, heroIdentity(hero));
+  readCol.innerHTML = readingColumn(hero, selected);
+  fillSaintHymns(readCol, hero.slug, selected);
+  fillHeroLede(readCol, hero.slug, selected, hero, saintCol);
+}
+
+/**
+ * Which row of the shelf is the saint in the card. Written rather than
+ * repainted: the shelf is not rebuilt by a choice, so the mark has to be moved
+ * from the row that had it to the row that has it now.
+ */
+export function markChosen(root, slug) {
+  for (const row of root.querySelectorAll('[data-choose]')) {
+    const on = row.dataset.choose === slug;
+    row.classList.toggle('is-picked', on);
+    if (on) row.setAttribute('aria-current', 'true');
+    else row.removeAttribute('aria-current');
+  }
 }
 
 // Translated, like the office beside it (2026-09-08): a title is a recorded

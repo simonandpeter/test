@@ -367,7 +367,15 @@ test('the register opens compact in columns, remembers the other face, and lands
 
   const shape = () =>
     page.evaluate(() => {
-      const cards = [...document.querySelectorAll('[data-register] .reg-card')];
+      /*
+       * **Drawn rows only** (2026-09-16). Past 1024 px the shelf lists the
+       * whole day and hides the saint standing in the card, so the row of the
+       * chosen saint is in the document with every box on it reporting zero —
+       * trap 7 — and it is the first row of the list. Read before this filter
+       * it made the picture look stacked over the name and the single column
+       * look like two, both off a rectangle that is not on the screen.
+       */
+      const cards = [...document.querySelectorAll('[data-register] .reg-card')].filter((c) => c.offsetParent);
       const withImage = cards.find((c) => c.querySelector('.reg-thumb:not(.is-blank)'));
       const thumb = withImage?.querySelector('.reg-thumb').getBoundingClientRect();
       const body = withImage?.querySelector('.reg-body').getBoundingClientRect();
@@ -383,7 +391,18 @@ test('the register opens compact in columns, remembers the other face, and lands
     });
 
   const wide = await shape();
-  expect(wide.columns, 'the cards are not in columns').toBeGreaterThan(1);
+  /*
+   * **One column, at every width past 1024 px** (2026-09-16). This read "the
+   * cards are not in columns — more than one" and asked for fewer of them in a
+   * narrower window, which is what "separated in columns depending on window
+   * size" asked for when the register had the width of the page under the
+   * hero. It is the fourth column of four now, `--side-w` wide, and a card
+   * grid whose floor is 340 px in a 272 px box lays a 340 px row into it — so
+   * the packing is not narrowed here, it is gone, and what is asserted instead
+   * is that it is gone. The faces themselves are unchanged and are what stage
+   * two dresses.
+   */
+  expect(wide.columns, 'the shelf is packing rows across itself again').toBe(1);
   expect(wide.pictureAbove, 'the picture stacked over the name again').toBe(false);
   expect(wide.pictureTrails, 'the picture is not at the row’s trailing edge').toBe(true);
   // The mat: 48 px of picture and 6 px of padding either side, fixed however
@@ -391,10 +410,10 @@ test('the register opens compact in columns, remembers the other face, and lands
   // way short of the 190 px card this used to be.
   expect(wide.pictureWidth, 'the mat is not 60 px wide').toBe(60);
 
-  // Fewer columns in a narrower window, which is what "depending on window
-  // size" means and what a fixed column count would not do.
+  // And still one at the narrow end of the desk, where the shelf is at its
+  // own floor: the column does not pack rows across itself at any width.
   await page.setViewportSize({ width: 1024, height: 900 });
-  await expect.poll(async () => (await shape()).columns).toBeLessThan(wide.columns);
+  await expect.poll(async () => (await shape()).columns).toBe(1);
   await page.setViewportSize({ width: 1440, height: 900 });
 
   // The other face: one column of repeated day cards, picture leading.
@@ -518,7 +537,9 @@ test('a register card crops to the hero own limits', async ({ page }) => {
 
   const shapes = await page.evaluate(() =>
     [...document.querySelectorAll('.register-cards.is-cards .reg-thumb')]
-      .filter((t) => t.querySelector('img'))
+      // Drawn rows only: the shelf hides the saint in the card and a hidden
+      // box measures zero, which divides into NaN rather than into a shape.
+      .filter((t) => t.querySelector('img') && t.offsetParent)
       .map((t) => {
         const r = t.getBoundingClientRect();
         const img = t.querySelector('img');
@@ -566,7 +587,8 @@ test('a register mat is 60 px wide however tall its picture is', async ({ page }
 
   const mats = await page.evaluate(() =>
     [...document.querySelectorAll('[data-register].is-cards .reg-card')]
-      .filter((row) => row.querySelector('.reg-pic img'))
+      // Drawn rows only; the shelf's hidden row reports a 0 px mat.
+      .filter((row) => row.querySelector('.reg-pic img') && row.offsetParent)
       .map((row) => {
         const mat = row.querySelector('.reg-thumb').getBoundingClientRect();
         const pic = row.querySelector('.reg-pic').getBoundingClientRect();
@@ -709,8 +731,8 @@ test('the register offers the two faces the reference draws, and no third', asyn
   await expect(page.locator('[data-reg-view="expanded"]')).toHaveAttribute('aria-pressed', 'true');
 
   const big = await page.evaluate(() => {
-    const row = [...document.querySelectorAll('[data-register] .reg-card')].find((r) =>
-      r.querySelector('.reg-pic img'),
+    const row = [...document.querySelectorAll('[data-register] .reg-card')].find(
+      (r) => r.querySelector('.reg-pic img') && r.offsetParent,
     );
     const hero = document.querySelector('.hero-figure');
     const probe = document.createElement('span');
@@ -737,8 +759,24 @@ test('the register offers the two faces the reference draws, and no third', asyn
       wayShown: row.querySelector('.reg-more').offsetParent !== null,
     };
   });
-  expect(big.width, 'the expanded mount is not the day card own shape').toBe(big.heroWidth);
-  expect(big.width, 'the expanded mount is not filling a column at all').toBeGreaterThan(200);
+  /*
+   * **The two are no longer one width, and cannot be** (2026-09-16). This read
+   * `big.width === big.heroWidth` on the strength of "every saint in the shape
+   * of the day's own card", which held while the shelf and the hero were the
+   * same column. They are two columns of the four now — the hero in
+   * `--saint-w`, the shelf in `--side-w` — so one number can no longer stand
+   * for both. What survives is the half that was ever a shape rather than a
+   * coincidence: the mount fills whatever column it is in, and wears the
+   * hero's own mat.
+   */
+  /*
+   * 200 px is `--card-pic`'s own floor and it is what binds here: five
+   * twelfths of a 272 px column is 100, so the clamp holds the picture at the
+   * width below which "a very tall icon is a sliver" — measured at 1440, where
+   * the fraction used to give 244.
+   */
+  expect(big.width, 'the expanded mount is not filling its column at all').toBeGreaterThanOrEqual(200);
+  expect(big.heroWidth, 'premise: the day card has no picture to compare against').toBeGreaterThan(0);
   expect(big.fill, 'the expanded mount is not the hero own mat colour').toBe(big.mount);
   expect(big.pad, 'the expanded mat is not the hero own').toBe(big.heroPad);
   expect(big.name, 'the expanded name is not --text-xl').toBe(21);

@@ -285,10 +285,10 @@ test('past 1024 px the month carries one mark, not the phone ring as well', asyn
   // A day that is today, so both marks would be competing for one cell — the
   // state the author photographed, and the one the desktop page opens on.
   await page.goto('/', { waitUntil: 'networkidle' });
-  await expect(page.locator('.cal-bubble .month-grid')).toBeVisible();
+  await expect(page.locator('.cal-main .month-grid')).toBeVisible();
 
   const m = await page.evaluate(() => {
-    const today = document.querySelector('.cal-bubble .month-grid button.is-today');
+    const today = document.querySelector('.cal-main .month-grid button.is-today');
     if (!today) return { none: true };
     const ring = getComputedStyle(today.querySelector('.day-num'), '::before');
     const cell = getComputedStyle(today);
@@ -2420,7 +2420,23 @@ test('the day the reader is on is told apart from the box it sits in', async ({ 
       };
       const sel = document.querySelector('.month-grid button[aria-current="date"]');
       const plain = document.querySelector('.month-grid button:not([aria-current]):not(.month-out)');
-      const fill = rgb(getComputedStyle(document.querySelector('.cal-bubble-fill')).backgroundColor);
+      /*
+       * **The ground the cell actually stands on, walked to rather than
+       * named.** It was the bubble's fill until 2026-09-16, when the month
+       * moved into the day's own column and the surround became the page's
+       * own — and a mark scored against a box it is no longer in is a number
+       * about nothing. Walked up from the cell because the column paints
+       * nothing itself: the first ancestor with a paint is the answer at
+       * either width.
+       */
+      const groundOf = (el) => {
+        for (let n = el.parentElement; n; n = n.parentElement) {
+          const c = rgb(getComputedStyle(n).backgroundColor);
+          if (c[3] > 0) return c;
+        }
+        return [255, 255, 255, 255];
+      };
+      const fill = groundOf(sel);
       const s = getComputedStyle(sel);
       const paints = [s.borderTopColor, s.backgroundColor]
         .map(rgb)
@@ -2445,7 +2461,7 @@ test('the day the reader is on is told apart from the box it sits in', async ({ 
     expect(seen.marks, `the selected day paints nothing at all in ${where}`).toBeGreaterThan(0);
     expect(
       seen.strongest,
-      `the selected day's mark is ${seen.strongest.toFixed(2)}:1 against the bubble in ${where}`,
+      `the selected day's mark is ${seen.strongest.toFixed(2)}:1 against its own ground in ${where}`,
     ).toBeGreaterThan(2);
   }
 });

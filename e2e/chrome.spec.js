@@ -2803,12 +2803,20 @@ test('the header takes one measure on every route, and stops at Daily’s column
           header: r('header.chrome'),
           mark: r('header.chrome .site-name'),
           corner: r('header.chrome .chrome-corner'),
-          // Daily alone: the left column the bar is now the head of, and the
-          // sidebar whose width and gutter are what came out of the measure.
-          // Measured off the boxes rather than read off `--side-w`, which is
-          // `19rem` and does not compute to pixels through a custom property.
+          /*
+           * Daily alone: the columns the bar is the head of, and the sidebar
+           * whose width and gutter are what came out of the measure. Measured
+           * off the boxes rather than read off `--side-w`, which is `19rem`
+           * and does not compute to pixels through a custom property.
+           *
+           * **The last of those columns is the reading column since
+           * 2026-09-16**, where it was the whole left column of two. The bar
+           * still stops one `--side-w` and one `--day-gap` short of the page's
+           * right margin — the arithmetic below is untouched — but the box
+           * that ends there is the third of four now, not the first of two.
+           */
           bar: r('.chrome-bar'),
-          column: document.querySelector('.cal-main') ? r('.cal-main') : null,
+          column: document.querySelector('.cal-read') ? r('.cal-read') : null,
           side: document.querySelector('.cal-bubble') ? r('.cal-bubble') : null,
         };
       }),
@@ -2835,9 +2843,9 @@ test('the header takes one measure on every route, and stops at Daily’s column
    * `daily-panel.spec.js`, rather than inferred from a width here.
    *
    * **And Daily's row now *ends* somewhere else on purpose, since 2026-09-10**
-   * (§2.2's last open piece): past 1024 px the bar is that page's left column's
-   * own head, so its box stops where the column does and the sidebar stands
-   * beside it rather than under it. That is the one difference between the
+   * (§2.2's last open piece): past 1024 px the bar is the head of that page's
+   * columns, so its box stops where the last of them does and the sidebar
+   * stands beside it rather than under it. That is the one difference between the
    * four routes this test is allowed to have, and it is asserted as a
    * *derivation* rather than excused — the row ends at the column's own right
    * edge, and the distance back to where the other three end is exactly the
@@ -2859,9 +2867,9 @@ test('the header takes one measure on every route, and stops at Daily’s column
   }
 
   const d = seen[0];
-  expect(d.column, `premise: ${daily} draws no left column at 1280`).not.toBeNull();
-  expect(d.bar[1], `${daily} does not stop the bar at the left column`).toBe(d.column[1]);
-  expect(d.corner[1], `${daily} ends the header row past its own column`).toBe(d.column[1]);
+  expect(d.column, `premise: ${daily} draws no reading column at 1280`).not.toBeNull();
+  expect(d.bar[1], `${daily} does not stop the bar where its columns do`).toBe(d.column[1]);
+  expect(d.corner[1], `${daily} ends the header row past its own columns`).toBe(d.column[1]);
   expect(
     seen[1].corner[1] - d.corner[1],
     `${daily} gives up ${seen[1].corner[1] - d.corner[1]} px where the sidebar and its gutter are ${d.side[1] - d.column[1]}`,

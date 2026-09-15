@@ -1059,8 +1059,17 @@
    crosses stand in a notch that is not cut at this width. `display: none`
    rather than `contents`: `contents` on four empty spans is four flex items of
    nothing between the picker and the date. */
+/* Nor are the desk's own three columns. The chosen saint, what is read of them
+   and the shelf are the four-column page's boxes and are not painted at all
+   below this width (`daily/panel.js`): the phone's day is one hero with the
+   register under it, and there is no second saint to choose. `display: none`
+   rather than `contents`, for the reason above — an empty panel dissolved into
+   the run would be a flex item of nothing between the date and the day. */
 .cal-bubble-head,
-.cal-notch {
+.cal-notch,
+.cal-saint,
+.cal-read,
+.cal [data-slot='shelf'] {
   display: none;
 }
 
@@ -1116,8 +1125,19 @@
   /* The two numbers themselves are `--side-w` and `--day-gap` on the route
      below: the site's bar has to measure itself against this column and it
      sits outside the grid, so the width cannot live on the box that uses it. */
+  /*
+   * **Four columns, and the fourth track is a gutter rather than a gap**
+   * (2026-09-16). The day, the saint, what is read of them, the rest of the
+   * day: the mockup's Today face, and the first three stand shoulder to
+   * shoulder with a hairline between them, which a uniform `column-gap` cannot
+   * draw. So the space before the shelf is a track of its own — the one gutter
+   * this grid has, and the one the site's bar has to clear, which is why it is
+   * still `--day-gap` and still the same number. A grid gap would have had to
+   * be paid three times over, and at 1024 px the three payments come out of
+   * the reading column: 96 px of the 240 it has there.
+   */
   .cal {
-    --day-cols: minmax(0, 1fr) var(--side-w);
+    --day-cols: var(--day-w) var(--saint-w) minmax(0, 1fr) var(--day-gap) var(--side-w);
     display: grid;
     grid-template-columns: var(--day-cols);
     /* One row, since 2026-09-10. It was two — `auto minmax(0, 1fr)`, the
@@ -1129,7 +1149,6 @@
        the sections move under it there, which is the same promise kept by the
        box rather than by the grid. */
     grid-template-rows: minmax(0, 1fr);
-    column-gap: var(--day-gap);
     /* The columns own the scrolling, so the grid is exactly the height it is
        given and never more. */
     height: 100%;
@@ -1186,8 +1205,28 @@
    * from a heading with its own leading and is not the same distance; an
    * instruction in words beats a number read off a redraw.
    */
+  /*
+   * **The shelf holds 19 rem and the two new columns give ground** (2026-09-16).
+   * Four columns at 1024 px leave about 200 px for prose if all three of the
+   * left-hand ones are held at their widest, and 200 px of Literata is not a
+   * measure — so `--day-w` and `--saint-w` are clamps that close toward their
+   * own floors, the month grid's seven columns and an icon, as the window does.
+   *
+   * **`--side-w` is not one of them and may not become one.** It is the shelf's
+   * width, it is a rem because a percentage column with reflowing text feeds
+   * back into its own scrollbar appearing and disappearing, and the site's bar
+   * measures itself against it from outside the grid — a bar that changed width
+   * with the window would take the three chrome controls in the bubble's head
+   * with it, and the head has no slack to give.
+   *
+   * `vw` and not a percentage for the other two: a percentage would be of the
+   * grid, which is what they are dividing, and `vw` is the window, which this
+   * page does not scroll.
+   */
   html[data-route~='calendar'] {
     --side-w: 19rem;
+    --day-w: clamp(13rem, 19vw, 19rem);
+    --saint-w: clamp(11rem, 17vw, 20rem);
     --day-gap: var(--space-8);
     --headgap: var(--space-2);
     --rulegap: var(--space-1);
@@ -1252,13 +1291,74 @@
     padding-inline: 0;
   }
 
-  /* The gap §6's table names, paid where it is now owed: the left column
-     begins under the bar rather than the whole page beginning under it. Every
-     other route starts `--space-6` below the bar (base.css). */
+  /*
+   * **Column one is the day itself**: the date and its two steps, the liturgy
+   * line, the month, the church's own readings and the names it gives — and
+   * Continue reading at the foot of it.
+   *
+   * The five are laid out by `order` because the document is the phone's
+   * reading order and may not be touched: the picker and the sections stand
+   * after the day's saints there so that a screen reader meets the day before
+   * the readings of the day (views/calendar.js says it at length). The day
+   * panel itself is the phone's and is not drawn here at all.
+   *
+   * The margin is the gap §6's table names, paid where it is owed: this column
+   * begins under the bar rather than the whole page beginning under it. Every
+   * other route starts `--space-6` below the bar (base.css).
+   */
   .cal-main {
     grid-column: 1;
     grid-row: 1;
+    display: flex;
+    flex-direction: column;
     margin-top: calc(var(--chrome-h-reserve) + var(--headgap));
+    padding-inline-end: var(--space-6);
+  }
+
+  .cal-main > .cal-head { order: 0; }
+  .cal-main > .cal-liturgy { order: 1; }
+  .cal-main > .cal-controls { order: 2; }
+  .cal-main > .cal-side { order: 3; }
+  .cal-main > .shelves { order: 4; }
+  .cal-main > [data-slot='main'] { display: none; }
+
+  /*
+   * **The chosen saint, and what is being read of them.**
+   *
+   * Each is its own scroller, and `min-height: 0` is what makes that true: a
+   * grid item's default floor is its content, so without it the box grows to
+   * fit the life and the page scrolls instead of the column. The mockup
+   * records what that costs when it is missed — a tightening pass took
+   * `overflow-y` into one column's own block and left two of the four at
+   * `overflow: visible`, which is a thousand pixels of saints with no way to
+   * reach them.
+   *
+   * The hairline is drawn at the column's leading edge and the padding stands
+   * the content off it, so the rule between two columns is one rule and not
+   * two abutting borders.
+   */
+  .cal-saint,
+  .cal-read {
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    overflow-y: auto;
+    margin-top: calc(var(--chrome-h-reserve) + var(--headgap));
+    border-inline-start: 1px solid var(--rule);
+    padding-inline: var(--space-6);
+  }
+
+  .cal-saint { grid-column: 2; }
+  .cal-read { grid-column: 3; }
+
+  /* The viewport is the roll's clip and takes no height of its own: the column
+     around it is what scrolls, and a viewport that shared the scrolling would
+     put a second bar inside the first. */
+  .cal-saint > .slot-viewport,
+  .cal-read > .slot-viewport {
+    min-height: 0;
   }
 
   /*
@@ -1272,7 +1372,8 @@
    * be. It is also where anything that must escape the clip belongs — the
    * chooser panels, in step 6 (§10.9).
    *
-   * `grid-row: 1` and `grid-column: 2` are stated rather than left to flow.
+   * `grid-row: 1` and `grid-column: 5` — the last track — are stated rather
+   * than left to flow.
    * The document order is `.cal-main` then `.cal-bubble` now (views/calendar.js
    * says why), and explicit placement is what makes that a free choice: the
    * columns are where they are said to be, whichever order they are written
@@ -1306,7 +1407,7 @@
        ancestor left — land on the viewport's own corners. Measured, on the
        first render of this box. */
     display: block;
-    grid-column: 2;
+    grid-column: 5;
     grid-row: 1;
     position: relative;
     min-width: 0;
@@ -4123,12 +4224,15 @@ a.name-day:hover {
    * mark that reads: **2.64:1 and ΔL* 31.8 in day, 2.84:1 and ΔL* 32.1 in
    * vigil**, three times the separation of the border it replaces.
    *
-   * Below this width nothing changes: the month is on the page's own ground
-   * there, where the field is a real second channel and `--rule` reads at
-   * 1.41:1. `daily-picker.spec.js` asserts the mark against the box, in both
-   * themes, rather than against a number written here.
+   * **The ground under it changed on 2026-09-16 and the mark did not.** The
+   * month moved out of the bubble into the day's own column, so the surround
+   * is `--gesso` here as it is on a phone rather than `--bub`; `--accent` is
+   * the ground's own hue shifted away from itself and reads against either.
+   * The field-hole this rule refuses would have been fainter still on gesso.
+   * `daily-picker.spec.js` asserts the mark against whatever box it actually
+   * stands on, in both themes, rather than against a number written here.
    */
-  html[data-route~='calendar'] .cal-bubble .month-grid button[aria-current='date'] {
+  html[data-route~='calendar'] .cal-main .month-grid button[aria-current='date'] {
     background: none;
     border-color: var(--accent);
   }
@@ -4158,7 +4262,7 @@ a.name-day:hover {
    * reference does not draw that state, so it is the reference's silence being
    * followed, not a decision this file is making on its own.
    */
-  html[data-route~='calendar'] .cal-bubble .month-grid button.is-today .day-num::before {
+  html[data-route~='calendar'] .cal-main .month-grid button.is-today .day-num::before {
     content: none;
   }
 
@@ -4176,8 +4280,8 @@ a.name-day:hover {
    * that rule means — they are a ruled grid, which is the register's own
    * shape.
    */
-  html[data-route~='calendar'] .cal-bubble .month-grid button,
-  html[data-route~='calendar'] .cal-bubble .month-grid .month-out {
+  html[data-route~='calendar'] .cal-main .month-grid button,
+  html[data-route~='calendar'] .cal-main .month-grid .month-out {
     border-radius: 0;
   }
 
@@ -4672,5 +4776,113 @@ a.name-day:hover {
 @media (min-width: 700px) {
   .fullcal .fc-day-name {
     display: none;
+  }
+}
+
+
+/* ---- the four columns (2026-09-16) -------------------------------------- */
+
+/*
+ * What the moved components have to be told, and nothing more. The day cells,
+ * the hero and the register rows are one drawing at both widths (STRUCTURE.md
+ * §4, Shared) and are re-placed here rather than re-drawn: every rule below is
+ * a box that has changed column, not a component that has changed face.
+ *
+ * **Route-scoped, because the rules they answer are.** `html[data-route~=]
+ * .hero.has-media` is (0,3,1) and a plain `.cal-saint .hero.has-media` is
+ * (0,3,0), so the unprefixed version of this block lost to the rule it was
+ * written to replace and the picture kept its second column. Measured, not
+ * reasoned: the hero's `grid-template-columns` still read `200px 92px`.
+ */
+@media (min-width: 1024px) {
+  /* Painted past this width and nowhere else; the base sheet hides it beside
+     the bubble's head, for the same reason. */
+  html[data-route~='calendar'] .cal [data-slot='shelf'] {
+    display: block;
+  }
+
+  /*
+   * **The saint column stacks.** `.hero.has-media` is a two-column grid from
+   * 620 px up — the picture beside the words — and the picture has a column of
+   * the page to itself now, so there is nothing left to be beside.
+   */
+  html[data-route~='calendar'] .cal-saint .hero.has-media {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /*
+   * **The reading column is the card's text column, moved.** Every rule that
+   * shows the lede and the way into it asks for `.hero.has-media` around them,
+   * because until now the words were always beside the picture. They are a
+   * column of their own here, so the three are said again against the box that
+   * holds them — and the standalone copy stands down, exactly as it does
+   * beside a picture.
+   */
+  html[data-route~='calendar'] .cal-read .hero-lede {
+    display: block;
+    max-width: 62ch;
+  }
+
+  html[data-route~='calendar'] .cal-read .hero-more:not(.hero-more-alone) {
+    display: inline-flex;
+    /* The same `align-self` the card's own copy needs, and for the same
+       reason: `.hero-body` is a column flex container, which blockifies an
+       inline-flex child and stretches it to the column — 339 px of target for
+       113 px of words, measured. */
+    align-self: flex-start;
+  }
+
+  html[data-route~='calendar'] .cal-read .hero-more-alone {
+    display: none;
+  }
+
+  /*
+   * **The shelf is one column wide, whichever face the register wears.** The
+   * card face is `repeat(auto-fill, minmax(340px, 1fr))`, and `auto-fill` with
+   * a 340 px floor in a 240 px box lays a 340 px row into it and overruns.
+   */
+  html[data-route~='calendar'] .cal-bubble .register-cards.is-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /*
+   * **The saint in the card is not one of the others.** "Also today" means the
+   * rest of the day, so the one being read leaves the shelf while it is being
+   * read and comes back when another is chosen. Hidden rather than dropped
+   * from the paint, so nothing is rebuilt by a press and no picture is fetched
+   * twice.
+   */
+  html[data-route~='calendar'] .cal-bubble .register-cards li.reg-card.is-picked {
+    display: none;
+  }
+
+  /* The row chooses; the two anchors in it still go to the saint's own page. */
+  html[data-route~='calendar'] .cal-bubble .reg-card[data-choose] {
+    cursor: pointer;
+  }
+
+  /*
+   * **The shelf's head stays put while the day goes under it** — the mockup's
+   * one sticky head, and the only place on this page where a heading and the
+   * control beside it must stay reachable through a column of saints. The
+   * ground is the bubble's own, so the rows pass under it rather than through
+   * it.
+   */
+  html[data-route~='calendar'] .cal-bubble .register-head {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--bub);
+    padding-bottom: var(--space-2);
+  }
+
+  /*
+   * **The date comes down two steps.** `--text-3xl` is `5vw` at its middle,
+   * which is 64 px at 1280 — a heading sized for a column two thirds of the
+   * page standing in one a fifth of it, where "Wednesday, 3 September 2026"
+   * took four lines. `--text-xl` is the last step that holds the date on two.
+   */
+  html[data-route~='calendar'] .cal-head > .cal-date {
+    font-size: var(--text-xl);
   }
 }

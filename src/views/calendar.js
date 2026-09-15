@@ -33,10 +33,11 @@ import { formatDate, translateReason } from '../lib/i18n.js';
    views/daily/state.js for why it is a singleton and why it moved. */
 import { state, open as openState, close as closeState } from './daily/state.js';
 import { reducedMotion } from '../lib/motion.js';
+import { onWideChange } from '../lib/viewport.js';
 import { buildRail, growMonthBody, markRail, measure, monthCursor, moveMonth, paintMonth, paintMonthInto, revealSelected, stepCursor, stepMonth, toggleMonth, wireDayKeys, wireDaySwipe, wireRail } from './daily/picker.js';
 import { countFor, dayRecordFor } from './daily/entries.js';
 import { monthFmt, reckonedHeading, weekdayFmt } from './daily/format.js';
-import { paintDay } from './daily/panel.js';
+import { markChosen, paintChosen, paintDay } from './daily/panel.js';
 import { fullCalButton, wireFullCal } from './daily/fullcal.js';
 
 import { gradeForDay, gradeFromNote } from '../lib/fast-grade.js';
@@ -114,6 +115,12 @@ export function render(el, { data, params, router }) {
     select,
     calendar: currentChurch(),
     monthCursor: null, monthOpen: false,
+    /* Which saint of the day the two middle columns are showing, past 1024 px
+       (2026-09-16). Null is "the one the day chose for itself" — `pickHero` —
+       and the day step puts it back to null, because a choice is about a day
+       and does not survive it. Below the breakpoint nothing reads it: there is
+       one hero and no column to put a second saint in. */
+    picked: null,
     cleanups: [], dayCleanups: [],
     sizeTimer: null,
     monthGrain: null, railAnchor: null,
@@ -143,12 +150,14 @@ export function render(el, { data, params, router }) {
         take the month's growth as one. So the day is painted into two panels,
         each in its own roll viewport, and slotSwap steps both together.
 
-        **The picker moved inside the right column on 2026-09-10.** It sat
-        between the two columns in the document until then, so that the grid
-        could put it in the right column's first row while the left column
-        spanned both. The bubble is one box now and the picker is the first
-        thing in it, so the whole of column two is one run of markup — the run
-        that follows this one, for the reason written on cal-bubble below.
+        **The picker and the church's own record are the last two children of
+        cal-main, and the order they are drawn in is a stylesheet's business.**
+        They stand after the day's saints in the document because that is the
+        phone's reading order and it may not change — a screen reader meets the
+        day before it meets the readings of the day. Past 1024 px cal-main
+        is column one and lays its five children out by order, which is how
+        the date, the picker and the sections come to be the day's own column
+        with Continue reading at its foot.
       -->
       <div class="cal-main" data-col="main">
         <!--
@@ -185,6 +194,128 @@ export function render(el, { data, params, router }) {
         <p class="cal-liturgy utility" data-liturgy></p>
         <div class="slot-viewport" data-slot="main"><div class="day-panel day-main"></div></div>
         <div class="shelves" data-shelves></div>
+        <div class="cal-controls">
+            <div class="cal-jump">
+              <button type="button" data-month aria-expanded="false"
+                aria-label="${STRINGS.calendar.monthView}">${ICON_MONTH}</button>
+            </div>
+            <div class="cal-span">
+              <div class="cal-week">
+                <div class="week-strip" role="group" tabindex="0"
+                  aria-label="${STRINGS.calendar.weekLabel}"></div>
+                <!--
+                  **Arrows over the rail's own fading ends** (author, 2026-09-02:
+                  "add arrows left and right over the week display and monthly
+                  display edges, don't resize anything just put them over the
+                  left and right ends where the dates just outside of the week
+                  are fading out").
+
+                  Over, in the literal sense: they are absolutely positioned on
+                  top of the dissolve, so the rail keeps every pixel it had and
+                  the seven days are the width they were. Desktop only, where
+                  there is a pointer to aim at them — a phone swipes the rail,
+                  which is the gesture the fade is hinting at in the first
+                  place, and two 24 px targets over the edge days would be in
+                  the way of it.
+
+                  The month's own two edges already are buttons (peek-prev and
+                  peek-next below); they get the same glyph in calendar.css
+                  rather than a second control drawn over them.
+                -->
+                <button type="button" class="week-arrow week-arrow-prev" data-wstep="-1"
+                  aria-label="${STRINGS.calendar.prevWeek}">&lsaquo;</button>
+                <button type="button" class="week-arrow week-arrow-next" data-wstep="1"
+                  aria-label="${STRINGS.calendar.nextWeek}">&rsaquo;</button>
+              </div>
+              <div class="cal-month" hidden>
+                <!--
+                  **The calendar's own header row** (author, 2026-09-02): the
+                  month's whole name on the left margin of the column, and the
+                  reckoning the page is read by opposite it on the right, which
+                  is a control on a desktop and a statement everywhere else.
+
+                  One row rather than two things that happen to be near each
+                  other: they are the two facts about *this grid* — which month,
+                  and by whose arithmetic — and the pair reads as a heading.
+                -->
+                <div class="month-head">
+                  <!--
+                    **The month's two steps, past 1024 px**: a hairline closed by a
+                    diamond, pointing away from the month it leaves. They replace
+                    the peeked columns, which is what buys the grid its width —
+                    and they are a *second* control on stepMonth, not the same
+                    one moved, because the phone keeps its peeks. Hence
+                    data-mstepper beside data-mstep: two names for two controls,
+                    so neither a querySelector here nor a locator in the suite
+                    can pick up the wrong one.
+                  -->
+                  <button type="button" class="mstep mstep-prev" data-mstepper="-1"
+                    aria-label="${esc(STRINGS.calendar.prevMonth)}">
+                    <i class="mstep-dot"></i><i class="mstep-line"></i></button>
+                  <span class="month-title">
+                    <span class="month-name"></span>
+                    <div class="reckoning" data-reckoning>
+                      <button type="button" class="reckoning-btn utility" data-reckoning-btn
+                        aria-expanded="false" aria-haspopup="listbox"
+                        aria-controls="reckoning-pop"></button>
+                      <div class="reckoning-pop" id="reckoning-pop" data-reckoning-pop hidden
+                        role="group" aria-label="${esc(STRINGS.calendar.reckoningLabel)}"></div>
+                    </div>
+                    ${fullCalButton()}
+                  </span>
+                  <button type="button" class="mstep mstep-next" data-mstepper="1"
+                    aria-label="${esc(STRINGS.calendar.nextMonth)}">
+                    <i class="mstep-line"></i><i class="mstep-dot"></i></button>
+                </div>
+                <div class="month-days-line" aria-hidden="true">
+                  <span class="peek-gap"></span>
+                  <div class="month-days"></div>
+                  <span class="peek-gap"></span>
+                </div>
+                <div class="month-body">
+                  <div class="grain-track">
+                    <div class="month-row">
+                      <button type="button" class="peek peek-prev" data-mstep="-1"
+                        aria-label="${STRINGS.calendar.prevMonth}"></button>
+                      <div class="month-grid"></div>
+                      <button type="button" class="peek peek-next" data-mstep="1"
+                        aria-label="${STRINGS.calendar.nextMonth}"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--
+                **The full-screen control moved into the month's own head on
+                2026-09-10**, to the right
+                of the month and its reckoning. It stood here, in a second row
+                of the span under whichever grain was showing, from 2026-09-01;
+                it is a desktop control only (calendar.css hides it below
+                1024 px, author 2026-09-02) and the desktop's picker is the
+                month, so the calendar's own way out now sits on the calendar's
+                own heading rather than a row below it. Its words are unchanged.
+              -->
+            </div>
+        </div>
+        <div class="cal-side" data-col="side">
+          <div class="slot-viewport" data-slot="side"><div class="day-panel day-side"></div></div>
+        </div>
+      </div>
+      <!--
+        **The chosen saint, and what is being read of them** — the two middle
+        columns past 1024 px, and nothing at all below it. They are painted
+        only at that width (daily/panel.js), because below it the day is one
+        panel: a phone reads the hero whole, with the register under it, and
+        there is no second saint to choose.
+
+        Each is its own slot viewport so that a day change rolls all four
+        panels together on one animation, and so that choosing a saint can
+        repaint these two and leave the other two standing.
+      -->
+      <div class="cal-saint" data-col="saint">
+        <div class="slot-viewport" data-slot="saint"><div class="day-panel day-saint"></div></div>
+      </div>
+      <div class="cal-read" data-col="content">
+        <div class="slot-viewport" data-slot="content"><div class="day-panel day-content"></div></div>
       </div>
       <!--
         **The right column is one filled box past 1024 px**
@@ -196,24 +327,19 @@ export function render(el, { data, params, router }) {
         drawn *outside* the clip — they are the box turned inside out, on the
         page's own ground. cal-bubble-fill carries the fill and the clip-path,
         and nothing else may. cal-bubble-scroll sits inside the clip and is the
-        column's scroller, so the month and the sections travel together under
-        a head that stays put.
+        column's scroller.
 
         **No overflow: hidden anywhere on the bubble** (§10.9). The chooser
         panels open downward from the head and are allowed to overrun the
         bottom edge; the notches are the only clipping this box does.
 
-        **After cal-main in the document, not before it.** The whole of column
-        two is one run of markup — which is what lets the picker live in the
-        bubble it belongs to — and that run goes *after* the day's own saint,
-        because below the breakpoint all of these wrappers dissolve to
-        display: contents. The order property then decides what a sighted
-        reader sees and the document decides what assistive technology hears,
-        and ahead of cal-main the readings, hymns and name days would be
-        announced before the day they belong to — on the phone, which is this
-        page's primary surface. What the choice costs is the month button's
-        place in the tab order: a control rather than content, and the cheaper
-        of the two.
+        **It is the fourth column now, and it holds the rest of the day.** The
+        site's bar measures itself as the page less one side column and one
+        gutter from the right, so whatever stands in the last column is
+        what the bar clears — which is why the bubble stayed where it was and
+        the day's own facts moved into a column of their own rather than the
+        other way about. Nothing in it is drawn below 1024 px: the wrappers
+        dissolve to display: contents and the shelf panel is not painted.
       -->
       <div class="cal-bubble">
         <div class="cal-bubble-fill">
@@ -222,111 +348,11 @@ export function render(el, { data, params, router }) {
                the site's own bar. -->
           <div class="cal-bubble-head" data-side-head></div>
           <div class="cal-bubble-scroll">
-            <div class="cal-controls">
-                <div class="cal-jump">
-                  <button type="button" data-month aria-expanded="false"
-                    aria-label="${STRINGS.calendar.monthView}">${ICON_MONTH}</button>
-                </div>
-                <div class="cal-span">
-                  <div class="cal-week">
-                    <div class="week-strip" role="group" tabindex="0"
-                      aria-label="${STRINGS.calendar.weekLabel}"></div>
-                    <!--
-                      **Arrows over the rail's own fading ends** (author, 2026-09-02:
-                      "add arrows left and right over the week display and monthly
-                      display edges, don't resize anything just put them over the
-                      left and right ends where the dates just outside of the week
-                      are fading out").
-
-                      Over, in the literal sense: they are absolutely positioned on
-                      top of the dissolve, so the rail keeps every pixel it had and
-                      the seven days are the width they were. Desktop only, where
-                      there is a pointer to aim at them — a phone swipes the rail,
-                      which is the gesture the fade is hinting at in the first
-                      place, and two 24 px targets over the edge days would be in
-                      the way of it.
-
-                      The month's own two edges already are buttons (peek-prev and
-                      peek-next below); they get the same glyph in calendar.css
-                      rather than a second control drawn over them.
-                    -->
-                    <button type="button" class="week-arrow week-arrow-prev" data-wstep="-1"
-                      aria-label="${STRINGS.calendar.prevWeek}">&lsaquo;</button>
-                    <button type="button" class="week-arrow week-arrow-next" data-wstep="1"
-                      aria-label="${STRINGS.calendar.nextWeek}">&rsaquo;</button>
-                  </div>
-                  <div class="cal-month" hidden>
-                    <!--
-                      **The calendar's own header row** (author, 2026-09-02): the
-                      month's whole name on the left margin of the column, and the
-                      reckoning the page is read by opposite it on the right, which
-                      is a control on a desktop and a statement everywhere else.
-
-                      One row rather than two things that happen to be near each
-                      other: they are the two facts about *this grid* — which month,
-                      and by whose arithmetic — and the pair reads as a heading.
-                    -->
-                    <div class="month-head">
-                      <!--
-                        **The month's two steps, past 1024 px**: a hairline closed by a
-                        diamond, pointing away from the month it leaves. They replace
-                        the peeked columns, which is what buys the grid its width —
-                        and they are a *second* control on stepMonth, not the same
-                        one moved, because the phone keeps its peeks. Hence
-                        data-mstepper beside data-mstep: two names for two controls,
-                        so neither a querySelector here nor a locator in the suite
-                        can pick up the wrong one.
-                      -->
-                      <button type="button" class="mstep mstep-prev" data-mstepper="-1"
-                        aria-label="${esc(STRINGS.calendar.prevMonth)}">
-                        <i class="mstep-dot"></i><i class="mstep-line"></i></button>
-                      <span class="month-title">
-                        <span class="month-name"></span>
-                        <div class="reckoning" data-reckoning>
-                          <button type="button" class="reckoning-btn utility" data-reckoning-btn
-                            aria-expanded="false" aria-haspopup="listbox"
-                            aria-controls="reckoning-pop"></button>
-                          <div class="reckoning-pop" id="reckoning-pop" data-reckoning-pop hidden
-                            role="group" aria-label="${esc(STRINGS.calendar.reckoningLabel)}"></div>
-                        </div>
-                        ${fullCalButton()}
-                      </span>
-                      <button type="button" class="mstep mstep-next" data-mstepper="1"
-                        aria-label="${esc(STRINGS.calendar.nextMonth)}">
-                        <i class="mstep-line"></i><i class="mstep-dot"></i></button>
-                    </div>
-                    <div class="month-days-line" aria-hidden="true">
-                      <span class="peek-gap"></span>
-                      <div class="month-days"></div>
-                      <span class="peek-gap"></span>
-                    </div>
-                    <div class="month-body">
-                      <div class="grain-track">
-                        <div class="month-row">
-                          <button type="button" class="peek peek-prev" data-mstep="-1"
-                            aria-label="${STRINGS.calendar.prevMonth}"></button>
-                          <div class="month-grid"></div>
-                          <button type="button" class="peek peek-next" data-mstep="1"
-                            aria-label="${STRINGS.calendar.nextMonth}"></button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!--
-                    **The full-screen control moved into the month's own head on
-                    2026-09-10**, to the right
-                    of the month and its reckoning. It stood here, in a second row
-                    of the span under whichever grain was showing, from 2026-09-01;
-                    it is a desktop control only (calendar.css hides it below
-                    1024 px, author 2026-09-02) and the desktop's picker is the
-                    month, so the calendar's own way out now sits on the calendar's
-                    own heading rather than a row below it. Its words are unchanged.
-                  -->
-                </div>
-            </div>
-            <div class="cal-side" data-col="side">
-              <div class="slot-viewport" data-slot="side"><div class="day-panel day-side"></div></div>
-            </div>
+            <!-- The rest of the day, past 1024 px: the register, and nothing
+                 else. Below it the register is painted into the main panel
+                 under the hero, where it has always been, and this box is not
+                 drawn. -->
+            <div class="slot-viewport" data-slot="shelf"><div class="day-panel day-shelf"></div></div>
           </div>
         </div>
         <!-- The four crosses: 20 px boxes standing in the 20 px bites, arms
@@ -368,6 +394,31 @@ export function render(el, { data, params, router }) {
   };
   el.addEventListener('click', onRegisterView);
   state.cleanups.push(() => el.removeEventListener('click', onRegisterView));
+  /*
+   * **The shelf chooses; the links in it still go where they say.** A register
+   * row carries two anchors — the name and *Read more* — and both are doors to
+   * the saint's own page. The rest of the row is the choosing surface, so a
+   * reader who wants the whole life presses the words and one who wants to see
+   * the saint here presses the picture or the space beside it.
+   *
+   * Delegated on the view, because the shelf is repainted on every day change.
+   * `data-choose` and not `data-pick`: the reckoning popover's four rows had
+   * that name first, and a press on one of them was reaching this handler.
+   */
+  const onChoose = (e) => {
+    const row = e.target.closest?.('[data-choose]');
+    if (!row || !el.contains(row) || e.target.closest('a')) return;
+    chooseSaint(row.dataset.choose);
+  };
+  el.addEventListener('click', onChoose);
+  state.cleanups.push(() => el.removeEventListener('click', onChoose));
+  /*
+   * The columns are not the same boxes at the two widths — below 1024 px the
+   * day is one panel and three of the five slots are not drawn — so a window
+   * dragged across the line is owed the paint the new width takes, not the one
+   * the last day-step left. `onWideChange`'s own reasoning is the same.
+   */
+  state.cleanups.push(onWideChange(() => repaintDay()));
   /* Two controls, one function: the phone's peeked columns and the desktop
      head's two marks both step a month, and neither exists at the other's
      width. */
@@ -789,19 +840,31 @@ function wireChromeInHead(el) {
  * day change, so its listeners are torn down and remade rather than delegated:
  * the Save button has to re-read the store for the new day's hero anyway.
  */
-function wireDay({ main, side }) {
+function wireDay(panels) {
   state.dayCleanups.forEach((fn) => fn?.());
-  // Both halves, because either can carry a saint: the Save button and the
-  // hero live in the left, the register's own prefetch links in the left and
-  // the name days in the right.
-  state.dayCleanups = [wireSaveButtons(main), observePrefetch(main), observePrefetch(side)];
+  // Every panel, because any of them can carry a saint: the hero and the
+  // register below 1024 px, and above it the chosen saint, what is read of
+  // them, the shelf and the name days, one to a column.
+  state.dayCleanups = [
+    wireSaveButtons(panels.main),
+    ...SLOTS.map((which) => observePrefetch(panels[which])),
+  ];
 }
 
-/** The day's two panels, which are painted and rolled as a pair. */
-const panelsIn = (el) => ({
-  main: el.querySelector('[data-slot="main"] .day-panel'),
-  side: el.querySelector('[data-slot="side"] .day-panel'),
-});
+/**
+ * The slots a day is painted into, in the order they are rolled.
+ *
+ * `main` and `side` are the phone's pair and the desk's day column; `saint`,
+ * `content` and `shelf` are drawn past 1024 px only and are empty below it.
+ * One list rather than two, because a day change has to step every panel in
+ * the document whichever width is standing — a panel left unrolled is a
+ * yesterday under a today.
+ */
+const SLOTS = ['main', 'side', 'saint', 'content', 'shelf'];
+
+/** The day's panels, which are painted and rolled together. */
+const panelsIn = (el) =>
+  Object.fromEntries(SLOTS.map((which) => [which, el.querySelector(`[data-slot="${which}"] .day-panel`)]));
 
 
 /**
@@ -846,6 +909,8 @@ function select(iso, swipeDx) {
   const forward = iso > state.selected;
   state.selected = iso;
   state.monthCursor = null;
+  // A choice is about a day: the new day picks its own saint again.
+  state.picked = null;
   history.replaceState(null, '', state.router.href(iso === todayIso() ? '/' : `/calendar/${iso}`));
   announceDay(iso);
   paintChrome();
@@ -883,7 +948,7 @@ function slotSwap(forward, swipeDx) {
    * both animate on the same classes and the same 300 ms, and the day is
    * painted once into the pair rather than twice into one.
    */
-  const sides = ['main', 'side'].map((which) => {
+  const sides = SLOTS.map((which) => {
     const viewport = state.el.querySelector(`[data-slot="${which}"]`);
     landSwap(viewport);
     const old = viewport.querySelector('.day-panel');
@@ -891,7 +956,8 @@ function slotSwap(forward, swipeDx) {
     next.className = `day-panel day-${which}`;
     return { which, viewport, old, next };
   });
-  paintDay({ main: sides[0].next, side: sides[1].next });
+  const next = Object.fromEntries(sides.map((s) => [s.which, s.next]));
+  paintDay(next);
 
   // Both panels are in the document at once during the roll, and a
   // view-transition-name may appear only once: a reader clicking through to a
@@ -907,7 +973,7 @@ function slotSwap(forward, swipeDx) {
       old.style.transform = '';
       old.replaceWith(next);
     }
-    wireDay({ main: sides[0].next, side: sides[1].next });
+    wireDay(next);
     return;
   }
   for (const { viewport, old, next } of sides) {
@@ -919,7 +985,7 @@ function slotSwap(forward, swipeDx) {
     next.classList.add('slot-entering');
     viewport.appendChild(next);
   }
-  wireDay({ main: sides[0].next, side: sides[1].next });
+  wireDay(next);
   for (const { viewport, old, next } of sides) {
     beginSwap(viewport, () => {
       old.remove();
@@ -939,6 +1005,23 @@ function repaintDay() {
   state.el.querySelectorAll('.slot-viewport').forEach((v) => landSwap(v));
   const panels = panelsIn(state.el);
   paintDay(panels);
+  wireDay(panels);
+}
+
+/**
+ * **A press chooses a saint; nothing else moves** (the mockup's Today face,
+ * 2026-09-12). The two middle columns are repainted and the other two are left
+ * exactly as they stand — the reader's place in the shelf, in the month and in
+ * the day's own readings is theirs and a choice is not a navigation.
+ *
+ * No roll, for `repaintDay`'s reason: the day has not travelled.
+ */
+function chooseSaint(slug) {
+  if (!state || state.picked === slug) return;
+  state.picked = slug;
+  const panels = panelsIn(state.el);
+  paintChosen(panels);
+  markChosen(state.el, slug);
   wireDay(panels);
 }
 

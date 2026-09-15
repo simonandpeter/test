@@ -354,17 +354,34 @@ test('the day panel follows the finger while the swipe is still live', async ({ 
   await ready(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
 
-  await dragGrain(page, '[data-slot="main"]', -20, { release: false });
-  const live = await page.locator('[data-slot="main"] .day-panel').evaluate((el) => getComputedStyle(el).transform);
+  /*
+   * **The box the finger lands on, not the box that moves.** `[data-slot=
+   * "main"]` is the phone's day panel and is not drawn past 1024 px since
+   * 2026-09-16, so a drag aimed at it there begins on a `display: none` box
+   * with no geometry and `wireDaySwipe`'s `begin` never runs. `.cal` is the
+   * listener's own element at both widths. The panel read below is still the
+   * main one: `begin` transforms every panel in the document, and a hidden
+   * element reports the transform it was given.
+   */
+  /*
+   * **Whichever panel this width draws.** `[data-slot="main"]` is the phone's
+   * day panel and is not drawn past 1024 px since 2026-09-16, so both the
+   * finger and the reading have to find a box that exists: a hidden element
+   * has no geometry for `dragGrain` to aim at and nothing measurable on it
+   * afterwards. `.cal` is the listener's own ground at either width.
+   */
+  const panel = (await page.locator('[data-slot="main"]').isVisible())
+    ? '[data-slot="main"] .day-panel'
+    : '[data-slot="content"] .day-panel';
+  await dragGrain(page, '.cal', -20, { release: false });
+  const live = await page.locator(panel).evaluate((el) => getComputedStyle(el).transform);
   expect(live, 'the panel did not move while the finger was still down').not.toBe('none');
 
   // Short of the threshold: letting go here must not change the day, and the
   // panel must spring back to its own place rather than being left adrift.
-  await releaseGrain(page, '[data-slot="main"]', -20);
+  await releaseGrain(page, '.cal', -20);
   await expect(page.locator('h1')).toHaveText(/28 Aug(ust)? 2026/);
-  await expect
-    .poll(() => page.locator('[data-slot="main"] .day-panel').evaluate((el) => el.style.transform))
-    .toBe('');
+  await expect.poll(() => page.locator(panel).evaluate((el) => el.style.transform)).toBe('');
 });
 
 
@@ -770,7 +787,9 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
   // And Also commemorated reads as one company, not a ruled ledger: no line
   // between the saints (author, 2026-08-24; the shelves keep theirs).
   expect(
-    await page.locator('[data-slot="main"] .register li').first().evaluate((li) => getComputedStyle(li).borderBottomWidth),
+    // Whichever slot this width paints the register into — the day panel on a
+    // phone, the shelf column past 1024 px. The row is the same row.
+    await page.locator('.register li').first().evaluate((li) => getComputedStyle(li).borderBottomWidth),
   ).toBe('0px');
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   // A fish-permitted day resolves to the `fish` grade, which is the one
@@ -1119,21 +1138,35 @@ test('the hairline under the date runs full width, close to the text, in --rule'
      */
     const heading = document.querySelector('.cal-head');
     /*
-     * The column the heading actually heads. One page, two arrangements since
-     * 2026-09-01: on a phone the day is one column and `.cal-body` is the box
-     * around it, and past 1024 px `.cal-body` is `display: contents` — it has
-     * no box at all — while the heading sits over the wide left column with
-     * the readings beside it. Whichever of the two lays out is the one to
-     * measure; asking the dissolved one returns zero and reads as the rule
-     * having collapsed.
+     * The column the heading actually heads, and there have been three of
+     * them. On a phone the day is one column and `.day-main` is the box around
+     * it; past 1024 px, since 2026-09-16, the heading stands at the top of
+     * `.cal-main` — the day's own column, first of four — and `.day-main` is
+     * not drawn at all. `.cal-body` is the older arrangement's box and is kept
+     * in the list because a dissolved box measures zero and drops out of it by
+     * itself, which is cheaper than knowing which build is being run.
      */
-    const column = [document.querySelector('.day-main'), document.querySelector('.cal-body')].find(
-      (el) => el && el.getBoundingClientRect().width > 0,
-    );
+    const column = [
+      document.querySelector('.day-main'),
+      document.querySelector('.cal-main'),
+      document.querySelector('.cal-body'),
+    ].find((el) => el && el.getBoundingClientRect().width > 0);
+    /* The measure the heading actually has, which is the column's *content*
+       box: past 1024 px the day's column stands its own content off the
+       hairline that divides it from the saint's, and a border box measured
+       against a child that is inside that padding is 24 px out. */
+    const measureOf = (el) => {
+      const cs = getComputedStyle(el);
+      return (
+        el.getBoundingClientRect().width -
+        parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) -
+        parseFloat(cs.borderLeftWidth) - parseFloat(cs.borderRightWidth)
+      );
+    };
     const s = getComputedStyle(heading, '::after');
     return {
       headingWidth: heading.getBoundingClientRect().width,
-      bodyWidth: column.getBoundingClientRect().width,
+      bodyWidth: measureOf(column),
       afterWidth: parseFloat(s.width),
       paddingBottom: parseFloat(getComputedStyle(heading).paddingBottom),
       afterBackground: s.backgroundColor,
@@ -2798,7 +2831,7 @@ test('the day leads with a sung saint who has an icon, where the day has one', a
 /* ---- the desktop two-column day (2026-09-01) ----------------------------- */
 
 
-test('the day is two columns on a desktop and one on a phone', async ({ page }) => {
+test('the day is four columns on a desktop and one on a phone', async ({ page }) => {
   /*
    * Author, 2026-09-01: "The mobile layout on Daily page is looking great,
    * but the desktop layout needs revision ... we will have 2 columns, a wide
@@ -2831,92 +2864,119 @@ test('the day is two columns on a desktop and one on a phone', async ({ page }) 
 
   const boxOf = (sel) => page.locator(sel).boundingBox();
   /*
-   * `.cal-main` and `.cal-side`, not the panels inside them: since 2026-09-01
-   * the columns are two real boxes — each its own scroll container, each
-   * holding its own day panel — because only that lets one move without the
-   * other. The panels are what the roll swaps; the columns are the layout.
+   * **Four columns since 2026-09-16**, and they are four boxes. The day, the
+   * chosen saint, what is being read of them, and the rest of the day — the
+   * mockup's Today face. The wrappers are what is measured rather than the
+   * panels inside them: the panels are what the roll swaps, the columns are
+   * the layout, and only separate boxes can scroll and grow apart.
    */
-  const main = await boxOf('.cal-main');
-  const side = await boxOf('.cal-side');
+  const day = await boxOf('.cal-main');
+  const saint = await boxOf('.cal-saint');
+  const read = await boxOf('.cal-read');
+  const shelf = await boxOf('.cal-bubble');
 
-  // Side by side, and the left is the wider of the two.
-  expect(side.x, 'the readings are not beside the day’s saints').toBeGreaterThan(main.x + main.width - 1);
-  expect(main.width, 'the left column is not the wider one').toBeGreaterThan(side.width);
+  // In that order across the page, each beginning where the last one ends.
+  for (const [left, right, what] of [
+    [day, saint, 'the saint is not beside the day'],
+    [saint, read, 'what is read is not beside the saint'],
+    [read, shelf, 'the shelf is not beside what is read'],
+  ]) {
+    expect(right.x, what).toBeGreaterThan(left.x + left.width - 1);
+  }
   /*
-   * They no longer start on one line, and that is the layout rather than a
-   * drift: the picker took the top of the right column on 2026-09-01, so the
-   * readings begin under it while the left column starts at the top of the
-   * page. What has to be level is the *column* and the left column.
-   *
-   * **`.cal-bubble` and not `.cal-controls` since 2026-09-10.** The picker is
-   * inside the bubble's padding now, sixteen pixels down, so the two boxes
-   * that are grid items in the same row are what can be asked to agree.
-   *
-   * **And they no longer agree at the top either, since the bar became the
-   * left column's own head** (§2.2, last piece): the bubble rises into the
-   * bar's band to carry its own head level with the nav's, and the left
-   * column starts under the bar because that is where its head ends. What is
-   * still one row is where the two *end*. Asserted against the bar rather
-   * than against a number, so a bubble that simply drifted up would fail it.
+   * **The reading column takes the slack and is the widest of the four.** The
+   * other three are a width apiece — `--day-w`, `--saint-w`, `--side-w` — and
+   * this one is `minmax(0, 1fr)`, which is the whole of why the prose is the
+   * thing the window is spent on.
    */
-  const bubble = await boxOf('.cal-bubble');
+  for (const [other, what] of [
+    [day, 'the day column is wider than the reading column'],
+    [saint, 'the saint column is wider than the reading column'],
+    [shelf, 'the shelf is wider than the reading column'],
+  ]) {
+    expect(read.width, what).toBeGreaterThan(other.width);
+  }
+
+  /*
+   * The bubble rises into the bar's band to carry its own head level with the
+   * nav's, and the other three start under the bar because that is where the
+   * bar's rule ends. What is one row is where they all *end*. Asserted against
+   * the bar rather than against a number, so a column that simply drifted up
+   * would fail it.
+   */
   const bar = await boxOf('.chrome-bar');
-  expect(bubble.y, 'the bubble does not rise into the bar’s band').toBeLessThan(bar.y + bar.height);
-  expect(main.y, 'the left column does not start under the bar').toBeGreaterThan(bar.y + bar.height - 1);
-  expect(
-    Math.abs(bubble.y + bubble.height - (main.y + main.height)),
-    'the two columns do not end on one line',
-  ).toBeLessThan(1);
-
-  const top = await boxOf('.cal-controls');
-  expect(top.y, 'the picker is not inside the bubble it sits in').toBeGreaterThan(bubble.y);
-  expect(side.y, 'the readings are not under the picker').toBeGreaterThan(top.y);
+  expect(shelf.y, 'the bubble does not rise into the bar’s band').toBeLessThan(bar.y + bar.height);
+  for (const [col, what] of [
+    [day, 'the day column does not start under the bar'],
+    [saint, 'the saint column does not start under the bar'],
+    [read, 'the reading column does not start under the bar'],
+  ]) {
+    expect(col.y, what).toBeGreaterThan(bar.y + bar.height - 1);
+    expect(Math.abs(shelf.y + shelf.height - (col.y + col.height)), 'the columns do not end on one line').toBeLessThan(1);
+  }
 
   /*
-   * The picker moved to the top of the narrow column on 2026-09-01 (author:
-   * "move the weekly and monthly display over to the top of the small column
-   * on the right"), which is a claim about two boxes that are in different
-   * grids — the controls belong to `.cal`, the readings to `.day-panel` — so
-   * it is measured rather than read off the markup.
+   * The picker moved into the day's own column on 2026-09-16, where it had
+   * been the first thing in the bubble since 2026-09-10. It is above the
+   * church's own readings and on the same left edge — a claim about two boxes
+   * in different grids, the controls belonging to `.cal-main` and the readings
+   * to the side panel inside it, so it is measured rather than read off the
+   * markup.
    */
   const controls = await boxOf('.cal-controls');
-  expect(Math.abs(controls.x - side.x), 'the picker is not on the right column').toBeLessThan(2);
+  const side = await boxOf('.cal-side');
+  expect(Math.abs(controls.x - day.x), 'the picker is not on the day’s own column').toBeLessThan(2);
   expect(controls.y, 'the picker is not above the readings').toBeLessThan(side.y);
 
   /*
-   * Each column scrolls itself and the page does not (author: "make the left
-   * and right columns independently scrollable"). The left is the one with
-   * the register under the hero, so it is the one with something to scroll.
+   * **Every column scrolls itself and the page does not.** The mockup's own
+   * bug is what this is against: a tightening pass left two of its four
+   * columns at `overflow: visible` and a thousand pixels of saints had no way
+   * to be reached. So all four are asked, not the one that happens to be
+   * longest today.
    */
   const scrolling = await page.evaluate(() => {
-    const box = document.querySelector('.cal-main');
-    box.scrollTop = 150;
+    const boxes = ['.cal-main', '.cal-saint', '.cal-read', '.cal-bubble-scroll'].map((sel) => {
+      const box = document.querySelector(sel);
+      return { sel, overflowY: getComputedStyle(box).overflowY, minHeight: getComputedStyle(box).minHeight };
+    });
+    const shelfBox = document.querySelector('.cal-bubble-scroll');
+    shelfBox.scrollTop = 150;
     return {
-      column: box.scrollTop,
+      boxes,
+      shelfScrolled: shelfBox.scrollTop,
       page: document.documentElement.scrollHeight - window.innerHeight,
     };
   });
-  expect(scrolling.column, 'the left column does not scroll on its own').toBeGreaterThan(0);
+  for (const box of scrolling.boxes) {
+    expect(box.overflowY, `${box.sel} is not a scroller of its own`).toBe('auto');
+    expect(box.minHeight, `${box.sel} has no floor of 0 and will grow to its content`).toBe('0px');
+  }
+  expect(scrolling.shelfScrolled, 'the shelf does not scroll on its own').toBeGreaterThan(0);
   expect(scrolling.page, 'the page still scrolls behind the columns').toBeLessThanOrEqual(1);
 
   // What is in each, structurally rather than by looking at the picture.
-  await expect(page.locator('.cal-main .hero')).toHaveCount(1);
-  await expect(page.locator('.cal-main .register-cards')).toHaveCount(1);
-  await expect(page.locator('.cal-side [data-readings]')).toHaveCount(1);
-  await expect(page.locator('.cal-side [data-hymns]')).toHaveCount(1);
-  // The name days moved across on 2026-09-01: "move Name Days to be under
-  // hymns in the right column".
-  await expect(page.locator('.cal-side [data-namedays]')).toHaveCount(1);
+  await expect(page.locator('.cal-main .cal-date')).toHaveCount(1);
+  await expect(page.locator('.cal-main [data-readings]')).toHaveCount(1);
+  await expect(page.locator('.cal-main [data-namedays]')).toHaveCount(1);
+  await expect(page.locator('.cal-saint .hero')).toHaveCount(1);
+  await expect(page.locator('.cal-read [data-hero-lede]')).toHaveCount(1);
+  await expect(page.locator('.cal-read [data-hymns]')).toHaveCount(1);
+  await expect(page.locator('.cal-bubble .register-cards')).toHaveCount(1);
+  // And nothing painted into the phone's own panel, which is not drawn here.
+  await expect(page.locator('.cal-main .hero')).toHaveCount(0);
 
   /*
-   * And Continue reading on the left column's own edge and inside its width —
-   * the two-grid alignment, which is the thing that cannot be seen from the
-   * markup.
+   * Continue reading stays at the foot of the day's own column rather than
+   * moving to the shelf with the register, and the reason is the phone: the
+   * document order under these wrappers is the phone's reading order, and
+   * carrying the shelf into the bubble would put it after the readings and the
+   * name days in what a screen reader hears. Its box is the column's.
    */
   const shelves = await boxOf('.shelves');
   await expect(page.locator('.shelves')).toContainText('Continue reading');
-  expect(Math.abs(shelves.x - main.x), 'Continue reading does not sit on the left column').toBeLessThan(2);
-  expect(shelves.width, 'Continue reading runs wider than the column it belongs to').toBeLessThan(main.width + 2);
+  expect(Math.abs(shelves.x - day.x), 'Continue reading does not sit on the day’s column').toBeLessThan(2);
+  expect(shelves.width, 'Continue reading runs wider than the column it belongs to').toBeLessThan(day.width + 2);
 
   /*
    * A phone is one column and document order, which is what `display:
@@ -2935,6 +2995,127 @@ test('the day is two columns on a desktop and one on a phone', async ({ page }) 
     hero.y + hero.height - 1,
   );
   expect(readings.x, 'the readings are indented into a column of their own').toBeLessThan(hero.x + 2);
+});
+
+
+test('choosing a saint from the shelf fills the middle columns and moves nothing else', async ({ page }) => {
+  /*
+   * The selection model the four columns exist for (the mockup's Today face,
+   * 2026-09-12): "choosing a saint moves nothing and reading a long life
+   * carries nothing else with it". The page had one hero and a register under
+   * it until 2026-09-16; it has a shelf of the whole day now, and a press on a
+   * row puts that saint in the two middle columns.
+   *
+   * Three claims, and the third is the one that costs something to check:
+   *
+   * - the press changes who is in the saint column and whose life is in the
+   *   reading column;
+   * - the saint in the card leaves the shelf, and the one it replaced returns;
+   * - nothing else moves — not the day, not the reader's place in the shelf,
+   *   not the reader's place in the day's own column.
+   *
+   * 22 September, which carries enough saints for the shelf to overflow its
+   * column, so there is a scroll position to keep.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-22', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const state = () =>
+    page.evaluate(() => ({
+      saint: document.querySelector('.cal-saint .hero-name')?.textContent.trim(),
+      read: document.querySelector('.cal-read .hero-more-alone')?.getAttribute('href'),
+      hidden: [...document.querySelectorAll('[data-choose]')]
+        .filter((r) => !r.offsetParent)
+        .map((r) => r.dataset.choose),
+      current: [...document.querySelectorAll('[data-choose][aria-current="true"]')].map((r) => r.dataset.choose),
+      date: document.querySelector('h1').textContent.trim(),
+      shelfTop: document.querySelector('.cal-bubble-scroll').scrollTop,
+      dayTop: document.querySelector('.cal-main').scrollTop,
+      kept: [...document.querySelectorAll('[data-choose]')].filter((r) => r.__wasHere !== undefined).length,
+    }));
+
+  let before = await state();
+  expect(before.hidden.length, 'the day’s own saint is not marked in the shelf').toBe(1);
+  expect(before.current, 'the marked row and the hidden row are not the same row').toEqual(before.hidden);
+
+  /*
+   * Somewhere to come back to, in both scrollers, and a mark on one of the
+   * shelf's own rows: "nothing is rebuilt" is a claim about the elements, and
+   * a property set on a node in the page survives exactly as long as the node
+   * does.
+   */
+  await page.evaluate(() => {
+    document.querySelector('.cal-bubble-scroll').scrollTop = 200;
+    document.querySelector('.cal-main').scrollTop = 120;
+    document.querySelectorAll('[data-choose]').forEach((row, i) => {
+      row.__wasHere = i;
+    });
+  });
+  before = await state();
+
+  /*
+   * The picture, not the name: the row carries two anchors to the saint's own
+   * page and both still go there. Everything else in the row chooses.
+   */
+  const target = page.locator('[data-choose]:visible').nth(2);
+  const chosen = await target.evaluate((row) => row.dataset.choose);
+  expect(chosen, 'premise: the row pressed is the one already in the card').not.toBe(before.hidden[0]);
+  // Dispatched, not clicked: `locator.click()` scrolls its target into view
+  // (trap 3), which is exactly the movement this test is about to assert did
+  // not happen.
+  await target.locator('.reg-thumb').dispatchEvent('click');
+
+  const after = await state();
+  expect(after.saint, 'the saint column did not change').not.toBe(before.saint);
+  expect(after.read, 'the reading column is not showing the chosen saint').toContain(chosen);
+  expect(after.hidden, 'the chosen saint did not leave the shelf').toEqual([chosen]);
+  expect(after.current, 'the chosen row is not marked as the one being read').toEqual([chosen]);
+
+  expect(after.date, 'choosing a saint changed the day').toBe(before.date);
+  expect(after.dayTop, 'the day’s own column lost the reader’s place').toBe(120);
+  /*
+   * **The shelf keeps its rows and its place, and its place is not a number.**
+   * `scrollTop` is not stable across the press and should not be: the saint
+   * that left the card comes back above the reader's position, and the
+   * browser's own scroll anchoring moves `scrollTop` by that row's height so
+   * that what the reader is looking at does not move — which is the promise,
+   * kept by the engine rather than by us. Measured: 200 before, 321 after, and
+   * the row in between grew back by the difference. So what is asserted is
+   * that the shelf was not returned to its top, and that the rows in it are
+   * the same elements — the mockup's "hidden rather than removed, so nothing
+   * is rebuilt and no picture is fetched twice".
+   */
+  expect(after.shelfTop, 'the shelf was scrolled back to its top').toBeGreaterThan(100);
+  expect(after.kept, 'the shelf was rebuilt rather than re-marked').toBe(before.kept);
+
+  // And the saint it replaced is back on the shelf to be chosen again.
+  await expect(page.locator(`[data-choose="${before.hidden[0]}"]`)).toBeVisible();
+
+  // The day step puts the choice back: a choice is about a day and does not
+  // survive one.
+  await page.locator('.day-step-next').dispatchEvent('click');
+  await expect.poll(async () => (await state()).hidden.length).toBe(1);
+  await expect.poll(async () => (await state()).hidden[0]).not.toBe(chosen);
+});
+
+
+test('a phone has no shelf to choose from', async ({ page }) => {
+  /*
+   * The other half of the rule, and the one that keeps the phone out of this:
+   * below 1024 px the day is one hero with the register under it, the hero is
+   * the page's own choice, and there is no second column to put a chosen saint
+   * in — so no row is a choosing surface and the day's own saint is not
+   * printed twice.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('/calendar/2026-09-22', { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-choose]')).toHaveCount(0);
+  const hero = await page.locator('.hero-name').textContent();
+  const names = await page.locator('[data-register] .reg-name').allTextContents();
+  expect(names, 'the day’s own saint is printed twice on a phone').not.toContain(hero.trim());
 });
 
 
@@ -3001,10 +3182,33 @@ test('the right column is a filled box with a bite and a cross at each corner', 
       stem: arm('::before'),
       bar: arm('::after'),
       fillPaint: getComputedStyle(fill).backgroundColor,
-      // And the month still fits what is left: 304 px of column less 16 px of
-      // padding either side is 272 px of grid (§2.1).
+      /*
+       * And the month still fits the column it is in — which is the day's own
+       * first column since 2026-09-16, not the bubble. Derived from that box
+       * rather than written down, because the column is a clamp on `vw` now
+       * and a number here would be a number for one window.
+       */
       gridWidth: Math.round(grid.getBoundingClientRect().width),
+      monthColumn: (() => {
+        const col = document.querySelector('.cal-main');
+        const cs = getComputedStyle(col);
+        return Math.round(
+          col.getBoundingClientRect().width - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight),
+        );
+      })(),
       cellWidths: [...new Set([...grid.children].map((c) => Math.round(c.getBoundingClientRect().width)))],
+      /*
+       * The widest numeral the month actually draws, measured rather than
+       * assumed. The floor here was 36 px while the month stood in a 272 px
+       * column; it is the day's own column now, 26 px a cell at the narrow end
+       * of the desk, and a number written for the old box would fail a page
+       * that is drawing its dates perfectly well. What the assertion is for is
+       * that a cell holds its numeral, so the numeral is what it is compared
+       * against.
+       */
+      numeralWidth: Math.max(
+        ...[...grid.querySelectorAll('.day-num')].map((n) => Math.ceil(n.getBoundingClientRect().width)),
+      ),
       cellsWrap: [...grid.children].some((c) => c.getBoundingClientRect().height > 30),
     };
   });
@@ -3042,10 +3246,14 @@ test('the right column is a filled box with a bite and a cross at each corner', 
   expect(seen.stem.background, 'the cross is not drawn in the fill colour').toBe(seen.fillPaint);
   expect(seen.bar.background, 'the cross is not drawn in the fill colour').toBe(seen.fillPaint);
 
-  expect(seen.gridWidth, 'the month grid is not the column less its padding').toBe(272);
+  expect(seen.gridWidth, 'the month grid is not the width of the column it stands in').toBe(seen.monthColumn);
   expect(seen.cellWidths.length, 'the month cells are not one width').toBe(1);
-  expect(seen.cellWidths[0], 'a month cell is narrower than a two-digit date').toBeGreaterThanOrEqual(36);
-  expect(seen.cellsWrap, 'a month cell wrapped its numeral at 304 px').toBe(false);
+  expect(seen.numeralWidth, 'premise: the month draws no numerals to measure').toBeGreaterThan(0);
+  expect(
+    seen.cellWidths[0],
+    `a month cell is ${seen.cellWidths[0]} px against a ${seen.numeralWidth} px numeral`,
+  ).toBeGreaterThan(seen.numeralWidth + 2);
+  expect(seen.cellsWrap, 'a month cell wrapped its numeral in the day’s own column').toBe(false);
 });
 
 
@@ -3307,7 +3515,7 @@ test('the theme control is a switch the size of the language control beside it',
 });
 
 
-test('the card ends where the picture does, and the words with it', async ({ page }) => {
+test('past 1024 px the picture has a column and the words have the next one', async ({ page }) => {
   /*
    * Author, 2026-09-01: "make sure the text on the main saint card does not
    * go below the bottom of the image."
@@ -3346,7 +3554,10 @@ test('the card ends where the picture does, and the words with it', async ({ pag
     hero: document.querySelector('.hero').getBoundingClientRect(),
     mount: document.querySelector('.hero-figure').getBoundingClientRect(),
     media: document.querySelector('.hero-media').getBoundingClientRect(),
-    body: document.querySelector('.hero-body').getBoundingClientRect(),
+    // The reading column's own text box, which is where the life is drawn past
+    // 1024 px; the saint column keeps a `.hero-body` of its own for the name.
+    body: document.querySelector('.cal-read .hero-body').getBoundingClientRect(),
+    name: document.querySelector('.cal-saint .hero-name').getBoundingClientRect(),
     lede: document.querySelector('[data-hero-lede]').getBoundingClientRect(),
   }));
 
@@ -3354,10 +3565,22 @@ test('the card ends where the picture does, and the words with it', async ({ pag
   // A mount, not an outline: the mat is real and is 14 px on all four sides.
   expect(m.mount.bottom - m.media.bottom, 'the picture has no mat under it').toBeCloseTo(14, 0);
   expect(m.media.top - m.mount.top, 'the picture has no mat over it').toBeCloseTo(14, 0);
-  // The words stop at the mount's foot, and the card stops with them.
-  expect(m.lede.bottom, 'the preview runs past the bottom of the mount').toBeLessThan(m.mount.bottom + 2);
-  expect(m.body.bottom, 'the text column runs past the bottom of the mount').toBeLessThan(m.mount.bottom + 2);
-  expect(m.hero.height - m.mount.height, 'the card is taller than the mount it holds').toBeLessThan(4);
+  /*
+   * **And the words no longer stop at that foot, because they are no longer
+   * beside it** (2026-09-16). "The text on the main saint card does not go
+   * below the bottom of the image" was an instruction about a card in two
+   * halves; the picture has a column of the page now and the life has the next
+   * one, so there is no budget left for `fitLede` to trim against — it finds
+   * no `.hero-media` in the panel it is given and returns. What replaces the
+   * old assertion is the arrangement that replaced the rule: the words begin
+   * to the right of the mount and run past its foot, which on the old page was
+   * the defect this test existed to catch.
+   */
+  expect(m.body.left, 'the words are still beside the picture in one card').toBeGreaterThan(m.mount.right);
+  expect(m.lede.bottom, 'the life is still being trimmed to the picture’s foot').toBeGreaterThan(m.mount.bottom);
+  // And the name is under the picture rather than beside it, which is the
+  // saint column's whole arrangement.
+  expect(m.name.top, 'the name is not under the picture').toBeGreaterThan(m.mount.bottom - 1);
 });
 
 
@@ -3516,11 +3739,15 @@ test('the preview ends in a way into the life, on a desktop; a phone has no seco
    */
   expect(m.inLede, 'still nested inside the clipped preview box').toBe(false);
   expect(m.link.top, 'not below the dates').toBeGreaterThan(m.dates.bottom - 1);
-  // And never past the foot of the picture, which is the rule the trim
-  // exists for: the words end where the image does. This one is unchanged by
-  // 2026-09-12 — the link is in the flow now, so it is part of what `fitLede`
-  // fits rather than an absolute box hung on the card's own foot.
-  expect(m.link.bottom, 'the preview runs below the mount').toBeLessThan(m.media.bottom + 2);
+  /*
+   * **The picture's foot stopped being the budget on 2026-09-16**, when the
+   * two went into columns of their own. What the trim was for — that the way
+   * in is reachable without hunting for it — is carried by the two assertions
+   * above and by the link being the last thing in the paragraph's own column.
+   * `past 1024 px the picture has a column` is the test for the arrangement
+   * itself.
+   */
+  expect(m.link.top, 'the way in is not under the words it ends').toBeGreaterThan(m.lede.top);
 
   // And it goes where the name goes.
   await more.click();
@@ -3856,9 +4083,14 @@ test('the way into the life reads as a control without wearing a surface', async
     return {
       background: cs.backgroundColor,
       shadow: cs.boxShadow,
-      // And still inside the picture's height, which the rule before this one
-      // asked for and this must not have broken.
-      fits: document.querySelector('.hero-body').getBoundingClientRect().bottom <= media.bottom + 2,
+      /*
+       * And still in the life's own column rather than under the picture:
+       * "inside the picture's height" was the rule until 2026-09-16 and is
+       * not one the four-column page can keep — the words are not beside the
+       * picture any more. What has to hold is that the way in is where the
+       * words are.
+       */
+      fits: document.querySelector('.cal-read .hero-body').getBoundingClientRect().left > media.right,
     };
   });
 
@@ -3882,7 +4114,7 @@ test('the way into the life reads as a control without wearing a surface', async
    * `the preview ends where it ends` is the test for the removal, and the
    * `below` reading this line used to make was the tail's own position.
    */
-  expect(seen.fits, 'the card now runs below its own picture').toBe(true);
+  expect(seen.fits, 'the way into the life is not in the reading column').toBe(true);
 
 
 });
@@ -3945,13 +4177,25 @@ test('the hero picture is never more than half the window, on any monitor', asyn
      * width, so on a 1440 px-tall monitor a perfectly correct picture is 14%
      * of the window and the old floor would have failed the very geometry the
      * author asked for. Width is the dimension a shrinking picture now loses,
-     * and 300 px is under the reference's own 312 at every one of these
-     * windows.
+     *
+     * **Derived from the column since 2026-09-16, where it was a flat 300.**
+     * The picture has a column of the page to itself now — `--saint-w`, a
+     * clamp on `vw` — so what says it has not been capped into a stamp is that
+     * it fills that column less its mat, at every window. A number would be a
+     * number for one of them.
      */
+    const column = await page.evaluate(() => {
+      const figure = document.querySelector('.hero-figure');
+      const cs = getComputedStyle(figure);
+      return (
+        figure.getBoundingClientRect().width - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight)
+      );
+    });
     expect(
       box.width,
-      `the picture shrank to ${box.width.toFixed(0)} px wide at ${size.width}x${size.height}`,
-    ).toBeGreaterThan(300);
+      `the picture shrank to ${box.width.toFixed(0)} px inside a ${column.toFixed(0)} px column at ${size.width}x${size.height}`,
+    ).toBeCloseTo(column, 0);
+    expect(column, `the saint column collapsed at ${size.width}x${size.height}`).toBeGreaterThan(130);
   }
 });
 
@@ -4346,10 +4590,26 @@ test('the hero picture stands in a mount rather than behind an outline', async (
       mat: [s.paddingTop, s.paddingRight, s.paddingBottom, s.paddingLeft].map(parseFloat),
       borders: [...edges(figure), ...edges(media), ...edges(media.querySelector('img'))],
       column: figure.getBoundingClientRect().width,
-      // Optical, not geometric (§4.2): the words are lifted so the name's
-      // cap-height sits just under the mount's top edge rather than level
-      // with it.
-      lift: figure.getBoundingClientRect().top - body.getBoundingClientRect().top,
+      saintColumn: (() => {
+        const col = document.querySelector('.cal-saint');
+        const cs = getComputedStyle(col);
+        return (
+          col.getBoundingClientRect().width -
+          parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - parseFloat(cs.borderLeftWidth)
+        );
+      })(),
+      /*
+       * Optical, not geometric (§4.2): the words are lifted so the name's
+       * cap-height sits close under the edge of the mount rather than level
+       * with it. **The edge is the mount's foot since 2026-09-16**, where it
+       * was its top: the words stood beside the picture and now stand under
+       * it, and the same four pixels do the same job against the other edge.
+       */
+      lift: figure.getBoundingClientRect().bottom - body.getBoundingClientRect().top,
+      // The row the lift is measured against, read in the same pass rather
+      // than written down: the words sit a row gap below the mount and are
+      // then pulled four pixels back toward it.
+      rowGap: parseFloat(getComputedStyle(figure.closest('.hero')).rowGap),
       nameSize: parseFloat(getComputedStyle(name).fontSize),
     };
   });
@@ -4358,7 +4618,17 @@ test('the hero picture stands in a mount rather than behind an outline', async (
   expect(m.fill, 'the mount is not filled in --mount').toBe(m.mount);
   expect(m.fill, 'the mount is transparent, so there is no mat at all').not.toBe('rgba(0, 0, 0, 0)');
   expect(m.borders, 'a picture on this page is wearing an outline').toEqual(new Array(12).fill(0));
-  expect(m.column, 'the mount is not filling a column at all').toBeGreaterThan(340);
+  /*
+   * **Its own column, and the number came down with it** (2026-09-16). The
+   * mount filled the wide left column of a two-column page and was over 340 px
+   * at every desk width; it fills `--saint-w` now, whose floor is 11 rem. What
+   * is asserted is still that it fills a column rather than standing in one.
+   */
+  expect(m.column, 'the mount is not filling a column at all').toBeGreaterThan(170);
+  expect(
+    Math.abs(m.column - m.saintColumn),
+    'the mount does not fill the saint column it stands in',
+  ).toBeLessThan(2);
   /*
    * **Four, where the reference's own margin is eight** (2026-09-11), and the
    * difference is the name's line box rather than a disagreement. The
@@ -4372,7 +4642,8 @@ test('the hero picture stands in a mount rather than behind an outline', async (
    * The author read the same four pixels by eye on 2026-09-11 and called them
    * three, which is the closest a person should have to get.
    */
-  expect(m.lift, 'the words are not lifted against the mount').toBeCloseTo(4, 0);
+  expect(m.rowGap + m.lift, 'the words are not lifted four pixels against the mount').toBeCloseTo(4, 0);
+  expect(m.lift, 'the words are beside the mount rather than under it').toBeLessThan(0);
   // 26, the scale's own h2 step, where the reference drew 27 (§10.8).
   expect(m.nameSize, 'the hero name is off the type scale').toBe(26);
 });
@@ -4426,48 +4697,48 @@ test('the way into the life ends in a diamond, the last chevron on this page', a
 /* ---- the picture's column grows with the window (2026-09-10) ------------- */
 
 
-test('the picture keeps the reference share of the words beside it as the window widens', async ({ page }) => {
+test('the picture grows with its own column as the window widens', async ({ page }) => {
   /*
-   * Author, 2026-09-10: the picture's width should grow with the window and
-   * hold the reference's proportion of picture to lede, rather than staying at
-   * 340 px with more and more text beside it.
+   * Author, 2026-09-10: the picture's width should grow with the window rather
+   * than staying at 340 px with more and more text beside it.
    *
-   * **The proportion is measured off the reference rather than quoted.** It is
-   * drawn at 1240 px with a 304 px sidebar and a 32 px gutter inside a 32 px
-   * page margin, so its left column is 840, the picture's column is 340 and
-   * the words take 476 — 5 : 7, and 340 is five twelfths of the 816 the two of
-   * them share. Five twelfths is what the stylesheet says, so what is asserted
-   * here is the *ratio of the two tracks*, which is the thing the author was
-   * looking at: a pixel count would pass on a page whose columns had both
-   * moved and would fail on one that had merely got wider.
+   * **The share it was measured by is gone, and the growth is not** (2026-09-16).
+   * The proportion asserted here — 340 : 476, five twelfths of the two tracks
+   * the picture and the lede shared — was a fact about a card in two halves.
+   * The picture has a column of the page now and the life has the next one, so
+   * there are no two tracks to take a share of; what the author was actually
+   * looking at, a picture that follows the window instead of standing still,
+   * is a fact about `--saint-w` and is asserted against that.
    *
-   * 1280, 1440 and 1920 are the three the author asked for, and all three sit
-   * inside the band where neither end of the clamp binds — the 200 px floor is
-   * below the 240 the rule gives at 1024, and the 40 rem ceiling is not
-   * reached until a window near 1983 px, past `--page-max`.
+   * 1280, 1440 and 1920 are the three widths the author asked for. The first
+   * two are inside the band where neither end of the clamp binds; 1920 is past
+   * the 20 rem ceiling, which is why the last step is asked to be flat rather
+   * than to keep growing — a ceiling is the point.
    */
   await ready(page);
-
-  /** The reference's own two columns, and the share they make. */
-  const REFERENCE = { picture: 340, words: 476 };
-  const SHARE = REFERENCE.picture / (REFERENCE.picture + REFERENCE.words);
 
   const read = async (width) => {
     await page.setViewportSize({ width, height: 900 });
     await page.goto('/calendar/2026-09-24', { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
     return page.evaluate(() => {
-      const hero = document.querySelector('.hero');
-      const s = getComputedStyle(hero);
-      const tracks = s.gridTemplateColumns.split(' ').map(parseFloat);
+      const col = document.querySelector('.cal-saint');
+      const cs = getComputedStyle(col);
+      const figure = document.querySelector('.hero-figure');
       return {
-        picture: tracks[0],
-        words: tracks[1],
-        gap: parseFloat(s.columnGap),
-        figure: document.querySelector('.hero-figure').getBoundingClientRect().width,
+        // The track itself, which is what `--saint-w` names, and the measure
+        // inside it, which is what the picture fills.
+        track: col.getBoundingClientRect().width,
+        column:
+          col.getBoundingClientRect().width -
+          parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - parseFloat(cs.borderLeftWidth),
+        figure: figure.getBoundingClientRect().width,
         media: document.querySelector('.hero-media').getBoundingClientRect().width,
-        mat: parseFloat(getComputedStyle(document.querySelector('.hero-figure')).paddingLeft),
-        column: hero.getBoundingClientRect().width,
+        mat: parseFloat(getComputedStyle(figure).paddingLeft),
+        // The words are the next column, which is the whole of what replaced
+        // the share: they are not beside the picture inside one card.
+        wordsLeft: document.querySelector('.cal-read .hero-body').getBoundingClientRect().left,
+        pictureRight: figure.getBoundingClientRect().right,
       };
     });
   };
@@ -4476,27 +4747,24 @@ test('the picture keeps the reference share of the words beside it as the window
   for (const width of [1280, 1440, 1920]) {
     const m = await read(width);
     seen.push({ width, ...m });
-    const share = m.picture / (m.picture + m.words);
-    expect(
-      share,
-      `at ${width} the picture takes ${(share * 100).toFixed(2)}% of the two columns, not the reference's ${(SHARE * 100).toFixed(2)}%`,
-    ).toBeCloseTo(SHARE, 3);
-    // The mount is the grid item and the picture is the mount less its mat, so
-    // a mat that quietly went to zero cannot pass here as a wider picture.
-    expect(Math.abs(m.figure - m.picture), 'the mount does not fill the track').toBeLessThan(1);
+    // The mount is the column, and the picture is the mount less its mat, so a
+    // mat that quietly went to zero cannot pass here as a wider picture.
+    expect(Math.abs(m.figure - m.column), `at ${width} the mount does not fill the saint column`).toBeLessThan(1);
     expect(Math.abs(m.media - (m.figure - 2 * m.mat)), 'the picture does not fill the mount').toBeLessThan(1);
     expect(m.mat, 'the mat has gone, so the picture and its column are the same box').toBeGreaterThan(0);
+    expect(m.wordsLeft, `at ${width} the life is still beside the picture`).toBeGreaterThan(m.pictureRight);
   }
 
   /*
-   * And it really is growing, which is the half of the instruction a
-   * proportion alone cannot say: a column left at a flat 340 would hold no
-   * proportion at all, but a proportion of a column that never moved would
-   * pass the assertions above.
+   * And it really is growing, which is the half of the instruction a shape
+   * alone cannot say — then stopping, which is what the 20 rem ceiling is for:
+   * past it the picture would start competing with the life rather than
+   * introducing it.
    */
-  expect(seen[1].picture, 'the picture did not grow between 1280 and 1440').toBeGreaterThan(seen[0].picture + 40);
-  expect(seen[2].picture, 'the picture did not grow between 1440 and 1920').toBeGreaterThan(seen[1].picture + 100);
-  expect(seen[0].picture, 'the picture is narrower at 1280 than the flat 340 it replaced').toBeGreaterThan(340);
+  expect(seen[1].figure, 'the picture did not grow between 1280 and 1440').toBeGreaterThan(seen[0].figure + 20);
+  // 20 rem, the clamp's own ceiling: past it the picture would start competing
+  // with the life rather than introducing it.
+  expect(seen[2].track, 'the saint column ran past its own 20 rem ceiling at 1920').toBeCloseTo(320, 0);
 });
 
 
@@ -4542,6 +4810,8 @@ test('the columns do not shake when the window is resized', async ({ page }) => 
           side: bubble.width,
           margin: document.documentElement.clientWidth - bubble.right,
           left: document.querySelector('.cal-main').getBoundingClientRect().width,
+          saint: document.querySelector('.cal-saint').getBoundingClientRect().width,
+          read: document.querySelector('.cal-read').getBoundingClientRect().width,
         };
       }, width),
     );
@@ -4554,22 +4824,28 @@ test('the columns do not shake when the window is resized', async ({ page }) => 
   }
 
   /*
-   * Monotone and smooth. Each 4 px of window is 4 px of left column and five
-   * twelfths of that on the picture's track, so the step is ~1.67 px; anything
-   * over 3 is a discontinuity and anything negative is the track going
-   * backwards as the window widens, which is what a shake looks like one frame
-   * at a time.
+   * Monotone and smooth, and **the reading column is what takes the slack**
+   * (2026-09-16). Three of the four columns are a width apiece — two of them
+   * clamps on `vw`, so each 4 px of window is 0.76 and 0.68 of them — and the
+   * fourth is `minmax(0, 1fr)`, which takes what is left. So the four steps
+   * sum to the window's, none of them goes backwards, and the reading column
+   * has the largest share: a "shake" is a step that oscillates, and a sweep at
+   * 4 px is fine enough to find one.
    */
   for (let i = 1; i < readings.length; i += 1) {
-    const step = readings[i].track - readings[i - 1].track;
+    const steps = {
+      day: readings[i].left - readings[i - 1].left,
+      saint: readings[i].saint - readings[i - 1].saint,
+      read: readings[i].read - readings[i - 1].read,
+    };
+    for (const [name, step] of Object.entries(steps)) {
+      expect(step, `the ${name} column went backwards by ${step.toFixed(2)} px at ${readings[i].width}`).toBeGreaterThan(-0.01);
+      expect(step, `the ${name} column jumped ${step.toFixed(2)} px at ${readings[i].width}`).toBeLessThan(4.5);
+    }
     expect(
-      step,
-      `the picture's track jumped ${step.toFixed(2)} px between ${readings[i - 1].width} and ${readings[i].width}`,
-    ).toBeGreaterThan(0);
-    expect(step, `the picture's track jumped ${step.toFixed(2)} px at ${readings[i].width}`).toBeLessThan(3);
-    expect(
-      readings[i].left - readings[i - 1].left,
-      'the left column did not take the slack',
+      steps.day + steps.saint + steps.read,
+      `the four columns did not divide the 4 px the window gained at ${readings[i].width}`,
     ).toBeCloseTo(4, 0);
+    expect(steps.read, 'the reading column did not take the largest share of the slack').toBeGreaterThan(steps.day);
   }
 });

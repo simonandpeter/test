@@ -41,9 +41,12 @@ citation to them has been retired from `src/`, `e2e/`, `tests/` and `scripts/`.
 `tests/corpus-break.test.mjs`, and `scripts/tokens-table.mjs` prints §3's four
 token tables from `tokens.css`. `git log` has the rest; nothing is pushed.
 
-**The Daily desktop redesign is the next job** and the design has not been
-given. `eae39cd` took the page back to `f31520a`, the last commit before the
-2026-09-12 rebuild.
+**The Daily desktop redesign is in two stages and the first has landed.** The
+frame and the four columns are done (`STRUCTURE.md` §4 Daily describes the page
+that is there). **Stage two is the shelf's own face**: the tile faces in
+`.cal-bubble`, the picture/rows view toggle, and the selected-state styling.
+What stage one left there is the register's existing two faces, re-placed into
+a `--side-w` column, with the chosen row hidden and marked `aria-current`.
 
 ---
 
@@ -62,6 +65,20 @@ else records that they are there. Never re-shoot either.**
   rebuild.
 - `baseline-new-daily-2026-09-15` — 4 tiles of `/` at 360 and 1280 in both
   themes, the rebuilt page as it stood the moment before the revert.
+- `baseline-before-daily-desktop-2026-09-16` and
+  `baseline-after-daily-desktop-2026-09-16` — 18 tiles either side of the
+  four-column Daily desktop, plus `baseline-noise-2026-09-16`, which is the
+  same build shot twice and came back identical on all 18.
+
+```bash
+MSYS_NO_PATHCONV=1 node scripts/contact-sheet.mjs --still --routes=/,/saints,/texts   --widths=360,768,1280 --themes=day,vigil --langs=en
+```
+
+**`tile-saints-1280-day-en` moves by ~3,980 px between any two sittings and is
+not a finding.** A 20 × 200 px strip at the carousel's left edge; the
+unmodified tree shot against the same baseline moves it by exactly the same
+number. Two shots in one sitting are identical, so the instrument's own floor
+does not see it.
 
 ```bash
 MSYS_NO_PATHCONV=1 node scripts/contact-sheet.mjs --still --routes=/saints \

@@ -480,18 +480,17 @@ what there is.
 - **Owns** `views/calendar.js`, `views/daily/*`, `styles/calendar.css`
 - **Reads** `lib/`: `calendar-page`, `liturgy`, `feasts`, `computus`, `church`,
   `viewport`, `date-display`, `hero-crop`
-- **Specs** `daily-panel` (87 tests), `daily-picker` (48), `daily-register` (13),
-  `daily-stage` (14)
+- **Specs** `daily-panel`, `daily-picker`, `daily-register`, `daily-stage`
 
 #### Modules
 
 | file | owns |
 | --- | --- |
-| `calendar.js` | the markup, and **which day**. Nothing in `daily/` calls back into it. |
+| `calendar.js` | the markup, **which day**, and **which saint**. Nothing in `daily/` calls back into it. |
 | `daily/state.js` | the page's one mutable object. **Sole writer.** |
 | `daily/entries.js` | who is commemorated on a day, in the chosen church |
 | `daily/record.js` | the day's readings and hymns |
-| `daily/panel.js` | paints both panels: hero + register into `main`, readings + hymns + name days into `side` |
+| `daily/panel.js` | paints the day into its panels: two below 1024 px, four above it |
 | `daily/picker.js` | the week rail **and** the month grid — one control, two faces |
 | `daily/fullcal.js` | the full-screen calendar |
 | `daily/format.js` | dates in the reader's language and reckoning |
@@ -503,57 +502,102 @@ html[data-route~='calendar'][data-fills-window]
 └ body
   └ main.chrome                      100dvh − --chrome-h, overflow hidden (≥1024)
     └ #view                          height 100%
-      └ .cal                         grid: minmax(0,1fr) var(--side-w)  (≥1024)
-        ├ .cal-main [data-col=main]
+      └ .cal                         grid: --day-w --saint-w minmax(0,1fr)
+        │                            --day-gap --side-w   (≥1024)
+        ├ .cal-main [data-col=main]   column 1, laid out by `order`
         │ ├ .cal-head                ◂ prev · h1.cal-date · next ▸
         │ ├ p.cal-liturgy
         │ ├ .slot-viewport[data-slot=main] > .day-panel.day-main
-        │ │                          hero (picture, name, dates, places, lede)
-        │ │                          then the register
-        │ └ .shelves                 Continue reading
-        └ .cal-bubble                grid item and positioning context;
-          │                          the four corner crosses are drawn outside the clip
+        │ │                          the phone's whole day; not drawn ≥1024
+        │ ├ .shelves                 Continue reading
+        │ ├ .cal-controls            .cal-jump (month button)
+        │ │                          .cal-span → .cal-week | .cal-month
+        │ └ .cal-side [data-col=side] > .slot-viewport[data-slot=side]
+        │                              > .day-panel.day-side
+        │                            name days, readings; hymns below 1024
+        ├ .cal-saint [data-col=saint]  column 2, ≥1024 only
+        │ └ .slot-viewport[data-slot=saint] > .day-panel.day-saint
+        │                            the chosen saint: picture, name, dates
+        ├ .cal-read [data-col=content] column 3, ≥1024 only
+        │ └ .slot-viewport[data-slot=content] > .day-panel.day-content
+        │                            the opening of the life, and the hymns
+        └ .cal-bubble                 column 5 (column 4 is the gutter);
+          │                          grid item and positioning context, and the
+          │                          four corner crosses are drawn outside the clip
           └ .cal-bubble-fill         the fill and the clip-path, nothing else
             ├ .cal-bubble-head       relocated chrome controls (≥1024 only)
-            └ .cal-bubble-scroll     the right column's scroller
-              ├ .cal-controls        .cal-jump (month button)
-              │                      .cal-span → .cal-week (.week-strip) | .cal-month (.month-grid)
-              └ .cal-side [data-col=side] > .slot-viewport[data-slot=side] > .day-panel.day-side
-                                     name days, readings, hymns
+            └ .cal-bubble-scroll     the shelf's scroller
+              └ .slot-viewport[data-slot=shelf] > .day-panel.day-shelf
+                                     the rest of the day; not drawn below 1024
 ```
+
+**The document order is the phone's reading order and may not be rearranged
+for the desk.** Every wrapper above dissolves to `display: contents` below
+1024 px, so a screen reader hears `.cal-main`'s five children in the order they
+are written — the date, the day's own saints, Continue reading, the picker,
+then the readings and the name days. The desk's arrangement of those five is
+`order` in `calendar.css` and costs the document nothing. This is why the
+picker and the church's own record are the *last* two children of `.cal-main`
+rather than the first two, and why Continue reading stays at the foot of the
+day's column instead of joining the register in the shelf.
 
 `ui/face-stage.js` puts a second view in `#view` beside this one for the length
 of a page swap.
 
 #### Desktop — 1024 px and up
 
-- **Two columns, and they are two boxes.** The day is painted into two panels,
-  each in its own roll viewport, stepped together. A single panel spanning both
-  could only move, scroll and grow as one.
-- **The left column takes all the slack; the right is fixed.** `--side-w` is a
-  rem, never a percentage — a percentage column with reflowing text feeds back
-  into its own scrollbar appearing and disappearing.
-- **The page gives up its scroll** (`data-fills-window`) and each column keeps
-  its own. Two scrolling columns and a scrolling page are one scrollbar too many.
+**Four columns: the day, the saint, what is being read of them, and the rest of
+the day.** Choosing a saint in the shelf fills the middle two and moves nothing
+else.
+
+- **Each column is its own box and its own scroller**, with `min-height: 0`. A
+  grid item's default floor is its content, so without it the box grows to fit
+  the day and the page scrolls instead of the column. The mockup this page is
+  drawn from records what it costs to miss: a tightening pass left two of its
+  four columns at `overflow: visible`, and a thousand pixels of saints had no
+  way to be reached.
+- **The page gives up its scroll** (`data-fills-window`). Four scrolling
+  columns and a scrolling page are one scrollbar too many.
+- **The reading column takes all the slack.** The other three are a width
+  apiece and it is `minmax(0, 1fr)`, so the window is spent on the prose.
+- **`--side-w` is a rem and stays one.** It is the shelf's width, the site's bar
+  measures itself against it from outside the grid, and the three chrome
+  controls in the bubble's head have no slack to give. `--day-w` and
+  `--saint-w` are clamps on `vw`, which is the window rather than the grid and
+  so cannot feed back into a scrollbar appearing and disappearing.
+- **The gutter is a track, not a gap.** Columns 1–3 stand shoulder to shoulder
+  with a hairline between them, which a uniform `column-gap` cannot draw; the
+  one space this grid has is before the shelf, and it is `--day-gap` because
+  that is the number the bar subtracts.
+- **The day is painted into five panels and rolled as five.** `main` and `side`
+  are the phone's pair; `saint`, `content` and `shelf` are the desk's and are
+  not painted below 1024 px. A day change steps every panel in the document on
+  one animation — a panel left unrolled is a yesterday under a today.
+- **The shelf lists the whole day, and the saint in the card leaves it** while
+  it is being read: hidden, not dropped from the paint, so nothing is rebuilt
+  by a press and no picture is fetched twice. Its head is sticky.
 - **The right column is one filled box** with a square notch bitten from each
-  corner and a cross of the fill standing in each bite. No `overflow: hidden` on
-  it anywhere — the chooser panels open downward and are allowed to overrun the
-  bottom edge; the notches are the only clipping it does.
+  corner and a cross of the fill standing in each bite. No `overflow: hidden`
+  on it anywhere — the chooser panels open downward and are allowed to overrun
+  the bottom edge; the notches are the only clipping it does.
 - **The picker is the month grid**, forced open on arrival, and the week rail is
-  hidden.
+  hidden. It stands in the day's own column, on the page's own ground.
 - The date sits between two stepper buttons, each half a cross.
-- Name days lead the right column, above readings.
+- Name days lead the day's column, above readings.
 - The site's controls relocate into `.cal-bubble-head`.
+
+**What stage two owns.** The shelf's rows are the register's own two faces,
+re-placed into a narrow column and nothing more: the tile faces, the
+picture/rows toggle and the selected-state styling are the second half of this
+redesign and are not drawn yet.
 
 #### Mobile — below 1024 px
 
 - **One column.** Every wrapper dissolves to `display: contents` and `order`
   decides what is seen: picker 0, date 1, liturgy 2, day panel 3, side panel 4,
-  shelves 5.
-- **The markup order is the phone's reading order**, which is why `.cal-bubble`
-  follows `.cal-main` in the document — ahead of it, the readings and hymns would
-  be announced before the day they belong to. The cost is the month button's
-  place in the tab order, which is the cheaper of the two.
+  shelves 5. The desk's three columns are `display: none` and are not painted.
+- **The markup order is the phone's reading order**, which is the constraint the
+  desk's column assignments are built around — see the box chain above.
 - **The picker is the week rail.** The month closes behind it rather than being
   left open under a button that says shut.
 - **A phone is Gregorian throughout, fasts included** (`lib/church.js`
@@ -566,9 +610,11 @@ of a page swap.
   make it pass at 360 would be asserting the bug.
 - The day turns by swiping anywhere on the page (`touch-action: pan-y` on `.cal`,
   dragged by `onGrainDrag`), so there are no day steppers beside the date.
+- **There is one hero and it is the page's own choice**: no row is a choosing
+  surface, and the hero is filtered out of the register rather than hidden in
+  it.
 - The reckoning control and the month steppers are not drawn.
-- The rail's cells carry `tabindex="-1"`; the desk's month cells do not, and are
-  35 of the desk's 82 tab stops.
+- The rail's cells carry `tabindex="-1"`; the desk's month cells do not.
 
 #### Shared
 
@@ -576,8 +622,10 @@ The two widths are free to diverge except here.
 
 - **The day cells** — the week rail's and the month grid's — are one drawing:
   the same box, numerals, feast mark and fast colour.
-- **The hero and the register rows** are the same components at both widths;
-  only their measure changes.
+- **The hero and the register rows are the same components at both widths.**
+  Past 1024 px the hero is taken apart at one seam — `heroIdentity` into the
+  saint column, `heroOpening` into the reading column — and nothing is drawn
+  twice to do it. The register rows are the same rows in a narrower column.
 - **The tokens.** No raw colour, duration, easing, type size or spacing value in
   `calendar.css`.
 - **The derived card box**, per §3's materials rule, with the hero as its one
@@ -587,9 +635,11 @@ The two widths are free to diverge except here.
 
 | property | where | decides |
 | --- | --- | --- |
-| `--side-w` | `html[data-route~='calendar']`, ≥1024 | the right column's width. On the route and not on the box, because the site's bar measures itself against this column from outside the grid. |
-| `--day-gap` | same rule | the gap between the columns |
-| `--day-cols` | `.cal`, ≥1024 | `minmax(0, 1fr) var(--side-w)` |
+| `--side-w` | `html[data-route~='calendar']`, ≥1024 | the shelf's width, 19rem. On the route and not on the box, because the site's bar measures itself against this column from outside the grid. |
+| `--day-w` | same rule | the day's own column |
+| `--saint-w` | same rule | the chosen saint's column |
+| `--day-gap` | same rule | the one gutter: the track between the reading column and the shelf, and what the bar subtracts along with `--side-w` |
+| `--day-cols` | `.cal`, ≥1024 | the five tracks |
 | `--cal-peek`, `--cal-gutter` | `calendar.css` | the month's peeked neighbour columns and the gutter they need |
 | `--cal-row-h` | `calendar.css` | a month row |
 | `--card-h`, `--card-pic`, `--card-gap` | `calendar.css` | the register's card face |
@@ -602,22 +652,24 @@ read where they are declared.
 
 | attribute | set by | read by |
 | --- | --- | --- |
-| `data-route~='calendar'` | `main.js`, `ui/face-stage.js` | **82 rules** in `calendar.css`. It is a **set, not a value** — face-stage writes both faces into it for the length of a swap, so every rule is `[data-route~=]`. A rule written `[data-route=]` works everywhere except the one second a reader is watching the two faces move. |
+| `data-route~='calendar'` | `main.js`, `ui/face-stage.js` | most rules in `calendar.css`. It is a **set, not a value** — face-stage writes both faces into it for the length of a swap, so every rule is `[data-route~=]`. A rule written `[data-route=]` works everywhere except the one second a reader is watching the two faces move. |
 | `data-fills-window` | `index.html` before first paint, `main.js` on every navigation | `base.css`, at 1024 px and up |
 | `data-fullcal='open'` | `daily/fullcal.js` | 2 rules |
+| `data-choose` | `daily/panel.js`, on each shelf row ≥1024 | `calendar.js`'s one delegated press. Not `data-pick`: the reckoning popover's four rows had that name first. |
+| `data-slot` | `views/calendar.js` | the five panels, by name, in `calendar.js`'s roll and in `calendar.css` |
 
-**Known coupling.** Those 82 rules are the root deciding what one view's own
-boxes look like — `html[data-route~='calendar'] .hero-media img`. Scoping the
-inner ones to `.cal` would make the two faces independent by construction, and
-shorten 82 selectors by ~20 bytes each. Specificity is the risk
-(`.cal .hero-figure` is (0,2,0) against (0,2,1)), so it is a read of each block,
-never a sweep.
+**Known coupling.** The route's own rules are what decide one view's inner
+boxes — `html[data-route~='calendar'] .hero-media img` — and their specificity
+is load-bearing rather than incidental: a rule scoped to a new column and
+written `.cal-saint .hero.has-media` is (0,3,0) against the route's (0,3,1) and
+silently loses. Scoping the inner ones to `.cal` would make the two faces
+independent by construction, but it is a read of each block, never a sweep.
 
 #### Breakpoints
 
 | px | what turns |
 | --- | --- |
-| 1024 | **the layout break** — one column ↔ two, page scroll surrendered, week rail ↔ month grid, Gregorian ↔ the chosen reckoning |
+| 1024 | **the layout break** — one column ↔ four, page scroll surrendered, week rail ↔ month grid, Gregorian ↔ the chosen reckoning, one hero ↔ a shelf to choose from |
 | 900 | the full-screen calendar's body |
 | 760 | the hero's lede and its *more* control |
 | 700 | the full-screen calendar's weekday names |
@@ -753,8 +805,6 @@ is discussed.
 
 ### Recorded, deliberately not done
 
-- **Above a 1983 px window** the Daily hero's 40rem ceiling binds and the 5:7
-  proportion falls to 0.690 — the top 2% of the range. Recorded, not tuned.
 - **41 hymns cite Orloff (1899) or Hapgood (1906).** The other renderings have no
   published English in either book — checked, not assumed. Someone with the
   physical books could still improve on much of this.
