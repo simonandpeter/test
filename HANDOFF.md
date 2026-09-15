@@ -14,14 +14,19 @@ sitting's record here, put it in the commit message instead.
 
 ## State, end of 2026-09-15
 
-**Six commits unpushed**, local `HEAD` `eae39cd` plus the doc commit after it,
-remote `4bf4cdf`. `bash scripts/state.sh` is the truth about this — `git status`
-lies here, because a PAT push never updates `origin/main`.
+`bash scripts/state.sh` is the truth about what has landed — `git status` lies
+here, because a PAT push never updates `origin/main`.
 
 - **407 unit tests pass.** `locale-coverage` 0 fallbacks in all four packs.
-- **Full browser suite: 976 passed, 6 failed**, and all six pass alone —
-  266 of 266 at two workers across `map`, `pwa`, `index-carousel` and
-  `daily-stage`. That is this desk's parallel load, not the diff.
+- **Full browser suite: 976 passed, 6 failed at six workers** — and the six
+  are a *different* six on each run. Run alone, `chrome` and `map` together
+  give **293 of 294**, and the one is the shelf-swipe flake
+  `docs/WHERE-WE-ARE.md` already records as the test's fault, not the page's.
+  Treat a full run's failures here as the desk until `--repeat-each=6` alone
+  says otherwise; that test is what separated three real defects from the
+  noise on 2026-09-15.
+- **The first CI run of the revert went red** on one of them that was *not*
+  noise. See "Three tests that named an instance" below.
 - **862 saints**, 130 icons. The corpus reaches 28 September 2026.
 - The PAT is at `C:\Users\matei\Documents\Agios Website Ex\update git.txt`.
   `bash scripts/push.sh` pushes and reads the CI run in one step.
@@ -35,15 +40,44 @@ budget comes from `scripts/build-manifest.mjs`. Read them from the run.
 
 ## The one thing that must happen next
 
-**Nothing is blocking, and nothing has been pushed.** Six commits sit on top of
-the remote, the largest of them the Daily revert. `npm run test:lighthouse` has
-**not** been run against the reverted tree — `calendar.css` is back in the
-render-blocking bundle and `daily.css` is gone, so the entry stylesheet's size
-has moved and only that run knows which way. **Run it before pushing.**
+**Nothing is blocking.** `docs/WHERE-WE-ARE.md` is the open work, and its first
+item — the Daily desktop redesign — is the live question. The author has not
+yet given the design.
 
-`docs/WHERE-WE-ARE.md` is the open work. Its first item — the Daily desktop
-redesign — is now the live question, and the author has not yet given the
-design.
+**The entry stylesheet has ~66 bytes of headroom, not ~600.** The revert put
+`calendar.css` back beside the `face-stage` rules `base.css` gained after
+`f31520a`, and the ceiling went 73,000 → 73,400 against a cliff measured at
+73,629 green / 73,688 red. The next few hundred bytes of CSS anywhere trips
+`npm run test:lighthouse`, and the answer then is taking `index.css` and
+`saint.css` off the entry (72.28 → 54.31 kB), not another 400 on the ceiling.
+`scripts/lighthouse-floor.mjs`'s comment has the whole of it.
+
+---
+
+## Three tests that named an instance where they meant a rule
+
+All three went red *after* the revert and **none of them was the revert's**.
+They are worth reading together, because they are one failure mode and it is
+the one this repo keeps meeting: a value written in a test and also in the code
+it measures, with nothing tying the two.
+
+- **`index-carousel.spec.js:1568`** filtered resource timings with
+  `endsWith('-card.jpg')`. Since `502aed1` taught `build-manifest.mjs` to emit
+  `cardSm`, a 360 px card asks for `icon-card-sm.jpg` — **0 of 10 requests
+  matched at 360 px, 8 of 8 at 1280** — so the test measured an empty set and
+  its own premise guard caught it. This is what reddened CI.
+- **`index-carousel.spec.js`'s DPR-1 branch** required `-card-sm.jpg` and a
+  decoded width under 280. `make_thumbs.py` cannot cut a card wider than its
+  source, so 8 of 130 icons yield a `cardSm` under the 150 px box and three of
+  those fall back to a card of 283-298 px. It asserts the ratio now.
+- **`daily-stage.spec.js:238`** asserted `#view h1` before the stage came down,
+  when both parked faces' headings are still in `#view`. A strict mode
+  violation raises at once rather than retrying, so it failed on a state it
+  should have waited through.
+
+**A fourth of the same kind is already fixed and worth not re-learning:**
+`lib/settings.js`'s `REGISTER_LAYOUTS` was swept out as dead code by
+`1b1d811` and is load-bearing again after the revert.
 
 ---
 
