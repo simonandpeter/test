@@ -21,8 +21,11 @@ times as "brief §N" and "Addendum X" — a contract, not history), and
 `docs/APP.md` for the Capacitor shells.
 
 History is in `git log` (430 commits of reasoning; `git log --grep` searches it)
-and in the `*.notes.md` beside a module. Read history only when asked how
-something used to work.
+and, per module and per spec, in `docs/SRC-DECISIONS.md` and
+`docs/E2E-DECISIONS.md`. Read history only when asked how something used to
+work. (This paragraph named `*.notes.md` beside a module from 2026-09-09 until
+2026-09-15. No such file has ever existed in this repo — the convention was
+proposed and the extraction went to the two documents above instead.)
 
 ---
 
@@ -170,6 +173,14 @@ them — so this is a rule about mechanism, not about care.
 ---
 
 ## Where things live
+
+**`docs/STRUCTURE.md` is the map when the task is a page's layout**: per route,
+the files, the attributes and custom properties that drive it, the box chain
+from the root down to the view's own root, the breakpoints and the specs — so
+a session does not reassemble that chain out of four files' comments before it
+can change one rule. **It is not written yet**; `docs/WHERE-WE-ARE.md` has the
+item and the shape, and until it lands the table below plus
+`docs/SRC-DECISIONS.md` are what there is.
 
 ### Pages
 
