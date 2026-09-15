@@ -361,12 +361,18 @@ value and the override that replaces it at a breakpoint are two decisions.
 | `--chrome-h-reserve` | `41px` | `base.css` |
 | `--chrome-h-reserve` | `52.5px` | `base.css` |
 | `--chrome-h-reserve` | `75.5625px` | `base.css` |
-| `--td-side-w` | `clamp(240px, 21vw, 310px)` | `daily-sidebar.css` |
-| `--tile-pic` | `120px` | `daily-tiles.css` |
-| `--tile-pic` | `84px` | `daily-tiles.css` |
-| `--row-pic-w` | `clamp(180px, 20vw, 300px)` | `daily-tiles.css` |
-| `--row-pic-h` | `clamp(200px, 38vh, 420px)` | `daily-tiles.css` |
-| `--row-flow-h` | `clamp(180px, 30vh, 380px)` | `daily-tiles.css` |
+| `--cal-peek` | `24px` | `calendar.css` |
+| `--cal-peek` | `44px` | `calendar.css` |
+| `--cal-gutter` | `calc(34px + var(--space-2) + var(--cal-peek))` | `calendar.css` |
+| `--cal-gutter` | `calc(34px + var(--space-3) + var(--cal-peek))` | `calendar.css` |
+| `--cal-row-h` | `51px` | `calendar.css` |
+| `--card-h` | `calc(18 * 1.65 * 17px)` | `calendar.css` |
+| `--card-pic` | `clamp(200px, calc((100% - var(--card-gap)) * 5 / 12), 40rem)` | `calendar.css` |
+| `--hero-mat` | `14px` | `calendar.css` |
+| `--notch` | `20px` | `calendar.css` |
+| `--ox` | `10px` | `calendar.css` |
+| `--ox` | `14px` | `calendar.css` |
+| `--rail-fade` | `12px` | `calendar.css` |
 | `--cx-w` | `150px` | `index.css` |
 | `--cx-w` | `clamp(150px, calc(var(--cx-max-h) * 0.58), 300px)` | `index.css` |
 | `--cx-w-text` | `clamp(150px, calc(var(--cx-w) * 0.62), 190px)` | `index.css` |
@@ -392,17 +398,18 @@ boundary spelled differently in different sheets.
 
 | breakpoint | sheets | what it divides |
 | --- | --- | --- |
-| `max-width: 480px` | `saint.css` | the shelf row's feast chip moves ahead of the date rather than wrapping to a third line |
-| `max-width: 559.98px` | `base.css`, `index.css` | the first-visit choices close up; All Saints' head takes the phone's padding |
-| `max-width: 699.98px` | `daily.css` | the full-screen calendar drops to one column — seven columns stop holding a phrase |
-| `min-width: 700px` | `daily.css`, `index.css` | the full-screen calendar's weekday heads; the carousel's own card measure. `views/index/controls.js` opens on cards rather than rows at the same width |
+| `max-width: 480px` | `calendar.css`, `saint.css` | the shelf row's feast chip moves ahead of the date rather than wrapping to a third line |
+| `max-width: 559.98px` | `base.css`, `calendar.css`, `index.css` | the first-visit choices close up; All Saints' head takes the phone's padding |
+| `min-width: 620px` | `calendar.css` | the week rail's peek and gutter widen |
+| `max-width: 619.98px` | `calendar.css` | the complement |
+| `max-width: 699.98px` | `calendar.css` | the full-screen calendar drops to one column — seven columns stop holding a phrase |
+| `min-width: 700px` | `calendar.css`, `index.css` | the full-screen calendar's weekday heads; the carousel's own card measure. `views/index/controls.js` opens on cards rather than rows at the same width |
+| `max-width: 759px` | `calendar.css` | the day's own chrome gives up its gaps |
 | `max-width: 759.98px` | `base.css` | the chrome line gives up its gaps rather than wrapping |
-| `min-width: 760px` | `base.css`, `saint.css` | the complement: the masthead returns to the left, and `main.js` turns the nav strip at the same number |
-| `max-width: 767.98px` | `daily-tiles.css` | a folded tile's picture drops from 120 px to 84 |
-| `min-width: 900px` | `daily.css` | the full-screen calendar gains its periods column beside the month |
-| `max-width: 1023px` | `daily-sidebar.css` | the sidebar stops standing and becomes the first block in the flow |
-| `max-width: 1023.98px` | `daily.css`, `saint.css` | the day's strip stops being its own scroller; the saint's columns take `pan-y` for the swipe |
-| `min-width: 1024px` | `base.css`, `daily.css`, `saint.css` | Daily's two columns, and every other desk arrangement |
+| `min-width: 760px` | `base.css`, `calendar.css`, `saint.css` | the complement: the masthead returns to the left, and `main.js` turns the nav strip at the same number |
+| `min-width: 900px` | `calendar.css` | the full-screen calendar gains its periods column beside the month |
+| `max-width: 1023.98px` | `calendar.css`, `saint.css` | the day's strip stops being its own scroller; the saint's columns take `pan-y` for the swipe |
+| `min-width: 1024px` | `base.css`, `calendar.css`, `saint.css` | Daily's two columns, and every other desk arrangement |
 
 **760 and 767.98 are two numbers for one idea, and so are 1023 and 1023.98.**
 The `.98` spellings exist so a fractional window width falls in exactly one of
@@ -467,19 +474,16 @@ overhaul's to decide.*
 
 **"That is the one shadow on the site" was written here on 2026-09-08 and is
 false** — an extrapolation from the old DESIGN.md's justification of the
-bookmark's shadow, asserted without counting. There were six, found by
-`scratchpad/colour-audit.py` on 2026-09-09, and there are three: the Daily
-page's rebuild (2026-09-12) took `.fast-bubble` with the liturgy line it
-pointed at, and the reckoning control's popover came back in
-`daily-sidebar.css` with a hairline instead of a shadow — it stands against the
-column rather than over the page, which is the rule below deciding its own
-case:
+bookmark's shadow, asserted without counting. There are five, found by
+`scratchpad/colour-audit.py` on 2026-09-09 and held by `tests/plan.test.mjs`:
 
 | where | what |
 | --- | --- |
 | `.church-panel` | `0 6px 18px -8px rgb(0 0 0 / 0.4)` — the chooser, fixed over the page |
+| `.fast-bubble` | `0 6px 20px rgb(0 0 0 / 0.14)` — the fast's note, over the liturgy line it points at |
 | `.index-controls.is-stuck .index-row` | `0 6px 12px -10px rgb(0 0 0 / 0.5)` — the bar once it sticks |
 | `.index-controls.is-stuck.is-filters-open .filter-drop-inner` | `0 8px 14px -12px rgb(0 0 0 / 0.5)` |
+| `.reckoning-pop` | `0 6px 18px -8px rgb(0 0 0 / 0.4)` — the reckoning control's popover |
 
 Not shadows, but in the same family: a `rgb(0 0 0 / 0.45)` scrim on
 `.hero-media`, the coachmark's gold glow, and the map's focus ring, which uses

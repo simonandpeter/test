@@ -532,7 +532,7 @@ test('the reader’s own work is still there on the way back', async ({ page }) 
   await expect(page.locator('.face-stage[data-face="calendar"]')).toBeVisible();
   // A moment on the day, which is what the reader came for and what gives the
   // parked row something to have done while it was underneath.
-  await expect(page.locator('.day-grid .day-tile').first()).toBeVisible();
+  await expect(page.locator('.hero-name').first()).toBeVisible();
   await page.waitForTimeout(600);
 
   await toSaints(page);
@@ -599,7 +599,7 @@ test('the page comes back to the line it was left on, without a jump', async ({ 
 
   await toDaily(page);
   await expect(page.locator('.face-stage[data-face="calendar"]')).toBeVisible();
-  await expect(page.locator('.day-grid .day-tile').first()).toBeVisible();
+  await expect(page.locator('.hero-name').first()).toBeVisible();
 
   const dur = await swapMs(page);
   const film = filming(page, dur * 3);
@@ -678,7 +678,7 @@ test('Back slides and is not faded over, and a phone fades instead', async ({ pa
   await page.goto('/saints', { waitUntil: 'networkidle' });
   await toDaily(page);
   await expect(page.locator('.face-stage[data-face="calendar"]')).toBeVisible();
-  await expect(page.locator('.day-grid .day-tile').first()).toBeVisible();
+  await expect(page.locator('.hero-name').first()).toBeVisible();
 
   const dur = await swapMs(page);
   const fadesBefore = await page.evaluate(() => window.__fades);

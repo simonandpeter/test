@@ -74,6 +74,13 @@ const DEFAULTS = {
 };
 
 /**
+ * The two faces the register can wear. A stored value is whatever a previous
+ * version of the site left there, so every reader filters through this list
+ * rather than trusting the string; `list` was a third face until 2026-09-10.
+ */
+export const REGISTER_LAYOUTS = ['cards', 'expanded'];
+
+/**
  * The two themes, under both of the names this project gives them.
  *
  * **The keys are the design's names and the values are the storage's**, and

@@ -377,7 +377,7 @@ test('a saint is named in the reader own language where the corpus has the name'
    * the author asked again — and the second look found the corpus had been
    * carrying them all along, in each folder's `names` array, transcribed from
    * the same calendar entries the attestations were read from. They were on
-   * the saint page under "Also called" until then removed that block.
+   * the saint page under "Also called" until Amendment 38 removed that block.
    * So nothing here is translated; a recorded form is chosen.
    */
   for (const [language, church, name] of [
@@ -393,9 +393,7 @@ test('a saint is named in the reader own language where the corpus has the name'
     );
     if (language === 'ru') {
       await page.goto('/calendar/2026-08-26', { waitUntil: 'networkidle' });
-      // The day's leading saint is the first tile of the grid since the rebuild
-      // of 2026-09-12 (plan §6); the name it prints is the same one.
-      await expect(page.locator('.day-tile .row-name').first(), language).toHaveText(name);
+      await expect(page.locator('.hero-name'), language).toHaveText(name);
     } else {
       await page.goto('/saints/moses-the-prophet', { waitUntil: 'networkidle' });
       await expect(page.locator('h1.saint-name'), language).toHaveText(name);
@@ -409,7 +407,7 @@ test('a saint is named in the reader own language where the corpus has the name'
    *
    * **The subject is read off the manifest rather than named** (2026-09-07).
    * It was Anthony the Great, "one of the twelve saints with a Russian
-   * attestation and no entry", until then gave him «Антоний
+   * attestation and no entry", until Amendment 105 gave him «Антоний
    * Великий» out of a citation his own folder already carried — so the test
    * went red for the corpus getting better, which is the shape `CORPUS` and
    * `venerateUnion` exist to avoid. `NO_RU_NAME` is whoever is still in that
@@ -1203,7 +1201,7 @@ test('a saint page is the Daily page’s two columns, with the reader’s own se
   await page.evaluate(() => document.fonts.ready);
   const daily = await page.evaluate(() => {
     const r = (s) => document.querySelector(s).getBoundingClientRect();
-    return { main: [Math.round(r('.td-scroll').left), Math.round(r('.td-scroll').right)] };
+    return { main: [Math.round(r('.cal-main').left), Math.round(r('.cal-main').right)] };
   });
 
   await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
@@ -1215,23 +1213,7 @@ test('a saint page is the Daily page’s two columns, with the reader’s own se
       side: [Math.round(r('.saint-side').left), Math.round(r('.saint-side').right)],
     };
   });
-  /*
-   * **The margins, not the column, since the rebuild of 2026-09-12.** Until
-   * then the Daily page had a left column of its own and this asserted the
-   * two rects were the same. The rebuilt day has no such column — the strip of
-   * saints takes the whole measure and the standing column is over its left
-   * edge (plan §5) — so the equality it asserted no longer has two comparable
-   * boxes behind it.
-   *
-   * What the author asked for survives as the outer margins: the life starts
-   * where the day's own content starts, and the column beside it ends where
-   * the day's ends. That is still measured against the other page rather than
-   * against a literal, which is the half of this test that was worth keeping —
-   * a hard-coded 1025 px would pass on the day it was written and say nothing
-   * afterwards.
-   */
-  expect(saint.main[0], 'the life does not start at the Daily page’s own left margin').toBe(daily.main[0]);
-  expect(saint.side[1], 'the column beside the life does not end where the day ends').toBe(daily.main[1]);
+  expect(saint.main, 'the life does not sit in the Daily page’s left column').toEqual(daily.main);
   expect(saint.side[0], 'the search column is not to the right of the life').toBeGreaterThan(saint.main[1]);
 
   // A row view, scrolled inside its own box, and drawing no bar to do it.

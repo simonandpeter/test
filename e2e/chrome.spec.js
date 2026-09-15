@@ -7,6 +7,7 @@ import {
   POPULATED,
   aDayThatIsNotToday,
   answered,
+  desk,
   facet,
   openChooser,
   panelSettled,
@@ -438,11 +439,7 @@ test('the calendar is remembered, and the header changes it', async ({ page }) =
   // and hands the focus back.
   await answered(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
-  // The day's leading saint, which is the first tile of the grid since the
-  // rebuild of 2026-09-12 took the hero card off the page (plan §6). The name
-  // it is read off is the tile's own, and the tile at the head of the grid is
-  // the one `pickHero` chose — the same claim the hero's name carried.
-  await expect(page.locator('.day-tile .row-name').first()).toContainText('Augustine');
+  await expect(page.locator('.hero-name')).toContainText('Augustine');
   const open = page.locator('#church-open');
   await expect(open).toHaveText('Russian');
   await open.click();
@@ -455,9 +452,7 @@ test('the calendar is remembered, and the header changes it', async ({ page }) =
   await expect(page.locator('#church-panel')).toBeHidden();
   expect(await page.evaluate(() => document.activeElement?.id)).toBe('church-open');
   await expect(open).toHaveText('Greek');
-  // The Greek calendar keeps nothing on 28 June, and the day says so where its
-  // saints would have been (plan §11.3: the empty line moved into the grid).
-  await expect(page.locator('.day-grid .day-empty')).toBeVisible();
+  await expect(page.locator('.empty-day')).toBeVisible();
 
   await page.reload({ waitUntil: 'networkidle' });
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('greek');
@@ -530,26 +525,39 @@ test('under reduced motion the panel does not fly, it is simply gone', async ({ 
 
 test('a first visit is shown where the two controls are, and the day is not held back', async ({ page }) => {
   /*
-   * **This reverses the first-visit gate**, which showed *nothing* until the
-   * reader said which church they kept. The argument is answered rather than
-   * dropped: the guess is `defaultChurch()` — the reader's own browser language,
-   * never written to settings — the header names the church on every page, and a
-   * mark under that control says which control changes it. `hasChosen()` is
-   * untouched, so the marks come back next visit.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   * **This reverses the first-visit gate**, at the author's instruction of
+   * 2026-08-26: "Replace the language and calendar pop-ups on first opening
+   * with a fade-in glowing tool tip with an arrow pointing to each of the two
+   * buttons, explaining you can select your church from here, and language from
+   * here."
+   *
+   * What the gate was for is worth restating, because it was not decoration.
+   * From 2026-08-21 the calendar asked which church the reader kept and showed
+   * *nothing* until it was answered — no strip, no date, no day — on the
+   * argument that a calendar with no church chosen is the site picking one and
+   * not saying so. A second block joined it on 2026-08-25 evening for the
+   * language, and that one was an offer rather than a gate, because English is
+   * a default the reader is already reading.
+   *
+   * The argument is answered rather than dropped, and this is where that is
+   * pinned. The guess is `defaultChurch()` — the reader's own browser language,
+   * never written to settings — the header has named the church on every page
+   * since 2026-08-24, and a mark under that control says which control changes
+   * it. `hasChosen()` is untouched: the marks come back next visit, and the
+   * three pages that can do without a calendar still do (`chosenChurch`).
    */
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   // The gate itself, gone: no panel, no blocks, and nothing hidden behind them.
   await expect(page.locator('[data-ask]')).toHaveCount(0);
   await expect(page.locator('.cal-gate')).toHaveCount(0);
-  // The picker is one grain at every width: the month grid stands in the
-  // sidebar wherever the page is read. What this line says is that the day is
-  // not held back behind a gate.
-  await expect(page.locator('.day-side [data-cal] .cal-day[data-iso]').first()).toBeVisible();
-  // The day's leading saint is the first tile of the grid now (plan §6: the
-  // hero card is gone), and the tile at the head of the grid is the one
-  // `pickHero` chose.
-  await expect(page.locator('.day-tile .row-name').first()).toContainText('Augustine');
+  /*
+     * The picker, whichever grain this width shows: the rail on a phone, the
+     * month grid on a desktop since 2026-09-02 ("just display monthly only on
+     * desktop, no weekly display"). What this line is really saying is that
+     * the day is not held back behind a gate, which is true of either.
+     */
+    await expect(page.locator('.week-strip:visible, .cal-month:visible').first()).toBeVisible();
+  await expect(page.locator('.hero-name')).toContainText('Augustine');
 
   // Two marks, each under the control it names, each with a way out.
   const marks = page.locator('.coachmark');
@@ -573,11 +581,12 @@ test('a first visit is shown where the two controls are, and the day is not held
     expect(Math.abs(pointing[i] - (target.x + target.width / 2))).toBeLessThan(2);
   }
 
-  // A mark is still not an answer: nothing about the *church* is stored by being
-  // shown one, which is what keeps the guess a guess. Not `toBeUndefined` —
-  // being shown a mark writes the seen list and `writeSetting` persists the
-  // whole settings object, so `church` is stored as an explicit null, which is
-  // what every reader of it asks about.
+  // A mark is still not an answer: nothing about the *church* is stored by
+  // being shown one, which is what keeps the guess a guess.
+  // Not `toBeUndefined`: since 2026-08-27 being *shown* a mark writes the
+  // seen list, and `writeSetting` persists the whole settings object, so
+  // `church` is stored as an explicit null. Every reader of it — `hasChosen`
+  // above all — asks whether it is null, so nothing about the guess changes.
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings') ?? '{}').church ?? null)).toBeNull();
   await page.locator('.coachmark-close').first().click();
   await expect(marks).toHaveCount(1);
@@ -593,10 +602,12 @@ test('a first visit is shown where the two controls are, and the day is not held
 
 test('a coachmark goes on the second scroll, and not on the first', async ({ page }) => {
   /*
-   * Two scroll inputs, not one: the first is a reader looking at the page they
-   * arrived on, and dismissing on it would mean most readers never read the mark.
+   * Author, 2026-08-26: "It also disappears after the second scroll input, down
+   * or up." Two, not one, and the reason is that the first scroll is a reader
+   * looking at the page they arrived on — dismissing on it would mean most
+   * readers never read the mark at all.
    *
-   * **What counts as *one* input is the part worth pinning**: a wheel notch fires
+   * What counts as *one* input is the part worth pinning: a wheel notch fires
    * scroll events every frame for a few hundred milliseconds, so counting raw
    * events would spend both on one gesture. ui/coachmark.js separates them by a
    * pause, which is what the waits below are.
@@ -606,12 +617,13 @@ test('a coachmark goes on the second scroll, and not on the first', async ({ pag
   await expect(page.locator('.coachmark')).toHaveCount(2);
 
   /*
-   * The pointer has to be over something that scrolls: the Daily page's own
-   * columns carry the scrolling and the page does not, so a wheel spun over the
-   * header — where the mouse sits by default — reaches nothing at all.
-   * `ui/coachmark.js` takes the event from whichever element scrolled.
+   * The pointer has to be over something that scrolls. Since 2026-09-01 the
+   * Daily page's own columns carry the scrolling and the page does not, so a
+   * wheel spun over the header — where the mouse sits by default — reaches
+   * nothing at all. `ui/coachmark.js` takes the event from whichever element
+   * scrolled; this puts the mouse over one.
    */
-  const column = await page.locator('.td-scroll').boundingBox();
+  const column = await page.locator('.cal-main').boundingBox();
   await page.mouse.move(column.x + column.width / 2, column.y + column.height / 2);
 
   await page.mouse.wheel(0, 400);
@@ -626,19 +638,21 @@ test('a coachmark goes on the second scroll, and not on the first', async ({ pag
 
 test('on a first visit the two marks clear the fold, and so does the day', async ({ page }) => {
   /*
-   * A first visit gets the day *and* is told where the two controls are. Both
-   * marks stand clear of the fold on a 360x780 phone, and so does the day under
-   * them.
+   * The exception this test was written for is gone with the gate (2026-08-26).
+   * From 2026-08-21 to 2026-08-26 a first visit saw the question and nothing
+   * else, and what had to clear the fold was the question and every one of its
+   * answers — which is why the rule above about the saint's name clearing the
+   * fold had to make an exception for the first visit.
    *
-   * **What "the day" is has changed, and the assertion with it** (plan §5, §7):
-   * a phone reads the standing column first and the saints under it, so the
-   * hero's *name* is past the fold by design and what has to clear it is the
-   * day's own date and the first saint's tile.
+   * There is no exception now, and that is the stronger claim: a first visit
+   * gets the day *and* is told where the two controls are. Both marks stand
+   * clear of the fold on a 360x780 phone, and so does the saint's own name
+   * under them, which no first visit could see at all before.
    *
-   * **The marks must also not overlap each other.** They sit under controls at
+   * The marks must also not overlap each other. They sit under controls at
    * opposite ends of the header, and a 30ch box under each overlapped in the
-   * middle of a 390 px screen, the second covering the × of the first.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   * middle of a 390 px screen — the one drawn second covering the ×  of the one
+   * drawn first. Found by rendering it and looking; kept honest here.
    */
   await page.setViewportSize({ width: 360, height: 780 });
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
@@ -651,34 +665,37 @@ test('on a first visit the two marks clear the fold, and so does the day', async
   const [a, b] = boxes.sort((x, y) => x.x - y.x);
   expect(a.x + a.width, 'the two marks overlap').toBeLessThanOrEqual(b.x);
 
-  const shown = await page.evaluate(() => ({
-    date: document.querySelector('.day-date').getBoundingClientRect().bottom,
-    tile: document.querySelector('.day-tile').getBoundingClientRect().top,
-    picture: document.querySelector('.day-tile .row-media').getBoundingClientRect().top,
-  }));
-  expect(shown.date, 'the day’s own date is below the fold').toBeLessThan(780);
-  expect(shown.tile, 'the day’s first saint is below the fold').toBeLessThan(780);
-  expect(shown.picture, 'the leading saint’s picture is below the fold').toBeLessThan(780);
+  const name = await page.locator('.hero-name').boundingBox();
+  expect(name.y).toBeLessThan(780);
 });
 
 /* ---- the 2026-08-22 round, Phase 2: the header, the selection, one calendar -- */
 
 test('a first visit opens on a calendar it did not choose, and is told which', async ({ page }) => {
   /*
-   * The reader must never be shown a calendar without being told which it is:
-   * the day opens on a guessed calendar and the guess is named in the header,
-   * which is the whole of what makes it honest.
+   * Addendum H7–H8 said the strip, the date and the day stay hidden until the
+   * reader has said which calendar they keep (author, 2026-08-22). **Superseded
+   * 2026-08-26**, with the coachmarks: the day opens on a guessed calendar and
+   * the guess is named in the header, which is the whole of what makes it
+   * honest. The test is kept and turned around, because the property it guards
+   * is the same one — the reader must never be shown a calendar without being
+   * told which it is.
    *
    * The guess is the browser's own language and nothing else about the reader.
    * This context is en-US, which none of the four churches claims, so it falls
-   * through to Russian. docs/E2E-DECISIONS.md#chromespecjs
+   * through to Russian — the calendar with the most to show: 426 of the 742
+   * folders and day records running to January where the Greek and Serbian stop
+   * in September.
    */
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('.day-side [data-cal] .cal-day[data-iso]').first()).toBeVisible();
-  // The day's leading saint is the first tile of the grid now (plan §6: the
-  // hero card is gone), and the tile at the head of the grid is the one
-  // `pickHero` chose.
-  await expect(page.locator('.day-tile .row-name').first()).toContainText('Augustine');
+  /*
+     * The picker, whichever grain this width shows: the rail on a phone, the
+     * month grid on a desktop since 2026-09-02 ("just display monthly only on
+     * desktop, no weekly display"). What this line is really saying is that
+     * the day is not held back behind a gate, which is true of either.
+     */
+    await expect(page.locator('.week-strip:visible, .cal-month:visible').first()).toBeVisible();
+  await expect(page.locator('.hero-name')).toContainText('Augustine');
   await expect(page.locator('#church-open')).toHaveText('Russian');
   // And it is a guess, not an answer: nothing is written until the reader says.
   const before = await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings') ?? '{}'));
@@ -689,7 +706,13 @@ test('a first visit opens on a calendar it did not choose, and is told which', a
   await page.locator('#church-panel [data-church="russian"]').click();
   // Choosing the same calendar the guess had picked still changes something:
   // it is stored, and the marks stop.
-  await expect(page.locator('.day-side [data-cal] .cal-day[data-iso]').first()).toBeVisible();
+  /*
+     * The picker, whichever grain this width shows: the rail on a phone, the
+     * month grid on a desktop since 2026-09-02 ("just display monthly only on
+     * desktop, no weekly display"). What this line is really saying is that
+     * the day is not held back behind a gate, which is true of either.
+     */
+    await expect(page.locator('.week-strip:visible, .cal-month:visible').first()).toBeVisible();
   await expect(page.locator('[data-which]')).toHaveCount(0);
   await expect(page.locator('#church-open')).toHaveText('Russian');
   const stored = await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')));
@@ -938,18 +961,16 @@ test('the language control offers five, each naming itself in its own tongue', a
 });
 
 test('choosing Russian redraws the page in Russian, dates included, and it holds across a reload', async ({ page }) => {
-  // Julian, not `ready()`'s own explicit-Gregorian default: the Dormition fast
-  // this test reads is dated by the Russian church's own Julian reckoning, and a
-  // forced Gregorian reckoning here would price it off the wrong 14 days
-  // entirely (lib/church.js's `calendarFor`).
+  // Julian, not `ready()`'s own explicit-Gregorian default: the Dormition
+  // fast this test reads (26 August civil) is dated by the Russian church's
+  // own Julian reckoning, and a forced Gregorian reckoning here would price
+  // the fast off the wrong 14 days entirely (see daily-panel.spec.js's own note
+  // on this, and lib/church.js's `calendarFor`).
+  // And above 1024 px, because below it the reckoning is Gregorian whatever
+  // the church (author, 2026-09-12) and 26 August is then an ordinary day
+  // with no fast, no Julian numerals and none of what this test reads.
   await ready(page, { reckoning: null });
-  /*
-   * **And past 1024 px**, for the same reason: below that width the reckoning is
-   * fixed Gregorian whatever the church keeps (`lib/viewport.js`), so the Julian
-   * numerals below exist only here. What this test is about is the *language*,
-   * which is the same at both widths.
-   */
-  await page.setViewportSize({ width: 1280, height: 900 });
+  await desk(page);
   await page.goto('/calendar/2026-08-26', { waitUntil: 'networkidle' });
   await page.locator('#lang-open').click();
   await page.locator('#lang-panel [data-language="ru"]').click();
@@ -961,39 +982,49 @@ test('choosing Russian redraws the page in Russian, dates included, and it holds
   expect(await page.evaluate(() => document.documentElement.lang)).toBe('ru');
   /*
    * **All Saints and not Daily.** The first nav link is the one word in the
-   * chrome that changes with the *date*, and this page is a hardcoded one, so on
-   * one day of the year it reads «Ежедневно» and on every other «Сегодня». The
-   * claim here — that the whole chrome redraws in Russian — is made by a word
-   * that stands still; the Daily button's two words have two tests of their own.
+   * chrome that changes with the *date*, and this page is a hardcoded one:
+   * on 26 August the button reads «Ежедневно» and on every other day
+   * «Сегодня». It read the same either way until 2026-08-27, when the packs
+   * were given a distinct base word, and CI went red the same evening because
+   * the runner's clock was on the 26th. What this test is claiming — that the
+   * whole chrome redraws in Russian — is made by a word that stands still;
+   * the Daily button's two words have two tests of their own.
    */
   await expect(page.locator('.site-nav a').nth(1)).toHaveText('Все святые');
   await expect(page.locator('#church-open')).toHaveText('Русская');
+  // Capitalised, and the month's own abbreviation dot dropped (author,
+  // 2026-08-25). Said plainly because it is a departure: lower case is
+  // correct Russian orthography for a weekday and a month, and «авг.» wants
+  // its dot; the author asked for capitals and no dot, and only the weekday
+  // and month parts are touched — the literal «2026 г.» keeps the dot that
+  // belongs to a different word.
+  // The month in full since 2026-09-01, in every pack: `headingFmt` asks Intl
+  // for `month: 'long'` where it asked for `short`.
   /*
-   * Two lines rather than one: the standing column prints the weekday as its own
-   * small label over the date (plan §5). **The weekday alone stays civil** —
-   * «Среда» is right for the 26th while the numerals are Julian — which is
-   * CLAUDE.md's own rule for `reckonedHeading`, and the half of this that a
-   * reckoning change would silently break.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   * The month is abbreviated at this width since 2026-09-02 - and it is the
+   * *pack's* own abbreviation, which is the half of that change worth pinning
+   * here: «Авг» rather than a English "Aug" leaking into a Russian heading.
+   *
+   * **13, not 26** (2026-09-05, following the "Follow my church" fix):
+   * unset reckoning now truly follows the Russian church's own default,
+   * Julian, and the numerals are the reckoned ones — 26 August civil is 13
+   * August Julian. The weekday alone stays civil («Среда» is still right for
+   * the 26th), which is CLAUDE.md's own rule for `reckonedHeading`.
    */
-  await expect(page.locator('[data-day-word]')).toHaveText('Среда');
-  await expect(page.locator('.day-date')).toHaveText(/^13 Авг(уста)? 2026 г\.$/);
-  // The tab is the one thing that does NOT redraw: since 2026-09-12 the
-  // name is a mark, the same in all five packs, so this asserts that the
-  // Russian page still says AGIOS while everything above it is Russian.
-  await expect(page).toHaveTitle(/AGIOS/);
+  await expect(page.locator('h1')).toHaveText(/^Среда, 13 Авг(уста)? 2026 г\.$/);
+  // The tab keeps the reader's own word for the route and the untranslated
+  // mark beside it: AGIOS is one name in every pack (PLAN §3, "The name").
+  await expect(page).toHaveTitle(/^Сегодня - AGIOS$/);
   // The fast line: label and recurring reason translated, the cycle line
-  // deliberately not — it is composed in English by lib/liturgy.js, the recorded
-  // seam. The grade leads the line and names the *type* of fast rather than the
-  // technical term, which is why this reads Строгий пост and not Сухоядение.
-  /*
-   * The fast and its occasion are one tag rather than a line and a chip beside
-   * it (plan §6), and the cycle and tone have the sidebar's own line. Every fact
-   * survives the move, which is what this asserts.
-   */
-  await expect(page.locator('.day-tags .tag[data-fast]')).toHaveText(/^Строгий пост/);
-  await expect(page.locator('.day-tags .tag[data-fast]')).toContainText('Успенский пост');
-  await expect(page.locator('.day-cycle')).toContainText('Глас 3');
+  // deliberately not — it is composed in English by lib/liturgy.js, the
+  // recorded seam of Amendment 36.
+  // 26 August: days.pravoslavie.ru printed «Успенский пост; сухоядение», so
+  // the grade leads the line, in Russian, from the pack's own vocabulary —
+  // naming the *type* of fast since 2026-08-26 rather than the technical
+  // term, which is why this reads Строгий пост and not Сухоядение.
+  await expect(page.locator('[data-liturgy] .fast')).toHaveText(/^Строгий пост/);
+  await expect(page.locator('[data-liturgy] .occasion-chip')).toHaveText('Успенский пост');
+  await expect(page.locator('[data-liturgy]')).toContainText('Глас 3');
 
   // And it is a setting, not a session: the reload comes back Russian.
   await page.reload({ waitUntil: 'networkidle' });
@@ -1499,9 +1530,14 @@ test('pressing a chooser twice inside its flight does not send it the wrong way'
 
 test('the Daily button offers Today when the reader has left it, and only there', async ({ page }) => {
   /*
-   * The word only ever offers what the page it is on can give: on the Index the
-   * button is how you reach the Daily page at all, so it says Daily whatever day
-   * that page was last showing. docs/E2E-DECISIONS.md#chromespecjs
+   * Author, 2026-08-26 evening: "when today's date is scrolled away from on
+   * the Daily page, the text 'Daily' on the Daily button fades and is
+   * replaced by 'Today', so when you press it, it takes you to today's date.
+   * But it only says 'Today' while on the Daily page."
+   *
+   * The word only ever offers what the page it is on can give: on the Index
+   * the button is how you reach the Daily page at all, so it says Daily
+   * whatever day that page was last showing.
    */
   await ready(page);
   const label = page.locator('[data-nav-label]');
@@ -1520,30 +1556,15 @@ test('the Daily button offers Today when the reader has left it, and only there'
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await expect(label).toHaveText('Daily');
 
-  // And stepping the day inside the page changes it, not only a fresh load.
-  // The gesture is the sidebar's own `›`: the week rail carried a keyboard step
-  // and went with the rail (plan §6).
+  // And stepping the rail is what changes it, not only a fresh load.
   await page.goto('/', { waitUntil: 'networkidle' });
   await expect(label).toHaveText('Daily');
-  await page.locator('.day-head .day-step[data-step="1"]').click();
+  await page.keyboard.press('d');
   await expect(label).toHaveText('Today');
   // Pressing it goes back to today, and the word goes with it.
   await page.locator('.site-nav a[data-nav-daily]').click();
   await expect(label).toHaveText('Daily');
-  /*
-   * And the month grid says which day the page is showing. The mark is
-   * `.is-today`, and **the date it carries is asserted rather than the class
-   * alone** — otherwise this passes with the mark on any square of the month.
-   */
-  const marked = page.locator('.day-side .cal-day.is-today');
-  await expect(marked).toHaveCount(1);
-  await expect(marked).toHaveAttribute(
-    'data-iso',
-    await page.evaluate(() => {
-      const d = new Date();
-      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-    }),
-  );
+  await expect(page.locator('.week-strip button.is-today')).toHaveAttribute('aria-current', 'date');
 });
 
 test('the header is sticky, shorter, and the phone gets an endless centred nav', async ({ page }) => {
@@ -2722,18 +2743,26 @@ test('a file that is not an export changes nothing and says so', async ({ page }
   await expect(page.locator('[data-import-note]')).toContainText('nothing was changed');
 });
 
-test('the header takes one measure on every route, Daily included', async ({ page }) => {
+test('the header takes one measure on every route, and stops at Daily’s column', async ({ page }) => {
   /*
-   * The header takes one measure on every route (`--page-max`, base.css).
-   * What made four routes differ was the *window*: Daily and Map hold the page
-   * still, so neither draws a classic scrollbar while All Saints and About do.
+   * Author, 2026-09-01: "The header on Daily and Map page are different widths
+   * from the All Saints and About page, make sure they are the same."
+   *
+   * Nothing in the stylesheet made them different — the header takes one
+   * measure on every route (`--page-max`, base.css) and this suite has pinned
+   * that since the masthead doubled. What made them different was the window.
+   * Daily and Map hold the page still (`html { overflow: hidden }`, one so the
+   * columns can scroll themselves and one so the canvas can fill the glass), so
+   * neither draws a classic scrollbar while All Saints and About do — 15 px of
+   * window on Windows and Linux, and the masthead sitting 7 px further left on
+   * half the site than on the other half.
    *
    * **The geometry half of this test cannot see that**, and saying so is the
-   * point: the browser these tests run in has overlay scrollbars, where the
-   * four routes measure the same either way. So the fix is pinned where it can
-   * be seen — the declaration that reserves the room — and the geometry beside
-   * it, because that is what breaks if a route takes its own measure again.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   * point of this paragraph: the browser these tests run in has overlay
+   * scrollbars, where the four routes measure the same either way. So the fix
+   * is pinned where it can be seen — the declaration that reserves the room —
+   * and the geometry is pinned beside it because it is the thing that would
+   * break if a route ever took its own measure again.
    */
   const routes = ['/calendar/2026-08-25', '/saints', '/about', '/map'];
   const seen = [];
@@ -2753,55 +2782,75 @@ test('the header takes one measure on every route, Daily included', async ({ pag
           header: r('header.chrome'),
           mark: r('header.chrome .site-name'),
           corner: r('header.chrome .chrome-corner'),
-          // Daily alone: the strip its saints are read down, and the standing
-          // column over its left edge. Measured off the boxes rather than read
-          // off `--td-side-w`, a `clamp()` that does not compute through a
-          // custom property (trap 9).
+          // Daily alone: the left column the bar is now the head of, and the
+          // sidebar whose width and gutter are what came out of the measure.
+          // Measured off the boxes rather than read off `--side-w`, which is
+          // `19rem` and does not compute to pixels through a custom property.
           bar: r('.chrome-bar'),
-          column: document.querySelector('.td-scroll') ? r('.td-scroll') : null,
-          side: document.querySelector('.day-side') ? r('.day-side') : null,
+          column: document.querySelector('.cal-main') ? r('.cal-main') : null,
+          side: document.querySelector('.cal-bubble') ? r('.cal-bubble') : null,
         };
       }),
     );
   }
 
   /*
-   * The mark's **whole rect**, not its left edge: a left edge alone passes a
-   * masthead that starts in the right place at any size at all.
+   * **The mark's whole rect again, since 2026-09-10.** It was narrowed to the
+   * left edge alone earlier the same day, when docs/daily-desktop-visuals.md
+   * §2.2 scoped `--text-mast-wide: 22px` to the Daily route and Daily's
+   * masthead was therefore a different size from the other three. The author
+   * reversed that within the day — one size everywhere — so the whole rect is
+   * the claim once more, and it is the stronger one: a left edge alone would
+   * pass a masthead that started in the right place at any size at all, which
+   * is exactly the state this line was relaxed into.
    *
-   * The corner's **right edge**, not its whole box: past 1024 px Daily's three
-   * controls are in the sidebar's head, so `.chrome-corner` is an empty box
-   * there and collapses to a point. Its right edge is the header's own content
-   * edge, which is the number this has always stood for. Where those controls
-   * went is asserted in `daily-panel.spec.js`, not inferred from a width here.
+   * **And the corner's *right* edge, not its whole box, since 2026-09-10.**
+   * Past 1024 px the Daily page's three controls are in the sidebar's head
+   * (§2.2 route (c), step 6 of §10.12), so `.chrome-corner` is an empty box
+   * there and collapses to a point. Its right edge is where it always was —
+   * `justify-self: end` in the header's grid, so it is the header's own
+   * content edge — which is the number this line has always been standing for.
+   * Where those controls went is asserted on Daily itself, in
+   * `daily-panel.spec.js`, rather than inferred from a width here.
    *
-   * The four routes are asserted as four rather than as three and a special
-   * case. docs/E2E-DECISIONS.md#chromespecjs
+   * **And Daily's row now *ends* somewhere else on purpose, since 2026-09-10**
+   * (§2.2's last open piece): past 1024 px the bar is that page's left column's
+   * own head, so its box stops where the column does and the sidebar stands
+   * beside it rather than under it. That is the one difference between the
+   * four routes this test is allowed to have, and it is asserted as a
+   * *derivation* rather than excused — the row ends at the column's own right
+   * edge, and the distance back to where the other three end is exactly the
+   * sidebar and the gutter between them. A bar that simply lost 336 px would
+   * pass a constant and fail this.
+   *
+   * The three site routes keep the whole of what this test was written for:
+   * one box, one measure, whether or not the page under them scrolls.
    */
-  const [daily] = routes;
+  const [daily, ...site] = routes;
   for (const [i, route] of routes.entries()) {
     expect(seen[i].gutter, `${route} does not hold the scrollbar's room`).toBe('stable');
     expect(seen[i].mark, `${route} draws the mark in its own box`).toEqual(seen[0].mark);
-    expect(seen[i].header, `${route} lays the header out in its own box`).toEqual(seen[0].header);
-    expect(seen[i].corner[1], `${route} ends the header row somewhere else`).toEqual(seen[0].corner[1]);
-    expect(seen[i].bar, `${route} draws the chrome bar in its own box`).toEqual(seen[0].bar);
+  }
+  for (const [i, route] of site.entries()) {
+    const s = seen[i + 1];
+    expect(s.header, `${route} lays the header out in its own box`).toEqual(seen[1].header);
+    expect(s.corner[1], `${route} ends the header row somewhere else`).toEqual(seen[1].corner[1]);
   }
 
-  // And Daily's own two boxes are what they claim: the strip runs the width of
-  // the page and the column stands *over* its left edge rather than beside it,
-  // which is what stopped the bar needing an exception. Asserted here because
-  // this is the test that would otherwise go green on a Daily page that had
-  // quietly lost its column.
   const d = seen[0];
-  expect(d.column, `premise: ${daily} draws no strip of saints at 1280`).not.toBeNull();
-  expect(d.side, `premise: ${daily} draws no standing column at 1280`).not.toBeNull();
-  expect(d.side[0], `${daily} does not stand its column at the strip's own left edge`).toBe(d.column[0]);
-  expect(d.side[1], `${daily} stands its column past the strip it is over`).toBeLessThan(d.column[1]);
+  expect(d.column, `premise: ${daily} draws no left column at 1280`).not.toBeNull();
+  expect(d.bar[1], `${daily} does not stop the bar at the left column`).toBe(d.column[1]);
+  expect(d.corner[1], `${daily} ends the header row past its own column`).toBe(d.column[1]);
+  expect(
+    seen[1].corner[1] - d.corner[1],
+    `${daily} gives up ${seen[1].corner[1] - d.corner[1]} px where the sidebar and its gutter are ${d.side[1] - d.column[1]}`,
+  ).toBe(d.side[1] - d.column[1]);
 
   /*
    * And not on a phone, which the author scoped out ("make sure 5 6 7 are on
-   * desktop only"): a 7 px gutter out of 360 is a real cost against a
-   * scrollbar drawn over the page rather than beside it.
+   * desktop only") and which has nothing to hold room for: a 7 px gutter out of
+   * 360 is a real cost against a scrollbar that is drawn over the page rather
+   * than beside it.
    */
   await page.setViewportSize({ width: 360, height: 780 });
   await page.goto('/saints', { waitUntil: 'networkidle' });
@@ -2884,63 +2933,6 @@ test('the masthead is one box on all six routes, at both widths and in both them
   expect(inkOn('/map'), 'a route other than Daily quietened its masthead').toBe(inkOn('/saints'));
 });
 
-test('Daily’s two boxes start on one line, and stand clear of the bar', async ({ page }) => {
-  /*
-   * Three claims, all about the reader rather than about the ornament this
-   * test was first written for (docs/E2E-DECISIONS.md#chromespecjs):
-   *
-   *  - **The day's two boxes start on the same line.** The column and the
-   *    strip it stands over are the whole page.
-   *  - **They stand off the ceiling by a real margin** (`--space-6`), read off
-   *    the drawn boxes rather than off the declaration.
-   *  - **They are clear of the bar's own box.** The bar is `position: sticky`
-   *    at `z-index: 20`, and a page raised into its band would have live
-   *    controls lying under an invisible sheet. Geometry alone cannot see
-   *    that, so two controls either side of the seam are asked what is on top
-   *    of them at their own centres.
-   *
-   * At both widths, and in a wide utility face: every box here is sized from
-   * text and `--chrome-h-reserve` is a measured constant.
-   */
-  await ready(page);
-  for (const width of [1280, 1440]) {
-    await page.setViewportSize({ width, height: 900 });
-    await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
-    await page.evaluate(() => document.fonts.ready);
-
-    const m = await page.evaluate(() => {
-      const top = (s) => document.querySelector(s).getBoundingClientRect().top;
-      const onTopOf = (s) => {
-        const el = document.querySelector(s);
-        const b = el.getBoundingClientRect();
-        const hit = document.elementFromPoint(b.left + b.width / 2, b.top + b.height / 2);
-        return Boolean(hit) && (hit === el || el.contains(hit));
-      };
-      return {
-        barBottom: document.querySelector('.chrome-bar').getBoundingClientRect().bottom,
-        sideTop: top('.day-side'),
-        stripTop: top('.td-scroll'),
-        tileTop: top('.day-tile'),
-        churchReaches: onTopOf('#church-open'),
-        stepReaches: onTopOf('.day-head .day-step'),
-      };
-    });
-
-    const at = `at ${width} px`;
-    expect(
-      Math.abs(m.sideTop - m.stripTop),
-      `the column starts at ${m.sideTop} and the strip at ${m.stripTop} ${at}`,
-    ).toBeLessThan(1);
-    // The first saint starts on that line too: the strip is the box, and a tile
-    // pushed down inside it would satisfy the line above and still be wrong.
-    expect(Math.abs(m.tileTop - m.sideTop), `the first tile is not level with the column ${at}`).toBeLessThan(1);
-    expect(m.sideTop, `the day starts above the bar ${at}`).toBeGreaterThan(m.barBottom);
-    // `--space-6`, the gutter the strip also keeps from the column beside it.
-    expect(m.sideTop - m.barBottom, `the day's boxes touch the ceiling ${at}`).toBeCloseTo(24, 0);
-    expect(m.churchReaches, `the bar's own control is under something ${at}`).toBe(true);
-    expect(m.stepReaches, `the bar's box lies over the sidebar's own controls ${at}`).toBe(true);
-  }
-});
 
 test('a press outside a chooser closes it', async ({ page }) => {
   /*

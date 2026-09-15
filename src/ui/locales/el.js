@@ -192,6 +192,8 @@ export const el = {
       epistle: 'Απόστολος',
       gospel: 'Ευαγγέλιο',
     },
+    alsoCommemorated: 'Επίσης εορτάζονται',
+    alsoToday: 'Επίσης σήμερα',
     nameDays: { heading: 'Ονομαστικές εορτές', headingToday: 'Σημερινές ονομαστικές εορτές' },
     hymns: {
       heading: 'Ύμνοι',

@@ -135,6 +135,15 @@ export const INDEX = '/saints';
  */
 export const phone = (page) => page.setViewportSize({ width: 360, height: 780 });
 
+/**
+ * The complement. Below 1024 px `lib/church.js` reckons every day Gregorian
+ * whatever church is chosen (author, 2026-09-12), so a test asserting what a
+ * church's *own* calendar prints for a date must stand above that line — at
+ * 360 px it is asserting the other calendar's answer and will read a fast,
+ * a feast or a tone that belongs to a different day.
+ */
+export const desk = (page) => page.setViewportSize({ width: 1280, height: 900 });
+
 export /** Facet groups are disclosures; a reader opens one before using it. */
 const facet = async (page, name) => {
   const group = page.locator(`[data-facet="${name}"]`);
@@ -422,3 +431,39 @@ const tokenColours = (page, ...names) =>
     probe.remove();
     return out;
   }, names);
+
+export /**
+ * The state of a grain the moment its neighbour appears beside it. Sampled from
+ * a MutationObserver rather than polled afterwards: a move is 260 ms and a poll
+ * racing it would be a flake waiting to be blamed on the machine.
+ */
+const duringMove = (page, viewport, rowClass, act) =>
+  page.evaluate(
+    ([viewport, rowClass, act]) =>
+      new Promise((resolve) => {
+        const vp = document.querySelector(viewport);
+        const observer = new MutationObserver(() => {
+          const side = vp.querySelector(`.${rowClass}.grain-side`);
+          if (!side) return;
+          observer.disconnect();
+          const live = vp.querySelector(`.${rowClass}:not(.grain-side)`);
+          const peeks = (row) =>
+            [...row.querySelectorAll('.peek .day-num, .peek-cell')].map((e) =>
+              e.firstChild.textContent.trim(),
+            );
+          resolve({
+            rows: vp.querySelectorAll(`.${rowClass}`).length,
+            sides: [...vp.querySelectorAll('.grain-side')].map((s) => s.style.left),
+            hidden: side.getAttribute('aria-hidden'),
+            reachable: [...side.querySelectorAll('button')].filter((b) => b.tabIndex !== -1).length,
+            reach: getComputedStyle(side).pointerEvents,
+            clipped: vp.classList.contains('is-moving'),
+            sidePeeks: peeks(side),
+            livePeeks: peeks(live),
+          });
+        });
+        observer.observe(vp, { childList: true, subtree: true, attributes: true });
+        document.querySelector(act).click();
+      }),
+    [viewport, rowClass, act],
+  );

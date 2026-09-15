@@ -195,6 +195,8 @@ export const ru = {
       epistle: 'Апостол',
       gospel: 'Евангелие',
     },
+    alsoCommemorated: 'Также совершается память',
+    alsoToday: 'Также сегодня',
     nameDays: { heading: 'Именины', headingToday: 'Сегодняшние именины' },
     hymns: {
       heading: 'Песнопения',

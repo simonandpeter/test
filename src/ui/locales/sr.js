@@ -192,6 +192,8 @@ export const sr = {
       epistle: 'Апостол',
       gospel: 'Јеванђеље',
     },
+    alsoCommemorated: 'Такође се празнују',
+    alsoToday: 'Такође данас',
     nameDays: { heading: 'Имендани', headingToday: 'Данашњи имендани' },
     hymns: {
       heading: 'Песме',

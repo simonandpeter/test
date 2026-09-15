@@ -136,99 +136,60 @@ for (const [label, path, prepare] of ROUTES) {
  * silent to the reader. **Two weights would pass; they must not.**
  * docs/E2E-DECISIONS.md#quality-floorspecjs
  */
-test('a day in the month grid is told apart by shape and by words, not only by hue', async ({ page }) => {
+test('a day mark is told apart by shape, not only by hue', async ({ page }) => {
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
 
   const shapes = await page.evaluate(() => {
-    /*
-     * Probe cells mounted in the real grid rather than whichever marks this
-     * month happens to carry: the question is whether these classes draw
-     * differently with the colour taken away, which is a fact about the
-     * stylesheet, and the corpus is free to stop having a fish week. Reading
-     * the live cells instead once compared one kind against itself.
-     */
-    const grid = document.querySelector('.cal');
+    const kinds = ['mark-fast', 'mark-fish', 'mark-feast'];
     const out = {};
-    for (const kind of ['plain', 'is-fast', 'is-fish', 'is-feast']) {
-      // A button, because that is what the grid renders: a span would measure
-      // an element this page does not draw, and the button's own borders are
-      // reset in a rule a span never matches.
-      const el = document.createElement('button');
-      el.className = kind === 'plain' ? 'cal-day' : `cal-day ${kind}`;
-      el.textContent = '8';
-      grid.append(el);
+    /*
+     * Probe elements in the rail's own row rather than whichever marks this
+     * week happens to carry. The first version read the live dots and asserted
+     * its own premise, which is how it reported that 30 January's week stands
+     * only a strict fast: one kind, and a comparison of one thing against
+     * itself is green for the wrong reason.
+     *
+     * The question here is exactly "do these three classes draw differently
+     * with the colour taken away", which is a fact about the stylesheet and not
+     * about the corpus — and the corpus is free to stop having a fish week.
+     * They are mounted inside a real `.day-marks` row so anything inherited or
+     * descendant-scoped applies as it does in place.
+     */
+    const row = document.querySelector('.week-strip .day-marks') ?? document.querySelector('.week-strip button');
+    for (const kind of kinds) {
+      const el = document.createElement('span');
+      el.className = `day-mark ${kind}`;
+      row.append(el);
       const s = getComputedStyle(el);
-      /*
-       * Everything a reader could tell the cells apart by *except* colour, so
-       * a rule that differs only in its ink reads here as no rule at all.
-       *
-       * A *fully transparent* colour masks to its own token, not to `C`: every
-       * `.cal-day` carries a transparent `border-top` so no cell moves when a
-       * mark appears, and collapsing that placeholder into an inked rule would
-       * make a day with a fast read exactly like a day without one.
-       */
-      const noInk = (v) =>
-        String(v)
-          .replace(/rgba\([^)]*,\s*0(\.0+)?\s*\)/gi, 'BLANK')
-          .replace(/(rgba?\([^)]*\)|#[0-9a-f]{3,8})/gi, 'C');
+      // Everything a reader could tell the marks apart by *except* colour.
       out[kind] = [
         s.width,
         s.height,
         s.borderRadius,
         s.borderTopWidth,
-        s.borderTopStyle,
-        noInk(s.borderTopColor),
         s.borderStyle,
-        noInk(s.boxShadow),
-        s.outlineStyle,
-        s.outlineWidth,
-        s.textDecorationLine,
-        s.fontWeight,
         s.transform,
-        getComputedStyle(el, '::after').content,
+        s.clipPath,
+        getComputedStyle(el, '::before').content,
       ].join('|');
       el.remove();
     }
     return out;
   });
 
-  // The premise, asserted rather than assumed: four probes, or the comparisons
-  // below are green because they compared nothing.
-  expect(Object.keys(shapes), 'a probe went missing from the grid').toHaveLength(4);
-  expect(shapes['is-feast'], 'a feast is drawn exactly like a plain day, so only colour marks it').not.toBe(
-    shapes.plain,
-  );
-  expect(shapes['is-fast'], 'a strict fast is drawn exactly like a plain day, so only colour marks it').not.toBe(
-    shapes.plain,
-  );
-  expect(shapes['is-fish'], 'a fish day is drawn exactly like a plain day, so only colour marks it').not.toBe(
-    shapes.plain,
-  );
-  // The pair the audit was written for: two marks that are each a shape but the
-  // same shape are still one channel between them.
-  expect(shapes['is-fast'], 'a fast and a fish day are the same shape, so only colour tells them apart').not.toBe(
-    shapes['is-fish'],
-  );
+  const kinds = Object.keys(shapes);
+  // The premise, asserted rather than assumed: three kinds, or the loop below
+  // is green because it compared nothing.
+  expect(kinds, 'a mark kind went missing from the probe').toHaveLength(3);
 
-  // The words, off the live grid: every marked cell names its mark in its own
-  // accessible name, so the numeral's colour is never the only thing saying it.
-  const said = await page.evaluate(() => {
-    const cells = [...document.querySelectorAll('.cal-day')];
-    const marked = cells.filter((c) => ['is-fast', 'is-fish', 'is-feast'].some((k) => c.classList.contains(k)));
-    return marked.map((c) => ({
-      kinds: ['is-fast', 'is-fish', 'is-feast'].filter((k) => c.classList.contains(k)),
-      label: c.getAttribute('aria-label') ?? '',
-    }));
-  });
-
-  // Again the premise: a month with nothing marked in it proves nothing.
-  expect(said.length, 'no day in this month carries a mark, so the loop below asserts nothing').toBeGreaterThan(0);
-
-  const WORDS = { 'is-fast': 'a fast', 'is-fish': 'fish permitted', 'is-feast': 'a feast' };
-  for (const { kinds, label } of said) {
-    for (const kind of kinds) {
-      expect(label.toLowerCase(), `a ${kind} day says its mark in colour and nowhere else`).toContain(WORDS[kind]);
+  for (const a of kinds) {
+    for (const b of kinds) {
+      if (a >= b) continue;
+      expect(
+        shapes[a],
+        `${a} and ${b} are the same shape, so only colour tells them apart`,
+      ).not.toBe(shapes[b]);
     }
   }
 });
@@ -266,15 +227,21 @@ test('every interactive element takes visible keyboard focus', async ({ page }) 
 
 test('the heading takes focus on navigation but not on arrival', async ({ page }) => {
   // Moving focus to the new h1 is how a single-page app tells a screen reader
-  // the page changed — but on the first page of a visit there is nothing to
-  // announce, and Chrome scores a programmatic focus with no interaction behind
-  // it as keyboard-driven, ringing the heading of every fresh load.
+  // the page changed. On the first page of a visit there is no change to
+  // announce, and Chrome scores a programmatic focus with no interaction
+  // behind it as keyboard-driven — which put a focus ring around the heading
+  // of every freshly loaded page until the reader clicked it away.
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   expect(await page.evaluate(() => document.activeElement?.tagName)).not.toBe('H1');
 
   await page.locator('.site-nav a[href$="/saints"]').click();
-  await expect(page.locator('h1')).toHaveText('All Saints');
+  // The stage keeps both faces mounted and, for the length of a swap, both are
+  // paintable — so there are two level-1 headings in the accessibility tree
+  // until it lands, and only the parked one's `visibility: hidden` takes it
+  // back out. Wait for the swap rather than racing it.
+  await expect(page.locator('.face-stage[data-swapping]')).toHaveCount(0);
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('All Saints');
   await expect
     .poll(() => page.evaluate(() => document.activeElement?.tagName))
     .toBe('H1');

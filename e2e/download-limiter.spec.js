@@ -44,7 +44,7 @@ test('the day records and the locale packs are fetched, not carried in the entry
   // And the page is whole, which is the half that matters: the records are in
   // before the column is painted, so the tag carries its grade at first sight.
   await expect(page.locator('[data-readings] a').first()).toBeVisible();
-  await expect(page.locator('.day-tags .tag').first()).toHaveAttribute('data-fast', /.+/);
+  await expect(page.locator('[data-liturgy] .fast').first()).toHaveAttribute('data-fast', /.+/);
   await expect(page.locator('#church-open')).toHaveText('Русская');
 
   /*

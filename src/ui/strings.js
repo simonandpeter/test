@@ -142,13 +142,6 @@ export const STRINGS = {
      * Not drawn: the sidebar heads the day where a reader can see it, and this
      * is what a reader who cannot is given instead of a run of unlabelled
      * articles.
-     *
-     * **`alsoCommemorated` and `alsoToday` stood here and are gone**
-     * (2026-09-12). They headed the register of the saints *besides* the
-     * hero — two widths' worth of words for one heading, the author's own
-     * rename of 2026-09-10 — and the rebuild put the hero into the same strip
-     * as everybody else, so there is no "also" left for them to name. What is
-     * drawn above the day is the desktop redesign's to decide.
      */
     commemorationsFor: 'Commemorations for {date}',
     /*
@@ -469,6 +462,8 @@ export const STRINGS = {
      * between families inside them, and lib/name-days.js states the day's
      * names rather than anyone's obligation.
      */
+    alsoCommemorated: 'Also commemorated',
+    alsoToday: 'Also today',
     nameDays: { heading: 'Name days', headingToday: "Today's name days" },
     // The hymns of the day's saint or feast, in the chosen church's language,
     // copied whole from the cited source (author, 2026-08-22).

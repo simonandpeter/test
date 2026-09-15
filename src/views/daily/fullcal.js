@@ -41,22 +41,7 @@ import { countFor, dayRecordFor } from './entries.js';
 import { reckonedMonth, reckonedPlain, utc, weekdayFmt } from './format.js';
 
 import { state } from './state.js';
-
-/**
- * A month either side of the one showing — the whole of what this dialog has
- * ever needed from the month picker.
- *
- * It lived in `picker.js` until that file was deleted with the week rail and
- * the small month view (2026-09-12), and it came here rather than to
- * `lib/calendar-page.js` because this is now its only caller: three lines of
- * modular arithmetic over a `{year, month}` pair, with no calendar and no
- * state behind them. December steps to the following January and January back
- * to the previous December, which `Math.floor` of a negative gives for free.
- */
-const stepCursor = (c, n) => ({
-  year: c.year + Math.floor((c.month + n - 1) / 12),
-  month: ((c.month + n - 1 + 12) % 12) + 1,
-});
+import { stepCursor } from './picker.js';
 
 /*
  * A format of its own, because `format.js`'s month carries the year with it —
@@ -64,6 +49,44 @@ const stepCursor = (c, n) => ({
  * The month's own name, in the reader's language.
  */
 const longMonth = (d) => formatDate({ month: 'long', timeZone: 'UTC' }, d);
+
+/*
+ * The four corners of a frame opening outwards, 13 px, stroked in
+ * `currentColor` so it takes the head's own quiet ink and introduces no
+ * colour. `aria-hidden`, because the words beside it in the button's label are
+ * what a screen reader is given.
+ */
+const ICON_FULL = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
+  stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+  <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>
+</svg>`;
+
+/**
+ * The button that opens it: a mark in the month's head, with the words it used
+ * to print as its accessible name and its `title`.
+ *
+ * **It printed "Open Fullscreen" until 2026-09-10**
+ * (docs/daily-desktop-visuals.md §10.13). The words are the author's, twice
+ * over — 2026-09-02, "change to 'Open Fullscreen'" — and they are not gone:
+ * they are what a screen reader is given and what a pointer is shown. What
+ * changed is the column. At 19 rem the head is 272 px and has to hold a
+ * stepper either side, the month, the year and the reckoning; the words took
+ * about a hundred of those pixels and the two steppers collapsed to nothing,
+ * which is how this was found rather than argued. The author drew it as a
+ * four-corner mark in this head twice on 2026-09-10 ("Add a make fullscreen
+ * icon button to the left of the Month Name", then "Put the make full screen
+ * button to the right of the month and Reckoning"), which is the later
+ * instruction of the two.
+ *
+ * The control exists only past 1024 px — calendar.css hides it below, author
+ * 2026-09-02 — so there is no width at which a reader sees the words as words,
+ * and nothing is served by keeping a copy of them in the markup for a
+ * stylesheet to hide.
+ */
+export const fullCalButton = () =>
+  `<button type="button" class="fullcal-open" data-fullcal aria-haspopup="dialog"
+    aria-label="${esc(STRINGS.calendar.fullScreen)}"
+    title="${esc(STRINGS.calendar.fullScreen)}">${ICON_FULL}</button>`;
 
 /**
  * **The calendar this month is counted in** (2026-09-02), which is the small
@@ -134,7 +157,7 @@ function fastOf(iso, church) {
  * out — "Friday" is not a period, and the grid prints the day's own name above
  * it anyway.
  */
-function periodsIn(cursor, church) {
+export function periodsIn(cursor, church) {
   const runs = [];
   const days = daysInMonth(cursor);
   for (let day = 1; day <= days; day += 1) {
@@ -169,7 +192,7 @@ function periodsIn(cursor, church) {
 }
 
 /** The Great Feasts falling in one month, in date order. */
-function feastsIn(cursor, church) {
+export function feastsIn(cursor, church) {
   const found = [];
   const days = daysInMonth(cursor);
   for (let day = 1; day <= days; day += 1) {
@@ -329,19 +352,15 @@ function build(el) {
 }
 
 /**
- * Wires the opener, and builds the dialog the first time it is asked for.
+ * Wires the button, and builds the dialog the first time it is asked for.
  *
  * Built late on purpose: a month of cells is a few hundred nodes and thirty-one
  * walks through the paschal arithmetic, and the overwhelming majority of visits
  * to the Daily page never open it. Nothing is paid for until it is.
- *
- * **Delegated on `el`, not bound to the button.** The opener only exists past
- * 1024 px and is rewritten into its slot on every day step
- * (`sidebar.js`'s `monthCaption`), so a listener holding one node would be
- * dropped by the first paint after this — and would have to be re-wired by
- * whatever noticed the window crossing the line.
  */
 export function wireFullCal(el) {
+  const open = el.querySelector('[data-fullcal]');
+  if (!open) return null;
   let dialog = null;
 
   const step = (n) => {
@@ -387,8 +406,7 @@ export function wireFullCal(el) {
 
   const onClose = () => shift(false);
 
-  const onOpen = (e) => {
-    if (!e.target.closest('[data-fullcal]')) return;
+  const onOpen = () => {
     if (!dialog) {
       dialog = build(el);
       dialog.addEventListener('click', onBody);
@@ -401,9 +419,9 @@ export function wireFullCal(el) {
     shift(true);
   };
 
-  el.addEventListener('click', onOpen);
+  open.addEventListener('click', onOpen);
   return () => {
-    el.removeEventListener('click', onOpen);
+    open.removeEventListener('click', onOpen);
     dialog?.removeEventListener('click', onBody);
     dialog?.removeEventListener('close', onClose);
     dialog?.remove();

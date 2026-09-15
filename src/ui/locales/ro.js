@@ -192,6 +192,8 @@ export const ro = {
       epistle: 'Apostol',
       gospel: 'Evanghelie',
     },
+    alsoCommemorated: 'Se mai pomenesc',
+    alsoToday: 'Tot astăzi',
     nameDays: { heading: 'Onomastici', headingToday: 'Onomasticile de azi' },
     hymns: {
       heading: 'Cântări',
