@@ -411,11 +411,10 @@ boundary spelled differently in different sheets.
 | `max-width: 1023.98px` | `calendar.css`, `saint.css` | the day's strip stops being its own scroller; the saint's columns take `pan-y` for the swipe |
 | `min-width: 1024px` | `base.css`, `calendar.css`, `saint.css` | Daily's two columns, and every other desk arrangement |
 
-**760 and 767.98 are two numbers for one idea, and so are 1023 and 1023.98.**
-The `.98` spellings exist so a fractional window width falls in exactly one of
-a `min`/`max` pair; `daily-sidebar.css`'s bare `1023px` and
-`daily-tiles.css`'s `767.98px` are each the odd one out in their own
-neighbourhood. Recorded, not reconciled: a breakpoint moved is a layout
+**620 and 619.98, 759 and 759.98, are two numbers for one idea each.** The
+`.98` spellings exist so a fractional window width falls in exactly one of a
+`min`/`max` pair, and `calendar.css`'s bare `759px` is the odd one out in its
+own neighbourhood. Recorded, not reconciled: a breakpoint moved is a layout
 changed, and that wants the contact sheet in front of it.
 
 **1024 is the one a module may not spell for itself.** `lib/viewport.js` holds

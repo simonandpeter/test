@@ -12,19 +12,17 @@ sitting's record here, put it in the commit message instead.
 
 ---
 
-## State, end of 2026-09-12
+## State, end of 2026-09-15
 
-**Nine commits unpushed**, local `HEAD` `2cddfaa`, remote `46dbbaf`.
-`bash scripts/state.sh` is the truth about this — `git status` lies here,
-because a PAT push never updates `origin/main`.
+**Six commits unpushed**, local `HEAD` `eae39cd` plus the doc commit after it,
+remote `4bf4cdf`. `bash scripts/state.sh` is the truth about this — `git status`
+lies here, because a PAT push never updates `origin/main`.
 
-- **396 unit tests pass.** `locale-coverage` 0 fallbacks in all four packs.
-- **The full browser suite has now run against a real build**: 720 tests,
-  715 pass. The five that did not are `map.spec.js` under six workers plus one
-  assertion since fixed; **map and `index-carousel` pass 230 of 230 run
-  alone**, which is this desk's parallel load and not the diff.
-- **862 saints**, 1,221 attestations, 126 undated, 130 icons. 144 day records,
-  23 Aug 2026 – 13 Jan 2027; the corpus reaches 28 September 2026.
+- **407 unit tests pass.** `locale-coverage` 0 fallbacks in all four packs.
+- **Full browser suite: 976 passed, 6 failed**, and all six pass alone —
+  266 of 266 at two workers across `map`, `pwa`, `index-carousel` and
+  `daily-stage`. That is this desk's parallel load, not the diff.
+- **862 saints**, 130 icons. The corpus reaches 28 September 2026.
 - The PAT is at `C:\Users\matei\Documents\Agios Website Ex\update git.txt`.
   `bash scripts/push.sh` pushes and reads the CI run in one step.
 
@@ -37,65 +35,91 @@ budget comes from `scripts/build-manifest.mjs`. Read them from the run.
 
 ## The one thing that must happen next
 
-**Nothing is blocking.** The three tests that had never executed — both of
-`e2e/download-limiter.spec.js` and `chrome.spec.js`'s masthead and preload
-pair — have now run against `dist/` and pass. The masthead one was red when it
-first ran and is fixed: it read the whole served HTML for `>AGIOS<`, and the
-rename of 2026-09-12 made `<title>AGIOS</title>` match it.
+**Nothing is blocking, and nothing has been pushed.** Six commits sit on top of
+the remote, the largest of them the Daily revert. `npm run test:lighthouse` has
+**not** been run against the reverted tree — `calendar.css` is back in the
+render-blocking bundle and `daily.css` is gone, so the entry stylesheet's size
+has moved and only that run knows which way. **Run it before pushing.**
 
-`docs/WHERE-WE-ARE.md` is the open work, and its "Decided, not yet done"
-section is empty. What is left there is the Daily desktop redesign, which
-needs the author to describe it, and four things nobody has ruled on.
-
----
-
-## What a phone now does that a desk does not
-
-**Below 1024 px the site is Gregorian throughout** — the date it prints, the
-month it colours, *and the days it calls a fast*. `lib/church.js`'s
-`calendarFor` answers `gregorian` regardless of church, so an Old Calendar
-reader on a phone is shown the Dormition Fast on 1–14 August where the desk
-shows them 14–27.
-
-This is here rather than in a commit message because it is the one place the
-site deliberately tells two readers two different things about the same day,
-and the next person to meet it will read it as a bug. It is not: the
-consequence was measured, put to the author on 2026-09-12 and the ruling
-re-confirmed. It is one branch in one function to reverse.
-
-`lib/viewport.js` holds the 1024 for JavaScript. Two modules read it — the
-Daily page's full-screen opener and that reckoning — and `PLAN.md` §4 now
-lists every breakpoint and named measure in the sheets, with
-`tests/plan.test.mjs` reading both directions.
+`docs/WHERE-WE-ARE.md` is the open work. Its first item — the Daily desktop
+redesign — is now the live question, and the author has not yet given the
+design.
 
 ---
 
-## In flight: the defects agent's work, still only half checked
+## The Daily page was reverted on 2026-09-15
 
-`aa72f65` is three performance fixes by a subagent, committed on its own so it
-can be dropped whole. Since then:
+`eae39cd` takes the page back to `f31520a`, the last commit before the
+2026-09-12 rebuild. The rebuild had replaced the week rail with a standing
+month calendar and the register with tiles, at both widths, without the brief
+`docs/WHERE-WE-ARE.md` still lists as unfinished; the author was unhappy with
+both faces of it.
 
-- **Its All Saints fix has been read in the diff and the mechanism holds**
-  (`paintGrid` returns early while the mode is `carousel`; `applyMode` calls
-  `state.layoutGrid()` after the `hidden` attribute comes off). `PLAN.md` §7
-  item 2 is rewritten around it. **Its numbers are still only its own**, and
-  it reported two different sets for the same quantity — 394–606 ms in the
-  code's comment against 367–403 in the commit message. Direction established,
-  magnitude not.
-- **One of its tests was wrong and is fixed** (`2cddfaa`): the dense-screen
-  card assertion required a decoded width of 280 px from a corpus that does
-  not guarantee one.
-- **The nav-strip swipe fix and the card derivatives have not been reviewed at
-  all.** 130 new `saints/*/images/icon-card-sm.jpg` are committed.
+**It is a path-scoped checkout, not a `git revert`,** because the rebuild's
+commits are interleaved with work that stays: the AGIOS rename, 178 dead
+citations, the performance subagent's fixes, 130 card derivatives.
+
+**Kept and untouched:** the rebrand, the corpus, every hymn's English,
+`ui/face-stage.js` and `main.js`'s stage wiring, the 1024 px Gregorian ruling,
+`lib/viewport.js`.
+
+**What a checkout could not carry** is in `eae39cd`'s message in full. The
+shape of it, because the next revert of anything will meet the same five
+classes: a constant swept out as dead code that is load-bearing again
+(`REGISTER_LAYOUTS`); string keys deleted from all five packs; a test helper
+that went with its spec (`duringMove`); `PLAN.md` §4's tables, which
+`tests/plan.test.mjs` reads in both directions and which went red at once; and
+**twelve tests asserting a church's own calendar on a phone**, which the
+Gregorian ruling contradicts — they now stand above 1024 px through a new
+`desk()` helper in `e2e/helpers.js` rather than being quietly re-dated.
+
+**`chrome.spec.js` was reconciled test by test, not restored whole.** `AGIOS`
+appears in it 14 times now against 2 at `f31520a`; a blanket checkout would
+have undone the rename's own tests. Anyone reverting further must do the same.
+
+**Two findings from the reconciliation, neither about the Daily page:**
+
+- **The rebuilt page had no `<h1>` at all.** That is why `quality-floor`'s
+  heading test passed against it. The restored page has one, and it collided
+  with All Saints' — not because the parked face is exposed (it is
+  `visibility: hidden` and out of the accessibility tree) but because
+  `base.css` deliberately makes **both layers paintable for the length of a
+  swap**. The test was racing it and now waits for `data-swapping` to clear.
+- **201 of 211 feast hymns in `src/data/liturgical-days.js` have no English.**
+  The 2026-09-12 pass covered the *saints'* hymns — 428 of 428 — and that is
+  the whole of what "the hymns are translated" means today.
+
+---
+
+## Two commits of another session's work, committed cold
+
+`502aed1` and `1b1d811` are 47 tracked files and 520 image derivatives that had
+sat uncommitted in the tree since 2026-09-12, found three days cold. They are
+committed **unchanged and unreviewed** beyond `npm test`, so that the revert
+could not lose them:
+
+- `502aed1` — webp and row image derivatives, a CI byte-budget step, and the
+  four probe scripts moved from `scratchpad/` into `scripts/`.
+- `1b1d811` — the comment extraction into `docs/SRC-DECISIONS.md` and
+  `docs/E2E-DECISIONS.md`. **Its Daily-page files were replaced wholesale by
+  the revert**, so whatever of that pass still applies there has to be replayed
+  from this commit rather than kept. It is also what deleted `REGISTER_LAYOUTS`.
 
 ---
 
 ## Two things git cannot tell you
 
+**`android/app/src/main/assets/public/` holds a built copy of the site from
+2026-09-05** — before the rename and before the rebuild, so its masthead reads
+"Daily Dox" and its Daily page is the week rail. It is **gitignored and
+untracked**: the only copy of that state outside git, and `npm run app:sync`
+would overwrite it. It was the reference for what the page used to look like.
+
 **`shots/baseline-before-daily-rebuild` exists and must never be re-shot.**
 16 tiles of `/saints` from before the Daily rebuild, and `shots/` is gitignored,
-so nothing else records that it is there. The instinct — re-shoot, then
-compare — destroys the only evidence there was.
+so nothing else records that it is there. `shots/baseline-new-daily-2026-09-15`
+is beside it now: 4 tiles of `/` at 360 and 1280 in both themes, the rebuilt
+page as it stood the moment before the revert. Same rule — do not re-shoot it.
 
 ```bash
 MSYS_NO_PATHCONV=1 node scripts/contact-sheet.mjs --still --routes=/saints \
@@ -115,9 +139,9 @@ the history is not. It is unpushed, so a rebase would still tidy it.
 
 ## Standing facts about this tree
 
-**`npm run app:sync` has not been run.** The copies under
-`android/app/src/main/assets/public/` and `ios/App/App/public/` are stale build
-output still carrying the old name.
+**`npm run app:sync` has not been run**, and see the warning above before
+running it. The copies under `android/app/src/main/assets/public/` and
+`ios/App/App/public/` are stale build output still carrying the old name.
 
 **`PLAN.md` §3 "The name" lists all fourteen places the brand is written
 down** — change it there and in all fourteen, in one commit.

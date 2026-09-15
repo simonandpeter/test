@@ -262,7 +262,7 @@ folders, not the manifest.
 | touched | run |
 | --- | --- |
 | `views/index/*`, `index.css`, `lib/index-filters.js`, `lib/virtual-grid.js` | `index-carousel`, `index-grid`, `index-controls` |
-| `views/daily/*`, `calendar.js`, `daily.css`, `daily-sidebar.css`, `daily-tiles.css`, `lib/liturgy.js`, `feasts.js`, `computus.js` | `daily-panel`, `daily-sidebar`, `daily-tiles` |
+| `views/daily/*`, `calendar.js`, `calendar.css`, `lib/liturgy.js`, `feasts.js`, `computus.js` | `daily-panel`, `daily-picker`, `daily-register`, `daily-stage` |
 | `lib/manifest.js`, `main.js`'s boot, a new import on a view's first-paint path | `download-limiter` — the two tests that hold the first load to its budget |
 | `views/saint.js`, `saint.css`, `lib/detail.js`, `cross-link.js`, `ui/hymns.js` | `saint.spec.js` |
 | `ui/*`, `main.js`, `base.css`, `tokens.css` | `chrome.spec.js` + the surface; `ui/face-stage.js` and `main.js`'s pair branch also `daily-stage` |
