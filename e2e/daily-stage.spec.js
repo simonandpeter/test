@@ -250,8 +250,15 @@ test('leaving the pair for a third route takes the stage down', async ({ page })
   await expect(page.locator('.face-stage[data-face="calendar"]')).toBeVisible();
 
   await page.locator('.site-nav a[href$="/about"]').click();
-  await expect(page.locator('#view h1')).toBeVisible();
+  /*
+   * **The stage first, and that order is the whole of it.** Until it comes
+   * down both parked faces' headings are still in `#view`, so `#view h1`
+   * matches two — and a strict mode violation is raised at once rather than
+   * retried, so asserting the heading first fails on the transient state
+   * instead of waiting through it. `toHaveCount(0)` does wait.
+   */
   await expect(stage(page)).toHaveCount(0);
+  await expect(page.locator('#view h1')).toBeVisible();
   expect(await restingFace(page)).toBe(null);
   expect(await page.evaluate(() => document.documentElement.dataset.fillsWindow)).toBe(undefined);
 });

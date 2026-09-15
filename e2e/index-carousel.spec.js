@@ -1955,10 +1955,26 @@ test('a phone takes the narrow card file, and a dense screen takes the wide one'
     expect(picked.dpr, 'the context did not take the density it was given').toBe(dpr);
 
     if (dpr === 1) {
-      // 150 CSS px at one device pixel: the 280 px derivative is already
-      // nearly twice what the box needs, and 560 was the defect.
-      expect(picked.src, `a phone at one device pixel took ${picked.src}`).toContain('-card-sm.jpg');
-      expect(picked.natural, `the picture decoded at ${picked.natural} px wide`).toBeLessThanOrEqual(280);
+      /*
+       * **The ratio, not the filename — for the same reason the dense branch
+       * below gives.** `make_thumbs.py` cannot cut a card wider than the icon
+       * it was given, so 8 of the 130 icons yield a `cardSm` under the 150 px
+       * box and `modes.js` correctly falls back to the wide file for them
+       * (Pulcheria's is 90 px, from a 556x1721 icon; three of the eight then
+       * take a card of 283–298 px). Which saint is first is a race between
+       * eleven pictures for the network (trap 5), so both `-card-sm.jpg` and a
+       * flat 280 px ceiling are facts about one saint's source rather than
+       * about the rule.
+       *
+       * The defect this guards was a 560 px file in a 150 px box — 3.7x. The
+       * widest legitimate fallback in the corpus is 298 px, 1.99x. 2.5
+       * separates them and belongs to neither.
+       */
+      expect(picked.src, `a phone took the undersized icon ${picked.src}`).toMatch(/-card(-sm)?\.jpg$/);
+      expect(
+        picked.natural / picked.drawn,
+        `${picked.natural} px into a ${picked.drawn} px box`,
+      ).toBeLessThanOrEqual(2.5);
     } else {
       // 150 CSS px at three device pixels is 450, which the narrow file cannot
       // fill — taking it here would be the opposite mistake, and a cheaper one
