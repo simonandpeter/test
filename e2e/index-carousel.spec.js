@@ -1606,9 +1606,19 @@ test('the row loads what is on screen before what is off it, a few at a time', a
       const r = img.getBoundingClientRect();
       return r.right > box.left && r.left < box.right && !img.hasAttribute('src');
     }).length;
+    /*
+     * **Both card derivatives, because a phone asks for the other one.**
+     * `endsWith('-card.jpg')` matched nothing at 360 px from the moment
+     * `build-manifest.mjs` began emitting `cardSm`: the row picks
+     * `icon-card-sm.jpg` there and `icon-card.jpg` only on a desk. Measured
+     * 2026-09-15 — 0 of 10 requests matched at 360, 8 of 8 at 1280 — so
+     * `total` and `peak` were both 0 and the premise guard below is what
+     * caught it. The extension is a group for the same reason: a webp
+     * derivative would walk straight back into this.
+     */
     const cards = performance
       .getEntriesByType('resource')
-      .filter((e) => e.name.includes('/images/') && e.name.endsWith('-card.jpg'));
+      .filter((e) => /\/images\/.*icon-card(-sm)?\.(jpg|webp)$/.test(e.name));
     // The most requests alive at any one moment.
     let peak = 0;
     for (const a of cards) {
