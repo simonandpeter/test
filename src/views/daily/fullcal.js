@@ -66,7 +66,7 @@ const ICON_FULL = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" s
  * to print as its accessible name and its `title`.
  *
  * **It printed "Open Fullscreen" until 2026-09-10**
- * (docs/daily-desktop-visuals.md §10.13). The words are the author's, twice
+ * The words are the author's, twice
  * over — 2026-09-02, "change to 'Open Fullscreen'" — and they are not gone:
  * they are what a screen reader is given and what a pointer is shown. What
  * changed is the column. At 19 rem the head is 272 px and has to hold a
@@ -303,7 +303,7 @@ function aside(cursor, church) {
    * A month with neither is not a gap in the data — most months of the year
    * have no Great Feast and several have no named fasting period — so it says
    * so in a sentence rather than showing two empty headings, which is the
-   * furniture PLAN.md refuses.
+   * furniture STRUCTURE.md refuses.
    */
   return periods || great
     ? `<div class="fc-aside">${periods}${great}</div>`

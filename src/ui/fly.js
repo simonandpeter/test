@@ -21,7 +21,7 @@
  * duration, and the flier is pinned out of flow first so the closing box
  * cannot clip it.
  *
- * Which makes reduced motion the interesting case. PLAN.md's Motion
+ * Which makes reduced motion the interesting case. STRUCTURE.md's Motion
  * section: reduced
  * motion **removes**, never shortens — so there is no flight and no collapse
  * at all, and `done` runs at once. The information the flight carried is not
@@ -249,7 +249,7 @@ export function flyOutOf(el, source, done = () => {}, { expand = null } = {}) {
   setTimeout(finish, FLIGHT + 80);
 
   /*
-   * A forced layout between the two values, for the reason PLAN.md
+   * A forced layout between the two values, for the reason STRUCTURE.md
    * gives about the month unfurling: without a flush the browser coalesces
    * the start and the end into one recalculation and there is no transition
    * left to run. `flyInto` gets this free from its `requestAnimationFrame`;

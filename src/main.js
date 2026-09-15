@@ -121,7 +121,7 @@ function paintDailyLabel(fade = true) {
     return;
   }
   clearTimeout(fadeTimer);
-  // Removed, not shortened (PLAN.md): reduced motion gets the word, not
+  // Removed, not shortened (STRUCTURE.md): reduced motion gets the word, not
   // a faster fade to it.
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!fade || reduced) {

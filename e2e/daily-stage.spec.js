@@ -410,7 +410,7 @@ const BROAD = 'martyr';
 
 /** Waits until the row is wider than its own viewport, so that it *can* drift.
  *  All Saints packs every caption in one blocking task before it can paint a
- *  column (PLAN.md item 7), and under parallel load that task can eat a whole
+ *  column (STRUCTURE.md item 7), and under parallel load that task can eat a whole
  *  budget — `index-carousel.spec.js` separates the two for the same reason. */
 const rowReady = (page) =>
   expect

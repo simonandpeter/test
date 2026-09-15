@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { typeGlyph } from '../src/lib/saint-types.js';
 
 /**
- * The register's type glyph (docs/daily-desktop-visuals.md §5.1, §10.10): the
+ * The register's type glyph: the
  * mark a row shows where the saint has no icon, so the reader is told what kind
  * of saint this is rather than shown a hole.
  *

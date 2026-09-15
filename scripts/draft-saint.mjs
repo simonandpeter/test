@@ -149,7 +149,7 @@ function houseRules(saint, life, readOn) {
   const name = String(saint.display_name ?? '');
 
   /*
-   * The naming contract (PLAN.md). `display_name` held name, office, rank and
+   * The naming contract (STRUCTURE.md). `display_name` held name, office, rank and
    * death year in one string until 2026-08-27 — "Gorazd, Bishop of Bohemia and
    * Moravia-Silesia, Hieromartyr (1942)" — and every naming rule since rests on
    * having taken it apart. A rank left in the name is the bug this protocol

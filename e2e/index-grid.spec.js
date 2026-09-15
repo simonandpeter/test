@@ -302,7 +302,7 @@ test('a fading card is set aside, and one brought back mid-fade is whole again',
 
 test('the day ground is gesso, and the field is recessed into it', async ({ page }) => {
   // The author pinned the light ground at rgb(229, 228, 221) on 2026-08-22,
-  // replacing the near-white #fbfaf7 PLAN.md had carried until then, and
+  // replacing the near-white #fbfaf7 STRUCTURE.md had carried until then, and
   // warmed it again to #ECE5D6 — rgb(236, 229, 214) — on 2026-09-01. Three
   // derived values moved with it and each is asserted below, because each was
   // a relationship the old near-white ground was holding up by accident: the
@@ -337,7 +337,7 @@ test('the day ground is gesso, and the field is recessed into it', async ({ page
   // The ground itself, exactly as asked.
   expect(seen.page).toBe('rgb(236, 229, 214)');
 
-  // A card is a kovcheg: the field sits *below* the page tone (PLAN.md,
+  // A card is a kovcheg: the field sits *below* the page tone (STRUCTURE.md,
   // §3). Darkening the page without re-deriving the field would have inverted
   // that silently — the old #f4f1ea is lighter than this ground, so the panel
   // would have stood proud of the page instead of recessing into it.
@@ -359,7 +359,7 @@ test('Detailed adds the opening of the life, and every box still holds', async (
   // Addendum H1. The description is the life's own first paragraph in a box
   // reserved before it arrives: the card's height is still known before
   // render, so nothing may be cropped. (Until 2026-08-22 Detailed also swapped
-  // the badge for the matrix; the glyph is removed — PLAN.md.)
+  // the badge for the matrix; the glyph is removed — STRUCTURE.md.)
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   // A *card's* box is what this measures, and a phone opens on rows since
   // 2026-08-27 — whose description is clamped to two lines, not three.
@@ -576,7 +576,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
 test('a navigation lands at the top of the page it opens', async ({ browser }) => {
   // Found measuring the ×: with no scroll reset anywhere, a reader arriving
   // from a scrolled Index landed 696 px down the saint's page at 360 px. The
-  // app owns scroll now (PLAN.md).
+  // app owns scroll now (STRUCTURE.md).
   const ctx = await browser.newContext({ viewport: { width: 360, height: 780 } });
   const page = await ctx.newPage();
   await searchMode(page);
@@ -601,7 +601,7 @@ test('a navigation lands at the top of the page it opens', async ({ browser }) =
 test('the veneration glyph is drawn nowhere, and gold is spent only where it was asked for', async ({ page }) => {
   /*
    * The author's decision for the Eastern Orthodox project (2026-08-22;
-   * PLAN.md, and §7 superseded in full): in a one-communion corpus the
+   * STRUCTURE.md, and §7 superseded in full): in a one-communion corpus the
    * mark said nothing and is removed, and gold — spent only on it — is spent
    * nowhere until a new signature element is chosen. Four routes; every
    * element's computed colours. A reintroduction anywhere fails here by name.
@@ -612,7 +612,7 @@ test('the veneration glyph is drawn nowhere, and gold is spent only where it was
    * the rail's feast dot, the feast chip, the hairline under the date — and
    * this is the first control to wear it. It is allowed here **by name**, so
    * a second one anywhere still fails, which is the whole value of the test.
-   * PLAN.md carries the reversal and the cost: --gold on gesso is
+   * STRUCTURE.md carries the reversal and the cost: --gold on gesso is
    * 2.78:1, under the 3:1 WCAG asks of a meaningful non-text graphic.
    *
    * The allowance is `el.closest('.random-die')` in the sweep below, and the
@@ -869,7 +869,7 @@ test('every row starts its name at the card margin, picture or no picture', asyn
    * 1024 px.** This pressed `[data-reg-view="list"]` when it found it: the
    * register had a third face that was a column of rows, and the desktop run
    * of this test asked for it by name. The author removed that face
-   * (docs/daily-desktop-visuals.md §10.4, reversed) and a phone is now the
+   * and a phone is now the
    * only place these rows are drawn — so the width is stated here instead of
    * a control being pressed, and both projects measure the same thing. What is
    * claimed is unchanged: whatever dresses a row, every name starts at the

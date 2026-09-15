@@ -18,7 +18,7 @@ import {
 
 /**
  * The chrome: the header, its two choosers, the coachmarks, the shelf and the
- * theme. docs/E2E-DECISIONS.md#chromespecjs
+ * theme.
  */
 
 // **Every spec file needs this**: dropping it hands these tests the carousel
@@ -37,7 +37,7 @@ test.beforeEach(async ({ page }) => {
  *
  * `except` drops the page's own slug from the shelf, so the saint this stands on
  * is never one of the saints the test has just read.
- * docs/E2E-DECISIONS.md#chromespecjs
+ *
  */
 const SHELF_HOST = '/saints/christopher';
 
@@ -140,7 +140,7 @@ test('Continue reading reappears after a saint has been opened', async ({ page }
 
   // And it can still be dismissed without a gesture: a shelf the reader
   // cannot clear is a nag, and a shelf only a swipe can clear strands
-  // everyone who cannot swipe (PLAN.md). Focus reveals the control.
+  // everyone who cannot swipe (STRUCTURE.md). Focus reveals the control.
   await shelf.locator('.shelf-remove').first().focus();
   await expect(shelf.locator('.shelf-remove').first()).toBeVisible();
   await shelf.locator('.shelf-remove').first().click();
@@ -152,7 +152,7 @@ test('a Continue reading row is swiped away, and a short push springs back', asy
    * Pointer events, so the mouse does it too. **The spring-back half is the one
    * worth pinning hardest**: a row that vanished on any push at all would make
    * the shelf unscrollable by touch, and a row that never moved would read as a
-   * dead press. docs/E2E-DECISIONS.md#chromespecjs
+   * dead press.
    */
   await ready(page);
   await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
@@ -188,7 +188,7 @@ test('a Continue reading row is swiped away, and a short push springs back', asy
    * a short *slow* one is a reader nudging a row and it springs back; a short
    * *fast* one is a flick and the row goes. So this pushes slowly, with the moves
    * spaced in time, and the flick has a test of its own below.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   await push(70, 30);
   // A real wait, and it has to be: a removal is a flight and only then a
@@ -322,7 +322,7 @@ test('the header carries no date, and the controls keep their places at both wid
    * that built it while wrapping in CI, unseen, from the start. The face is
    * forced here and the native one printed to the log, so the assertion is one
    * width everywhere and the runner still says what its own face costs.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
@@ -394,7 +394,7 @@ test('the chrome line holds down to a 320 px phone, in every language', async ({
    * **The landmine**: a bare `1fr` track has an automatic minimum of min-content,
    * so a long name widens the track instead of ellipsising and prints straight
    * across the controls. `minmax(0, 1fr)` is the fix, and the same trap caught
-   * the month's own span. docs/E2E-DECISIONS.md#chromespecjs
+   * the month's own span.
    */
   for (const [width, language] of [[320, 'en'], [360, 'ru'], [360, 'el'], [412, 'ro']]) {
     const ctx = await browser.newContext({ viewport: { width, height: 780 } });
@@ -466,7 +466,7 @@ test('an answered panel shrinks into the control that changes it', async ({ page
    * small controls in the header, and a reader who answers and never sees where
    * the answer went has to hunt for it next time. So the assertion is about
    * *direction* — the panel is travelling towards the control, and has not
-   * simply faded where it stood. docs/E2E-DECISIONS.md#chromespecjs
+   * simply faded where it stood.
    */
   await ready(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
@@ -503,7 +503,7 @@ test('an answered panel shrinks into the control that changes it', async ({ page
 });
 
 test('under reduced motion the panel does not fly, it is simply gone', async ({ browser }) => {
-  // Removed, not shortened (PLAN.md). The lesson the flight carried is
+  // Removed, not shortened (STRUCTURE.md). The lesson the flight carried is
   // not lost with it: the control's accessible name says the whole sentence.
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
@@ -756,7 +756,7 @@ test('the site is named in the reader\u2019s own language, and the habit page is
   // The name in the head and the page's nav label. The head and the corner
   // carried two deliberately different names until the author ended the split;
   // both are AGIOS now, in every language. The route stays /calendar so no link
-  // breaks. docs/E2E-DECISIONS.md#chromespecjs
+  // breaks.
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(page).toHaveTitle(/AGIOS/);
@@ -787,7 +787,7 @@ test('the veil names the site the way the header does', async ({ page }) => {
   /*
    * The loading veil and the corner are the same words. The veil is removed 300
    * ms after the manifest lands, so it is read out of the served HTML rather
-   * than raced for in a live page. docs/E2E-DECISIONS.md#chromespecjs
+   * than raced for in a live page.
    */
   const html = await (await page.request.get('/')).text();
   /*
@@ -805,10 +805,10 @@ test('the veil names the site the way the header does', async ({ page }) => {
   /*
    * **And neither printed name follows the language.** The name comes from
    * exactly one place — the outlined mark `scripts/make_wordmark.py` draws — and
-   * that place is not the pack. PLAN.md §3 "The name" lists every surface it
+   * that place is not the pack. STRUCTURE.md §3 "The name" lists every surface it
    * reaches; the markup's own English is simply right rather than a placeholder
    * the pack paints over, which is why the assertion above can read it out of
-   * the served HTML at all. docs/E2E-DECISIONS.md#chromespecjs
+   * the served HTML at all.
    */
   await page.addInitScript(() =>
     localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'russian', language: 'ro' })),
@@ -829,11 +829,11 @@ test('the site mark is the Orthodox cross, in gold by instruction', async ({ pag
    * footrest, whose slant is the whole of what makes it Orthodox rather than
    * Latin.
    *
-   * **Gold is spent here and nowhere else on the site** — PLAN.md §2 records the
+   * **Gold is spent here and nowhere else on the site** — STRUCTURE.md §2 records the
    * exception in place. So this pins the two gold tokens exactly, a mark
    * drifting to some other yellow being the failure now; the "spent nowhere
    * else" half has its own test over the rendered pages.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   const html = await (await page.request.get('/')).text();
   const href = html.match(/<link rel="icon" href="([^"]+)"/)?.[1];
@@ -869,7 +869,7 @@ test('the calendar chooser asks its question and offers the four, with nothing b
    * churches and their two calendars in prose directly above four buttons each
    * printing exactly that, so it said the choices twice and put four lines
    * between the question and the answer.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
@@ -886,7 +886,7 @@ test('the header names the church with a mark, not with the word calendar', asyn
    * text: an icon says nothing to a screen reader, and the aria-label used to
    * swallow the church's name while the visible text carried it. It now says
    * which church as well as what a press does.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   await ready(page, { church: 'romanian' });
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
@@ -1038,7 +1038,7 @@ test('About offers a way to write, and it goes to the repository', async ({ page
    * Issues are the affordance: no address is printed, no form is posted
    * anywhere, and a static site needs no server to receive one. The trade — that
    * an issue is public — is told to the reader before they open one.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   await ready(page);
   await page.goto('/about', { waitUntil: 'networkidle' });
@@ -1060,7 +1060,7 @@ test('the four pages hold one line in every pack, at every width', async ({ brow
    * wins**: the four pages are how the site is used, the masthead is a constant
    * learnt once. So the nav has its own `auto` track and the name pays in lines.
    * There is no third option — the arithmetic is in
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   // One context per pack, resized across the widths, rather than thirty cold
   // loads: the header is laid out from the same stylesheet either way, and
@@ -1143,7 +1143,7 @@ test('the chrome prints no em dashes, in any language', async ({ browser }) => {
    * quoted source text and citation lines transcribed from four synaxaria, and
    * editing a quotation for typography is the one thing the corpus's
    * no-invention rule forbids. So this reads the chrome element by element
-   * rather than the whole page. docs/E2E-DECISIONS.md#chromespecjs
+   * rather than the whole page.
    */
   for (const [language, church] of [
     ['en', 'russian'],
@@ -1203,7 +1203,7 @@ test('the panel flies home in half the time, and the page closes behind it', asy
    * everything below it by the panel's whole height in a single frame — the
    * flight was smooth and its consequence was not. The space closes over the
    * same duration now, and the flier is pinned out of flow first so the closing
-   * box cannot clip it. docs/E2E-DECISIONS.md#chromespecjs
+   * box cannot clip it.
    */
   await ready(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
@@ -1307,7 +1307,7 @@ test('a flick clears a Continue reading row that a slow push of the same length 
    * natural gesture is a quick push across a third of the row. So the release is
    * measured too — the last 80 ms of travel — and a flick dismisses whatever the
    * distance. **Same distance in both halves**, so the only variable is speed.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   await ready(page);
   await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
@@ -1356,7 +1356,7 @@ test('a chooser panel arrives the way it leaves, and the page comes with it', as
    *
    * Sampled frame by frame rather than asserted at one instant: what is under
    * test is that the panel *travels*, and a single reading cannot tell a
-   * journey from a jump. docs/E2E-DECISIONS.md#chromespecjs
+   * journey from a jump.
    */
   await ready(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
@@ -1426,7 +1426,7 @@ test('a chooser panel arrives the way it leaves, and the page comes with it', as
 
 test('under reduced motion a chooser panel is simply there, arriving as well as leaving', async ({ browser }) => {
   /*
-   * PLAN.md: reduced motion **removes**, never shortens. The close has had its
+   * STRUCTURE.md: reduced motion **removes**, never shortens. The close has had its
    * own test since the flight was written; the arrival needed one the moment it
    * gained an animation — no flight, no band opening, the panel simply at full
    * size on the first frame after the press.
@@ -1571,7 +1571,7 @@ test('the header is sticky, shorter, and the phone gets an endless centred nav',
   /*
    * Three instructions, which are one bar: sticky, shorter, and — on a phone —
    * an endless centred strip. Desktop keeps the plain row.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   /*
    * 900 rather than 1280: past 1024 the chrome is deliberately twice the size,
@@ -1750,7 +1750,7 @@ test('a swipe carries the nav strip one page, however hard it is thrown', async 
    * The assertions are on travel and on arrival, which are independent (trap
    * 14): the row has to *go*, past a threshold no snap-back can reach, and it
    * has to *arrive* somewhere else with the ring turned.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   const ctx = await browser.newContext({
     viewport: { width: 360, height: 780 },
@@ -1944,7 +1944,7 @@ test('the phone strip is balanced at rest, and a press glides into the centre', 
    * centred, so at rest the current page stood at one end of the five with blank
    * strip beside it. Balancing every settle so the centred page sits in the
    * middle of the five is what makes the ring's own neighbours the ones a reader
-   * meets. docs/E2E-DECISIONS.md#chromespecjs
+   * meets.
    */
   await page.setViewportSize({ width: 360, height: 780 });
   await ready(page);
@@ -1981,7 +1981,7 @@ test('the phone strip is balanced at rest, and a press glides into the centre', 
    * transition's `finished` settled, so a press bought a quarter-second of
    * nothing. Both numbers are read from the same clock as the press, and the
    * assertion is that *neither waits for the other*.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   expect(glided.movedAt, `the strip did not move until ${glided.movedAt} ms`).toBeLessThan(120);
   expect(glided.transitions, 'the press ran a view transition, which freezes the strip under a snapshot').toBe(0);
@@ -2019,7 +2019,7 @@ test('the phone strip is balanced at rest, and a press glides into the centre', 
 });
 
 test('under reduced motion the strip is simply centred, with no journey', async ({ browser }) => {
-  // Removed, not shortened (PLAN.md). The press still puts the page on
+  // Removed, not shortened (STRUCTURE.md). The press still puts the page on
   // the midline; there is nothing to watch it get there.
   const ctx = await browser.newContext({
     ...devices['Desktop Chrome'],
@@ -2053,7 +2053,7 @@ test('a coachmark is shown once, and a guess is still not an answer', async ({ p
    * nothing about the church, so `hasChosen()` keeps its meaning, the header
    * still names a guess as a guess, and the Index still calls that church's
    * saints a selection rather than the corpus.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await expect(page.locator('.coachmark')).toHaveCount(2);
@@ -2085,7 +2085,7 @@ test('the Daily button says Daily on today, and wears gold when it says Today', 
    * paints in one tick — the nav rebuilt for the new route while the view had
    * not yet said which day it was showing, with the fade's own timer landing
    * last. main.js has the whole account.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   await ready(page);
   const away = await aDayThatIsNotToday(page);
@@ -2134,7 +2134,7 @@ test('a section is remembered where the reader left it, and a second press goes 
    * **The presses are dispatched rather than clicked** (trap 3). The header is
    * sticky, so an ordinary `click()` can move the page to the top *before* the
    * navigation reads where the reader was, which is the one thing this test is
-   * about. docs/E2E-DECISIONS.md#chromespecjs
+   * about.
    */
   const press = (sel) => page.evaluate((q) => document.querySelector(q).click(), sel);
 
@@ -2175,7 +2175,7 @@ test('a second press of the current page eases to the top over a fixed span, not
    * still settle inside the same deadline, which is the difference between this
    * hand-rolled tween and `scrollTo({ behavior: 'smooth' })` — Chrome scales
    * that one's duration with distance, which is "takes ages" for a long page.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   await ready(page);
   await page.setViewportSize({ width: 1280, height: 800 });
@@ -2238,7 +2238,7 @@ test('the remembered spot is where the fade lands, not where it starts', async (
    * before the animation runs, so whatever `window.scrollY` reads at that
    * instant is what the reader's fade actually shows. A `waitForTimeout` would
    * be measuring a clock rather than the moment the transition keys off.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   const press = (sel) => page.evaluate((q) => document.querySelector(q).click(), sel);
 
@@ -2270,7 +2270,7 @@ test('the die is square, and the header rule sits on the buttons', async ({ page
    * which left it an upright pill; both read the same token now, so a chip's
    * padding change moves the two together. The row's budget paid for it —
    * `the filter row still holds one line with the die in it` is where that
-   * arithmetic lives. docs/E2E-DECISIONS.md#chromespecjs
+   * arithmetic lives.
    */
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
@@ -2313,7 +2313,7 @@ test('the calendar panel follows a language change while it is open', async ({ p
   /*
    * The panel is a disclosure in the page's flow rather than a dialogue, so
    * being open while something else changes is its normal state, not an edge
-   * case. docs/E2E-DECISIONS.md#chromespecjs
+   * case.
    */
   await ready(page, { church: 'russian', language: 'en' });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
@@ -2349,7 +2349,7 @@ test('the chooser panels travel with the sticky header', async ({ page }) => {
   /*
    * Asserted where it matters - far down a long page - because in the flow at
    * the top of the document a panel under the header looks identical whether it
-   * sticks or not. docs/E2E-DECISIONS.md#chromespecjs
+   * sticks or not.
    */
   await ready(page);
   await page.setViewportSize({ width: 1280, height: 700 });
@@ -2439,7 +2439,7 @@ test('the name is a stamp: the same mark in every language, in the stamp face', 
    * **Its accessible name is deliberately still the site's**: the mark is a
    * mark, and AGIOS is what the PWA manifest, the README and the `<title>` all
    * say. A pack that translated *either* fails here.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   for (const language of ['en', 'ru', 'el']) {
     await ready(page, { language });
@@ -2505,7 +2505,7 @@ test('a Continue reading row carries no mark, and the shelf still clears', async
    * **The shelf has no Save control at all** — the Saved shelf's own rows never
    * had one — so this also pins that the *other* ways off a reading row still
    * work: the swipe, and the × a pointer gets.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   await ready(page);
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
@@ -2531,7 +2531,7 @@ test('the masthead is outlines in the served HTML, not text waiting for a face',
    * Asserted against the **raw HTML** rather than the rendered page: the veil is
    * what a reader looks at while the modules are still parsing, so a mark
    * injected by JavaScript would be exactly as late as the font was.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   const html = await (await page.request.get('/')).text();
   const marks = [...html.matchAll(/<svg[^>]*class="brand-mark"/g)];
@@ -2569,7 +2569,7 @@ test('the two Latin subsets are preloaded, and only those', async ({ page }) => 
    *
    * Read out of the served HTML rather than off a live page: this is a claim
    * about what the document says before anything runs.
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   const html = await (await page.request.get('/')).text();
   const links = [...html.matchAll(/<link[^>]*rel="preload"[^>]*>/g)].map((m) => m[0]);
@@ -2817,7 +2817,7 @@ test('the header takes one measure on every route, and stops at Daily’s column
 
   /*
    * **The mark's whole rect again, since 2026-09-10.** It was narrowed to the
-   * left edge alone earlier the same day, when docs/daily-desktop-visuals.md
+   * left edge alone earlier the same day, when the rebuild
    * §2.2 scoped `--text-mast-wide: 22px` to the Daily route and Daily's
    * masthead was therefore a different size from the other three. The author
    * reversed that within the day — one size everywhere — so the whole rect is
@@ -2896,7 +2896,7 @@ test('the masthead is one box on all six routes, at both widths and in both them
    * **Both themes, because the mark is a picture of a word**: `fill:
    * currentColor` over paths whose advances are baked in, so a theme cannot
    * move it — which a route-scoped colour rule with its own font-size would
-   * break silently. docs/E2E-DECISIONS.md#chromespecjs
+   * break silently.
    */
   const routes = ['/calendar/2026-09-05', '/saints', '/saints/anthony-the-great', '/map', '/texts', '/about'];
   await ready(page);
@@ -2959,7 +2959,7 @@ test('a press outside a chooser closes it', async ({ page }) => {
   /*
    * `pointerdown` is what closes them, so this presses rather than clicks — a
    * click would fire too, but pressing is the moment the reader has said they
-   * are done with the panel. docs/E2E-DECISIONS.md#chromespecjs
+   * are done with the panel.
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
@@ -2996,7 +2996,7 @@ test('the masthead stands the same distance off the nav as the nav’s own words
   // narrow row where four gaps decide whether Romanian fits on one line; the
   // nav's own labels are at `space-8` on a desktop, so one gap in a row of
   // four would otherwise be a third the size of the others.
-  // docs/E2E-DECISIONS.md#chromespecjs
+  //
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
@@ -3033,7 +3033,7 @@ test('the theme crosses in one movement: nothing snaps and nothing lags, on ever
    * at the *wrong* rate and one not crossing at all are different defects: at
    * the synchronising frame nothing may have arrived (the snap), and after the
    * fade nothing may still be travelling (the lag).
-   * docs/E2E-DECISIONS.md#chromespecjs
+   *
    */
   const routes = ['/calendar/2026-01-30', '/saints', '/saints/anthony-the-great', '/map', '/texts', '/about'];
   await ready(page);

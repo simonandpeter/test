@@ -8,7 +8,7 @@ import { ready } from './helpers.js';
  * rather than stubbing it. Every offline test therefore loads once online and
  * asserts its premise (a controlling worker) first — without that it would
  * fail for the boring reason and report the interesting one.
- * Rationale: docs/E2E-DECISIONS.md#pwaspecjs
+ * Rationale:
  */
 
 /** Registered, active, and controlling this page — the premise of every offline claim. */

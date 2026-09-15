@@ -15,7 +15,7 @@ import { MAX_HERO_RATIO, MIN_HERO_RATIO, heroCrop } from '../src/lib/hero-crop.j
  * fires. The arithmetic can be asked about both.
  *
  * **What this governs changed on 2026-09-10, and nothing in it changed with
- * it** (docs/daily-desktop-visuals.md §10.23). The rule was written about the
+ * it.** The rule was written about the
  * Daily page's main saint card, and that card, past 1024 px, is now a fixed
  * 3:2 at `50% 34%` — the reference's crop, by the author's instruction of that
  * day. So the *hero* on a desk no longer consumes either constant or either

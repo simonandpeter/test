@@ -1718,7 +1718,7 @@ export function paintCanvas(canvas, cards) {
       // whole of it however many halos overlap.
       lc.globalAlpha = dimOf(card.slug);
       /*
-       * The uncertainty curve's first shipping consumer (PLAN.md),
+       * The uncertainty curve's first shipping consumer (STRUCTURE.md),
        * scaled by the zoom as well as by the picture's width: the doubt is a
        * distance on the ground, so a halo that stayed the same size in
        * pixels would claim a tighter place the further in the reader went.

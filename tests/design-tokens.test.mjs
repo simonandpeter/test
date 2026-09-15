@@ -10,7 +10,7 @@ import { DUR, EASE } from '../src/lib/motion.js';
  * The design system is `src/styles/tokens.css`, and this is what makes that
  * true rather than aspirational.
  *
- * PLAN.md said "200 ms standard, one easing" for three weeks — in DESIGN.md's
+ * STRUCTURE.md said "200 ms standard, one easing" for three weeks — in DESIGN.md's
  * words, before it was distilled — while the code grew to **17 durations and 7
  * easings**, because a document cannot stop a value being typed and nothing
  * else was looking. Type went the same way: 62 `font-size` declarations over 14

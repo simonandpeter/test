@@ -179,7 +179,7 @@ function shell(card, backLabel) {
       titles.push(title);
     }
   }
-  /* Rank, then offices, and *not* the sex — PLAN.md §6. The rank is taken out
+  /* Rank, then offices, and *not* the sex — STRUCTURE.md §6. The rank is taken out
      of the types because the heading above already prints it; `the facts line
      stops repeating the rank the name already prints`, tests/honorific.test.mjs. */
   const beside = typesBeside(card);
@@ -191,7 +191,7 @@ function shell(card, backLabel) {
     .filter(Boolean)
     .join(' · ');
 
-  // The name and its two controls (PLAN.md). The mark that stood at the
+  // The name and its two controls (STRUCTURE.md). The mark that stood at the
   // line's margin went with the glyph (2026-08-22, §2).
   return `<article class="saint">
     <header class="saint-head">
@@ -793,10 +793,10 @@ function fillIn(el, payload, { data, router }) {
 
   // The "Also called" line — the multi-script name forms (Ἀντώνιος,
   // Ⲁⲛⲧⲱⲛⲓⲟⲥ) — stood here until 2026-08-24 (author: remove it). This
-  // reverses PLAN.md's "script coverage is a hard requirement, not a
+  // reverses STRUCTURE.md's "script coverage is a hard requirement, not a
   // nicety" passage, which named this exact block as how "attest, never
   // adjudicate" appears on screen; flagged to the author the same sitting,
-  // reversal recorded in place in PLAN.md. The forms still live in each
+  // reversal recorded in place in STRUCTURE.md. The forms still live in each
   // saint's own data file — payload.saint.names, unread here now — but were
   // never in the search index (loadSearch's own comment says why: a
   // manifest-size decision, not a code one), so nothing on the site surfaces

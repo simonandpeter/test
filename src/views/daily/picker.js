@@ -43,7 +43,7 @@ const MONTH_FADE = DUR.travel;
  * The date picker, at both of its grains.
  *
  * The rail and the month are one module because they are one control:
- * PLAN.md says the month is the week grown taller, and the code means it —
+ * STRUCTURE.md says the month is the week grown taller, and the code means it —
  * the month paints through `buildRail`, settles through the same easing, and
  * steps with the same cursor arithmetic. An earlier plan had them as two
  * modules, which was wrong and would have produced a web of cross-imports for
@@ -62,7 +62,7 @@ const MONTH_FADE = DUR.travel;
 /*
  * The week strip is a rail of days that scrolls, and this replaced the week
  * grain on 2026-08-24 at the author's instruction. Four decisions of
- * PLAN.md go with it and each is marked superseded where it sits: the
+ * STRUCTURE.md go with it and each is marked superseded where it sits: the
  * peeked edges were buttons, the fade was a mask, the unit of travel was a
  * week, and a drag was touch and pen only.
  *
@@ -877,7 +877,7 @@ const FEAST_MARK = '<i class="month-feast" aria-hidden="true"></i>';
 /**
  * A day either side of the month: numbered, one step back in ink, and **out of
  * reach** — `aria-hidden`, a span rather than a button, so it is neither
- * focusable nor clickable (docs/daily-desktop-visuals.md §10.6).
+ * focusable nor clickable.
  *
  * **It carries no fast tone and no feast mark, and that is not the plan's
  * first answer.** §3.3 drew these days "numbered and marked", tinted 38%
@@ -912,8 +912,7 @@ export function paintMonthInto(row, cursor, { live }) {
   const cal = gridCalendar();
   const lead = toJdn(cal, cursor.year, cursor.month, 1) % 7; // JDN 0 was a Monday
   /*
-   * **Past 1024 px the grid fills its own corners** (2026-09-10,
-   * docs/daily-desktop-visuals.md §3.3): the blank cells before the 1st and
+   * **Past 1024 px the grid fills its own corners**: the blank cells before the 1st and
    * after the last become the neighbouring months' own days, numbered and
    * marked and stepped back toward the field, and the peeked columns beside
    * the grid go — which is what buys the column its width. Below the
@@ -943,7 +942,7 @@ export function paintMonthInto(row, cursor, { live }) {
      * **And it is named, not only coloured.** A dot is nothing to a screen
      * reader and a hue is nothing to a reader who cannot separate these two,
      * so the word goes into the button's accessible name exactly as the
-     * rail's has since the dots arrived — this is PLAN.md's "the words
+     * rail's has since the dots arrived — this is STRUCTURE.md's "the words
      * still say which" applied to the one grain that had no words.
      */
     const tone = fastTone(iso);

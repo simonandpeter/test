@@ -216,7 +216,7 @@ function build(target, text) {
 
   // One frame at rest, then the class that runs the fade and the glow. Under
   // reduced motion the class is on from the first paint and base.css gives it
-  // nothing to run: the movement is removed, not shortened (PLAN.md).
+  // nothing to run: the movement is removed, not shortened (STRUCTURE.md).
   if (reducedMotion()) el.classList.add('is-in');
   else requestAnimationFrame(() => el.classList.add('is-in'));
   return mark;

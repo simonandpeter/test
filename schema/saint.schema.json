@@ -23,7 +23,7 @@
       "minLength": 1
     },
     "kind": {
-      "$comment": "A folder is a saint unless it says otherwise. The one alternative is a feast: when the Great Feasts become folders, \"St. Dormition of the Theotokos\" is what a blanket honorific would print, so the naming function opts out on this flag rather than on a guess about the name (PLAN.md, the naming contract). Nothing in the corpus carries it yet; it is here before the work that needs it, not after.",
+      "$comment": "A folder is a saint unless it says otherwise. The one alternative is a feast: when the Great Feasts become folders, \"St. Dormition of the Theotokos\" is what a blanket honorific would print, so the naming function opts out on this flag rather than on a guess about the name (STRUCTURE.md, the naming contract). Nothing in the corpus carries it yet; it is here before the work that needs it, not after.",
       "enum": ["saint", "feast"]
     },
     "names": { "type": "array", "items": { "$ref": "#/$defs/name" } },

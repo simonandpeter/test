@@ -1,5 +1,5 @@
 /**
- * The calendar — the habit page (brief §8.1, PLAN.md). Opens on today
+ * The calendar — the habit page (brief §8.1, STRUCTURE.md). Opens on today
  * in the reader's local date; week strip and month view to move; deep links
  * at /calendar/YYYY-MM-DD; one church's calendar at a time (author,
  * 2026-08-22): the church the reader keeps, chosen once and changed from the header.
@@ -66,7 +66,7 @@ const ICON_MONTH = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" 
 
 /*
  * **Half a cross**, and the day steps are the two halves
- * (docs/daily-desktop-visuals.md §2.3, step 7 of §10.12): a 1 px stem capped by
+ *: a 1 px stem capped by
  * a diamond at each end, and one arm reaching out from the middle with a
  * diamond of its own — left on the back step, right on the forward one. The
  * five pieces are the same five either way; which side the arm reaches is
@@ -160,7 +160,7 @@ export function render(el, { data, params, router }) {
           360 px line would crowd the date out of it.
 
           **The words went on 2026-09-10** and each button became half a cross
-          (docs/daily-desktop-visuals.md §2.3). They are not lost: both buttons
+. They are not lost: both buttons
           carried prevDay / nextDay as their accessible name before this and
           still do, and title was added in the same commit so a pointer keeps
           the words too. The nav that wrapped the pair went with them — a
@@ -188,7 +188,7 @@ export function render(el, { data, params, router }) {
       </div>
       <!--
         **The right column is one filled box past 1024 px**
-        (docs/daily-desktop-visuals.md §3.1, step 5 of §10.12): a square notch
+: a square notch
         bitten from each corner and a cross of the fill standing in each bite.
 
         Three boxes rather than one, and each earns its place. cal-bubble is
@@ -268,8 +268,7 @@ export function render(el, { data, params, router }) {
                     -->
                     <div class="month-head">
                       <!--
-                        **The month's two steps, past 1024 px** (2026-09-10,
-                        docs/daily-desktop-visuals.md §3.3): a hairline closed by a
+                        **The month's two steps, past 1024 px**: a hairline closed by a
                         diamond, pointing away from the month it leaves. They replace
                         the peeked columns, which is what buys the grid its width —
                         and they are a *second* control on stepMonth, not the same
@@ -315,7 +314,7 @@ export function render(el, { data, params, router }) {
                   </div>
                   <!--
                     **The full-screen control moved into the month's own head on
-                    2026-09-10** (docs/daily-desktop-visuals.md §3.3), to the right
+                    2026-09-10**, to the right
                     of the month and its reckoning. It stood here, in a second row
                     of the span under whichever grain was showing, from 2026-09-01;
                     it is a desktop control only (calendar.css hides it below
@@ -512,7 +511,7 @@ function wireReckoning(el) {
      * The button stands inside the month's head now, between two steppers and
      * beside the month's own name, and "Revised Julian" is the one of the
      * three that will not fit there once the column narrows to 19rem
-     * (docs/daily-desktop-visuals.md §3.3). The abbreviation is a layout's
+     * The abbreviation is a layout's
      * need, so it goes where a layout can be seen: the accessible name keeps
      * the calendar's whole name, and so do the chooser's own rows below.
      *
@@ -667,8 +666,7 @@ function wireGrainForWidth(el) {
 
 /**
  * The three chrome controls, in the bubble's head past 1024 px, and back in
- * the site's own bar below it (docs/daily-desktop-visuals.md §2.2 route (c),
- * step 6 of §10.12).
+ * the site's own bar below it.
  *
  * **The live nodes are moved. Nothing is drawn twice, and that is the whole
  * decision.** The plan's first route was to render a second set of controls in
@@ -934,7 +932,7 @@ function slotSwap(forward, swipeDx) {
 /**
  * The day's content changed under it — the calendar or the selection, not the
  * date — so the panel repaints in place. The movement decides, not the gesture
- * (PLAN.md): a filter press has not travelled anywhere, and rolling it
+ * (STRUCTURE.md): a filter press has not travelled anywhere, and rolling it
  * read as a step forward in time that never happened.
  */
 function repaintDay() {
@@ -961,7 +959,7 @@ function paintChrome() {
    * chosen** (author, 2026-09-02, widened 2026-09-05: "Follow my church"
    * has to actually name the church's own calendar, not the civil one — see
    * `reckoningInForce`'s own record in `lib/church.js`). This reverses
-   * PLAN.md's "the Daily page prints the civil date and only the civil
+   * STRUCTURE.md's "the Daily page prints the civil date and only the civil
    * date" for every reader whose church keeps something other than
    * Gregorian, not only the reader who has explicitly asked — which is most
    * of them, since three of the four churches this site keeps default away
@@ -1082,7 +1080,7 @@ function paintLiturgy() {
    * above, and `reasonKind` marks it so this does not have to match strings.
    *
    * **Rubric, and rubric is the right claim rather than a spare colour.**
-   * PLAN.md gives it to liturgical time and the reader's place, and
+   * STRUCTURE.md gives it to liturgical time and the reader's place, and
    * "the Dormition Fast", "Great Lent", "the Beheading of the Forerunner" are
    * liturgical time exactly. Gold would have said this was a finding about
    * veneration, which is the feast chip's business beside it. The words are
@@ -1196,7 +1194,7 @@ function openFastBubble(button) {
    * 2026-08-26 is a different question from whether there is a grade at all:
    * an ungraded fast day now defaults to Strict Fasting, and a note reading
    * only «Post» or «Νηστεία» would otherwise start being quoted under a label
-   * it adds nothing to — the exact thing PLAN.md had this condition
+   * it adds nothing to — the exact thing STRUCTURE.md had this condition
    * stop doing.
    */
   const gradeIsQuoted = Boolean(gradeFromNote(note));
@@ -1301,7 +1299,7 @@ function openFastBubble(button) {
 
   // The pop: one frame at rest, then the class that runs the transition. Under
   // reduced motion the class is on from the first paint and the CSS gives it
-  // no transition to run — the movement is *removed*, not shortened (PLAN.md
+  // no transition to run — the movement is *removed*, not shortened (STRUCTURE.md
   // §6). Focus follows so Escape and a screen reader both land on it.
   if (reducedMotion()) el.classList.add('is-in');
   else requestAnimationFrame(() => el.classList.add('is-in'));

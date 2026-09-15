@@ -1,5 +1,5 @@
 /* Base styles — chrome, typography, loading states. Component CSS builds on
-   this and on tokens.css; both follow PLAN.md, which wins any argument. */
+   this and on tokens.css; both follow STRUCTURE.md, which wins any argument. */
 
 *,
 *::before,
@@ -186,7 +186,7 @@ a:hover {
    and fight the otherwise refined typography. Set them in rubric or ink with
    underline on hover only; the whole card is already the tap target").
 
-   Ink rather than rubric, and the choice is PLAN.md's: red is where the
+   Ink rather than rubric, and the choice is STRUCTURE.md's: red is where the
    reader *is* — the current nav item, today's weekday, the selected date — and
    spending it on every name in a register would leave the reader's own place
    with nothing to say it. The Index's cards have read this way since they were
@@ -228,7 +228,7 @@ button:hover {
 }
 
 /* A frameless icon button — the bookmark, and the × that closes a saint's page
-   (PLAN.md's Layout section). No border and no field: the shape is the control. The
+   (STRUCTURE.md's Materials section). No border and no field: the shape is the control. The
    box stays 32 px square so there is a finger's worth to press and the focus
    ring has something to draw on. The shelf's × predates this class and keeps
    its own rule. */
@@ -856,7 +856,7 @@ nav.site-nav a[aria-current='page'] .nav-label.is-today {
 }
 
 /* The current page is a red letter — rubric marks the reader's place
-   (PLAN.md) — and is underlined so colour never carries it alone. */
+   (STRUCTURE.md) — and is underlined so colour never carries it alone. */
 nav.site-nav a[aria-current='page'] {
   color: var(--rubric);
   text-decoration: underline;
@@ -1130,7 +1130,7 @@ main.chrome {
   /*
    * **Daily's masthead was 22 px here from 2026-09-10 until later the same
    * day, and the author reversed it: one size everywhere.**
-   * docs/daily-desktop-visuals.md §2.2 argued the smaller stamp from the
+   * The smaller stamp was argued from the
    * page's new shape — a reading column whose head the nav becomes — and the
    * scoped `--text-mast-wide: 22px` that came out of it is gone. The mark is
    * `--text-mast-wide` on all six routes, so its box is the same box
@@ -1359,7 +1359,7 @@ main.chrome {
 /* ---- loading --------------------------------------------------------- */
 
 /* Full-page veil for the initial manifest fetch only; everything after is
-   inline and non-blocking. No spinners anywhere (PLAN.md). */
+   inline and non-blocking. No spinners anywhere (STRUCTURE.md). */
 #veil {
   position: fixed;
   inset: 0;
@@ -1704,7 +1704,7 @@ html[data-swipe-nav='right']::view-transition-new(root) {
 }
 
 /* Pressed is the recessed field in ink — aria-pressed carries it, never a
-   colour alone; nothing here is gold or red (PLAN.md). */
+   colour alone; nothing here is gold or red (STRUCTURE.md). */
 .church-choice[aria-pressed='true'] {
   background: var(--field);
   border-color: var(--ink-soft);

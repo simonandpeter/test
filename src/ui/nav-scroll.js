@@ -21,7 +21,7 @@
  * back a piece at a time. `node scripts/nav-swipe.mjs` still films the strip.
  *
  * **Exactly five `<a>`, one per page, never cloned and never reordered in the
- * DOM** (PLAN.md §6) — the loop is a flex `order` rotation. A dozen places in
+ * DOM** (STRUCTURE.md §6) — the loop is a flex `order` rotation. A dozen places in
  * the suite hold `.site-nav a[href$="/saints"]` to be one element;
  * `tests/nav-strip.test.mjs` fails if this file learns to clone or to move a
  * node. The one-page rule is held by `a swipe carries the nav strip one page,
@@ -175,7 +175,7 @@ export function wireNavScroll(track) {
    * `centreOf(target)` by a whole period and moves the picture not at all, so
    * `centreOf(target) - scrollLeft` is invariant across one.
    *
-   * Reduced motion gets the centre and not a quicker journey to it (PLAN.md
+   * Reduced motion gets the centre and not a quicker journey to it (STRUCTURE.md
    * §6): the page is simply put where it belongs.
    *
    * `docs/SRC-DECISIONS.md § src/ui/nav-scroll.js` has the author's asks and

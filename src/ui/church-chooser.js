@@ -9,12 +9,12 @@
  * church subscribe there.
  *
  * Drawn in ink and rule, never gold or red: a control is not a finding and not
- * liturgical time (PLAN.md). The pressed state is carried by
+ * liturgical time (STRUCTURE.md). The pressed state is carried by
  * aria-pressed, never by colour alone.
  *
  * It replaces ui/traditions.js and ui/plate.js — four communion switches, the
  * rite × communion lattice under (advanced), a Done — which went with the
- * traditions (PLAN.md, superseded 2026-08-22).
+ * traditions (STRUCTURE.md, superseded 2026-08-22).
  */
 
 import { enabledChurches } from '../data/churches.js';

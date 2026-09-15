@@ -1,4 +1,4 @@
-/* Calendar page (PLAN.md). The hero holds one scale whatever the day's
+/* Calendar page (STRUCTURE.md). The hero holds one scale whatever the day's
    density; the register carries the rest; the week strip is the red-letter
    idiom doing literal work. */
 
@@ -352,7 +352,7 @@
 /* The edges fade (author, 2026-08-25: "add a fade on the edges so the half
    cropped 'Sun' or 'Mon' don't read as accidental"), which reverses Amendment
    35's "the rail's edge days are ordinary buttons at full strength with no
-   mask at all" — recorded in place in PLAN.md. The reason 35 gave still
+   mask at all" — recorded in place in STRUCTURE.md. The reason 35 gave still
    holds where it was aimed: the edge day is a *real* day, clickable and in
    full ink, and nothing here dims a glyph a reader might try to read. What
    the mask does is end the run, so a half-cut column reads as the grain
@@ -506,7 +506,7 @@
    (author, 2026-08-26: "put a bubble around today's date in the weekly and
    monthly display so even when selecting a different day you still recognise
    today's date"). Drawn as a ring around the numeral rather than a filled
-   disc — gold and a flat fill both belong to other things (PLAN.md) —
+   disc — gold and a flat fill both belong to other things (STRUCTURE.md) —
    and as an absolutely positioned ::before rather than a box on `.day-num`
    itself, so it costs the row no width or height of its own and cannot be the
    thing that nudges the rail's column measurements. */
@@ -754,7 +754,7 @@
 /* The density dots — one per commemoration, capped at five — stood under every
    date at both grains from the first calendar until the author removed them
    (2026-08-25 evening: "remove the dots under each date in the calendar").
-   PLAN.md's "Dense against sparse" argued them as density made legible
+   STRUCTURE.md's "Dense against sparse" argued them as density made legible
    before arrival; that paragraph now records the reversal in place. What
    survives is the *count*, in the day button's accessible name, said plainly
    here because it is a divergence: a reader who cannot glance at the register
@@ -799,7 +799,7 @@
      week grown taller" is a geometry the two share to the pixel — the rail's
      button width is derived from this same number — and a month whose columns
      had drifted 2 px from the week's would move the day names as the reader
-     toggles, which is the one thing that must never happen (PLAN.md).
+     toggles, which is the one thing that must never happen (STRUCTURE.md).
      It was --space-1 from 2026-08-21 until now. */
   column-gap: 2px;
 }
@@ -1082,8 +1082,7 @@
      (base.css), so this only has to say the shape. */
 
   /* **19 rem — 304 px — and what makes that safe is that nothing in the
-     column is the week's any more** (docs/daily-desktop-visuals.md §2.1,
-     step 5 of §10.12).
+     column is the week's any more**.
 
      This read "the right column's floor is the week" until 2026-09-10, and
      the floor it named was 400 px: seven day buttons, two shoulders and the
@@ -1141,7 +1140,7 @@
      all: a grid item's default floor is its content, so without it the box
      grows to fit the day and the page scrolls instead of the column. */
   /* **The right column's scroller moved inside the bubble on 2026-09-10**
-     (docs/daily-desktop-visuals.md §3.1). The corners are bitten out of the
+. The corners are bitten out of the
      box the fill is on, and a corner cut off a scroller is a corner the reader
      can scroll away from — so the clipped box stays put and the scrolling
      happens in a child of it. The claim below is unchanged; only the box in
@@ -1196,7 +1195,7 @@
 
   /*
    * **The bar is the left column's head, and the grid starts at the glass**
-   * (docs/daily-desktop-visuals.md §2.2 — the last open piece of it).
+   *
    *
    * Two things had to happen together, which is why they are one block. The
    * bar's *box* is narrowed to the left column, so its rule stops where the
@@ -1263,7 +1262,7 @@
   }
 
   /*
-   * **The bubble** — docs/daily-desktop-visuals.md §3.1, step 5 of §10.12.
+   * **The bubble.**
    * The right column is one filled box with a 20 px square bitten out of each
    * corner and a cross of the same fill standing in the bite.
    *
@@ -1316,7 +1315,7 @@
 
   /*
    * **The head, and the three chrome controls in it**
-   * (docs/daily-desktop-visuals.md §3.2, step 6 of §10.12): the language
+   *: the language
    * control at the start, the church control **centred by the grid** so the
    * pair at the ends can never pull it off centre, and the theme switch at the
    * end. `views/calendar.js` moves the live nodes here and puts them back on
@@ -2420,7 +2419,7 @@
    is left of the derived shape is the band between 620 and 1024, where the
    hero has a column but the page is not yet the two-column desk the
    instruction is about — and `cardCrop`, which is every other saint card on
-   the site and is untouched. docs/daily-desktop-visuals.md §10.23. */
+   the site and is untouched. */
 @media (min-width: 620px) {
   .hero-media {
     aspect-ratio: var(--hero-shape, 1 / 1);
@@ -2490,7 +2489,7 @@
 /* ---- the mount (2026-09-10) --------------------------------------------- */
 
 /*
- * **A mount, not an outline** (docs/daily-desktop-visuals.md §4.1, step 8).
+ * **A mount, not an outline**.
  * No border anywhere on a picture: the frame is a 14 px mat the photo stands
  * inside, and its colour is the *other* theme's bubble — a dark mat on the
  * gesso page, a pale one on the bole. `--mount` is that pair; tokens.css says
@@ -2544,8 +2543,7 @@
   }
 
   /*
-   * The band itself, over the derived shape above (docs/daily-desktop-visuals.md
-   * §10.23, which reverses §10.1). The reservation-before-decode promise is
+   * The band itself, over the derived shape above. The reservation-before-decode promise is
    * unchanged in kind and stronger in fact: the box is now one ratio for every
    * saint, so it is known before the manifest is, let alone the image.
    */
@@ -3071,7 +3069,7 @@
  * `is-cards`, because renaming a stored setting to match a redraw would have
  * quietly reset every reader who had chosen something.
  *
- * What changed is the shape (docs/daily-desktop-visuals.md §5.1): two columns
+ * What changed is the shape: two columns
  * of rows rather than a column-packed grid of Index cards, a 60 px mat instead
  * of a full-width picture, and a line of the life under the dates.
  *
@@ -3488,7 +3486,7 @@ a.name-day:hover {
   text-decoration-color: var(--ink-soft);
 }
 
-/* The empty day is a designed state, not a fallback (PLAN.md). */
+/* The empty day is a designed state, not a fallback (STRUCTURE.md). */
 .empty-day {
   border: 1px solid var(--rule);
   border-radius: var(--radius-panel);
@@ -3517,7 +3515,7 @@ a.name-day:hover {
 }
 
 /* Pressed is the recessed field in ink — aria-pressed carries it, never a
-   colour alone; nothing here is gold or red (PLAN.md). */
+   colour alone; nothing here is gold or red (STRUCTURE.md). */
 .church-choice[aria-pressed='true'] {
   background: var(--field);
   border-color: var(--ink-soft);
@@ -3573,8 +3571,7 @@ a.name-day:hover {
   position: relative;
 }
 
-/* **`--rule`, not `--gold`, since 2026-09-10** (docs/daily-desktop-visuals.md
-   §2.4). The date's rule and the rule under the nav are one pair and read as
+/* **`--rule`, not `--gold`, since 2026-09-10**. The date's rule and the rule under the nav are one pair and read as
    one, and gold moves onto the feast mark alone — the rebuild's rules and
    marks are `--accent` and its rules are `--rule`. The `:has()` guard is
    unchanged and is the whole of why this is drawn here rather than as a plain
@@ -3670,7 +3667,7 @@ a.name-day:hover {
    took the fast chip's trailing "- {reason}" with it.
 
    **Rubric, where the feast's is gold, and both are edge and tint only.**
-   PLAN.md spends rubric on liturgical time and the reader's place, which
+   STRUCTURE.md spends rubric on liturgical time and the reader's place, which
    is what a fast's occasion is; gold marks a finding about veneration, which
    is the feast chip standing next to it. The words stay ink in both, because
    --gold on gesso is 2.78:1 and dark-mode --rubric is 4.20:1 — neither can
@@ -3694,7 +3691,7 @@ a.name-day:hover {
 /* The cycle and the tone keep the line. They wore `opacity: 0.85` for one
    build, to sit a step behind the chip — and the quality floor caught it the
    same run: --ink-soft washed over gesso is 4.17:1, under the 4.5 that WCAG AA
-   asks of 13.5 px text. PLAN.md already says this in as many words about
+   asks of 13.5 px text. STRUCTURE.md already says this in as many words about
    the rail's fade ("a mask, never an opacity — a wash over --ink-soft is 2.1:1
    on gesso"), so this is the same mistake the same file warns about, made
    again in a different place.
@@ -3881,7 +3878,7 @@ a.name-day:hover {
   color: var(--ink-soft);
 }
 
-/* Reduced motion removes the movement, it does not hurry it (PLAN.md):
+/* Reduced motion removes the movement, it does not hurry it (STRUCTURE.md):
    the bubble is simply there, and simply gone. */
 @media (prefers-reduced-motion: reduce) {
   .fast-bubble {
@@ -3914,7 +3911,7 @@ a.name-day:hover {
 /* ---- the month, redesigned for the desk (2026-09-10) -------------------- */
 
 /*
- * docs/daily-desktop-visuals.md §3.3, step 3 of §10.12. The month is the only
+ * The month is the only
  * picker past 1024 px — the rail and its toggle went on 2026-09-02 — so this
  * is the whole of the date control on a desktop, and it is being rebuilt to
  * fit a column that narrows to 19rem two steps from here.

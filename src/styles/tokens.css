@@ -1,4 +1,4 @@
-/* Design tokens — the six named colours of PLAN.md and the derived
+/* Design tokens — the six named colours of STRUCTURE.md and the derived
    surfaces. Every colour in the app goes through these custom properties; a
    hard-coded colour anywhere else in the CSS is a defect.
 
@@ -11,13 +11,13 @@
      theme with gesso #ece5d6"), from #E5E4DD — a near-neutral off-white — to
      a cream that reads as primed gesso rather than as paper. It is lighter as
      well as warmer, so every text token gained a little contrast rather than
-     losing any; the figures are recomputed in PLAN.md and held there by
+     losing any; the figures are recomputed in STRUCTURE.md and held there by
      `tests/contrast.test.mjs`. */
-  --gesso: #ece5d6;
-  --ink: #221d19;
-  --ink-soft: #5c544d;
-  --rubric: #8a2e26;
-  --gold: #a98237;
+  --gesso: #ece5d6; /* the ground: primed gesso, not paper */
+  --ink: #221d19; /* body text */
+  --ink-soft: #5c544d; /* secondary text, coastlines, marks */
+  --rubric: #8a2e26; /* liturgical time and place only */
+  --gold: #a98237; /* a glyph, a border or a tint — never a word */
   /* The same gold at a value words can be read at (2026-08-27). `--gold` on
      gesso is **2.82:1**, which is under the 3:1 a meaningful graphic asks and
      nowhere near the 4.5:1 text asks; it is the right hue for a glyph, a
@@ -32,8 +32,8 @@
      first used, and the first value tried cleared 4.59:1 on gesso and 4.26 on
      the field. axe caught it on the mobile project. 5.13 and 4.76 — and
      5.21 and 4.84 since the ground warmed on 2026-09-01. */
-  --gold-ink: #755925;
-  --rule: #c8c2b7;
+  --gold-ink: #755925; /* gold where it has to be a word */
+  --rule: #c8c2b7; /* a register's rule */
 
   /* Both follow the ground rather than standing still while it moves
      (2026-09-01). The veil has no choice — it *is* gesso at 0.8, and leaving
@@ -42,26 +42,26 @@
      luminance drop it always had (0.059) and takes the new warmth with it,
      rather than staying a grey panel let into a cream page. */
   --field: #e6ddca; /* recessed panel interior only — never a page background */
-  --veil: rgba(236, 229, 214, 0.8);
+  --veil: rgba(236, 229, 214, 0.8); /* the first-load scrim: gesso at 0.8 */
 
-  /* The fast of the day (author, 2026-08-24, PLAN.md): three states the
+  /* The fast of the day (author, 2026-08-24, STRUCTURE.md): three states the
      reader sorts at a glance. Strict is the rubric itself, because a fast is
      liturgical time; the other two are new hues and the one sanctioned
      exception to the two-colour rule. Blue rather than amber for fish so the
      mitigated day is never mistaken for the gold of the veneration glyph. */
-  --fast-strict: var(--rubric);
+  --fast-strict: var(--rubric); /* a strict fast — the rubric itself, a fast being liturgical time */
   /* Chroma 20.7 -> 34 and hue 235 -> 260 deg on 2026-09-10: it read as a
      grey-teal rather than as a blue, which is the one thing this hue is here
      to do — keep the mitigated day from being mistaken for gold. 5.23:1 on
      gesso and 4.86:1 on the field, a *drop* from 6.10 and 5.67, so the token
      has less headroom over the 4.5 floor after the change than before.
      `tests/contrast.test.mjs` is what holds it. */
-  --fast-fish: #016392;
-  --fast-free: #356038;
+  --fast-fish: #016392; /* fish permitted; blue, so a mitigated day is never mistaken for gold */
+  --fast-free: #356038; /* no fast */
 
-  /* ---- the desktop Daily rebuild (docs/daily-desktop-visuals.md §1) ------
+  /* ---- the desktop Daily rebuild ------
      Four tokens the rebuild adds, light and vigil, so the sheets it touches
-     spend no raw hex: PLAN.md §3's rule, and PLAN's own colour sweep counts
+     spend no raw hex: STRUCTURE.md §3's rule, and PLAN's own colour sweep counts
      the raw hexes outside this file at three and calls closing them the
      sweep worth doing. Every one of these has a row in PLAN's colour table
      carrying its day value. */
@@ -71,12 +71,12 @@
      only carrier of a fact** — 2.84:1 on gesso and 2.64:1 on the field, which
      is `--gold`'s own exemption in `tests/contrast.test.mjs` and is why it
      takes no floor there. */
-  --accent: #918770;
+  --accent: #918770; /* rules, hairlines and marks; never a word and never alone */
 
   /* The Daily sidebar's own surface. In day it *is* the field — the bubble is
      a recessed panel and there is no second surface to invent; in vigil it is
      a step below it, so the box reads without shouting. */
-  --bub: var(--field);
+  --bub: var(--field); /* the Daily sidebar's own surface */
 
   /* The feast mark, at each ground's own value: one hex could not serve both
      and still read as gold, which is the wall `--gold-ink` exists for.
@@ -94,7 +94,7 @@
      dot is the only thing on a month cell saying the day holds a feast.
      Vigil is `#a67600` — 4.52:1 on gesso, 4.24:1 on the field, 4.30:1 on
      `--bub` — and was already clear. */
-  --feast: #a67300;
+  --feast: #a67300; /* the one mark saying a day holds a feast; takes a 3:1 floor */
 
   /* The mat a picture stands in: no border anywhere on an image, a mount
      instead. It takes the *other* theme's surface, so the day page's mat is
@@ -103,7 +103,7 @@
      one `--bub` carries in vigil; two names for one colour is the honest
      record of that, and writing it as `var(--bub)` here would resolve to the
      field instead. */
-  --mount: #201917;
+  --mount: #201917; /* the mat a picture stands in: the other theme's surface */
 
   --space-1: 4px;
   --space-2: 8px;
@@ -151,7 +151,7 @@
   --text-mast-wide: 34px;
 
   /* ---- motion ---------------------------------------------------------
-     PLAN.md's Motion section is the intent; this is the vocabulary. **Five
+     STRUCTURE.md's Motion section is the intent; this is the vocabulary. **Five
      durations where there were twelve** (2026-09-08): 120, 140, 150, 160, 180,
      200, 260, 280, 300, 380, 420 and 450 ms were in use, most of them a few
      milliseconds from a neighbour and none derived from anything. A reader
@@ -165,11 +165,11 @@
      clipped stage, and what travels is every pixel at once rather than an
      element crossing a still page. Outside the four for the same reason
      `--dur-linger` is — a movement of that size reads as hurried at 450 ms. */
-  --dur-swap: 620ms;
+  --dur-swap: 620ms; /* the whole page changing face: the two-layer stage */
   /* Content arriving on its own account, with no gesture behind it — a picture
      reaching a card. Deliberately outside the four: it is not answering
      anybody, and the author asked for it slower still. */
-  --dur-linger: 900ms;
+  --dur-linger: 900ms; /* content arriving with no gesture behind it */
 
   --ease: cubic-bezier(0.2, 0, 0, 1); /* the default: decisive, arrives calm */
   --ease-out: cubic-bezier(0, 0, 0.2, 1); /* leaves at once, eases in to rest */
@@ -178,7 +178,7 @@
   --ease-turn: cubic-bezier(0.45, 0, 0.25, 1); /* the die: one symmetric turn */
 
 
-  /* The uncertainty curve (PLAN.md): softness(p) = clamp(min·p^gamma,
+  /* The uncertainty curve (STRUCTURE.md): softness(p) = clamp(min·p^gamma,
      min, max), px at base scale. One curve for date bars, map halos and
      timeline dissolves; these three constants are the only sanctioned nudge. */
   --uncertainty-min: 0.75;
@@ -200,15 +200,15 @@
    * matters — a chip's contrast is against what it sits on, and it sits on
    * itself.
    */
-  --button-face: #ffffff;
-  --button-face-ink: #221d19;
+  --button-face: #ffffff; /* the one white surface on the site, and the one that is not themed */
+  --button-face-ink: #221d19; /* fixed dark, so the white pill never inverts */
   /*
    * The ground's own opposite: near-black on the cream, near-white on the bole
    * (the dark block below). One token rather than a rule per theme, for the
    * one phrase that is asked to be "white ... on dark mode, or black on a
    * light mode" (author, 2026-09-02) — the way into the day's life.
    */
-  --ground-ink: #1a1613;
+  --ground-ink: #1a1613; /* the ground's own opposite: near-black on gesso, near-white on bole */
 
   color-scheme: light;
 }
@@ -239,7 +239,7 @@ html.dark {
   --ink-soft: #9b9187;
   /* Was #C05B4B, which is 4.20:1 on gesso and 3.93:1 on the field — under the
      AA floor for normal text, on the token that carries the current nav item
-     and today's date. PLAN.md had recorded that as a live defect since
+     and today's date. STRUCTURE.md had recorded that as a live defect since
      2026-08-22 and nothing checked it, because the browser suite ran in light
      mode only. Lifted 8% in HSL with hue (8.2 deg) and saturation (0.48) held,
      so it is the same cinnabar: 5.54:1 and 5.18:1. `tests/contrast.test.mjs`

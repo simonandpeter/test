@@ -1160,7 +1160,7 @@ export function paintCarousel() {
    * keystroke inside the fade supersedes the first (the timer is cancelled and
    * the later key wins), and reduced motion skips the whole arrangement and
    * rebuilds in place, because a wait with no animation behind it is the same
-   * defect wearing a different hat (PLAN.md).
+   * defect wearing a different hat (STRUCTURE.md).
    */
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const first = state.carouselKey === null || state.carouselKey === undefined;
@@ -1374,7 +1374,7 @@ function buildCarousel(key, run, { cardWidth, textWidth, space, pen }) {
  * and then the mode it left behind comes up.
  *
  * Reduced motion gets the swap with no fall and no fade — removed, not
- * shortened (PLAN.md).
+ * shortened (STRUCTURE.md).
  */
 /**
  * The mode for the rest of this document's life, and no longer than that.

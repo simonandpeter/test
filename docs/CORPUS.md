@@ -1,7 +1,7 @@
 # CORPUS — how a saint gets into this corpus
 
 **Binding for anyone adding to `saints/`.** `CLAUDE.md` is how to work here and
-`PLAN.md` is what the site is; this file is the one job neither of them
+`STRUCTURE.md` is what the site is; this file is the one job neither of them
 describes end to end. Read those two first — this assumes them.
 
 It is written to be followed by someone who has read no conversation. Where it
@@ -164,6 +164,19 @@ state), and the gate's rank-head check.
 **`office`** — "Archbishop of Caesarea in Cappadocia". Its own field. Recorded
 data in the corpus's English, not translated per reader.
 
+**The lives stay English, by decision.** The source-language material a reader
+of that language wants — hymns, quoted calendar lines, name forms — is on the
+page in the original; the prose is not translated per reader.
+
+**A saint is printed with the rank their sources give** — *Venerable Moses the
+Ethiopian*, *Prophet Zacharias* — and "St" is the marked case for the ones with
+no distinctive rank, which is how OCA and the Greek calendars print them.
+`lib/honorific.js` is the precedence walk and `lib/saint-name.js` chooses which
+recorded form to show. A folder is a saint unless it says otherwise; the one
+alternative is a feast, flagged in `saint.json` so the naming function opts out
+rather than guessing from the name — "St. Dormition of the Theotokos" is what a
+blanket honorific would print.
+
 **`types`** — the closed slug list the Index filters and `lib/honorific.js`
 reads. Use a slug already in the corpus unless the source states a rank the
 corpus has never held; adding one means the Index, the locale packs'
@@ -237,6 +250,21 @@ that church's own language. A hymn belongs to a church as an attestation does;
 the Greek apolytikion and the Romanian tropar are different texts, not
 translations of one. `english` is either a citation to Orloff or Hapgood or
 `rendered: "site"`, exactly one of the two.
+
+**A reading that looks corrupt is the source's, not the scrape's.** Twenty
+suspicious hymn readings were fetched back from their own `source.url` and
+checked character by character: **all twenty came back "source confirms"**, and
+no `text` was changed. saint.gr, doxologia.ro and days.pravoslavie.ru each
+publish the corrupt reading — itacisms, a stray clitic, `τᾶς` for `τὰς`, a
+common of apostles printed under one apostle's name. So a hymn that does not
+construe is **not** evidence of a bad scrape, and correcting it silently would
+put words in a source's mouth. Check the page before you touch the field.
+
+**Orloff is exhausted for troparia and not for kontakia.** His 27 chapters were
+indexed by their troparia and matched against every rendering the corpus had
+made; he prints a kontakion in every general service and those have never been
+matched. Hapgood carries the fixed services and the great feasts only, and the
+corpus's one great-feast hymn already cites him.
 
 **`images`** — `icon.jpg` plus `icon.meta.json` with `credit`, `licence`,
 `source_url`, then `npm run thumbs` for the two derivatives. The build *fails*
@@ -485,7 +513,7 @@ that does not fail means the batch is not doing what its message says.
 
 ## 9. What goes red when the corpus grows
 
-`PLAN.md` section 5: *tests must not name instances*, and 85 hard-coded slugs
+`STRUCTURE.md` section 5: *tests must not name instances*, and 85 hard-coded slugs
 and dates still live in the e2e specs. Until they are derived, **a batch that
 moves one of these numbers has to move the literal in the same commit.** The
 gate computes all eight from the folders and prints them beside the literal

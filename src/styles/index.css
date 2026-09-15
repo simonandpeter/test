@@ -385,7 +385,7 @@ select:hover {
   height: var(--facet-h);
   /* **Gold, at the author's instruction** ("make the icon gold to draw
      attention"), and it is worth saying what it costs rather than passing it
-     off. PLAN.md spends gold on a *finding* about veneration and never
+     off. STRUCTURE.md spends gold on a *finding* about veneration and never
      on chrome, so this is the first control on the site to wear it. And
      --gold on gesso is **2.78:1**, under the 3:1 WCAG asks of a meaningful
      non-text graphic — axe does not check icon contrast, so nothing goes red,
@@ -612,7 +612,7 @@ html.is-rolling #view {
    the life says and whichever face renders it. saints.js holds the other half
    of these numbers (DETAILED_CARD_TEXT_HEIGHT, DETAILED_ROW_HEIGHT). Until
    2026-08-22 Detailed also put the matrix in the badge's place on the name
-   line; the glyph is removed (PLAN.md). */
+   line; the glyph is removed (STRUCTURE.md). */
 .index-desc {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -1503,7 +1503,7 @@ html.is-rolling #view {
   animation-delay: var(--cx-delay, 0ms);
 }
 
-/* Reduced motion removes the animation, never shortens it (PLAN.md): the
+/* Reduced motion removes the animation, never shortens it (STRUCTURE.md): the
    words stand from the first frame, and a picture still waits for its
    bitmap but arrives without the fade. */
 @media (prefers-reduced-motion: reduce) {

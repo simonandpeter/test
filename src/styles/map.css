@@ -1,6 +1,6 @@
 /* The map (§8.3, redrawn as a flat Mercator by the author on 2026-08-29,
    and stripped to the map alone on 2026-08-30).
-   Built on base.css and tokens.css; PLAN.md wins any argument. */
+   Built on base.css and tokens.css; STRUCTURE.md wins any argument. */
 
 /* ---- the stage -------------------------------------------------------- */
 
@@ -759,7 +759,7 @@ input.map-search-input {
  * end. It points down at the bar it stands over.
  *
  * Rubric, like the fill it rides on — this is liturgical time, the same claim
- * (PLAN.md 2) — and its own hairline in ink so it stays legible where it
+ * (STRUCTURE.md 2) — and its own hairline in ink so it stays legible where it
  * crosses the bar's own colour.
  */
 .map-timeline-head {

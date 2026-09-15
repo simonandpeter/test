@@ -4,7 +4,7 @@
  * the whole mechanism of the cross-fade: `base.css` transitions these
  * fifteen names on `<html>`, every `var()` reading one recomputes each
  * frame, and the page therefore crosses in one movement at one duration and
- * one easing — PLAN.md's "if two things move, they move together".
+ * one easing — STRUCTURE.md's "if two things move, they move together".
  *
  * **It replaces transitioning the boxes, which could not be made to work.**
  * Until 2026-09-10 the fade was `background-color` and `color` on `body`,

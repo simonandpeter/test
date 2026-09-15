@@ -10,19 +10,15 @@ archived at the tag `archive/cross-church-2026-08`.
 
 ## The documents
 
-- **`CLAUDE.md`** — where things live and how to work: the index, the test
-  table, the traps. **Start here**; it opens with the order to read the other
-  two in.
-- **`PLAN.md`** — what the site should be, the design system, what is settled
-  and must not be re-proposed, and what is next. **Binding.**
+- **`CLAUDE.md`** — how to work: the test table, the commands, the traps.
+  **Start here**; it opens with the order to read the other two in.
+- **`STRUCTURE.md`** — what the site is, what it looks like, which files own
+  which page, what is settled and what is next. **Binding.** Its token tables
+  are printed from `src/styles/tokens.css` and a test fails if they are stale.
 - **`HANDOFF.md`** — current state and what is in flight.
 
-Three files, about 700 lines. They replaced 15,776 across four on 2026-09-08:
-`SESSIONS.md` was a hand-maintained second copy of reasoning that `git log`
-already held — 430 commits of it, searchable with `git log --grep` — and
-`DESIGN.md`'s binding content is distilled into `PLAN.md`. The review of that
-cut put back three things it had dropped rather than distilled: the panel and
-register materials, the softness curve, and a layout section.
+Reasoning lives in `git log`, not in a second copy of it: `git log --grep`
+searches it.
 
 Two older documents stay, because they are a **contract rather than a history**:
 

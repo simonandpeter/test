@@ -717,7 +717,7 @@ test('the rail never dead-ends: scrolled to its edge, it rebuilds around the rea
 
 
 test('picking a day already in view does not move the rail', async ({ page }) => {
-  // The movement decides, not the gesture (PLAN.md, unchanged by the
+  // The movement decides, not the gesture (STRUCTURE.md, unchanged by the
   // rail): a day already on screen has nowhere to be brought from, so the
   // rail must not stir under the click.
   await ready(page);
@@ -1320,7 +1320,7 @@ test('no date carries a density dot, and a fast or a feast carries its own', asy
   /*
    * Author, 2026-08-25 evening: "remove the dots under each date in the
    * calendar." They stood under every date at both grains from the first
-   * calendar — one per commemoration, capped at five — and PLAN.md's "Dense
+   * calendar — one per commemoration, capped at five — and STRUCTURE.md's "Dense
    * against sparse" argued them and now records the reversal in place. That
    * removal stands and is still the first half of this test.
    *
@@ -1652,7 +1652,7 @@ test("the month's numerals wear the same colour as the rail's dots", async ({ pa
   /*
    * **The colour is never the only channel.** The rail has named its marks in
    * the accessible label since the dots arrived; the month had no words at
-   * all until it took a colour, and PLAN.md's rule is that the words say
+   * all until it took a colour, and STRUCTURE.md's rule is that the words say
    * which. A screen reader and a reader who cannot separate these two hues
    * both get the fast from the name.
    */
@@ -1739,7 +1739,7 @@ test('the full-screen calendar prints the month’s fasts, feasts and seasons', 
 
   /*
    * In the month's head, and still carrying its words — **as its accessible
-   * name, since 2026-09-10** (docs/daily-desktop-visuals.md §10.13). The
+   * name, since 2026-09-10**. The
    * control is a four-corner mark now, because at 19 rem the head is 272 px
    * and the words took about a hundred of them; the author's own instruction
    * ("change to 'Open Fullscreen'", 2026-09-02) is about what this button
@@ -1966,7 +1966,7 @@ test('a desktop shows the month alone, across the column, with no toggle', async
   expect(m.spare, 'a column is still being kept for the old toggle').toBeLessThan(4);
   /*
    * **It moved into the month's own head on 2026-09-10**
-   * (docs/daily-desktop-visuals.md §3.3), from the column's right margin under
+   *, from the column's right margin under
    * the grid where the author put it on 2026-09-02 ("move it right justified
    * to the rightmost column margin and change to 'Open Fullscreen'"). The head
    * grew two steppers and a reckoning in the same step and the calendar's own
@@ -2034,8 +2034,7 @@ test('the calendar names its own reckoning, and the reader may change it', async
   await expect(button).toHaveText('Julian');
 
   /*
-   * **The head was rebuilt on 2026-09-10** (docs/daily-desktop-visuals.md
-   * §3.3): the name and its reckoning stand together between two steppers
+   * **The head was rebuilt on 2026-09-10**: the name and its reckoning stand together between two steppers
    * rather than on the column's two margins, and the reckoning reads as a
    * bracket after the month it counts — "September 2026 (Julian)".
    *
@@ -2147,7 +2146,7 @@ test('a chosen reckoning renames the day and moves nothing it names', async ({ p
    * **The premise, updated 2026-09-05**: the church's own reckoning, not
    * flatly the civil date, once "Follow my church" is what is in force —
    * Julian for a Russian reader, thirteen days behind the civil URL this
-   * page is still written in. PLAN.md's "civil date and only the civil
+   * page is still written in. STRUCTURE.md's "civil date and only the civil
    * date" rule now holds only for a reader whose church actually keeps
    * Gregorian, or who has chosen it outright (checked below).
    */
@@ -2235,7 +2234,7 @@ test('a phone is told the reckoning without being offered the choice', async ({ 
 /* ---- the month redesigned for the desk, 2026-09-10 ---------------------- */
 
 /*
- * docs/daily-desktop-visuals.md §3.3 and §10.6. Three claims, three tests,
+ * Three claims, three tests,
  * because they fail independently: the grid's own shape, the mark it grew, and
  * the control that steps it. Each was backed out and watched to fail.
  */

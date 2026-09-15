@@ -4,7 +4,7 @@
 alternatives that were tried and rejected, and the measurements that settled an
 argument — moved here out of the source files on 2026-09-12, verbatim.
 
-This is a **record of intent**, not a specification. `PLAN.md` is what the site
+This is a **record of intent**, not a specification. `STRUCTURE.md` is what the site
 should be and is binding; `CLAUDE.md` is how to work. This file answers one
 question and only one: *why is this line here and not the obvious other one?*
 

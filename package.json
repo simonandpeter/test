@@ -26,7 +26,8 @@
     "app:icons": "python scripts/make-app-icons.py && capacitor-assets generate --android --ios --iconBackgroundColor #ece5d6 --iconBackgroundColorDark #1a1412 --splashBackgroundColor #ece5d6 --splashBackgroundColorDark #1a1412",
     "app:sync": "npm run build && cap sync",
     "app:android": "npm run app:sync && cap open android",
-    "app:ios": "npm run app:sync && cap open ios"
+    "app:ios": "npm run app:sync && cap open ios",
+    "tokens:table": "node scripts/tokens-table.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",

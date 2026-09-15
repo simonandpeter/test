@@ -21,7 +21,7 @@ import { civilDate, churchDate, feastIndex, onCivilDay, onMenologionDay, fold } 
  * Both scans are needed and they answer different questions: the civil one is
  * "what does this church show on this date", the menologion one is "does this
  * person already have a folder". These tests hold both, on a synthetic corpus
- * so that nothing here names a saint (`PLAN.md` section 5).
+ * so that nothing here names a saint (`STRUCTURE.md` section 5).
  */
 
 test('a church calendar and the civil date are thirteen days apart, in the right direction', () => {

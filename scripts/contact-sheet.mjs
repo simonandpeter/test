@@ -167,7 +167,7 @@ const OUT = arg('out', 'shots/contact.png');
  * half the tiles as changed, all of it that.
  *
  * `--still` removes three things: `reducedMotion` disables every transition and
- * every drift on the site by design (PLAN.md — removed, never shortened),
+ * every drift on the site by design (STRUCTURE.md — removed, never shortened),
  * `?seed=` fixes the shuffle (`views/saints.js` already reads it off the URL so
  * a dealt row can be shared), and the webfont is **refused**.
  *

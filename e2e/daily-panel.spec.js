@@ -108,7 +108,7 @@ test('the hero is a 3:2 band on the desk, its own shape between, and a band agai
    *
    * This test said "shown whole up to 1:1.6 on desktop" until that last
    * instruction, and the title is the change. **The 1:1.6 rule is not gone
-   * and is not weaker** — docs/daily-desktop-visuals.md §10.23 — it governs
+   * and is not weaker** — it governs
    * every other saint card on the site through `cardCrop`, and it governs
    * this one below 1024 px. What changed is that the desk's own card is one
    * picture alone at the top of a page the reader returns to daily, and a
@@ -486,7 +486,7 @@ test('the hero image fills its column, and opens the saint', async ({ page }) =>
   await page.evaluate(() => document.fonts.ready);
 
   /*
-   * **The mount, 2026-09-10** (docs/daily-desktop-visuals.md §4.1): from
+   * **The mount, 2026-09-10**: from
    * 1024 px the picture stands in a 14 px mat, so what fills the column is the
    * *figure* and what fills the figure is the picture. Both halves are read
    * here — a mat that quietly went to zero would otherwise pass as a smaller
@@ -624,7 +624,7 @@ test('the saint name clears the fold at 360 px on a tall icon', async ({ page })
 
 
 test('a calendar change repaints the day in place rather than rolling it', async ({ page }) => {
-  // The movement decides, not the gesture (PLAN.md). A change of
+  // The movement decides, not the gesture (STRUCTURE.md). A change of
   // calendar has not travelled anywhere in time, so the panel repaints where
   // it stands — it used to roll upward as if the reader had stepped forward a
   // day. 28 June is Augustine's in the Russian calendar and nobody's in the
@@ -792,7 +792,7 @@ test('the Daily page prints the civil date alone, the paschal cycle, the tone an
   // And an ordinary Friday, whose calendar printed no allowance. It said
   // "Fast - Friday" and stopped until the evening of 2026-08-26; it is Strict
   // Fasting by default now, and the weekday goes with the change because on
-  // this day the reason *was* the weekday (PLAN.md carries the
+  // this day the reason *was* the weekday (STRUCTURE.md carries the
   // reversal).
   await expect(page.locator('[data-liturgy] .fast')).toHaveText(/^Strict Fasting/);
   await expect(page.locator('[data-liturgy] .cal-cycle')).toHaveText('13th week after Pentecost · Tone 3');
@@ -1098,7 +1098,7 @@ test('the hairline under the date runs full width, close to the text, in --rule'
    * the register-heading's underline, and stands a tighter space-1 (4 px)
    * under it.
    *
-   * **It is no longer gold** (2026-09-10, docs/daily-desktop-visuals.md §2.4).
+   * **It is no longer gold.**
    * The rebuild pairs it with a rule under the nav and draws both in `--rule`;
    * gold survives on the page as the feast mark alone, which is the one place
    * it carries a fact. The measurements above are untouched — what changed is
@@ -1269,7 +1269,7 @@ test('a day whose calendar named no allowance is strict, and quotes nothing back
    * bubble said what every fast sets aside and refused to guess the rest.
    *
    * The author's instruction ('"Fast - Friday" becomes "Strict Fasting"')
-   * fills that silence, in the strict direction, and PLAN.md carries
+   * fills that silence, in the strict direction, and STRUCTURE.md carries
    * the reversal in place. What did *not* change, and is the reason this test
    * still earns its name: the note is still not quoted back. A grade the site
    * defaulted to was not read out of «Пост», and the bubble prints a
@@ -1311,7 +1311,7 @@ test('a day whose calendar named no allowance is strict, and quotes nothing back
 test('a fast-free day says so, and quotes nothing it was not given', async ({ page }) => {
   // The other side: a day with no fast opens the same bubble and prints no
   // quotation at all, because for that day nobody printed one. A heading over
-  // an empty quotation would be the furniture PLAN.md 5b refuses.
+  // an empty quotation would be the furniture STRUCTURE.md 5b refuses.
   await ready(page, { church: 'russian' });
   await page.goto('/calendar/2026-09-01', { waitUntil: 'networkidle' });
   await page.locator('[data-liturgy] .fast').click();
@@ -1359,7 +1359,7 @@ test('the fast and its bubble are in the reader own language', async ({ browser 
 
 
 test('under reduced motion the bubble does not pop, it is simply there', async ({ browser }) => {
-  // Removed, not shortened (PLAN.md): no scale, no fade, no wait.
+  // Removed, not shortened (STRUCTURE.md): no scale, no fade, no wait.
   const ctx = await browser.newContext({ reducedMotion: 'reduce' });
   const page = await ctx.newPage();
   await searchMode(page);
@@ -2033,7 +2033,7 @@ test('every calendar names its type of fast, not only the one that prints allowa
    * through to a bare "Fast - Friday".
    *
    * So a fast with no printed allowance is Strict Fasting by default now
-   * (lib/fast-grade.js argues the direction; PLAN.md records the
+   * (lib/fast-grade.js argues the direction; STRUCTURE.md records the
    * reversal), and this test is the one that would catch the default being
    * quietly dropped again — it walks the three calendars that have no notes
    * to read.
@@ -2940,7 +2940,7 @@ test('the day is two columns on a desktop and one on a phone', async ({ page }) 
 
 test('the right column is a filled box with a bite and a cross at each corner', async ({ page }) => {
   /*
-   * docs/daily-desktop-visuals.md §3.1, step 5 of §10.12: the right column is
+   * The right column is
    * one filled box, 19rem wide, with a 20 px square bitten out of each corner
    * and a cross of the fill standing in the bite — "the box's own substance
    * turned inside out".
@@ -3051,7 +3051,7 @@ test('the right column is a filled box with a bite and a cross at each corner', 
 
 test('the chrome’s three controls move into the bubble’s head, and go home again', async ({ page }) => {
   /*
-   * docs/daily-desktop-visuals.md §2.2 route (c), step 6 of §10.12: past
+   * Past
    * 1024 px on Daily the language control, the church control and the theme
    * control sit at the head of the sidebar bubble, and below that width they
    * are back in the site's own bar where every other route keeps them.
@@ -3379,7 +3379,7 @@ test('the masthead doubles and the chrome lines up with the page', async ({ page
    * alignment on Daily. The instruction is about the *site's* masthead, and
    * Daily was merely where this test could also reach `.cal-main` and
    * `.cal-side`; but Daily's own wide mast is 22 px now
-   * (docs/daily-desktop-visuals.md §2.2), so leaving the ratio here would
+   *, so leaving the ratio here would
    * have quietly restated the author's claim as 1.29 and let one page's
    * decision redefine a rule about every page. What Daily's mast *is* has a
    * test of its own — `chrome.spec.js`, "Daily wears a smaller, quieter
@@ -3608,7 +3608,7 @@ test('the day steps are half a cross either side of the date, between its two ru
    * that 5, 6 and 7 are desktop only.
    *
    * **The words went on 2026-09-10 and each button became half a cross**
-   * (docs/daily-desktop-visuals.md §2.3, step 7 of §10.12): a 1 px stem capped
+   *: a 1 px stem capped
    * by a diamond at each end, and one arm reaching out from the middle — left
    * on the back step, right on the forward one. So the assertions about type
    * size are gone with the type, and what replaces them is the geometry the
@@ -3764,7 +3764,7 @@ test('neither Daily column draws a scrollbar, and both still scroll', async ({ p
   /*
    * **`.cal-bubble-scroll` is the right column's scroller since 2026-09-10**,
    * where it was `.cal-side`. The column became a filled box with its corners
-   * bitten out (docs/daily-desktop-visuals.md §3.1) and a corner cut off a
+   * bitten out and a corner cut off a
    * scroller is a corner the reader can scroll away from, so the clipped box
    * stays put and the scrolling happens in a child of it. The author's
    * instruction is unchanged and so is this test's claim; only the box in
@@ -3834,7 +3834,7 @@ test('the way into the life reads as a control without wearing a surface', async
    * whole first paragraph fits and there is nothing to fade.
    *
    * **1060 px, where it was 1100 until 2026-09-10.** The right column went
-   * from 28 rem to 19 rem that day (docs/daily-desktop-visuals.md §2.1), which
+   * from 28 rem to 19 rem that day, which
    * handed 144 px to the left column and let Anthony's first paragraph fit
    * whole at 1100 — so this failed on `tail.length` with no hint that its
    * premise had gone. The premise is asserted below now, in words, so the next
@@ -4299,7 +4299,7 @@ test('the wordmark is centred on a phone and unmoved on a desktop', async ({ pag
 
 test('the hero picture stands in a mount rather than behind an outline', async ({ page }) => {
   /*
-   * docs/daily-desktop-visuals.md §4.1, step 8 of §10.12: "**A mount, not an
+   * The instruction: "**A mount, not an
    * outline.** No border anywhere on a picture. The frame is a 14px mat the
    * photo stands inside", drawn in `--mount` — the *other* theme's bubble, so
    * the picture reads as standing on a wall rather than as a framed box on the
@@ -4380,7 +4380,7 @@ test('the hero picture stands in a mount rather than behind an outline', async (
 
 test('the way into the life ends in a diamond, the last chevron on this page', async ({ page }) => {
   /*
-   * docs/daily-desktop-visuals.md §4.2: "`Continue reading ›` loses its
+   * The instruction: "`Continue reading ›` loses its
    * chevron for a 5px diamond. It is the last chevron on the page — on *this*
    * page: the register's own controls and the picker keep theirs."
    *

@@ -327,8 +327,7 @@ test('the register opens compact in columns, remembers the other face, and lands
    * number, so it is measured at two widths and asked to differ.
    *
    * **Two of its assertions were rewritten on 2026-09-10, and the reason is a
-   * decision rather than a drift** (docs/daily-desktop-visuals.md §10.3,
-   * §10.19). This read `pictureAbove` and `pictureWidth > 100`, which were the
+   * decision rather than a drift**. This read `pictureAbove` and `pictureWidth > 100`, which were the
    * borrowed Index card: a full-width picture stacked over the name. The
    * compact face is a row now — a 60 px mat at the row's *trailing* edge — and
    * that is the one place the shipped page deliberately differs from the
@@ -549,7 +548,7 @@ test('a register card crops to the hero own limits', async ({ page }) => {
 
 test('a register mat is 60 px wide however tall its picture is', async ({ page }) => {
   /*
-   * docs/daily-desktop-visuals.md §5.1 and §10.2: "fix the mat's WIDTH at
+   * The instruction: "fix the mat's WIDTH at
    * 60px (48 + 6px padding), let the height derive within the existing clamp".
    * `--reg-aspect` is untouched, so what a picture is *drawn* at is still the
    * clamped shape `cardCrop` writes per saint — and the test above this one
@@ -591,7 +590,7 @@ test('a register mat is 60 px wide however tall its picture is', async ({ page }
 
 test('a register row with no icon shows its type as a mark, and says it in words', async ({ page }) => {
   /*
-   * docs/daily-desktop-visuals.md §5.1 and §10.10: a glyph keyed off `types`
+   * A glyph keyed off `types`
    * where there is no picture, drawn in `--rule` and `aria-hidden` — "its
    * 1.41:1 is then not a legibility failure because it is not the carrier:
    * make sure the entry's accessible text names the saint's type in words".
@@ -648,7 +647,7 @@ test('a register row with no icon shows its type as a mark, and says it in words
 
 test('the register offers the two faces the reference draws, and no third', async ({ page }) => {
   /*
-   * docs/daily-desktop-visuals.md §10.4, **as reversed by the author on
+   * **As reversed by the author on
    * 2026-09-10**. It had ruled that `expanded` was a third face beside `cards`
    * and `list`, reading the reference's two marks as two frames of one
    * three-mark control. The author has ruled that the two marks are the

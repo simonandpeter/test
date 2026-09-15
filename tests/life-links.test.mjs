@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { writtenLinks, setAside, KEPT, REFUSED } from '../scripts/life-links.mjs';
 
 /**
- * **A saint named in a life gets a hyperlink and a `related` row** — `PLAN.md`
+ * **A saint named in a life gets a hyperlink and a `related` row** — `STRUCTURE.md`
  * section 5, and the corpus's oldest cross-reference rule.
  *
  * It went unenforced for as long as it existed. On 2026-09-09 the corpus held

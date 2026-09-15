@@ -2,7 +2,7 @@
  * The one width the site changes its mind at, and the only place it is written.
  *
  * **1024 px is the Daily page's boundary** — two columns above it,
- * `display: contents` below (PLAN.md §4) — and it is also where three controls
+ * `display: contents` below (STRUCTURE.md §4) — and it is also where three controls
  * the author called "desktop only" stop existing: the full-screen calendar's
  * opener (2026-09-02, "this was only ever supposed to be a desktop only
  * addition"), the reckoning chooser (2026-09-02, "have the ability only on

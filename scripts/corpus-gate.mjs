@@ -255,7 +255,7 @@ if (wrongCalendar) fail('calendars', `${wrongCalendar} feast(s) on the wrong cal
 
 /*
  * Not a check. These are the numbers `e2e/` writes as literals, computed from
- * the folders. `PLAN.md` section 5 says tests must not name instances and 85
+ * the folders. `STRUCTURE.md` section 5 says tests must not name instances and 85
  * hard-coded slugs and dates are still in the specs; until they are derived,
  * **a batch that moves one of these has to move the literal in the same
  * commit** or `main` goes red seventeen minutes after the push.

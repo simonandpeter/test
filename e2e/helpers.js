@@ -5,14 +5,14 @@ import { expect } from '@playwright/test';
  * The fixtures every browser spec shares: the routes the suite keeps returning
  * to, and the small helpers that press the site's own controls.
  *
- * History and the decisions behind these: docs/E2E-DECISIONS.md#helpersjs
+ * History and the decisions behind these:
  */
 
 /**
  * **The corpus's own size, read from the build rather than typed** — never a
  * literal, which a new saint turns red without having found a defect.
  * The build's own meta file, so it is the number the page renders from.
- * docs/E2E-DECISIONS.md#helpersjs
+ *
  */
 const META = JSON.parse(readFileSync(new URL('../data/manifest.meta.json', import.meta.url), 'utf8'));
 
@@ -63,7 +63,7 @@ export /**
  * itself**, so `carouselMode()` and any test that stamps `indexMode` directly
  * still gets the mode it asked for. The page's own default is a separate claim
  * with its own test, "All Saints opens on the carousel".
- * docs/E2E-DECISIONS.md#helpersjs
+ *
  */
 const searchMode = (page) =>
   page.addInitScript(() => {
@@ -87,7 +87,7 @@ export /**
  * clock — trap 4. Any test that asserts the *Today* word navigates through this
  * rather than through a literal, which fails on exactly one day of the year.
  * Three days back is outside a timezone's worth of slop, and the calendar
- * renders any date. docs/E2E-DECISIONS.md#helpersjs
+ * renders any date.
  */
 const aDayThatIsNotToday = (page) =>
   page.evaluate(() => {
@@ -131,7 +131,7 @@ export const INDEX = '/saints';
  * toggle and the grain fade are phone controls; a desktop has a static month
  * grid and no toggle, so a test *about the picker* has to say which width it
  * means. Not a workaround for a hidden element.
- * docs/E2E-DECISIONS.md#helpersjs
+ *
  */
 export const phone = (page) => page.setViewportSize({ width: 360, height: 780 });
 
@@ -232,7 +232,7 @@ export /**
  * suite's default church is Russian, whose own reckoning is Julian, and every
  * test written against the civil date would shift thirteen days. A test that
  * wants the true "nothing chosen" state asks for it: `{ reckoning: null }`.
- * docs/E2E-DECISIONS.md#helpersjs
+ *
  */
 const ready = (page, { church = 'russian', language = 'en', reckoning = 'gregorian' } = {}) =>
   page.addInitScript(
@@ -251,7 +251,7 @@ const ready = (page, { church = 'russian', language = 'en', reckoning = 'gregori
 export /**
  * Sort, through the `.facet` chip that replaced the old `<select>`. One place,
  * so the next change to that control is one edit and not thirty.
- * docs/E2E-DECISIONS.md#helpersjs
+ *
  */
 const chooseSort = async (page, value) => {
   const chip = page.locator('details[data-facet="sort"] > summary');
@@ -270,7 +270,7 @@ const chooseSort = async (page, value) => {
  * The product path is untouched: pointerdown, four pointermoves, pointerup, and
  * the rail's own sampling decides. Returns the rail's position at release, plus
  * `delivered` — the caller asserts its own premise rather than inferring it.
- * docs/E2E-DECISIONS.md#helpersjs
+ *
  */
 export const throwRail = (
   strip,
@@ -329,7 +329,7 @@ export const throwRail = (
 /**
  * The Index narrowed to one calendar. **Narrowing is unticking**: every
  * calendar starts ticked, so ticking one is a no-op that hands back the whole
- * corpus. docs/E2E-DECISIONS.md#helpersjs
+ * corpus.
  */
 export const onlyCalendar = async (page, name) => {
   const group = await facet(page, 'churches');
@@ -416,7 +416,7 @@ export /**
  * `<color>` hands back the computed one, and a parser written for either is
  * silently wrong about the other. Painting it asks the question the reader's
  * eye asks and survives the next registration.
- * docs/E2E-DECISIONS.md#helpersjs
+ *
  */
 const tokenColours = (page, ...names) =>
   page.evaluate((tokens) => {

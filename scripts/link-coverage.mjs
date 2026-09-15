@@ -8,7 +8,7 @@
  * PLAN's section 5 wants every thread the sources write down to be walkable,
  * and its item 4 asked for the one number that says how far off that is *to
  * trend*, the way `locale-coverage.mjs` trends the packs. A figure quoted once
- * in a document goes stale silently: `PLAN.md` carried "520 saints with no
+ * in a document goes stale silently: `STRUCTURE.md` carried "520 saints with no
  * link in either direction" until this was written, and the true figure that
  * day was 768.
  *

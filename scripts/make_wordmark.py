@@ -28,7 +28,7 @@ WORDS = ['AGIOS']
 # The accessible name a screen reader is given for the mark. It matched the
 # drawn word from 2026-09-12, when the site became AGIOS everywhere; before
 # that the site and the mark were deliberately different names. Keep it equal
-# to `WORDS` unless that is chosen again — PLAN.md §3 "The name" lists every
+# to `WORDS` unless that is chosen again — STRUCTURE.md §3 "The name" lists every
 # other place the brand is written down, and they all move together.
 LABEL = 'AGIOS'
 TRACKING = 0.04   # base.css: .site-name letter-spacing

@@ -1,7 +1,7 @@
 /**
  * Which church the reader keeps (author, 2026-08-22): one of the registry's
  * four — Russian, Romanian, Greek or Serbian — and with it which calendar, because
- * the calendar follows the church (PLAN.md). One choice for the whole
+ * the calendar follows the church (STRUCTURE.md). One choice for the whole
  * site: the calendar page shows that church's calendar, the Index keeps that
  * church's saints and names what it sets aside, the saint's page reads that
  * church's register first. Asked once on a first visit, changed from the

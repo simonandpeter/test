@@ -10,7 +10,7 @@ import { ready, searchMode } from './helpers.js';
  * project's own Playwright config.
  *
  * Why these two, why at the network rather than in a unit test, and the
- * numbers that prompted them: docs/E2E-DECISIONS.md#download-limiterspecjs
+ * numbers that prompted them:
  */
 
 // The suite's standing seed; neither test visits All Saints, but every other
@@ -21,7 +21,7 @@ test.beforeEach(async ({ page }) => {
 
 test('the day records and the locale packs are fetched, not carried in the entry chunk', async ({ page }) => {
   // What the split costs and why the day records are awaited beside the
-  // manifest: docs/E2E-DECISIONS.md#download-limiterspecjs
+  // manifest:
   const scripts = [];
   page.on('request', (r) => {
     if (r.resourceType() === 'script') scripts.push(r.url());
@@ -59,7 +59,7 @@ test('the day records and the locale packs are fetched, not carried in the entry
 
 test('the boot path fetches the manifest and not the coverage statistics', async ({ page }) => {
   // Addendum G1. About's statistics call `loadManifestMeta()` when they want
-  // the file; the boot path must not. docs/E2E-DECISIONS.md#download-limiterspecjs
+  // the file; the boot path must not.
   const fetched = [];
   page.on('request', (r) => fetched.push(r.url()));
 

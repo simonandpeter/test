@@ -12,7 +12,7 @@ export const STRINGS = {
      * index.html's slots at build time; `LABEL` in that script is its
      * accessible name. This key is drawn by nothing and carries one value in
      * all five packs, so the coverage script sees one key set —
-     * `tests/strings-shape.test.mjs`. PLAN.md §3 "The name" lists the fourteen
+     * `tests/strings-shape.test.mjs`. STRUCTURE.md §3 "The name" lists the fourteen
      * places the brand is written down.
      * `docs/SRC-DECISIONS.md § src/ui/strings.js — the name is a mark`
      */
@@ -90,7 +90,7 @@ export const STRINGS = {
      * The same three calendars named short, for the bracket beside the month's
      * own name — "September 2026 (R. Julian)" — where the head has a stepper
      * either side of it and, once the column narrows, 19rem to hold all of it
-     * (docs/daily-desktop-visuals.md §3.3).
+     *
      *
      * **Only the longest name is abbreviated, in every pack.** The chooser's
      * own rows keep the full names, and so does the button's accessible
@@ -291,7 +291,7 @@ export const STRINGS = {
       /* `unstated` stood here — "Meat, dairy and eggs are set aside." — for a
          fast whose calendar printed no allowance. It has no caller since the
          evening of 2026-08-26, when such a day started reading Strict Fasting
-         by default (lib/fast-grade.js argues it, PLAN.md records the
+         by default (lib/fast-grade.js argues it, STRUCTURE.md records the
          reversal), and it is removed rather than left for someone to grep
          for. `liturgy.fast` — "Fast - {reason}" — went with it and for the
          same reason: there is no longer a fast day without a grade to name. */
@@ -457,7 +457,7 @@ export const STRINGS = {
      * Whose name day it is (author, 2026-08-26: "add name days"). A heading
      * and nothing else: the names under it are the day's own saints read a
      * second way, and a sentence explaining that would be the furniture
-     * PLAN.md refuses. What the site will not say is who *should*
+     * STRUCTURE.md refuses. What the site will not say is who *should*
      * celebrate on which day — usage differs between the four churches and
      * between families inside them, and lib/name-days.js states the day's
      * names rather than anyone's obligation.
@@ -741,7 +741,7 @@ export const STRINGS = {
        the first Index until the author removed it (2026-08-25 evening). The
        count note under the controls already says how much of the corpus this
        calendar keeps, and the filters are visibly filters; a line that only
-       describes the furniture is the furniture PLAN.md refuses. The key
+       describes the furniture is the furniture STRUCTURE.md refuses. The key
        is gone from all five packs with it. */
     search: 'Search',
     searchHint: 'name, type, church, region',
@@ -789,7 +789,7 @@ export const STRINGS = {
      * text. `--ink-soft` is this palette's own answer to that question and
      * clears it at 5.82:1, so the contrast between the two halves is bought
      * by lifting the *rest* to full ink rather than by sinking the lead-in
-     * below the floor. PLAN.md, and the third time this file has been
+     * below the floor. STRUCTURE.md, and the third time this file has been
      * asked for a colour that cannot carry words.
      *
      * Each pack orders its own two halves; the four that are not English
@@ -839,7 +839,7 @@ export const STRINGS = {
       description: 'How the saints are laid out',
       // The tick box beside them (author, 2026-08-22): the opening of the life
       // under the name. It swapped the mark for the full matrix too, until the
-      // glyph was removed (2026-08-22, PLAN.md).
+      // glyph was removed (2026-08-22, STRUCTURE.md).
       detailed: 'Detailed',
       detailedDescription: 'Show a short description on every saint',
     },

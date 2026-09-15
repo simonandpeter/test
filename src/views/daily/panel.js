@@ -144,7 +144,7 @@ function fitLede(panel) {
   /*
    * **The budget is the mount's foot, not the picture's** (2026-09-10). From
    * 1024 px the picture stands in a 14 px mat and the words beside it are
-   * lifted 8 (docs/daily-desktop-visuals.md §4.1, §4.2), so "the text does not
+   * lifted 8, so "the text does not
    * go below the bottom of the image" is now a distance between two boxes that
    * no longer share an edge. Measured rather than added up: the foot of the
    * mount less the top of the words is the space the words have, whatever the
@@ -255,7 +255,7 @@ function registerOrder(entries, data) {
 }
 
 /**
- * The six marks, drawn (docs/daily-desktop-visuals.md §5.1). Which one a saint
+ * The six marks, drawn. Which one a saint
  * gets is `typeGlyph` in lib/saint-types.js — arithmetic over the corpus's
  * vocabulary, and unit-tested there; this is only the ink.
  *
@@ -342,7 +342,7 @@ function registerRow(saint, title, transition, seq = 0) {
       ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
       <span class="reg-sub utility">${esc(subtext)}</span>${spoken}
       <!--
-        **One line of who they were** (docs/daily-desktop-visuals.md §5.1):
+        **One line of who they were**:
         "the register says who else is commemorated; this makes it say who they
         were". Two lines clamped in the compact face and the whole opening
         paragraph in the expanded one — same box, the clamp is the difference.
@@ -443,7 +443,7 @@ function emptyDayNote(iso) {
 
 /**
  * The register's own control, as the two marks the reference draws
- * (docs/daily-desktop-visuals.md §5.3, §10.4): four 5 px diamonds standing in
+ *: four 5 px diamonds standing in
  * the shape of a larger one for the compact face, and that larger diamond
  * whole for the expanded one. Whichever is live is drawn in `--accent` and the
  * other in `--rule`; calendar.css has the geometry.
@@ -572,7 +572,7 @@ export function paintDay({ main, side }) {
    * 1:1.6 in a 414 px column is 662 px of icon over a 505 px card.
    *
    * **Read between 620 and 1024 px only, since 2026-09-10.** The desk's own
-   * card is a fixed 3:2 now (docs/daily-desktop-visuals.md §10.23), so there
+   * card is a fixed 3:2 now, so there
    * is no tall icon left for that arithmetic to hold down and the column is
    * the design's own rather than derived. This is still published because
    * the width that reads it is a window resize away, and the three properties
@@ -704,7 +704,7 @@ export function paintDay({ main, side }) {
           keeps the names in the folder), so the words come with the saint's
           own payload. Empty until then and empty for good where the corpus has
           no place, because a line that says "Born:" and nothing else is the
-          furniture PLAN.md refuses.
+          furniture STRUCTURE.md refuses.
         -->
         <p class="hero-places utility" data-hero-places hidden></p>
         <!-- The opening of the life, on a wide screen only (author,
@@ -713,7 +713,7 @@ export function paintDay({ main, side }) {
              from the manifest, so the box is here from the first paint and
              fills a moment later; empty until then, and empty for good where
              a saint has no life recorded, because a heading over nothing is
-             the furniture PLAN.md refuses.
+             the furniture STRUCTURE.md refuses.
 
              The way into the life is now the last words *of this paragraph*
              (author, 2026-09-01: "make the '...continue reading' part of the

@@ -78,7 +78,7 @@ const contentDirs = () => ({
  * starts the request with the HTML instead of after the stylesheet has been
  * parsed and matched, which is what puts the face inside that window on most
  * loads — without reintroducing the layout shift `swap` would cost. Zero shift
- * outranks brand (PLAN.md); this buys the brand back where it is free.
+ * outranks brand (STRUCTURE.md); this buys the brand back where it is free.
  *
  * **Which two, and why not four.** `normal-latin` is the face every page is set
  * in. `normal-latin-ext` is not a luxury beside it: the corpus is full of names

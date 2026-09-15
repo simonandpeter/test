@@ -11,9 +11,9 @@ import { fileURLToPath } from 'node:url';
  * On 2026-09-08 a documentation cut repointed 152 references across 57 files
  * by hand. It missed live ones in `index.html`, `base.css` and
  * `saint.schema.json`, and it turned about a dozen precise citations into
- * false ones — `DESIGN.md §5c` became `PLAN.md`, which points at four hundred
- * lines, and in five cases at content `PLAN.md` does not contain at all. Every
- * one of those was found by hand, one at a time, over an afternoon.
+ * false ones: a citation naming a section became a bare filename pointing at
+ * four hundred lines, and in five cases at content that file did not contain
+ * at all. Every one was found by hand, one at a time, over an afternoon.
  *
  * `brief §N` and `Addendum X` are cited sixty-four times between them and are
  * a contract rather than a history, so a citation that does not resolve is a
@@ -66,7 +66,7 @@ const lineOf = (text, index) => text.slice(0, index).split('\n').length;
  * new name appearing here should feel like a cost.
  */
 const GONE = new Map([
-  ['DESIGN.md', 'distilled into PLAN.md on 2026-09-08; mentioned in the past tense only'],
+  ['DESIGN.md', 'distilled into the design document on 2026-09-08; mentioned in the past tense only'],
   ['SESSIONS.md', 'deleted on 2026-09-08, its reasoning already in git log'],
 ]);
 
@@ -149,14 +149,78 @@ test('every "Addendum X" is an item the addendum has', () => {
   assert.deepEqual(bad, [], `no such item in the addendum:\n  ${bad.join('\n  ')}`);
 });
 
-test('every "PLAN.md\'s X section" is a heading PLAN.md has', () => {
+/**
+ * The documents themselves, which the checks above never read — they search
+ * `src/` and friends for names *of* documents. A path written inside a
+ * document is the other half, and it is the half that rots: two documents
+ * both sent a reader to `scratchpad/throttle-probe.mjs` for the
+ * three days after it moved to `scripts/`, and nothing could see it.
+ *
+ * Not `docs/archive/`, whose whole subject is files that are gone.
+ */
+const DOCS = (() => {
+  const out = [];
+  const add = (dir) => {
+    for (const entry of readdirSync(path.join(ROOT, dir), { withFileTypes: true })) {
+      if (entry.isFile() && entry.name.endsWith('.md')) out.push(path.join(dir, entry.name));
+    }
+  };
+  add('.');
+  add('docs');
+  return out.map((f) => [
+    f.replace(/^\.[\\/]/, '').replace(/\\/g, '/'),
+    readFileSync(path.join(ROOT, f), 'utf8'),
+  ]);
+})();
+
+const DIRS = 'src|scripts|scratchpad|e2e|tests|schema|public|mockups|docs';
+
+test('every path a document names exists', () => {
+  const missing = [];
+  for (const [file, text] of DOCS) {
+    for (const m of text.matchAll(
+      new RegExp(String.raw`(?<![\w/.-])((?:${DIRS})/[A-Za-z0-9._/-]+\.[a-z]{2,4})\b`, 'g'),
+    )) {
+      const named = m[1];
+      // `data/` is generated and gitignored; a glob or a placeholder names a
+      // shape rather than a file.
+      if (/[*{}<>]/.test(named)) continue;
+      if (existsSync(path.join(ROOT, named))) continue;
+      missing.push(`${file}:${lineOf(text, m.index)} names ${named}`);
+    }
+  }
+  assert.deepEqual(
+    missing,
+    [],
+    `a document sends a reader to a file that is not there:\n  ${missing.join('\n  ')}`,
+  );
+});
+
+test('every npm script a document names is in package.json', () => {
+  const pkg = JSON.parse(readFileSync(path.join(ROOT, 'package.json'), 'utf8'));
+  const scripts = new Set(Object.keys(pkg.scripts ?? {}));
+
+  const bad = [];
+  for (const [file, text] of DOCS) {
+    for (const m of text.matchAll(/npm run ([a-z][a-z0-9:-]*)/g)) {
+      if (!scripts.has(m[1])) bad.push(`${file}:${lineOf(text, m.index)} names \`npm run ${m[1]}\``);
+    }
+  }
+  assert.deepEqual(
+    bad,
+    [],
+    `no such npm script:\n  ${bad.join('\n  ')}\n  package.json has: ${[...scripts].join(', ')}`,
+  );
+});
+
+test('every "STRUCTURE.md\'s X section" is a heading STRUCTURE.md has', () => {
   /*
    * The repointing's own damage: a citation that names a section has to name
    * one that exists, or it is worse than the bare filename it replaced —
-   * `fast-grade.js` quoted a phrase as PLAN.md's that PLAN.md has never
+   * `fast-grade.js` quoted a phrase as STRUCTURE.md's that STRUCTURE.md has never
    * contained.
    */
-  const plan = readFileSync(path.join(ROOT, 'PLAN.md'), 'utf8');
+  const plan = readFileSync(path.join(ROOT, 'STRUCTURE.md'), 'utf8');
   const headings = [...plan.matchAll(/^#{2,4}\s+(?:\d+\.\s*)?(.+)$/gm)].map((m) =>
     m[1].trim().toLowerCase(),
   );
@@ -172,6 +236,6 @@ test('every "PLAN.md\'s X section" is a heading PLAN.md has', () => {
   assert.deepEqual(
     bad,
     [],
-    `PLAN.md has no such section:\n  ${bad.join('\n  ')}\n  it has: ${headings.join(' / ')}`,
+    `STRUCTURE.md has no such section:\n  ${bad.join('\n  ')}\n  it has: ${headings.join(' / ')}`,
   );
 });

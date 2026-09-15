@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 /*
- * PLAN.md quotes a contrast ratio for every text token in both themes, and
+ * STRUCTURE.md quotes a contrast ratio for every text token in both themes, and
  * has been wrong about them twice — once claiming ink-soft cleared 5.4:1 both
  * modes when the light field was 5.29:1, and once calling the dark rubric
  * 5.1:1 and "safe for text at any size" when it was 4.20:1 and failing AA.
@@ -76,7 +76,7 @@ for (const [theme, get] of [
 
   /*
    * `--gold` itself takes no floor: it is never text and never carries
-   * information alone (PLAN.md), and it is spent on a favicon, a hairline
+   * information alone (STRUCTURE.md), and it is spent on a favicon, a hairline
    * and the coachmarks' border — decoration, not a graphical object a reader
    * has to resolve to understand anything. It measures 2.78:1 on light gesso,
    * which would fail a non-text floor if one applied, and none does.
@@ -141,7 +141,7 @@ for (const [theme, get] of [
 /*
  * **The document no longer quotes the ratios, and this no longer checks that
  * it does** (2026-09-08). DESIGN.md carried a paragraph of computed figures and
- * this test held the paragraph to the palette; PLAN.md replaced it and states
+ * this test held the paragraph to the palette; STRUCTURE.md replaced it and states
  * the *guarantee* instead — every text token clears WCAG AA on both grounds in
  * both themes — which is what the loop above actually proves. A test that a
  * document repeats a number the code already enforces was one more thing to

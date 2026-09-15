@@ -12,7 +12,7 @@ import { AxeBuilder } from '@axe-core/playwright';
 /**
  * The brief's §13 quality floor, as an executable gate. Every item here is
  * non-negotiable and is meant to fail the build when it regresses.
- * docs/E2E-DECISIONS.md#quality-floorspecjs
+ *
  */
 
 // **Every spec file needs this**: dropping it hands these tests the carousel
@@ -36,7 +36,7 @@ for (const [label, path, prepare] of ROUTES) {
    * `tests/contrast.test.mjs` holds the *tokens* to the floor and is much the
    * faster check. This one holds the **compositions**: a token pair no test
    * thought to look at is exactly how the last dark-mode AA failure hid.
-   * docs/E2E-DECISIONS.md#quality-floorspecjs
+   *
    */
   test(`no axe violations in vigil mode: ${label}`, async ({ page }) => {
     await page.emulateMedia({ colorScheme: 'dark' });
@@ -70,7 +70,7 @@ for (const [label, path, prepare] of ROUTES) {
  * The budget is 0.02, not the 0.1 of Core Web Vitals "good": the brief says
  * *no* shift, and 0.1 would license eight times the movement it allows.
  * **It should be argued down rather than up.**
- * docs/E2E-DECISIONS.md#quality-floorspecjs
+ *
  */
 const CLS_BUDGET = 0.02;
 
@@ -122,7 +122,7 @@ for (const [label, path, prepare] of ROUTES) {
 }
 
 /*
- * Brief §13: "All colour information duplicated in text or shape" — PLAN.md's
+ * Brief §13: "All colour information duplicated in text or shape" — STRUCTURE.md's
  * §7 greyscale test. Both of the grid's channels are held, because the grid
  * uses a different one per mark: a **shape** (rules under and above the
  * numeral, solid for the strict fast and dashed for the fish day) and the
@@ -134,7 +134,7 @@ for (const [label, path, prepare] of ROUTES) {
  * `borderTopWidth`: solid and dashed are the same width, and a pair told apart
  * by width alone is a thinner line rather than a different one — green here and
  * silent to the reader. **Two weights would pass; they must not.**
- * docs/E2E-DECISIONS.md#quality-floorspecjs
+ *
  */
 test('a day mark is told apart by shape, not only by hue', async ({ page }) => {
   await ready(page);
@@ -278,9 +278,9 @@ test('no axe violations on the first visit, with the two marks standing', async 
   /*
    * Once it has arrived: axe reads an opacity as a new colour, and the panel
    * fades in, so sampling mid-flight indicts colours that are at full strength
-   * a sixth of a second later. **Not** the mistake PLAN.md keeps catching — a
+   * a sixth of a second later. **Not** the mistake STRUCTURE.md keeps catching — a
    * permanent wash over text is a real defect; this is a transient. The gate is
-   * for the resting state. docs/E2E-DECISIONS.md#quality-floorspecjs
+   * for the resting state.
    */
   await panelSettled(page);
   const open = await new AxeBuilder({ page })

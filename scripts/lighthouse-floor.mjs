@@ -63,7 +63,7 @@ const FLOOR = {
  *
  * **The ceiling is a measurement and will move when the transfer around it
  * does.** The step is a fact about the whole first-paint download, not about
- * this file alone, which is why docs/daily-desktop-visuals.md §10.18's
+ * this file alone, which is why an earlier measurement of
  * "between 73.9 and 75.1 kB" — true when it was written — is not where the
  * step is now. Re-measure with the 57-byte method rather than nudging this
  * number to fit a run.

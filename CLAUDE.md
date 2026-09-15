@@ -2,16 +2,17 @@
 
 ## Read these first, in this order
 
-Read all three before touching anything. They are ~600 lines together and they
-are the whole briefing; the author's prompt does not repeat what is in them.
+Read all three before touching anything. They are the whole briefing; the
+author's prompt does not repeat what is in them.
 
-1. **This file** — where things live, how to work, the test table, the traps.
+1. **This file** — how to work, the test table, the traps.
 2. **`HANDOFF.md`** — current state and anything in flight. Read before you
    assume the working tree is clean.
-3. **`PLAN.md`** — what the site should be, what is settled and must not be
-   re-proposed, the design system, and the numbered next steps. **Binding**: if
-   the code disagrees with it, the code is wrong. Read it before any visual or
-   design decision.
+3. **`STRUCTURE.md`** — what the site is, what it looks like, which files own
+   which page, what is settled and what is next. **Binding**: if the code
+   disagrees with it, the code is wrong. Read it before any visual, layout or
+   design decision, and read the route's own section in §4 before changing one
+   of its rules.
 
 Then, only if the task reaches them: **`docs/CORPUS.md`** — binding for anyone
 adding to `saints/`: the sources, what "correct" means per field, the failure
@@ -20,12 +21,49 @@ and `docs/saintsplanaddendum.md` (the original brief, cited by the source 64
 times as "brief §N" and "Addendum X" — a contract, not history), and
 `docs/APP.md` for the Capacitor shells.
 
-History is in `git log` (430 commits of reasoning; `git log --grep` searches it)
-and, per module and per spec, in `docs/SRC-DECISIONS.md` and
-`docs/E2E-DECISIONS.md`. Read history only when asked how something used to
-work. (This paragraph named `*.notes.md` beside a module from 2026-09-09 until
-2026-09-15. No such file has ever existed in this repo — the convention was
-proposed and the extraction went to the two documents above instead.)
+History is in `git log`, searchable with `git log --grep`, and per module in
+`docs/SRC-DECISIONS.md`. Read history only when asked how something used to
+work.
+
+---
+
+## Which document takes it
+
+**The test is how often the thing changes, not what it is about.** Every
+document this repo has lost was lost to the same failure: a fact that changes
+weekly written beside one that changes yearly, so the page had to be rewritten
+to correct the first and the second got rewritten with it, differently.
+
+| how often it changes | where it goes |
+| --- | --- |
+| never, or when the author rules | `STRUCTURE.md` §1–5 |
+| when an item is finished | `STRUCTURE.md` §6 — the to-do |
+| every sitting | `HANDOFF.md` |
+| whenever the code changes | **nowhere.** A script prints it. |
+| it already happened | the commit message |
+
+Four rules follow, and each one has a corpse behind it:
+
+- **One claim, one file.** Before you write a fact down, grep for it. The same
+  number in two documents is two claims, and the day they disagree neither is
+  trusted. The entry stylesheet's headroom was written in two files within an
+  hour of the to-do moving.
+- **A number is generated or it is not written.** If a script can print it, name
+  the script instead of the number — `npm test` for the unit count,
+  `locale-coverage.mjs` for pack gaps, `build-manifest.mjs` for the corpus.
+  `npm run tokens:table` prints `STRUCTURE.md` §3's tables outright, and
+  `tests/structure.test.mjs` fails if they are stale.
+- **`HANDOFF.md` is state, not the record of your sitting.** If you are about to
+  append a narrative of what you just did, that is the commit message's job.
+  That file reached 573 lines once, nine tenths of it exactly that.
+- **Delete a wrong claim; never annotate it.** "This paragraph said X until…"
+  is how one page becomes an argument with itself. The correction goes in the
+  commit that makes it.
+
+**A route's section in `STRUCTURE.md` §4 is written when that route is worked
+on, and corrected in the same commit that proves it wrong.** Daily is written.
+The other five are not, and a section nobody has checked against the page is
+worse than no section.
 
 ---
 
@@ -127,7 +165,7 @@ comparison.
 
 **And if it still will not reproduce, throttle the CPU rather than theorise.**
 `Emulation.setCPUThrottlingRate` after the `goto` turns a two-core runner into
-something this desk can be. **`node scratchpad/throttle-probe.mjs
+something this desk can be. **`node scripts/throttle-probe.mjs
 hover|resize|ceiling [rates]`** against a running `npm run preview` is the tool.
 Three flakes survived a day of guessing — including two explanations written
 into the code and later disproved — and all three fell out in minutes at 20x:
@@ -174,13 +212,16 @@ them — so this is a rule about mechanism, not about care.
 
 ## Where things live
 
-**`docs/STRUCTURE.md` is the map when the task is a page's layout**: per route,
-the files, the attributes and custom properties that drive it, the box chain
-from the root down to the view's own root, the breakpoints and the specs — so
-a session does not reassemble that chain out of four files' comments before it
-can change one rule. **It is not written yet**; `docs/WHERE-WE-ARE.md` has the
-item and the shape, and until it lands the table below plus
-`docs/SRC-DECISIONS.md` are what there is.
+**`STRUCTURE.md` is the map when the task is a page's layout**: per route, the
+files, the desktop and mobile layouts as separate readings, what the two are
+required to share, the attributes and custom properties that drive them, the
+box chain from the root down to the view's own root, the breakpoints and the
+specs — so a session does not reassemble that chain out of four files' comments
+before it can change one rule.
+
+**It covers Daily and nothing else yet.** For every other route the table below
+plus `docs/SRC-DECISIONS.md` are what there is, and a route's section gets
+written when that route is next worked on.
 
 ### Pages
 
@@ -259,7 +300,7 @@ folders, not the manifest.
 ## Tests
 
 - **Unit** `tests/*.mjs` — `npm test`, ~2 s, 353 tests. Put logic here.
-- **`tests/plan.test.mjs` executes `PLAN.md`.** Its tables of colours, type,
+- **`tests/structure.test.mjs` executes `STRUCTURE.md`.** Its tables of colours, type,
   durations, easings and shadows are read and checked against the code, in both
   directions — a token added and not written down fails too. **If you change a
   value, change the table in the same commit.** `tests/citations.test.mjs` does
@@ -343,7 +384,7 @@ After deleting or moving a stylesheet, list the selectors it held and check
 which of them nothing else defines:
 
 ```bash
-git show <deletion>^:src/styles/gone.css | grep -oE "^\.[a-z][a-z0-9-]*" | sort -u
+git show <deletion>^:src/styles/<gone>.css | grep -oE "^\.[a-z][a-z0-9-]*" | sort -u
 ```
 
 ---
@@ -464,7 +505,7 @@ The codebase already holds this line. The rule is to keep it there.
   **48 tiles in 43 s** (2 widths × 2 themes × 2 languages × 6 routes).
   `export MSYS_NO_PATHCONV=1` before `--routes=/`, or the shell turns it into
   `C:/Program Files/Git/` and you get six tiles of nothing.
-- **`--css=mockups/a.css,mockups/b.css`** shoots each as its own labelled row,
+- **`--css=mockups/panel-card.css,mockups/panel-icon.css`** shoots each as its own labelled row,
   with the baseline first. **This is how visual options are compared**: no file
   is edited, no tree is left dirty, and three variants of two routes take 11 s
   in one image. `mockups/` holds them; two are there already (`panel-card.css`,

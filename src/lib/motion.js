@@ -5,7 +5,7 @@
  * Daily page's roll, picker and fast bubble, the carousel's loop, the grain,
  * the shelf, the chooser panels' flight, the coachmarks and the map — and
  * none of them owns it. Until 2026-09-05 eight of them carried their own
- * copy of this line; PLAN.md wants motion *removed* under it, never
+ * copy of this line; STRUCTURE.md wants motion *removed* under it, never
  * shortened, and eight copies were eight chances to get that wrong once.
  *
  * Read fresh each time rather than cached: a reader can change the setting
@@ -27,7 +27,7 @@ export const reducedMotion = () =>
  * declared in `index.css`), and two copies of a number is how twelve durations
  * happened in the first place.
  *
- * PLAN.md's Motion section is what the names mean. Reach for the name, not the
+ * STRUCTURE.md's Motion section is what the names mean. Reach for the name, not the
  * number.
  */
 export const DUR = {

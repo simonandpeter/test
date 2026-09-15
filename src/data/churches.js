@@ -1,6 +1,6 @@
 /**
  * The church registry — four local churches of the Orthodox Church, the
- * author's decision for this project (PLAN.md, 2026-08-22): Russian,
+ * author's decision for this project (STRUCTURE.md, 2026-08-22): Russian,
  * Romanian and Greek, "for now", and the Serbian from 2026-08-23. One entry
  * per church the site offers; the
  * reader chooses one and the whole site reads it. Everything downstream is

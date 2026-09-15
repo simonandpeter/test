@@ -42,7 +42,7 @@ test('a saint opens with its own names, citations and life', async ({ page }) =>
   // The "Also called" block — the multi-script name forms (Ἀντώνιος,
   // Ⲁⲛⲧⲱⲛⲓⲟⲥ) that used to stand here — was removed by the author,
   // 2026-08-24, reversing the "attest, never adjudicate" passage in
-  // PLAN.md that named this exact block; the reversal is recorded in
+  // STRUCTURE.md that named this exact block; the reversal is recorded in
   // place there. The heir of this test's old assertion is negative: the
   // block is gone from the page entirely, not merely relabelled.
   await expect(page.locator('.names')).toHaveCount(0);
@@ -102,7 +102,7 @@ test('an image says what its licence is, and links the source it can be checked 
 test('dates and places read as one register, keyed by kind', async ({ page }) => {
   // The date-interval bars stood here until 2026-08-21. What a reader needed
   // from them was the years, and the years were already printed beside them;
-  // what they could not get was where. PLAN.md's Softness section keeps the curve for the
+  // what they could not get was where. STRUCTURE.md's Softness section keeps the curve for the
   // map and the timeline and records that the bars, not it, were withdrawn.
   await page.goto(DETAIL, { waitUntil: 'networkidle' });
   await expect(page.locator('.date-bar')).toHaveCount(0);

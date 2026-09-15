@@ -4,7 +4,7 @@
  * Split out of `related-from-links.mjs` so a test can hold the rule without a
  * second copy of these regexes: `tests/life-links.test.mjs` asserts that every
  * `/saints/<slug>` a hand wrote into a life is a `related` row, which is
- * `PLAN.md`'s oldest corpus rule and the one that had gone unenforced —
+ * `STRUCTURE.md`'s oldest corpus rule and the one that had gone unenforced —
  * 532 such links were in the corpus and nine of them were in `related`.
  *
  * The script keeps the two prose tiers, which need the manifest's name index;

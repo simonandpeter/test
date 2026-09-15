@@ -74,7 +74,7 @@ export function allNames(id) {
 
 /**
  * Which of the register's six marks a saint's types call for, or `null`
- * (docs/daily-desktop-visuals.md §5.1). A row with no icon shows a type glyph
+ * A row with no icon shows a type glyph
  * where one of these fits, so a reader still gets *what kind of saint this is*
  * rather than a hole where a picture would be.
  *

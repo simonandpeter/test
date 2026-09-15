@@ -30,7 +30,7 @@ const SPIN = DUR.travel;
  * Rolls `die`, then calls `go` to navigate, then reveals what it landed on.
  *
  * Under reduced motion the whole thing is removed rather than shortened
- * (PLAN.md): the navigation happens on the spot, with no fade and no
+ * (STRUCTURE.md): the navigation happens on the spot, with no fade and no
  * turn, and the reader gets the saint.
  */
 export function rollDie(die, go) {
