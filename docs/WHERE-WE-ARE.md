@@ -148,6 +148,24 @@ one branch to reverse if it ever reads wrong on the page.
       `test('…')` in `e2e/` is the instrument `plan.test.mjs` already is, in
       two seconds, at the source.
 
+- [ ] **All Saints may come back from the day with a different deal, and the
+      test that would say so is read as a flake.** `daily-stage.spec.js`'s
+      `the page comes back to the line it was left on` fails about **3 runs in
+      12** under load — measured 2026-09-15 on `7766a99`, *before* that day's
+      stage work, and at the same rate after it, so it is neither new nor that
+      change's. What it fails on is the interesting part: the window's scroll
+      is back at 2,400, the layer is in flow, the grid has mounted a full
+      screenful at the right offset — and the card the reader pinned is not
+      among them, with a different set of saints standing where it was. That
+      reads as the row having been re-dealt rather than parked, which is the
+      one thing the stage exists to prevent (`views/saints.js` takes its seed
+      from the URL, and the nav's `/saints` carries none).
+      **Next step is one measurement, not a fix**: count `saints.render` calls
+      across the round trip — 2 proves a re-deal, 1 says the grid moved the
+      card and sends the question to `lib/virtual-grid.js`. CI retries hide it
+      as a `flaky` line, which is how it has gone unlooked-at; a flake there
+      once masked a 16-of-16 regression.
+
 ## Recorded, deliberately not done
 
 - **Above a 1983 px window** the hero's 40rem ceiling binds and the 5:7
