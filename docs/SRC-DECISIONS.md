@@ -25,7 +25,7 @@ Organised by source file, in the order a reader meets them: `src/ui/`,
 
 ## src/ui/nav-scroll.js
 
-### The endless strip, three cuts
+### The endless strip, four cuts
 
 The mobile nav row as an endless, centred strip (author, 2026-09-07: on a
 phone, make the header "a horizontal scroll header where the selected one
@@ -124,8 +124,42 @@ stillness with the finger off**, because a mandatory-snap scroller fires
 provokes, which is how `balance` came to be re-centring in the middle of a
 fling. Same fling afterwards: the full 450 px, 225 px of coast after the
 lift, no backward step, and the ring turned so the page it lands on stands
-in the middle of five. `an aggressive swipe carries the nav strip` in
-`e2e/chrome.spec.js` fails if either half goes back.
+in the middle of five. Both halves went with the scroller on 2026-09-15 —
+see the fourth cut below, which is the design that is live.
+
+### Fourth cut, 2026-09-15: one gesture, one page
+
+Author: "the header on mobile is really bad to use. Make it simple: Either
+you swipe left or right and it takes you one spot left or right, to the next
+one, or you click and it takes you there. Currently you can swipe multiple
+and this isn't working."
+
+**So the native scroller went.** `overflow-x` is `hidden` (base.css) and
+`ui/nav-scroll.js` writes every position this row is ever drawn at: a drag
+follows the finger for at most one page — `place()` clamps the travel to the
+distance between the anchor's centre and its neighbour's — and the lift
+glides to the neighbour it was heading for, or back to the page it started
+on when the finger travelled under 24 px. A 320 px fling and a 40 px push
+mean the same thing, which is the whole of the instruction.
+
+Measured afterwards (`node scripts/nav-swipe.mjs`, mobile-360, 3 of 3): a
+320 px touch fling carries the row from `saints` to `texts`, one page, and
+settles 0 px off the midline. Backed out — the clamp removed — the same
+fling went two pages, which is what the author was reporting.
+
+**What that deleted, and why the three sections below are history rather
+than design.** The once-a-gesture guard, the 150 ms settle and the flag
+answering "whose scroll was that" all existed to share one scroller with the
+compositor: they are the cost of letting the platform move a row that has to
+land on a particular page. None of them is in the file now, and none should
+come back a piece at a time — what they measured is the argument for owning
+the movement outright.
+
+**Two things had to be added back by hand**, because the platform had been
+doing them: a click that follows a real swipe is swallowed in the capture
+phase (the browser suppresses the click after a scroll *it* ran, and this
+row's scroll is not one of those), and a `focusin` brings a tabbed-to page to
+the middle.
 
 ### Whose scroll was that
 

@@ -1187,7 +1187,7 @@
    * from a heading with its own leading and is not the same distance; an
    * instruction in words beats a number read off a redraw.
    */
-  html[data-route='calendar'] {
+  html[data-route~='calendar'] {
     --side-w: 19rem;
     --day-gap: var(--space-8);
     --headgap: var(--space-2);
@@ -1223,7 +1223,7 @@
    * would put this grid half a pixel out on every load. Nothing here grows
    * into place.
    */
-  html[data-route='calendar'] main.chrome {
+  html[data-route~='calendar'] main.chrome {
     height: 100dvh;
     margin-top: calc(-1 * var(--chrome-h-reserve));
     padding-top: 0;
@@ -1239,7 +1239,7 @@
    * is the body's content box, so this reads the same width the grid does
    * and neither of them can see the scrollbar's gutter.
    */
-  html[data-route='calendar'] .chrome-bar {
+  html[data-route~='calendar'] .chrome-bar {
     box-sizing: border-box;
     margin-left: max(var(--page-pad), calc((100% - var(--page-max)) / 2 + var(--page-pad)));
     width: calc(min(100%, var(--page-max)) - 2 * var(--page-pad) - var(--side-w) - var(--day-gap));
@@ -1249,7 +1249,7 @@
      box already is the column's, so base.css's `--page-pad` either side would
      hold the masthead and the rule a page margin in from the column they are
      the head of. */
-  html[data-route='calendar'] header.chrome {
+  html[data-route~='calendar'] header.chrome {
     padding-inline: 0;
   }
 
@@ -1362,15 +1362,15 @@
      55 locators in the browser suite name them, `ui/coachmark.js` and
      `ui/panel-control.js` both hardcode them, and the two chooser buttons are
      otherwise the same class. */
-  html[data-route='calendar'] .cal-bubble-head > #lang-open {
+  html[data-route~='calendar'] .cal-bubble-head > #lang-open {
     justify-self: start;
   }
 
-  html[data-route='calendar'] .cal-bubble-head > #church-open {
+  html[data-route~='calendar'] .cal-bubble-head > #church-open {
     justify-self: center;
   }
 
-  html[data-route='calendar'] .cal-bubble-head > #theme-toggle {
+  html[data-route~='calendar'] .cal-bubble-head > #theme-toggle {
     justify-self: end;
   }
 
@@ -1381,7 +1381,7 @@
    * invisible in here. `--gesso` is the page's ground showing through, which is
    * the same idea the switch's track below is built on.
    */
-  html[data-route='calendar'] .cal-bubble-head .church-open[aria-expanded='true'] {
+  html[data-route~='calendar'] .cal-bubble-head .church-open[aria-expanded='true'] {
     background: var(--gesso);
   }
 
@@ -1420,7 +1420,7 @@
    * control acknowledging a press — where the mockup had a raw `180ms ease`
    * that `design-tokens.test.mjs` rejects twice over.
    */
-  html[data-route='calendar'] .cal-bubble-head > #theme-toggle {
+  html[data-route~='calendar'] .cal-bubble-head > #theme-toggle {
     position: relative;
     box-sizing: border-box;
     align-self: stretch;
@@ -1438,11 +1438,11 @@
 
   /* The glyph theme.js writes stays in the DOM and out of the picture: it is
      `aria-hidden` decoration and the button's label is what carries the state. */
-  html[data-route='calendar'] .cal-bubble-head > #theme-toggle > svg {
+  html[data-route~='calendar'] .cal-bubble-head > #theme-toggle > svg {
     display: none;
   }
 
-  html[data-route='calendar'] .cal-bubble-head > #theme-toggle::after {
+  html[data-route~='calendar'] .cal-bubble-head > #theme-toggle::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -1459,7 +1459,7 @@
      the border once the knob and its two 3 px shoulders are taken out.
      `data-theme` is the theme that is *on*, which is the opposite of what the
      glyph it replaces showed. */
-  html[data-route='calendar'] .cal-bubble-head > #theme-toggle[data-theme='dark']::after {
+  html[data-route~='calendar'] .cal-bubble-head > #theme-toggle[data-theme='dark']::after {
     transform: translate(25px, -50%);
   }
 
@@ -1474,7 +1474,7 @@
    * replaces, so a panel opened before the first observation is where it always
    * was rather than at the top of the window.
    */
-  html[data-route='calendar'] .church-panel {
+  html[data-route~='calendar'] .church-panel {
     top: var(--cal-head-b, var(--chrome-h, 53px));
   }
 
@@ -2514,7 +2514,7 @@
      "the day's own card repeated" (§5.2) and reads the same number — "the same
      mat" has to stay true if it ever moves, and two boxes under one ancestor
      is where a shared quantity belongs (§10.16's own rule for `--headgap`). */
-  html[data-route='calendar'] {
+  html[data-route~='calendar'] {
     --hero-mat: 14px;
     /*
      * **The reference's own crop, fixed** (author, 2026-09-10: the main saint
@@ -2538,7 +2538,7 @@
     --hero-band-focus: 50% 34%;
   }
 
-  html[data-route='calendar'] .hero-figure {
+  html[data-route~='calendar'] .hero-figure {
     background: var(--mount);
     padding: var(--hero-mat);
   }
@@ -2549,12 +2549,12 @@
    * unchanged in kind and stronger in fact: the box is now one ratio for every
    * saint, so it is known before the manifest is, let alone the image.
    */
-  html[data-route='calendar'] .hero-media {
+  html[data-route~='calendar'] .hero-media {
     aspect-ratio: var(--hero-band);
     background-position: var(--hero-band-focus);
   }
 
-  html[data-route='calendar'] .hero-media img {
+  html[data-route~='calendar'] .hero-media img {
     object-position: var(--hero-band-focus);
   }
 
@@ -2646,12 +2646,12 @@
    * the same reason: five twelfths of *what the two share* is a different
    * number if the two are divided by different gaps.
    */
-  html[data-route='calendar'] {
+  html[data-route~='calendar'] {
     --card-gap: var(--space-8);
     --card-pic: clamp(200px, calc((100% - var(--card-gap)) * 5 / 12), 40rem);
   }
 
-  html[data-route='calendar'] .hero.has-media {
+  html[data-route~='calendar'] .hero.has-media {
     grid-template-columns: var(--card-pic) 1fr;
   }
 
@@ -2667,7 +2667,7 @@
    * base.css already gives every `h2`. The reference's 27 was the number off
    * the scale, and §10.8 snapped it here.
    */
-  html[data-route='calendar'] .hero-body {
+  html[data-route~='calendar'] .hero-body {
     /*
      * **Four, not eight** (2026-09-11). The reference computes its lift from
      * *its* type — "6.75 of half-leading at 27/40.5, plus the gap between
@@ -2697,14 +2697,14 @@
    * `align-self`, because the mark is a flex item of a baseline-aligned row
    * and a 5 px square has no baseline worth aligning to.
    */
-  html[data-route='calendar'] .hero-more-chevron {
+  html[data-route~='calendar'] .hero-more-chevron {
     align-self: center;
   }
 
   /* The register's expanded face carries the same door and therefore the same
      mark. One rule, two selectors, so they cannot drift apart. */
-  html[data-route='calendar'] .hero-more-chevron::after,
-  html[data-route='calendar'] .reg-more-mark {
+  html[data-route~='calendar'] .hero-more-chevron::after,
+  html[data-route~='calendar'] .reg-more-mark {
     content: '';
     display: block;
     width: 5px;
@@ -2713,7 +2713,7 @@
     transform: rotate(45deg);
   }
 
-  html[data-route='calendar'] .reg-more-mark {
+  html[data-route~='calendar'] .reg-more-mark {
     align-self: center;
   }
 }
@@ -3019,7 +3019,7 @@
  * three in a 19 rem column.
  */
 @media (min-width: 1024px) {
-  html[data-route='calendar'] .register-heading {
+  html[data-route~='calendar'] .register-heading {
     font-family: var(--font-serif);
     font-variant-caps: normal;
     letter-spacing: normal;
@@ -3028,7 +3028,7 @@
     color: var(--ink);
   }
 
-  html[data-route='calendar'] .register-head .register-heading {
+  html[data-route~='calendar'] .register-head .register-heading {
     font-size: var(--text-lede);
     /*
      * **"Also today" comes up the page** (§6). It carried `--space-6` of its
@@ -3094,7 +3094,7 @@
  * name and two lines of life want beside 60 px of picture.
  */
 @media (min-width: 1024px) {
-  html[data-route='calendar'] .register-cards.is-cards {
+  html[data-route~='calendar'] .register-cards.is-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     column-gap: var(--space-6);
@@ -3113,7 +3113,7 @@
    * So there is no `order` here, and the absence is the decision: the markup
    * is body-then-picture and a flex row draws it in that order.
    */
-  html[data-route='calendar'] .register-cards.is-cards li.reg-card {
+  html[data-route~='calendar'] .register-cards.is-cards li.reg-card {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -3131,7 +3131,7 @@
    * `align-self: flex-start`, so a row with two lines of life does not
    * stretch its picture to match.
    */
-  html[data-route='calendar'] .register-cards.is-cards .reg-thumb {
+  html[data-route~='calendar'] .register-cards.is-cards .reg-thumb {
     width: 60px;
     height: auto;
     padding: 6px;
@@ -3139,15 +3139,15 @@
     align-self: flex-start;
   }
 
-  html[data-route='calendar'] .register-cards.is-cards .reg-pic,
-  html[data-route='calendar'] .register-cards.is-expanded .reg-pic {
+  html[data-route~='calendar'] .register-cards.is-cards .reg-pic,
+  html[data-route~='calendar'] .register-cards.is-expanded .reg-pic {
     width: 100%;
     height: auto;
     aspect-ratio: var(--reg-aspect, 1);
   }
 
-  html[data-route='calendar'] .register-cards.is-cards .reg-pic img,
-  html[data-route='calendar'] .register-cards.is-expanded .reg-pic img {
+  html[data-route~='calendar'] .register-cards.is-cards .reg-pic img,
+  html[data-route~='calendar'] .register-cards.is-expanded .reg-pic img {
     height: 100%;
     object-fit: cover;
   }
@@ -3168,7 +3168,7 @@
    * between 42 and 108 tall, and 74 sits in the middle of that spread so a
    * glyph row is neither the shortest nor the tallest thing in its column.
    */
-  html[data-route='calendar'] .register-cards.is-cards .reg-thumb.is-blank {
+  html[data-route~='calendar'] .register-cards.is-cards .reg-thumb.is-blank {
     height: 74px;
     display: flex;
     align-items: center;
@@ -3176,7 +3176,7 @@
     background: var(--field);
   }
 
-  html[data-route='calendar'] .register-cards.is-cards .reg-thumb.is-blank:not(:has(.reg-glyph)) {
+  html[data-route~='calendar'] .register-cards.is-cards .reg-thumb.is-blank:not(:has(.reg-glyph)) {
     display: none;
   }
 
@@ -3198,8 +3198,8 @@
      the pictures are would be a second thing in a row that was packed tightly
      on purpose (2026-08-27). Found by looking at all three faces rather than
      the one being built. */
-  html[data-route='calendar'] .register-cards.is-cards .reg-glyph,
-  html[data-route='calendar'] .register-cards.is-expanded .reg-glyph {
+  html[data-route~='calendar'] .register-cards.is-cards .reg-glyph,
+  html[data-route~='calendar'] .register-cards.is-expanded .reg-glyph {
     display: block;
     width: 30px;
     height: 30px;
@@ -3215,7 +3215,7 @@
    * opening paragraph, so what it needs is a box that stops, not a truncation
    * the fetch would have to guess at.
    */
-  html[data-route='calendar'] .register-cards.is-cards .reg-life {
+  html[data-route~='calendar'] .register-cards.is-cards .reg-life {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -3231,7 +3231,7 @@
   /* The name may take the lines it needs here, as the Index's cards do since
      2026-09-01 — a register column is narrow and the register prints whole
      names. The dates give up their single-line ellipsis with it. */
-  html[data-route='calendar'] .register-cards.is-cards .reg-sub {
+  html[data-route~='calendar'] .register-cards.is-cards .reg-sub {
     white-space: normal;
     overflow: visible;
     text-overflow: clip;
@@ -3257,11 +3257,11 @@
    * hero's, read from the route rather than copied, because "the same mat"
    * has to stay true if the number ever moves — and that one is still shared.
    */
-  html[data-route='calendar'] .register-cards.is-expanded {
+  html[data-route~='calendar'] .register-cards.is-expanded {
     display: block;
   }
 
-  html[data-route='calendar'] .register-cards.is-expanded li.reg-card {
+  html[data-route~='calendar'] .register-cards.is-expanded li.reg-card {
     display: grid;
     /* The day's own card's shape, from the one place it is declared. */
     grid-template-columns: var(--card-pic) 1fr;
@@ -3276,7 +3276,7 @@
      face where `order` moves it: the row's trailing edge is the compact
      face's rule and its reason — the bookmark — is about a 48 px thumbnail,
      which this is not. */
-  html[data-route='calendar'] .register-cards.is-expanded .reg-thumb {
+  html[data-route~='calendar'] .register-cards.is-expanded .reg-thumb {
     order: -1;
     /* The column is the shape now; the mount fills it, as the hero's does. */
     width: 100%;
@@ -3288,7 +3288,7 @@
   /* Imageless, the glyph stands in the mount at 56 px in a box 240 tall — the
      reference's numbers, and a mount that kept a picture's shape around a mark
      would be a frame around nothing. */
-  html[data-route='calendar'] .register-cards.is-expanded .reg-thumb.is-blank {
+  html[data-route~='calendar'] .register-cards.is-expanded .reg-thumb.is-blank {
     height: 240px;
     display: flex;
     align-items: center;
@@ -3296,20 +3296,20 @@
     background: var(--mount);
   }
 
-  html[data-route='calendar'] .register-cards.is-expanded .reg-thumb.is-blank:not(:has(.reg-glyph)) {
+  html[data-route~='calendar'] .register-cards.is-expanded .reg-thumb.is-blank:not(:has(.reg-glyph)) {
     display: none;
   }
 
-  html[data-route='calendar'] .register-cards.is-expanded .reg-glyph {
+  html[data-route~='calendar'] .register-cards.is-expanded .reg-glyph {
     width: 56px;
     height: 56px;
   }
 
-  html[data-route='calendar'] .register-cards.is-expanded .reg-name {
+  html[data-route~='calendar'] .register-cards.is-expanded .reg-name {
     font-size: var(--text-xl);
   }
 
-  html[data-route='calendar'] .register-cards.is-expanded .reg-sub {
+  html[data-route~='calendar'] .register-cards.is-expanded .reg-sub {
     white-space: normal;
     overflow: visible;
     text-overflow: clip;
@@ -3317,7 +3317,7 @@
 
   /* The whole opening paragraph, at the hero's own reading size. No clamp:
      this face exists to give the reader the lede the compact one cuts. */
-  html[data-route='calendar'] .register-cards.is-expanded .reg-life {
+  html[data-route~='calendar'] .register-cards.is-expanded .reg-life {
     display: block;
     margin-top: var(--space-2);
     font-family: var(--font-serif);
@@ -3326,7 +3326,7 @@
     color: var(--ink);
   }
 
-  html[data-route='calendar'] .register-cards.is-expanded .reg-more {
+  html[data-route~='calendar'] .register-cards.is-expanded .reg-more {
     display: inline-flex;
     align-items: baseline;
     gap: var(--space-1);
@@ -3337,7 +3337,7 @@
     text-decoration: none;
   }
 
-  html[data-route='calendar'] .register-cards.is-expanded .reg-more:hover {
+  html[data-route~='calendar'] .register-cards.is-expanded .reg-more:hover {
     text-decoration: underline;
     text-underline-offset: 2px;
   }
@@ -3458,17 +3458,17 @@
  * about a mechanism nobody has measured.
  */
 @media (min-width: 1024px) {
-  html[data-route='calendar'] .namedays {
+  html[data-route~='calendar'] .namedays {
     display: block;
     columns: 2;
     column-gap: var(--space-6);
   }
 
-  html[data-route='calendar'] .namedays li {
+  html[data-route~='calendar'] .namedays li {
     overflow-wrap: break-word;
   }
 
-  html[data-route='calendar'] .namedays li:not(:last-child)::after {
+  html[data-route~='calendar'] .namedays li:not(:last-child)::after {
     content: none;
   }
 }
@@ -3905,7 +3905,7 @@ a.name-day:hover {
      nothing definite to be a fraction of. The route's own surrender of the
      page scroll — root, body, `main` and `#view` — is base.css's, under
      "a route that fills the window", keyed on `data-fills-window`. */
-  html[data-route='calendar'] .cal {
+  html[data-route~='calendar'] .cal {
     height: 100%;
     min-height: 0;
   }
@@ -3936,13 +3936,13 @@ a.name-day:hover {
      nothing but width. `.month-row::before` / `::after` are the two chevron
      chips drawn *over* the peeks (2026-09-02); with nothing underneath to
      press they would be controls that do nothing. */
-  html[data-route='calendar'] .month-row > .peek,
-  html[data-route='calendar'] .month-days-line > .peek-gap {
+  html[data-route~='calendar'] .month-row > .peek,
+  html[data-route~='calendar'] .month-days-line > .peek-gap {
     display: none;
   }
 
-  html[data-route='calendar'] .month-row::before,
-  html[data-route='calendar'] .month-row::after {
+  html[data-route~='calendar'] .month-row::before,
+  html[data-route~='calendar'] .month-row::after {
     content: none;
   }
 
@@ -3954,7 +3954,7 @@ a.name-day:hover {
    * items (a diamond, then a line), which put their hairlines on different
    * subpixels and made one read heavier than the other.
    */
-  html[data-route='calendar'] .month-head {
+  html[data-route~='calendar'] .month-head {
     display: flex;
     align-items: center;
     justify-content: initial;
@@ -3963,7 +3963,7 @@ a.name-day:hover {
   }
 
   /* The rules run out to within a space-2 of the month's own words. */
-  html[data-route='calendar'] .month-title {
+  html[data-route~='calendar'] .month-title {
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
@@ -3978,7 +3978,7 @@ a.name-day:hover {
    * is never asked to carry a word — the button's `aria-label` is what says
    * which month this reaches.
    */
-  html[data-route='calendar'] .mstep {
+  html[data-route~='calendar'] .mstep {
     display: flex;
     flex: 1 1 0;
     align-items: center;
@@ -3990,15 +3990,15 @@ a.name-day:hover {
     cursor: pointer;
   }
 
-  html[data-route='calendar'] .mstep-next {
+  html[data-route~='calendar'] .mstep-next {
     justify-content: flex-end;
   }
 
-  html[data-route='calendar'] .mstep:hover {
+  html[data-route~='calendar'] .mstep:hover {
     color: var(--ink-soft);
   }
 
-  html[data-route='calendar'] .mstep-line {
+  html[data-route~='calendar'] .mstep-line {
     flex: 1 1 0;
     min-width: 0;
     height: 1px;
@@ -4008,7 +4008,7 @@ a.name-day:hover {
   /* A diamond by clip-path, for `.mark-feast`'s reason: a rotated 5 px square
      measures 7.07 px corner to corner and would set the head's height from a
      mark rather than from its words. */
-  html[data-route='calendar'] .mstep-dot {
+  html[data-route~='calendar'] .mstep-dot {
     flex: none;
     width: 5px;
     height: 5px;
@@ -4028,21 +4028,21 @@ a.name-day:hover {
    * 12 px — `--text-2xs`, the smallest apparatus — because it is the quietest
    * fact in the head: which arithmetic, under which month.
    */
-  html[data-route='calendar'] .reckoning-btn {
+  html[data-route~='calendar'] .reckoning-btn {
     font-size: var(--text-2xs);
   }
 
-  html[data-route='calendar'] .reckoning-btn::before {
+  html[data-route~='calendar'] .reckoning-btn::before {
     content: '(';
   }
 
-  html[data-route='calendar'] .reckoning-btn::after {
+  html[data-route~='calendar'] .reckoning-btn::after {
     content: ')';
   }
 
   /* It opens under its own button now that the button is no longer on the
      margin, so it hangs from the start of it rather than the end. */
-  html[data-route='calendar'] .reckoning-pop {
+  html[data-route~='calendar'] .reckoning-pop {
     right: auto;
     left: 0;
   }
@@ -4053,7 +4053,7 @@ a.name-day:hover {
      says why they came off the page and what they cost while they were on it.
      `line-height: 0` because a 13 px mark in a line box a whole line tall
      would push the head's own baseline. */
-  html[data-route='calendar'] .month-head .fullcal-open {
+  html[data-route~='calendar'] .month-head .fullcal-open {
     display: inline-flex;
     align-items: center;
     margin-top: 0;
@@ -4071,17 +4071,17 @@ a.name-day:hover {
    * they already were: the type collapse of 2026-09-09 folded 14 into 15 with
    * the sheet open and 14 is not coming back for a calendar cell.
    */
-  html[data-route='calendar'] .month-days,
-  html[data-route='calendar'] .month-grid {
+  html[data-route~='calendar'] .month-days,
+  html[data-route~='calendar'] .month-grid {
     column-gap: 1px;
   }
 
-  html[data-route='calendar'] .month-grid {
+  html[data-route~='calendar'] .month-grid {
     row-gap: 1px;
   }
 
-  html[data-route='calendar'] .month-grid button,
-  html[data-route='calendar'] .month-grid .month-out {
+  html[data-route~='calendar'] .month-grid button,
+  html[data-route~='calendar'] .month-grid .month-out {
     padding: 1px 0;
     /* The feast mark is absolutely placed in the cell's own corner, so the
        cell has to be what it is placed against. */
@@ -4094,7 +4094,7 @@ a.name-day:hover {
    * reasoning and `tests/contrast.test.mjs` the 3:1 floor, which this mark
    * takes because it is the only thing on the cell saying the day holds one.
    */
-  html[data-route='calendar'] .month-feast {
+  html[data-route~='calendar'] .month-feast {
     position: absolute;
     top: 2px;
     right: 4px;
@@ -4131,7 +4131,7 @@ a.name-day:hover {
    * 1.41:1. `daily-picker.spec.js` asserts the mark against the box, in both
    * themes, rather than against a number written here.
    */
-  html[data-route='calendar'] .cal-bubble .month-grid button[aria-current='date'] {
+  html[data-route~='calendar'] .cal-bubble .month-grid button[aria-current='date'] {
     background: none;
     border-color: var(--accent);
   }
@@ -4161,7 +4161,7 @@ a.name-day:hover {
    * reference does not draw that state, so it is the reference's silence being
    * followed, not a decision this file is making on its own.
    */
-  html[data-route='calendar'] .cal-bubble .month-grid button.is-today .day-num::before {
+  html[data-route~='calendar'] .cal-bubble .month-grid button.is-today .day-num::before {
     content: none;
   }
 
@@ -4179,8 +4179,8 @@ a.name-day:hover {
    * that rule means — they are a ruled grid, which is the register's own
    * shape.
    */
-  html[data-route='calendar'] .cal-bubble .month-grid button,
-  html[data-route='calendar'] .cal-bubble .month-grid .month-out {
+  html[data-route~='calendar'] .cal-bubble .month-grid button,
+  html[data-route~='calendar'] .cal-bubble .month-grid .month-out {
     border-radius: 0;
   }
 
@@ -4202,7 +4202,7 @@ a.name-day:hover {
    * 5.53:1 on the field. The fast hue goes with the tint, and that is what
    * buys the reading back — **a coloured numeral is this month's**.
    */
-  html[data-route='calendar'] .month-grid .month-out {
+  html[data-route~='calendar'] .month-grid .month-out {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -4244,7 +4244,7 @@ a.name-day:hover {
 
 @media (max-width: 559.98px) {
   /* The page starts under the bar rather than a space-6 below it. */
-  html[data-route='calendar'] main.chrome {
+  html[data-route~='calendar'] main.chrome {
     padding-top: var(--space-2);
   }
 

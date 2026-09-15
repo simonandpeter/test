@@ -930,33 +930,39 @@ made *shorter* by cropping its top margin — is about the sizes below that
 breakpoint. The taller bar has its own pin: `the header reserves the
 height it settles at`, which measures all three widths.
 
-### an aggressive swipe carries the nav strip, and the ring turns under it
+### a swipe carries the nav strip one page, however hard it is thrown
 
-**The 2026-09-12 defect, and the only test that can see it.**
+**The 2026-09-15 instruction, and the only test that can see it kept.**
 
-`ui/nav-scroll.js` turned the ring on every scroll event and wrote
-`scrollLeft` to hold the picture still while it did. Measured, that write
-does not "cut iOS momentum short": it ends the gesture. A 320 px fling
-moved the strip 45 px of its 450 px range, jumped backwards nine times and
-settled on the page it started from — three runs of three, identically.
-`scratchpad/fling-write.mjs` isolates the mechanism on a bare scroller
-with none of this site in it: no write, 350 px of travel; one write, 350
-dragged back to 315; a write per scroll event, 45.
+Author: "Either you swipe left or right and it takes you one spot left or
+right, to the next one, or you click and it takes you there. Currently you
+can swipe multiple and this isn't working." A 320 px fling is more than
+three labels wide at 360 px, so this is the gesture that tells a row which
+moves one page from a row which spends whatever momentum it was given: run
+against the free-scrolling row it landed on `about`, two pages past the
+`texts` it should have stopped at.
 
-Two things had to change and this test fails if either is put back — the
-turn is once a gesture, and the settle is 150 ms of stillness rather than
-`scrollend`, which a mandatory-snap scroller fires every time it snaps.
-Both were backed out one at a time and both failed it at 40 px.
+The assertion is therefore *which* page, named rather than merely different:
+the ring is read before the finger goes down, and the page expected is the
+one standing to the right of the centred one in it.
 
 **A real touch fling, through CDP** (trap 11, and `map.spec.js` takes the
 same route for the same reason): a dispatched `PointerEvent` is not an
-active pointer and produces no momentum at all, so it would report this
-row as perfectly well behaved whichever way the code was written.
+active pointer, so a synthetic gesture cannot tell a row that refuses
+momentum from one that never had any to refuse.
 
-The assertions are on travel and on arrival, which are independent (trap
-14): the row has to *go* — past a threshold no snap-back can reach — and
-it has to *arrive* somewhere else, with the ring turned so the page it
-arrived at still has neighbours either side.
+**Travel is asserted separately from arrival** (trap 14): the row has to
+*answer the finger* — 20 px is enough to say it moved rather than sat there
+— and it has to *arrive*, on the midline, with the ring turned so the page
+it landed on still has neighbours either side. A row that ignored the
+gesture entirely would satisfy the arrival half on its own.
+
+**What it used to hold, until the mechanism went.** Before 2026-09-15 this
+row was a native scroller, and the test measured a `scrollLeft` write
+landing inside a live fling: a 320 px swipe moved 45 px of a 450 px range,
+jumped backwards nine times, and settled on the page it started from.
+`docs/SRC-DECISIONS.md § src/ui/nav-scroll.js` keeps those numbers, and
+`docs/PROBES.md` keeps the probe.
 
 ### the phone strip is balanced at rest, and a press glides into the centre
 

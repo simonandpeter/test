@@ -876,8 +876,8 @@ nav.site-nav a[aria-current='page'] {
  *
  * `main.js`'s `renderNav` supplies the content this reads: the same five
  * `<a>` the wide row uses, one of them wearing `aria-current`, nothing
- * cloned — `overflow-x: auto` plus `scroll-snap-type` is the phone's own
- * swipe, momentum and snap, none of it built here. `ui/nav-scroll.js` turns
+ * cloned. The swipe itself is `ui/nav-scroll.js`'s and not the platform's —
+ * `overflow-x` below has what that bought and what it cost. It also turns
  * the ring — a flex `order` per link, so the DOM and the tab ring keep the
  * site's own order and only the picture rotates — until whichever page is
  * centred stands in the *middle* of the five, on load and again every time a
@@ -917,9 +917,7 @@ nav.site-nav a[aria-current='page'] {
  * glide to one of them (author, same day: "animated to click into the centre
  * gently instead of just jumping") landed short, with the rebalance behind it
  * showing as exactly the jump being removed. At 50vw every one of the five is
- * centrable exactly, whichever way the ring has been turned. The cost is that
- * a hard fling can reach a half-empty screen for as long as the fling lasts;
- * the strip is balanced again the moment it stops.
+ * centrable exactly, whichever way the ring has been turned.
  */
 @media (max-width: 759.98px) {
   nav.site-nav {
@@ -929,10 +927,19 @@ nav.site-nav a[aria-current='page'] {
     width: 100vw;
     margin-inline: calc(50% - 50vw);
     border-top: 1px solid var(--rule);
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+    /*
+     * **The platform does not move this row; `ui/nav-scroll.js` does** (author,
+     * 2026-09-15: "Either you swipe left or right and it takes you one spot
+     * left or right ... Currently you can swipe multiple and this isn't
+     * working"). `auto` plus `scroll-snap-type: x mandatory` gave a phone its
+     * own swipe, momentum and snap for free, and free was the problem: a fling
+     * spends its momentum wherever it likes, which is several pages. `hidden`
+     * keeps the box scrollable to script and not to the compositor, so one
+     * gesture can be made to mean exactly one page. `touch-action` says the
+     * same thing to the finger: the page still pans under it, the row does not.
+     */
+    overflow-x: hidden;
+    touch-action: pan-y;
     /* No visible scrollbar on a strip that is never meant to look like a
        list with two ends — a reader is meant to read it as a wheel. */
     scrollbar-width: none;
@@ -984,7 +991,6 @@ nav.site-nav a[aria-current='page'] {
 
   nav.site-nav a {
     flex: none;
-    scroll-snap-align: center;
     text-align: center;
     /*
      * **Wide enough that the ring is longer than the screen** (2026-09-08).
@@ -1147,7 +1153,7 @@ main.chrome {
    * a link with an accessible name, so axe reads it as text and it clears AA
    * in both themes with room.
    */
-  html[data-route='calendar'] header.chrome .site-name {
+  html[data-route~='calendar'] header.chrome .site-name {
     color: color-mix(in oklab, var(--ink) 74%, var(--gesso));
   }
 }
@@ -1635,10 +1641,19 @@ html[data-swipe-nav='right']::view-transition-new(root) {
   transform: none;
 }
 
+/* **`--swap-travel` is the fallback's own value made explicit, and it is only
+   ever set while a slide is in flight** (`face-stage.js`). Each face keeps its
+   own page's box: the day's `main` is pulled up under the bar and gives up the
+   page's scroll, All Saints' starts below the bar and scrolls the window, so
+   the layer below is pinned to its own box with an inline `top` and `height`
+   for the length of the slide — which beat the `inset: 0` here, because a box
+   given top, bottom and height ignores the bottom. Its height is then no longer
+   the day's, and `100%` would send the two faces down the glass at different
+   speeds. Standing still, there is no travel and the fallback is the truth. */
 .face-stage[data-face='calendar'] .face-layer[data-layer='saints'] {
   position: absolute;
   inset: 0;
-  transform: translateY(calc(100% + 32px));
+  transform: translateY(var(--swap-travel, calc(100% + 32px)));
 }
 
 /* In flight, both layers are absolute and both are paintable. The

@@ -18,10 +18,10 @@ sitting's record here, put it in the commit message instead.
 here, because a PAT push never updates `origin/main`.
 
 - **407 unit tests pass.** `locale-coverage` 0 fallbacks in all four packs.
-- **Full browser suite: 976 passed, 6 failed at six workers** — and the six
-  are a *different* six on each run. Run alone, `chrome` and `map` together
-  give **293 of 294**, and the one is the shelf-swipe flake
-  `docs/WHERE-WE-ARE.md` already records as the test's fault, not the page's.
+- **Full browser suite: 982 passed, 4 failed at six workers** — and the four
+  are a *different* four on each run. Run alone, all three map tests passed
+  and the fourth is the shelf-swipe flake `docs/WHERE-WE-ARE.md` already
+  records as the test's fault, not the page's (12 of 12 alone on 2026-09-15).
   Treat a full run's failures here as the desk until `--repeat-each=6` alone
   says otherwise; that test is what separated three real defects from the
   noise on 2026-09-15.
@@ -44,7 +44,7 @@ budget comes from `scripts/build-manifest.mjs`. Read them from the run.
 item — the Daily desktop redesign — is the live question. The author has not
 yet given the design.
 
-**The entry stylesheet has ~66 bytes of headroom, not ~600.** The revert put
+**The entry stylesheet has ~57 bytes of headroom, not ~600.** The revert put
 `calendar.css` back beside the `face-stage` rules `base.css` gained after
 `f31520a`, and the ceiling went 73,000 → 73,400 against a cliff measured at
 73,629 green / 73,688 red. The next few hundred bytes of CSS anywhere trips
@@ -179,6 +179,13 @@ running it. The copies under `android/app/src/main/assets/public/` and
 
 **`PLAN.md` §3 "The name" lists all fourteen places the brand is written
 down** — change it there and in all fourteen, in one commit.
+
+**`data-route` on the root is a *set*, not a value**, and every rule that
+reads it is written `[data-route~='calendar']`. `ui/face-stage.js` writes both
+faces into it for the length of a swap, so the day keeps its own stylesheet
+while it slides out of a page the router has already answered `saints` for.
+A new rule written `[data-route='calendar']` works everywhere except during
+the one second a reader is watching the two faces move.
 
 **Three branches exist in the locale packs and not in the English base** —
 `reasons`, `offices`, `eras`. `lib/i18n.js`'s `PACK_ONLY` is the list; a

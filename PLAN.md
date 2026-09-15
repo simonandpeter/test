@@ -875,8 +875,11 @@ two whose stated reason turned out to be wrong.
    row is already wider than its viewport at 60 cells, and "two consecutive
    equal readings" settles on the prefix. `packedRow` carries the table.
 
-3. **The nav strip breaks under an aggressive swipe** — `keepEndless` writes
-   `scrollLeft` inside a live gesture. Known defect.
+3. ~~**The nav strip breaks under an aggressive swipe**~~ — **done
+   2026-09-15.** The swipe is one page now, and the row has no native scroller
+   left to fight: `overflow-x: hidden`, and `ui/nav-scroll.js` writes every
+   position itself. `docs/SRC-DECISIONS.md § src/ui/nav-scroll.js` has the
+   fourth cut.
 
 4. **Sweep for cross-references, to the vision in section 5.** In order of
    what each is worth:

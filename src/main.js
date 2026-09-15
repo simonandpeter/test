@@ -487,6 +487,26 @@ function settleLate(y) {
 const faceOf = (route) =>
   route?.view === calendar ? 'calendar' : route?.view === saints ? 'saints' : null;
 
+/**
+ * The two attributes a stylesheet answers a layout question with, written
+ * together because they answer the same question: which section is on, and
+ * whether it gives up the page's scroll (base.css, "a route that fills the
+ * window"). `index.html` sets both before first paint — a rule that only
+ * learns its route once the modules have parsed paints one layout and then
+ * another, which the quality floor measures as shift — and this keeps them
+ * true from the second navigation on.
+ *
+ * **`data-route` is a set, not a value.** `ui/face-stage.js` writes both faces
+ * into it for the length of a swap, and every rule that reads it is written
+ * `[data-route~='calendar']` for that reason.
+ */
+function dressRoute(route) {
+  const root = document.documentElement;
+  root.dataset.route = route?.nav ?? '';
+  if (route?.nav === 'calendar' || route?.view === saint) root.dataset.fillsWindow = '';
+  else delete root.dataset.fillsWindow;
+}
+
 function show({ route, params, path }, nav = {}) {
   const view = route?.view;
   const firstRender = first;
@@ -595,7 +615,18 @@ function show({ route, params, path }, nav = {}) {
      * the one criterion §13 spells out. This keeps it in step from the second
      * navigation onward; the head does the first frame.
      */
-    document.documentElement.dataset.route = route?.nav ?? '';
+    /*
+     * **A stage swap owns both of these for its duration** and is skipped here:
+     * the slide needs the window's scroll gone *before* it starts and given
+     * back only once it has landed, and it needs the *two* faces dressed at
+     * once — `ui/face-stage.js` writes `data-route="calendar saints"`, which
+     * `[data-route~='calendar']` matches, so the day keeps its own stylesheet
+     * while it slides out of a page that is already All Saints. Every other
+     * navigation — a cold load straight onto the day among them (§11.7 d) —
+     * dresses here as it always has. A refused swap falls through to
+     * `dressRoute` below with the rest of the first-arrival path.
+     */
+    if (!stageSwap) dressRoute(route);
     /*
      * And which *view*, which is not the same question (2026-09-02). `nav` is
      * the section the header underlines, so the Index and a saint's page share
@@ -606,26 +637,6 @@ function show({ route, params, path }, nav = {}) {
      * columns their own scrolling.
      */
     document.documentElement.dataset.view = route?.view === saint ? 'saint' : '';
-    /*
-     * And whether the route fills the window (base.css, "a route that fills
-     * the window", 2026-09-05): the Daily page and a saint's own page give up
-     * the page's scroll past 1024 px so their columns can keep their own.
-     * One attribute the two stylesheets used to reach for by their own
-     * names — index.html sets it for the first frame, this keeps it true.
-     *
-     * **A stage swap owns this attribute for its duration** and is skipped
-     * here: the slide needs the window's scroll gone *before* it starts and
-     * given back only once it has landed, which is a sequence rather than a
-     * fact about the route. Every other navigation — a cold load straight onto
-     * the day among them (§11.7 d) — sets it here as it always has.
-     */
-    if (stageSwap) {
-      /* face-stage.js has it */
-    } else if (route?.nav === 'calendar' || route?.view === saint) {
-      document.documentElement.dataset.fillsWindow = '';
-    } else {
-      delete document.documentElement.dataset.fillsWindow;
-    }
     /*
      * Every navigation lands at the top of the page it opens, or — a change of
      * section — back where this section was left (`returning`). The first
@@ -706,6 +717,10 @@ function show({ route, params, path }, nav = {}) {
       });
       if (!swapped) {
         const layer = mountStage(viewEl, face);
+        // The dressing the swap would have owned, now that there is no swap.
+        // After `mountStage`, which lands any slide still in flight — and a
+        // landing writes `data-route` itself.
+        dressRoute(route);
         if (!(face === 'saints' && facePainted('saints'))) paint(layer);
       }
     } else if (onStage) {

@@ -1652,20 +1652,29 @@ test('the header is sticky, shorter, and the phone gets an endless centred nav',
   await map.click();
   await expect(page).toHaveURL(/\/map$/);
 
-  // And the loop is real: dragging the strip to its own rendered end and
-  // letting the gesture settle brings a fifth page across the DOM to sit beside
-  // it (`ui/nav-scroll.js`'s `rotate`) rather than leaving a blank run-off.
+  // And the loop is real: swiping the strip one page brings a fifth page across
+  // the ring to sit beside it rather than leaving a blank run-off.
   await page.goto('/map', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   const before = await page.evaluate(() => document.querySelector('.site-nav').outerHTML);
   await page.evaluate(() => {
+    /*
+     * `ui/nav-scroll.js` moves this row itself now — `overflow-x` is `hidden`,
+     * so a `scrollLeft` write alone reaches nothing and there is no native
+     * scroll to provoke. The gesture is the whole instrument. Dispatched
+     * pointer events are enough here because the file takes its moves off
+     * `window` and never asks for pointer capture, which a synthetic pointer
+     * would refuse (trap 11); the fling test below uses a real touch.
+     */
     const track = document.querySelector('.site-nav');
-    // `ui/nav-scroll.js` only ever rotates in answer to a `pointerdown` or
-    // `wheel` it has itself seen on the track — a `scrollLeft` write alone is
-    // not enough, on purpose. A `wheel` event is the cheaper to synthesise.
-    track.dispatchEvent(new WheelEvent('wheel'));
-    track.scrollLeft = track.scrollWidth; // past the true trailing edge
-    track.dispatchEvent(new Event('scrollend'));
+    const y = track.getBoundingClientRect().top + 4;
+    const at = (type, x, target) =>
+      target.dispatchEvent(
+        new PointerEvent(type, { clientX: x, clientY: y, bubbles: true, pointerId: 1, pointerType: 'touch' }),
+      );
+    at('pointerdown', 300, track);
+    for (let x = 280; x >= 120; x -= 20) at('pointermove', x, window);
+    at('pointerup', 120, window);
   });
   await expect
     .poll(() => page.evaluate(() => document.querySelector('.site-nav').outerHTML))
@@ -1722,20 +1731,21 @@ test('the suite’s positional nav selectors match exactly one link, at every wi
   }
 });
 
-test('an aggressive swipe carries the nav strip, and the ring turns under it', async ({ browser }) => {
+test('a swipe carries the nav strip one page, however hard it is thrown', async ({ browser }) => {
   /*
-   * `ui/nav-scroll.js` turned the ring on every scroll event and wrote
-   * `scrollLeft` to hold the picture still while it did. That write does not
-   * "cut iOS momentum short": it ends the gesture. Re-derive the numbers on a
-   * bare scroller with none of this site in it: `scripts/fling-write.mjs`.
+   * Author, 2026-09-15: "Either you swipe left or right and it takes you one
+   * spot left or right, to the next one, or you click and it takes you there.
+   * Currently you can swipe multiple and this isn't working."
    *
-   * Two things had to change and this test fails if either is put back — the
-   * turn is once a gesture, and the settle is 150 ms of stillness rather than
-   * `scrollend`, which a mandatory-snap scroller fires every time it snaps.
+   * A 320 px fling is the hardest thing this row is ever asked for, and it has
+   * to mean the same as a 40 px one: the next page, and only the next page.
+   * The strip's own `overflow-x` is `hidden` for it (base.css) — momentum
+   * belongs to whoever owns the scroller, and this row cannot let the
+   * compositor spend it.
    *
    * **A real touch fling, through CDP** (trap 11): a dispatched `PointerEvent`
-   * is not an active pointer and produces no momentum at all, so it would
-   * report this row as perfectly well behaved whichever way it was written.
+   * is not an active pointer, so a synthetic gesture cannot tell a row that
+   * refuses momentum from one that never had any to refuse.
    *
    * The assertions are on travel and on arrival, which are independent (trap
    * 14): the row has to *go*, past a threshold no snap-back can reach, and it
@@ -1774,6 +1784,13 @@ test('an aggressive swipe carries the nav strip, and the ring turns under it', a
           return { k: a.dataset.navKey, d: Math.abs(r.left + r.width / 2 - (b.left + t.clientWidth / 2)) };
         })
         .sort((p, q) => p.d - q.d)[0].k,
+      // The ring as it reads left to right, so "one spot" can be named rather
+      // than assumed: the next page is the one standing to the right of the
+      // centred one before the finger went down.
+      order: [...t.querySelectorAll('a')]
+        .map((a) => ({ k: a.dataset.navKey, x: a.getBoundingClientRect().left }))
+        .sort((p, q) => p.x - q.x)
+        .map((p) => p.k),
     };
   });
   expect(start.range, 'the strip has nowhere to be flung').toBeGreaterThan(300);
@@ -1819,15 +1836,19 @@ test('an aggressive swipe carries the nav strip, and the ring turns under it', a
     };
   });
 
-  // It travelled. 45 px was the whole of what the broken row managed, and the
-  // snap point it kept springing back to is `start.at`; a third of the range
-  // is far past both and far short of the 450 the fixed row reaches.
+  // It answered the finger: the row moved rather than sitting still under it.
   expect(
     after.reached - start.at,
     `the fling moved the strip ${after.reached - start.at} px of a ${start.range} px range`,
-  ).toBeGreaterThan(start.range / 3);
-  // And it arrived: a different page is centred, cleanly, and in bounds.
-  expect(after.centred, 'the strip sprang back to the page it started on').not.toBe(start.centred);
+  ).toBeGreaterThan(20);
+  /*
+   * And it arrived one page along, not three. The 320 px thrown at it is more
+   * than three labels wide, so this is the assertion the old free-scrolling row
+   * fails: it is not "a different page" but "the next one".
+   */
+  const next = start.order[start.order.indexOf(start.centred) + 1];
+  expect(next, 'premise: the page the gesture started on was not in the middle of five').toBeTruthy();
+  expect(after.centred, `the strip travelled to ${after.centred} rather than one spot, to ${next}`).toBe(next);
   expect(after.offMid, 'the strip settled off its own midline').toBeLessThan(6);
   expect(after.inBounds, 'the compensated scrollLeft left the scrollable range').toBe(true);
   // The ring turned with it, so the page it landed on still has neighbours on

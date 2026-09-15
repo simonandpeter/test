@@ -1,19 +1,31 @@
 /**
- * The mobile nav row as an endless, centred strip.
+ * The mobile nav row as an endless, centred strip — **one gesture, one page**.
+ *
+ * Author, 2026-09-15: "Either you swipe left or right and it takes you one spot
+ * left or right, to the next one, or you click and it takes you there.
+ * Currently you can swipe multiple and this isn't working."
+ *
+ * So the platform's scroller is not the instrument here any more. `overflow-x`
+ * is `hidden` (base.css) and every position this row is drawn at is written by
+ * this file: a drag follows the finger for **at most one page**, and the lift
+ * glides to the page it was heading for — or back to the one it started on,
+ * when the finger never travelled far enough to have meant it. A fling has no
+ * momentum to spend because there is no native scroll to fling.
+ *
+ * That is also what deleted the three mechanisms the third cut needed — the
+ * once-a-gesture guard, the 150 ms settle, and the flag answering "whose scroll
+ * was that" — every one of which existed to share one scroller with the
+ * compositor. `docs/SRC-DECISIONS.md § src/ui/nav-scroll.js` keeps them, and
+ * they are worth keeping: they are the measurements that say why a native
+ * scroller is the wrong instrument for a five-page ring, not a design to be put
+ * back a piece at a time. `node scripts/nav-swipe.mjs` still films the strip.
  *
  * **Exactly five `<a>`, one per page, never cloned and never reordered in the
  * DOM** (PLAN.md §6) — the loop is a flex `order` rotation. A dozen places in
  * the suite hold `.site-nav a[href$="/saints"]` to be one element;
  * `tests/nav-strip.test.mjs` fails if this file learns to clone or to move a
- * node. The other two invariants — the ring turns **at most once per gesture**
- * and the settle is **rest, not `scrollend`** — are held by `an aggressive
- * swipe carries the nav strip` in `e2e/chrome.spec.js`.
- *
- * The three cuts that got here, the alternatives refused, and the fling
- * measurements behind the once-a-gesture rule:
- * `docs/SRC-DECISIONS.md § src/ui/nav-scroll.js`. Re-derive the numbers with
- * `node scripts/fling-write.mjs` (a bare scroller) and
- * `node scripts/nav-swipe.mjs` (the real strip).
+ * node. The one-page rule is held by `a swipe carries the nav strip one page,
+ * however hard it is thrown` in `e2e/chrome.spec.js`.
  */
 
 import { reducedMotion, DUR } from '../lib/motion.js';
@@ -42,62 +54,19 @@ export function wireNavScroll(track) {
     track.scrollLeft = left;
   };
 
-  /*
-   * **Whether a reader has actually touched this row.** An input event is the
-   * only signal that can only come from a reader; a `scrollLeft` diff cannot
-   * tell a swipe from the browser correcting a position by itself, and reading
-   * intent out of the number rotated the row on a fresh load before anyone had
-   * touched it. `docs/SRC-DECISIONS.md § src/ui/nav-scroll.js` has the whole of it.
-   */
-  let touched = false;
-  /**
-   * Whether the ring has already turned inside the gesture now under way.
-   * Cleared by a finger going down and by the settle, and by nothing else.
-   */
-  let turnedInGesture = false;
-  /**
-   * Whether a finger is on the glass right now. A scroller can go quiet with a
-   * finger still on it — a reader holding the row still, or pausing mid-drag —
-   * and rebalancing there moves the row under the hand that is holding it.
-   */
-  let fingerDown = false;
-  const onTouch = () => {
-    touched = true;
-    fingerDown = true;
-    // A finger going down ends whatever momentum was running, so the gesture
-    // that starts here gets its own turn. See `turnedInGesture` above.
-    turnedInGesture = false;
-  };
-  const onLift = () => {
-    fingerDown = false;
-    // The momentum starts here, so the settle is armed from here too: a fling
-    // that never fires another scroll event still has to be squared up.
-    armSettle();
-  };
-  track.addEventListener('pointerdown', onTouch, { passive: true });
-  track.addEventListener('touchstart', onTouch, { passive: true });
-  track.addEventListener('pointerup', onLift, { passive: true });
-  track.addEventListener('pointercancel', onLift, { passive: true });
-  track.addEventListener('touchend', onLift, { passive: true });
-  track.addEventListener('touchcancel', onLift, { passive: true });
-  // A wheel does not clear the flag: momentum wheel events arrive in a stream,
-  // and treating each as a fresh gesture is exactly the per-event write this
-  // guard exists to stop. The settle clears it.
-  const onWheel = () => {
-    touched = true;
-  };
-  track.addEventListener('wheel', onWheel, { passive: true });
-
   const currentEl = () => track.querySelector(':scope > a[aria-current="page"]');
 
   /** Where `scrollLeft` has to stand for `el` to sit on the track's midline. */
   const centreOf = (el) => el.offsetLeft + el.offsetWidth / 2 - track.clientWidth / 2;
 
+  /** The five as they read left to right on the screen, which the DOM does not
+   *  say: the ring turns by `order`, and `offsetLeft` is what answers. */
+  const seenOrder = () => [...links].sort((a, b) => a.offsetLeft - b.offsetLeft);
+
   /**
-   * Whichever link's own centre is nearest the track's, which is what a
-   * `scroll-snap-align: center` gesture actually settles on — not
-   * necessarily the *current* page, since a reader is free to swipe to any
-   * of the other four without pressing one.
+   * Whichever link's own centre is nearest the track's — not necessarily the
+   * *current* page, since a reader is free to swipe to any of the other four
+   * without pressing one.
    */
   function nearestEl() {
     const mid = track.scrollLeft + track.clientWidth / 2;
@@ -112,6 +81,16 @@ export function wireNavScroll(track) {
     }
     return best;
   }
+
+  /** The page one step from `el` in the direction the finger is going, and how
+   *  far away it is. `el` is at the middle of five whenever a gesture starts,
+   *  so there is always a neighbour; the fallback is for the frame after a
+   *  language change, where a label's width has moved everything. */
+  const neighbourOf = (el, dir) => {
+    const seen = seenOrder();
+    return seen[seen.indexOf(el) + dir] ?? el;
+  };
+  const stepSpan = (el, dir) => Math.abs(centreOf(neighbourOf(el, dir)) - centreOf(el));
 
   /**
    * Turns the ring until `el` stands in the middle of the five. Every link
@@ -160,91 +139,36 @@ export function wireNavScroll(track) {
     write(centreOf(target));
   }
 
-  /** Whether this file's own tween is running, and its frame handle. */
-  let gliding = false;
-  let raf = 0;
-  let settleTimer = null;
-
   /**
-   * The settle, which is **rest and not `scrollend`**: 150 ms with no scroll
-   * event at all and a finger off the glass. A mandatory-snap scroller fires
-   * `scrollend` on every snap, including the one this file's own turn provokes,
-   * so the platform's event lands mid-fling. Every scroll — the reader's, the
-   * momentum's, the snap's, and this file's own — re-arms this, so it can only
-   * fire when nothing is moving.
-   * `docs/SRC-DECISIONS.md § src/ui/nav-scroll.js` has what it cost;
-   * `node scripts/nav-swipe.mjs` re-derives it.
-   */
-  function settled() {
-    clearTimeout(settleTimer);
-    settleTimer = null;
-    // The tween ends itself, and it is the only thing that moves this row
-    // besides a reader.
-    if (dead || gliding || !touched) return;
-    // A finger still on the glass is a gesture still happening, whatever the
-    // scroller has stopped doing.
-    if (fingerDown) return;
-    // The gesture is over, so the next one gets a turn of its own.
-    turnedInGesture = false;
-    balance();
-  }
-
-  /** Re-arms the settle. Every scroll goes through here, and so does `scrollend`. */
-  const armSettle = () => {
-    clearTimeout(settleTimer);
-    settleTimer = setTimeout(settled, SETTLE_MS);
-  };
-
-  /** How long the row must be still before a rebalance counts as a settle. */
-  const SETTLE_MS = 150;
-
-  /**
-   * The same turn, run *during* a reader's own swipe rather than after it, so
-   * a finger meets a new page instead of the end of the row. It is only ever a
-   * turn: the scroll position the reader put there is preserved, because
-   * `turnKeepingStill` pins whatever they are looking at.
+   * Keeps two pages of runway either side of the midline, run on every frame
+   * this file moves the row — a reader's drag and its own tween both. Turning
+   * only at the end of a journey is what left 85 px of blank strip on the
+   * leading edge while it travelled (author, 2026-09-08: "they should be
+   * visible as the animation is happening").
    *
-   * **At most once per gesture.** Any `scrollLeft` write inside a live fling
-   * kills the fling — the value written need not even differ — so a turn per
-   * scroll event costs almost the whole gesture. `force` is for this file's own
-   * tween, which writes every frame regardless and has no native momentum to
-   * protect.
-   *
-   * `node scripts/fling-write.mjs` is the mechanism on a bare scroller and
-   * `node scripts/nav-swipe.mjs` is it on the real strip;
-   * `docs/SRC-DECISIONS.md § src/ui/nav-scroll.js` records what they read.
+   * There is no once-a-gesture guard any more and there must not be one again:
+   * the guard protected a native fling from `scrollLeft` writes, and this row
+   * no longer has one to protect.
    */
-  function keepEndless(force = false) {
+  function keepEndless() {
     if (dead) return;
-    if (!force && turnedInGesture) return;
     const near = nearestEl();
     if (!near) return;
-    const seen = [...links].sort((a, b) => a.offsetLeft - b.offsetLeft);
-    if (seen.indexOf(near) === middle) return;
-    if (!force) turnedInGesture = true;
+    if (seenOrder().indexOf(near) === middle) return;
     turnKeepingStill(near);
   }
 
-  const useScrollEnd = 'onscrollend' in track;
-  const onScroll = () => {
-    // The tween below drives its own turns and its own ending; the events it
-    // makes on the way are not news.
-    if (gliding || !touched) return;
-    keepEndless();
-    armSettle();
-  };
-  // `scrollend` arms the settle rather than being it — see `settled` above for
-  // the fling a snap's own `scrollend` used to cut in half.
-  track.addEventListener('scroll', onScroll, { passive: true });
-  if (useScrollEnd) track.addEventListener('scrollend', armSettle, { passive: true });
+  /** Whether this file's own tween is running, and its frame handle. */
+  let gliding = false;
+  let raf = 0;
+  /** Whether a reader has touched the row, so the late font settle below does
+   *  not yank it back from wherever they have since swiped it. */
+  let touched = false;
 
   /**
    * **The gentle press**: a hand-rolled tween rather than
    * `scrollTo({ behavior: 'smooth' })`, because the row has to be turned *while*
-   * it travels and any `scrollLeft` write aborts a native smooth scroll. Snap
-   * comes off for the length of the tween for the same reason — a
-   * mandatory-snap scroller re-snaps every programmatic write — and `balance`
-   * puts it back at the end.
+   * it travels and any `scrollLeft` write aborts a native smooth scroll.
    *
    * **The distance is a remainder, not two endpoints**, which is what makes a
    * destination that moves under the tween safe: a turn changes
@@ -273,17 +197,17 @@ export function wireNavScroll(track) {
     bound = target;
     cancelAnimationFrame(raf);
     if (reducedMotion() || typeof requestAnimationFrame !== 'function') {
+      gliding = false;
       balance(target);
       return;
     }
     const remaining = centreOf(target) - track.scrollLeft;
     if (Math.abs(remaining) < 1) {
+      gliding = false;
       balance(target);
       return;
     }
     gliding = true;
-    const snap = track.style.scrollSnapType;
-    track.style.scrollSnapType = 'none';
     const began = performance.now();
     const step = (now) => {
       if (dead) return;
@@ -292,21 +216,108 @@ export function wireNavScroll(track) {
       // gentle at this distance.
       const eased = 1 - (1 - t) ** 3;
       write(centreOf(target) - remaining * (1 - eased));
-      // Forced: the tween owns every write in this frame, so the once-a-gesture
-      // guard is not about it.
-      keepEndless(true);
+      keepEndless();
       if (t < 1) {
         raf = requestAnimationFrame(step);
         return;
       }
       raf = 0;
-      track.style.scrollSnapType = snap;
       balance(target);
       gliding = false;
       bound = null;
     };
     raf = requestAnimationFrame(step);
   }
+
+  /**
+   * The gesture. Live while a finger is down: `anchor` is the page the gesture
+   * started on and `hold` is where that page stood relative to the midline, so
+   * every position below is computed from the anchor's *current* geometry
+   * rather than from a remembered `scrollLeft` — which a turn mid-drag would
+   * have made stale.
+   */
+  let drag = null;
+  /** How far a finger has to travel before it means a page rather than a press. */
+  const STEP_MIN = 24;
+  /** Whether the click that follows this gesture is the tail of a swipe. */
+  let swiped = false;
+
+  const place = (dx) => {
+    const { anchor, hold } = drag;
+    // **One page is the most a gesture can ask for**, whatever the finger does
+    // — the whole of the author's complaint was a row that took several.
+    const span = stepSpan(anchor, dx < 0 ? 1 : -1);
+    const travelled = Math.max(-span, Math.min(span, dx));
+    write(centreOf(anchor) + hold - travelled);
+    keepEndless();
+  };
+
+  const onMove = (e) => {
+    if (!drag || dead) return;
+    drag.dx = e.clientX - drag.x;
+    place(drag.dx);
+  };
+
+  const onUp = () => {
+    if (!drag) return;
+    const { anchor, dx } = drag;
+    endDrag();
+    const dir = dx <= -STEP_MIN ? 1 : dx >= STEP_MIN ? -1 : 0;
+    swiped = dir !== 0;
+    glide(dir === 0 ? anchor : neighbourOf(anchor, dir));
+  };
+
+  function endDrag() {
+    drag = null;
+    window.removeEventListener('pointermove', onMove);
+    window.removeEventListener('pointerup', onUp);
+    window.removeEventListener('pointercancel', onUp);
+  }
+
+  /*
+   * On the window rather than on the track, and no `setPointerCapture`: a
+   * dispatched `PointerEvent` is not an active pointer and capture throws on
+   * one (trap 11), so a gesture synthesised by a test would take a different
+   * path through this file than a finger does.
+   */
+  const onDown = (e) => {
+    if (dead || (e.pointerType === 'mouse' && e.button !== 0)) return;
+    touched = true;
+    swiped = false;
+    cancelAnimationFrame(raf);
+    gliding = false;
+    bound = null;
+    const anchor = nearestEl();
+    if (!anchor) return;
+    drag = { x: e.clientX, dx: 0, anchor, hold: track.scrollLeft - centreOf(anchor) };
+    window.addEventListener('pointermove', onMove, { passive: true });
+    window.addEventListener('pointerup', onUp, { passive: true });
+    window.addEventListener('pointercancel', onUp, { passive: true });
+  };
+
+  /*
+   * A swipe that ends over a link would otherwise open it: the browser
+   * suppresses the click after a scroll it ran itself, and this row's scroll is
+   * not one of those. Capture on the track, so the press never reaches the
+   * anchor, `main.js`'s own nav listener, or the router's.
+   */
+  const onClick = (e) => {
+    if (!swiped) return;
+    swiped = false;
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  /** A tab into a page half off the edge brings it to the middle, rather than
+   *  leaving the focus ring somewhere the reader cannot read. */
+  const onFocus = (e) => {
+    const link = e.target.closest?.('a');
+    if (link && links.includes(link)) glide(link);
+  };
+
+  track.addEventListener('pointerdown', onDown, { passive: true });
+  track.addEventListener('click', onClick, true);
+  track.addEventListener('focusin', onFocus);
 
   /**
    * Re-centres whatever is centred *now*, without turning the ring and without
@@ -316,7 +327,7 @@ export function wireNavScroll(track) {
    * is whichever one they left in the middle.
    */
   function recentre() {
-    if (dead || gliding) return;
+    if (dead || gliding || drag) return;
     const near = nearestEl();
     if (near) write(centreOf(near));
   }
@@ -336,17 +347,11 @@ export function wireNavScroll(track) {
     recentre,
     destroy() {
       dead = true;
-      clearTimeout(settleTimer);
+      endDrag();
       cancelAnimationFrame(raf);
-      track.removeEventListener('pointerdown', onTouch);
-      track.removeEventListener('touchstart', onTouch);
-      track.removeEventListener('pointerup', onLift);
-      track.removeEventListener('pointercancel', onLift);
-      track.removeEventListener('touchend', onLift);
-      track.removeEventListener('touchcancel', onLift);
-      track.removeEventListener('wheel', onWheel);
-      track.removeEventListener('scroll', onScroll);
-      if (useScrollEnd) track.removeEventListener('scrollend', armSettle);
+      track.removeEventListener('pointerdown', onDown);
+      track.removeEventListener('click', onClick, true);
+      track.removeEventListener('focusin', onFocus);
       for (const el of links) el.style.removeProperty('order');
     },
   };

@@ -138,15 +138,15 @@ when the instrument cannot resolve the change. Do not use `pack` as a budget.
 
 ## `nav-swipe.mjs` — a hard fling on the phone nav strip
 
-**The question.** `ui/nav-scroll.js` writes `scrollLeft` inside a live
-gesture and has always known that costs something. This is the cost, traced
-per frame through a real touch fling at mobile-360.
+**The question.** One gesture is one page (author, 2026-09-15). Does a *hard*
+one still mean one page? Traced per frame through a real touch fling at
+mobile-360 — 320 px thrown at a row whose labels are 90 px apart.
 
 ```bash
 npm run dev                                          # the **dev** server, not the preview
-npm run probe:nav-swipe http://localhost:5175 3
-NAV_LOG=1 npm run probe:nav-swipe http://localhost:5175 1        # every write, stamped
-NAV_EVERY_SCROLL=1 npm run probe:nav-swipe http://localhost:5175 2  # the control
+npm run probe:nav-swipe http://localhost:5174 3
+NAV_LOG=1 npm run probe:nav-swipe http://localhost:5174 1        # every write, stamped
+NAV_BACKOUT=1 npm run probe:nav-swipe http://localhost:5174 2    # the ring turn off
 ```
 
 **It needs `npm run dev`, and it checks that it got it.** The probe serves a
@@ -155,51 +155,43 @@ that module is inside the entry bundle, where the pattern matches nothing and
 fails open (trap 13). A run against `npm run preview` reports the route never
 fired and exits non-zero rather than measuring an uninstrumented page.
 **`npm run dev` does not always land on 5173** — a dev server left from an
-earlier sitting pushes it to 5175 — so read the port off the log and pass it.
+earlier sitting pushes it to 5174 or 5175 — so read the port off the log and
+pass it.
 
-**The thresholds.**
+**The gates.**
 
-- `COAST_FLOOR_PX` = 100: how far the row must still coast after the finger
-  leaves the glass.
-- `MAX_BACK_JUMPS` = 0: backward steps after the lift.
-- `OFF_MID_CEILING_PX` = 40: how far off the midline the row may settle.
+- `PAGES` = 1: how many ring steps the fling may carry the row. Counted in
+  steps rather than pixels, because the labels are not all one width.
+- `OFF_MID_CEILING_PX` = 40: how far off the midline it may settle — inside a
+  90 px label's own half-width, so the row landed on a page rather than
+  between two.
 
-**Where those came from.** `ui/nav-scroll.js`'s header records both sides of
-the 2026-09-12 fix. Before: a 320 px swipe travelled 45 px of a 450 px range,
-jumped backwards nine times, and came back to the page it left, three times in
-three. After: the full 450 px, 225 px of coast, no backward step, and the ring
-turned so the landed page stands in the middle of five. The floors sit between
-those two states — 100 px is well above a fling that died at the lift and well
-below the 225 the platform gives, so the gate reads the difference between a
-fling and no fling rather than pinning Chromium's momentum curve.
+**What it reads as written** (2026-09-15, 3 of 3): `saints -> texts`, one page,
+0 px off the midline, and the ring turned so the landed page stands in the
+middle of five. The trace's own travel is ~50 px, not 90, and that is not a
+shortfall: the ring turns halfway through the step, which moves the picture not
+at all and takes a whole period off `scrollLeft`.
 
-**Two arms, and they control for different things.** This was misread once, so
-it is written down: `NAV_BACKOUT=1` serves a `keepEndless` that returns
-immediately, and the fling is then *perfect* — 225 px of coast, no backward
-step. It is the control for the **ring turn** and nothing else; you see it in
-the printed link order, which comes back untuned. The defect was never
-`keepEndless` existing, it was `keepEndless` running on every scroll event, so
-**`NAV_EVERY_SCROLL=1` is the control for the floors** — it drops the
-once-per-gesture guard, and the run then reproduces the recorded defect to the
-digit (45 px of travel, 8 and 9 backward jumps, 0 px of coast, settling back
-on the page the swipe began from) and **inverts the exit code**, so a green
-control is reported as a gate that does not bite.
+**The floors it used to carry are gone with the mechanism they measured.**
+Until 2026-09-15 this row was a native scroller and the numbers here were about
+momentum — coast after the lift, backward jumps inside a fling, a
+`NAV_EVERY_SCROLL=1` arm that put a per-gesture guard back. `overflow-x` is
+`hidden` now, `ui/nav-scroll.js` writes every position itself, and there is no
+coast to measure. `docs/SRC-DECISIONS.md § src/ui/nav-scroll.js` keeps those
+measurements; they are the argument for why the scroller went.
 
-**Why it is not in CI.** It needs a dev server rather than the build every
-other step uses, and a touch fling's momentum is a function of frame rate,
-which on a shared runner is not a controlled quantity. The behaviour it holds
-shut is already gated there by `an aggressive swipe carries the nav strip` in
-`e2e/chrome.spec.js`.
+**`NAV_BACKOUT=1` is not a control and inverts no exit code.** It takes the
+ring turn out and leaves the distance alone, which shows in the printed link
+order and in nothing the gates measure. The control for the distance gate is
+the code: take the clamp out of `place()` and every fling here goes two pages
+or three.
 
-**Reach for it** before touching `ui/nav-scroll.js` — anything in
-`keepEndless`, `balance`, `settled`, or `SETTLE_MS` — and after, with the
-control arm, to confirm the gate still bites. Also when a reader reports the
-nav strip "sticking" or "jumping back" on a phone.
+**Reach for it** before touching `ui/nav-scroll.js` — anything in `place`,
+`keepEndless`, `balance` or `glide` — and after. Also when a reader reports the
+nav strip overshooting, sticking, or opening a page they only swiped past.
 
 **Do not reach for it** for the carousel: `ui/loop-scroll.js` is a different
-engine with its own tween and no native momentum to protect. And do not read a
-single run — the defect it holds shut was three times in three, and every
-fling is judged.
+engine, with its own drift loop and its own drag. And do not read a single run.
 
 ---
 
@@ -236,13 +228,15 @@ is silent: if `Input.dispatchTouchEvent` ever stops producing momentum, every
 arm reads small, the differences vanish, and a run looks like "a write no
 longer cancels a fling" when it means "there was no fling".
 
-**A red here is not a bug in this repository.** It is a change in Chromium,
-and what to do about it is re-read `keepEndless` in `ui/nav-scroll.js`, whose
-whole design rests on the old behaviour.
+**A red here is not a bug in this repository.** It is a change in Chromium.
+The nav strip no longer rests on it — it gave its scroller up on 2026-09-15 —
+but `ui/loop-scroll.js` still does: the carousel is `overflow-x: auto` and
+writes `scrollLeft` from its own loop, which is the pairing this measures.
 
-**Reach for it** when `nav-swipe.mjs` goes red and you want to know whether the
-strip broke or the platform did; before designing anything that writes a
-scroll position from a scroll handler.
+**Reach for it** before designing anything that writes a scroll position from a
+scroll handler, and when a scroller somewhere in the site dies under its own
+corrections — this is the cheapest place to find out whether that is the
+platform's rule or yours.
 
 **Do not reach for it** to measure the real nav strip — it deliberately has
 none of the site's code in it. That is `nav-swipe.mjs`.

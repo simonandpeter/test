@@ -805,7 +805,7 @@ html.is-rolling #view {
  * window and the heading is the page's own title.
  */
 @media (max-width: 559.98px) {
-  html[data-route='saints'] main.chrome {
+  html[data-route~='saints'] main.chrome {
     padding-top: var(--space-2);
   }
 

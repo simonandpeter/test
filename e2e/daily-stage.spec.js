@@ -496,6 +496,160 @@ test('the pair slides, and --dur-swap is what times it', async ({ page }) => {
   expect(flight, `the slide took ${flight}ms against a --dur-swap of ${dur}ms`).toBeLessThan(dur * 2);
 });
 
+/**
+ * Every named box, every frame, for as long as the stage says it is swapping.
+ * Boxes rather than the tops `filming` reads: a face being re-laid-out by the
+ * other's stylesheet changes its *width*, and a face merely sliding does not.
+ */
+const filmingBoxes = (page, sels, ms) =>
+  page.evaluate(
+    ([sels, ms]) =>
+      new Promise((resolve) => {
+        const frames = [];
+        const until = performance.now() + ms;
+        const tick = () => {
+          const stage = document.querySelector('.face-stage');
+          const shot = { swapping: stage?.hasAttribute('data-swapping') ?? false };
+          for (const sel of sels) {
+            const el = document.querySelector(sel);
+            const r = el?.getBoundingClientRect();
+            shot[sel] = r ? [Math.round(r.left), Math.round(r.top), Math.round(r.width), Math.round(r.height)] : null;
+          }
+          frames.push(shot);
+          if (performance.now() < until) requestAnimationFrame(tick);
+          else resolve(frames);
+        };
+        requestAnimationFrame(tick);
+      }),
+    [sels, ms],
+  );
+
+/** One box per selector, as it stands right now. */
+const boxesOf = (page, sels) =>
+  page.evaluate((sels) => {
+    const out = {};
+    for (const sel of sels) {
+      const r = document.querySelector(sel)?.getBoundingClientRect();
+      out[sel] = r ? [Math.round(r.left), Math.round(r.top), Math.round(r.width), Math.round(r.height)] : null;
+    }
+    return out;
+  }, sels);
+
+/** The frames the stage was actually in flight for, and a premise guard: a
+ *  filter that matched nothing would make every assertion below vacuous. */
+const inFlight = (frames) => {
+  const flying = frames.filter((f) => f.swapping);
+  expect(flying.length, 'the stage never reported a swap, so nothing here was measured').toBeGreaterThan(5);
+  return flying;
+};
+
+test('a step back while the last slide is still ending lands on the face asked for', async ({ page }) => {
+  /*
+   * Both slides animate the *same two layers*, so the `transitionend` this
+   * file's own swap waits for is indistinguishable from the previous swap's
+   * unless something says so. A reader who steps across and straight back
+   * inside `--dur-swap` is the ordinary way to produce that: the second swap
+   * attaches its listener, the first slide's end arrives a moment later, and
+   * the second slide lands before it has moved — `data-face` left on the page
+   * being left, with the route already saying the other one, and the reader
+   * looking at a day they navigated away from.
+   *
+   * Found 2026-09-15, six times in six, by a round trip with a 600 ms pause in
+   * the middle of a 620 ms slide.
+   */
+  await ready(page);
+  await page.setViewportSize(DESK);
+  await page.goto('/saints', { waitUntil: 'networkidle' });
+  await expect(stage(page)).toHaveCount(1);
+  const dur = await swapMs(page);
+
+  await toDaily(page);
+  await expect(page.locator('.face-stage[data-face="calendar"]')).toBeVisible();
+  // Just short of the first slide's own end, so its `transitionend` lands
+  // *after* the second swap has started listening.
+  await page.waitForTimeout(dur * 0.95);
+  await toSaints(page);
+
+  await expect(page.locator('.face-stage[data-face="saints"]')).toBeVisible();
+  expect(await restingFace(page), 'the stage stayed on the face the reader left').toBe('saints');
+  // And the page it left is not still on the glass: a face that never flipped
+  // leaves the day drawn over All Saints with the route saying `saints`.
+  await expect(page.locator('.index-head')).toBeInViewport();
+});
+
+test('neither face is re-laid-out by the other while the pair slides', async ({ page }) => {
+  /*
+   * Author, 2026-09-15: "the page layout changes, the sidebar gets wider and
+   * the main saint card image gets smaller, when I click on the All Saints page
+   * and the swipe transition happens with that newly appeared layout" — and,
+   * the other way, "the All Saints page crops to just the margins of the Daily
+   * page before it swipes up. They should be independent."
+   *
+   * Two mechanisms, one rule. Eighty-odd rules in `calendar.css` hang off the
+   * root's `data-route`, so flipping it to `saints` before the slide took the
+   * day's `--side-w` away and the column collapsed under the page that was
+   * still on screen; and both layers sat `inset: 0` in a box the day had
+   * already claimed, so All Saints was laid out in the day's margins rather
+   * than its own.
+   *
+   * **Width, not position.** A face in flight moves by design, so a test that
+   * watched its `top` would be watching the animation. What cannot change is
+   * how wide each face's own columns are, and — for the face being left —
+   * where its first pixel was when the reader last saw it standing still.
+   */
+  await ready(page);
+  await page.setViewportSize(DESK);
+  await page.goto(DAY, { waitUntil: 'networkidle' });
+  await expect(page.locator('.cal-bubble')).toBeVisible();
+  await page.evaluate(() => document.fonts.ready);
+
+  const DAY_PARTS = ['.cal-bubble', '.cal-main'];
+  const still = await boxesOf(page, DAY_PARTS);
+  expect(still['.cal-bubble'], 'premise: the day has no sidebar at this width').not.toBeNull();
+
+  const dayFilm = filmingBoxes(page, DAY_PARTS, 900);
+  // Dispatched rather than `locator.click()`, which scrolls its target into
+  // view first (trap 3) — on the stage that is a scroll of the page under test.
+  await page.evaluate(() => document.querySelector('.site-nav a[href$="/saints"]').click());
+  const flyingDay = inFlight(await dayFilm);
+
+  for (const sel of DAY_PARTS) {
+    const measures = [...new Set(flyingDay.map((f) => `${f[sel]?.[0]}+${f[sel]?.[2]}`))];
+    expect(
+      measures,
+      `${sel} was drawn at ${measures.join(' | ')} while the day slid out, ` +
+        `against ${still[sel][0]}+${still[sel][2]} standing still (left+width)`,
+    ).toEqual([`${still[sel][0]}+${still[sel][2]}`]);
+  }
+
+  // And back the other way, from a page the reader has scrolled — the offset is
+  // half of what "its own box" means for All Saints.
+  await expect(page.locator('.index-head')).toBeVisible();
+  await page.evaluate(() => window.scrollTo(0, 600));
+  await expect.poll(() => page.evaluate(() => Math.round(window.scrollY))).toBeGreaterThan(400);
+  const INDEX_PARTS = ['.index-head'];
+  const parked = await boxesOf(page, INDEX_PARTS);
+
+  const indexFilm = filmingBoxes(page, INDEX_PARTS, 900);
+  await page.evaluate(() => document.querySelector('.site-nav a[data-nav-daily]').click());
+  const flyingIndex = inFlight(await indexFilm);
+
+  for (const sel of INDEX_PARTS) {
+    const measures = [...new Set(flyingIndex.map((f) => `${f[sel]?.[0]}+${f[sel]?.[2]}`))];
+    expect(
+      measures,
+      `${sel} was drawn at ${measures.join(' | ')} while All Saints slid out, ` +
+        `against ${parked[sel][0]}+${parked[sel][2]} standing still (left+width)`,
+    ).toEqual([`${parked[sel][0]}+${parked[sel][2]}`]);
+    // The first frame of the flight is the page the reader was looking at: the
+    // window's scroll has gone by then, and the pin is what stands in for it.
+    expect(
+      flyingIndex[0][sel][1],
+      'All Saints jumped before it moved',
+    ).toBe(parked[sel][1]);
+  }
+});
+
 test('the reader’s own work is still there on the way back', async ({ page }) => {
   /*
    * The stamp above proves the *elements* survived; this proves the state the
