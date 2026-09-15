@@ -68,12 +68,27 @@ const FLOOR = {
  * step is now. Re-measure with the 57-byte method rather than nudging this
  * number to fit a run.
  *
+ * **73,000 became 73,400 on 2026-09-15, and the margin is what was spent.**
+ * The Daily revert (`eae39cd`) put `calendar.css` back on the entry beside the
+ * `face-stage` rules `base.css` had gained after it, and the sheet came to
+ * 73,334 — 334 into the margin and **295 bytes below the 73,629 that measured
+ * green**. So this is not the cliff moving and the gate still bites before
+ * FCP does; what is gone is the ~600 bytes of slack, which is now ~230.
+ *
+ * **74,000 was the number asked for and is the one that must not be used**:
+ * 73,688 measured *red*. A ceiling past the cliff does not raise the budget,
+ * it turns the gate off and lets a 150 ms regression through unnamed, on the
+ * page a reader opens daily.
+ *
+ * **The next few hundred bytes of CSS anywhere will trip this**, and the
+ * answer then is the way down below rather than another 400.
+ *
  * **The measured way down, when it is needed**: taking `index.css` and
  * `saint.css` off the entry the way `map.css` and `theme-fade.css` went is
  * 72.28 → 54.31 kB (§10.20). Unlike those two it needs the router to await the
  * view's sheet, because those routes paint text on the first frame.
  */
-const ENTRY_CSS_CEILING = 73_000;
+const ENTRY_CSS_CEILING = 73_400;
 
 /*
  * Lighthouse's stock mobile profile *is* the brief's throttled 4G: 150 ms RTT,
