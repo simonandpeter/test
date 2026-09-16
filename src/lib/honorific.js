@@ -25,9 +25,9 @@ import { STRINGS } from '../ui/strings.js';
 
 /**
  * A collective is not given a rank. "The Fifty Martyrs of Palestine" is a
- * company, and "Martyr The Fifty Martyrs" is not English; there are 22 of
- * these in the corpus and every one announces itself with a leading article,
- * which was checked against the whole corpus rather than assumed.
+ * company, and "Martyr The Fifty Martyrs" is not English. Every one in the
+ * corpus announces itself with a leading article, which was checked against
+ * the whole corpus rather than assumed.
  */
 const isCollective = (name) => /^The\s/.test(name);
 

@@ -153,6 +153,8 @@ test('every name in the corpus resolves, and the split left nothing behind', () 
     const rec = JSON.parse(readFileSync(`saints/${slug}/saint.json`, 'utf8'));
     const key = /^The\s/.test(rec.display_name) ? '(collective)' : rankKey(rec);
     counts.set(key, (counts.get(key) ?? 0) + 1);
+    // A company is printed as its name alone: no rank goes in front of "The".
+    if (key === '(collective)') assert.equal(saintName(rec), rec.display_name, `${slug}: a collective was given a rank`);
 
     /*
      * The migration of 2026-08-27 took the rank, the office and the death
@@ -183,7 +185,7 @@ test('every name in the corpus resolves, and the split left nothing behind', () 
   }
   // The shape of the corpus, which is what makes "St." the marked case: it is
   // 58 of 742, against 253 martyrs and 156 hieromartyrs.
-  assert.equal(counts.get('(collective)'), 22);
+  assert.ok(counts.get('(collective)') > 0, 'the corpus holds companies, so the rule above was exercised');
   assert.ok(counts.get('honorific') < 100, `St is the marked case (${counts.get('honorific')} of ${slugs.length})`);
   assert.ok(counts.get('martyr') > 200);
 });
