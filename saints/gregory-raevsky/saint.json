@@ -1,0 +1,67 @@
+{
+  "slug": "gregory-raevsky",
+  "display_name": "Gregory (Raevsky)",
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Григорий (Раевский)",
+      "lang": "ru",
+      "note": "Read out of the life’s heading «Священномученик Григорий (Раевский)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1888,
+      "latest": 1888,
+      "display": "1888",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru’s life: «родился 28 сентября 1888 года в селе Завидове»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru’s life: «был расстрелян сразу после объявления приговора, 29 сентября 1937 года»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Сщмч. Григория пресвитера (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260916.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s lists for 16 septembrie or 29 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s lists for 16 Σεπτεμβρίου or 29 Σεπτεμβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 29.09.2026 (16. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "photius-of-kyiv",
+  "display_name": "Photius of Kyiv",
+  "office": "Metropolitan of Kyiv",
+  "names": [
+    {
+      "form": "Фотий",
+      "lang": "ru",
+      "note": "Read out of the life’s heading «Святитель Фотий, митрополит Киевский и всея Руси»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1431,
+      "latest": 1431,
+      "display": "1431",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru’s life: died on the feast of the Placing of the Robe of the Theotokos, «2 июля 1431 года»."
+    }
+  },
+  "related": [
+    "cyprian-of-kyiv"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Свт. Фотия , митр. Киевского, Московского и всея Руси, чудотворца (1431)»",
+        "url": "https://days.pravoslavie.ru/Days/20260916.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s lists for 16 septembrie or 29 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s lists for 16 Σεπτεμβρίου or 29 Σεπτεμβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 29.09.2026 (16. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

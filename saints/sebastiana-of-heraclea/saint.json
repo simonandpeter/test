@@ -1,0 +1,58 @@
+{
+  "slug": "sebastiana-of-heraclea",
+  "display_name": "Sebastiana of Heraclea",
+  "names": [
+    {
+      "form": "Севастиана Гераклейская",
+      "lang": "ru",
+      "note": "Read out of the life’s heading «Мученица Севастиана Гераклейская»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 86,
+      "latest": 96,
+      "display": "86–96",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s day line: «Мц. Севастианы (ок. 86-96)»; the life sets her trial in the persecution of Domitian (81–96)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Мц. Севастианы (ок. 86-96)»",
+        "url": "https://days.pravoslavie.ru/Days/20260916.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s lists for 16 septembrie or 29 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s lists for 16 Σεπτεμβρίου or 29 Σεπτεμβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 29.09.2026 (16. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

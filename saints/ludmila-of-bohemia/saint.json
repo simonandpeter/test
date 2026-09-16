@@ -10,6 +10,16 @@
     {
       "form": "Sfânta Muceniță Ludmila",
       "lang": "ro"
+    },
+    {
+      "form": "Людмила Чешская",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Мученица Людмила Чешская»."
+    },
+    {
+      "form": "Људмила",
+      "lang": "sr",
+      "note": "Read out of «Св. муч. Људмила.» in this folder’s Serbian citation."
     }
   ],
   "sex": "female",
@@ -27,17 +37,26 @@
     },
     "death": {
       "earliest": 917,
-      "latest": 921,
-      "display": "917 (921)",
+      "latest": 927,
+      "display": "917–927",
       "basis": "traditional",
-      "note": "saint.gr: strangled in 917, aged sixty-two."
+      "note": "saint.gr: strangled in 917, aged sixty-two; days.pravoslavie.ru’s day line «Мц. Людмилы , кн. Чешской (927)» and the Ohrid Prologue «Пострадала у Течину 927. год.» say 927."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 16 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Мц. Людмилы , кн. Чешской (927)»",
+        "url": "https://days.pravoslavie.ru/Days/20260916.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -69,8 +88,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 16. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.09.2026 (16. септембар ст. ст.) — „Св. муч. Људмила.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-29&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -80,6 +108,27 @@
     {
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
+    }
+  ],
+  "related": [
+    "wenceslas-of-czechia"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Оставльша тьму идолослужения / и с горячей любовию прияв свет Православныя веры Христовы, / явися ты, святая Людмило, яко звезда утренняя, / и светом святости твоея / истинный день Богопочитания в Честей земли начав.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Тропарь мученице Людмиле, княгине Чешской»",
+        "url": "https://days.pravoslavie.ru/Days/20260916.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having left the darkness of idol-worship and received with burning love the light of the Orthodox faith of Christ, thou didst appear, holy Ludmila, as the morning star, and by the light of thy holiness didst begin the true day of the worship of God in the Czech land.",
+        "rendered": "site"
+      }
     }
   ]
 }

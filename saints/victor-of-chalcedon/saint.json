@@ -1,0 +1,63 @@
+{
+  "slug": "victor-of-chalcedon",
+  "display_name": "Victor of Chalcedon",
+  "names": [
+    {
+      "form": "Виктор",
+      "lang": "ru",
+      "note": "Read out of «Мчч. Виктора и Сосфена (ок. 304)» and the life’s heading «Святая великомученица Евфимия Всехвальная, мученики Виктор и Сосфен»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "c. 304",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s day line: «Мчч. Виктора и Сосфена (ок. 304)»."
+    }
+  },
+  "related": [
+    "euphemia-the-great-martyr",
+    "sosthenes-of-chalcedon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Мчч. Виктора и Сосфена (ок. 304)»",
+        "url": "https://days.pravoslavie.ru/Days/20260916.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s lists for 16 septembrie or 29 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s lists for 16 Σεπτεμβρίου or 29 Σεπτεμβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "The Ohrid Prologue on pravoslavno.rs for 29.09.2026 (16. септембар ст. ст.) names the soldiers Victor and Sosthenes inside its entry for Euphemia but gives them no entry of their own (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

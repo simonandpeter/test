@@ -9,6 +9,16 @@
     {
       "form": "Sfânta Mare Muceniță Eufimia",
       "lang": "ro"
+    },
+    {
+      "form": "Евфимия Всехвальная",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Святая великомученица Евфимия Всехвальная, мученики Виктор и Сосфен»."
+    },
+    {
+      "form": "Ефимија",
+      "lang": "sr",
+      "note": "Read out of «Св. вел. муч. Ефимија.» in this folder’s Serbian citation."
     }
   ],
   "sex": "female",
@@ -28,8 +38,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 16 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Вмц. Евфимии всехвальной (304)»",
+        "url": "https://days.pravoslavie.ru/Days/20260916.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -61,8 +80,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 16. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.09.2026 (16. септембар ст. ст.) — „Св. вел. муч. Ефимија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-29&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -152,6 +180,54 @@
         "text": "Thou didst bear with fervour the struggles of suffering and the struggles of the faith for Christ thy Bridegroom. And as thou didst once crush the heresies, so now also put the assaults of our enemies under the feet of our people, entreating the Theotokos; for from the six hundred and thirty God-bearing fathers thou didst receive the definition of the faith, and thou hast kept it, O all-praised one.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Агница Твоя, Иисусе, Евфимия/ зовет велиим гласом:/ Тебе, Женише мой, люблю,/ и Тебе ищущи страдальчествую,/ и сраспинаюся, и спогребаюся Крещению Твоему,/ и стражду Тебе ради,/ яко да царствую в Тебе,/ и умираю за Тя, да и живу с Тобою;/ но яко жертву непорочную приими мя,/ с любовию пожершуюся Тебе.// Тоя молитвами, яко Милостив, спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Тропарь великомученицы Евфимии»",
+        "url": "https://days.pravoslavie.ru/Days/20260916.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy ewe-lamb, O Jesus, Euphemia, crieth with a loud voice: Thee, my Bridegroom, do I love, and seeking thee I suffer; I am crucified and buried with thee in thy baptism, and I suffer for thy sake, that I may reign in thee; I die for thee, that I may also live with thee. But as a spotless sacrifice accept me, who am offered to thee with love. Through her prayers, since thou art merciful, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Жениха твоего Христа возлюбивши/ и свещу твою светлу уготовльши,/ добродетельми возсиявши, всехвальная Евфимие,/ тем возшла еси с Ним на брак,/ венец страдания от Него приемши./ Но от бед избави нас,/ чтущих верою память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Ин тропарь великомученицы Евфимии всехвальной»",
+        "url": "https://days.pravoslavie.ru/Days/20260916.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved Christ thy Bridegroom and made ready thy bright lamp, shining with the virtues, O all-praised Euphemia, thou didst go in with him to the marriage, receiving from him the crown of suffering. But deliver from misfortunes us who honour thy memory with faith.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Во страдальчестве твоем добре подвизалася еси/ и по смерти ны освящаеши чудес точеньми, всехвальная./ Темже твое успение святое поем,/ верою притекающе/ в божественный храм твой,/ да избавимся недугов душевных// и чудес благодать почерпем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Кондак великомученицы Евфимии»",
+        "url": "https://days.pravoslavie.ru/Days/20260916.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thy suffering thou didst contend nobly, and after death thou dost sanctify us with streams of wonders, O all-praised one. Therefore we sing of thy holy falling asleep, hastening with faith to thy divine temple, that we may be delivered from the ailments of the soul and may draw the grace of wonders.",
+        "rendered": "site"
+      }
     }
   ],
   "images": [
@@ -159,5 +235,9 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "victor-of-chalcedon",
+    "sosthenes-of-chalcedon"
   ]
 }

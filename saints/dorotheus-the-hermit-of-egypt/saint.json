@@ -5,6 +5,16 @@
     {
       "form": "Όσιος Δωρόθεος ο εν Αιγύπτω Ερημίτης",
       "lang": "el"
+    },
+    {
+      "form": "Дорофей",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Преподобный Дорофей, пустынник Египетский»."
+    },
+    {
+      "form": "Доротеј",
+      "lang": "sr",
+      "note": "Read out of «Преп. Доротеј.» in this folder’s Serbian citation."
     }
   ],
   "sex": "male",
@@ -23,8 +33,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 16 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Прп. Дорофея , пустынника Египетского (IV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260916.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -47,8 +66,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 16. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.09.2026 (16. септембар ст. ст.) — „Преп. Доротеј.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-29&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

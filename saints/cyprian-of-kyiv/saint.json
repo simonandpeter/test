@@ -6,6 +6,16 @@
     {
       "form": "Όσιος Κυπριανός Μητροπολίτης Κιέβου",
       "lang": "el"
+    },
+    {
+      "form": "Киприан Московский",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Святитель Киприан, митрополит Киевский и всея Руси»."
+    },
+    {
+      "form": "Кипријан",
+      "lang": "sr",
+      "note": "Read out of «Св. Кипријан митрополит Кијевски.» in this folder’s Serbian citation."
     }
   ],
   "sex": "male",
@@ -25,8 +35,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 16 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Свт. Киприана , митр. Московского, всея России чудотворца (1406)»",
+        "url": "https://days.pravoslavie.ru/Days/20260916.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -49,8 +68,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 16. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.09.2026 (16. септембар ст. ст.) — „Св. Кипријан митрополит Кијевски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-29&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "locations": [
@@ -70,6 +98,56 @@
     {
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Иже от Бога свыше Божественною благодатию совершен/ и благими нравы украшен,/ Духом Святым просвещен,/ совершив святыню в страсе Божий,/ сподоблен бысть благодати Божественнаго Духа,/ пасый Церковь Божию Русския митрополии,/ постом вся поборая, волнение претерпе,/ гонение преминув, святаго Петра митрополита всегда себе в помощь призывая,/ и сего помощника имея,/ и того стопам последуя./ Служитель благоприятный,/ заповеди Божия соблюдая,/ Духом Божиим наставляемь,/ просвещая верныя люди учением словес твоих,/ пощением украси житие свое,/ ярем Господень измлада восприим,/ и паче всех Христа возлюби./ Того ради и архиерейским седалищем почтен,/ и, яко светозарное солнце, от Сербския земли происшед,/ и по вся концы русский земли добродетелию просияв,/ светило явися мирови,/ и преставися ко Господу от сея жизни в вечный покой,/ великий архиерею Божий, Киприане митрополите,/ учителю и наставниче Русския земли,/ всегда предстоя Престолу Пресвятыя Троицы,/ моли Господа прилежно об архиереех и о всех христианех,/ да спасет тебе ради души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Тропарь святителя Киприана, митрополита Московского»",
+        "url": "https://days.pravoslavie.ru/Days/20260916.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Made perfect from on high by the divine grace of God and adorned with good ways, enlightened by the Holy Spirit, thou didst perform holy things in the fear of God and wast counted worthy of the grace of the divine Spirit. Shepherding the Church of God of the Russian metropolia, overcoming all things by fasting, thou didst endure the storm and pass through persecution, ever calling on the holy metropolitan Peter to help thee, having him as thy helper and following in his steps. An acceptable servant, keeping the commandments of God and guided by the Spirit of God, thou didst enlighten the faithful people with the teaching of thy words; thou didst adorn thy life with fasting, taking up the yoke of the Lord from thy youth, and didst love Christ above all. Therefore wast thou honoured with the throne of a hierarch, and like a radiant sun coming forth from the Serbian land and shining with virtue to all the ends of the Russian land, thou didst appear as a luminary to the world, and didst pass from this life to the Lord into eternal rest, O great hierarch of God, Cyprian the metropolitan, teacher and instructor of the Russian land. Ever standing before the throne of the Most Holy Trinity, pray diligently to the Lord for the hierarchs and for all Christians, that for thy sake he may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Необорим столп Православия,/ вере Христове утверждение,/ церквам украситель, премудрый учитель,/ сербское воспитание, русское процветение,/ Господнею любовию распалаемь,/ Духу Пресвятому дом явися/ и душу, яко жертву непорочну, Господеви принесе,/ досточудне и всечестне Киприане, святителю Христов,/ сего ради вселися в широту райскую,/ предстоя Христу в лице святых,/ Емуже молися и спасай град и люди от поганых нахождения,/ яко да зовем ти:/ радуйся, отче Киприане,/ учителю премудрый.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Кондак святителя Киприана, митрополита Московского»",
+        "url": "https://days.pravoslavie.ru/Days/20260916.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Unconquerable pillar of Orthodoxy, confirmation of the faith of Christ, adorner of churches, all-wise teacher, of Serbian upbringing and Russian flowering, kindled with the love of the Lord, thou didst become a house of the Most Holy Spirit and didst offer thy soul to the Lord as a spotless sacrifice, O wondrous and all-honoured Cyprian, hierarch of Christ. Therefore thou hast made thy dwelling in the breadth of paradise, standing before Christ in the company of the saints. Pray to him, and save the city and the people from the incursion of the heathen, that we may cry to thee: Rejoice, O father Cyprian, all-wise teacher.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Святителю Христов, пастырю добрый,/ учителю небесныя мудрости,/ светильниче света духовнаго,/ Киприане досточудне,/ не престай молитися за паству свою,/ за любящих и чтущих тя,// града нашего крепкий заступниче.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Ин кондак святителя Киприана, митрополита Московского»",
+        "url": "https://days.pravoslavie.ru/Days/20260916.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O hierarch of Christ, good shepherd, teacher of heavenly wisdom, lamp of spiritual light, wondrous Cyprian, cease not to pray for thy flock, for those who love and honour thee, O strong defender of our city.",
+        "rendered": "site"
+      }
     }
   ]
 }

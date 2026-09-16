@@ -1,0 +1,73 @@
+{
+  "slug": "kuksha-of-odessa",
+  "display_name": "Kuksha of Odessa",
+  "office": "Hieromonk",
+  "names": [
+    {
+      "form": "Кукша Одесский",
+      "lang": "ru",
+      "note": "Read out of the name page’s heading «Кукша Одесский, исповедник, прп.» on days.pravoslavie.ru."
+    },
+    {
+      "form": "Кукша Одесский (Величко)",
+      "lang": "ru",
+      "note": "As azbyka.ru prints it."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1875,
+      "latest": 1875,
+      "display": "1875",
+      "basis": "attested",
+      "note": "azbyka.ru: «родился 12 января (25 н. ст.) 1875 г. в с. Арбузинка»."
+    },
+    "death": {
+      "earliest": 1964,
+      "latest": 1964,
+      "display": "1964",
+      "basis": "attested",
+      "note": "azbyka.ru: «преподобный Кукша 11 (24) декабря 1964 года преставился ко Господу»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Прп. Кукши Одесского, исп. (1964)»",
+        "url": "https://days.pravoslavie.ru/Days/20260916.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s lists for 16 septembrie or 29 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s lists for 16 Σεπτεμβρίου or 29 Σεπτεμβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 29.09.2026 (16. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
