@@ -743,19 +743,20 @@ html[data-route~='prayer'][data-fills-window]
         │ └ #hy-views              the two marks, aria-pressed
         └ .hy-body                 grid: --hy-side-w minmax(0,1fr) --hy-side-w
           │                        (≥1024); a plain block below it
-          ├ .hy-view#hy-view       column 2. The positioning context for the
-          │ │                      arrows, and the two dividers are its own
-          │ │                      inline borders
+          ├ .hy-view#hy-view       row 1, column 2. The positioning context
+          │ │                      for the arrows, and the two dividers are its
+          │ │                      own inline borders
           │ ├ button#hy-prev       ≥1024 only
           │ ├ .hy-hold#hy-hold     the box the fade animates; the card is
           │ │ │                    rewritten inside it
           │ │ └ article.hy-saint   grid: 4fr 6fr (≥1024); data-slug
           │ │   ├ .hy-pic          picture, name, dates, the life's first line
+          │ │   │                  clamped to --hy-lede-lines
           │ │   └ .hy-hymns        `ui/hymns.js`'s markup; the only scroller
           │ │                      for the text at the desk
           │ └ button#hy-next       ≥1024 only
-          ├ aside#hy-related       column 1, by `grid-column` and not by source
-          └ aside#hy-sameday       column 3
+          ├ aside#hy-related       row 1, column 1 — by placement, not source
+          └ aside#hy-sameday       row 1, column 3
 ```
 
 **The document order is the phone's reading order**, as it is on Daily, and
@@ -780,7 +781,14 @@ day.** The middle is the page and the two outside it are its margins.
 - **Each column is its own box and its own scroller**, with `min-height: 0`,
   and the page gives up its scroll (`data-fills-window`, a ≥1024 rule in
   `base.css`). The wheel belongs to the hymn: at prayer, a troparion longer
-  than its box is the one moment the reader is certain to be scrolling.
+  than its box is the one moment the reader is certain to be scrolling. The
+  hymn box is `tabindex="0"` and a named region, because a scroller a keyboard
+  cannot reach is one nobody can read to the end of.
+- **All three are placed on row 1 by hand.** Naming only a column leaves grid
+  auto-placement to the rows, and it never goes backwards: the saint takes row
+  1 column 2 and the aside that follows it in the document and wants column 1
+  is put in row 2, with the same-day column after it. The page then reads as
+  the saint above two lists.
 - **The dividers are the middle column's own `border-inline`**, so neither
   aside has to know it has a neighbour.
 - **The two asides are one width apiece and the saint takes the slack** —
@@ -811,6 +819,14 @@ day.** The middle is the page and the two outside it are its margins.
 
 The two widths are free to diverge except here.
 
+- **The life's opening keeps its height before it arrives.** It is filled from
+  the saint's own folder a moment after the card is drawn, into a flex column
+  whose picture is allowed to shrink — so a lede growing from nothing took
+  338 px off the icon above it and moved the card, the columns and everything
+  in them. It is clamped to `--hy-lede-lines` and given that height from the
+  start, and the asides are drawn once, when the folder answers, rather than
+  twice: on a phone they stand under a card that fills from the same fetch, so
+  drawing them early bought nothing and cost a jolt.
 - **The saint changes by a fade and nothing travels.** It is a Web Animations
   fade whose `finished` drives the swap — not a CSS transition and not a timer.
   A transition was measured on this desk and did not start at all on one press

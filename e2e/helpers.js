@@ -120,6 +120,7 @@ const ROUTES = [
   ['saint detail, sparse', SPARSE_DETAIL],
   ['all saints', '/saints'],
   ['all saints, carousel', '/saints', carouselMode],
+  ['prayer', '/prayer'],
   ['map', '/map'],
   ['about', '/about'],
 ];

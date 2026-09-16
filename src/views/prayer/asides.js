@@ -126,25 +126,33 @@ export function drawAsides(root, card) {
 }
 
 /**
- * The asides' own half of the payload: `related` merged in once the folder has
- * answered. Same generation guard as the card's — an answer that arrives after
- * the reader has stepped on is about a saint who is no longer on the page.
+ * Both asides, drawn when the saint's own folder has answered — **or when it
+ * has failed to**, which is the same moment for this page's purposes and is why
+ * both branches draw.
+ *
+ * `related` lives in that payload and `mentionedIn` is already on the card, so
+ * waiting costs only the half that was immediate and buys a page that does not
+ * move under the reader (`card.js` has the measurement). A folder that never
+ * answers leaves the columns holding the manifest's half alone — a smaller true
+ * list rather than a guessed one, and never an empty column where a relation
+ * exists.
+ *
+ * Same generation guard as the card's: an answer that arrives after the reader
+ * has stepped on is about a saint who is no longer on the page.
  */
 export function fillAsides(root, card, generation) {
+  const draw = (detail) => {
+    if (!state || state.generation !== generation) return;
+    /* The one writer of `state.detail`: it is the aside's half of the payload
+       and it is kept so that a redraw which is not a step — the reader
+       switching the two columns' face — does not lose the half that arrived
+       with the fetch. */
+    state.detail = detail;
+    drawAsides(root, card);
+  };
   loadDetail(card.slug).then(
-    (payload) => {
-      if (!state || state.generation !== generation) return;
-      /* The one writer of `state.detail`: it is the aside's half of the payload
-         and it is kept so that a redraw which is not a step — the reader
-         switching the two columns' face — does not lose the half that arrived
-         with the fetch. */
-      state.detail = payload?.saint ?? null;
-      drawAsides(root, card);
-    },
-    () => {
-      /* The folder did not answer; the aside keeps the half the manifest gave
-         it, which is a smaller true list rather than a guessed one. */
-    },
+    (payload) => draw(payload?.saint ?? null),
+    () => draw(null),
   );
 }
 

@@ -68,7 +68,7 @@ test('the three columns stand side by side, and the saint is in the middle', asy
       const r = el.getBoundingClientRect();
       // A hidden element reports 0 and would satisfy an ordering by accident
       // (trap 7), so the reading says whether it is drawn at all.
-      return { x: r.x, y: r.y, w: r.width, drawn: el.clientWidth > 0 };
+      return { x: r.x, y: r.y, w: r.width, h: r.height, drawn: el.clientWidth > 0 };
     }, sel);
 
   const [related, view, sameday] = await Promise.all([
@@ -81,8 +81,17 @@ test('the three columns stand side by side, and the saint is in the middle', asy
   }
   expect(related.x, 'recorded-with is left of the saint').toBeLessThan(view.x);
   expect(view.x, 'the saint is left of the same day').toBeLessThan(sameday.x);
-  // One row, so the three tops agree to within a hair.
-  expect(Math.abs(related.y - sameday.y)).toBeLessThan(2);
+  /*
+   * **One row, and the saint's own top is what says so.** The three x
+   * assertions above and a shared top between the two asides are all still true
+   * of a grid that has put the saint in row 1 and both asides in row 2 — which
+   * is what auto-placement does when only a column is named, and what this page
+   * did until 2026-09-16. The reading that catches it is the middle column's
+   * top against an aside's.
+   */
+  expect(Math.abs(related.y - sameday.y), 'the two asides are not on one row').toBeLessThan(2);
+  expect(Math.abs(view.y - related.y), 'the saint is not on the asides’ row').toBeLessThan(2);
+  expect(Math.abs(view.h - related.h), 'the saint’s column is not the asides’ height').toBeLessThan(2);
   // And the saint takes the room: the asides are the narrow pair.
   expect(view.w).toBeGreaterThan(related.w + sameday.w);
 });

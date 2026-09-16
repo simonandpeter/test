@@ -314,6 +314,26 @@ html[data-route~='prayer'] .hy-line {
   margin: 0;
 }
 
+/* **The life's opening, at a height it keeps whether or not it has arrived.**
+   It is filled from the saint's own folder a moment after the card is drawn,
+   and the box it sits in is a flex column whose picture is allowed to shrink —
+   so a lede growing from nothing to four lines took 338 px off the icon above
+   it and moved the whole card, measured at a CLS of 0.049 against
+   `quality-floor.spec.js`'s budget of 0.02. Given the lines it will have, it
+   takes them from the start and the icon never moves.
+
+   Four, and clamped rather than left to run: this is a preview under a name,
+   not the life. `--hy-lede-lines` carries no pixel, so it is a count and not a
+   measure — `calendar.css`'s own `--lede-lines` is the same idea. */
+html[data-route~='prayer'] .hy-line[data-hy-lede] {
+  --hy-lede-lines: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--hy-lede-lines);
+  overflow: hidden;
+  height: calc(var(--hy-lede-lines) * 1lh);
+}
+
 /* The hymn's own measure. No px in it, so `structure.test.mjs` cannot see it —
    written here rather than nowhere for the same reason the measures table
    exists. */
@@ -408,16 +428,29 @@ html[data-route~='prayer'] .hy-arrow.is-next {
   }
 
   /* The document order is the phone's (`views/prayer.js`), so the desk puts the
-     first aside back on the left by hand rather than by source order. */
+     first aside back on the left by hand rather than by source order.
+
+     **`grid-row: 1` on all three, and it is load-bearing.** Auto-placement
+     never goes backwards: with only a column named, `.hy-view` takes row 1
+     column 2, and `#hy-related` — which follows it in the document and wants
+     column 1 — is placed in *row 2*, with the same-day column after it. The
+     page then reads as the saint above two lists rather than between them, at
+     every width past the breakpoint, and it did until 2026-09-16. It survived
+     a geometry test because the three x-ordering and shared-top assertions were
+     all still true of two rows: the asides shared a top with each other. The
+     test now asks the saint's own top of the same question. */
   html[data-route~='prayer'] #hy-related {
+    grid-row: 1;
     grid-column: 1;
   }
 
   html[data-route~='prayer'] .hy-view {
+    grid-row: 1;
     grid-column: 2;
   }
 
   html[data-route~='prayer'] #hy-sameday {
+    grid-row: 1;
     grid-column: 3;
   }
 

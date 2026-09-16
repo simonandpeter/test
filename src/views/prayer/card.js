@@ -9,7 +9,7 @@ import { DUR, EASE, reducedMotion } from '../../lib/motion.js';
 import { neighboursAt } from '../../lib/prayer-order.js';
 import { hymnMarkup, mergeForReading } from '../../ui/hymns.js';
 import { STRINGS } from '../../ui/strings.js';
-import { clearAsides, drawAsides, fillAsides } from './asides.js';
+import { clearAsides, fillAsides } from './asides.js';
 import { state } from './state.js';
 
 const BASE = import.meta.env.BASE_URL;
@@ -55,7 +55,8 @@ export function cardMarkup(card) {
       <p class="hy-sub utility">${esc(formatSubtext(card))}</p>
       <p class="hy-line" data-hy-lede></p>
     </div>
-    <div class="hy-hymns" data-hy-hymns></div>
+    <div class="hy-hymns" data-hy-hymns tabindex="0" role="region"
+      aria-label="${esc(STRINGS.calendar.hymns.heading)}"></div>
   </article>`;
 }
 
@@ -188,13 +189,26 @@ export function showCard(root, { animate = false } = {}) {
     hold.innerHTML = cardMarkup(card);
     fillDetail(hold, card, generation);
     /*
-     * The asides are drawn from the manifest now and redrawn when the folder
-     * answers, and they are *outside* `.hy-hold` — so they change at the press
-     * rather than behind the card's fade. That is deliberate: the fade is the
-     * page being turned, and the two lists beside it are the page's margins,
-     * which do not need to be turned to be read.
+     * **The asides are emptied now and drawn once, when the folder answers.**
+     * They were drawn twice — the manifest's half at once and the payload's
+     * merged in after — and on a phone that costs a jolt rather than buying
+     * anything: the two columns stand *under* a card whose own two boxes fill
+     * from the same fetch, so whatever is in them is pushed down the page the
+     * moment the hymns arrive. Measured at 360 px, that was a CLS of 0.076
+     * against `quality-floor.spec.js`'s budget of 0.02, and the whole of it was
+     * blamed on `.hy-side`. Drawn once, the columns have no height to be moved
+     * from and the card grows into the space below it.
+     *
+     * A step costs nothing for it: the neighbours are prefetched, so
+     * `loadDetail` answers from the cache in a microtask and the columns are
+     * filled before the frame is painted.
+     *
+     * They are *outside* `.hy-hold`, so they change at the press rather than
+     * behind the card's fade. That is deliberate: the fade is the page being
+     * turned, and the two lists beside it are the page's margins, which do not
+     * need to be turned to be read.
      */
-    drawAsides(root, card);
+    clearAsides(root);
     fillAsides(root, card, generation);
     refreshEnds(root);
   };
