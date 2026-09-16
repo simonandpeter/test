@@ -33,15 +33,36 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
-**The document cut, uncommitted.** Six documents are gone — the old plan, the
-old to-do, the reverted rebuild's two, and the scratchpad's three — and every
-citation to them has been retired from `src/`, `e2e/`, `tests/` and `scripts/`.
-`STRUCTURE.md` is what replaced the first two. The plan's test is now
-`tests/structure.test.mjs`, the saint-slug guard moved to
-`tests/corpus-break.test.mjs`, and `scripts/tokens-table.mjs` prints §3's four
-token tables from `tokens.css`. `git log` has the rest; nothing is pushed.
+**The corpus run (`scratchpad/corpus-plan.md` §5) has reached the end of
+civil 21 September.** A1 did Serbian 20 and 21 and Greek 21; **civil 22
+September is untouched and is next** (Serbian and Greek), then A2. What the
+reading of 22 September already found, so it need not be found twice:
 
-**`/prayer` is finished and unpushed.** The hymn reader is complete through the
+- **Serbian 22** (Ohrid Prologue): Joachim and Anna, Severian of Sebaste and
+  Theophanes the Confessor are upgrades of existing folders; the Third
+  Ecumenical Council is not a person. «Св. Никита Угодник Божји», of
+  Constantinople in the 12th century, has to be read against
+  `nicetas-the-chartularius` before it is called the same man.
+- **Greek 22**: Phocas the hieromartyr, Isaac and Martin, and Cosmas of
+  Zographou are upgrades; Phocas the Gardener (saint.gr 2483, also of Sinope)
+  and Paraskeva of Diveyevo (2488, who guided `maria-ivanovna-of-diveyevo`)
+  are new. **The Twenty-Six Zographou martyrs (2486) print 22 names and four
+  unknown**, so by CORPUS §4.6 and §7 they are folders each and need two
+  batches of their own; two are both «Ιάκωβος».
+- Phocas's page carries a megalynarion, which the schema's hymn `kind` does
+  not allow; leave it out rather than file it as a troparion.
+
+Three things the run taught that the tools do not say. saint.gr's day index
+carries a sidebar that `day-candidates.mjs` reads as entries (Paisios,
+Nicodemus, Panagia Megalomata): open each entry and check its own feast date.
+`corpus-gate.mjs --batch` fails "duplicates" on name forms a batch's folders
+already shared, and on a company whose members carry its heading; read the
+pairs, and for an upgrade-only day a scope file under `.tmp/corpus-batches/`
+is the only way to scope it. And neither the unit suite nor the gate notices
+a batch's one row being backed out, so the back-out is watched in the
+manifest (who is on that church's day), not in `npm test`.
+
+**`/prayer` is finished.** The hymn reader is complete through the
 plan's seventh stage — the route, `lib/prayer-order.js`, the card and its fade,
 the two asides, the field with its own MiniSearch, the phone, and the sixth nav
 link — and the plan it was built from is spent. `STRUCTURE.md` §4 Prayer
@@ -52,8 +73,7 @@ it was written on. `scratchpad/strip-throttle.mjs` is the
 instrument that settled the nav strip's gap budget at six links and is worth
 keeping for the seventh.
 
-**`index.css` and `saint.css` are off the render-blocking entry sheet, and
-unpushed.** `src/ui/sheets.js` loads them per route and `main.js` awaits a
+**`index.css` and `saint.css` are off the render-blocking entry sheet.** `src/ui/sheets.js` loads them per route and `main.js` awaits a
 view's `styles()` before it renders. The entry sheet's byte gate passes with
 room; **`npm run test:lighthouse` is still red on FCP**, which it also is on an
 unmodified tree on this desk (`STRUCTURE.md` §6 item 7) — every route improved
