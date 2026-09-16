@@ -428,23 +428,33 @@ async function type(page, query) {
  * first saint before it starts, so it is the whole book and not the tail of it;
  * it is bounded, so a stepper that stopped disabling itself fails the premise
  * instead of hanging.
+ *
+ * **Each press waits for the saint to change, not for a fixed 80 ms.** The card
+ * swaps when its fade's `finished` resolves (`views/prayer/card.js`), which is
+ * `DUR.move` later, so a fixed wait read the old saint again and pressed on
+ * into a fade the next press cancelled: a book of two walked as four, «John V»
+ * three times and then Varlaam. It passed while the pinned subject's book held
+ * one saint and failed the day corpus growth moved the pin to one of two. A
+ * stepper that does not move still shows, as the same slug read twice.
  */
 async function walkBook(page, cap = 60) {
   return page.evaluate(async (limit) => {
-    const press = (id) => document.querySelector(id).click();
-    const settle = () => new Promise((r) => setTimeout(r, 80));
+    const at = () => document.querySelector('.hy-saint')?.dataset.slug;
+    const press = async (id) => {
+      const from = at();
+      document.querySelector(id).click();
+      for (let t = 0; t < 60 && at() === from; t += 1) await new Promise((r) => setTimeout(r, 50));
+    };
     for (let i = 0; i < limit && !document.querySelector('#hy-prev').disabled; i += 1) {
-      press('#hy-prev');
-      await settle();
+      await press('#hy-prev');
     }
     const slugs = [];
     for (let i = 0; i < limit; i += 1) {
-      const at = document.querySelector('.hy-saint')?.dataset.slug;
-      if (!at) break;
-      slugs.push(at);
+      const slug = at();
+      if (!slug) break;
+      slugs.push(slug);
       if (document.querySelector('#hy-next').disabled) break;
-      press('#hy-next');
-      await settle();
+      await press('#hy-next');
     }
     return slugs;
   }, cap);
