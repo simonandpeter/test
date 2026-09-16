@@ -27,4 +27,6 @@ taught all to run it. The Greek calendar keeps him on 7 September with
 same day of the old style, 20 September, and in the synaxis of the seventy
 apostles.
 
-*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-evod-antiohijskij), read 6 September 2026; the Ορθόδοξος Συναξαριστής (saint.gr), 7 Σεπτεμβρίου — [the entry](https://www.saint.gr/946/saint.aspx), read 23 August 2026, was all this entry had until then.*
+The Ohrid Prologue, which keeps him for the Serbian calendar with Onesiphorus, calls him a disciple of Peter, made bishop of Antioch by Peter himself. It counts the Virgin’s years in his lost book differently — eleven years in the temple, given to Joseph as she entered her fifteenth year, and the Lord born in that year — and names his other work the Lamp. It says he was killed for Christ while the emperor Vespasian was at Antioch.
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-evod-antiohijskij), read 6 September 2026; the Ορθόδοξος Συναξαριστής (saint.gr), 7 Σεπτεμβρίου — [the entry](https://www.saint.gr/946/saint.aspx), read 23 August 2026, was all this entry had until then; the Ohrid Prologue for 20 September 2026 (7. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-20&prolog=1), read 17 September 2026.*

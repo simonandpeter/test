@@ -23,4 +23,6 @@ Greek calendar sends the reader also to the notice of Thecla on 24
 September. The Russian calendar keeps him on 7 September of the old style,
 20 September.
 
-*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-onisifor-kolofonskij), read 6 September 2026; the Ορθόδοξος Συναξαριστής (saint.gr), 7 Σεπτεμβρίου — [the entry](https://www.saint.gr/946/saint.aspx), read 23 August 2026, was all this entry had until then.*
+The Ohrid Prologue keeps him for the Serbian calendar with Euodus, as one of the Seventy and the friend and helper Paul names, and adds that he suffered at Colophon, where he had been bishop, bound — it is said — to wild horses and torn apart.
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-onisifor-kolofonskij), read 6 September 2026; the Ορθόδοξος Συναξαριστής (saint.gr), 7 Σεπτεμβρίου — [the entry](https://www.saint.gr/946/saint.aspx), read 23 August 2026, was all this entry had until then; the Ohrid Prologue for 20 September 2026 (7. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-20&prolog=1), read 17 September 2026.*

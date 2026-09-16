@@ -10,6 +10,10 @@
     {
       "form": "Иоанн",
       "lang": "ru"
+    },
+    {
+      "form": "Јован",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -19,11 +23,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 1186,
+      "earliest": 1185,
       "latest": 1186,
-      "display": "1186",
+      "display": "1185 or 1186",
       "basis": "attested",
-      "note": "saint.gr: reposed in 1186."
+      "note": "saint.gr: reposed in 1186. The Ohrid Prologue on pravoslavno.rs (20.09.2026) gives „7. септ. 1185. год.“ The two sources disagree by a year."
     }
   },
   "attestations": [
@@ -62,8 +66,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 7. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.09.2026 (7. септембар ст. ст.) — „Св. Јован архиеп. Новгородски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-20&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

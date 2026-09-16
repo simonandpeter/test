@@ -45,7 +45,9 @@ a dream whose they were. The Greek synaxarion keeps him on 7 September in a
 line — archbishop in 1162, asleep in 1186 — and says it has no further
 details; the Russian calendar keeps him the same day of its own reckoning.
 
+The Ohrid Prologue, for the Serbian calendar, tells it shortly: first a priest, then from 1163 bishop in Novgorod; he built seven churches in his lifetime, saw the Theotokos, and had such power over demons that he made them serve him. He saved Novgorod by a wonder from the attack of seventy-two princes, bore the devil’s temptations and overcame them by the Cross and prayer, and in old age withdrew to a monastery, took the schema and reposed peacefully on 7 September 1185 — a year earlier than the Greek calendar gives.
+
 *After the life printed by the Orthodox Church in America for 7 September —
 [the day’s lives](https://www.oca.org/saints/all-lives/2026/09/07); the Greek
 entry is the Ορθόδοξος Συναξαριστής (saint.gr), 7 Σεπτεμβρίου —
-[the entry](https://www.saint.gr/941/saint.aspx); read 5 September 2026.*
+[the entry](https://www.saint.gr/941/saint.aspx); read 5 September 2026; the Ohrid Prologue for 20 September 2026 (7. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-20&prolog=1), read 17 September 2026.*
