@@ -34,9 +34,25 @@ here, because a PAT push never updates `origin/main`.
 ## In flight
 
 **The corpus run (`scratchpad/corpus-plan.md` §5) has reached the end of
-civil 22 September**, which finishes sitting A1 (Serbian 20–22, Greek 21–22).
-**A2 is next: civil 23–25 September, Greek and Serbian**; Russian and Romanian
-stay untouched until B1. Nothing of 23 September has been read yet.
+civil 25 September**, which finishes sitting A2 (Greek and Serbian 23–25).
+**A3 is next: civil 26–28 September, Greek and Serbian**; Russian and Romanian
+stay untouched until B1. Nothing of 26 September has been read yet.
+
+What A2 added that the tools do not say. `day-candidates.mjs` undercounts the
+Serbian Prologue: it read four entries on 24 and 25 September where the page
+prints five, so read the numbered list on the page itself. Orloff is not
+exhausted for a saint.gr "Έτερον Ἀπολυτίκιον": a common (a nun's «Ἐν σοὶ
+Μῆτερ», a hieromartyr's «Καὶ τρόπων μέτοχος») is often printed under a
+named saint, and the corpus already holds its Orloff English, so grep the
+Greek text across `saints/*/saint.json` before rendering one. An office goes
+in only if `el.js` already has it — `grep -c "<office>" src/ui/locales/el.js`
+settles it in a second. A regnal marker ("under Basil I"), a monastery's
+dedication and a lavra's name are written so that they do not match an
+existing display name; `cross-link-audit.mjs` diffed against the last batch's
+output shows it. `.tmp/mk23.py`–`mk25.py` and `.tmp/upgrade.py` (which now
+takes `types_add`) are the shape of a two-church day, and
+`.tmp/namedays.mjs <base> <date> <church>` reads a day's name-day list against
+a running dev server.
 
 Three more things 22 September taught that the tools say only by failing:
 `office` must already have a translation in all four locale packs
