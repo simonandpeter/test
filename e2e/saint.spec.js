@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { test, expect } from './fixtures.js';
 import {
   DETAIL,
@@ -10,6 +11,9 @@ import {
   ready,
   searchMode,
 } from './helpers.js';
+
+const MANIFEST = JSON.parse(readFileSync(new URL('../data/manifest.json', import.meta.url), 'utf8'));
+const MANIFEST_CARDS = MANIFEST.saints ?? MANIFEST;
 
 /**
  * A saint's own page: the register, the life, the hymns, the licence.
@@ -960,10 +964,17 @@ test('the two left columns scroll independently of each other and of the page', 
    * as one thing has to be one box, so `wireColumns` moves it into the aside
    * at this width. That is asserted here rather than in the layout test above
    * because it is this instruction that forced it.
+   *
+   * Nektarios of Aegina, because both columns overflow on their own: a long
+   * life in the middle and a veneration table taller than the aside. It was
+   * John Chrysostom, whose 950-byte life overflowed at this height only by a
+   * second list heading, and stopped when Mentioned in merged into Related to
+   * (2026-09-16). Philaret (Danilevsky), tried first, has the life and not the
+   * table.
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
-  await page.goto('/saints/john-chrysostom', { waitUntil: 'networkidle' });
+  await page.goto('/saints/nektarios-of-aegina', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   await expect(page.locator('[data-veneration] .att').first()).toBeVisible();
 
@@ -1565,7 +1576,7 @@ test('a saint named in a life is a link in it and a row under Related', async ({
 
   // And the row, under the heading.
   const related = page.locator('[data-related]');
-  await expect(related.locator('h2')).toHaveText('Related');
+  await expect(related.locator('h2')).toHaveText('Related to');
   await expect(related.locator('a[href*="/saints/sergius-of-radonezh"]')).toHaveCount(1);
 
   /*
@@ -1609,6 +1620,72 @@ test('a saint named in a life is a link in it and a row under Related', async ({
   await expect(anthony.first()).toHaveText(/Anthony of the\s+Caves/);
   await expect(anthony.nth(1)).toHaveText('Anthony');
   await expect(page.locator('[data-related] a[href*="/saints/anthony-of-the-caves"]')).toHaveCount(1);
+});
+
+/** A saint's own `related`, from the folder: the manifest card does not carry it. */
+const relatedOf = (slug) =>
+  JSON.parse(readFileSync(new URL(`../saints/${slug}/saint.json`, import.meta.url), 'utf8')).related ?? [];
+const cardOf = (slug) => MANIFEST_CARDS.find((c) => c.slug === slug);
+
+test('Related to is one list: who the life names and whose lives name this saint, once each', async ({ page }) => {
+  /*
+   * Author, 2026-09-16: "collapse Mentioned in and Related to/with subheadings
+   * in saint profiles together into 'Related to'. On mobile and desktop. No
+   * need to distinguish."
+   *
+   * Heliodorus (Golovanitsky) is pinned because he has all three shapes the
+   * union has to get right: a saint only his own life names (Innocent), saints
+   * only other lives name him in (Archippus, Joannicius, Martyrius), and one on
+   * both sides (Philaret) who must appear once. The premise is read off the
+   * folder and the manifest and asserted first (trap 5).
+   */
+  const slug = 'heliodorus-golovanitsky';
+  const own = relatedOf(slug);
+  const incoming = cardOf(slug)?.mentionedIn ?? [];
+  const union = [...new Set([...own, ...incoming])];
+  expect(own.filter((s) => !incoming.includes(s)).length, 'premise: a saint only his life names').toBeGreaterThan(0);
+  expect(incoming.filter((s) => !own.includes(s)).length, 'premise: a saint only other lives name').toBeGreaterThan(0);
+  expect(own.filter((s) => incoming.includes(s)).length, 'premise: a saint on both sides').toBeGreaterThan(0);
+
+  await page.goto(`/saints/${slug}`, { waitUntil: 'networkidle' });
+  const box = page.locator('[data-related]');
+  await expect(box.locator('h2')).toHaveCount(1);
+  await expect(box.locator('h2')).toHaveText('Related to');
+  await expect(box.locator('li')).toHaveCount(union.length);
+  const listed = await box.locator('li a').evaluateAll((as) => as.map((a) => a.dataset.prefetch));
+  expect(new Set(listed).size, 'no saint listed twice').toBe(listed.length);
+  expect([...listed].sort()).toEqual([...union].sort());
+  // And a saint from that list named in the life is a link there too.
+  const inLife = await page.locator('[data-life] a[data-prefetch]').evaluateAll((as) => as.map((a) => a.dataset.prefetch));
+  expect(union.some((s) => inLife.includes(s)), 'premise: the life names someone on the list').toBe(true);
+});
+
+test('a related saint the life names by given name and surname is a link in it', async ({ page }) => {
+  /*
+   * The second half of the same instruction: "just need to hyperlink if they
+   * are mentioned in the life". Stephen Kreydich's life names "the igumen
+   * Eugene (Vyzhva), the igumen Nicholas (Ashchepyev) and the hieromonk
+   * Pachomius (Ionov)", all three on his list from their own lives' side, and
+   * `lib/cross-link.js` would not link any of them — each is one word before
+   * its bracket. `buildSurnameIndex` takes them back for the list's saints only.
+   */
+  const slug = 'stephen-kreydich';
+  const named = ['eugene-vyzhva', 'nicholas-ashchepyev', 'pachomius-ionov'];
+  const life = readFileSync(new URL(`../saints/${slug}/life.md`, import.meta.url), 'utf8');
+  for (const s of named) {
+    const form = cardOf(s)?.display_name;
+    expect(cardOf(slug)?.mentionedIn ?? [], `premise: ${s} names ${slug} in their life`).toContain(s);
+    expect(life, `premise: the life writes ${form}`).toContain(form);
+    expect(life, `premise: ${form} is not a hand-written link`).not.toContain(`/saints/${s})`);
+  }
+
+  await page.goto(`/saints/${slug}`, { waitUntil: 'networkidle' });
+  for (const s of named) {
+    const link = page.locator(`[data-life] a[data-prefetch="${s}"]`);
+    await expect(link).toHaveCount(1);
+    await expect(link).toHaveText(cardOf(s).display_name);
+    await expect(page.locator(`[data-related] a[data-prefetch="${s}"]`)).toHaveCount(1);
+  }
 });
 
 test('a phone gets Continue reading under the life, and a desk does not', async ({ browser }) => {

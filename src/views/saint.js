@@ -878,8 +878,10 @@ function fillIn(el, payload, { data, router }) {
    * twice, once linked, keeps its own link and gains nothing.
    * lib/cross-link.js argues the four rules that decide what is safe to link.
    */
+  const companions = relatedCards(saint, data);
   linkSaintNames(lifeEl, {
     saints: data.saints,
+    related: companions,
     skipSlug: saint.slug,
     href: (slug) => router.href(`/saints/${slug}`),
   });
@@ -891,8 +893,7 @@ function fillIn(el, payload, { data, router }) {
   el.querySelector('[data-hymns-box]').innerHTML = saintHymnsSection(saint.hymns, currentChurch());
   wireSources(el, saint.slug);
 
-  el.querySelector('[data-related]').innerHTML =
-    related(saint, data, router) + mentionedIn(saint, data, router);
+  el.querySelector('[data-related]').innerHTML = related(companions, router);
 
   /*
    * Last, once every box inside it holds what it is going to hold. A hidden
@@ -1203,46 +1204,30 @@ function wireSources(el, slug) {
 
 /* ---- related ------------------------------------------------------------ */
 
-function related(saint, data, router) {
-  const rows = (saint.related ?? [])
+/**
+ * Everyone this saint is recorded with, once each: who the life speaks of
+ * (`related`), then whose lives speak of this saint (`mentionedIn`, computed
+ * in `build-manifest.mjs` from the other side's `related`). One list under one
+ * heading since 2026-09-16 (author: "No need to distinguish"). The same union
+ * feeds `linkSaintNames`, so a name from either side is a link in the life.
+ */
+function relatedCards(saint, data) {
+  const slugs = [...(saint.related ?? []), ...(data.bySlug.get(saint.slug)?.mentionedIn ?? [])];
+  return [...new Set(slugs)]
+    .filter((slug) => slug !== saint.slug)
     .map((slug) => data.bySlug.get(slug))
-    .filter(Boolean)
-    .map(
-      (card) => `<li>
-        <a class="reg-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(saintName(card))}</a>
-        <span class="reg-feast utility">${esc(formatLifespan(card.dates))}</span>
-      </li>`,
-    );
-  if (!rows.length) return '';
-  return `<h2 class="register-heading">${STRINGS.saint.related}</h2><ul class="register">${rows.join('')}</ul>`;
+    .filter(Boolean);
 }
 
-/**
- * The same relation read backwards: the lives that name *this* saint.
- *
- * `related` says who a life speaks of; this says whose story a person is
- * remembered inside, which is a finding of its own and one the corpus already
- * holds — it was simply invisible from this end until 2026-09-09.
- *
- * `mentionedIn` is computed in `build-manifest.mjs` from `related` and never
- * from the raw hyperlinks in a life, because a church or a lavra named for a
- * saint is not an association with them. Widening this list is done by widening
- * `related`; see PLAN's cross-reference sweep.
- */
-function mentionedIn(saint, data, router) {
-  const rows = (data.bySlug.get(saint.slug)?.mentionedIn ?? [])
-    .map((slug) => data.bySlug.get(slug))
-    .filter(Boolean)
-    // A saint already in the outgoing list is not news in the incoming one.
-    .filter((card) => !(saint.related ?? []).includes(card.slug))
-    .map(
-      (card) => `<li>
+function related(cards, router) {
+  if (!cards.length) return '';
+  const rows = cards.map(
+    (card) => `<li>
         <a class="reg-name" href="${router.href(`/saints/${card.slug}`)}" data-prefetch="${esc(card.slug)}">${esc(saintName(card))}</a>
         <span class="reg-feast utility">${esc(formatLifespan(card.dates))}</span>
       </li>`,
-    );
-  if (!rows.length) return '';
-  return `<h2 class="register-heading">${STRINGS.saint.mentionedIn}</h2><ul class="register">${rows.join('')}</ul>`;
+  );
+  return `<h2 class="register-heading">${STRINGS.saint.related}</h2><ul class="register">${rows.join('')}</ul>`;
 }
 
 /* ---- reading position ---------------------------------------------------- */

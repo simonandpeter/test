@@ -10,7 +10,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-import { buildNameIndex, matchableName, usableName } from '../src/lib/cross-link.js';
+import { buildNameIndex, buildSurnameIndex, matchableName, usableName } from '../src/lib/cross-link.js';
 
 const saint = (display_name) => ({ slug: display_name.toLowerCase().replace(/\W+/g, '-'), display_name });
 
@@ -74,4 +74,36 @@ test('an index with nothing usable in it produces no pattern at all', () => {
   // Rather than an empty alternation, which matches everywhere.
   const { pattern } = buildNameIndex([saint('Christopher'), saint('Laurence')]);
   assert.equal(pattern, null);
+});
+
+test('a related saint is linked by given name and surname, and never by the given name alone', () => {
+  // Stephen (Kreydich)'s life names "the igumen Eugene (Vyzhva)"; the life of
+  // Alexander, presbyter-martyr of 1918, names "the priest Leo Ershov". Both are
+  // on those saints' Related lists and both were one word to buildNameIndex.
+  const { pattern, bySlug } = buildSurnameIndex([
+    { slug: 'eugene-vyzhva', display_name: 'Eugene (Vyzhva)' },
+    { slug: 'leo-presbyter-martyr-1918', display_name: 'Leo (Ershov)' },
+    { slug: 'theodore-disciple', display_name: 'Theodore, disciple of Maximus' },
+    { slug: 'ignatius-1938', display_name: 'Ignatius (1938)' },
+  ]);
+  const found = (text) => [...text.matchAll(pattern)].map((m) => bySlug.get(m[1]));
+  assert.deepEqual(found('with the igumen Eugene (Vyzhva), the igumen'), ['eugene-vyzhva']);
+  assert.deepEqual(found('shot with the priest Leo Ershov at Krasnoufimsk'), ['leo-presbyter-martyr-1918']);
+  // The bare given name is what put "Pope Theodore" on the wrong saint when
+  // measured over the corpus's Related lists; a bracketed year is no surname.
+  assert.deepEqual(found('before Pope Theodore; Eugene alone; Ignatius 1938'), []);
+  // A different surname is a different man: Macarius (Glukharev) is not Macarius (Sharov).
+  assert.deepEqual(
+    [...'Macarius (Glukharev)'.matchAll(buildSurnameIndex([{ slug: 'm', display_name: 'Macarius (Sharov)' }]).pattern)],
+    [],
+  );
+});
+
+test('a surname form two related saints share links to neither', () => {
+  const { bySlug } = buildSurnameIndex([
+    { slug: 'john-a', display_name: 'John (Smirnov)' },
+    { slug: 'john-b', display_name: 'John (Smirnov), with others' },
+  ]);
+  assert.equal(bySlug.get('John (Smirnov)'), null);
+  assert.equal(buildSurnameIndex([]).pattern, null);
 });

@@ -73,11 +73,15 @@ export function buildNameIndex(saints) {
     if (bySlug.has(form)) bySlug.set(form, null);
     else bySlug.set(form, saint.slug);
   }
+  return { bySlug, pattern: patternFor(bySlug) };
+}
+
+function patternFor(bySlug) {
   const forms = [...bySlug.entries()]
     .filter(([, slug]) => slug)
     .map(([form]) => form)
     .sort((a, b) => b.length - a.length);
-  if (!forms.length) return { bySlug, pattern: null };
+  if (!forms.length) return null;
   const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   /*
    * Letter boundaries rather than `\b`: JavaScript's word boundary is
@@ -86,7 +90,34 @@ export function buildNameIndex(saints) {
    * down here so the next person to reach for `\b` in this repository meets it
    * a third time.
    */
-  return { bySlug, pattern: new RegExp(`(?<!\\p{L})(${forms.map(escape).join('|')})(?!\\p{L})`, 'gu') };
+  return new RegExp(`(?<!\\p{L})(${forms.map(escape).join('|')})(?!\\p{L})`, 'gu');
+}
+
+/**
+ * The forms rule 2 turns away that a saint's own Related list can take back
+ * (author, 2026-09-16: related saints are to be linked "if they are mentioned
+ * in the life"). "Eugene (Vyzhva)" is one word by rule 1 and unlinkable; a life
+ * that writes "the igumen Eugene (Vyzhva)" or "Leo Ershov" is naming him by
+ * given name *and* surname, which is disambiguation — and only saints this
+ * one is already recorded with are offered, so the relation stands behind it.
+ *
+ * **Given name plus bracketed surname, and nothing shorter.** The bare given
+ * name was measured over every Related list in the corpus and is wrong too
+ * often to take even there: Maximus the Confessor's related Theodore is not
+ * the "Pope Theodore" his life names, nor John Vostorgov's Nicholas (Varzhansky)
+ * the "St Nicholas" of Bari in his.
+ */
+export function buildSurnameIndex(cards) {
+  const bySlug = new Map();
+  for (const card of cards ?? []) {
+    const m = /^(\p{L}+) \((\p{Lu}\p{Ll}+(?:-\p{Lu}\p{Ll}+)?)\)/u.exec(String(card?.display_name ?? ''));
+    if (!m) continue;
+    for (const form of [`${m[1]} (${m[2]})`, `${m[1]} ${m[2]}`]) {
+      if (bySlug.has(form)) bySlug.set(form, null);
+      else bySlug.set(form, card.slug);
+    }
+  }
+  return { bySlug, pattern: patternFor(bySlug) };
 }
 
 /* One index per manifest; the pattern is 363 alternatives and is not worth
@@ -106,12 +137,22 @@ const CLOSED = new Set(['A', 'CODE', 'PRE', 'SCRIPT', 'STYLE']);
 /**
  * Links every other saint named in `root`, in place. `href` turns a slug into
  * the site's own URL (the router owns the base path); `skipSlug` is the saint
- * whose page this is.
+ * whose page this is. `related` is that saint's Related list as cards, whose
+ * surname forms are then linked in a second pass (`buildSurnameIndex`).
  */
-export function linkSaintNames(root, { saints, skipSlug, href }) {
-  const { bySlug, pattern } = nameIndex(saints);
-  if (!root || !pattern) return 0;
+export function linkSaintNames(root, { saints, skipSlug, href, related = [] }) {
+  if (!root) return 0;
+  const linked = new Set(skipSlug ? [skipSlug] : []);
+  let made = linkPass(root, nameIndex(saints), linked, href);
+  // A related saint the life or the first pass already links keeps that one
+  // link; a surname further down is not a second.
+  for (const a of root.querySelectorAll('a[data-prefetch]')) linked.add(a.dataset.prefetch);
+  made += linkPass(root, buildSurnameIndex(related.filter((c) => c?.slug !== skipSlug)), linked, href);
+  return made;
+}
 
+function linkPass(root, { bySlug, pattern }, linked, href) {
+  if (!pattern) return 0;
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
     acceptNode: (node) =>
       node.parentElement?.closest([...CLOSED].join(','))
@@ -123,7 +164,6 @@ export function linkSaintNames(root, { saints, skipSlug, href }) {
   const texts = [];
   for (let node = walker.nextNode(); node; node = walker.nextNode()) texts.push(node);
 
-  const linked = new Set(skipSlug ? [skipSlug] : []);
   let made = 0;
 
   for (const node of texts) {

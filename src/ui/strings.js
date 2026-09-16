@@ -912,8 +912,7 @@ export const STRINGS = {
     expand: 'Show',
     noLife: 'No life has been written for this saint yet. The entry is a set of attestations until one is.',
     sources: 'Sources',
-    related: 'Related',
-    mentionedIn: 'Mentioned in',
+    related: 'Related to',
     sourceFailed: 'This source text could not be loaded. It is a file in this saint’s folder, so a reload usually fixes it.',
     creditUnrecorded: 'The licence for this image is not yet recorded, or requires a credit we do not have. Until that is settled, it is shown here on the understanding that it must not be reused on this page’s authority.',
     credit: '{credit} · {licence}',
@@ -1242,9 +1241,8 @@ export const STRINGS = {
      * The two asides' headings. **`related` is one heading over both directions
      * of one relation** — who a saint's life speaks of and whose life speaks of
      * them — because a reader looking for the company someone is kept in does
-     * not care which way round the corpus recorded it. `saint.related` and
-     * `saint.mentionedIn` stay two, because the saint's own page shows them as
-     * two lists and the distinction is the point there.
+     * not care which way round the corpus recorded it. The saint's own page
+     * made the same merge under `saint.related` on 2026-09-16.
      */
     related: 'Recorded with',
     sameDay: 'Kept the same day',
