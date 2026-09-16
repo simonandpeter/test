@@ -21,6 +21,17 @@ import {
  * theme.
  */
 
+/**
+ * The site's own nav order, written out here rather than imported.
+ *
+ * `main.js` is not importable from a spec — it boots the app on evaluation — and
+ * a copy is what this file already was, in three hand-written rotation arrays.
+ * Kept as one list so a page added to the site is one edit here, and still a
+ * claim rather than a derivation: if this disagrees with `main.js`, the strip
+ * tests below say so.
+ */
+const NAV_KEYS = ['calendar', 'saints', 'prayer', 'texts', 'map', 'about'];
+
 // **Every spec file needs this**: dropping it hands these tests the carousel
 // instead of the search face they were written about (`searchMode`, helpers.js).
 test.beforeEach(async ({ page }) => {
@@ -1604,9 +1615,12 @@ test('the header is sticky, shorter, and the phone gets an endless centred nav',
   await expect(header).not.toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
 
   // The phone's nav: a strip, edge to edge, with the current page centred on
-  // it — exactly five links, the same five the wide row has, never cloned. That
-  // the clones are never `/saints` is held by `the suite's positional nav
-  // selectors match exactly one link, at every width` below.
+  // it — the same links the wide row has and no more, never cloned. The count
+  // is read off the desk rather than typed, so adding a page to the site is one
+  // edit and not two. That the clones are never `/saints` is held by `the
+  // suite's positional nav selectors match exactly one link, at every width`
+  // below.
+  const wideLinks = await page.evaluate(() => document.querySelectorAll('.site-nav a').length);
   await page.setViewportSize({ width: 360, height: 780 });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
@@ -1626,8 +1640,8 @@ test('the header is sticky, shorter, and the phone gets an endless centred nav',
       weight: currents[0] ? getComputedStyle(currents[0]).fontWeight : null,
       field: currents[0] ? getComputedStyle(currents[0]).backgroundColor : null,
       linkCount: track.querySelectorAll('a').length,
-      // The generous `padding-inline` (base.css) is what makes even five
-      // items wider than the box, so the strip has somewhere to swipe to.
+      // The generous `padding-inline` (base.css) is what makes even a short
+      // row wider than the box, so the strip has somewhere to swipe to.
       canScroll: track.scrollWidth > track.clientWidth,
     };
   });
@@ -1635,7 +1649,7 @@ test('the header is sticky, shorter, and the phone gets an endless centred nav',
   expect(nav.right, 'and ends at it').toBe(nav.viewport);
   expect(nav.currentCount, 'more than one link claimed to be current').toBe(1);
   expect(Math.abs(nav.currentMid - nav.trackMid), 'the current page is not centred').toBeLessThan(6);
-  expect(nav.linkCount, 'a phone should not see more or fewer than the five pages').toBe(5);
+  expect(nav.linkCount, 'a phone sees a different number of pages than the desk').toBe(wideLinks);
   expect(nav.canScroll, 'the strip does not scroll').toBe(true);
   // Shorter than the comfortable row a desktop's own padding gives, and
   // shorter than the 28 px the four-pages test allowed at 320.
@@ -1687,8 +1701,8 @@ test('the header is sticky, shorter, and the phone gets an endless centred nav',
       inBounds: track.scrollLeft >= 0 && track.scrollLeft <= track.scrollWidth - track.clientWidth,
     };
   });
-  expect(after2.count, 'the rotation dropped or duplicated a link').toBe(5);
-  expect(after2.keys, 'the rotation lost one of the five distinct pages').toBe(5);
+  expect(after2.count, 'the rotation dropped or duplicated a link').toBe(wideLinks);
+  expect(after2.keys, 'the rotation lost one of the distinct pages').toBe(wideLinks);
   expect(after2.inBounds, 'the compensated scrollLeft left the scrollable range').toBe(true);
 });
 
@@ -1706,7 +1720,7 @@ test('the suite’s positional nav selectors match exactly one link, at every wi
    * at once. Both widths, and a route where the strip has rotated, because that
    * is the state a clone would appear in.
    */
-  const ONE = ['/saints', '/map', '/about', '/texts'];
+  const ONE = ['/saints', '/prayer', '/map', '/about', '/texts'];
   await ready(page);
   for (const width of [1280, 360]) {
     await page.setViewportSize({ width, height: 780 });
@@ -1847,16 +1861,24 @@ test('a swipe carries the nav strip one page, however hard it is thrown', async 
    * fails: it is not "a different page" but "the next one".
    */
   const next = start.order[start.order.indexOf(start.centred) + 1];
-  expect(next, 'premise: the page the gesture started on was not in the middle of five').toBeTruthy();
+  expect(next, 'premise: the page the gesture started on was at the end of the ring').toBeTruthy();
   expect(after.centred, `the strip travelled to ${after.centred} rather than one spot, to ${next}`).toBe(next);
   expect(after.offMid, 'the strip settled off its own midline').toBeLessThan(6);
   expect(after.inBounds, 'the compensated scrollLeft left the scrollable range').toBe(true);
   // The ring turned with it, so the page it landed on still has neighbours on
   // both sides — the whole of what "endless" means here.
-  expect(after.links, 'the turn dropped or duplicated a link').toBe(5);
-  expect(after.keys, 'the turn lost one of the five distinct pages').toBe(5);
+  expect(after.links, 'the turn dropped or duplicated a link').toBe(NAV_KEYS.length);
+  expect(after.keys, 'the turn lost one of the distinct pages').toBe(NAV_KEYS.length);
+  /*
+   * **`Math.floor(n / 2)`, which is where `ui/nav-scroll.js` puts the centred
+   * page** — the third of five and the fourth of six. Written as the same
+   * expression the file uses rather than as the number it currently comes to,
+   * because what this asserts is that the strip balanced, not how many pages
+   * the site has.
+   */
   const landed = after.order.indexOf(after.centred);
-  expect(landed, `the strip landed at position ${landed} of five, not the middle`).toBe(2);
+  const middle = Math.floor(NAV_KEYS.length / 2);
+  expect(landed, `the strip landed at position ${landed} of ${NAV_KEYS.length}, not the middle`).toBe(middle);
   await ctx.close();
 });
 
@@ -1941,27 +1963,31 @@ test('the phone strip is balanced at rest, and a press glides into the centre', 
   /*
   /*
    * The row only rotated once a swipe had *already* settled with an edge page
-   * centred, so at rest the current page stood at one end of the five with blank
-   * strip beside it. Balancing every settle so the centred page sits in the
-   * middle of the five is what makes the ring's own neighbours the ones a reader
-   * meets.
+   * centred, so at rest the current page stood at one end of the row with blank
+   * strip beside it. Balancing every settle so the centred page sits at the
+   * ring's own middle is what makes its neighbours the ones a reader meets.
    */
   await page.setViewportSize({ width: 360, height: 780 });
   await ready(page);
   await page.goto('/', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
-  // The ring read from two pages before Daily. Its own order is NAV_KEYS, so
-  // this is also the claim that the ring wraps rather than running out.
+  /*
+   * The ring read from three pages before Daily — `Math.floor(6 / 2)`. Written
+   * out rather than computed from `NAV_KEYS`: a test that derives the rotation
+   * the same way the code does passes whatever the two agree on, and this is
+   * the one place the whole turn is claimed independently. It is also the claim
+   * that the ring wraps rather than running out.
+   */
   await expect
     .poll(() => stripOrder(page))
-    .toEqual(['map', 'about', 'calendar', 'saints', 'texts']);
+    .toEqual(['texts', 'map', 'about', 'calendar', 'saints', 'prayer']);
   // And the DOM is untouched by that rotation, which is what lets the rest of
   // this file address `.site-nav a` by position at all.
   expect(
     await page.evaluate(() => [...document.querySelectorAll('.site-nav a')].map((a) => a.dataset.navKey)),
     'the ring turned the DOM rather than the picture',
-  ).toEqual(['calendar', 'saints', 'texts', 'map', 'about']);
+  ).toEqual(NAV_KEYS);
 
   const glided = await page.evaluate(watchPress, '/about');
   // Five or more distinct positions is a journey; a jump is two — where it
@@ -1970,8 +1996,8 @@ test('the phone strip is balanced at rest, and a press glides into the centre', 
   /*
    * **And the row is never seen to run out.** Two things together give this and
    * either alone fails it: the ring turns on every frame of the journey rather
-   * than at the end of it, and the five links are `min-width: 28vw` so the ring
-   * is longer than the window.
+   * than at the end of it, and every link is `min-width: 25vw` so the ring is
+   * longer than the window.
    */
   expect(glided.gap, `${glided.gap} px of empty strip showed during the press`).toBeLessThan(2);
   expect(glided.offCentre, 'the pressed page did not land on the midline').toBeLessThan(6);
@@ -1990,14 +2016,21 @@ test('the phone strip is balanced at rest, and a press glides into the centre', 
   // pixel for About, and only the four pages around it have moved.
   await expect
     .poll(() => stripOrder(page))
-    .toEqual(['texts', 'map', 'about', 'calendar', 'saints']);
+    .toEqual(['prayer', 'texts', 'map', 'about', 'calendar', 'saints']);
 
   /*
-   * **All five pages are on screen, and the outer two by about half.** Half the
-   * *box* and half the *word* are the same thing only at `min-width: 25vw`,
+   * **Three pages stand whole and the two beside them show about half.** Half
+   * the *box* and half the *word* are the same thing only at `min-width: 25vw`,
    * which is why the number is what it is: a label is centred in its box, so at
    * 26vw what shows is the box's outer edge and the last few letters of the
    * word. base.css carries the arithmetic.
+   *
+   * **Read as a shape rather than by index**, because the row is longer than
+   * the window by design and a sixth page put a whole link off the leading edge
+   * as runway. What a reader sees is unchanged: the same three whole and the
+   * same two halves, and anything further out is off screen entirely — which is
+   * asserted rather than allowed for, since a link half off the *wrong* edge
+   * would be a gap.
    */
   const seen = await page.evaluate(() => {
     const track = document.querySelector('.site-nav');
@@ -2009,10 +2042,21 @@ test('the phone strip is balanced at rest, and a press glides into the centre', 
     const style = getComputedStyle(track);
     return { parts, masked: (style.maskImage || style.webkitMaskImage || 'none') !== 'none' };
   });
-  expect(seen.parts.length, 'a page went missing from the strip').toBe(5);
-  expect(seen.parts.slice(1, 4), 'the three middle pages are not whole').toEqual([100, 100, 100]);
-  for (const shown of [seen.parts[0], seen.parts[4]]) {
-    expect(shown, `an outer page shows ${shown}% of itself`).toBeGreaterThan(35);
+  expect(seen.parts.length, 'a page went missing from the strip').toBe(NAV_KEYS.length);
+  expect(seen.parts.filter((p) => p === 100).length, 'three pages do not stand whole').toBe(3);
+  const first = seen.parts.indexOf(100);
+  const last = seen.parts.lastIndexOf(100);
+  expect(last - first, 'the whole pages are not three in a row').toBe(2);
+  for (const shown of [seen.parts[first - 1], seen.parts[last + 1]]) {
+    expect(shown, `a page beside the whole three shows ${shown}% of itself`).toBeGreaterThan(35);
+  }
+  /* Zero or less: the overlap is measured rather than clamped, so a link wholly
+     past an edge reports how far past it is as a negative. What matters is that
+     none of it is on screen. */
+  for (const [i, shown] of seen.parts.entries()) {
+    if (i < first - 1 || i > last + 1) {
+      expect(shown, `the ring's runway shows ${shown}% at position ${i} rather than nothing`).toBeLessThanOrEqual(0);
+    }
   }
   // And they run off the edge rather than stopping at it.
   expect(seen.masked, 'the strip has no edge fade').toBe(true);
@@ -2888,12 +2932,12 @@ test('the header takes one measure on every route, and stops at Daily’s column
     .toBe('auto');
 });
 
-test('the masthead is one box on all six routes, at both widths and in both themes', async ({ page }) => {
+test('the masthead is one box on every route, at both widths and in both themes', async ({ page }) => {
   /*
    * **Twice Playwright's budget**, for the same reason `map.spec.js` has one:
-   * twenty-four `networkidle` navigations, two of them the map and four of
-   * them the Daily page. A geometry test that times out reports a defect in
-   * the masthead it never looked at.
+   * a `networkidle` navigation per route per width per theme, two of them the
+   * map and four of them the Daily page. A geometry test that times out reports
+   * a defect in the masthead it never looked at.
    */
   test.setTimeout(60_000);
   /*
@@ -2906,7 +2950,7 @@ test('the masthead is one box on all six routes, at both widths and in both them
    * move it — which a route-scoped colour rule with its own font-size would
    * break silently.
    */
-  const routes = ['/calendar/2026-09-05', '/saints', '/saints/anthony-the-great', '/map', '/texts', '/about'];
+  const routes = ['/calendar/2026-09-05', '/saints', '/saints/anthony-the-great', '/prayer', '/map', '/texts', '/about'];
   await ready(page);
   await coldFace(page);
 
@@ -3043,7 +3087,7 @@ test('the theme crosses in one movement: nothing snaps and nothing lags, on ever
    * fade nothing may still be travelling (the lag).
    *
    */
-  const routes = ['/calendar/2026-01-30', '/saints', '/saints/anthony-the-great', '/map', '/texts', '/about'];
+  const routes = ['/calendar/2026-01-30', '/saints', '/saints/anthony-the-great', '/prayer', '/map', '/texts', '/about'];
   await ready(page);
   await page.setViewportSize({ width: 1280, height: 900 });
 

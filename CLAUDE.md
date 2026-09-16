@@ -219,9 +219,9 @@ box chain from the root down to the view's own root, the breakpoints and the
 specs — so a session does not reassemble that chain out of four files' comments
 before it can change one rule.
 
-**It covers Daily and nothing else yet.** For every other route the table below
-plus `docs/SRC-DECISIONS.md` are what there is, and a route's section gets
-written when that route is next worked on.
+**It covers Daily and Prayer.** For every other route the table below plus
+`docs/SRC-DECISIONS.md` are what there is, and a route's section gets written
+when that route is next worked on.
 
 ### Pages
 
@@ -230,6 +230,7 @@ written when that route is next worked on.
 | Daily | `views/calendar.js` + `views/daily/*` | `calendar.css` |
 | All Saints | `views/saints.js` + `views/index/*` | `index.css` |
 | Saint | `views/saint.js` | `saint.css` |
+| Prayer | `views/prayer.js` + `views/prayer/*` | `prayer.css` |
 | Map | `views/map.js` + `views/map/*` | `map.css` |
 | Texts | `views/texts.js` | — |
 | About | `views/about.js` | `about.css` |
@@ -239,6 +240,12 @@ written when that route is next worked on.
 `picker.js` (week rail *and* month — one control), `fullcal.js`.
 `calendar.js` owns *which day*; nothing in `daily/` calls back into it.
 Four columns past 1024 px, `display: contents` below it.
+
+**`views/prayer/`** — `state.js` (sole writer), `card.js` (the saint in hand and
+the fade), `asides.js` (recorded-with, kept the same day, and their two faces),
+`find.js` (the field, its own MiniSearch, the count, the face switch).
+`lib/prayer-order.js` is the arithmetic. Three columns past 1024 px, one below
+it, and the phone turns the page by swiping it.
 
 **`views/index/`** — `state.js`, `modes.js` (carousel, column packing, the mode
 toggle), `grid.js` (virtualised and absolutely positioned), `controls.js`,
@@ -317,6 +324,7 @@ folders, not the manifest.
 | `views/daily/*`, `calendar.js`, `calendar.css`, `lib/liturgy.js`, `feasts.js`, `computus.js` | `daily-panel`, `daily-picker`, `daily-register`, `daily-stage` |
 | `lib/manifest.js`, `main.js`'s boot, a new import on a view's first-paint path | `download-limiter` — the two tests that hold the first load to its budget |
 | `views/saint.js`, `saint.css`, `lib/detail.js`, `cross-link.js`, `ui/hymns.js` | `saint.spec.js` |
+| `views/prayer*`, `prayer.css`, `lib/prayer-order.js` | `prayer.spec.js` |
 | `ui/*`, `main.js`, `base.css`, `tokens.css` | `chrome.spec.js` + the surface; `ui/face-stage.js` and `main.js`'s pair branch also `daily-stage` |
 | `views/map*`, `map.css`, `lib/map-*`, `lib/mercator.js`, `data/places.js` | `map.spec.js` |
 | `ui/strings.js`, `ui/locales/*` | `locale-coverage.mjs`, then the full run |
@@ -502,7 +510,7 @@ The codebase already holds this line. The rule is to keep it there.
   an earlier sitting keeps 5173 while a new `npm run dev` quietly takes 5175,
   and the sheet drew the wrong tree and reported success (2026-09-09). It also
   found a dev-only 404 on the saint route on its first run.
-  **48 tiles in 43 s** (2 widths × 2 themes × 2 languages × 6 routes).
+  Its own output line says how many tiles it shot and over how many routes.
   `export MSYS_NO_PATHCONV=1` before `--routes=/`, or the shell turns it into
   `C:/Program Files/Git/` and you get six tiles of nothing.
 - **`--css=mockups/panel-card.css,mockups/panel-icon.css`** shoots each as its own labelled row,

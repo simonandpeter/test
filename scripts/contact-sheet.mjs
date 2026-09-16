@@ -135,7 +135,7 @@ for (const t of THEMES) {
   }
 }
 const LANGS = list('langs', 'en');
-const ROUTES = list('routes', `/,/saints,/saints/${anySaint()},/map,/texts,/about`);
+const ROUTES = list('routes', `/,/saints,/saints/${anySaint()},/prayer,/map,/texts,/about`);
 const HEIGHT = Number(arg('height', 780));
 const TILE = Number(arg('tile', 420));
 const SETTLE = Number(arg('settle', 250));
@@ -161,7 +161,8 @@ const OUT = arg('out', 'shots/contact.png');
  * **Deterministic mode, for diffing one tree against another.**
  *
  * The plain sheet is for *looking*; comparing two of them pixel by pixel says
- * almost nothing, because two of the six routes are not the same picture twice.
+ * almost nothing, because two of the routes it shoots are not the same picture
+ * twice.
  * All Saints deals a shuffle on every load and the map's crowds settle over a
  * few hundred milliseconds. A first attempt at diffing a pure rename reported
  * half the tiles as changed, all of it that.

@@ -5,7 +5,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 /**
- * **The phone's nav strip is five real links, and the loop is a rotation.**
+ * **The phone's nav strip is one real link per page, and the loop is a
+ * rotation.**
  *
  * `ui/nav-scroll.js` used to be written with buffered clones, the way
  * `ui/loop-scroll.js` still is, and it was wrong for a *nav*: a dozen places in
@@ -36,12 +37,16 @@ const code = (src) =>
 
 const lineOf = (src, index) => src.slice(0, index).split('\n').length;
 
-test('the row is five links, one per page, built once from one list', () => {
+test('the row is one link per page, built once from one list', () => {
   const m = /const NAV_KEYS = \[([^\]]*)\]/.exec(code(MAIN));
   assert.ok(m, 'main.js has no NAV_KEYS list');
   const keys = m[1].split(',').map((s) => s.trim().replace(/^'|'$/g, '')).filter(Boolean);
-  assert.equal(keys.length, 5, `the strip is five destinations, not ${keys.length}`);
-  assert.equal(new Set(keys).size, 5, 'a page is listed twice');
+  /* The count is not written down: a page added to the site is a key added
+     here, and a test naming the number would go red for the one change it is
+     meant to allow. What it must never be is a key twice, which is the clone
+     this whole file exists to refuse, wearing a different hat. */
+  assert.ok(keys.length >= 5, `the strip has ${keys.length} destinations`);
+  assert.equal(new Set(keys).size, keys.length, 'a page is listed twice');
 
   // One `<a>` per key and nothing else: `navLinkHTML` is the only thing that
   // writes a nav link, and `renderNav` maps it over `NAV_KEYS` exactly once.

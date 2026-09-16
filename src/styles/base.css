@@ -994,14 +994,14 @@ nav.site-nav a[aria-current='page'] {
     text-align: center;
     /*
      * **Wide enough that the ring is longer than the screen** (2026-09-08).
-     * The five labels measured 339 px against a 360 px viewport — the whole
-     * row was *shorter than the window*, so blank strip showed at one end or
-     * the other at every position, balanced or not, and no amount of turning
-     * the ring could hide it. `ui/nav-scroll.js` keeps whichever page is
-     * centred in the middle of the five at every frame, and for that to leave
-     * no gap the ring has to span the window plus one more page: five items of
-     * 28vw is 140vw against the 128vw that needs, at every width the strip is
-     * used at, since both sides of the inequality are in vw.
+     * The labels — five of them then — measured 339 px against a 360 px
+     * viewport, so the whole row was *shorter than the window*: blank strip
+     * showed at one end or the other at every position, balanced or not, and no
+     * amount of turning the ring could hide it. `ui/nav-scroll.js` keeps
+     * whichever page is centred at the ring's own middle on every frame, and
+     * for that to leave no gap the ring has to span the window plus one more
+     * page — `n·w >= V + w`. Written in `vw`, both sides scale together, so it
+     * holds at every width the strip is used at.
      *
      * A `min-width`, not a width: a label longer than this keeps its own size,
      * which only makes the ring longer still. It is also what the old
@@ -1021,11 +1021,24 @@ nav.site-nav a[aria-current='page'] {
      * — 13 px of a 40 px "Map". At 25vw the visible half of the box holds the
      * visible half of the word.
      *
-     * The cost is the movement margin. No gap *at rest* needs `2.5w >= V/2`,
-     * which 25vw clears by 45 px; no gap at the worst point of a movement needs
-     * `2.5w >= V/2 + w/2`, which 25vw meets exactly and nothing to spare. That
-     * is affordable only because of the mask below: a hairline that opens at the
-     * very edge mid-glide opens inside the band that is faded to nothing.
+     * The cost is the movement margin, and **it is the runway to the *right* of
+     * the centred page that binds** — `nav-scroll.js` puts that page at
+     * `Math.floor(n/2)`, which leaves `n - 1 - floor(n/2)` links after it, and
+     * that is 2 at five links and 2 at six. So the trailing edge needs
+     * `2.5w >= V/2 + w/2` whichever of the two the row holds: 25vw meets it
+     * exactly and with nothing to spare, and the extra link a sixth page adds
+     * lands on the leading side as runway that is off screen entirely. No gap
+     * *at rest* needs only `2.5w >= V/2`, which 25vw clears by 45 px.
+     *
+     * Meeting the moving case exactly is affordable only because of the mask
+     * below: a hairline that opens at the very edge mid-glide opens inside the
+     * band that is faded to nothing.
+     *
+     * **Six links are not slacker than five here**, which is the arithmetic
+     * above and was worth writing down: the total-length inequality does relax
+     * with `n`, and reading only that one would have said the strip had gained
+     * margin it has not. What six buys is a longer ring, not a wider gap
+     * budget.
      */
     min-width: 25vw;
     /* Shorter than the comfortable row above it (author, 2026-08-26
@@ -1133,7 +1146,7 @@ main.chrome {
    * The smaller stamp was argued from the
    * page's new shape — a reading column whose head the nav becomes — and the
    * scoped `--text-mast-wide: 22px` that came out of it is gone. The mark is
-   * `--text-mast-wide` on all six routes, so its box is the same box
+   * `--text-mast-wide` on every route, so its box is the same box
    * everywhere and `chrome.spec.js`'s four-route comparison asserts the whole
    * rect again rather than its left edge.
    *

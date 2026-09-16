@@ -14,7 +14,7 @@ walk('src');
 sources.push('index.html');
 const blob = sources.map((p) => readFileSync(p, 'utf8')).join('\n');
 
-const SHEETS = ['base.css', 'calendar.css', 'index.css', 'saint.css', 'about.css'];
+const SHEETS = ['base.css', 'calendar.css', 'index.css', 'saint.css', 'about.css', 'prayer.css'];
 
 for (const sheet of SHEETS) {
   const css = readFileSync(`src/styles/${sheet}`, 'utf8');

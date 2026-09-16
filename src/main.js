@@ -143,7 +143,20 @@ function paintDailyLabel(fade = true) {
   }, 140);
 }
 
-const NAV_KEYS = ['calendar', 'saints', 'texts', 'map', 'about'];
+/*
+ * The row, in the site's own order, and the only list of it. `ui/nav-scroll.js`
+ * turns this into the phone's ring and `tests/nav-strip.test.mjs` holds it to
+ * one link per key with nothing buffered — so a page is added here and nowhere
+ * else, and `renderNav` is the one thing that writes a nav link.
+ *
+ * **Prayer stands between All Saints and Texts**, which is where the reader
+ * meets it: the two pages about who the saints are, then the page for praying
+ * to them, then the texts they left. Six links rather than five costs the strip
+ * nothing it did not already spend — `base.css`'s own `min-width: 25vw` note
+ * has the arithmetic, and the runway `nav-scroll.js` keeps to the right of the
+ * centred page is two links at five and two at six.
+ */
+const NAV_KEYS = ['calendar', 'saints', 'prayer', 'texts', 'map', 'about'];
 
 function navHref(key) {
   return key === 'calendar' ? '/' : `/${key}`;
