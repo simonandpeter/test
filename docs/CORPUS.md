@@ -516,17 +516,14 @@ that does not fail means the batch is not doing what its message says.
 `STRUCTURE.md` section 5: *tests must not name instances*, and 85 hard-coded slugs
 and dates still live in the e2e specs. Until they are derived, **a batch that
 moves one of these numbers has to move the literal in the same commit.** The
-gate computes all seven from the folders and prints them beside the literal
+gate computes all four from the folders and prints them beside the literal
 each spec currently holds, so this is caught in two seconds rather than by CI
 in seventeen minutes.
 
 | where | what it counts | literal on 2026-09-10 |
 | --- | --- | --- |
 | `e2e/index-controls.spec.js:69,261` | Romanian venerated | `160` |
-| `e2e/index-controls.spec.js:130` | dated lives overlapping 240–460 | `219` |
-| `e2e/index-controls.spec.js:132` | …entirely within it | `205` |
 | `e2e/index-controls.spec.js:160` | 1396–1400 must match **nobody** | `0` |
-| `e2e/index-controls.spec.js:215` | the undated tray | `126 undated` |
 | `e2e/index-controls.spec.js:229` | a search for "hermit" | `10` |
 | `e2e/index-controls.spec.js:317` | feasts in the church's own January | `6` |
 
@@ -541,8 +538,10 @@ coverage figures on the About page. Through them, since 2026-09-16: the reach
 sentence and the two bare-day notes in `daily-panel.spec.js` (the day is made
 bare by withholding its folders from the manifest the page is served, and the
 reach is worked out from the manifest), the crowds at Nicomedia, Constantinople
-and the Kyiv Caves in `map.spec.js`, and the legendary facet in
-`index-grid.spec.js`. Constantinople's under-the-cap test still pins that city,
+and the Kyiv Caves in `map.spec.js`, the legendary facet in
+`index-grid.spec.js`, and — since 2026-09-17, through `countInRange` and
+`undatedCount` — the 240–460 overlaps and within counts and the undated tray in
+`index-controls.spec.js`. Constantinople's under-the-cap test still pins that city,
 and says so by name when a batch takes it over `BLOB_MAX`.
 
 Also watch: `tests/map-span.test.mjs` (a located saint alive over a century, or

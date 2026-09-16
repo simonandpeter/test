@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { expect } from '@playwright/test';
+import { applyFilters } from '../src/lib/index-filters.js';
 
 /**
  * The fixtures every browser spec shares: the routes the suite keeps returning
@@ -18,6 +19,16 @@ const META = JSON.parse(readFileSync(new URL('../data/manifest.meta.json', impor
 
 /** How many saints the corpus holds, as the page prints it. */
 export const CORPUS = String(META.total);
+
+/**
+ * How many lives the All Saints date range matches, and how many it sets aside
+ * as undated, counted by the page's own `applyFilters` over the manifest the
+ * page is served. A literal here went red with every dated or undated saint a
+ * batch added, without having found anything.
+ */
+export const countInRange = (from, to, rangeMode) =>
+  String(applyFilters(CARDS, { from, to, rangeMode, sort: 'name' }).matched.length);
+export const undatedCount = () => String(applyFilters(CARDS, { from: 1396, to: 1400, sort: 'name' }).undated.length);
 
 /** How many each church venerates, as the Calendar facet narrows to. */
 export const VENERATED = Object.fromEntries(

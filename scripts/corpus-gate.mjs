@@ -305,10 +305,7 @@ for (let i = 0; i < 460; i += 1) {
 
 const EXPECTED = [
   ['e2e/index-controls.spec.js:69,261  Romanian venerated', venerated.romanian, '160'],
-  ['e2e/index-controls.spec.js:130     240–460 overlaps', overlapsRange(240, 460), '219'],
-  ['e2e/index-controls.spec.js:132     240–460 within', withinRange(240, 460), '205'],
   ['e2e/index-controls.spec.js:160     1396–1400 must be empty', overlapsRange(1396, 1400), '0'],
-  ['e2e/index-controls.spec.js:215     undated tray', undated, '126'],
   ['e2e/index-controls.spec.js:229     type "hermit"', hermits, '10'],
   ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '6'],
 ];
@@ -318,6 +315,9 @@ for (const [where, now, literal] of EXPECTED) {
   if (moved) fail('e2e literals', `${where} — the spec still says ${literal}, the corpus now says ${now}`);
 }
 console.log(`  · corpus total (e2e reads META.total)                 now ${corpus.length}`);
+console.log(`  · 240–460 overlaps (e2e reads countInRange)          now ${overlapsRange(240, 460)}`);
+console.log(`  · 240–460 within   (e2e reads countInRange)          now ${withinRange(240, 460)}`);
+console.log(`  · undated tray     (e2e reads undatedCount)          now ${undated}`);
 /*
  * Read, not held: daily-panel's reach sentence works the reach out from the
  * manifest itself (2026-09-16), so this is a figure to look at, not a literal

@@ -6,6 +6,7 @@ import {
   carouselMode,
   chooseSort,
   chooseView,
+  countInRange,
   facet,
   leaders,
   onlyCalendar,
@@ -13,6 +14,7 @@ import {
   ready,
   searchMode,
   sortChip,
+  undatedCount,
   venerateUnion,
   viewChip,
 } from './helpers.js';
@@ -83,53 +85,15 @@ test('Overlaps and Entirely within are different questions, and both are offered
   await page.locator('[data-from]').fill('240');
   await page.locator('[data-to]').fill('460');
 
-  // A hundred and eighty-one lives touch 240–460 and a hundred and sixty-eight
-  // sit inside it: the Roman martyrs of 258, the Nicomedians of 305 and the
-  // martyrs of the Great Persecution are inside; Paul of Thebes (born 220),
-  // the third- and fourth-century bishops dated only to their century and
-  // Moses the Hungarian with his open birth bound overlap it without being
-  // contained.
-  //
-  // The counts have moved three times with the corpus, always for the same
-  // reason. Two on 2026-08-25, when nine saints whose *lives* stated a death
-  // year the data had never recorded were given it. Twenty-one more on
-  // 2026-08-26, when the audit was widened past the lives to the calendar
-  // entry lines and the reigns — Adrian and Natalia of Nicomedia "under
-  // Maximian (305–311)", the Twenty-three Martyrs in the fourth century,
-  // Pothinus of Lyon in the second — 43 saints in all. And ten more in the
-  // pass after it, which opened two further seams: saint.gr's *per-saint*
-  // pages, which date people its day index does not (the three sisters of
-  // Bithynia at 290, Irenaeus of Sirmium at 288, Ia of Persia under Shapur),
-  // and named authorities outside the four calendars for figures the
-  // calendars are silent about.
-  // 198 since the 24 September batch: Diodorus and Didymus of Laodicea at
-  // the line's printed 362-364 sit inside, and Copris of Palestine, dated
-  // 460-570 by his nearness to Theodosius the Cenobiarch, touches the range
-  // at its very edge - and is rightly not *within* it, which is the
-  // distinction this test exists to keep.
-  // 212/195 since 2026-08-31, which added six saints whose
-  // lives fall in this window: Basil the Great (330-379) and Gregory the
-  // Theologian (329-389) sit inside it, Spyridon (late 3rd century-c. 348)
-  // overlaps it from before, and Panteleimon, Catherine and Barbara all die
-  // in the persecutions of 305-313 that the range was drawn around.
-  //
-  // 210/195 since the date audit of 2026-09-01, and the two that left are
-  // the audit's own point. Moses the Hungarian's birth was "before 1000" and
-  // Sabbas of Venetala's death "before the 11th century" - intervals open at
-  // their start, which `overlaps` reads as reaching back without limit, so
-  // both of them matched the fourth century as readily as the tenth. Bounding
-  // one and admitting the other is undated took them out of a window neither
-  // ever belonged in. `within` is unmoved at 195: an open interval was never
-  // *entirely inside* anything.
-  //
-  // 219/205 since the night of 2026-09-06, when a sweep of the audit's own
-  // lists recorded years the lives already stated: Jerusalem of Beroea and
-  // her three sons (276–282), the Egyptian martyrs of 305–311 with their two
-  // bishops and two noblemen, and Rufus of Thessalonica (434) sit inside;
-  // Poemen the Great, born about 340, already overlapped by his death.
-  await expect(page.locator('[data-count]')).toHaveText('219');
+  // Paul of Thebes (born 220) and a bishop dated only to his century overlap
+  // the window without being inside it; the Roman martyrs of 258 are inside.
+  // The counts are read through the page's own filter over the manifest, so a
+  // dated saint added to the corpus moves the expectation with it; what this
+  // test holds is that the two questions give two different answers.
+  expect(countInRange(240, 460, 'overlaps')).not.toBe(countInRange(240, 460, 'within'));
+  await expect(page.locator('[data-count]')).toHaveText(countInRange(240, 460, 'overlaps'));
   await page.locator('input[name="rangeMode"][value="within"]').check();
-  await expect(page.locator('[data-count]')).toHaveText('205');
+  await expect(page.locator('[data-count]')).toHaveText(countInRange(240, 460, 'within'));
 });
 
 
@@ -163,56 +127,9 @@ test('a range that matches nobody is a designed state, not a hole', async ({ pag
   // The calendars' saints often carry no dates — their pages printed none — so
   // the undated tray holds them rather than letting a range pretend to decide
   // about them (it held nobody while every saint in the corpus was dated).
-  // 157, down from 239 in four audits. Nine on 2026-08-25, from death years
-  // stated in the saints' own life texts (Titus the Apostle's 105 among
-  // them); 43 more on 2026-08-26, when the audit was widened past the lives
-  // to the calendar entry lines, the reigns those lives name and the councils
-  // they place a man at; 30 more in the pass after it, from saint.gr's
-  // per-saint pages and from named authorities outside the four calendars; and
-  // 5 more then, when the Russian calendar's 7 September was read
-  // and printed a year for five saints the Greek and Romanian had left bare -
-  // Euodus (66), Onesiphorus (after 67), Luke of Bathys Ryax (after 975),
-  // Macarius of Optina (1860) and Serapion of Pskov (1480).
-  //
-  // The rest are undated because their sources say nothing, and the third
-  // audit is the one that showed how firmly. 152 of these people are kept by
-  // the Greek church, so all 152 of saint.gr's per-saint pages were fetched:
-  // 44 carry no biography at all, 15 say in as many words that no details of
-  // the life survive, and of the 75 that are silent about time only 11 so
-  // much as name a ruler. That is a finding rather than a gap, which is what
-  // this tray exists to keep visible.
-  // 155 since 2026-09-01: Sabbas of Venetala joined them. He carried a death
-  // of "before the 11th century", which is a bound on when he was written
-  // down - his one record is a tenth or eleventh century Sinai codex - and
-  // not on when he lived. An interval running from the apostolic age to that
-  // codex is not a date, and undated is the corpus's own word for it.
-  //
-  // 150 since 2026-09-02, and the audit that found them started on the map
-  // rather than in the tray: an undated life is drawn `live` in every year,
-  // so Sergius of Radonezh was lit at 66 AD (author: "apparently alive in 66
-  // AD ... any saint who is on the map for longer than 100 years as alive may
-  // need a check"). Eleven located saints were in that state. Five could be
-  // dated from a source: Sergius (1392) and John the Theologian ("начало II")
-  // were both in days.pravoslavie.ru all along, missed because the corpus had
-  // checked the wrong day for each; Clement of Sardis carries the "(I)" the
-  // same page prints; Eumenius of Gortyna has the OCA's "died in the seventh
-  // century"; and Heraclides of Tamassos is bounded, not found, by Barnabas's
-  // own mission. The other six stay here, which is the tray doing its work -
-  // saint.gr prints no year for any of them, and a martyrdom the sources
-  // place only by a persecution is not a date.
-  // 147 since 2026-09-06: three entries that exist for a relics day —
-  // Nicholas of Alma-Ata, Alexander Urodov, Amphilochius of Patmos — had no
-  // year in the calendar line they stood on, and their lives (azbyka.ru,
-  // saint.gr) supplied both.
-  // 145 since dc030ec (2026-09-06 evening): Symeon the Lesbian stylite and Pope
-  // Martin got their years from saint.gr's whole pages. 144 since b6f2dd8, the
-  // same night: Anthimos of Chios (1869–1960) had stood for a relics day only.
-  // 138 since 3fd9a64: a sweep of the no-birth list found seven lives (Joseph
-  // the Hesychast, Aristokles, John of Svyatogorsk …) that stated both years
-  // in their own text with neither in saint.json. 126 since the death sweep
-  // that followed it (the Yaroslavl princes, Jerusalem of Beroea and her sons,
-  // Kosmas the hermit, Rufus, the Egyptian martyrs of 305–311 …).
-  await expect(page.locator('.tray')).toContainText('126 undated');
+  // Its size is read through the page's own filter over the manifest rather
+  // than typed, so a batch of undated saints does not turn it red.
+  await expect(page.locator('.tray')).toContainText(`${undatedCount()} undated`);
 });
 
 
