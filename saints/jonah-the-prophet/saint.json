@@ -5,6 +5,10 @@
     {
       "form": "Sfântul Proroc Iona",
       "lang": "ro"
+    },
+    {
+      "form": "Προφήτης Ιωνάς",
+      "lang": "el"
     }
   ],
   "sex": "male",
@@ -33,8 +37,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-29)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 21 Σεπτεμβρίου — «Προφήτης Ιωνάς»",
+        "url": "https://www.saint.gr/09/21/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -53,5 +66,24 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Σάλπιγξ εὔηχος, θείων κριμάτων, κόσμω πέφηνας, ἀναφωνοῦσα, Ἰωνὰ τοὶς Νινευίταις μετάνοιαν καὶ συσχεθεῖς ἐν τῷ κήτει προέγραψας, τὴν τοῦ Σωτῆρος τριήμερον ἔγερσιν ὅθεν πρέσβευε, δοθήναι τοὶς σὲ γεραίρουσι, πταισμάτων ἱλασμὸν καὶ μέγα ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Προφήτης Ιωνάς, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1011/saint.aspx",
+        "year": 2026
+      },
+      "model": "Θείας πίστεως.",
+      "english": {
+        "text": "A sweet-sounding trumpet of the divine judgements wast thou shown to the world, O Jonah, proclaiming repentance to the Ninevites; and, held fast in the sea-monster, thou didst foretell the Saviour’s rising on the third day. Wherefore intercede that to those who honour thee be given cleansing of offences and great mercy.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

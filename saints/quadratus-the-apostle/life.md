@@ -6,4 +6,6 @@ The darkness, the life says, always hates the light. Seeing their idols trodden 
 
 His body was laid in Magnesia, and pours out healings on the infirm.
 
-*After doxologia.ro, [Viața Sfântului Apostol Codrat](https://doxologia.ro/viata-sfantului-apostol-codrat); read 29 August 2026.*
+The Greek calendar makes him a great apologist, after Peter’s counsel to be ready always to give an answer for the hope that is in us, with meekness and fear. A modest, wise and very learned man, skilled in argument, he became bishop of Athens while its schools of philosophy still flourished, enlightened many and silenced the philosophers, who, unable to answer him, drove him out of the city by force. Unbowed, he went on to Magnesia in Asia Minor and preached the Gospel there boldly, and wrote an apology for Christianity to Hadrian, whose answer was to have him killed. Its verse has him stoned by fools for refusing to give honour to stones.
+
+*After doxologia.ro, [Viața Sfântului Apostol Codrat](https://doxologia.ro/viata-sfantului-apostol-codrat); read 29 August 2026; the Ορθόδοξος Συναξαριστής (saint.gr), 21 Σεπτεμβρίου — [the entry](https://www.saint.gr/1012/saint.aspx), read 17 September 2026.*

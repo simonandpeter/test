@@ -1,0 +1,57 @@
+{
+  "slug": "six-martyrs-21-september",
+  "display_name": "The Six Martyrs (21 September)",
+  "names": [
+    {
+      "form": "Άγιοι Έξι Μάρτυρες",
+      "lang": "el"
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 298,
+      "latest": 298,
+      "display": "298",
+      "basis": "traditional",
+      "note": "saint.gr: „υπασπιστές του βασιλιά Μαξιμιανού (298 μ.Χ.)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 21 сентября ст. ст. (civil 4 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 21 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 21 Σεπτεμβρίου — «Άγιοι Έξι Μάρτυρες»",
+        "url": "https://www.saint.gr/09/21/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 21. септембар ст. ст. (civil 4 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

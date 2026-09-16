@@ -6,6 +6,10 @@
     {
       "form": "Sfântul Apostol Codrat",
       "lang": "ro"
+    },
+    {
+      "form": "Άγιος Κοδράτος ο Απόστολος «ὁ ἐν Μαγνησίᾳ»",
+      "lang": "el"
     }
   ],
   "sex": "male",
@@ -35,8 +39,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-29)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 21 Σεπτεμβρίου — «Άγιος Κοδράτος ο Απόστολος «ὁ ἐν Μαγνησίᾳ»»",
+        "url": "https://www.saint.gr/09/21/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -55,5 +68,24 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Σοφίας ταῖς ἀκτῖσι φαιδρύνας σου τὸν βίον, εἵλκυσας τοῦ Πνεύματος, μάκαρ, τὴν πυρίπνοον χάριν καὶ ηὔγασας δόγματα ζωῆς, Κορδᾶτε, ὡς ἀπόστολος Χριστοῦ· διὰ τοῦτο ὡς φωστῆρα σὲ ἀπλανῆ γεραίροντες ἐκβοῶμεν· δόξα τῷ δοξάσαντι Χριστῷ, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Κοδράτος ο Απόστολος «ὁ ἐν Μαγνησίᾳ», Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1012/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τοῦ λίθου σφραγισθέντος.",
+      "english": {
+        "text": "Having made thy life bright with the rays of wisdom, O blessed one, thou didst draw down the fire-breathing grace of the Spirit and didst make the doctrines of life shine forth, O Quadratus, as an apostle of Christ. Wherefore, honouring thee as an unerring luminary, we cry aloud: Glory to Christ who glorified thee; glory to him who crowned thee; glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

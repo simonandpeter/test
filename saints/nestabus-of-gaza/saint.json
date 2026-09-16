@@ -1,0 +1,63 @@
+{
+  "slug": "nestabus-of-gaza",
+  "display_name": "Nestabus of Gaza",
+  "names": [
+    {
+      "form": "Άγιοι Ευσέβιος, Νέσταβος και Ζήνων τα αδέλφια Νέστωρ και Βούσιρις",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 360,
+      "latest": 363,
+      "display": "360–363",
+      "basis": "traditional",
+      "note": "saint.gr: „έζησαν στα χρόνια του βασιλιά Ιουλιανού του Παραβάτη (360 - 363 μ.Χ.)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 21 сентября ст. ст. (civil 4 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 21 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 21 Σεπτεμβρίου — «Άγιοι Ευσέβιος, Νέσταβος και Ζήνων τα αδέλφια Νέστωρ και Βούσιρις»",
+        "url": "https://www.saint.gr/09/21/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 21. септембар ст. ст. (civil 4 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "eusebius-of-gaza",
+    "zeno-of-gaza",
+    "nestor-21-september",
+    "busiris"
+  ]
+}

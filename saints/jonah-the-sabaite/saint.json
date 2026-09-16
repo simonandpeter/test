@@ -1,0 +1,58 @@
+{
+  "slug": "jonah-the-sabaite",
+  "display_name": "Jonah the Sabaite",
+  "names": [
+    {
+      "form": "Όσιος Ιωνάς ο Σαβαΐτης",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 829,
+      "latest": 829,
+      "display": "829",
+      "basis": "attested",
+      "note": "saint.gr: „ήταν Πρεσβύτερος το έτος 829 μ.Χ.”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 21 сентября ст. ст. (civil 4 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 21 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 21 Σεπτεμβρίου — «Όσιος Ιωνάς ο Σαβαΐτης»",
+        "url": "https://www.saint.gr/09/21/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 21. септембар ст. ст. (civil 4 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

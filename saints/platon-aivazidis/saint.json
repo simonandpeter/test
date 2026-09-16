@@ -1,0 +1,64 @@
+{
+  "slug": "platon-aivazidis",
+  "display_name": "Platon Aivazidis",
+  "names": [
+    {
+      "form": "Άγιος Πλάτων Αϊβαζίδης",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "deacon"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1852,
+      "latest": 1852,
+      "display": "1852",
+      "basis": "attested",
+      "note": "saint.gr: „γεννήθηκε στην Πάτμο το 1852 μ.Χ.”."
+    },
+    "death": {
+      "earliest": 1921,
+      "latest": 1921,
+      "display": "1921",
+      "basis": "attested",
+      "note": "saint.gr: „κρεμάστηκε στις 21 Σεπτεμβρίου 1921 μ.Χ.”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 21 сентября ст. ст. (civil 4 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 21 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 21 Σεπτεμβρίου — «Άγιος Πλάτων Αϊβαζίδης»",
+        "url": "https://www.saint.gr/09/21/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 21. септембар ст. ст. (civil 4 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
