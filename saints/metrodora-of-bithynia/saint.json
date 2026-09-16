@@ -23,6 +23,11 @@
       "form": "Μητροδώρα",
       "lang": "el",
       "note": "Her own name, read out of «Αγίες Μηνοδώρα, Μητροδώρα και Νυμφοδώρα» — the line already recorded here, which names more than this saint (or joins two of the titles with “and”), so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
+    },
+    {
+      "form": "Митродора",
+      "lang": "sr",
+      "note": "Her own name, read out of «Св. муч. Минодора, Митродора и Нимфодора» in this folder’s Serbian citation."
     }
   ],
   "sex": "female",
@@ -33,10 +38,10 @@
   "dates": {
     "death": {
       "earliest": 290,
-      "latest": 290,
-      "display": "290",
+      "latest": 311,
+      "display": "290–311",
       "basis": "attested",
-      "note": "saint.gr: they gave up their souls to Christ their bridegroom (290 AD)."
+      "note": "saint.gr: they gave up their souls to Christ their bridegroom (290 AD); the Ohrid Prologue on pravoslavno.rs: „Пострадаше између 305. и 311. год. у време Максимијана Галерија“, as days.pravoslavie.ru prints „(305-311)“. The interval holds both."
     }
   },
   "attestations": [
@@ -84,8 +89,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 10. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.09.2026 (10. септембар ст. ст.) — „Св. муч. Минодора, Митродора и Нимфодора.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-23&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -181,5 +195,9 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "menodora-of-bithynia",
+    "nymphodora-of-bithynia"
   ]
 }

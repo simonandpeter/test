@@ -1,0 +1,42 @@
+{
+  "slug": "three-women-ascetics",
+  "display_name": "The Three Women Ascetics",
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 10 сентября ст. ст. (civil 23 September, checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s page for 10 septembrie was not read for them (2026-09-17)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 10 Σεπτεμβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.09.2026 (10. септембар ст. ст.) — „Св. три жене.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-23&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

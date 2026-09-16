@@ -13,11 +13,16 @@
     {
       "form": "Sfânta Muceniță Iraida",
       "lang": "ro"
+    },
+    {
+      "form": "Αγία Ραΐς η παρθένος",
+      "lang": "el"
     }
   ],
   "sex": "female",
   "types": [
-    "martyr"
+    "martyr",
+    "virgin"
   ],
   "dates": {
     "death": {
@@ -59,8 +64,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 5 September (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 23 Σεπτεμβρίου — «Αγία Ραΐς η παρθένος»",
+        "url": "https://www.saint.gr/09/23/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

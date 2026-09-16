@@ -1,0 +1,65 @@
+{
+  "slug": "gregory-of-argos",
+  "display_name": "Gregory of Argos",
+  "names": [
+    {
+      "form": "Άγιος Γρηγόριος Μητροπολίτης Άργους",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1769,
+      "latest": 1769,
+      "display": "1769",
+      "basis": "attested",
+      "note": "saint.gr: „Γεννήθηκε το 1769 μ.Χ. στην Αλαγονία Καλαμάτας”."
+    },
+    "death": {
+      "earliest": 1821,
+      "latest": 1821,
+      "display": "1821",
+      "basis": "attested",
+      "note": "saint.gr: „πέθανε στις 18 ή 21 Σεπτεμβρίου 1821 μ.Χ.”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 23 сентября ст. ст. (civil 6 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 23 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 23 Σεπτεμβρίου — «Άγιος Γρηγόριος Μητροπολίτης Άργους»",
+        "url": "https://www.saint.gr/09/23/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 23. септембар ст. ст. (civil 6 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

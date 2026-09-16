@@ -15,6 +15,11 @@
       "form": "Απελλής",
       "lang": "el",
       "note": "His own name, read out of «Άγιοι Απελλής, Λουκάς και Κλήμης οι Απόστολοι» — the line already recorded here, which names more than this saint (or joins two of the titles with “and”), so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
+    },
+    {
+      "form": "Аполос",
+      "lang": "sr",
+      "note": "The name the Ohrid Prologue prints for the first of the three in «Св. Аполос, Лукије и Климент», taking him for the Apollos of Acts 18:24–25; the Greek and Russian calendars name him Apelles."
     }
   ],
   "sex": "male",
@@ -57,8 +62,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 10. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.09.2026 (10. септембар ст. ст.) — „Св. Аполос, Лукије и Климент.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-23&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

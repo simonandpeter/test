@@ -1,0 +1,48 @@
+{
+  "slug": "adamnan",
+  "display_name": "Adamnan",
+  "sex": "male",
+  "dates": {
+    "death": {
+      "earliest": 704,
+      "latest": 704,
+      "display": "704",
+      "basis": "traditional",
+      "note": "saint.gr prints him as „Αγιος Adamnan (; - 704)”; the entry gives no other date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 23 сентября ст. ст. (civil 6 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 23 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 23 Σεπτεμβρίου — «Άγιος Adamnan»",
+        "url": "https://www.saint.gr/09/23/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 23. септембар ст. ст. (civil 6 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

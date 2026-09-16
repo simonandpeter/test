@@ -1,0 +1,108 @@
+{
+  "slug": "john-of-konitsa",
+  "display_name": "John of Konitsa",
+  "names": [
+    {
+      "form": "Άγιος Ιωάννης ο Νεομάρτυρας ο εξ Αγαρηνών",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1814,
+      "latest": 1814,
+      "display": "1814",
+      "basis": "attested",
+      "note": "saint.gr: „Τελικά τον αποκεφάλισαν στις 23 Σεπτεμβρίου 1814 μ.Χ.”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 23 сентября ст. ст. (civil 6 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 23 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 23 Σεπτεμβρίου — «Άγιος Ιωάννης ο Νεομάρτυρας ο εξ Αγαρηνών»",
+        "url": "https://www.saint.gr/09/23/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 23. септембар ст. ст. (civil 6 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλάγιος α’.",
+      "text": "Νεομάρτυρα πάντες σεμνὸν τιμήσωμεν, ἐξ ἀλλοπίστων Κονίτσης, τὸν γενναιόφρονα ᾿Ιωάννην βαπτισθέντα τὸν μακάριον· τὸν μετὰ ζήλου τὸν Χριστὸν ὁμολογήσαντα Θεὸν ἀσκήσει καὶ μαρτυρίῳ· ἀεὶ δὲ πᾶσι κηρύττοντα ᾿Ορθοδοξίαν, σέβας τὸ σωτήριον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ιωάννης ο Νεομάρτυρας ο εξ Αγαρηνών, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2335/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "english": {
+        "text": "Let us all honour the august new martyr, the noble-minded and blessed John of Konitsa, baptized though born of those of another faith, who with zeal confessed Christ as God by ascesis and by martyrdom, and ever proclaimeth to all Orthodoxy, the saving worship.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Τῆς Κονίτσης τόν γόνον, Βραχωρίου τό καύχημα, καί Χριστοῦ ὁπλίτην τόν νέον, Ἰωάννην τιμήσωμεν· ἐκ ῥίζης γάρ δυσώδους προελθών, ἐνήθλησε λαμπρῶς ὑπέρ Χριστοῦ, καί κινδύνων ἐξαιτεῖται ἀπαλλαγήν, τοῖς πρός αὐτόν κραυγάζουσιν· δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σέ στεφανώσαντι, δόξα τῷ χορηγοῦντι διά σοῦ, ἡμῖν παθῶν ἐκλύτρωσιν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ιωάννης ο Νεομάρτυρας ο εξ Αγαρηνών, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2335/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "english": {
+        "text": "The offspring of Konitsa, the boast of Vrachori and the new soldier of Christ, John, let us honour; for, sprung from a foul-smelling root, he contended gloriously for Christ, and asketh deliverance from dangers for those who cry out to him: Glory to him who gave thee strength; glory to him who crowned thee; glory to him who through thee granteth us deliverance from the passions.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τὴν πατρῴαν πίστιν σου, σοφέ, ἀφῆκας καὶ Χριστὸν ὡς Κύριον ὁμολογήσας καὶ Θεόν, ἐβίωσας τὰς ἐντολὰς τοῦ Εὐαγγελίου. ῎Εδωκας τῇ νέα πίστει καὶ τὴν ζωήν σου, διὰ τοῦτο καὶ κατελέχθης ἐν Νεομάρτυσιν, ᾿Ιωάννη ἔνδοξε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ιωάννης ο Νεομάρτυρας ο εξ Αγαρηνών, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2335/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst forsake the faith of thy fathers, O wise one, and confessing Christ as Lord and God, didst live by the commandments of the Gospel. To thy new faith thou gavest thy very life; therefore thou wast numbered among the new martyrs, O glorious John.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

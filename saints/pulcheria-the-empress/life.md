@@ -120,8 +120,10 @@ had served with all her heart. The Greek synaxarion keeps her on
 10 September and refers to her feast of 17 February with Marcian; the
 Romanian calendar keeps her on 10 September.
 
+The Ohrid Prologue, for the Serbian calendar, tells her life in a few lines: the daughter of the emperor [Arcadius](/saints/arcadius-the-emperor); vowed to lifelong virginity, and as a sign of the vow the maker of a holy table of gold and precious stones for the cathedral church; co-ruler with her brother Theodosius the Younger and a great zealot for the Orthodox faith, by whose efforts the Third Ecumenical Council was called at Ephesus and condemned the heresy of Nestorius; the builder of the famous church of the Theotokos at Blachernae in Constantinople; after Theodosius’s death married to Marcian, the emperor chosen, but living with him as with a brother; and the finder of the relics of the Forty Martyrs of Sebaste. She reposed in the Lord, it says, on 10 September 453, in the fifty-fifth year of her life.
+
 *After the Viețile Sfinților as printed by doxologia.ro —
 [the life](https://doxologia.ro/viata-sfintei-pulheria-imparateasa), read 5 September 2026 — this
 time whole; the earlier reading had stopped partway. The Greek entry is
 the Ορθόδοξος Συναξαριστής (saint.gr), 10 Σεπτεμβρίου —
-[the entry](https://www.saint.gr/2375/saint.aspx).*
+[the entry](https://www.saint.gr/2375/saint.aspx); the Ohrid Prologue for 23 September 2026 (10. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-23&prolog=1), read 17 September 2026.*

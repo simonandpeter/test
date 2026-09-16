@@ -1,0 +1,100 @@
+{
+  "slug": "nicholas-the-grocer-of-karpenisi",
+  "display_name": "Nicholas the Grocer of Karpenisi",
+  "names": [
+    {
+      "form": "Άγιος Νικόλαος ο παντοπώλης ο Νεομάρτυρας από το Καρπενήσι",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1657,
+      "latest": 1657,
+      "display": "1657",
+      "basis": "traditional",
+      "note": "saint.gr prints him as „(1657 - 1672)” and says he was fifteen when he was beheaded."
+    },
+    "death": {
+      "earliest": 1672,
+      "latest": 1672,
+      "display": "1672",
+      "basis": "attested",
+      "note": "saint.gr: „τη Δευτέρα 23 Σεπτεμβρίου 1672 μ.Χ. τον αποκεφάλισαν. Ήταν 15 χρονών”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 23 сентября ст. ст. (civil 6 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 23 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 23 Σεπτεμβρίου — «Άγιος Νικόλαος ο παντοπώλης ο Νεομάρτυρας από το Καρπενήσι»",
+        "url": "https://www.saint.gr/09/23/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 23. септембар ст. ст. (civil 6 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Νίκας ἤνεγκας τῇ ᾿Εκκλησίᾳ, νῖκος ἔδωκας τῇ σῇ πατρίδι τῇ καλλινίκῳ ἀθλήσει, Νικόλαε. Νεομαρτύρων ἡ δόξα ἡ ἄφθιτος, ὁδὸν Κυρίου νεότητι ἔδειξας· ταῖς πρὸς Χριστὸν θερμαῖς δεήσεσιν ὅθεν ἱκέτευε ἀεὶ νίκας χαρίζεσθαι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Νικόλαος ο παντοπώλης ο Νεομάρτυρας από το Καρπενήσι, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2334/saint.aspx",
+        "year": 2026
+      },
+      "model": "Θείας πίστεως.",
+      "english": {
+        "text": "Thou hast brought victories to the Church and given victory to thy homeland by thy gloriously victorious contest, O Nicholas. Incorruptible glory of the new martyrs, thou didst show the young the way of the Lord; wherefore by thy fervent prayers to Christ entreat him ever to grant victories.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Καλλιδρόμης κλεινὸν ἀξιάγαστον βλάστημα καὶ Σχολῶν Εὐγενίου θεοδίδακτον καύχημα, Νικόλαον τιμήσωμεν πιστοί, νεώτατον Χριστοῦ τὸν μιμητήν, τὴν τῶν νέων ἀρετὴν ἀθλητικῶς κρατύνοντα. Δόξα τῷ δεδοκότι τὴν ἀλκήν, δόξα τῷ μεγαλύναντι, δόξα τῷ ἐνεργοῦντι ἐν παισὶν ἀεὶ θαυμάσια.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Νικόλαος ο παντοπώλης ο Νεομάρτυρας από το Καρπενήσι, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2334/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "english": {
+        "text": "The renowned and most admirable offshoot of Kallidromos, the God-taught boast of the schools of Eugenius, let us the faithful honour, Nicholas, the youngest imitator of Christ, who by his contest strengthened the virtue of the young. Glory to him who gave the strength; glory to him who magnified thee; glory to him who ever worketh wonders in children.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

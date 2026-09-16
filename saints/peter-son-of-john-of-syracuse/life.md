@@ -1,0 +1,5 @@
+# Peter, son of John of Syracuse
+
+Peter was one of the two sons of [John](/saints/john-of-syracuse) of Syracuse in Sicily, with his brother [Antony](/saints/antony-son-of-john-of-syracuse), in the years of the emperor Basil I (867). When the Agarenes took Sicily they carried off John and his sons as captives and brought the boys up in their own religion. Grown, the sons did not forget the faith their father had taught them, and worshipped the one true God in secret. When the Agarenes’ savage chief Abrahim learned of it he was enraged, the more because he had given them high offices, and he seized them and tortured them in the most barbarous and horrible way. At last, when he had cut off every limb of their bodies, the two sons gave up their holy souls to God; and the father too gave up his soul gloriously, when Abrahim drove the sword into his throat. The entry’s verses have John, slain, slaying the enemy and its error with it, and Antony and Peter enduring the cutting limb from limb like firm rocks.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 23 Σεπτεμβρίου — [the entry](https://www.saint.gr/2331/saint.aspx); read 17 September 2026.*

@@ -1,0 +1,66 @@
+{
+  "slug": "peter-son-of-john-of-syracuse",
+  "display_name": "Peter, son of John of Syracuse",
+  "names": [
+    {
+      "form": "Άγιος Ιωάννης με τα δύο παιδιά του Πέτρο και Αντώνιο",
+      "lang": "el"
+    },
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "His own name, as the entry’s verse «Εις τον Πέτρον και Αντώνιον» prints it."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 867,
+      "latest": 867,
+      "display": "867",
+      "basis": "traditional",
+      "note": "saint.gr: „υπήρξαν στα χρόνια του βασιλιά Βασιλείου του Μακεδόνα (867 μ.Χ.)”."
+    }
+  },
+  "related": [
+    "john-of-syracuse",
+    "antony-son-of-john-of-syracuse"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 23 сентября ст. ст. (civil 6 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 23 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 23 Σεπτεμβρίου — «Άγιος Ιωάννης με τα δύο παιδιά του Πέτρο και Αντώνιο»",
+        "url": "https://www.saint.gr/09/23/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 23. септембар ст. ст. (civil 6 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

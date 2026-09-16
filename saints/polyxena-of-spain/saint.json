@@ -5,6 +5,15 @@
     {
       "form": "Sfânta Cuvioasă Polixenia",
       "lang": "ro"
+    },
+    {
+      "form": "Οσίες Ξανθίππη και Πολυξένη",
+      "lang": "el"
+    },
+    {
+      "form": "Πολυξένη",
+      "lang": "el",
+      "note": "Her own name, read out of «Οσίες Ξανθίππη και Πολυξένη» in this folder’s Greek citation."
     }
   ],
   "sex": "female",
@@ -33,8 +42,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 23 Σεπτεμβρίου — «Οσίες Ξανθίππη και Πολυξένη»",
+        "url": "https://www.saint.gr/09/23/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -63,5 +81,75 @@
   },
   "related": [
     "xanthippe-of-spain"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Θείας πίστεως, τὸ φῶς δεχθεῖσα, ἔργοις ἔλαμψας, τῆς εὐσεβείας, Πολυξένη Ὁσία θεόληπτε· καὶ ἐν τῷ βίῳ Χριστὸν ἐμεγάλυνας, σὺν τῇ συγχρόνῳ ἀμέμπτοις σου πράξεσι· μεθ’ ἧς πρέσβευε Κυρίῳ τῷ σὲ δοξάσαντι, δωρήσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσίες Ξανθίππη και Πολυξένη, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2333/saint.aspx",
+        "year": 2026
+      },
+      "model": "Θείας πίστεως.",
+      "english": {
+        "text": "Having received the light of the divine faith, thou didst shine with works of piety, O venerable Polyxena, possessed by God; and in thy life thou didst magnify Christ by thy blameless deeds, together with her who lived in thy time. With her intercede with the Lord who glorified thee, that he grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α´.",
+      "text": "Ἀποστόλων ταῖς τρίβοις ἀκολουθήσασαι, ὑμῶν τὸν βίον ἐν ἔργοις, φιλαδελφείας καλῶς, καὶ ἀγάπης ἀκραιφνοῦς ἐδαπανήσατε, σῶφρον Ξανθίππη θαυμαστή, καὶ ὁσίων παμφαὲς, ὡράϊσμα Πολυξένη· καὶ νῦν Χριστὸν δυσωπεῖτε, ὑπὲρ ἡμῶν σεμναὶ αὐτάδελφοι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσίες Ξανθίππη και Πολυξένη, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2333/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "english": {
+        "text": "Following in the paths of the apostles, ye spent your life well in works of sisterly love and of pure charity, O wondrous and chaste Xanthippe, and Polyxena, all-radiant adornment of the venerable; and now, O august sisters, entreat Christ for us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ´.",
+      "text": "Διαδραμοῦσαι πολιτείαν ὑπερθαύμαστον, ἐπὶ τῆς γῆς ὁσίων σύμμορφαι ἐδείχθητε γυναικῶν, Ξανθίππη θεία καὶ Πολυξένη· ὅθεν στέφανον δεξάμεναι ἀμάραντον ἐκ χειρῶν τοῦ Ἰησοῦ ἡμῶν ἀκούετε τῶν βοώντων νῦν· Χαίροις, ζεῦγος θειότατον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσίες Ξανθίππη και Πολυξένη, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2333/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῇ ὑπερμάχῳ.",
+      "english": {
+        "text": "Having run a most wondrous course of life upon the earth, ye were shown to be of one form with the venerable women, O divine Xanthippe and Polyxena; wherefore, having received an unfading crown from the hands of our Jesus, ye now hear those who cry: Rejoice, O most divine pair.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Πολυτρόποις πράξεσιν ὁσίου βίου, Πολυξένη πάνσεμνε, Χριστῷ λατρεύσασα πιστῶς, τῆς ἄνω δόξης ἠξίωσαι, ὐπὲρ ἡμῶν ἐκτενῶς ἱκετεύουσα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσίες Ξανθίππη και Πολυξένη, Λειτουργικά κείμενα: Έτερον Κοντάκιον",
+        "url": "https://www.saint.gr/2333/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ἐπεφάνης σήμερον.",
+      "english": {
+        "text": "Having served Christ faithfully in the manifold deeds of a holy life, O all-august Polyxena, thou hast been counted worthy of the glory on high, and fervently entreatest for us.",
+        "rendered": "site"
+      }
+    }
   ]
 }
