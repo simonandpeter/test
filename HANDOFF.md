@@ -34,23 +34,21 @@ here, because a PAT push never updates `origin/main`.
 ## In flight
 
 **The corpus run (`scratchpad/corpus-plan.md` §5) has reached the end of
-civil 21 September.** A1 did Serbian 20 and 21 and Greek 21; **civil 22
-September is untouched and is next** (Serbian and Greek), then A2. What the
-reading of 22 September already found, so it need not be found twice:
+civil 22 September**, which finishes sitting A1 (Serbian 20–22, Greek 21–22).
+**A2 is next: civil 23–25 September, Greek and Serbian**; Russian and Romanian
+stay untouched until B1. Nothing of 23 September has been read yet.
 
-- **Serbian 22** (Ohrid Prologue): Joachim and Anna, Severian of Sebaste and
-  Theophanes the Confessor are upgrades of existing folders; the Third
-  Ecumenical Council is not a person. «Св. Никита Угодник Божји», of
-  Constantinople in the 12th century, has to be read against
-  `nicetas-the-chartularius` before it is called the same man.
-- **Greek 22**: Phocas the hieromartyr, Isaac and Martin, and Cosmas of
-  Zographou are upgrades; Phocas the Gardener (saint.gr 2483, also of Sinope)
-  and Paraskeva of Diveyevo (2488, who guided `maria-ivanovna-of-diveyevo`)
-  are new. **The Twenty-Six Zographou martyrs (2486) print 22 names and four
-  unknown**, so by CORPUS §4.6 and §7 they are folders each and need two
-  batches of their own; two are both «Ιάκωβος».
-- Phocas's page carries a megalynarion, which the schema's hymn `kind` does
-  not allow; leave it out rather than file it as a troparion.
+Three more things 22 September taught that the tools say only by failing:
+`office` must already have a translation in all four locale packs
+(`tests/i18n.test.mjs`), so an office the packs lack is left out of a batch
+rather than added to them; a date `display` must be one the four languages can
+read (`tests/date-display.test.mjs` refused "under Trajan", and "98–117"
+passes); and a display name that cuts, at its first comma or bracket, to an
+existing saint's form silences both in cross-link — "Cosmas of Zographou (…)"
+did, "Cosmas, companion of Thomas of Zographou" does not. Diff
+`cross-link-audit.mjs` against the previous batch's output to see it. A
+company too big for one batch links forward by editing the first batch's lives
+in the second (plan §6 step 2).
 
 Three things the run taught that the tools do not say. saint.gr's day index
 carries a sidebar that `day-candidates.mjs` reads as entries (Paisios,
