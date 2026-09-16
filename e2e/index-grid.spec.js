@@ -5,6 +5,7 @@ import {
   ICONED,
   INDEX,
   POPULATED,
+  VENERATED,
   carouselMode,
   chooseSort,
   chooseView,
@@ -526,7 +527,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await searchMode(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await onlyCalendar(page, 'Romanian');
-  await expect(page.locator('[data-count]')).toHaveText('160');
+  await expect(page.locator('[data-count]')).toHaveText(VENERATED.romanian);
   // The order is pinned because the card this test opens has to be one that
   // fits between the header and the fold, and card heights come from each
   // icon's aspect ratio — under the Random default (2026-08-24) a deal that
@@ -534,7 +535,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   // and the search came back empty. The subject here is what comes back
   // after a trip into a saint, not which saints are on top.
   await chooseSort(page, 'earliest');
-  await expect(page.locator('[data-count]')).toHaveText('160');
+  await expect(page.locator('[data-count]')).toHaveText(VENERATED.romanian);
   await page.evaluate(() => window.scrollTo(0, 500));
   await page.waitForTimeout(200);
   /*
@@ -564,7 +565,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await expect(page.locator('h1.saint-name')).toHaveText(opened);
   await page.locator('[data-back]').click();
   await expect(page).toHaveURL(/\/saints$/);
-  await expect(page.locator('[data-count]')).toHaveText('160');
+  await expect(page.locator('[data-count]')).toHaveText(VENERATED.romanian);
   await expect(page.locator('input[name="churches"][value="romanian"]')).toBeChecked();
   expect(await page.evaluate(() => document.querySelector('[data-facet="churches"]').open)).toBe(true);
   expect(await page.evaluate(() => window.scrollY)).toBe(left);
@@ -573,7 +574,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await openVisible();
   await expect(page.locator('h1.saint-name')).toBeVisible();
   await page.goBack();
-  await expect(page.locator('[data-count]')).toHaveText('160');
+  await expect(page.locator('[data-count]')).toHaveText(VENERATED.romanian);
   expect(await page.evaluate(() => window.scrollY)).toBe(left);
 
   // The nav link is a fresh Index. Landing at the top now eases there
