@@ -5,6 +5,10 @@
     {
       "form": "Sfântul Cuvios Coprie",
       "lang": "ro"
+    },
+    {
+      "form": "Όσιος Κόπρις",
+      "lang": "el"
     }
   ],
   "sex": "male",
@@ -33,8 +37,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 24 Σεπτεμβρίου — «Όσιος Κόπρις»",
+        "url": "https://www.saint.gr/09/24/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

@@ -9,6 +9,10 @@
     {
       "form": "Sfântul Cuvios Siluan Athonitul",
       "lang": "ro"
+    },
+    {
+      "form": "Άγιος Σιλουανός ο Αγιορείτης",
+      "lang": "el"
     }
   ],
   "sex": "male",
@@ -62,8 +66,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 24 Σεπτεμβρίου — «Άγιος Σιλουανός ο Αγιορείτης»",
+        "url": "https://www.saint.gr/09/24/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -83,5 +96,92 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Χριστὸν διδάσκαλον ἐν ὀδῷ ταπεινώσεως προσευξάμενος ἔλαβες, μαρτυροῦντος τοῦ Πνεύματος, ἐν σῇ καρδία τὴν λύτρωσιν, διὰ τοῦτο ἀσκήσεως ἀνεδείχθης σὺ ὁδηγός, ὡς φωτὸς θείου ἔμπλεως. Ὅσιε πάτερ Σιλουανέ, πρέσβευε Χριστῷ τῷ Θεῷ σωθήναι τᾶς ψυχᾶς ἠμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Σιλουανός ο Αγιορείτης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2493/saint.aspx",
+        "year": 2026
+      },
+      "model": "Κανόνα πίστεως.",
+      "english": {
+        "text": "By prayer thou didst receive Christ as thy teacher on the way of humility, the Spirit bearing witness to redemption in thy heart; therefore thou wast shown forth a guide in ascesis, as one filled with divine light. O venerable father Silouan, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ὁσίων ἐφάμιλλος, καὶ κοινωνὸς ἀληθῶς, ἐσχάτοις ἐν ἔτεσι, δι’ ἐναρέτου ζωῆς, ἐδείχθης μακάριε. Ὅθεν Σιλουανέ σε, ἡ οὐράνιος δόξα, δέδεκται μετὰ τέλος, σὺν Ὁσίοις Πατράσι· μεθ’ ὧν καὶ καθικέτευε, ὑπὲρ τῶν τιμώντων σε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Σιλουανός ο Αγιορείτης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2493/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "In these last years, through a virtuous life, thou wast shown, O blessed one, to be truly the equal and companion of the venerable; wherefore, O Silouan, the glory of heaven received thee at thine end with the venerable fathers. With them make supplication for those who honour thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ'.",
+      "text": "Κήρυξ δέδοσαι, τῇ οἰκουμένῃ, σὺ γλυκύτατος, ἐν θεολόγοις, τῆς τοῦ Χριστοῦ ἀγάπης τρισόλβιε· τὸν Ταπεινὸν γὰρ καὶ Πρᾷον ἑώρακας, καὶ τὴν Ἐκείνου καρδίαν κατέμαθες. Ὅθεν ἅπαντες, Σιλουανὲ ἐλλαμπόμενοι, τοῖς θεογλώσσοις ῥήμασι, δοξάζομεν τὸ Πνεῦμα τὸ δοξάσαν σε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Σιλουανός ο Αγιορείτης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον (Ποίημα Παύλου Ἱερομόναχου)",
+        "url": "https://www.saint.gr/2493/saint.aspx",
+        "year": 2026
+      },
+      "model": "Θείας πίστεως.",
+      "english": {
+        "text": "Thou wast given to the whole world as a preacher of the love of Christ, most sweet among theologians, O thrice-blessed one; for thou didst see the Humble and Meek One and didst learn his heart. Wherefore all of us, O Silouan, enlightened by thy God-inspired words, glorify the Spirit who glorified thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α'.",
+      "text": "Κατηγλάϊσας Πάτερ Ὄρος τοῦ Ἄθωνος, ὑπὲρ φύσιν βιώσας καὶ τὴν τοῦ Πνεύματος, ἐπίδειξάμενος ἡμῖν θείαν ἐνέργειαν, ὅθεν τιμῶντές σου σεπτῶς, τὴν μνήμην ὦ Σιλουανέ, δοξάζομεν ἐκ καρδίας, τὸν παρασχόντα σε μέγαν, τῇ Ἐκκλησίᾳ χριστοκήρυκα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Σιλουανός ο Αγιορείτης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2493/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὸν Συνάναρχον Λόγον.",
+      "english": {
+        "text": "Thou didst adorn the Mountain of Athos, O father, living beyond nature and showing us the divine working of the Spirit; wherefore, reverently honouring thy memory, O Silouan, we glorify from the heart him who gave thee to the Church as a great preacher of Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Τῶν Ὁσίων σύσκηνος τῶν πάλαι ὤφθης, ἐναρέτοις πράξεσι, Χριστὸν δοξάσας ἐπὶ γῆς, Σιλουανὲ παναοίδιμε, καὶ ἐκομίσω τὸν ἄφθαρτον στέφανον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Σιλουανός ο Αγιορείτης, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2493/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ἐπεφάνης σήμερον.",
+      "english": {
+        "text": "Thou wast shown to share the dwelling of the venerable of old, having glorified Christ on earth by virtuous deeds, O all-praised Silouan, and thou hast received the incorruptible crown.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

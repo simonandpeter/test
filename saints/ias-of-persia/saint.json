@@ -9,6 +9,11 @@
     {
       "form": "Ия",
       "lang": "ru"
+    },
+    {
+      "form": "Ија",
+      "lang": "sr",
+      "note": "Read out of «Св. муч. Ија.» in this folder’s Serbian citation."
     }
   ],
   "sex": "female",
@@ -21,7 +26,7 @@
       "latest": 379,
       "display": "4th century",
       "basis": "traditional",
-      "note": "saint.gr: taken by the Persians with nine thousand Christians and brought before the chief magi of the king of Persia; Shapur reigned 309–379."
+      "note": "saint.gr: taken by the Persians with nine thousand Christians and brought before the chief magi of the king of Persia; Shapur reigned 309–379. The Ohrid Prologue on pravoslavno.rs: „пострадала за Господа у Персији у време Сапора II, 363. год.“"
     }
   },
   "attestations": [
@@ -60,8 +65,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 11. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.09.2026 (11. септембар ст. ст.) — „Св. муч. Ија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-24&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

@@ -1,0 +1,50 @@
+{
+  "slug": "paphnutius-of-the-thebaid",
+  "display_name": "Paphnutius of the Thebaid",
+  "names": [
+    {
+      "form": "Пафнутије",
+      "lang": "sr",
+      "note": "Read out of «Св. Пафнутије исповедник.» in this folder’s Serbian citation."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 11 сентября ст. ст. (civil 24 September, checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 11 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 11 Σεπτεμβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.09.2026 (11. септембар ст. ст.) — „Св. Пафнутије исповедник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-24&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -45,9 +45,11 @@ were listening closely to the priest’s story, opened the side door of the
 church and, fleeing the glory of men, left the monastery and was never seen
 again. The Greek and Romanian calendars keep him on 11 September.
 
+The Ohrid Prologue, for the Serbian calendar, calls him a simple man but a man of God, a cook in a monastery it calls «Аморејски», in the ninth century. The monastery’s confessor saw himself one night in paradise and saw Euphrosynus there, who picked three apples of paradise and gave them to him; when he woke he found three apples of unusual beauty and fragrance beside his pillow. He found Euphrosynus quickly and asked where he had been that night, brother, and the saint answered: where you were, father. The confessor told the whole thing to the monks, and all of them knew Euphrosynus for a saint; and he, fearing the praise of men, fled the monastery at once and hid in the wilderness, where he lived out the rest of his life.
+
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 11 Σεπτεμβρίου —
 [the entry](https://www.saint.gr/1000/saint.aspx), read 5 September 2026 — this
 time whole: its page shows seventy words and the rest behind a link, which is
 where the earlier reading stopped. The Romanian life is at doxologia.ro —
 [the page](https://doxologia.ro/viata-sfantului-cuvios-eufrosin-bucatarul),
-read 23 August 2026.*
+read 23 August 2026; the Ohrid Prologue for 24 September 2026 (11. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-24&prolog=1), read 17 September 2026.*

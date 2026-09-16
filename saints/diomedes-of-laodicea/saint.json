@@ -5,6 +5,11 @@
     {
       "form": "Άγιοι Διόδωρος, Διομήδης & Δίδυμος οι μάρτυρες",
       "lang": "el"
+    },
+    {
+      "form": "Диомид",
+      "lang": "sr",
+      "note": "Read out of «Св. муч. Диодор, Дидим и Диомид.» in this folder’s Serbian citation."
     }
   ],
   "sex": "male",
@@ -38,11 +43,24 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 11. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.09.2026 (11. септембар ст. ст.) — „Св. муч. Диодор, Дидим и Диомид.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-24&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "diodorus-of-laodicea",
+    "didymus-of-laodicea"
+  ]
 }
