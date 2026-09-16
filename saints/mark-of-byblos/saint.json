@@ -1,0 +1,57 @@
+{
+  "slug": "mark-of-byblos",
+  "display_name": "Mark of Byblos",
+  "names": [
+    {
+      "form": "Άγιοι Μάρκος, Αρίσταρχος και Ζήνων οι Απόστολοι από τους Εβδομήκοντα",
+      "lang": "el"
+    },
+    {
+      "form": "Μάρκος",
+      "lang": "el",
+      "note": "Read out of «Άγιοι Μάρκος, Αρίσταρχος και Ζήνων οι Απόστολοι από τους Εβδομήκοντα» in this folder’s Greek citation."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle"
+  ],
+  "related": [
+    "aristarchus-of-apamea",
+    "zeno-of-diospolis"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 27 сентября ст. ст. (civil 10 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 27 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 27 Σεπτεμβρίου — «Άγιοι Μάρκος, Αρίσταρχος και Ζήνων οι Απόστολοι από τους Εβδομήκοντα»",
+        "url": "https://www.saint.gr/09/27/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 27. септембар ст. ст. (civil 10 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

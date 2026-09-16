@@ -5,6 +5,11 @@
     {
       "form": "Αγία Πλακίλλα η Ευσεβέστατη Βασίλισσα",
       "lang": "el"
+    },
+    {
+      "form": "Плакила",
+      "lang": "sr",
+      "note": "Read out of «Св. Плакила царица.» in this folder’s Serbian citation."
     }
   ],
   "sex": "female",
@@ -15,10 +20,10 @@
   "dates": {
     "death": {
       "earliest": 385,
-      "latest": 387,
-      "display": "c. 386",
+      "latest": 400,
+      "display": "385–400",
       "basis": "traditional",
-      "note": "About 386, azbyka.ru, after Philaret of Chernigov; Gregory of Nyssa spoke her funeral oration. saint.gr says only wife of Theodosius the Great."
+      "note": "About 386, azbyka.ru, after Philaret of Chernigov; Gregory of Nyssa spoke her funeral oration. saint.gr says only wife of Theodosius the Great. The Ohrid Prologue on pravoslavno.rs: „Упокојила се мирно око 400. год.“; the interval holds both."
     }
   },
   "attestations": [
@@ -48,8 +53,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 14. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.09.2026 (14. септембар ст. ст.) — „Св. Плакила царица.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-27&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

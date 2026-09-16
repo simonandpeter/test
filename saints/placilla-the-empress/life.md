@@ -19,4 +19,6 @@ September, the feast of the Exaltation; the Russian church calendar prints
 her page on 14 September of the old style, 27 September, and notes that she
 is not in the present Russian menologion.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 14 Σεπτεμβρίου — [the entry](https://www.saint.gr/2392/saint.aspx), read 23 August 2026, and the page of the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-plakilla), read 6 September 2026, which gives the year and the answer.*
+The Ohrid Prologue, for the Serbian calendar, calls her the wife of the emperor Theodosius I and a true Christian in mind and deed, above all in helping the poor and the sick. When some told her this did not befit an empress’s dignity, she answered that it became the imperial rank to help with money, but her own labours for the poor she gave to Him who had been pleased to give her that rank. She died in peace, it says, about 400, where the folder’s other sources put her death about 386.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 14 Σεπτεμβρίου — [the entry](https://www.saint.gr/2392/saint.aspx), read 23 August 2026, and the page of the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-plakilla), read 6 September 2026, which gives the year and the answer; the Ohrid Prologue for 27 September 2026 (14. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-27&prolog=1), read 17 September 2026.*

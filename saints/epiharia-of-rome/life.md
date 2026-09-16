@@ -9,4 +9,6 @@ beheaded, and so gave her blessed and honoured soul to God. The Russian
 calendar keeps her on 27 September of the old style, 10 October, and the
 Romanian calendar on 27 September.
 
-*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-epiharija-rimskaja), read 6 September 2026; the Romanian life at doxologia.ro — [Viața Sfintei Mucenițe Epiharia](https://doxologia.ro/viata-sfintei-mucenite-epiharia), read 30 August 2026, was all this entry had until then.*
+The Greek synaxarion keeps her on 27 September as Epicharis of Rome, in the years of Diocletian (298). Arrested as a Christian by the prefect Caesarius, she confessed Christ boldly, was cruelly tortured, her limbs crushed with a ball of lead, and at the last beheaded. Its verse calls her daring before the sword, rich in divine grace as her helper.
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-epiharija-rimskaja), read 6 September 2026; the Romanian life at doxologia.ro — [Viața Sfintei Mucenițe Epiharia](https://doxologia.ro/viata-sfintei-mucenite-epiharia), read 30 August 2026, was all this entry had until then; the Ορθόδοξος Συναξαριστής (saint.gr), 27 Σεπτεμβρίου — [the entry](https://www.saint.gr/2518/saint.aspx), read 17 September 2026.*

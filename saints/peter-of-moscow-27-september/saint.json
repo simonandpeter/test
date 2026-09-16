@@ -1,0 +1,48 @@
+{
+  "slug": "peter-of-moscow-27-september",
+  "display_name": "Peter of Moscow (27 September)",
+  "names": [
+    {
+      "form": "Άγιος Πέτρος Πατριάρχης Μόσχας Ιερομάρτυρας",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 27 сентября ст. ст. (civil 10 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 27 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 27 Σεπτεμβρίου — «Άγιος Πέτρος Πατριάρχης Μόσχας Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/09/27/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 27. септембар ст. ст. (civil 10 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

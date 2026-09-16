@@ -1,0 +1,49 @@
+{
+  "slug": "mary-of-tarsus",
+  "display_name": "Mary of Tarsus",
+  "names": [
+    {
+      "form": "Марија",
+      "lang": "sr",
+      "note": "Read out of «Преп. Марија Тарсијска.» in this folder’s Serbian citation."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked in this batch: days.pravoslavie.ru’s page for 14 сентября ст. ст. (civil 27 September) was not read for her (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 27 septembrie (checked 2026-09-17); its 14 septembrie was not read for her."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 27 Σεπτεμβρίου (checked 2026-09-17); its 14 Σεπτεμβρίου was not read for her."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.09.2026 (14. септембар ст. ст.) — „Преп. Марија Тарсијска.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-27&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "slug": "ignatius-of-bathys-ryax",
+  "display_name": "Ignatius of Bathys Ryax",
+  "names": [
+    {
+      "form": "Όσιος Ιγνάτιος ηγούμενος της Μονής Σωτήρος Χριστού της επιλεγόμενης του Βαθέος Ρύακος",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 963,
+      "latest": 976,
+      "display": "963–976",
+      "basis": "traditional",
+      "note": "saint.gr: „έζησε στα χρόνια των βασιλέων Νικηφόρου Β’ Φωκά (963 - 969 μ.Χ.) και Ιωάννη Α’ Τσιμισκή (969 - 976 μ.Χ.)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 27 сентября ст. ст. (civil 10 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 27 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 27 Σεπτεμβρίου — «Όσιος Ιγνάτιος ηγούμενος της Μονής Σωτήρος Χριστού της επιλεγόμενης του Βαθέος Ρύακος»",
+        "url": "https://www.saint.gr/09/27/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 27. септембар ст. ст. (civil 10 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

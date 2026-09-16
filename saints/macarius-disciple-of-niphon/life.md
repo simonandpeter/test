@@ -1,7 +1,7 @@
 # Macarius the New, disciple of Patriarch Niphon
 
 Where Macarius came from and who his parents were is not known. He was a
-disciple of Niphon, patriarch of Constantinople, kept on 11 August, and
+disciple of [Niphon](/saints/niphon-patriarch-of-constantinople), patriarch of Constantinople, kept on 11 August, and
 imitated his life; and reaching the height of divine love, his heart burned
 daily with the longing to end his life by a martyr’s death. He told his holy
 teacher, who was then again at Vatopedi, and Niphon, knowing the desire was
@@ -27,8 +27,10 @@ wrong, since Niphon himself died in 1508; the Romanian life keeps 14
 September 1527, and says he stayed steadfast in his Orthodoxy and was
 condemned and beheaded for it. This entry records both and settles neither.
 
+The Ohrid Prologue, for the Serbian calendar, makes him a disciple of the patriarch Niphon while Niphon lived in stillness at Vatopedi. Macarius longed for martyrdom for Christ and begged his blessing, and the clear-sighted patriarch, seeing it was God’s will, blessed him on his way. He went to Thessalonica and began to speak of Christ as the only true God to a crowd of Turks, who beat him and threw him into prison; brought to judgement, he cried out to them: O that you knew the truth and were baptized in the name of the Father and the Son and the Holy Spirit! They cut off his head in 1527. In that hour Niphon saw it in the spirit at Vatopedi and told a monk that his brother Macarius had ended as a martyr that day and was rising to heaven, triumphant and rejoicing in the Lord, and that by his prayers they too might be made worthy of blessedness.
+
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 14 Σεπτεμβρίου —
 [the entry](https://www.saint.gr/2397/saint.aspx), read 5 September 2026 — this
 time whole: its page shows seventy words and the rest behind a link, which is
 where the earlier reading stopped; the Romanian life is at
-doxologia.ro — [the page](https://doxologia.ro/viata-sfantului-nou-mucenic-macarie-ucenicul-patriarhului-nifon-14-septembrie-1527).*
+doxologia.ro — [the page](https://doxologia.ro/viata-sfantului-nou-mucenic-macarie-ucenicul-patriarhului-nifon-14-septembrie-1527); the Ohrid Prologue for 27 September 2026 (14. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-27&prolog=1), read 17 September 2026.*

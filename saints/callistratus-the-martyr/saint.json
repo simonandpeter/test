@@ -5,6 +5,15 @@
     {
       "form": "Sfântul Mucenic Calistrat",
       "lang": "ro"
+    },
+    {
+      "form": "Άγιος Καλλίστρατος και οι μαζί μ' αυτόν Σαράντα εννέα Μάρτυρες",
+      "lang": "el"
+    },
+    {
+      "form": "Καλλίστρατος",
+      "lang": "el",
+      "note": "Read out of «Άγιος Καλλίστρατος και οι μαζί μ' αυτόν Σαράντα εννέα Μάρτυρες» in this folder’s Greek citation."
     }
   ],
   "sex": "male",
@@ -33,8 +42,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 27 Σεπτεμβρίου — «Άγιος Καλλίστρατος και οι μαζί μ' αυτόν Σαράντα εννέα Μάρτυρες»",
+        "url": "https://www.saint.gr/09/27/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -53,5 +71,41 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Τῷ θείῳ Πνεύματι, περιφραξάμενος, Μάρτυς Καλλίστρατε, λαμπρῶς ἠρίστευσας, καταβολῶν τὸν δυσμενῆ, σοφία τῶν σῶν ἀγώνων ὅθεν καὶ προσήγαγες, τῷ Χριστῷ ὡς θυμίαμα, δῆμον παναοίδιμον, Ἀθλητῶν πιστευσάντων σοί, μεθ' ὧν ὑπὲρ ἠμῶν ἐκδυσώπει, τῶν εὐφημούντων σὲ ἐν ὕμνοις.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Καλλίστρατος και οι μαζί μ' αυτόν Σαράντα εννέα Μάρτυρες, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2517/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὴν ὡραιότητα.",
+      "english": {
+        "text": "Fenced about by the divine Spirit, O martyr Callistratus, thou didst fight gloriously and cast down the enemy by the wisdom of thy contests; wherefore thou didst bring to Christ as incense an all-praised company of champions who believed through thee. With them entreat him for us who praise thee in hymns.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ὥσπερ ἄστρον μέγιστον, ἔλαμψας κόσμω, τᾶς ἀκτῖνας ἄπασι, τῶν σῶν ἀγώνων ἐφαπλῶν, καὶ τῶν θαυμάτων τοὶς κράζουσι, Χαίροις Μαρτύρων, τὸ κλέος Καλλίστρατε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Καλλίστρατος και οι μαζί μ' αυτόν Σαράντα εννέα Μάρτυρες, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2517/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ἐπεφάνης σήμερον.",
+      "english": {
+        "text": "Like a very great star thou didst shine upon the world, spreading abroad the rays of thy contests and thy wonders upon all who cry: Rejoice, O Callistratus, glory of martyrs.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

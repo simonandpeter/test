@@ -5,6 +5,10 @@
     {
       "form": "Sfânta Muceniță Achilina din Zagliveri",
       "lang": "ro"
+    },
+    {
+      "form": "Αγία Ακυλίνα",
+      "lang": "el"
     }
   ],
   "sex": "female",
@@ -33,8 +37,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 27 Σεπτεμβρίου — «Αγία Ακυλίνα»",
+        "url": "https://www.saint.gr/09/27/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -60,5 +73,41 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "text": "Ἀκυλίναν τὴν θείαν ἀνευφημήσωμεν, οἴα θεόφρονα κόρην καὶ Ἀθληφόρον Χριστοῦ, τὴ ἀγάπη γὰρ αὐτοῦ πίστει ἠνδρίσατο, καὶ καθεῖλε τὸν ἐχθρόν, δι' ἀγώνων ἱερῶν καὶ δόξης τυχοῦσα θείας Χριστῷ τῷ Λόγῳ πρεσβεύει, ἐλεηθήναι τᾶς ψυχᾶς ἠμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Ακυλίνα, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2524/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "english": {
+        "text": "Let us praise the divine Aquilina, a God-minded maiden and prizebearer of Christ; for out of love for him she was made manly by faith and cast down the enemy by sacred contests, and having attained divine glory she intercedes with Christ the Word that our souls may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος πλ. α'.",
+      "text": "Ζαγκλιβέριον χαίρει εν τη αθλήσει σου, η σε βλαστήσασα κώμη ως άνθος εύοσμον, Ακυλίνα του Χριστού καλλιπάρθενε· συ γαρ ενήθλησας στερρώς, και εδέξω εκ Θεού το στέφος της αφθαρσίας, εκδυσωπούσα απαύστως, ελεηθήναι τας ψυχάς ημών.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Ακυλίνα, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2524/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τον συνάναρχον Λόγον",
+      "english": {
+        "text": "Zagliveri, the village that put thee forth as a sweet-scented flower, rejoices in thy contest, O Aquilina, fair virgin of Christ; for thou didst contend steadfastly and receive from God the crown of incorruption, ceaselessly entreating that our souls may find mercy.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

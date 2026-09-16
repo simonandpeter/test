@@ -9,6 +9,11 @@
     {
       "form": "Sfântul Nou-Mucenic Macarie, ucenicul Patriarhului Nifon",
       "lang": "ro"
+    },
+    {
+      "form": "Макарије",
+      "lang": "sr",
+      "note": "Read out of «Преп. муч. Макарије Солунски.» in this folder’s Serbian citation."
     }
   ],
   "sex": "male",
@@ -61,11 +66,23 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 14. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.09.2026 (14. септембар ст. ст.) — „Преп. муч. Макарије Солунски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-27&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "niphon-patriarch-of-constantinople"
+  ]
 }
