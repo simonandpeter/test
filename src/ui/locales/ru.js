@@ -566,6 +566,8 @@ export const ru = {
 
   prayer: {
     title: 'Молитва',
+    prev: 'Предыдущий святой',
+    next: 'Следующий святой',
   },
 
   texts: {

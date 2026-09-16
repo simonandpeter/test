@@ -1580,7 +1580,8 @@ html[data-swipe-nav='right']::view-transition-new(root) {
 .saint-aside,
 .saint-main,
 .side-results,
-.hy-side {
+.hy-side,
+.hy-hymns {
   scrollbar-width: none;
 }
 
@@ -1592,7 +1593,8 @@ html[data-swipe-nav='right']::view-transition-new(root) {
 .saint-aside::-webkit-scrollbar,
 .saint-main::-webkit-scrollbar,
 .side-results::-webkit-scrollbar,
-.hy-side::-webkit-scrollbar {
+.hy-side::-webkit-scrollbar,
+.hy-hymns::-webkit-scrollbar {
   display: none;
 }
 

@@ -1199,6 +1199,14 @@ export const STRINGS = {
    */
   prayer: {
     title: 'Prayer',
+    /*
+     * The two arrows draw ‹ and ›, which say nothing to a screen reader, so
+     * these are what the buttons are called. Neither ever wraps: at the ends
+     * the button is disabled rather than turning into a way back to the other
+     * end of the alphabet.
+     */
+    prev: 'The saint before',
+    next: 'The saint after',
   },
 
   texts: {

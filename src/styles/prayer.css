@@ -28,6 +28,138 @@ html[data-route~='prayer'] .hy-body {
   min-height: 0;
 }
 
+/* ---- the saint in hand ---------------------------------------------------
+   **One saint at a time, and it fades.** Nothing travels and nothing steps on a
+   wheel tick, because the wheel belongs to the hymn the moment a troparion is
+   longer than its box — which at prayer is the one moment the reader is certain
+   to be scrolling.
+
+   The fade's own duration is `--dur-move` and `views/prayer/card.js` swaps on
+   the transition's end rather than on a timer aimed at it. Reduced motion is
+   the whole mechanism removed, not a shorter one: the rule below carries no
+   transition at all under it, and the module draws on the same tick. */
+
+html[data-route~='prayer'] .hy-hold {
+  height: 100%;
+  min-height: 0;
+  opacity: 1;
+  transition: opacity var(--dur-move) var(--ease-soft);
+}
+
+html[data-route~='prayer'] .hy-hold.is-out {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-route~='prayer'] .hy-hold {
+    transition: none;
+  }
+}
+
+/* The picture, the name and the dates on one side; what is sung on the other.
+   4 / 6, because the hymn is what the reader came for and the icon is what they
+   are looking at while they read it. */
+html[data-route~='prayer'] .hy-saint {
+  display: grid;
+  gap: var(--space-6);
+  padding: 0 var(--space-4) var(--space-6);
+}
+
+html[data-route~='prayer'] .hy-pic {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-height: 0;
+}
+
+/* The picture takes the manifest's own clamped shape (`lib/hero-crop.js`), the
+   same silhouette the Daily rows and the Index's cards give it, and stands in
+   the mat every icon on this site stands in. */
+html[data-route~='prayer'] .hy-pic-frame {
+  display: block;
+  flex: 0 1 auto;
+  min-height: 0;
+  aspect-ratio: var(--hy-aspect, 1);
+  background: var(--mount);
+  overflow: hidden;
+}
+
+html[data-route~='prayer'] .hy-pic-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--hy-focus, 50% 0);
+}
+
+html[data-route~='prayer'] .hy-name {
+  font-size: var(--text-2xl);
+  line-height: 1.15;
+  margin: 0;
+}
+
+html[data-route~='prayer'] .hy-sub {
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+html[data-route~='prayer'] .hy-line {
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* The hymn's own measure. No px in it, so `structure.test.mjs` cannot see it —
+   written here rather than nowhere for the same reason the measures table
+   exists. */
+html[data-route~='prayer'] .hy-hymns .hymn-text {
+  max-width: 54ch;
+}
+
+/* ---- the two arrows ------------------------------------------------------
+   At the edges of the saint and quiet until they are wanted. Absolute, over the
+   content, because the centre column is the reader's box and a stepper in the
+   flow would take a line of it on every screen. */
+html[data-route~='prayer'] .hy-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  appearance: none;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  background: var(--gesso);
+  color: var(--ink-soft);
+  font-family: var(--font-utility);
+  font-size: var(--text-lg);
+  line-height: 1;
+  padding: var(--space-2) var(--space-3);
+  cursor: pointer;
+  transition:
+    color var(--dur-answer) var(--ease),
+    border-color var(--dur-answer) var(--ease);
+}
+
+html[data-route~='prayer'] .hy-arrow:hover {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+html[data-route~='prayer'] .hy-arrow[disabled] {
+  color: var(--rule);
+  border-color: var(--rule);
+  cursor: default;
+}
+
+html[data-route~='prayer'] .hy-arrow.is-prev {
+  left: var(--space-2);
+}
+
+html[data-route~='prayer'] .hy-arrow.is-next {
+  right: var(--space-2);
+}
+
 /* ---- the desk ------------------------------------------------------------
    Three columns past 1024, the one number a layout here is allowed to know
    (STRUCTURE.md §3). The middle one is the only one that is not a list, and it
@@ -80,5 +212,22 @@ html[data-route~='prayer'] .hy-body {
 
   html[data-route~='prayer'] .hy-side:last-child {
     padding: 0 var(--space-8) var(--space-8) var(--space-6);
+  }
+
+  /* The pair, past the width where there is room to stand them side by side.
+     The icon is 4 and the hymns 6: the hymn is what the reader came for. */
+  html[data-route~='prayer'] .hy-saint {
+    height: 100%;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
+    gap: clamp(var(--space-6), 3vw, var(--space-12));
+    padding: 0 var(--space-8) var(--space-8);
+  }
+
+  /* The only scroller for the hymn text, so the wheel stays on it: the page
+     itself has given up its scroll at this width (`data-fills-window`). */
+  html[data-route~='prayer'] .hy-hymns {
+    min-height: 0;
+    overflow-y: auto;
+    padding-right: var(--space-2);
   }
 }

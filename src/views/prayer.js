@@ -1,5 +1,8 @@
 import { escapeHtml as esc } from '../lib/markdown.js';
+import { stepOrder } from '../lib/prayer-order.js';
 import { STRINGS } from '../ui/strings.js';
+import { showCard, stepBy } from './prayer/card.js';
+import { close, open } from './prayer/state.js';
 
 /*
  * **This view's stylesheet, off the first paint's path.** `src/main.js`
@@ -33,18 +36,48 @@ export const title = () => STRINGS.prayer.title;
  * navigation, so one has to exist, and the page's own name is already in the
  * masthead and the tab.
  */
-export function render(el) {
+
+/** The box the two arrows are delegated on, and the handler, between renders. */
+let root = null;
+let onPress = null;
+
+export function render(el, { data } = {}) {
   const P = STRINGS.prayer;
   el.innerHTML = `
     <div class="hymnal">
       <h1 class="sr-only">${esc(P.title)}</h1>
       <div class="hy-body">
-        <div class="hy-view" id="hy-view"></div>
+        <div class="hy-view" id="hy-view">
+          <button class="hy-arrow is-prev" type="button" id="hy-prev" aria-label="${esc(P.prev)}">‹</button>
+          <div class="hy-hold" id="hy-hold"></div>
+          <button class="hy-arrow is-next" type="button" id="hy-next" aria-label="${esc(P.next)}">›</button>
+        </div>
         <aside class="hy-side" id="hy-related"></aside>
         <aside class="hy-side" id="hy-sameday"></aside>
       </div>
     </div>
   `;
+
+  open({ order: stepOrder(data?.saints ?? []) });
+  showCard(el);
+
+  /*
+   * One listener on the pair rather than one each: the two buttons are never
+   * rebuilt — only their `disabled` changes — so a delegated handler on their
+   * shared parent costs one binding and has nothing to keep in step.
+   */
+  onPress = (e) => {
+    const button = e.target.closest?.('#hy-prev, #hy-next');
+    if (!button || button.disabled) return;
+    stepBy(el, button.id === 'hy-next' ? 1 : -1);
+  };
+  root = el.querySelector('#hy-view');
+  root?.addEventListener('click', onPress);
 }
 
-export function destroy() {}
+export function destroy() {
+  root?.removeEventListener('click', onPress);
+  root = null;
+  onPress = null;
+  close();
+}

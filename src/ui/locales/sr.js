@@ -554,6 +554,8 @@ export const sr = {
 
   prayer: {
     title: 'Молитва',
+    prev: 'Претходни светитељ',
+    next: 'Следећи светитељ',
   },
 
   texts: {

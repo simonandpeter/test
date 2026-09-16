@@ -552,6 +552,8 @@ export const ro = {
 
   prayer: {
     title: 'Rugăciune',
+    prev: 'Sfântul dinainte',
+    next: 'Sfântul următor',
   },
 
   texts: {

@@ -552,6 +552,8 @@ export const el = {
 
   prayer: {
     title: 'Προσευχή',
+    prev: 'Ο προηγούμενος άγιος',
+    next: 'Ο επόμενος άγιος',
   },
 
   texts: {
