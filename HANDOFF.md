@@ -33,19 +33,46 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
-**The corpus run (`scratchpad/corpus-plan.md` §5) has finished Phase A**:
-civil 20–28 September is read for all four churches. **B1 is next: civil
-29 September – 1 October, all four churches**, and its first batch moves the
-reach. Nothing of 29 September has been read. The Russian 29 September is
-Julian 16 September. Most Russian and Serbian entries there will be UPGRADES
-on the Greek and Romanian 16 September. For every new Russian folder, read
-the Greek-only folders A3 made from pages with no details. Those are Ephraim
-of Russia, Sabbatius of Solovki, Peter of Moscow (27 September), Spyridon and
-Nicodemus of the Cave, and Wenceslas of Czechia. Ephraim, Sabbatius, Peter
-and Wenceslas sit on the menologion days 26–28/9, so the UPGRADE block lists
-them when the Russian calendar reaches those days (civil 9–11 October). Spyridon and Nicodemus are repeated on 31 October,
-so the UPGRADE block will not list them there. Identity has to rest on the
-Russian life, because none of the Greek pages says which man it means.
+**The corpus run (`scratchpad/corpus-plan.md` §5) is in Phase B.** Civil
+20–29 September is read for all four churches; B1 finished only 29 September.
+**B2 starts at civil 30 September** (Russian and Serbian: Julian 17 September),
+then 1 October, which is CORPUS §4.1's example. On 29 September the Russian
+and Serbian columns held fifteen people, five of them upgrades, and the Greek
+and Romanian page made seventeen folders; three batches, as the 12-folder cap
+required. For every new Russian folder, read the Greek-only folders A3 made
+from pages with no details: Ephraim of Russia, Sabbatius of Solovki, Peter of
+Moscow (27 September), Spyridon and Nicodemus of the Cave, Anthony of Zadonsk
+(29 September) and Wenceslas of Czechia. Ephraim, Sabbatius, Peter and
+Wenceslas sit on the menologion days 26–28/9, so the UPGRADE block lists them
+when the Russian calendar reaches those days (civil 9–11 October); Anthony of
+Zadonsk sits on 29/9 (civil 12 October). Spyridon and Nicodemus are repeated on
+31 October, so the UPGRADE block will not list them there. Identity has to rest
+on the Russian life. Wenceslas is already linked from Ludmila, whose Prologue
+entry calls him her grandson. Two identities stay open: the Greek 29/9's
+Tryphon, Trophimus and Dorymedon against the Antioch martyrs of 19/9 and the
+Romanian Tryphon of Campsada (the great martyr, also 1 February).
+
+What B1 added that the tools do not say. `day-candidates.mjs` read three of
+the Serbian 29 September's four entries, cutting Euphemia's heading at
+«Св. вел». `corpus-gate.mjs`'s literal table never listed
+`index-grid.spec.js`'s four Romanian 160s; every Romanian count and the
+"hermit" search are now derived, so a batch that moves a number the gate does
+not print shows up on CI, not in the gate — read CI's failures as possibly
+literal before anything else. `prayer.spec.js` pins the middle of the hymnal,
+so every hymn a batch adds can move its subject; its walk now waits for each
+step, and a failure there again is the page. Orloff is a 2 MB PDF on
+ponomar.net, and reading it is a download that needs the author's yes: it was
+not read, and «Агница Твоя» (a virgin-martyr's common) carries the site's
+English. A Russian folder whose Sretensky calendar has no life takes azbyka's:
+`azbyka.ru/days/<civil date>` lists the day's `sv-` slugs (Kuksha of Odessa,
+Sergius Losev). A back-out cannot be restored with `git checkout` from an
+untracked folder: `.tmp/backout.py <batch> <slug> <church> out|in` restores to
+the hash `draft-saint` recorded. `.tmp/mk29a.py` + `mk29a_up.py` are the shape
+of a Russian and Serbian day with Slavonic hymns, `mk29b.py` of a Greek and
+Romanian one with doxologia hymns, `.tmp/daycount.py D M` counts a church's
+menologion day in the manifest, and `.tmp/lookday.mjs` checks a day's names per
+church and language against a dev server. Port 5173 is held by a server from
+before this sitting, so read `npm run dev`'s port from its log.
 
 What A3 added that the tools do not say. `day-candidates.mjs` missed Prologue
 entries on 26 September (4 of 5) and 27 September (2 of 4) as well. Read
