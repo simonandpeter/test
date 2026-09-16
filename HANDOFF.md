@@ -33,10 +33,33 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
-**The corpus run (`scratchpad/corpus-plan.md` §5) has reached the end of
-civil 25 September**, which finishes sitting A2 (Greek and Serbian 23–25).
-**A3 is next: civil 26–28 September, Greek and Serbian**; Russian and Romanian
-stay untouched until B1. Nothing of 26 September has been read yet.
+**The corpus run (`scratchpad/corpus-plan.md` §5) has finished Phase A**:
+civil 20–28 September is read for all four churches. **B1 is next: civil
+29 September – 1 October, all four churches**, and its first batch moves the
+reach. Nothing of 29 September has been read. The Russian 29 September is
+Julian 16 September. Most Russian and Serbian entries there will be UPGRADES
+on the Greek and Romanian 16 September. For every new Russian folder, read
+the Greek-only folders A3 made from pages with no details. Those are Ephraim
+of Russia, Sabbatius of Solovki, Peter of Moscow (27 September), Spyridon and
+Nicodemus of the Cave, and Wenceslas of Czechia. Ephraim, Sabbatius, Peter
+and Wenceslas sit on the menologion days 26–28/9, so the UPGRADE block lists
+them when the Russian calendar reaches those days (civil 9–11 October). Spyridon and Nicodemus are repeated on 31 October,
+so the UPGRADE block will not list them there. Identity has to rest on the
+Russian life, because none of the Greek pages says which man it means.
+
+What A3 added that the tools do not say. `day-candidates.mjs` missed Prologue
+entries on 26 September (4 of 5) and 27 September (2 of 4) as well. Read
+the numbered list. `draft-saint.mjs` refuses "martyr with" in a display name,
+because it reads "martyr" as a rank; use "companion of". saint.gr writes hymn
+labels with oxia (U+1F77) and tonos by turn, so match them after NFKC.
+`.tmp/dayhelp.py` (DAY, SR_OLD, RU_OLD and SR_SELF come from the environment)
+and `.tmp/mk26.py`–`mk28b.py` are the shape of a day. They copy a hymn's text
+and tone off the cached page instead of retyping it. `hymn-english --emit`
+counts groups of slug · kind · tone, so two apolytikia in one tone count once.
+A relic finding goes on an existing folder's row with a `feast.note`
+(Neophytos, as Theodosius of Chernigov's). A synaxis that names nobody stays
+out (Kalyviani). `index-carousel.spec.js:1743` flaked once on CI and passed
+6 of 6 alone.
 
 What A2 added that the tools do not say. `day-candidates.mjs` undercounts the
 Serbian Prologue: it read four entries on 24 and 25 September where the page
