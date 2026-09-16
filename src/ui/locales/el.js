@@ -555,7 +555,7 @@ export const el = {
     prev: 'Ο προηγούμενος άγιος',
     next: 'Ο επόμενος άγιος',
     searchLabel: 'Βρείτε έναν άγιο',
-    searchPlaceholder: 'Αναζήτηση: άγιος, συνοδοιπόρος, αιώνας',
+    searchPlaceholder: 'Άγιος, συνοδοιπόρος',
     count: '{n} άγιοι',
     countOne: '1 άγιος',
     countNone: 'κανείς με αυτό το όνομα',

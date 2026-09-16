@@ -21,11 +21,29 @@ html[data-route~='prayer'] .hymnal {
   display: flex;
   flex-direction: column;
   min-height: 0;
+  /* The browser keeps sending pointer events for a sideways drag and still
+     scrolls the page on a vertical one; without this a swipe is a scroll.
+     Not scoped to the phone, because the gesture is not: `ui/grain-drag.js`
+     answers touch and pen and never a mouse, so a desk with a touchscreen turns
+     the page the same way and a desk without one never sees the rule. */
+  touch-action: pan-y;
 }
 
-html[data-route~='prayer'] .hy-body {
-  flex: 1 1 auto;
-  min-height: 0;
+/* **The phone dissolves nothing, and that is a measurement rather than an
+   omission.** Daily's wrappers are `display: contents` below 1024 px because
+   its desk arrangement forces a document order that is not the phone's, and
+   `order` only reaches a flex container's own children. This page has no such
+   debt: `views/prayer.js` writes the markup in the reading order already — the
+   field, the saint, who they are recorded with, who shares their day — and the
+   desk moves the first aside back to the left with `grid-column`, which needs
+   nothing of the phone. Dissolving the two wrappers here was tried and
+   `prayer.spec.js`'s five readings at 360 px were identical with and without
+   it, so the rule went rather than standing as a mechanism no test could see.
+
+   The asides stand on the page's own margin at this width, where past 1024 they
+   are columns with padding of their own. */
+html[data-route~='prayer'] .hy-side {
+  padding: 0 var(--space-4) var(--space-6);
 }
 
 /* ---- the row above the book ----------------------------------------------
@@ -33,16 +51,23 @@ html[data-route~='prayer'] .hy-body {
    the switch between the two faces of the columns beside. `flex: none`, so the
    body below it is what the page's height is spent on. */
 
+/* **Two lines on a phone, one past 1024 px, and that is a measurement.** Held
+   to one line at 360 px the field's own inner width comes to 127 px — about
+   fifteen characters, before the four packs' longer words — because the count
+   and the two marks are fixed and everything left over is the field. A search
+   box a reader cannot see what they typed in is not a search box, so the field
+   takes the whole first line and the count and the marks take the second. */
 html[data-route~='prayer'] .hy-find {
   flex: none;
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   gap: var(--space-4);
   padding: 0 var(--space-4) var(--space-4);
 }
 
 html[data-route~='prayer'] .hy-q {
-  flex: 1 1 auto;
+  flex: 1 1 100%;
   min-width: 0;
   padding: var(--space-3) var(--space-4);
   border: 1px solid var(--rule);
@@ -73,6 +98,10 @@ html[data-route~='prayer'] .hy-count {
    the entry and a control four routes away quietly loses its drawing. */
 html[data-route~='prayer'] .hy-views {
   flex: none;
+  /* The right edge of whichever line it lands on, which is the same place at
+     both widths — beside the count on a phone's second line, and at the end of
+     the desk's single one. */
+  margin-left: auto;
   display: flex;
   align-items: center;
   gap: var(--space-1);
@@ -296,7 +325,13 @@ html[data-route~='prayer'] .hy-hymns .hymn-text {
    At the edges of the saint and quiet until they are wanted. Absolute, over the
    content, because the centre column is the reader's box and a stepper in the
    flow would take a line of it on every screen. */
+/* **Not drawn below 1024 px.** They are absolutely placed inside the middle
+   column, and below the breakpoint that column is not a box at all — it has
+   dissolved, and an absolute arrow would hang off the viewport. The phone turns
+   the page by swiping it (`views/prayer.js`, `ui/grain-drag.js`), which is the
+   answer the Daily page gives to the same question. */
 html[data-route~='prayer'] .hy-arrow {
+  display: none;
   position: absolute;
   top: 50%;
   z-index: 2;
@@ -347,15 +382,27 @@ html[data-route~='prayer'] .hy-arrow.is-next {
   }
 
   /* The row takes the same side margin the three columns under it take, so the
-     field's left edge and the first aside's stand on one line. */
+     field's left edge and the first aside's stand on one line — and there is
+     room here for the field, the count and the marks to be one line. */
   html[data-route~='prayer'] .hy-find {
+    flex-wrap: nowrap;
     padding: 0 var(--space-8) var(--space-4);
+  }
+
+  html[data-route~='prayer'] .hy-q {
+    flex: 1 1 auto;
+  }
+
+  html[data-route~='prayer'] .hy-arrow {
+    display: block;
   }
 
   /* `--hy-side-w` is the aside's measure — wide enough for a name over two
      lines, never wide enough to compete with the saint. */
   html[data-route~='prayer'] .hy-body {
     --hy-side-w: clamp(180px, 16vw, 250px);
+    flex: 1 1 auto;
+    min-height: 0;
     display: grid;
     grid-template-columns: var(--hy-side-w) minmax(0, 1fr) var(--hy-side-w);
   }
@@ -375,7 +422,8 @@ html[data-route~='prayer'] .hy-arrow.is-next {
   }
 
   /* The two dividers are the middle column's own borders, so neither aside has
-     to know it has a neighbour. */
+     to know it has a neighbour. `display: block` undoes the phone's `contents`
+     */
   html[data-route~='prayer'] .hy-view {
     position: relative;
     min-height: 0;

@@ -4,7 +4,7 @@ import { CHURCHES_BY_ID } from '../src/data/churches.js';
 import { feastIndexFor } from '../src/lib/feasts.js';
 import { SAME_DAY_MAX } from '../src/lib/prayer-order.js';
 import { STRINGS, fill } from '../src/ui/strings.js';
-import { desk, ready } from './helpers.js';
+import { desk, dragGrain, phone, ready } from './helpers.js';
 
 /**
  * Prayer: the hymns the corpus holds, one saint at a time, with the two ways
@@ -534,7 +534,10 @@ test('the two faces are two drawings, not two class names', async ({ page }) => 
 
   const plate = page.locator('#hy-views [data-hy-view="plate"]');
   const rows = page.locator('#hy-views [data-hy-view="rows"]');
-  await expect(plate).toHaveAttribute('aria-pressed', 'true');
+  /* The page opens on the names, because most of the corpus has no icon and a
+     Pictures face of empty mats reads as a page that failed to load. */
+  await expect(rows).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('#hy-related .hy-plate')).toHaveCount(0);
 
   /*
    * **Geometry, not the class** (the whole point of this test): a row in the
@@ -550,14 +553,117 @@ test('the two faces are two drawings, not two class names', async ({ page }) => 
       return el && el.clientWidth > 0 ? el.getBoundingClientRect().height : 0;
     });
 
-  const asPlate = await rowHeight();
-  expect(asPlate, 'the picture face is drawn').toBeGreaterThan(0);
-  await page.evaluate(() => document.querySelector('[data-hy-view="rows"]').click());
-  await expect(rows).toHaveAttribute('aria-pressed', 'true');
-  await expect(plate).toHaveAttribute('aria-pressed', 'false');
-  await expect(page.locator('#hy-related .hy-plate')).toHaveCount(0);
-
   const asRows = await rowHeight();
   expect(asRows, 'the names face is drawn').toBeGreaterThan(0);
-  expect(asRows, 'and is shorter by a picture').toBeLessThan(asPlate);
+
+  await page.evaluate(() => document.querySelector('[data-hy-view="plate"]').click());
+  await expect(plate).toHaveAttribute('aria-pressed', 'true');
+  await expect(rows).toHaveAttribute('aria-pressed', 'false');
+  // Every row gains a plate, the ones with no icon included: a face with holes
+  // in it would have the reader reading the holes as something meant.
+  await expect
+    .poll(() => page.locator('#hy-related .hy-plate').count())
+    .toBe(await page.locator('#hy-related .hy-link').count());
+
+  const asPlate = await rowHeight();
+  expect(asPlate, 'the picture face is drawn').toBeGreaterThan(0);
+  expect(asPlate, 'and is taller by a picture').toBeGreaterThan(asRows);
+});
+
+/* ---- the phone ------------------------------------------------------------
+   One column, in the document's own order, and no arrows: the page turns by
+   being swiped. The nested `beforeEach` runs after the file's, so it takes the
+   viewport back off the desk for these five and leaves the rest alone. */
+
+test.describe('at 360 px', () => {
+  test.beforeEach(async ({ page }) => {
+    await phone(page);
+  });
+
+  test('the three regions are one column, in the order they are written', async ({ page }) => {
+    await page.goto(PRAYER, { waitUntil: 'networkidle' });
+    await expect(page.locator('.hy-saint')).toBeVisible();
+    await stepTo(page, WITH_MENTIONS);
+    await expect(page.locator('#hy-related .hy-link').first()).toBeVisible();
+
+    const boxes = await page.evaluate(() =>
+      ['.hy-find', '.hy-saint', '#hy-related', '#hy-sameday'].map((sel) => {
+        const el = document.querySelector(sel);
+        const r = el.getBoundingClientRect();
+        // A hidden element reports 0 and would satisfy an ordering by accident
+        // (trap 7), so the reading says whether it is drawn at all.
+        return { sel, x: r.x, y: r.y, w: r.width, drawn: el.clientWidth > 0 };
+      }),
+    );
+    for (const b of boxes) expect(b.drawn, `${b.sel} is drawn`).toBe(true);
+
+    /*
+     * **Down the page, not across it** (trap 1: geometry, never document
+     * order). The four tops ascend in the order the markup writes them, and
+     * each region is the page's own width rather than a column of it — which is
+     * the difference between one column and three narrow ones.
+     */
+    for (let i = 1; i < boxes.length; i += 1) {
+      expect(boxes[i].y, `${boxes[i].sel} is below ${boxes[i - 1].sel}`).toBeGreaterThan(boxes[i - 1].y);
+    }
+    const width = await page.evaluate(() => window.innerWidth);
+    for (const b of boxes) {
+      expect(b.w, `${b.sel} has the page's width`).toBeGreaterThan(width * 0.8);
+    }
+  });
+
+  test('the two arrows are not drawn', async ({ page }) => {
+    await page.goto(PRAYER, { waitUntil: 'networkidle' });
+    await expect(page.locator('.hy-saint')).toBeVisible();
+    // Present in the document and drawn nowhere: the phone's way to turn the
+    // page is the swipe below, and an absolutely placed arrow has no column to
+    // be absolute inside at this width.
+    await expect(page.locator('#hy-prev')).toHaveCount(1);
+    await expect(page.locator('#hy-prev')).toBeHidden();
+    await expect(page.locator('#hy-next')).toBeHidden();
+  });
+
+  test('a swipe turns the page, and back', async ({ page }) => {
+    await page.goto(PRAYER, { waitUntil: 'networkidle' });
+    const article = page.locator('.hy-saint');
+    await expect(article).toBeVisible();
+    await expect(article).toHaveAttribute('data-slug', HYMNED[0].slug);
+    const first = (await page.locator('.hy-name').textContent())?.trim();
+
+    // Leftward is onward, which is the direction the Daily page turns a day.
+    await dragGrain(page, '.hymnal', -80);
+    // Two independent things (trap 14): the published slug and a drawn glyph.
+    await expect(article).toHaveAttribute('data-slug', HYMNED[1].slug);
+    await expect
+      .poll(async () => (await page.locator('.hy-name').textContent())?.trim())
+      .not.toBe(first);
+
+    await dragGrain(page, '.hymnal', 80);
+    await expect(article).toHaveAttribute('data-slug', HYMNED[0].slug);
+  });
+
+  test('a swipe inside the field is not a page turn', async ({ page }) => {
+    await page.goto(PRAYER, { waitUntil: 'networkidle' });
+    await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', HYMNED[0].slug);
+    /* A finger dragging through the field is selecting text in it. The gesture
+       is refused there by name (`ignore`), and this is the reading that says so
+       rather than the absence of a complaint. */
+    await dragGrain(page, '#hy-q', -80);
+    await page.waitForTimeout(150);
+    await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', HYMNED[0].slug);
+  });
+
+  test('nothing in the page reaches past its own width', async ({ page }) => {
+    await page.goto(PRAYER, { waitUntil: 'networkidle' });
+    await expect(page.locator('.hy-saint')).toBeVisible();
+    await stepTo(page, WITH_MENTIONS);
+    /* The floor `quality-floor.spec.js` walks every route with, asserted here
+       too because `/prayer` is the route whose three columns become one and the
+       one width at which a column that failed to dissolve would show. */
+    const overflow = await page.evaluate(() => ({
+      doc: document.documentElement.scrollWidth,
+      win: window.innerWidth,
+    }));
+    expect(overflow.doc).toBeLessThanOrEqual(overflow.win + 1);
+  });
 });

@@ -162,11 +162,16 @@ export function revealSlug(el, slug) {
 /* ---- the two faces ------------------------------------------------------- */
 
 /**
- * Which face the asides are drawn in. **Not stored.** `lib/settings.js` keeps
- * the Daily register's face across visits, and that setting's two values are
- * that register's two faces; this control's are this page's, and one setting
- * answering to two vocabularies is how a stored preference comes to mean
- * neither. Said plainly rather than left looking like an oversight.
+ * The two faces, in the order the pair is drawn — the square then the four
+ * lines, which is the order the Daily register draws the same pair in, so the
+ * control reads the same wherever a reader meets it. Which of them a page opens
+ * in is `views/prayer/state.js`'s, not this list's.
+ *
+ * **Not stored.** `lib/settings.js` keeps the Daily register's face across
+ * visits, and that setting's two values are that register's two faces; this
+ * control's are this page's, and one setting answering to two vocabularies is
+ * how a stored preference comes to mean neither. Said plainly rather than left
+ * looking like an oversight.
  */
 export const VIEWS = ['plate', 'rows'];
 
@@ -186,13 +191,14 @@ const VIEW_WORDS = {
 /**
  * The row's markup. `views/prayer.js` writes it into the page so the whole of
  * the page's shape is readable in one file; everything that happens to it
- * afterwards is here.
+ * afterwards is here — which is why that view opens the state before it writes
+ * the markup: the live face is read from one place and not spelled in two.
  */
 export function findMarkup() {
   const P = STRINGS.prayer;
   const buttons = VIEWS.map(
     (mode) =>
-      `<button class="hy-vt-button" type="button" data-hy-view="${mode}" aria-pressed="${mode === 'plate'}">
+      `<button class="hy-vt-button" type="button" data-hy-view="${mode}" aria-pressed="${mode === state?.view}">
         <span class="sr-only">${VIEW_WORDS[mode]()}</span>${VIEW_MARKS[mode]}
       </button>`,
   ).join('');

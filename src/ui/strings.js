@@ -1216,7 +1216,12 @@ export const STRINGS = {
      * the case, and hymn text is a fetch a page cannot make 142 times.
      */
     searchLabel: 'Find a saint',
-    searchPlaceholder: 'Search: a saint, a companion, a century',
+    /* **Short enough to be read whole in a 360 px field.** The placeholder is
+       the only part of this control a reader sees before they type, and one cut
+       off mid-phrase — which the four packs' longer words make worse — says
+       less than a short one. The sentence the field really answers to is on the
+       label above, where nothing truncates it. */
+    searchPlaceholder: 'A saint, a companion',
     /*
      * Three lines and not one with a number in it: four of the five languages
      * do not pluralise the way English does, and «1 святых» is the kind of

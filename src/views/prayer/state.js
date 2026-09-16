@@ -22,7 +22,14 @@
  *   detail     the payload of the saint in hand, once it has landed, so a
  *              redraw that is not a step does not have to wait for it twice
  *   query      what is in the field, so a redraw can put it back
- *   view       `plate` or `rows` — how the two asides list a saint
+ *   view       `plate` or `rows` — how the two asides list a saint. **`rows`,
+ *              and that is a reading of the corpus rather than a preference**:
+ *              only about a seventh of the corpus carries an icon, and the
+ *              saints these two columns name are drawn from the whole of it, so
+ *              a Pictures face opens on far more empty mats than filled ones
+ *              and reads as a page that failed to load. `scripts/build-manifest.mjs`
+ *              prints what the corpus holds; re-measure and reverse this the
+ *              day the icons catch up.
  *   search     the MiniSearch index, or null until it has been built
  *   generation bumped on every step, so an answer that arrives after the
  *              reader has moved on knows it is stale and says nothing
@@ -39,7 +46,7 @@ export function open(next) {
     at: 0,
     detail: null,
     query: '',
-    view: 'plate',
+    view: 'rows',
     search: null,
     generation: 0,
     ...next,

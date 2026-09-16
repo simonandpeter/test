@@ -569,7 +569,7 @@ export const ru = {
     prev: 'Предыдущий святой',
     next: 'Следующий святой',
     searchLabel: 'Найти святого',
-    searchPlaceholder: 'Поиск: святой, сподвижник, век',
+    searchPlaceholder: 'Святой, сподвижник',
     count: '{n} святых',
     countOne: '1 святой',
     countNone: 'никого с таким именем',

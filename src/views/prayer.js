@@ -1,5 +1,6 @@
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { stepOrder } from '../lib/prayer-order.js';
+import { SETTLE, onGrainDrag } from '../ui/grain-drag.js';
 import { STRINGS } from '../ui/strings.js';
 import { showCard, stepBy } from './prayer/card.js';
 import { drawAsides } from './prayer/asides.js';
@@ -42,9 +43,14 @@ export const title = () => STRINGS.prayer.title;
 /** The box the two arrows are delegated on, and the handler, between renders. */
 let root = null;
 let onPress = null;
+/** `ui/grain-drag.js`'s own teardown for the page-turning swipe. */
+let unswipe = null;
 
 export function render(el, { data } = {}) {
   const P = STRINGS.prayer;
+  /* Opened before the markup is written, so `findMarkup` can read which face
+     the page is in rather than a second copy of the default. */
+  open({ data, all: stepOrder(data?.saints ?? []) });
   el.innerHTML = `
     <div class="hymnal">
       <h1 class="sr-only">${esc(P.title)}</h1>
@@ -61,7 +67,6 @@ export function render(el, { data } = {}) {
     </div>
   `;
 
-  open({ data, all: stepOrder(data?.saints ?? []) });
   showCard(el);
   /*
    * The switch redraws the asides and nothing else. Passed in rather than
@@ -96,10 +101,38 @@ export function render(el, { data } = {}) {
   };
   root = el.querySelector('.hy-body');
   root?.addEventListener('click', onPress);
+
+  /*
+   * **The page turns by being swiped, which is the phone's only way to turn
+   * it**: the two arrows are placed inside the middle column and that column is
+   * not a box below 1024 px, so `prayer.css` does not draw them there. The Daily
+   * page answers the same question the same way and with the same primitive.
+   *
+   * **Nothing follows the finger.** Daily's panels roll under the drag because
+   * rolling is what a day change looks like there; a saint change here is a
+   * fade, and a card dragged sideways and then faded would be two page-turns
+   * for one gesture. So the gesture decides and the fade performs.
+   *
+   * Bound at both widths rather than gated on one, because `onGrainDrag`
+   * answers touch and pen and refuses a mouse: a desk without a touchscreen
+   * never reaches this, and a desk with one has no reason to be refused.
+   *
+   * The find row is excluded — a finger dragging through the field is selecting
+   * text in it, and a gesture that turned the page from there would take the
+   * query with it.
+   */
+  unswipe = onGrainDrag(el, {
+    ignore: (target) => !!target.closest?.('.hy-find'),
+    end(dx) {
+      if (Math.abs(dx) >= SETTLE) stepBy(el, dx < 0 ? 1 : -1);
+    },
+  });
 }
 
 export function destroy() {
   root?.removeEventListener('click', onPress);
+  unswipe?.();
+  unswipe = null;
   root = null;
   onPress = null;
   close();

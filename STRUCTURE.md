@@ -23,9 +23,9 @@ Three rules keep this file true, and all three exist because it rotted before:
 ## 1. The site
 
 An Eastern Orthodox daily calendar and saints reference. Four churches —
-Russian, Romanian, Greek, Serbian — and the reader chooses one. Five pages:
-Daily, All Saints, Texts, Map, About. Five reading languages: English plus the
-four churches' own.
+Russian, Romanian, Greek, Serbian — and the reader chooses one. Six pages:
+Daily, All Saints, Prayer, Texts, Map, About. Five reading languages: English
+plus the four churches' own.
 
 Live at https://simonandpeter.github.io/test/, deployed by GitHub Actions from
 `dist/`. The corpus is a folder per saint; `scripts/build-manifest.mjs` prints
@@ -469,7 +469,7 @@ breakpoint is how a breakpoint drifts. The other two numbers JavaScript knows,
 One block per route: what it owns, how its desktop and mobile layouts differ,
 and what the two are required to share.
 
-**Only Daily is written.** The rest arrive as each route is worked on — a
+**Daily and Prayer are written.** The rest arrive as each route is worked on — a
 section nobody has checked against the page is worse than no section. Until
 then, `CLAUDE.md`'s "Where things live" table and `docs/SRC-DECISIONS.md` are
 what there is.
@@ -699,6 +699,173 @@ independent by construction, but it is a read of each block, never a sweep.
 | 620 | the hero's picture goes beside its text |
 | 560 | the picker's control row, the register's ask, the page's own padding |
 | 480 | register rows that are not cards |
+
+### Prayer
+
+`/prayer` · nav key `prayer` · entry `views/prayer.js`
+
+- **Owns** `views/prayer.js`, `views/prayer/*`, `styles/prayer.css`,
+  `lib/prayer-order.js`
+- **Reads** `lib/`: `prayer-order`, `index-filters`, `feasts`, `church`,
+  `detail`, `hero-crop`, `honorific`, `calendar-page`, `motion`, `markdown`;
+  `ui/`: `hymns`, `grain-drag`, `strings`
+- **Specs** `prayer.spec.js`
+
+**The page is the saints the corpus has a hymn for, one at a time.** A card
+keys `hymned: [...churches]` and the hymn text stays in the saint's own folder,
+so the page's whole corpus is `cards.filter(c => c.hymned?.length)` and the text
+is a fetch per saint. `scripts/build-manifest.mjs` prints how many that is.
+
+#### Modules
+
+| file | owns |
+| --- | --- |
+| `prayer.js` | the markup, the two arrows, the swipe, and the wiring between the other three |
+| `prayer/state.js` | the page's one mutable object. **Sole writer**, except `detail`, which `asides.js` writes when the payload lands |
+| `prayer/card.js` | the saint in hand: the picture, the name, the hymns, the fade, and which arrows are live |
+| `prayer/asides.js` | both columns, their two faces, and the rows in them |
+| `prayer/find.js` | the field, its index, the count line, and the face switch |
+| `lib/prayer-order.js` | pure: `hymnedSaints`, `stepOrder`, `neighboursAt`, `relatedFor`, `sameDayFor` |
+
+#### The box chain
+
+```
+html[data-route~='prayer'][data-fills-window]
+└ body
+  └ main.chrome                    100dvh − --chrome-h, overflow hidden (≥1024)
+    └ #view                        height 100%
+      └ .hymnal                    flex column; height 100% (≥1024)
+        │                          touch-action: pan-y — the swipe
+        ├ h1.sr-only               the route's focus target; never drawn
+        ├ .hy-find                 flex; wraps to two lines below 1024
+        │ ├ input#hy-q             the whole of the first line on a phone
+        │ ├ p#hy-count             aria-live: what the field left
+        │ └ #hy-views              the two marks, aria-pressed
+        └ .hy-body                 grid: --hy-side-w minmax(0,1fr) --hy-side-w
+          │                        (≥1024); a plain block below it
+          ├ .hy-view#hy-view       column 2. The positioning context for the
+          │ │                      arrows, and the two dividers are its own
+          │ │                      inline borders
+          │ ├ button#hy-prev       ≥1024 only
+          │ ├ .hy-hold#hy-hold     the box the fade animates; the card is
+          │ │ │                    rewritten inside it
+          │ │ └ article.hy-saint   grid: 4fr 6fr (≥1024); data-slug
+          │ │   ├ .hy-pic          picture, name, dates, the life's first line
+          │ │   └ .hy-hymns        `ui/hymns.js`'s markup; the only scroller
+          │ │                      for the text at the desk
+          │ └ button#hy-next       ≥1024 only
+          ├ aside#hy-related       column 1, by `grid-column` and not by source
+          └ aside#hy-sameday       column 3
+```
+
+**The document order is the phone's reading order**, as it is on Daily, and
+this page pays less for it: the field, the saint, who they are recorded with,
+who shares their day is both the reading order and the source order, so the
+phone needs no `display: contents` and no `order`. What the desk does is move
+`#hy-related` back into column 1 by hand. Dissolving the wrappers below 1024 px
+was tried and `prayer.spec.js`'s five readings at that width were identical
+with it and without, so the rule is not there.
+
+`ui/face-stage.js` is not involved: `main.js`'s `faceOf` returns null for this
+view, so Prayer is never one of the two faces that share `#view` during a swap.
+It still reads `[data-route~=]` and never `[data-route=]`, because face-stage
+writes two tokens into that attribute for the length of a swap between the other
+two.
+
+#### Desktop — 1024 px and up
+
+**Three columns: who the saint is recorded with, the saint, who shares their
+day.** The middle is the page and the two outside it are its margins.
+
+- **Each column is its own box and its own scroller**, with `min-height: 0`,
+  and the page gives up its scroll (`data-fills-window`, a ≥1024 rule in
+  `base.css`). The wheel belongs to the hymn: at prayer, a troparion longer
+  than its box is the one moment the reader is certain to be scrolling.
+- **The dividers are the middle column's own `border-inline`**, so neither
+  aside has to know it has a neighbour.
+- **The two asides are one width apiece and the saint takes the slack** —
+  `--hy-side-w` either side of `minmax(0, 1fr)`.
+- **The pair inside the card is 4 / 6**, picture to hymns: the hymn is what the
+  reader came for and the icon is what they are looking at while they read it.
+- **The arrows are absolute inside the middle column**, over the content, at
+  its two edges. In the flow they would take a line of every screen.
+- **Each aside's heading is sticky at the top of its own column**, on
+  `--gesso`, over a rule. Sticky only here, because only here is the aside a
+  scroller of its own.
+
+#### Mobile — below 1024 px
+
+- **One column, in the source's own order**: the field, the saint, recorded
+  with, kept the same day. Nothing is reordered and nothing dissolves.
+- **The find row is two lines.** The count and the two marks are fixed and the
+  field is whatever is left, which on one line at 360 px is too few characters
+  for a reader to see what they typed — `prayer.css` has the measurement. So
+  the field takes the first line and the count and the marks take the second.
+- **The arrows are not drawn.** They are absolute inside a column that is not a
+  box at this width. The page turns by being swiped, which is Daily's answer to
+  the same question and the same primitive (`ui/grain-drag.js`).
+- The three regions keep the page's own scroll: `data-fills-window` is a ≥1024
+  rule, so there is one scrollbar and it is the window's.
+
+#### Shared
+
+The two widths are free to diverge except here.
+
+- **The saint changes by a fade and nothing travels.** It is a Web Animations
+  fade whose `finished` drives the swap — not a CSS transition and not a timer.
+  A transition was measured on this desk and did not start at all on one press
+  in six, and the fallback timer a missing start needs can catch a late one
+  mid-flight and redraw the card at a third of its opacity, which is the
+  mockup's own bug. **Reduced motion removes the fade, never shortens it** (§3).
+- **The swipe is bound at both widths** and turns the page in the same
+  direction Daily turns a day: leftward is onward. `onGrainDrag` answers touch
+  and pen and refuses a mouse, so a desk without a touchscreen never reaches it.
+  The find row is excluded by name — a finger dragging through the field is
+  selecting text in it.
+- **The rows in the two asides are one drawing with two faces**, the same
+  element and the same press: a plate of the saint over their name, or the name
+  alone. **The page opens on the names**, which is a reading of the corpus and
+  not a preference — only about a seventh of the corpus carries an icon and
+  these columns name saints from the whole of it, so a Pictures face opens on
+  far more empty mats than filled ones. A row whose saint has no icon still
+  keeps a plate in that face: a face with holes in it has the reader reading the
+  holes as something meant.
+- **A saint the hymnal does not hold is named and left inert**, dimmed, without
+  `data-go`. The relation is a fact about the saint whether or not this page can
+  carry the reader to them, and dropping the row would make the corpus look
+  smaller than it is.
+- **The field narrows the book itself**, so the arrows step through what the
+  query left and the count line is that book's length. It searches the names,
+  the line of office and dates, and the names of whoever the corpus records the
+  saint with — never the hymn text, which would be a fetch per saint in the
+  hymnal to answer one keystroke. A name pressed in an aside that the query
+  excludes clears the field rather than refusing the press.
+- **Only the shown saint and its two neighbours are ever fetched**, through
+  `lib/detail.js`'s `loadDetail` and `prefetch`.
+- **The tokens.** No raw colour, duration, easing, type size or spacing value in
+  `prayer.css`.
+
+#### Drives
+
+| property | where | decides |
+| --- | --- | --- |
+| `--hy-side-w` | `.hy-body`, ≥1024 | both asides' width — wide enough for a name over two lines, never wide enough to compete with the saint |
+| `--hy-aspect`, `--hy-focus` | inline per picture, from `lib/hero-crop.js` | the icon's clamped shape and where it is cropped, the same silhouette the Daily rows and the Index's cards give it |
+
+| attribute | set by | read by |
+| --- | --- | --- |
+| `data-route~='prayer'` | `main.js` | every rule in `prayer.css`. A **set, not a value** — see the box chain |
+| `data-fills-window` | `index.html` before first paint, `main.js` on every navigation | `base.css`, at 1024 px and up. `index.html`'s pre-paint classifier **names this route**, so the first frame is not laid out as the calendar |
+| `data-slug` | `card.js` on `article.hy-saint`, `asides.js` on every row | `prayer.spec.js`, and the card's own staleness check |
+| `data-go` | `asides.js`, on a row this page can reach | `prayer.js`'s one delegated press. Two attributes and not one, so "who is named here" and "where can this go" are separate questions |
+| `data-iso` | `asides.js` on `#hy-sameday` | the civil day the aside resolved, for the year it resolved it in |
+| `data-hy-view` | `find.js` | the face switch's own press, and `aria-pressed` says which is live |
+
+#### Breakpoints
+
+| px | what turns |
+| --- | --- |
+| 1024 | **the layout break** — one column ↔ three, page scroll surrendered, the arrows drawn, the find row on one line, the asides become scrollers with sticky heads |
 
 ### All Saints, Saint, Map, Texts, About
 

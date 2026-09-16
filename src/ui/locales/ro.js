@@ -555,7 +555,7 @@ export const ro = {
     prev: 'Sfântul dinainte',
     next: 'Sfântul următor',
     searchLabel: 'Caută un sfânt',
-    searchPlaceholder: 'Caută: un sfânt, un însoțitor, un secol',
+    searchPlaceholder: 'Un sfânt, un însoțitor',
     count: '{n} de sfinți',
     countOne: '1 sfânt',
     countNone: 'nimeni cu acest nume',

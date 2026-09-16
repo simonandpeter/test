@@ -557,7 +557,7 @@ export const sr = {
     prev: 'Претходни светитељ',
     next: 'Следећи светитељ',
     searchLabel: 'Пронађи светитеља',
-    searchPlaceholder: 'Претрага: светитељ, сапутник, век',
+    searchPlaceholder: 'Светитељ, сапутник',
     count: '{n} светитеља',
     countOne: '1 светитељ',
     countNone: 'никога с тим именом',
