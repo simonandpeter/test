@@ -11,6 +11,7 @@ import {
   facet,
   keptOn,
   onlyCalendar,
+  withHistoricity,
   nothingCropped,
   ready,
   searchMode,
@@ -138,14 +139,24 @@ test('card boxes come from the manifest, not from measuring the image', async ({
 });
 
 
+/*
+ * The legendary lives, read from the manifest (2026-09-16): the facet narrowing
+ * to one card was the corpus on the day, and Barbara and Catherine are in the
+ * next months' batches. This counts mounted cards, which is the corpus only
+ * while the legendary are few enough for the grid to mount them all (trap 1);
+ * at how many that stops holding is not measured.
+ */
+const LEGENDARY = withHistoricity('legendary');
+
 test('a filtered-out saint fades rather than vanishing', async ({ page }) => {
+  expect(LEGENDARY.length, 'premise: no legendary life is left to stay behind').toBeGreaterThan(0);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await (await facet(page, 'historicities')).getByLabel('legendary').check();
   // Caught mid-fade: the cards on their way out are still in the document with
   // the transition running, which is the difference between a register and a
   // search engine.
   await expect(page.locator('.index-card.leaving').first()).toBeVisible();
-  await expect(page.locator('.index-card')).toHaveCount(1);
+  await expect(page.locator('.index-card')).toHaveCount(LEGENDARY.length);
 });
 
 
@@ -155,7 +166,7 @@ test('under reduced motion the filtered-out are gone, not gone slower', async ({
   await searchMode(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await (await facet(page, 'historicities')).getByLabel('legendary').check();
-  await expect(page.locator('.index-card')).toHaveCount(1);
+  await expect(page.locator('.index-card')).toHaveCount(LEGENDARY.length);
   await expect(page.locator('.index-card.leaving')).toHaveCount(0);
   await ctx.close();
 });

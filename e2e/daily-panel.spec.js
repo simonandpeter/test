@@ -1,3 +1,4 @@
+import { CHURCHES } from '../src/data/churches.js';
 import { test, expect } from './fixtures.js';
 import {
   EMPTY,
@@ -5,6 +6,7 @@ import {
   answered,
   dragGrain,
   desk,
+  keptOn,
   openChooser,
   phone,
   ready,
@@ -1891,6 +1893,59 @@ test('a great feast months past the corpus keeps its readings, its fast and its 
 });
 
 
+/**
+ * **Serves the page a manifest with every saint any church keeps on `iso`
+ * withheld** (or on each of several — one route, since a second on the same
+ * URL would shadow the first), and returns what it withheld and how often it served. A silence
+ * is a state the corpus grows out of, one day per batch, so a test of what a
+ * bare day says cannot wait for the corpus to leave one bare; it makes the day
+ * bare instead, the same way whichever batches have landed on it (2026-09-16).
+ * The day is read by `keptOn`, not by the page's feast index, and in all four
+ * churches, because a folder the reader's church does not keep still changes
+ * the note to "Nothing in the Russian calendar today".
+ *
+ * The service worker precaches the manifest and serves it on the next visit,
+ * which `page.route` never sees (trap 13), so the tests using this block it,
+ * and `served()` is asserted so a route that matched nothing fails shut.
+ */
+async function withoutSaintsOn(page, ...isos) {
+  const withheld = new Set(isos.flatMap((iso) => CHURCHES.flatMap((c) => keptOn(c.id, iso))));
+  let served = 0;
+  await page.route('**/data/manifest.json', async (route) => {
+    const response = await route.fetch();
+    const cards = await response.json();
+    served += 1;
+    await route.fulfill({ response, json: cards.filter((s) => !withheld.has(s.slug)) });
+  });
+  return { withheld, served: () => served };
+}
+
+/**
+ * **How far the corpus reaches for `church`, stated as the rule the page
+ * prints rather than read off it**: from today, the last day of a run of kept
+ * days that tolerates a fortnight of silence and stops at anything longer
+ * (`views/daily/entries.js`), over the manifest less `withheld`.
+ */
+function reachOf(church, withheld) {
+  const now = new Date();
+  let day = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  let last = null;
+  let empty = 0;
+  for (let i = 0; i < 500; i += 1, day += 86_400_000) {
+    const iso = new Date(day).toISOString().slice(0, 10);
+    if (keptOn(church, iso).some((slug) => !withheld.has(slug))) {
+      last = day;
+      empty = 0;
+    } else if (last !== null && (empty += 1) > 14) break;
+  }
+  return last === null
+    ? ''
+    : new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(last);
+}
+
+test.describe('the silences, on a day made bare', () => {
+test.use({ serviceWorkers: 'block' });
+
 test('a day whose calendar is recorded but whose saints are not says which half is missing', async ({ page }) => {
   /*
    * `emptyDayNote` told two silences apart: the corpus having nothing, and
@@ -1899,7 +1954,11 @@ test('a day whose calendar is recorded but whose saints are not says which half 
    * September — and the old wording called such a day "an empty day" directly
    * above its own readings and a dozen hymns, which said the opposite of what
    * the page showed.
+   *
+   * Both days are made bare by `withoutSaintsOn` (2026-09-16): they were bare
+   * in the corpus, and the batches starting that day reach both of them.
    */
+  const bare = await withoutSaintsOn(page, '2026-10-14', '2027-03-01');
   await ready(page, { church: 'russian', language: 'en' });
   await page.goto('/calendar/2026-10-14', { waitUntil: 'networkidle' });
   const note = page.locator('.empty-day p');
@@ -1913,6 +1972,8 @@ test('a day whose calendar is recorded but whose saints are not says which half 
   await page.goto('/calendar/2027-03-01', { waitUntil: 'networkidle' });
   await expect(page.locator('.empty-day p')).toContainText('No commemorations are recorded');
   await expect(page.locator('[data-readings]')).toHaveCount(0);
+  expect(bare.served(), 'the withholding route never served the page').toBeGreaterThan(0);
+});
 });
 
 
@@ -2497,6 +2558,9 @@ test('the fast bubble cites a source for the day, and credits it only for what i
 });
 
 
+test.describe('the reach, on a day made bare', () => {
+test.use({ serviceWorkers: 'block' });
+
 test('the day records say where they stop, and the corpus says how far it reaches', async ({ page }) => {
   /*
    * Found in review, 2026-08-27: past 13 January 2027 the readings and the
@@ -2509,6 +2573,9 @@ test('the day records say where they stop, and the corpus says how far it reache
    * yet said "the corpus reaches 19 September", as a literal, and had been
    * wrong for a fortnight. It is read off the index now.
    */
+  // Made bare before anything loads: the reach sentence is only printed on a
+  // day with no folders, and the day below is the next batch's.
+  const bare = await withoutSaintsOn(page, '2026-09-29');
   await ready(page, { church: 'russian', language: 'en' });
 
   await page.goto('/calendar/2027-03-10', { waitUntil: 'networkidle' });
@@ -2523,19 +2590,22 @@ test('the day records say where they stop, and the corpus says how far it reache
   await expect(page.locator('[data-readings] a').first()).toBeVisible();
 
   /*
-   * And the reach is a date read off the corpus, not a literal. The literal
-   * *here* moves with every day the corpus gains - it is the assertion that
-   * the page computes the right answer, and the right answer is a corpus
-   * fact - and a church fact: the reach walks the reader's own calendar
-   * (entries.js). The 28 September batch put Russian folders on the 28th,
-   * and the reach's fortnight gap-tolerance carries the Russian run over
-   * the folderless Exaltation, so both calendars read the 28th now.
+   * And the reach is a date read off the corpus, not a literal - and a
+   * church fact: the reach walks the reader's own calendar (entries.js).
+   * Until 2026-09-16 this asserted "28 September 2026", which was the right
+   * answer on the day and went red on the first batch past it; the answer is
+   * now worked out here from the manifest by `reachOf`, over the same
+   * manifest the page was served, less the day made bare.
    */
   // Not the 27th: that is the Exaltation of the Cross, and a Great Feast day
   // prints the feast's own sentence rather than the reach.
+  const reach = reachOf('russian', bare.withheld);
+  expect(reach, 'premise: the Russian calendar has no run of folders from today').not.toBe('');
   await page.goto('/calendar/2026-09-29', { waitUntil: 'networkidle' });
-  await expect(page.locator('.empty-day')).toContainText('the corpus reaches 28 September 2026');
+  await expect(page.locator('.empty-day')).toContainText(`the corpus reaches ${reach} so far`);
   await expect(page.locator('.empty-day')).not.toContainText('19 September so far');
+  expect(bare.served(), 'the withholding route never served the page').toBeGreaterThan(0);
+});
 });
 
 

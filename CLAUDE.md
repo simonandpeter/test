@@ -540,7 +540,7 @@ The codebase already holds this line. The rule is to keep it there.
   by civil day *and* by menologion number), `draft-saint.mjs <draft.json>`
   (the only writer: dry run by default, `--write` to write, `--undo <batch>
   --write` to take a batch back out), `corpus-gate.mjs --batch <id>` (schema,
-  `npm test`, duplicates, calendars, citations, **and the eight e2e literals a
+  `npm test`, duplicates, calendars, citations, **and the e2e literals a
   batch moves**). Dedupe on the feast date, never on the name — and on the
   menologion number, not only the civil day.
 - `npm run thumbs`, `python scripts/make_wordmark.py`, `node scripts/make-land.mjs`,

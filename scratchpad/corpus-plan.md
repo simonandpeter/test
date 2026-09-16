@@ -170,18 +170,16 @@ Each **batch** = one civil day (or ≤12 folders), one commit, one push. Each **
 | B4 | 8–10 Oct | ~30 new |
 | B5 | 11–13 Oct | ~30 new |
 
-- **B1's first batch moves the reach.** It must edit:
-  - `corpus-gate.mjs`'s literal
-  - **`e2e/daily-panel.spec.js:2536–2537`** (§5.2)
+- **B1's first batch moves the reach**, which no spec and no gate literal holds any more (§5.2).
 - Julian Sept 16–30 = civil 29 Sept – 13 Oct. The Revised-Julian 16–30 Sept is already in the corpus, so the Russian/Serbian rows here are largely upgrades [I, CORPUS §4.1's 1 Oct example].
 
 ### Phases C–E
 
 | phase | civil days | sittings | notes |
 | --- | --- | --- | --- |
-| C | 14 Oct – 30 Nov | ~16 | Russian 14 Oct = Julian 1 Oct (Protection) [U, feast date from memory]; **moves `daily-panel.spec.js:1904–1908`**. Nicomedia martyrs through Dec–Jan may move `map.spec.js:3387` |
+| C | 14 Oct – 30 Nov | ~16 | Russian 14 Oct = Julian 1 Oct (Protection) [U, feast date from memory] |
 | D | 1 Dec – 13 Jan | ~15 | Nativity and Theophany cycles, heavy feast days [U]. Russian day records (readings) stop 13 Jan 2027 and the Romanian stop at the end of 2026 [M, `daily-panel.spec.js:1935–1944, 2516`]; saints still land [I] |
-| E | 14 Jan – 16 Mar | ~21 | Triodion from 21 Feb (moveable feasts are not folders); **Russian 1 Mar moves `daily-panel.spec.js:1913–1914`** [I] |
+| E | 14 Jan – 16 Mar | ~21 | Triodion from 21 Feb (moveable feasts are not folders) |
 
 **Sources for every batch:** the four calendar pages for the day; then the life pages they link (pravoslavie `Life/lifeNNNN.htm` — not the `idNNNN` index, §4.9 — `saint.gr/NNNN/saint.aspx`, doxologia); azbyka/oca/Butler for thin lines; Orloff for kontakia.
 
@@ -195,7 +193,7 @@ Each **batch** = one civil day (or ≤12 folders), one commit, one push. Each **
    - `tests/corpus-break.test.mjs` — **a new slug containing a hyphen and ≥8 characters that also appears in `src/` outside a comment fails it** [M]; name slugs away from code identifiers [I]
    - `lives.test`, `life-links.test` (a written link with no `related` row), `map-span.test`, `saint-name.test`
 6. `node scripts/language-audit.mjs` (0 mismatches), `node scripts/date-audit.mjs`, `node scripts/cross-link-audit.mjs` and `node scripts/related-from-links.mjs` (§6).
-7. `node scripts/corpus-gate.mjs --batch <id> --online` — schema, `npm test`, duplicates, names, citations, calendars and its e2e literal table. **Then check the spec lines in §5.2 that the gate does not print.**
+7. `node scripts/corpus-gate.mjs --batch <id> --online` — schema, `npm test`, duplicates, names, citations, calendars and its e2e literal table.
 8. `npm run dev` and look at the day in each affected church and language (DOM and screenshots only; CLAUDE.md trap 17).
 9. The back-out (§8): one row set to `undocumented`, rebuild, watch the saint vanish from that church's day only, restore. Record it in the commit.
 10. One commit, `bash scripts/push.sh`, then read the conclusion **and** the `flaky` line.
@@ -211,22 +209,13 @@ Where a literal moved, also run `npm run build && npm run test:e2e` for those sp
 - `:215` — undated tray
 - `:229` — "hermit"
 - `:317` — the church's own January. **Phase D/E adds January feasts, so expect this one to move** [I]
-- the gate's own reach literal — edit it in almost every batch
 
-**Not printed by the gate, found reading the specs** [M lines; I for when they break]:
-- **`e2e/daily-panel.spec.js:2536–2537`** — `/calendar/2026-09-29` must show `.empty-day` containing "the corpus reaches 28 September 2026". It breaks on the first batch that fills 29 Sept or extends the reach.
-  - **CORPUS §9 and the gate's comment both say no spec asserts the reach since 2026-09-12. This spec does.** The doc line is wrong; correct it in B1's commit.
-- **`e2e/daily-panel.spec.js:1901–1908`** — Russian `/calendar/2026-10-14` must say "Its saints are not folders yet". It breaks when Russian Julian 1 Oct folders land (phase C). Move it to a day past the window, or derive it.
-- **`e2e/daily-panel.spec.js:1913–1914`** — `/calendar/2027-03-01` must say "No commemorations are recorded". It breaks when that civil day gets folders in the reader's church (phase E).
-- **`e2e/map.spec.js:3387,3400`** — exactly 27 martyrs at Nicomedia's one coordinate. Any located Nicomedia saint moves it.
-- `e2e/saint.spec.js:345,366,1497` — hymn counts on `adrian-of-nicomedia` and `anthony-of-the-caves`. They move only if an upgrade adds hymns to those two, whose feasts fall outside the window [I].
+**Derived since the commit after this plan's own** [M]: the reach sentence and the two bare-day notes in `daily-panel.spec.js` (the day's folders are withheld from the manifest the page is served, and the reach is worked out from the manifest), the Nicomedia, Constantinople and Kyiv Caves crowds in `map.spec.js`, and the legendary facet in `index-grid.spec.js`. Constantinople's under-the-cap test still pins the city and fails by name if a batch takes it past 8. Still literal: `e2e/saint.spec.js:345,366,1497` — hymn counts on `adrian-of-nicomedia` and `anthony-of-the-caves`, which move only if an upgrade adds hymns to those two [I]. Also still literal, and moved only by a saint who takes a day's hero or a name-day row: the heroes named on fixed days in `daily-panel.spec.js` (Sozon on 20 Sept Russian, Zacharias on 18 Sept Serbian, and older days outside the window), the nine name days on 25 Sept Russian in `daily-register.spec.js`, the one Serapion link on 20 Sept there, and the one hymn each on `eustathius-the-great-martyr` in `saint.spec.js` [M lines, I for when].
 
 **Already derived, nothing to do:**
 - `e2e/helpers.js` `CORPUS`, `VENERATED`, `venerateUnion`, `TRACKED`, `NO_RU_NAME`, `keptOn`, `ICONED` [M, exports]
-- `index-grid.spec.js` — a grep for count literals found only `toBeGreaterThan` floors [M]; derivation from the manifest is as briefed [U, not traced]
 - `EMPTY` (2026-08-20) and `POPULATED` (2026-01-30) fall outside the window [M]
 
-**Suggested first commit of the whole job, before B1** [I]: derive or relocate the three daily-panel literals and add them (and the Nicomedia count) to the gate's `EXPECTED`. That is a test change, in its own commit, not inside a corpus batch.
 
 ## 6. Related-to connections
 

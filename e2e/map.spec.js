@@ -1,5 +1,5 @@
 import { test, expect } from './fixtures.js';
-import { ready, TRACKED } from './helpers.js';
+import { HYMNED, ready, sharingPlace, TRACKED } from './helpers.js';
 
 /**
  * The map (Session 7, 2026-08-29). One file per surface, as the rest of the
@@ -1311,10 +1311,15 @@ test('two saints who share an exact spot are one mark that says how many', async
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
+  // Everyone at the Caves' coordinate, read from the manifest, so a Caves
+  // father added by a batch is one more under the mark, not a mark of his own
+  // that the slugs typed here would miss (2026-09-16).
+  const caves = sharingPlace('john-the-long-suffering');
+  expect(caves, 'premise: the pair no longer share a coordinate').toContain('moses-the-hungarian');
   const dots = JSON.parse(await canvas.getAttribute('data-dots'));
-  const kyiv = dots.filter((d) => ['john-the-long-suffering', 'moses-the-hungarian'].includes(d.slug));
+  const kyiv = dots.filter((d) => caves.includes(d.slug));
   expect(kyiv.length, 'the pair is drawn as two marks, which no zoom could ever justify').toBe(1);
-  expect(kyiv[0].n, 'the mark does not say that a second saint stands under it').toBeGreaterThanOrEqual(2);
+  expect(kyiv[0].n, 'the mark does not say that a second saint stands under it').toBeGreaterThanOrEqual(caves.length);
 
   /*
    * And nobody is lost behind it: every located saint is either their own
@@ -1345,7 +1350,7 @@ test('zooming in splits a merged mark into the saints under it', async ({ page }
    * and must stay merged at every zoom, which is the half of this that says
    * the map is not simply splitting things up as it goes.
    */
-  const kyiv = ['cyprian-of-kyiv', 'john-the-long-suffering', 'moses-the-hungarian'];
+  const kyiv = [...new Set(['cyprian-of-kyiv', ...sharingPlace('john-the-long-suffering')])];
   const marksFor = async () =>
     JSON.parse(await canvas.getAttribute('data-dots')).filter((d) => kyiv.includes(d.slug));
 
@@ -1374,7 +1379,7 @@ test('zooming in splits a merged mark into the saints under it', async ({ page }
    * reader goes in. What that buys over the old fan is below.
    */
   const zoomed = await marksFor();
-  expect(zoomed.length, 'the saints at Kyiv never came apart').toBe(3);
+  expect(zoomed.length, 'the saints at Kyiv never came apart').toBe(kyiv.length);
   expect(
     Math.max(...zoomed.map((d) => d.n)),
     'a mark is still standing for more than one saint this far in',
@@ -1396,12 +1401,17 @@ test('saints spread from one coordinate stay a tight constellation, not a wheel'
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
-  const caves = ['john-the-long-suffering', 'moses-the-hungarian'];
-  const at = async () => JSON.parse(await canvas.getAttribute('data-dots')).filter((d) => caves.includes(d.slug));
+  const pair = ['john-the-long-suffering', 'moses-the-hungarian'];
+  const caves = sharingPlace(pair[0]);
+  expect(caves, 'premise: the pair no longer share a coordinate').toContain(pair[1]);
+  const marks = async (slugs) => JSON.parse(await canvas.getAttribute('data-dots')).filter((d) => slugs.includes(d.slug));
+  const at = () => marks(pair);
 
   // At rest the ring is far under a pixel, so they are one mark: the spread
-  // never costs the resting map the honesty the merge bought it.
-  expect((await at()).length, 'the pair is already two marks with the whole world on screen').toBe(1);
+  // never costs the resting map the honesty the merge bought it. Whoever at
+  // the coordinate leads it, which a batch can change, so the mark is looked
+  // for among all of them.
+  expect((await marks(caves)).length, 'the pair is already two marks with the whole world on screen').toBe(1);
 
   await searchBox(page).fill('kyiv');
   await expect(searchRows(page).first()).toContainText('Kyiv');
@@ -2740,26 +2750,22 @@ test('a crowd prints the name the Daily page would lead with', async ({ page }) 
    * page and the also commemorated in order when deciding which name to print
    * over the others when zoomed out."
    *
-   * Five saints share the Constantinople coordinate exactly, so no zoom will
-   * ever separate them and one of the five has to be the mark. Two of them —
-   * Alexander the Patriarch and Natalia of Nicomedia — have hymns recorded,
-   * which is what pickHero calls "the day's principal commemoration in that
-   * church"; the other three appear only under *Also commemorated*. The claim
-   * is that the mark is one of those two, whichever way their own tie falls,
-   * and never one of the other three.
+   * Saints share the Constantinople coordinate exactly, so no zoom will ever
+   * separate them and one of them has to be the mark. Those with hymns
+   * recorded are what pickHero calls "the day's principal commemoration in
+   * that church"; the rest appear only under *Also commemorated*. The claim
+   * is that the mark is one of the hymned, whichever way their own tie falls,
+   * and never one of the rest. Both halves are read from the manifest
+   * (2026-09-16): five and two were the corpus on the day, not the rule.
    */
   await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
 
-  const atTheCity = [
-    'alexander-patriarch-of-constantinople',
-    'athanasius-of-vysotsk',
-    'gennadius-patriarch-of-constantinople',
-    'natalia-of-nicomedia',
-    'niphon-patriarch-of-constantinople',
-  ];
-  const leads = ['alexander-patriarch-of-constantinople', 'natalia-of-nicomedia'];
+  const atTheCity = sharingPlace('alexander-patriarch-of-constantinople');
+  const leads = atTheCity.filter((slug) => HYMNED.has(slug));
+  expect(leads.length, 'premise: nobody at the city has a hymn, so there is no lead to prefer').toBeGreaterThan(0);
+  expect(leads.length, 'premise: everybody at the city has a hymn, so nothing is passed over').toBeLessThan(atTheCity.length);
 
   /*
    * At the whole world the five are inside a mark that reaches most of
@@ -2782,7 +2788,7 @@ test('a crowd prints the name the Daily page would lead with', async ({ page }) 
 
   const marks = JSON.parse(await canvas.getAttribute('data-dots')).filter((d) => atTheCity.includes(d.slug));
   expect(marks.length, 'premise: the five are not one mark here, so nothing is being chosen between').toBe(1);
-  expect(marks[0].n).toBeGreaterThanOrEqual(5);
+  expect(marks[0].n).toBeGreaterThanOrEqual(atTheCity.length);
   expect(leads, 'the crowd printed a saint who leads no day anywhere: ' + marks[0].slug).toContain(marks[0].slug);
 });
 
@@ -3363,9 +3369,13 @@ test('a coordinate over BLOB_MAX splits into blobs, and only the centred one is 
    * printing a bare count.
    *
    * Nicomedia is the corpus's own case for this — 27 martyrs at one
-   * coordinate, the only place today over `BLOB_MAX` (8) — so this flies
-   * there rather than building a synthetic fixture.
+   * coordinate on 2026-09-16, the only place then over `BLOB_MAX` (8) — so
+   * this flies there rather than building a synthetic fixture. Who is there
+   * is read from the manifest, since every Nicomedian martyr a batch adds
+   * moves the number.
    */
+  const nicomedia = sharingPlace('adrian-of-nicomedia');
+  expect(nicomedia.length, 'premise: Nicomedia is no longer over BLOB_MAX').toBeGreaterThan(8);
   await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
@@ -3378,13 +3388,12 @@ test('a coordinate over BLOB_MAX splits into blobs, and only the centred one is 
   const blobCounts = JSON.parse(await canvas.getAttribute('data-blob-counts'));
   const blobOpen = await canvas.getAttribute('data-blob-open');
   /*
-   * Four blobs, not one — 27 over a cap of 8 is `Math.ceil(27 / 8)`, and the
-   * premise this whole test rests on: if the corpus ever grows this company
-   * to a multiple of 8 exactly, or shrinks it to 8 or fewer, this number
-   * moves and says so rather than the test quietly measuring nothing.
+   * More than one blob — a crowd over a cap of 8 — is the premise this whole
+   * test rests on: if the corpus ever shrinks this company to 8 or fewer,
+   * this says so rather than the test quietly measuring nothing.
    */
   expect(blobCounts.length, `premise: Nicomedia's own count no longer needs blobs (got ${JSON.stringify(blobCounts)})`).toBeGreaterThan(1);
-  expect(blobCounts.reduce((a, b) => a + b, 0), 'every martyr accounted for, once').toBe(27);
+  expect(blobCounts.reduce((a, b) => a + b, 0), 'every martyr accounted for, once').toBe(nicomedia.length);
   for (const n of blobCounts) expect(n, `a blob of ${n}, over BLOB_MAX`).toBeLessThanOrEqual(8);
   expect(blobOpen, 'a blob is open once the crowd has split').not.toBe('');
 
@@ -3397,7 +3406,7 @@ test('a coordinate over BLOB_MAX splits into blobs, and only the centred one is 
    */
   const dots = JSON.parse(await canvas.getAttribute('data-dots'));
   const blobbed = dots.filter((d) => d.blobId);
-  expect(blobbed.length, 'every one of the 27 is still its own dot').toBe(27);
+  expect(blobbed.map((d) => d.slug).toSorted(), 'every one of the martyrs is still its own dot').toEqual(nicomedia.toSorted());
   const openMembers = blobbed.filter((d) => d.blobId === blobOpen);
   const closedMembers = blobbed.filter((d) => d.blobId !== blobOpen);
   expect(openMembers.length, 'premise: the open blob has members').toBeGreaterThan(0);
@@ -3408,9 +3417,13 @@ test('a coordinate over BLOB_MAX splits into blobs, and only the centred one is 
 });
 
 test('a coordinate at or under BLOB_MAX never blobs, however deep the zoom', async ({ page }) => {
-  // Constantinople's own located company is five — under the cap, so it is
-  // named exactly as it always was: every one of the five, once it is the
-  // saint the picture is centred nearest.
+  // Constantinople's own located company was five on 2026-09-16 — under the
+  // cap, so it is named exactly as it always was. Its size is read from the
+  // manifest, and a batch that takes it over the cap says so here rather than
+  // as a blob this test calls a defect.
+  const city = sharingPlace('alexander-patriarch-of-constantinople');
+  expect(city.length, `premise: Constantinople holds ${city.length}, over BLOB_MAX — fly to a smaller crowd`).toBeLessThanOrEqual(8);
+  expect(city.length, 'premise: Constantinople is no longer a crowd').toBeGreaterThan(1);
   await openMap(page);
   const canvas = page.locator('[data-map]');
   await expect(canvas).toHaveAttribute('data-land', 'ok');
@@ -3420,7 +3433,7 @@ test('a coordinate at or under BLOB_MAX never blobs, however deep the zoom', asy
   await searchBox(page).press('Enter');
   await zoomedToCeiling(page);
 
-  expect(await canvas.getAttribute('data-blobs'), 'five is under BLOB_MAX').toBe('0');
+  expect(await canvas.getAttribute('data-blobs'), `${city.length} is under BLOB_MAX`).toBe('0');
   expect(await canvas.getAttribute('data-blob-open'), 'nothing to open').toBe('');
 });
 

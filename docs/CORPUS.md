@@ -516,7 +516,7 @@ that does not fail means the batch is not doing what its message says.
 `STRUCTURE.md` section 5: *tests must not name instances*, and 85 hard-coded slugs
 and dates still live in the e2e specs. Until they are derived, **a batch that
 moves one of these numbers has to move the literal in the same commit.** The
-gate computes all eight from the folders and prints them beside the literal
+gate computes all seven from the folders and prints them beside the literal
 each spec currently holds, so this is caught in two seconds rather than by CI
 in seventeen minutes.
 
@@ -529,17 +529,21 @@ in seventeen minutes.
 | `e2e/index-controls.spec.js:215` | the undated tray | `126 undated` |
 | `e2e/index-controls.spec.js:229` | a search for "hermit" | `10` |
 | `e2e/index-controls.spec.js:317` | feasts in the church's own January | `6` |
-| `corpus-gate.mjs`'s own literal | "the corpus reaches 28 September 2026" | the date — no spec asserts it since 2026-09-12 |
 
-The last one moves the moment a folder lands past 28 September, which is
-exactly where the runway continues — **expect to edit it in almost every
-batch.** The empty range at 1396–1400 is five years wide and is the fourth
+The empty range at 1396–1400 is five years wide and is the fourth
 window that test has used; a dated life running through it moves the test, and
 the comment there says so.
 
 What is already derived and needs nothing: `CORPUS`, `VENERATED`,
-`venerateUnion()`, `TRACKED` and `NO_RU_NAME` in `e2e/helpers.js`, and the
-coverage figures on the About page.
+`venerateUnion()`, `TRACKED`, `NO_RU_NAME`, `keptOn()`, `ICONED`,
+`withHistoricity()`, `sharingPlace()` and `HYMNED` in `e2e/helpers.js`, and the
+coverage figures on the About page. Through them, since 2026-09-16: the reach
+sentence and the two bare-day notes in `daily-panel.spec.js` (the day is made
+bare by withholding its folders from the manifest the page is served, and the
+reach is worked out from the manifest), the crowds at Nicomedia, Constantinople
+and the Kyiv Caves in `map.spec.js`, and the legendary facet in
+`index-grid.spec.js`. Constantinople's under-the-cap test still pins that city,
+and says so by name when a batch takes it over `BLOB_MAX`.
 
 Also watch: `tests/map-span.test.mjs` (a located saint alive over a century, or
 located and undated), and `tests/lives.test.mjs` (all three life rules).

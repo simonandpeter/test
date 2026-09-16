@@ -79,6 +79,36 @@ export const keptOn = (church, iso) => {
 /** The slugs whose card carries an icon. */
 export const ICONED = new Set(CARDS.filter((s) => s.image).map((s) => s.slug));
 
+/** The slugs whose card carries `historicity`, as the All Saints facet narrows to. */
+export const withHistoricity = (historicity) => CARDS.filter((s) => s.historicity === historicity).map((s) => s.slug);
+
+/**
+ * **The saints whose map mark rests on exactly the coordinate `slug`'s does**,
+ * `slug` included, read from the manifest (2026-09-16). A crowd at one spot is
+ * where the next batch lands a martyr, so a map test that typed its members
+ * or their number went red for a saint added rather than a defect found.
+ * The resting place is death, then relics, then see, then birth, then the
+ * first location, then the track's last stay — the order `views/map/paint.js`
+ * gives, restated here rather than imported so the draw pass is not asked to
+ * check itself. Throws for a saint with no place, whose crowd is no premise.
+ */
+export const sharingPlace = (slug) => {
+  const rest = (s) => {
+    const at = s.locations ?? [];
+    const of = (kind) => at.find((l) => l.kind === kind);
+    return of('death') ?? of('relics') ?? of('see') ?? of('birth') ?? at[0] ?? (s.track ?? []).at(-1);
+  };
+  const home = rest(CARDS.find((s) => s.slug === slug) ?? {});
+  if (!home) throw new Error(`sharingPlace: ${slug} has no place on the map`);
+  return CARDS.filter((s) => {
+    const p = rest(s);
+    return p && p.lat === home.lat && p.lon === home.lon;
+  }).map((s) => s.slug);
+};
+
+/** The slugs recorded with a hymn in any church — who can lead a day. */
+export const HYMNED = new Set(CARDS.filter((s) => (s.hymned ?? []).length > 0).map((s) => s.slug));
+
 export // 30 January 2026: Anthony the Great in the Russian calendar — 17 January by
 // the Julian reckoning, which the New Calendar churches keep on the civil 17th:
 // one menologion date, two civil days, the most load-bearing date in the corpus.

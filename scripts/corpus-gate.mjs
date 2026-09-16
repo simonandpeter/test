@@ -311,10 +311,6 @@ const EXPECTED = [
   ['e2e/index-controls.spec.js:215     undated tray', undated, '126'],
   ['e2e/index-controls.spec.js:229     type "hermit"', hermits, '10'],
   ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '6'],
-  // No spec asserts this any more: the test that did went with the Daily
-  // rebuild on 2026-09-12. Kept as a gate on the corpus own runway, which is
-  // what it measured; the literal is this file, not a spec.
-  ['corpus runway (no spec asserts it)  the corpus reaches', reach, '2026-09-28'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;
@@ -322,6 +318,13 @@ for (const [where, now, literal] of EXPECTED) {
   if (moved) fail('e2e literals', `${where} — the spec still says ${literal}, the corpus now says ${now}`);
 }
 console.log(`  · corpus total (e2e reads META.total)                 now ${corpus.length}`);
+/*
+ * Read, not held: daily-panel's reach sentence works the reach out from the
+ * manifest itself (2026-09-16), so this is a figure to look at, not a literal
+ * a batch has to move. It is every church summed from 1 August, where the
+ * page walks one church from today, so the two need not agree.
+ */
+console.log(`  · corpus runway, all churches (no spec holds it)     now ${reach}`);
 for (const [c, n] of Object.entries(venerated)) console.log(`  · venerated ${c.padEnd(9)} (e2e reads META.by_church)     now ${n}`);
 
 /* ---- verdict ------------------------------------------------------------- */
