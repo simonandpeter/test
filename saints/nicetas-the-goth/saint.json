@@ -13,6 +13,11 @@
     {
       "form": "Никита Готфский",
       "lang": "ru"
+    },
+    {
+      "form": "Никита",
+      "lang": "sr",
+      "note": "Read out of «Св. муч. Никита.» in this folder’s Serbian citation."
     }
   ],
   "sex": "male",
@@ -22,10 +27,10 @@
   "dates": {
     "death": {
       "earliest": 306,
-      "latest": 337,
-      "display": "under Constantine the Great",
+      "latest": 372,
+      "display": "306–372",
       "basis": "traditional",
-      "note": "saint.gr: in the years of Constantine the Great; thrown into a furnace."
+      "note": "saint.gr: in the years of Constantine the Great; thrown into a furnace. The Ohrid Prologue on pravoslavno.rs: „Пострадао и прославио се 372. године.“; the interval holds both."
     }
   },
   "attestations": [
@@ -74,8 +79,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 15. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.09.2026 (15. септембар ст. ст.) — „Св. муч. Никита.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-28&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

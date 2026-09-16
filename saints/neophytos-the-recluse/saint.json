@@ -49,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "revised-julian",
+        "note": "The finding of his relics, which is how the Greek calendar keeps this day; it keeps his life on 12 April."
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Σεπτεμβρίου — «Εύρεσις Ιερών Λειψάνων οσίου Νεοφύτου του εν Κύπρω Εγκλείστου»",
+        "url": "https://www.saint.gr/09/28/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

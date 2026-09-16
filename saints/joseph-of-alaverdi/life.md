@@ -21,8 +21,10 @@ many miracles have been worked at his grave. The Romanian calendar keeps him
 on 15 September and gives the year of his repose as 570; the Russian
 calendar keeps him the same day of its own reckoning.
 
+The Ohrid Prologue, for the Serbian calendar, calls him bishop of Alaverdi and one of the twelve Syrian fathers, kept on 7 May, who were sent into the lands of the Caucasus to preach the Gospel. He died in peace in 570, it says, and his wonderworking relics rest in the cathedral church of Alaverdi.
+
 *After the life printed by the Orthodox Church in America for 15 September —
 [the day’s lives](https://www.oca.org/saints/all-lives/2026/09/15); the
 Romanian page is at doxologia.ro —
 [the page](https://doxologia.ro/sfantul-ierarh-iosif-de-alaverdi-georgia);
-read 5 September 2026.*
+read 5 September 2026; the Ohrid Prologue for 28 September 2026 (15. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-28&prolog=1), read 17 September 2026.*

@@ -1,0 +1,66 @@
+{
+  "slug": "auxentius-of-cyprus",
+  "display_name": "Auxentius of Cyprus",
+  "names": [
+    {
+      "form": "Όσιος Αυξέντιος ο Μοναχός, που ασκήτευσε στην Κύπρο",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 28 сентября ст. ст. (civil 11 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 28 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Σεπτεμβρίου — «Όσιος Αυξέντιος ο Μοναχός, που ασκήτευσε στην Κύπρο»",
+        "url": "https://www.saint.gr/09/28/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 28. септембар ст. ст. (civil 11 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Χαίρει ἔχουσα ἡ Καρπασέων Κώμη λάρνακα τῶν σῶν λειψάνων, παναοίδιμε πάτερ Αὐξέντιε. Ὡς γὰρ ποτὲ πολεμίους κατήσχυνας, καὶ τῶν δαιμόνων τὸ θράσος ἐνίκησας καὶ κατηύφρανας ἠμᾶς τοὺς πιστῶς σοὶ κράζοντας, ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Αυξέντιος ο Μοναχός, που ασκήτευσε στην Κύπρο, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2471/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The village of Komi in Karpasia rejoices, having the casket of thy relics, O all-praised father Auxentius; for as once thou didst put the enemy to shame, and didst conquer the boldness of the demons and gladden us who cry to thee in faith, so now entreat that great mercy be granted us.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

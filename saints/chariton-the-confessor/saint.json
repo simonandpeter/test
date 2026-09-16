@@ -5,6 +5,10 @@
     {
       "form": "Sfântul Cuvios Hariton Mărturisitorul",
       "lang": "ro"
+    },
+    {
+      "form": "Όσιος Χαρίτων ο Ομολογητής",
+      "lang": "el"
     }
   ],
   "sex": "male",
@@ -34,8 +38,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Σεπτεμβρίου — «Όσιος Χαρίτων ο Ομολογητής»",
+        "url": "https://www.saint.gr/09/28/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -54,5 +67,57 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Χαρίτων τοῦ Πνεύματος, καταυγασθεῖς ταὶς αὐγαίς, φωστὴρ ἐχρημάτισας, τῆς ἐναρέτου ζωῆς, Χαρίτων μακάριε, σὺ γὰρ ὁμολογία, ἀληθείας ἐμπρέψας, ἔλαμψας ἐν ἐρήμῳ, ἐγκράτειας τοὶς πόνοις. Διὸ τῶν εὐφημούντων σέ, Πάτερ μνημόνευε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Χαρίτων ο Ομολογητής, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2466/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "Made radiant by the rays of the graces of the Spirit, thou wast shown forth as a lamp of the virtuous life, O blessed Chariton; for, adorned with the confession of the truth, thou didst shine in the desert with the labours of abstinence. Wherefore, O father, remember those who praise thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ταῖς τῶν δακρύων σου ῥοαῖς, τῆς ἐρήμου τὸ ἄγονον ἐγεώργησας· καὶ τοῖς ἐκ βάθους στεναγμοῖς, εἰς ἑκατὸν τοὺς πόνους ἐκαρποφόρησας· καὶ γέγονας φωστὴρ τῇ οἰκουμένῃ, λάμπων τοῖς θαύμασιν, Χαρίτων Πατὴρ ἡμῶν ὅσιε, πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Χαρίτων ο Ομολογητής, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2466/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren wilderness, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou wast made a lamp to the whole world, shining with wonders, O Chariton our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Κατατρυφήσας θεόφρον τῆς ἐγκρατείας, καὶ τῆς σαρκός σου τὰς ὀρέξεις χαλινώσας, ὤφθης τῇ πίστει αὐξανόμενος· καὶ ὡς ζωῆς ἐν μέσῳ, ξύλον Ἐδὲμ ἐξήνθησας, Χαρίτων παμμάκαρ ἱερώτατε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Χαρίτων ο Ομολογητής, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2466/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὴν ἐν πρεσβείαις.",
+      "english": {
+        "text": "Having delighted in abstinence, O godly-minded one, and bridled the appetites of thy flesh, thou wast seen growing in faith; and like the tree of life in the midst of Eden thou didst blossom, O all-blessed and most sacred Chariton.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

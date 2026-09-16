@@ -5,6 +5,10 @@
     {
       "form": "Sfântul Proroc Baruh",
       "lang": "ro"
+    },
+    {
+      "form": "Προφήτης Βαρούχ ο Δίκαιος",
+      "lang": "el"
     }
   ],
   "sex": "male",
@@ -33,8 +37,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Σεπτεμβρίου — «Προφήτης Βαρούχ ο Δίκαιος»",
+        "url": "https://www.saint.gr/09/28/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -53,5 +66,41 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Προφητικῆς ἀξιωθεῖς λαμπηδόνας, Ἱερεμία τῷ κλεινῷ συνεδέθης, καὶ τούτω ὁμοδίαιτος ἐγένου σοφέ, ὅθεν προηγόρευσας, θεηγόρω σου γλώττη, τὴν τοῦ Λόγου κένωσιν, εἰς ἀνάπλασιν κόσμου, ἧς μετασχόντες πίστει ἀληθεῖ, Βαροὺχ Προφῆτα, ἐνθέως τιμῶμεν σε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Προφήτης Βαρούχ ο Δίκαιος, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2467/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "english": {
+        "text": "Deemed worthy of the radiance of prophecy, thou wast bound to the renowned Jeremiah and didst share his life, O wise one; wherefore with thy God-speaking tongue thou didst foretell the self-emptying of the Word for the refashioning of the world. Partaking of it in true faith, O prophet Baruch, we honour thee in godly wise.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. β’.",
+      "text": "Τὴν τοῦ Λυτρωτοῦ, κηρύττων οἰκονομίαν, ὡς προφητική, κινύρα προεμελῴδης· Ὁ Θεὸς ἡμῶν οὗτος, τεχθεὶς ὡς ηὐδόκησεν, ᾧ παρόμοιος οὐχ ἕτερος, ἐπὶ γῆς ὀφθεὶς ἐγνώρισεν, ἐπιστήμης θείας εἴσοδον, τοῖς προσκυνοῦσι Βαρούχ, τὴν παρουσίαν αὐτοῦ.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Προφήτης Βαρούχ ο Δίκαιος, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2467/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὴν ὑπὲρ ἡμῶν.",
+      "english": {
+        "text": "Proclaiming the dispensation of the Redeemer, thou didst sing beforehand like a prophetic harp: This is our God, born as he was well pleased, and there is none other like him; appearing on earth he hath made known the entrance of divine knowledge to those who worship his coming, O Baruch.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

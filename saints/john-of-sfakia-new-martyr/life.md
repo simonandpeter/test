@@ -16,7 +16,9 @@ His martyrdom was written by Athanasius of Paros, and his service by the
 monk Gerasimos Mikragiannanitis; the Greek calendar also gathers him with
 the new martyrs who suffered after the fall of Constantinople.
 
+The Ohrid Prologue, for the Serbian calendar, calls him John of Crete, a new martyr, and says only that he suffered for the faith of Christ at the hands of the Turks at Ephesus, in 1811.
+
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 15 Σεπτεμβρίου —
 [the entry](https://www.saint.gr/2443/saint.aspx), read 5 September 2026 — this
 time whole: its page shows seventy words and the rest behind a link, which is
-where the earlier reading stopped.*
+where the earlier reading stopped; the Ohrid Prologue for 28 September 2026 (15. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-28&prolog=1), read 17 September 2026.*

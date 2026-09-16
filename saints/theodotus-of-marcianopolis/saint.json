@@ -14,6 +14,11 @@
       "form": "Θεόδοτος",
       "lang": "el",
       "note": "His own name, read out of «Άγιοι Μάξιμος, Θεόδοτος και Ασκληπιοδότη» — the line already recorded here, which names more than this saint (or joins two of the titles with “and”), so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
+    },
+    {
+      "form": "Теодот",
+      "lang": "sr",
+      "note": "Read out of «Св. муч. Теодот, Асклиад и Максим.» in this folder’s Serbian citation."
     }
   ],
   "sex": "male",
@@ -56,8 +61,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 17. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.09.2026 (15. септембар ст. ст.) — „Св. муч. Теодот, Асклиад и Максим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-28&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

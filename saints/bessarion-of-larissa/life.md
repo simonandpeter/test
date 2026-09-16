@@ -52,9 +52,11 @@ lived before this saint. The Romanian page has him repose on 13 September
 15 September with a troparion that calls him Bessarion the merciful, who
 loved the poor and supplied them.
 
+The Ohrid Prologue, for the Serbian calendar, calls him archbishop of Larissa and a wonderworker, and says that he founded the monastery of the Saviour in the diocese of Larissa and was glorified by wonders in his life and after his death.
+
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 15 Σεπτεμβρίου —
 [the entry](https://www.saint.gr/2441/saint.aspx), read 5 September 2026 — this
 time whole: its page shows seventy words and the rest behind a link, which is
 where the earlier reading stopped. The Romanian life is at doxologia.ro —
 [the page](https://doxologia.ro/sfantul-ierarh-visarion-arhiepiscopul-larisei),
-read 23 August 2026.*
+read 23 August 2026; the Ohrid Prologue for 28 September 2026 (15. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-28&prolog=1), read 17 September 2026.*

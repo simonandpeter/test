@@ -1,0 +1,7 @@
+# Heliodorus, companion of Mark the Shepherd
+
+[Mark the Shepherd](/saints/mark-the-shepherd), the brothers [Alexander](/saints/alexander-brother-of-alphaeus), [Alphaeus](/saints/alphaeus-brother-of-alexander) and [Zosimas](/saints/zosimas-brother-of-alexander), [Nikon](/saints/nikon-companion-of-mark-the-shepherd), [Neon](/saints/neon-companion-of-mark-the-shepherd), Heliodorus, and [the virgins and children](/saints/virgins-and-children-with-mark-the-shepherd) with them lived in the years of Diocletian, when Magnus was governor of Pisidia, about 290, the Greek synaxarion says. Mark was an old man who kept sheep. Because he confessed that he was a Christian he was horribly tortured and sent to Claudiopolis, and there three brothers of the village of Katalyton, Alexander, Alphaeus and Zosimas, were called in to make bronze fetters for him; but as they began the work they felt their hands go numb, and marvelling at it they at once confessed Christ. They were martyred horribly, molten lead poured into their mouths, and then nailed to a rock; and Mark, after still more torture, was at last beheaded.
+
+The other martyrs, Heliodorus, Nikon and Neon, died the same death with many virgins and children, all of them beheaded at a place called Moromilion. The synaxarion names none of the virgins and children.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 28 Σεπτεμβρίου — [the entry](https://www.saint.gr/2468/saint.aspx); read 17 September 2026.*
