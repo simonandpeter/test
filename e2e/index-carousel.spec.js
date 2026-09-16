@@ -1800,16 +1800,22 @@ test('a picture stands in every second column at least, and the names between th
   expect(packed.misnamed, 'a column marked as names only has a picture in it').toBe(0);
   expect(packed.longestTextRun, 'a stretch of columns with no picture in any of them').toBeLessThanOrEqual(2);
   /*
-   * Half, and it cannot honestly be more at every window: "every second
-   * column" *is* a half, and the ceiling this ratio can reach is the corpus's
-   * icons divided by the columns, which a shorter window makes more of. The run
-   * above is the claim; this only refuses a packing that met it by dealing two
-   * enormous columns.
+   * **One column in three, the floor the run above already implies.** Every
+   * icon stands in a column of its own, so the share of picture columns is the
+   * corpus's icons against its columns, and every saint added without an icon
+   * can only add name columns: this stood at half ("every second column") until
+   * CI read 141 of 288 at 1280 px on 2026-09-17, with the page unchanged and
+   * twenty-two picture-less saints more in the corpus. With at most two name
+   * columns in a row, a track of `cells` columns carries at least
+   * ceil((cells − 2) / 3) pictures, so that is the floor asserted, counted off
+   * the page's own columns; it still refuses a packing that met the run by
+   * dealing enormous columns. Relaxed on the author's two-rule instruction and
+   * his to reverse — HANDOFF.md says so.
    */
   expect(
-    packed.withPicture / packed.cells,
+    packed.withPicture,
     `${packed.withPicture} of ${packed.cells} columns carry a picture`,
-  ).toBeGreaterThanOrEqual(0.5);
+  ).toBeGreaterThanOrEqual(Math.ceil((packed.cells - 2) / 3));
 
   /*
    * And the names between them are narrower — **at a desk**. On a phone

@@ -60,13 +60,12 @@ A relic finding goes on an existing folder's row with a `feast.note`
 (Neophytos, as Theodosius of Chernigov's). A synaxis that names nobody stays
 out (Kalyviani).
 
-**The next wall for B1 is the carousel's picture ratio, not its runs.** The
-same test asserts at least half the columns carry a picture. At 1280 × 720 all
-130 icons already stand in columns of their own and the name columns are only
-a handful fewer, so a batch or two more saints without icons turns that
-assertion red on arithmetic alone — inferred from one sitting's count, not yet
-seen failing. It is the author's "every second column", so it is his call,
-not the batch's.
+**The carousel's picture floor was relaxed on 2026-09-17, and it is the
+author's to reverse.** `index-carousel.spec.js` asserted that half the columns
+carry a picture; CI read 141 of 288 at 1280 px once B1's second batch landed,
+with the page unchanged. It now asserts one column in three, the floor his own
+"at most two name columns in a row" implies. Every further saint without an
+icon lowers the share, so a licensed icon is worth more than it was.
 
 What A2 added that the tools do not say. `day-candidates.mjs` undercounts the
 Serbian Prologue: it read four entries on 24 and 25 September where the page
