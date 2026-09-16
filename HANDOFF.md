@@ -21,11 +21,19 @@ here, because a PAT push never updates `origin/main`.
 - `npm test` for the unit count, `node scripts/locale-coverage.mjs` for pack
   gaps, `scripts/build-manifest.mjs` for the corpus size. None of them is
   written down here.
-- **A full browser run fails about four of ~980 at six workers, and it is a
+- **A full browser run fails about four of ~1,040 at six workers, and it is a
   different four each time.** Treat them as this desk until `--repeat-each=6`
   alone says otherwise — that comparison is what separated three real defects
   from the noise on 2026-09-15. The shelf-swipe flake is the known one and is
   the test's fault, not the page's (`STRUCTURE.md` §6).
+- **Two of them are not flakes and repeat every time**, on the unmodified tree
+  as well, so a run that shows these two and nothing else is a clean run:
+  `saint.spec.js` "a saint page is the Daily page's two columns", and
+  `index-grid.spec.js` "Also commemorated is a column of saint cards", which
+  expects six saints under 1 September 2026 in the Russian calendar where the
+  corpus now holds seven. The second is a test naming an instance — exactly what
+  `STRUCTURE.md` §1 says a spec must not do — and is a two-line fix nobody has
+  made.
 - The PAT is at `C:\Users\matei\Documents\Agios Website Ex\update git.txt`.
   `bash scripts/push.sh` pushes and reads the CI run in one step.
 
@@ -40,6 +48,14 @@ citation to them has been retired from `src/`, `e2e/`, `tests/` and `scripts/`.
 `tests/structure.test.mjs`, the saint-slug guard moved to
 `tests/corpus-break.test.mjs`, and `scripts/tokens-table.mjs` prints §3's four
 token tables from `tokens.css`. `git log` has the rest; nothing is pushed.
+
+**`/prayer` is finished and unpushed.** The hymn reader is complete through the
+plan's seventh stage — the route, `lib/prayer-order.js`, the card and its fade,
+the two asides, the field with its own MiniSearch, the phone, and the sixth nav
+link — and `scratchpad/prayer-plan.txt` is spent. `STRUCTURE.md` §4 Prayer
+describes the page that is there. `scratchpad/strip-throttle.mjs` is the
+instrument that settled the nav strip's gap budget at six links and is worth
+keeping for the seventh.
 
 **The Daily desktop redesign is in two stages and the first has landed.** The
 frame and the four columns are done (`STRUCTURE.md` §4 Daily describes the page
