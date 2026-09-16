@@ -194,10 +194,19 @@ function stopServer(proc) {
  *
  * The median rather than the mean: Lighthouse's own guidance, because the noise
  * is one-sided — a run can be arbitrarily slow and cannot be arbitrarily fast.
+ *
+ * **Five, because three lost to the runner's second state.** CI's FCP is
+ * bimodal: ~1355 ms, or one 150 ms round trip later at ~1505 — five over the
+ * floor. Seven runs from `35c4f9b` to `adf589c` held 7 slow samples in 84, and
+ * `adf589c`, which changed only `HANDOFF.md`, drew two of three on one route
+ * and went red. Modelled as independent draws at that rate, a median of three
+ * fails some route on about one run in twelve and a median of five on one in
+ * fifty; slow samples cluster by run, so both are underestimates. The floor
+ * did not move.
  */
 const median = (xs) => [...xs].sort((a, b) => a - b)[Math.floor(xs.length / 2)];
 
-const RUNS = Number(process.argv.find((a) => a.startsWith('--runs='))?.slice(7) ?? 3);
+const RUNS = Number(process.argv.find((a) => a.startsWith('--runs='))?.slice(7) ?? 5);
 
 async function measure(port, path) {
   const samples = [];
