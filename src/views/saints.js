@@ -40,6 +40,16 @@ import { paintGrid, paintWindow, wireGrid } from './index/grid.js';
 import { wireSticky } from './index/sticky.js';
 import { applyMode, paintCarousel, sessionMode } from './index/modes.js';
 import { paintSummary } from './index/count.js';
+import { indexSheet } from '../ui/sheets.js';
+
+/*
+ * **This page's stylesheet, off the first paint's path and awaited.**
+ * `index.css` is 17 kB of the render-blocking bundle `src/main.js` builds, and
+ * one route reads it — but unlike `map.css` this page paints text on its first
+ * frame, so `main.js` waits for it rather than firing and forgetting.
+ * `ui/sheets.js` is the whole of the reasoning and the loading.
+ */
+export const styles = indexSheet;
 
 export const title = () => STRINGS.saints.title;
 

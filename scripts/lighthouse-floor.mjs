@@ -13,7 +13,7 @@
  */
 import { spawn } from 'node:child_process';
 import { setTimeout as sleep } from 'node:timers/promises';
-import { writeFile, mkdir, readdir, stat } from 'node:fs/promises';
+import { writeFile, mkdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import * as chromeLauncher from 'chrome-launcher';
 import lighthouse from 'lighthouse';
@@ -83,10 +83,23 @@ const FLOOR = {
  * **The next few hundred bytes of CSS anywhere will trip this**, and the
  * answer then is the way down below rather than another 400.
  *
- * **The measured way down, when it is needed**: taking `index.css` and
- * `saint.css` off the entry the way `map.css` and `theme-fade.css` went is
- * 72.28 → 54.31 kB (§10.20). Unlike those two it needs the router to await the
- * view's sheet, because those routes paint text on the first frame.
+ * **That way down was taken on 2026-09-16, and the sheet is 57,310 bytes.**
+ * `index.css` and `saint.css` left the entry the way `map.css` and
+ * `theme-fade.css` had (75,263 → 57,310, the predicted ~18 kB), and because
+ * those two routes paint text on their first frame `main.js` *awaits* the
+ * view's sheet rather than firing and forgetting it — `src/ui/sheets.js` is
+ * the mechanism and `e2e/route-styles.spec.js` holds the await in place.
+ *
+ * **The ceiling stayed at 73,400 and the margin is now ~16 kB, which is slack
+ * rather than a measurement.** The step is a fact about the whole first-paint
+ * download, and ~18 kB has just left it, so the cliff has moved and nobody has
+ * re-measured it; 73,400 is the last number that was measured and it is
+ * conservative in the safe direction — anything it rejects was over a line
+ * that was real when it was drawn. Lowering it to ~600 bytes under the *new*
+ * cliff needs the 57-byte method run again from this build, and until someone
+ * does that a number picked to sit near 57,310 would be a guess wearing a
+ * measurement's clothes. That is the one thing this comment has always been
+ * about.
  */
 const ENTRY_CSS_CEILING = 73_400;
 
@@ -119,18 +132,30 @@ const settings = {
  * for the same reason every FCP number here is printed: a gate that only
  * speaks when it is angry teaches nobody where the margin went.
  */
+/*
+ * **Asked of `dist/index.html`, not of the directory listing.** Globbing
+ * `index-*.css` was unambiguous only while every sheet rode the entry: since
+ * `src/styles/index.css` went dynamic (2026-09-16) its own chunk is named
+ * after the file too, so `dist/assets/` holds two `index-*.css` and the glob
+ * matched both — which the old code reported as "2 candidates, not measuring",
+ * a gate switching itself off at exactly the moment the thing it measures was
+ * being changed. The shell names the render-blocking sheet in the one link the
+ * parser blocks on, and that *is* the definition of the thing being measured.
+ */
 let entryCss = null;
 async function reportEntryStylesheet() {
-  const dir = path.join(process.cwd(), 'dist', 'assets');
-  const names = (await readdir(dir)).filter((f) => /^index-.*[.]css$/.test(f));
-  if (names.length !== 1) {
-    console.log(`entry stylesheet: ${names.length} candidates in dist/assets, not measuring`);
+  const dist = path.join(process.cwd(), 'dist');
+  const html = await readFile(path.join(dist, 'index.html'), 'utf8');
+  const hrefs = [...html.matchAll(/<link[^>]+rel="stylesheet"[^>]+href="([^"]+)"/g)].map((m) => m[1]);
+  if (hrefs.length !== 1) {
+    console.log(`entry stylesheet: ${hrefs.length} stylesheet links in dist/index.html, not measuring`);
     return;
   }
-  const bytes = (await stat(path.join(dir, names[0]))).size;
-  entryCss = { name: names[0], bytes, ok: bytes <= ENTRY_CSS_CEILING };
+  const name = hrefs[0].replace(/^.*\//, '');
+  const bytes = (await stat(path.join(dist, 'assets', name))).size;
+  entryCss = { name, bytes, ok: bytes <= ENTRY_CSS_CEILING };
   console.log(
-    `entry stylesheet: ${names[0]}  ${bytes} bytes  (ceiling ${ENTRY_CSS_CEILING})` +
+    `entry stylesheet: ${name}  ${bytes} bytes  (ceiling ${ENTRY_CSS_CEILING})` +
       (entryCss.ok ? `  — ${ENTRY_CSS_CEILING - bytes} to spare` : '  **OVER**'),
   );
 }

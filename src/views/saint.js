@@ -35,6 +35,7 @@ import { renderBookmark, wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
 import { saintHymnsSection } from '../ui/hymns.js';
 import { renderDateFacts, fillPlaces } from '../ui/datefacts.js';
+import { cardSheets } from '../ui/sheets.js';
 import { STRINGS, fill } from '../ui/strings.js';
 import { currentLanguage, formatDate, translateOffice } from '../lib/i18n.js';
 /* The Index's own row, and the Index's own memory of what it had matched —
@@ -47,6 +48,15 @@ import { monthsBySlugFor } from './index/search.js';
 import { EMPTY_FILTERS, applyFilters, facetsOf } from '../lib/index-filters.js';
 
 const BASE = import.meta.env.BASE_URL;
+
+/*
+ * **Both sheets, off the first paint's path and awaited.** This page wears
+ * `saint.css` and — for the shelf's rows and for the side column, which is the
+ * Index's own list rather than a copy of it — `index.css` too. Neither is on
+ * the render-blocking bundle any more, and this page paints text on its first
+ * frame, so `main.js` waits for them. `ui/sheets.js` holds the reasoning.
+ */
+export const styles = cardSheets;
 
 export const title = () => STRINGS.saints.title;
 

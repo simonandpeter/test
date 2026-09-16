@@ -18,6 +18,7 @@ import { formatLifespan, formatSubtext } from '../lib/calendar-page.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { saintName } from '../lib/honorific.js';
 import { paintSaved, wireSaveButtons } from './save.js';
+import { cardSheets } from './sheets.js';
 import { STRINGS } from './strings.js';
 import { reducedMotion } from '../lib/motion.js';
 
@@ -129,6 +130,23 @@ export function mountShelves(el, { data, router, except = null } = {}) {
         `<h2 class="register-heading">${STRINGS.shelf.saved}</h2>
          <ul class="register shelf">${savedCards.map((c) => row(c, router)).join('')}</ul>`,
       );
+    }
+    /*
+     * **A shelf row is an index card, and neither sheet that dresses one is on
+     * the entry any more** (`ui/sheets.js`): `index.css` draws the row and
+     * `saint.css` re-dresses it here. The Daily page reads neither otherwise,
+     * so this is asked for at the last moment and only when there is something
+     * to dress — a reader with an empty shelf, which is every first visit,
+     * fetches nothing. On a saint's page the view has already asked and this
+     * is a resolved promise.
+     *
+     * Awaited rather than fired, for the reason the two sheets are awaited at
+     * all: rows that land undressed are a column of unstyled text that then
+     * reflows, on the page a reader opens daily.
+     */
+    if (sections.length) {
+      await cardSheets();
+      if (!alive) return;
     }
     el.innerHTML = sections.join('');
     paintSaved(el);

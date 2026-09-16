@@ -3,18 +3,19 @@ import './styles/metrics.css';
 import './styles/tokens.css';
 import './styles/base.css';
 import './styles/calendar.css';
-import './styles/saint.css';
-import './styles/index.css';
 /*
- * **`map.css` and `theme-fade.css` are missing from this list on purpose.**
- * Every sheet imported here is concatenated into one render-blocking
- * stylesheet that every route waits for, and this bundle sits on a congestion
- * boundary where first contentful paint steps by a whole round trip over a few
- * dozen bytes — so a sheet only one route reads is imported dynamically
- * instead, by `views/map.js`, `views/prayer.js` and `lib/theme.js`.
- * `npm run test:lighthouse` is
- * the gate that catches a sheet added back here.
- * `docs/SRC-DECISIONS.md § src/main.js — the render-blocking sheet`.
+ * **Five sheets are missing from this list on purpose**: `map.css`,
+ * `prayer.css`, `theme-fade.css`, `index.css` and `saint.css`. Every sheet
+ * imported here is concatenated into one render-blocking stylesheet that every
+ * route waits for, and this bundle sits on a congestion boundary where first
+ * contentful paint steps by a whole round trip over a few dozen bytes — so a
+ * sheet only one route reads is imported dynamically instead, by
+ * `views/map.js`, `views/prayer.js`, `lib/theme.js` and `ui/sheets.js`.
+ * The last two of the five are the ones a route has to *wait* for, because
+ * they dress a page that paints text on its first frame; `ui/sheets.js`
+ * carries that distinction and `show()` below does the awaiting.
+ * `npm run test:lighthouse` is the gate that catches a sheet added back here,
+ * and its `ENTRY_CSS_CEILING` carries the measurement.
  */
 import './styles/about.css';
 
@@ -595,6 +596,21 @@ function show({ route, params, path }, nav = {}) {
    * unchanged.
    */
   const swap = async () => {
+    /*
+     * **A view that paints text on its first frame waits for its own sheet**
+     * (`ui/sheets.js`). Before anything in here moves, so there is no window
+     * in which the outgoing page has been torn down and the incoming one is
+     * undressed; and inside the transition callback rather than outside it,
+     * because `startViewTransition` has already taken the old page's snapshot
+     * by the time this runs, so the wait is spent on a frozen picture of the
+     * page the reader was already looking at.
+     *
+     * This is also where the fetch *starts*, on a cold load — see `boot()` for
+     * why it is not started earlier. A later navigation usually finds it
+     * already in hand, since the reader's last route may well have brought it
+     * in.
+     */
+    await view?.styles?.();
     // Views that hold listeners or timers get told they are leaving; the rest
     // are pure renderers and do not implement it.
     //
@@ -794,13 +810,23 @@ function show({ route, params, path }, nav = {}) {
       settleLate(returning);
       settleNav();
     });
-  } else {
-    swap().then(() => {
-      settleLate(returning);
-      settleNav();
-    });
+    first = false;
+    return;
   }
+  /*
+   * **Returned, and only this branch has one to return**: `boot()` waits on
+   * the first render before it takes the veil down, and the first render is
+   * never a transition (the paragraph above says why). Since the view's own
+   * stylesheet is awaited in `swap`, a veil lifted on the old schedule —
+   * synchronously, the moment `router.start()` returned — would uncover a page
+   * that had not been painted yet.
+   */
+  const painted = swap().then(() => {
+    settleLate(returning);
+    settleNav();
+  });
   first = false;
+  return painted;
 }
 
 /**
@@ -899,6 +925,17 @@ async function boot() {
    */
   loadDays();
   /*
+   * **The opening route's own stylesheet is deliberately *not* started here,
+   * beside these two.** It was, for one measurement, and the measurement is
+   * why it is not: a `<link rel="stylesheet">` inserted into the head before
+   * the first paint is render-blocking exactly like the entry sheet, so
+   * starting it in this wait puts back the round trip the split had just taken
+   * out. FCP on a saint's page went 1689 → 1912 ms and All Saints 1709 →
+   * 1931, against 1683 for the Daily page, which asks for no sheet either way.
+   * So it is left to the render that awaits it (`show()`), which happens after
+   * the manifest has landed and therefore after the paint this gate measures.
+   */
+  /*
    * And the reader's own locale pack, for the same reason and in the same
    * wait: it is 20-30 kB of one language rather than 106 kB of four, and
    * having it before the first paint is what keeps a page from appearing in
@@ -927,7 +964,10 @@ async function boot() {
     return;
   }
 
-  router.start();
+  // Awaited: the first render waits for its view's own stylesheet now, and
+  // everything below here — the splash, the coachmarks, the veil — is written
+  // for a page that is already painted.
+  await router.start();
   // The splash comes down once the first view is on the page, not on a timer.
   native?.then((m) => m.bootDone()).catch(() => {});
   // After the first view is on the page, so the marks are placed against a

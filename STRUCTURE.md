@@ -948,28 +948,21 @@ is discussed.
    `mockups/` through `contact-sheet.mjs --css=a.css,b.css`; open the page and
    press things before calling it done.
 
-2. **The entry stylesheet has ~57 bytes of headroom** (73,343 of a 73,400
-   ceiling). The next CSS anyone writes trips `npm run test:lighthouse`, and it
-   presents as four routes failing FCP rather than as a file being too big. Two
-   ways out, and they are the same list: the coupling item below, or taking
-   `index.css` and `saint.css` off the entry (72.28 → 54.31 kB), which needs the
-   router to await the view's sheet rather than a bare dynamic import.
+2. **Scope the Daily page's 82 root-attribute rules to `.cal`.** §4's known
+   coupling. It makes the two faces independent by construction, and it is
+   ~1.6 kB off the entry sheet as well.
 
-3. **Scope the Daily page's 82 root-attribute rules to `.cal`.** §4's known
-   coupling. It makes the two faces independent by construction and is ~1.6 kB
-   off the entry sheet, which pays for the item above.
-
-4. **A roving tabindex on the month grid.** 35 of 82 focusable elements on a
+3. **A roving tabindex on the month grid.** 35 of 82 focusable elements on a
    desk are the month's day cells. Invisible to touch; it bites a keyboard and,
    more sharply, a screen reader. `picker.js:968` is the line that omits it.
 
-5. **The shelf-swipe test flakes about 1 run in 8.** The author ruled that the
+4. **The shelf-swipe test flakes about 1 run in 8.** The author ruled that the
    swipe behaves correctly, so the page is right and **the test is wrong** — it
    asserts a gesture it cannot reliably perform and should drive the drag at a
    fixed velocity instead of eight `mouse.move` steps. Until then CI retries
    hide it, which is how a flake here once masked a 16/16 regression.
 
-6. **201 of 211 feast hymns in `src/data/liturgical-days.js` have no English.**
+5. **201 of 211 feast hymns in `src/data/liturgical-days.js` have no English.**
    The saints' hymns are done, 428 of 428; that is the whole of what "the hymns
    are translated" means today.
 
@@ -981,30 +974,30 @@ is discussed.
    rendering wherever one exists. Hapgood carries the great feasts alone and
    has nothing further to give.
 
-7. **Raise the cross-linker's ceiling.** `lib/cross-link.js` can match 375 of the
+6. **Raise the cross-linker's ceiling.** `lib/cross-link.js` can match 375 of the
    corpus's folders; the rest have name forms too short or ambiguous to be safe.
    The way past it is better *name forms in the data*, not looser rules. Both
    other mechanical tiers are exhausted, so the remaining work is writing links
    into lives by hand — `node scripts/link-coverage.mjs --isolated` prints the
    list.
 
-8. **Make `test:lighthouse` usable locally.** It costs eight minutes and fails
+7. **Make `test:lighthouse` usable locally.** It costs eight minutes and fails
    FCP on all four routes on this desk *identically on an unmodified tree*. The
    number a session actually needs is the entry sheet's size, which is a build
    and a `stat`. A flag that checks the sheet and skips the Lighthouse passes.
 
-9. **`scripts/state.sh` should report who holds 4173, 5173 and 5174.** A stray
+8. **`scripts/state.sh` should report who holds 4173, 5173 and 5174.** A stray
    server from an earlier sitting makes Playwright refuse to start with no hint
    who holds the port, and makes `contact-sheet.mjs` quietly shoot the wrong
    tree.
 
-10. **Tie a test's name to the prose about it.** `tests/citations.test.mjs`
+9. **Tie a test's name to the prose about it.** `tests/citations.test.mjs`
     checks that a named file exists and that a named path exists, but not that a
     named *test* does, so a renamed test leaves stale headings in
     `docs/SRC-DECISIONS.md`. Asserting that every `### …` heading there resolves
     to a symbol that exists is the same instrument, in two seconds.
 
-11. **`docs/PROBES.md` is the last document with no owner.** 250 lines
+10. **`docs/PROBES.md` is the last document with no owner.** 250 lines
     describing four debug scripts, and its table is a hand-copy of
     `package.json`'s own script names. Either generate it or fold it into
     `CLAUDE.md` beside the traps it serves.

@@ -57,6 +57,13 @@ describes the page that is there. `scratchpad/strip-throttle.mjs` is the
 instrument that settled the nav strip's gap budget at six links and is worth
 keeping for the seventh.
 
+**`index.css` and `saint.css` are off the render-blocking entry sheet, and
+unpushed.** `src/ui/sheets.js` loads them per route and `main.js` awaits a
+view's `styles()` before it renders. The entry sheet's byte gate passes with
+room; **`npm run test:lighthouse` is still red on FCP**, which it also is on an
+unmodified tree on this desk (`STRUCTURE.md` §6 item 7) — every route improved
+by roughly the 150 ms round trip and none reached 1500 ms here.
+
 **The Daily desktop redesign is in two stages and the first has landed.** The
 frame and the four columns are done (`STRUCTURE.md` §4 Daily describes the page
 that is there). **Stage two is the shelf's own face**: the tile faces in
@@ -74,8 +81,8 @@ a `--side-w` column, with the chosen row hidden and marked `aria-current`.
 untracked**: the only copy of that state outside git, and `npm run app:sync`
 would overwrite it.
 
-**Two visual baselines exist under `shots/`, which is gitignored, so nothing
-else records that they are there. Never re-shoot either.**
+**Visual baselines exist under `shots/`, which is gitignored, so nothing else
+records that they are there. Never re-shoot one.**
 
 - `baseline-before-daily-rebuild` — 16 tiles of `/saints` from before the
   rebuild.
@@ -88,6 +95,15 @@ else records that they are there. Never re-shoot either.**
 
 ```bash
 MSYS_NO_PATHCONV=1 node scripts/contact-sheet.mjs --still --routes=/,/saints,/texts   --widths=360,768,1280 --themes=day,vigil --langs=en
+```
+
+- `baseline-before-css-split` and `baseline-after-css-split` — 8 tiles either
+  side of `index.css` and `saint.css` leaving the entry sheet. Two tiles differ
+  between them, and the unmodified tree shot against the same baseline differs
+  by the same 3,984 px on the same two, so nothing in that pair is a finding.
+
+```bash
+MSYS_NO_PATHCONV=1 node scripts/contact-sheet.mjs --still   --routes=/saints,/saints/anthony-the-great --widths=360,1280 --themes=day,vigil --langs=en
 ```
 
 **`tile-saints-1280-day-en` moves by ~3,980 px between any two sittings and is

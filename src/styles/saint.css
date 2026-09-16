@@ -726,21 +726,23 @@
   }
 
   /*
-   * **`flex: none`, or this column's own search field grows to fill it**
-   * (2026-09-05, found live: "sometimes the search bar on the right column
-   * loads up massive"). `.search-field` wears `index.css`'s own dress
-   * unchanged, the same "no override needed" reasoning `.side-facets`
-   * already banks on below — but that rule is `flex: 1 1 220px`, written
-   * for the All Saints page's own *row*, where growing along the main axis
-   * means growing *wider*. This column runs the opposite direction
-   * (`flex-direction: column`), so the same rule grows the field *taller*
-   * instead, and with nothing else in the column claiming the leftover
-   * space, the input absorbs the whole of it — the empty box in the report,
-   * with its placeholder pinned to the top.
+   * **The `.search-field { flex: none }` that stood here never applied, and it
+   * is gone rather than corrected** (2026-09-16). It was written for a report
+   * from 2026-09-05 — "sometimes the search bar on the right column loads up
+   * massive" — because `index.css`'s bare `.search-field { flex: 1 1 220px }`
+   * is written for the All Saints page's own *row*, where growing along the
+   * main axis means growing wider, while this column runs the other way and
+   * the field absorbs the leftover height instead. But the override was bare
+   * too, at the same specificity, and `index.css` came after this sheet in the
+   * entry bundle, so it won: the complaint is **still live and unfixed**, and
+   * the fix is a selector that names this column.
+   *
+   * Removed here because these two sheets are loaded per route now
+   * (`ui/sheets.js`) and the order their links reach the document is the
+   * reader's route history — so a rule that depends on which of them came
+   * second would draw this page two different ways for two readers.
+   * `tests/sheet-order.test.mjs` is what stops another one being written.
    */
-  .search-field {
-    flex: none;
-  }
 
   .side-count {
     flex: none;
