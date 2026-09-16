@@ -2,12 +2,14 @@ import { COLD, coldFace, test, expect } from './fixtures.js';
 import {
   CORPUS,
   DETAIL,
+  ICONED,
   INDEX,
   POPULATED,
   carouselMode,
   chooseSort,
   chooseView,
   facet,
+  keptOn,
   onlyCalendar,
   nothingCropped,
   ready,
@@ -707,13 +709,30 @@ test('Also commemorated is a column of saint cards, not a list of links', async 
    * register. The church's title for the day ("Venerable, the Great") is what
    * these rows carry that no other card does, and it survives the change.
    *
-   * 1 September 2026 in the Russian calendar: Pitirim of Perm is the hero and
-   * six more are commemorated under him.
+   * 1 September 2026 in the Russian calendar.
+   *
+   * **Who is on the day is read from the manifest, never counted off it**
+   * (2026-09-16). This asserted six rows, which was the corpus's size for the
+   * day and not the rule, and the day is where the next batches land. The rule
+   * is membership: every saint the church keeps that day has a row the reader
+   * can see, except the one already standing in the hero. Past 1024 px that
+   * one is in the DOM as well, marked and hidden by `calendar.css`, so the
+   * rows are counted by what is drawn rather than by what is mounted (trap 1).
    */
   await ready(page);
   await page.goto('/calendar/2026-09-01', { waitUntil: 'networkidle' });
+  const day = keptOn('russian', '2026-09-01');
+  expect(day.length, 'premise: the day holds too few saints for a register').toBeGreaterThan(1);
+  const hero = await page.locator('.hero-name a[data-prefetch]').getAttribute('data-prefetch');
+  expect(day, `premise: the hero ${hero} is not kept on this day`).toContain(hero);
   const cards = page.locator('.register-cards .reg-card');
-  await expect(cards).toHaveCount(6);
+  const shown = await cards.evaluateAll((rows) =>
+    rows.filter((r) => r.offsetParent !== null).map((r) => r.querySelector('.reg-name').dataset.prefetch),
+  );
+  expect(shown.toSorted(), 'the drawn rows are not the day less its hero').toEqual(
+    day.filter((slug) => slug !== hero).toSorted(),
+  );
+  const mounted = await cards.evaluateAll((rows) => rows.map((r) => r.querySelector('.reg-name').dataset.prefetch));
 
   /*
    * **Pinned by name rather than read off the first card** (2026-09-02). The
@@ -733,7 +752,7 @@ test('Also commemorated is a column of saint cards, not a list of links', async 
    * just have the image square to the right side, giving more space for the
    * text").
    *
-   * One of the six has an icon. The other five hold the slot without drawing
+   * The saints with an icon draw it; the rest hold the slot without drawing
    * in it, which is not the empty frame the author struck out on 2026-08-26
    * ("remove the empty frame and just print the text all the way to the left
    * margin of the card") — that one stood *before* the name and pushed every
@@ -741,11 +760,9 @@ test('Also commemorated is a column of saint cards, not a list of links', async 
    * edge, so the names still start at the card's own margin while the pictures
    * that do exist still hold one column.
    */
-  await expect(cards.locator('.reg-thumb img')).toHaveCount(1);
-  await expect(cards.locator('.reg-thumb')).toHaveCount(6);
+  await expect(cards.locator('.reg-thumb img')).toHaveCount(mounted.filter((slug) => ICONED.has(slug)).length);
+  await expect(cards.locator('.reg-thumb')).toHaveCount(mounted.length);
   await expect(cards.locator('.bookmark')).toHaveCount(0);
-  // The hero is not repeated among them.
-  await expect(page.locator('.register-cards')).not.toContainText('Pitirim');
 
   // The row still opens the saint, which is now the only thing it does.
   await agapius.locator('.reg-name').click();

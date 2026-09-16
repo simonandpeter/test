@@ -52,6 +52,33 @@ export const NO_RU_NAME = CARDS.find(
   (s) => !(s.names ?? {}).ru && !/\band\b|,|&|\d/.test(s.display_name ?? ''),
 );
 
+/**
+ * **The saints `church` keeps on the civil day `iso`**, as slugs, read from the
+ * manifest so a batch added to that day moves the expectation with it.
+ * Deliberately not `lib/feasts.js`: a test that asked the page's own
+ * arithmetic who belongs on a day could not see that arithmetic go wrong.
+ * Julian runs thirteen days behind the civil date from March 1900 to February
+ * 2100, and outside that span this throws rather than answer wrongly; an
+ * unknown reckoning throws for the same reason.
+ */
+export const keptOn = (church, iso) => {
+  const civil = new Date(`${iso}T00:00:00Z`);
+  if (!(iso >= '1900-03-01' && iso <= '2100-02-28')) throw new Error(`keptOn: ${iso} is outside 1900–2100`);
+  const julian = new Date(civil.getTime() - 13 * 86_400_000);
+  const on = { julian, 'revised-julian': civil, gregorian: civil };
+  return CARDS.filter((s) =>
+    (s.attestations ?? []).some(({ church: c, status, feast }) => {
+      if (c !== church || status !== 'venerated' || !feast) return false;
+      const day = on[feast.calendar];
+      if (!day) throw new Error(`keptOn: ${s.slug} is kept by the unknown reckoning ${feast.calendar}`);
+      return feast.month === day.getUTCMonth() + 1 && feast.day === day.getUTCDate();
+    }),
+  ).map((s) => s.slug);
+};
+
+/** The slugs whose card carries an icon. */
+export const ICONED = new Set(CARDS.filter((s) => s.image).map((s) => s.slug));
+
 export // 30 January 2026: Anthony the Great in the Russian calendar — 17 January by
 // the Julian reckoning, which the New Calendar churches keep on the civil 17th:
 // one menologion date, two civil days, the most load-bearing date in the corpus.
