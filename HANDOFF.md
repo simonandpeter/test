@@ -52,8 +52,11 @@ token tables from `tokens.css`. `git log` has the rest; nothing is pushed.
 **`/prayer` is finished and unpushed.** The hymn reader is complete through the
 plan's seventh stage — the route, `lib/prayer-order.js`, the card and its fade,
 the two asides, the field with its own MiniSearch, the phone, and the sixth nav
-link — and `scratchpad/prayer-plan.txt` is spent. `STRUCTURE.md` §4 Prayer
-describes the page that is there. `scratchpad/strip-throttle.mjs` is the
+link — and the plan it was built from is spent. `STRUCTURE.md` §4 Prayer
+describes the page that is there. The plan was a scratch `.txt`, which
+`/scratchpad/*.txt` keeps out of git, so nothing may cite it by path:
+`tests/citations.test.mjs` fails on CI for a file that exists only on the desk
+it was written on. `scratchpad/strip-throttle.mjs` is the
 instrument that settled the nav strip's gap budget at six links and is worth
 keeping for the seventh.
 
