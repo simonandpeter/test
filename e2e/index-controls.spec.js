@@ -6,6 +6,7 @@ import {
   carouselMode,
   chooseSort,
   chooseView,
+  carryingWord,
   countInRange,
   facet,
   leaders,
@@ -68,7 +69,7 @@ test('filtering by church narrows the corpus and the count follows', async ({ pa
   await expect(page.locator('[data-count]')).toHaveText(CORPUS);
   for (const name of ['Russian', 'Greek', 'Serbian']) await group.getByLabel(name).uncheck();
 
-  await expect(page.locator('[data-count]')).toHaveText('160');
+  await expect(page.locator('[data-count]')).toHaveText(VENERATED.romanian);
   // The count is the corpus's answer; the DOM holds only the cards near the
   // viewport, which at 360 px is far fewer than a hundred and twenty-two.
   await expect(page.locator('.index-card:not(.leaving)').first()).toBeVisible();
@@ -139,11 +140,9 @@ test('search reaches names, types, churches and regions', async ({ page }) => {
 
   await query.fill('hermit');
   // The count is the corpus's answer; the DOM holds only what is near the
-  // viewport, which at 360 px is a card or two. Ten since 2026-08-30:
-  // Cosmas of Zographou, hermit of the Holy Mountain, came in with the
-  // Romanian 22 September; nine before him since 2026-08-26, when John the
-  // Stranger of Siva came in with the Greek 20 September.
-  await expect(page.locator('[data-count]')).toHaveText('10');
+  // viewport, which at 360 px is a card or two. Read from the manifest, since
+  // every hermit a batch adds moved a literal here without finding anything.
+  await expect(page.locator('[data-count]')).toHaveText(carryingWord('hermit'));
 
   await query.fill('Alexandria');
   await expect(page.locator('.index-card').first()).toBeVisible();
@@ -175,7 +174,7 @@ test('Random saint stays inside the reader own filters', async ({ page }) => {
   // three unticks rather than a tick.
   const only = await facet(page, 'churches');
   for (const name of ['Russian', 'Greek', 'Serbian']) await only.getByLabel(name).uncheck();
-  await expect(page.locator('[data-count]')).toHaveText('160');
+  await expect(page.locator('[data-count]')).toHaveText(VENERATED.romanian);
 
   await page.locator('[data-random]').click();
   await expect(page.locator('h1.saint-name')).toBeVisible();

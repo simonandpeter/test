@@ -30,6 +30,20 @@ export const countInRange = (from, to, rangeMode) =>
   String(applyFilters(CARDS, { from, to, rangeMode, sort: 'name' }).matched.length);
 export const undatedCount = () => String(applyFilters(CARDS, { from: 1396, to: 1400, sort: 'name' }).undated.length);
 
+/**
+ * How many saints carry `word` in their display name, a recorded name form or
+ * a type slug — the three places the search box reaches that a batch fills.
+ * Read, not re-implemented: the page's MiniSearch is prefix and fuzzy, so if it
+ * ever finds a saint this does not, the count assertion fails and names the
+ * two numbers, which is a finding about the search rather than the corpus.
+ */
+export const carryingWord = (word) => {
+  const re = new RegExp(word, 'i');
+  return String(
+    CARDS.filter((s) => [s.display_name, ...Object.values(s.names ?? {}), ...(s.types ?? [])].some((t) => re.test(String(t)))).length,
+  );
+};
+
 /** How many each church venerates, as the Calendar facet narrows to. */
 export const VENERATED = Object.fromEntries(
   Object.entries(META.by_church).map(([church, counts]) => [church, String(counts.venerated)]),

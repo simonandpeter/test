@@ -290,7 +290,7 @@ const januaryOwn = cards.filter((s) =>
  * on its own gave 9 against the spec's 10 and would have read as the spec
  * being stale when it was this arithmetic that was.
  */
-const hermits = cards.filter((s) => /hermit/i.test(s.display_name ?? '') || (s.types ?? []).some((t) => /hermit/i.test(t))).length;
+const hermits = cards.filter((s) => [s.display_name ?? '', ...(s.names ?? []).map((n) => n.form), ...(s.types ?? [])].some((t) => /hermit/i.test(t))).length;
 
 let reach = null;
 let gap = 0;
@@ -304,9 +304,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:69,261  Romanian venerated', venerated.romanian, '160'],
   ['e2e/index-controls.spec.js:160     1396–1400 must be empty', overlapsRange(1396, 1400), '0'],
-  ['e2e/index-controls.spec.js:229     type "hermit"', hermits, '10'],
   ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '6'],
 ];
 for (const [where, now, literal] of EXPECTED) {
@@ -318,6 +316,7 @@ console.log(`  · corpus total (e2e reads META.total)                 now ${corp
 console.log(`  · 240–460 overlaps (e2e reads countInRange)          now ${overlapsRange(240, 460)}`);
 console.log(`  · 240–460 within   (e2e reads countInRange)          now ${withinRange(240, 460)}`);
 console.log(`  · undated tray     (e2e reads undatedCount)          now ${undated}`);
+console.log(`  · type "hermit"    (e2e reads carryingWord)          now ${hermits}`);
 /*
  * Read, not held: daily-panel's reach sentence works the reach out from the
  * manifest itself (2026-09-16), so this is a figure to look at, not a literal
