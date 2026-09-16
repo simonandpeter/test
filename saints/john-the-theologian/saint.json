@@ -10,6 +10,11 @@
       "form": "Ioan",
       "lang": "ro",
       "note": "His own name, read out of «Sfântul Apostol și Evanghelist Ioan» — the line already recorded here, which names more than this saint (or joins two of the titles with “and”), so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
+    },
+    {
+      "form": "Άγιος Ιωάννης ο Θεολόγος",
+      "lang": "el",
+      "note": "Read out of «Άγιος Ιωάννης ο Θεολόγος (Μετάσταση)» in this folder’s Greek citation."
     }
   ],
   "sex": "male",
@@ -48,8 +53,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 26 Σεπτεμβρίου — «Άγιος Ιωάννης ο Θεολόγος (Μετάσταση)»",
+        "url": "https://www.saint.gr/09/26/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -69,5 +83,40 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Ἀπόστολε Χριστῷ τῷ Θεῷ ἠγαπηπημένε, ἐπιτάχυνον, ῥῦσαι λαὸν ἀναπολόγητον, δέχεταί σε προσπίπτοντα, ὁ ἐπιπεσόντα τῷ στήθει καταδεξάμενος· ὃν ἱκέτευε, Θεολόγε, καὶ ἐπίμονον νέφος ἐθνῶν διασκεδάσαι, αἰτούμενος ἡμῖν εἰρήνην, καὶ τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ιωάννης ο Θεολόγος (Μετάσταση), Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2500/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "O Apostle beloved of Christ our God, make haste and deliver a people that has no defence; he who suffered thee to lean upon his breast receiveth thee as thou fallest down before him. Beseech him, O Theologian, to scatter the lingering cloud of the heathen, asking for us peace and great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Τὰ μεγαλεῖά σου Παρθένε, τὶς διηγήσεται; βρύεις γὰρ θαύματα, καὶ πηγάζεις ἰάματα, καὶ πρεσβεύεις ὑπὲρ τῶν ψυχῶν ἡμῶν, ὡς θεολόγος καὶ φίλος Χριστοῦ.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ιωάννης ο Θεολόγος (Μετάσταση), Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2500/saint.aspx",
+        "year": 2026
+      },
+      "model": "Αὐτόμελον.",
+      "english": {
+        "text": "Thy mighty deeds, O virgin, who shall tell? For thou gushest forth wonders and wellest up with healings, and intercedest for our souls, as theologian and friend of Christ.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

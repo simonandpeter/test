@@ -1,0 +1,57 @@
+{
+  "slug": "john-the-speleote-of-sia",
+  "display_name": "John the Speleote of Sia",
+  "names": [
+    {
+      "form": "Όσιος Ιωάννης ο Σπηλεώτης ο εν της κώμης Σιάς ασκήσας",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 700,
+      "latest": 700,
+      "display": "c. 700",
+      "basis": "inferred",
+      "note": "saint.gr: „Το 700 μ.χ. στην περιοχή υπήρχε ένας Ρωμαϊκός συνοικισμός, η λεγόμενη Παμπουλιά. Εκεί έφθασαν αλαμάνοι αγίοι από από την Παλαιστίνη, μεταξύ αυτών και οι πέντε όσιοι.” The page does not date his arrival more closely than that."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 26 сентября ст. ст. (civil 9 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 26 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 26 Σεπτεμβρίου — «Όσιος Ιωάννης ο Σπηλεώτης ο εν της κώμης Σιάς ασκήσας»",
+        "url": "https://www.saint.gr/09/26/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 26. септембар ст. ст. (civil 9 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

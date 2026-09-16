@@ -1,0 +1,69 @@
+{
+  "slug": "mary-of-aza",
+  "display_name": "Mary of Aza",
+  "names": [
+    {
+      "form": "Αγίες Θέκλα, Μαριάμνη, Μάρθα, Μαρία και Ενναθά οι πέντε κανονικές Παρθένες",
+      "lang": "el"
+    },
+    {
+      "form": "Μαρία",
+      "lang": "el",
+      "note": "Read out of «Αγίες Θέκλα, Μαριάμνη, Μάρθα, Μαρία και Ενναθά οι πέντε κανονικές Παρθένες» in this folder’s Greek citation."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 330,
+      "latest": 330,
+      "display": "c. 330",
+      "basis": "traditional",
+      "note": "saint.gr, 9 June: „Στα χρόνια του βασιλιά των Περσών Σαθωρίου (330 μ.Χ.)”; the heading prints „(; - 330)”."
+    }
+  },
+  "related": [
+    "thecla-of-aza",
+    "mariamne-of-aza",
+    "martha-of-aza",
+    "ennatha-of-aza"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 26 сентября ст. ст. (civil 9 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 26 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 26 Σεπτεμβρίου — «Αγίες Θέκλα, Μαριάμνη, Μάρθα, Μαρία και Ενναθά οι πέντε κανονικές Παρθένες»",
+        "url": "https://www.saint.gr/09/26/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 26. септембар ст. ст. (civil 9 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -9,6 +9,11 @@
     {
       "form": "Sfântul Cuvios Ierotei cel Tânăr de la Iviron",
       "lang": "ro"
+    },
+    {
+      "form": "Јеротеј",
+      "lang": "sr",
+      "note": "Read out of «Преп. Јеротеј.» in this folder’s Serbian citation."
     }
   ],
   "sex": "male",
@@ -67,8 +72,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 13. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.09.2026 (13. септембар ст. ст.) — „Преп. Јеротеј.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-26&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

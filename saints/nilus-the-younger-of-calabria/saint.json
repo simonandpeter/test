@@ -1,0 +1,67 @@
+{
+  "slug": "nilus-the-younger-of-calabria",
+  "display_name": "Nilus the Younger of Calabria",
+  "names": [
+    {
+      "form": "Άγιος Νείλος ο νεότερος από την Καλαβρία",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 910,
+      "latest": 910,
+      "display": "910",
+      "basis": "traditional",
+      "note": "saint.gr: „γεννήθηκε στο Ροσσάνο της Κάτω Ιταλίας το έτος 910 μ.Χ.”; the heading prints „(910 - 1005)”."
+    },
+    "death": {
+      "earliest": 1003,
+      "latest": 1005,
+      "display": "1003 or 1005",
+      "basis": "traditional",
+      "note": "saint.gr’s life: „Λίγο πριν παραδώσει την αγία του ψυχή στον Θεό, το έτος 1003 μ.Χ.”; its heading prints „(910 - 1005)”. The interval holds both."
+    }
+  },
+  "related": [
+    "phantinus-the-wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 26 сентября ст. ст. (civil 9 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 26 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 26 Σεπτεμβρίου — «Άγιος Νείλος ο νεότερος από την Καλαβρία»",
+        "url": "https://www.saint.gr/09/26/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 26. септембар ст. ст. (civil 9 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

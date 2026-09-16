@@ -23,6 +23,11 @@
       "form": "Μακρόβιος",
       "lang": "el",
       "note": "His own name, read out of «Άγιοι Γορδιανός, Σέλευκος και Μακρόβιος» — the line already recorded here, which names more than this saint (or joins two of the titles with “and”), so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
+    },
+    {
+      "form": "Макровије",
+      "lang": "sr",
+      "note": "Read out of «Св. муч. Макровије и Гордијан.» in this folder’s Serbian citation."
     }
   ],
   "sex": "male",
@@ -31,11 +36,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 323,
+      "earliest": 320,
       "latest": 324,
-      "display": "c. 323–324",
+      "display": "320–324",
       "basis": "traditional",
-      "note": "saint.gr: in the fourth century under Licinius; the Romanian Lives: about 323–324."
+      "note": "saint.gr: in the fourth century under Licinius; the Romanian Lives: about 323–324. The Ohrid Prologue on pravoslavno.rs: „у месту Новом Дунавцу 320. год.“; the interval holds both."
     }
   },
   "attestations": [
@@ -83,8 +88,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 13. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.09.2026 (13. септембар ст. ст.) — „Св. муч. Макровије и Гордијан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-26&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -113,5 +127,8 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "gordian-of-tomis"
   ]
 }

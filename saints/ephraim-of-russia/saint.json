@@ -1,0 +1,64 @@
+{
+  "slug": "ephraim-of-russia",
+  "display_name": "Ephraim of Russia",
+  "names": [
+    {
+      "form": "Όσιος Εφραίμ ο εκ Ρωσίας ο θαυματουργός",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1412,
+      "latest": 1412,
+      "display": "1412",
+      "basis": "traditional",
+      "note": "saint.gr’s heading: „Οσιος Εφραιμ ο Εκ Ρωσιας ο Θαυματουργος (1412 - 1492)”."
+    },
+    "death": {
+      "earliest": 1492,
+      "latest": 1492,
+      "display": "1492",
+      "basis": "traditional",
+      "note": "saint.gr’s heading: „Οσιος Εφραιμ ο Εκ Ρωσιας ο Θαυματουργος (1412 - 1492)”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 26 сентября ст. ст. (civil 9 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 26 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 26 Σεπτεμβρίου — «Όσιος Εφραίμ ο εκ Ρωσίας ο θαυματουργός»",
+        "url": "https://www.saint.gr/09/26/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 26. септембар ст. ст. (civil 9 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

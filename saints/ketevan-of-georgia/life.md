@@ -36,6 +36,8 @@ altar of the cathedral of St George at Alaverdi in Kakheti. The
 catholicos-patriarch Zacharias numbered her among the saints and set her
 feast on 13 September; the Romanian calendar keeps her on that day.
 
+The Ohrid Prologue, for the Serbian calendar, calls her queen of Kakheti and says she suffered as a Christian under Shah Abbas I in 1624: by the shah’s order a red-hot cauldron was set on her head. Her son Teimuraz, king of Georgia, laid her relics under the altar of the church at Alaverdi.
+
 *After the Viețile Sfinților as printed by doxologia.ro —
 [the life](https://doxologia.ro/viata-sfintei-mucenite-ketevan-regina-georgiei), read 5 September 2026 — this
-time whole; the earlier reading had stopped partway.*
+time whole; the earlier reading had stopped partway; the Ohrid Prologue for 26 September 2026 (13. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-26&prolog=1), read 17 September 2026.*
