@@ -9,7 +9,7 @@ import { DUR, EASE, reducedMotion } from '../../lib/motion.js';
 import { neighboursAt } from '../../lib/prayer-order.js';
 import { hymnMarkup, mergeForReading } from '../../ui/hymns.js';
 import { STRINGS } from '../../ui/strings.js';
-import { drawAsides, fillAsides } from './asides.js';
+import { clearAsides, drawAsides, fillAsides } from './asides.js';
 import { state } from './state.js';
 
 const BASE = import.meta.env.BASE_URL;
@@ -121,6 +121,32 @@ function fillDetail(root, card, generation) {
   );
 }
 
+/**
+ * Which arrows are live, and the two neighbours in the cache behind them.
+ *
+ * **Its own function because the ends move without the saint moving.** A query
+ * typed into the field shortens the book under the reader's hands: the saint in
+ * hand can be unchanged and be the last one in it, and an arrow left enabled
+ * there would step to nobody. `views/prayer/find.js` calls this on exactly that
+ * change, where redrawing the card would throw away the hymn's scroll position
+ * for nothing.
+ */
+export function refreshEnds(root) {
+  if (!state) return;
+  const { prev, next } = neighboursAt(state.order, state.at);
+  const prevBtn = root.querySelector('#hy-prev');
+  const nextBtn = root.querySelector('#hy-next');
+  if (prevBtn) prevBtn.disabled = !prev;
+  if (nextBtn) nextBtn.disabled = !next;
+  /*
+   * Both neighbours, because a reader who has stepped forward is as likely to
+   * step back as on — and speculatively, so `lib/detail.js` cancels them the
+   * moment the reader leaves for somewhere else entirely.
+   */
+  if (prev) prefetch(prev.slug);
+  if (next) prefetch(next.slug);
+}
+
 /** The fade in flight, so a second press cancels the first rather than racing it. */
 let fading = null;
 
@@ -149,8 +175,13 @@ export function showCard(root, { animate = false } = {}) {
   if (!hold || !state) return;
   const draw = () => {
     const card = state.order[state.at];
+    /* The field narrowed the hymnal to nobody. The count line says so in words;
+       here the three regions empty rather than keeping the saint the query has
+       just excluded, which would be the page disagreeing with its own count. */
     if (!card) {
       hold.innerHTML = '';
+      clearAsides(root);
+      refreshEnds(root);
       return;
     }
     const generation = state.generation;
@@ -165,18 +196,7 @@ export function showCard(root, { animate = false } = {}) {
      */
     drawAsides(root, card);
     fillAsides(root, card, generation);
-    const { prev, next } = neighboursAt(state.order, state.at);
-    const prevBtn = root.querySelector('#hy-prev');
-    const nextBtn = root.querySelector('#hy-next');
-    if (prevBtn) prevBtn.disabled = !prev;
-    if (nextBtn) nextBtn.disabled = !next;
-    /*
-     * Both neighbours, because a reader who has stepped forward is as likely to
-     * step back as on — and speculatively, so `lib/detail.js` cancels them the
-     * moment the reader leaves for somewhere else entirely.
-     */
-    if (prev) prefetch(prev.slug);
-    if (next) prefetch(next.slug);
+    refreshEnds(root);
   };
 
   fading?.cancel();
@@ -238,6 +258,8 @@ export function goToSlug(root, slug) {
 
 function showAt(root, at) {
   state.at = at;
+  // The payload belongs to the saint being left, and the asides read it.
+  state.detail = null;
   state.generation += 1;
   showCard(root, { animate: true });
 }

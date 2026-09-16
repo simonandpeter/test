@@ -28,6 +28,88 @@ html[data-route~='prayer'] .hy-body {
   min-height: 0;
 }
 
+/* ---- the row above the book ----------------------------------------------
+   The field that narrows the hymnal, the line that says how much is left, and
+   the switch between the two faces of the columns beside. `flex: none`, so the
+   body below it is what the page's height is spent on. */
+
+html[data-route~='prayer'] .hy-find {
+  flex: none;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-4);
+  padding: 0 var(--space-4) var(--space-4);
+}
+
+html[data-route~='prayer'] .hy-q {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  background: var(--field);
+  color: var(--ink);
+  font-family: var(--font-utility);
+  font-size: var(--text-base);
+}
+
+html[data-route~='prayer'] .hy-count {
+  flex: none;
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Two marks and no words, the pair this site already draws over the Daily
+   register: a square for the pictures, four lines for the names alone, at one
+   size so the two read as one control. The live one is `--accent` and the other
+   `--rule`, and the word each stands for is `sr-only` inside it — which is what
+   actually says which face is showing, to a reader who cannot separate the two
+   hues or is not looking at them at all.
+
+   **The geometry is written here rather than borrowed from `.vt`.** That class
+   is `calendar.css`'s and `calendar.css` is on the entry bundle today, which is
+   the kind of dependency that holds until the day somebody takes a sheet off
+   the entry and a control four routes away quietly loses its drawing. */
+html[data-route~='prayer'] .hy-views {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+html[data-route~='prayer'] .hy-vt-button {
+  display: inline-flex;
+  padding: var(--space-1);
+  border: 0;
+  background: none;
+  font: inherit;
+  line-height: 0;
+  color: var(--rule);
+  cursor: pointer;
+  transition: color var(--dur-answer) var(--ease);
+}
+
+html[data-route~='prayer'] .hy-vt {
+  display: block;
+  flex: none;
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.3;
+  stroke-linecap: round;
+}
+
+html[data-route~='prayer'] .hy-vt-button:hover {
+  color: var(--ink-soft);
+}
+
+/* Last, so hovering the live mark does not take it back to the soft ink. */
+html[data-route~='prayer'] .hy-vt-button[aria-pressed='true'] {
+  color: var(--accent);
+}
+
 /* ---- the two asides ------------------------------------------------------
    A heading and a column of names, and nothing that looks like a card: the
    saint in the middle is the page and these are its margins. */
@@ -77,10 +159,55 @@ html[data-route~='prayer'] .hy-link[disabled] {
   cursor: default;
 }
 
+html[data-route~='prayer'] .hy-who {
+  display: block;
+}
+
 html[data-route~='prayer'] .hy-when {
   display: block;
   font-size: var(--text-2xs);
   color: var(--ink-soft);
+}
+
+/* ---- the columns' picture face -------------------------------------------
+   **A plate of the saint above their name**, the shape this site gives a small
+   icon everywhere else: a 3:2 box whatever the icon's own proportions, filled
+   and positioned by `lib/hero-crop.js`'s focus so a face stays in the frame.
+
+   The two faces are two drawings of one row — the same element, the same
+   classes, the same press — so nothing is rebuilt to switch between them beyond
+   the picture itself, and a reader who has learnt the rows has learnt the
+   plates. A row whose saint has no icon keeps an empty mat rather than standing
+   shorter than its neighbours, which would read as something meant. */
+html[data-route~='prayer'] .hy-links.is-plate .hy-link {
+  border-left: 0;
+  margin-left: 0;
+  padding: 0 0 var(--space-4);
+}
+
+html[data-route~='prayer'] .hy-links.is-plate .hy-link:hover {
+  border-left: 0;
+}
+
+html[data-route~='prayer'] .hy-plate {
+  display: block;
+  aspect-ratio: 3 / 2;
+  margin-bottom: var(--space-1);
+  background: var(--mount);
+  overflow: hidden;
+}
+
+html[data-route~='prayer'] .hy-plate img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--hy-focus, 50% 0);
+}
+
+/* The one thing a dimmed row must keep saying is that it is dimmed, and a
+   picture at full ink over a name at a quarter of it says the opposite. */
+html[data-route~='prayer'] .hy-link[disabled] .hy-plate {
+  opacity: 0.45;
 }
 
 /* ---- the saint in hand ---------------------------------------------------
@@ -217,6 +344,12 @@ html[data-route~='prayer'] .hy-arrow.is-next {
 @media (min-width: 1024px) {
   html[data-route~='prayer'] .hymnal {
     height: 100%;
+  }
+
+  /* The row takes the same side margin the three columns under it take, so the
+     field's left edge and the first aside's stand on one line. */
+  html[data-route~='prayer'] .hy-find {
+    padding: 0 var(--space-8) var(--space-4);
   }
 
   /* `--hy-side-w` is the aside's measure — wide enough for a name over two

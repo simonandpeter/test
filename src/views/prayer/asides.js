@@ -2,11 +2,14 @@ import { formatLifespan } from '../../lib/calendar-page.js';
 import { currentChurch } from '../../lib/church.js';
 import { CHURCHES_BY_ID } from '../../data/churches.js';
 import { loadDetail } from '../../lib/detail.js';
+import { cardCrop } from '../../lib/hero-crop.js';
 import { saintName } from '../../lib/honorific.js';
 import { escapeHtml as esc } from '../../lib/markdown.js';
 import { relatedFor, sameDayFor } from '../../lib/prayer-order.js';
 import { STRINGS, fill } from '../../ui/strings.js';
 import { state } from './state.js';
+
+const BASE = import.meta.env.BASE_URL;
 
 /**
  * The two ways out of one saint and into the next: who the corpus records them
@@ -25,20 +28,46 @@ import { state } from './state.js';
  * named here" and "where can this go" are two attributes and not one, and a
  * test can ask the first question about a row that answers no to the second.
  */
-function link(card, reachable) {
+function link(card, reachable, plate) {
   const name = esc(saintName(card));
   const when = esc(formatLifespan(card.dates));
   const go = reachable ? ` data-go="${esc(card.slug)}"` : ' disabled';
-  return `<li><button class="hy-link" type="button" data-slug="${esc(card.slug)}"${go}>${name}<span class="hy-when utility">${when}</span></button></li>`;
+  return `<li><button class="hy-link" type="button" data-slug="${esc(card.slug)}"${go}>${
+    plate ? plateFor(card) : ''
+  }<span class="hy-who">${name}<span class="hy-when utility">${when}</span></span></button></li>`;
 }
 
-function list(slugs, bySlug, reach) {
+/**
+ * The picture face of a row.
+ *
+ * **A plate of the saint above their name**, in the shape the rest of the site
+ * gives a small icon: a 3:2 box whatever the icon's own proportions, filled and
+ * positioned by `lib/hero-crop.js`'s focus so a face stays in the frame. The
+ * narrow derivative (`cardSm`, 228 px) is the one asked for, because this
+ * column is never wider than `--hy-side-w`.
+ *
+ * **A saint with no icon keeps their plate** — an empty mat rather than a row
+ * that is shorter than its neighbours. Sixty-four of the hymnal's own 142 have
+ * no picture and far more of the saints these columns *name* have none, so a
+ * face that collapsed for them would be a face with holes in it, and a reader
+ * would read the holes as something meant.
+ */
+function plateFor(card) {
+  const image = card.image;
+  if (!image) return `<span class="hy-plate is-blank" aria-hidden="true"></span>`;
+  const { focus } = cardCrop(image);
+  return `<span class="hy-plate" style="--hy-focus:${focus}">
+    <img src="${BASE + (image.cardSm ?? image.src)}" alt="" loading="lazy" decoding="async" />
+  </span>`;
+}
+
+function list(slugs, bySlug, reach, plate) {
   const rows = slugs
     .map((slug) => bySlug?.get(slug))
     .filter(Boolean)
-    .map((card) => link(card, reach.has(card.slug)));
+    .map((card) => link(card, reach.has(card.slug), plate));
   if (!rows.length) return `<p class="hy-line">${esc(STRINGS.prayer.none)}</p>`;
-  return `<ul class="hy-links">${rows.join('')}</ul>`;
+  return `<ul class="hy-links${plate ? ' is-plate' : ''}">${rows.join('')}</ul>`;
 }
 
 /**
@@ -55,14 +84,21 @@ function list(slugs, bySlug, reach) {
  * of the manifest's own attestations, in the reader's church and for the year
  * the caller names.
  */
-export function drawAsides(root, card, detail = null) {
+export function drawAsides(root, card) {
   const P = STRINGS.prayer;
   const bySlug = state?.data?.bySlug;
   const reach = state?.reach ?? new Set();
+  /*
+   * **The face is read here rather than passed in**, because every caller wants
+   * the one the reader chose and none of them has an opinion about it: the
+   * step, the payload landing, and the switch itself all draw the same face.
+   */
+  const plate = state?.view === 'plate';
+  const detail = state?.detail ?? null;
 
   const related = root.querySelector('#hy-related');
   if (related) {
-    related.innerHTML = `<h2>${esc(P.related)}</h2>${list(relatedFor(card, detail), bySlug, reach)}`;
+    related.innerHTML = `<h2>${esc(P.related)}</h2>${list(relatedFor(card, detail), bySlug, reach, plate)}`;
   }
 
   const sameday = root.querySelector('#hy-sameday');
@@ -83,7 +119,7 @@ export function drawAsides(root, card, detail = null) {
   const over = day.total - day.slugs.length;
   sameday.innerHTML =
     `<h2>${esc(P.sameDay)}</h2>` +
-    list(day.slugs, bySlug, reach) +
+    list(day.slugs, bySlug, reach, plate) +
     (over > 0 ? `<p class="hy-line" data-hy-more>${esc(fill(P.andMore, { n: over }))}</p>` : '');
   if (day.iso) sameday.dataset.iso = day.iso;
   else delete sameday.dataset.iso;
@@ -98,11 +134,28 @@ export function fillAsides(root, card, generation) {
   loadDetail(card.slug).then(
     (payload) => {
       if (!state || state.generation !== generation) return;
-      drawAsides(root, card, payload?.saint);
+      /* The one writer of `state.detail`: it is the aside's half of the payload
+         and it is kept so that a redraw which is not a step — the reader
+         switching the two columns' face — does not lose the half that arrived
+         with the fetch. */
+      state.detail = payload?.saint ?? null;
+      drawAsides(root, card);
     },
     () => {
       /* The folder did not answer; the aside keeps the half the manifest gave
          it, which is a smaller true list rather than a guessed one. */
     },
   );
+}
+
+/**
+ * Empties both columns, which is what a query matching nobody leaves behind.
+ * The headings go with the lists: a heading over nothing is a promise the page
+ * is not keeping, and the count line has already said what happened.
+ */
+export function clearAsides(root) {
+  for (const id of ['#hy-related', '#hy-sameday']) {
+    const aside = root.querySelector(id);
+    if (aside) aside.innerHTML = '';
+  }
 }

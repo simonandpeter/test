@@ -3,6 +3,7 @@ import { test, expect } from './fixtures.js';
 import { CHURCHES_BY_ID } from '../src/data/churches.js';
 import { feastIndexFor } from '../src/lib/feasts.js';
 import { SAME_DAY_MAX } from '../src/lib/prayer-order.js';
+import { STRINGS, fill } from '../src/ui/strings.js';
 import { desk, ready } from './helpers.js';
 
 /**
@@ -396,4 +397,167 @@ test('the same day holds only the saints this reader’s church keeps that day',
    */
   const over = await aside.locator('[data-hy-more]').count();
   expect(over > 0, 'the “and N more” line matches the cap').toBe(shouldBe.size > drawn.length);
+});
+
+/* ---- the field, the count and the two faces -------------------------------
+   `ready()` seeds English, so `STRINGS` read here is the pack the page is
+   drawn in — the count line is compared against the site's own words rather
+   than against a copy of them typed into this file. */
+
+/** What is in the field, set and announced the way a keystroke would. */
+async function type(page, query) {
+  await page.evaluate((q) => {
+    const field = document.querySelector('#hy-q');
+    field.value = q;
+    field.dispatchEvent(new Event('input', { bubbles: true }));
+  }, query);
+}
+
+/**
+ * Every saint the book holds right now, walked with the arrow rather than read
+ * off anything the page publishes about itself. The walk steps back to the
+ * first saint before it starts, so it is the whole book and not the tail of it;
+ * it is bounded, so a stepper that stopped disabling itself fails the premise
+ * instead of hanging.
+ */
+async function walkBook(page, cap = 60) {
+  return page.evaluate(async (limit) => {
+    const press = (id) => document.querySelector(id).click();
+    const settle = () => new Promise((r) => setTimeout(r, 80));
+    for (let i = 0; i < limit && !document.querySelector('#hy-prev').disabled; i += 1) {
+      press('#hy-prev');
+      await settle();
+    }
+    const slugs = [];
+    for (let i = 0; i < limit; i += 1) {
+      const at = document.querySelector('.hy-saint')?.dataset.slug;
+      if (!at) break;
+      slugs.push(at);
+      if (document.querySelector('#hy-next').disabled) break;
+      press('#hy-next');
+      await settle();
+    }
+    return slugs;
+  }, cap);
+}
+
+test('the count line says how many saints the book holds, and it is the corpus own number', async ({ page }) => {
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hy-saint')).toBeVisible();
+  /*
+   * Read off the manifest, never typed: 142 is a number that moves the day
+   * somebody adds a folder with a hymn in it, and a test naming it goes red
+   * without having found anything.
+   */
+  await expect(page.locator('#hy-count')).toHaveText(fill(STRINGS.prayer.count, { n: HYMNED.length }));
+});
+
+test('the field narrows the book itself, and the count is the book own length', async ({ page }) => {
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hy-saint')).toBeVisible();
+
+  /*
+   * The pin and its premise (trap 5): a saint the hymnal holds, searched for by
+   * the whole of the name the page prints for them, so the query cannot fail to
+   * reach them for a reason this test cannot see.
+   */
+  const subject = HYMNED[Math.floor(HYMNED.length / 2)];
+  await type(page, subject.display_name);
+
+  /*
+   * The index arrives after the paint (`views/prayer/find.js` imports MiniSearch
+   * on demand), so the narrowing is polled for rather than assumed — and what is
+   * asserted is a relationship: fewer than the whole hymnal, and not none.
+   */
+  await expect
+    .poll(() => page.locator('#hy-count').textContent())
+    .not.toBe(fill(STRINGS.prayer.count, { n: HYMNED.length }));
+
+  /*
+   * **The count line is the book's own length**, walked with the arrow. Two
+   * independent readings of one fact (trap 14): the line the page prints, and
+   * the saints a reader can actually reach by stepping. A count that came from
+   * somewhere other than the shown list would pass the first and fail this.
+   */
+  const slugs = await walkBook(page);
+  expect(slugs.length, 'the query found somebody').toBeGreaterThanOrEqual(1);
+  expect(slugs.length, 'and not the whole hymnal').toBeLessThan(HYMNED.length);
+  expect(slugs, 'the saint searched for is in the book the query left').toContain(subject.slug);
+  const line = await page.locator('#hy-count').textContent();
+  const said = slugs.length === 1 ? STRINGS.prayer.countOne : fill(STRINGS.prayer.count, { n: slugs.length });
+  expect(line.trim()).toBe(said);
+});
+
+test('a query that matches nobody says so, and the page holds no saint', async ({ page }) => {
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hy-saint')).toBeVisible();
+
+  await type(page, 'qzxwvj');
+  await expect(page.locator('#hy-count')).toHaveText(STRINGS.prayer.countNone);
+  // The three regions agree with the line: no saint, and no margins around one.
+  await expect(page.locator('.hy-saint')).toHaveCount(0);
+  await expect(page.locator('#hy-related .hy-link')).toHaveCount(0);
+  await expect(page.locator('#hy-sameday .hy-link')).toHaveCount(0);
+  await expect(page.locator('#hy-prev')).toBeDisabled();
+  await expect(page.locator('#hy-next')).toBeDisabled();
+});
+
+test('a name pressed in an aside is reached even when the query is hiding it', async ({ page }) => {
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hy-saint')).toBeVisible();
+  await stepTo(page, WITH_MENTIONS);
+  await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', HYMNED[WITH_MENTIONS].slug);
+
+  const target = await page.evaluate(() => document.querySelector('.hy-link[data-go]')?.dataset.go ?? null);
+  expect(target, 'this saint has reachable company to press').not.toBeNull();
+
+  /* A query that narrows to the saint in hand and therefore excludes whoever
+     their margin names. The relation is a fact about the saint and not about
+     the search, so the press has to widen the book rather than refuse. */
+  await type(page, HYMNED[WITH_MENTIONS].display_name);
+  await expect
+    .poll(() => page.locator('#hy-count').textContent())
+    .not.toBe(fill(STRINGS.prayer.count, { n: HYMNED.length }));
+  await page.evaluate((slug) => document.querySelector(`.hy-link[data-go="${slug}"]`)?.click(), target);
+
+  await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', target);
+  // And the field says what it is doing: nothing, now.
+  await expect(page.locator('#hy-q')).toHaveValue('');
+  await expect(page.locator('#hy-count')).toHaveText(fill(STRINGS.prayer.count, { n: HYMNED.length }));
+});
+
+test('the two faces are two drawings, not two class names', async ({ page }) => {
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hy-saint')).toBeVisible();
+  await stepTo(page, WITH_MENTIONS);
+  await expect(page.locator('#hy-related .hy-link').first()).toBeVisible();
+
+  const plate = page.locator('#hy-views [data-hy-view="plate"]');
+  const rows = page.locator('#hy-views [data-hy-view="rows"]');
+  await expect(plate).toHaveAttribute('aria-pressed', 'true');
+
+  /*
+   * **Geometry, not the class** (the whole point of this test): a row in the
+   * picture face carries a plate above the name and is therefore taller than
+   * the same row without one. Measured on the row the page happens to draw
+   * first in that column — its identity does not matter, only that it is the
+   * same element before and after.
+   */
+  const rowHeight = () =>
+    page.evaluate(() => {
+      const el = document.querySelector('#hy-related .hy-link');
+      // A hidden element reports 0 and would satisfy "shorter" by accident.
+      return el && el.clientWidth > 0 ? el.getBoundingClientRect().height : 0;
+    });
+
+  const asPlate = await rowHeight();
+  expect(asPlate, 'the picture face is drawn').toBeGreaterThan(0);
+  await page.evaluate(() => document.querySelector('[data-hy-view="rows"]').click());
+  await expect(rows).toHaveAttribute('aria-pressed', 'true');
+  await expect(plate).toHaveAttribute('aria-pressed', 'false');
+  await expect(page.locator('#hy-related .hy-plate')).toHaveCount(0);
+
+  const asRows = await rowHeight();
+  expect(asRows, 'the names face is drawn').toBeGreaterThan(0);
+  expect(asRows, 'and is shorter by a picture').toBeLessThan(asPlate);
 });

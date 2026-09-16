@@ -1,8 +1,10 @@
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { stepOrder } from '../lib/prayer-order.js';
 import { STRINGS } from '../ui/strings.js';
-import { goToSlug, showCard, stepBy } from './prayer/card.js';
-import { close, open } from './prayer/state.js';
+import { showCard, stepBy } from './prayer/card.js';
+import { drawAsides } from './prayer/asides.js';
+import { findMarkup, revealSlug, wireFind } from './prayer/find.js';
+import { close, open, state } from './prayer/state.js';
 
 /*
  * **This view's stylesheet, off the first paint's path.** `src/main.js`
@@ -46,6 +48,7 @@ export function render(el, { data } = {}) {
   el.innerHTML = `
     <div class="hymnal">
       <h1 class="sr-only">${esc(P.title)}</h1>
+      ${findMarkup()}
       <div class="hy-body">
         <div class="hy-view" id="hy-view">
           <button class="hy-arrow is-prev" type="button" id="hy-prev" aria-label="${esc(P.prev)}">‹</button>
@@ -58,8 +61,21 @@ export function render(el, { data } = {}) {
     </div>
   `;
 
-  open({ data, order: stepOrder(data?.saints ?? []) });
+  open({ data, all: stepOrder(data?.saints ?? []) });
   showCard(el);
+  /*
+   * The switch redraws the asides and nothing else. Passed in rather than
+   * imported inside `find.js` because `asides.js` is the card's collaborator
+   * and a straight import there would close a cycle — the one place this view's
+   * three modules would have needed to know about each other in both
+   * directions.
+   */
+  wireFind(el, {
+    redrawAsides: () => {
+      const card = state?.order[state.at];
+      if (card) drawAsides(el, card);
+    },
+  });
 
   /*
    * One listener for the arrows and both asides. The arrows are never rebuilt —
@@ -74,7 +90,9 @@ export function render(el, { data } = {}) {
       return;
     }
     const go = e.target.closest?.('.hy-link[data-go]');
-    if (go) goToSlug(el, go.dataset.go);
+    // Through `find.js`, because a name the current query excludes is still a
+    // saint this page holds: the search widens to let the reader reach them.
+    if (go) revealSlug(el, go.dataset.go);
   };
   root = el.querySelector('.hy-body');
   root?.addEventListener('click', onPress);

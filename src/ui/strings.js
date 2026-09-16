@@ -1208,6 +1208,32 @@ export const STRINGS = {
     prev: 'The saint before',
     next: 'The saint after',
     /*
+     * **The field narrows the hymnal itself**, so the arrows step through what
+     * the reader asked for rather than past it. What is indexed is what the
+     * card already shows — the name in every form the corpus records, the line
+     * of office and dates under it, and the names of whoever the corpus records
+     * this saint with — because a reader searching for a saint they can see is
+     * the case, and hymn text is a fetch a page cannot make 142 times.
+     */
+    searchLabel: 'Find a saint',
+    searchPlaceholder: 'Search: a saint, a companion, a century',
+    /*
+     * Three lines and not one with a number in it: four of the five languages
+     * do not pluralise the way English does, and «1 святых» is the kind of
+     * wrong that a template with `{n}` in it cannot be stopped from writing.
+     */
+    count: '{n} saints',
+    countOne: '1 saint',
+    countNone: 'nothing by that name',
+    /*
+     * The two faces of the columns beside: the saint's own picture over their
+     * name, or the name alone. The words are `sr-only` beside each mark — a
+     * shape told from another shape by colour is nothing to a screen reader.
+     */
+    views: 'How the saints beside are listed',
+    viewPlate: 'Pictures',
+    viewRows: 'Rows',
+    /*
      * The two asides' headings. **`related` is one heading over both directions
      * of one relation** — who a saint's life speaks of and whose life speaks of
      * them — because a reader looking for the company someone is kept in does
