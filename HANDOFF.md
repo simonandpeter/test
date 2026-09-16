@@ -26,9 +26,6 @@ here, because a PAT push never updates `origin/main`.
   alone says otherwise — that comparison is what separated three real defects
   from the noise on 2026-09-15. The shelf-swipe flake is the known one and is
   the test's fault, not the page's (`STRUCTURE.md` §6).
-- **One of them is not a flake and repeats every time**, on the unmodified tree
-  as well, so a run that shows it and nothing else is a clean run:
-  `saint.spec.js` "a saint page is the Daily page's two columns".
 - The PAT is at `C:\Users\matei\Documents\Agios Website Ex\update git.txt`.
   `bash scripts/push.sh` pushes and reads the CI run in one step.
 

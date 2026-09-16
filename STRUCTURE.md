@@ -448,7 +448,7 @@ four boundaries: ~480–560, ~700–768, 900, and 1024.
 | `min-width: 760px` | `base.css`, `calendar.css`, `saint.css` | the complement: the masthead returns to the left, and `main.js` turns the nav strip at the same number |
 | `min-width: 900px` | `calendar.css` | the full-screen calendar gains its periods column beside the month |
 | `max-width: 1023.98px` | `calendar.css`, `saint.css` | the day's strip stops being its own scroller; the saint's columns take `pan-y` for the swipe |
-| `min-width: 1024px` | `base.css`, `calendar.css`, `prayer.css`, `saint.css` | Daily's two columns, Prayer's three, and every other desk arrangement |
+| `min-width: 1024px` | `base.css`, `calendar.css`, `prayer.css`, `saint.css` | Daily's four columns, Prayer's three, and every other desk arrangement |
 <!-- /copied -->
 
 **620 and 619.98, 759 and 759.98, are two numbers for one idea each.** The `.98`

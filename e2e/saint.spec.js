@@ -1193,6 +1193,11 @@ test('a saint page is the Daily page’s two columns, with the reader’s own se
    * Daily Page" is a width the Daily page works out from its own grid, so the
    * only honest instrument is to open both and compare. A hard-coded 929 px
    * would pass on the day it was written and say nothing afterwards.
+   *
+   * The Daily page's left column is no longer one box: past 1024 px it is the
+   * day, the saint and the reading (`.cal-main`, `.cal-saint`, `.cal-read`),
+   * and the right column is the shelf. So the span measured is from the first
+   * one's left edge to the third one's right, not `.cal-main` alone.
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
@@ -1201,7 +1206,10 @@ test('a saint page is the Daily page’s two columns, with the reader’s own se
   await page.evaluate(() => document.fonts.ready);
   const daily = await page.evaluate(() => {
     const r = (s) => document.querySelector(s).getBoundingClientRect();
-    return { main: [Math.round(r('.cal-main').left), Math.round(r('.cal-main').right)] };
+    return {
+      main: [Math.round(r('.cal-main').left), Math.round(r('.cal-read').right)],
+      side: [Math.round(r('.cal-bubble').left), Math.round(r('.cal-bubble').right)],
+    };
   });
 
   await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
@@ -1215,6 +1223,7 @@ test('a saint page is the Daily page’s two columns, with the reader’s own se
   });
   expect(saint.main, 'the life does not sit in the Daily page’s left column').toEqual(daily.main);
   expect(saint.side[0], 'the search column is not to the right of the life').toBeGreaterThan(saint.main[1]);
+  expect(saint.side, 'the search column is not where the Daily page’s shelf is').toEqual(daily.side);
 
   // A row view, scrolled inside its own box, and drawing no bar to do it.
   const list = page.locator('[data-side-results]');
