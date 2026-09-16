@@ -35,6 +35,7 @@ export const STRINGS = {
      */
     today: 'Today',
     saints: 'All Saints',
+    prayer: 'Prayer',
     texts: 'Texts',
     map: 'Map',
     about: 'About',
@@ -1189,6 +1190,15 @@ export const STRINGS = {
       'new-martyrs': 'The New Martyrs',
       'soviet-persecution': 'The Soviet persecution',
     },
+  },
+
+  /*
+   * The hymn reader. `title` is the page's own name — the `h1` `main.js` moves
+   * focus to on arrival, and the tab — and the rest of this branch arrives with
+   * the stages that draw it.
+   */
+  prayer: {
+    title: 'Prayer',
   },
 
   texts: {

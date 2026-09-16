@@ -24,6 +24,7 @@ export const sr = {
     calendar: 'Дневно',
     today: 'Данас',
     saints: 'Сви светитељи',
+    prayer: 'Молитва',
     texts: 'Текстови',
     map: 'Карта',
     about: 'О сајту',
@@ -549,6 +550,10 @@ export const sr = {
       'new-martyrs': 'Новомученици',
       'soviet-persecution': 'Совјетско гоњење',
     },
+  },
+
+  prayer: {
+    title: 'Молитва',
   },
 
   texts: {

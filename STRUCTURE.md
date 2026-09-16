@@ -422,6 +422,7 @@ breakpoint are two decisions.
 | `--facet-font` | `13.5px` | `index.css` |
 | `--facet-pad-y` | `3px` | `index.css` |
 | `--facet-h` | `calc(var(--facet-font) * var(--facet-lh) + var(--facet-pad-y) * 2 + 2px)` | `index.css` |
+| `--hy-side-w` | `clamp(180px, 16vw, 250px)` | `prayer.css` |
 <!-- /copied -->
 
 `--chrome-h-reserve` is declared three times with three values, none of which
@@ -447,7 +448,7 @@ four boundaries: ~480–560, ~700–768, 900, and 1024.
 | `min-width: 760px` | `base.css`, `calendar.css`, `saint.css` | the complement: the masthead returns to the left, and `main.js` turns the nav strip at the same number |
 | `min-width: 900px` | `calendar.css` | the full-screen calendar gains its periods column beside the month |
 | `max-width: 1023.98px` | `calendar.css`, `saint.css` | the day's strip stops being its own scroller; the saint's columns take `pan-y` for the swipe |
-| `min-width: 1024px` | `base.css`, `calendar.css`, `saint.css` | Daily's two columns, and every other desk arrangement |
+| `min-width: 1024px` | `base.css`, `calendar.css`, `prayer.css`, `saint.css` | Daily's two columns, Prayer's three, and every other desk arrangement |
 <!-- /copied -->
 
 **620 and 619.98, 759 and 759.98, are two numbers for one idea each.** The `.98`

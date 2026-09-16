@@ -1579,7 +1579,8 @@ html[data-swipe-nav='right']::view-transition-new(root) {
 .carousel-track,
 .saint-aside,
 .saint-main,
-.side-results {
+.side-results,
+.hy-side {
   scrollbar-width: none;
 }
 
@@ -1590,7 +1591,8 @@ html[data-swipe-nav='right']::view-transition-new(root) {
 .carousel-track::-webkit-scrollbar,
 .saint-aside::-webkit-scrollbar,
 .saint-main::-webkit-scrollbar,
-.side-results::-webkit-scrollbar {
+.side-results::-webkit-scrollbar,
+.hy-side::-webkit-scrollbar {
   display: none;
 }
 

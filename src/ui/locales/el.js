@@ -24,6 +24,7 @@ export const el = {
     calendar: 'Καθημερινά',
     today: 'Σήμερα',
     saints: 'Όλοι οι άγιοι',
+    prayer: 'Προσευχή',
     texts: 'Κείμενα',
     map: 'Χάρτης',
     about: 'Σχετικά',
@@ -547,6 +548,10 @@ export const el = {
       'new-martyrs': 'Οι Νεομάρτυρες',
       'soviet-persecution': 'Ο σοβιετικός διωγμός',
     },
+  },
+
+  prayer: {
+    title: 'Προσευχή',
   },
 
   texts: {

@@ -27,6 +27,7 @@ export const ru = {
     calendar: 'Ежедневно',
     today: 'Сегодня',
     saints: 'Все святые',
+    prayer: 'Молитва',
     texts: 'Тексты',
     map: 'Карта',
     about: 'О сайте',
@@ -561,6 +562,10 @@ export const ru = {
       'new-martyrs': 'Новомученики',
       'soviet-persecution': 'Советские гонения',
     },
+  },
+
+  prayer: {
+    title: 'Молитва',
   },
 
   texts: {

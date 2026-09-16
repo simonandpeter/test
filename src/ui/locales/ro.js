@@ -24,6 +24,7 @@ export const ro = {
     calendar: 'Zilnic',
     today: 'Astăzi',
     saints: 'Toți sfinții',
+    prayer: 'Rugăciune',
     texts: 'Texte',
     map: 'Hartă',
     about: 'Despre',
@@ -547,6 +548,10 @@ export const ro = {
       'new-martyrs': 'Noii Mucenici',
       'soviet-persecution': 'Persecuția sovietică',
     },
+  },
+
+  prayer: {
+    title: 'Rugăciune',
   },
 
   texts: {

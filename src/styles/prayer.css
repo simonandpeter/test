@@ -1,0 +1,84 @@
+/* ---- Prayer ---------------------------------------------------------------
+   For prayer time: the icon and what is sung for the saint beside it, with the
+   two ways out of one saint and into the next down either side — who the corpus
+   records them with, and who is kept on the same day. Nothing drifts; the page
+   sits where it is put.
+
+   **Not imported by `src/main.js`.** `views/prayer.js` dynamic-imports it, the
+   way `views/map.js` does its own, so a sheet one route reads stays off the
+   render-blocking bundle every route waits for.
+
+   **Every selector reads `[data-route~='prayer']`, never `=`.** `data-route` is
+   a set: `ui/face-stage.js` writes two tokens into it for the length of a swap
+   between the Daily and All Saints faces, and a rule written with `=` stops
+   matching for that half second.
+
+   The phone is the base and the desk is the media query, because the phone is
+   one column in the document's own order — which is the order `views/prayer.js`
+   writes the markup in, and the reason it writes it that way. */
+
+html[data-route~='prayer'] .hymnal {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+html[data-route~='prayer'] .hy-body {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+/* ---- the desk ------------------------------------------------------------
+   Three columns past 1024, the one number a layout here is allowed to know
+   (STRUCTURE.md §3). The middle one is the only one that is not a list, and it
+   is the only one that gets the page's height: `data-fills-window` is a
+   ≥1024 rule too, so below this the three regions run down the page and share
+   its single scroll. */
+@media (min-width: 1024px) {
+  html[data-route~='prayer'] .hymnal {
+    height: 100%;
+  }
+
+  /* `--hy-side-w` is the aside's measure — wide enough for a name over two
+     lines, never wide enough to compete with the saint. */
+  html[data-route~='prayer'] .hy-body {
+    --hy-side-w: clamp(180px, 16vw, 250px);
+    display: grid;
+    grid-template-columns: var(--hy-side-w) minmax(0, 1fr) var(--hy-side-w);
+  }
+
+  /* The document order is the phone's (`views/prayer.js`), so the desk puts the
+     first aside back on the left by hand rather than by source order. */
+  html[data-route~='prayer'] #hy-related {
+    grid-column: 1;
+  }
+
+  html[data-route~='prayer'] .hy-view {
+    grid-column: 2;
+  }
+
+  html[data-route~='prayer'] #hy-sameday {
+    grid-column: 3;
+  }
+
+  /* The two dividers are the middle column's own borders, so neither aside has
+     to know it has a neighbour. */
+  html[data-route~='prayer'] .hy-view {
+    position: relative;
+    min-height: 0;
+    border-inline: 1px solid var(--rule);
+  }
+
+  /* Each aside keeps its own scroll, so the hymn text in the middle never loses
+     the wheel to the page. The bar itself is hidden by `base.css`'s scroller
+     block, which this joins by class. */
+  html[data-route~='prayer'] .hy-side {
+    min-height: 0;
+    overflow-y: auto;
+    padding: 0 var(--space-6) var(--space-8) var(--space-8);
+  }
+
+  html[data-route~='prayer'] .hy-side:last-child {
+    padding: 0 var(--space-8) var(--space-8) var(--space-6);
+  }
+}

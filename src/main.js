@@ -10,8 +10,9 @@ import './styles/index.css';
  * Every sheet imported here is concatenated into one render-blocking
  * stylesheet that every route waits for, and this bundle sits on a congestion
  * boundary where first contentful paint steps by a whole round trip over a few
- * dozen bytes — so a sheet one route in six reads is imported dynamically
- * instead, by `views/map.js` and `lib/theme.js`. `npm run test:lighthouse` is
+ * dozen bytes — so a sheet only one route reads is imported dynamically
+ * instead, by `views/map.js`, `views/prayer.js` and `lib/theme.js`.
+ * `npm run test:lighthouse` is
  * the gate that catches a sheet added back here.
  * `docs/SRC-DECISIONS.md § src/main.js — the render-blocking sheet`.
  */
@@ -47,6 +48,7 @@ import * as saint from './views/saint.js';
 import * as map from './views/map.js';
 import * as texts from './views/texts.js';
 import * as about from './views/about.js';
+import * as prayer from './views/prayer.js';
 
 const routes = [
   { path: '/', view: calendar, nav: 'calendar' },
@@ -54,6 +56,7 @@ const routes = [
   { path: '/saints', view: saints, nav: 'saints' },
   { path: '/saints/:slug', view: saint, nav: 'saints' },
   { path: '/map', view: map, nav: 'map' },
+  { path: '/prayer', view: prayer, nav: 'prayer' },
   { path: '/texts', view: texts, nav: 'texts' },
   { path: '/about', view: about, nav: 'about' },
 ];
@@ -503,7 +506,8 @@ const faceOf = (route) =>
 function dressRoute(route) {
   const root = document.documentElement;
   root.dataset.route = route?.nav ?? '';
-  if (route?.nav === 'calendar' || route?.view === saint) root.dataset.fillsWindow = '';
+  if (route?.nav === 'calendar' || route?.nav === 'prayer' || route?.view === saint)
+    root.dataset.fillsWindow = '';
   else delete root.dataset.fillsWindow;
 }
 
@@ -591,7 +595,7 @@ function show({ route, params, path }, nav = {}) {
     if (!(stageSwap && leaving === saints)) currentView?.destroy?.();
     currentView = view ?? null;
     /*
-     * Leaving the pair for a third route — Map, Texts, About, a saint — takes
+     * Leaving the pair for a third route — Map, Prayer, Texts, About, a saint — takes
      * the stage down, and whichever face was parked has to be told now, while
      * its markup is still in the document for it to read. After this the site
      * is back to one view in `#view` and All Saints rebuilds from its own
