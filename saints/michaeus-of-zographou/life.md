@@ -1,0 +1,7 @@
+# Michaeus of Zographou
+
+Michaeus — or Michaeas, as the entry also gives him — was one of the twenty-six monks of Zographou, on the Holy Mountain, whom the Greek calendar keeps together as venerable martyrs. By the account its entry follows, they were shut up in the monastery’s tower and from there reproved the heretics of the pro-papal emperor Michael Palaiologos and of the equally pro-papal patriarch of Constantinople, Bekkos (1275–1282); on the emperor’s order the monastery was set on fire on 10 October, and they were all burned alive. Its verse says the twenty-six were rightly seen as burnt offerings to the Lord.
+
+The entry says nothing more of him. With him it names [Thomas the abbot](/saints/thomas-of-zographou), [Barsanuphius](/saints/barsanuphius-of-zographou), [Cyril](/saints/cyril-of-zographou), [Simon](/saints/simon-of-zographou), [Hilarion](/saints/hilarion-of-zographou), [James](/saints/james-of-zographou-the-first), [a second James](/saints/james-of-zographou-the-second), [Job](/saints/job-of-zographou), [Cyprian](/saints/cyprian-of-zographou), [Sabbas](/saints/sabbas-of-zographou), [Martinian](/saints/martinian-of-zographou), Cosmas, Sergius, Menas, Joasaph, Joannicius, Paul, Anthony, Euthymius, Dometius, Parthenius, and four more whose names are not known, and it keeps the company again on 10 October.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 22 Σεπτεμβρίου — [the entry](https://www.saint.gr/2486/saint.aspx); read 17 September 2026.*

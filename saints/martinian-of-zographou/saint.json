@@ -1,0 +1,71 @@
+{
+  "slug": "martinian-of-zographou",
+  "display_name": "Martinian of Zographou",
+  "names": [
+    {
+      "form": "Μαρτινιανός",
+      "lang": "el",
+      "note": "Read out of the entry’s list of the twenty-six, which prints him as «Μαρτινιανός»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1275,
+      "latest": 1282,
+      "display": "1275–1282",
+      "basis": "traditional",
+      "note": "saint.gr sets the burning under the patriarch Bekkos „(1275 - 1282 μ.Χ.)”, on 10 October; the year is not given."
+    }
+  },
+  "related": [
+    "thomas-of-zographou",
+    "barsanuphius-of-zographou",
+    "cyril-of-zographou",
+    "michaeus-of-zographou",
+    "simon-of-zographou",
+    "hilarion-of-zographou",
+    "james-of-zographou-the-first",
+    "james-of-zographou-the-second",
+    "job-of-zographou",
+    "cyprian-of-zographou",
+    "sabbas-of-zographou"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 9 сентября ст. ст. (civil 22 September, checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 22 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 22 Σεπτεμβρίου — «Άγιοι Είκοσι Έξι Οσιομάρτυρες Ζωγραφίτες»",
+        "url": "https://www.saint.gr/09/22/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not among the names in the Ohrid Prologue for 9. септембар ст. ст. on pravoslavno.rs (civil 22 September, checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
