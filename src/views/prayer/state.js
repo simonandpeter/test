@@ -8,7 +8,10 @@
  * writer honest.
  *
  * What is in it:
+ *   data       the manifest, as `lib/manifest.js` hands it over
  *   order      the hymned saints in name order (`lib/prayer-order.js`)
+ *   reach      the slugs `order` holds, so an aside can tell in one lookup
+ *              whether a saint it is naming is one this page can go to
  *   at         which of them is in hand
  *   generation bumped on every step, so an answer that arrives after the
  *              reader has moved on knows it is stale and says nothing
@@ -19,7 +22,8 @@ export let state = null;
 
 /** Starts a render. Returns the object so the caller can keep a local handle. */
 export function open(next) {
-  state = { order: [], at: 0, generation: 0, ...next };
+  state = { data: null, order: [], at: 0, generation: 0, ...next };
+  state.reach = new Set(state.order.map((card) => card.slug));
   return state;
 }
 

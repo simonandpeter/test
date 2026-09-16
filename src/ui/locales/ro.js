@@ -554,6 +554,10 @@ export const ro = {
     title: 'Rugăciune',
     prev: 'Sfântul dinainte',
     next: 'Sfântul următor',
+    related: 'Însemnat împreună cu',
+    sameDay: 'Prăznuit în aceeași zi',
+    andMore: 'și încă {n}',
+    none: 'Nimic însemnat.',
   },
 
   texts: {

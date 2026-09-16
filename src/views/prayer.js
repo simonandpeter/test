@@ -1,7 +1,7 @@
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { stepOrder } from '../lib/prayer-order.js';
 import { STRINGS } from '../ui/strings.js';
-import { showCard, stepBy } from './prayer/card.js';
+import { goToSlug, showCard, stepBy } from './prayer/card.js';
 import { close, open } from './prayer/state.js';
 
 /*
@@ -58,20 +58,25 @@ export function render(el, { data } = {}) {
     </div>
   `;
 
-  open({ order: stepOrder(data?.saints ?? []) });
+  open({ data, order: stepOrder(data?.saints ?? []) });
   showCard(el);
 
   /*
-   * One listener on the pair rather than one each: the two buttons are never
-   * rebuilt — only their `disabled` changes — so a delegated handler on their
-   * shared parent costs one binding and has nothing to keep in step.
+   * One listener for the arrows and both asides. The arrows are never rebuilt —
+   * only their `disabled` changes — and the asides are rebuilt on every step,
+   * which is exactly the case delegation exists for: nothing has to be rebound
+   * when a column is rewritten.
    */
   onPress = (e) => {
-    const button = e.target.closest?.('#hy-prev, #hy-next');
-    if (!button || button.disabled) return;
-    stepBy(el, button.id === 'hy-next' ? 1 : -1);
+    const arrow = e.target.closest?.('#hy-prev, #hy-next');
+    if (arrow) {
+      if (!arrow.disabled) stepBy(el, arrow.id === 'hy-next' ? 1 : -1);
+      return;
+    }
+    const go = e.target.closest?.('.hy-link[data-go]');
+    if (go) goToSlug(el, go.dataset.go);
   };
-  root = el.querySelector('#hy-view');
+  root = el.querySelector('.hy-body');
   root?.addEventListener('click', onPress);
 }
 

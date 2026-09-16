@@ -28,32 +28,80 @@ html[data-route~='prayer'] .hy-body {
   min-height: 0;
 }
 
+/* ---- the two asides ------------------------------------------------------
+   A heading and a column of names, and nothing that looks like a card: the
+   saint in the middle is the page and these are its margins. */
+
+html[data-route~='prayer'] .hy-side h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: var(--text-base);
+  margin: 0 0 var(--space-2);
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--rule);
+}
+
+html[data-route~='prayer'] .hy-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html[data-route~='prayer'] .hy-link {
+  display: block;
+  width: 100%;
+  text-align: left;
+  appearance: none;
+  border: 0;
+  border-left: 2px solid transparent;
+  background: none;
+  padding: var(--space-1) 0 var(--space-1) var(--space-3);
+  margin-left: calc(var(--space-3) * -1);
+  font-family: var(--font-serif);
+  font-size: var(--text-sm);
+  line-height: 1.3;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: color var(--dur-answer) var(--ease);
+}
+
+html[data-route~='prayer'] .hy-link:hover {
+  color: var(--ink);
+  border-left-color: var(--rubric);
+}
+
+/* A saint the hymnal does not hold is named and left alone: the relation is a
+   fact about the saint whether or not this page can take the reader to them. */
+html[data-route~='prayer'] .hy-link[disabled] {
+  color: var(--rule);
+  cursor: default;
+}
+
+html[data-route~='prayer'] .hy-when {
+  display: block;
+  font-size: var(--text-2xs);
+  color: var(--ink-soft);
+}
+
 /* ---- the saint in hand ---------------------------------------------------
    **One saint at a time, and it fades.** Nothing travels and nothing steps on a
    wheel tick, because the wheel belongs to the hymn the moment a troparion is
    longer than its box — which at prayer is the one moment the reader is certain
    to be scrolling.
 
-   The fade's own duration is `--dur-move` and `views/prayer/card.js` swaps on
-   the transition's end rather than on a timer aimed at it. Reduced motion is
-   the whole mechanism removed, not a shorter one: the rule below carries no
-   transition at all under it, and the module draws on the same tick. */
+   **The fade is an animation and not a transition**, and it is driven from
+   `views/prayer/card.js` on `DUR.move` / `EASE.soft` — the same scale this
+   sheet's tokens carry, held to it by `tests/design-tokens.test.mjs`. A CSS
+   transition was tried and measured: it did not always start, and a fallback
+   timer for the case where it did not could catch it mid-flight and redraw the
+   card at a third of its opacity, which is the mockup's own bug. Reduced motion
+   is the whole mechanism removed, not a shorter one, and that decision is the
+   module's too. */
 
 html[data-route~='prayer'] .hy-hold {
   height: 100%;
   min-height: 0;
   opacity: 1;
-  transition: opacity var(--dur-move) var(--ease-soft);
-}
-
-html[data-route~='prayer'] .hy-hold.is-out {
-  opacity: 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html[data-route~='prayer'] .hy-hold {
-    transition: none;
-  }
 }
 
 /* The picture, the name and the dates on one side; what is sung on the other.
@@ -212,6 +260,17 @@ html[data-route~='prayer'] .hy-arrow.is-next {
 
   html[data-route~='prayer'] .hy-side:last-child {
     padding: 0 var(--space-8) var(--space-8) var(--space-6);
+  }
+
+  /* The heading stays in sight while its own column is scrolled past. It is
+     sticky only here, because only here is the aside a scroller of its own:
+     below 1024 the page carries the scroll and a heading pinned to the window
+     would be pinned to somebody else's box. */
+  html[data-route~='prayer'] .hy-side h2 {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--gesso);
   }
 
   /* The pair, past the width where there is room to stand them side by side.

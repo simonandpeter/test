@@ -1207,6 +1207,20 @@ export const STRINGS = {
      */
     prev: 'The saint before',
     next: 'The saint after',
+    /*
+     * The two asides' headings. **`related` is one heading over both directions
+     * of one relation** — who a saint's life speaks of and whose life speaks of
+     * them — because a reader looking for the company someone is kept in does
+     * not care which way round the corpus recorded it. `saint.related` and
+     * `saint.mentionedIn` stay two, because the saint's own page shows them as
+     * two lists and the distinction is the point there.
+     */
+    related: 'Recorded with',
+    sameDay: 'Kept the same day',
+    // A column is a way out of the page, not a second page, so a busy day is
+    // capped and says what it left out.
+    andMore: 'and {n} more',
+    none: 'None recorded.',
   },
 
   texts: {

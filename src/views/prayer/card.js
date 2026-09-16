@@ -5,10 +5,11 @@ import { cardCrop } from '../../lib/hero-crop.js';
 import { saintName } from '../../lib/honorific.js';
 import { currentLanguage } from '../../lib/i18n.js';
 import { escapeHtml as esc, firstParagraphText } from '../../lib/markdown.js';
-import { DUR, reducedMotion } from '../../lib/motion.js';
+import { DUR, EASE, reducedMotion } from '../../lib/motion.js';
 import { neighboursAt } from '../../lib/prayer-order.js';
 import { hymnMarkup, mergeForReading } from '../../ui/hymns.js';
 import { STRINGS } from '../../ui/strings.js';
+import { drawAsides, fillAsides } from './asides.js';
 import { state } from './state.js';
 
 const BASE = import.meta.env.BASE_URL;
@@ -120,16 +121,25 @@ function fillDetail(root, card, generation) {
   );
 }
 
+/** The fade in flight, so a second press cancels the first rather than racing it. */
+let fading = null;
+
 /**
  * Draws the saint at `state.at`, and fades to them where the reader asked for
  * the change.
  *
- * **The swap happens when the fade is over, not on a timer guessed to match
- * it.** The mockup this page is drawn from redrew at a 200 ms `setTimeout`
- * against a 300 ms CSS transition and so painted the new saint at two thirds
- * opacity; `transitionend` is the event that actually says the old one has
- * gone, and `DUR.move` is only the fallback for the case where no transition
- * ran at all (a hidden tab, a browser that skipped it).
+ * **The swap waits on the animation's own `finished`, not on a timer and not on
+ * `transitionend`.** The mockup this page is drawn from redrew at a 200 ms
+ * `setTimeout` against a 300 ms CSS transition and so painted the new saint at
+ * two thirds opacity. A CSS transition plus a fallback timer is the same bug
+ * wearing a longer timer: **measured on this desk** (2026-09-16, 6 runs of one
+ * press), the transition did not start at all on one of them — the swap then
+ * landed on the timer at full opacity — and under load it started late enough
+ * that the timer caught it at 0.35. An animation has neither failure: it always
+ * runs and `finished` resolves exactly once, when the card is actually gone.
+ *
+ * `DUR.move` and `EASE.soft` are the same scale `tokens.css` holds, which
+ * `tests/design-tokens.test.mjs` is what keeps true of both halves.
  *
  * **Reduced motion removes the fade rather than shortening it** (STRUCTURE.md
  * §3): the end state arrives on the same tick.
@@ -146,6 +156,15 @@ export function showCard(root, { animate = false } = {}) {
     const generation = state.generation;
     hold.innerHTML = cardMarkup(card);
     fillDetail(hold, card, generation);
+    /*
+     * The asides are drawn from the manifest now and redrawn when the folder
+     * answers, and they are *outside* `.hy-hold` — so they change at the press
+     * rather than behind the card's fade. That is deliberate: the fade is the
+     * page being turned, and the two lists beside it are the page's margins,
+     * which do not need to be turned to be read.
+     */
+    drawAsides(root, card);
+    fillAsides(root, card, generation);
     const { prev, next } = neighboursAt(state.order, state.at);
     const prevBtn = root.querySelector('#hy-prev');
     const nextBtn = root.querySelector('#hy-next');
@@ -160,32 +179,41 @@ export function showCard(root, { animate = false } = {}) {
     if (next) prefetch(next.slug);
   };
 
+  fading?.cancel();
+  fading = null;
+
   if (!animate || reducedMotion()) {
-    hold.classList.remove('is-out');
     draw();
     return;
   }
 
-  let done = false;
-  const swap = () => {
-    if (done) return;
-    done = true;
-    hold.removeEventListener('transitionend', onEnd);
-    clearTimeout(timer);
-    draw();
-    /*
-     * Two frames, not one: a class removed in the same frame the content was
-     * written has nothing to transition from, because the browser has not yet
-     * computed a style for the new box.
-     */
-    requestAnimationFrame(() => requestAnimationFrame(() => hold.classList.remove('is-out')));
-  };
-  const onEnd = (e) => {
-    if (e.target === hold && e.propertyName === 'opacity') swap();
-  };
-  hold.addEventListener('transitionend', onEnd);
-  const timer = setTimeout(swap, DUR.move * 2);
-  hold.classList.add('is-out');
+  const generation = state.generation;
+  // `forwards`, so the card stays gone between the fade ending and the redraw;
+  // without it the old saint flashes back for a frame before being replaced.
+  const out = hold.animate([{ opacity: 1 }, { opacity: 0 }], {
+    duration: DUR.move,
+    easing: EASE.soft,
+    fill: 'forwards',
+  });
+  fading = out;
+  out.finished.then(
+    () => {
+      // The reader pressed again while this was running, and the press that
+      // overtook it owns the card now.
+      if (!state || state.generation !== generation) return;
+      draw();
+      // Cancelling hands the box back to the sheet's own `opacity: 1`, which is
+      // where the second half starts from.
+      out.cancel();
+      fading = hold.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: DUR.move,
+        easing: EASE.soft,
+      });
+    },
+    () => {
+      /* Cancelled by a press that overtook it; that press draws the card. */
+    },
+  );
 }
 
 /** Steps by one, within the ends. The hymnal is a book and does not wrap. */
@@ -193,6 +221,22 @@ export function stepBy(root, delta) {
   if (!state) return;
   const at = state.at + delta;
   if (at < 0 || at >= state.order.length) return;
+  showAt(root, at);
+}
+
+/**
+ * Goes to a named saint, which is what a press in either aside does. A slug the
+ * hymnal does not hold is not an error: the aside draws such a row inert, and
+ * this refuses it a second time rather than trusting that.
+ */
+export function goToSlug(root, slug) {
+  if (!state) return;
+  const at = state.order.findIndex((card) => card.slug === slug);
+  if (at < 0 || at === state.at) return;
+  showAt(root, at);
+}
+
+function showAt(root, at) {
   state.at = at;
   state.generation += 1;
   showCard(root, { animate: true });
