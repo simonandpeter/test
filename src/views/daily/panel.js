@@ -315,14 +315,22 @@ function registerRow(saint, title, transition, seq = 0, chosen = null) {
    * `.reg-thumb` stays the outer name deliberately: two browser tests reach
    * for it on rows that may have no picture at all, and a rename would have
    * made them fail on a null rather than on the thing they assert.
+   *
+   * **The crop's anchor goes out as `--reg-focus`, not as the two properties
+   * themselves** (2026-09-16). `cardCrop` gives `50% 0` or `50% 50%` by whether
+   * the icon is wider than 2:1, and written inline as `background-position` and
+   * `object-position` that answer outranked every rule in the sheet — which is
+   * wrong the moment a face crops to a shape the picture is not, as the shelf's
+   * 3:2 plate does. calendar.css reads the property in both places and the
+   * plate face overrides it; nothing computes differently below 1024 px.
    */
   const image = saint.image
     ? `<span class="reg-thumb">
         <span class="reg-pic" style="background-image:url('${BASE + saint.image.lqip}');--reg-aspect:${
           cardCrop(saint.image).aspect
-        };background-position:${cardCrop(saint.image).focus}">
+        };--reg-focus:${cardCrop(saint.image).focus}">
           <img src="${BASE + saint.image.src}" alt="" width="${saint.image.w}" height="${saint.image.h}"
-            style="object-position:${cardCrop(saint.image).focus}" loading="lazy" decoding="async" />
+            loading="lazy" decoding="async" />
         </span>
       </span>`
     : `<span class="reg-thumb is-blank" aria-hidden="true">${glyphMarkup(typeGlyph(saint.types))}</span>`;
@@ -458,11 +466,17 @@ function emptyDayNote(iso) {
    imports the DOM cannot have. */
 
 /**
- * The register's own control, as the two marks the reference draws
- *: four 5 px diamonds standing in
- * the shape of a larger one for the compact face, and that larger diamond
- * whole for the expanded one. Whichever is live is drawn in `--accent` and the
+ * The register's own control, as the two marks the reference draws: "two marks
+ * rather than two words — a square for the pictures, four lines for the rows,
+ * drawn at the same size so the pair reads as one control" (the mockup's own
+ * note beside `.views`). Whichever is live is drawn in `--accent` and the
  * other in `--rule`; calendar.css has the geometry.
+ *
+ * **The four lines stand for `expanded`, which is not a face of rows.** The
+ * mockup's pair is a plate face and a 56 px-stamp row face; this page's pair
+ * is the plate and the day's own card repeated, which the author did not ask
+ * to redraw. So the square is honest and the four lines are the only other
+ * mark there is. Said plainly rather than left looking intentional.
  *
  * **Two marks, and the list face is gone** (author, 2026-09-10). §10.4 had
  * read the reference's two marks as two frames of one three-mark control and
@@ -477,8 +491,10 @@ function emptyDayNote(iso) {
  * `aria-pressed`.
  */
 const VIEW_MARKS = {
-  cards: '<span class="vt vt-compact" aria-hidden="true"><i></i><i></i><i></i><i></i></span>',
-  expanded: '<span class="vt vt-full" aria-hidden="true"><i></i></span>',
+  cards:
+    '<svg class="vt" viewBox="0 0 14 14" aria-hidden="true"><rect x="1" y="1" width="12" height="12" rx="1" /></svg>',
+  expanded:
+    '<svg class="vt" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 2h12M1 5.7h12M1 9.3h12M1 13h12" /></svg>',
 };
 
 /* Read at call time, never captured: the packs merge over the base *in place*

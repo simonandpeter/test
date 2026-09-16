@@ -575,7 +575,17 @@ else.
   one animation — a panel left unrolled is a yesterday under a today.
 - **The shelf lists the whole day, and the saint in the card leaves it** while
   it is being read: hidden, not dropped from the paint, so nothing is rebuilt
-  by a press and no picture is fetched twice. Its head is sticky.
+  by a press and no picture is fetched twice. This is the mockup's own
+  treatment of a chosen tile and not a stand-in for one.
+- **A shelf row is a plate of the saint above their name**, the mockup's
+  `day-grid` tile: 3:2 whatever shape the icon is, cropped at 34% of its
+  height, a hairline above each tile and none between them, and one line of the
+  life where the row face gives two. It is the `is-cards` face — the stored
+  setting keeps the name it had before either redraw.
+- **The head is pinned and carries one rule across the column**, at its own
+  bottom edge, which is the edge the saints go under. The shelf's
+  `.slot-viewport` takes `overflow: clip` for it: `hidden` would make that box
+  the scrollport and the head would stick to a thing that never scrolls.
 - **The right column is one filled box** with a square notch bitten from each
   corner and a cross of the fill standing in each bite. No `overflow: hidden`
   on it anywhere — the chooser panels open downward and are allowed to overrun
@@ -586,10 +596,18 @@ else.
 - Name days lead the day's column, above readings.
 - The site's controls relocate into `.cal-bubble-head`.
 
-**What stage two owns.** The shelf's rows are the register's own two faces,
-re-placed into a narrow column and nothing more: the tile faces, the
-picture/rows toggle and the selected-state styling are the second half of this
-redesign and are not drawn yet.
+**The view toggle is two marks and no words**: a square for the pictures and
+four lines for the other face, drawn at one size so the pair reads as one
+control, the live one in `--accent` and the other in `--rule`. The ink is on
+the button and the marks are strokes reading `currentColor`. Each button keeps
+the word it stands for as an `sr-only` child, which is what actually says which
+face is showing.
+
+**The four lines stand for `expanded`, which is the day's own card repeated
+rather than a face of rows.** The mockup's pair is a plate face and a 56 px
+stamp row face; this page's pair is the plate and the repeated card, and
+redrawing the second was not asked for. Said plainly rather than left looking
+intentional.
 
 #### Mobile — below 1024 px
 
@@ -625,7 +643,11 @@ The two widths are free to diverge except here.
 - **The hero and the register rows are the same components at both widths.**
   Past 1024 px the hero is taken apart at one seam — `heroIdentity` into the
   saint column, `heroOpening` into the reading column — and nothing is drawn
-  twice to do it. The register rows are the same rows in a narrower column.
+  twice to do it. The register row is one element with one set of classes at
+  both widths: what the desk's plate changes is the boxes the same `.reg-card`,
+  `.reg-thumb`, `.reg-pic` and `.reg-body` are laid into, inside
+  `@media (min-width: 1024px)` and nowhere else. Nothing is rendered twice and
+  no phone rule is touched.
 - **The tokens.** No raw colour, duration, easing, type size or spacing value in
   `calendar.css`.
 - **The derived card box**, per §3's materials rule, with the hero as its one

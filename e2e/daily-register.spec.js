@@ -1,5 +1,5 @@
 import { test, expect } from './fixtures.js';
-import { phone, ready, searchMode } from './helpers.js';
+import { phone, ready, searchMode, tokenColours } from './helpers.js';
 
 /**
  * The Daily page, the register: the also-commemorated cards and rows, and the name days under their heading.
@@ -403,12 +403,17 @@ test('the register opens compact in columns, remembers the other face, and lands
    * two dresses.
    */
   expect(wide.columns, 'the shelf is packing rows across itself again').toBe(1);
-  expect(wide.pictureAbove, 'the picture stacked over the name again').toBe(false);
-  expect(wide.pictureTrails, 'the picture is not at the row’s trailing edge').toBe(true);
-  // The mat: 48 px of picture and 6 px of padding either side, fixed however
-  // tall the icon is (§10.2). Wider than the list's 40 px thumbnail and a long
-  // way short of the 190 px card this used to be.
-  expect(wide.pictureWidth, 'the mat is not 60 px wide').toBe(60);
+  /*
+   * **And the tile is a plate, not a row** (2026-09-16, stage two). These two
+   * read `false` and `true` from 2026-09-10, when the compact face was a row
+   * with a 60 px mat at its trailing edge. The shelf wears the mockup's
+   * `day-grid` tile now — the picture the width of the column and the name
+   * under it — so the two reverse, and the shape itself is held by "a shelf
+   * tile is a plate of the saint above their name" below.
+   */
+  expect(wide.pictureAbove, 'the plate is not above the name').toBe(true);
+  expect(wide.pictureTrails, 'the plate is inset from the column rather than filling it').toBe(false);
+  expect(wide.pictureWidth, 'the plate is still a mat rather than the column').toBeGreaterThan(200);
 
   // And still one at the narrow end of the desk, where the shelf is at its
   // own floor: the column does not pack rows across itself at any width.
@@ -529,14 +534,22 @@ test('a register card crops to the hero own limits', async ({ page }) => {
    *
    * Eleven of the 130 icons are taller than 1:1.6 and one is 3.1:1, which drew
    * a card three times the height of its neighbours in a column of them.
+   *
+   * **Asked of the other face since 2026-09-16.** The shelf's default face is
+   * the mockup's plate now and every plate in it is 3:2 — inside these limits
+   * by construction, and therefore no longer a test of them. `--reg-aspect` is
+   * the clamp `cardCrop` writes per saint, and the face that still reads it is
+   * the expanded one, so that is where the instruction is held.
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
+  await page.locator('[data-reg-view="expanded"]').click();
+  await expect(page.locator('[data-register]')).toHaveClass(/is-expanded/);
 
   const shapes = await page.evaluate(() =>
-    [...document.querySelectorAll('.register-cards.is-cards .reg-thumb')]
+    [...document.querySelectorAll('.register-cards.is-expanded .reg-pic')]
       // Drawn rows only: the shelf hides the saint in the card and a hidden
       // box measures zero, which divides into NaN rather than into a shape.
       .filter((t) => t.querySelector('img') && t.offsetParent)
@@ -567,46 +580,82 @@ test('a register card crops to the hero own limits', async ({ page }) => {
 /* ---- the desktop rebuild, step 9: the register's two faces (2026-09-10) -- */
 
 
-test('a register mat is 60 px wide however tall its picture is', async ({ page }) => {
+test('a shelf tile is a plate of the saint above their name, cropped at 3:2', async ({ page }) => {
   /*
-   * The instruction: "fix the mat's WIDTH at
-   * 60px (48 + 6px padding), let the height derive within the existing clamp".
-   * `--reg-aspect` is untouched, so what a picture is *drawn* at is still the
-   * clamped shape `cardCrop` writes per saint — and the test above this one
-   * still holds that shape to the hero's own two limits.
+   * **Stage two of the Daily desktop redesign** (2026-09-16): the shelf's rows
+   * wear the mockup's `day-grid` tile. This test replaces "a register mat is
+   * 60 px wide however tall its picture is", which held the *row* face's mat —
+   * 48 px of picture and 6 either side, at the row's trailing edge — and that
+   * shape is not what the column draws any more.
    *
-   * The claim is that the two are now separable: one fixed number and one
-   * derived one, where before the whole box derived. A mat whose height did
-   * *not* derive would pass a width check on its own, so the heights are asked
-   * to differ as well.
+   * Four claims, and the first two are the redraw:
+   *
+   * - the plate takes the column's whole width and stands *above* the name,
+   *   where the mat took 60 px of it and stood after it;
+   * - it is 3:2, the mockup's own shape, and every tile in the column is the
+   *   same 3:2 — which is the point of a fixed ratio and what the per-saint
+   *   `--reg-aspect` could not give;
+   * - the picture fills it rather than fitting inside it, cropped at 34% of
+   *   its height, "where a face sits in a panel once the halo and the frame
+   *   are allowed for";
+   * - a hairline stands above each tile and there is none between them, which
+   *   is the mockup's `border-top` and keeps "one company, not a ruled
+   *   ledger" (author, 2026-08-24) true of the gaps.
+   *
+   * **Drawn rows only** (trap 7): past 1024 px the shelf hides the saint
+   * standing in the card, and every box on that row reports zero.
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
-  const mats = await page.evaluate(() =>
-    [...document.querySelectorAll('[data-register].is-cards .reg-card')]
-      // Drawn rows only; the shelf's hidden row reports a 0 px mat.
-      .filter((row) => row.querySelector('.reg-pic img') && row.offsetParent)
-      .map((row) => {
-        const mat = row.querySelector('.reg-thumb').getBoundingClientRect();
-        const pic = row.querySelector('.reg-pic').getBoundingClientRect();
-        return { matW: Math.round(mat.width), matH: Math.round(mat.height), picW: Math.round(pic.width) };
+  const tiles = await page.evaluate(() => {
+    const rows = [...document.querySelectorAll('[data-register].is-cards .reg-card')].filter(
+      (row) => row.querySelector('.reg-pic img') && row.offsetParent,
+    );
+    const list = document.querySelector('[data-register]');
+    return {
+      listWidth: Math.round(list.getBoundingClientRect().width),
+      rows: rows.map((row) => {
+        const plate = row.querySelector('.reg-thumb').getBoundingClientRect();
+        const body = row.querySelector('.reg-body').getBoundingClientRect();
+        const img = row.querySelector('.reg-pic img');
+        const own = getComputedStyle(row);
+        return {
+          w: Math.round(plate.width),
+          ratio: plate.width / plate.height,
+          above: plate.bottom <= body.top + 1,
+          fit: getComputedStyle(img).objectFit,
+          from: getComputedStyle(img).objectPosition,
+          top: own.borderTopWidth,
+          bottom: own.borderBottomWidth,
+        };
       }),
-  );
-  expect(mats.length, 'premise: this day has no pictured register rows').toBeGreaterThan(2);
-  for (const m of mats) {
-    expect(m.matW, 'a mat is not 60 px wide').toBe(60);
-    // 48 of picture and 6 of padding either side, which is where the 60 came
-    // from — asserted rather than implied, so a mat that kept its width by
-    // squeezing the picture would fail.
-    expect(m.picW, 'the picture inside the mat is not 48 px').toBe(48);
+    };
+  });
+
+  expect(tiles.rows.length, 'premise: this day has no pictured shelf tiles').toBeGreaterThan(2);
+  for (const t of tiles.rows) {
+    expect(t.above, 'the plate is not above the name').toBe(true);
+    // The column's own width, not a mat's: the list box, less nothing, because
+    // the tile carries no side padding.
+    expect(t.w, 'the plate is not the width of the column').toBe(tiles.listWidth);
+    expect(t.ratio, 'the plate is not 3:2').toBeCloseTo(1.5, 1);
+    expect(t.fit, 'the picture fits inside the plate rather than filling it').toBe('cover');
+    expect(t.from, 'the crop is not taken at 34%').toBe('50% 34%');
+    expect(t.top, 'a tile has no hairline above it').toBe('1px');
+    expect(t.bottom, 'a tile has a second hairline below it').toBe('0px');
   }
-  expect(
-    new Set(mats.map((m) => m.matH)).size,
-    'every mat is the same height, so the height is not deriving',
-  ).toBeGreaterThan(1);
+  // Every plate the same shape, which a per-saint aspect ratio would not give
+  // — and the day has icons of several shapes, or this proves nothing.
+  expect(new Set(tiles.rows.map((t) => Math.round(t.ratio * 100))).size, 'the plates are not one shape').toBe(1);
+  const files = await page.evaluate(() =>
+    [...document.querySelectorAll('[data-register].is-cards .reg-pic img')]
+      .filter((img) => img.offsetParent)
+      .map((img) => Number(img.getAttribute('height')) / Number(img.getAttribute('width'))),
+  );
+  expect(new Set(files.map((r) => Math.round(r * 10))).size, 'premise: every icon on this day is one shape').toBeGreaterThan(1);
 });
 
 
@@ -806,8 +855,15 @@ test('a compact row carries a line of the life, and Daily headings are serif', a
    *
    * **The line of life** (§5.1): "the register says who else is commemorated;
    * this makes it say who they were" — the life's own opening paragraph,
-   * clamped to two lines. It arrives with the saint's payload, so it is polled
-   * for rather than read on the first frame.
+   * clamped. It arrives with the saint's payload, so it is polled for rather
+   * than read on the first frame.
+   *
+   * **One line since 2026-09-16, and it was two.** The shelf wears the
+   * mockup's plate now and the mockup's own note is the trade: "the written
+   * line drops to one on a tile this size — the second line was the first
+   * thing the wider stamp took". What is asserted is unchanged in kind — a box
+   * that stops, and more life than fits it — and the expanded face is where
+   * two lines still live.
    *
    * **The serif headings**, per the author and the reference's own note that
    * this is a deliberate departure from base.css's site utility. Scoped: the
@@ -852,8 +908,8 @@ test('a compact row carries a line of the life, and Daily headings are serif', a
       reading: probe('--font-serif'),
     };
   });
-  expect(line.clamp, 'the line of life is not clamped to two').toBe('2');
-  expect(line.lines, 'the clamped box is not two lines tall').toBeLessThanOrEqual(2);
+  expect(line.clamp, 'the line of life is not clamped to one').toBe('1');
+  expect(line.lines, 'the clamped box is not one line tall').toBeLessThanOrEqual(1);
   /*
    * And there is more life than fits, or the clamp is being asked about a
    * paragraph that was two lines anyway — the shape of green-by-absence this
@@ -902,4 +958,161 @@ test('a compact row carries a line of the life, and Daily headings are serif', a
   });
   expect(saint.caps, 'the Saint page lost its small caps to a Daily rule').toBe('all-small-caps');
   expect(saint.family, 'the Saint page heading went serif with Daily own').toBe(heads.apparatus);
+});
+
+/* ---- the desktop redesign, stage two: the shelf's own face (2026-09-16) --- */
+
+
+test('the view toggle is two stroked marks at one size, and the live one is the accent', async ({ page }) => {
+  /*
+   * The mockup's own note beside `.views`: "two marks rather than two words —
+   * a square for the pictures, four lines for the rows, drawn at the same size
+   * so the pair reads as one control."
+   *
+   * Four 5 px diamonds and one larger diamond stood here until today, and they
+   * said *small* and *large* rather than what either face draws. What the pair
+   * has to be is two drawings of the same size, in the same weight of line,
+   * differing only in what they draw — so the size is asserted as *equal*
+   * rather than as a number, which is the claim "one control" actually makes.
+   *
+   * **The ink is on the button and the marks read `currentColor`.** A stroked
+   * outline has no fill to colour, so the colour has to travel; that it does
+   * is what the last two assertions are for. Trap 9: the tokens are painted,
+   * never parsed.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const [accent, rule] = await tokenColours(page, '--accent', '--rule');
+
+  const marks = () =>
+    page.evaluate(() =>
+      [...document.querySelectorAll('.register-view button')].map((b) => {
+        const svg = b.querySelector('svg.vt');
+        const box = svg.getBoundingClientRect();
+        return {
+          view: b.dataset.regView,
+          live: b.getAttribute('aria-pressed'),
+          w: Math.round(box.width),
+          h: Math.round(box.height),
+          // A rect for the pictures and four lines for the rows: two drawings,
+          // not one drawn twice.
+          draws: [...svg.children].map((c) => c.tagName.toLowerCase()).join(','),
+          lines: (svg.querySelector('path')?.getAttribute('d') ?? '').split('M').length - 1,
+          weight: getComputedStyle(svg).strokeWidth,
+          fill: getComputedStyle(svg).fill,
+          ink: getComputedStyle(svg).stroke,
+          // The word the mark stands for is still in the accessibility tree.
+          word: b.textContent.trim(),
+        };
+      }),
+    );
+
+  const pair = await marks();
+  expect(pair.length, 'the control is not a pair').toBe(2);
+  expect(pair.map((m) => m.view)).toEqual(['cards', 'expanded']);
+  // Drawn at the same size, which is what makes the two one control.
+  expect(pair[0].w, 'the marks are not the same width').toBe(pair[1].w);
+  expect(pair[0].h, 'the marks are not the same height').toBe(pair[1].h);
+  expect(pair[0].w, 'a mark is not square').toBe(pair[0].h);
+  // A square for the pictures and four lines for the rows.
+  expect(pair[0].draws, 'the pictures mark is not a plate').toBe('rect');
+  expect(pair[1].draws, 'the rows mark is not a line drawing').toBe('path');
+  expect(pair[1].lines, 'the rows mark is not four lines').toBe(4);
+  for (const m of pair) {
+    expect(m.fill, `the ${m.view} mark is filled rather than stroked`).toBe('none');
+    expect(m.weight, `the ${m.view} mark is not drawn at the pair's weight`).toBe(pair[0].weight);
+    expect(m.word.length, `the ${m.view} mark lost the word it stands for`).toBeGreaterThan(0);
+  }
+
+  // The live one carries the accent and the other the rule, and the colour is
+  // on the drawing because the button's own ink is what it reads.
+  expect(pair.find((m) => m.view === 'cards').live, 'the shelf did not open on the plate').toBe('true');
+  expect(pair.find((m) => m.view === 'cards').ink, 'the live mark is not the accent').toBe(accent);
+  expect(pair.find((m) => m.view === 'expanded').ink, 'the quiet mark is not the rule').toBe(rule);
+
+  /*
+   * And it moves. Dispatched rather than clicked — trap 3: the control stands
+   * in a sticky head inside the shelf's own scroller, and `click()` scrolls
+   * its target into view, which is a scroll this test did not ask for.
+   */
+  await page.evaluate(() =>
+    document.querySelector('[data-reg-view="expanded"]').dispatchEvent(new MouseEvent('click', { bubbles: true })),
+  );
+  await expect(page.locator('[data-register]')).toHaveClass(/is-expanded/);
+  /*
+   * Polled, because the ink is a `--dur-answer` transition and a read taken on
+   * the frame after the press lands in the middle of it: the first run of this
+   * test measured `rgb(168, 160, 142)`, which is neither token and is both.
+   */
+  await expect
+    .poll(async () => (await marks()).find((m) => m.view === 'expanded').ink, {
+      message: 'the accent did not move to the pressed mark',
+    })
+    .toBe(accent);
+  expect((await marks()).find((m) => m.view === 'cards').ink, 'the mark that was live did not go quiet').toBe(rule);
+});
+
+
+test('the shelf head is pinned and its rule runs the width of the column', async ({ page }) => {
+  /*
+   * The mockup's `.shelf-head`, and its own note: pinned "while the saints go
+   * under it — the same pinning the name has, so the two right-hand columns
+   * behave alike".
+   *
+   * **The rule is the head's, not the heading's**, and that is the half of
+   * this that stage one left. `.register-heading` carries its own underline
+   * (base.css) which stops where the marks begin and sits *above* the head's
+   * padding, so a row scrolling under a pinned head was visible in the gap
+   * between the line and the head's bottom edge. One rule across the column at
+   * the foot of the head is what the saints go under.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  // 22 September carries enough saints for the shelf to overflow its column.
+  await page.goto('/calendar/2026-09-22', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const read = () =>
+    page.evaluate(() => {
+      const scroller = document.querySelector('.cal-bubble-scroll');
+      const head = document.querySelector('.cal-bubble .register-head');
+      const heading = head.querySelector('.register-heading');
+      const list = document.querySelector('.cal-bubble [data-register]');
+      const tile = [...document.querySelectorAll('.cal-bubble .reg-card')].find((r) => r.offsetParent);
+      return {
+        scrollTop: scroller.scrollTop,
+        headTop: head.getBoundingClientRect().top,
+        headWidth: Math.round(head.getBoundingClientRect().width),
+        listWidth: Math.round(list.getBoundingClientRect().width),
+        tileTop: tile.getBoundingClientRect().top,
+        headRule: getComputedStyle(head).borderBottomWidth,
+        headingRule: getComputedStyle(heading).borderBottomWidth,
+        ground: getComputedStyle(head).backgroundColor,
+      };
+    });
+
+  const before = await read();
+  expect(before.listWidth, 'premise: the shelf has no width to measure').toBeGreaterThan(100);
+  // One rule, across the whole head, and the heading has given its own up.
+  expect(before.headRule, 'the head draws no rule of its own').toBe('1px');
+  expect(before.headingRule, 'the heading still draws the rule the head should').toBe('0px');
+  expect(before.headWidth, 'the head is narrower than the column it heads').toBe(before.listWidth);
+  expect(before.ground, 'the head is not opaque, so the saints pass through it').not.toMatch(/, 0\)$/);
+
+  /*
+   * Scrolled by the shelf's own scroller rather than by a wheel: trap 17's
+   * sibling — what is being asserted is where the head lands, and the page
+   * itself has given up its scroll past 1024 px.
+   */
+  await page.evaluate(() => {
+    document.querySelector('.cal-bubble-scroll').scrollTop = 240;
+  });
+  await expect.poll(async () => (await read()).scrollTop).toBeGreaterThan(200);
+  const after = await read();
+
+  expect(after.tileTop, 'premise: the shelf did not actually move under the head').toBeLessThan(before.tileTop - 100);
+  expect(Math.abs(after.headTop - before.headTop), 'the head went up with the saints').toBeLessThan(1);
 });

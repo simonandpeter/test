@@ -2929,13 +2929,21 @@
   flex: none;
 }
 
+/* **The crop's anchor is a property, not an inline declaration** (2026-09-16).
+   `cardCrop` gives each picture `50% 0` or `50% 50%` by whether it is wider
+   than 2:1, and `registerRow` wrote that straight onto the box and the image as
+   `background-position` and `object-position` — where nothing could override
+   it, an inline declaration outranking every rule there is. The shelf's plate
+   face needs to, because a 3:2 crop of a portrait icon anchored hard to the top
+   is a halo and a frame with the face below the cut. So the row writes
+   `--reg-focus` and the two properties read it. */
 .reg-card .reg-pic {
   display: block;
   width: 100%;
   height: 100%;
   border-radius: var(--radius-cell);
   background-size: cover;
-  background-position: center;
+  background-position: var(--reg-focus, 50% 0);
   overflow: hidden;
 }
 
@@ -2948,6 +2956,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: var(--reg-focus, 50% 0);
 }
 
 /* The type glyph is a desktop face and nothing else draws it: below 1024 px a
@@ -3004,10 +3013,15 @@
 }
 
 /*
- * **Two marks where there were two words** (§5.3, §10.4, 2026-09-10): compact
- * is four 5 px diamonds standing in the shape of a larger one and expanded is
- * that larger diamond whole. Whichever is live is `--accent` and the other is
- * `--rule`.
+ * **Two marks where there were two words** (§5.3, §10.4, 2026-09-10), and
+ * since 2026-09-16 the mockup's own two: "a square for the pictures, four
+ * lines for the rows, drawn at the same size so the pair reads as one
+ * control". They were four 5 px diamonds and one larger diamond, which said
+ * *small* and *large* rather than what either face draws.
+ *
+ * Whichever is live is `--accent`, the other is `--rule`, and the ink is on
+ * the button so one `currentColor` carries both marks — a stroked outline has
+ * no fill to colour and the shapes are drawn as strokes.
  *
  * The words are not lost, only made invisible: each button carries the word it
  * stood for as an `sr-only` child (views/daily/panel.js), the group keeps its
@@ -3016,18 +3030,19 @@
  * reader who cannot separate these two hues, and this page has written that
  * sentence about its own marks before.
  *
- * `gap: 0` with the padding *inside* the buttons: a 13 px mark is a 13 px
- * target, and 4 px of padding either side makes it 21 without moving the marks
- * apart — the 8 px that leaves between them is the reference's own 9 snapped
- * to the scale (§6). The negative end margin puts the live mark's edge back on
- * the column's, where the padding would have inset it.
+ * The padding is *inside* the buttons: a 13 px mark is a 13 px target, and 4
+ * px either side makes it 21 without moving the marks apart. `--space-1`
+ * between them leaves the mockup's own 12 px of air between the two drawings,
+ * which is 4 of gap and 4 of padding on each side of it.
+ *
+ * **Drawn past 1024 px and nowhere else**, by the `max-width: 1023.98px` rule
+ * below: a phone has one face and no choice to make.
  */
 .register-view {
   display: flex;
   flex: none;
   align-items: center;
-  gap: 0;
-  margin-inline-end: calc(-1 * var(--space-1));
+  gap: var(--space-1);
 }
 
 .register-view button {
@@ -3037,64 +3052,31 @@
   background: none;
   font: inherit;
   line-height: 0;
-  color: var(--ink-soft);
+  color: var(--rule);
   cursor: pointer;
+  transition: color var(--dur-answer) var(--ease);
 }
 
 .vt {
-  position: relative;
+  display: block;
   flex: none;
   width: 13px;
   height: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.3;
+  stroke-linecap: round;
 }
 
-.vt i {
-  position: absolute;
-  background: var(--rule);
-}
-
-.vt-compact i {
-  width: 5px;
-  height: 5px;
-  transform: rotate(45deg);
-}
-
-.vt-compact i:nth-child(1) {
-  top: 0;
-  left: 4px;
-}
-
-.vt-compact i:nth-child(2) {
-  top: 4px;
-  left: 0;
-}
-
-.vt-compact i:nth-child(3) {
-  top: 4px;
-  left: 8px;
-}
-
-.vt-compact i:nth-child(4) {
-  top: 8px;
-  left: 4px;
-}
-
-.vt-full i {
-  top: 1px;
-  left: 1px;
-  width: 11px;
-  height: 11px;
-  transform: rotate(45deg);
+.register-view button:hover {
+  color: var(--ink-soft);
 }
 
 /* The one that is showing, and the only thing colour is asked to carry here —
-   the word beside it in the accessibility tree is what actually says so. */
-.register-view button[aria-pressed='true'] .vt i {
-  background: var(--accent);
-}
-
-.register-view button:hover .vt i {
-  background: var(--ink-soft);
+   the word beside it in the accessibility tree is what actually says so. Last,
+   so that hovering the live mark does not take it back to the soft ink. */
+.register-view button[aria-pressed='true'] {
+  color: var(--accent);
 }
 
 /*
@@ -3165,109 +3147,127 @@
 /* ---- Also commemorated: two faces (2026-09-10) --------------------------- */
 
 /*
- * **Compact.** The default, and what "Cards" has meant since 2026-09-01 — the
- * value in the reader's settings is still `cards` and the class is still
- * `is-cards`, because renaming a stored setting to match a redraw would have
- * quietly reset every reader who had chosen something.
+ * **Pictures: the mockup's plate** (2026-09-16). The default, and what "Cards"
+ * has meant since 2026-09-01 — the value in the reader's settings is still
+ * `cards` and the class is still `is-cards`, because renaming a stored setting
+ * to match a redraw would have quietly reset every reader who had chosen
+ * something. This is the second redraw that name has survived.
  *
- * What changed is the shape: two columns
- * of rows rather than a column-packed grid of Index cards, a 60 px mat instead
- * of a full-width picture, and a line of the life under the dates.
+ * What the mockup draws in this column is a tile rather than a row: a 3:2
+ * plate of the saint, the name and dates under it, and one line of the life.
+ * Its own note says why the picture is this size — "bigger pictures in the
+ * same width, which is as far as the column goes before the name has nowhere
+ * to sit. The written line drops to one on a tile this size; the second line
+ * was the first thing the wider stamp took."
  *
- * **`minmax(340px, 1fr)`.** This read "and the 340 is the same number the
- * hero's column takes" until 2026-09-10, when the hero's column became a share
- * of the left column (§10.24) and the two stopped being one number. The 340
- * here is the reference's own, and what it is doing is different: it is the
- * narrowest a row of these may be before the grid drops to one column, not the
- * width of anything. The reference draws two columns at 1240 px and PLAN's own
- * instruction is "separated in columns depending on window size", which a
- * fixed `1fr 1fr` is not — it would draw two columns at 1024 as well, where
- * the left column is 624 px and two of these rows do not fit. Measured
- * against the left column at three widths: one at 1024, two at 1280, two at
- * 1440. `daily-register.spec.js` asks for fewer at the narrower width and is
- * where a return to a fixed pair would fail.
+ * **The hairline is above the tile and there is none between the rows.** "Also
+ * commemorated reads as one company, not a ruled ledger" (author, 2026-08-24)
+ * was said of a list of names; this face is a column of plates, and what a
+ * plate wants is a line to stand on. The mockup draws `border-top` on every
+ * tile and nothing else.
  *
- * `columns: 190px` and its `break-inside: avoid` are gone with the card
- * shape. The Index's own floor is not this list's any more: these rows are
- * two-part shapes with a fixed mat, and what decides the break is the width a
- * name and two lines of life want beside 60 px of picture.
+ * **One column, at every width past 1024 px.** This was
+ * `repeat(auto-fill, minmax(340px, 1fr))` while the register had the width of
+ * the page under the hero. It is the fourth column of four now, `--side-w`
+ * wide, and a grid whose floor is 340 px in a 272 px box lays a 340 px row
+ * into it.
  */
 @media (min-width: 1024px) {
   html[data-route~='calendar'] .register-cards.is-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    column-gap: var(--space-6);
-    row-gap: var(--space-3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
   }
 
-  /*
-   * **The picture stays at the row's trailing edge** (§10.3). The reference
-   * puts the mat at the *leading* edge and this is the one place the shipped
-   * page deliberately differs from it: PLAN §4 wins, and its reason is
-   * load-bearing — "a 48 px thumbnail has no corner to spare, so the row's
-   * bookmark goes at the trailing edge rather than over the image". Move the
-   * picture there and the two collide. If the author wants it reversed, the
-   * bookmark's position moves in the same commit and PLAN §4 changes with it.
-   *
-   * So there is no `order` here, and the absence is the decision: the markup
-   * is body-then-picture and a flex row draws it in that order.
-   */
   html[data-route~='calendar'] .register-cards.is-cards li.reg-card {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: var(--space-3);
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-1);
+    padding: var(--space-2) 0 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  /* The row lit under the pointer while it was a row (the base sheet). A plate
+     the width of the column lit the same way is a band of colour down a
+     quarter of the page, so the mockup underlines the name instead — which is
+     what the name already is, a link. */
+  html[data-route~='calendar'] .register-cards.is-cards li.reg-card:hover {
+    background: none;
+  }
+
+  html[data-route~='calendar'] .register-cards.is-cards li.reg-card:hover .reg-name {
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 
   /*
-   * **The mat's width is fixed and its height derives** (§10.2). 60 px is 48
-   * of picture and 6 either side; `--reg-aspect` is untouched, so the picture
-   * inside is still the clamped shape `cardCrop` writes per saint and
-   * `daily-register.spec.js`'s two assertions about the crop still hold. What
-   * a fixed width buys is a column of mats that line up down the page, where
-   * a derived width had every one of them a different size.
-   *
-   * `align-self: flex-start`, so a row with two lines of life does not
-   * stretch its picture to match.
+   * **The plate leads**, and this is the one place the face parts from the row
+   * it replaced: §10.3 puts the mat at the row's *trailing* edge so the
+   * bookmark has a corner to stand in over a 48 px thumbnail, and a plate the
+   * width of the column has no trailing edge to be at. The mark this face
+   * answers to is a square standing for pictures; a picture under the name is
+   * not what that draws.
    */
   html[data-route~='calendar'] .register-cards.is-cards .reg-thumb {
-    width: 60px;
+    order: -1;
+    width: 100%;
     height: auto;
-    padding: 6px;
+    aspect-ratio: 3 / 2;
     background: var(--field);
-    align-self: flex-start;
+    overflow: hidden;
   }
 
-  html[data-route~='calendar'] .register-cards.is-cards .reg-pic,
+  /*
+   * **3:2, and the crop taken at 34%** — the mockup's own numbers, "where a
+   * face sits in a panel once the halo and the frame are allowed for". The
+   * per-saint `--reg-aspect` stays with the other face: it exists so a very
+   * tall icon is not drawn as a sliver, and a plate that is always 3:2 cannot
+   * be one. The author's 2026-09-02 limits are 1:1.6 and 2:1, and 3:2 sits
+   * inside both, so what changes here is that this face no longer needs them.
+   *
+   * The picture fills the plate on the base sheet's own rule — 100% of the box
+   * either way, `object-fit: cover` — so all this face has to say is where the
+   * crop is taken from. `cardCrop`'s own answer is `50% 0` for anything not
+   * wider than 2:1, which is the top of the icon: in a box as tall as the
+   * picture that is the whole of it, and in a 3:2 plate it is the halo and the
+   * frame with the face under the cut.
+   */
+  html[data-route~='calendar'] .register-cards.is-cards .reg-pic {
+    background-position: 50% 34%;
+  }
+
+  html[data-route~='calendar'] .register-cards.is-cards .reg-pic img {
+    object-position: 50% 34%;
+  }
+
   html[data-route~='calendar'] .register-cards.is-expanded .reg-pic {
     width: 100%;
     height: auto;
     aspect-ratio: var(--reg-aspect, 1);
   }
 
-  html[data-route~='calendar'] .register-cards.is-cards .reg-pic img,
   html[data-route~='calendar'] .register-cards.is-expanded .reg-pic img {
     height: 100%;
     object-fit: cover;
   }
 
   /*
-   * **A type glyph where there is no icon** (§5.1), and a mat under it: the
-   * reference draws the imageless row with the same 60 px mat the pictured
-   * ones have, which is what keeps the two kinds of row reading as one list.
+   * **A type glyph where there is no icon** (§5.1), and the one thing in this
+   * face not taken from the mockup, which drops the mark from the plate and
+   * draws it only in its row face. A cross or a mitre is a statement about the
+   * saint rather than a frame around an absence (author, 2026-08-26), and
+   * `registerRow` puts the type into the row's accessible text in words
+   * wherever the visible subtext has not already said it.
    *
-   * This is not the empty box the author struck out on 2026-08-26 — that was
-   * "the promise of a picture that is not coming". A cross or a mitre is a
-   * statement about the saint, not a frame around an absence, and where the
-   * corpus gives no type this list can draw a mark for, the slot closes up
-   * exactly as it does today.
-   *
-   * 74 px is the reference's own height for it, and it is the one number here
-   * that is chosen rather than derived: the mats around it are 60 wide and
-   * between 42 and 108 tall, and 74 sits in the middle of that spread so a
-   * glyph row is neither the shortest nor the tallest thing in its column.
+   * **A band and not a plate.** The mark keeps its 30 px and the box keeps the
+   * 74 px it has had since 2026-09-10, so a saint with no icon holds a place
+   * in the column without 181 px of empty field standing in for a picture that
+   * is not coming. Where the corpus gives no type this list can draw a mark
+   * for, the box closes up exactly as it does today.
    */
   html[data-route~='calendar'] .register-cards.is-cards .reg-thumb.is-blank {
+    aspect-ratio: auto;
     height: 74px;
     display: flex;
     align-items: center;
@@ -3282,21 +3282,14 @@
   /*
    * `--rule`, as the reference has it, and `aria-hidden` (§10.10). It is
    * 1.41:1 on the field, which is the right weight for decoration and would be
-   * a failure for a carrier — so it carries nothing: `registerRow` puts the
-   * type into the row's accessible text in words wherever the visible subtext
-   * has not already said it. A real icon always wins the row, and this is what
-   * that looks like as a colour.
+   * a failure for a carrier — so it carries nothing. A real icon always wins
+   * the row, and this is what that looks like as a colour.
    *
-   * If the 1x contact sheet shows these vanishing rather than reading as a
-   * quiet mark, the next step is
-   * `color-mix(in oklab, var(--ink-soft) 45%, var(--field))` and no further
-   * (§10.10). Read at 1440 on 2026-09-10 before it was left here.
+   * The two faces that were designed with it, and not the list: a list row is
+   * a name and its dates on one line, and a mark hanging in the column where
+   * the pictures are would be a second thing in a row that was packed tightly
+   * on purpose (2026-08-27).
    */
-  /* The two faces that were designed with it, and not the list: a list row is
-     a name and its dates on one line, and a mark hanging in the column where
-     the pictures are would be a second thing in a row that was packed tightly
-     on purpose (2026-08-27). Found by looking at all three faces rather than
-     the one being built. */
   html[data-route~='calendar'] .register-cards.is-cards .reg-glyph,
   html[data-route~='calendar'] .register-cards.is-expanded .reg-glyph {
     display: block;
@@ -3306,19 +3299,21 @@
   }
 
   /*
-   * **One line of who they were, clamped to two** (§5.1): "the register says
-   * who else is commemorated; this makes it say who they were". The serif,
-   * because it is prose and the line above it is apparatus.
+   * **One line of who they were** (§5.1): "the register says who else is
+   * commemorated; this makes it say who they were". Two lines under a 60 px
+   * mat and one under a plate, which is the mockup's own trade — the picture
+   * takes the room the second line had. The serif, because it is prose and the
+   * line above it is apparatus.
    *
-   * Two lines by height and not by word count — the text is the life's own
-   * opening paragraph, so what it needs is a box that stops, not a truncation
-   * the fetch would have to guess at.
+   * By height and not by word count: the text is the life's own opening
+   * paragraph, so what it needs is a box that stops, not a truncation the
+   * fetch would have to guess at.
    */
   html[data-route~='calendar'] .register-cards.is-cards .reg-life {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
     overflow: hidden;
     margin-top: 3px;
     font-family: var(--font-serif);
@@ -4837,15 +4832,6 @@ a.name-day:hover {
   }
 
   /*
-   * **The shelf is one column wide, whichever face the register wears.** The
-   * card face is `repeat(auto-fill, minmax(340px, 1fr))`, and `auto-fill` with
-   * a 340 px floor in a 240 px box lays a 340 px row into it and overruns.
-   */
-  html[data-route~='calendar'] .cal-bubble .register-cards.is-cards {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  /*
    * **The saint in the card is not one of the others.** "Also today" means the
    * rest of the day, so the one being read leaves the shelf while it is being
    * read and comes back when another is chosen. Hidden rather than dropped
@@ -4863,17 +4849,56 @@ a.name-day:hover {
 
   /*
    * **The shelf's head stays put while the day goes under it** — the mockup's
-   * one sticky head, and the only place on this page where a heading and the
-   * control beside it must stay reachable through a column of saints. The
-   * ground is the bubble's own, so the rows pass under it rather than through
-   * it.
+   * `.shelf-head`, pinned "while the saints go under it, the same pinning the
+   * name has, so the two right-hand columns behave alike". It is the only
+   * place on this page where a heading and the control beside it must stay
+   * reachable through a column of saints. The ground is the bubble's own, so
+   * the rows pass under it rather than through it.
+   *
+   * **Centred, not on a baseline.** `.register-head` aligns the two words on
+   * the heading's baseline everywhere else, which is right for two words and
+   * wrong for two 13 px drawings: a mark has no baseline to sit on and lands
+   * wherever its box's bottom edge falls.
    */
+  /*
+   * **`clip`, not `hidden`, or the head does not stick at all.** `.slot-viewport`
+   * hides its overflow so the leaving panel is cut off during a roll, and an
+   * `overflow: hidden` box is a scroll container — which makes it, rather than
+   * `.cal-bubble-scroll`, the scrollport a `position: sticky` descendant sticks
+   * against. It never scrolls, so the head simply travelled with the saints.
+   * Stage one's sticky rule was inert for that reason and nothing measured it.
+   * `clip` cuts the same pixels and creates no scrollport.
+   *
+   * The shelf's own viewport and no other: the four remaining panels keep
+   * `hidden`, and this one is not painted below 1024 px at all.
+   */
+  html[data-route~='calendar'] .cal-bubble .slot-viewport {
+    overflow: clip;
+  }
+
   html[data-route~='calendar'] .cal-bubble .register-head {
     position: sticky;
     top: 0;
     z-index: 1;
+    align-items: center;
+    gap: var(--space-3);
     background: var(--bub);
     padding-bottom: var(--space-2);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /*
+   * **The rule is the head's, not the heading's.** `.register-heading` carries
+   * its own underline (base.css) and that line stops where the marks begin and
+   * sits above the head's own padding — so a row scrolling under a pinned head
+   * was visible in the 8 px between the line and the head's bottom edge. The
+   * mockup draws one rule across the whole column at the foot of the head, and
+   * that is the edge the saints go under.
+   */
+  html[data-route~='calendar'] .cal-bubble .register-head .register-heading {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   /*
