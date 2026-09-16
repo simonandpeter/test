@@ -1,0 +1,93 @@
+{
+  "slug": "fathers-slain-at-the-strophades",
+  "display_name": "The Fathers slain at the Strophades",
+  "names": [
+    {
+      "form": "Άγιοι Μάρτυρες «Οἱ ἐν Στροφάσιν ἀναιρεθέντες»",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1530,
+      "latest": 1537,
+      "display": "1530 or 1537",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησαν το 1530 μ.Χ. (ή 1537 μ.Χ.)»; the monks’ chronicle note it quotes sets the burning of the Strophades after 29 July 1537."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 29 сентября ст. ст. (civil 12 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 29 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — «Άγιοι Μάρτυρες «Οἱ ἐν Στροφάσιν ἀναιρεθέντες»»",
+        "url": "https://www.saint.gr/09/29/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 29. септембар ст. ст. (civil 12 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος α’.",
+      "text": "Εν μονή των Στροφάδων θεαρέστως βιώσαντες και της εν Χριστώ απαθείας εποφθέντες κειμήλια υπέστητε βαρβάρων την ορμήν, Πατέρες, και μαρτύρων κοινωνοί ανεδείχθητε ως άρνες στυγνώς σφαγιασθέντες, οσιόαθλοι. Δόξα τω ενισχύσαντι υμάς, δόξα τω στεφανώσαντι, δόξα τω δωρουμένω δι' υμών πιστοίς τα κρείττονα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιοι Μάρτυρες «Οἱ ἐν Στροφάσιν ἀναιρεθέντες», Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2405/saint.aspx",
+        "year": 2026
+      },
+      "model": "Της ερήμου πολίτης.",
+      "english": {
+        "text": "Having lived pleasing to God in the monastery of the Strophades and been seen as treasures of dispassion in Christ, ye underwent the onslaught of the barbarians, O fathers, and were shown to be sharers with the martyrs, slaughtered cruelly as lambs, O venerable champions. Glory to him who strengthened you; glory to him who crowned you; glory to him who gives the faithful better things through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος πλ. δ’.",
+      "text": "Των αρετών τα τιμαλφέστατα κειμήλια και τα λαμπρότατα αθλήσεως αλάβαστρα, εν τη νήσω της Στροφάδος χειρί βιαία τους κτανθέντας ασκητάς ανευφημήσωμεν ως Πατέρων ιερόν και θείον σύλλογον ανακράζοντες: Χαίροις, Άγιον άθροισμα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιοι Μάρτυρες «Οἱ ἐν Στροφάσιν ἀναιρεθέντες», Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2405/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τη υπερμάχω.",
+      "english": {
+        "text": "Let us praise the ascetics slain by a violent hand on the island of the Strophades, the most precious treasures of the virtues and the brightest alabaster jars of contest, as a sacred and divine assembly of fathers, crying aloud: Rejoice, O holy company.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

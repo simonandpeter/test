@@ -1,0 +1,78 @@
+{
+  "slug": "goudelia",
+  "display_name": "Goudelia",
+  "names": [
+    {
+      "form": "Αγία Γουδελία",
+      "lang": "el"
+    },
+    {
+      "form": "Sfânta Muceniță Gudelia",
+      "lang": "ro"
+    },
+    {
+      "form": "Γοβδελία",
+      "lang": "el",
+      "note": "The other form saint.gr’s entry gives: «Η Αγία Γουδελία (ή Γοβδελία)»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 340,
+      "latest": 340,
+      "display": "c. 340",
+      "basis": "traditional",
+      "note": "saint.gr: under Shapur, king of Persia, «περί το 340 μ.Χ.»."
+    }
+  },
+  "related": [
+    "gobdelaas-son-of-sapor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 29 сентября ст. ст. (civil 12 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 29 septembrie — „Sfânta Muceniță Gudelia”",
+        "url": "https://doxologia.ro/29-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — «Αγία Γουδελία»",
+        "url": "https://www.saint.gr/09/29/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 29. септембар ст. ст. (civil 12 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

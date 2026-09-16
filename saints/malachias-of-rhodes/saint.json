@@ -1,0 +1,63 @@
+{
+  "slug": "malachias-of-rhodes",
+  "display_name": "Malachias of Rhodes",
+  "names": [
+    {
+      "form": "Άγιος Μαλαχίας ο Νέος Οσιομάρτυρας από τη Ρόδο",
+      "lang": "el"
+    },
+    {
+      "form": "Μαλαχίας",
+      "lang": "el",
+      "note": "Read out of «Άγιος Μαλαχίας ο Νέος Οσιομάρτυρας από τη Ρόδο» in this folder’s Greek citation."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1500,
+      "latest": 1500,
+      "display": "1500",
+      "basis": "traditional",
+      "note": "saint.gr: «παρέδωσε την Αγία του ψυχή στις 29 Σεπτεμβρίου 1500 μ.Χ.»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 29 сентября ст. ст. (civil 12 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 29 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — «Άγιος Μαλαχίας ο Νέος Οσιομάρτυρας από τη Ρόδο»",
+        "url": "https://www.saint.gr/09/29/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 29. септембар ст. ст. (civil 12 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "slug": "gobdelaas-son-of-sapor",
+  "display_name": "Gobdelaas, son of Sapor",
+  "names": [
+    {
+      "form": "Άγιοι Γοβδέλαος, Δάδας, Κάσδοος και Κασδόα",
+      "lang": "el"
+    },
+    {
+      "form": "Γοβδέλαος",
+      "lang": "el",
+      "note": "Read out of «Άγιοι Γοβδέλαος, Δάδας, Κάσδοος και Κασδόα» in this folder’s Greek citation."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "prince"
+  ],
+  "related": [
+    "dadas-companion-of-gobdelaas",
+    "casdoos-companion-of-gobdelaas",
+    "casdoa-sister-of-gobdelaas",
+    "goudelia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 29 сентября ст. ст. (civil 12 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 29 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — «Άγιοι Γοβδέλαος, Δάδας, Κάσδοος και Κασδόα»",
+        "url": "https://www.saint.gr/09/29/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 29. септембар ст. ст. (civil 12 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Βασίλειον ἀξίαν ὡς φθαρτὴν καταλέλοιπας, καὶ τῷ βασιλεῖ τῶν αἰώνων ἠκολούθησας ἔνδοξε, καὶ ἤθλησας στερρῶς ὑπὲρ αὐτοῦ, βασάνους ἀνυποίστους ἐνεγκών· διὰ τοῦτό σε τιμῶμεν ᾀσματικῶς, Γοβδελαᾶ κραυγάζοντες· δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ, πᾶσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιοι Γοβδέλαος, Δάδας, Κάσδοος και Κασδόα, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2403/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "english": {
+        "text": "Thou didst leave a kingly rank as corruptible, and didst follow the King of the ages, O glorious one, and didst contend steadfastly for him, bearing unbearable torments; therefore we honour thee in song, crying to thee, O Gobdelaas: Glory to him who gave thee strength; glory to him who crowned thee; glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Τῇ ψυχῇ δεξάμενος, τῆς εὐσεβείας τὸ φέγγος, τὴν πατρῴαν ἔλιπες, ἅπασαν πλάνην καὶ δόξαν· ἤθλησας, ὑπὲρ Κυρίου ἀνδρειοφρόνως· ἤνεγκας τὰς πολυτρόπους στερρῶς βασάνους· διὰ τοῦτό σοι βοῶμεν· χαίροις ὦ Μάρτυς Γοβδελαᾶ ἔνδοξε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιοι Γοβδέλαος, Δάδας, Κάσδοος και Κασδόα, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2403/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ἡ Παρθένος σήμερον.",
+      "english": {
+        "text": "Receiving in thy soul the light of piety, thou didst leave all thy father’s error and glory; thou didst contend manfully for the Lord, and didst bear steadfastly torments of many kinds; therefore we cry to thee: Rejoice, O glorious martyr Gobdelaas.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Δυάδα τὴν ἁγίαν τῶν Μαρτύρων τιμήσωμεν, σὺν Γοβδελαᾷ τὴν Κασδόαν τοὺς γενναίους ὁμαίμονας· φωτὶ γὰρ ἐλλαμφθέντες θεϊκῷ, ἐνήθλησαν στερρῶς ὑπὲρ Χριστοῦ, καὶ πρεσβεύουσιν ἀπαύστως ὑπὲρ ἡμῶν, τῶν ἐκβοώντων πάντοτε· δόξα τῷ ἐνισχύσαντι ὑμᾶς, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι δι’ ὑμῶν, πᾶσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιοι Γοβδέλαος, Δάδας, Κάσδοος και Κασδόα, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2403/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "english": {
+        "text": "Let us honour the holy pair of martyrs, Casdoa with Gobdelaas, the noble brother and sister; for, shone upon by divine light, they contended steadfastly for Christ, and intercede unceasingly for us who ever cry: Glory to him who strengthened you; glory to him who crowned thee; glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

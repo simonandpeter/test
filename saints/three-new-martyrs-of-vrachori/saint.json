@@ -1,0 +1,58 @@
+{
+  "slug": "three-new-martyrs-of-vrachori",
+  "display_name": "The Three New Martyrs of Vrachori",
+  "names": [
+    {
+      "form": "Άγιοι Τρεις Νεομάρτυρες εν τω Βραχωρίω Αγρινίου",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1786,
+      "latest": 1786,
+      "display": "1786",
+      "basis": "traditional",
+      "note": "saint.gr: «Το 1786 μ.Χ. αποφάσισαν να γυρίσουν στην πατρίδα τους», the journey on which they were taken; the page marks the entry as not cross-checked."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 29 сентября ст. ст. (civil 12 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 29 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — «Άγιοι Τρεις Νεομάρτυρες εν τω Βραχωρίω Αγρινίου»",
+        "url": "https://www.saint.gr/09/29/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 29. септембар ст. ст. (civil 12 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

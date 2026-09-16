@@ -1,0 +1,192 @@
+{
+  "slug": "cyriacus-the-anchorite",
+  "display_name": "Cyriacus the Anchorite",
+  "names": [
+    {
+      "form": "Όσιος Κυριακός ο Αναχωρητής",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Cuvios Chiriac Sihastrul",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Γεννήθηκε στην Κόρινθο το 5ο αιώνα μ.Χ.»; it adds that he died aged 107."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 29 сентября ст. ст. (civil 12 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 29 septembrie — „Sfântul Cuvios Chiriac Sihastrul”",
+        "url": "https://doxologia.ro/29-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — «Όσιος Κυριακός ο Αναχωρητής»",
+        "url": "https://www.saint.gr/09/29/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 29. септембар ст. ст. (civil 12 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Χριστῷ ἠκολούθησας, καταλιπῶν τὰ τῆς γῆς, καὶ βίον ἰσάγγελον, ἐπολιτεύσω σαφῶς, ὡς ἄσαρκος Ὅσιε, σὺ γὰρ ἐν ταὶς ἐρήμοις, προσχωρῶν θείω πόθω, σκίλλη πίκρα τὴν πάλαι, πικρᾶν γεῦσιν ἀπώσω. Διὸ Κυριακὲ θεοφόρε, ἀξίως δεδόξασαι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Κυριακός ο Αναχωρητής, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2398/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "Thou didst follow Christ, leaving the things of the earth, and didst plainly live a life equal to the angels’, as one without flesh, O venerable one; for going into the deserts with divine longing, thou didst thrust away the bitter taste of old with the bitter squill. Wherefore, O God-bearing Cyriacus, thou art worthily glorified.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Τῆς ἐρήμου πολίτης καὶ ἐν σώματι ἄγγελος, καὶ θαυματουργὸς ἀνεδείχθης, θεοφόρε Πατὴρ ἡμῶν Κυριακέ· νηστείᾳ ἀγρυπνίᾳ προσευχῇ, οὐράνια χαρίσματα λαβών, θεραπεύεις τοὺς νοσοῦντας, καὶ τὰς ψυχὰς τῶν πίστει προστρεχόντων σοι. Δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Κυριακός ο Αναχωρητής, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2398/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τοῦ λίθου σφαγισθέντος .",
+      "english": {
+        "text": "A citizen of the wilderness, an angel in the body and a wonderworker wast thou shown to be, O our God-bearing father Cyriacus. By fasting, vigil and prayer thou didst receive heavenly gifts, and thou healest the sick and the souls of them that run to thee with faith. Glory to him who gave thee strength; glory to him who crowned thee; glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Ἀπαλῶν ἐξ ὀνύχων τῷ Χριστῷ ἠκολούθησας, τὴν ἀγγελικὴν πολιτείαν ὁλοτρόπως ἑλόμενος· διὸ ἐν ταῖς ἐρήμοις προσχωρῶν, τῶν θείων ἠξιώθης δωρεῶν, θεραπεύων πᾶσαν νόσον Κυριακέ, τῶν πίστει προσιόντων σοι. Δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ, πᾶσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Κυριακός ο Αναχωρητής, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2398/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "english": {
+        "text": "From thy tender years thou didst follow Christ, choosing the angelic life in every way; therefore going into the deserts thou wast counted worthy of divine gifts, healing every sickness, O Cyriacus, of those who come to thee with faith. Glory to Christ who glorified thee; glory to him who crowned thee; glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ὡς ὑπερμάχω κραταιῶ καὶ ἀντιλήπτορι, ἡ σὲ τιμώσα ἱερὰ Λαύρα ἑκάστοτε, ἑορτάζει τὰ μνημόσυνα ἐτησίως, Ἀλλ' ὡς ἔχων παρρησίαν πρὸς τὸν Κύριον, ἐξ ἐχθρῶν ἐπεμβαινόντων ἠμᾶς φρούρησον, ἶνα κράζωμεν, Χαίροις Πάτερ τρισόλβιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Κυριακός ο Αναχωρητής, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2398/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὴ ὑπερμάχω.",
+      "english": {
+        "text": "The holy Lavra that honours thee keeps thy memorial every year, as its mighty champion and helper; but since thou hast boldness before the Lord, guard us from the enemies who come against us, that we may cry: Rejoice, O thrice-blessed father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Locuitor pustiului, înger în trup şi de minuni făcător te-ai arătat, purtătorule de Dumnezeu, Părintele nostru Chiriac. Cu postul, cu privegherea şi prin rugăciune primind daruri cereşti, tămăduieşti pe cei bolnavi şi sufletele celor ce aleargă la tine cu credinţă. Slavă Celui Ce ţi-a dat ţie putere; Slavă Celui Ce te-a încununat pe tine; Slavă Celui Ce lucrează prin tine tuturor tămăduiri.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Chiriac Sihastrul",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-chiriac-sihastrul",
+        "year": 2026
+      },
+      "english": {
+        "text": "A citizen of the wilderness, an angel in the body and a wonderworker wast thou shown to be, O our God-bearing father Cyriacus. By fasting, vigil and prayer thou didst receive heavenly gifts, and thou healest the sick and the souls of them that run to thee with faith. Glory to him who gave thee strength; glory to him who crowned thee; glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Ca pe un tare luptător şi apărător, pururea cinstindu-te pe tine Sfinţita Lavră, pururea prăznuieşte pomenirea ta cea de peste an. Ci, ca cel ce ai îndrăzneală către Domnul, păzeşte-ne pe noi de vrăjmaşii care vin asupră-ne, ca să-ţi cântăm; bucură-te, părinte, de trei ori fericite.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Chiriac Sihastrul",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-chiriac-sihastrul",
+        "year": 2026
+      },
+      "model": "Apărătoare Doamnă...",
+      "english": {
+        "text": "The holy Lavra that honours thee keeps thy memorial every year, as its mighty champion and helper; but since thou hast boldness before the Lord, guard us from the enemies who come against us, that we may cry: Rejoice, O thrice-blessed father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Nevoinţă şi vieţuire de înfrânare ai avut tu, Cuvioase Chiriac, făcătorule de minuni. Roagă-te pentru noi, cei ce cu credinţă săvârşim pomenirea ta.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Chiriac Sihastrul",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-chiriac-sihastrul-0",
+        "year": 2026
+      },
+      "model": "Arătatu-Te-ai astăzi lumii...",
+      "english": {
+        "text": "Thou didst have struggle and a life of abstinence, O venerable Cyriacus, worker of wonders. Pray for us who keep thy memory with faith.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
