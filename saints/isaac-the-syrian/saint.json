@@ -1,0 +1,85 @@
+{
+  "slug": "isaac-the-syrian",
+  "display_name": "Isaac the Syrian",
+  "names": [
+    {
+      "form": "Όσιος Ισαάκ ο Σύρος",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 28 сентября ст. ст. (civil 11 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 28 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Σεπτεμβρίου — «Όσιος Ισαάκ ο Σύρος»",
+        "url": "https://www.saint.gr/09/28/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 28. септембар ст. ст. (civil 11 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος πλ. α΄.",
+      "text": "Αρετών ταις ακτίσι καταλαμπόμενος, της εν Χριστώ πολιτείας φωστήε πολύφωτος, θεοφόρε Ισαάκ ώφθης εν Πνεύματι, και κατευθύνεις ασφαλώς, σωτηρίας προς οδόν, διδάγμασι θεοπνεύστοις, τους ευφημούντας σε Πάτερ, ως του Χριστού θείον θεράποντα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ισαάκ ο Σύρος, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3534/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τον συνάναρχον Λόγον.",
+      "english": {
+        "text": "Shining with the rays of the virtues, O many-lighted luminary of the life in Christ, God-bearing Isaac, thou wast seen in the Spirit, and by God-inspired teachings thou guidest safely on the way of salvation those who praise thee, O father, as a divine servant of Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος πλ. δ΄.",
+      "text": "Τη ισαγγέλω πολιτεία σου, μακάριε, του Παρακλήτου ανεδείχθης θείον όργανον, Ισαάκ, και μοναζόντων τύπος εν πάσιν, αλλ' ως χάριτος της θείας ενδιαίτημα, χάριν αίτησαι ημίν και φως ουράνιον, τοις βοώσι σοι, χαίροις, Πάτερ θεόσοφε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ισαάκ ο Σύρος, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/3534/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τη υπερμάχω.",
+      "english": {
+        "text": "By thine angel-like life, O blessed Isaac, thou wast shown forth as a divine instrument of the Comforter and in all things a pattern of monks; and as a dwelling of divine grace, ask grace and heavenly light for us who cry to thee: Rejoice, O father wise in God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

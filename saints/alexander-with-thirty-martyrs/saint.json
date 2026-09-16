@@ -1,0 +1,53 @@
+{
+  "slug": "alexander-with-thirty-martyrs",
+  "display_name": "Alexander, with thirty martyrs",
+  "names": [
+    {
+      "form": "Άγιος Αλέξανδρος και οι μαζί μ' αυτόν Τριάκοντα Μάρτυρες",
+      "lang": "el"
+    },
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of «Άγιος Αλέξανδρος και οι μαζί μ' αυτόν Τριάκοντα Μάρτυρες» in this folder’s Greek citation."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 28 сентября ст. ст. (civil 11 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 28 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Σεπτεμβρίου — «Άγιος Αλέξανδρος και οι μαζί μ' αυτόν Τριάκοντα Μάρτυρες»",
+        "url": "https://www.saint.gr/09/28/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 28. септембар ст. ст. (civil 11 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
