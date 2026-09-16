@@ -1,11 +1,11 @@
 {
-  "slug": "michaeus-of-zographou",
-  "display_name": "Michaeus of Zographou",
+  "slug": "paul-of-zographou",
+  "display_name": "Paul of Zographou",
   "names": [
     {
-      "form": "Μιχαίος",
+      "form": "Παύλος",
       "lang": "el",
-      "note": "Read out of the entry’s list of the twenty-six, which prints him as «Μιχαίος (ή Μιχαίας)»."
+      "note": "Read out of the entry’s list of the twenty-six, which prints him as «Παύλος»."
     }
   ],
   "sex": "male",
@@ -25,6 +25,7 @@
     "thomas-of-zographou",
     "barsanuphius-of-zographou",
     "cyril-of-zographou",
+    "michaeus-of-zographou",
     "simon-of-zographou",
     "hilarion-of-zographou",
     "james-of-zographou-the-first",
@@ -38,7 +39,6 @@
     "menas-of-zographou",
     "joasaph-of-zographou",
     "joannicius-of-zographou",
-    "paul-of-zographou",
     "anthony-of-zographou",
     "euthymius-of-zographou",
     "dometius-of-zographou",

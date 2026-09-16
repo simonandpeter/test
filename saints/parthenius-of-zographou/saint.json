@@ -1,11 +1,11 @@
 {
-  "slug": "michaeus-of-zographou",
-  "display_name": "Michaeus of Zographou",
+  "slug": "parthenius-of-zographou",
+  "display_name": "Parthenius of Zographou",
   "names": [
     {
-      "form": "Μιχαίος",
+      "form": "Παρθένιος",
       "lang": "el",
-      "note": "Read out of the entry’s list of the twenty-six, which prints him as «Μιχαίος (ή Μιχαίας)»."
+      "note": "Read out of the entry’s list of the twenty-six, which prints him as «Παρθένιος»."
     }
   ],
   "sex": "male",
@@ -25,6 +25,7 @@
     "thomas-of-zographou",
     "barsanuphius-of-zographou",
     "cyril-of-zographou",
+    "michaeus-of-zographou",
     "simon-of-zographou",
     "hilarion-of-zographou",
     "james-of-zographou-the-first",
@@ -42,7 +43,6 @@
     "anthony-of-zographou",
     "euthymius-of-zographou",
     "dometius-of-zographou",
-    "parthenius-of-zographou",
     "four-unknown-monks-of-zographou"
   ],
   "attestations": [

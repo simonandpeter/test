@@ -1,11 +1,11 @@
 {
-  "slug": "michaeus-of-zographou",
-  "display_name": "Michaeus of Zographou",
+  "slug": "cosmas-companion-of-thomas-of-zographou",
+  "display_name": "Cosmas, companion of Thomas of Zographou",
   "names": [
     {
-      "form": "Μιχαίος",
+      "form": "Κοσμάς",
       "lang": "el",
-      "note": "Read out of the entry’s list of the twenty-six, which prints him as «Μιχαίος (ή Μιχαίας)»."
+      "note": "Read out of the entry’s list of the twenty-six, which prints him as «Κοσμάς»."
     }
   ],
   "sex": "male",
@@ -25,6 +25,7 @@
     "thomas-of-zographou",
     "barsanuphius-of-zographou",
     "cyril-of-zographou",
+    "michaeus-of-zographou",
     "simon-of-zographou",
     "hilarion-of-zographou",
     "james-of-zographou-the-first",
@@ -33,7 +34,6 @@
     "cyprian-of-zographou",
     "sabbas-of-zographou",
     "martinian-of-zographou",
-    "cosmas-companion-of-thomas-of-zographou",
     "sergius-of-zographou",
     "menas-of-zographou",
     "joasaph-of-zographou",
