@@ -6,6 +6,11 @@
     {
       "form": "Όσιος Δανιήλ ο Θάσιος",
       "lang": "el"
+    },
+    {
+      "form": "Данил",
+      "lang": "sr",
+      "note": "Read out of «Преп. Данил са Тасоса.» in this folder’s Serbian citation."
     }
   ],
   "sex": "male",
@@ -49,8 +54,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 12. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.09.2026 (12. септембар ст. ст.) — „Преп. Данил са Тасоса.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-25&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

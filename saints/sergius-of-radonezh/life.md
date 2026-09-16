@@ -6,4 +6,6 @@ Tonsured Sergius, he settled in the forest and gathered a brotherhood around the
 
 Having lived seventy-eight years, he saw his departure to God seven months beforehand, called the brothers and entrusted the abbacy to his disciple Nicon, young in years and grey in mind. His body was laid in the monastery of his labours, and when his relics were later uncovered, the life says, they were found whole and untouched by corruption, with an unspeakable fragrance and healings flowing as from a spring - as they flow, it adds, to this day. The Romanian calendar keeps him twice, on 5 July and this day.
 
-*After doxologia.ro, [Viața Cuviosului Părintelui nostru Serghie, egumenul Radonejului](https://doxologia.ro/viata-cuviosului-parintelui-nostru-serghie-egumenul-radonejului-noul-facator-de-minuni); read 30 August 2026.*
+The Greek synaxarion keeps him on 25 September as the wonderworker and abbot of Radonezh, and says it has no details of his life; its heading prints his death as 1329, where the Russian calendar has 1392. His body, it says, lies incorrupt in the Lavra of the Holy Trinity near Moscow.
+
+*After doxologia.ro, [Viața Cuviosului Părintelui nostru Serghie, egumenul Radonejului](https://doxologia.ro/viata-cuviosului-parintelui-nostru-serghie-egumenul-radonejului-noul-facator-de-minuni); read 30 August 2026; the Ορθόδοξος Συναξαριστής (saint.gr), 25 Σεπτεμβρίου — [the entry](https://www.saint.gr/2009/saint.aspx), read 17 September 2026.*

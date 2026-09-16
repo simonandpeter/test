@@ -5,12 +5,17 @@
     {
       "form": "Sfântul Cuvios Pafnutie Egipteanul",
       "lang": "ro"
+    },
+    {
+      "form": "Άγιος Παφνούτιος ο Ιεροσολυμήτης, Ιερομάρτυρας",
+      "lang": "el"
     }
   ],
   "sex": "male",
   "types": [
     "venerable",
-    "martyr"
+    "martyr",
+    "hieromartyr"
   ],
   "attestations": [
     {
@@ -34,8 +39,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Σεπτεμβρίου — «Άγιος Παφνούτιος ο Ιεροσολυμήτης, Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/09/25/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -54,5 +68,61 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Θυσίαν τὴν ἔνθεον, πιστῶς προσφέρων Θεῶ, ὡς θῦμα εὐπρόσδεκτον, προσανηνέχθης αὐτῶ, ἀθλήσεως ἄνθραξιν ὅθεν ὡς ἱερέα, καὶ στερρὸν Ἀθλοφόρον, ἔδειξε σὲ ὁ Κτίστης, χαρισμάτων ταμεῖον ἐξ ὧν καὶ ἠμὶν Παράσχου, ἱερομάρτυς Παφνούτιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Παφνούτιος ο Ιεροσολυμήτης, Ιερομάρτυρας, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/306/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "Faithfully offering the divine sacrifice to God, thou wast thyself offered up to him as an acceptable victim on the coals of thy contest; wherefore the Creator showed thee forth as a priest and a steadfast prizebearer, a treasury of gifts. Of these grant us also, O hieromartyr Paphnutius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Καί τρόπων μέτοχος, καί θρόνων διάδοχος, τῶν Ἀποστόλων γενόμενος, τήν πρᾶξιν εὗρες θεόπνευστε, εἰς θεωρίας ἐπίβασιν· διά τοῦτο τόν λόγον τῆς ἀληθείας ὀρθοτομῶν, καί τῇ πίστει ἐνήθλησας μέχρις αἵματος, Ἱερομάρτυς Παφνούτιε· πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τάς ψυχάς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Παφνούτιος ο Ιεροσολυμήτης, Ιερομάρτυρας, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/306/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having been a participant of the character and a successor of the apostles on the throne, thou, O God-inspired one, didst find work in coming into visions; whilst therefore rightly dividing the word of truth, for the sake of the faith didst thou suffer even unto the shedding of thy blood. O hieromartyr (mentioned by name), intercede before Christ the God that our souls may be saved.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter XVI, The General Service to One Hieromartyr",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Αἱμάτων ῥοαῖς, στολήν σου τὴν ὑπέρτιμον, φοινίξας λαμπρῶς, Παφνούτιε μακάριε, χαρμοσύνως ἔδραμες, πρὸς ναόν κραυγάζων τὸν οὐράνιον· Τῆς ζωῆς σὺ Σῶτερ πηγή, ὁ πᾶσι βλυστάνων, οἰκτιρμῶν ποταμούς.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Παφνούτιος ο Ιεροσολυμήτης, Ιερομάρτυρας, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/306/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὰ ἄνω ζητῶν.",
+      "english": {
+        "text": "Having brightly dyed thy precious robe in streams of blood, O blessed Paphnutius, thou didst run joyfully to the heavenly temple, crying: Thou, O Saviour, art the fountain of life, who pourest forth rivers of compassion upon all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

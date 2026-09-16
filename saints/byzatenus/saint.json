@@ -1,0 +1,45 @@
+{
+  "slug": "byzatenus",
+  "display_name": "Byzatenus",
+  "names": [
+    {
+      "form": "Άγιος Βυζατηνός",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 25 сентября ст. ст. (civil 8 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 25 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Σεπτεμβρίου — «Άγιος Βυζατηνός»",
+        "url": "https://www.saint.gr/09/25/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 25. септембар ст. ст. (civil 8 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "sabinian-son-of-paul-and-tatta",
+  "display_name": "Sabinian, son of Paul and Tatta",
+  "names": [
+    {
+      "form": "Άγιοι Παύλος, Ταττή και τα παιδιά τους Σαβινιανός, Μάξιμος, Ρούφος και Ευγένιος",
+      "lang": "el"
+    },
+    {
+      "form": "Σαβινιανός",
+      "lang": "el",
+      "note": "Read out of «Άγιοι Παύλος, Ταττή και τα παιδιά τους Σαβινιανός, Μάξιμος, Ρούφος και Ευγένιος» in this folder’s Greek citation."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "paul-of-damascus",
+    "tatta-of-damascus",
+    "maximus-son-of-paul-and-tatta",
+    "rufus-son-of-paul-and-tatta",
+    "eugene-son-of-paul-and-tatta"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 25 сентября ст. ст. (civil 8 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 25 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Σεπτεμβρίου — «Άγιοι Παύλος, Ταττή και τα παιδιά τους Σαβινιανός, Μάξιμος, Ρούφος και Ευγένιος»",
+        "url": "https://www.saint.gr/09/25/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 25. септембар ст. ст. (civil 8 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

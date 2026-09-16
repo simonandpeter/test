@@ -35,4 +35,6 @@ Julian takes a double crown. The Greek calendar keeps him on 12 September,
 and the Russian on 12 and 13 September of the old style, 25 and 26
 September, with his forty companions.
 
-*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-iulian-galatijskij), read 6 September 2026; the Ορθόδοξος Συναξαριστής (saint.gr), 12 Σεπτεμβρίου — [the entry](https://www.saint.gr/2412/saint.aspx), read 23 August 2026, was all this entry had until then.*
+The Ohrid Prologue, for the Serbian calendar, keeps him with his forty companions and says they all suffered about 300, first tortured and then beheaded. Before his death, it says, Julian prayed that the Lord would give forgiveness of sins and relief from the passions to those who took of his dust, that no harmful birds, locusts, caterpillars or any other deadly blight fall on their fields, and that he would receive his spirit in peace.
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-iulian-galatijskij), read 6 September 2026; the Ορθόδοξος Συναξαριστής (saint.gr), 12 Σεπτεμβρίου — [the entry](https://www.saint.gr/2412/saint.aspx), read 23 August 2026, was all this entry had until then; the Ohrid Prologue for 25 September 2026 (12. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-25&prolog=1), read 17 September 2026.*

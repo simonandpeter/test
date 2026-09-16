@@ -1,0 +1,5 @@
+# Paphnutius, father of Euphrosyne
+
+Paphnutius was the father of [Euphrosyne](/saints/euphrosyne-of-alexandria), who is kept the same day, and died in peace: that is all the Greek synaxarion’s own notice of him says, and its verse has him, having closed his eyes in the flesh, live in the spirit and behold a great light. Her entry says more of him: he was the richest man in Alexandria, and he and his wife were known for their warm faith in God; when his daughter was left without a mother at twelve he gave himself still more lovingly to her care, and when she was eighteen he meant to marry her to a young man of high rank. At the end of her life, the entry says, she met her father again, when he too became a monk in the monastery where she had lived. Neither entry gives him a date.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 25 Σεπτεμβρίου — [the entry](https://www.saint.gr/2512/saint.aspx), and the entry for his daughter — [the entry](https://www.saint.gr/2511/saint.aspx); read 17 September 2026.*

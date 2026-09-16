@@ -5,6 +5,10 @@
     {
       "form": "Sfânta Cuvioasă Eufrosina",
       "lang": "ro"
+    },
+    {
+      "form": "Οσία Ευφροσύνη Θυγατέρα Παφνουτίου του Αιγυπτίου",
+      "lang": "el"
     }
   ],
   "sex": "female",
@@ -34,8 +38,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Σεπτεμβρίου — «Οσία Ευφροσύνη Θυγατέρα Παφνουτίου του Αιγυπτίου»",
+        "url": "https://www.saint.gr/09/25/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -45,5 +58,88 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 400,
+      "latest": 420,
+      "display": "c. 410",
+      "basis": "traditional",
+      "note": "saint.gr: „έζησε στα χρόνια του Θεοδοσίου του μικρού (περί το 410 μ.Χ.)”."
+    }
+  },
+  "related": [
+    "paphnutius-father-of-euphrosyne"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ἐν σοὶ Μῆτερ ἀκριβῶς διεσώθη τὸ κατ᾽ εἰκόνα· λαβοῦσα γὰρ τὸν σταυρόν, ἠκολούθησας τῷ Χριστῷ, καὶ πράττουσα ἐδίδασκες, ὑπερορᾷν μὲν σαρκός, παρέρχεται γάρ· ἐπιμελεῖσθαι δὲ ψυχῆς, πράγματος ἀθανάτoυ· διὸ καὶ μετὰ Ἀγγέλων συναγάλλεται, Ὁσία Εὐφροσύνη τὸ πνεῦμά σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσία Ευφροσύνη Θυγατέρα Παφνουτίου του Αιγυπτίου, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2511/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O mother, was manifestly preserved what is in the image of God; for, having taken up the cross, thou didst follow Christ, and by thine own example hast taught that the flesh is to be despised as transient, but that particular care should be bestowed on the soul, as a thing immortal; wherefore together with the angels rejoiceth also thine, O religious (mentioned by name), spirit.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter XXII, The General Service to a Nun",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "text": "Ὡς παρθένος φρόνιμη καὶ ἀδιάφθορος, κοτηγγυήθης ὁσίως τῷ Ζωοδότῃ Χριστῷ, καὶ προσκαίρων τὴν χλιδὴν ἐμφρόνως ἔλιπες, ὅθεν ἐν μέσω τῶν ἀνδρῶν, ὡς ἀμόλυντος ἀμνάς, ἐξέλαμψας Εὐφροσύνη, καὶ τοῦ Βελίαρ τὰ κέντρα, τὴ πολιτεία σου ἀπήμβλυνας.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσία Ευφροσύνη Θυγατέρα Παφνουτίου του Αιγυπτίου, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2511/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "english": {
+        "text": "As a wise and incorrupt virgin thou wast betrothed in holiness to Christ the Giver of life, and didst wisely leave the luxury of passing things; wherefore thou didst shine among men as an undefiled ewe-lamb, O Euphrosyne, and by thy way of life didst blunt the goads of Belial.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἐν τῇ ἀσκήσει τὸ θῆλυ ἐκάλυψας, ἐν τῇ κοιμήσει τοὺς πάντας ἐξέπληξας, Εὐφροσύνη ἀνύσασα ἀνδρικῶς, νεᾶνις οὖσα λαμπρά, καὶ ταῖς πρεσβείαις ταῖς σαῖς τῶν κινδύνων ἀπαλλάττεις τοὺς τιμῶντάς σε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσία Ευφροσύνη Θυγατέρα Παφνουτίου του Αιγυπτίου, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2511/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thine ascesis thou didst hide that thou wast a woman, and at thy falling asleep thou didst astonish all, O Euphrosyne, who didst finish thy course manfully, a radiant maiden; and by thine intercessions thou deliverest from dangers those who honour thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Τῆς ἄνω ζωῆς, τυχεῖν ἐπιποθήσασα, τὴν κάτω τρυφήν, σπουδαίως καταλέλοιπας, καὶ σαυτὴν ἀνέμιξας, ἀνάμεσον ἀνδρῶν παναοίδιμε· διὰ Χριστὸν γὰρ τὸν νυμφίον σου, μνηστῆρος προσκαίρου κατεφρόνησας.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Οσία Ευφροσύνη Θυγατέρα Παφνουτίου του Αιγυπτίου, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2511/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὰ ἄνω ζητῶν.",
+      "english": {
+        "text": "Longing to attain the life on high, thou didst eagerly forsake the delights below and didst mingle thyself among men, O all-praised one; for for the sake of Christ thy Bridegroom thou didst despise a passing betrothed.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
