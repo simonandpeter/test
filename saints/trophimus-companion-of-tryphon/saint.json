@@ -1,0 +1,57 @@
+{
+  "slug": "trophimus-companion-of-tryphon",
+  "display_name": "Trophimus, companion of Tryphon",
+  "names": [
+    {
+      "form": "Άγιοι Τρύφων, Τρόφιμος και Δορυμέδων",
+      "lang": "el"
+    },
+    {
+      "form": "Τρόφιμος",
+      "lang": "el",
+      "note": "Read out of «Άγιοι Τρύφων, Τρόφιμος και Δορυμέδων» in this folder’s Greek citation."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "tryphon-companion-of-trophimus",
+    "dorymedon-companion-of-tryphon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 29 сентября ст. ст. (civil 12 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 29 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — «Άγιοι Τρύφων, Τρόφιμος και Δορυμέδων»",
+        "url": "https://www.saint.gr/09/29/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 29. септембар ст. ст. (civil 12 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

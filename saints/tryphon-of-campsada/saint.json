@@ -1,0 +1,87 @@
+{
+  "slug": "tryphon-of-campsada",
+  "display_name": "Tryphon of Campsada",
+  "names": [
+    {
+      "form": "Sfântul Mucenic Trifon",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru was not read for this saint; doxologia.ro also keeps him on 1 February, and no calendar’s 1 February has been read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 29 septembrie — „Sfântul Mucenic Trifon”",
+        "url": "https://doxologia.ro/29-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s 29 Σεπτεμβρίου entry «Άγιοι Τρύφων, Τρόφιμος και Δορυμέδων» does not say whether its Tryphon is this martyr, and its page for 1 February was not read (2026-09-17)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs was not read for this saint; no calendar’s 1 February has been read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Trifon, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Trifon",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-trifon",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr, O Lord (mentioned by name), through his suffering, an incorruptible crown did obtain from Thee, our God; for, rejoicing in Thy strength, he laid low his tormentors and did beat off impotent affronts of the demons also; at his intercessions save our souls.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter XIV, The General Service to One Martyr",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu întărirea Preasfintei Treimi ai stricat mulţimea idolilor, până la margini, vredniciile de pomenire, cinstit întru Hristos făcându-te; şi biruind pe tirani întru Dumnezeu Mântuitorul, ai primit cununa muceniciei tale şi darurile Dumnezeieştilor tămăduiri, ca un nebiruit.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Mucenic Trifon",
+        "url": "https://doxologia.ro/condacul-sfantului-mucenic-trifon",
+        "year": 2026
+      },
+      "model": "Ca pe o pârgă a firii...",
+      "english": {
+        "text": "By the strength of the Most Holy Trinity thou didst destroy the multitude of the idols to the ends of the earth, O thou worthy of remembrance, being honoured in Christ; and conquering the tyrants in God the Saviour, thou didst receive the crown of thy martyrdom and the gifts of divine healings, as one unconquered.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
