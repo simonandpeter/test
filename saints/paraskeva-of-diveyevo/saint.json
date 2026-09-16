@@ -1,0 +1,68 @@
+{
+  "slug": "paraskeva-of-diveyevo",
+  "display_name": "Paraskeva of Diveyevo",
+  "names": [
+    {
+      "form": "Οσία Παρασκευή του Σάρωφ - Ντιβέεβο",
+      "lang": "el"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "fool-for-christ"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1795,
+      "latest": 1795,
+      "display": "1795",
+      "basis": "traditional",
+      "note": "saint.gr prints her as „(1795 - 1915)” and says she died in 1915 „σε ηλικία 120 χρονών”."
+    },
+    "death": {
+      "earliest": 1915,
+      "latest": 1915,
+      "display": "1915",
+      "basis": "attested",
+      "note": "saint.gr: „κοιμήθηκε ειρηνικά το έτος 1915 μ.Χ.”, on 22 September."
+    }
+  },
+  "related": [
+    "maria-ivanovna-of-diveyevo"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 9 сентября ст. ст. (civil 22 September, checked 2026-09-17); saint.gr says the Russian Church keeps her on 22 September, and the page for 22 сентября ст. ст. was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 22 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 22 Σεπτεμβρίου — «Οσία Παρασκευή του Σάρωφ - Ντιβέεβο»",
+        "url": "https://www.saint.gr/09/22/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not among the names in the Ohrid Prologue for 9. септембар ст. ст. on pravoslavno.rs (civil 22 September, checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -24,6 +24,11 @@
       "form": "Ιωακείμ",
       "lang": "el",
       "note": "His own name, read out of «Μνήμη των Δικαίων Θεοπατόρων Ιωακείμ και Άννης» — the line already recorded here, which names more than this saint (or joins two of the titles with “and”), so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
+    },
+    {
+      "form": "Јоаким",
+      "lang": "sr",
+      "note": "His own name, read out of «Св. Јоаким и Ана» in this folder’s Serbian citation, which names the pair."
     }
   ],
   "sex": "male",
@@ -75,8 +80,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 9. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.09.2026 (9. септембар ст. ст.) — „Св. Јоаким и Ана.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-22&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -194,6 +208,7 @@
     }
   ],
   "related": [
-    "anna-the-righteous"
+    "anna-the-righteous",
+    "elizabeth-mother-of-the-forerunner"
   ]
 }

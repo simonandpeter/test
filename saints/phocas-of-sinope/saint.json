@@ -6,6 +6,10 @@
     {
       "form": "Sfântul Sfințit Mucenic Foca, Episcopul de Sinope",
       "lang": "ro"
+    },
+    {
+      "form": "Άγιος Φωκάς Ιερομάρτυρας ο Θαυματουργός",
+      "lang": "el"
     }
   ],
   "sex": "male",
@@ -35,8 +39,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 22 Σεπτεμβρίου — «Άγιος Φωκάς Ιερομάρτυρας ο Θαυματουργός»",
+        "url": "https://www.saint.gr/09/22/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -46,5 +59,50 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 98,
+      "latest": 117,
+      "display": "98–117",
+      "basis": "traditional",
+      "note": "saint.gr: „επί των χρόνων του αυτοκράτορος Τραϊανού (98 - 117 μ.Χ.)”. doxologia.ro prints no year."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ἐκ βρέφους τοῦ Πνεύματος, ὀφθεῖς δοχεῖον λαμπρόν, θαυμάτων ἐπλούτησας, τὴν παρ' αὐτοῦ δωρεάν, Φωκὰ Ἱερώτατε, ὅθεν ἱερουργήσας, τῷ Σωτήρι ὁσίως, ἔπιες ἐν ἀθλήσει, τὸ ποτήριον τούτου, ὦ πρέσβευε δεόμεθα, ὑπὲρ τῶν ψυχῶν ἠμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Φωκάς Ιερομάρτυρας ο Θαυματουργός, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2482/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "Shown from infancy to be a radiant vessel of the Spirit, thou wast enriched by him with the gift of miracles, O most sacred Phocas; wherefore, having served the Saviour as his priest in holiness, thou didst drink his cup in thy contest. Intercede with him, we pray, for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. γ’.",
+      "text": "Τοῦ Ἁγίου Πνεύματος, τὴν πλουσιόδωρον χάριν, ὡς πηγὴν θεόβρυτον, ἐν τῇ ψυχῇ κεκτημένος, ἔσβεσας, πόνων ἱδρῶσι πλάνης τὴν φλόγα, βρύεις δὲ, θαυμάτων ῥεῖθρα τοῖς ἐκβοῶσι· χαίροις κλέος Ἱερέων, καὶ τῶν Μαρτύρων Φωκᾶ μακάριε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Φωκάς Ιερομάρτυρας ο Θαυματουργός, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2482/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ἡ Παρθένος σήμερον.",
+      "english": {
+        "text": "Having in thy soul the richly-given grace of the Holy Spirit as a spring welling up from God, thou didst quench the flame of error with the sweat of thy labours, and thou pourest forth streams of miracles for those who cry aloud: Rejoice, glory of priests and of martyrs, O blessed Phocas.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -31,7 +31,9 @@ cannot sit with the Greek life’s birth in 283, one of the two having read
 the persecution as a birth year. The Russian calendar keeps him on 9
 September of the old style, 22 September.
 
+The Ohrid Prologue, for the Serbian calendar, gives him one line — after a God-pleasing life and suffering for Christ he died in peace in 299 — and its reflection for the day tells the coat again: as a boy he saw an unclothed child freezing in the street, took off his own clothes to dress it, and went home naked; asked by his astonished parents where his clothes were, he said, I clothed Christ. For that, the Prologue says, grace was added to him, and he became a great ascetic, a sufferer for the faith and a wonderworker.
+
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 9 Σεπτεμβρίου —
 [the entry](https://www.saint.gr/992/saint.aspx), read 5 September 2026 — this
 time whole: its page shows seventy words and the rest behind a link, which is
-where the earlier reading stopped; the Russian church calendar’s life (azbyka.ru) — [the entry](https://azbyka.ru/days/sv-feofan-ispovednik-i-postnik), read 6 September 2026, is where the death year comes from.*
+where the earlier reading stopped; the Russian church calendar’s life (azbyka.ru) — [the entry](https://azbyka.ru/days/sv-feofan-ispovednik-i-postnik), read 6 September 2026, is where the death year comes from; the Ohrid Prologue for 22 September 2026 (9. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-22&prolog=1), read 17 September 2026.*

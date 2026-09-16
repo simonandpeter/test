@@ -10,6 +10,10 @@
       "form": "Феофан",
       "lang": "ru",
       "note": "The nominative of «Прп. Феофана исп. (ок. 300)» in this folder's Russian citation; «исп.» is the rank and is its own field here."
+    },
+    {
+      "form": "Теофан",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -30,7 +34,7 @@
       "latest": 305,
       "display": "c. 300",
       "basis": "traditional",
-      "note": "About 300, azbyka.ru, seventeen years after his release under Carus and Carinus; saint.gr’s birth in 283 cannot sit with it."
+      "note": "About 300, azbyka.ru, seventeen years after his release under Carus and Carinus; saint.gr’s birth in 283 cannot sit with it. The Ohrid Prologue on pravoslavno.rs (22.09.2026): „мирно скончао 299. год.“"
     }
   },
   "attestations": [
@@ -69,8 +73,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 9. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.09.2026 (9. септембар ст. ст.) — „Св. Теофан исповедник и постник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-22&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

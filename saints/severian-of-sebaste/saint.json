@@ -14,6 +14,10 @@
       "form": "Севериан",
       "lang": "ru",
       "note": "The nominative of «Мч. Севериана (320)» in this folder's Russian citation, which prints the bare name."
+    },
+    {
+      "form": "Севиријан",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -26,7 +30,7 @@
       "latest": 324,
       "display": "under Licinius",
       "basis": "traditional",
-      "note": "saint.gr: martyred in the years of Licinius."
+      "note": "saint.gr: martyred in the years of Licinius. The Ohrid Prologue on pravoslavno.rs (22.09.2026): „у време цара Ликинија 320. год.“"
     }
   },
   "attestations": [
@@ -74,8 +78,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 9. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.09.2026 (9. септембар ст. ст.) — „Св. муч. Севиријан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-22&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

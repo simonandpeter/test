@@ -5,6 +5,10 @@
     {
       "form": "Sfântul Cosma de la Zografu",
       "lang": "ro"
+    },
+    {
+      "form": "Όσιος Κοσμάς ο Ζωγραφίτης",
+      "lang": "el"
     }
   ],
   "sex": "male",
@@ -34,8 +38,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 22 Σεπτεμβρίου — «Όσιος Κοσμάς ο Ζωγραφίτης»",
+        "url": "https://www.saint.gr/09/22/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -49,7 +62,7 @@
       "latest": 1323,
       "display": "1323",
       "basis": "attested",
-      "note": "The life: „Acestea toate s-au întâmplat în anul 1323”."
+      "note": "The life: „Acestea toate s-au întâmplat în anul 1323”. saint.gr: „Απεβίωσε ειρηνικά την 22α Σεπτεμβρίου το έτος 1323 μ.Χ.”."
     }
   },
   "text": {
