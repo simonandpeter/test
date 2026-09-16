@@ -58,8 +58,15 @@ and tone off the cached page instead of retyping it. `hymn-english --emit`
 counts groups of slug · kind · tone, so two apolytikia in one tone count once.
 A relic finding goes on an existing folder's row with a `feast.note`
 (Neophytos, as Theodosius of Chernigov's). A synaxis that names nobody stays
-out (Kalyviani). `index-carousel.spec.js:1743` flaked once on CI and passed
-6 of 6 alone.
+out (Kalyviani).
+
+**The next wall for B1 is the carousel's picture ratio, not its runs.** The
+same test asserts at least half the columns carry a picture. At 1280 × 720 all
+130 icons already stand in columns of their own and the name columns are only
+a handful fewer, so a batch or two more saints without icons turns that
+assertion red on arithmetic alone — inferred from one sitting's count, not yet
+seen failing. It is the author's "every second column", so it is his call,
+not the batch's.
 
 What A2 added that the tools do not say. `day-candidates.mjs` undercounts the
 Serbian Prologue: it read four entries on 24 and 25 September where the page

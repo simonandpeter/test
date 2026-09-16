@@ -247,8 +247,8 @@ the fade), `asides.js` (recorded-with, kept the same day, and their two faces),
 `lib/prayer-order.js` is the arithmetic. Three columns past 1024 px, one below
 it, and the phone turns the page by swiping it.
 
-**`views/index/`** — `state.js`, `modes.js` (carousel, column packing, the mode
-toggle), `grid.js` (virtualised and absolutely positioned), `controls.js`,
+**`views/index/`** — `state.js`, `modes.js` (carousel, the mode toggle;
+the column packing is `lib/carousel-cells.js`), `grid.js` (virtualised and absolutely positioned), `controls.js`,
 `search.js`, `filter.js` (no DOM), `count.js`, `sticky.js`, `place.js`.
 One page, two faces; nothing is rebuilt to swap between them.
 

@@ -1748,11 +1748,18 @@ test('a picture stands in every second column at least, and the names between th
    * by geometry rather than by class where the claim is about pictures: a
    * column has a picture when it has a `.cx-media` in it, whatever it is called.
    *
-   * **Two, not one, and the two is the tail.** When the last icon has been
-   * placed, whatever imageless saints remain have nowhere to go but a column of
-   * their own. Pinning 1 would be pinning the corpus's own ratio of icons to
-   * saints, which the next folder changes.
+   * **Two, not one** (`MAX_NAME_RUN`, `lib/carousel-cells.js`). Where the
+   * corpus has more saints without an icon than a picture column and one name
+   * column carry, the packer puts two name columns between pictures, so
+   * pinning 1 would be pinning the corpus's own ratio, which the next folder
+   * changes. `tests/carousel-cells.test.mjs` holds the rule over corpora well
+   * past today's, and states where it stops being possible.
    *
+   * **Read round the seam.** The track holds the run's tail cloned in front of
+   * its head, so the DOM order below crosses the loop's seam exactly where a
+   * reader scrolling past it does; that stretch is where this failed on CI,
+   * three columns of names at the end of a pass beside the next one's opening
+   * picture, contiguous on screen.
    */
   await carouselMode(page);
   await ready(page);
