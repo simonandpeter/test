@@ -72,5 +72,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "И́же ко́рене честна́го о́трасль сла́вная, благове́рный кня́же Владисла́ве, в оте́честве твое́м до́бре ца́рствовал еси́, и Ца́рствие Небе́сное получи́вый, владе́еши сла́вою и че́стию вели́кою. Те́мже не забу́ди язы́ков слове́нских и правосла́вным лю́дем на сопроти́вныя спобо́рствуй.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Владислав Сербский», кондаки",
+        "url": "https://azbyka.ru/days/sv-vladislav-serbskij",
+        "year": 2026
+      },
+      "english": {
+        "text": "Glorious branch of an honourable root, O right-believing Prince Vladislav, thou didst reign well in thy fatherland, and having gained the Kingdom of Heaven thou dost possess great glory and honour. Wherefore forget not the Slavonic peoples, and fight beside the Orthodox against their adversaries.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Царю́ Небе́сному подража́я, Уте́шителю и Пода́телю жи́зни, бога́тства твоя́ убо́гим расточа́ше, и был еси́ прибе́жище вся́кому стра́ждущему, утеше́ние и заступле́ние оби́димому, кре́пость и огражде́ние стране́ твое́й, Владисла́ве богоблаже́нне.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Владислав Сербский», кондаки",
+        "url": "https://azbyka.ru/days/sv-vladislav-serbskij",
+        "year": 2026
+      },
+      "english": {
+        "text": "Imitating the Heavenly King, the Comforter and Giver of life, thou didst scatter thy riches to the poor, and wast a refuge to every sufferer, a consolation and defence to the wronged, the strength and bulwark of thy land, O Vladislav, blessed of God.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
