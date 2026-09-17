@@ -1204,6 +1204,9 @@
     flex-direction: column;
     margin-top: var(--headgap);
     padding-inline: var(--page-pad) var(--space-6);
+    /* The last line stands off the window's foot, at the register's tighter
+       step (the mockup's `.day-side`). */
+    padding-block-end: var(--space-4);
   }
 
   .cal-main > .cal-head { order: 0; }
@@ -1239,17 +1242,25 @@
     margin-top: var(--headgap);
     border-inline-start: 1px solid var(--rule);
     padding-inline: var(--space-6);
+    /* The last line stands `--space-6` off the column's foot, as the
+       mockup's columns do. */
+    padding-block-end: var(--space-6);
   }
 
   .cal-saint { grid-column: 2; }
   .cal-read { grid-column: 3; }
 
-  /* The viewport is the roll's clip and takes no height of its own: the column
-     around it is what scrolls, and a viewport that shared the scrolling would
-     put a second bar inside the first. */
+  /* **The viewport is as tall as its panel, and the column scrolls it**
+     (`../mockup-review/REVIEW.md` finding 12, stage C, 2026-09-18). It is a
+     flex item of a column-direction scroller, and it carried `min-height: 0`
+     (an `overflow: hidden` box's automatic floor is 0 besides), so it shrank
+     to the column's height and clipped the life and the hymns inside a box
+     that never scrolls: the column had nothing to scroll and a wheel over it
+     moved nothing. `flex: none` holds it at its content, which is what makes
+     the column's `overflow-y` real. */
   .cal-saint > .slot-viewport,
   .cal-read > .slot-viewport {
-    min-height: 0;
+    flex: none;
   }
 
   /*
@@ -1279,6 +1290,7 @@
 
   .cal-bubble-scroll {
     flex: 1;
+    padding-block-end: var(--space-6);
   }
 
   /*

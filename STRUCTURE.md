@@ -553,7 +553,12 @@ else.
   the day and the page scrolls instead of the column. The mockup this page is
   drawn from records what it costs to miss: a tightening pass left two of its
   four columns at `overflow: visible`, and a thousand pixels of saints had no
-  way to be reached.
+  way to be reached. **Inside columns two and three the `.slot-viewport` is
+  `flex: none`**: it is a flex item of the scroller, and let shrink it clipped
+  the life and the hymns in a box that never scrolls while the column had
+  nothing to scroll (`../mockup-review/REVIEW.md` finding 12). Each scroller
+  pays its own bottom padding, `--space-4` in the day's column and `--space-6`
+  in the other three, so the last line never sits on the column's foot.
 - **The page gives up its scroll** (`data-fills-window`). Four scrolling
   columns and a scrolling page are one scrollbar too many.
 - **The reading column takes all the slack.** The other three are a width

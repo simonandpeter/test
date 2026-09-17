@@ -3925,6 +3925,157 @@ test('neither Daily column draws a scrollbar, and both still scroll', async ({ p
 
 
 /*
+ * **Every column reaches its last line** (`../mockup-review/REVIEW.md`
+ * finding 12, stage C, 2026-09-18). The review wheeled over the reading column
+ * at 1440 × 900 and nothing moved: its `.slot-viewport` had shrunk to the
+ * column and clipped the life and the hymns, so the column that carried
+ * `overflow-y: auto` had nothing to scroll. `overflow` computing to `auto` was
+ * true the whole time, which is why this reads `scrollTop` after a real wheel,
+ * a real key and a real touch drag rather than a style.
+ */
+const COLUMNS = { '.cal-main': 16, '.cal-saint': 24, '.cal-read': 24, '.cal-bubble-scroll': 24 };
+
+/** Wheel over a column until it stops; its scrollTop before, after one turn, and at rest. */
+const wheelToEnd = async (page, sel) => {
+  const box = await page.locator(sel).boundingBox();
+  await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+  const top = () => page.evaluate((s) => document.querySelector(s).scrollTop, sel);
+  const before = await top();
+  await page.mouse.wheel(0, 200);
+  await expect.poll(top).toBeGreaterThan(before);
+  const once = await top();
+  let last = -1;
+  for (let i = 0; i < 40 && last !== (await top()); i++) {
+    last = await top();
+    await page.mouse.wheel(0, 800);
+    await page.waitForTimeout(80);
+  }
+  return { before, once, end: await top() };
+};
+
+/** How far above the column's foot its content ends, the column scrolled wherever it is. */
+const footGap = (page, sel) =>
+  page.evaluate((s) => {
+    const el = document.querySelector(s);
+    const kids = [...el.children].filter((k) => k.clientHeight > 0);
+    return {
+      gap: el.getBoundingClientRect().bottom - Math.max(...kids.map((k) => k.getBoundingClientRect().bottom)),
+      atEnd: el.scrollHeight - el.clientHeight - el.scrollTop < 1,
+      page: [document.scrollingElement.scrollHeight, innerHeight, scrollY],
+    };
+  }, sel);
+
+test('past 1024 px the reading column scrolls to Theodora of Alexandria’s hymns, and the page does not', async ({ page }) => {
+  await ready(page, { church: 'romanian' });
+  for (const [width, height] of [
+    [1440, 900],
+    [1280, 800],
+  ]) {
+    await page.setViewportSize({ width, height });
+    await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+
+    // The review's saint and the review's premise: hymns below the window's foot.
+    await expect(page.locator('.cal-saint')).toContainText('Theodora of Alexandria');
+    const hymns = page.locator('.cal-read .day-hymns');
+    const below = await hymns.evaluate((h) => h.clientWidth > 0 && h.getBoundingClientRect().top > innerHeight);
+    expect(below, `premise: ${width} puts the hymns under the fold`).toBe(true);
+
+    const { before, once, end } = await wheelToEnd(page, '.cal-read');
+    expect(once, `${width}: a wheel over the reading column moved nothing`).toBeGreaterThan(before);
+    const foot = await footGap(page, '.cal-read');
+    expect(foot.atEnd, `${width}: the wheel stopped short of the end`).toBe(true);
+    const last = await hymns.evaluate((h) => h.getBoundingClientRect().bottom);
+    expect(last, `${width}: the hymns end below the window`).toBeLessThanOrEqual(height);
+    expect(foot.gap, `${width}: the last line is flush with the column's foot (${end})`).toBeGreaterThanOrEqual(23);
+    expect(foot.page[0], `${width}: the page scrolls`).toBe(foot.page[1]);
+    expect(foot.page[2]).toBe(0);
+  }
+});
+
+test('past 1024 px each of the four columns reaches its last line by wheel, key and touch', async ({ page, browser }) => {
+  /*
+   * 14 September in the Russian calendar at 1024 × 330: a short window, so
+   * that all four columns overflow at once — the saint's column is the one
+   * that needs it, since its picture is sized from the column and fits any
+   * taller window. The premise is asserted, not assumed.
+   */
+  const size = { width: 1024, height: 330 };
+  const open = async (p) => {
+    await ready(p);
+    await p.setViewportSize(size);
+    await p.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
+    await p.evaluate(() => document.fonts.ready);
+  };
+  await open(page);
+
+  for (const [sel, pad] of Object.entries(COLUMNS)) {
+    const over = await page.evaluate((s) => {
+      const el = document.querySelector(s);
+      return el.clientWidth > 0 ? el.scrollHeight - el.clientHeight : -1;
+    }, sel);
+    expect(over, `premise: ${sel} overflows at 1024 × 330`).toBeGreaterThan(0);
+
+    const { before, once } = await wheelToEnd(page, sel);
+    expect(once, `${sel}: a wheel moved nothing`).toBeGreaterThan(before);
+    const foot = await footGap(page, sel);
+    expect(foot.atEnd, `${sel}: the wheel stopped short of the end`).toBe(true);
+    expect(foot.gap, `${sel}: the last line is flush with the column's foot`).toBeGreaterThanOrEqual(pad - 1);
+    expect(foot.page[0], `${sel}: the page scrolls`).toBe(foot.page[1]);
+  }
+
+  /** A point on text in the column's first screenful — for a press, not a link, a button or the month. */
+  const textPoint = (p, sel, pressable = true) =>
+    p.evaluate(([s, pressable]) => {
+      const el = document.querySelector(s);
+      el.scrollTop = 0;
+      const col = el.getBoundingClientRect();
+      // What is under the point, not what was queried: a card's link can be
+      // stretched over its text.
+      const inert = (x, y) =>
+        el.contains(document.elementFromPoint(x, y)) &&
+        !(pressable && document.elementFromPoint(x, y).closest('a, button, [role="button"], [data-choose], .cal-controls, [tabindex]'));
+      for (const t of el.querySelectorAll('p, h1, h2, h3, figcaption, span')) {
+        const r = t.getBoundingClientRect();
+        const at = { x: r.left + 4, y: Math.max(r.top, col.top) + Math.min(r.height / 2, 6) };
+        if (t.clientWidth > 0 && r.bottom > at.y && at.y < col.bottom && inert(at.x, at.y)) return at;
+      }
+      return null;
+    }, [sel, pressable]);
+  const top = (p, sel) => p.evaluate((s) => document.querySelector(s).scrollTop, sel);
+
+  for (const sel of Object.keys(COLUMNS)) {
+    const at = await textPoint(page, sel);
+    await page.evaluate(() => document.activeElement?.blur());
+    if (at) await page.mouse.click(at.x, at.y);
+    // The saint's column is one link, which a press would follow: Tab's way in.
+    else await page.evaluate((s) => document.querySelector(s).querySelector('a[href]').focus({ preventScroll: true }), sel);
+    await page.keyboard.press('PageDown');
+    await expect.poll(() => top(page, sel), { message: `${sel}: PageDown moved nothing` }).toBeGreaterThan(0);
+  }
+
+  // Trap 11: a dispatched PointerEvent is not a touch; CDP's touch events are.
+  const ctx = await browser.newContext({ viewport: size, hasTouch: true });
+  const touch = await ctx.newPage();
+  await open(touch);
+  const cdp = await ctx.newCDPSession(touch);
+  for (const sel of Object.keys(COLUMNS)) {
+    const at = await textPoint(touch, sel, false);
+    expect(at, `premise: ${sel} shows text to touch`).not.toBeNull();
+    const pt = (y) => [{ x: Math.round(at.x), y: Math.round(y) }];
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: pt(at.y) });
+    for (let i = 1; i <= 8; i++) {
+      await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: pt(at.y - 10 * i) });
+    }
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+    await expect.poll(() => top(touch, sel), { message: `${sel}: a touch drag moved nothing` }).toBeGreaterThan(0);
+  }
+  expect(await touch.evaluate(() => scrollY), 'a touch drag scrolled the page').toBe(0);
+  await ctx.close();
+});
+
+
+/*
  * **'The full-screen calendar is a list on a phone, so the words still fit'
  * was removed on 2026-09-02**, and it is worth saying why rather than leaving
  * a hole in the dates.
