@@ -34,13 +34,11 @@ here, because a PAT push never updates `origin/main`.
 ## In flight
 
 **The corpus run (`scratchpad/corpus-plan.md` §5) is in Phase B.** Civil
-20 September – 5 October is read for all four churches. **Civil 6 October is
-read for the Russian and Serbian only; the Greek and Romanian 6 October are
-next** (`day-candidates.mjs 2026-10-06` has been run). Innocent of Moscow has
-no folder: the Sretensky 23 September prints his glorification (1977) and
-three hymns, and saint.gr keeps him on 6 October, so his folder and both rows
-belong with the Greek 6 October. The Serbian list misses Prologue entries;
-read the page.
+20 September – 6 October is read for all four churches. **Civil 7 October is
+read for the Russian and Serbian only; the Greek and Romanian 7 October are
+next** (`day-candidates.mjs 2026-10-07` has been run; neither page has been
+read beyond what it printed).
+The Serbian list misses Prologue entries; read the page.
 
 Open identities, each written into the folders: whether the Greek 30 September's
 Two Women Martyrs are the two virgins the Romanian long life has die with
@@ -69,37 +67,50 @@ Not made folders: Paul of Gortyna (saint.gr keeps him on the Sunday between
 1 and 7 October, which no feast shape here holds) and Basil Nosov (on azbyka's
 4 October line, not on the Sretensky day's).
 
-From 5–6 October: Barlaam of Sikisk is a Greek one-liner (1846, "a Russian
+From 5–7 October: Barlaam of Sikisk is a Greek one-liner (1846, "a Russian
 saint") whose Russian identity is open; Charitina (5 October) and Charitina
 (4 September) stay two folders, though saint.gr wonders whether they are one.
-Macarius of Zhabyn's Russian 22 January and Irais's Russian 23 September are
-feast notes, so those days do not render them. azbyka.ru prints a troparion
-and kontakion for Jonah of Yashezero that were not taken, the azbyka hymn
-ruling covering new martyrs only.
+Cassian of Glyphia (Greek 16 September) is taken to be the Greek 6 October's
+Alaman «Κασσιανός ο της Γλυφάς» on name and place alone, a thin call, and that
+day is a feast note on his row. Feast notes also hold Macarius of Zhabyn's
+Russian 22 January, Irais's Russian 23 September, Innocent of Moscow's Russian
+31 March and Greek 31 March, and Stefan the First-Crowned's Russian 30 August;
+those days do not render them. Vladislav of Serbia's death is 1239 with no
+upper bound, labelled "after 1238", because the Sretensky life says 1239 and
+its day line "after 1264". Thomas the apostle and Erotiis stand undated: no
+page read gives a year. azbyka.ru prints a troparion and kontakion for Jonah
+of Yashezero that were not taken.
 
-**Hymns for new martyrs off azbyka.ru are taken** (ruling for the 3 October
-sitting): the Church Slavonic only, whole, with its tone, English rendered by
-the site from the Slavonic; never the Russian gloss. Nicholas of Iskrovka has
-his four; Maurice (Poletaev) and Basil (Kondratiev) have their two. The
-new martyrs kept 20 September – 2 October were not checked on azbyka for
-hymns; the 4 October ones were.
+**azbyka.ru hymns are taken for any saint a batch adds or upgrades** when
+they are that saint's own (ruling widened for the 6 October sitting): the
+Church Slavonic only, whole, with its tone, English rendered by the site from
+the Slavonic; never the Russian gloss; a hymn to a group (the Moscow
+hierarchs) is not one member's. Check azbyka for every Russian row a batch
+adds, even when the Sretensky day prints hymns: Vladislav's two kontakia are
+on azbyka only. The backfill of folders from before that ruling is queued
+separately and is not in flight.
 
 Latin letters inside Slavonic and Greek hymn words are written as the letters
-they display as since the 3 October batches; five older Greek hymns
-(`mixed.py` in `.tmp/` lists them) still carry them.
+they display as since the 3 October batches (the micro sign µ as μ since
+6 October); five older Greek hymns (`mixed.py` in `.tmp/` lists them) still
+carry them.
 
-Helpers in `.tmp/`: `mk1005a.py` and `mk1006a.py` (Russian and Serbian, new
-folders and upgrades, a second Russian day as a feast note), `mk1004b.py` and
-`mk1004c.py` (azbyka new martyrs, with hymns), `mk1005b.py` (Greek and
-Romanian, hymns pulled off the cached pages by label, pair hymns in both
-folders), `azlife.py` (an azbyka life), `up-nik.py` (azbyka hymns into an existing folder),
-`upgrade.py` (applies an upgrade file), `backout.py` and `daycount.mjs <date>
-<slug>` (the back-out), `fetch.mjs` (cached, polite), `txt.py` (a cached page
-as lines), `grbody.py` (a saint.gr entry's body), `hfind.py` (corpus hymns by
-text, with their English), `att.py` (a folder's rows), `lookday.mjs`,
-`grepday.mjs` and `saintpage.mjs` (the rendered day or saint page), `qf.py
-<sha>` (a run's job log when `ci-flaky.py` meets a 404). A back-out's render
-check greps the heading line: a needle can also match a companion's life.
+Helpers in `.tmp/`: `mk1007a.py` (Russian and Serbian, new folders and
+upgrades, Sretensky hymns), `mk1007b.py` (Sretensky new-martyr lives, a group
+related by the day's line), `mk1006b.py` (Greek and Romanian, hymns pulled off
+the cached pages by label, an Orloff common reused, a Russian row with its
+Sretensky hymns), `mk1006c.py` (a Greek group entry, with a second-day
+upgrade), `up-vlad.py` (azbyka hymns into an existing folder), `azcmp.py
+<azbyka-file> <slug>` (azbyka's troparia and kontakia against a folder's, NEW
+or IN CORPUS), `dd.mjs <display>…` (whether a date label reads in Russian and
+Greek), `azlife.py` (an azbyka life), `upgrade.py` (applies an upgrade file),
+`backout.py` and `daycount.mjs <date> <slug>` (the back-out), `fetch.mjs`
+(cached, polite), `txt.py` (a cached page as lines), `grbody.py` (a saint.gr
+entry's body), `hfind.py` (corpus hymns by text, with their English), `att.py`
+(a folder's rows), `lookday.mjs`, `grepday.mjs` and `saintpage.mjs` (the
+rendered day or saint page), `qf.py <sha>` (a run's job log when
+`ci-flaky.py` meets a 404). A back-out's render check greps the heading line:
+a needle can also match a companion's life.
 
 ## Three things git cannot tell you
 
