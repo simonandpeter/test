@@ -170,15 +170,7 @@ test('name days stand in two columns at a desk and run on with dots on a phone',
       };
     });
 
-  /*
-   * 1440 rather than 1280 since stage B of the mockup review: the day's column
-   * is the mockup's 269 px at 1280, 6 px narrower than it was, and under the
-   * runner's DejaVu Sans one of the nine names then wraps at 17 px and the
-   * balancer puts four in the leading column. The claim here is the fill
-   * order, not the width; the size itself is stage F's (13 px, ../mockup-review/REVIEW.md
-   * finding 2).
-   */
-  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto('/calendar/2026-09-25', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   const desk = await read();

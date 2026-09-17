@@ -3797,7 +3797,7 @@ test('a phone has no continue-reading button on the main saint card', async ({ p
 /* ---- the 2026-09-01 batch: the day steps, and the bars that went ---------- */
 
 
-test('the day steps are half a cross either side of the date, between its two rules', async ({ page }) => {
+test('the day steps are half a cross each, together at the top right of the date, between its two rules', async ({ page }) => {
   /*
    * Author, 2026-09-01: "Also on Daily Page add some <Yesterday and Tomorrow>
    * Buttons to the right of today's date print in large font, right justified
@@ -3816,7 +3816,9 @@ test('the day steps are half a cross either side of the date, between its two ru
    * justified to the margin between the columns — a width the page works out
    * from `--day-cols` and nothing in the markup knows — and the pair is desktop
    * only. The third, "to the right of today's date", is the one the redraw
-   * reversed: one mark is on each side now, which is what the author drew.
+   * reversed and stage F of ../mockup-review/REVIEW.md put back: the mockup's
+   * day-side head sets ‹ › together at the top right (finding 14), so both marks
+   * follow the date now, which starts on the column's own edge.
    * **The words themselves are not gone**, and that is asserted: both buttons
    * carry them as their accessible name and, since this commit, as a `title`.
    */
@@ -3869,9 +3871,10 @@ test('the day steps are half a cross either side of the date, between its two ru
       // stage B of the mockup review.
       columnLeft: Math.round(main.left + parseFloat(getComputedStyle(document.querySelector('.cal-main')).paddingLeft)),
       columnRight: Math.round(main.right - parseFloat(getComputedStyle(document.querySelector('.cal-main')).paddingRight)),
-      prevLeft: Math.round(prev.left),
+      dateLeft: Math.round(date.left),
       nextRight: Math.round(next.right),
-      beforeDate: prev.right <= date.left + 1,
+      prevBeforeNext: prev.right <= next.left + 1,
+      afterDateBack: prev.left >= date.right - 1,
       afterDate: next.left >= date.right - 1,
       sharesLine: prev.top < date.bottom && prev.bottom > date.top,
       topClear: Math.round(prev.top - navRule),
@@ -3883,10 +3886,11 @@ test('the day steps are half a cross either side of the date, between its two ru
     };
   });
 
-  // One either side of the date, and the forward one on the column's margin.
-  expect(m.prevLeft, 'the back mark is not on the column’s own margin').toBe(m.columnLeft);
+  // The date on the column's own edge, both marks after it, the forward one on the column's margin.
+  expect(m.dateLeft, 'the date is not on the column’s own edge').toBe(m.columnLeft);
   expect(Math.abs(m.nextRight - m.columnRight), 'the forward mark is not on the column margin').toBeLessThan(2);
-  expect(m.beforeDate, 'the back mark is not before the date').toBe(true);
+  expect(m.afterDateBack, 'the back mark is not after the date').toBe(true);
+  expect(m.prevBeforeNext, 'the back mark is not before the forward one').toBe(true);
   expect(m.afterDate, 'the forward mark is not after the date').toBe(true);
   expect(m.sharesLine, 'the marks are not on the date’s line').toBe(true);
 
@@ -3937,6 +3941,77 @@ test('the day steps are half a cross either side of the date, between its two ru
   await page.setViewportSize({ width: 360, height: 780 });
   await expect(page.locator('.day-step-prev')).toBeHidden();
   await expect(page.locator('.day-step-next')).toBeHidden();
+});
+
+
+test('the day’s column reads in the mockup’s order, with the name days last and at its size', async ({ page }) => {
+  /*
+   * Stage F of ../mockup-review/REVIEW.md (findings 2 and 14). The mockup's
+   * day column, top to bottom: the date on the column's edge with ‹ › at its
+   * top right, the cycle, the fast, the month, the readings, and the name days
+   * last, at 13 px — the one size the author asked to take from the mockup
+   * ("The left sidebar Name Days are meant to be smaller font as per the
+   * mockup"). The head is not pinned there, and is not here.
+   *
+   * Before the stage the name days sat above the readings at 17 px, the date
+   * stood between the two marks 40 px in from the edge, and the fast chip came
+   * before the cycle. The pinning claim held before the stage too: it is a
+   * guard, not a fix.
+   */
+  await ready(page, { church: 'russian' });
+  for (const [width, height] of [[1440, 900], [1280, 800]]) {
+    await page.setViewportSize({ width, height });
+    await page.goto('/calendar/2026-09-25', { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+    const m = await page.evaluate(() => {
+      const box = (el) => {
+        const b = el.getBoundingClientRect();
+        return { left: b.left, right: b.right, top: b.top, bottom: b.bottom };
+      };
+      const q = (s) => document.querySelector(s);
+      const main = q('.cal-main');
+      // The token by what it paints, not by what the property hands back (trap 9).
+      const probe = document.createElement('span');
+      probe.style.fontSize = 'var(--text-sm)';
+      main.append(probe);
+      const sm = getComputedStyle(probe).fontSize;
+      probe.remove();
+      return {
+        edge: main.getBoundingClientRect().left + parseFloat(getComputedStyle(main).paddingLeft),
+        date: box(q('.cal-head .cal-date')),
+        prev: box(q('.day-step-prev')),
+        cycle: box(q('.cal-liturgy .cal-cycle')),
+        fast: box(q('.cal-liturgy .fast-chip')),
+        month: box(q('.cal-controls')),
+        readings: box(q('.cal-main [data-readings]')),
+        names: box(q('.cal-main [data-namedays]')),
+        size: getComputedStyle(q('.cal-main [data-namedays] .namedays li')).fontSize,
+        sm,
+      };
+    });
+    const at = `at ${width}`;
+    expect(Math.abs(m.date.left - m.edge), `the date is not on the column’s edge ${at}`).toBeLessThan(1);
+    expect(m.prev.left, `the marks are not to the right of the date ${at}`).toBeGreaterThanOrEqual(m.date.right - 1);
+    expect(m.cycle.bottom, `the cycle is not above the fast ${at}`).toBeLessThanOrEqual(m.fast.top + 1);
+    expect(m.fast.bottom, `the fast is not above the month ${at}`).toBeLessThanOrEqual(m.month.top + 1);
+    expect(m.month.bottom, `the month is not above the readings ${at}`).toBeLessThanOrEqual(m.readings.top + 1);
+    expect(m.readings.bottom, `the name days are not after the readings ${at}`).toBeLessThanOrEqual(m.names.top + 1);
+    expect(m.sm, 'premise: --text-sm is no longer the mockup’s 13 px').toBe('13px');
+    expect(m.size, `the name days are not at --text-sm ${at}`).toBe(m.sm);
+  }
+
+  // Not pinned: the head travels with the column when the column scrolls.
+  const moved = await page.evaluate(async () => {
+    const main = document.querySelector('.cal-main');
+    const date = document.querySelector('.cal-head .cal-date');
+    const room = main.scrollHeight - main.clientHeight;
+    const y0 = date.getBoundingClientRect().top;
+    main.scrollTop = 60;
+    await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+    return { room, scrolled: main.scrollTop, travelled: Math.round(y0 - date.getBoundingClientRect().top) };
+  });
+  expect(moved.room, 'premise: the day’s column no longer overflows at 1280 × 800').toBeGreaterThan(60);
+  expect(moved.travelled, 'the day’s head is pinned while the column scrolls').toBe(moved.scrolled);
 });
 
 

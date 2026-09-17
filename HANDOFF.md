@@ -38,7 +38,8 @@ stages in `REVIEW.md` §3): stages A (Daily's full header), B (the four
 columns' widths, the shelf a plain column; the saint page's two columns follow
 Daily's), C (each column scrolls to its last line), D (the saint column's
 picture in its own shape, the name pinned over the reading column) and E (Life /
-Hymns / Writings under the picture, the whole life in column 3) are done; F is
+Hymns / Writings under the picture, the whole life in column 3) and F (the
+day's column in the mockup's order, name days last at 13 px) are done; G is
 next.
 
 **The corpus run (`scratchpad/corpus-plan.md` §5) is in Phase B.** Civil

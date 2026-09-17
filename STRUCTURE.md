@@ -507,7 +507,7 @@ html[data-route~='calendar'][data-fills-window]
       └ .cal                         grid: --side-w --saint-w minmax(0,1fr)
         │                            --side-w, full bleed   (≥1024)
         ├ .cal-main [data-col=main]   column 1, laid out by `order`
-        │ ├ .cal-head                ◂ prev · h1.cal-date · next ▸
+        │ ├ .cal-head                h1.cal-date · ◂ prev · next ▸
         │ ├ p.cal-liturgy
         │ ├ .slot-viewport[data-slot=main] > .day-panel.day-main
         │ │                          the phone's whole day; not drawn ≥1024
@@ -516,7 +516,7 @@ html[data-route~='calendar'][data-fills-window]
         │ │                          .cal-span → .cal-week | .cal-month
         │ └ .cal-side [data-col=side] > .slot-viewport[data-slot=side]
         │                              > .day-panel.day-side
-        │                            name days, readings; hymns below 1024
+        │                            readings, name days; hymns below 1024
         ├ .cal-saint [data-col=saint]  column 2, ≥1024 only
         │ └ .slot-viewport[data-slot=saint] > .day-panel.day-saint
         │                            the chosen saint's picture, its credit, and
@@ -622,8 +622,11 @@ else.
 - **The name and its dates head the reading column, pinned** (finding 4): a
   sticky head on `--gesso` over one rule, the life scrolling under it. Its
   `.slot-viewport` is `overflow: clip` for the shelf's reason.
-- The date sits between two stepper buttons, each half a cross.
-- Name days lead the day's column, above readings.
+- **The day's column in the mockup's order** (findings 2 and 14): the date on
+  the column's edge with its two stepper buttons, each half a cross, together
+  at its top right; the cycle, then the fast; the month; the readings; the name
+  days last, in two columns at `--text-sm`, the mockup's 13 px and the one size
+  taken from it. The head scrolls with the column and is not pinned.
 - **The site's header is the same as on every other route** (author,
   2026-09-17): full width, with the calendar, language and theme controls in
   it. `main` takes no top padding here, and the four columns start `--headgap`

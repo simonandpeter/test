@@ -179,7 +179,7 @@ export function render(el, { data, params, router }) {
           the words too. The nav that wrapped the pair went with them — a
           landmark named "Week" holding two marks says less than two buttons
           that name themselves — and the two are direct children of cal-head
-          now, which is what lets the grid put one either side of the date.
+          now, which is what lets the grid set the pair beside the date.
 
           The wrapper exists for that row. It was introduced for the gold rule
           under the date, which needed a box with the column's full measure once
