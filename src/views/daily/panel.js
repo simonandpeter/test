@@ -1,7 +1,7 @@
 import { formatSubtext, pickHero, todayIso } from '../../lib/calendar-page.js';
 import { churchName, entriesInChurch } from '../../lib/church.js';
 import { loadDetail } from '../../lib/detail.js';
-import { cardCrop, heroCrop } from '../../lib/hero-crop.js';
+import { cardCrop, columnCrop, heroCrop } from '../../lib/hero-crop.js';
 import { saintName } from '../../lib/honorific.js';
 import { currentLanguage, languageTag, translateOffice } from '../../lib/i18n.js';
 import { greatFeast } from '../../lib/liturgy.js';
@@ -9,6 +9,7 @@ import { escapeHtml as esc, firstParagraphText } from '../../lib/markdown.js';
 import { nameDays } from '../../lib/name-days.js';
 import { REGISTER_LAYOUTS } from '../../lib/settings.js';
 import { typeGlyph, typeName } from '../../lib/saint-types.js';
+import { creditLine } from '../../ui/credit.js';
 import { STRINGS, fill } from '../../ui/strings.js';
 import { allEntriesFor, dayRecordFor, entriesFor, reachInWords } from './entries.js';
 import { fillSaintHymns, hymnsMarkup, readingsMarkup } from './record.js';
@@ -37,16 +38,16 @@ const BASE = import.meta.env.BASE_URL;
  * column and the life is a scroll away under the register anyway.
  */
 /*
- * `places` is the panel the two place names are written into, which is not the
- * panel holding the lede past 1024 px: the saint's identity stands in one
- * column and what is read of them in the next, and both arrive in the same
- * fetched payload. One call, two boxes, rather than two fetches.
+ * `picture` is the saint column past 1024 px, where the picture's credit is
+ * written under it; the name, its places and the lede share `panel`. Both
+ * arrive in the same fetched payload: one call, two boxes, not two fetches.
  */
-function fillHeroLede(panel, slug, iso, card, places = panel) {
+function fillHeroLede(panel, slug, iso, card, picture = null) {
   loadDetail(slug).then(
     (payload) => {
       if (!state || state.selected !== iso) return;
-      fillHeroPlaces(places, payload);
+      fillHeroPlaces(panel, payload);
+      if (picture) fillHeroCredit(picture, payload);
       const box = panel.querySelector('[data-hero-lede]');
       if (!box) return;
       const text = firstParagraphText(payload?.life);
@@ -149,11 +150,10 @@ function fitLede(panel) {
   if (!hero || !box || !media || !body || !box.__full) return;
 
   /*
-   * **The budget is the mount's foot, not the picture's** (2026-09-10). From
-   * 1024 px the picture stands in a 14 px mat and the words beside it are
-   * lifted 8, so "the text does not
-   * go below the bottom of the image" is now a distance between two boxes that
-   * no longer share an edge. Measured rather than added up: the foot of the
+   * **The budget is the mount's foot, not the picture's** (2026-09-10). When
+   * the picture stood in a 14 px mat and the words beside it were lifted 8,
+   * "the text does not go below the bottom of the image" became a distance
+   * between two boxes that did not share an edge. Measured rather than added up: the foot of the
    * mount less the top of the words is the space the words have, whatever the
    * mat and the lift are, and below 1024 — where the figure has no padding and
    * the body no lift — it is exactly the picture's own height, which is what
@@ -205,6 +205,15 @@ function fillHeroPlaces(panel, payload) {
     .map(([kind, name]) => fill(P[kind], { place: name }));
   if (!parts.length) return;
   box.textContent = parts.join(' · ');
+  box.hidden = false;
+}
+
+/** The picture's credit under it, as the saint's own page words it. */
+function fillHeroCredit(panel, payload) {
+  const box = panel.querySelector('[data-hero-credit]');
+  const image = payload?.images?.[0];
+  if (!box || !image) return;
+  box.innerHTML = creditLine(image.credit);
   box.hidden = false;
 }
 
@@ -555,7 +564,7 @@ export { fitLede };
  * two are one decision — and used twice since 2026-09-16: the desk paints
  * this into a column of its own and the phone into the top of the day panel.
  */
-function heroPicture(hero) {
+function heroPicture(hero, desk = false) {
 
   // The image opens the saint too (author, 2026-08-21). Hidden from the
   // accessibility tree and out of the tab order on purpose: the name beside it
@@ -605,15 +614,23 @@ function heroPicture(hero) {
    * are one decision written once.
    */
   const ratio = hero.image ? (drawnH / hero.image.w).toFixed(4) : '1';
+  /*
+   * **Past 1024 px the picture is the column's width in its own shape, no
+   * taller than A4** (`../mockup-review/REVIEW.md` finding 3), with its credit
+   * under it. The file is the card derivative (`CARD_MAX_PX` in
+   * make_thumbs.py), which covers the column's width without upscaling; the
+   * original is kept for the phone, whose picture this does not touch.
+   */
+  const column = desk && hero.image ? columnCrop(hero.image) : null;
   const media = hero.image
     ? `<div class="hero-figure">
         <a class="hero-media" href="${state.router.href(`/saints/${hero.slug}`)}"
           data-prefetch="${hero.slug}" aria-hidden="true" tabindex="-1"
-          style="background-image:url('${BASE + hero.image.lqip}'); --hero-shape:${shape}; --hero-focus:${crop.focus}">
-          <img src="${BASE + hero.image.src}" alt="" width="${hero.image.w}" height="${hero.image.h}"
+          style="background-image:url('${BASE + hero.image.lqip}'); --hero-shape:${column ? column.aspect : shape}; --hero-focus:${column ? column.focus : crop.focus}">
+          <img src="${BASE + (column ? hero.image.card : hero.image.src)}" alt="" width="${hero.image.w}" height="${hero.image.h}"
             style="view-transition-name:s-${hero.slug}-image" loading="eager" decoding="async" />
         </a>
-      </div>`
+      </div>${column ? '<p class="hero-credit utility" data-hero-credit hidden></p>' : ''}`
     : '';
   return { media, ratio };
 }
@@ -635,7 +652,7 @@ export function paintDay(panels) {
 
   const heroSlug = chosenSlug(entries);
   const hero = data.bySlug.get(heroSlug);
-  const { media, ratio } = heroPicture(hero);
+  const { media, ratio } = heroPicture(hero, wide);
 
   /*
    * One calendar, one church: the register needs no church heading, and a
@@ -770,7 +787,7 @@ export function paintDay(panels) {
 
   if (wide) {
     main.innerHTML = '';
-    saintCol.innerHTML = heroArticle(hero, media, ratio, heroIdentity(hero));
+    saintCol.innerHTML = heroArticle(hero, media, ratio, '');
     readCol.innerHTML = readingColumn(hero, selected);
     shelfCol.innerHTML = register;
     fillSaintHymns(readCol, hero.slug, selected);
@@ -788,7 +805,8 @@ export function paintDay(panels) {
 }
 
 /*
- * The reading column, past 1024 px: the opening of the life and what is sung.
+ * The reading column, past 1024 px: who the saint is, pinned over the opening
+ * of the life and what is sung (`../mockup-review/REVIEW.md` finding 4).
  *
  * The `.hero-body` wrapper is not decoration. `fillHeroLede` appends the way
  * into the life to the card's text column, and this column *is* that column
@@ -797,12 +815,13 @@ export function paintDay(panels) {
  * 2026-09-02 rule spent a commit collapsing back into one.
  */
 const readingColumn = (hero, iso) =>
-  `<div class="hero-body">${heroOpening(hero)}</div>${hymnsMarkup(iso, state.calendar)}`;
+  `<header class="hero-head">${heroIdentity(hero)}</header>
+    <div class="hero-body">${heroOpening(hero)}</div>${hymnsMarkup(iso, state.calendar)}`;
 
 const heroArticle = (hero, media, ratio, body) => `
     <article class="hero ${hero.image ? 'has-media' : ''}" style="--hero-r:${ratio}">
       ${media}
-      <div class="hero-body">${body}</div>
+      ${body ? `<div class="hero-body">${body}</div>` : ''}
     </article>`;
 
 /**
@@ -874,8 +893,8 @@ export function paintChosen({ saint: saintCol, content: readCol }) {
   const entries = entriesFor(selected, data);
   if (!entries.length) return;
   const hero = data.bySlug.get(chosenSlug(entries));
-  const { media, ratio } = heroPicture(hero);
-  saintCol.innerHTML = heroArticle(hero, media, ratio, heroIdentity(hero));
+  const { media, ratio } = heroPicture(hero, true);
+  saintCol.innerHTML = heroArticle(hero, media, ratio, '');
   readCol.innerHTML = readingColumn(hero, selected);
   fillSaintHymns(readCol, hero.slug, selected);
   fillHeroLede(readCol, hero.slug, selected, hero, saintCol);

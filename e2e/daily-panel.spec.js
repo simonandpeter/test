@@ -97,7 +97,7 @@ test('an empty day is a designed state, not a hole', async ({ page }) => {
 });
 
 
-test('the hero is a 3:2 band on the desk, its own shape between, and a band again on a phone', async ({ page }) => {
+test('the hero is its own shape on the desk up to A4, its own shape up to 1:1.6 between, and a band on a phone', async ({ page }) => {
   /*
    * A square from 2026-08-21, a band from 2026-08-26 morning — "Change the
    * daily saint image crop from square to a horizontal rectangle … This is to
@@ -140,26 +140,22 @@ test('the hero is a 3:2 band on the desk, its own shape between, and a band agai
   };
 
   /*
-   * **On the desk: the reference's band, whoever the saint is.** Anthony's
-   * icon is inside the old 1:1.6 cap and Lupus the Martyr's (450x1184, 5
-   * September) is well past it, and the two premises below are what say so at
-   * run time. Under the rule this replaces they were drawn at 1.27 and at
-   * 1.60; under this one they are both 3:2, which is the whole claim — the
-   * shape belongs to the card and not to the picture in it.
+   * **On the desk: the icon's own shape, no taller than A4** (the mockup's
+   * `mainCrop`, `../mockup-review/REVIEW.md` finding 3, stage D). It was a
+   * fixed 3:2 band from 2026-09-10 until the review. Anthony's icon is inside
+   * A4 and Lupus the Martyr's (450x1184, 5 September) is well past it, and the
+   * two premises below are what say so at run time.
    */
+  const A4_TALL = 1 / 0.7071;
   const wideDesk = await shape();
-  expect(wideDesk.natural, 'premise: this hero is inside the old 1:1.6 cap').toBeLessThan(1.6);
-  expect(Math.abs(wideDesk.drawn - 2 / 3), 'the desk hero is not the reference 3:2').toBeLessThan(0.02);
+  expect(wideDesk.natural, 'premise: this hero is inside A4').toBeLessThan(A4_TALL);
+  expect(Math.abs(wideDesk.drawn - wideDesk.natural), 'the desk hero is not in its own shape').toBeLessThan(0.02);
 
   await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
   await expect(img).toBeVisible();
   const tallDesk = await shape();
-  expect(tallDesk.natural, 'premise: this day’s hero is not tall enough to have been cropped before').toBeGreaterThan(1.6);
-  expect(Math.abs(tallDesk.drawn - 2 / 3), 'a tall icon is not drawn in the same band as a short one').toBeLessThan(0.02);
-  expect(
-    Math.abs(wideDesk.drawn - tallDesk.drawn),
-    'two saints of different shapes are drawn differently, so this is the picture and not the box',
-  ).toBeLessThan(0.01);
+  expect(tallDesk.natural, 'premise: this day’s hero is taller than A4').toBeGreaterThan(A4_TALL);
+  expect(Math.abs(tallDesk.drawn - A4_TALL), 'a tall icon is not cut to A4 on the desk').toBeLessThan(0.02);
 
   /*
    * **Between 620 and 1024 px the icon keeps its own shape**, held to 1:1.6.
@@ -183,9 +179,7 @@ test('the hero is a 3:2 band on the desk, its own shape between, and a band agai
   ).toBeLessThan(0.03);
 
   // And the band survives where it was bought: a phone, where the picture is
-  // the card's own height. The desk arriving at the same 3:2 by a different
-  // instruction six weeks later does not make this the same rule — the phone's
-  // is about the register fitting under the card.
+  // the card's own height and the register has to fit under it.
   await page.setViewportSize({ width: 360, height: 780 });
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(img).toBeVisible();
@@ -196,13 +190,10 @@ test('the hero is a 3:2 band on the desk, its own shape between, and a band agai
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
 
   /*
-   * **Where the crop is taken from, on the desk: 34% down** (§10.23) — the
-   * reference's own `object-position`, and the author's "faces at 2/3 of the
-   * height of the image crop" said from the other end. It was `50% 0` here,
-   * hard against the top, which is what a *derived* box wants: a picture shown
-   * whole has nothing to anchor, and a tall one cropped to 1:1.6 must lose its
-   * feet rather than its face. A fixed band crops every icon, so the anchor
-   * stops being a fallback and becomes the composition.
+   * **Where the crop is taken from, on the desk: the top** — the derived box's
+   * anchor, since a picture shown whole has nothing to anchor and a tall one
+   * must lose its feet rather than its face. It was 34% down while the desk
+   * was a fixed band (2026-09-10 until stage D).
    *
    * The placeholder is read as well as the picture, because they are two boxes
    * and a placeholder framed differently from the picture landing over it is a
@@ -214,8 +205,8 @@ test('the hero is a 3:2 band on the desk, its own shape between, and a band agai
     return { fit: s.objectFit, position: s.objectPosition, background: media.backgroundPosition };
   });
   expect(crop.fit).toBe('cover');
-  expect(crop.position, 'the desk picture is not anchored a third down').toBe('50% 34%');
-  expect(crop.background, 'the placeholder is framed differently from the picture over it').toBe('50% 34%');
+  expect(crop.position, 'the desk picture is not anchored at its top').toBe('50% 0px');
+  expect(crop.background, 'the placeholder is framed differently from the picture over it').toBe(crop.position);
 });
 
 
@@ -3097,7 +3088,7 @@ test('choosing a saint from the shelf fills the middle columns and moves nothing
 
   const state = () =>
     page.evaluate(() => ({
-      saint: document.querySelector('.cal-saint .hero-name')?.textContent.trim(),
+      saint: document.querySelector('.cal-read .hero-name')?.textContent.trim(),
       read: document.querySelector('.cal-read .hero-more-alone')?.getAttribute('href'),
       hidden: [...document.querySelectorAll('[data-choose]')]
         .filter((r) => !r.offsetParent)
@@ -3423,23 +3414,10 @@ test('past 1024 px Daily keeps the site’s whole header, its three controls in 
 
 test('past 1024 px the picture has a column and the words have the next one', async ({ page }) => {
   /*
-   * Author, 2026-09-01: "make sure the text on the main saint card does not
-   * go below the bottom of the image."
-   *
-   * **This replaces a test that pinned an eighteen-line minimum**, given the
-   * round before. The two cannot both hold: a landscape icon is nothing like
-   * eighteen lines tall, so a card held at that minimum with its text stopped
-   * at the picture's foot is a card with a 240 px hole in it — which is what
-   * it looked like. The newer instruction wins, and the eighteen lines survive
-   * as what the *picture* is aimed at (`--card-h` sized its column) rather
-   * than as a floor the card is held to. From 2026-09-10 they do not reach
-   * this width either: the desk's box is a fixed 3:2 and its height follows
-   * its own column, so what is measured below is the instruction itself —
-   * the words stop at the mount's foot — with nothing derived behind it.
-   *
-   * 24 September because Theodora of Alexandria's icon is 939x625 — landscape,
-   * so the picture is far shorter than eighteen lines and the difference
-   * between the two rules is visible.
+   * The desk takes the hero apart at one seam: the picture in column 2, and
+   * the name over the words in column 3 (`../mockup-review/REVIEW.md`
+   * findings 3 and 4, stage D). 24 September: Theodora of Alexandria, whose
+   * icon and life are both there to place.
    */
   await ready(page);
   await page.setViewportSize({ width: 1280, height: 900 });
@@ -3448,45 +3426,121 @@ test('past 1024 px the picture has a column and the words have the next one', as
   // The preview arrives with the payload and is trimmed once it does.
   await expect(page.locator('[data-hero-lede]')).toBeVisible();
 
-  /*
-   * **The foot the words stop at is the mount's, 2026-09-10** (§4.1). The
-   * picture stands in a 14 px mat from 1024 px, so "does not go below the
-   * bottom of the image" is the same instruction measured against the box the
-   * image now sits in — the reader sees one object and its lower edge is the
-   * mat's. `fitLede` computes the budget the same way, from two rects rather
-   * than from a number, so the two cannot drift apart.
-   */
   const m = await page.evaluate(() => ({
     hero: document.querySelector('.hero').getBoundingClientRect(),
     mount: document.querySelector('.hero-figure').getBoundingClientRect(),
     media: document.querySelector('.hero-media').getBoundingClientRect(),
     // The reading column's own text box, which is where the life is drawn past
-    // 1024 px; the saint column keeps a `.hero-body` of its own for the name.
+    // 1024 px, and the name that heads it (stage D).
     body: document.querySelector('.cal-read .hero-body').getBoundingClientRect(),
-    name: document.querySelector('.cal-saint .hero-name').getBoundingClientRect(),
+    name: document.querySelector('.cal-read .hero-head .hero-name').getBoundingClientRect(),
     lede: document.querySelector('[data-hero-lede]').getBoundingClientRect(),
+    namesInSaint: document.querySelectorAll('.cal-saint .hero-name').length,
   }));
 
-  expect(m.media.height, 'premise: this icon is tall enough for the question not to arise').toBeLessThan(400);
-  // A mount, not an outline: the mat is real and is 14 px on all four sides.
-  expect(m.mount.bottom - m.media.bottom, 'the picture has no mat under it').toBeCloseTo(14, 0);
-  expect(m.media.top - m.mount.top, 'the picture has no mat over it').toBeCloseTo(14, 0);
+  expect(m.body.left, 'the words are not in the column after the picture').toBeGreaterThan(m.mount.right);
+  expect(m.lede.height, 'the life is not shown').toBeGreaterThan(0);
+  // The name heads the words rather than standing under the picture.
+  expect(m.namesInSaint, 'the saint column still carries the name').toBe(0);
+  expect(m.name.bottom, 'the name is not over the life').toBeLessThanOrEqual(m.body.top + 1);
+  expect(Math.abs(m.name.left - m.body.left), 'the name is not on the life’s own edge').toBeLessThan(1);
+});
+
+test('past 1024 px the picture is the saint column’s width in its own shape, and the name heads the reading column, pinned', async ({ page }) => {
   /*
-   * **And the words no longer stop at that foot, because they are no longer
-   * beside it** (2026-09-16). "The text on the main saint card does not go
-   * below the bottom of the image" was an instruction about a card in two
-   * halves; the picture has a column of the page now and the life has the next
-   * one, so there is no budget left for `fitLede` to trim against — it finds
-   * no `.hero-media` in the panel it is given and returns. What replaces the
-   * old assertion is the arrangement that replaced the rule: the words begin
-   * to the right of the mount and run past its foot, which on the old page was
-   * the defect this test existed to catch.
+   * `../mockup-review/REVIEW.md` findings 3 and 4, stage D. The mockup's
+   * `.card-media` is the column's whole width at the icon's own aspect, no
+   * taller than A4 or half the window, no mat, with the credit under it and nothing drawn for a
+   * saint with no icon; its `.read-head` stands at the top of the reading
+   * column and stays there while the life scrolls under it. Before this the
+   * picture was a fixed 3:2 inside a 14 px dark mat and the name was under it
+   * in column 2.
+   *
+   * Three saints, one per shape the rule treats differently: Theodora of
+   * Alexandria (landscape, drawn whole), Symeon the Stylite (taller than A4,
+   * cut to it) and Euphrosynus the Cook (no icon). Each premise is read off
+   * the manifest's own numbers, not assumed.
    */
-  expect(m.body.left, 'the words are still beside the picture in one card').toBeGreaterThan(m.mount.right);
-  expect(m.lede.bottom, 'the life is still being trimmed to the picture’s foot').toBeGreaterThan(m.mount.bottom);
-  // And the name is under the picture rather than beside it, which is the
-  // saint column's whole arrangement.
-  expect(m.name.top, 'the name is not under the picture').toBeGreaterThan(m.mount.bottom - 1);
+  await ready(page, { church: 'romanian' });
+  const A4 = 0.7071;
+  for (const [width, height] of [
+    [1440, 900],
+    [1280, 800],
+  ]) {
+    await page.setViewportSize({ width, height });
+
+    const picture = () =>
+      page.evaluate(() => {
+        const col = document.querySelector('.cal-saint');
+        const figure = col.querySelector('.hero-figure');
+        const media = col.querySelector('.hero-media');
+        const img = media?.querySelector('img');
+        const credit = col.querySelector('[data-hero-credit]');
+        const cs = getComputedStyle(col);
+        const inner = col.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+        return {
+          names: col.querySelectorAll('.hero-name').length,
+          inner,
+          figure: figure && { w: figure.getBoundingClientRect().width, pad: getComputedStyle(figure).paddingTop, bg: getComputedStyle(figure).backgroundColor },
+          media: media && media.getBoundingClientRect().toJSON(),
+          natural: img && img.width / img.height,
+          file: img?.currentSrc.split('/').pop(),
+          credit: credit && credit.clientWidth > 0 ? credit.getBoundingClientRect().top : null,
+        };
+      });
+
+    // Theodora: a landscape icon, drawn whole at the column's width.
+    await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+    await expect(page.locator('.cal-read .hero-head .hero-name')).toContainText('Theodora of Alexandria');
+    await expect(page.locator('.cal-saint [data-hero-credit]')).toBeVisible();
+    let p = await picture();
+    expect(p.names, `${width}: the saint column still carries the name`).toBe(0);
+    expect(p.figure.pad, `${width}: the picture stands in a mat`).toBe('0px');
+    expect(p.figure.bg, `${width}: the picture stands on a ground of its own`).toBe('rgba(0, 0, 0, 0)');
+    expect(Math.abs(p.media.width - p.inner), `${width}: the picture is not the column's width`).toBeLessThanOrEqual(1);
+    expect(p.natural, 'premise: Theodora’s icon is landscape').toBeGreaterThan(1);
+    expect(Math.abs(p.media.width / p.media.height - p.natural), `${width}: the landscape icon is not in its own shape`).toBeLessThan(0.02);
+    expect(p.file, `${width}: the column is not drawn from the card derivative`).toBe('icon-card.jpg');
+    expect(p.credit, `${width}: the credit is not under the picture`).toBeGreaterThanOrEqual(p.media.bottom);
+
+    /*
+     * Pinned: the head's top does not move while the column scrolls, and the
+     * life does go under it. Set on the scroller rather than wheeled, because
+     * what is asserted is where the head stands at a scroll position.
+     */
+    const head = () =>
+      page.evaluate(() => {
+        const col = document.querySelector('.cal-read');
+        return { col: col.getBoundingClientRect().top, top: document.querySelector('.cal-read .hero-head').getBoundingClientRect().top, scroll: col.scrollTop };
+      });
+    const rest = await head();
+    await page.evaluate(() => {
+      document.querySelector('.cal-read').scrollTop = 300;
+    });
+    await expect.poll(async () => (await head()).scroll, `${width}: premise: the reading column scrolls`).toBeGreaterThan(200);
+    const moved = await head();
+    expect(Math.abs(moved.top - rest.top), `${width}: the name scrolled away with the life (${rest.top} -> ${moved.top})`).toBeLessThanOrEqual(1);
+    expect(moved.top - moved.col, `${width}: the pinned name is not at the column's top`).toBeLessThanOrEqual(1);
+
+    // Symeon the Stylite: taller than A4, so cut to A4 at the column's width.
+    await page.goto('/calendar/2026-09-01', { waitUntil: 'networkidle' });
+    await expect(page.locator('.cal-read .hero-name')).toContainText('Symeon the Stylite');
+    p = await picture();
+    expect(p.natural, 'premise: Symeon’s icon is taller than A4').toBeLessThan(A4);
+    expect(Math.abs(p.media.width - p.inner), `${width}: the tall picture is not the column's width`).toBeLessThanOrEqual(1);
+    expect(Math.abs(p.media.width / p.media.height - A4), `${width}: the tall icon is not cut to A4`).toBeLessThan(0.01);
+    expect(p.media.height, `${width}: the picture is taller than half the window`).toBeLessThanOrEqual(height * 0.5 + 1);
+
+    // Euphrosynus the Cook: no icon, so no box at all — not a blank one.
+    await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
+    const row = page.locator('.cal-bubble [data-choose*="euphrosynus"]');
+    await row.evaluate((r) => r.querySelector('.reg-sub').click());
+    await expect(page.locator('.cal-read .hero-name')).toContainText('Euphrosynus');
+    p = await picture();
+    expect(p.figure, `${width}: a saint with no icon is drawn a picture box`).toBe(null);
+    expect(p.names, `${width}: the saint column carries the name`).toBe(0);
+  }
 });
 
 
@@ -3976,7 +4030,7 @@ test('past 1024 px the reading column scrolls to Theodora of Alexandria’s hymn
     await page.evaluate(() => document.fonts.ready);
 
     // The review's saint and the review's premise: hymns below the window's foot.
-    await expect(page.locator('.cal-saint')).toContainText('Theodora of Alexandria');
+    await expect(page.locator('.cal-read .hero-head')).toContainText('Theodora of Alexandria');
     const hymns = page.locator('.cal-read .day-hymns');
     const below = await hymns.evaluate((h) => h.clientWidth > 0 && h.getBoundingClientRect().top > innerHeight);
     expect(below, `premise: ${width} puts the hymns under the fold`).toBe(true);
@@ -3995,12 +4049,13 @@ test('past 1024 px the reading column scrolls to Theodora of Alexandria’s hymn
 
 test('past 1024 px each of the four columns reaches its last line by wheel, key and touch', async ({ page, browser }) => {
   /*
-   * 14 September in the Russian calendar at 1024 × 330: a short window, so
+   * 14 September in the Russian calendar at 1024 × 250: a short window, so
    * that all four columns overflow at once — the saint's column is the one
-   * that needs it, since its picture is sized from the column and fits any
-   * taller window. The premise is asserted, not assumed.
+   * that needs it, since stage D it holds only a picture capped at half
+   * the window and its credit, and fits any taller window. The premise is
+   * asserted, not assumed.
    */
-  const size = { width: 1024, height: 330 };
+  const size = { width: 1024, height: 250 };
   const open = async (p) => {
     await ready(p);
     await p.setViewportSize(size);
@@ -4014,7 +4069,7 @@ test('past 1024 px each of the four columns reaches its last line by wheel, key 
       const el = document.querySelector(s);
       return el.clientWidth > 0 ? el.scrollHeight - el.clientHeight : -1;
     }, sel);
-    expect(over, `premise: ${sel} overflows at 1024 × 330`).toBeGreaterThan(0);
+    expect(over, `premise: ${sel} overflows at 1024 × 250`).toBeGreaterThan(0);
 
     const { before, once } = await wheelToEnd(page, sel);
     expect(once, `${sel}: a wheel moved nothing`).toBeGreaterThan(before);
@@ -4184,14 +4239,10 @@ test('the hero picture is never more than half the window, on any monitor', asyn
    * windows, two of them larger than this suite otherwise runs at, because the
    * defect was invisible at the sizes it did run at.
    *
-   * **The ceiling is now kept by the crop rather than by arithmetic in front
-   * of it** (§10.23, 2026-09-10). A fixed 3:2 makes the picture's height two
-   * thirds of its own width whatever the icon is, so `--card-h / --hero-r` —
-   * the width at which a given icon stood exactly as tall as the card - can
-   * no longer bind and is gone from the desk's rule. The instruction is
-   * untouched and so is this measurement: the cap is only ever true if
-   * something reads the rendered height, and a cap that holds for a new
-   * reason still has to be watched.
+   * **The ceiling is a `max-height: 50vh` on the saint column's picture**
+   * (stage D, 2026-09-18). The mockup draws the icon at the column's width in
+   * its own shape and caps it at 58vh; this instruction is the author's own
+   * and is the tighter of the two, so it stands.
    */
   await ready(page);
   for (const size of [
@@ -4220,18 +4271,13 @@ test('the hero picture is never more than half the window, on any monitor', asyn
      * not the target, and a picture that fell to a tenth would be a different
      * defect.
      *
-     * **Read as a width since 2026-09-10, where it was a share of the window
-     * height** (§10.23). The floor was 0.2 of the window, which worked while
-     * the box was the icon's own shape — a portrait icon that had shrunk was
-     * short as well as narrow. A fixed 3:2 makes the height two thirds of the
-     * width, so on a 1440 px-tall monitor a perfectly correct picture is 14%
-     * of the window and the old floor would have failed the very geometry the
-     * author asked for. Width is the dimension a shrinking picture now loses,
+     * **Read as a width**: the height is the icon's shape or the cap, so
+     * width is the dimension a shrinking picture loses.
      *
      * **Derived from the column since 2026-09-16, where it was a flat 300.**
      * The picture has a column of the page to itself now — `--saint-w`, a
      * clamp on `vw` — so what says it has not been capped into a stamp is that
-     * it fills that column less its mat, at every window. A number would be a
+     * it fills that column, at every window. A number would be a
      * number for one of them.
      */
     const column = await page.evaluate(() => {
@@ -4591,21 +4637,12 @@ test('the wordmark is centred on a phone and unmoved on a desktop', async ({ pag
 /* ---- the desktop rebuild, step 8: the hero's mount (2026-09-10) ---------- */
 
 
-test('the hero picture stands in a mount rather than behind an outline', async ({ page }) => {
+test('the hero picture stands on the page’s own ground, with no mount and no outline', async ({ page }) => {
   /*
-   * The instruction: "**A mount, not an
-   * outline.** No border anywhere on a picture. The frame is a 14px mat the
-   * photo stands inside", drawn in `--mount` — the *other* theme's bubble, so
-   * the picture reads as standing on a wall rather than as a framed box on the
-   * page. The column is 340 px and the mat fills it.
-   *
-   * **The column was 340 px until 2026-09-10 and this test pinned the
-   * number** (§10.24). It is a share of the left column now — five twelfths of
-   * what the picture and the words divide between them, the reference's own
-   * proportion — so what is asserted here is that the mount fills a column
-   * *wider* than the old fixed one at this width, and the proportion itself
-   * has a test of its own below. A mount that quietly went to zero is what
-   * this reading is for, and it still catches it.
+   * A 14 px mat in `--mount` from 2026-09-10 until the mockup review
+   * (`../mockup-review/REVIEW.md` finding 3, stage D): the mockup draws the
+   * picture at the column's width on the page itself. Still no outline, which
+   * was the older instruction and stands.
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
@@ -4616,84 +4653,27 @@ test('the hero picture stands in a mount rather than behind an outline', async (
   const m = await page.evaluate(() => {
     const figure = document.querySelector('.hero-figure');
     const media = document.querySelector('.hero-media');
-    const body = document.querySelector('.hero-body');
-    const name = document.querySelector('.hero-name');
-    /*
-     * A custom property does not compute (CLAUDE.md trap 9), so `--mount` is
-     * asked of the engine through a box that reads it rather than parsed out
-     * of the declaration.
-     */
-    const probe = document.createElement('span');
-    probe.style.backgroundColor = 'var(--mount)';
-    figure.append(probe);
-    const mount = getComputedStyle(probe).backgroundColor;
-    probe.remove();
-
     const edges = (el) => {
       const s = getComputedStyle(el);
       return [s.borderTopWidth, s.borderRightWidth, s.borderBottomWidth, s.borderLeftWidth].map(parseFloat);
     };
     const s = getComputedStyle(figure);
+    const col = document.querySelector('.cal-saint');
+    const cs = getComputedStyle(col);
     return {
-      mount,
       fill: s.backgroundColor,
       mat: [s.paddingTop, s.paddingRight, s.paddingBottom, s.paddingLeft].map(parseFloat),
       borders: [...edges(figure), ...edges(media), ...edges(media.querySelector('img'))],
-      column: figure.getBoundingClientRect().width,
-      saintColumn: (() => {
-        const col = document.querySelector('.cal-saint');
-        const cs = getComputedStyle(col);
-        return (
-          col.getBoundingClientRect().width -
-          parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) - parseFloat(cs.borderLeftWidth)
-        );
-      })(),
-      /*
-       * Optical, not geometric (§4.2): the words are lifted so the name's
-       * cap-height sits close under the edge of the mount rather than level
-       * with it. **The edge is the mount's foot since 2026-09-16**, where it
-       * was its top: the words stood beside the picture and now stand under
-       * it, and the same four pixels do the same job against the other edge.
-       */
-      lift: figure.getBoundingClientRect().bottom - body.getBoundingClientRect().top,
-      // The row the lift is measured against, read in the same pass rather
-      // than written down: the words sit a row gap below the mount and are
-      // then pulled four pixels back toward it.
-      rowGap: parseFloat(getComputedStyle(figure.closest('.hero')).rowGap),
-      nameSize: parseFloat(getComputedStyle(name).fontSize),
+      media: media.getBoundingClientRect().width,
+      saintColumn: col.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight),
+      nameSize: parseFloat(getComputedStyle(document.querySelector('.hero-name')).fontSize),
     };
   });
 
-  expect(m.mat, 'the mat is not 14 px on all four sides').toEqual([14, 14, 14, 14]);
-  expect(m.fill, 'the mount is not filled in --mount').toBe(m.mount);
-  expect(m.fill, 'the mount is transparent, so there is no mat at all').not.toBe('rgba(0, 0, 0, 0)');
+  expect(m.mat, 'the picture still stands in a mat').toEqual([0, 0, 0, 0]);
+  expect(m.fill, 'the picture still stands on a mount').toBe('rgba(0, 0, 0, 0)');
   expect(m.borders, 'a picture on this page is wearing an outline').toEqual(new Array(12).fill(0));
-  /*
-   * **Its own column, and the number came down with it** (2026-09-16). The
-   * mount filled the wide left column of a two-column page and was over 340 px
-   * at every desk width; it fills `--saint-w` now, whose floor is 11 rem. What
-   * is asserted is still that it fills a column rather than standing in one.
-   */
-  expect(m.column, 'the mount is not filling a column at all').toBeGreaterThan(170);
-  expect(
-    Math.abs(m.column - m.saintColumn),
-    'the mount does not fill the saint column it stands in',
-  ).toBeLessThan(2);
-  /*
-   * **Four, where the reference's own margin is eight** (2026-09-11), and the
-   * difference is the name's line box rather than a disagreement. The
-   * reference lifts 8 against a name set 27/40.5 — 6.75 of half-leading — and
-   * §10.8 snapped the name to `--text-2xl`'s 26, which base.css sets at 1.25,
-   * so 3.25. The lift came across unchanged and the words sat four pixels
-   * high: measured with `scratchpad/align-probe.mjs`, which takes one reading
-   * off both documents, the name's line box stood 12 px above the mount's top
-   * edge where the reference stands it 8. At 4 the two read the same.
-   *
-   * The author read the same four pixels by eye on 2026-09-11 and called them
-   * three, which is the closest a person should have to get.
-   */
-  expect(m.rowGap + m.lift, 'the words are not lifted four pixels against the mount').toBeCloseTo(4, 0);
-  expect(m.lift, 'the words are beside the mount rather than under it').toBeLessThan(0);
+  expect(Math.abs(m.media - m.saintColumn), 'the picture does not fill the saint column').toBeLessThan(1);
   // 26, the scale's own h2 step, where the reference drew 27 (§10.8).
   expect(m.nameSize, 'the hero name is off the type scale').toBe(26);
 });
@@ -4797,11 +4777,10 @@ test('the picture grows with its own column as the window widens', async ({ page
   for (const width of [1280, 1440, 1920]) {
     const m = await read(width);
     seen.push({ width, ...m });
-    // The mount is the column, and the picture is the mount less its mat, so a
-    // mat that quietly went to zero cannot pass here as a wider picture.
-    expect(Math.abs(m.figure - m.column), `at ${width} the mount does not fill the saint column`).toBeLessThan(1);
-    expect(Math.abs(m.media - (m.figure - 2 * m.mat)), 'the picture does not fill the mount').toBeLessThan(1);
-    expect(m.mat, 'the mat has gone, so the picture and its column are the same box').toBeGreaterThan(0);
+    // The picture is the column: no mat since stage D.
+    expect(Math.abs(m.figure - m.column), `at ${width} the picture does not fill the saint column`).toBeLessThan(1);
+    expect(Math.abs(m.media - m.figure), 'the picture is inset in its figure').toBeLessThan(1);
+    expect(m.mat, 'the picture stands in a mat again').toBe(0);
     expect(m.wordsLeft, `at ${width} the life is still beside the picture`).toBeGreaterThan(m.pictureRight);
   }
 

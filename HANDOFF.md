@@ -36,7 +36,9 @@ here, because a PAT push never updates `origin/main`.
 **Daily/Prayer design fixes against the mockup** (`../mockup-review/BRIEF.md`,
 stages in `REVIEW.md` §3): stages A (Daily's full header), B (the four
 columns' widths, the shelf a plain column; the saint page's two columns follow
-Daily's) and C (each column scrolls to its last line) are done; D is next.
+Daily's), C (each column scrolls to its last line) and D (the saint column's
+picture in its own shape, the name pinned over the reading column) are done;
+E is next.
 
 **The corpus run (`scratchpad/corpus-plan.md` §5) is in Phase B.** Civil
 20 September – 6 October is read for all four churches. **Civil 7 October is
@@ -142,6 +144,9 @@ records that they are there. Never re-shoot one.**
   before stage B; after it they compared identical.
 - `baseline-stageC-scroll-before-2026-09-18` — 4 tiles of `/` only, 360 and
   768, day and vigil, `en`, before stage C; after it they compared identical.
+- `baseline-stageD-col2-before-2026-09-18` (archived as
+  `shots/baseline-baseline-stageD-col2-before-2026-09-18`) — the same 4 tiles,
+  same arguments, before stage D; after it they compared identical.
 
 ```bash
 MSYS_NO_PATHCONV=1 node scripts/contact-sheet.mjs --still --routes=/,/saints,/texts   --widths=360,768,1280 --themes=day,vigil --langs=en

@@ -519,10 +519,11 @@ html[data-route~='calendar'][data-fills-window]
         │                            name days, readings; hymns below 1024
         ├ .cal-saint [data-col=saint]  column 2, ≥1024 only
         │ └ .slot-viewport[data-slot=saint] > .day-panel.day-saint
-        │                            the chosen saint: picture, name, dates
+        │                            the chosen saint's picture and its credit
         ├ .cal-read [data-col=content] column 3, ≥1024 only
         │ └ .slot-viewport[data-slot=content] > .day-panel.day-content
-        │                            the opening of the life, and the hymns
+        │                            name and dates (pinned), the opening of
+        │                            the life, and the hymns
         └ .cal-bubble                 column 4, a plain column
           └ .cal-bubble-scroll       the shelf's scroller
             └ .slot-viewport[data-slot=shelf] > .day-panel.day-shelf
@@ -596,6 +597,15 @@ else.
   `--gesso` so the saints pass under it.
 - **The picker is the month grid**, forced open on arrival, and the week rail is
   hidden. It stands in the day's own column, on the page's own ground.
+- **The saint column's picture is the column's width in the icon's own
+  shape** (`../mockup-review/REVIEW.md` finding 3): `columnCrop`, which is
+  `cardCrop` cut to A4 at the tallest, capped at half the window (the
+  author's 2026-09-01 ceiling, where the mockup takes 58vh), drawn from the card
+  derivative, no mat, with the credit under it. A saint with no icon has no
+  box.
+- **The name and its dates head the reading column, pinned** (finding 4): a
+  sticky head on `--gesso` over one rule, the life scrolling under it. Its
+  `.slot-viewport` is `overflow: clip` for the shelf's reason.
 - The date sits between two stepper buttons, each half a cross.
 - Name days lead the day's column, above readings.
 - **The site's header is the same as on every other route** (author,
@@ -648,8 +658,8 @@ The two widths are free to diverge except here.
 - **The day cells** — the week rail's and the month grid's — are one drawing:
   the same box, numerals, feast mark and fast colour.
 - **The hero and the register rows are the same components at both widths.**
-  Past 1024 px the hero is taken apart at one seam — `heroIdentity` into the
-  saint column, `heroOpening` into the reading column — and nothing is drawn
+  Past 1024 px the hero is taken apart at one seam — its picture into the
+  saint column, `heroIdentity` and `heroOpening` into the reading column — and nothing is drawn
   twice to do it. The register row is one element with one set of classes at
   both widths: what the desk's plate changes is the boxes the same `.reg-card`,
   `.reg-thumb`, `.reg-pic` and `.reg-body` are laid into, inside
@@ -670,7 +680,8 @@ The two widths are free to diverge except here.
 | `--cal-peek`, `--cal-gutter` | `calendar.css` | the month's peeked neighbour columns and the gutter they need |
 | `--cal-row-h` | `calendar.css` | a month row |
 | `--card-h`, `--card-pic`, `--card-gap` | `calendar.css` | the register's card face |
-| `--hero-mat`, `--hero-band`, `--hero-band-focus`, `--hero-r` | `calendar.css`, and inline per saint | the hero's mat and crop |
+| `--hero-shape`, `--hero-focus` | inline per saint, `daily/panel.js` | the hero's crop: `heroCrop` below 1024, `columnCrop` (the icon's own shape, no taller than A4) past it |
+| `--hero-mat`, `--hero-r` | `calendar.css`, and inline per saint | the register's expanded mat; the hero's column between 620 and 1024 |
 
 The rest — `--ox`, `--rail-inset`, `--rail-fade`, `--peek-fade`, `--headgap`,
 `--rulegap`, `--lede-lines` — are local to one control and are

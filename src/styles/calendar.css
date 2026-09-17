@@ -2118,13 +2118,9 @@
    being full width and *being* the card's height at that size, and the
    instruction above is about the desktop layout it arrived with.
 
-   **And from 1024 px it no longer applies either** (author, 2026-09-10: the
-   main saint card takes the reference's cropping aspect ratio). The band and
-   its focus are declared on the route below and override both of these. What
-   is left of the derived shape is the band between 620 and 1024, where the
-   hero has a column but the page is not yet the two-column desk the
-   instruction is about — and `cardCrop`, which is every other saint card on
-   the site and is untouched. */
+   **From 1024 px the same property carries `columnCrop`'s shape instead**
+   (`../mockup-review/REVIEW.md` finding 3): the icon's own, no taller than
+   A4, written by `daily/panel.js`. */
 @media (min-width: 620px) {
   .hero-media {
     aspect-ratio: var(--hero-shape, 1 / 1);
@@ -2191,74 +2187,72 @@
   margin-bottom: 0;
 }
 
-/* ---- the mount (2026-09-10) --------------------------------------------- */
+/* ---- the saint column's picture ----------------------------------------- */
 
 /*
- * **A mount, not an outline**.
- * No border anywhere on a picture: the frame is a 14 px mat the photo stands
- * inside, and its colour is the *other* theme's bubble — a dark mat on the
- * gesso page, a pale one on the bole. `--mount` is that pair; tokens.css says
- * why its light value is written as vigil's `--bub` hex rather than as a
- * second literal.
+ * **The column's width, in the icon's own shape, on the page's ground**
+ * (`../mockup-review/REVIEW.md` finding 3, stage D, 2026-09-18). It stood in a
+ * 14 px dark mat at a fixed 3:2 from 2026-09-10 until the review; the mockup
+ * draws neither. `--hero-shape` and `--hero-focus` are `columnCrop`'s, written
+ * per saint by `daily/panel.js`, so the ≥620 px rule that reads them is the
+ * whole shape; this caps its height and puts the credit under it.
  *
- * **The shape is untouched** (§10.1). `--hero-shape` still comes from
- * `heroCrop` per saint and the box is still derived from the icon's own
- * dimensions; what this section changes is the column the picture sits in and
- * the 14 px of ground around it.
- *
- * On `.hero-figure` rather than on `.hero-media`, because the figure is the
- * grid item: the mat fills the column and the picture is the column less the
- * mat. That is also what keeps `daily-panel.spec.js`'s "the hero image fills
- * its column" measuring something — it reads the figure against the track and
- * the picture against the figure, so a mat that quietly went to zero fails
- * there rather than passing as a smaller picture.
+ * `--hero-mat` stays: the register's expanded face reads it.
  */
 @media (min-width: 1024px) {
-  /* On the route and not on `.hero`, because the register's expanded face is
-     "the day's own card repeated" (§5.2) and reads the same number — "the same
-     mat" has to stay true if it ever moves, and two boxes under one ancestor
-     is where a shared quantity belongs (§10.16's own rule for `--headgap`). */
   html[data-route~='calendar'] {
     --hero-mat: 14px;
-    /*
-     * **The reference's own crop, fixed** (author, 2026-09-10: the main saint
-     * card takes the cropping aspect ratio of the reference, and "faces at 2/3
-     * of the height of the image crop"). Both numbers are read off the file
-     * rather than off that sentence: its `.himg img` is `aspect-ratio: 3/2`
-     * with `object-position: 50% 34%`, which puts a face about a third down —
-     * the same thing said from the other end.
-     *
-     * **This is a static crop and not face detection.** Nothing here looks at
-     * the picture; 34% is where the subject of an icon is, on the whole,
-     * because an icon is a standing or half-length figure.
-     *
-     * One pair of properties because the two boxes that read them have to
-     * agree: the blurred placeholder is painted on `.hero-media` and the
-     * picture is the `img` inside it, and a placeholder framed differently
-     * from the picture arriving over it is a visible jump. §10.16's rule —
-     * a quantity two boxes share belongs on the ancestor both are under.
-     */
-    --hero-band: 3 / 2;
-    --hero-band-focus: 50% 34%;
   }
 
-  html[data-route~='calendar'] .hero-figure {
-    background: var(--mount);
-    padding: var(--hero-mat);
+  html[data-route~='calendar'] .cal-saint .hero {
+    gap: var(--space-3);
+  }
+
+  html[data-route~='calendar'] .cal-saint .hero-media {
+    /* Half the window, where the mockup takes 58vh: the author's own ceiling
+       (2026-09-01, "no more than half the window height"), which
+       `daily-panel.spec.js` holds on five monitors. */
+    max-height: 50vh;
+  }
+
+  html[data-route~='calendar'] .cal-saint .hero-credit {
+    color: var(--ink-soft);
+    margin: 0;
   }
 
   /*
-   * The band itself, over the derived shape above. The reservation-before-decode promise is
-   * unchanged in kind and stronger in fact: the box is now one ratio for every
-   * saint, so it is known before the manifest is, let alone the image.
+   * **The name heads the reading column and stays there** (finding 4): the
+   * mockup's `.read-head`, pinned while the life scrolls under it, on the
+   * page's own ground and over one rule. `.cal-read` is the scroller and its
+   * `.slot-viewport` is `overflow: clip` for the same reason as the shelf's:
+   * `hidden` would make that box the scrollport, and the head would stick to a
+   * box that never scrolls.
    */
-  html[data-route~='calendar'] .hero-media {
-    aspect-ratio: var(--hero-band);
-    background-position: var(--hero-band-focus);
+  html[data-route~='calendar'] .cal-read .slot-viewport {
+    overflow: clip;
   }
 
-  html[data-route~='calendar'] .hero-media img {
-    object-position: var(--hero-band-focus);
+  html[data-route~='calendar'] .cal-read .hero-head {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--gesso);
+    padding-block-end: var(--space-2);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: var(--space-3);
+  }
+
+  html[data-route~='calendar'] .cal-read .hero-name {
+    margin: 0;
+  }
+
+  html[data-route~='calendar'] .cal-read .hero-dates,
+  html[data-route~='calendar'] .cal-read .hero-places {
+    margin: var(--space-1) 0 0;
+  }
+
+  html[data-route~='calendar'] .cal-read .hero-body {
+    margin-top: 0;
   }
 
   /*
@@ -2951,9 +2945,9 @@
    * it as open rather than answering it in a sweep.
    *
    * The only differences the reference draws are the name's size and that
-   * every one of these carries its own way into the life. `--hero-mat` is the
-   * hero's, read from the route rather than copied, because "the same mat"
-   * has to stay true if the number ever moves — and that one is still shared.
+   * every one of these carries its own way into the life. `--hero-mat` was the
+   * hero's too until stage D of the mockup review took the hero's mat away;
+   * this face keeps it until its own stage.
    */
   html[data-route~='calendar'] .register-cards.is-expanded {
     display: block;
@@ -2976,7 +2970,7 @@
      which this is not. */
   html[data-route~='calendar'] .register-cards.is-expanded .reg-thumb {
     order: -1;
-    /* The column is the shape now; the mount fills it, as the hero's does. */
+    /* The column is the shape now; the mount fills it. */
     width: 100%;
     height: auto;
     padding: var(--hero-mat);

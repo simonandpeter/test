@@ -79,3 +79,16 @@ test('an icon with no dimensions asks for no box', () => {
   assert.equal(heroCrop(null).height, 0);
   assert.equal(heroCrop({}).height, 0);
 });
+
+test('the Daily desk column draws the icon in its own shape, no taller than A4', async () => {
+  const { COLUMN_TALLEST, columnCrop, cardCrop } = await import('../src/lib/hero-crop.js');
+  // Landscape and moderately tall: exactly the card's shape and anchor.
+  for (const image of [{ w: 939, h: 625, aspect: 1.5024 }, { w: 444, h: 560, aspect: 0.7929 }, { w: 2000, h: 500 }]) {
+    assert.deepEqual(columnCrop(image), cardCrop(image));
+  }
+  // Taller than A4, whether or not the card's 1:1.6 would already cut it.
+  for (const image of [{ w: 1094, h: 1738, aspect: 0.6295 }, { w: 100, h: 240 }]) {
+    assert.deepEqual(columnCrop(image), { aspect: COLUMN_TALLEST, focus: '50% 8%' });
+  }
+  assert.equal(columnCrop(null).aspect, null);
+});

@@ -94,3 +94,22 @@ export function cardCrop(image) {
   if (height === image.h && image.aspect) return { aspect: image.aspect, focus };
   return { aspect: image.w / height, focus };
 }
+
+/**
+ * **The tallest the Daily desk's saint column draws a picture: A4, 1:√2**
+ * (`../mockup-review/REVIEW.md` finding 3; the mockup's `mainCrop`). Past
+ * 1024 px the picture takes the column's whole width, so a panel icon at its
+ * own 1:1.6 spends the window on one saint.
+ */
+export const COLUMN_TALLEST = 0.7071;
+
+/**
+ * The saint column's shape past 1024 px: `cardCrop`'s own, unless that is
+ * taller than A4, which is cut to A4 with 8% of the surplus left above the
+ * head rather than none.
+ */
+export function columnCrop(image) {
+  const { aspect, focus } = cardCrop(image);
+  if (!aspect || aspect >= COLUMN_TALLEST) return { aspect, focus };
+  return { aspect: COLUMN_TALLEST, focus: '50% 8%' };
+}

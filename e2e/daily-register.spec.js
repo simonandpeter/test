@@ -805,10 +805,18 @@ test('the register offers the two faces the reference draws, and no third', asyn
       heroWidth: Math.round(hero.getBoundingClientRect().width),
       fill: getComputedStyle(mat).backgroundColor,
       mount,
-      // The same mat as the day's own card, read off the hero rather than
-      // written down twice.
+      // `--hero-mat`, painted rather than parsed (trap 9). The day's own card
+      // stood in the same mat until stage D of the mockup review took its mat
+      // away; the register's expanded face keeps it.
       pad: parseFloat(getComputedStyle(mat).paddingTop),
-      heroPad: parseFloat(getComputedStyle(hero).paddingTop),
+      heroPad: (() => {
+        const probe = document.createElement('span');
+        probe.style.cssText = 'display:block;padding-top:var(--hero-mat)';
+        row.append(probe);
+        const v = parseFloat(getComputedStyle(probe).paddingTop);
+        probe.remove();
+        return v;
+      })(),
       name: parseFloat(getComputedStyle(row.querySelector('.reg-name')).fontSize),
       clamp: getComputedStyle(row.querySelector('.reg-life')).webkitLineClamp,
       leads: mat.getBoundingClientRect().left < row.querySelector('.reg-body').getBoundingClientRect().left,
@@ -835,7 +843,8 @@ test('the register offers the two faces the reference draws, and no third', asyn
   expect(big.width, 'the expanded mount is not filling its column at all').toBeGreaterThanOrEqual(200);
   expect(big.heroWidth, 'premise: the day card has no picture to compare against').toBeGreaterThan(0);
   expect(big.fill, 'the expanded mount is not the hero own mat colour').toBe(big.mount);
-  expect(big.pad, 'the expanded mat is not the hero own').toBe(big.heroPad);
+  expect(big.pad, 'the expanded mat is not --hero-mat').toBe(big.heroPad);
+  expect(big.pad, 'premise: --hero-mat is a mat').toBeGreaterThan(0);
   expect(big.name, 'the expanded name is not --text-xl').toBe(21);
   expect(big.clamp, 'the expanded lede is still clamped').toBe('none');
   // Here the picture leads, as it does on the day's own card — the trailing
