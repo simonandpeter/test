@@ -1,0 +1,59 @@
+{
+  "slug": "anna-the-princess",
+  "display_name": "Anna the Princess",
+  "names": [
+    {
+      "form": "Άννα",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Οσία Άννα η Πριγκίπισσα»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "princess"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1056,
+      "latest": 1056,
+      "display": "1056",
+      "basis": "traditional",
+      "note": "saint.gr’s entry heads its page «Οσια Αννα η Πριγκιπισσα (; - 1056)» and gives no life."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 4 октября ст. ст. (civil 17 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Οκτωβρίου — «Οσία Άννα η Πριγκίπισσα»",
+        "url": "https://www.saint.gr/10/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 4. октобар ст. ст. (civil 17 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

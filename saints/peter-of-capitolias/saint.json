@@ -1,0 +1,49 @@
+{
+  "slug": "peter-of-capitolias",
+  "display_name": "Peter of Capitolias",
+  "names": [
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Άγιος Πέτρος Ιερομάρτυρας, από την Καπιτώλιο»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 4 октября ст. ст. (civil 17 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Οκτωβρίου — «Άγιος Πέτρος Ιερομάρτυρας, από την Καπιτώλιο»",
+        "url": "https://www.saint.gr/10/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 4. октобар ст. ст. (civil 17 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "edwin",
+  "display_name": "Edwin",
+  "names": [
+    {
+      "form": "Εδουΐνος",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Άγιος Εδουΐνος»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "king"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 585,
+      "latest": 585,
+      "display": "585",
+      "basis": "attested",
+      "note": "saint.gr’s entry heads its page «Αγιος Εδουϊνος (585 - 633)»; it has him killed in 633 «σε ηλικία 48 ετών»."
+    },
+    "death": {
+      "earliest": 633,
+      "latest": 633,
+      "display": "633",
+      "basis": "attested",
+      "note": "saint.gr: «Φονεύθηκε σε μάχη το 633 μ.Χ. σε ηλικία 48 ετών»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 4 октября ст. ст. (civil 17 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Οκτωβρίου — «Άγιος Εδουΐνος»",
+        "url": "https://www.saint.gr/10/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 4. октобар ст. ст. (civil 17 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

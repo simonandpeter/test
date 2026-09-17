@@ -1,0 +1,68 @@
+{
+  "slug": "ammon-the-egyptian",
+  "display_name": "Ammon the Egyptian",
+  "names": [
+    {
+      "form": "Αμμούν",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Όσιος Αμμούν ο Αιγύπτιος»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 294,
+      "latest": 294,
+      "display": "294",
+      "basis": "traditional",
+      "note": "saint.gr’s entry heads its page «Οσιος Αμμουν ο Αιγυπτιος (294 - 357)»."
+    },
+    "death": {
+      "earliest": 357,
+      "latest": 357,
+      "display": "357",
+      "basis": "traditional",
+      "note": "saint.gr’s entry heads its page «Οσιος Αμμουν ο Αιγυπτιος (294 - 357)»."
+    }
+  },
+  "related": [
+    "anthony-the-great"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 4 октября ст. ст. (civil 17 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Οκτωβρίου — «Όσιος Αμμούν ο Αιγύπτιος»",
+        "url": "https://www.saint.gr/10/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 4. октобар ст. ст. (civil 17 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
