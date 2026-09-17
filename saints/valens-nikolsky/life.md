@@ -1,0 +1,7 @@
+# Valens (Nikolsky)
+
+In June 1937, on the strength of testimony taken in the cells from two workers, the priests of the Lyskovo district were arrested and accused of setting fire to houses belonging to collective farmers. Among them was the priest Valens Ivanovich Nikolsky, born in 1885 in the village of Linevo in the Bor district of Nizhny Novgorod province, who served in the village of Trofimovo in the Lyskovo district. He rejected every charge and would not sign false testimony against the others accused. On 21 September an NKVD troika sentenced him to be shot, and the sentence was carried out on 4 October.
+
+The Russian calendar keeps him on 21 September old style on one line with the priests [Alexander (Belyakov)](/saints/alexander-belyakov), [John (Lazarev)](/saints/john-lazarev), [Andrew (Benediktov)](/saints/andrew-benediktov), [Peter (Sakharovsky)](/saints/peter-sakharovsky) and [John (Nikolsky)](/saints/john-nikolsky), of 1937. azbyka.ru prints a seventh priest, Basil Nosov, on its line for the day, whom the Sretensky day does not name; it keeps him also with the saints of Nizhny Novgorod, and prints no hymns for him.
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-valent-nikolskij); the Sretensky calendar (days.pravoslavie.ru), 21 сентября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260921.html); read 17 September 2026.*

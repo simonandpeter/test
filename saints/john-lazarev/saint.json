@@ -1,0 +1,74 @@
+{
+  "slug": "john-lazarev",
+  "display_name": "John (Lazarev)",
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Иоанн Лазарев",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Священномученик Иоанн Лазарев, пресвитер», its stress mark left out."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1876,
+      "latest": 1876,
+      "display": "1876",
+      "basis": "attested",
+      "note": "azbyka.ru: «Протоиерей Иоанн Михайлович Лазарев родился в 1876 году в селе Курмыш Нижегородской губернии»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "azbyka.ru: «21 сентября был оглашен приговор – высшая мера наказания. Вскоре священномученик был расстрелян», and its short life «(1876-1937)»; the Sretensky day prints «(1937)»."
+    }
+  },
+  "related": [
+    "valens-nikolsky",
+    "alexander-belyakov",
+    "andrew-benediktov",
+    "peter-sakharovsky",
+    "john-nikolsky"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 сентября ст. ст. — «Сщмчч. Валента , Александра , Иоанна , Андрея , Петра , Иоанна пресвитеров (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260921.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 4 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 04.10.2026 (21. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "slug": "peter-sakharovsky",
+  "display_name": "Peter (Sakharovsky)",
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Петр Сахаровский",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Священномученик Петр Сахаровский, пресвитер»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1876,
+      "latest": 1876,
+      "display": "1876",
+      "basis": "attested",
+      "note": "azbyka.ru: «Протоиерей Петр Иванович Сахаровский родился в 1876 году»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "azbyka.ru: «В августе 1937 года отец Петр был арестован и приговорен к высшей мере наказания. Священник принял мученический венец через расстрел»; the Sretensky day prints «(1937)»."
+    }
+  },
+  "related": [
+    "valens-nikolsky",
+    "alexander-belyakov",
+    "john-lazarev",
+    "andrew-benediktov",
+    "john-nikolsky"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 сентября ст. ст. — «Сщмчч. Валента , Александра , Иоанна , Андрея , Петра , Иоанна пресвитеров (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260921.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 4 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 04.10.2026 (21. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

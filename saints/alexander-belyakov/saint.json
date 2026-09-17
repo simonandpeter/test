@@ -1,0 +1,74 @@
+{
+  "slug": "alexander-belyakov",
+  "display_name": "Alexander (Belyakov)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Александр Беляков",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Священномученик Александр Беляков, пресвитер», its stress mark left out."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1890,
+      "latest": 1890,
+      "display": "1890",
+      "basis": "attested",
+      "note": "azbyka.ru: «Иерей Александр Николаевич Беляков родился в 1890 году в Нижнем Новгороде»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "azbyka.ru: «Он был расстрелян по приговору от 21 августа 1937 года»; its short life: «Приговор был приведён в исполнение в тот же день»; the Sretensky day prints «(1937)»."
+    }
+  },
+  "related": [
+    "valens-nikolsky",
+    "john-lazarev",
+    "andrew-benediktov",
+    "peter-sakharovsky",
+    "john-nikolsky"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 сентября ст. ст. — «Сщмчч. Валента , Александра , Иоанна , Андрея , Петра , Иоанна пресвитеров (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260921.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 4 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 04.10.2026 (21. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
