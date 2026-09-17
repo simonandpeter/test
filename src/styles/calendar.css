@@ -2206,6 +2206,8 @@
 
   html[data-route~='calendar'] .cal-saint .hero {
     gap: var(--space-3);
+    /* The list under the credit sets the space between them. */
+    margin-bottom: 0;
   }
 
   html[data-route~='calendar'] .cal-saint .hero-media {
@@ -2249,10 +2251,6 @@
   html[data-route~='calendar'] .cal-read .hero-dates,
   html[data-route~='calendar'] .cal-read .hero-places {
     margin: var(--space-1) 0 0;
-  }
-
-  html[data-route~='calendar'] .cal-read .hero-body {
-    margin-top: 0;
   }
 
   /*
@@ -2389,18 +2387,10 @@
    * what `daily-picker.spec.js:885` holds. The glyph is `content` in the base
    * rule above precisely so this can put a box in its place; `font-size: 0`
    * is not available, tests/design-tokens.test.mjs refuses a `font-size` that
-   * is not a token.
-   *
-   * `align-self`, because the mark is a flex item of a baseline-aligned row
-   * and a 5 px square has no baseline worth aligning to.
+   * is not a token. The reading column's own `Continue reading` went with
+   * stage E (the whole life is printed there), so the shelf's expanded face
+   * carries the one door left, and the mark.
    */
-  html[data-route~='calendar'] .hero-more-chevron {
-    align-self: center;
-  }
-
-  /* The register's expanded face carries the same door and therefore the same
-     mark. One rule, two selectors, so they cannot drift apart. */
-  html[data-route~='calendar'] .hero-more-chevron::after,
   html[data-route~='calendar'] .reg-more-mark {
     content: '';
     display: block;
@@ -4404,29 +4394,57 @@ a.name-day:hover {
   }
 
   /*
-   * **The reading column is the card's text column, moved.** Every rule that
-   * shows the lede and the way into it asks for `.hero.has-media` around them,
-   * because until now the words were always beside the picture. They are a
-   * column of their own here, so the three are said again against the box that
-   * holds them — and the standalone copy stands down, exactly as it does
-   * beside a picture.
+   * **Life, Hymns, Writings under the picture** (`../mockup-review/REVIEW.md`
+   * finding 6): the mockup's `.toc`, a list over one rule, the section being
+   * read marked by the rubric at its edge and one the saint lacks in `--rule`.
+   * The bar hangs in the column's own padding, so the words keep its edge.
    */
-  html[data-route~='calendar'] .cal-read .hero-lede {
-    display: block;
+  html[data-route~='calendar'] .cal-saint .read-tabs {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--space-3);
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--rule);
+  }
+
+  html[data-route~='calendar'] .cal-saint .read-tab {
+    appearance: none;
+    background: none;
+    border: 0;
+    border-left: 2px solid transparent;
+    padding: var(--space-1) 0 var(--space-1) var(--space-3);
+    margin-left: calc(var(--space-3) * -1);
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    text-align: left;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: color var(--dur-answer) var(--ease);
+  }
+
+  html[data-route~='calendar'] .cal-saint .read-tab:hover {
+    color: var(--ink);
+  }
+
+  html[data-route~='calendar'] .cal-saint .read-tab[aria-selected='true'] {
+    color: var(--ink);
+    border-left-color: var(--rubric);
+  }
+
+  html[data-route~='calendar'] .cal-saint .read-tab[aria-disabled='true'] {
+    color: var(--rule);
+    cursor: default;
+  }
+
+  /* The whole life and the writings, at the measure the lede had. */
+  html[data-route~='calendar'] .cal-read .read-life,
+  html[data-route~='calendar'] .cal-read .read-writings {
     max-width: 62ch;
   }
 
-  html[data-route~='calendar'] .cal-read .hero-more:not(.hero-more-alone) {
-    display: inline-flex;
-    /* The same `align-self` the card's own copy needs, and for the same
-       reason: `.hero-body` is a column flex container, which blockifies an
-       inline-flex child and stretches it to the column — 339 px of target for
-       113 px of words, measured. */
-    align-self: flex-start;
-  }
-
-  html[data-route~='calendar'] .cal-read .hero-more-alone {
-    display: none;
+  html[data-route~='calendar'] .cal-read .read-life > :first-child,
+  html[data-route~='calendar'] .cal-read .read-writing:first-child > :first-child {
+    margin-top: 0;
   }
 
   /*

@@ -1414,6 +1414,11 @@ test('the day hero opens its life on a wide screen, and not on a narrow one', as
   // two can never disagree about where a life begins.
   await ready(page, { church: 'russian' });
   await page.goto('/calendar/2026-09-01', { waitUntil: 'networkidle' });
+  // Past 1024 px the whole life is read in its own column (stage E).
+  if (await page.evaluate(() => innerWidth >= 1024)) {
+    await expect(page.locator('.cal-read [data-read-life]')).toContainText('Gerasim, Pitirim and Jonah were bishops of Great Perm');
+    return;
+  }
   const lede = page.locator('[data-hero-lede]');
   await expect(lede).toContainText('Gerasim, Pitirim and Jonah were bishops of Great Perm');
   const shown = await lede.evaluate((el) => ({
@@ -1651,6 +1656,8 @@ test('the hero keeps its foot close under the dates', async ({ page }) => {
   await ready(page, { church: 'russian' });
   await page.goto('/calendar/2026-08-25', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
+  // Past 1024 px the card is the picture alone and its words head column 3.
+  test.skip(await page.evaluate(() => innerWidth >= 1024), 'the card has no body past 1024 px');
   /*
    * Under the last thing the card carries, which since 2026-09-01 is the way
    * into the life rather than the dates: an imageless hero now ends with
@@ -2437,7 +2444,8 @@ test('the Daily page carries no bookmark, at any width and whatever the name doe
 
       const m = await page.evaluate(() => {
         const h2 = document.querySelector('.hero-name');
-        const body = document.querySelector('.hero-body');
+        // `.hero-body` below 1024 px, the reading column's pinned head past it.
+        const body = h2.parentElement;
         return {
           nameWidth: h2.getBoundingClientRect().width,
           bodyWidth: body.getBoundingClientRect().width,
@@ -3024,7 +3032,8 @@ test('the day is four columns on a desktop and one on a phone', async ({ page })
   await expect(page.locator('.cal-main [data-readings]')).toHaveCount(1);
   await expect(page.locator('.cal-main [data-namedays]')).toHaveCount(1);
   await expect(page.locator('.cal-saint .hero')).toHaveCount(1);
-  await expect(page.locator('.cal-read [data-hero-lede]')).toHaveCount(1);
+  await expect(page.locator('.cal-saint [role="tablist"] [role="tab"]')).toHaveCount(3);
+  await expect(page.locator('.cal-read [data-read-life]')).toHaveCount(1);
   await expect(page.locator('.cal-read [data-hymns]')).toHaveCount(1);
   await expect(page.locator('.cal-bubble .register-cards')).toHaveCount(1);
   // And nothing painted into the phone's own panel, which is not drawn here.
@@ -3089,7 +3098,7 @@ test('choosing a saint from the shelf fills the middle columns and moves nothing
   const state = () =>
     page.evaluate(() => ({
       saint: document.querySelector('.cal-read .hero-name')?.textContent.trim(),
-      read: document.querySelector('.cal-read .hero-more-alone')?.getAttribute('href'),
+      read: document.querySelector('.cal-read [data-read-life]')?.dataset.readLife,
       hidden: [...document.querySelectorAll('[data-choose]')]
         .filter((r) => !r.offsetParent)
         .map((r) => r.dataset.choose),
@@ -3423,8 +3432,8 @@ test('past 1024 px the picture has a column and the words have the next one', as
   await page.setViewportSize({ width: 1280, height: 900 });
   await page.goto('/calendar/2026-09-24', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
-  // The preview arrives with the payload and is trimmed once it does.
-  await expect(page.locator('[data-hero-lede]')).toBeVisible();
+  // The life arrives with the payload.
+  await expect(page.locator('.cal-read [data-read-life] p').first()).toBeVisible();
 
   const m = await page.evaluate(() => ({
     hero: document.querySelector('.hero').getBoundingClientRect(),
@@ -3432,9 +3441,9 @@ test('past 1024 px the picture has a column and the words have the next one', as
     media: document.querySelector('.hero-media').getBoundingClientRect(),
     // The reading column's own text box, which is where the life is drawn past
     // 1024 px, and the name that heads it (stage D).
-    body: document.querySelector('.cal-read .hero-body').getBoundingClientRect(),
+    body: document.querySelector('.cal-read .read-pane:not([hidden])').getBoundingClientRect(),
     name: document.querySelector('.cal-read .hero-head .hero-name').getBoundingClientRect(),
-    lede: document.querySelector('[data-hero-lede]').getBoundingClientRect(),
+    lede: document.querySelector('.cal-read [data-read-life]').getBoundingClientRect(),
     namesInSaint: document.querySelectorAll('.cal-saint .hero-name').length,
   }));
 
@@ -3620,7 +3629,12 @@ test('the preview ends in a way into the life, on a desktop; a phone has no seco
    * else.
    */
   await ready(page);
-  await page.setViewportSize({ width: 1280, height: 900 });
+  /*
+   * **900 px since stage E**: past 1024 px the reading column prints the whole
+   * life and has no preview to end (`../mockup-review/REVIEW.md` finding 13),
+   * so this preview and its way in are the 760–1023 px card's.
+   */
+  await page.setViewportSize({ width: 900, height: 900 });
   await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
@@ -3726,7 +3740,12 @@ test('the preview ends where it ends, with nothing fading under the way in', asy
    * test it replaces.
    */
   await ready(page);
-  await page.setViewportSize({ width: 1440, height: 900 });
+  /*
+   * **900 px since stage E**: past 1024 px the reading column prints the whole
+   * life and has no preview to end (`../mockup-review/REVIEW.md` finding 13),
+   * so this preview and its way in are the 760–1023 px card's.
+   */
+  await page.setViewportSize({ width: 900, height: 900 });
   await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
@@ -4019,7 +4038,7 @@ const footGap = (page, sel) =>
     };
   }, sel);
 
-test('past 1024 px the reading column scrolls to Theodora of Alexandria’s hymns, and the page does not', async ({ page }) => {
+test('past 1024 px the reading column scrolls to the end of Theodora of Alexandria’s life, and the page does not', async ({ page }) => {
   await ready(page, { church: 'romanian' });
   for (const [width, height] of [
     [1440, 900],
@@ -4029,19 +4048,20 @@ test('past 1024 px the reading column scrolls to Theodora of Alexandria’s hymn
     await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
     await page.evaluate(() => document.fonts.ready);
 
-    // The review's saint and the review's premise: hymns below the window's foot.
+    // The review's saint, and since stage E her whole life: its end below the window's foot.
     await expect(page.locator('.cal-read .hero-head')).toContainText('Theodora of Alexandria');
-    const hymns = page.locator('.cal-read .day-hymns');
-    const below = await hymns.evaluate((h) => h.clientWidth > 0 && h.getBoundingClientRect().top > innerHeight);
-    expect(below, `premise: ${width} puts the hymns under the fold`).toBe(true);
+    const end = page.locator('.cal-read [data-read-life] > :last-child');
+    await expect(end).toBeAttached();
+    const below = await end.evaluate((h) => h.clientWidth > 0 && h.getBoundingClientRect().top > innerHeight);
+    expect(below, `premise: ${width} puts the end of the life under the fold`).toBe(true);
 
-    const { before, once, end } = await wheelToEnd(page, '.cal-read');
+    const { before, once, end: stops } = await wheelToEnd(page, '.cal-read');
     expect(once, `${width}: a wheel over the reading column moved nothing`).toBeGreaterThan(before);
     const foot = await footGap(page, '.cal-read');
     expect(foot.atEnd, `${width}: the wheel stopped short of the end`).toBe(true);
-    const last = await hymns.evaluate((h) => h.getBoundingClientRect().bottom);
-    expect(last, `${width}: the hymns end below the window`).toBeLessThanOrEqual(height);
-    expect(foot.gap, `${width}: the last line is flush with the column's foot (${end})`).toBeGreaterThanOrEqual(23);
+    const last = await end.evaluate((h) => h.getBoundingClientRect().bottom);
+    expect(last, `${width}: the life ends below the window`).toBeLessThanOrEqual(height);
+    expect(foot.gap, `${width}: the last line is flush with the column's foot (${stops})`).toBeGreaterThanOrEqual(23);
     expect(foot.page[0], `${width}: the page scrolls`).toBe(foot.page[1]);
     expect(foot.page[2]).toBe(0);
   }
@@ -4173,7 +4193,12 @@ test('the way into the life reads as a control without wearing a surface', async
    * change to either column says what it did rather than leaving a zero.
    */
   await ready(page);
-  await page.setViewportSize({ width: 1060, height: 900 });
+  /*
+   * **900 px since stage E**: past 1024 px the reading column prints the whole
+   * life and has no preview to end (`../mockup-review/REVIEW.md` finding 13),
+   * so this preview and its way in are the 760–1023 px card's.
+   */
+  await page.setViewportSize({ width: 900, height: 900 });
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
@@ -4182,20 +4207,9 @@ test('the way into the life reads as a control without wearing a surface', async
   const seen = await page.evaluate(() => {
     const link = [...document.querySelectorAll('.hero-more')].find((a) => a.offsetParent !== null);
     const cs = getComputedStyle(link);
-    // The mount's own foot since 2026-09-10 (§4.1) — the picture's mat is
-    // what the card ends on now, and `fitLede` fits the words to it.
-    const media = document.querySelector('.hero-figure').getBoundingClientRect();
     return {
       background: cs.backgroundColor,
       shadow: cs.boxShadow,
-      /*
-       * And still in the life's own column rather than under the picture:
-       * "inside the picture's height" was the rule until 2026-09-16 and is
-       * not one the four-column page can keep — the words are not beside the
-       * picture any more. What has to hold is that the way in is where the
-       * words are.
-       */
-      fits: document.querySelector('.cal-read .hero-body').getBoundingClientRect().left > media.right,
     };
   });
 
@@ -4219,7 +4233,6 @@ test('the way into the life reads as a control without wearing a surface', async
    * `the preview ends where it ends` is the test for the removal, and the
    * `below` reading this line used to make was the tail's own position.
    */
-  expect(seen.fits, 'the way into the life is not in the reading column').toBe(true);
 
 
 });
@@ -4397,7 +4410,12 @@ test('a hero with no picture offers one way into the life, not two', async ({ pa
    * Melitene, who has no icon.
    */
   await ready(page, { church: 'romanian' });
-  await page.setViewportSize({ width: 1440, height: 900 });
+  /*
+   * **900 px since stage E**: past 1024 px the reading column prints the whole
+   * life and has no preview to end (`../mockup-review/REVIEW.md` finding 13),
+   * so this preview and its way in are the 760–1023 px card's.
+   */
+  await page.setViewportSize({ width: 900, height: 900 });
   await page.goto('/calendar/2026-09-06', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
@@ -4648,7 +4666,7 @@ test('the hero picture stands on the page’s own ground, with no mount and no o
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/calendar/2026-09-24', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
-  await expect(page.locator('[data-hero-lede]')).toBeVisible();
+  await expect(page.locator('.cal-read [data-read-life] p').first()).toBeVisible();
 
   const m = await page.evaluate(() => {
     const figure = document.querySelector('.hero-figure');
@@ -4676,51 +4694,6 @@ test('the hero picture stands on the page’s own ground, with no mount and no o
   expect(Math.abs(m.media - m.saintColumn), 'the picture does not fill the saint column').toBeLessThan(1);
   // 26, the scale's own h2 step, where the reference drew 27 (§10.8).
   expect(m.nameSize, 'the hero name is off the type scale').toBe(26);
-});
-
-
-test('the way into the life ends in a diamond, the last chevron on this page', async ({ page }) => {
-  /*
-   * The instruction: "`Continue reading ›` loses its
-   * chevron for a 5px diamond. It is the last chevron on the page — on *this*
-   * page: the register's own controls and the picker keep theirs."
-   *
-   * Both halves are asserted, because the first alone would pass on a mark
-   * that had simply been deleted: the character is gone from the link's own
-   * text, *and* a 5 px square stands in its place, turned 45°.
-   */
-  await ready(page);
-  await page.setViewportSize({ width: 1280, height: 900 });
-  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
-  await page.evaluate(() => document.fonts.ready);
-
-  const more = page.locator('.hero-more').filter({ visible: true });
-  await expect(more).toHaveCount(1);
-  await expect(more, 'a chevron is still on the way into the life').not.toContainText(/[‹›]/);
-
-  const mark = await page.evaluate(() => {
-    const link = [...document.querySelectorAll('.hero-more')].find((a) => a.offsetParent !== null);
-    const s = getComputedStyle(link.querySelector('.hero-more-chevron'), '::after');
-    return {
-      width: parseFloat(s.width),
-      height: parseFloat(s.height),
-      transform: s.transform,
-      // A shape, not a glyph: `content` is the empty string here and the
-      // chevron everywhere else on the site.
-      content: s.content,
-    };
-  });
-  expect(mark.width, 'the diamond is not 5 px wide').toBe(5);
-  expect(mark.height, 'the diamond is not 5 px tall').toBe(5);
-  expect(mark.content, 'the mark is still a character').toBe('""');
-  /*
-   * 45° as a matrix, which is what `getComputedStyle` prints: cos and sin of
-   * a quarter turn, to the six places Chrome rounds to. Read as "it is turned
-   * a quarter of a right angle", not as a magic number.
-   */
-  expect(mark.transform, 'the mark is not turned onto its corner').toMatch(
-    /^matrix\(0\.7071\d*, 0\.7071\d*, -0\.7071\d*, 0\.7071\d*, 0, 0\)$/,
-  );
 });
 
 
@@ -4767,7 +4740,7 @@ test('the picture grows with its own column as the window widens', async ({ page
         mat: parseFloat(getComputedStyle(figure).paddingLeft),
         // The words are the next column, which is the whole of what replaced
         // the share: they are not beside the picture inside one card.
-        wordsLeft: document.querySelector('.cal-read .hero-body').getBoundingClientRect().left,
+        wordsLeft: document.querySelector('.cal-read .hero-head').getBoundingClientRect().left,
         pictureRight: figure.getBoundingClientRect().right,
       };
     });
@@ -4878,4 +4851,187 @@ test('the columns do not shake when the window is resized', async ({ page }) => 
     ).toBeCloseTo(4, 0);
     expect(steps.read, 'the reading column did not take the largest share of the slack').toBeGreaterThan(steps.day);
   }
+});
+
+
+/* ---- stage E: Life, Hymns, Writings (2026-09-18) ------------------------- */
+
+/*
+ * `../mockup-review/REVIEW.md` findings 6 and 13. The mockup's `nav.toc`: three
+ * lines under the picture's credit over one rule, the section being read in ink
+ * with the rubric at its edge, one the saint lacks in `--rule` and not
+ * pressable; the reading column shows the chosen section alone, and Life is the
+ * whole life. The choice outlives the saint, falling back to Life.
+ */
+const readTabs = (page) =>
+  page.evaluate(() => {
+    const tabs = [...document.querySelectorAll('.cal-saint [role="tablist"] [role="tab"]')];
+    return {
+      tabs: tabs.map((t) => ({
+        key: t.dataset.readTab,
+        selected: t.getAttribute('aria-selected'),
+        disabled: t.getAttribute('aria-disabled') === 'true',
+        tabindex: t.tabIndex,
+        color: getComputedStyle(t).color,
+        edge: getComputedStyle(t).borderLeftColor,
+        edgeWidth: getComputedStyle(t).borderLeftWidth,
+      })),
+      shown: [...document.querySelectorAll('.cal-read [role="tabpanel"]')]
+        .filter((p) => !p.hidden && p.clientWidth > 0)
+        .map((p) => p.dataset.readPane),
+      focused: document.activeElement?.dataset?.readTab ?? null,
+    };
+  });
+
+test('past 1024 px Life, Hymns and Writings stand under the picture, and the reading column shows the one chosen', async ({ page }) => {
+  const { readFileSync } = await import('node:fs');
+  const [ink, inkSoft, rule, rubric] = await (async () => {
+    await ready(page, { church: 'romanian' });
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
+    return tokenColours(page, '--ink', '--ink-soft', '--rule', '--rubric');
+  })();
+
+  // The life as the folder holds it: body paragraphs, not the title.
+  const md = readFileSync('saints/theodora-of-alexandria/life.md', 'utf8');
+  const paragraphs = md.split(/\n\s*\n/).filter((b) => b.trim() && !/^#\s/.test(b.trim())).length;
+  expect(paragraphs, 'premise: Theodora’s life is more than one paragraph').toBeGreaterThan(1);
+
+  for (const [width, height] of [
+    [1440, 900],
+    [1280, 800],
+  ]) {
+    await page.setViewportSize({ width, height });
+    await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+    await expect(page.locator('.cal-read .hero-head')).toContainText('Theodora of Alexandria');
+    await expect(page.locator('.cal-saint .hero-credit')).toBeVisible();
+    await expect(page.locator('.cal-read [data-read-life] p').last()).toBeAttached();
+
+    // Under the credit, over one rule, on the picture's own edge.
+    const g = await page.evaluate(() => {
+      const r = (s) => document.querySelector(s).getBoundingClientRect();
+      const list = document.querySelector('.cal-saint [role="tablist"]');
+      return {
+        credit: r('.cal-saint .hero-credit'),
+        media: r('.cal-saint .hero-media'),
+        list: list.getBoundingClientRect(),
+        rule: getComputedStyle(list).borderTopWidth,
+        words: r('.cal-saint [role="tab"]').left + parseFloat(getComputedStyle(document.querySelector('.cal-saint [role="tab"]')).paddingLeft),
+      };
+    });
+    expect(g.list.top, `${width}: the list is not under the credit`).toBeGreaterThan(g.credit.bottom);
+    expect(g.list.top - g.credit.bottom, `${width}: the list has drifted from the credit`).toBeLessThan(25);
+    expect(g.rule, `${width}: no rule over the list`).toBe('1px');
+    expect(Math.abs(g.words - g.media.left), `${width}: the words are not on the picture’s edge`).toBeLessThan(1.5);
+
+    // Life chosen, Hymns there to press, Writings offered and not pressable.
+    let s = await readTabs(page);
+    expect(s.tabs.map((t) => t.key)).toEqual(['life', 'hymns', 'writings']);
+    expect(s.tabs.map((t) => t.selected)).toEqual(['true', 'false', 'false']);
+    expect(s.tabs.map((t) => t.tabindex), 'more than one tab stop in the list').toEqual([0, -1, -1]);
+    expect(s.tabs.map((t) => t.disabled)).toEqual([false, false, true]);
+    expect([s.tabs[0].color, s.tabs[0].edge, s.tabs[0].edgeWidth], 'the chosen section is not marked').toEqual([ink, rubric, '2px']);
+    expect(s.tabs[1].color).toBe(inkSoft);
+    expect(s.tabs[2].color, 'the empty section is not in the rule colour').toBe(rule);
+    expect(s.shown).toEqual(['life']);
+
+    // The whole life, every paragraph, where only the first used to be.
+    const drawn = await page.locator('.cal-read [data-read-life] > p').count();
+    expect(drawn, `${width}: the life is cut`).toBeGreaterThanOrEqual(paragraphs);
+    await expect(page.locator('.cal-read .hero-more').filter({ visible: true })).toHaveCount(0);
+
+    // Hover answers in ink.
+    const hymnsBox = await page.locator('.cal-saint [data-read-tab="hymns"]').boundingBox();
+    await page.mouse.move(hymnsBox.x + 20, hymnsBox.y + hymnsBox.height / 2);
+    await expect.poll(() => page.locator('.cal-saint [data-read-tab="hymns"]').evaluate((t) => getComputedStyle(t).color)).toBe(ink);
+    await page.mouse.move(0, 0);
+
+    // A press on Hymns shows the hymns alone, from the top.
+    await page.evaluate(() => (document.querySelector('.cal-read').scrollTop = 200));
+    await page.locator('.cal-saint [data-read-tab="hymns"]').dispatchEvent('click');
+    s = await readTabs(page);
+    expect(s.tabs.map((t) => t.selected)).toEqual(['false', 'true', 'false']);
+    expect(s.shown).toEqual(['hymns']);
+    await expect(page.locator('.cal-read [data-read-pane="hymns"] .hymn').last()).toBeVisible();
+    expect(await page.evaluate(() => document.querySelector('.cal-read').scrollTop)).toBe(0);
+
+    // A press on the empty section does nothing.
+    await page.locator('.cal-saint [data-read-tab="writings"]').dispatchEvent('click');
+    expect((await readTabs(page)).shown).toEqual(['hymns']);
+
+    // The keyboard: one stop, arrows move and choose, skip the empty one and wrap.
+    await page.locator('.cal-saint [data-read-tab="hymns"]').focus();
+    await page.keyboard.press('ArrowDown');
+    s = await readTabs(page);
+    expect([s.focused, s.shown[0]], 'ArrowDown did not wrap past the empty section to Life').toEqual(['life', 'life']);
+    await page.keyboard.press('ArrowUp');
+    s = await readTabs(page);
+    expect([s.focused, s.shown[0]]).toEqual(['hymns', 'hymns']);
+    await page.keyboard.press('Home');
+    expect((await readTabs(page)).focused).toBe('life');
+    await page.keyboard.press('End');
+    s = await readTabs(page);
+    expect([s.focused, s.shown[0], s.tabs[1].tabindex]).toEqual(['hymns', 'hymns', 0]);
+  }
+});
+
+test('past 1024 px the section chosen is kept for the next saint, and a saint without it opens on Life', async ({ page }) => {
+  /*
+   * 4 September in the Romanian calendar: Babylas of Antioch and Moses the
+   * Prophet have hymns, Hermione has none, and the day itself carries no
+   * Romanian hymns of its own (which would give every saint a Hymns section).
+   */
+  await ready(page, { church: 'romanian' });
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-04', { waitUntil: 'networkidle' });
+  await expect(page.locator('.cal-read .hero-head')).toBeVisible();
+  const reading = page.locator('.cal-read [data-read-life]');
+  const hero = await reading.getAttribute('data-read-life');
+  expect(['moses-the-prophet', 'babylas-of-antioch'], 'premise: the day opens on one of the two').toContain(hero);
+  const other = hero === 'moses-the-prophet' ? 'babylas-of-antioch' : 'moses-the-prophet';
+  await expect(page.locator('.cal-read [data-feast-hymns] .hymn'), 'premise: the day has hymns of its own').toHaveCount(0);
+
+  await page.locator('.cal-saint [data-read-tab="hymns"]').dispatchEvent('click');
+  await page.locator(`[data-choose="${other}"]`).dispatchEvent('click');
+  await expect(reading).toHaveAttribute('data-read-life', other);
+  let s = await readTabs(page);
+  expect(s.tabs[1].disabled, `premise: ${other} has hymns`).toBe(false);
+  expect(s.shown, 'the choice did not outlive the saint').toEqual(['hymns']);
+
+  await page.locator('[data-choose="hermione-daughter-of-philip"]').dispatchEvent('click');
+  await expect(reading).toHaveAttribute('data-read-life', 'hermione-daughter-of-philip');
+  s = await readTabs(page);
+  expect(s.tabs[1].disabled, 'premise: Hermione has no hymns').toBe(true);
+  expect(s.shown, 'a saint without hymns did not open on Life').toEqual(['life']);
+
+  // The fall-back is the choice now, as in the mockup's `pick`.
+  await page.locator(`[data-choose="${hero}"]`).dispatchEvent('click');
+  await expect(reading).toHaveAttribute('data-read-life', hero);
+  expect((await readTabs(page)).shown).toEqual(['life']);
+});
+
+test('past 1024 px Writings opens the saint’s own source texts, where the folder has one', async ({ page }) => {
+  /*
+   * Writings are `text.sources`: two saints in the corpus, Anthony the Great
+   * and Paul of Thebes. Fetched when chosen, never before.
+   */
+  const { readFileSync } = await import('node:fs');
+  const heading = /^#\s+(.+)$/m.exec(readFileSync('saints/anthony-the-great/sources/athanasius-life-of-antony.md', 'utf8'))[1];
+  let fetched = 0;
+  page.on('request', (r) => {
+    if (r.url().includes('athanasius-life-of-antony')) fetched += 1;
+  });
+  await ready(page, { church: 'romanian' });
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2027-01-17', { waitUntil: 'networkidle' });
+  await expect(page.locator('.cal-read .hero-head')).toContainText('Anthony the Great');
+  const writings = page.locator('.cal-saint [data-read-tab="writings"]');
+  await expect(writings).not.toHaveAttribute('aria-disabled', 'true');
+  expect(fetched, 'the source was fetched before anyone asked for it').toBe(0);
+
+  await writings.dispatchEvent('click');
+  await expect(page.locator('.cal-read [data-read-pane="writings"] h3')).toHaveText(heading);
+  expect((await readTabs(page)).shown).toEqual(['writings']);
+  expect(fetched).toBeGreaterThan(0);
 });

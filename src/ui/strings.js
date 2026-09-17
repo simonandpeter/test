@@ -193,6 +193,8 @@ export const STRINGS = {
      */
     heroMore: 'Continue reading',
     heroMoreOf: 'Continue reading the life of {name}',
+    /* The three sections listed under the saint past 1024 px; `label` names the list. */
+    readTabs: { label: 'About {name}', life: 'Life', hymns: 'Hymns', writings: 'Writings' },
     /*
      * The heading over the open card's first column, where the life stands
      * beside the two hymns. It says *from*, because the column holds the

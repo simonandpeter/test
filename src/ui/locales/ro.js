@@ -77,6 +77,7 @@ export const ro = {
     continueReadingOf: 'Continuă viața Sfântului {name}',
     heroMore: 'Continuă lectura',
     heroMoreOf: 'Continuă viața Sfântului {name}',
+    readTabs: { label: 'Despre {name}', life: 'Viața', hymns: 'Cântări', writings: 'Scrieri' },
     fromTheLife: 'Din viața sa',
     emptyDay: 'Pentru această zi nu sunt încă pomeniri înregistrate. Corpusul crește dosar cu dosar, iar o zi goală e o lipsă în sursele noastre, nu o afirmație despre calendar. Încearcă o zi vecină sau sfinții înșiși.',
     beyondRecords: 'Citirile și cântările sunt consemnate până la {until}, iar ziua aceasta este după. Ce stă mai sus - postul, glasul și săptămâna - se calculează și este valabil pentru orice dată.',

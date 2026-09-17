@@ -37,7 +37,7 @@ import { onWideChange } from '../lib/viewport.js';
 import { buildRail, growMonthBody, markRail, measure, monthCursor, moveMonth, paintMonth, paintMonthInto, revealSelected, stepCursor, stepMonth, toggleMonth, wireDayKeys, wireDaySwipe, wireRail } from './daily/picker.js';
 import { countFor, dayRecordFor } from './daily/entries.js';
 import { monthFmt, reckonedHeading, weekdayFmt } from './daily/format.js';
-import { markChosen, paintChosen, paintDay } from './daily/panel.js';
+import { markChosen, paintChosen, paintDay, showReadTab } from './daily/panel.js';
 import { fullCalButton, wireFullCal } from './daily/fullcal.js';
 
 import { gradeForDay, gradeFromNote } from '../lib/fast-grade.js';
@@ -121,6 +121,10 @@ export function render(el, { data, params, router }) {
        and does not survive it. Below the breakpoint nothing reads it: there is
        one hero and no column to put a second saint in. */
     picked: null,
+    /* Which of Life, Hymns and Writings the reading column shows past 1024 px
+       (`daily/panel.js` `paintReading`). Kept across saints and days, as the
+       mockup keeps it; not stored, as the mockup does not store it. */
+    readTab: 'life',
     cleanups: [], dayCleanups: [],
     sizeTimer: null,
     monthGrain: null, railAnchor: null,
@@ -385,6 +389,41 @@ export function render(el, { data, params, router }) {
   };
   el.addEventListener('click', onChoose);
   state.cleanups.push(() => el.removeEventListener('click', onChoose));
+  /*
+   * **Life, Hymns, Writings: a vertical tab list** under the saint's picture.
+   * A press or an arrow chooses (selection follows focus, since every section
+   * is already painted); arrows skip a section the saint lacks and wrap, Home
+   * and End go to the ends.
+   */
+  const readTab = (tab, focus) => {
+    state.readTab = tab.dataset.readTab;
+    showReadTab(panelsIn(el), state.readTab, { focus });
+  };
+  const onReadTab = (e) => {
+    const tab = e.target.closest?.('[data-read-tab]');
+    if (!tab || !el.contains(tab) || tab.getAttribute('aria-disabled') === 'true') return;
+    readTab(tab, false);
+  };
+  const STEP = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1, Home: 'first', End: 'last' };
+  const onReadKey = (e) => {
+    const tab = e.target.closest?.('[data-read-tab]');
+    const step = STEP[e.key];
+    if (!tab || !step || !el.contains(tab)) return;
+    const live = [...tab.parentElement.querySelectorAll('[data-read-tab]:not([aria-disabled="true"])')];
+    if (!live.length) return;
+    e.preventDefault();
+    const at = live.indexOf(tab);
+    const next = step === 'first' ? live[0]
+      : step === 'last' ? live[live.length - 1]
+      : live[(Math.max(at, 0) + step + live.length) % live.length];
+    readTab(next, true);
+  };
+  el.addEventListener('click', onReadTab);
+  el.addEventListener('keydown', onReadKey);
+  state.cleanups.push(() => {
+    el.removeEventListener('click', onReadTab);
+    el.removeEventListener('keydown', onReadKey);
+  });
   /*
    * The columns are not the same boxes at the two widths — below 1024 px the
    * day is one panel and three of the five slots are not drawn — so a window

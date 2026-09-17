@@ -1,11 +1,11 @@
 import { formatSubtext, pickHero, todayIso } from '../../lib/calendar-page.js';
 import { churchName, entriesInChurch } from '../../lib/church.js';
-import { loadDetail } from '../../lib/detail.js';
+import { loadDetail, loadSource } from '../../lib/detail.js';
 import { cardCrop, columnCrop, heroCrop } from '../../lib/hero-crop.js';
 import { saintName } from '../../lib/honorific.js';
 import { currentLanguage, languageTag, translateOffice } from '../../lib/i18n.js';
 import { greatFeast } from '../../lib/liturgy.js';
-import { escapeHtml as esc, firstParagraphText } from '../../lib/markdown.js';
+import { escapeHtml as esc, firstParagraphText, renderMarkdown, stripLeadingHeading } from '../../lib/markdown.js';
 import { nameDays } from '../../lib/name-days.js';
 import { REGISTER_LAYOUTS } from '../../lib/settings.js';
 import { typeGlyph, typeName } from '../../lib/saint-types.js';
@@ -37,17 +37,11 @@ const BASE = import.meta.env.BASE_URL;
  * only — the CSS hides the box below 760 px, where the hero has no spare
  * column and the life is a scroll away under the register anyway.
  */
-/*
- * `picture` is the saint column past 1024 px, where the picture's credit is
- * written under it; the name, its places and the lede share `panel`. Both
- * arrive in the same fetched payload: one call, two boxes, not two fetches.
- */
-function fillHeroLede(panel, slug, iso, card, picture = null) {
+function fillHeroLede(panel, slug, iso, card) {
   loadDetail(slug).then(
     (payload) => {
       if (!state || state.selected !== iso) return;
       fillHeroPlaces(panel, payload);
-      if (picture) fillHeroCredit(picture, payload);
       const box = panel.querySelector('[data-hero-lede]');
       if (!box) return;
       const text = firstParagraphText(payload?.life);
@@ -787,11 +781,8 @@ export function paintDay(panels) {
 
   if (wide) {
     main.innerHTML = '';
-    saintCol.innerHTML = heroArticle(hero, media, ratio, '');
-    readCol.innerHTML = readingColumn(hero, selected);
+    paintReading(saintCol, readCol, hero, media, ratio);
     shelfCol.innerHTML = register;
-    fillSaintHymns(readCol, hero.slug, selected);
-    fillHeroLede(readCol, hero.slug, selected, hero, saintCol);
     fillRegisterLives(shelfCol, selected);
     return;
   }
@@ -805,18 +796,114 @@ export function paintDay(panels) {
 }
 
 /*
- * The reading column, past 1024 px: who the saint is, pinned over the opening
- * of the life and what is sung (`../mockup-review/REVIEW.md` finding 4).
+ * **Past 1024 px the saint is read one section at a time**
+ * (`../mockup-review/REVIEW.md` findings 6 and 13): Life, Hymns and Writings
+ * listed under the picture, and the reading column showing the one chosen, under the pinned
+ * name. The life is the whole life, as the saint page prints it.
  *
- * The `.hero-body` wrapper is not decoration. `fillHeroLede` appends the way
- * into the life to the card's text column, and this column *is* that column
- * now — without the box the link has nowhere to land and the phone's
- * standalone copy stands in for it, which is the pair of controls the
- * 2026-09-02 rule spent a commit collapsing back into one.
+ * A tab pattern: the list is a `tablist` in column 2 and each section a
+ * `tabpanel` in column 3, all three painted and two `hidden`, so a choice
+ * fetches nothing already fetched. A section the saint lacks stays in the list,
+ * `aria-disabled`, as the mockup draws it. Writings are the folder's own
+ * `text.sources`, which the manifest does not carry, so that tab is disabled
+ * until the payload says otherwise.
+ *
+ * The choice is `state.readTab` and outlives the saint and the day; a saint
+ * without the chosen section sends it back to Life, which every saint has —
+ * the mockup's `pick`.
  */
-const readingColumn = (hero, iso) =>
-  `<header class="hero-head">${heroIdentity(hero)}</header>
-    <div class="hero-body">${heroOpening(hero)}</div>${hymnsMarkup(iso, state.calendar)}`;
+const READ_TABS = ['life', 'hymns', 'writings'];
+
+function paintReading(saintCol, readCol, hero, media, ratio) {
+  const { selected: iso, calendar } = state;
+  const sung = (dayRecordFor(iso, calendar)?.hymns ?? []).some((h) => h.church === calendar)
+    || !!hero.hymned?.includes(calendar);
+  if (state.readTab === 'hymns' && !sung) state.readTab = 'life';
+  // Unknown until the payload lands; Life stands in for it meanwhile.
+  const shown = state.readTab === 'writings' ? 'life' : state.readTab;
+  const has = { life: true, hymns: sung, writings: false };
+  const T = STRINGS.calendar.readTabs;
+  const tabs = READ_TABS.map((key) => {
+    const on = key === shown;
+    return `<button type="button" role="tab" class="read-tab" id="read-tab-${key}" data-read-tab="${key}"
+        aria-controls="read-pane-${key}" aria-selected="${on}" tabindex="${on ? 0 : -1}"${has[key] ? '' : ' aria-disabled="true"'}>${esc(T[key])}</button>`;
+  }).join('');
+  const pane = (key, body) =>
+    `<div class="read-pane" role="tabpanel" id="read-pane-${key}" aria-labelledby="read-tab-${key}" data-read-pane="${key}"${key === shown ? '' : ' hidden'}>${body}</div>`;
+
+  saintCol.innerHTML = `${heroArticle(hero, media, ratio, '')}
+    <div class="read-tabs" role="tablist" aria-orientation="vertical"
+      aria-label="${esc(fill(T.label, { name: saintName(hero) }))}">${tabs}</div>`;
+  readCol.innerHTML = `<header class="hero-head">${heroIdentity(hero)}</header>
+    ${pane('life', `<div class="read-life" lang="en" data-read-life="${hero.slug}"></div>`)}
+    ${pane('hymns', hymnsMarkup(iso, calendar))}
+    ${pane('writings', '<div class="read-writings" lang="en" data-read-writings></div>')}`;
+
+  fillSaintHymns(readCol, hero.slug, iso);
+  loadDetail(hero.slug).then(
+    (payload) => {
+      if (!state || state.selected !== iso) return;
+      const life = readCol.querySelector(`[data-read-life="${hero.slug}"]`);
+      if (!life) return; // another saint was chosen while this one loaded
+      fillHeroPlaces(readCol, payload);
+      fillHeroCredit(saintCol, payload);
+      life.innerHTML = payload?.life
+        ? renderMarkdown(stripLeadingHeading(payload.life), {
+            link: (href) => (href.startsWith('/') ? state.router.href(href) : href),
+          })
+        : `<p class="utility">${esc(STRINGS.saint.noLife)}</p>`;
+      const sources = payload?.saint?.text?.sources ?? [];
+      const writings = readCol.querySelector('[data-read-writings]');
+      if (sources.length) {
+        saintCol.querySelector('[data-read-tab="writings"]').removeAttribute('aria-disabled');
+        writings.dataset.sources = JSON.stringify(sources);
+        writings.dataset.slug = hero.slug;
+      }
+      if (state.readTab !== 'writings') return;
+      if (sources.length) showReadTab({ saint: saintCol, content: readCol }, 'writings');
+      else state.readTab = 'life';
+    },
+    () => {}, // the payload failed: the life stays empty, as the lede did, and the page says nothing false
+  );
+}
+
+/**
+ * Shows one section and marks its tab; `calendar.js` writes `state.readTab`
+ * and calls this. Writings are fetched on first showing: Jerome's Life of Paul
+ * is 40 KB, and nobody should pay for it to read a feast day.
+ */
+export function showReadTab({ saint: saintCol, content: readCol }, key, { focus = false } = {}) {
+  if (!saintCol || !readCol) return;
+  for (const tab of saintCol.querySelectorAll('[data-read-tab]')) {
+    const on = tab.dataset.readTab === key;
+    tab.setAttribute('aria-selected', String(on));
+    tab.tabIndex = on ? 0 : -1;
+    if (on && focus) tab.focus();
+  }
+  for (const pane of readCol.querySelectorAll('[data-read-pane]')) pane.hidden = pane.dataset.readPane !== key;
+  readCol.closest('.cal-read')?.scrollTo({ top: 0 });
+  if (key === 'writings') fillWritings(readCol.querySelector('[data-read-writings]'));
+}
+
+function fillWritings(box) {
+  if (!box?.dataset.sources || box.dataset.loaded) return;
+  box.dataset.loaded = 'pending';
+  const { slug } = box.dataset;
+  Promise.all(
+    JSON.parse(box.dataset.sources).map((file) =>
+      loadSource(slug, file).then(
+        (text) => {
+          const heading = /^\s*#\s+(.+)$/m.exec(text)?.[1];
+          return `<article class="read-writing">${heading ? `<h3>${esc(heading)}</h3>` : ''}${renderMarkdown(stripLeadingHeading(text), { headingOffset: 2 })}</article>`;
+        },
+        () => `<p class="error-note">${STRINGS.saint.sourceFailed}</p>`,
+      ),
+    ),
+  ).then((parts) => {
+    box.innerHTML = parts.join('');
+    box.dataset.loaded = 'done';
+  });
+}
 
 const heroArticle = (hero, media, ratio, body) => `
     <article class="hero ${hero.image ? 'has-media' : ''}" style="--hero-r:${ratio}">
@@ -894,10 +981,7 @@ export function paintChosen({ saint: saintCol, content: readCol }) {
   if (!entries.length) return;
   const hero = data.bySlug.get(chosenSlug(entries));
   const { media, ratio } = heroPicture(hero, true);
-  saintCol.innerHTML = heroArticle(hero, media, ratio, '');
-  readCol.innerHTML = readingColumn(hero, selected);
-  fillSaintHymns(readCol, hero.slug, selected);
-  fillHeroLede(readCol, hero.slug, selected, hero, saintCol);
+  paintReading(saintCol, readCol, hero, media, ratio);
 }
 
 /**

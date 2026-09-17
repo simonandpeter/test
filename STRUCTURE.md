@@ -519,11 +519,13 @@ html[data-route~='calendar'][data-fills-window]
         │                            name days, readings; hymns below 1024
         ├ .cal-saint [data-col=saint]  column 2, ≥1024 only
         │ └ .slot-viewport[data-slot=saint] > .day-panel.day-saint
-        │                            the chosen saint's picture and its credit
+        │                            the chosen saint's picture, its credit, and
+        │                            Life / Hymns / Writings (a tablist)
         ├ .cal-read [data-col=content] column 3, ≥1024 only
         │ └ .slot-viewport[data-slot=content] > .day-panel.day-content
-        │                            name and dates (pinned), the opening of
-        │                            the life, and the hymns
+        │                            name and dates (pinned), then the one
+        │                            section chosen: the whole life, the hymns
+        │                            or the writings (three tabpanels)
         └ .cal-bubble                 column 4, a plain column
           └ .cal-bubble-scroll       the shelf's scroller
             └ .slot-viewport[data-slot=shelf] > .day-panel.day-shelf
@@ -603,6 +605,20 @@ else.
   author's 2026-09-01 ceiling, where the mockup takes 58vh), drawn from the card
   derivative, no mat, with the credit under it. A saint with no icon has no
   box.
+- **Life, Hymns and Writings stand under the picture's credit, and the reading
+  column shows the one chosen** (findings 6 and 13): the mockup's `.toc`, over
+  one rule, the chosen line in ink with the rubric at its edge and a section
+  the saint lacks in `--rule` and not pressable. A vertical tab pattern —
+  `role="tablist"` in column 2, a `tabpanel` per section in column 3, all
+  three painted and two `hidden`; arrows move and choose, skipping the empty
+  ones and wrapping, Home and End go to the ends. **Life is the whole life**,
+  rendered as the saint page renders it, with no "Continue reading". Hymns are
+  the day's and the saint's, as before. Writings are the folder's
+  `text.sources` (Anthony the Great and Paul of Thebes), which the manifest
+  does not carry, so that line is disabled until the payload says otherwise and
+  a source is fetched only when chosen. The choice is `state.readTab`: kept
+  across saints and days, not stored, and a saint without it sends it back to
+  Life — the mockup's `pick`.
 - **The name and its dates head the reading column, pinned** (finding 4): a
   sticky head on `--gesso` over one rule, the life scrolling under it. Its
   `.slot-viewport` is `overflow: clip` for the shelf's reason.
@@ -658,9 +674,10 @@ The two widths are free to diverge except here.
 - **The day cells** — the week rail's and the month grid's — are one drawing:
   the same box, numerals, feast mark and fast colour.
 - **The hero and the register rows are the same components at both widths.**
-  Past 1024 px the hero is taken apart at one seam — its picture into the
-  saint column, `heroIdentity` and `heroOpening` into the reading column — and nothing is drawn
-  twice to do it. The register row is one element with one set of classes at
+  Past 1024 px the hero is taken apart at one seam — its picture into the saint
+  column, `heroIdentity` into the reading column's pinned head — and nothing is
+  drawn twice to do it. `heroOpening`, the lede and its way in, is the card's
+  below 1024 px only; past it the reading column prints the whole life. The register row is one element with one set of classes at
   both widths: what the desk's plate changes is the boxes the same `.reg-card`,
   `.reg-thumb`, `.reg-pic` and `.reg-body` are laid into, inside
   `@media (min-width: 1024px)` and nowhere else. Nothing is rendered twice and
@@ -693,6 +710,7 @@ read where they are declared.
 | `data-fills-window` | `index.html` before first paint, `main.js` on every navigation | `base.css`, at 1024 px and up |
 | `data-fullcal='open'` | `daily/fullcal.js` | 2 rules |
 | `data-choose` | `daily/panel.js`, on each shelf row ≥1024 | `calendar.js`'s one delegated press. Not `data-pick`: the reckoning popover's four rows had that name first. |
+| `data-read-tab`, `data-read-pane` | `daily/panel.js` `paintReading`, ≥1024 | `calendar.js`'s delegated press and arrow keys, and `showReadTab` |
 | `data-slot` | `views/calendar.js` | the five panels, by name, in `calendar.js`'s roll and in `calendar.css` |
 
 **Known coupling.** The route's own rules are what decide one view's inner
