@@ -1,0 +1,157 @@
+{
+  "slug": "thomas-the-apostle",
+  "display_name": "Thomas",
+  "names": [
+    {
+      "form": "Θωμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Άγιος Θωμάς ο Απόστολος»."
+    },
+    {
+      "form": "Toma",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro’s line „Sfântul Apostol Toma” for 6 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle",
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 6 октября ст. ст. (civil 19 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 6 octombrie — „Sfântul Apostol Toma”",
+        "url": "https://doxologia.ro/6-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 6 Οκτωβρίου — «Άγιος Θωμάς ο Απόστολος»",
+        "url": "https://www.saint.gr/10/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 6. октобар ст. ст. (civil 19 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ὡς θεῖος Ἀπόστολος, θεολογίας κρουνούς, ἐνθέως ἐξήντλησας, ἐκ λογχονύκτου πλευρᾶς, Χριστοῦ τοῦ Θεοῦ ἠμῶν. Ὅθεν τῆς εὐσέβειας, κατασπείρας τὸν λόγον, ἔλαμψας ἐν Ἰνδίᾳ, ὡς ἀκτὶς οὐρανία, Θωμὰ τῶν Ἀποστόλων, τὸ θεῖον ἀγλάισμα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Θωμάς ο Απόστολος, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1027/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "As a divine apostle, thou didst draw in godly wise streams of theology from the lance-pierced side of Christ our God; wherefore, having sown the word of piety, thou didst shine in India as a heavenly ray, O Thomas, the divine adornment of the apostles.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Ἀπόστολε Ἅγιε Θωμᾶ, πρέσβευε τῷ ἐλεήμονι Θεῷ ἵνα πταισμάτων ἄφεσιν, παράσχῃ ταῖς ψυχαῖς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Θωμάς ο Απόστολος, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1027/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostle (mentioned by name), entreat the Merciful God that He may grant the remission of sins to our souls.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter VIII, The General Service to an Apostle",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ὁ τῆς θείας χάριτος πεπληρωμένος, τοῦ Χριστοῦ Ἀπόστολος, καὶ ὑπηρέτης ἀληθής, ἐν μετανοίᾳ ἐκραύγαζε· Σύ μου ὑπάρχεις, Θεός τε καὶ Κύριος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Θωμάς ο Απόστολος, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/1027/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ἐπεφάνης σήμερον.",
+      "english": {
+        "text": "Filled with divine grace, the apostle of Christ and true servant cried out in repentance: Thou art my God and Lord.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Apostole Sfinte Toma, roagă pe Milostivul Dumnezeu, ca să dăruiască iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Apostol Toma",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-toma",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostle (mentioned by name), entreat the Merciful God that He may grant the remission of sins to our souls.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter VIII, The General Service to an Apostle",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "De harul înţelepciunii plin fiind Apostolul lui Hristos şi adevărată slugă întru pocăinţă, a grăit: Tu eşti Dumnezeul meu şi Domnul.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Apostol Toma",
+        "url": "https://doxologia.ro/condacul-sfantului-apostol-toma",
+        "year": 2026
+      },
+      "model": "Arătatu-Te-ai astăzi...",
+      "english": {
+        "text": "Filled with the grace of wisdom, the apostle of Christ and true servant said in repentance: Thou art my God and Lord.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

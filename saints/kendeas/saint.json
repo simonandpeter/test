@@ -1,0 +1,70 @@
+{
+  "slug": "kendeas",
+  "display_name": "Kendeas",
+  "names": [
+    {
+      "form": "Κενδέας",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Όσιος Κενδέας ο θαυματουργός»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 6 октября ст. ст. (civil 19 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 6 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 6 Οκτωβρίου — «Όσιος Κενδέας ο θαυματουργός»",
+        "url": "https://www.saint.gr/10/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 6. октобар ст. ст. (civil 19 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἤχος πλ. α΄.",
+      "text": "Αρετών τη ασκήσει Πάτερ κοσμούμενος, εν τη Κύπρω εκλάμπεις ως εωσφόρος αστήρ, των αγγέλων μιμητά Κενδέα Όσιε, και θαυμάτων τω φωτί, την ομίχλην των παθών, εκάστοτε διαλύεις, και τω Σωτήρι πρεσβεύεις, ελεηθήναι τας ψυχάς ημών.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Κενδέας ο θαυματουργός, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1025/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὀν Συνάναρχον Λόγον.",
+      "english": {
+        "text": "Adorned, O father, with the practice of the virtues, thou shinest in Cyprus as the morning star, O venerable Kendeas, imitator of the angels; and by the light of thy miracles thou dost ever scatter the mist of the passions, and dost intercede with the Saviour that our souls may find mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

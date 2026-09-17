@@ -1,0 +1,59 @@
+{
+  "slug": "macarius-of-kios",
+  "display_name": "Macarius of Kios",
+  "names": [
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Άγιος Μακάριος ο νέος οσιομάρτυρας από την Κίο της Βιθυνίας»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1590,
+      "latest": 1590,
+      "display": "1590",
+      "basis": "attested",
+      "note": "saint.gr: «τον αποκεφάλισαν στις 6 Οκτωβρίου του 1590 μ.Χ.»; its heading prints «(; - 1590)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 6 октября ст. ст. (civil 19 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 6 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 6 Οκτωβρίου — «Άγιος Μακάριος ο νέος οσιομάρτυρας από την Κίο της Βιθυνίας»",
+        "url": "https://www.saint.gr/10/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 6. октобар ст. ст. (civil 19 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

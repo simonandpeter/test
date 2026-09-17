@@ -1,0 +1,133 @@
+{
+  "slug": "innocent-of-moscow",
+  "display_name": "Innocent of Moscow",
+  "office": "Metropolitan of Moscow",
+  "names": [
+    {
+      "form": "Иннокентий",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Иннокентий, митрополит Московский и Коломенский, просветитель Сибири и Америки»."
+    },
+    {
+      "form": "Ιννοκέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Όσιος Ιννοκέντιος Βενιάμινωφ Μητροπολίτης Μόσχας και Ιεραπόστολος Αλάσκας»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1797,
+      "latest": 1797,
+      "display": "1797",
+      "basis": "attested",
+      "note": "The Sretensky life: «родился 26 августа 1797 г. в селе Ангинском Иркутской епархии»; saint.gr: «γεννήθηκε στις 26 Αυγούστου 1797»."
+    },
+    "death": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "1879",
+      "basis": "attested",
+      "note": "The Sretensky life: «преставился ко Господу 31 марта 1879 г., в Великую субботу»; saint.gr: «στις 31 Μαρτίου του έτους 1879»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The Sretensky day prints his glorification of 1977. Its life of him keeps his memory also on 31 марта, the day of his death, on 10 июня with the saints of Siberia and on 5 октября with the Moscow hierarchs; the corpus holds one feast a church, so those days do not list him."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 сентября ст. ст. — «Прославление свт. Иннокентия , митр. Московского (1977).»",
+        "url": "https://days.pravoslavie.ru/Days/20260923.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 6 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 10,
+        "calendar": "revised-julian",
+        "note": "saint.gr keeps him a second time on 31 Μαρτίου, where its life of him stands; the corpus holds one feast a church, so that day does not list him."
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 6 Οκτωβρίου — «Όσιος Ιννοκέντιος Βενιάμινωφ Μητροπολίτης Μόσχας και Ιεραπόστολος Αλάσκας»",
+        "url": "https://www.saint.gr/10/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 06.10.2026 (23. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Во вся страны полунощныя изыде вещание твое,/ яко приемшия слово твое,/ ихже боголепно научил еси,/ неведущия Христа светом Евангелия просветил еси,/ человеческия обычаи украсил еси,/ Российская похвало, святителю отче наш Иннокентие,/ моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 сентября ст. ст. — «Тропарь святителя Иннокентия, митрополита Московского»",
+        "url": "https://days.pravoslavie.ru/Days/20260923.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy voice went out into all the lands of the north, for they received thy word whom thou didst teach in godly wise; thou didst enlighten with the light of the Gospel those who knew not Christ and didst adorn the ways of men, O praise of Russia, holy hierarch Innocent our father: pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Первый учитель прежде темным языческим племенам,/ первый возвеститель им пути спасительнаго,/ апостольски потрудивыйся в просвещении Сибири и Америки,/ святителю отче наш Иннокентие,/ Владыку всех моли/ мир вселенней даровати/ и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 сентября ст. ст. — «Ин тропарь святителя Иннокентия, митрополита Московского»",
+        "url": "https://days.pravoslavie.ru/Days/20260923.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "First teacher of the tribes once dark in paganism, first herald to them of the way of salvation, who didst labour as an apostle in the enlightening of Siberia and America, O holy hierarch Innocent our father, pray to the Master of all to grant peace to the world and great mercy to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Истинный и наложный учитель был еси:/ заповеданная бо Господам сам сотворив,/ имже учил еси и наказал еси ко благочестию приходящая чада,/ неверныя вразумлял еси познати веру истинную,/ просвещая их святым Крещением./ Сего ради со апостолы радуешися,/ приемля почесть благовестника Христова.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 сентября ст. ст. — «Кондак святителя Иннокентия, митрополита Московского»",
+        "url": "https://days.pravoslavie.ru/Days/20260923.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast a true teacher and a guide: for having thyself done what the Lord commanded, thou didst teach and train in piety the children who came to thee, and didst bring unbelievers to know the true faith, enlightening them with holy Baptism. Wherefore thou rejoicest with the apostles, receiving the honour of a herald of Christ’s Gospel.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

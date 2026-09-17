@@ -1,0 +1,80 @@
+{
+  "slug": "gregory-khandzteli",
+  "display_name": "Gregory Khandzteli",
+  "names": [
+    {
+      "form": "Γρηγορίος του Χαντζτέλι",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Οσίος Γρηγορίος του Χαντζτέλι»."
+    },
+    {
+      "form": "Grigorie Khandzteli",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro’s line „Sfântul Grigorie Khandzteli din Georgia” for 6 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 759,
+      "latest": 759,
+      "display": "759",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut în anul 759 la Kartala»."
+    },
+    "death": {
+      "earliest": 861,
+      "latest": 861,
+      "display": "861",
+      "basis": "attested",
+      "note": "doxologia.ro: «Era ziua de 6 octombrie a anului 861», when he had passed 102 years. saint.gr prints no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 6 октября ст. ст. (civil 19 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 6 octombrie — „Sfântul Grigorie Khandzteli din Georgia”",
+        "url": "https://doxologia.ro/6-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 6 Οκτωβρίου — «Οσίος Γρηγορίος του Χαντζτέλι»",
+        "url": "https://www.saint.gr/10/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 6. октобар ст. ст. (civil 19 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
