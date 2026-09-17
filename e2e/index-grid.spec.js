@@ -776,8 +776,28 @@ test('Also commemorated is a column of saint cards, not a list of links', async 
   await expect(cards.locator('.reg-thumb')).toHaveCount(mounted.length);
   await expect(cards.locator('.bookmark')).toHaveCount(0);
 
-  // The row still opens the saint, which is now the only thing it does.
-  await agapius.locator('.reg-name').click();
+  /*
+   * **The row chooses, and the chosen saint's own name is the door**
+   * (`../mockup-review/REVIEW.md` finding 7, stage G). This pressed the row's
+   * name and expected the saint's page, which is what the row did until the
+   * mockup's rule was applied to it: "a tile chooses; it does not open". Past
+   * 1024 px a press moves the saint into the middle two columns and the page
+   * does not turn; the way out is the name pinned over the reading column,
+   * which is the same anchor it always was. The claim this test carries — the
+   * rest of the day is a column of cards a reader can reach and Save lives on
+   * the saint's own page — is unchanged; only which press does it is.
+   *
+   * Below 1024 px there is no column to choose into and the row's name is
+   * still the link it always was, so this test's two projects take two routes
+   * to the same page — which is the branch `registerRow` itself makes.
+   */
+  if (page.viewportSize().width >= 1024) {
+    await agapius.locator('.reg-name').dispatchEvent('click');
+    await expect(page.locator('.hero-name')).toHaveText('Martyr Agapius of Gaza');
+    await page.locator('.hero-name a').click();
+  } else {
+    await agapius.locator('.reg-name').click();
+  }
   await expect(page.locator('h1.saint-name')).toHaveText('Martyr Agapius of Gaza');
   // Save is still there, on the page the author sent anyone who wants it.
   await expect(page.locator('.saint-head .bookmark')).toHaveCount(1);
