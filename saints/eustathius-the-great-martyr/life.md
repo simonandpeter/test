@@ -1,19 +1,24 @@
 # Eustathius
 
-Eustathius was a distinguished officer at Rome, called Placidas before his
-baptism, and came to the faith in a marvellous way: hunting a stag, he saw a cross between its
-antlers and heard a voice calling him. He was baptised Eustathius, his wife Tatiana as
+Eustathius was a distinguished officer at Rome, called Placidas before his baptism, and came to
+the faith in a marvellous way: hunting a stag, he saw a cross between its antlers and heard a
+voice calling him. He was baptised Eustathius, his wife Tatiana as
 [Theopiste](/saints/theopiste-wife-of-eustathius), and their two sons
 [Agapius](/saints/agapius-son-of-eustathius) and
-[Theopistus](/saints/theopistus-son-of-eustathius). When Trajan learned of his conversion he
-stripped him of his rank and exiled the family, and on the road Eustathius was separated from his
-wife and sons, which grieved him bitterly. Years later, in a hard war, Trajan remembered his
-ablest officer and recalled him, and Eustathius did much to win the victory — and on the march
-found his family again. But Trajan's successor Hadrian required him to attend the sacrifices to
-the idols, and when he refused he and his household were tortured. The Greek calendar keeps them
-together on 20 September.
+[Theopistus](/saints/theopistus-son-of-eustathius).
 
-The Russian calendar keeps him on 20 September old style with his wife and sons, about 118, and its life tells the story at more length. Placidas was a general under Titus and Trajan who did works of mercy before he knew Christ. The stag he was hunting stopped on a high mountain, and between its antlers he saw a shining cross with the crucified Son of God and heard the voice say that his good deeds and alms had come up to him; his wife had been told in a dream the same night that she, her husband and their sons would come to Christ the next day, and a Christian presbyter baptised the household. Warned at the same place that like Job he must bear many sorrows, he lost his servants and his cattle, left home secretly and sailed for Egypt; the shipmaster, taken with his wife’s beauty, put him ashore with the children and kept her, and as he carried the boys over a river one at a time a lion took one and a wolf the other. For fifteen years he worked as a hired man in the village of Vadiss, not knowing that shepherds and ploughmen had saved his sons and that they lived near him, that the shipmaster had soon died of a cruel illness, or that his wife lived untouched. When Trajan needed him in a hard war, his friends Antiochus and Acacius found him guarding grain in a field and knew him by the scar of a deep wound on his neck. Back at the head of the army, he did not know that two young soldiers he was fond of were his sons, until the brothers, talking in a tent, found each other out, and the woman at whose house the tent was pitched, overhearing them, knew them for her sons and their commander for her husband. Under Hadrian (117–138) he would not sacrifice for the victory; the family was thrown to beasts that did not touch them and then shut alive in a red-hot bronze bull, and when it was opened after three days their bodies were found whole, not a hair burned and their faces shining, and many who saw it believed.
+When Trajan learned of his conversion he stripped him of his rank and exiled the family, and on
+the road Eustathius was separated from his wife and sons, which grieved him bitterly. Years
+later, in a hard war, Trajan remembered his ablest officer and recalled him, and Eustathius did
+much to win the victory — and on the march found his family again. But Trajan's successor Hadrian
+required him to attend the sacrifices to the idols, and when he refused he and his household were
+tortured. The Greek calendar keeps them together on 20 September.
+
+The Russian calendar keeps him on 20 September old style with his wife and sons, about 118, and its life tells the story at more length. Placidas was a general under Titus and Trajan who did works of mercy before he knew Christ. The stag he was hunting stopped on a high mountain, and between its antlers he saw a shining cross with the crucified Son of God and heard the voice say that his good deeds and alms had come up to him; his wife had been told in a dream the same night that she, her husband and their sons would come to Christ the next day, and a Christian presbyter baptised the household.
+
+Warned at the same place that like Job he must bear many sorrows, he lost his servants and his cattle, left home secretly and sailed for Egypt; the shipmaster, taken with his wife’s beauty, put him ashore with the children and kept her, and as he carried the boys over a river one at a time a lion took one and a wolf the other. For fifteen years he worked as a hired man in the village of Vadiss, not knowing that shepherds and ploughmen had saved his sons and that they lived near him, that the shipmaster had soon died of a cruel illness, or that his wife lived untouched.
+
+When Trajan needed him in a hard war, his friends Antiochus and Acacius found him guarding grain in a field and knew him by the scar of a deep wound on his neck. Back at the head of the army, he did not know that two young soldiers he was fond of were his sons, until the brothers, talking in a tent, found each other out, and the woman at whose house the tent was pitched, overhearing them, knew them for her sons and their commander for her husband. Under Hadrian (117–138) he would not sacrifice for the victory; the family was thrown to beasts that did not touch them and then shut alive in a red-hot bronze bull, and when it was opened after three days their bodies were found whole, not a hair burned and their faces shining, and many who saw it believed.
 
 The Ohrid Prologue, for the Serbian calendar, tells it more briefly, and compares him to the centurion Cornelius. In its telling a wicked barbarian carries off his wife in Egypt and beasts carry off his sons, but the barbarian soon perishes and shepherds save the children; he lives fifteen years in the village of Vadisis until Trajan sends two officers who had been his comrades; he finds his wife and sons on the way back to Rome after his victory; and Hadrian has the family thrown to the beasts and then into a heated metal ox, from which their bodies are taken on the third day, dead but untouched by the fire.
 

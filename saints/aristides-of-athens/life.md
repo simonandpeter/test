@@ -10,7 +10,9 @@ Chronicle giving the year as 125, and which was then preserved by many;
 then, the synaxarion goes on, he was driven out, and as Hadrian was absent
 went to Rome, where he made his defence, and was brought back to Athens and
 martyred, hanged in the agora on 13 September 120; Jerome wrote an encomium
-on him and calls him equal-to-the-apostles. The Apology was long thought
+on him and calls him equal-to-the-apostles.
+
+The Apology was long thought
 lost. In 1878 a fragment of it in Armenian was found in a manuscript of the
 tenth century; in 1889 Rendel Harris found the full Syriac text at the
 monastery of St Catherine on Sinai, under two headings — the apology which
@@ -19,7 +21,9 @@ worship of God almighty, and, to the emperor Titus Hadrian Antoninus
 Augustus and Pius, from Marcianus Aristides, philosopher of Athens; and
 Robinson then found that the whole of it had been lying in plain sight for
 centuries inside the seventh-century Life of Barlaam and Joasaph, as the
-speech of the hermit Nachor before King Abenner. The Armenian manuscript
+speech of the hermit Nachor before King Abenner.
+
+The Armenian manuscript
 also carries a homily on the cry of the thief and the answer of the
 Crucified, whose attribution to him is disputed for its anti-Nestorian turns
 of phrase and for the silence of the ancient writers, and a few lines of a

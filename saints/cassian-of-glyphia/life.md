@@ -8,19 +8,20 @@ which lies between the districts of Limassol and Paphos, where the lands of
 Archimandrita, Plataniskia and Alektora meet, is a quiet place that was
 called Glyphia. On a hill there stand the ruins of Cassian’s church, and in
 its north wall the cave in which he lived as an ascetic, enclosed within the
-church with a little gate leading into it; the cave is blackened by the
-many candles the faithful once lit in his honour, and low on its left side
-is a hollow walled with plaster by Christians of old, believed to have been
-the reliquary of his bones. The little church was painted — traces of
-frescoes survive to the left of the apse — and Cassian must have been a
-wonderworker, since his whole body was kept there, as Machairas says, and
-the church probably carried scenes of his life and miracles that have not
-survived. Some four hundred metres south-east of the hermitage is a well,
-dug later, the people of the district say; in the saint’s time the water
-ran on the surface, and the stone-built channel that brought it to the
-south side of the hillock, nearer his cell, is still there — water the
-faithful who came to venerate his relic would surely have held to be holy
-after his death.
+church with a little gate leading into it; the cave is blackened by the many
+candles the faithful once lit in his honour, and low on its left side is a
+hollow walled with plaster by Christians of old, believed to have been the
+reliquary of his bones.
+
+The little church was painted — traces of frescoes survive to the left of
+the apse — and Cassian must have been a wonderworker, since his whole body
+was kept there, as Machairas says, and the church probably carried scenes of
+his life and miracles that have not survived. Some four hundred metres
+south-east of the hermitage is a well, dug later, the people of the district
+say; in the saint’s time the water ran on the surface, and the stone-built
+channel that brought it to the south side of the hillock, nearer his cell,
+is still there — water the faithful who came to venerate his relic would
+surely have held to be holy after his death.
 
 The Greek calendar keeps a Cassian “of Glyfa” again on 6 October, with [Hilarion the New](/saints/hilarion-the-new-of-cyprus), [John](/saints/john-companion-of-hilarion-the-new), [Joseph “at Lythrodontas”](/saints/joseph-of-lythrodontas), [Kalandios in Tamasia](/saints/kalandios-of-tamasia) and [Cassian of Axylou](/saints/cassian-of-axylou), and says only that they were five of the three hundred martyrs and venerable fathers called the Alamanoi who bore witness in Cyprus, marking the entry as not cross-checked. That he is this Cassian of Glyphia is a thin call, on the name and the Cypriot place alone: this entry tells nothing of the hermitage near Alektora, and the life above does not call him an Alaman.
 

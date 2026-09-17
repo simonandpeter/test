@@ -9,6 +9,7 @@ of Christ without counting his wife and six children: do what you will, he
 told the vizier — beat, cut, slaughter, burn me in the fire, throw me to
 the beasts, drown me in the sea, do whatever you can to this body of clay;
 I do not deny my Christ, I do not change my faith, I do not become a Turk.
+
 So on 1 September 1680, before the palace, near Hagia Sophia, they beheaded
 him, and he received the crown of martyrdom. The Christians bought his body
 for three hundred piastres and buried it in the monastery on the island of

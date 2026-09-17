@@ -10,12 +10,13 @@ back to the religion of the idols; for eight years the wretched and at the
 same time blessed slave bore a daily life of martyrdom — she abused her,
 beat her, pierced her body with forks and wounded her with pitiless
 scourging — and since none of this conquered the most devout Christian’s
-resolve, one day she lit a fire and pushed her into it. So Agathocleia was
-freed from her impious and murderous pagan mistress and departed to the
-blessed and free dwellings of the righteous. Some sources, the synaxarion
-notes, say that she was Nicholas’s daughter. Its verse says she bears fire
-on her neck, burning the dread neck of dread error. The Greek calendar
-keeps her on 17 September.
+resolve, one day she lit a fire and pushed her into it.
+
+So Agathocleia was freed from her impious and murderous pagan mistress and
+departed to the blessed and free dwellings of the righteous. Some sources,
+the synaxarion notes, say that she was Nicholas’s daughter. Its verse says
+she bears fire on her neck, burning the dread neck of dread error. The
+Greek calendar keeps her on 17 September.
 
 The Russian calendar keeps her on 17 September old style, and its life makes her the slave of a Christian named Nicholas whose wife Paulina was a pagan. For eight years Paulina persecuted her for her faith, beating her and making her walk barefoot over sharp stones; in a rage she broke her ribs with a hammer and cut out her tongue, and when nothing would make her bow to the idols shut her in prison to starve, where birds brought her food every day, until Paulina came in and killed her.
 

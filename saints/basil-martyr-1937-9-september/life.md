@@ -25,14 +25,18 @@ a general confession however many came but spoke with each, taught his
 parishioners to pray and to teach their children to, never to change their
 faith and never to take off the cross; and since neither crosses nor
 prayers of absolution nor icons could be had any more, he sent his warden
-Basil to the big cities to buy what was needed. An informer noted the
+Basil to the big cities to buy what was needed.
+
+An informer noted the
 revival in the parish: people going to church, baptising children they had
 not baptised before — a high-ranking Red Army officer had come to the
 village on purpose to baptise his; talk of restoring the bells; many nuns
 gathered round the church doing missionary work; the wives of party
 workers attending. When in the summer of 1937 the government decided on
 arrests of clergy everywhere the NKVD used the report, and on 2 September
-arrested the priest and the warden. Questioned on 6 September — the inquiry
+arrested the priest and the warden.
+
+Questioned on 6 September — the inquiry
 knows that you, together with the priest Alexius Uspensky, carried on
 counter-revolutionary activity — Basil answered: as church warden I
 distributed crosses among the people, up to a hundred and fifty in all,
@@ -44,7 +48,9 @@ house. — It is true I was at the priest’s house in June, but why I went to
 him I now do not remember. — The inquiry knows that while distributing
 the prayers and crosses you carried on counter-revolutionary agitation. —
 While distributing the prayers and crosses I carried on no
-counter-revolutionary agitation. The priest for his part admitted
+counter-revolutionary agitation.
+
+The priest for his part admitted
 baptising newborn children in the villagers’ houses without the local
 authorities’ leave, distributing crosses and icons with prayers to
 strengthen the faith, sending back children with names not in the

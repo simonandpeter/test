@@ -8,6 +8,7 @@ St Nicholas at Chernovsko-Nikolayevskoye in the Nizhny Novgorod country of
 the Vyatka diocese. In 1929 he was arrested for anti-Soviet agitation and
 exiled three years to the north, to the Narym region, and afterwards given
 ten years in the camps for keeping sermons of counter-revolutionary content.
+
 In 1937 he was in the Karaganda camp in Kazakhstan, where the priest
 [Stephen Kostogryz](/saints/stephen-kostogryz) of the Odessa region was also
 held; one group case was opened on the two of them, for systematic

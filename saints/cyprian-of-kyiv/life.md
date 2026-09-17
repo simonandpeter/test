@@ -18,7 +18,9 @@ same: of Serbian descent, an ascetic of the Holy Mountain, appointed by
 Philotheus, asleep in 1406. The Orthodox Church in America keeps the day as
 his repose.
 
-The Russian calendar keeps him on 16 September old style as metropolitan of Moscow and all Russia and wonderworker, with a troparion and two kontakia; its life is the account above. The Ohrid Prologue, for the Serbian calendar, calls him a native of Tarnovo but a pupil of the Serbs on Athos, where he gave himself especially to translating and copying books. The patriarch Philotheus of Constantinople came to know him on the Holy Mountain, took him to himself, and sent him to Kyiv as metropolitan; he bore great sorrows and hardships in that office, held for nearly thirty years, all with a good heart, and did much for the Russian church. Before his death he wrote a letter of farewell, which was read over his grave. He died on 16 September 1406, and his wonderworking relics lie in the Dormition church in Moscow. The Prologue’s Tarnovo stands here beside the Serbian birth the other sources give.
+The Russian calendar keeps him on 16 September old style as metropolitan of Moscow and all Russia and wonderworker, with a troparion and two kontakia; its life is the account above. The Ohrid Prologue, for the Serbian calendar, calls him a native of Tarnovo but a pupil of the Serbs on Athos, where he gave himself especially to translating and copying books.
+
+The patriarch Philotheus of Constantinople came to know him on the Holy Mountain, took him to himself, and sent him to Kyiv as metropolitan; he bore great sorrows and hardships in that office, held for nearly thirty years, all with a good heart, and did much for the Russian church. Before his death he wrote a letter of farewell, which was read over his grave. He died on 16 September 1406, and his wonderworking relics lie in the Dormition church in Moscow. The Prologue’s Tarnovo stands here beside the Serbian birth the other sources give.
 
 *After the life printed by the Orthodox Church in America for 16 September —
 [the day’s lives](https://www.oca.org/saints/all-lives/2026/09/16); the Greek

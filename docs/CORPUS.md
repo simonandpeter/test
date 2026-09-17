@@ -227,8 +227,11 @@ play: a located saint who reads as alive for more than a century fails it, and
 a located saint with no dates has to go on that test's `UNDATED` list with the
 reason.
 
-**`life.md`** — the house paraphrase, one to three paragraphs, first paragraph
-fit to be the Index's lede. Opens `# <display_name>` exactly. Closes with a
+**`life.md`** — the house paraphrase, **in paragraphs a reader can hold: about
+600 characters each, none over 900, and every break at a sentence end** (author,
+2026-09-17: "the Life sections are massive block paragraphs. Format them more
+digestibly"). The first paragraph is the Index's lede, so it is not cut short of
+300 characters. Opens `# <display_name>` exactly. Closes with a
 single italic paragraph naming and **linking** the source and saying when it
 was read: `*After …[the day](https://…); read 10 September 2026.*` Where the
 source has nothing, **the life says so and says what the one line says** —
