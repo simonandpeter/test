@@ -1,0 +1,9 @@
+# Vladimir (Chekalov)
+
+Vladimir was born on 10 July 1880 in the village of Pukhlino in the Kimry district of Tver province, the son of the priest Dmitry Chekalov. After the seminary he was called up and served as an ensign, and was discharged to the reserve in 1904; in 1908 he was ordained deacon, then priest, and served in churches of the Tver diocese for the rest of his life. In the early 1930s, at Vasyunino in the Krasny Kholm district, an arbitrary tax became the pretext for taking all he owned; in June 1932 he moved to Nikitskoye in the Kalyazin district, where he was pressed to subscribe to a loan while the OGPU gathered evidence, and on 3 January 1933 he was arrested and held in the Kalyazin prison, accused of preaching against the collective farms, and on 28 February sentenced to three years of camp.
+
+In 1936 he came home to the Tver region and served at the church at Volkovo, resolved to serve to the end, with his wife Nadezhda Pavlovna reading in the church. On 23 July 1937 the chairman and secretary of the Volkovo village soviet denounced him and the head of the church council, Ivan Mikheev, for anti-Soviet talk and for repairing the church while its dues were unpaid. On 27 July the head of the district NKVD searched his house, arrested him and took him to the Tver prison; the secretary’s denunciation was copied into the file as though it were an interrogation. On 27 September the NKVD troika sentenced him to death, and he was shot a few days later, on 1 October 1937.
+
+The Russian calendar keeps him on 18 September old style, and he is also remembered on 26 January with the new martyrs.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru), 18 сентября ст. ст. — [the entry](https://days.pravoslavie.ru/Life/life4788.htm); read 17 September 2026.*

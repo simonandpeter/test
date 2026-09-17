@@ -1,0 +1,67 @@
+{
+  "slug": "amphilochius-skvortsov",
+  "display_name": "Amphilochius (Skvortsov)",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Амфилохий",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Священномученик Амфилохий, епископ Енисейский»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1885,
+      "latest": 1885,
+      "display": "1885",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru’s life: «родился в 1885 году в селе Норваши»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru’s life: «В 1937 году Святитель был расстрелян в Мариинских лагерях»; the day line «(1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 сентября ст. ст. — «Сщмч. Амфилохия , еп. Красноярского, Иоанна , Бориса , Михаила , Владимира , Вениамина , Константина пресвитеров и мч. Сергия (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260918.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s lists for 18 septembrie or 1 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s lists for 18 Σεπτεμβρίου or 1 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 01.10.2026 (18. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

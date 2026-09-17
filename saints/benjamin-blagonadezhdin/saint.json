@@ -1,0 +1,67 @@
+{
+  "slug": "benjamin-blagonadezhdin",
+  "display_name": "Benjamin (Blagonadezhdin)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Вениамин (Благонадеждин)",
+      "lang": "ru",
+      "note": "Read out of the name page’s heading «Вениамин (Благонадеждин), иерей, сщмч.» on days.pravoslavie.ru."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1880,
+      "latest": 1880,
+      "display": "1880",
+      "basis": "attested",
+      "note": "azbyka.ru: «родился 24 марта 1880 года в селе Опарино»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "azbyka.ru: «Священник Вениамин Благонадеждин был расстрелян 1 октября 1937 года»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 сентября ст. ст. — «Сщмч. Амфилохия , еп. Красноярского, Иоанна , Бориса , Михаила , Владимира , Вениамина , Константина пресвитеров и мч. Сергия (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260918.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s lists for 18 septembrie or 1 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s lists for 18 Σεπτεμβρίου or 1 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 01.10.2026 (18. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
