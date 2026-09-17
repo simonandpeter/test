@@ -1,0 +1,97 @@
+{
+  "slug": "damaris-of-athens",
+  "display_name": "Damaris of Athens",
+  "names": [
+    {
+      "form": "Δάμαρις η Αθηναία",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Αγία Δάμαρις η Αθηναία»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "righteous"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 52,
+      "latest": 52,
+      "display": "52",
+      "basis": "attested",
+      "note": "saint.gr: «πίστεψαν στο κήρυγμα του Αποστόλου Παύλου το 52 μ.Χ.»."
+    }
+  },
+  "related": [
+    "dionysius-the-areopagite"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 3 октября ст. ст. (civil 16 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 3 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Οκτωβρίου — «Αγία Δάμαρις η Αθηναία»",
+        "url": "https://www.saint.gr/10/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 3. октобар ст. ст. (civil 16 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος δ'.",
+      "text": "Του Παύλου ως ήκουσας, δημηγορούντος σοφώς, έδέξω το κήρυγμα, της ευσεβείας θερμώς, Κυρίω πιστεύσασα .Όθεν ή εν Αθήναις, Εκκλησία τιμά σε, Δάμαρις μακαρία, ως θεράπαιναν θείαν, Χριστώ οικειουμένην, τούς σε μακαρίζοντας.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Δάμαρις η Αθηναία, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2577/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχύ προκατάλαβε.",
+      "english": {
+        "text": "When thou didst hear Paul speaking wisely before the people, thou didst warmly receive the preaching of godliness, believing in the Lord; wherefore the Church in Athens honours thee, O blessed Damaris, as a divine handmaid who commends to Christ those who call thee blessed.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος δ .",
+      "text": "Το Του του Παύλου ρήμασι καταυγασθείσα, των Χριστώ προσέδραμες, και την χρηστότητα αυτού, βίω άμέμπτω έδόξασας, εν ταις Αθήναις θεόσοφε Δάμαρις.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Δάμαρις η Αθηναία, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2577/saint.aspx",
+        "year": 2026
+      },
+      "model": "Έπεφάνης σήμερον.",
+      "english": {
+        "text": "Illumined by the words of Paul, thou didst run to Christ, and by a blameless life didst glorify his goodness in Athens, O Damaris of godly wisdom.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

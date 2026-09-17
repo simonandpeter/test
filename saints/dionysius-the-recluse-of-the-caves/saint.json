@@ -1,0 +1,59 @@
+{
+  "slug": "dionysius-the-recluse-of-the-caves",
+  "display_name": "Dionysius the Recluse of the Caves",
+  "office": "recluse of the Kyiv Caves",
+  "names": [
+    {
+      "form": "Διονύσιος ο Έγκλειστος",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Όσιος Διονύσιος ο Έγκλειστος «εν τω Σπηλαίω»»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1463,
+      "latest": 1463,
+      "display": "1463",
+      "basis": "attested",
+      "note": "saint.gr: «Το Πάσχα του 1463 μ.Χ. επισκέφτηκε τον τόπο όπου βρίσκονταν τα λείψανα των Πατέρων των Σπηλαίων»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 3 октября ст. ст. (civil 16 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 3 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Οκτωβρίου — «Όσιος Διονύσιος ο Έγκλειστος «εν τω Σπηλαίω»»",
+        "url": "https://www.saint.gr/10/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 3. октобар ст. ст. (civil 16 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "rusticus-disciple-of-dionysius",
+  "display_name": "Rusticus, disciple of Dionysius the Areopagite",
+  "names": [
+    {
+      "form": "Ρουστίκος",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Άγιοι Ρουστίκος και Ελευθέριος»."
+    },
+    {
+      "form": "Rustic",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro’s life of Dionysius the Areopagite, «cu preotul Rustic»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 81,
+      "latest": 96,
+      "display": "81–96",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησαν δια ξίφους μαζί με τον Άγιο Διονύσιο, κατά τον επί Δομετιανού διωγμό (81 - 96 μ.Χ.)»."
+    }
+  },
+  "related": [
+    "dionysius-the-areopagite",
+    "eleutherius-disciple-of-dionysius"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 3 октября ст. ст. (civil 16 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "doxologia.ro’s list for 3 octombrie names Dionysius the Areopagite alone, though its life of him tells of this martyr’s death with him (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Οκτωβρίου — «Άγιοι Ρουστίκος και Ελευθέριος»",
+        "url": "https://www.saint.gr/10/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 3. октобар ст. ст. (civil 16 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

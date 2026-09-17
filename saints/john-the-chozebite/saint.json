@@ -1,0 +1,51 @@
+{
+  "slug": "john-the-chozebite",
+  "display_name": "John the Chozebite",
+  "office": "Bishop of Caesarea",
+  "names": [
+    {
+      "form": "Ιωάννης ο Χοζεβίτης",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Όσιος Ιωάννης ο Χοζεβίτης επίσκοπος Καισαρείας»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 3 октября ст. ст. (civil 16 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 3 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Οκτωβρίου — «Όσιος Ιωάννης ο Χοζεβίτης επίσκοπος Καισαρείας»",
+        "url": "https://www.saint.gr/10/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 3. октобар ст. ст. (civil 16 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,7 @@
+# Damaris of Athens
+
+Damaris was the first woman of Athens to believe, the Greek synaxarion says, when with [Dionysius the Areopagite](/saints/dionysius-the-areopagite) she believed the preaching of the apostle Paul in the year 52; the Acts of the Apostles name her among those who joined him and believed, Dionysius the Areopagite and a woman named Damaris and others with them. The entry takes it from Luke’s naming her that she was a person of standing, from a noble family and of high social rank.
+
+The Christian community of Athens, it says, barely held on among the pagan city in Paul’s time, and Paul never visited it again; yet the Church there, with Dionysius, whom Paul himself had made its bishop, lived on and grew, and Damaris helped it. She had a missionary soul and served everywhere, especially among the women, with undiminished zeal; a disciple of Paul, she laboured daily as her teacher did, preaching the Gospel of Christ in whatever way she could, and the entry thinks it almost certain that whenever the apostle visited the Church of Corinth she went to meet him and came back to Athens stronger and more ardent in her service. Her service was composed by the hymnographer Father Gerasimos Mikragiannanitis. The Greek calendar keeps her on 3 October, and the entry notes that some synaxaria give her memory on 2 October.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 3 Οκτωβρίου — [the entry](https://www.saint.gr/2577/saint.aspx); read 17 September 2026.*

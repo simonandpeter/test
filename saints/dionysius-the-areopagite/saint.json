@@ -1,0 +1,180 @@
+{
+  "slug": "dionysius-the-areopagite",
+  "display_name": "Dionysius the Areopagite",
+  "names": [
+    {
+      "form": "Διονύσιος ο Αρεοπαγίτης",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Άγιος Διονύσιος ο Αρεοπαγίτης»."
+    },
+    {
+      "form": "Dionisie Areopagitul",
+      "lang": "ro",
+      "note": "From «Sfântul Sfințit Mucenic Dionisie Areopagitul» in this folder’s Romanian citation, without the rank."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 81,
+      "latest": 96,
+      "display": "81–96",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησε και μαρτύρησε τα χρόνια που αυτοκράτορας ήταν ο Δομετιανός», and its entry for Rusticus and Eleutherius dates Domitian’s persecution «(81 - 96 μ.Χ.)»; doxologia.ro: «a pătimit în al nouăzecilea an al vieții sale, iar de la nașterea lui Hristos în al nouăzeci și șaselea an». saint.gr quotes Galanos against the martyrdom at Paris."
+    }
+  },
+  "related": [
+    "rusticus-disciple-of-dionysius",
+    "eleutherius-disciple-of-dionysius",
+    "john-the-theologian"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 3 октября ст. ст. (civil 16 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 3 octombrie — „Sfântul Sfințit Mucenic Dionisie Areopagitul”",
+        "url": "https://doxologia.ro/3-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Οκτωβρίου — «Άγιος Διονύσιος ο Αρεοπαγίτης»",
+        "url": "https://www.saint.gr/10/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 3. октобар ст. ст. (civil 16 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "text": "Ἀγρευβεῖς τῷ τοῦ Παύλου Πάτερ κηρύγματι, ὑφηγητὴς ἀνεδείχθης τῶν ὑπὲρ νοῦν δωρεῶν, διανοια ὑψηλὴ καλλωπιζόμενος, τῶν γὰρ ἀΰλων οὐσιῶν, τᾶς ἀρχὰς μυσταγωγεῖς, ὡς μύστης τῶν ἀπορρήτων, καὶ τῆς σοφίας ἐκφάντωρ, Ἱερομάρτυς Διονύσιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Διονύσιος ο Αρεοπαγίτης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2579/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὸ συνάναρχον Λόγον.",
+      "english": {
+        "text": "Caught, O father, by the preaching of Paul, thou wast shown a guide to the gifts that pass understanding, adorned with lofty thought; for thou dost lead us into the mysteries of the orders of the immaterial beings, as an initiate of things ineffable and a revealer of wisdom, O hieromartyr Dionysius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Χρηστότητα ἐκδιδαχθείς, καὶ νήφων ἐν πᾶσιν, ἀγαθὴν συνείδησιν ἱεροπρεπῶς ἐνδυσάμενος, ἤντλησας ἐκ τοῦ Σκεύους τῆς ἐκλογῆς τὰ ἀπόῤῥητα, καὶ τὴν πίστιν τηρήσας, τὸν ἴσον δρόμον τετέλεκας, Ἱερομάρτυς Διονύσιε. Πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Διονύσιος ο Αρεοπαγίτης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον (Κατέβασμα)",
+        "url": "https://www.saint.gr/2579/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thoroughly taught in goodness and sober in all things, clothed as befits a priest with a good conscience, thou didst draw things ineffable from the chosen vessel; and keeping the faith thou hast finished a like course, O hieromartyr Dionysius. Intercede with Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Τὰς οὐρανίους διαβὰς πύλας ἐν πνεύματι, μαθητευθεὶς τῷ ὑπὲρ τρεῖς οὐρανοὺς φθάσαντι, Ἀποστόλου Διονύσιε τῶν ἀῤῥήτων, ἐπλουτίσθης πᾶσαν γνῶσιν καὶ κατηύγασας, τοὺς ἐν σκότει ἀγνωσίας πρὶν καθεύδοντας, διὸ κράζομεν, Χαίροις Πάτερ παγκόσμιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Διονύσιος ο Αρεοπαγίτης, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2579/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῇ ὑπερμάχῳ.",
+      "english": {
+        "text": "Passing in the spirit through the gates of heaven, a disciple of the apostle who reached beyond the three heavens, O Dionysius, thou wast enriched with all knowledge of things ineffable, and didst enlighten those who before slept in the darkness of ignorance. Wherefore we cry: Rejoice, O father of all the world.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ὡς τῶν ἀρρήτων μυητὴν καὶ ὑφηγήτορα Καὶ τῶν ἀΰλων οὐσιῶν ἱεροφάντορα Ἀνυμνοῦμέν σε ἀξίως Ἱερομάρτυς. Ἀλλ’ ὡς πλήρης τῆς τοῦ Πνεύματος ἐλλάμψεως Τῆς σῆς χάριτος μετάδος ταῖς ψυχαῖς ἡμῶν Τῶν βοώντων σοι, χαίροις Πάτερ Διονύσιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Διονύσιος ο Αρεοπαγίτης, Λειτουργικά κείμενα: Έτερον Κοντάκιον",
+        "url": "https://www.saint.gr/2579/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῇ ὑπερμάχῳ.",
+      "english": {
+        "text": "As an initiate and guide into things ineffable and a sacred revealer of the immaterial beings, we worthily praise thee in hymns, O hieromartyr; but as one full of the illumination of the Spirit, impart of thy grace to the souls of us who cry to thee: Rejoice, O father Dionysius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Bunătate învăţându-te şi îmbărbătându-te întru toate, îmbrăcându-te cuviincios cu bun cuget, ai scos din vasul alegerii cele negrăite; şi cre­dinţa păzind, calea întocmai ai săvârşit, Sfinţite Mucenice Dionisie: roagă-te lui Hristos Dumnezeu, să mântuiască su­fletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfinţit Mucenic Dionisie Areopagitul",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-dionisie-areopagitul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thoroughly taught in goodness and sober in all things, clothed as befits a priest with a good conscience, thou didst draw things ineffable from the chosen vessel; and keeping the faith thou hast finished a like course, O hieromartyr Dionysius. Intercede with Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Prin uşile cerurilor trecând cu Duhul, ca un ucenic al Apos­tolului celui ce a ajuns până la al treilea cer, Sfinte Sfinţite Dionisie, te-ai îmbogăţit cu toată cunoştinţa celor negrăite şi ai luminat pe cei ce şedeau mai înainte în întunericul necunoştinţei. Pentru acesta strigăm: bucură-te părinte a toată lumea.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Sfinţit Mucenic Dionisie Areopagitul",
+        "url": "https://doxologia.ro/condacul-sfantului-sfintit-mucenic-dionisie-areopagitul",
+        "year": 2026
+      },
+      "model": "Apărătoare Doamnă...",
+      "english": {
+        "text": "Passing in the spirit through the gates of heaven, a disciple of the apostle who reached beyond the three heavens, O Dionysius, thou wast enriched with all knowledge of things ineffable, and didst enlighten those who before slept in the darkness of ignorance. Wherefore we cry: Rejoice, O father of all the world.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
