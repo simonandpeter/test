@@ -59,5 +59,71 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "В житии́ твое́м до́бре подвиза́лся еси́, во страда́нии твое́м непоколеби́м в ве́ре пребы́в, незло́биво му́ченическую сме́рть прия́л еси́, священному́чениче, о́тче Нико́лае Искровский, моли́ о на́с Го́спода Спа́са ми́р ми́рови дарова́ти и душа́м на́шим ве́лию ми́лость.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Николай Искровский», тропари и кондаки",
+        "url": "https://azbyka.ru/days/sv-nikolaj-iskrovskij",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst struggle well in thy life, and remaining unshaken in the faith in thy sufferings thou didst meekly accept a martyr’s death, O hieromartyr, father Nicholas of Iskrovka. Pray to the Lord the Saviour for us, to grant peace to the world and great mercy to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Кро́тость и смире́ние стяжа́вый,/ любо́вь Христо́ву па́стве свое́й показа́л еси́/ в годи́ну о́гненных искуше́ний Це́ркве Ру́сския/ и, я́ко па́стырь до́брый,/ ду́шу свою́ за Него́ положи́л еси́./ Моли́ся о нас, священному́чениче Нико́лае,// просвети́ти ду́ши на́ша.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Николай Искровский», тропари и кондаки",
+        "url": "https://azbyka.ru/days/sv-nikolaj-iskrovskij",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having acquired meekness and humility, thou didst show the love of Christ to thy flock in the hour of the fiery trials of the Russian Church, and as a good shepherd didst lay down thy life for him. Pray for us, O hieromartyr Nicholas, that our souls may be enlightened.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Труды́ и боле́зни на ра́мо свое́ взял еси́/ и, ра́дуяся, путе́м те́сным ше́ствовал еси́,/ страда́ньми за Христа́ Небе́снаго Ца́рства дости́гл еси́,/ моли́ о нас Бо́га Спа́са, священному́чениче Нико́лае,// обрести́ нам ми́лость в День Су́дный.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Николай Искровский», тропари и кондаки",
+        "url": "https://azbyka.ru/days/sv-nikolaj-iskrovskij",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst take labours and sicknesses upon thy shoulder, and rejoicing didst walk the narrow way; by thy sufferings for Christ thou didst attain the Kingdom of Heaven. Pray to God the Saviour for us, O hieromartyr Nicholas, that we may find mercy on the Day of Judgement.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Сы́й ди́вный во́ине Руси́ Святе́й,/ у Ца́рскаго Престо́ла вене́ц сла́вы обре́л еси́,/ усе́рдно мо́лится о ве́рных/ для ве́чнаго блаже́нства Спа́сом просветле́нных,/ до кро́ви во и́стине стоя́л еси́,/ во спасе́ние наро́да Бо́жия свою́ Голго́фу от Христа́ прия́л еси́,// спаси́ на́с твои́ми моли́твами, священному́чениче Нико́лае, о́тче на́ш.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Николай Искровский», тропари и кондаки",
+        "url": "https://azbyka.ru/days/sv-nikolaj-iskrovskij",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being a wondrous warrior of Holy Rus’, thou hast found a crown of glory at the royal throne, and prayest fervently for the faithful enlightened by the Saviour unto eternal blessedness; thou didst stand in truth even unto blood, and didst receive from Christ thine own Golgotha for the salvation of the people of God. Save us by thy prayers, O hieromartyr Nicholas, our father.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
