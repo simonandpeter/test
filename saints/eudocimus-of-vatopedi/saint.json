@@ -1,0 +1,72 @@
+{
+  "slug": "eudocimus-of-vatopedi",
+  "display_name": "Eudocimus of Vatopedi",
+  "names": [
+    {
+      "form": "Ευδόκιμος ο Βατοπεδινός",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Όσιος Ευδόκιμος ο Βατοπεδινός ο νεοφανής»."
+    },
+    {
+      "form": "Evdochim Vatopedinul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro’s line „Sfântul Evdochim Vatopedinul” for 5 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": null,
+      "latest": null,
+      "display": null,
+      "basis": "unknown",
+      "note": "saint.gr: «Δεν είναι επίσης γνωστό ούτε ποια εποχή έζησε». The finding of his relics, 1840 or 1841, bounds only when he was found; doxologia.ro’s oral tradition that he is Sabbas of Vatopedi, of the 14th century, is not a date for him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 5 октября ст. ст. (civil 18 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 5 octombrie — „Sfântul Evdochim Vatopedinul”",
+        "url": "https://doxologia.ro/5-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Οκτωβρίου — «Όσιος Ευδόκιμος ο Βατοπεδινός ο νεοφανής»",
+        "url": "https://www.saint.gr/10/05/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 5. октобар ст. ст. (civil 18 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "slug": "barlaam-of-sikisk",
+  "display_name": "Barlaam of Sikisk",
+  "names": [
+    {
+      "form": "Βαρλαάμ",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Άγιος Βαρλαάμ του Σικίζσκ ο ερημίτης»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hermit"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1846,
+      "latest": 1846,
+      "display": "1846",
+      "basis": "traditional",
+      "note": "saint.gr heads its entry «Αγιος Βαρλααμ Του Σικιζσκ ο Ερημιτης (; - 1846)» and says nothing more."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 5 октября ст. ст. (civil 18 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 5 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Οκτωβρίου — «Άγιος Βαρλαάμ του Σικίζσκ ο ερημίτης»",
+        "url": "https://www.saint.gr/10/05/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 5. октобар ст. ст. (civil 18 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

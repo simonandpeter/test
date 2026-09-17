@@ -25,8 +25,8 @@ every day all praised him — one for his love to all, another for his
 humility, his wisdom, his restraint, his contempt of worldly glory and
 vanity — and he bore the trials of the common life hoping to be freed of
 them, longing for the hermit’s life. He did not seek it out of order but
-took counsel with the other fathers who desired perfect stillness, Daniel
-and Misail, then Neophytos and Isaiah, with whom he went to the mountain
+took counsel with the other fathers who desired perfect stillness, [Daniel](/saints/daniel-of-turnu)
+and [Misail](/saints/misael-of-turnu), then Neophytos and Isaiah, with whom he went to the mountain
 called Sălbaticul; they urged him to endure in the community to be
 tempered further, quoting Sabbas, that as the flower goes before the fruit
 so the common life must go before the hermit’s, in which beginners, like

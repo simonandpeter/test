@@ -1,0 +1,52 @@
+{
+  "slug": "damian-the-healer",
+  "display_name": "Damian the Healer",
+  "names": [
+    {
+      "form": "Damian",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro’s line „Sfântul Cuvios Damian, tămăduitorul de la Lavra Pecerska” for 5 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "related": [
+    "theodosius-of-the-kyiv-caves"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 5 октября ст. ст. (civil 18 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 5 octombrie — „Sfântul Cuvios Damian, tămăduitorul de la Lavra Pecerska”",
+        "url": "https://doxologia.ro/5-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 5 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 5. октобар ст. ст. (civil 18 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

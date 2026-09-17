@@ -1,0 +1,65 @@
+{
+  "slug": "methodia-of-kimolos",
+  "display_name": "Methodia of Kimolos",
+  "names": [
+    {
+      "form": "Μεθοδία",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Οσία Μεθοδία της Κιμώλου»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1865,
+      "latest": 1865,
+      "display": "1865",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε στο νησί Κίμωλος στις 10 Νοεμβρίου 1865 μ.Χ.»."
+    },
+    "death": {
+      "earliest": 1908,
+      "latest": 1908,
+      "display": "1908",
+      "basis": "attested",
+      "note": "saint.gr: «απεβίωσε ειρηνικά την Κυριακή 5 Οκτωβρίου 1908 σε ηλικία 43 ετών»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 5 октября ст. ст. (civil 18 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 5 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Οκτωβρίου — «Οσία Μεθοδία της Κιμώλου»",
+        "url": "https://www.saint.gr/10/05/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 5. октобар ст. ст. (civil 18 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

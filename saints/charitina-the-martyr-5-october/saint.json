@@ -1,0 +1,142 @@
+{
+  "slug": "charitina-the-martyr-5-october",
+  "display_name": "Charitina (5 October)",
+  "names": [
+    {
+      "form": "Χαριτίνη",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Αγία Χαριτίνη»."
+    },
+    {
+      "form": "Haritina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro’s line „Sfânta Muceniță Haritina” for 5 octombrie."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "saint.gr heads its entry «Αγια Χαριτινη (; - 304)» and says: «Το 304 μ.Χ. κάποιοι την κατήγγειλαν». doxologia.ro sets her under Diocletian and prints no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 5 октября ст. ст. (civil 18 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 5 octombrie — „Sfânta Muceniță Haritina”",
+        "url": "https://doxologia.ro/5-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Οκτωβρίου — «Αγία Χαριτίνη»",
+        "url": "https://www.saint.gr/10/05/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 5. октобар ст. ст. (civil 18 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Θεία χάριτι, κραταιωθεῖσα, κράτος ἤσχυνας, τῆς δυσσεβείας, Χαριτίνη ὑπὲρ φύσιν ἀθλήσασα ὅθεν χαρίτων πηγὴν ἀδαπάνητον, ὡς γλυκασμὸν ἀναβλύζεις τοὶς κράζουσι. Μάρτυς ἔνδοξε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Χαριτίνη, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2667/saint.aspx",
+        "year": 2026
+      },
+      "model": "Θείας πίστεως.",
+      "english": {
+        "text": "Strengthened by divine grace, thou didst put to shame the might of impiety, O Charitina, contending beyond nature; wherefore thou pourest forth an unfailing fountain of graces, as sweetness, for those who cry out. O glorious martyr, entreat Christ God to grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mieluşeaua Ta, Iisuse, Haritina, strigă cu glas mare: pe Tine, Mirele meu, te iubesc și pe Tine căutându-Te mă chinuiesc și împreună mă răstignesc și împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru tine, ca să viez pentru Tine; ci, ca o jertfă fără de prihană, primește-mă pe mine ceea ce cu dragoste mă jertfesc Ție. Pentru rugăciunile ei, ca un Milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Muceniţe Haritina",
+        "url": "https://doxologia.ro/troparul-sfintei-mucenite-haritina",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy ewe-lamb, O Jesus, Charitina, crieth with a loud voice: Thee, my Bridegroom, do I love, and seeking thee I suffer; I am crucified and buried with thee in thy baptism, and I suffer for thy sake, that I may reign in thee; I die for thee, that I may also live with thee. But as a spotless sacrifice accept me, who am offered to thee with love. Through her prayers, since thou art merciful, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Pentru dragostea Domnului, Sfântă Preamărită Haritina, suferind toate cele îngrozitoare ale chinurilor, ai câştigat cununa muceniciei cea nestricăcioasă.",
+      "source": {
+        "text": "Doxologia — Condacul Sfintei Muceniţe Haritina",
+        "url": "https://doxologia.ro/condacul-sfintei-mucenite-haritina",
+        "year": 2026
+      },
+      "model": "Arătatu-Te-ai astăzi...",
+      "english": {
+        "text": "For the love of the Lord, O holy and most glorious Charitina, enduring all the terrors of the torments, thou hast won the incorruptible crown of martyrdom.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Întărindu-te la minte, Sfântă Muceniţă Haritina, ţi-ai întărit sufletul cu cre­dinţa; biruind pe vrăjmaşi aie­vea i-ai ruşinat, stând înaintea lui Hristos întru tot fericită; şi acum, purtând haină din sân­gele tău şi cu îngerii bucurându-te, roagă-te pentru noi, pur­tătoare de chinuri.",
+      "source": {
+        "text": "Doxologia — Condacul Sfintei Muceniţe Haritina",
+        "url": "https://doxologia.ro/condacul-sfintei-mucenite-haritina-0",
+        "year": 2026
+      },
+      "model": "Cele de sus căutând...",
+      "english": {
+        "text": "Strengthened in mind, O holy martyr Charitina, thou didst make thy soul strong with faith; overcoming the enemies, thou didst put them openly to shame, standing all-blessed before Christ; and now, clothed in a garment of thy blood and rejoicing with the angels, pray for us, O passion-bearer.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

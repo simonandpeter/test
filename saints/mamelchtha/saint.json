@@ -1,0 +1,72 @@
+{
+  "slug": "mamelchtha",
+  "display_name": "Mamelchtha",
+  "names": [
+    {
+      "form": "Μαμέλχθα",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Αγία Μαμέλχθα»."
+    },
+    {
+      "form": "Mamelta",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro’s line „Sfânta Muceniță Mamelta” for 5 octombrie."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 344,
+      "latest": 344,
+      "display": "344",
+      "basis": "traditional",
+      "note": "saint.gr heads its entry «Αγια Μαμελχθα (; - 344)» and dates her dream «(344 μ.Χ.)». doxologia.ro prints no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 5 октября ст. ст. (civil 18 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 5 octombrie — „Sfânta Muceniță Mamelta”",
+        "url": "https://doxologia.ro/5-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Οκτωβρίου — «Αγία Μαμέλχθα»",
+        "url": "https://www.saint.gr/10/05/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 5. октобар ст. ст. (civil 18 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

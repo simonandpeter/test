@@ -1,0 +1,86 @@
+{
+  "slug": "hermogenes-of-samos",
+  "display_name": "Hermogenes of Samos",
+  "names": [
+    {
+      "form": "Ερμογένης",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Άγιος Ερμογένης ο Ιερομάρτυρας ο Θαυματουργός»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 5 октября ст. ст. (civil 18 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 5 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Οκτωβρίου — «Άγιος Ερμογένης ο Ιερομάρτυρας ο Θαυματουργός»",
+        "url": "https://www.saint.gr/10/05/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 5. октобар ст. ст. (civil 18 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Τοῦ Φοίνικος ὁ κλάδος, καὶ Σαμίων τὸ στήριγμα, φύλαξ καὶ φρουρὸς τῶν Κυπρίων, Ἐρμόγενες Πατὴρ ἠμῶν ἀναδειχθεῖς τὴν Θάλασσαν διῆλθες ὥσπερ ζῶν, καὶ ταύτης τρικυμίας χαλινῶν, θαυμασίως λάρνακά σου Ἐπισκοπῇ τὴ πόλει κατεστήριξας, δόξα τῷ οὕτως εὐδοκήσαντι Θεῶ, δόξα τῷ σὲ ὁδηγήσαντι. Δόξα τῷ ἐνεργούντι διὰ σοῦ πάσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ερμογένης ο Ιερομάρτυρας ο Θαυματουργός, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2670/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τοῦ λίθου σφραγισθέντος.",
+      "english": {
+        "text": "Branch of Phoenicia and support of the Samians, guardian and protector of the Cypriots, O Hermogenes our father, thou wast shown forth; thou didst cross the sea as though alive and, bridling its storm, didst wondrously set thy coffin fast in the town of Episkopi. Glory to God who was so well pleased; glory to him who guided thee; glory to him who works all healings through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Τῶν Σαμίων καύχημα καὶ τῶν Κυπρίων τὸ κλέος, Ἐρμογένη ἅπαντες ἀνευφημήσωμεν ὕμνοις οὗτος γὰρ τὴν τῆς Τριάδος ἔλαβεν αἴγλην, καὶ ὡς ἥλιος φωτίσας τὴν Οἰκουμένην ὂν προθύμως ἀνυμνοῦμεν καὶ προσκυνοῦμεν, λέγοντες χαῖρε, θαυματοφόρε Ἐρμόγενες Ὅσιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ερμογένης ο Ιερομάρτυρας ο Θαυματουργός, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2670/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ἡ Παρθένος σήμερον.",
+      "english": {
+        "text": "The boast of the Samians and the glory of the Cypriots, Hermogenes, let us all acclaim with hymns; for he received the radiance of the Trinity and, like the sun, enlightened the world; him we eagerly praise and venerate, saying: Rejoice, O venerable Hermogenes, bearer of wonders.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

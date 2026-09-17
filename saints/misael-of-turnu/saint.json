@@ -1,0 +1,98 @@
+{
+  "slug": "misael-of-turnu",
+  "display_name": "Misael of Turnu",
+  "names": [
+    {
+      "form": "Misail",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro’s line „✝) Sfântul Cuvios Misail de la Mănăstirea Turnu” for 5 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1601,
+      "latest": 1650,
+      "display": "early 17th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «după trecerea la cele veșnice, în prima jumătate a veacului al XVII-lea»."
+    }
+  },
+  "related": [
+    "daniel-of-turnu",
+    "neophytos-of-stanisoara",
+    "meletius-of-stanisoara"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 5 октября ст. ст. (civil 18 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 5 octombrie — „✝) Sfântul Cuvios Misail de la Mănăstirea Turnu”",
+        "url": "https://doxologia.ro/5-octombrie",
+        "year": 2026
+      },
+      "note": "Marked ✝) on doxologia.ro’s list — a saint of the Romanian Church with a full service."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 5 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 5. октобар ст. ст. (civil 18 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 1",
+      "text": "Dascăli ai rugăciunii neîncetate şi ai luptelor duhovniceşti v-aţi arătat, Cuvioşilor Daniil şi Misail, că de iubirea Mântuitorului Hristos, nedespărţiţi fiind, cu apostolească râvnă Preasfintei Treimi aţi slujit cu osârdie, în peşteri nevoindu-vă. Pentru aceasta, cerem, cu smerenie: Rugaţi-vă, să se mântuiască sufletele noastre!",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Cuvioşi Daniil şi Misail de la Mănăstirea Turnu",
+        "url": "https://doxologia.ro/troparul-sfintilor-cuviosi-daniil-misail-de-la-manastirea-turnu",
+        "year": 2026
+      },
+      "english": {
+        "text": "Teachers of unceasing prayer and of spiritual struggles you were shown, O venerable Daniel and Misael, for, inseparable in the love of Christ the Saviour, you served the Most Holy Trinity diligently with apostolic zeal, struggling in caves. Therefore we ask in humility: pray that our souls be saved!",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glas 8",
+      "text": "Pe apărătorii credinţei şi fericiţii călăuzitori ai călugărilor şi credincioşilor, pe sfeşnicele luminii dumnezeieşti şi rugătorii neîncetați ai Duhului să-i lăudăm, pe Daniil şi Misail, următorii Domnului, în cântări preamărindu-i și zicând: Rugaţi-vă să se mântuiască sufletele noastre!",
+      "source": {
+        "text": "Doxologia — Condacul Sfinţilor Cuvioşi Daniil şi Misail de la Mănăstirea Turnu",
+        "url": "https://doxologia.ro/condacul-sfintilor-cuviosi-daniil-misail-de-la-manastirea-turnu",
+        "year": 2026
+      },
+      "english": {
+        "text": "The defenders of the faith and blessed guides of monks and of the faithful, the lampstands of divine light and unceasing intercessors of the Spirit, Daniel and Misael, followers of the Lord, let us praise, magnifying them in songs and saying: Pray that our souls be saved!",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
