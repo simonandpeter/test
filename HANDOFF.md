@@ -34,129 +34,45 @@ here, because a PAT push never updates `origin/main`.
 ## In flight
 
 **The corpus run (`scratchpad/corpus-plan.md` §5) is in Phase B.** Civil
-20–29 September is read for all four churches; B1 finished only 29 September.
-**B2 starts at civil 30 September** (Russian and Serbian: Julian 17 September),
-then 1 October, which is CORPUS §4.1's example. On 29 September the Russian
-and Serbian columns held fifteen people, five of them upgrades, and the Greek
-and Romanian page made seventeen folders; three batches, as the 12-folder cap
-required. For every new Russian folder, read the Greek-only folders A3 made
-from pages with no details: Ephraim of Russia, Sabbatius of Solovki, Peter of
-Moscow (27 September), Spyridon and Nicodemus of the Cave, Anthony of Zadonsk
-(29 September) and Wenceslas of Czechia. Ephraim, Sabbatius, Peter and
-Wenceslas sit on the menologion days 26–28/9, so the UPGRADE block lists them
-when the Russian calendar reaches those days (civil 9–11 October); Anthony of
-Zadonsk sits on 29/9 (civil 12 October). Spyridon and Nicodemus are repeated on
-31 October, so the UPGRADE block will not list them there. Identity has to rest
-on the Russian life. Wenceslas is already linked from Ludmila, whose Prologue
-entry calls him her grandson. Two identities stay open: the Greek 29/9's
-Tryphon, Trophimus and Dorymedon against the Antioch martyrs of 19/9 and the
-Romanian Tryphon of Campsada (the great martyr, also 1 February).
+20–30 September is read for all four churches. **1 October is half read:** the
+Russian and Serbian columns (Julian 18 September) are done in two batches; the
+**Greek and Romanian 1 October are not**, and B3 starts there, then 2 October.
 
-What B1 added that the tools do not say. `day-candidates.mjs` read three of
-the Serbian 29 September's four entries, cutting Euphemia's heading at
-«Св. вел». `corpus-gate.mjs`'s literal table never listed
-`index-grid.spec.js`'s four Romanian 160s; every Romanian count and the
-"hermit" search are now derived, so a batch that moves a number the gate does
-not print shows up on CI, not in the gate — read CI's failures as possibly
-literal before anything else. `prayer.spec.js` pins the middle of the hymnal,
-so every hymn a batch adds can move its subject; its walk now waits for each
-step, and a failure there again is the page. Orloff is a 2 MB PDF on
-ponomar.net, and reading it is a download that needs the author's yes: it was
-not read, and «Агница Твоя» (a virgin-martyr's common) carries the site's
-English. A Russian folder whose Sretensky calendar has no life takes azbyka's:
-`azbyka.ru/days/<civil date>` lists the day's `sv-` slugs (Kuksha of Odessa,
-Sergius Losev). A back-out cannot be restored with `git checkout` from an
-untracked folder: `.tmp/backout.py <batch> <slug> <church> out|in` restores to
-the hash `draft-saint` recorded. `.tmp/mk29a.py` + `mk29a_up.py` are the shape
-of a Russian and Serbian day with Slavonic hymns, `mk29b.py` of a Greek and
-Romanian one with doxologia hymns, `.tmp/daycount.py D M` counts a church's
-menologion day in the manifest, and `.tmp/lookday.mjs` checks a day's names per
-church and language against a dev server. Port 5173 is held by a server from
-before this sitting, so read `npm run dev`'s port from its log.
+**`main` is red on Lighthouse FCP alone, at `635553a`** (the Greek and Romanian
+30 September): calendar populated 1504 ms (1357/1674/1504/1683/1355) and all
+saints 1523 ms (1692/1445/1692/1519/1523) against a 1500 ms floor, a11y 100,
+entry stylesheet unchanged; e2e 1044 passed, 6 known flakes. A re-run is the
+author's call. **Three commits sit unpushed on top of it** — the two Russian 1
+October batches and this handoff — and go out only once `main` is green: one
+push each, by resetting `main` back and fast-forwarding a commit at a time.
 
-What A3 added that the tools do not say. `day-candidates.mjs` missed Prologue
-entries on 26 September (4 of 5) and 27 September (2 of 4) as well. Read
-the numbered list. `draft-saint.mjs` refuses "martyr with" in a display name,
-because it reads "martyr" as a rank; use "companion of". saint.gr writes hymn
-labels with oxia (U+1F77) and tonos by turn, so match them after NFKC.
-`.tmp/dayhelp.py` (DAY, SR_OLD, RU_OLD and SR_SELF come from the environment)
-and `.tmp/mk26.py`–`mk28b.py` are the shape of a day. They copy a hymn's text
-and tone off the cached page instead of retyping it. `hymn-english --emit`
-counts groups of slug · kind · tone, so two apolytikia in one tone count once.
-A relic finding goes on an existing folder's row with a `feast.note`
-(Neophytos, as Theodosius of Chernigov's). A synaxis that names nobody stays
-out (Kalyviani).
+What the Greek and Romanian 1 October hold, from `day-candidates.mjs` and not
+yet read against the pages: saint.gr — Ananias the Apostle, Romanos the
+Melodist, John Koukouzelis, Michael of Zobe and thirty-six venerable martyrs,
+Domninus, Gregory the Domestikos, Sabbas of Vishera, with the Protection, the
+Gorgoepikoos and Eleftherotria synaxes and two sidebar entries (Paisios,
+Nicodemus) that are not the day's. doxologia.ro — Cyriacus and Joseph of
+Bisericani, Romanos, John Koukouzelis, Ananias, Mirian and Nana, Sidonia of
+Georgia, the Lord's Robe, and five icons. Grep for Romanos, Ananias and
+Koukouzelis before drafting: a Julian 1 October has not been read, but another
+day may hold them.
 
-**The carousel's picture floor was relaxed on 2026-09-17, and it is the
-author's to reverse.** `index-carousel.spec.js` asserted that half the columns
-carry a picture; CI read 141 of 288 at 1280 px once B1's second batch landed,
-with the page unchanged. It now asserts one column in three, the floor his own
-"at most two name columns in a row" implies. Every further saint without an
-icon lowers the share, so a licensed icon is worth more than it was.
+Open identities, each written into the folders: whether the Greek 30 September's
+Two Women Martyrs are the two virgins the Romanian long life has die with
+Gaiane; whether the Fifty Martyrs of Palestine are the Sretensky 151's burned
+(they carry no Russian row); Gregory of Pelshma and Michael of Kyiv are Greek
+one-liners that the Russian 30 September (civil 13 October) must read before
+anyone calls them the Russian saints; the older open ones (Trophimus and
+Dorymedon, Tryphon) stand.
 
-What A2 added that the tools do not say. `day-candidates.mjs` undercounts the
-Serbian Prologue: it read four entries on 24 and 25 September where the page
-prints five, so read the numbered list on the page itself. Orloff is not
-exhausted for a saint.gr "Έτερον Ἀπολυτίκιον": a common (a nun's «Ἐν σοὶ
-Μῆτερ», a hieromartyr's «Καὶ τρόπων μέτοχος») is often printed under a
-named saint, and the corpus already holds its Orloff English, so grep the
-Greek text across `saints/*/saint.json` before rendering one. An office goes
-in only if `el.js` already has it — `grep -c "<office>" src/ui/locales/el.js`
-settles it in a second. A regnal marker ("under Basil I"), a monastery's
-dedication and a lavra's name are written so that they do not match an
-existing display name; `cross-link-audit.mjs` diffed against the last batch's
-output shows it. `.tmp/mk23.py`–`mk25.py` and `.tmp/upgrade.py` (which now
-takes `types_add`) are the shape of a two-church day, and
-`.tmp/namedays.mjs <base> <date> <church>` reads a day's name-day list against
-a running dev server.
-
-Three more things 22 September taught that the tools say only by failing:
-`office` must already have a translation in all four locale packs
-(`tests/i18n.test.mjs`), so an office the packs lack is left out of a batch
-rather than added to them; a date `display` must be one the four languages can
-read (`tests/date-display.test.mjs` refused "under Trajan", and "98–117"
-passes); and a display name that cuts, at its first comma or bracket, to an
-existing saint's form silences both in cross-link — "Cosmas of Zographou (…)"
-did, "Cosmas, companion of Thomas of Zographou" does not. Diff
-`cross-link-audit.mjs` against the previous batch's output to see it. A
-company too big for one batch links forward by editing the first batch's lives
-in the second (plan §6 step 2).
-
-Three things the run taught that the tools do not say. saint.gr's day index
-carries a sidebar that `day-candidates.mjs` reads as entries (Paisios,
-Nicodemus, Panagia Megalomata): open each entry and check its own feast date.
-`corpus-gate.mjs --batch` fails "duplicates" on name forms a batch's folders
-already shared, and on a company whose members carry its heading; read the
-pairs, and for an upgrade-only day a scope file under `.tmp/corpus-batches/`
-is the only way to scope it. And neither the unit suite nor the gate notices
-a batch's one row being backed out, so the back-out is watched in the
-manifest (who is on that church's day), not in `npm test`.
-
-**`/prayer` is finished.** The hymn reader is complete through the
-plan's seventh stage — the route, `lib/prayer-order.js`, the card and its fade,
-the two asides, the field with its own MiniSearch, the phone, and the sixth nav
-link — and the plan it was built from is spent. `STRUCTURE.md` §4 Prayer
-describes the page that is there. The plan was a scratch `.txt`, which
-`/scratchpad/*.txt` keeps out of git, so nothing may cite it by path:
-`tests/citations.test.mjs` fails on CI for a file that exists only on the desk
-it was written on. `scratchpad/strip-throttle.mjs` is the
-instrument that settled the nav strip's gap budget at six links and is worth
-keeping for the seventh.
-
-**`index.css` and `saint.css` are off the render-blocking entry sheet.** `src/ui/sheets.js` loads them per route and `main.js` awaits a
-view's `styles()` before it renders. The entry sheet's byte gate passes with
-room; **`npm run test:lighthouse` is still red on FCP**, which it also is on an
-unmodified tree on this desk (`STRUCTURE.md` §6 item 7) — every route improved
-by roughly the 150 ms round trip and none reached 1500 ms here.
-
-**The Daily desktop redesign is in two stages and the first has landed.** The
-frame and the four columns are done (`STRUCTURE.md` §4 Daily describes the page
-that is there). **Stage two is the shelf's own face**: the tile faces in
-`.cal-bubble`, the picture/rows view toggle, and the selected-state styling.
-What stage one left there is the register's existing two faces, re-placed into
-a `--side-w` column, with the chosen row hidden and marked `aria-current`.
-
----
+Helpers in `.tmp/`: `mk30a.py` + `mk30a_up.py` and `mk1001a.py` (new folders and
+upgrades in one) are a Russian and Serbian day; `mk1001b.py` a Russian-only
+batch after azbyka; `mk30b.py` a Greek and Romanian day with Orloff commons and
+doxologia hymns. A batch parked on a branch (`git branch -f hold-x HEAD; git
+reset --keep <prev>`) lets two committed batches push one at a time, since
+`push.sh` pushes HEAD. A life that names a church "of John the Theologian" or a
+namesake "Mardonius of Nicomedia" links that saint; `cross-link-audit.mjs`
+diffed against the last batch shows it.
 
 ## Three things git cannot tell you
 
