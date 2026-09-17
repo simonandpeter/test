@@ -18,8 +18,8 @@
  *
  * Transitioning the boxes instead cannot be repaired by widening that
  * selector. `transition` is a shorthand, so a universal rule either loses to
- * every component that declares one — the coachmark, the theme knob, the
- * month's own height — or overrides them and stops their movement mid-press.
+ * every component that declares one — the coachmark, the month's own
+ * height — or overrides them and stops their movement mid-press.
  * Animating the token has no such collision: it is not a `transition` on the
  * element at all.
  *

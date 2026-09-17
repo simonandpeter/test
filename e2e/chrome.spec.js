@@ -2808,7 +2808,7 @@ test('a file that is not an export changes nothing and says so', async ({ page }
   await expect(page.locator('[data-import-note]')).toContainText('nothing was changed');
 });
 
-test('the header takes one measure on every route, and stops at Daily’s column', async ({ page }) => {
+test('the header takes one measure on every route, Daily included', async ({ page }) => {
   /*
    * Author, 2026-09-01: "The header on Daily and Map page are different widths
    * from the All Saints and About page, make sure they are the same."
@@ -2847,21 +2847,7 @@ test('the header takes one measure on every route, and stops at Daily’s column
           header: r('header.chrome'),
           mark: r('header.chrome .site-name'),
           corner: r('header.chrome .chrome-corner'),
-          /*
-           * Daily alone: the columns the bar is the head of, and the sidebar
-           * whose width and gutter are what came out of the measure. Measured
-           * off the boxes rather than read off `--side-w`, which is `19rem`
-           * and does not compute to pixels through a custom property.
-           *
-           * **The last of those columns is the reading column since
-           * 2026-09-16**, where it was the whole left column of two. The bar
-           * still stops one `--side-w` and one `--day-gap` short of the page's
-           * right margin — the arithmetic below is untouched — but the box
-           * that ends there is the third of four now, not the first of two.
-           */
           bar: r('.chrome-bar'),
-          column: document.querySelector('.cal-read') ? r('.cal-read') : null,
-          side: document.querySelector('.cal-bubble') ? r('.cal-bubble') : null,
         };
       }),
     );
@@ -2877,47 +2863,22 @@ test('the header takes one measure on every route, and stops at Daily’s column
    * pass a masthead that started in the right place at any size at all, which
    * is exactly the state this line was relaxed into.
    *
-   * **And the corner's *right* edge, not its whole box, since 2026-09-10.**
-   * Past 1024 px the Daily page's three controls are in the sidebar's head
-   * (§2.2 route (c), step 6 of §10.12), so `.chrome-corner` is an empty box
-   * there and collapses to a point. Its right edge is where it always was —
-   * `justify-self: end` in the header's grid, so it is the header's own
-   * content edge — which is the number this line has always been standing for.
-   * Where those controls went is asserted on Daily itself, in
-   * `daily-panel.spec.js`, rather than inferred from a width here.
+   * **Daily is one of the four again since 2026-09-17** (author: "The header
+   * is meant to stay the same, not shorten"). From 2026-09-10 its bar had
+   * stopped at the reading column and its three controls stood in the shelf's
+   * head; now the bar, the header and the corner are asserted equal on all
+   * four routes, whole rects.
    *
-   * **And Daily's row now *ends* somewhere else on purpose, since 2026-09-10**
-   * (§2.2's last open piece): past 1024 px the bar is the head of that page's
-   * columns, so its box stops where the last of them does and the sidebar
-   * stands beside it rather than under it. That is the one difference between the
-   * four routes this test is allowed to have, and it is asserted as a
-   * *derivation* rather than excused — the row ends at the column's own right
-   * edge, and the distance back to where the other three end is exactly the
-   * sidebar and the gutter between them. A bar that simply lost 336 px would
-   * pass a constant and fail this.
-   *
-   * The three site routes keep the whole of what this test was written for:
+   * All four keep the whole of what this test was written for:
    * one box, one measure, whether or not the page under them scrolls.
    */
-  const [daily, ...site] = routes;
   for (const [i, route] of routes.entries()) {
     expect(seen[i].gutter, `${route} does not hold the scrollbar's room`).toBe('stable');
     expect(seen[i].mark, `${route} draws the mark in its own box`).toEqual(seen[0].mark);
+    expect(seen[i].header, `${route} lays the header out in its own box`).toEqual(seen[1].header);
+    expect(seen[i].bar, `${route} draws the bar in its own box`).toEqual(seen[1].bar);
+    expect(seen[i].corner, `${route} ends the header row somewhere else`).toEqual(seen[1].corner);
   }
-  for (const [i, route] of site.entries()) {
-    const s = seen[i + 1];
-    expect(s.header, `${route} lays the header out in its own box`).toEqual(seen[1].header);
-    expect(s.corner[1], `${route} ends the header row somewhere else`).toEqual(seen[1].corner[1]);
-  }
-
-  const d = seen[0];
-  expect(d.column, `premise: ${daily} draws no reading column at 1280`).not.toBeNull();
-  expect(d.bar[1], `${daily} does not stop the bar where its columns do`).toBe(d.column[1]);
-  expect(d.corner[1], `${daily} ends the header row past its own columns`).toBe(d.column[1]);
-  expect(
-    seen[1].corner[1] - d.corner[1],
-    `${daily} gives up ${seen[1].corner[1] - d.corner[1]} px where the sidebar and its gutter are ${d.side[1] - d.column[1]}`,
-  ).toBe(d.side[1] - d.column[1]);
 
   /*
    * And not on a phone, which the author scoped out ("make sure 5 6 7 are on

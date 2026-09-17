@@ -526,7 +526,6 @@ html[data-route~='calendar'][data-fills-window]
           │                          grid item and positioning context, and the
           │                          four corner crosses are drawn outside the clip
           └ .cal-bubble-fill         the fill and the clip-path, nothing else
-            ├ .cal-bubble-head       relocated chrome controls (≥1024 only)
             └ .cal-bubble-scroll     the shelf's scroller
               └ .slot-viewport[data-slot=shelf] > .day-panel.day-shelf
                                      the rest of the day; not drawn below 1024
@@ -561,15 +560,12 @@ else.
   columns and a scrolling page are one scrollbar too many.
 - **The reading column takes all the slack.** The other three are a width
   apiece and it is `minmax(0, 1fr)`, so the window is spent on the prose.
-- **`--side-w` is a rem and stays one.** It is the shelf's width, the site's bar
-  measures itself against it from outside the grid, and the three chrome
-  controls in the bubble's head have no slack to give. `--day-w` and
+- **`--side-w` is a rem and stays one.** It is the shelf's width. `--day-w` and
   `--saint-w` are clamps on `vw`, which is the window rather than the grid and
   so cannot feed back into a scrollbar appearing and disappearing.
 - **The gutter is a track, not a gap.** Columns 1–3 stand shoulder to shoulder
   with a hairline between them, which a uniform `column-gap` cannot draw; the
-  one space this grid has is before the shelf, and it is `--day-gap` because
-  that is the number the bar subtracts.
+  one space this grid has is before the shelf, and it is `--day-gap`.
 - **The day is painted into five panels and rolled as five.** `main` and `side`
   are the phone's pair; `saint`, `content` and `shelf` are the desk's and are
   not painted below 1024 px. A day change steps every panel in the document on
@@ -589,13 +585,15 @@ else.
   the scrollport and the head would stick to a thing that never scrolls.
 - **The right column is one filled box** with a square notch bitten from each
   corner and a cross of the fill standing in each bite. No `overflow: hidden`
-  on it anywhere — the chooser panels open downward and are allowed to overrun
-  the bottom edge; the notches are the only clipping it does.
+  on it anywhere; the notches are the only clipping it does.
 - **The picker is the month grid**, forced open on arrival, and the week rail is
   hidden. It stands in the day's own column, on the page's own ground.
 - The date sits between two stepper buttons, each half a cross.
 - Name days lead the day's column, above readings.
-- The site's controls relocate into `.cal-bubble-head`.
+- **The site's header is the same as on every other route** (author,
+  2026-09-17): full width, with the calendar, language and theme controls in
+  it. `main` takes no top padding here, and the four columns start `--headgap`
+  under the bar. The page still does not scroll.
 
 **The view toggle is two marks and no words**: a square for the pictures and
 four lines for the other face, drawn at one size so the pair reads as one
@@ -658,10 +656,10 @@ The two widths are free to diverge except here.
 
 | property | where | decides |
 | --- | --- | --- |
-| `--side-w` | `html[data-route~='calendar']`, ≥1024 | the shelf's width, 19rem. On the route and not on the box, because the site's bar measures itself against this column from outside the grid. |
+| `--side-w` | `html[data-route~='calendar']`, ≥1024 | the shelf's width, 19rem |
 | `--day-w` | same rule | the day's own column |
 | `--saint-w` | same rule | the chosen saint's column |
-| `--day-gap` | same rule | the one gutter: the track between the reading column and the shelf, and what the bar subtracts along with `--side-w` |
+| `--day-gap` | same rule | the one gutter: the track between the reading column and the shelf |
 | `--day-cols` | `.cal`, ≥1024 | the five tracks |
 | `--cal-peek`, `--cal-gutter` | `calendar.css` | the month's peeked neighbour columns and the gutter they need |
 | `--cal-row-h` | `calendar.css` | a month row |
@@ -670,7 +668,7 @@ The two widths are free to diverge except here.
 | `--notch` | `calendar.css` | the bubble's corner bite |
 
 The rest — `--ox`, `--rail-inset`, `--rail-fade`, `--peek-fade`, `--headgap`,
-`--rulegap`, `--lede-lines`, `--bub-inset` — are local to one control and are
+`--rulegap`, `--lede-lines` — are local to one control and are
 read where they are declared.
 
 | attribute | set by | read by |
