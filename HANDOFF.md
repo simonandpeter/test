@@ -34,9 +34,13 @@ here, because a PAT push never updates `origin/main`.
 ## In flight
 
 **The corpus run (`scratchpad/corpus-plan.md` §5) is in Phase B.** Civil
-20 September – 4 October is read for all four churches. **5 October is not
-read** for any church, and `day-candidates.mjs 2026-10-05` has not been run.
-The Serbian list misses Prologue entries; read the page.
+20 September – 5 October is read for all four churches. **Civil 6 October is
+read for the Russian and Serbian only; the Greek and Romanian 6 October are
+next** (`day-candidates.mjs 2026-10-06` has been run). Innocent of Moscow has
+no folder: the Sretensky 23 September prints his glorification (1977) and
+three hymns, and saint.gr keeps him on 6 October, so his folder and both rows
+belong with the Greek 6 October. The Serbian list misses Prologue entries;
+read the page.
 
 Open identities, each written into the folders: whether the Greek 30 September's
 Two Women Martyrs are the two virgins the Romanian long life has die with
@@ -65,6 +69,14 @@ Not made folders: Paul of Gortyna (saint.gr keeps him on the Sunday between
 1 and 7 October, which no feast shape here holds) and Basil Nosov (on azbyka's
 4 October line, not on the Sretensky day's).
 
+From 5–6 October: Barlaam of Sikisk is a Greek one-liner (1846, "a Russian
+saint") whose Russian identity is open; Charitina (5 October) and Charitina
+(4 September) stay two folders, though saint.gr wonders whether they are one.
+Macarius of Zhabyn's Russian 22 January and Irais's Russian 23 September are
+feast notes, so those days do not render them. azbyka.ru prints a troparion
+and kontakion for Jonah of Yashezero that were not taken, the azbyka hymn
+ruling covering new martyrs only.
+
 **Hymns for new martyrs off azbyka.ru are taken** (ruling for the 3 October
 sitting): the Church Slavonic only, whole, with its tone, English rendered by
 the site from the Slavonic; never the Russian gloss. Nicholas of Iskrovka has
@@ -76,10 +88,11 @@ Latin letters inside Slavonic and Greek hymn words are written as the letters
 they display as since the 3 October batches; five older Greek hymns
 (`mixed.py` in `.tmp/` lists them) still carry them.
 
-Helpers in `.tmp/`: `mk1004a.py` (Russian and Serbian, new folders and
-upgrades), `mk1004b.py` and `mk1004c.py` (azbyka new martyrs, with hymns),
-`mk1004d.py` and `mk1004e.py` (Greek and Romanian, hymns pulled off the cached
-pages by label, and a Greek row's feast note), `azlife.py` (an azbyka life), `up-nik.py` (azbyka hymns into an existing folder),
+Helpers in `.tmp/`: `mk1005a.py` and `mk1006a.py` (Russian and Serbian, new
+folders and upgrades, a second Russian day as a feast note), `mk1004b.py` and
+`mk1004c.py` (azbyka new martyrs, with hymns), `mk1005b.py` (Greek and
+Romanian, hymns pulled off the cached pages by label, pair hymns in both
+folders), `azlife.py` (an azbyka life), `up-nik.py` (azbyka hymns into an existing folder),
 `upgrade.py` (applies an upgrade file), `backout.py` and `daycount.mjs <date>
 <slug>` (the back-out), `fetch.mjs` (cached, polite), `txt.py` (a cached page
 as lines), `grbody.py` (a saint.gr entry's body), `hfind.py` (corpus hymns by
