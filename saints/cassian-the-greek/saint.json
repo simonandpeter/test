@@ -1,0 +1,58 @@
+{
+  "slug": "cassian-the-greek",
+  "display_name": "Cassian the Greek",
+  "names": [
+    {
+      "form": "Κασσιανός ο Έλληνας",
+      "lang": "el",
+      "note": "Read out of «Όσιος Κασσιανός ο Έλληνας και Θαυματουργός», whose «και Θαυματουργός» makes the whole line read as two titles joined by “and”, which the name picker will not print."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1504,
+      "latest": 1504,
+      "display": "1504",
+      "basis": "attested",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη σε βαθύ γήρας, στις 2 Οκτωβρίου του 1504 μ.Χ.»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 2 октября ст. ст. (civil 15 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 2 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 2 Οκτωβρίου — «Όσιος Κασσιανός ο Έλληνας και Θαυματουργός»",
+        "url": "https://www.saint.gr/10/02/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 2. октобар ст. ст. (civil 15 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

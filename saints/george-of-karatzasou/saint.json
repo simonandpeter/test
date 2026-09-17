@@ -1,0 +1,57 @@
+{
+  "slug": "george-of-karatzasou",
+  "display_name": "George of Karatzasou",
+  "names": [
+    {
+      "form": "Άγιος Γεώργιος ο Νεομάρτυρας που μαρτύρησε στο Καρατζασού",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1752,
+      "latest": 1794,
+      "display": "1794 or 1752",
+      "basis": "traditional",
+      "note": "saint.gr: «στις 2 Οκτωβρίου 1794 μ.Χ (ή κατά τον Otto Meinardus στις 2 Οκτωβρίου 1752 μ.Χ.) τον αποκεφάλισαν»; the interval spans both readings."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 2 октября ст. ст. (civil 15 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 2 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 2 Οκτωβρίου — «Άγιος Γεώργιος ο Νεομάρτυρας που μαρτύρησε στο Καρατζασού»",
+        "url": "https://www.saint.gr/10/02/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 2. октобар ст. ст. (civil 15 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,7 @@
+# Cassian the Greek
+
+Cassian of Uglich, in the world Constantine, was of Greek birth, a descendant of the princely family of the Mankoupioi, and came to Moscow with the Byzantine embassy to Grand Prince Ivan III Vasilyevich (1438–1505), who by his marriage to Sophia Palaiologina in 1472 became kin to the last Byzantine dynasty and took the double-headed eagle for his emblem. Resolving to give his life to God, Constantine stayed on in the tsar’s judicial service at Moscow, living near Joasaph, bishop of Rostov; when Joasaph withdrew to the monastery of St Therapont, Constantine left the world and followed him, and became a monk after a wondrous vision in which the venerable Martinian (died 1483) called him to the monastic life, taking the name Cassian.
+
+After a time he left that monastery and settled near Uglich, where the Uchma flows into the Volga, and founded a monastery in honour of the Dormition of the Theotokos. The fame of his holy life spread widely, and many came to him for his blessing and his counsel; he received everyone with abundant love and led them with discernment to the harbour of salvation. He died in peace in deep old age on 2 October 1504, the day of his memory. The Greek synaxarion adds that he is remembered also on 21 May, because in the world he was named Constantine for Constantine the Great, and on 23 August for the translation of his relics.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 2 Οκτωβρίου — [the entry](https://www.saint.gr/1688/saint.aspx); read 17 September 2026.*

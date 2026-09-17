@@ -1,0 +1,202 @@
+{
+  "slug": "cyprian-of-antioch",
+  "display_name": "Cyprian of Antioch",
+  "names": [
+    {
+      "form": "Κυπριανός",
+      "lang": "el",
+      "note": "His own name, read out of «Άγιος Κυπριανός και η Αγία Ιουστίνη», which names two saints."
+    },
+    {
+      "form": "Sfântul Sfințit Mucenic Ciprian",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "249–251",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησε στα χρόνια του Δεκίου (249 - 251 μ.Χ.)», and Claudius beheaded him with Justina at Nicomedia; doxologia.ro: «Pe vremea împărăției lui Deciu», and condemned at Nicomedia by «împăratul Claudiu»."
+    }
+  },
+  "related": [
+    "justina-of-antioch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 2 октября ст. ст. (civil 15 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 2 octombrie — „Sfântul Sfințit Mucenic Ciprian”",
+        "url": "https://doxologia.ro/2-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 2 Οκτωβρίου — «Άγιος Κυπριανός και η Αγία Ιουστίνη»",
+        "url": "https://www.saint.gr/10/02/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 2. октобар ст. ст. (civil 15 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Θείας πίστεως, τὴ φωταυγεία, σκότος ἔλιπες, τῆς ἀσεβείας, καὶ φωστὴρ τῆς ἀληθείας γεγένησαι ποιμαντικῶς γὰρ φαιδρύνας τὸν βίον σου, Κυπριανὲ τὴ ἀθλήσει δεδόξασαι. Πάτερ Ὅσιε, τὸν Κτίστην ἠμὶν ἰλέωσαι, ὁμοὺ σὺν Ἰουστίνη τὴ Θεόφρονι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Κυπριανός και η Αγία Ιουστίνη, Λειτουργικά κείμενα: Ἀπολυτίκιον (Κατέβασμα)",
+        "url": "https://www.saint.gr/2578/saint.aspx",
+        "year": 2026
+      },
+      "model": "Θείας πίστεως.",
+      "english": {
+        "text": "By the radiance of divine faith thou didst leave the darkness of ungodliness and didst become a luminary of the truth; for having made thy life bright as a shepherd, O Cyprian, thou wast glorified by thy contest. O venerable father, make the Creator merciful to us, together with Justina of godly mind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Καὶ τρόπων μέτοχος, καὶ θρόνων διάδοχος, τῶν Ἀποστόλων γενόμενος, τὴν πρᾶξιν εὗρες θεόπνευστε, εἰς θεωρίας ἐπίβασιν· διὰ τοῦτο τὸν λόγον τῆς ἀληθείας ὀρθοτομῶν, καὶ τῇ πίστει ἐνήθλησας μέχρις αἵματος, Ἱερομάρτυς Κυπριανέ· Πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Κυπριανός και η Αγία Ιουστίνη, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2578/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having been a participant of the character and a successor of the apostles on the throne, thou, O God-inspired one, didst find work in coming into visions; whilst therefore rightly dividing the word of truth, for the sake of the faith didst thou suffer even unto the shedding of thy blood. O hieromartyr (mentioned by name), intercede before Christ the God that our souls may be saved.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter XVI, The General Service to One Hieromartyr",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ὡς ἱεράρχην τίμιον, καὶ ἀθλητὴν στερρότατον, ἡ οἰκουμένη ἀξίως γεραίρει σέ, Κυπριανὲ ἀοίδιμε, καὶ τοὶς ὕμvοις δοξάζει, τὴν ἁγίαν σου μνήμην, αἰτοῦσα πάντοτε, πταισμάτων ἄφεσιν, διὰ σοῦ δωρηθήναι τοὶς μέλπουσιν. Ἀλληλούια.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Κυπριανός και η Αγία Ιουστίνη, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2578/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ὡς ἀπαρχᾶς.",
+      "english": {
+        "text": "As an honoured hierarch and a most steadfast contestant, the whole world worthily honoureth thee, O ever-memorable Cyprian, and glorifieth thy holy memory with hymns, asking always that through thee forgiveness of offences be granted to those who sing: Alleluia.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Ἐκ τέχνης μαγικῆς, ἐπιστρέψας θεόφρον, πρὸς γνῶσιν θεϊκήν, ἀνεδείχθης τῷ κόσμῳ, ἀκέστωρ σοφώτατος, τὰς ἰάσεις δωρούμενος, τοῖς τιμῶσί σε, Κυπριανὲ σὺν Ἰουστίνῃ· μεθ’ ἧς πρέσβευε, τῷ Φιλανθρώπῳ Δεσπότῃ, σωθῆναι τοὺς δούλους σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Κυπριανός και η Αγία Ιουστίνη, Λειτουργικά κείμενα: Έτερον Κοντάκιον",
+        "url": "https://www.saint.gr/2578/saint.aspx",
+        "year": 2026
+      },
+      "model": "Χορὸς Ἀγγελικός.",
+      "english": {
+        "text": "Turning from the art of magic to divine knowledge, O thou of godly mind, thou wast shown to the world a most wise physician, granting healings to those who honour thee, O Cyprian, with Justina; with her intercede with the Master who loveth mankind, that thy servants may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor Apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge Sfinţite Mucenice Ciprian, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfinţit Mucenic Ciprian",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-ciprian",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having been a participant of the character and a successor of the apostles on the throne, thou, O God-inspired one, didst find work in coming into visions; whilst therefore rightly dividing the word of truth, for the sake of the faith didst thou suffer even unto the shedding of thy blood. O hieromartyr (mentioned by name), intercede before Christ the God that our souls may be saved.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter XVI, The General Service to One Hieromartyr",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Ca pe un ierarh cinstit şi ca pe un nevoitor preatare, lumea după vrednicie te cinsteşte, Sfinţite Mucenice Ciprian, pururea pomenite şi cu cântări măreşte sfântă po­menirea ta; cerând întotdeauna să dăruiască prin tine iertare greşelilor, celor ce cântă: Aliluia.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Sfinţit Mucenic Ciprian",
+        "url": "https://doxologia.ro/condacul-sfantului-sfintit-mucenic-ciprian",
+        "year": 2026
+      },
+      "model": "Ca nişte pârgă a firii...",
+      "english": {
+        "text": "As an honoured hierarch and a most steadfast contestant, the whole world worthily honoureth thee, O ever-memorable Cyprian, and glorifieth thy holy memory with hymns, asking always that through thee forgiveness of offences be granted to those who sing: Alleluia.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "De la meşteşugul vrăjitoresc întorcâdu-te, de Dumnezeu înţelepţite, la Dumnezeiasca Cunoştinţă, te-ai arătat lumii doc­tor preaînţelept, tămăduiri dă­ruind celor ce te cinstesc pe tine, Sfinţite Mucenice Ciprian şi pe Sfântă Muceniţă Iustina; cu care roagă-te Iubitorului de oameni, Stăpânului, să mântu­iască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Sfinţit Mucenic Ciprian şi al Sfintei Muceniţe Iustina, fecioara",
+        "url": "https://doxologia.ro/condacul-sfantului-sfintit-mucenic-ciprian-al-sfintei-mucenite-iustina-fecioara",
+        "year": 2026
+      },
+      "model": "Ceata îngerească...",
+      "english": {
+        "text": "Turning from the art of magic to divine knowledge, O thou of godly mind, thou wast shown to the world a most wise physician, granting healings to those who honour thee, O Cyprian, with Justina; with her intercede with the Master who loveth mankind, that thy servants may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

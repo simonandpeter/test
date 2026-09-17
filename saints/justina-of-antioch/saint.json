@@ -1,0 +1,144 @@
+{
+  "slug": "justina-of-antioch",
+  "display_name": "Justina of Antioch",
+  "names": [
+    {
+      "form": "Ιουστίνη",
+      "lang": "el",
+      "note": "Her own name, read out of «Άγιος Κυπριανός και η Αγία Ιουστίνη», which names two saints."
+    },
+    {
+      "form": "Sfânta Muceniță Iustina",
+      "lang": "ro"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "249–251",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησε στα χρόνια του Δεκίου (249 - 251 μ.Χ.)», and Claudius beheaded him with Justina at Nicomedia; doxologia.ro: «Pe vremea împărăției lui Deciu», and condemned at Nicomedia by «împăratul Claudiu»."
+    }
+  },
+  "related": [
+    "cyprian-of-antioch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 2 октября ст. ст. (civil 15 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 2 octombrie — „Sfânta Muceniță Iustina”",
+        "url": "https://doxologia.ro/2-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 2 Οκτωβρίου — «Άγιος Κυπριανός και η Αγία Ιουστίνη»",
+        "url": "https://www.saint.gr/10/02/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 2. октобар ст. ст. (civil 15 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Θείας πίστεως, τὴ φωταυγεία, σκότος ἔλιπες, τῆς ἀσεβείας, καὶ φωστὴρ τῆς ἀληθείας γεγένησαι ποιμαντικῶς γὰρ φαιδρύνας τὸν βίον σου, Κυπριανὲ τὴ ἀθλήσει δεδόξασαι. Πάτερ Ὅσιε, τὸν Κτίστην ἠμὶν ἰλέωσαι, ὁμοὺ σὺν Ἰουστίνη τὴ Θεόφρονι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Κυπριανός και η Αγία Ιουστίνη, Λειτουργικά κείμενα: Ἀπολυτίκιον (Κατέβασμα)",
+        "url": "https://www.saint.gr/2578/saint.aspx",
+        "year": 2026
+      },
+      "model": "Θείας πίστεως.",
+      "english": {
+        "text": "By the radiance of divine faith thou didst leave the darkness of ungodliness and didst become a luminary of the truth; for having made thy life bright as a shepherd, O Cyprian, thou wast glorified by thy contest. O venerable father, make the Creator merciful to us, together with Justina of godly mind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Ἐκ τέχνης μαγικῆς, ἐπιστρέψας θεόφρον, πρὸς γνῶσιν θεϊκήν, ἀνεδείχθης τῷ κόσμῳ, ἀκέστωρ σοφώτατος, τὰς ἰάσεις δωρούμενος, τοῖς τιμῶσί σε, Κυπριανὲ σὺν Ἰουστίνῃ· μεθ’ ἧς πρέσβευε, τῷ Φιλανθρώπῳ Δεσπότῃ, σωθῆναι τοὺς δούλους σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Κυπριανός και η Αγία Ιουστίνη, Λειτουργικά κείμενα: Έτερον Κοντάκιον",
+        "url": "https://www.saint.gr/2578/saint.aspx",
+        "year": 2026
+      },
+      "model": "Χορὸς Ἀγγελικός.",
+      "english": {
+        "text": "Turning from the art of magic to divine knowledge, O thou of godly mind, thou wast shown to the world a most wise physician, granting healings to those who honour thee, O Cyprian, with Justina; with her intercede with the Master who loveth mankind, that thy servants may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mieluşeaua Ta, Iisuse, Iustina, strigă cu glas mare: pe Tine, Mirele meu, te iubesc și pe Tine căutându-Te mă chinuiesc și împreună mă răstignesc și împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru tine, ca să viez pentru Tine; ci, ca o jertfă fără de prihană, primește-mă pe mine ceea ce cu dragoste mă jertfesc Ție. Pentru rugăciunile ei, ca un Milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Muceniţe Iustina, fecioara",
+        "url": "https://doxologia.ro/troparul-sfintei-mucenite-iustina-fecioara",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy ewe-lamb, O Jesus, Justina, crieth with a loud voice: Thee, my Bridegroom, do I love, and seeking thee I suffer; I am crucified and buried with thee in thy baptism, and I suffer for thy sake, that I may reign in thee; I die for thee, that I may also live with thee. But as a spotless sacrifice accept me, who am offered to thee with love. Through her prayers, since thou art merciful, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "De la meşteşugul vrăjitoresc întorcâdu-te, de Dumnezeu înţelepţite, la Dumnezeiasca Cunoştinţă, te-ai arătat lumii doc­tor preaînţelept, tămăduiri dă­ruind celor ce te cinstesc pe tine, Sfinţite Mucenice Ciprian şi pe Sfântă Muceniţă Iustina; cu care roagă-te Iubitorului de oameni, Stăpânului, să mântu­iască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Sfinţit Mucenic Ciprian şi al Sfintei Muceniţe Iustina, fecioara",
+        "url": "https://doxologia.ro/condacul-sfantului-sfintit-mucenic-ciprian-al-sfintei-mucenite-iustina-fecioara",
+        "year": 2026
+      },
+      "model": "Ceata îngerească...",
+      "english": {
+        "text": "Turning from the art of magic to divine knowledge, O thou of godly mind, thou wast shown to the world a most wise physician, granting healings to those who honour thee, O Cyprian, with Justina; with her intercede with the Master who loveth mankind, that thy servants may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "slug": "cyprian-of-soundal",
+  "display_name": "Cyprian of Soundal",
+  "names": [
+    {
+      "form": "Άγιος Κυπριανός του Σουντάλ",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "fool-for-christ"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 2 октября ст. ст. (civil 15 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 2 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 2 Οκτωβρίου — «Άγιος Κυπριανός του Σουντάλ»",
+        "url": "https://www.saint.gr/10/02/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 2. октобар ст. ст. (civil 15 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

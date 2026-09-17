@@ -1,0 +1,93 @@
+{
+  "slug": "theodore-gabras",
+  "display_name": "Theodore Gabras",
+  "names": [
+    {
+      "form": "Άγιος Θεόδωρος ο Μεγαλομάρτυρας ο Γαβράς",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "great-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1098,
+      "latest": 1098,
+      "display": "1098",
+      "basis": "attested",
+      "note": "saint.gr: «μαρτύρησε μετά από φρικτά και μεγάλα βασανιστήρια, στις 2 Οκτωβρίου 1098 μ.Χ. στη Θεοδοσιούπολη (Ερζερούμ)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 2 октября ст. ст. (civil 15 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 2 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 2 Οκτωβρίου — «Άγιος Θεόδωρος ο Μεγαλομάρτυρας ο Γαβράς»",
+        "url": "https://www.saint.gr/10/02/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 2. октобар ст. ст. (civil 15 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α´.",
+      "text": "Τῆς Χαλδείας ἡγεμῶν καὶ προστάτης ὑπάρχων, Σὺ ὁ βλαστὸς τῶν Γαβράδων, ὑπὲρ Χριστοῦ τὸ σὸν αἷμα ἐξέχεας· μὴ πτοηθῇς τὰς ἀπειλὰς τῶν δυσμενῶν, ἐν οὐρανοῖς νῦν ἀγάλλῃ τῷ θρόνῳ τῆς τρισηλίου θεότητος παριστάμενος. Δόξα τῷ σὲ ἰσχύσαντι Θεῷ, δόξα τῷ σὲ στεφανώσαντι Χριστῷ, δόξα τῷ σὲ δοξάσαντι θείῳ Πνεύματι, Θεόδωρε πάνσοφε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Θεόδωρος ο Μεγαλομάρτυρας ο Γαβράς, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2575/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τοῦ λίθου σφραγισθέντος.",
+      "english": {
+        "text": "Ruler and protector of Chaldia, thou, the scion of the Gabrades, didst pour out thy blood for Christ; undismayed by the threats of the enemy, thou dost now rejoice in the heavens, standing before the throne of the thrice-radiant Godhead. Glory to God who gave thee strength; glory to Christ who crowned thee; glory to the divine Spirit who glorified thee, O all-wise Theodore.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Τῆς Ἑῴας στρατηγὸς ὑπερθαύμαστος, καὶ τῶν Γαβράδων βλαστὸς ὑπερμέγιστος, τῆς Τραπεζοῦντος ἄριστος ὁ πρύτανις φρουρός, σκέπε, φρούρει, φύλαττε τοὺς πιστῶς σε ὑμνοῦντες θρόνῳ παριστάμενος τῆς ἁγίας Τριάδος, ἣν ἐκδυσώπει σῴζεσθαι ἡμᾶς, Μεγαλομάρτυς Θεόδωρε τρισόλβιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Θεόδωρος ο Μεγαλομάρτυρας ο Γαβράς, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2575/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ.",
+      "english": {
+        "text": "Most wondrous general of the East and greatest scion of the Gabrades, most excellent ruler and guardian of Trebizond: shelter, guard and keep those who hymn thee with faith, as thou standest before the throne of the Holy Trinity; entreat it that we may be saved, O thrice-blessed great martyr Theodore.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

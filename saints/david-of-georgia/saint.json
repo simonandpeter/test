@@ -1,0 +1,62 @@
+{
+  "slug": "david-of-georgia",
+  "display_name": "David of Georgia",
+  "names": [
+    {
+      "form": "David",
+      "lang": "ro",
+      "note": "His own name, read out of «Sfinții Mucenici David și Constantin, prinți ai Georgiei», which names two saints."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "prince"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 740,
+      "latest": 740,
+      "display": "740",
+      "basis": "attested",
+      "note": "doxologia.ro: «să-i înece în Râul Rioni, aceasta petrecându-se în anul 740»."
+    }
+  },
+  "related": [
+    "constantine-of-georgia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 2 октября ст. ст. (civil 15 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 2 octombrie — „Sfinții Mucenici David și Constantin, prinți ai Georgiei”",
+        "url": "https://doxologia.ro/2-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 2 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 2. октобар ст. ст. (civil 15 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
