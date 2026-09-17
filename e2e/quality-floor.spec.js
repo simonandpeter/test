@@ -239,8 +239,11 @@ test('the heading takes focus on navigation but not on arrival', async ({ page }
   // The stage keeps both faces mounted and, for the length of a swap, both are
   // paintable — so there are two level-1 headings in the accessibility tree
   // until it lands, and only the parked one's `visibility: hidden` takes it
-  // back out. Wait for the swap rather than racing it.
-  await expect(page.locator('.face-stage[data-swapping]')).toHaveCount(0);
+  // back out. Wait for the swap rather than racing it — and for its end, not
+  // its absence: before the All Saints view has loaded no swap has begun, so
+  // "nothing swapping" held at once and the strict heading read then met two.
+  await expect(page.getByRole('heading', { level: 1, name: 'All Saints' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1);
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('All Saints');
   await expect
     .poll(() => page.evaluate(() => document.activeElement?.tagName))
