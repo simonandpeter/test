@@ -1,0 +1,108 @@
+{
+  "slug": "galaction-of-vologda",
+  "display_name": "Galaction of Vologda",
+  "names": [
+    {
+      "form": "Галактион",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Преподобномученик Галактион Вологодский»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1612,
+      "latest": 1612,
+      "display": "1612",
+      "basis": "attested",
+      "note": "The Sretensky life: «Преподобный Галактион был убит завоевателями 24 сентября 1612 года»; the day’s line prints «(1612)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Прмч. Галактиона Вологодского (1612).»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 7 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 7 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 07.10.2026 (24. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Днесь град Вологда тобою всемирне хвалится,/ возсиял бо еси пресветло яко солнце/ и чудесы твоими град и веси, преподобне Галактионе, озарил еси./ И ныне молися Господеви/ избавитися душам нашим от прелести вражия/ спастися граду нашему от поганскаго и всех противных наития,/ и испроси у Христа Бога любовию чтущим тя/ прегрешений прощения/ и просящим твоея помощи от всякия скорби избавление, и вопиющим к тебе:/ Бог наш с нами, прославивый угодника Своего, яко же благоволи.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Тропарь преподобномученика Галактиона Вологодского»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today the city of Vologda is praised through all the world because of thee, for thou hast shone most brightly as the sun, and by thy miracles, O venerable Galaction, hast lit up city and villages. And now pray to the Lord that our souls be delivered from the deceit of the enemy and our city be saved from the assault of the heathen and of all adversaries, and ask of Christ God forgiveness of sins for those who honour thee with love, and deliverance from every sorrow for those who seek thy help and cry to thee: Our God is with us, who hath glorified His saint as He was well pleased.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Днесь град Вологда тобою хвалится, преподобне,/ возсиял бо еси пресветло, яко солнце,/ грады и веси чудесы твоими озаряя./ И ныне, преподобномучениче Галактионе,/ Господеви молися стране нашей от нахождения сопротивных избавитися,/ и у Христа Бога прегрешений наших оставление испроси,/ и от всякия скорби избавление подаждь любовию чтущим тя,/ и вопиющим верно:/ Бог наш с нами, прославивый угодника Своего, якоже благоволи.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Ин тропарь преподобномученика Галактиона Вологодского»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today the city of Vologda praises thee, O venerable one, for thou hast shone most brightly as the sun, lighting up cities and villages with thy miracles. And now, O venerable martyr Galaction, pray to the Lord that our land be delivered from the incursion of adversaries, ask of Christ God the remission of our sins, and grant deliverance from every sorrow to those who honour thee with love and cry out faithfully: Our God is with us, who hath glorified His saint as He was well pleased.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Благочестно на земли пожив/ и мучения венец приял еси, пречестне,/ древом во главу от нашедших градоразорителев убиен еси,/ добрый ученик Спаса Христа,/ оставив отечественный свой град и други/ странствовати любве ради Христовы Евангельски изволил еси./ Сего ради тя почитаем, песньми вопиюще:/ от бед избави нас присно молитвами твоими,/ угодниче Божий Галактионе, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Кондак преподобномученика Галактиона Вологодского»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lived piously on earth, thou didst receive the crown of martyrdom, O most honourable one, slain by a blow of wood upon the head by the destroyers of the city who came upon it; a good disciple of Christ the Saviour, thou didst leave thy native city and thy friends and chose to wander as the Gospel bids, for the love of Christ. Wherefore we honour thee, crying out in songs: Deliver us ever from troubles by thy prayers, O Galaction, pleaser of God, our father.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

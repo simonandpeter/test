@@ -1,0 +1,136 @@
+{
+  "slug": "nicander-of-pskov",
+  "display_name": "Nicander of Pskov",
+  "names": [
+    {
+      "form": "Никандр",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Преподобный Никандр Псковский»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "related": [
+    "sabbas-of-krypetsk",
+    "alexander-of-svir"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1507,
+      "latest": 1507,
+      "display": "1507",
+      "basis": "attested",
+      "note": "The Sretensky life: «родился 24 июля 1507 года»."
+    },
+    "death": {
+      "earliest": 1581,
+      "latest": 1581,
+      "display": "1581",
+      "basis": "attested",
+      "note": "The Sretensky life: «24 сентября 1581 года, во время нашествия войск польского короля Стефана Батория, один крестьянин нашел его скончавшимся»; the day’s line prints «(1581)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Прп. Никандра пустынножителя, Псковского чудотворца (1581).»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 7 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 7 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 07.10.2026 (24. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Глас Божественный,/ иже во Евангелии, услышав, преподобне отче Никандре:/ приидите ко Мне вси труждающиеся и обремененнии, и Аз упокою вы,/ и прием крест, последовал еси Христу,/ мир оставль, в пустыню вселился еси,/ пощением же и бдением Небесный дар восприим,/ и души недужных приходящих к тебе с верою исцелявши:/ темже и со ангелы срадуется, преподобне, дух твой.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Тропарь преподобного Никандра пустынножителя, Псковского чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having heard, O venerable father Nicander, the divine voice in the Gospel, “Come unto me, all ye that labour and are heavy laden, and I will give you rest”, thou didst take up the cross and follow Christ; leaving the world, thou didst settle in the wilderness, and receiving a heavenly gift through fasting and vigil, thou didst heal the souls of the sick who came to thee with faith. Wherefore thy spirit, O venerable one, rejoiceth with the angels.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Светило незаходимаго света стране нашей явился еси, Богоблаженне, / доблественне претерпев вражия озлобления, / биение и раны яко одежда нетления вменишася тебе, / со зверьми бо брався, и от человек злых прободения прияв, / о тех молился еси, не постави им греха сего, глаголя; / темже Владыце Христу уподобился еси, достохвальне Никандре, отче наш, / молися о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Ин тропарь преподобного Никандра пустынножителя, Псковского чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst appear to our land as a luminary of the light that setteth not, O blessed of God, bravely enduring the malice of enemies; beatings and wounds were counted to thee as a garment of incorruption, for thou didst wrestle with beasts and, pierced by evil men, didst pray for them, saying, Lay not this sin to their charge. Wherefore thou wast made like to Christ the Master, O praiseworthy Nicander our father: pray for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Яко лучу тя солнечную Христос показа, преподобне,/ сияеши бо в земли Российстей чудес благодатию,/ и отгонявши тму страстей же и скорбей, от приходящих к тебе с верою:/ темже почитаем твою память, Никандре/ отче наш, и вопием ти: радуйся пустынножителей красото,/ и стране нашей похвала и утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Кондак преподобного Никандра пустынножителя, Псковского чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Christ showed thee forth as a ray of the sun, O venerable one, for thou shinest in the Russian land with the grace of miracles and drivest away the darkness of passions and sorrows from those who come to thee with faith. Wherefore we honour thy memory, O Nicander our father, and cry to thee: Rejoice, beauty of the dwellers in the wilderness, praise and strength of our land.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Во избрание Богосиянная звезда веры,/ иже возсия в Рустей земли, отче преблаженне Никандре,/ слезами и постом и бдением и молитвами удручал тело свое,/ темже и обрете Небесную жизнь,/ и радостно тайно со Ангелы ликовствуя, да зовем ти: радуйся, отче преподобне Никандре пустынный жителю.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Ин кондак преподобного Никандра пустынножителя, Псковского чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a God-radiant star of faith chosen out, who didst shine forth in the Russian land, O most blessed father Nicander, thou didst wear down thy body with tears and fasting, vigils and prayers, and so didst find the heavenly life, and joyfully keepest mystic festival with the angels; let us cry to thee: Rejoice, O venerable father Nicander, dweller in the wilderness.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

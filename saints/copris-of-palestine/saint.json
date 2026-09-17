@@ -9,6 +9,11 @@
     {
       "form": "Όσιος Κόπρις",
       "lang": "el"
+    },
+    {
+      "form": "Коприй",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Преподобный Коприй»."
     }
   ],
   "sex": "male",
@@ -18,8 +23,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 11 сентября ст. ст. (civil 24 September, checked 2026-08-30); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Прп. Коприя (530).»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -52,7 +66,7 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 07.10.2026 (24. септембар ст. ст.) (checked 2026-09-17); no other day checked."
     }
   ],
   "dates": {
@@ -61,7 +75,7 @@
       "latest": 570,
       "display": "6th century",
       "basis": "traditional",
-      "note": "The life gives no year: he was born beside the monastery of Theodosius the Cenobiarch (d. 529), was dear to the great Theodosius, and lived to ninety."
+      "note": "The life gives no year: he was born beside the monastery of Theodosius the Cenobiarch (d. 529), was dear to the great Theodosius, and lived to ninety. The Russian calendar’s 24 September old style dates him «(530)» and its life gives no year beyond his ninety years; the two are left as the interval."
     }
   },
   "text": {

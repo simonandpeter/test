@@ -1,0 +1,53 @@
+{
+  "slug": "david-son-of-vukan",
+  "display_name": "David, son of Vukan",
+  "names": [
+    {
+      "form": "Давид",
+      "lang": "sr",
+      "note": "Read out of «Св. Давид (најпре кнез Димитрије), син Вукана, брата Стефанова» in the Ohrid Prologue for 07.10.2026."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "prince"
+  ],
+  "related": [
+    "stefan-the-first-crowned"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not among the names printed by days.pravoslavie.ru for 24 сентября ст. ст. (civil 7 October) (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 7 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 7 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.10.2026 (24. септембар ст. ст.) — „Св. Давид (најпре кнез Димитрије), син Вукана, брата Стефанова“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-07&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

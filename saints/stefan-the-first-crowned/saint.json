@@ -9,6 +9,16 @@
     {
       "form": "Άγιος Στέφανος, βασιλιάς των Σέρβων",
       "lang": "el"
+    },
+    {
+      "form": "Стефан",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Святой король Стефан Сербский»."
+    },
+    {
+      "form": "Стефан",
+      "lang": "sr",
+      "note": "Read out of «Св. Стефан краљ српски првовенчани» in the Ohrid Prologue for 07.10.2026."
     }
   ],
   "sex": "male",
@@ -28,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 11 сентября ст. ст. (civil 24 September, checked 2026-08-30); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The Sretensky life keeps his memory also on 30 августа with the Serbian saints; the corpus holds one feast a church, so that day does not list him."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Св. царя Стефана Сербского (1224) и сына его св. царя Владислава Сербского (после 1264).»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -61,8 +81,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.10.2026 (24. септембар ст. ст.) — „Св. Стефан краљ српски првовенчани“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-07&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "locations": [
@@ -77,5 +106,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "vladislav-of-serbia",
+    "sava-of-serbia"
+  ]
 }

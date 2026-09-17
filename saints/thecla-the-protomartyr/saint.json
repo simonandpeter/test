@@ -14,6 +14,16 @@
     {
       "form": "Αγία Θέκλα η Ισαπόστολος",
       "lang": "el"
+    },
+    {
+      "form": "Фекла",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Святая Фекла»."
+    },
+    {
+      "form": "Текла",
+      "lang": "sr",
+      "note": "Read out of «Св. првомуч. Текла равноапостолна» in the Ohrid Prologue for 07.10.2026."
     }
   ],
   "sex": "female",
@@ -25,8 +35,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 11 сентября ст. ст. (civil 24 September, checked 2026-08-30); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Первомц. равноап. Феклы (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -58,8 +77,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.10.2026 (24. септембар ст. ст.) — „Св. првомуч. Текла равноапостолна“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-07&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "dates": {
@@ -124,6 +152,54 @@
         "year": 2026
       },
       "model": "Ὡς ἀπαρχὰς",
+      "english": {
+        "text": "Thou didst shine with the beauty of virginity and art adorned with the crown of martyrdom; as one glorious, O Virgin, thou art entrusted with apostleship; the flame of the fire thou didst turn into dew, and the fury of the bull thou didst tame by thy prayer, O first champion.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Словесем Павловым научившися, богоневестная Фекло,/ и верою утвердившися от Петра, богозванная,/ первомученица явилася еси и первострадальница в женах,/ возшла еси на пламень, яко на место благоцветущее,/ звери и юнцы устрашишася тебе, вооружися бо Крестом./ Тем моли, всехвальная, Христа Бога,// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Тропарь первомученицы равноапостольной Феклы»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taught by the words of Paul, O Thecla, bride of God, and confirmed in the faith by Peter, O called of God, thou wast shown forth as first martyr and first sufferer among women; thou didst go up onto the flame as onto a place in flower, and the beasts and the bullocks feared thee, for thou wast armed with the Cross. Wherefore, O all-praised one, pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Уязвивши твое сердце, добродево, любовию Христовою,/ обручника временнаго, яко небрегома, преобидела еси,/ и на огнь дерзнула еси,/ зверей же уста заградила еси/ и, спасшися от них, прилежаше, Павла ищущи,// Фекло первострадальная.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Кондак первомученицы равноапостольной Феклы»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having wounded thy heart with the love of Christ, O good virgin, thou didst slight thy temporal betrothed as one of no account; thou didst dare the fire and stop the mouths of the beasts, and, saved from them, didst go diligently seeking Paul, O Thecla, first in suffering.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Девства добротою просияла еси,/ и мученичества венцем украсилася еси,/ Апостольству вверяешися, дево, яко преславная,/ и огня убо пламень в росу преложила еси,/ юнца же ярость молитвою твоею укротила еси,/ яко первострадальная.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Кондак первомученицы равноапостольной Феклы»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      },
       "english": {
         "text": "Thou didst shine with the beauty of virginity and art adorned with the crown of martyrdom; as one glorious, O Virgin, thou art entrusted with apostleship; the flame of the fire thou didst turn into dew, and the fury of the bull thou didst tame by thy prayer, O first champion.",
         "rendered": "site"

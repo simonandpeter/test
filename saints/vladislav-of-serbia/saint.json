@@ -1,0 +1,76 @@
+{
+  "slug": "vladislav-of-serbia",
+  "display_name": "Vladislav of Serbia",
+  "names": [
+    {
+      "form": "Владислав",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Святой король Владислав Сербский»."
+    },
+    {
+      "form": "Владислав",
+      "lang": "sr",
+      "note": "Read out of «Св. краљ Владислав» in the Ohrid Prologue for 07.10.2026."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "king"
+  ],
+  "related": [
+    "stefan-the-first-crowned",
+    "sava-of-serbia"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1239,
+      "latest": null,
+      "display": "after 1238",
+      "basis": "traditional",
+      "note": "The Sretensky life: «скончался в 1239 году»; the Sretensky day’s line dates him «(после 1264)». The Prologue gives no year. The interval is the one both readings fit, 1239 with no upper bound; it is labelled “after 1238” because “1239 or after 1264” does not read in all four languages."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Св. царя Стефана Сербского (1224) и сына его св. царя Владислава Сербского (после 1264).»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 7 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 7 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.10.2026 (24. септембар ст. ст.) — „Св. краљ Владислав“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-07&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
