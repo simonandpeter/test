@@ -175,7 +175,7 @@ test('name days stand in two columns at a desk and run on with dots on a phone',
    * is the mockup's 269 px at 1280, 6 px narrower than it was, and under the
    * runner's DejaVu Sans one of the nine names then wraps at 17 px and the
    * balancer puts four in the leading column. The claim here is the fill
-   * order, not the width; the size itself is stage F's (13 px, REVIEW.md
+   * order, not the width; the size itself is stage F's (13 px, ../mockup-review/REVIEW.md
    * finding 2).
    */
   await page.setViewportSize({ width: 1440, height: 900 });
