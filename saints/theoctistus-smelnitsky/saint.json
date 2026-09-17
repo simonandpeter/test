@@ -1,0 +1,70 @@
+{
+  "slug": "theoctistus-smelnitsky",
+  "display_name": "Theoctistus (Smelnitsky)",
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Феоктист Смельницкий",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Священномученик Феоктист Смельницкий, пресвитер»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1874,
+      "latest": 1874,
+      "display": "1874",
+      "basis": "attested",
+      "note": "azbyka.ru’s short life: «родился 17 января 1874 года в селе Тарасовичи»; its full life: «родился 4 января 1874 года»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "azbyka.ru: «Расстрелян 3 октября 1937 г. в 23 часа 30 минут, в отделении \"Тартаул\" Карлага НКВД»; the Sretensky day prints «(1937)»."
+    }
+  },
+  "related": [
+    "alexander-tetyuev"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 сентября ст. ст. — «Сщмчч. Феоктиста и Александра пресвитеров (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260920.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 3 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 3 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 03.10.2026 (20. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

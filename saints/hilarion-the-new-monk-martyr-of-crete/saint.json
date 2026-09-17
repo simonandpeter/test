@@ -10,6 +10,11 @@
       "form": "Ilarion Criteanul",
       "lang": "ro",
       "note": "From «Sfântul Cuvios Nou Mucenic Ilarion Criteanul» in this folder's Romanian citation, without the rank."
+    },
+    {
+      "form": "Иларион",
+      "lang": "sr",
+      "note": "Read out of «Преп. муч. Иларион» in the Ohrid Prologue for 03.10.2026."
     }
   ],
   "sex": "male",
@@ -53,8 +58,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.10.2026 (20. септембар ст. ст.) — „Преп. муч. Иларион. Монах Светогорски, драговољно пострадао за веру Христову од Турака у Цариграду 20. септ. 1804. г.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-03&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [
@@ -95,5 +109,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1804,
+      "latest": 1804,
+      "display": "1804",
+      "basis": "attested",
+      "note": "The Ohrid Prologue for 03.10.2026 (20. септембар ст. ст.): «драговољно пострадао за веру Христову од Турака у Цариграду 20. септ. 1804. г.»; the Greek and Romanian pages print no year."
+    }
   }
 }

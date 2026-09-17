@@ -1,0 +1,190 @@
+{
+  "slug": "theodore-boyar-of-chernigov",
+  "display_name": "Theodore, boyar of Michael of Chernigov",
+  "names": [
+    {
+      "form": "Феодор",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Святой благоверный князь Михаил Черниговский и боярин его Феодор»."
+    },
+    {
+      "form": "Теодор",
+      "lang": "sr",
+      "note": "Read out of «Св. Михаил кнез и Теодор бољарин» in the Ohrid Prologue for 03.10.2026."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "confessor"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1244,
+      "latest": 1246,
+      "display": "1244–1246",
+      "basis": "attested",
+      "note": "The Sretensky day prints «(1245)»; both of its lives put the martyrdom in 1246 («Когда в 1246 году благоверный князь Михаил и боярин Феодор прибыли в Орду», and «пострадавшего в Орде в 1246 году»); the Ohrid Prologue: «бише посечени 1244. год.»."
+    }
+  },
+  "related": [
+    "michael-of-chernigov"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 сентября ст. ст. — «Мчч. и испп. Михаила , кн. Черниговского, и болярина его Феодора , чудотворцев (1245)»",
+        "url": "https://days.pravoslavie.ru/Days/20260920.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 3 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 3 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.10.2026 (20. септембар ст. ст.) — „Св. Михаил кнез и Теодор бољарин“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-03&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Жизнь вашу мученически совершивше,/ исповедания венцы украсившеся, к Небесным востекосте,/ Михаиле премудре с доблим Феодором,/ молите Христа Бога/ сохранити отечество ваше,/ град же и люди,// по велицей Его милости.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 сентября ст. ст. — «Тропарь мучеников и исповедников Михаила и Феодора»",
+        "url": "https://days.pravoslavie.ru/Days/20260920.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having ended your life as martyrs and adorned yourselves with the crowns of confession, ye have hastened to the heavens, O most wise Michael, with valiant Theodore. Pray to Christ God to preserve your fatherland, your city and people, according to his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Троичнаго Божества осиянием просветився,/ страстотерпче великий княже Михаиле,/ с премудрым болярином ти Феодором,/ самозванна к подвигом устремистася,/ сквозе огнь не идоста,/ кусту же и идолом не поклонистася, но оплеваста/ и нечестиваго царя обличиста,/ Христа же Единаго от Троицы Бога Суща исповедаста./ И того ради кровей своих струями обагристася, славная./ Темже и венца от Него победная прилета,/ и нас свыше назираета,/ молим ва, святая, молите Того,/ яко да вашими молитвами избавит нас от всяких обстоящих ны зол/ и подаст нам вся благая,/ Иже Един Сый прославляемый во святых Своих.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 сентября ст. ст. — «Тропарь благоверного князя Михаила Черниговского и болярина его Феодора»",
+        "url": "https://days.pravoslavie.ru/Days/20260920.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by the radiance of the Divinity of the Trinity, O great prince and passion-bearer Michael, with thy most wise boyar Theodore, ye hastened of your own will to the contest. Ye would not go through the fire nor bow down to the bush and the idols, but spat upon them and rebuked the impious king, and confessed Christ, who is God, One of the Trinity; and for this ye were crimsoned with the streams of your own blood, O glorious ones. Wherefore ye have won the crown of victory from him, and look down upon us from on high. We entreat you, O holy ones: pray to him that by your prayers he deliver us from all the evils that beset us and grant us all good things, he who alone is glorified in his saints.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Блаженнии апостоли равночестнии,/ прияли есте венец от Христа,/ занеже того достоини Михаиле Богомудре и Феодоре дивне,/ мир мирови испросите,/ и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 сентября ст. ст. — «Ин тропарь мучеников и исповедников Михаила и Феодора»",
+        "url": "https://days.pravoslavie.ru/Days/20260920.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O blessed ones, equal in honour to the apostles, ye have received a crown from Christ, for ye were worthy of it, O Michael of godly wisdom and wondrous Theodore. Ask peace for the world, and great mercy for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Царство земное в ничтоже вменив,/ славу, яко преходящую, оставил еси,/ самозван пришед к подвигом,/ Троицу проповедал еси пред нечестивым мучителем,/ страстотерпче Михаиле с доблим Феодором,/ Царю сил предстояще,/ молите без вреда сохранити Отечество ваше, град же и люди,// да вас непрестанно почитаем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 сентября ст. ст. — «Кондак мучеников и исповедников Михаила и Феодора»",
+        "url": "https://days.pravoslavie.ru/Days/20260920.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Counting the earthly kingdom as nothing, thou didst leave glory as a thing that passes away, and coming of thine own will to the contest thou didst preach the Trinity before the impious tormentor, O passion-bearer Michael, with valiant Theodore. Standing before the King of powers, pray that your fatherland, your city and people be kept unharmed, that we may honour you without ceasing.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Верою укреплыыеся, святии, мучения претерпесте/ и кровьми своими погаснете пламень сопротивных безбожия,/ Христа же исповедаете, с Отцем и Духом,/ Михаиле и Феодоре, Его молите за всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 сентября ст. ст. — «Ин кондак благоверного князя Михаила Черниговского и болярина его Феодора»",
+        "url": "https://days.pravoslavie.ru/Days/20260920.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Strengthened by faith, O saints, ye endured torments, and with your blood ye quenched the flame of the godlessness of the adversaries, and confessed Christ with the Father and the Spirit. O Michael and Theodore, pray to him for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Вышних ища, нижняя оставил еси,/ колесницу на Небеса кровь свою сотворил еси,/ тем собеседниче первомучеником бысть, Михаиле и Феодоре,/ с ними же Христа Бога моля непрестанно за вся ны.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 сентября ст. ст. — «Ин кондак благоверного князя Михаила Черниговского и болярина его Феодора»",
+        "url": "https://days.pravoslavie.ru/Days/20260920.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Seeking the things on high, thou didst leave the things below, and madest thy blood a chariot to the heavens; therefore thou wast shown a companion of the first martyrs, O Michael and Theodore, praying with them to Christ God unceasingly for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Яко светило в Руси возсиявше, мучения лучами славными отразисте, страстотерпцы славнии, Михаиле и Феодоре, тем вопиясте:/ ничтоже нас отлучит от любве Христовы.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 сентября ст. ст. — «Ин кондак благоверного князя Михаила Черниговского и болярина его Феодора»",
+        "url": "https://days.pravoslavie.ru/Days/20260920.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having shone forth in Rus’ as luminaries, ye turned back torments with glorious rays, O glorious passion-bearers Michael and Theodore, and so ye cried: nothing shall separate us from the love of Christ.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

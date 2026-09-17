@@ -48,4 +48,6 @@ the saint’s blood, and before he could so much as sign the girl with it the
 demon came out of her and the child got up well. The Greek and Romanian
 calendars keep him on 20 September.
 
-*After the Greek synaxarion’s own page — [saint.gr, Άγιος Ιλαρίων ο Νέος Οσιομάρτυρας](https://www.saint.gr/976/saint.aspx), read 26 August 2026 and whole on 6 September 2026; the first reading had stopped at the agha’s door.*
+The Ohrid Prologue, for the Serbian calendar, keeps him on 20 September old style in a line: a monk of the Holy Mountain who suffered willingly for the faith of Christ at the hands of the Turks in Constantinople on 20 September 1804, whose wonder-working relics rest in the church of the Transfiguration on the island of Prote. It is the only source here to give the year, and the only one to say where his relics lie.
+
+*After the Greek synaxarion’s own page — [saint.gr, Άγιος Ιλαρίων ο Νέος Οσιομάρτυρας](https://www.saint.gr/976/saint.aspx), read 26 August 2026 and whole on 6 September 2026; the first reading had stopped at the agha’s door; the Ohrid Prologue for 3 October 2026 (20. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-03&prolog=1), read 17 September 2026.*

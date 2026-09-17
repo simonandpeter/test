@@ -1,0 +1,7 @@
+# Oleg of Bryansk
+
+Oleg Romanovich, baptised Leontius, prince of Bryansk, was a grandson of the martyr [Michael of Chernigov](/saints/michael-of-chernigov). The chronicles, the Russian calendar’s life says, record that in 1274 he took part with his father, Prince Roman Mikhailovich of Bryansk, in the war against Lithuania. After 1274 he left his principality and took monastic vows with the name Basil in the monastery of Sts Peter and Paul at Bryansk, which had been built at his expense, and there he died a strict ascetic about 1285 and was buried in the monastery church.
+
+A second, shorter life on the same calendar says that he was indifferent to riches and worldly glory and drawn above all to the monastic life, and so gave up his throne to his brother; that he became known for the strictness of his monastic life; and that he died in peace in his monastery about 1289, his relics resting in the Peter and Paul monastery of Bryansk that he had built. The Russian calendar keeps him on 20 September old style, the day of his grandfather Michael, with the synaxis of the saints of Bryansk; its day prints about 1285.
+
+*After the lives printed by the Sretensky calendar (days.pravoslavie.ru), 20 сентября ст. ст. — [the first](https://days.pravoslavie.ru/Life/life1571.htm) and [the second](https://days.pravoslavie.ru/Life/life6775.htm), with [the day](https://days.pravoslavie.ru/Days/20260920.html); read 17 September 2026.*

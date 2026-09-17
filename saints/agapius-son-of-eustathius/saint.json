@@ -10,6 +10,16 @@
       "form": "Agapie",
       "lang": "ro",
       "note": "From «Sfântul Mare Mucenic Eustatie și soția sa Teopista, cu cei doi fii: Agapie și Teopist» in this folder's Romanian citation."
+    },
+    {
+      "form": "Агапий",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Великомученик Евстафий Плакида, жена его Феопистия и их чада Агапий и Феопист»."
+    },
+    {
+      "form": "Агапије",
+      "lang": "sr",
+      "note": "Read out of the text of the Ohrid Prologue’s entry for Eustathius on 03.10.2026, which names the family."
     }
   ],
   "sex": "male",
@@ -19,8 +29,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for this day was not read (26 August 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 сентября ст. ст. — «Вмч. Евстафия Плакиды, жены его Феопистии и чад их Агапия и Феописта (ок. 118)»",
+        "url": "https://days.pravoslavie.ru/Days/20260920.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -53,7 +72,7 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+      "note": "The Ohrid Prologue on pravoslavno.rs for 03.10.2026 (20. септембар ст. ст.) gives the entry to Eustathius alone («Св. вел. муч. Евстатије Плакида»), though its text tells of his baptism and martyrdom with his father (checked 2026-09-17); no other day checked."
     }
   ],
   "dates": {
@@ -78,6 +97,38 @@
       },
       "tone": "Ἦχος β’.",
       "model": "Τὰ ἄνω ζητῶν.",
+      "english": {
+        "text": "Having clearly imitated the sufferings of Christ, and having faithfully drunk of his cup, thou didst become, O Eustathius, his companion and a joint-heir of his glory, receiving from him, the God of all, divine remission from on high.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего:/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 сентября ст. ст. — «Тропарь великомученика Евстафия и иже с ним»",
+        "url": "https://days.pravoslavie.ru/Days/20260920.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their sufferings received incorruptible crowns from thee our God; for possessing thy strength, they cast down the tyrants and shattered also the feeble insolence of the demons. By their prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Страсти Христовы яве подражав/ и Сего испив усердно чашу,/ общник, Евстафие, и славы снаследник был еси,/ от Самаго всех Бога// приемля с высоты божественное оставление.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 сентября ст. ст. — «Кондак великомученика Евстафия»",
+        "url": "https://days.pravoslavie.ru/Days/20260920.html",
+        "year": 2026
+      },
       "english": {
         "text": "Having clearly imitated the sufferings of Christ, and having faithfully drunk of his cup, thou didst become, O Eustathius, his companion and a joint-heir of his glory, receiving from him, the God of all, divine remission from on high.",
         "rendered": "site"

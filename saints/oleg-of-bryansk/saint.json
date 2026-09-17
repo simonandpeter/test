@@ -1,0 +1,97 @@
+{
+  "slug": "oleg-of-bryansk",
+  "display_name": "Oleg of Bryansk",
+  "office": "Prince",
+  "names": [
+    {
+      "form": "Олег Брянский",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Благоверный князь Олег Брянский»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "prince"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1285,
+      "latest": 1289,
+      "display": "c. 1285–1289",
+      "basis": "traditional",
+      "note": "The Sretensky day prints «(ок. 1285)» and its first life «скончался строгим подвижником около 1285 года»; its second life: «Он мирно скончался в своем монастыре около 1289 г.»."
+    }
+  },
+  "related": [
+    "michael-of-chernigov"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 сентября ст. ст. — «Прп. и блгв. кн. Олега Брянского (ок. 1285)»",
+        "url": "https://days.pravoslavie.ru/Days/20260920.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 3 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 3 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 03.10.2026 (20. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "От юности возлюбив Христа всем сердцем, преподобне / славу земную, яко преходящу, оставил еси / и царство земное в ничтоже вменивше, / лику инок радостно причелся еси / и труды многими град Брянск, аки солнце пресветло, озарил еси: / тем, быв Троицы украшение, моли, княже Олеже, Христа Бога, спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 сентября ст. ст. — «Тропарь преподобного и благоверного князя Олега Брянского»",
+        "url": "https://days.pravoslavie.ru/Days/20260920.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved Christ with all thy heart from thy youth, O venerable one, thou didst leave earthly glory as a thing that passes away, and counting the earthly kingdom as nothing thou wast joyfully numbered with the ranks of monks, and by many labours thou didst enlighten the city of Bryansk like a most radiant sun. Therefore, having become an adornment of the Trinity, O Prince Oleg, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Уподобился еси плодоносней леторасли от корене честнаго, Олеже благородне,/ истину возлюбив и нетленный Христов живот./ Темже молитвою, бдением и пощением светильник великий быв твоим учеником,/ просвети, блаженне, Отечество твое и спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 сентября ст. ст. — «Кондак преподобного и благоверного князя Олега Брянского»",
+        "url": "https://days.pravoslavie.ru/Days/20260920.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast like a fruitful shoot from an honoured root, O noble Oleg, having loved the truth and the incorruptible life of Christ. Therefore, having become by prayer, vigil and fasting a great lamp to thy disciples, enlighten thy fatherland, O blessed one, and save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

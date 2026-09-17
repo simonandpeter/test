@@ -1,0 +1,70 @@
+{
+  "slug": "alexander-tetyuev",
+  "display_name": "Alexander (Tetyuev)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Александр Тетюев",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Священномученик Александр Тетюев, пресвитер»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "1879",
+      "basis": "attested",
+      "note": "azbyka.ru: «родился 10 марта 1879 года в селе Салтанове Чердынского уезда Пермской губернии»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "azbyka.ru: «Отец Александр был арестован 5 августа 1937 года и вскоре расстрелян»; the Sretensky day prints «(1937)»."
+    }
+  },
+  "related": [
+    "theoctistus-smelnitsky"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 сентября ст. ст. — «Сщмчч. Феоктиста и Александра пресвитеров (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260920.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 3 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 3 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 03.10.2026 (20. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
