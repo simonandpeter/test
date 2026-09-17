@@ -14,6 +14,11 @@
       "form": "Ξανθίππη",
       "lang": "el",
       "note": "Her own name, read out of «Οσίες Ξανθίππη και Πολυξένη» in this folder’s Greek citation."
+    },
+    {
+      "form": "Ксанфиппа",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Преподобные Ксанфиппа и Поликсения»."
     }
   ],
   "sex": "female",
@@ -23,8 +28,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 10 сентября ст. ст. (civil 23 September, checked 2026-08-30); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 сентября ст. ст. — «Прпп. жен Ксанфиппы и Поликсении (109)»",
+        "url": "https://days.pravoslavie.ru/Days/20260923.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -57,7 +71,7 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 06.10.2026 (23. септембар ст. ст.) (checked 2026-09-17); no other day checked."
     }
   ],
   "dates": {

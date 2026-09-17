@@ -1,0 +1,66 @@
+{
+  "slug": "john-pankratovich",
+  "display_name": "John (Pankratovich)",
+  "names": [
+    {
+      "form": "Иоанн Панкратович",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Священномученик Иоанн Панкратович, пресвитер», its stress marks left out."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1870,
+      "latest": 1870,
+      "display": "1870",
+      "basis": "attested",
+      "note": "azbyka.ru’s life: «родился в 1870 году в местечке Клецк Слуцкого уезда Минской губернии»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The Sretensky day prints «(1937)»; azbyka.ru’s life: «6 октября 1937 года казнен, погребен в безвестной могиле»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 сентября ст. ст. — «Сщмч. Иоанна пресвитера (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260923.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 6 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 6 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 06.10.2026 (23. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

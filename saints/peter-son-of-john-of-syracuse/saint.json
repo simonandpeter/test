@@ -10,6 +10,11 @@
       "form": "Πέτρος",
       "lang": "el",
       "note": "His own name, as the entry’s verse «Εις τον Πέτρον και Αντώνιον» prints it."
+    },
+    {
+      "form": "Петр",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Мученики Андрей, Иоанн и чада Иоанновы, Петр и Антонин»."
     }
   ],
   "sex": "male",
@@ -27,13 +32,23 @@
   },
   "related": [
     "john-of-syracuse",
-    "antony-son-of-john-of-syracuse"
+    "antony-son-of-john-of-syracuse",
+    "andrew-the-martyr-23-september"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 23 сентября ст. ст. (civil 6 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 сентября ст. ст. — «Мчч. Андрея , Иоанна и чад Иоанновых Петра и Антонина (IX)»",
+        "url": "https://days.pravoslavie.ru/Days/20260923.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -57,7 +72,7 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 23. септембар ст. ст. (civil 6 October) was not read (2026-09-17)."
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 06.10.2026 (23. септембар ст. ст.) (checked 2026-09-17); no other day checked."
     }
   ],
   "text": {

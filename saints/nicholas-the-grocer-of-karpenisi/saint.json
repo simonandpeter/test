@@ -5,6 +5,11 @@
     {
       "form": "Άγιος Νικόλαος ο παντοπώλης ο Νεομάρτυρας από το Καρπενήσι",
       "lang": "el"
+    },
+    {
+      "form": "Никола",
+      "lang": "sr",
+      "note": "Read out of «Св. новомуч. Никола Пантопол» in the Ohrid Prologue for 06.10.2026."
     }
   ],
   "sex": "male",
@@ -31,7 +36,7 @@
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 23 сентября ст. ст. (civil 6 October) was not read (2026-09-17)."
+      "note": "Not among the names printed by days.pravoslavie.ru for 23 сентября ст. ст. (civil 6 October) (checked 2026-09-17); no other day checked."
     },
     {
       "church": "romanian",
@@ -54,8 +59,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 23. септембар ст. ст. (civil 6 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.10.2026 (23. септембар ст. ст.) — „Св. новомуч. Никола Пантопол“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-06&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [
