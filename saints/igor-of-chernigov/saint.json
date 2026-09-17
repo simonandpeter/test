@@ -1,0 +1,126 @@
+{
+  "slug": "igor-of-chernigov",
+  "display_name": "Igor of Chernigov",
+  "office": "Grand Prince",
+  "names": [
+    {
+      "form": "Игорь Черниговский",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Святой благоверный князь Игорь Черниговский»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous",
+    "prince"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1147,
+      "latest": 1147,
+      "display": "1147",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru’s life: «святой князь-мученик Игорь Ольгович (+1147)»; the day prints «(1147)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Блгв. вел. кн. Игоря Черниговского и Киевского (1147)»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 2 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 2 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 02.10.2026 (19. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Наста днесь всечестная память страстотерпца благовернаго князя Игоря,/ созывающая люди в пречестный храм Спасов,/ идеже радостно сошедшеся благочестивых множество/ молитвенно празднуют святую память твою,/ и с верою взывают ти:/ молися, святе, стране Российстей, граду Чернигову и всем православным христианом/ в мире и благоденствии спастися.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Тропарь блаженного Игоря, великого князя Черниговского и Кмевского»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today the all-honoured memory of the passion-bearer, the right-believing Prince Igor, is come, calling the people to the most honoured church of the Saviour, where a multitude of the pious, gathered with joy, keep thy holy memory in prayer and cry to thee with faith: Pray, O saint, that the Russian land, the city of Chernigov and all Orthodox Christians may be saved in peace and prosperity.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Просветився Божественным крещением, / Духа Святаго светлостьми озаряем, / Евангелие Христово в сердце твое восприял еси / делом слово Сына Божия исполняя, благоверный княже Игоре, / моли Всеблагаго Спасителя нашего даровати нам мир, и милость, / и спасение душ наших, чтущих честную память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Ин тропарь благоверного великого князя Игоря Черниговского»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by divine baptism and illumined by the radiance of the Holy Spirit, thou didst receive the Gospel of Christ into thy heart, fulfilling in deed the word of the Son of God, O right-believing Prince Igor. Pray to our all-good Saviour to grant peace and mercy and the salvation of our souls to us who honour thy precious memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Изменил еси земнаго княжения славу/ во иночества образ смиренный/ и страдальчески земное житие скончав,/ ныне на Небесех радуешися,/ усердие моляся/ о чтущих тя, Игоре, страдальцев похвало.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Кондак блаженного Игоря, великого князя Черниговского и Кмевского»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst exchange the glory of an earthly princedom for the humble form of the monastic life, and having ended thy earthly life in suffering, thou dost now rejoice in the heavens, praying earnestly for those who honour thee, O Igor, boast of sufferers.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Княжескую диадему обагрил еси кровию твоею, / Богомудре страстотерпче Игоре, / за скиптр крест в руку приим, явился еси победоносец / и жертву непорочну Владыце принесл еси себе. / Яко бо агнец незлобив от раб убиен был еси, / и ныне радуяся предстоиши Святей Троице, / молися спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Ин кондак благоверного великого князя Игоря Черниговского»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst crimson thy princely diadem with thy blood, O Igor, passion-bearer of godly wisdom; taking the cross in thy hand in place of the sceptre, thou didst appear victorious, and didst offer thyself to the Master as a spotless sacrifice. For as a guileless lamb thou wast slain by servants, and now thou standest rejoicing before the Holy Trinity: pray that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

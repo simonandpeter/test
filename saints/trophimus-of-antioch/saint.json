@@ -14,6 +14,16 @@
       "form": "Τρόφιμος",
       "lang": "el",
       "note": "His own name, read out of «Άγιοι Τρόφιμος, Σαββάτιος και Δορυμέδων» — the line already recorded here, which names more than this saint (or joins two of the titles with “and”), so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
+    },
+    {
+      "form": "Трофим",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Мученики Трофим, Савватий и Доримедонт»."
+    },
+    {
+      "form": "Трофим",
+      "lang": "sr",
+      "note": "Read out of «Св. муч. Трофим, Саватије и Доримедонт» in this folder’s Serbian citation."
     }
   ],
   "sex": "male",
@@ -22,18 +32,27 @@
   ],
   "dates": {
     "death": {
-      "earliest": 278,
-      "latest": 278,
-      "display": "278",
+      "earliest": 276,
+      "latest": 282,
+      "display": "276–282",
       "basis": "traditional",
-      "note": "saint.gr: under Probus and the governor Heliodorus, 278."
+      "note": "saint.gr: under Probus and the governor Heliodorus, 278; the Sretensky day prints «(276)» and its life «в царствование римского императора Проба (276 - 282)»; the Ohrid Prologue: «У време цара Прова, у III столећу»."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 19 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Мчч. Трофима , Савватия и Доримедонта (276)»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -65,8 +84,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 19. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.10.2026 (19. септембар ст. ст.) — „Св. муч. Трофим, Саватије и Доримедонт“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-02&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -137,6 +165,38 @@
       },
       "english": {
         "text": "God, who is praised in Trinity, hath greatly glorified the trinity of martyrs: Saint Trophimus, Saint Sabbatius and Saint Dorymedon; for believing in him they cast down the enemy. Through their prayers, O Christ God, have mercy on us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "В Троице хвалимый Бог троицу мученик прослави,/ Трофима и Савватия и Доримедонта:/ в Того бо веровавше, врага низложиша.// Тех молитвами, Христе Боже наш, помилуй нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Тропарь мучеников»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "God, who is praised in Trinity, hath greatly glorified the trinity of martyrs: Saint Trophimus, Saint Sabbatius and Saint Dorymedon; for believing in him they cast down the enemy. Through their prayers, O Christ God, have mercy on us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко страдальцев основание и благочестия утверждение,/ Церковь чтит и славит твое светоносное страдание,/ приснопеваемый блаженне страдальче, доблемудре славне Трофиме,/ со страдавшими с тобою,// очищение поющим тя испроси, яко непобедим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Кондак мучеников»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a firm foundation of contestants and a support of piety, the Church honoureth and magnifieth thy light-bearing contest, O all-renowned and blessed one, valiant-minded contestant, glorious Trophimus. Together with them that contended with thee, ask remission for those who hymn thee, as one unconquered.",
         "rendered": "site"
       }
     }

@@ -1,0 +1,69 @@
+{
+  "slug": "alexis-of-zosimova",
+  "display_name": "Alexis of Zosimova",
+  "office": "Hieroschemamonk",
+  "names": [
+    {
+      "form": "Алексий Зосимовский (Соловьев)",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Преподобный Алексий Зосимовский (Соловьев)», its stress mark left out."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1846,
+      "latest": 1846,
+      "display": "1846",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru’s life: «родился 17 января 1846 года в Москве»."
+    },
+    "death": {
+      "earliest": 1928,
+      "latest": 1928,
+      "display": "1928",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru’s life: «Почил старец Алексий 19 сентября (2 октября н. ст.) 1928 года в Сергиевом Посаде»."
+    }
+  },
+  "related": [
+    "seraphim-of-dmitrov"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Прп. Алексия Зосимовсого (1928)»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 2 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 2 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 02.10.2026 (19. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

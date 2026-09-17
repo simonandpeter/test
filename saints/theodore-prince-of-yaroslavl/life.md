@@ -42,7 +42,11 @@ The Greek synaxarion keeps the three on 19 September and says it has no
 details of these Russian saints; the Russian calendar keeps them the same day
 of its own reckoning.
 
+The Russian calendar keeps him on 19 September old style with his sons as the wonderworkers of Yaroslavl, on 5 March for the finding of their relics, and on 23 May among the saints of Rostov, with troparia and kontakia for the three together and two troparia and a kontakion for Theodore alone. Its life dates his birth about 1237–1239, and adds that in 1239, when the martyr Mercurius delivered Smolensk from Batu, the boy had been carried away and hidden; that his mother-in-law, Princess Xenia, brought up his son Michael; and that in 1296, when war nearly broke out between the princes, he and Grand Prince Andrew stood on one side and Michael of Tver and [Daniel of Moscow](/saints/daniel-of-moscow) on the other, until at the congress of princes at Vladimir the bishops Simeon of Vladimir and Ismael of Sarai made peace. After him, it says, his son David ruled Yaroslavl, and Constantine seems to have died earlier; and in 1322–1327 the Fyodorovskoye Gospel was written and illuminated in his memory for Bishop Prochorus of Rostov, who had been abbot of the Saviour monastery at Yaroslavl and may have seen his tonsure and his confession before the people.
+
+The Ohrid Prologue, for the Serbian calendar, gives him alone a line: righteous and merciful, he took the schema before his death and died in 1298. That year stands beside the Russian 1299 in his dates.
+
 *After the life printed by the Orthodox Church in America for 19 September —
 [the day’s lives](https://www.oca.org/saints/all-lives/2026/09/19); the Greek
 entry is the Ορθόδοξος Συναξαριστής (saint.gr), 19 Σεπτεμβρίου —
-[the entry](https://www.saint.gr/3846/saint.aspx); read 5 September 2026.*
+[the entry](https://www.saint.gr/3846/saint.aspx); read 5 September 2026; the life printed by the Sretensky calendar (days.pravoslavie.ru), 19 сентября ст. ст. — [the entry](https://days.pravoslavie.ru/Life/life1565.htm), read 17 September 2026; the Ohrid Prologue for 2 October 2026 (19. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-02&prolog=1), read 17 September 2026.*

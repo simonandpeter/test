@@ -5,6 +5,11 @@
     {
       "form": "Άγιοι Θεόδωρος ο πρίγκιπας και Δαβίδ και Κωνσταντίνος οι υιοί του",
       "lang": "el"
+    },
+    {
+      "form": "Константин Ярославский",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Святой благоверный князь Константин Ярославский»."
     }
   ],
   "sex": "male",
@@ -15,8 +20,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 19 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Блгвв. князей Феодора Смоленского (1299) и чад его Давида (1321) и Константина , Ярославских чудотворцев»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -40,7 +54,7 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 19. септембар ст. ст. was not read (2026-08-23)."
+      "note": "The Ohrid Prologue on pravoslavno.rs for 02.10.2026 (19. септембар ст. ст.) gives an entry to Prince Theodore of Yaroslavl alone and does not name his sons (checked 2026-09-17); no other day checked."
     }
   ],
   "text": {
@@ -58,11 +72,109 @@
       "latest": 1321,
       "display": "before 1321",
       "basis": "traditional",
-      "note": "Died, it seems, before his brother David, who died in 1321; their father died in 1299, as the entry’s own life says; recorded 2026-09-06."
+      "note": "Died, it seems, before his brother David, who died in 1321; their father died in 1299, as the entry’s own life says; recorded 2026-09-06. days.pravoslavie.ru’s page for him: «По кончине отца князь Константин во всем повиновался старшему брату св. благоверному князю Давиду (+ 1321 г.)», while its joint life says «святой Константин, видимо, почил ранее»."
     }
   },
   "related": [
     "david-son-of-prince-theodore",
     "theodore-prince-of-yaroslavl"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От юности вашея Христове любви прилепившеся, святии, / усердно закон и оправдания Того сохранисте, / отонудуже и чудесными даровании обогатившеся, / исцеления источаете, Феодоре, Давиде и Константине, / о верою вас почитающих, / молите Христа Бога, спастися душам нашым.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Тропарь благоверных князей Феодора Смоленского и чад его Давида и Константина, на преставление»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Cleaving from your youth to the love of Christ, O saints, ye zealously kept his law and his statutes; wherefore, enriched also with wondrous gifts, ye pour forth healings, O Theodore, David and Constantine. For those who honour you with faith, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко звезды многосветлыя от юности возсиявше, / осветили есте сердца верных пренесением честных мощей ваших, / во плоти, яко Ангелы на земли показастеся, / пощением насаждени бысте яко древа, при водах воздержания, / напоени струями слез ваших, и скверну омысте. / Сего ради явистеся приятелища Божия Духа, / Феодоре, и Давиде, и Константине, / молите Христа Бога, спастися душам нашым.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Тропарь благоверных князей Феодора Смоленского и чад его Давида и Константина, на перенесение мощей»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining from your youth like most radiant stars, ye have enlightened the hearts of the faithful by the translation of your honoured relics. In the flesh ye appeared as angels on earth; by fasting ye were planted like trees by the waters of abstinence, and, watered by the streams of your tears, ye washed away defilement. Therefore ye were shown to be dwellings of the Spirit of God, O Theodore, and David, and Constantine: pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко апостолом спричастницы и врачеве предобрии, служители Богоприятнии, / памяти вашей Божественней притекающим, / святии Богомудрии, достоблаженнии, благочестивии князи, / новоявленнии чудотворцы Феодоре и Давиде, и Константине, / сошедшеся любовию в память вашу светло празднуем / в песнех и пениих, радующеся Христа славяще, таковую благодать даровавшего вам исцелением, / граду вашему Ярославлю великое утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Ин тропарь благоверных князей Феодора Смоленского и чад его Давида и Константина»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As partakers with the apostles and most excellent physicians, servants acceptable to God, to those who hasten to your divine memory, O saints of godly wisdom, most blessed and pious princes, newly revealed wonderworkers Theodore and David and Constantine: gathered with love for your memory we keep it brightly in songs and hymns, rejoicing and glorifying Christ, who hath given you such grace of healing, a great stronghold for your city of Yaroslavl.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Явися велие солнце Христове Церкви,/ просвещая учением светлостьми, всечестне,/ яко черпалом златым от кладязя неископаннаго чудес почерпл еси от Источника неистощимаго/ на успение свое приспел еси, всеблаженне Феодоре,/ ныне всем даеши грехов прощение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Кондак благоверных князей Феодора Смоленского и чад его Давида и Константина, на преставление»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst appear as a great sun to the Church of Christ, enlightening it with the brightness of teaching, O all-honoured one; as with a golden pitcher thou didst draw wonders from the undug well, from the inexhaustible Source; thou hast come to thy falling asleep, O all-blessed Theodore, and now thou givest to all forgiveness of sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Явистеся светильницы всесветлии во плоти яко Ангели,/ и яко жизни древеса райская,/ пощением, бдением и верою возращаеми, процвели есте,/ молитвами вашими небесныя благодати приемше,/ врачеве крепцы явльшеся, / исцеляете недугующих души,/ с верою прибегающих к вам чудотворцы славнии, Феодоре, Давиде и Константине:/ молите Христа Бога, грехов оставление даровати/ верою и любовию чтущым память вашу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Кондак благоверных князей Феодора Смоленского и чад его Давида и Константина, на перенесение мощей»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ye appeared as all-radiant lamps in the flesh, like angels, and as trees of life in paradise; nourished by fasting, vigil and faith, ye blossomed, and having received heavenly grace by your prayers ye were shown to be strong physicians, healing the souls of the sick who flee to you with faith, O glorious wonderworkers Theodore, David and Constantine. Pray to Christ God to grant remission of sins to those who honour your memory with faith and love.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко светильницы и врачеве преизряднии явистеся,/ верним сердцем озаряюще добродетельми чудес ваших,/ в плоти бо на земли благоугодители,/ Иже во святых Прославляемому непрестанно молите о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Ин кондак благоверных князей Феодора Смоленского и чад его Давида и Константина, на перенесение мощей»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ye appeared as lamps and most excellent physicians, enlightening the hearts of the faithful with the virtues of your wonders; for in the flesh on earth ye were well-pleasing to God. Pray without ceasing for us all to him who is glorified in the saints.",
+        "rendered": "site"
+      }
+    }
   ]
 }

@@ -1,0 +1,73 @@
+{
+  "slug": "zosimas-the-hermit",
+  "display_name": "Zosimas the Hermit",
+  "names": [
+    {
+      "form": "Зосима пустынник",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Мученик Зосима пустынник»."
+    },
+    {
+      "form": "Зосим пустињак",
+      "lang": "sr",
+      "note": "Read out of «Св. муч. Зосим пустињак» in this folder’s Serbian citation."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "hermit"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life: «Мученик Зосима пустынник жил в IV веке»; the day prints «(IV)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Мч. Зосимы пустынника (IV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 2 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 2 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.10.2026 (19. септембар ст. ст.) — „Св. муч. Зосим пустињак“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-02&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "constantine-golubev",
+  "display_name": "Constantine (Golubev)",
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Константин (Голубев)",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Священномученик Константин (Голубев), Богородский, пресвитер»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1852,
+      "latest": 1852,
+      "display": "1852",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru’s life: «родился в 1852 году в селе Барановке Вольского уезда Саратовской губернии»."
+    },
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The Sretensky day prints «Сщмч. Константина (1918)»; its life puts his arrest after the revolution of 1917 and gives no year."
+    }
+  },
+  "related": [
+    "john-vostorgov"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Сщмч. Константина (1918)»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 2 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 2 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 02.10.2026 (19. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

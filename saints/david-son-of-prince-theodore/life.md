@@ -12,7 +12,9 @@ have been kept together since. The Greek synaxarion keeps them on
 19 September and says it has no details of the lives of these Russian
 saints; the Russian calendar keeps them the same day of its own reckoning.
 
+The Russian calendar keeps him on 19 September old style with his father and brother as the wonderworkers of Yaroslavl, and with them on 5 March for the finding of their relics and on 23 May among the saints of Rostov; its life says he ruled Yaroslavl after his father and died in 1321. The Ohrid Prologue for the same day gives an entry to his father alone.
+
 *After the life printed by the Orthodox Church in America for 19 September —
 [the day’s lives](https://www.oca.org/saints/all-lives/2026/09/19); the Greek
 entry is the Ορθόδοξος Συναξαριστής (saint.gr), 19 Σεπτεμβρίου —
-[the entry](https://www.saint.gr/3846/saint.aspx); read 5 September 2026.*
+[the entry](https://www.saint.gr/3846/saint.aspx); read 5 September 2026; the life printed by the Sretensky calendar (days.pravoslavie.ru), 19 сентября ст. ст. — [the entry](https://days.pravoslavie.ru/Life/life1565.htm), read 17 September 2026.*
