@@ -34,38 +34,49 @@ here, because a PAT push never updates `origin/main`.
 ## In flight
 
 **The corpus run (`scratchpad/corpus-plan.md` §5) is in Phase B.** Civil
-20 September – 2 October is read for all four churches. **3 October is not
-read** for any church, and `day-candidates.mjs 2026-10-03` has not been run;
-B4 starts there. The Serbian list misses Prologue entries; read the page.
+20 September – 3 October is read for all four churches. **4 October is not
+read** for any church, and `day-candidates.mjs 2026-10-04` has not been run.
+The Serbian list misses Prologue entries; read the page. saint.gr's entry for
+Dionysius of Alexandria says Faustus, Gaius, Eusebius and Chaeremon are kept
+again on 4 October: their folders exist with the Greek 3 October row.
 
 Open identities, each written into the folders: whether the Greek 30 September's
 Two Women Martyrs are the two virgins the Romanian long life has die with
 Gaiane; whether the Fifty Martyrs of Palestine are the Sretensky 151's burned;
 Gregory of Pelshma, Michael of Kyiv (30 September), Sabbas of Vishera
-(1 October) and Cyprian of Soundal (2 October) are Greek one-liners the Russian
-30 September – 2 October (civil 13–15 October) must read before anyone calls
-them the Russian saints; John Koukouzelis carries a 1118–1433 death because the
-Greek and Romanian pages put him centuries apart; Zosimas the Hermit's
-Sretensky name page files a second, unread life of a venerable martyr Zosimas
-of Cilicia beside his. The Julian 19 September names no Tryphon, so whether the
-Greek 29 September's Trophimus and Dorymedon are the 19 September martyrs
-stays open; the Romanian Tryphon stands open too.
+(1 October), Cyprian of Soundal (2 October) and Dionysius the Recluse of the
+Caves (3 October) are Greek one-liners the Russian 30 September – 3 October
+(civil 13–16 October) must read before anyone calls them the Russian saints;
+John Koukouzelis carries a 1118–1433 death because the Greek and Romanian pages
+put him centuries apart; Zosimas the Hermit's Sretensky name page files a
+second, unread life of a venerable martyr Zosimas of Cilicia beside his. The
+Julian 19 September names no Tryphon, so whether the Greek 29 September's
+Trophimus and Dorymedon are the 19 September martyrs stays open; the Romanian
+Tryphon stands open too. Theoctistus (3 October) is one folder for the Greek
+and Romanian one-liners on the day, name and rank alone; the Romanian life of
+Dionysius the Areopagite calls his wife "Damar", and she is not linked to
+Damaris of Athens.
 
-**Hymns for new martyrs off azbyka.ru are not taken**: the Russian batches take
-hymns only from the Sretensky day, though azbyka prints some (Nicholas of
-Iskrovka has two troparia and two kontakia there) and `eae87ce` once cited it
-for two Caves saints. Unsettled; the author's call.
+**Hymns for new martyrs off azbyka.ru are taken** (ruling for the 3 October
+sitting): the Church Slavonic only, whole, with its tone, English rendered by
+the site from the Slavonic; never the Russian gloss. Nicholas of Iskrovka has
+his four. The other new martyrs of 20 September – 2 October were not checked
+on azbyka for hymns.
 
-`quality-floor.spec.js:228` is no longer a known flake: it was a race, fixed in
-`03a4003`.
+Latin letters inside Slavonic and Greek hymn words are written as the letters
+they display as since the 3 October batches; five older Greek hymns
+(`mixed.py` in `.tmp/` lists them) still carry them.
 
-Helpers in `.tmp/`: `mk1002a.py` (Russian and Serbian, new folders and
-upgrades), `mk1002b.py` (Russian-only after azbyka), `mk1002c.py` (Greek and
-Romanian, hymns pulled off the cached pages by label), `upgrade.py` (applies an
-upgrade file), `fetch.mjs` (cached, polite), `txt.py` (a cached page as lines),
-`lookday.mjs` and `grepday.mjs` (the rendered day per church and language),
-`daycount1002.mjs` (the back-out's day count), `qf.py <sha>` (a run's job log
-into `.tmp/joblog-<sha>.txt` when `ci-flaky.py` meets a 404 on the blob).
+Helpers in `.tmp/`: `mk1003a.py` (Russian and Serbian, new folders and
+upgrades), `mk1003b.py` and `mk1003c.py` (Greek and Romanian, hymns pulled off
+the cached pages by label), `up-nik.py` (azbyka hymns into an existing folder),
+`upgrade.py` (applies an upgrade file), `backout.py` and `daycount.mjs <date>
+<slug>` (the back-out), `fetch.mjs` (cached, polite), `txt.py` (a cached page
+as lines), `grbody.py` (a saint.gr entry's body), `hfind.py` (corpus hymns by
+text, with their English), `att.py` (a folder's rows), `lookday.mjs`,
+`grepday.mjs` and `saintpage.mjs` (the rendered day or saint page), `qf.py
+<sha>` (a run's job log when `ci-flaky.py` meets a 404). A back-out's render
+check greps the heading line: a needle can also match a companion's life.
 
 ## Three things git cannot tell you
 
