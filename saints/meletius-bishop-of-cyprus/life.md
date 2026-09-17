@@ -13,4 +13,6 @@ both earned the gift of wonders by their lives, and both died in peace in
 old age, in different years but on one day — Isaac on Cyprus, Meletius
 later, in a city not known. The Greek calendar keeps him on 20 September.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 20 Σεπτεμβρίου — [the entry](https://www.saint.gr/980/saint.aspx); read 26 August 2026; the Russian church calendar’s page (azbyka.ru) — [the entry](https://azbyka.ru/days/sv-meletij-kiprskij), read 6 September 2026.*
+The Sretensky calendar prints the two on one line on 21 September old style, and no life.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 20 Σεπτεμβρίου — [the entry](https://www.saint.gr/980/saint.aspx); read 26 August 2026; the Russian church calendar’s page (azbyka.ru) — [the entry](https://azbyka.ru/days/sv-meletij-kiprskij), read 6 September 2026; the Sretensky calendar (days.pravoslavie.ru), 21 сентября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260921.html), read 17 September 2026.*

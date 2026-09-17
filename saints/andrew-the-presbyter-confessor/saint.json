@@ -5,6 +5,16 @@
     {
       "form": "Άγιος Ανδρέας ο Πρεσβύτερος",
       "lang": "el"
+    },
+    {
+      "form": "Андрей",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Священномученики Ипатий, епископ Ефесский и пресвитер Андрей»."
+    },
+    {
+      "form": "Андреј",
+      "lang": "sr",
+      "note": "Read out of «Свешт. муч. Ипатије еп. Ефески и Андреј презвитер» in the Ohrid Prologue for 04.10.2026."
     }
   ],
   "sex": "male",
@@ -16,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for this day was not read (26 August 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 сентября ст. ст. — «Сщмчч. Ипатия епископа и Андрея пресвитера (ок. 730-735)»",
+        "url": "https://days.pravoslavie.ru/Days/20260921.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -40,17 +59,26 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.10.2026 (21. септембар ст. ст.) — „Свешт. муч. Ипатије еп. Ефески и Андреј презвитер“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-04&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "dates": {
     "death": {
-      "earliest": 717,
-      "latest": 741,
-      "display": "8th century",
+      "earliest": 730,
+      "latest": 735,
+      "display": "c. 730–735",
       "basis": "traditional",
-      "note": "saint.gr: he lived under Leo the Isaurian, the iconoclast, who reigned 717–741."
+      "note": "The Sretensky day prints «(ок. 730-735)»; the Ohrid Prologue: «бише обезглављени 730. год.»; saint.gr: they lived under Leo the Isaurian, the iconoclast, who reigned 717–741."
     }
   },
   "text": {

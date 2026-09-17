@@ -1,0 +1,125 @@
+{
+  "slug": "joseph-of-zaonikiev",
+  "display_name": "Joseph of Zaonikiev",
+  "names": [
+    {
+      "form": "Иосиф Заоникиевский",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Преподобный Иосиф Заоникиевский»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "fool-for-christ"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1612,
+      "latest": 1612,
+      "display": "1612",
+      "basis": "attested",
+      "note": "The Sretensky life: «Преподобный Иосиф преставился 21 сентября 1612 года, в возрасте 83 лет»; the day prints «(1612)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 сентября ст. ст. — «Прп. Иосифа Заоникиевского (1612)»",
+        "url": "https://days.pravoslavie.ru/Days/20260921.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 4 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 04.10.2026 (21. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Смиренномудрием наказание благодушие приемля,/ иже от Небес неизреченный дар приити сподобился,/и в плоти сый, преподобне,/ безплотен в служении своем к Богоматери трудолюбие подвизася,/ бдении, пощении, слезами и молитвами,/ имиже и пустыню многожительну устроил еси,/ благоухищренным же юродством человеческия славы избежа./ Сего ради Всевышний Мздовоздатель/ в конец века сего сугубо тя прослави,/ и гроб твой святый точением чудес обогатися,/ Егоже моли, преподобне отче наш Иосифе,/ даровати нам отпущение грехов и велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 сентября ст. ст. — «Тропарь преподобного Иосифа Заоникиевского»",
+        "url": "https://days.pravoslavie.ru/Days/20260921.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Accepting chastisement with humility of mind and good courage, thou wast counted worthy to receive an ineffable gift from heaven; and being in the flesh, O venerable one, thou didst labour as one bodiless in thy service to the Mother of God, with vigils, fasts, tears and prayers, by which thou didst also make the wilderness a place of many dwellers, and by a wisely devised foolishness thou didst flee the glory of men. Therefore the Most High Rewarder hath glorified thee doubly at the end of this age, and thy holy tomb is enriched with a stream of wonders. Pray to him, O our venerable father Joseph, to grant us forgiveness of sins and great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Исперва житие твое, преподобне,/ хитростию благоюродства от человек утаено на небесех пред Ангелы явленно,/ и аще на земли тмою очес претыкаяся хождаше,/ но мысленными крилы на высоту возшед,/ Присносущным Светом облистаемь,/ во отечествии наследова,/ и земных мнящихся красных храмов не требовав,/ но в Небесных селех пресветлыя обители стяжал еси,/ ни ризами мягкими одеяся,/ но паче власяницу возлюбил еси,/ и сего ради паче всех имений земных небесная сокровища приобрел еси/ и на земли плотян сый со безплотными совокупляяся,/ Небесной Царице служа и Той приносимых Ангельских песней насладився,/ ихже многие людие желая насладитися не могут./ Сего ради Всевышний Творец образ Свой/ и Рождшия Его Богоматере/ с высоты воздуха на руце твоя,/ яко на Херувимская носила дарова тебе./ От Негоже Присносущным Светом очи твои уясни,/ и яко росоточащий облак молитвами твоими весь мир милованный напои./ И ныне в последняя времена святую персть твою, яко Едемский источник во исцеление недугов устрои,/ Егоже моли, наставниче наш, чудоносче Иосифе,/ даровати нам мир и велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 сентября ст. ст. — «Тропарь преподобного Иосифа Заоникиевского»",
+        "url": "https://days.pravoslavie.ru/Days/20260921.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From the beginning thy life, O venerable one, hidden from men by the skill of a blessed foolishness, was made manifest in heaven before the angels; and though on earth thou didst walk stumbling in the darkness of thine eyes, yet going up on the wings of the mind to the height, shone upon by the Ever-existing Light, thou didst inherit the fatherland. Needing not the earthly temples that seem fair, thou didst gain most radiant mansions in the heavenly dwellings; nor didst thou clothe thyself in soft raiment, but rather didst love the hair shirt, and therefore thou didst gain heavenly treasures above all earthly possessions; and being in the flesh on earth thou wast joined with the bodiless, serving the Queen of Heaven and delighting in the angelic songs offered to her, which many people desire to enjoy and cannot. Therefore the Most High Creator gave thee from the height of the air, into thy hands as onto the bearers of the Cherubim, the image of himself and of the Mother of God who bore him. By it he made thine eyes clear with the Ever-existing Light, and as a dew-dropping cloud thou hast watered with thy prayers the whole world that is shown mercy. And now in the last times he hath made thy holy dust as a spring of Eden for the healing of ailments. Pray to him, O our guide, wonder-bearing Joseph, to grant us peace and great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Вышних благ желаяй,/ преобидел еси долу влекущая мудрования,/ ибо трудолюбивое свое тело/ острым власяным плетением стерл еси,/ и бысть благоугоден служитель Богоматере,/ страждущим в недузех являлся, скоро помогавши,/ и с верою притекающим к тебе неоскудное здравие подаеши./ Сего ради зовем ти:/ разреши наша болезни душевныя и телесныя/ еже к Богу молитвами твоими,/ началообразный смирению наставниче, отче наш Богомудре Иосифе,/ монахом удобрение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 сентября ст. ст. — «Кондак преподобного Иосифа Заоникиевского»",
+        "url": "https://days.pravoslavie.ru/Days/20260921.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring the good things on high, thou didst despise the thoughts that drag downward, for thou didst wear away thy laborious body with a sharp weave of hair, and becamest a well-pleasing servant of the Mother of God; appearing to those who suffer in sickness, thou didst help them swiftly, and to those who run to thee with faith thou givest unfailing health. Therefore we cry to thee: loose our ailments of soul and body by thy prayers to God, O first pattern and guide of humility, our God-wise father Joseph, adornment of monks.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "От юности Бога возлюбив/ и простынею безгласие стяжал еси, преподобне./ Сего ради и с Небес сладкий Свет очию получил еси/ и росоточащии милости пресветлый образ Богоматери/ с высоты воздуха чрез святых безмездников во объятие приял еси,/ и Ей богоугодно послужил еси./ И обитель составил еси,/ власяными веригами тело свое удручил еси,/ от негоже каплями кровными диавола потопил еси./ Сего ради и в последняя времена/ гроб твой от Владыки нашего Христа точением чудес обогатися,/ тем и мы, чада твоя, любовию притекающе к тебе, умильно глаголем:/ радуйся, наставниче нашего спасения,/ радуйся, исцелений подателю;/ радуйся, отче наш Иосифе,/ монахом удобрение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 сентября ст. ст. — «Кондак преподобного Иосифа Заоникиевского»",
+        "url": "https://days.pravoslavie.ru/Days/20260921.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved God from thy youth, thou didst gain silence through simplicity, O venerable one. Therefore thou didst receive from heaven the sweet light of thine eyes, and through the holy unmercenaries didst receive into thine embrace from the height of the air the most radiant image of the Mother of God that drops the dew of mercy, and didst serve her in a way pleasing to God. And thou didst gather a monastery, and weigh down thy body with chains of hair, and with the drops of blood from it thou didst drown the devil. Therefore in the last times also thy tomb is enriched by our Master Christ with a stream of wonders; and so we thy children, running to thee with love, say with tenderness: Rejoice, guide of our salvation; rejoice, giver of healings; rejoice, our father Joseph, adornment of monks.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -2,4 +2,6 @@
 
 Isaac, also called Acacius, was a bishop of the Church of Cyprus, and the Greek calendar says his life is identical to that of [Meletius](/saints/meletius-bishop-of-cyprus), bishop of Cyprus. He spent his life spreading the word of God and in almsgiving, having given away all he had to the poor and the wretched, and died in peace — though some synaxaria, the notice adds, say he was martyred by the sword, as its verse has it: offering the divine Calf in sacrifice, he was himself sacrificed like a calf by the sword.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 21 Σεπτεμβρίου — [the entry](https://www.saint.gr/1007/saint.aspx); read 17 September 2026.*
+The Russian calendar keeps him on 21 September old style on one line with Meletius, both bishops of Cyprus, and prints no life. azbyka.ru’s short life of the two says that they were known for their pious lives and zealous service to the Church, preached the word of God without tiring and taught the people the Christian virtues, gave their goods to those in need, were granted the gift of wonders for their God-pleasing lives, and died in old age in different years but on the same day.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 21 Σεπτεμβρίου — [the entry](https://www.saint.gr/1007/saint.aspx); read 17 September 2026; the Sretensky calendar (days.pravoslavie.ru), 21 сентября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260921.html), and the life printed by azbyka.ru — [the entry](https://azbyka.ru/days/sv-isaakij-kiprskij), read 17 September 2026.*

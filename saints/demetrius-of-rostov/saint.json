@@ -1,0 +1,116 @@
+{
+  "slug": "demetrius-of-rostov",
+  "display_name": "Demetrius of Rostov",
+  "names": [
+    {
+      "form": "Димитрий Ростовский",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Святитель Димитрий Ростовский»."
+    },
+    {
+      "form": "Димитрије",
+      "lang": "sr",
+      "note": "Read out of «Св. Димитрије еп. Ростовски» in the Ohrid Prologue for 04.10.2026."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1651,
+      "latest": 1651,
+      "display": "1651",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s second life: «родился в декабре 1651 года в местечке Макарово, недалеко от Киева»."
+    },
+    "death": {
+      "earliest": 1709,
+      "latest": 1709,
+      "display": "1709",
+      "basis": "attested",
+      "note": "Both Sretensky lives: «Преставился святитель Димитрий 28 октября 1709 года» and «По его кончине, последовавшей 28 октября 1709 года»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The finding of his relics (1752), which is how the calendar keeps this day; his repose is kept on 28 October."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 сентября ст. ст. — «Обретение мощей свт. Димитрия , митр. Ростовского (1752)»",
+        "url": "https://days.pravoslavie.ru/Days/20260921.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 4 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The finding of his relics in 1752, which the Prologue says this day commemorates; it keeps his feast on 28 October."
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.10.2026 (21. септембар ст. ст.) — „Св. Димитрије еп. Ростовски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-04&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Православия ревнителю и раскола искоренителию, / Российский целебниче и новый к Богу молитвенниче, / списаньми твоими буих уцеломудрил еси, / цевнице духовная, Димитрие блаженне, / моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 сентября ст. ст. — «Тропарь свт. Димитрию Ростовскому»",
+        "url": "https://days.pravoslavie.ru/Days/20260921.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Zealot for Orthodoxy and uprooter of schism, healer of Russia and new intercessor before God, by thy writings thou hast brought the foolish to a sound mind, O spiritual lyre, blessed Demetrius: pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Звезду Российскую, от Киева возсиявшую,/ и чрез Новград Северский в Ростов достигшую,/ всю же страну сию ученьми и чудесы озарившую,/ ублажим златословеснаго учителя Димитрия:/ той бо всем вся написа, яже к наставлению,/ да всех приобрящет, якоже Павел, Христу// и спасет правоверием души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 сентября ст. ст. — «Кондак святителя Димитрия»",
+        "url": "https://days.pravoslavie.ru/Days/20260921.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The star of Russia, that shone forth from Kyiv and came through Novgorod-Seversky to Rostov, and enlightened all this land with teachings and wonders, let us call blessed, the golden-worded teacher Demetrius; for he wrote all things for all, whatever serves for instruction, that like Paul he might win all for Christ, and save our souls by right belief.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
