@@ -176,6 +176,10 @@ html[data-route~='prayer'] .hy-link {
   font-size: var(--text-sm);
   line-height: 1.3;
   color: var(--ink-soft);
+  /* The row is a `<button>` where this page can reach the saint and an `<a>`
+     where it sends the reader to their own page instead (stage I), so the
+     underline an anchor is given has to come off. */
+  text-decoration: none;
   cursor: pointer;
   transition: color var(--dur-answer) var(--ease);
 }
@@ -185,8 +189,11 @@ html[data-route~='prayer'] .hy-link:hover {
   border-left-color: var(--rubric);
 }
 
-/* A saint the hymnal does not hold is named and left alone: the relation is a
-   fact about the saint whether or not this page can take the reader to them. */
+/* A saint the hymnal does not hold, **below 1024 px**, where the row is still
+   inert: the relation is a fact about the saint whether or not this page can
+   take the reader to them. Past 1024 px every name opens something and the
+   rule below draws the dim instead — `views/prayer/asides.js` has the ruling
+   and `STRUCTURE.md` §6 carries the phone's half as open. */
 html[data-route~='prayer'] .hy-link[disabled] {
   color: var(--rule);
   cursor: default;
@@ -478,6 +485,56 @@ html[data-route~='prayer'] .hy-arrow.is-next {
 
   html[data-route~='prayer'] .hy-side:last-child {
     padding: 0 var(--space-8) var(--space-8) var(--space-6);
+  }
+
+  /* ---- the saints beside are the Daily page's own tiles -------------------
+     `../mockup-review/REVIEW.md` findings 9 and 16, stage I. The tile
+     itself is `calendar.css`'s — one drawing for the shelf and for these two
+     columns, off the seam stage G left — and nothing of it is repeated here.
+     What this sheet says is only how a `<button>` or an `<a>` comes to be that
+     tile: the whole tile is the press, so the press is the element, and the
+     chrome a control is given everywhere else has to come back off it. */
+  html[data-route~='prayer'] .hy-side .day-tile {
+    width: 100%;
+    appearance: none;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-radius: 0;
+    background: none;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  /* **The dim stays and the door is what changed** (finding 16, and the
+     ruling: every name opens something). A row the hymnal does not hold is
+     marked as one this page cannot carry the reader *through* — it opens the
+     saint's own page instead — so it is dimmed rather than painted in a rule
+     colour at full opacity, which is what read as broken.
+
+     **0.65 and not the mockup's 0.45, because the row is live now.** The
+     mockup's tile is inert and its text has no contrast floor to meet; a link
+     does. `--ink` at .45 is 2.69:1 on gesso and 3.60:1 on the bole, both under
+     the 4.5:1 normal text asks. The lowest opacity that clears it on both is
+     .64 in day and .53 in vigil, so .65 carries the pair: 4.74:1 and 6.18:1.
+     `--ink-soft` cannot be carried at any useful opacity — it needs .88 in day
+     — so the two small lines take `--ink` inside a dim tile and the fade is
+     what marks them, which is the mockup's own mechanism at a legible depth.
+
+     The underline on hover and the pointer stay, where the mockup takes both
+     off: there is somewhere to go now. */
+  html[data-route~='prayer'] .hy-side .day-tile.is-dim,
+  html[data-route~='prayer'] .hy-side .hy-link.is-dim {
+    opacity: 0.65;
+  }
+
+  html[data-route~='prayer'] .hy-side .day-tile.is-dim .reg-sub,
+  html[data-route~='prayer'] .hy-side .day-tile.is-dim .reg-life,
+  html[data-route~='prayer'] .hy-side .hy-link.is-dim,
+  html[data-route~='prayer'] .hy-side .hy-link.is-dim .hy-when {
+    color: var(--ink);
   }
 
   /* The heading stays in sight while its own column is scrolled past. It is

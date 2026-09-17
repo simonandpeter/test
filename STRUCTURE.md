@@ -910,26 +910,47 @@ The two widths are free to diverge except here.
   and pen and refuses a mouse, so a desk without a touchscreen never reaches it.
   The find row is excluded by name — a finger dragging through the field is
   selecting text in it.
-- **The rows in the two asides are one drawing with two faces**, the same
-  element and the same press: a plate of the saint over their name, or the name
-  alone. **The page opens on the names**, which is a reading of the corpus and
-  not a preference — only about a seventh of the corpus carries an icon and
-  these columns name saints from the whole of it, so a Pictures face opens on
-  far more empty mats than filled ones. A row whose saint has no icon still
-  keeps a plate in that face: a face with holes in it has the reader reading the
-  holes as something meant.
-- **A saint the hymnal does not hold is named and left inert**, dimmed, without
-  `data-go`. The relation is a fact about the saint whether or not this page can
-  carry the reader to them, and dropping the row would make the corpus look
-  smaller than it is.
+- **The rows in the two asides are one drawing with two faces**, the same press
+  in both: a plate of the saint over their name, or the name alone.
+- **Past 1024 px the picture face is Daily's own tile** and the page opens on
+  it. The tile is `calendar.css`'s single drawing (§4 Daily, "One tile, drawn
+  once") reached by emitting `.day-tile` with the `.reg-*` boxes inside it, so
+  the reader learns one list and can read it anywhere on the site: a 3:2 plate,
+  the name at `--text-base`, a line at `--text-2xs`, and three lines of the
+  life. **No picture, no box** — the blank mat is emitted and the shared rule
+  hides it, where this page used to paint a `--mount` block under every saint
+  with no icon.
+- **The line under the name is the day in the same-day column and the dates in
+  the recorded-with one**: one column is a day and says so, the other is a
+  relation and says who they were. `Intl` formats the day, so there is nothing
+  new in the packs.
+- **Below 1024 px the page opens on the names**, which is a reading of the
+  corpus and not a preference — only about a seventh of the corpus carries an
+  icon and these columns name saints from the whole of it, so a Pictures face
+  of empty mats reads as a page that failed to load. A row whose saint has no
+  icon keeps its plate at that width for the same reason.
+- **Every name opens something past 1024 px.** A saint the hymnal holds is a
+  `<button>` carrying `data-go` and opens here, in place; one it does not is an
+  `<a>` to their own page. Two doors, two elements, and `data-go` still says
+  only "this page can reach them". **Below 1024 px a row the hymnal does not
+  hold is still the inert button it shipped with** — §6 carries that half.
+- **A saint the hymnal does not hold is dimmed, and the dim is legible.**
+  `opacity: 0.65` on the row, and its two small lines take `--ink` inside it:
+  the mockup's 0.45 is affordable on an inert tile and not on a live one —
+  `--ink` at .45 is 2.69:1 on gesso, and `--ink-soft` clears 4.5:1 at no useful
+  depth. .65 gives 4.74:1 in day and 6.18:1 in vigil.
 - **The field narrows the book itself**, so the arrows step through what the
   query left and the count line is that book's length. It searches the names,
   the line of office and dates, and the names of whoever the corpus records the
   saint with — never the hymn text, which would be a fetch per saint in the
   hymnal to answer one keystroke. A name pressed in an aside that the query
   excludes clears the field rather than refusing the press.
-- **Only the shown saint and its two neighbours are ever fetched**, through
-  `lib/detail.js`'s `loadDetail` and `prefetch`.
+- **The shown saint, its two neighbours, and — past 1024 px — the saints the
+  two margins name**, through `lib/detail.js`'s `loadDetail` and `prefetch`.
+  The third group is the tile's three lines of life, four requests at a time
+  and none of it below 1024 px, which is the same arrangement and the same
+  ceiling Daily's shelf uses for the same drawing. Lighthouse's own run is a
+  360 px phone, so the gate never sees it.
 - **The tokens.** No raw colour, duration, easing, type size or spacing value in
   `prayer.css`.
 
@@ -945,7 +966,8 @@ The two widths are free to diverge except here.
 | `data-route~='prayer'` | `main.js` | every rule in `prayer.css`. A **set, not a value** — see the box chain |
 | `data-fills-window` | `index.html` before first paint, `main.js` on every navigation | `base.css`, at 1024 px and up. `index.html`'s pre-paint classifier **names this route**, so the first frame is not laid out as the calendar |
 | `data-slug` | `card.js` on `article.hy-saint`, `asides.js` on every row | `prayer.spec.js`, and the card's own staleness check |
-| `data-go` | `asides.js`, on a row this page can reach | `prayer.js`'s one delegated press. Two attributes and not one, so "who is named here" and "where can this go" are separate questions |
+| `data-go` | `asides.js`, on a row this page can reach | `prayer.js`'s one delegated press. Two attributes and not one, so "who is named here" and "where can this go" are separate questions. A row without it carries an `href` instead past 1024 px |
+| `data-hy-life` | `asides.js`, on a tile's own life box | `fillTileLives`, which fills it from the saint's folder four at a time and leaves it `hidden` if nothing arrives |
 | `data-iso` | `asides.js` on `#hy-sameday` | the civil day the aside resolved, for the year it resolved it in |
 | `data-hy-view` | `find.js` | the face switch's own press, and `aria-pressed` says which is live |
 
@@ -953,7 +975,7 @@ The two widths are free to diverge except here.
 
 | px | what turns |
 | --- | --- |
-| 1024 | **the layout break** — one column ↔ three, page scroll surrendered, the arrows drawn, the find row on one line, the asides become scrollers with sticky heads |
+| 1024 | **the layout break** — one column ↔ three, page scroll surrendered, the arrows drawn, the find row on one line, the asides become scrollers with sticky heads, and the margins take Daily's tile, the day under the name and a door on every row |
 
 ### All Saints, Saint, Map, Texts, About
 
@@ -1024,17 +1046,27 @@ is discussed.
    coupling. It makes the two faces independent by construction, and it is
    ~1.6 kB off the entry sheet as well.
 
-3. **A roving tabindex on the month grid.** 35 of 82 focusable elements on a
+3. **Prayer's margins below 1024 px still hold inert names.** Every name opens
+   something past 1024 px (§4 Prayer, stage I of the mockup review), because
+   the review, the mockup and the author's instruction are all the desk and the
+   standing rule for that pass was that mobile does not move. The phone's own
+   half is therefore open: a saint the hymnal does not hold is a `<button
+   disabled>` painted `--rule`, which is 84 of 116 names over the twelve saints
+   the review walked. The fix is the same ruling applied at that width and the
+   dim it needs to be legible; it will move the phone's pixels, which is why it
+   is an item and not a side effect.
+
+4. **A roving tabindex on the month grid.** 35 of 82 focusable elements on a
    desk are the month's day cells. Invisible to touch; it bites a keyboard and,
    more sharply, a screen reader. `picker.js:968` is the line that omits it.
 
-4. **The shelf-swipe test flakes about 1 run in 8.** The author ruled that the
+5. **The shelf-swipe test flakes about 1 run in 8.** The author ruled that the
    swipe behaves correctly, so the page is right and **the test is wrong** — it
    asserts a gesture it cannot reliably perform and should drive the drag at a
    fixed velocity instead of eight `mouse.move` steps. Until then CI retries
    hide it, which is how a flake here once masked a 16/16 regression.
 
-5. **201 of 211 feast hymns in `src/data/liturgical-days.js` have no English.**
+6. **201 of 211 feast hymns in `src/data/liturgical-days.js` have no English.**
    The saints' hymns are done, 428 of 428; that is the whole of what "the hymns
    are translated" means today.
 
@@ -1046,30 +1078,30 @@ is discussed.
    rendering wherever one exists. Hapgood carries the great feasts alone and
    has nothing further to give.
 
-6. **Raise the cross-linker's ceiling.** `lib/cross-link.js` can match 375 of the
+7. **Raise the cross-linker's ceiling.** `lib/cross-link.js` can match 375 of the
    corpus's folders; the rest have name forms too short or ambiguous to be safe.
    The way past it is better *name forms in the data*, not looser rules. Both
    other mechanical tiers are exhausted, so the remaining work is writing links
    into lives by hand — `node scripts/link-coverage.mjs --isolated` prints the
    list.
 
-7. **Make `test:lighthouse` usable locally.** It costs eight minutes and fails
+8. **Make `test:lighthouse` usable locally.** It costs eight minutes and fails
    FCP on all four routes on this desk *identically on an unmodified tree*. The
    number a session actually needs is the entry sheet's size, which is a build
    and a `stat`. A flag that checks the sheet and skips the Lighthouse passes.
 
-8. **`scripts/state.sh` should report who holds 4173, 5173 and 5174.** A stray
+9. **`scripts/state.sh` should report who holds 4173, 5173 and 5174.** A stray
    server from an earlier sitting makes Playwright refuse to start with no hint
    who holds the port, and makes `contact-sheet.mjs` quietly shoot the wrong
    tree.
 
-9. **Tie a test's name to the prose about it.** `tests/citations.test.mjs`
+10. **Tie a test's name to the prose about it.** `tests/citations.test.mjs`
     checks that a named file exists and that a named path exists, but not that a
     named *test* does, so a renamed test leaves stale headings in
     `docs/SRC-DECISIONS.md`. Asserting that every `### …` heading there resolves
     to a symbol that exists is the same instrument, in two seconds.
 
-10. **`docs/PROBES.md` is the last document with no owner.** 250 lines
+11. **`docs/PROBES.md` is the last document with no owner.** 250 lines
     describing four debug scripts, and its table is a hand-copy of
     `package.json`'s own script names. Either generate it or fold it into
     `CLAUDE.md` beside the traps it serves.

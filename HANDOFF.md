@@ -40,13 +40,23 @@ Daily's), C (each column scrolls to its last line), D (the saint column's
 picture in its own shape, the name pinned over the reading column) and E (Life /
 Hymns / Writings under the picture, the whole life in column 3), F (the
 day's column in the mockup's order, name days last at 13 px), G (the shelf
-tile's anatomy and its press) and H (one search field, `ui/search-field.js` +
+tile's anatomy and its press), H (one search field, `ui/search-field.js` +
 `styles/search-field.css`, mounted by All Saints, Prayer and the saint page's
-side column) are done; I is next and depends on G's tile.
+side column) and I (Prayer's margins wear that tile, and every name opens
+something past 1024 px) are done; J is next and touches `prayer.css` alone.
 
-A `tile-diff` baseline `shots/baseline-stage-h-before` exists — 8 tiles,
-`--still --routes=/saints,/prayer --widths=360,768 --themes=day,vigil
---langs=en`, shot at `db73f995`. Do not re-shoot it.
+Stage I left the phone's half of its own ruling open — `STRUCTURE.md` §6 item 3.
+
+Two `tile-diff` baselines exist. Do not re-shoot either.
+
+- `shots/baseline-stage-h-before` — 8 tiles, `--still --routes=/saints,/prayer
+  --widths=360,768 --themes=day,vigil --langs=en`, shot at `db73f995`.
+- `shots/baseline-stageI-prayer-2026-09-18` — 4 tiles, `--still
+  --routes=/prayer --widths=360,768 --themes=day,vigil --langs=en`, shot at
+  `36ee2995`. **`tile-prayer-360-day-en` is a two-state tile**: shooting one
+  build twice moves it by exactly 135,936 px (48.41%) and back, so a single
+  changed reading of that tile is the camera. Shoot twice before calling it a
+  finding.
 
 **The corpus run (`scratchpad/corpus-plan.md` §5) is in Phase B.** Civil
 20 September – 6 October is read for all four churches. **Civil 7 October is

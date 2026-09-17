@@ -46,11 +46,14 @@ let onPress = null;
 /** `ui/grain-drag.js`'s own teardown for the page-turning swipe. */
 let unswipe = null;
 
-export function render(el, { data } = {}) {
+export function render(el, { data, router } = {}) {
   const P = STRINGS.prayer;
   /* Opened before the markup is written, so `findMarkup` can read which face
-     the page is in rather than a second copy of the default. */
-  open({ data, all: stepOrder(data?.saints ?? []) });
+     the page is in rather than a second copy of the default.
+
+     The router is kept for the one href these columns write: a saint the
+     hymnal does not hold opens their own page (stage I, `prayer/asides.js`). */
+  open({ data, router, all: stepOrder(data?.saints ?? []) });
   el.innerHTML = `
     <div class="hymnal">
       <h1 class="sr-only">${esc(P.title)}</h1>
@@ -94,7 +97,11 @@ export function render(el, { data } = {}) {
       if (!arrow.disabled) stepBy(el, arrow.id === 'hy-next' ? 1 : -1);
       return;
     }
-    const go = e.target.closest?.('.hy-link[data-go]');
+    /* Both faces, named rather than reduced to `[data-go]` alone: the row and
+       the tile are two elements and the attribute is what says the press can
+       act. A name the hymnal does not hold carries an `href` and no `data-go`,
+       so it falls through this to the browser and opens the saint's own page. */
+    const go = e.target.closest?.('.hy-link[data-go], .day-tile[data-go]');
     // Through `find.js`, because a name the current query excludes is still a
     // saint this page holds: the search widens to let the reader reach them.
     if (go) revealSlug(el, go.dataset.go);
