@@ -402,6 +402,7 @@ breakpoint are two decisions.
 | `--chrome-h-reserve` | `41px` | `base.css` |
 | `--chrome-h-reserve` | `52.5px` | `base.css` |
 | `--chrome-h-reserve` | `75.5625px` | `base.css` |
+| `--side-w` | `clamp(240px, 21vw, 310px)` | `base.css` |
 | `--cal-peek` | `24px` | `calendar.css` |
 | `--cal-peek` | `44px` | `calendar.css` |
 | `--cal-gutter` | `calc(34px + var(--space-2) + var(--cal-peek))` | `calendar.css` |
@@ -410,7 +411,7 @@ breakpoint are two decisions.
 | `--card-h` | `calc(18 * 1.65 * 17px)` | `calendar.css` |
 | `--card-pic` | `clamp(200px, calc((100% - var(--card-gap)) * 5 / 12), 40rem)` | `calendar.css` |
 | `--hero-mat` | `14px` | `calendar.css` |
-| `--notch` | `20px` | `calendar.css` |
+| `--saint-w` | `clamp(230px, 23vw, 360px)` | `calendar.css` |
 | `--ox` | `10px` | `calendar.css` |
 | `--ox` | `14px` | `calendar.css` |
 | `--rail-fade` | `12px` | `calendar.css` |
@@ -503,8 +504,8 @@ html[data-route~='calendar'][data-fills-window]
 └ body
   └ main.chrome                      100dvh − --chrome-h, overflow hidden (≥1024)
     └ #view                          height 100%
-      └ .cal                         grid: --day-w --saint-w minmax(0,1fr)
-        │                            --day-gap --side-w   (≥1024)
+      └ .cal                         grid: --side-w --saint-w minmax(0,1fr)
+        │                            --side-w, full bleed   (≥1024)
         ├ .cal-main [data-col=main]   column 1, laid out by `order`
         │ ├ .cal-head                ◂ prev · h1.cal-date · next ▸
         │ ├ p.cal-liturgy
@@ -522,12 +523,9 @@ html[data-route~='calendar'][data-fills-window]
         ├ .cal-read [data-col=content] column 3, ≥1024 only
         │ └ .slot-viewport[data-slot=content] > .day-panel.day-content
         │                            the opening of the life, and the hymns
-        └ .cal-bubble                 column 5 (column 4 is the gutter);
-          │                          grid item and positioning context, and the
-          │                          four corner crosses are drawn outside the clip
-          └ .cal-bubble-fill         the fill and the clip-path, nothing else
-            └ .cal-bubble-scroll     the shelf's scroller
-              └ .slot-viewport[data-slot=shelf] > .day-panel.day-shelf
+        └ .cal-bubble                 column 4, a plain column
+          └ .cal-bubble-scroll       the shelf's scroller
+            └ .slot-viewport[data-slot=shelf] > .day-panel.day-shelf
                                      the rest of the day; not drawn below 1024
 ```
 
@@ -560,12 +558,17 @@ else.
   columns and a scrolling page are one scrollbar too many.
 - **The reading column takes all the slack.** The other three are a width
   apiece and it is `minmax(0, 1fr)`, so the window is spent on the prose.
-- **`--side-w` is a rem and stays one.** It is the shelf's width. `--day-w` and
-  `--saint-w` are clamps on `vw`, which is the window rather than the grid and
-  so cannot feed back into a scrollbar appearing and disappearing.
-- **The gutter is a track, not a gap.** Columns 1–3 stand shoulder to shoulder
-  with a hairline between them, which a uniform `column-gap` cannot draw; the
-  one space this grid has is before the shelf, and it is `--day-gap`.
+- **The mockup's tracks** (`../mockup-review/REVIEW.md` finding 5): the two
+  outer columns are one width, `--side-w`, and the saint is `--saint-w`, both
+  clamps on `vw` — the window rather than the grid, so neither can feed back
+  into a scrollbar appearing and disappearing. `--side-w` is base.css's because
+  the saint page's search column reads it too.
+- **Edge to edge, no gutter.** The four stand shoulder to shoulder with a
+  hairline at the leading edge of columns 2–4, and the page's `--page-pad` is
+  paid inside the two outer columns rather than around the grid. The grid runs
+  the laid-out page's width, which on a desk is the window less the reserved
+  scrollbar gutter, so the reading column is that much narrower than the
+  mockup's.
 - **The day is painted into five panels and rolled as five.** `main` and `side`
   are the phone's pair; `saint`, `content` and `shelf` are the desk's and are
   not painted below 1024 px. A day change steps every panel in the document on
@@ -583,9 +586,9 @@ else.
   bottom edge, which is the edge the saints go under. The shelf's
   `.slot-viewport` takes `overflow: clip` for it: `hidden` would make that box
   the scrollport and the head would stick to a thing that never scrolls.
-- **The right column is one filled box** with a square notch bitten from each
-  corner and a cross of the fill standing in each bite. No `overflow: hidden`
-  on it anywhere; the notches are the only clipping it does.
+- **The right column is a plain column** on the page's own ground: no fill, no
+  corners (`REVIEW.md` finding 7's container). Its pinned head stands on
+  `--gesso` so the saints pass under it.
 - **The picker is the month grid**, forced open on arrival, and the week rail is
   hidden. It stands in the day's own column, on the page's own ground.
 - The date sits between two stepper buttons, each half a cross.
@@ -656,16 +659,13 @@ The two widths are free to diverge except here.
 
 | property | where | decides |
 | --- | --- | --- |
-| `--side-w` | `html[data-route~='calendar']`, ≥1024 | the shelf's width, 19rem |
-| `--day-w` | same rule | the day's own column |
-| `--saint-w` | same rule | the chosen saint's column |
-| `--day-gap` | same rule | the one gutter: the track between the reading column and the shelf |
+| `--side-w` | `:root` in base.css, ≥1024 | the day's column and the shelf; the saint page's search column |
+| `--saint-w` | `html[data-route~='calendar']`, ≥1024 | the chosen saint's column |
 | `--day-cols` | `.cal`, ≥1024 | the five tracks |
 | `--cal-peek`, `--cal-gutter` | `calendar.css` | the month's peeked neighbour columns and the gutter they need |
 | `--cal-row-h` | `calendar.css` | a month row |
 | `--card-h`, `--card-pic`, `--card-gap` | `calendar.css` | the register's card face |
 | `--hero-mat`, `--hero-band`, `--hero-band-focus`, `--hero-r` | `calendar.css`, and inline per saint | the hero's mat and crop |
-| `--notch` | `calendar.css` | the bubble's corner bite |
 
 The rest — `--ox`, `--rail-inset`, `--rail-fade`, `--peek-fade`, `--headgap`,
 `--rulegap`, `--lede-lines` — are local to one control and are

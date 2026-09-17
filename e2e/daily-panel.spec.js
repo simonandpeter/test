@@ -2955,7 +2955,7 @@ test('the day is four columns on a desktop and one on a phone', async ({ page })
   }
   /*
    * **The reading column takes the slack and is the widest of the four.** The
-   * other three are a width apiece — `--day-w`, `--saint-w`, `--side-w` — and
+   * other three are a width apiece — `--side-w` twice and `--saint-w` — and
    * this one is `minmax(0, 1fr)`, which is the whole of why the prose is the
    * thing the window is spent on.
    */
@@ -2995,7 +2995,10 @@ test('the day is four columns on a desktop and one on a phone', async ({ page })
    */
   const controls = await boxOf('.cal-controls');
   const side = await boxOf('.cal-side');
-  expect(Math.abs(controls.x - day.x), 'the picker is not on the day’s own column').toBeLessThan(2);
+  // The column's content edge: the page's own inset is paid inside the day's
+  // column since stage B of the mockup review.
+  const dayInset = await page.locator('.cal-main').evaluate((el) => parseFloat(getComputedStyle(el).paddingLeft));
+  expect(Math.abs(controls.x - (day.x + dayInset)), 'the picker is not on the day’s own column').toBeLessThan(2);
   expect(controls.y, 'the picker is not above the readings').toBeLessThan(side.y);
 
   /*
@@ -3045,7 +3048,7 @@ test('the day is four columns on a desktop and one on a phone', async ({ page })
    */
   const shelves = await boxOf('.shelves');
   await expect(page.locator('.shelves')).toContainText('Continue reading');
-  expect(Math.abs(shelves.x - day.x), 'Continue reading does not sit on the day’s column').toBeLessThan(2);
+  expect(Math.abs(shelves.x - (day.x + dayInset)), 'Continue reading does not sit on the day’s column').toBeLessThan(2);
   expect(shelves.width, 'Continue reading runs wider than the column it belongs to').toBeLessThan(day.width + 2);
 
   /*
@@ -3189,22 +3192,89 @@ test('a phone has no shelf to choose from', async ({ page }) => {
 });
 
 
-test('the right column is a filled box with a bite and a cross at each corner', async ({ page }) => {
+test('past 1024 px the four columns take the mockup’s widths, edge to edge', async ({ page }) => {
   /*
-   * The right column is
-   * one filled box, 19rem wide, with a 20 px square bitten out of each corner
-   * and a cross of the fill standing in the bite — "the box's own substance
-   * turned inside out".
+   * `../mockup-review/REVIEW.md` finding 5, stage B (2026-09-18). The mockup's
+   * Today face is `--side-w` `--saint-w` `minmax(0, 1fr)` `--side-w`, the outer
+   * two `clamp(240px, 21vw, 310px)` and the saint `clamp(230px, 23vw, 360px)`,
+   * across the window's whole width with the page's 32 px inside the two outer
+   * columns. Before the stage the saint column was 245 px at 1440 against the
+   * mockup's 331, and the shelf a fixed 304 behind a 32 px gutter.
    *
-   * **Two independent instruments, because neither alone sees this** (trap 14).
-   * The bite is asked of the *clip*, by hit-testing four points around one
-   * corner: `clip-path` clips pointer events as well as paint, so a point
-   * three pixels in from the corner lands on whatever is under the bubble and
-   * a point past the bite lands on the fill. That is a fact about what is
-   * drawn, not about what the stylesheet says it drew. The crosses are then
-   * measured — four boxes on the four corners, arms 3 px, painted in the same
-   * colour as the fill they stand in — because a `pointer-events: none`
-   * decoration cannot be hit-tested by design.
+   * Widths are asserted against the clamps worked on this window's own
+   * `innerWidth` rather than against the review's numbers, which are for a
+   * window with no scrollbar gutter; the reading column takes what is left,
+   * which on a desk with a classic scrollbar is 15 px less than the mockup's.
+   * 1024 is asked too: the narrowest desk must still leave the prose a column.
+   */
+  await ready(page);
+  for (const [width, height] of [[1440, 900], [1280, 800], [1024, 768]]) {
+    await page.setViewportSize({ width, height });
+    await page.goto('/calendar/2026-09-09', { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+    const m = await page.evaluate(() => {
+      const box = (sel) => {
+        const el = document.querySelector(sel);
+        const r = el.getBoundingClientRect();
+        const cs = getComputedStyle(el);
+        return {
+          left: r.left,
+          right: r.right,
+          width: r.width,
+          padL: parseFloat(cs.paddingLeft),
+          padR: parseFloat(cs.paddingRight),
+          rule: parseFloat(cs.borderLeftWidth),
+        };
+      };
+      return {
+        inner: innerWidth,
+        // The laid-out page, which is a reserved scrollbar gutter narrower than
+        // `clientWidth` reports on a desk (base.css, `scrollbar-gutter`).
+        client: document.body.getBoundingClientRect().right,
+        cols: ['.cal-main', '.cal-saint', '.cal-read', '.cal-bubble'].map(box),
+      };
+    });
+    const clamp = (lo, v, hi) => Math.min(hi, Math.max(lo, v));
+    const side = clamp(240, m.inner * 0.21, 310);
+    const saint = clamp(230, m.inner * 0.23, 360);
+    const [day, pic, read, shelf] = m.cols;
+    const at = `at ${width}`;
+
+    expect(Math.abs(day.width - side), `the day column is ${day.width} px ${at}, not ${side}`).toBeLessThan(1);
+    expect(Math.abs(shelf.width - side), `the shelf is ${shelf.width} px ${at}, not ${side}`).toBeLessThan(1);
+    expect(Math.abs(pic.width - saint), `the saint column is ${pic.width} px ${at}, not ${saint}`).toBeLessThan(1);
+
+    // Edge to edge, shoulder to shoulder: no gutter track and no gap.
+    expect(Math.abs(day.left), `the grid does not start at the window’s edge ${at}`).toBeLessThan(1);
+    expect(Math.abs(shelf.right - m.client), `the grid does not end at the window’s edge ${at}`).toBeLessThan(1);
+    for (const [l, r, what] of [[day, pic, 'day and saint'], [pic, read, 'saint and reading'], [read, shelf, 'reading and shelf']]) {
+      expect(Math.abs(r.left - l.right), `a gap between ${what} ${at}`).toBeLessThan(1);
+    }
+    // The page's inset is paid inside the outer two, and a hairline stands at
+    // the leading edge of each of the other three.
+    expect(day.padL, `the day column does not carry the page’s inset ${at}`).toBe(32);
+    expect(shelf.padR, `the shelf does not carry the page’s inset ${at}`).toBe(32);
+    expect([pic.rule, read.rule, shelf.rule], `a column has no hairline at its leading edge ${at}`).toEqual([1, 1, 1]);
+
+    // The proportion the review measured, and the prose still a column.
+    if (width >= 1280) {
+      const ratio = pic.width / read.width;
+      expect(ratio, `saint : reading is ${ratio.toFixed(2)} ${at}, the mockup's is 0.66`).toBeGreaterThan(0.6);
+      expect(ratio, `saint : reading is ${ratio.toFixed(2)} ${at}, the mockup's is 0.66`).toBeLessThan(0.72);
+    }
+    expect(read.width, `the reading column is ${read.width} px ${at}`).toBeGreaterThan(280);
+  }
+});
+
+test('the right column is a plain column: no fill, no corners, a rule at its edge', async ({ page }) => {
+  /*
+   * `../mockup-review/REVIEW.md` finding 7's container, stage B (2026-09-18).
+   * The mockup's `.shelf-col` has no fill and no corners; the live one was a
+   * `--bub` box with a 20 px bite and a cross in each corner. So: nothing is
+   * painted under the shelf but the page, nothing clips it, and a point three
+   * pixels in from its top corner is the shelf's own — where the bite used to
+   * hand that point to whatever stood under the box (trap 14: what is drawn,
+   * not what the sheet says).
    */
   await ready(page);
   await page.setViewportSize({ width: 1280, height: 900 });
@@ -3213,51 +3283,30 @@ test('the right column is a filled box with a bite and a cross at each corner', 
 
   const seen = await page.evaluate(() => {
     const bubble = document.querySelector('.cal-bubble');
-    const fill = document.querySelector('.cal-bubble-fill');
+    const scroll = document.querySelector('.cal-bubble-scroll');
     const b = bubble.getBoundingClientRect();
-    const inFill = (dx, dy) => {
+    const own = (dx, dy) => {
       const el = document.elementFromPoint(Math.round(b.left + dx), Math.round(b.top + dy));
-      return !!el && fill.contains(el);
-    };
-    const arm = (which) => {
-      const cs = getComputedStyle(document.querySelector('.cal-notch-tl'), which);
-      return { width: cs.width, height: cs.height, background: cs.backgroundColor };
+      return !!el && bubble.contains(el);
     };
     const grid = document.querySelector('.month-grid');
     return {
-      width: Math.round(b.width),
-      // The clip, at one corner and its opposite.
-      biteTL: inFill(3, 3),
-      biteBR: inFill(b.width - 3, b.height - 3),
-      pastBiteAcross: inFill(30, 3),
-      pastBiteDown: inFill(3, 30),
-      // Nothing clips but the notch (§10.9): a chooser panel opens out of the
-      // head in step 6 and is allowed to overrun the bottom edge.
-      bubbleOverflow: getComputedStyle(bubble).overflow,
-      fillOverflow: getComputedStyle(fill).overflow,
-      // The scroller is inside the clip, so the corners cannot travel with it.
-      scrollerInsideClip: fill.contains(document.querySelector('.cal-bubble-scroll')),
-      // The four crosses, as offsets from the bubble's own corners.
-      corners: ['tl', 'tr', 'bl', 'br'].map((k) => {
-        const r = document.querySelector(`.cal-notch-${k}`).getBoundingClientRect();
-        return {
-          left: Math.round(r.left - b.left),
-          top: Math.round(r.top - b.top),
-          right: Math.round(b.right - r.right),
-          bottom: Math.round(b.bottom - r.bottom),
-          width: Math.round(r.width),
-          height: Math.round(r.height),
-        };
-      }),
-      stem: arm('::before'),
-      bar: arm('::after'),
-      fillPaint: getComputedStyle(fill).backgroundColor,
-      /*
-       * And the month still fits the column it is in — which is the day's own
-       * first column since 2026-09-16, not the bubble. Derived from that box
-       * rather than written down, because the column is a clamp on `vw` now
-       * and a number here would be a number for one window.
-       */
+      // The chain of boxes between the column and its panel; a fill on any of
+      // them is a shaded box again.
+      paints: [...document.querySelectorAll('.cal-bubble, .cal-bubble *')]
+        .filter((el) => el === bubble || el.parentElement === bubble || el.matches('.cal-bubble-scroll > *, .cal-bubble-scroll > * > .day-panel'))
+        .map((el) => getComputedStyle(el).backgroundColor)
+        .filter((c) => c !== 'rgba(0, 0, 0, 0)'),
+      clips: [bubble, scroll].map((el) => getComputedStyle(el).clipPath),
+      decorations: document.querySelectorAll('.cal-notch, .cal-bubble-fill').length,
+      cornerTL: own(3, 3),
+      // Bottom-left rather than top-right: the first-visit coachmark stands
+      // over the top-right corner.
+      cornerBL: own(3, b.height - 3),
+      rule: getComputedStyle(bubble).borderLeftColor,
+      readRule: getComputedStyle(document.querySelector('.cal-read')).borderLeftColor,
+      headGround: getComputedStyle(bubble.querySelector('.register-head')).backgroundColor,
+      bodyGround: getComputedStyle(document.body).backgroundColor,
       gridWidth: Math.round(grid.getBoundingClientRect().width),
       monthColumn: (() => {
         const col = document.querySelector('.cal-main');
@@ -3283,38 +3332,13 @@ test('the right column is a filled box with a bite and a cross at each corner', 
     };
   });
 
-  expect(seen.width, 'the right column is not 19rem').toBe(304);
-
-  expect(seen.biteTL, 'the top-left corner is not bitten out').toBe(false);
-  expect(seen.biteBR, 'the bottom-right corner is not bitten out').toBe(false);
-  expect(seen.pastBiteAcross, 'the bite runs further than 20 px along the top').toBe(true);
-  expect(seen.pastBiteDown, 'the bite runs further than 20 px down the side').toBe(true);
-
-  expect(seen.bubbleOverflow, 'the bubble clips more than its corners').toBe('visible');
-  expect(seen.fillOverflow, 'the fill clips more than its corners').toBe('visible');
-  expect(seen.scrollerInsideClip, 'the scroller is outside the clip').toBe(true);
-
-  /*
-   * Each cross stands square in its own bite: 20x20, hard against the two
-   * edges its corner is made of. Measured as distances from the bubble's own
-   * four sides, so the claim survives a window of any size.
-   */
-  const [tl, tr, bl, br] = seen.corners;
-  expect([tl.left, tl.top], 'the top-left cross is not in its bite').toEqual([0, 0]);
-  expect([tr.right, tr.top], 'the top-right cross is not in its bite').toEqual([0, 0]);
-  expect([bl.left, bl.bottom], 'the bottom-left cross is not in its bite').toEqual([0, 0]);
-  expect([br.right, br.bottom], 'the bottom-right cross is not in its bite').toEqual([0, 0]);
-  for (const c of seen.corners) {
-    expect([c.width, c.height], 'a cross is not the size of the bite it stands in').toEqual([20, 20]);
-  }
-
-  // Arms 3 px, inset 2 px at each end of a 20 px box, drawn in the fill.
-  expect(seen.stem.width, 'the cross stem is not 3 px').toBe('3px');
-  expect(seen.stem.height, 'the cross stem is not inset 2 px at each end').toBe('16px');
-  expect(seen.bar.height, 'the cross arm is not 3 px').toBe('3px');
-  expect(seen.bar.width, 'the cross arm is not inset 2 px at each end').toBe('16px');
-  expect(seen.stem.background, 'the cross is not drawn in the fill colour').toBe(seen.fillPaint);
-  expect(seen.bar.background, 'the cross is not drawn in the fill colour').toBe(seen.fillPaint);
+  expect(seen.paints, 'something paints a fill under the shelf').toEqual([]);
+  expect(seen.clips, 'the shelf clips its corners').toEqual(['none', 'none']);
+  expect(seen.decorations, 'the corner crosses or the fill are still in the page').toBe(0);
+  expect(seen.cornerTL, 'the top-left corner is still bitten out').toBe(true);
+  expect(seen.cornerBL, 'the bottom-left corner is still bitten out').toBe(true);
+  expect(seen.rule, 'the shelf’s hairline is not the other columns’').toBe(seen.readRule);
+  expect(seen.headGround, 'the pinned head does not stand on the page’s ground').toBe(seen.bodyGround);
 
   expect(seen.gridWidth, 'the month grid is not the width of the column it stands in').toBe(seen.monthColumn);
   expect(seen.cellWidths.length, 'the month cells are not one width').toBe(1);
@@ -3499,10 +3523,17 @@ test('the masthead doubles and the chrome lines up with the page', async ({ page
       nav: parseFloat(getComputedStyle(document.querySelector('nav.site-nav a')).fontSize),
       name: parseFloat(getComputedStyle(document.querySelector('.site-name')).fontSize),
       mark: document.querySelector('.site-name').getBoundingClientRect().left,
-      left: document.querySelector('.cal-main')?.getBoundingClientRect().left,
-      // `.cal-bubble` since 2026-09-10: the right column's margin is the
-      // bubble's own edge, and `.cal-side` is a box inside its padding.
-      right: document.querySelector('.cal-bubble')?.getBoundingClientRect().right,
+      // The columns' content edges: since stage B of the mockup review the
+      // grid runs the window's width and the page's inset is paid inside the
+      // two outer columns, so the margin is where their padding ends.
+      left: (() => {
+        const el = document.querySelector('.cal-main');
+        return el && el.getBoundingClientRect().left + parseFloat(getComputedStyle(el).paddingLeft);
+      })(),
+      right: (() => {
+        const el = document.querySelector('.cal-bubble');
+        return el && el.getBoundingClientRect().right - parseFloat(getComputedStyle(el).paddingRight);
+      })(),
       end: document.querySelector('.chrome-corner').getBoundingClientRect().right,
     }));
   };
@@ -3761,7 +3792,9 @@ test('the day steps are half a cross either side of the date, between its two ru
       };
     };
     return {
-      columnLeft: Math.round(main.left),
+      // The column's content edge: the page's inset is paid inside it since
+      // stage B of the mockup review.
+      columnLeft: Math.round(main.left + parseFloat(getComputedStyle(document.querySelector('.cal-main')).paddingLeft)),
       columnRight: Math.round(main.right - parseFloat(getComputedStyle(document.querySelector('.cal-main')).paddingRight)),
       prevLeft: Math.round(prev.left),
       nextRight: Math.round(next.right),
@@ -4578,7 +4611,7 @@ test('the picture grows with its own column as the window widens', async ({ page
    *
    * 1280, 1440 and 1920 are the three widths the author asked for. The first
    * two are inside the band where neither end of the clamp binds; 1920 is past
-   * the 20 rem ceiling, which is why the last step is asked to be flat rather
+   * the mockup's 360 px ceiling (stage B, 2026-09-18), which is why the last step is asked to be flat rather
    * than to keep growing — a ceiling is the point.
    */
   await ready(page);
@@ -4623,14 +4656,13 @@ test('the picture grows with its own column as the window widens', async ({ page
 
   /*
    * And it really is growing, which is the half of the instruction a shape
-   * alone cannot say — then stopping, which is what the 20 rem ceiling is for:
+   * alone cannot say — then stopping, which is what the 360 px ceiling is for:
    * past it the picture would start competing with the life rather than
    * introducing it.
    */
   expect(seen[1].figure, 'the picture did not grow between 1280 and 1440').toBeGreaterThan(seen[0].figure + 20);
-  // 20 rem, the clamp's own ceiling: past it the picture would start competing
-  // with the life rather than introducing it.
-  expect(seen[2].track, 'the saint column ran past its own 20 rem ceiling at 1920').toBeCloseTo(320, 0);
+  // 360 px, the mockup clamp's own ceiling.
+  expect(seen[2].track, 'the saint column ran past its own 360 px ceiling at 1920').toBeCloseTo(360, 0);
 });
 
 
@@ -4647,8 +4679,10 @@ test('the columns do not shake when the window is resized', async ({ page }) => 
    * the test that says the shape has not come back. Three claims, and the
    * first two are what the instruction actually asked for:
    *
-   * - the right column's width and its margin off the window never move;
-   * - the left column takes all the slack;
+   * - the right column's margin off the window never moves (its *width* is
+   *   the mockup's clamp on `vw` since stage B of the mockup review,
+   *   2026-09-18, and is asserted smooth below with the others);
+   * - the reading column takes the largest share of the slack;
    * - the picture's track is a continuous function of the window width — a
    *   scrollbar appearing, a reflow feeding back, or any other oscillation is
    *   a jump, and a sweep at 4 px is fine enough to find one.
@@ -4685,14 +4719,13 @@ test('the columns do not shake when the window is resized', async ({ page }) => 
 
   const first = readings[0];
   for (const r of readings) {
-    expect(r.side, `the right column is ${r.side} px at ${r.width}, not ${first.side}`).toBeCloseTo(first.side, 1);
     expect(r.margin, `the right column margin moved to ${r.margin} px at ${r.width}`).toBeCloseTo(first.margin, 1);
   }
 
   /*
    * Monotone and smooth, and **the reading column is what takes the slack**
-   * (2026-09-16). Three of the four columns are a width apiece — two of them
-   * clamps on `vw`, so each 4 px of window is 0.76 and 0.68 of them — and the
+   * (2026-09-16). Three of the four columns are a width apiece — clamps on
+   * `vw`, so each 4 px of window is 0.84, 0.92 and 0.84 of them — and the
    * fourth is `minmax(0, 1fr)`, which takes what is left. So the four steps
    * sum to the window's, none of them goes backwards, and the reading column
    * has the largest share: a "shake" is a step that oscillates, and a sweep at
@@ -4703,13 +4736,14 @@ test('the columns do not shake when the window is resized', async ({ page }) => 
       day: readings[i].left - readings[i - 1].left,
       saint: readings[i].saint - readings[i - 1].saint,
       read: readings[i].read - readings[i - 1].read,
+      side: readings[i].side - readings[i - 1].side,
     };
     for (const [name, step] of Object.entries(steps)) {
       expect(step, `the ${name} column went backwards by ${step.toFixed(2)} px at ${readings[i].width}`).toBeGreaterThan(-0.01);
       expect(step, `the ${name} column jumped ${step.toFixed(2)} px at ${readings[i].width}`).toBeLessThan(4.5);
     }
     expect(
-      steps.day + steps.saint + steps.read,
+      steps.day + steps.saint + steps.read + steps.side,
       `the four columns did not divide the 4 px the window gained at ${readings[i].width}`,
     ).toBeCloseTo(4, 0);
     expect(steps.read, 'the reading column did not take the largest share of the slack').toBeGreaterThan(steps.day);

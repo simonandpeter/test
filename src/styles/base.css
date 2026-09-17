@@ -1104,6 +1104,14 @@ main.chrome {
 }
 
 @media (min-width: 1024px) {
+  /* Daily's two outer columns (the mockup's clamp, `../mockup-review/REVIEW.md`
+     finding 5), and the saint page's search column, which is Daily's shelf
+     column by the author's 2026-09-01 instruction (saint.css). Declared once,
+     here, because both sheets read it. */
+  :root {
+    --side-w: clamp(240px, 21vw, 310px);
+  }
+
   main.chrome,
   header.chrome {
     max-width: none;

@@ -318,37 +318,21 @@ export function render(el, { data, params, router }) {
         <div class="slot-viewport" data-slot="content"><div class="day-panel day-content"></div></div>
       </div>
       <!--
-        **The right column is one filled box past 1024 px**
-: a square notch
-        bitten from each corner and a cross of the fill standing in each bite.
-
-        Three boxes rather than one, and each earns its place. cal-bubble is
-        the grid item and the positioning context, because the four crosses are
-        drawn *outside* the clip — they are the box turned inside out, on the
-        page's own ground. cal-bubble-fill carries the fill and the clip-path,
-        and nothing else may. cal-bubble-scroll sits inside the clip and is the
-        column's scroller.
-
-        **No overflow: hidden anywhere on the bubble** (§10.9). The notches are the only clipping this box does.
-
-        **It is the fourth column now, and it holds the rest of the day.** Nothing in it is drawn below 1024 px: the wrappers
-        dissolve to display: contents and the shelf panel is not painted.
+        **The fourth column, past 1024 px: the rest of the day.** A plain
+        column since 2026-09-18 (the mockup review's stage B), where it was a
+        filled box with a cross in each bitten corner. cal-bubble is the grid
+        item; cal-bubble-scroll is its scroller. Nothing in it is drawn below
+        1024 px: the wrappers dissolve to display: contents and the shelf panel
+        is not painted.
       -->
       <div class="cal-bubble">
-        <div class="cal-bubble-fill">
-          <div class="cal-bubble-scroll">
-            <!-- The rest of the day, past 1024 px: the register, and nothing
-                 else. Below it the register is painted into the main panel
-                 under the hero, where it has always been, and this box is not
-                 drawn. -->
-            <div class="slot-viewport" data-slot="shelf"><div class="day-panel day-shelf"></div></div>
-          </div>
+        <div class="cal-bubble-scroll">
+          <!-- The rest of the day, past 1024 px: the register, and nothing
+               else. Below it the register is painted into the main panel
+               under the hero, where it has always been, and this box is not
+               drawn. -->
+          <div class="slot-viewport" data-slot="shelf"><div class="day-panel day-shelf"></div></div>
         </div>
-        <!-- The four crosses: 20 px boxes standing in the 20 px bites, arms
-             3 px, drawn in the fill on the page's own ground. Empty spans, so
-             they say nothing to a screen reader. -->
-        <span class="cal-notch cal-notch-tl"></span><span class="cal-notch cal-notch-tr"></span>
-        <span class="cal-notch cal-notch-bl"></span><span class="cal-notch cal-notch-br"></span>
       </div>
     </div>`;
 

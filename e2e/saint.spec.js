@@ -1254,7 +1254,8 @@ test('a saint page is the Daily page’s two columns, with the reader’s own se
     };
   });
   expect(saint.main, 'the life does not sit in the Daily page’s left column').toEqual(daily.main);
-  expect(saint.side[0], 'the search column is not to the right of the life').toBeGreaterThan(saint.main[1]);
+  // Shoulder to shoulder since stage B of the mockup review, as Daily's columns are.
+  expect(saint.side[0], 'the search column is not to the right of the life').toBeGreaterThanOrEqual(saint.main[1]);
   expect(saint.side, 'the search column is not where the Daily page’s shelf is').toEqual(daily.side);
 
   // A row view, scrolled inside its own box, and drawing no bar to do it.

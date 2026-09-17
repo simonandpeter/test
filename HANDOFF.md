@@ -34,9 +34,10 @@ here, because a PAT push never updates `origin/main`.
 ## In flight
 
 **Daily/Prayer design fixes against the mockup** (`../mockup-review/BRIEF.md`,
-stages in `REVIEW.md` §3): stage A (Daily's full header) is done; B is next.
-Finding 12 is untouched by A: `.cal-read`'s content is still clipped by its
-`.slot-viewport` (stage C).
+stages in `REVIEW.md` §3): stages A (Daily's full header) and B (the four
+columns' widths, the shelf a plain column; the saint page's two columns follow
+Daily's) are done; C is next. Finding 12 is untouched: `.cal-read`'s content
+is still clipped by its `.slot-viewport` (stage C).
 
 **The corpus run (`scratchpad/corpus-plan.md` §5) is in Phase B.** Civil
 20 September – 6 October is read for all four churches. **Civil 7 October is
@@ -138,6 +139,8 @@ records that they are there. Never re-shoot one.**
   same build shot twice and came back identical on all 18.
 - `baseline-stageA-header-before-2026-09-17` — 4 tiles of `/` at 360 and 768,
   day and vigil, `en`, before stage A; after it they compared identical.
+- `baseline-stageB-cols-before-2026-09-18` — the same 4 tiles, same arguments,
+  before stage B; after it they compared identical.
 
 ```bash
 MSYS_NO_PATHCONV=1 node scripts/contact-sheet.mjs --still --routes=/,/saints,/texts   --widths=360,768,1280 --themes=day,vigil --langs=en

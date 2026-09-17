@@ -625,6 +625,7 @@
  * also happening on the Saints profile pages which have 3 columns").
  *
  * **28rem → 19rem on 2026-09-10, and it was looked at rather than dragged**
+ * (and 19rem → Daily's `--side-w` on 2026-09-18, for the same reason)
  * This said the 28 was "what the Daily
  * page's week rail needs, and this column would have been happy with less";
  * the rail went on 2026-09-02 and the Daily column narrowed to 19rem with the
@@ -646,15 +647,20 @@
 }
 
 @media (min-width: 1024px) {
+  /* Daily's grid from its first column's left edge to its third's right, and
+     its shelf column, box for box (stage B of the mockup review, 2026-09-18):
+     full bleed, no gap, and the page's 32 px paid inside the two outer
+     columns as Daily pays it. */
   .saint-cols {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 19rem;
-    column-gap: var(--space-8);
+    grid-template-columns: minmax(0, 1fr) var(--side-w);
     align-items: start;
+    margin-inline: calc(var(--page-pad) * -1);
   }
 
   .saint-col-main {
     min-width: 0;
+    padding-inline: var(--page-pad) var(--space-6);
   }
 
   /*
@@ -674,6 +680,7 @@
   .saint-side {
     display: flex;
     flex-direction: column;
+    padding-inline: var(--space-6) var(--page-pad);
     position: sticky;
     top: calc(var(--chrome-h, 53px) + var(--space-4));
     max-height: calc(100dvh - var(--chrome-h, 53px) - var(--space-8));
