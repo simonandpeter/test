@@ -97,7 +97,7 @@ const hasScript = (text, script) => RANGES[script] ? RANGES[script].test(String(
  */
 const TONE_WORD = {
   cyrillic: /глас|глaс/i,
-  greek: /ἦχος|ήχος|ηχος/i,
+  greek: /ἦχος|ἤχος|ήχος|ηχος/i,
   latin: /glas|tone|ton\b/i,
 };
 
