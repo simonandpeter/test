@@ -15,7 +15,14 @@
 
    The phone is the base and the desk is the media query, because the phone is
    one column in the document's own order — which is the order `views/prayer.js`
-   writes the markup in, and the reason it writes it that way. */
+   writes the markup in, and the reason it writes it that way.
+
+   **`search-field.css` is the one exception to the scoping rule above**, and
+   it is deliberate: its `.search-field` rules are unscoped so that they are the
+   same rules `index.css` carries, which is the whole reason the two sheets can
+   reach the document in either order. An unscoped rule from this sheet dressing
+   All Saints' field is not a leak when it is the rule All Saints wanted. */
+@import './search-field.css';
 
 html[data-route~='prayer'] .hymnal {
   display: flex;
@@ -66,16 +73,13 @@ html[data-route~='prayer'] .hy-find {
   padding: 0 var(--space-4) var(--space-4);
 }
 
-html[data-route~='prayer'] .hy-q {
+/* All Saints' field, mounted here (`ui/search-field.js`). Only how it sits in
+   this row is this sheet's: the whole of the first line on a phone, where the
+   row wraps, and one of three things on the line at the desk. Everything it
+   wears is `search-field.css`'s, including the phone's own padding and ground
+   — which is the field Prayer shipped with and keeps below 1024 px. */
+html[data-route~='prayer'] .search-field {
   flex: 1 1 100%;
-  min-width: 0;
-  padding: var(--space-3) var(--space-4);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius-panel);
-  background: var(--field);
-  color: var(--ink);
-  font-family: var(--font-utility);
-  font-size: var(--text-base);
 }
 
 html[data-route~='prayer'] .hy-count {
@@ -409,7 +413,7 @@ html[data-route~='prayer'] .hy-arrow.is-next {
     padding: 0 var(--space-8) var(--space-4);
   }
 
-  html[data-route~='prayer'] .hy-q {
+  html[data-route~='prayer'] .search-field {
     flex: 1 1 auto;
   }
 

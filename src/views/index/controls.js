@@ -6,6 +6,7 @@ import { REGIONS_BY_ID } from '../../lib/regions.js';
 import { historicityName, typeName } from '../../lib/saint-types.js';
 import * as store from '../../lib/store.js';
 import { rollDie } from '../../ui/roll.js';
+import { searchField } from '../../ui/search-field.js';
 import { STRINGS, fill } from '../../ui/strings.js';
 import { defaultChurches } from './filter.js';
 import { switchMode } from './modes.js';
@@ -252,9 +253,11 @@ export function controls(state) {
   return `<div class="sticky-sentinel" data-sticky-sentinel aria-hidden="true"></div>
     <div class="index-controls" data-index-sticky>
     <div class="index-row">
-      <input class="search-field" type="search" data-query
-        aria-label="${STRINGS.saints.search}"
-        placeholder="${STRINGS.saints.search}: ${STRINGS.saints.searchHint}" />
+      ${searchField({
+        label: STRINGS.saints.search,
+        placeholder: `${STRINGS.saints.search}: ${STRINGS.saints.searchHint}`,
+        attrs: 'data-query',
+      })}
       <button type="button" data-clear hidden>${STRINGS.saints.clear}</button>
     </div>
 

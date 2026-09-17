@@ -39,8 +39,14 @@ columns' widths, the shelf a plain column; the saint page's two columns follow
 Daily's), C (each column scrolls to its last line), D (the saint column's
 picture in its own shape, the name pinned over the reading column) and E (Life /
 Hymns / Writings under the picture, the whole life in column 3), F (the
-day's column in the mockup's order, name days last at 13 px) and G (the shelf
-tile's anatomy and its press) are done; H is next, and I depends on G's tile.
+day's column in the mockup's order, name days last at 13 px), G (the shelf
+tile's anatomy and its press) and H (one search field, `ui/search-field.js` +
+`styles/search-field.css`, mounted by All Saints, Prayer and the saint page's
+side column) are done; I is next and depends on G's tile.
+
+A `tile-diff` baseline `shots/baseline-stage-h-before` exists — 8 tiles,
+`--still --routes=/saints,/prayer --widths=360,768 --themes=day,vigil
+--langs=en`, shot at `db73f995`. Do not re-shoot it.
 
 **The corpus run (`scratchpad/corpus-plan.md` §5) is in Phase B.** Civil
 20 September – 6 October is read for all four churches. **Civil 7 October is

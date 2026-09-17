@@ -36,6 +36,7 @@ import { mountShelves } from '../ui/shelf.js';
 import { saintHymnsSection } from '../ui/hymns.js';
 import { renderDateFacts, fillPlaces } from '../ui/datefacts.js';
 import { cardSheets } from '../ui/sheets.js';
+import { searchField } from '../ui/search-field.js';
 import { STRINGS, fill } from '../ui/strings.js';
 import { currentLanguage, formatDate, translateOffice } from '../lib/i18n.js';
 /* The Index's own row, and the Index's own memory of what it had matched —
@@ -332,9 +333,7 @@ function sideColumn(data, router, current) {
       }</button>
     </div>
     <div class="side-body" data-side-body${sideFolded ? ' hidden' : ''}>
-      <input class="search-field" type="search" data-side-query
-        aria-label="${esc(STRINGS.saint.sideSearch)}"
-        placeholder="${esc(STRINGS.saint.sideSearch)}" />
+      ${searchField({ label: STRINGS.saint.sideSearch, attrs: 'data-side-query' })}
       <!-- The Index's own facet chips, arriving ticked as the reader left them
            on All Saints, and narrowing over the whole corpus through the same
            applyFilters the Index runs. Held by "the filters in the search

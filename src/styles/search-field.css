@@ -1,0 +1,78 @@
+/* ---- the search field -----------------------------------------------------
+   **One control, and this file is the whole of its drawing.** All Saints, the
+   saint page's side column and Prayer all mount `ui/search-field.js`, and every
+   declaration any of them wears is here — so the three cannot come apart the
+   way the first two and Prayer had (author, 2026-09-17: "the search bar should
+   be the exact same as the All Saints page, not any different. SSOT, repeating
+   designed elements"). Prayer's own field was h46 / 12-16 padding / `--field`
+   against All Saints' h35 / 4-8 / `--gesso` before this.
+
+   **Imported by `index.css` and by `prayer.css`, and unscoped in both.**
+   Those two sheets load per route (`ui/sheets.js`), so the order their links
+   reach the document is the reader's route history — All Saints then Prayer
+   puts one first, a cold Prayer puts the other. That cannot matter here
+   because both sheets carry *this file*: the same selectors with the same
+   specificity and the same declarations, so whichever wins draws the same
+   field. It is the one shape of shared rule that is order-independent by
+   construction, and it is why the drawing is not left in either page's sheet
+   for the other to borrow — `prayer.css`'s `.hy-views` comment names the day
+   that kind of borrowing breaks.
+
+   The layout around it is each page's own and stays there: `flex` on the field
+   is set by `.index-row` and by Prayer's `.hy-find`, at a specificity above
+   these rules, because growing along the main axis means growing wider in one
+   row and taller in the saint page's column.
+
+   **`font: inherit` before the two font declarations** is the reset a form
+   control needs before anything else takes hold; `color: inherit` is the same
+   bargain, and is what carries the theme's ink into a control the UA would
+   otherwise paint its own. */
+
+.search-field {
+  min-width: 0;
+  font: inherit;
+  font-family: var(--font-utility);
+  font-size: var(--text-base);
+  color: inherit;
+  background: var(--gesso);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  padding: var(--space-1) var(--space-2);
+}
+
+.search-field:hover {
+  border-color: var(--ink-soft);
+}
+
+/* The focus ring is `base.css`'s `:focus-visible`, on the entry sheet and
+   therefore the same ring on every route whichever of these two sheets is
+   loaded. Nothing is written here for it on purpose. */
+
+/* ---- the phone keeps what it had ------------------------------------------
+   **Prayer's field below 1024 px is the field Prayer shipped with**, and this
+   is the only place the component draws two ways. The author's ruling is about
+   the desk — "ONLY DESKTOP OF COURSE FOR ALL OF THESE UPDATES" (2026-09-17) —
+   and the standing rule for this whole pass is that mobile does not move, so a
+   control whose phone appearance is a reader's muscle memory keeps it: 12/16
+   padding on `--field`, which is a 46 px tap target against the 35 px the desk
+   now shares.
+
+   It sits in the component's own sheet rather than back in `prayer.css` for
+   the reason the file exists: one place holds every declaration this field
+   wears, including the exception, so the exception is read by anyone who reads
+   the component and is deleted in one edit the day the phone is allowed to
+   follow. `e2e/prayer.spec.js` pins both halves — the desk's identity with All
+   Saints and the phone's 12/16 — so neither can be lost quietly. */
+@media (max-width: 1023.98px) {
+  html[data-route~='prayer'] .search-field {
+    padding: var(--space-3) var(--space-4);
+    background: var(--field);
+    /* The third of the three, and the one that is easy to miss: Prayer's own
+       rule never set `font` at all, so its field kept the UA's `normal` line
+       box — 20 px against the 25 px `font: inherit` brings from the root. Left
+       out, the phone's field came back 51 px tall rather than the 46 it has
+       always been, which is not the same field however right the padding is.
+       A keyword, not a measure; there is no token for the UA's own default. */
+    line-height: normal;
+  }
+}

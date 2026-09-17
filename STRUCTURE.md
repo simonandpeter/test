@@ -448,7 +448,7 @@ four boundaries: ~480–560, ~700–768, 900, and 1024.
 | `max-width: 759.98px` | `base.css` | the chrome line gives up its gaps rather than wrapping |
 | `min-width: 760px` | `base.css`, `calendar.css`, `saint.css` | the complement: the masthead returns to the left, and `main.js` turns the nav strip at the same number |
 | `min-width: 900px` | `calendar.css` | the full-screen calendar gains its periods column beside the month |
-| `max-width: 1023.98px` | `calendar.css`, `saint.css` | the day's strip stops being its own scroller; the saint's columns take `pan-y` for the swipe |
+| `max-width: 1023.98px` | `calendar.css`, `saint.css`, `search-field.css` | the day's strip stops being its own scroller; the saint's columns take `pan-y` for the swipe; Prayer's search field keeps the phone dress it shipped with |
 | `min-width: 1024px` | `base.css`, `calendar.css`, `prayer.css`, `saint.css` | Daily's four columns, Prayer's three, and every other desk arrangement |
 <!-- /copied -->
 
@@ -766,8 +766,19 @@ independent by construction, but it is a read of each block, never a sweep.
   `lib/prayer-order.js`
 - **Reads** `lib/`: `prayer-order`, `index-filters`, `feasts`, `church`,
   `detail`, `hero-crop`, `honorific`, `calendar-page`, `motion`, `markdown`;
-  `ui/`: `hymns`, `grain-drag`, `strings`
+  `ui/`: `hymns`, `grain-drag`, `search-field`, `strings`
 - **Specs** `prayer.spec.js`
+
+**The search field is All Saints' own control, not a second one.** `ui/search-field.js`
+is the markup and the wiring and `styles/search-field.css` is the whole drawing,
+imported by `index.css` and by `prayer.css` so it cannot depend on which route's
+sheet a reader loaded first (author, 2026-09-17: "the search bar should be the
+exact same as the All Saints page, not any different. SSOT, repeating designed
+elements"). What the two do *not* share is the index behind it: All Saints runs
+the corpus through `views/index/search.js`, Prayer its own MiniSearch over the
+hymnal (`views/prayer/find.js`). Below 1024 px Prayer's field keeps the taller
+dress it shipped with — the one exception, and it lives in the component's own
+sheet.
 
 **The page is the saints the corpus has a hymn for, one at a time.** A card
 keys `hymned: [...churches]` and the hymn text stays in the saint's own folder,
@@ -796,7 +807,10 @@ html[data-route~='prayer'][data-fills-window]
         │                          touch-action: pan-y — the swipe
         ├ h1.sr-only               the route's focus target; never drawn
         ├ .hy-find                 flex; wraps to two lines below 1024
-        │ ├ input#hy-q             the whole of the first line on a phone
+        │ ├ input#hy-q             `.search-field` — All Saints' own control
+        │ │ .search-field          (`ui/search-field.js`, `search-field.css`),
+        │ │                        the whole of the first line on a phone,
+        │ │                        where it keeps its taller 12/16 dress
         │ ├ p#hy-count             aria-live: what the field left
         │ └ #hy-views              the two marks, aria-pressed
         └ .hy-body                 grid: --hy-side-w minmax(0,1fr) --hy-side-w

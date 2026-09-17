@@ -4,7 +4,7 @@ import { CHURCHES_BY_ID } from '../src/data/churches.js';
 import { feastIndexFor } from '../src/lib/feasts.js';
 import { SAME_DAY_MAX } from '../src/lib/prayer-order.js';
 import { STRINGS, fill } from '../src/ui/strings.js';
-import { desk, dragGrain, phone, ready } from './helpers.js';
+import { INDEX as SAINTS_ROUTE, desk, dragGrain, phone, ready } from './helpers.js';
 
 /**
  * Prayer: the hymns the corpus holds, one saint at a time, with the two ways
@@ -685,4 +685,87 @@ test.describe('at 360 px', () => {
     }));
     expect(overflow.doc).toBeLessThanOrEqual(overflow.win + 1);
   });
+});
+
+/* ---- one search field, two pages ------------------------------------------
+   The author, 2026-09-17: "the search bar should be the exact same as the All
+   Saints page, not any different. SSOT, repeating designed elements." It was
+   not: Prayer drew its own `input.hy-q` at 46 px on `--field` with 12/16
+   padding against All Saints' 35 px on `--gesso` with 4/8. Both pages mount
+   `ui/search-field.js` now and the drawing is `styles/search-field.css`,
+   imported by both per-route sheets.
+
+   **Read off the two pages rather than off the stylesheet**, which is the half
+   `tests/search-field.test.mjs` cannot do: that one holds the sheets apart, and
+   this one is what says the reader sees one control. Both routes are visited in
+   one test for the same reason — two tests each measuring one page would agree
+   with each other only by the numbers a human copied between them. */
+
+const fieldDress = (page) =>
+  page.evaluate(() => {
+    /* Not `.first()` (trap 1): the count is part of the reading, so a second
+       field appearing on either page fails here rather than being measured
+       past. */
+    const all = document.querySelectorAll('.search-field');
+    if (all.length !== 1) return { count: all.length };
+    const el = all[0];
+    const c = getComputedStyle(el);
+    return {
+      count: 1,
+      tag: el.tagName,
+      type: el.type,
+      height: Math.round(el.getBoundingClientRect().height),
+      padding: `${c.paddingTop} ${c.paddingRight} ${c.paddingBottom} ${c.paddingLeft}`,
+      background: c.backgroundColor,
+      border: `${c.borderTopWidth} ${c.borderTopStyle} ${c.borderTopColor}`,
+      radius: c.borderTopLeftRadius,
+      font: `${c.fontSize} ${c.fontFamily}`,
+      lineHeight: c.lineHeight,
+      color: c.color,
+      /* The two spacing tokens the phone's exception below is written in,
+         resolved by the element itself so the assertion cannot go stale the day
+         a token moves. */
+      space3: c.getPropertyValue('--space-3').trim(),
+      space4: c.getPropertyValue('--space-4').trim(),
+    };
+  });
+
+test('at the desk the field on Prayer is the field All Saints draws', async ({ page }) => {
+  await desk(page);
+  await page.goto(SAINTS_ROUTE, { waitUntil: 'networkidle' });
+  await expect(page.locator('.search-field')).toBeVisible();
+  const saints = await fieldDress(page);
+  expect(saints.count).toBe(1);
+  expect(saints.height).toBeGreaterThan(0);
+
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hy-saint')).toBeVisible();
+  const prayer = await fieldDress(page);
+
+  /* Every quantity the review measured the two apart on — height, padding,
+     ground — and the rest of the dress with them, in one comparison. */
+  expect(prayer).toEqual(saints);
+});
+
+test('below the desk Prayer keeps the field it shipped with', async ({ page }) => {
+  await phone(page);
+  await page.goto(SAINTS_ROUTE, { waitUntil: 'networkidle' });
+  await expect(page.locator('.search-field')).toBeVisible();
+  const saints = await fieldDress(page);
+
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hy-saint')).toBeVisible();
+  const prayer = await fieldDress(page);
+
+  /* The one place the component draws two ways, and it is deliberate: the
+     ruling is about the desk and mobile does not move in this pass. All three
+     declarations of the exception are read, because the third — the UA's own
+     `normal` line box, which `font: inherit` would replace with the root's —
+     is worth 5 px of the field's height and nothing else names it. */
+  expect(prayer.padding).toBe(`${prayer.space3} ${prayer.space4} ${prayer.space3} ${prayer.space4}`);
+  expect(prayer.background).not.toBe(saints.background);
+  expect(prayer.lineHeight).toBe('normal');
+  expect(saints.lineHeight).not.toBe('normal');
+  // Geometry, not a stylesheet: the taller tap target the phone has always had.
+  expect(prayer.height).toBeGreaterThan(saints.height + 8);
 });

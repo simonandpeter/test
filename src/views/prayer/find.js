@@ -1,4 +1,5 @@
 import { formatSubtext } from '../../lib/calendar-page.js';
+import { searchField, wireSearchField } from '../../ui/search-field.js';
 import { fill, STRINGS } from '../../ui/strings.js';
 import { goToSlug, refreshEnds, showCard } from './card.js';
 import { state } from './state.js';
@@ -203,8 +204,7 @@ export function findMarkup() {
       </button>`,
   ).join('');
   return `<div class="hy-find">
-    <input class="hy-q" type="search" id="hy-q" autocomplete="off"
-      placeholder="${P.searchPlaceholder}" aria-label="${P.searchLabel}" />
+    ${searchField({ label: P.searchLabel, placeholder: P.searchPlaceholder, attrs: 'id="hy-q"' })}
     <p class="hy-count utility" id="hy-count" aria-live="polite"></p>
     <div class="hy-views" id="hy-views" role="group" aria-label="${P.views}">${buttons}</div>
   </div>`;
@@ -224,9 +224,11 @@ export function wireFind(el, { redrawAsides }) {
        the whole hymnal, which is what it is before the index lands anyway. */
   });
 
-  el.querySelector('#hy-q')?.addEventListener('input', (e) => {
+  /* The shared control, this page's own index: `ui/search-field.js` hands over
+     what was typed and this is where the hymnal narrows to it. */
+  wireSearchField(el.querySelector('#hy-q'), (query) => {
     if (!state) return;
-    state.query = e.target.value;
+    state.query = query;
     apply(el);
   });
 

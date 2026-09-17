@@ -145,11 +145,15 @@ html[data-route='map'] body {
   width: min(20rem, calc(100% - var(--space-6)));
 }
 
-/* `input.map-search-input`, not `.map-search-input` alone: `index.css`'s
-   generic `input[type='search']` rule is an element-plus-attribute selector,
-   which outweighs a bare class on specificity regardless of which stylesheet
-   loads second, and would otherwise hand this field the Index's own smaller
-   font size and tighter padding the moment `type="search"` made it match. */
+/* `input.map-search-input`, not `.map-search-input` alone. `index.css` used to
+   carry a generic `input[type='search']` rule — an element-plus-attribute
+   selector, which outweighs a bare class regardless of which stylesheet loads
+   second, and handed this field the Index's smaller font size and tighter
+   padding the moment `type="search"` made it match. That rule stops at numbers
+   and selects since 2026-09-18 (the search field is its own component now, and
+   dresses itself by class), so nothing outside this sheet reaches this field
+   any more. The element is kept in the selector all the same: it costs nothing
+   and it is the guard that was needed once. */
 input.map-search-input {
   width: 100%;
   padding: var(--space-2) var(--space-3);
@@ -162,6 +166,13 @@ input.map-search-input {
   background: var(--gesso);
   border: 1px solid var(--rule);
   border-radius: var(--radius-panel);
+}
+
+/* The hover the generic rule used to give it, now that the generic rule has
+   stopped matching: the border answers the pointer here as it does on every
+   other field on the site. */
+input.map-search-input:hover {
+  border-color: var(--ink-soft);
 }
 
 .map-search-input::placeholder {

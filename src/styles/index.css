@@ -1,3 +1,9 @@
+/* The search field's whole drawing, shared with Prayer, which imports the same
+   file. It is inlined into both sheets at build, which is what makes it
+   order-independent between them — `search-field.css`'s own comment has the
+   argument. Nothing about the field is declared in this sheet. */
+@import './search-field.css';
+
 /* All Saints, Index mode. The controls are utility voice and stay quiet; the
    grid is panels on a field, as everywhere else. Nothing here is gold or red. */
 
@@ -77,15 +83,22 @@
   padding: var(--space-1) var(--space-2);
 }
 
-/* The label lives in the placeholder now, so the field is one line rather than
-   two. The accessible name is on aria-label — a placeholder disappears the
-   moment anyone types, which is exactly when a name is still needed. */
+/* How the field sits in *this* row, and nothing else: the drawing is
+   `search-field.css`'s, shared with Prayer since 2026-09-18. Growing along the
+   main axis means growing wider here, which is why the flex belongs to the row
+   and not to the control — see the same class's note in `saint.css`, where the
+   column runs the other way and this bare rule is still the bug it describes. */
 .search-field {
   flex: 1 1 220px;
-  min-width: 0;
 }
 
-input[type='search'],
+/* `[type='search']` is deliberately *not* in this list. It used to be, and the
+   field's ground, border, padding and type came from here — an
+   element-plus-attribute selector that outweighed any bare `.search-field`
+   class, which is how `saint.css`'s override came to be dead and how the map's
+   own field had to name `input.map-search-input` to escape it. The field is one
+   component now and dresses itself; this rule is for the date range's two
+   number boxes and the selects. */
 input[type='number'],
 select {
   font: inherit;
@@ -99,7 +112,6 @@ select {
   min-width: 0;
 }
 
-input[type='search']:hover,
 input[type='number']:hover,
 select:hover {
   border-color: var(--ink-soft);
