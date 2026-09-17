@@ -587,9 +587,32 @@ else.
   treatment of a chosen tile and not a stand-in for one.
 - **A shelf row is a plate of the saint above their name**, the mockup's
   `day-grid` tile: 3:2 whatever shape the icon is, cropped at 34% of its
-  height, a hairline above each tile and none between them, and one line of the
-  life where the row face gives two. It is the `is-cards` face — the stored
-  setting keeps the name it had before either redraw.
+  height, a hairline above each tile and none between them, the dates at
+  `--text-2xs` and three lines of the life at the same size. **A saint with no
+  icon gets no box at all** — the mockup hides the media span in this face and
+  draws the type mark only where there is a mount to draw it in, which here is
+  the expanded face; the type is still said in words by `registerRow`
+  (`../mockup-review/REVIEW.md` findings 7 and 16). It is the `is-cards` face —
+  the stored setting keeps the name it had before any of the redraws.
+- **The tile chooses; it does not open.** Past 1024 px the name is a
+  `<button>` and not a link to the saint's own page, so every part of the tile
+  does the one thing — the mockup's "a tile chooses; it does not open". Below
+  1024 px there is no column to move a saint into and the name is the row's
+  only door, so it is the anchor it has always been; `registerRow` branches on
+  `chosen`. The way to a saint's own page from the desk is the chosen saint's
+  own column.
+- **The column is named by a label, not a heading**: `.register-heading` in the
+  shelf head is 12 px of the utility voice, uppercase and tracked 0.08em, which
+  is the mockup's `.lbl`. The sidebar's section headings keep the serif.
+- **One tile, drawn once.** The plate's declarations carry two selectors — the
+  shelf's own `li.reg-card`, which has the register's base rules to outrank,
+  and a bare `.day-tile` for anything else that wants the same drawing. The
+  mockup draws the shelf and the Prayer face's two lists with one function, so
+  Prayer's side lists take the second selector by emitting `.day-tile` with
+  `.reg-thumb` / `.reg-pic` / `.reg-name` / `.reg-sub` / `.reg-life` inside it
+  and **not** `.reg-card`, whose base rules are the 40 px row this face
+  replaces. `calendar.css` is on the entry sheet, so that costs Prayer nothing
+  to reach.
 - **The head is pinned and carries one rule across the column**, at its own
   bottom edge, which is the edge the saints go under. The shelf's
   `.slot-viewport` takes `overflow: clip` for it: `hidden` would make that box

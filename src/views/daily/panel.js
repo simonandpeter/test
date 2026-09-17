@@ -355,10 +355,34 @@ function registerRow(saint, title, transition, seq = 0, chosen = null) {
    * is what the phone puts back — see `registerOrder` below and the
    * `max-width: 1023.98px` rule in calendar.css.
    */
+  /*
+   * **A tile chooses; it does not open** (`../mockup-review/REVIEW.md`
+   * finding 7, stage G — the mockup's own words). The whole tile has been the
+   * choosing surface since 2026-09-12, but the name inside it stayed an anchor
+   * to `/saints/<slug>`, so the one word a reader aims at was the one part of
+   * the tile that left the page. The mockup draws the name as a `<p>`.
+   *
+   * A button and not a `<span>`, because a press has to be reachable from the
+   * keyboard and the tile itself is a list item: the button is what takes the
+   * focus ring, and `calendar.js`'s delegation on `data-choose` — which lets
+   * anchors through and nothing else — picks the saint from it unchanged.
+   *
+   * Below 1024 px (`chosen === null`) there is no column to move a saint into
+   * and the name is the row's only door, so it stays the link it has always
+   * been. `data-prefetch` rides on either: the chosen saint's life and hymns
+   * are the payload column 3 then wants, so the hover is worth the same fetch
+   * it was worth as a link (`lib/detail.js` watches `[data-prefetch]`, not
+   * `a[data-prefetch]`).
+   */
+  const href = state.router.href(`/saints/${saint.slug}`);
+  const name = esc(saintName(saint));
+  const nameEl =
+    chosen === null
+      ? `<a class="reg-name" href="${href}" data-prefetch="${saint.slug}"${transition}>${name}</a>`
+      : `<button type="button" class="reg-name" data-prefetch="${saint.slug}"${transition}>${name}</button>`;
   return `<li class="reg-card${picked ? ' is-picked' : ''}" style="--reg-seq:${seq}"${picks}>
     <span class="reg-body">
-      <a class="reg-name" href="${state.router.href(`/saints/${saint.slug}`)}"
-        data-prefetch="${saint.slug}"${transition}>${esc(saintName(saint))}</a>
+      ${nameEl}
       ${/* No day in any of the four calendars currently puts a *titled*
              saint in the register: all 20 titled attestations in the corpus
              belong to saints who are their own day's hero, so this branch has

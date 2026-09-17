@@ -38,9 +38,9 @@ stages in `REVIEW.md` §3): stages A (Daily's full header), B (the four
 columns' widths, the shelf a plain column; the saint page's two columns follow
 Daily's), C (each column scrolls to its last line), D (the saint column's
 picture in its own shape, the name pinned over the reading column) and E (Life /
-Hymns / Writings under the picture, the whole life in column 3) and F (the
-day's column in the mockup's order, name days last at 13 px) are done; G is
-next.
+Hymns / Writings under the picture, the whole life in column 3), F (the
+day's column in the mockup's order, name days last at 13 px) and G (the shelf
+tile's anatomy and its press) are done; H is next, and I depends on G's tile.
 
 **The corpus run (`scratchpad/corpus-plan.md` §5) is in Phase B.** Civil
 20 September – 6 October is read for all four churches. **Civil 7 October is
@@ -152,6 +152,10 @@ records that they are there. Never re-shoot one.**
 
 - `stageE-read-before-2026-09-18` — the same 4 tiles, same arguments, before
   stage E; after it they compared identical.
+- `baseline-stageG-tiles-before-2026-09-18` (archived as
+  `shots/baseline-baseline-stageG-tiles-before-2026-09-18`) — 4 tiles of `/`
+  only, 360 and 768, day and vigil, `en`, before stage G; after it they
+  compared identical.
 
 ```bash
 MSYS_NO_PATHCONV=1 node scripts/contact-sheet.mjs --still --routes=/,/saints,/texts   --widths=360,768,1280 --themes=day,vigil --langs=en

@@ -2737,31 +2737,53 @@
  * wide, and a grid whose floor is 340 px in a 272 px box lays a 340 px row
  * into it.
  */
+/*
+ * **One tile, drawn once, wherever it stands** (`../mockup-review/REVIEW.md`
+ * findings 7 and 9; stage G). The mockup draws the shelf and the Prayer face's
+ * two lists with the same function and the same classes — "the saints beside
+ * are the Daily page's own tiles, so the reader learns one list and can read
+ * it anywhere on the site" — so the drawing below is written once and carries
+ * two selectors: the shelf's own `li.reg-card`, which has the register's base
+ * rules to outrank, and a plain `.day-tile` for anything else that wants the
+ * same tile. Prayer's side lists take the second one (stage I) by emitting
+ * `.day-tile` with `.reg-thumb` / `.reg-pic` / `.reg-name` / `.reg-sub` /
+ * `.reg-life` inside it — and *not* `.reg-card`, whose base rules are the
+ * 40 px row this face replaces.
+ *
+ * calendar.css is on the entry stylesheet, so the second selector costs the
+ * Prayer route nothing to reach.
+ */
 @media (min-width: 1024px) {
-  html[data-route~='calendar'] .register-cards.is-cards {
+  html[data-route~='calendar'] .register-cards.is-cards,
+  .day-grid {
     display: flex;
     flex-direction: column;
     gap: var(--space-6);
   }
 
-  html[data-route~='calendar'] .register-cards.is-cards li.reg-card {
+  html[data-route~='calendar'] .register-cards.is-cards li.reg-card,
+  .day-tile {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: var(--space-1);
     padding: var(--space-2) 0 0;
     border-top: 1px solid var(--rule);
+    cursor: pointer;
   }
 
   /* The row lit under the pointer while it was a row (the base sheet). A plate
      the width of the column lit the same way is a band of colour down a
-     quarter of the page, so the mockup underlines the name instead — which is
-     what the name already is, a link. */
-  html[data-route~='calendar'] .register-cards.is-cards li.reg-card:hover {
+     quarter of the page, so the mockup underlines the name instead — which the
+     name no longer is, a link, so the underline is drawn here rather than
+     inherited from `.reg-name:hover`. */
+  html[data-route~='calendar'] .register-cards.is-cards li.reg-card:hover,
+  .day-tile:hover {
     background: none;
   }
 
-  html[data-route~='calendar'] .register-cards.is-cards li.reg-card:hover .reg-name {
+  html[data-route~='calendar'] .register-cards.is-cards li.reg-card:hover .reg-name,
+  .day-tile:hover .reg-name {
     text-decoration: underline;
     text-underline-offset: 2px;
   }
@@ -2774,8 +2796,10 @@
    * answers to is a square standing for pictures; a picture under the name is
    * not what that draws.
    */
-  html[data-route~='calendar'] .register-cards.is-cards .reg-thumb {
+  html[data-route~='calendar'] .register-cards.is-cards .reg-thumb,
+  .day-tile .reg-thumb {
     order: -1;
+    display: block;
     width: 100%;
     height: auto;
     aspect-ratio: 3 / 2;
@@ -2798,11 +2822,25 @@
    * picture that is the whole of it, and in a 3:2 plate it is the halo and the
    * frame with the face under the cut.
    */
-  html[data-route~='calendar'] .register-cards.is-cards .reg-pic {
+  html[data-route~='calendar'] .register-cards.is-cards .reg-pic,
+  .day-tile .reg-pic {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* The base sheet's own, so the borrowed tile is the same drawing and not
+       a squarer copy of it. */
+    border-radius: var(--radius-cell);
+    background-size: cover;
     background-position: 50% 34%;
+    overflow: hidden;
   }
 
-  html[data-route~='calendar'] .register-cards.is-cards .reg-pic img {
+  html[data-route~='calendar'] .register-cards.is-cards .reg-pic img,
+  .day-tile .reg-pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     object-position: 50% 34%;
   }
 
@@ -2818,29 +2856,26 @@
   }
 
   /*
-   * **A type glyph where there is no icon** (§5.1), and the one thing in this
-   * face not taken from the mockup, which drops the mark from the plate and
-   * draws it only in its row face. A cross or a mitre is a statement about the
-   * saint rather than a frame around an absence (author, 2026-08-26), and
-   * `registerRow` puts the type into the row's accessible text in words
-   * wherever the visible subtext has not already said it.
+   * **No picture, no box** (`../mockup-review/REVIEW.md` findings 7 and
+   * 16; stage G). The mockup's plate face hides the media span outright
+   * where there is no icon —
+   * `.row-media.is-glyph { display: none }`, drawn only in its row face — and
+   * the tile is then 106 px of name, dates and three lines of the life.
    *
-   * **A band and not a plate.** The mark keeps its 30 px and the box keeps the
-   * 74 px it has had since 2026-09-10, so a saint with no icon holds a place
-   * in the column without 181 px of empty field standing in for a picture that
-   * is not coming. Where the corpus gives no type this list can draw a mark
-   * for, the box closes up exactly as it does today.
+   * This face drew a 74 px band of `--field` with a 30 px type mark in it
+   * instead, on the reading that "a cross or a mitre is a statement about the
+   * saint rather than a frame around an absence" (author, 2026-08-26). The
+   * review measured that as the mismatch it is, and the author's complaint
+   * about Prayer's dark blocks is the same defect in the other column: an
+   * empty box is a picture that did not arrive, whatever is drawn inside it.
+   *
+   * The mark is not lost. The expanded face below draws it at 56 px, and
+   * `registerRow` still puts the saint's type into the row's accessible text
+   * in words wherever the visible subtext has not already said it — so the
+   * type survives both as a drawing and as a word.
    */
-  html[data-route~='calendar'] .register-cards.is-cards .reg-thumb.is-blank {
-    aspect-ratio: auto;
-    height: 74px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--field);
-  }
-
-  html[data-route~='calendar'] .register-cards.is-cards .reg-thumb.is-blank:not(:has(.reg-glyph)) {
+  html[data-route~='calendar'] .register-cards.is-cards .reg-thumb.is-blank,
+  .day-tile .reg-thumb.is-blank {
     display: none;
   }
 
@@ -2850,50 +2885,85 @@
    * a failure for a carrier — so it carries nothing. A real icon always wins
    * the row, and this is what that looks like as a colour.
    *
-   * The two faces that were designed with it, and not the list: a list row is
-   * a name and its dates on one line, and a mark hanging in the column where
-   * the pictures are would be a second thing in a row that was packed tightly
-   * on purpose (2026-08-27).
+   * The expanded face alone since stage G: the plate face has no box for a
+   * mark to stand in any more, and below 1024 px a list row is a name and its
+   * dates on one line, where a mark hanging in the column of pictures would be
+   * a second thing in a row that was packed tightly on purpose (2026-08-27).
    */
-  html[data-route~='calendar'] .register-cards.is-cards .reg-glyph,
   html[data-route~='calendar'] .register-cards.is-expanded .reg-glyph {
     display: block;
-    width: 30px;
-    height: 30px;
     color: var(--rule);
   }
 
   /*
-   * **One line of who they were** (§5.1): "the register says who else is
-   * commemorated; this makes it say who they were". Two lines under a 60 px
-   * mat and one under a plate, which is the mockup's own trade — the picture
-   * takes the room the second line had. The serif, because it is prose and the
-   * line above it is apparatus.
+   * **Three lines of who they were** (§5.1: "the register says who else is
+   * commemorated; this makes it say who they were"), which is what the mockup
+   * clamps its `.row-line` to and what `../mockup-review/REVIEW.md`
+   * finding 7 measured: 12 px, three lines, 52 px of box. It was one line
+   * at 13 px on the reading that "the picture takes the room the second
+   * line had" — the mockup draws the
+   * same 3:2 plate and keeps all three, so that trade was never made.
    *
    * By height and not by word count: the text is the life's own opening
    * paragraph, so what it needs is a box that stops, not a truncation the
    * fetch would have to guess at.
    */
-  html[data-route~='calendar'] .register-cards.is-cards .reg-life {
+  html[data-route~='calendar'] .register-cards.is-cards .reg-life,
+  .day-tile .reg-life {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    line-clamp: 1;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     overflow: hidden;
-    margin-top: 3px;
+    margin-top: 2px;
     font-family: var(--font-serif);
-    font-size: var(--text-sm);
-    line-height: 1.4;
+    font-size: var(--text-2xs);
+    line-height: 1.45;
     color: var(--ink-soft);
   }
 
   /* The name may take the lines it needs here, as the Index's cards do since
      2026-09-01 — a register column is narrow and the register prints whole
-     names. The dates give up their single-line ellipsis with it. */
-  html[data-route~='calendar'] .register-cards.is-cards .reg-sub {
+     names. The dates give up their single-line ellipsis with it, and stand at
+     the mockup's 12 px rather than the utility voice's 13. */
+  html[data-route~='calendar'] .register-cards.is-cards .reg-sub,
+  .day-tile .reg-sub {
+    font-size: var(--text-2xs);
+    color: var(--ink-soft);
     white-space: normal;
     overflow: visible;
     text-overflow: clip;
+  }
+
+  /* The name: the register's serif at reading weight, which is the mockup's
+     `.row-name` and the base sheet's own `.reg-card .reg-name` — written here
+     too so the borrowed tile does not have to carry `.reg-card` to get it. */
+  html[data-route~='calendar'] .register-cards.is-cards .reg-name,
+  .day-tile .reg-name {
+    font-family: var(--font-serif);
+    font-size: var(--text-base);
+    line-height: 1.25;
+    text-align: left;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  /*
+   * **The name chooses; it does not open**
+   * (`../mockup-review/REVIEW.md` finding 7, stage G; the mockup's own
+   * words, "a tile chooses; it does not open"). It is a
+   * button past 1024 px rather than a link to the saint's page — see
+   * `registerRow` — so the button chrome the base sheet gives every button
+   * comes back off here, and the focus ring is the only thing that marks it.
+   */
+  html[data-route~='calendar'] .register-cards button.reg-name,
+  .day-tile button.reg-name {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    background: none;
   }
 
   /*
@@ -4492,10 +4562,31 @@ a.name-day:hover {
    * mockup draws one rule across the whole column at the foot of the head, and
    * that is the edge the saints go under.
    */
+  /*
+   * **A label, not a heading** (`../mockup-review/REVIEW.md` finding 7;
+   * stage G). The mockup names this column with its `.lbl` — 12 px of the
+   * utility voice, uppercase, tracked out — where the live page put a 19 px
+   * serif heading. The column is
+   * apparatus: it says what the list under it is, once, and then gets out of
+   * the way of four or five names in the same face as the page's own prose.
+   *
+   * It is still an `h2`, because the outline of the page has not changed and
+   * the four columns each own a heading level; only the drawing has.
+   *
+   * The tracking is the mockup's own `0.08em` and is written as a literal:
+   * the scale this repo tokenises is type size, space and colour, and one
+   * letter-spacing on one label is not a scale.
+   */
   html[data-route~='calendar'] .cal-bubble .register-head .register-heading {
     border-bottom: 0;
     padding-bottom: 0;
     margin-bottom: 0;
+    font-family: var(--font-utility);
+    font-size: var(--text-2xs);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
   }
 
   /*

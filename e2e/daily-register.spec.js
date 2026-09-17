@@ -659,46 +659,79 @@ test('a shelf tile is a plate of the saint above their name, cropped at 3:2', as
 });
 
 
-test('a register row with no icon shows its type as a mark, and says it in words', async ({ page }) => {
+test('a shelf tile with no icon draws no box at all, and says its type in words', async ({ page }) => {
   /*
-   * A glyph keyed off `types`
-   * where there is no picture, drawn in `--rule` and `aria-hidden` — "its
-   * 1.41:1 is then not a legibility failure because it is not the carrier:
-   * make sure the entry's accessible text names the saint's type in words".
+   * **No picture, no box** (`../mockup-review/REVIEW.md` findings 7 and 16;
+   * stage G). The mockup's plate face hides the media span outright where the
+   * saint has no icon and the tile is name, dates and three lines of life. The
+   * live plate drew a 74 px band of `--field` with a 30 px type mark in it,
+   * which the review measured as the mismatch it is — an empty box is a
+   * picture that did not arrive, whatever is drawn inside it.
    *
-   * Both halves, because either alone is the bug: a mark nobody can read with
-   * no words behind it, or words with no mark, which is what this list was
-   * yesterday.
+   * Three claims, because each alone is a different bug: nothing is drawn
+   * where there is no picture; the type is still *said*, so removing the mark
+   * has not taken the information with it; and the mark itself is still drawn
+   * by the face that has a mount to draw it in.
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
-  const rows = await page.evaluate(() =>
-    [...document.querySelectorAll('[data-register].is-cards .reg-card')].map((row) => {
-      const glyph = row.querySelector('.reg-glyph');
-      return {
-        name: row.querySelector('.reg-name').textContent.trim(),
-        // `textContent` takes the sr-only span with it, which is the point:
-        // this is what a screen reader is given, not what is drawn.
-        spoken: row.textContent.replace(/\s+/g, ' ').trim(),
-        hasPicture: Boolean(row.querySelector('.reg-pic img')),
-        glyph: glyph ? getComputedStyle(glyph).width : null,
-        hidden: glyph?.getAttribute('aria-hidden'),
-      };
-    }),
-  );
-  const marked = rows.filter((r) => r.glyph);
-  expect(marked.length, 'premise: every saint on this day has a picture').toBeGreaterThan(2);
+  const read = () =>
+    page.evaluate(() =>
+      [...document.querySelectorAll('[data-register] .reg-card')].map((row) => {
+        const glyph = row.querySelector('.reg-glyph');
+        const mat = row.querySelector('.reg-thumb');
+        return {
+          name: row.querySelector('.reg-name').textContent.trim(),
+          // `textContent` takes the sr-only span with it, which is the point:
+          // this is what a screen reader is given, not what is drawn.
+          spoken: row.textContent.replace(/\s+/g, ' ').trim(),
+          hasPicture: Boolean(row.querySelector('.reg-pic img')),
+          // The geometry and not the declaration (trap 7 in reverse): a box
+          // that draws nothing reports zero on both axes whichever rule made
+          // it do so.
+          mat: mat ? Math.round(mat.getBoundingClientRect().width * mat.getBoundingClientRect().height) : 0,
+          tile: Math.round(row.getBoundingClientRect().height),
+          glyph: glyph ? Math.round(glyph.getBoundingClientRect().width) : null,
+          hidden: glyph?.getAttribute('aria-hidden'),
+        };
+      }),
+    );
+
+  const rows = await read();
+  const blank = rows.filter((r) => !r.hasPicture && r.tile > 0);
+  expect(blank.length, 'premise: every saint on this day has a picture').toBeGreaterThan(2);
   expect(rows.some((r) => r.hasPicture), 'premise: no picture on this day to lose the row to').toBe(true);
   // A real icon always wins the row: no row carries both.
-  expect(rows.every((r) => !(r.hasPicture && r.glyph)), 'a picture and a glyph in one row').toBe(true);
+  expect(rows.every((r) => !(r.hasPicture && r.glyph && r.mat > 0)), 'a picture and a glyph in one row').toBe(true);
 
-  for (const row of marked) {
-    expect(row.glyph, `${row.name} mark is not 30 px`).toBe('30px');
+  const pictured = rows.filter((r) => r.hasPicture && r.tile > 0);
+  for (const row of blank) {
+    expect(row.mat, `${row.name} draws a box where there is no picture`).toBe(0);
+    // And the tile closed up behind it, rather than the box merely going
+    // transparent: the mockup's imageless tile is 106 px at 1440 against 270
+    // for a pictured one, so the two cannot be within a plate's height.
+    expect(row.tile, `${row.name} keeps a picture's height with no picture in it`).toBeLessThan(
+      Math.min(...pictured.map((p) => p.tile)) - 100,
+    );
+  }
+
+  /*
+   * The mark is not lost: the expanded face has a mount to draw it in and
+   * draws it there at 56 px, `aria-hidden`, as it always has.
+   */
+  await page.locator('[data-reg-view="expanded"]').click();
+  await expect(page.locator('[data-register]')).toHaveClass(/is-expanded/);
+  const big = (await read()).filter((r) => !r.hasPicture && r.glyph);
+  expect(big.length, 'the expanded face draws no type mark at all').toBeGreaterThan(2);
+  for (const row of big) {
+    expect(row.glyph, `${row.name} mark is not 56 px in the expanded face`).toBe(56);
     expect(row.hidden, `${row.name} mark is not hidden from the accessibility tree`).toBe('true');
   }
+  await page.locator('[data-reg-view="cards"]').click();
+  await expect(page.locator('[data-register]')).toHaveClass(/is-cards/);
 
   /*
    * And the words. Callinicus is the case worth naming: the corpus has him as
@@ -858,7 +891,7 @@ test('the register offers the two faces the reference draws, and no third', asyn
 });
 
 
-test('a compact row carries a line of the life, and Daily headings are serif', async ({ page }) => {
+test('a shelf tile carries three lines of the life under a labelled head', async ({ page }) => {
   /*
    * Two claims from the same step and one page load.
    *
@@ -867,18 +900,18 @@ test('a compact row carries a line of the life, and Daily headings are serif', a
    * clamped. It arrives with the saint's payload, so it is polled for rather
    * than read on the first frame.
    *
-   * **One line since 2026-09-16, and it was two.** The shelf wears the
-   * mockup's plate now and the mockup's own note is the trade: "the written
-   * line drops to one on a tile this size — the second line was the first
-   * thing the wider stamp took". What is asserted is unchanged in kind — a box
-   * that stops, and more life than fits it — and the expanded face is where
-   * two lines still live.
+   * **Three lines, at 12 px** (`../mockup-review/REVIEW.md` finding 7,
+   * stage G). It was one at 13 on the reading that "the written line drops to one on a tile this size
+   * — the second line was the first thing the wider stamp took", which the
+   * mockup does not do: it draws the same 3:2 plate and clamps `.row-line` to
+   * three, 52 px of box at either width. What is asserted is unchanged in kind
+   * — a box that stops, and more life than fits it.
    *
-   * **The serif headings**, per the author and the reference's own note that
-   * this is a deliberate departure from base.css's site utility. Scoped: the
-   * Saint page draws `.register-heading` too and was not asked about, so the
-   * second half of this loads one and finds the small caps still there. That
-   * is the assertion a route-less rule would fail.
+   * **The shelf's head is a label, not a heading** (same finding). 12 px of the
+   * utility voice, uppercase and tracked out, where this was 19 px serif. The
+   * sidebar's own section headings keep the serif they were given, which is
+   * the half of this that must not move — and the Saint page keeps base.css's
+   * small caps, which is the assertion a route-less rule would fail.
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
@@ -907,21 +940,38 @@ test('a compact row carries a line of the life, and Daily headings are serif', a
       el.remove();
       return family;
     };
-    const box = [...document.querySelectorAll('[data-register] .reg-life')].find((b) => !b.hidden);
+    /*
+     * Drawn, not merely filled (trap 7). The tile of the saint standing in the
+     * card is `display: none` and its line of life carries no `hidden`
+     * attribute, so the first match is a box that reports zero on every axis —
+     * which is how a clamp of one passed a "no taller than one line" assertion
+     * for two days without ever measuring a tile.
+     */
+    const box = [...document.querySelectorAll('[data-register] .reg-life')].find(
+      (b) => !b.hidden && b.clientWidth > 0,
+    );
     const s = getComputedStyle(box);
     return {
       clamp: s.webkitLineClamp,
+      size: parseFloat(s.fontSize),
       lines: Math.round(box.getBoundingClientRect().height / parseFloat(s.lineHeight)),
       words: box.textContent.trim().split(/\s+/).length,
       serif: s.fontFamily,
       reading: probe('--font-serif'),
     };
   });
-  expect(line.clamp, 'the line of life is not clamped to one').toBe('1');
-  expect(line.lines, 'the clamped box is not one line tall').toBeLessThanOrEqual(1);
+  expect(line.clamp, 'the line of life is not clamped to three').toBe('3');
+  expect(line.size, 'the line of life is not --text-2xs').toBe(12);
+  expect(line.lines, 'the clamped box is taller than three lines').toBeLessThanOrEqual(3);
+  /*
+   * And it is *drawing* three rather than merely permitting them: a box one
+   * line tall is what this face had before stage G, and a clamp of three over
+   * a one-line box would pass the assertion above.
+   */
+  expect(line.lines, 'the clamped box is still one line tall').toBeGreaterThan(1);
   /*
    * And there is more life than fits, or the clamp is being asked about a
-   * paragraph that was two lines anyway — the shape of green-by-absence this
+   * paragraph that was three lines anyway — the shape of green-by-absence this
    * suite has been caught by before.
    */
   expect(line.words, 'premise: this life is too short for the clamp to bite').toBeGreaterThan(20);
@@ -938,7 +988,13 @@ test('a compact row carries a line of the life, and Daily headings are serif', a
     };
     const read = (el) => {
       const s = getComputedStyle(el);
-      return { family: s.fontFamily, caps: s.fontVariantCaps, size: parseFloat(s.fontSize) };
+      return {
+        family: s.fontFamily,
+        caps: s.fontVariantCaps,
+        size: parseFloat(s.fontSize),
+        upper: s.textTransform,
+        track: s.letterSpacing,
+      };
     };
     return {
       reading: probe('--font-serif'),
@@ -947,9 +1003,11 @@ test('a compact row carries a line of the life, and Daily headings are serif', a
       side: read(document.querySelector('.cal-side .register-heading')),
     };
   });
-  expect(heads.register.family, 'the register heading is not serif').toBe(heads.reading);
-  expect(heads.register.caps, 'the register heading is still in small caps').toBe('normal');
-  expect(heads.register.size, 'the register heading is not --text-lede').toBe(19);
+  expect(heads.register.family, 'the shelf label is not the utility voice').toBe(heads.apparatus);
+  expect(heads.register.size, 'the shelf label is not --text-2xs').toBe(12);
+  expect(heads.register.upper, 'the shelf label is not uppercase').toBe('uppercase');
+  // 0.08em of 12 px, which is the mockup's own `.lbl`.
+  expect(parseFloat(heads.register.track), 'the shelf label is not tracked out').toBeCloseTo(0.96, 1);
   expect(heads.side.family, 'a sidebar section heading is not serif').toBe(heads.reading);
   expect(heads.side.size, 'a sidebar section heading is not --text-lg').toBe(17);
   /* The two faces really are two, or the comparison above says nothing —
@@ -1124,4 +1182,112 @@ test('the shelf head is pinned and its rule runs the width of the column', async
 
   expect(after.tileTop, 'premise: the shelf did not actually move under the head').toBeLessThan(before.tileTop - 100);
   expect(Math.abs(after.headTop - before.headTop), 'the head went up with the saints').toBeLessThan(1);
+});
+
+
+/* ---- the desktop redesign, stage G: the tile's press (2026-09-18) --------- */
+
+
+test('a press on a shelf tile’s name chooses the saint in place and does not leave the page', async ({ page }) => {
+  /*
+   * **A tile chooses; it does not open** (`../mockup-review/REVIEW.md`
+   * finding 7, stage G — the mockup's own words). The whole tile has been the
+   * choosing surface since 2026-09-12, but the name inside it was still an
+   * anchor to `/saints/<slug>`, so the one word a reader aims at was the one
+   * part of the tile that left the page. The review verified that departure;
+   * this is the assertion that keeps it gone.
+   *
+   * Three presses, because the failure was specific to one of them: the name,
+   * the line of life beside it, and the plate. All three must land on the same
+   * choice and none of them may navigate.
+   *
+   * Dispatched rather than clicked (trap 3): the shelf scrolls and `click()`
+   * would carry the column to the tile before pressing it.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const drawn = await page.evaluate(() =>
+    [...document.querySelectorAll('[data-register] .reg-card')]
+      .filter((row) => row.getBoundingClientRect().height > 0)
+      .map((row) => ({
+        slug: row.dataset.choose,
+        // The name is no longer a link anywhere on this face, which is the
+        // whole of the fix — asserted per tile rather than on one, so a single
+        // `<span>` among nine anchors could not pass it.
+        nameTag: row.querySelector('.reg-name').tagName,
+        nameHref: row.querySelector('.reg-name').getAttribute('href'),
+      })),
+  );
+  expect(drawn.length, 'premise: this day has no shelf tiles to press').toBeGreaterThan(3);
+  for (const tile of drawn) {
+    expect(tile.nameHref, `${tile.slug}'s name is still a door out of the page`).toBe(null);
+    expect(tile.nameTag, `${tile.slug}'s name is not a pressable`).toBe('BUTTON');
+  }
+
+  const chosen = () =>
+    page.evaluate(() => ({
+      url: location.pathname,
+      hero: document.querySelector('.hero-name')?.textContent.trim(),
+      picked: [...document.querySelectorAll('[data-register] .reg-card.is-picked')].map((r) => r.dataset.choose),
+    }));
+
+  const start = await chosen();
+  expect(start.picked.length, 'premise: no saint is standing in the card').toBe(1);
+
+  for (const [i, part] of ['.reg-name', '.reg-life', '.reg-thumb'].entries()) {
+    const tile = drawn.filter((t) => t.slug !== start.picked[0])[i];
+    await page.locator(`[data-choose="${tile.slug}"] ${part}`).dispatchEvent('click');
+    const after = await chosen();
+    expect(after.url, `pressing ${part} left the page`).toBe('/calendar/2026-09-05');
+    expect(after.picked, `pressing ${part} did not mark the tile it chose`).toEqual([tile.slug]);
+    expect(after.hero, `pressing ${part} did not move the saint into the card`).toBeTruthy();
+    expect(after.hero, `pressing ${part} chose the saint that was already there`).not.toBe(start.hero);
+  }
+
+  /*
+   * And from the keyboard, which is what the button is for: the name takes the
+   * focus ring and Enter chooses. A `<span>` would have drawn the same tile
+   * and left the choice unreachable without a pointer.
+   */
+  const last = drawn.filter((t) => t.slug !== start.picked[0]).at(-1);
+  await page.locator(`[data-choose="${last.slug}"] .reg-name`).focus();
+  const ring = await page.evaluate(() => {
+    const el = document.activeElement;
+    return { name: el.classList.contains('reg-name'), outline: parseFloat(getComputedStyle(el).outlineWidth) };
+  });
+  expect(ring.name, 'the name does not take focus').toBe(true);
+  expect(ring.outline, 'the focused name draws no ring').toBeGreaterThan(0);
+  await page.keyboard.press('Enter');
+  const keyed = await chosen();
+  expect(keyed.url, 'Enter on the name left the page').toBe('/calendar/2026-09-05');
+  expect(keyed.picked, 'Enter on the name chose nothing').toEqual([last.slug]);
+});
+
+
+test('the phone keeps the register name as a link to the saint', async ({ page }) => {
+  /*
+   * The other half of stage G, and the one the standing rule protects: below
+   * 1024 px there is no column to move a saint into, so the name is the row's
+   * only door and stays the anchor it has always been. `registerRow` branches
+   * on `chosen`, which is null at this width.
+   */
+  await ready(page);
+  await phone(page);
+  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  const names = await page.evaluate(() =>
+    [...document.querySelectorAll('[data-register] .reg-card')].map((row) => ({
+      tag: row.querySelector('.reg-name').tagName,
+      href: row.querySelector('.reg-name').getAttribute('href'),
+    })),
+  );
+  expect(names.length, 'premise: no register on this day').toBeGreaterThan(3);
+  for (const n of names) {
+    expect(n.tag, 'the phone lost the register link to a desktop rule').toBe('A');
+    expect(n.href, 'the phone register name points nowhere').toMatch(/\/saints\//);
+  }
 });
