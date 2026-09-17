@@ -31,6 +31,33 @@ export const countInRange = (from, to, rangeMode) =>
 export const undatedCount = () => String(applyFilters(CARDS, { from: 1396, to: 1400, sort: 'name' }).undated.length);
 
 /**
+ * The widest run of years no dated life touches that has dated lives on both
+ * sides of it, as `[from, to]` — a gap inside the corpus, not the empty years
+ * past either end of it. Found through the page's own `applyFilters`, so it is
+ * the page's idea of "touches". A typed window went red five times as dated
+ * lives closed it, and on 2026-10-01 no year between 1 and 2002 was left.
+ * Throws when no gap is left, because then the test has lost its premise.
+ */
+export const emptyRange = () => {
+  const touched = (y) => applyFilters(CARDS, { from: y, to: y, sort: 'name' }).matched.length > 0;
+  const last = new Date().getFullYear();
+  let best = null;
+  let start = null;
+  let seenDated = false;
+  for (let y = -3000; y <= last; y++) {
+    if (!touched(y)) {
+      if (seenDated && start === null) start = y;
+      continue;
+    }
+    if (start !== null && (!best || y - 1 - start > best[1] - best[0])) best = [start, y - 1];
+    start = null;
+    seenDated = true;
+  }
+  if (!best) throw new Error('emptyRange: every year between the first and last dated life is touched');
+  return best;
+};
+
+/**
  * How many saints carry `word` in their display name, a recorded name form or
  * a type slug — the three places the search box reaches that a batch fills.
  * Read, not re-implemented: the page's MiniSearch is prefix and fuzzy, so if it

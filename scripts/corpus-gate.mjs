@@ -304,7 +304,6 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:160     1396–1400 must be empty', overlapsRange(1396, 1400), '0'],
   ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '6'],
 ];
 for (const [where, now, literal] of EXPECTED) {
@@ -316,6 +315,24 @@ console.log(`  · corpus total (e2e reads META.total)                 now ${corp
 console.log(`  · 240–460 overlaps (e2e reads countInRange)          now ${overlapsRange(240, 460)}`);
 console.log(`  · 240–460 within   (e2e reads countInRange)          now ${withinRange(240, 460)}`);
 console.log(`  · undated tray     (e2e reads undatedCount)          now ${undated}`);
+/*
+ * The empty-range test reads `emptyRange()` from the manifest: the widest run of
+ * years no dated life touches with dated lives on both sides. Printed, and red
+ * only when no such run is left, which is the test losing its premise.
+ */
+{
+  let best = null;
+  let start = null;
+  let seen = false;
+  for (let y = -3000; y <= new Date().getFullYear(); y++) {
+    if (overlapsRange(y, y) === 0) { if (seen && start === null) start = y; continue; }
+    if (start !== null && (!best || y - 1 - start > best[1] - best[0])) best = [start, y - 1];
+    start = null;
+    seen = true;
+  }
+  console.log(`  · empty range    (e2e reads emptyRange)            now ${best ? best.join('–') : 'none'}`);
+  if (!best) fail('e2e literals', 'no year range inside the corpus is untouched; the empty-range test has no premise');
+}
 console.log(`  · type "hermit"    (e2e reads carryingWord)          now ${hermits}`);
 /*
  * Read, not held: daily-panel's reach sentence works the reach out from the

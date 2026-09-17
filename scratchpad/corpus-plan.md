@@ -205,7 +205,6 @@ Where a literal moved, also run `npm run build && npm run test:e2e` for those sp
 **Printed by `corpus-gate.mjs` (`EXPECTED`, lines ~306–318)** [M]:
 - `e2e/index-controls.spec.js:69,261` — Romanian venerated
 - `:130` and `:132` — 240–460 overlaps / within
-- `:160` — 1396–1400 must stay empty
 - `:215` — undated tray
 - `:229` — "hermit"
 - `:317` — the church's own January. **Phase D/E adds January feasts, so expect this one to move** [I]

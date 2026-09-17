@@ -522,12 +522,7 @@ in seventeen minutes.
 
 | where | what it counts | literal on 2026-09-10 |
 | --- | --- | --- |
-| `e2e/index-controls.spec.js:160` | 1396–1400 must match **nobody** | `0` |
 | `e2e/index-controls.spec.js:317` | feasts in the church's own January | `6` |
-
-The empty range at 1396–1400 is five years wide and is the fourth
-window that test has used; a dated life running through it moves the test, and
-the comment there says so.
 
 What is already derived and needs nothing: `CORPUS`, `VENERATED`,
 `venerateUnion()`, `TRACKED`, `NO_RU_NAME`, `keptOn()`, `ICONED`,
@@ -539,7 +534,7 @@ reach is worked out from the manifest), the crowds at Nicomedia, Constantinople
 and the Kyiv Caves in `map.spec.js`, the legendary facet in
 `index-grid.spec.js`, and — since 2026-09-17, through `countInRange` and
 `undatedCount` — the 240–460 overlaps and within counts and the undated tray in
-`index-controls.spec.js`, and through `VENERATED` and
+`index-controls.spec.js`, since 2026-10-01 through `emptyRange` its range that matches nobody, and through `VENERATED` and
 `carryingWord`, its Romanian count and its search for "hermit". Constantinople's under-the-cap test still pins that city,
 and says so by name when a batch takes it over `BLOB_MAX`.
 
