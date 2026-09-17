@@ -9,6 +9,16 @@
     {
       "form": "Sfânta Muceniță Sofia și fiicele sale: Pistis, Elpis și Agapis",
       "lang": "ro"
+    },
+    {
+      "form": "Надежда",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Мученицы Вера, Надежда и Любовь и их мать София»."
+    },
+    {
+      "form": "Нада",
+      "lang": "sr",
+      "note": "Read out of «Св. муч. Вера, Нада, Љубав, и мајка им Софија.» in this folder’s Serbian citation."
     }
   ],
   "sex": "female",
@@ -28,8 +38,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 17 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 сентября ст. ст. — «Мцц. Веры , Надежды , Любови и матери их Софии (ок. 137)»",
+        "url": "https://days.pravoslavie.ru/Days/20260917.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -61,8 +80,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 17. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.09.2026 (17. септембар ст. ст.) — „Св. муч. Вера, Нада, Љубав, и мајка им Софија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-30&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -188,6 +216,38 @@
           "year": 1899
         }
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Торжествует Церковь первородных, / и свеселится приемля матерь о чадех веселящуюся, / яже яко мудрости тезоименитая / тройственным богословским добродетелем равночисленныя породи. / Тыя с мудрыми девами зрит уневестившияся Жениху Богу Слову, / с нею и мы духовне в памяти их свеселимся, глаголюще: / Троицы поборницы, / Веро, Любве и Надеждо, / в вере, любви и надежде утверждайте нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 сентября ст. ст. — «Тропарь мучениц Веры, Надежды, Любови и матери их Софии»",
+        "url": "https://days.pravoslavie.ru/Days/20260917.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Church of the first-born triumphs and rejoices together, receiving the mother who rejoices over her children: she who, bearing the name of wisdom, gave birth to daughters equal in number to the three theological virtues. She beholds them betrothed with the wise virgins to the Bridegroom, God the Word, and with her let us too rejoice in spirit at their memory, saying: O champions of the Trinity, Faith, Love and Hope, establish us in faith, love and hope.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Софии честныя священнейшия ветви/ Вера и Надежда и Любовь показавшеся,/ мудрость обуиша еллинскую благодатию,/ и пострадавше, и победоносицы явившеся,// венцем нетленным от всех Владыки Христа увязошася.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 сентября ст. ст. — «Кондак мучениц»",
+        "url": "https://days.pravoslavie.ru/Days/20260917.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shown forth as the most sacred branches of honoured Sophia — Faith, Hope and Love — by grace they made foolish the wisdom of the Greeks; and having contended and been shown victorious, they were crowned with an incorruptible crown by Christ, the Master of all.",
+        "rendered": "site"
+      }
     }
   ],
   "images": [
@@ -195,5 +255,10 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "sophia-mother-of-faith-hope-and-love",
+    "faith-daughter-of-sophia",
+    "love-daughter-of-sophia"
   ]
 }

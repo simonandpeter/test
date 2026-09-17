@@ -1,0 +1,65 @@
+{
+  "slug": "john-korotkov",
+  "display_name": "John (Korotkov)",
+  "names": [
+    {
+      "form": "Иоанн Коротков",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Мч. Иоанн Коротков»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1885,
+      "latest": 1885,
+      "display": "1885",
+      "basis": "attested",
+      "note": "azbyka.ru: «родился в 1885 году в Ярославской губернии»."
+    },
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "attested",
+      "note": "azbyka.ru: «30 сентября 1941 года мученик Иоанн Коротков погиб в Каргопольлаге»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 сентября ст. ст. — «Мч. Иоанна (1941)»",
+        "url": "https://days.pravoslavie.ru/Days/20260917.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s lists for 17 septembrie or 30 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s lists for 17 Σεπτεμβρίου or 30 Σεπτεμβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 30.09.2026 (17. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

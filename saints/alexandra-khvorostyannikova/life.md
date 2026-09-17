@@ -1,0 +1,9 @@
+# Alexandra (Khvorostyannikova)
+
+Alexandra, the daughter of Simeon Khvorostyannikov, a peasant who served in the church, was born on 20 April 1886 in the village of Syanovo in the Serpukhov district of Moscow province. In 1915 she entered as a novice the women’s community founded in 1896 near the village of Lukonino in the Medyn district, thirty versts from Kaluga, by the hieroschemamonk Gerasim of the Kaluga monastery of St Laurence, and lived there until 1918. After two years at home she moved to Serpukhov, worked as a servant in well-off houses, and from 1925 at a textile factory.
+
+In 1937 the government secretly ordered the arrest of all the monks and nuns and novices of the closed monasteries. In February 1938 women who worked beside her at the factory testified that she had lived in a monastery, spoke against the Soviet power in the hostel and opposed the state loans; she was arrested on 21 February 1938 and held in the Serpukhov prison. Questioned, she confirmed that she had lived in the community and kept her faith, and said she had told the workers that the communists said there was no God but were not to be believed, that God exists, that churches were being closed and priests imprisoned, and that the priests ought to be defended. On 7 June 1938 the NKVD troika sentenced her to ten years of labour camp, and she was sent to Bamlag; she died in the Khabarovsk region on 30 September 1943 and was buried in an unmarked grave.
+
+The Russian calendar keeps her on 17 September old style.
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-aleksandra-hvorostjannikova); the Sretensky calendar (days.pravoslavie.ru), 17 сентября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260917.html); read 17 September 2026.*

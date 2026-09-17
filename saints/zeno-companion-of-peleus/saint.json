@@ -1,27 +1,39 @@
 {
-  "slug": "peleus-bishop-and-hieromartyr",
-  "display_name": "Peleus",
-  "office": "Bishop",
+  "slug": "zeno-companion-of-peleus",
+  "display_name": "Zeno, companion of Peleus and Nilus",
+  "office": "Presbyter",
   "names": [
     {
-      "form": "Άγιοι Πηλέας και Νείλος Ιερομάρτυρες και Επίσκοποι",
-      "lang": "el"
-    },
-    {
-      "form": "Пелий",
+      "form": "Зинон",
       "lang": "ru",
       "note": "Read out of the Sretensky life’s heading «Мученики Пелий, Нил, епископы Египетские, пресвитер Зинон, Патермуфий, Илия и другие мученики числом 151»."
     },
     {
-      "form": "Пелеј",
+      "form": "Зинон",
       "lang": "sr",
-      "note": "Read out of the Ohrid Prologue’s entry «Св. 156 мученика.», which names him among them."
+      "note": "Read out of the Ohrid Prologue’s entry «Св. 156 мученика», which names «свештеник Зинон» among them."
     }
   ],
   "sex": "male",
   "types": [
     "hieromartyr",
-    "bishop"
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 311,
+      "display": "305–311",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life: «пострадали при императоре Максимиане Галерии (305 - 311)»; its day line says «(ок. 310)», and the Ohrid Prologue «Страдали за Христа Господа 310. год»"
+    }
+  },
+  "related": [
+    "peleus-bishop-and-hieromartyr",
+    "nilus-bishop-and-hieromartyr",
+    "patermuthius-the-martyr",
+    "elias-martyr-with-patermuthius",
+    "hundred-egyptian-martyrs"
   ],
   "attestations": [
     {
@@ -41,21 +53,12 @@
     {
       "church": "romanian",
       "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 17 septembrie (checked 2026-08-23); no other day checked."
+      "note": "Not on doxologia.ro’s lists for 17 septembrie or 30 septembrie (checked 2026-09-17); no other day checked."
     },
     {
       "church": "greek",
-      "status": "venerated",
-      "feast": {
-        "day": 17,
-        "month": 9,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 17 Σεπτεμβρίου — «Άγιοι Πηλέας και Νείλος Ιερομάρτυρες και Επίσκοποι»",
-        "url": "https://www.saint.gr/09/17/index.aspx",
-        "year": 2026
-      }
+      "status": "undocumented",
+      "note": "Not on saint.gr’s lists for 17 Σεπτεμβρίου or 30 Σεπτεμβρίου (checked 2026-09-17); no other day checked."
     },
     {
       "church": "serbian",
@@ -74,18 +77,5 @@
   ],
   "text": {
     "life": "life.md"
-  },
-  "dates": {
-    "death": {
-      "earliest": 305,
-      "latest": 311,
-      "display": "305–311",
-      "basis": "traditional",
-      "note": "Under Maximian Galerius, between 305 and 311, at the hands of Firmilian, as the entry’s own life says; recorded 2026-09-06."
-    }
-  },
-  "related": [
-    "nilus-bishop-and-hieromartyr",
-    "zeno-companion-of-peleus"
-  ]
+  }
 }

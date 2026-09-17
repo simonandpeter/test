@@ -1,0 +1,65 @@
+{
+  "slug": "alexandra-khvorostyannikova",
+  "display_name": "Alexandra (Khvorostyannikova)",
+  "names": [
+    {
+      "form": "Александра Хворостянникова",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Прмц. Александра Хворостянникова»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1886,
+      "latest": 1886,
+      "display": "1886",
+      "basis": "attested",
+      "note": "azbyka.ru: «родилась 20 апреля 1886 года в селе Сьяново»."
+    },
+    "death": {
+      "earliest": 1943,
+      "latest": 1943,
+      "display": "1943",
+      "basis": "attested",
+      "note": "azbyka.ru: «скончалась в заключении в Хабаровском крае 30 сентября 1943 года»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 сентября ст. ст. — «Прмц. Александры (1943)»",
+        "url": "https://days.pravoslavie.ru/Days/20260917.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s lists for 17 septembrie or 30 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s lists for 17 Σεπτεμβρίου or 30 Σεπτεμβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 30.09.2026 (17. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

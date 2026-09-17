@@ -11,6 +11,16 @@
       "form": "Νείλος",
       "lang": "el",
       "note": "His own name, read out of «Άγιοι Πηλέας και Νείλος Ιερομάρτυρες και Επίσκοποι» — the line already recorded here, which names more than this saint (or joins two of the titles with “and”), so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
+    },
+    {
+      "form": "Нил",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Мученики Пелий, Нил, епископы Египетские, пресвитер Зинон, Патермуфий, Илия и другие мученики числом 151»."
+    },
+    {
+      "form": "Нил",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s entry «Св. 156 мученика.», which names him among them."
     }
   ],
   "sex": "male",
@@ -21,8 +31,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 17 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 сентября ст. ст. — «Мучеников Пелия и Нила , епископов Египетских, Зинона пресвитера, Патермуфия , Илии и иных 151 (ок. 310)»",
+        "url": "https://days.pravoslavie.ru/Days/20260917.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -45,8 +64,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 17. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.09.2026 (17. септембар ст. ст.) — „Св. 156 мученика.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-30&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -62,6 +90,7 @@
     }
   },
   "related": [
-    "peleus-bishop-and-hieromartyr"
+    "peleus-bishop-and-hieromartyr",
+    "zeno-companion-of-peleus"
   ]
 }

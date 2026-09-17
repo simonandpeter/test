@@ -30,9 +30,13 @@ calendars keep the four on 17 September with a troparion and kontakion —
 rational lambs, the Romanian troparion says, brought by martyrdom to the
 Lamb and Shepherd.
 
+The Russian calendar keeps the four on 17 September old style and dates them about 137, with a troparion and a kontakion. Its life says that [Faith](/saints/faith-daughter-of-sophia), [Hope](/saints/hope-daughter-of-sophia) and Love were born in Italy to [Sophia](/saints/sophia-mother-of-faith-hope-and-love), a devout Christian widow, who named them for the three Christian virtues and brought them up in the love of Christ; they confessed their faith openly, and the governor Antiochus denounced them to the emperor Hadrian (117–138), who had them brought to Rome. Faith was twelve, Hope ten and Love nine, and none of them would sacrifice to Artemis. They were burned on an iron grate and thrown into a furnace and into a cauldron of boiling pitch, and kept unharmed; Love was bound to a wheel and beaten with rods; and Sophia’s own torment was to be made to watch, while she urged her daughters on. The three were beheaded. Sophia was allowed their bodies, laid them in a chest, took them out of the city and buried them on a high place, and after three days sitting by the grave gave up her soul there, and the faithful buried her beside them. The life adds that their relics have rested since 777 in Alsace, in the church at Eschau.
+
+The Ohrid Prologue, for the Serbian calendar, sets their life and death in Rome under Hadrian and gives the daughters the same ages. It says the four stood before the emperor holding one another by the hand and would not sacrifice to Artemis, that the mother strengthened her daughters before their suffering, that the three were beaten, cut, thrown into fire and boiling pitch, and beheaded one after another, and that Sophia buried them outside the city and stayed three days and three nights at their grave in prayer, and gave up her spirit there.
+
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 17 Σεπτεμβρίου —
 [the entry](https://www.saint.gr/2452/saint.aspx), read 5 September 2026 — this
 time whole: its page shows seventy words and the rest behind a link, which is
 where the earlier reading stopped. The Romanian life is at doxologia.ro —
 [the page](https://doxologia.ro/viata-sfintei-mucenite-sofia-fiicelor-sale-pistis-elpis-agapis),
-read 23 August 2026.*
+read 23 August 2026; the life printed by the Sretensky calendar (days.pravoslavie.ru), 17 сентября ст. ст. — [the entry](https://days.pravoslavie.ru/Life/life1553.htm), read 17 September 2026; the Ohrid Prologue for 30 September 2026 (17. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-30&prolog=1), read 17 September 2026.*

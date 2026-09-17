@@ -6,6 +6,11 @@
     {
       "form": "Άγιος Ιωακείμ Α' ο Πάνυ Πατριάρχης Αλεξανδρείας",
       "lang": "el"
+    },
+    {
+      "form": "Иоаким",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Свт. Иоаким, патриарх Александрийский (†1567)»."
     }
   ],
   "sex": "male",
@@ -32,8 +37,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 17 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 сентября ст. ст. — «Свт. Иоакима , патриарха Александрийского (1567)»",
+        "url": "https://days.pravoslavie.ru/Days/20260917.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

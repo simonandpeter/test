@@ -1,0 +1,71 @@
+{
+  "slug": "seraphim-kulakov",
+  "display_name": "Seraphim (Kulakov)",
+  "office": "Hieromonk",
+  "names": [
+    {
+      "form": "Серафим (Кулаков)",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Преподобномученики Павел (Моисеев) и Феодосий (Соболев), архимандриты, Никодим (Щапков) и Серафим (Кулаков), иеромонахи»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1873,
+      "latest": 1874,
+      "display": "1873–1874",
+      "basis": "inferred",
+      "note": "azbyka.ru: he came to Koryazhma in 1904 «30 лет от роду», and was shot on 30 September 1918 as «45-летний»."
+    },
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "azbyka.ru: «В 2 часа пополудни 30 сентября 1918 года … были расстреляны»; days.pravoslavie.ru’s day line «Прмчч. Павла , Феодосия , Никодима и Серафима (1918)»."
+    }
+  },
+  "related": [
+    "paul-moiseev",
+    "theodosius-sobolev",
+    "nicodemus-shchapkov"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 сентября ст. ст. — «Прмчч. Павла , Феодосия , Никодима и Серафима (1918)»",
+        "url": "https://days.pravoslavie.ru/Days/20260917.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s lists for 17 septembrie or 30 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s lists for 17 Σεπτεμβρίου or 30 Σεπτεμβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 30.09.2026 (17. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

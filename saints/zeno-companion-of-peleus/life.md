@@ -1,0 +1,7 @@
+# Zeno, companion of Peleus and Nilus
+
+Zeno was a presbyter, one of the martyrs the Russian calendar keeps with the Egyptian bishops [Peleus](/saints/peleus-bishop-and-hieromartyr) and [Nilus](/saints/nilus-bishop-and-hieromartyr), [Patermuthius](/saints/patermuthius-the-martyr), [Elias](/saints/elias-martyr-with-patermuthius) and others to the number of 151, about 310. Its life says they suffered under the emperor Galerius Maximian (305–311): most of them were Egyptians and some Palestinians, and Firmilian, the governor of Palestine, seized 156 Christians. The martyrs’ eyes were put out and the sinews of their legs cut, and they were tortured in other ways; a hundred of them were beheaded — [the hundred Egyptian martyrs](/saints/hundred-egyptian-martyrs) the Greek calendar keeps the same day — and the rest were burned. The life says nothing more of Zeno than his name and his order.
+
+The Ohrid Prologue, for the Serbian calendar, keeps the 156 martyrs, all of them Egyptians, who suffered for Christ in 310, some by the sword and some by fire, and names among them the two old bishops Peleus and Nilus, the priest Zeno, and the two glorious men Patermuthius and Elias.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life1556.htm); the Ohrid Prologue for 30 September 2026 (17. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-30&prolog=1); read 17 September 2026.*
