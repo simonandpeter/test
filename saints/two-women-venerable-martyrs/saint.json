@@ -1,0 +1,48 @@
+{
+  "slug": "two-women-venerable-martyrs",
+  "display_name": "The Two Women Martyrs",
+  "names": [
+    {
+      "form": "Άγιες Δύο Γυναίκες Οσιομάρτυρες",
+      "lang": "el"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 30 сентября ст. ст. (civil 13 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 30 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 30 Σεπτεμβρίου — «Άγιες Δύο Γυναίκες Οσιομάρτυρες»",
+        "url": "https://www.saint.gr/09/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 30. септембар ст. ст. (civil 13 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

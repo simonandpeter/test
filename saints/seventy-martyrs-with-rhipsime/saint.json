@@ -1,0 +1,62 @@
+{
+  "slug": "seventy-martyrs-with-rhipsime",
+  "display_name": "The Seventy Martyrs slain with Rhipsime",
+  "names": [
+    {
+      "form": "Άγιοι Εβδομήκοντα Μάρτυρες των συναναιρεθέντων τη Αγία Pιψιμία",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 292,
+      "latest": 292,
+      "display": "292",
+      "basis": "traditional",
+      "note": "saint.gr’s entry for the seventy sends the reader to Rhipsime’s on 30 September, which dates her death «το 292 μ.Χ.» and says the seventy died with her."
+    }
+  },
+  "related": [
+    "rhipsime",
+    "gaiane-companion-of-rhipsime",
+    "thirty-two-virgin-martyrs"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 30 сентября ст. ст. (civil 13 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "doxologia.ro’s life of Rhipsime and Gaiane for 30 septembrie names seventy Christian men among those killed with them, but its list for the day gives them no entry of their own (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 30 Σεπτεμβρίου — «Άγιοι Εβδομήκοντα Μάρτυρες των συναναιρεθέντων τη Αγία Pιψιμία»",
+        "url": "https://www.saint.gr/09/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 30. септембар ст. ст. (civil 13 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

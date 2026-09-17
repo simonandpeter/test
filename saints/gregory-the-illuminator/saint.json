@@ -1,0 +1,176 @@
+{
+  "slug": "gregory-the-illuminator",
+  "display_name": "Gregory the Illuminator",
+  "names": [
+    {
+      "form": "Άγιος Γρηγόριος ο Ιερομάρτυρας επίσκοπος της Μεγάλης Αρμενίας",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Ierarh Grigorie Luminătorul, Arhiepiscopul Armeniei celei Mari",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 257,
+      "latest": 257,
+      "display": "257",
+      "basis": "traditional",
+      "note": "saint.gr’s heading for the entry: «Αγιος Γρηγοριος ο Ιερομαρτυρας Επισκοπος Της Μεγαλης Αρμενιας (257 - 331)»."
+    },
+    "death": {
+      "earliest": 331,
+      "latest": 331,
+      "display": "331",
+      "basis": "traditional",
+      "note": "saint.gr’s heading for the entry: «(257 - 331)»."
+    }
+  },
+  "related": [
+    "rhipsime",
+    "gaiane-companion-of-rhipsime",
+    "thirty-two-virgin-martyrs"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 30 сентября ст. ст. (civil 13 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 30 septembrie — „Sfântul Ierarh Grigorie Luminătorul, Arhiepiscopul Armeniei celei Mari”",
+        "url": "https://doxologia.ro/30-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 30 Σεπτεμβρίου — «Άγιος Γρηγόριος ο Ιερομάρτυρας επίσκοπος της Μεγάλης Αρμενίας»",
+        "url": "https://www.saint.gr/09/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 30. септембар ст. ст. (civil 13 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Θείας πίστεως, τὴ γεωργία, ἐνεούργησας, βροτῶν καρδίας, κατασπείρας τὴν τοῦ Λόγου ἐπίγνωσιν, καὶ λαμπρυνθεῖς μαρτυρίου τοὶς στίγμασιν, ἱεραρχία Γρηγόριε ἔφανας. Πάτερ ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Γρηγόριος ο Ιερομάρτυρας επίσκοπος της Μεγάλης Αρμενίας, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1022/saint.aspx",
+        "year": 2026
+      },
+      "model": "Θείας πίστεως.",
+      "english": {
+        "text": "Thou didst till the hearts of mortals with the husbandry of divine faith, sowing in them the knowledge of the Word; and made radiant with the marks of martyrdom, thou didst shine forth in the hierarchy, O Gregory. O venerable father, entreat Christ God to grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Καὶ τρόπων μέτοχος, καὶ θρόνων διάδοχος, τῶν Ἀποστόλων γενόμενος, τὴν πρᾶξιν εὗρες θεόπνευστε, εἰς θεωρίας ἐπίβασιν· διὰ τοῦτο τὸν λόγον τῆς ἀληθείας ὀρθοτομῶν, καὶ τῇ πίστει ἐνήθλησας μέχρις αἵματος, Ἱερομάρτυς Γρηγόριε· Πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Γρηγόριος ο Ιερομάρτυρας επίσκοπος της Μεγάλης Αρμενίας, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1022/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having been a participant of the character and a successor of the apostles on the throne, thou, O God-inspired one, didst find work in coming into visions; whilst therefore rightly dividing the word of truth, for the sake of the faith didst thou suffer even unto the shedding of thy blood. O hieromartyr (mentioned by name), intercede before Christ the God that our souls may be saved.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter XVI, The General Service to One Hieromartyr",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Τὸν εὐκλεῆ καὶ Ἱεράρχην ἅπαντες, ὡς ἀθλητὴν τῆς ἀληθείας σήμερον, οἱ πιστοὶ θείοις ἐν ἄσμασι, καὶ ὑμνῳδίαις εὐφημήσωμεν, τὸν γρήγορον Γρηγόριον ποιμένα καὶ διδάσκαλον, τὸν ἔκλαμπρον φωστῆρα καὶ ὑπέρμαχον· Χριστῷ γὰρ πρεσβεύει τοῦ σωθῆναι ἡμᾶς.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Γρηγόριος ο Ιερομάρτυρας επίσκοπος της Μεγάλης Αρμενίας, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/1022/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τοὺς ἀσφαλεῖς.",
+      "english": {
+        "text": "Let all us faithful praise today with divine songs and hymns the glorious hierarch as a champion of the truth: the watchful Gregory, shepherd and teacher, the radiant luminary and defender; for he intercedes with Christ that we be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor Apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge, Sfinţite Ierarhe Grigorie, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Grigorie Luminătorul, Arhiepiscopul Armeniei",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-grigorie-luminatorul-arhiepiscopul-armeniei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having been a participant of the character and a successor of the apostles on the throne, thou, O God-inspired one, didst find work in coming into visions; whilst therefore rightly dividing the word of truth, for the sake of the faith didst thou suffer even unto the shedding of thy blood. O hieromartyr (mentioned by name), intercede before Christ the God that our souls may be saved.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter XVI, The General Service to One Hieromartyr",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Pe cel mărit şi ierarh, ca pe un nevoitor al adevărului, astăzi să-l lăudăm toţi cu cântări şi cu imne de laude; pe păstorul şi învăţătorul cel priveghelnic, pe Sfântul Grigorie Luminătorul a toată lumea, căci se roagă lui Hristos să ne mântuim noi.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Ierarh Grigorie Luminătorul, Arhiepiscopul Armeniei",
+        "url": "https://doxologia.ro/condacul-sfantului-ierarh-grigorie-luminatorul-arhiepiscopul-armeniei",
+        "year": 2026
+      },
+      "model": "Pe propovăduitorii cei tari...",
+      "english": {
+        "text": "Let us all praise today with songs and hymns of praise the glorified hierarch as one who contended for the truth: the watchful shepherd and teacher, Saint Gregory, the Illuminator of all the world; for he prays to Christ that we be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

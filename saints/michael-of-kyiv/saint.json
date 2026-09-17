@@ -1,0 +1,59 @@
+{
+  "slug": "michael-of-kyiv",
+  "display_name": "Michael of Kyiv",
+  "office": "Metropolitan of Kyiv",
+  "names": [
+    {
+      "form": "Άγιος Μιχαήλ πρώτος Μητροπολίτης Κιέβου και πάσης Ρωσίας ο θαυματουργός",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 992,
+      "latest": 992,
+      "display": "992",
+      "basis": "traditional",
+      "note": "saint.gr’s heading for the entry: «Αγιος Μιχαηλ Πρωτος Μητροπολιτης Κιεβου Και Πασης Ρωσιας ο Θαυματουργος (; - 992)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 30 сентября ст. ст. (civil 13 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 30 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 30 Σεπτεμβρίου — «Άγιος Μιχαήλ πρώτος Μητροπολίτης Κιέβου και πάσης Ρωσίας ο θαυματουργός»",
+        "url": "https://www.saint.gr/09/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 30. септембар ст. ст. (civil 13 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

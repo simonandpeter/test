@@ -1,0 +1,57 @@
+{
+  "slug": "gregory-of-pelshma",
+  "display_name": "Gregory of Pelshma",
+  "names": [
+    {
+      "form": "Όσιος Γρηγόριος του Πελσέμσκιϋ",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1442,
+      "latest": 1442,
+      "display": "1442",
+      "basis": "traditional",
+      "note": "saint.gr’s heading for the entry: «Οσιος Γρηγοριος Του Πελσεμσκιϋ (; - 1442)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 30 сентября ст. ст. (civil 13 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 30 septembrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 30 Σεπτεμβρίου — «Όσιος Γρηγόριος του Πελσέμσκιϋ»",
+        "url": "https://www.saint.gr/09/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 30. септембар ст. ст. (civil 13 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

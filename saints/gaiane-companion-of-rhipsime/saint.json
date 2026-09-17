@@ -1,0 +1,76 @@
+{
+  "slug": "gaiane-companion-of-rhipsime",
+  "display_name": "Gaiane, companion of Rhipsime",
+  "names": [
+    {
+      "form": "Άγιες Ριψιμιά, Γαϊάνη και Άλλες Τριακονταδύο Παρθενομάρτυρες",
+      "lang": "el"
+    },
+    {
+      "form": "Sfânta Muceniță Gaiani",
+      "lang": "ro"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 292,
+      "latest": 292,
+      "display": "292",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε στα χρόνια του Διοκλητιανού (284-304 μ.Χ.) και συγκεκριμένα το 292 μ.Χ.»; its heading gives each of the three entries «(; - 292)»."
+    }
+  },
+  "related": [
+    "rhipsime",
+    "thirty-two-virgin-martyrs",
+    "seventy-martyrs-with-rhipsime",
+    "gregory-the-illuminator"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 30 сентября ст. ст. (civil 13 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 30 septembrie — „Sfânta Muceniță Gaiani”",
+        "url": "https://doxologia.ro/30-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 30 Σεπτεμβρίου — «Άγιες Ριψιμιά, Γαϊάνη και Άλλες Τριακονταδύο Παρθενομάρτυρες»",
+        "url": "https://www.saint.gr/09/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 30. септембар ст. ст. (civil 13 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
