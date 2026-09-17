@@ -4,7 +4,7 @@ Aristides was an Athenian patrician, a philosopher of a glorious Athenian
 family, who lived in the second century under Hadrian — one of the most
 eloquent of the Athenian philosophers, Jerome calls him, and Eusebius a firm
 follower of our faith. He became a Christian, the Greek synaxarion says,
-through Dionysius and Hierotheus, and wrote to Hadrian an apology for the
+through Dionysius and [Hierotheus](/saints/hierotheus-of-athens), and wrote to Hadrian an apology for the
 persecuted Christians, which Eusebius says he presented to the emperor, his
 Chronicle giving the year as 125, and which was then preserved by many;
 then, the synaxarion goes on, he was driven out, and as Hadrian was absent

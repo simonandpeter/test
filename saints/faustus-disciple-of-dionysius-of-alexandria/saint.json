@@ -10,15 +10,16 @@
   ],
   "sex": "male",
   "types": [
-    "martyr"
+    "martyr",
+    "deacon"
   ],
   "dates": {
     "death": {
       "earliest": 254,
-      "latest": 254,
-      "display": "254",
+      "latest": 264,
+      "display": "254–264",
       "basis": "attested",
-      "note": "saint.gr: «μαρτύρησε όταν αυτοκράτορας ήταν ο Ουαλεριανός (254 μ.Χ.)», of Dionysius, with whom his disciples died."
+      "note": "saint.gr’s 3 October entry: «μαρτύρησε όταν αυτοκράτορας ήταν ο Ουαλεριανός (254 μ.Χ.)», of Dionysius, with whom his disciples died; its 4 October entry prints «(; - 264)» for each of the four deacons."
     }
   },
   "related": [
@@ -33,7 +34,7 @@
     {
       "church": "romanian",
       "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 3 octombrie (checked 2026-09-17); no other day checked."
+      "note": "Not on doxologia.ro’s lists for 3 or 4 octombrie (checked 2026-09-17); no other day checked."
     },
     {
       "church": "greek",
@@ -41,7 +42,8 @@
       "feast": {
         "day": 3,
         "month": 10,
-        "calendar": "revised-julian"
+        "calendar": "revised-julian",
+        "note": "Kept with Dionysius of Alexandria on 3 October, and again on 4 October, where saint.gr’s list prints «Άγιοι Φαύστος, Γάιος, Ευσέβιος, Χαιρήμων οι Διάκονοι»."
       },
       "source": {
         "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Οκτωβρίου — «Άγιος Διονύσιος Ιερομάρτυρας και οι μαρτυρήσαντες μαζί μ' αυτόν Φαύστος, Γάιος, Πέτρος, Παύλος, Ευσέβιος, Χαιρήμων και άλλοι δύο μάρτυρες»",

@@ -1,0 +1,101 @@
+{
+  "slug": "dumitru-staniloae",
+  "display_name": "Dumitru Stăniloae",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Dumitru Stăniloae",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro’s line „✝) Sfântul Preot Mărturisitor Dumitru Stăniloae” for 4 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1903,
+      "latest": 1903,
+      "display": "1903",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut în ziua de 16 noiembrie 1903 în Vlădeni, judeţul Braşov»."
+    },
+    "death": {
+      "earliest": 1993,
+      "latest": 1993,
+      "display": "1993",
+      "basis": "attested",
+      "note": "doxologia.ro: «A trecut la cele veşnice la 90 de ani, în ziua de 4 octombrie 1993»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 4 октября ст. ст. (civil 17 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 4 octombrie — „✝) Sfântul Preot Mărturisitor Dumitru Stăniloae”",
+        "url": "https://doxologia.ro/4-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 4 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 4. октобар ст. ст. (civil 17 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Cu întreită cunună încununându-te a preoției Părinte, a bunei mărturisiri și cu cea a cuvântării de Dumnezeu, ca un soare strălucești, învățându-ne a cinsti Treimea cea de o ființă, la care Sfinte Dumitru totdeauna pomenește-ne.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Preot Mărturisitor Dumitru Stăniloae",
+        "url": "https://doxologia.ro/troparul-sfantului-preot-marturisitor-dumitru-staniloae",
+        "year": 2026
+      },
+      "english": {
+        "text": "Crowned with a threefold crown, O father — of the priesthood, of good confession, and of speaking of God — thou shinest like a sun, teaching us to honour the Trinity one in essence; before whom, O holy Dumitru, remember us always.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glas 8",
+      "text": "Pe odraslirea cea în Domnul a românilor, nou-arătatul mare dascăl al Bisericii și înțelept tălcuitor al Filocaliei, pe Părintele Dumitru cu evlavie să-l cinstim după dreptate, credincioșilor, strigând: Bucură-te, Sfinte Dumitru, de Dumnezeu cuvântătorule!",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Preot Mărturisitor Dumitru Stăniloae",
+        "url": "https://doxologia.ro/condacul-sfantului-preot-marturisitor-dumitru-staniloae",
+        "year": 2026
+      },
+      "model": "Apărătoare Doamnă...",
+      "english": {
+        "text": "The Romanians’ offspring in the Lord, the newly revealed great teacher of the Church and wise interpreter of the Philokalia, Father Dumitru, let us honour with devotion as is right, O faithful, crying: Rejoice, holy Dumitru, speaker of God!",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

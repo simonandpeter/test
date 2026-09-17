@@ -1,0 +1,178 @@
+{
+  "slug": "hierotheus-of-athens",
+  "display_name": "Hierotheus of Athens",
+  "names": [
+    {
+      "form": "Ιερόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Άγιος Ιερόθεος Επίσκοπος Αθηνών»."
+    },
+    {
+      "form": "Ierotei",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro’s line „Sfântul Sfințit Mucenic Ierotei, Episcopul Atenei” for 4 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 52,
+      "latest": 52,
+      "display": "52",
+      "basis": "traditional",
+      "note": "saint.gr’s entry heads its page «Αγιος Ιεροθεος Επισκοπος Αθηνων (; - 52)»; its life has him die in peace in deep old age."
+    }
+  },
+  "related": [
+    "dionysius-the-areopagite"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 4 октября ст. ст. (civil 17 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 4 octombrie — „Sfântul Sfințit Mucenic Ierotei, Episcopul Atenei”",
+        "url": "https://doxologia.ro/4-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Οκτωβρίου — «Άγιος Ιερόθεος Επίσκοπος Αθηνών»",
+        "url": "https://www.saint.gr/10/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 4. октобар ст. ст. (civil 17 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Χρηστότητα ἐκδιδαχθείς, καὶ νήφων ἐν πᾶσιν, ἀγαθὴν συνείδησιν ἱεροπρεπῶς ἐνδυσάμενος, ἤντλησας ἐκ τοῦ Σκεύους τῆς ἐκλογῆς τὰ ἀπόῤῥητα, καὶ τὴν πίστιν τηρήσας, τὸν ἴσον δρόμον τετέλεκας, Ἱερομάρτυς Ἱερόθεε. Πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ιερόθεος Επίσκοπος Αθηνών, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2587/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thoroughly taught in goodness and sober in all things, clothed as befits a priest with a good conscience, thou didst draw things ineffable from the chosen vessel; and keeping the faith thou hast finished a like course, O hieromartyr Hierotheus. Intercede with Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Τοῦ Παύλου ἠλίευσαι, ταὶς θεηγόροις πλοκαίς, καὶ ὅλος γεγένησαι, ἱερωμένος Θεῶ, σοφὲ Ἰερόθεε, σὺ γὰρ φιλοσοφίας, ταὶς ἀκτίσιν ἐκλάμπων, ὤφθης θεολογίας, ἀκριβοὺς ὑποφήτης, δι' ἧς μυσταγωγούμεθα, Πάτερ τὰ κρείττονα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ιερόθεος Επίσκοπος Αθηνών, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2587/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "Thou wast caught in the God-voiced nets of Paul and becamest wholly consecrated to God, O wise Hierotheus; for shining with the rays of philosophy, thou wast shown an exact interpreter of theology, by which we are initiated, O father, into the higher things.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Τὸν Ἱεράρχην Ἀθηνῶν ἀνευφημοῦμέν σε, ὡς μυηθέντες διὰ σοῦ ξένα καὶ ἄῤῥητα, ἀνεδείχθης γὰρ θεόληπτος ὑμνολόγος. Ἀλλὰ πρέσβευε παμμάκαρ. Ἱερόθεε, ἐκ παντοίων συμπτωμάτων ἡμᾶς ῥύεσθαι, ἵνα κράζωμεν· Χαίροις Πάτερ Θεόσοφε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ιερόθεος Επίσκοπος Αθηνών, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2587/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῇ ὑπερμάχῳ.",
+      "english": {
+        "text": "We praise thee, the hierarch of Athens, as those initiated through thee into things strange and ineffable; for thou wast shown a God-possessed singer of hymns. But intercede, O all-blessed Hierotheus, that we be delivered from misfortunes of every kind, that we may cry: Rejoice, O God-wise father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Bunătate învăţându-te şi îmbărbătându-te întru toate, cu bună cunoştinţă, ca un sfinţitor cuvios îmbrăcându-te, ai scos din vasul alegerii cele negrăite; şi credinţa păzind, stadiul întocmai ai săvârşit, Sfinţite Mucenice Ierotei, roagă-te lui Hristos Dumnezeu, să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfinţit Mucenic Ierotei, Episcopul Atenei",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-ierotei-episcopul-atenei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thoroughly taught in goodness and sober in all things, clothed as befits a priest with a good conscience, thou didst draw things ineffable from the chosen vessel; and keeping the faith thou hast finished a like course, O hieromartyr Hierotheus. Intercede with Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Pe tine, ierarhul Atenei, te lăudăm, ca unii care ne-am învăţat prin tine cele minunate şi negrăite; că te-ai arătat cu­vântător de cântare de Dumnezeu primit. Roagă-te, dar, Preafericite Părinte Ierotei, să ne curăţim de toate greşelile, ca să strigăm: bucură-te, părinte, de Dumnezeu înţelepţite.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Sfinţit Mucenic Ierotei, Episcopul Atenei",
+        "url": "https://doxologia.ro/condacul-sfantului-sfintit-mucenic-ierotei-episcopul-atenei",
+        "year": 2026
+      },
+      "model": "Apărătoare Doamnă...",
+      "english": {
+        "text": "We praise thee, the hierarch of Athens, as those who have learned through thee things wondrous and ineffable; for thou wast shown a singer of hymns received of God. Pray then, O most blessed father Hierotheus, that we be cleansed of all offences, that we may cry: Rejoice, O father made wise by God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Ca un stâlp neclătinat, Sfinte Ierarhe Iero­tei, nu te-ai temut de îngrozirile vrăjmaşilor, ci ai surpat teme­iul înşelăciunii, întărindu-te ca pe o piatră cinstită, părinte. Pentru acesta, ca pe un birui­tor, Stăpânul te încununează cu dreapta cea Dumnezeiască şi În­cepătoare de viaţă; pe care roagă-L pentru noi toţi.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Sfinţit Mucenic Ierotei, Episcopul Atenei",
+        "url": "https://doxologia.ro/condacul-sfantului-sfintit-mucenic-ierotei-episcopul-atenei-0",
+        "year": 2026
+      },
+      "model": "Cel Ce Te-ai Înălţat pe Cruce...",
+      "english": {
+        "text": "As an unshaken pillar, O holy hierarch Hierotheus, thou didst not fear the threats of the enemies, but didst overthrow the foundation of deceit, standing firm as on a precious rock, O father. Therefore the Master crowneth thee as a victor with his divine right hand that is the beginning of life; pray to him for us all.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

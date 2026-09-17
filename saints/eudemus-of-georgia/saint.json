@@ -1,0 +1,59 @@
+{
+  "slug": "eudemus-of-georgia",
+  "display_name": "Eudemus of Georgia",
+  "names": [
+    {
+      "form": "Evdemoz",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro’s line „Sfântul Mucenic Evdemoz din Georgia” for 4 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "patriarch"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1642,
+      "latest": 1658,
+      "display": "1642–1658",
+      "basis": "inferred",
+      "note": "doxologia.ro: King Rostom, «(1632-1658)», imprisoned him «în 1642» and at last had him strangled; the life gives no year for the death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 4 октября ст. ст. (civil 17 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 4 octombrie — „Sfântul Mucenic Evdemoz din Georgia”",
+        "url": "https://doxologia.ro/4-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 4 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 4. октобар ст. ст. (civil 17 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

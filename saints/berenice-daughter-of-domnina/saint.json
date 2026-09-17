@@ -1,0 +1,76 @@
+{
+  "slug": "berenice-daughter-of-domnina",
+  "display_name": "Berenice, daughter of Domnina",
+  "names": [
+    {
+      "form": "Βερνίκη",
+      "lang": "el",
+      "note": "Read out of saint.gr’s entry text «Η άξια Δομνίνα ήταν από την Αντιόχεια και ασπάστηκε την χριστιανική πίστη μαζί με τις δύο θυγατέρες της, την Βερνίκη και την Προσδόκη»."
+    },
+    {
+      "form": "Verina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro’s line „Sfânta Muceniță Verina” for 4 octombrie."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian",
+      "basis": "traditional",
+      "note": "saint.gr: the husband used «την σκληρότητα των διωγμών του Διοκλητιανού»; doxologia.ro names no emperor."
+    }
+  },
+  "related": [
+    "domnina-of-antioch",
+    "prosdoce-daughter-of-domnina"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 4 октября ст. ст. (civil 17 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 4 octombrie — „Sfânta Muceniță Verina”",
+        "url": "https://doxologia.ro/4-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Οκτωβρίου — «Άγια μάρτυρας Δομνίνη και οι θυγατέρες αυτής Βερνίκης και Προσδόκης»",
+        "url": "https://www.saint.gr/10/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 4. октобар ст. ст. (civil 17 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

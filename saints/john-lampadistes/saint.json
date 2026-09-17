@@ -1,0 +1,91 @@
+{
+  "slug": "john-lampadistes",
+  "display_name": "John Lampadistes",
+  "names": [
+    {
+      "form": "Ιωάννης ο Λαμπαδιστής",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Όσιος Ιωάννης ο Λαμπαδιστής»."
+    },
+    {
+      "form": "Ioan Lampadistis",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro’s line „Sfântul Ioan Lampadistis din Cipru” for 4 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 901,
+      "latest": 1000,
+      "display": "10th century",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησε τον 10ο αιώνα μ.Χ»; doxologia.ro: «a trăit în secolul al X-lea». Both have him die at twenty-two."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 4 октября ст. ст. (civil 17 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 4 octombrie — „Sfântul Ioan Lampadistis din Cipru”",
+        "url": "https://doxologia.ro/4-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Οκτωβρίου — «Όσιος Ιωάννης ο Λαμπαδιστής»",
+        "url": "https://www.saint.gr/10/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 4. октобар ст. ст. (civil 17 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Τῆς Λαμπάδος τὸ κλέος καὶ Κυπρίων ἀγλάισμα καὶ θαυματουργὸς ὄντως ὤφθης, Ἰωάννη Πατὴρ ἠμῶν Ὅσιε. Νηστεία κατατήξας τῆς σαρκός, ἀλόγους ἐνθυμήσεις πανσθενῶς, ὅθεν χάριν ἰαμάτων ἐξ οὐρανοῦ ἐδέξω, θεόπνευστε. Δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι δόξα τῷ ἐνεργούντι διὰ σοῦ πάσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ιωάννης ο Λαμπαδιστής, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2592/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "english": {
+        "text": "Glory of Lampados and adornment of the Cypriots, thou wast shown truly a wonderworker, O John our venerable father. Having wasted away by fasting the irrational thoughts of the flesh with all thy strength, thou didst receive from heaven the grace of healings, O inspired of God. Glory to him who gave thee strength; glory to him who crowned thee; glory to him who worketh healings for all through thee.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
