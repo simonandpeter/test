@@ -1,0 +1,61 @@
+{
+  "slug": "gaius-disciple-of-dionysius-of-alexandria",
+  "display_name": "Gaius, disciple of Dionysius of Alexandria",
+  "names": [
+    {
+      "form": "Γάιος",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Άγιος Διονύσιος Ιερομάρτυρας και οι μαρτυρήσαντες μαζί μ' αυτόν Φαύστος, Γάιος, Πέτρος, Παύλος, Ευσέβιος, Χαιρήμων και άλλοι δύο μάρτυρες»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 254,
+      "latest": 254,
+      "display": "254",
+      "basis": "attested",
+      "note": "saint.gr: «μαρτύρησε όταν αυτοκράτορας ήταν ο Ουαλεριανός (254 μ.Χ.)», of Dionysius, with whom his disciples died."
+    }
+  },
+  "related": [
+    "dionysius-of-alexandria"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 3 октября ст. ст. (civil 16 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 3 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Οκτωβρίου — «Άγιος Διονύσιος Ιερομάρτυρας και οι μαρτυρήσαντες μαζί μ' αυτόν Φαύστος, Γάιος, Πέτρος, Παύλος, Ευσέβιος, Χαιρήμων και άλλοι δύο μάρτυρες»",
+        "url": "https://www.saint.gr/2582/saint.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 3. октобар ст. ст. (civil 16 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
