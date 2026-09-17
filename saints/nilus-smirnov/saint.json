@@ -1,0 +1,70 @@
+{
+  "slug": "nilus-smirnov",
+  "display_name": "Nilus (Smirnov)",
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Нил Смирнов",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Священномученик Нил Смирнов, пресвитер»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1881,
+      "latest": 1881,
+      "display": "1881",
+      "basis": "attested",
+      "note": "azbyka.ru: «родился 5 ноября 1881 года в селе Пересыпкино»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "azbyka.ru: «скончался 2 октября 1938 года и был погребен в безвестной могиле»; the Sretensky day prints «(1938)»."
+    }
+  },
+  "related": [
+    "maria-mamontova-shashina"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Сщмч. Нила пресвитера, прмц. Марии (1938)»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 2 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 2 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 02.10.2026 (19. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

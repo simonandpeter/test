@@ -1,0 +1,69 @@
+{
+  "slug": "maria-mamontova-shashina",
+  "display_name": "Maria (Mamontova-Shashina)",
+  "office": "Novice",
+  "names": [
+    {
+      "form": "Мария Мамонтова-Шашина",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Преподобномученица Мария Мамонтова-Шашина, послушница»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1890,
+      "latest": 1890,
+      "display": "1890",
+      "basis": "attested",
+      "note": "azbyka.ru: «родилась в 1890 году в селе Дединово Зарайского уезда Рязанской губернии»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "azbyka.ru: «умерла в лагере 2 октября 1938 года и погребена в безвестной могиле»; the Sretensky day prints «(1938)»."
+    }
+  },
+  "related": [
+    "nilus-smirnov"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Сщмч. Нила пресвитера, прмц. Марии (1938)»",
+        "url": "https://days.pravoslavie.ru/Days/20260919.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 2 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 2 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 02.10.2026 (19. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
