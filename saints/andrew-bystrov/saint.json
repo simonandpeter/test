@@ -1,0 +1,74 @@
+{
+  "slug": "andrew-bystrov",
+  "display_name": "Andrew (Bystrov)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Андрей (Быстров)",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Священномученик Андрей (Быстров) и мученики Василий (Виноградов), Сергий (Михайлов) и Спиридон (Савельев)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1873,
+      "latest": 1873,
+      "display": "1873",
+      "basis": "attested",
+      "note": "The Sretensky life: «Священномученик Андрей родился в 1873 году в селе Залесье»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The Sretensky life: «Они были расстреляны 7 октября 1937 года»; the day prints «(1937)»."
+    }
+  },
+  "related": [
+    "paul-berezin",
+    "vitaly-kokorev",
+    "basil-vinogradov",
+    "sergius-mikhailov",
+    "spyridon-savelyev"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Сщмчч. Андрея и Павла пресвитеров, прмч. Виталия и мчч. Василия , Сергия и Спиридона (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 7 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 7 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 07.10.2026 (24. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

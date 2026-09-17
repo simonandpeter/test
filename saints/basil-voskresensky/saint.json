@@ -1,0 +1,60 @@
+{
+  "slug": "basil-voskresensky",
+  "display_name": "Basil (Voskresensky)",
+  "office": "Deacon",
+  "names": [
+    {
+      "form": "Василий Воскресенский",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Священномученик Васи́лий Воскресенский, диакон», its stress mark left out."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "deacon"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "azbyka.ru: «Расстрелян 7 октября 1918 года красноармейцами»; the Sretensky day prints «(1918)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 сентября ст. ст. — «Сщмч. Василия диакона (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260924.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 7 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 7 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 07.10.2026 (24. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
