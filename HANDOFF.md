@@ -44,13 +44,15 @@ tile's anatomy and its press), H (one search field, `ui/search-field.js` +
 `styles/search-field.css`, mounted by All Saints, Prayer and the saint page's
 side column), I (Prayer's margins wear that tile, and every name opens
 something past 1024 px) and J (Prayer full-bleed, the page gutter charged once
-inside the columns) are done. **Every layout stage is done.**
+inside the columns) and K (the lives' paragraphs) are done. **Stages A–K are
+done; L, the hymn languages, is what is left.**
 
-**K — the lives' paragraphs** (`saints/*/life.md` and `docs/CORPUS.md` only):
-`scratchpad/k-split.py` breaks any body paragraph over 900 characters at
-sentence ends, `k-verify.py` proves every changed file identical to `HEAD`
+**K's tools stay** (`saints/*/life.md` and `docs/CORPUS.md` were all it
+touched): `scratchpad/k-split.py` breaks any body paragraph over 900 characters
+at sentence ends, `k-verify.py` proves every changed file identical to `HEAD`
 under whitespace collapse, `k-literals.py` proves no `e2e/` prose literal is
-cut. Slugs **a–e are done**; f–m and n–z remain, one batch each.
+cut, `k-stats.py` prints the paragraph distribution. A new life is written to
+the shape `docs/CORPUS.md` now states, so the pass should find nothing to do.
 
 Stage I left the phone's half of its own ruling open — `STRUCTURE.md` §6 item 3.
 

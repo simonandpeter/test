@@ -8,7 +8,9 @@ teacher, who was then again at Vatopedi, and Niphon, knowing the desire was
 truly God’s will, admonished him, prayed over him, blessed him, kissed him
 and sent him off: go, child, on the road of martyrdom, for according to your
 eagerness you will be counted worthy of the crown of the contest, and rejoice
-for ever with the martyrs and the righteous. Macarius had gone with his
+for ever with the martyrs and the righteous.
+
+Macarius had gone with his
 elder and his fellow-disciple Joasaph, kept on 26 October, on Niphon’s long
 and fruitful missionary journeys through Macedonia and Wallachia, and in
 1505 the three had come to settle at Vatopedi for two years. As Niphon had

@@ -7,13 +7,16 @@ Olympus had built from its foundations some hundred and fifty years before;
 he is counted its second founder, and his tomb is there. He was born in the
 middle of the seventeenth century at Leontari near Megalopolis to Theodore
 and Evangelia, and at eight George was given to a teacher for the sacred
-letters. He loved the lives of the saints above everything, so that grown up
-he went to the monastery of Philosophou nearby, a great centre of Greek
-learning under the Turks, and was tonsured Gerasimus, and naturally
-well-schooled. With divine longing he went to venerate the Holy Places, and
-coming back preached the word of God like another apostle in villages and
-towns until he reached Makrinitsa and Sourvia, and decided to stay. He
-restored all its buildings and reorganised it on ascetic lines, delighted
+letters.
+
+He loved the lives of the saints above everything, so that grown up he went
+to the monastery of Philosophou nearby, a great centre of Greek learning
+under the Turks, and was tonsured Gerasimus, and naturally well-schooled.
+With divine longing he went to venerate the Holy Places, and coming back
+preached the word of God like another apostle in villages and towns until he
+reached Makrinitsa and Sourvia, and decided to stay.
+
+He restored all its buildings and reorganised it on ascetic lines, delighted
 by its quiet and its good air, and finding a cave nearby spent hours there
 in stillness, prayer and many tears for his own salvation and everyone’s;
 God adorned him with the gift of wonders. Out of love for the enslaved
@@ -33,19 +36,21 @@ conversation with God, do not neglect your rule, love one another, run to
 confession, which is the key of paradise — as without the key the door
 cannot be opened, so without confession a man cannot enter the kingdom of
 heaven — keep out of worldly cares and keep the memory of death written in
-your minds. He gave up his soul on 14 September 1740, having lived on earth
-as a heavenly man and an earthly angel. The old men of the monastery and
-the faithful round about tell of many miracles, old and recent, by the
-grace his relics carry and above all his precious skull: the possessed made
-whole, barren women given children, a plague of locusts lifted from the
-fields after the skull was carried in procession, Skopelos spared a
-pestilence and a disease of its vines, a great mortality stopped at
-Pinakates, a shepherd’s flock saved at Agios Georgios of Velestino, rats
-driven from the crops at Stephanovikeio, and many at Makrinitsa, whose
-highest point was his hermitage and is now the convent of St Gerasimus. On
-the eve of Mid-Pentecost every year his icon and skull are carried on foot
-from the Makrinitsa convent to the church at Phytoko outside Nea Ionia for
-Vespers and an all-night vigil.
+your minds.
+
+He gave up his soul on 14 September 1740, having lived on earth as a
+heavenly man and an earthly angel. The old men of the monastery and the
+faithful round about tell of many miracles, old and recent, by the grace his
+relics carry and above all his precious skull: the possessed made whole,
+barren women given children, a plague of locusts lifted from the fields
+after the skull was carried in procession, Skopelos spared a pestilence and
+a disease of its vines, a great mortality stopped at Pinakates, a shepherd’s
+flock saved at Agios Georgios of Velestino, rats driven from the crops at
+Stephanovikeio, and many at Makrinitsa, whose highest point was his
+hermitage and is now the convent of St Gerasimus. On the eve of
+Mid-Pentecost every year his icon and skull are carried on foot from the
+Makrinitsa convent to the church at Phytoko outside Nea Ionia for Vespers
+and an all-night vigil.
 
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 14 Σεπτεμβρίου —
 [the entry](https://www.saint.gr/2442/saint.aspx), read 5 September 2026 — this

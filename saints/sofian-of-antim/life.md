@@ -9,6 +9,7 @@ county, entered the monastery at the Rughi skete in Soroca in the autumn of
 cathedral of Bălți on 6 August 1939; in 1940 he finished the monastic
 seminary at Cernica, and gifted for painting studied at the Academy of Fine
 Arts in Bucharest (1940–1945) and at the Faculty of Theology (1942–1946).
+
 Ordained hieromonk in 1945 for the Antim monastery in Bucharest, he was
 among the best-known members of the cultural and spiritual meetings of the
 Burning Bush at Antim, which gathered the heights of the Orthodox clergy and
@@ -19,6 +20,7 @@ condemned to hard labour for his activity in the Burning Bush and freed in
 1964 under the general decree of pardon; he stayed at Antim to the end of
 his earthly life, serving with great gentleness and devotion as confessor,
 with hundreds of disciples, whence he was called the confessor of Bucharest.
+
 He went to the Lord on 14 September 2002 and was buried at Căldărușani. The
 Holy Synod of the Romanian Church canonised him in 2024, with his feast on
 16 September, together with fifteen other confessors of the last century;

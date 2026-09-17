@@ -21,19 +21,23 @@ gardening, baking and keeping bees. Tonsured Hilarion, he was named by
 Macarius as one of the two who would succeed him, with Ambrose, and after
 1860 he was superior of the skete and confessor of the monastery, hearing
 every monk five times a year, then the nuns, then whoever came, and refusing
-no one. He gave little of his own opinion, quoting the Fathers or what
-Macarius had said, and people found that he practised what he told them.
-Two years of illness he bore without asking to be cured, only for patience;
-in his last month he could not lie down for the water in his lungs and sat
-before a portrait of Macarius, communicating daily. Early on 18 September
-1873 he heard the morning rule, received communion, and five hours later
-died with his prayer rope in his hands. He was buried beside Macarius. The
-Optina elders were glorified for the whole church in August 2000.
+no one.
+
+He gave little of his own opinion, quoting the Fathers or what Macarius had
+said, and people found that he practised what he told them. Two years of
+illness he bore without asking to be cured, only for patience; in his last
+month he could not lie down for the water in his lungs and sat before a
+portrait of Macarius, communicating daily. Early on 18 September 1873 he
+heard the morning rule, received communion, and five hours later died with
+his prayer rope in his hands. He was buried beside Macarius. The Optina
+elders were glorified for the whole church in August 2000.
 
 The Greek and Romanian calendars keep him on 18 September, the Romanian
 with the prayers of the elders of Optina and no life.
 
-The Russian calendar keeps him on 18 September old style, and also on 27 June for the finding of his relics and on 11 October with the Optina elders. Its life names his parents, Nikita Filimonovich and Euphemia Nikiforovna Ponomarev, of the Novokhopyorsk district of Voronezh province; his father followed him into Optina as the monk Niphont, worked at the skete’s apiary and died in 1849. It says his mother foretold his monastic life when he was seven; that at twenty-four, in 1829, he moved with his family to Saratov, where he taught the men of his tailoring artel church singing and reading and, under Bishop Jacob, contended with the Old Believers; that he spent part of 1837 and all of 1838 visiting the monasteries of Russia and found peace only at Optina, where he was received into the skete on 13 March 1839; and that he was cell-attendant to [Macarius](/saints/macarius-of-optina) for twenty years, until the elder’s death in 1860, and on 8 April 1863 became superior of the skete and confessor of the monastery.
+The Russian calendar keeps him on 18 September old style, and also on 27 June for the finding of his relics and on 11 October with the Optina elders. Its life names his parents, Nikita Filimonovich and Euphemia Nikiforovna Ponomarev, of the Novokhopyorsk district of Voronezh province; his father followed him into Optina as the monk Niphont, worked at the skete’s apiary and died in 1849.
+
+It says his mother foretold his monastic life when he was seven; that at twenty-four, in 1829, he moved with his family to Saratov, where he taught the men of his tailoring artel church singing and reading and, under Bishop Jacob, contended with the Old Believers; that he spent part of 1837 and all of 1838 visiting the monasteries of Russia and found peace only at Optina, where he was received into the skete on 13 March 1839; and that he was cell-attendant to [Macarius](/saints/macarius-of-optina) for twenty years, until the elder’s death in 1860, and on 8 April 1863 became superior of the skete and confessor of the monastery.
 
 *After the life printed by the Orthodox Church in America for 18 September —
 [the day’s lives](https://www.oca.org/saints/all-lives/2026/09/18); the Greek

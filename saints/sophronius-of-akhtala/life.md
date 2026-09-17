@@ -9,6 +9,7 @@ monastic life, and still young went as a novice to the monastery of St
 George Choutoura, after three months to Soumela, and after three years to
 Vazelon, learning at all three the sacred letters and in great measure the
 monastic life; there he was tonsured Sophronius and then ordained priest.
+
 After seven years the abbot Ignatius sent him, in 1776, to the mine of
 Akhtala in Iberia, where some five hundred metal-workers had settled and
 made a village called Dal-ver, precious stones; by his holy life he won the

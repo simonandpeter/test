@@ -7,13 +7,14 @@ her mission led many pagans to the Christian faith; denounced to the duke
 of Thessalonica, Kindianos, who came to Beroea himself to interrogate her,
 she was tortured for her steadfastness, and her children were put to death
 cruelly — one dragged behind horses, the second beaten to death, the third
-made to wear a red-hot helmet. At last they beheaded the holy mother too,
-between the years 276 and 282. Her skull is kept in the pilgrimage church
-of St Anthony at Beroea, and she is kept with a festival on 4 September
-both there and at Kampochori near Alexandria in Macedonia; a life, with
-her festal service, has been published by Panteleimon, metropolitan of
-Beroea. The Greek calendar keeps her with her sons
-[Kegouros](/saints/kegouros-son-of-jerusalem),
+made to wear a red-hot helmet.
+
+At last they beheaded the holy mother too, between the years 276 and 282.
+Her skull is kept in the pilgrimage church of St Anthony at Beroea, and
+she is kept with a festival on 4 September both there and at Kampochori
+near Alexandria in Macedonia; a life, with her festal service, has been
+published by Panteleimon, metropolitan of Beroea. The Greek calendar keeps
+her with her sons [Kegouros](/saints/kegouros-son-of-jerusalem),
 [Secundinus](/saints/secundinus-son-of-jerusalem) and
 [Secundus](/saints/secundus-son-of-jerusalem).
 

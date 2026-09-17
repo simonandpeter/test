@@ -9,10 +9,12 @@ monks were left in it; one day two armed Chekists came and announced that
 the monks were summoned at once to Tbilisi, and shot them on the road — John
 by a wonder survived, the bullet having passed through his chest, and the
 nuns of a neighbouring convent nursed him; he went back to Betania and never
-left it again. In 1924 the monk [George (Mkheidze)](/saints/george-mkheidze)
-came to him, and through the communist persecution the two of them kept
-Betania a monastery for many years, living within its walls to their deaths
-— officially they were “watchmen of an architectural monument” and the
+left it again.
+
+In 1924 the monk [George (Mkheidze)](/saints/george-mkheidze) came to him,
+and through the communist persecution the two of them kept Betania a
+monastery for many years, living within its walls to their deaths —
+officially they were “watchmen of an architectural monument” and the
 monastery was counted closed, but the icons hung in the church, the lamps
 burned, the services and processions were held, and people were baptised and
 married there. John died in 1957, and is buried at Betania beside George,

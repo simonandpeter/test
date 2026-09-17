@@ -9,29 +9,33 @@ to hand him to the persecutors, he left the city for the desert. He settled
 in a cave at the foot of a mountain and lived there, known to no one, for
 ninety-one years, praying to God day and night without rest, fed on dates
 and on the bread a raven brought him, half a loaf a day, and clothed against
-heat and cold in palm leaves. By God’s providence, a little before his
-death, God revealed him to [Anthony the Great](/saints/anthony-the-great),
-who was labouring in the same desert: the thought had come to Anthony that
-there could hardly be another such hermit as himself, and he heard a voice —
-Anthony, there is a servant of God more perfect than you, who settled in
-this desert before you; go into its depth and you will find him. Anthony
-went and found the cave; Paul, having taught him a lesson in humility by
-keeping him waiting, came out to meet him, and the two old men called each
-other by name, embraced and talked long, and while they talked the raven
-flew down and brought a whole loaf for the two of them. Paul told Anthony
-that his end was near and charged him with his burial; he died at prayer, on
-his knees, and Anthony saw his holy soul going up to God among angels,
-prophets and apostles. Two lions ran from the desert and dug the grave with
-their claws; Anthony buried the old man, took his garment of palm leaves and
-went back to his own monastery, where he kept it as the greatest of
-treasures and wore it only twice a year, at Pascha and Pentecost. Paul died
-in 341, at a hundred and thirteen. He founded no monastery, but soon after
-his death many imitators of his life appeared and covered the desert with
-monasteries, and he is counted the father of Orthodox monasticism. In the
-twelfth century his body was brought by the will of the emperor Manuel
-(1143–1180) to Constantinople and laid in the monastery of the Theotokos
-Peribleptos; later it went to Venice and at last to Hungary, to Buda, and
-part of his head is at Rome.
+heat and cold in palm leaves.
+
+By God’s providence, a little before his death, God revealed him to [Anthony
+the Great](/saints/anthony-the-great), who was labouring in the same desert:
+the thought had come to Anthony that there could hardly be another such
+hermit as himself, and he heard a voice — Anthony, there is a servant of God
+more perfect than you, who settled in this desert before you; go into its
+depth and you will find him. Anthony went and found the cave; Paul, having
+taught him a lesson in humility by keeping him waiting, came out to meet
+him, and the two old men called each other by name, embraced and talked
+long, and while they talked the raven flew down and brought a whole loaf for
+the two of them.
+
+Paul told Anthony that his end was near and charged him with his burial; he
+died at prayer, on his knees, and Anthony saw his holy soul going up to God
+among angels, prophets and apostles. Two lions ran from the desert and dug
+the grave with their claws; Anthony buried the old man, took his garment of
+palm leaves and went back to his own monastery, where he kept it as the
+greatest of treasures and wore it only twice a year, at Pascha and
+Pentecost. Paul died in 341, at a hundred and thirteen.
+
+He founded no monastery, but soon after his death many imitators of his life
+appeared and covered the desert with monasteries, and he is counted the
+father of Orthodox monasticism. In the twelfth century his body was brought
+by the will of the emperor Manuel (1143–1180) to Constantinople and laid in
+the monastery of the Theotokos Peribleptos; later it went to Venice and at
+last to Hungary, to Buda, and part of his head is at Rome.
 
 Jerome’s purpose in writing was partly to argue that Anthony was not the
 first hermit, and no earlier source mentions Paul at all. Historians have

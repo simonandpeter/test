@@ -7,14 +7,16 @@ came and demanded the head-tax; the three Sfakians refused to pay and came
 to blows with the tax-collectors, and John’s companions killed a Turk and
 wounded others. The two fled, while John, being innocent, stayed; but the
 Turks, wanting revenge, seized him, tortured him and threw him into prison,
-where he stayed sixteen days without food. To their proposals that he turn
-Muslim to escape death he answered: a Christian I was born, a Christian I
-want to die; John is my name, and I change neither my faith nor my name.
-Then the Turks hanged him, on 15 September 1811, and with leave the
-Christians buried him in the yard of the church of St George at Ephesus.
-His martyrdom was written by Athanasius of Paros, and his service by the
-monk Gerasimos Mikragiannanitis; the Greek calendar also gathers him with
-the new martyrs who suffered after the fall of Constantinople.
+where he stayed sixteen days without food.
+
+To their proposals that he turn Muslim to escape death he answered: a
+Christian I was born, a Christian I want to die; John is my name, and I
+change neither my faith nor my name. Then the Turks hanged him, on 15
+September 1811, and with leave the Christians buried him in the yard of the
+church of St George at Ephesus. His martyrdom was written by Athanasius of
+Paros, and his service by the monk Gerasimos Mikragiannanitis; the Greek
+calendar also gathers him with the new martyrs who suffered after the fall
+of Constantinople.
 
 The Ohrid Prologue, for the Serbian calendar, calls him John of Crete, a new martyr, and says only that he suffered for the faith of Christ at the hands of the Turks at Ephesus, in 1811.
 

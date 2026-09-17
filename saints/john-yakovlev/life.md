@@ -6,6 +6,7 @@ the church of St John the Theologian at Novonikolayevskaya, the Daniel
 church at Stavropol and the Demetrius church at Yekaterinodar, taught the
 law of God at the Yekaterinodar diocesan girls’ school, and sat for the
 clergy in the Yekaterinodar town duma. He was married and had four children.
+
 He was arrested on the night of 16 September 1921 for corresponding with
 exiled priests, and the whole parish of the Demetrius church rose in his
 defence, writing that having lived beside him more than twenty years they

@@ -16,19 +16,20 @@ condemned the heresy of Nestorius.
 For Rufus was a close friend, ally and supporter of Cyril of Alexandria in
 his fight against Nestorianism. Two of Cyril’s letters are addressed to him
 on the dogmatic questions of the day and the church affairs bound up with
-them, written, as the preface to the first says, to keep him informed so
-that rumours telling one thing for another should not trouble the most
-devout bishops there; both are warm in tone and lavish in their praise of
-him — all-wise and all-perfect, Cyril calls him. Cyril’s letter to John of
-Antioch shows the same: they had written the like, he says, to the most
-God-beloved bishop of Thessalonica Rufus and to certain other devout bishops
-in Macedonia, who always concur in his decisions. Yet for some unknown
-reason Rufus could not sit at the Third Ecumenical Council at Ephesus in 431,
-which condemned Nestorianism and Pelagianism; Flavian of Philippi signed for
-him, holding the place of Rufus the most reverend bishop of the
-Thessalonians. He must have died in 434, since by 435 Anastasius, kept on
-16 July, was already on the throne. The Greek calendar keeps him on
-9 September.
+them, written, as the preface to the first says, to keep him informed so that
+rumours telling one thing for another should not trouble the most devout
+bishops there; both are warm in tone and lavish in their praise of him —
+all-wise and all-perfect, Cyril calls him.
+
+Cyril’s letter to John of Antioch shows the same: they had written the like,
+he says, to the most God-beloved bishop of Thessalonica Rufus and to certain
+other devout bishops in Macedonia, who always concur in his decisions. Yet
+for some unknown reason Rufus could not sit at the Third Ecumenical Council
+at Ephesus in 431, which condemned Nestorianism and Pelagianism; Flavian of
+Philippi signed for him, holding the place of Rufus the most reverend bishop
+of the Thessalonians. He must have died in 434, since by 435 Anastasius, kept
+on 16 July, was already on the throne. The Greek calendar keeps him on 9
+September.
 
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 9 Σεπτεμβρίου —
 [the entry](https://www.saint.gr/4133/saint.aspx), read 5 September 2026 — this

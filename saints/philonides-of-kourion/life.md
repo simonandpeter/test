@@ -10,17 +10,18 @@ the priest Aristocles, the deacon Demetrianus and the reader Athanasius; one
 morning, as the holy company finished its prayer, three executioners came
 into the cell, dragged the three out and put them to a violent death, and
 told Philonides to sacrifice to the idols — otherwise they would strip him
-and drunken satyrs would outrage his body. The hieromartyr froze, quite
-literally, when he heard it, and having prayed a long while with tears he
-rose, called some of the imprisoned brethren to him and told them the
-governor’s intentions and his own resolve to give up his life himself — he
-wanted no one to be scandalised by the way he would die. Then he crept
-slowly along a corridor and through a hidden hatch climbed up to a high
-cliff; there he covered his face with his cloak, made the sign of the cross
-three times, and threw himself down, and before his body touched the ground
-the hieromartyr’s holy soul flew free to heaven. The Russian church
-calendar, which does not keep him in its menologion but prints his page on
-30 June, puts his martyrdom on Cyprus at about 306, in the persecution of
-Maximian Galerius (305–311).
+and drunken satyrs would outrage his body.
+
+The hieromartyr froze, quite literally, when he heard it, and having prayed
+a long while with tears he rose, called some of the imprisoned brethren to
+him and told them the governor’s intentions and his own resolve to give up
+his life himself — he wanted no one to be scandalised by the way he would
+die. Then he crept slowly along a corridor and through a hidden hatch
+climbed up to a high cliff; there he covered his face with his cloak, made
+the sign of the cross three times, and threw himself down, and before his
+body touched the ground the hieromartyr’s holy soul flew free to heaven. The
+Russian church calendar, which does not keep him in its menologion but
+prints his page on 30 June, puts his martyrdom on Cyprus at about 306, in
+the persecution of Maximian Galerius (305–311).
 
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 30 Αυγούστου — [the entry](https://www.saint.gr/838/saint.aspx), read 5 September 2026 — this time whole: its page shows seventy words and the rest behind a link, which is where the earlier reading stopped. The year is from the Russian church calendar’s page (azbyka.ru) — [the entry](https://azbyka.ru/days/sv-filonid-kurijskij), read 6 September 2026.*

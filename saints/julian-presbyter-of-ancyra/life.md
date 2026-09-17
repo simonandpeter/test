@@ -9,23 +9,27 @@ account has him come down from the mountain once to fetch water, where the
 pagans sacrificing at a temple of Hecate saw him, seized him and led him to
 the governor of Ancyra, who asked where the rest were hiding; he would not
 betray them, was horribly tortured, a red-hot helmet set on his head, and at
-last beheaded as he prayed. The Russian calendar tells it more fully.
-Denounced to the governor of Galatia as hiding in a cave with forty
-companions and holding services there, he was seized and ordered to give up
-the others, who had escaped, and refused; ordered to sacrifice, he refused
-again, was stripped and set on a red-hot iron grill, made the sign of the
-cross, and an angel of the Lord cooled the flame so that he stood unharmed —
-asked who he was and how he had put out the fire, he said, I am God’s
-servant. They brought his aged mother and threatened that if she did not
-persuade her son to sacrifice she would be given over to outrage; the brave
-woman answered that if her body were defiled against her will it would not
-be counted against her before God but rather counted as martyrdom, and the
+last beheaded as he prayed.
+
+The Russian calendar tells it more fully. Denounced to the governor of
+Galatia as hiding in a cave with forty companions and holding services
+there, he was seized and ordered to give up the others, who had escaped, and
+refused; ordered to sacrifice, he refused again, was stripped and set on a
+red-hot iron grill, made the sign of the cross, and an angel of the Lord
+cooled the flame so that he stood unharmed — asked who he was and how he had
+put out the fire, he said, I am God’s servant.
+
+They brought his aged mother and threatened that if she did not persuade her
+son to sacrifice she would be given over to outrage; the brave woman
+answered that if her body were defiled against her will it would not be
+counted against her before God but rather counted as martyrdom, and the
 shamed torturers let her go and condemned her son to death. In his last
 prayer he thanked God fervently, asked strength to bear his sufferings, and
 asked a particular grace: that those who took earth from the place of his
 burial should receive forgiveness of sins and deliverance from the passions,
 and that no harmful insect or bird should fall on their fields; then,
 saying, Lord, receive my spirit in peace, he bent his head under the sword.
+
 A voice sounded calling the martyr into the heavenly kingdom, and the
 Christians hidden in the cave heard it too; heartened, they went to the
 place of his suffering, found him already dead, and with one voice confessed

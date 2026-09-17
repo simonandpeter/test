@@ -7,6 +7,7 @@ physician took him along when he left for Constantinople, and though John
 lived with him from childhood for ten years the uncle neither taught him
 medicine nor troubled himself about him, so John left the house and was
 taken on as a clerk by a merchant of Chios who already had another clerk.
+
 Once the merchant had to go home to Chios, and when he came back the two
 clerks gave him their account of the time he was away; he reckoned that the
 takings did not answer to the goods sold and that thirty piastres were
@@ -16,15 +17,18 @@ refused, and in his despair went to the sultan’s palace to see the sultan’s
 mother, the valide; he was received first by her agent, the Ethiopian Merjan
 Agha, who knew him and to whom he told his trouble — and that wicked
 counsellor seized the chance and advised him to change his faith and have
-riches and office. In his distress, and with the devil’s help, John agreed;
-the delighted agha presented him to the sultan’s mother and she to the
-sultan, he was circumcised at once, dressed in splendid clothes and handed
-to a hodja to be taught. After three days the young man came to himself and
-repented from his heart, looked for a chance to escape, and got away to the
-Crimea, where he stayed ten months without finding any rest from the great
-sin of his denial, and resolved to go back to Constantinople and confess
-Christ; some confessors advised him to go first to the Holy Mountain. He
-went, first to Iveron and then to the skete of St Anne, to a hieromonk
+riches and office.
+
+In his distress, and with the devil’s help, John agreed; the delighted agha
+presented him to the sultan’s mother and she to the sultan, he was
+circumcised at once, dressed in splendid clothes and handed to a hodja to be
+taught. After three days the young man came to himself and repented from his
+heart, looked for a chance to escape, and got away to the Crimea, where he
+stayed ten months without finding any rest from the great sin of his denial,
+and resolved to go back to Constantinople and confess Christ; some
+confessors advised him to go first to the Holy Mountain.
+
+He went, first to Iveron and then to the skete of St Anne, to a hieromonk
 Bessarion who had also been the trainer of the new martyr Luke; the elder
 received him, set him a rule of strict asceticism and fasting, and soon
 tonsured him with the name Hilarion. One morning Hilarion told his elder
@@ -36,6 +40,7 @@ repented bitterly, and at once I left the darkness of error and came back to
 the light of truth, so I anathematise your confession and your faith; a
 Christian I was and am, and I anathematise your salawat — and throwing the
 turban to the ground he put on the black cap he had hidden in his breast.
+
 Seeing his decision unshakable, the agha had him seized and tortured without
 pity, so that all his bones were put out of joint, and at last beheaded, and
 he received two crowns, of asceticism and of martyrdom; the synaxarion’s

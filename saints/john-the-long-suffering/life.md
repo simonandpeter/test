@@ -11,7 +11,9 @@ Caves](/saints/anthony-of-the-caves) lay and
 prayed earnestly to the holy abba, and after a day and a night heard a
 voice: John, you must shut yourself in here, so that at least by not seeing
 and by silence the war may be weakened, and the Lord will help you by the
-prayers of his saints. From then he lived in the cave, and only after thirty
+prayers of his saints.
+
+From then he lived in the cave, and only after thirty
 years overcame the passion; the war was hard and fierce, and sometimes he
 wanted to leave his enclosure, but instead resolved on a greater labour. He
 dug a pit, and at the beginning of the Great Fast climbed into it and
@@ -19,7 +21,9 @@ covered himself with earth to the shoulders, and spent the whole fast so,
 and still the heat of the passion did not leave his much-tried flesh. The
 enemy tried to drive him from the cave by fear: a terrible serpent,
 breathing flame and showering sparks, tried for several days to swallow him,
-and in the night of the Resurrection took the saint’s head in its jaws. Then
+and in the night of the Resurrection took the saint’s head in its jaws.
+
+Then
 John cried from the depth of his heart, Lord my God and my Saviour, why have
 you forsaken me? Have mercy on me, you who alone love mankind; deliver me
 from my foul iniquity, that I be not caught in the enemy’s snare; deliver me
@@ -27,7 +31,9 @@ from the mouth of my enemy; flash your lightning and drive him away.
 Lightning flashed, the serpent vanished, a divine light shone on him and a
 voice said, John, here is your help; from now on attend to yourself, lest
 worse befall you and you suffer in the age to come. He bowed and asked,
-Lord, why did you leave me so long in torment? According to the strength of
+Lord, why did you leave me so long in torment?
+
+According to the strength of
 your endurance, came the answer, I brought the temptation on you, that you
 might be burned pure as gold; a master sets heavy work to his strong and
 able servants and light to the weak; pray to the one buried here, [Moses the

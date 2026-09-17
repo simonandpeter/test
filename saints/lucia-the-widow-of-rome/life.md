@@ -6,6 +6,7 @@ seventy-five, she was betrayed to Diocletian by her pagan son Eutropius as
 believing in Christ; she was seized and shut in prison, and there suffered
 harsh tortures, but by God’s grace remained unharmed and went about the
 city, so shaming the pettiness of her torturers.
+
 [Geminianus](/saints/geminianus-adopted-son-of-lucia) saw it, believed in
 Christ and presented himself with Lucia before the king, confessing Christ;
 Lucia adopted Geminianus and baptised him, and when they were rid of their

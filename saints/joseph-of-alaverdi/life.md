@@ -10,16 +10,18 @@ the day a nobleman came hunting in it, saw him, knew at once what he was,
 kissed him and asked what had brought him to such a place. Joseph woke in
 him a love of God and a hunger for the truth; the nobleman vowed a church in
 the Alaverdi wilderness, and laid the foundations of the monastery that
-stands there. People began to hear of the elder and came in crowds to see
-him and hear him, unbelief was rooted out of the region and the church’s
-services established in it, and enough of those drawn by his life, his love
-and his miracles stayed that a community grew, of which he was the first
-abbot. Worn out by his labours, he felt his death near, gathered his
-disciples, blessed and instructed them, named a new abbot, and departed in
-peace; his disciples buried him with honour at the church of Alaverdi, and
-many miracles have been worked at his grave. The Romanian calendar keeps him
-on 15 September and gives the year of his repose as 570; the Russian
-calendar keeps him the same day of its own reckoning.
+stands there.
+
+People began to hear of the elder and came in crowds to see him and hear
+him, unbelief was rooted out of the region and the church’s services
+established in it, and enough of those drawn by his life, his love and his
+miracles stayed that a community grew, of which he was the first abbot. Worn
+out by his labours, he felt his death near, gathered his disciples, blessed
+and instructed them, named a new abbot, and departed in peace; his disciples
+buried him with honour at the church of Alaverdi, and many miracles have
+been worked at his grave. The Romanian calendar keeps him on 15 September
+and gives the year of his repose as 570; the Russian calendar keeps him the
+same day of its own reckoning.
 
 The Ohrid Prologue, for the Serbian calendar, calls him bishop of Alaverdi and one of the twelve Syrian fathers, kept on 7 May, who were sent into the lands of the Caucasus to preach the Gospel. He died in peace in 570, it says, and his wonderworking relics rest in the cathedral church of Alaverdi.
 
