@@ -104,6 +104,76 @@ test('the three columns stand side by side, and the saint is in the middle', asy
   expect(view.w).toBeGreaterThan(related.w + sameday.w);
 });
 
+/**
+ * Stage J, `../mockup-review/REVIEW.md` finding 15. The page's gutter is
+ * charged once, inside the columns, where the mockup charges it — not once
+ * outside them by `#view` and again inside them by each aside.
+ *
+ * **Read as three relations, not as three numbers.** `--page-pad` is a token
+ * and a token does not compute (trap 9), so the gutter under test is `#view`'s
+ * own computed `padding-left` in pixels, and every assertion is a distance
+ * measured against it. That also keeps the test true at both widths without
+ * two tables of constants: the asides' own width is `16vw` clamped, so only
+ * the middle column changes between 1280 and 1440.
+ */
+for (const width of [1440, 1280]) {
+  test(`at ${width} px the page gutter is charged once, inside the columns`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto(PRAYER, { waitUntil: 'networkidle' });
+    await expect(page.locator('.hy-saint')).toBeVisible();
+
+    const m = await page.evaluate(() => {
+      const view = document.getElementById('view');
+      const body = document.querySelector('.hy-body');
+      const asides = [...document.querySelectorAll('.hy-side')];
+      const rect = (el) => {
+        const r = el.getBoundingClientRect();
+        return { x: r.x, right: r.right, w: r.width, drawn: el.clientWidth > 0 };
+      };
+      /* The heading is the column's first drawn line, so its left edge is where
+         the aside's own padding has put the content. */
+      const head = (aside) => rect(aside.querySelector('h2'));
+      return {
+        pad: parseFloat(getComputedStyle(view).paddingLeft),
+        viewBox: view.clientWidth,
+        body: rect(body),
+        left: rect(asides[0]),
+        leftHead: head(asides[0]),
+        right: rect(asides[asides.length - 1]),
+        rightHead: head(asides[asides.length - 1]),
+        view: rect(document.getElementById('hy-view')),
+        field: rect(document.querySelector('.hy-find .search-field')),
+        scrollW: document.documentElement.scrollWidth,
+        clientW: document.documentElement.clientWidth,
+      };
+    });
+
+    expect(m.pad, 'the route still pays a page gutter to measure against').toBeGreaterThan(0);
+    for (const [name, b] of [['body', m.body], ['left aside', m.left], ['right aside', m.right]]) {
+      expect(b.drawn, `${name} is drawn`).toBe(true);
+    }
+
+    // The body spans its parent's whole box, not the box inside its padding.
+    expect(Math.abs(m.body.w - m.viewBox), 'the body is not full-bleed').toBeLessThan(1);
+    expect(Math.abs(m.body.x - m.left.x), 'the first aside does not stand on the body’s edge').toBeLessThan(1);
+    expect(Math.abs(m.body.right - m.right.right), 'the last aside does not reach the body’s edge').toBeLessThan(1);
+
+    // And the gutter is inside the asides, once each, at exactly `--page-pad`.
+    expect(Math.abs(m.leftHead.x - m.body.x - m.pad), 'the left column’s content is not one gutter in').toBeLessThan(1);
+    expect(Math.abs(m.body.right - m.rightHead.right - m.pad), 'the right column’s content is not one gutter in').toBeLessThan(1);
+    // The field above the columns starts on the same line as that content.
+    expect(Math.abs(m.field.x - m.leftHead.x), 'the field does not stand on the first column’s content').toBeLessThan(1);
+
+    /* The middle column is what the recovered gutter goes to — the asides are
+       measured off the viewport and do not grow — and the negative margin buys
+       it without pushing the page sideways. */
+    expect(m.view.w, 'the middle column did not take the recovered gutter').toBeGreaterThan(
+      m.body.w - m.left.w - m.right.w - 1,
+    );
+    expect(m.scrollW, 'the page overflows sideways').toBeLessThanOrEqual(m.clientW);
+  });
+}
+
 test('the page opens on the first saint the hymnal holds', async ({ page }) => {
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   const article = page.locator('.hy-saint');

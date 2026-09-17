@@ -42,12 +42,14 @@ Hymns / Writings under the picture, the whole life in column 3), F (the
 day's column in the mockup's order, name days last at 13 px), G (the shelf
 tile's anatomy and its press), H (one search field, `ui/search-field.js` +
 `styles/search-field.css`, mounted by All Saints, Prayer and the saint page's
-side column) and I (Prayer's margins wear that tile, and every name opens
-something past 1024 px) are done; J is next and touches `prayer.css` alone.
+side column), I (Prayer's margins wear that tile, and every name opens
+something past 1024 px) and J (Prayer full-bleed, the page gutter charged once
+inside the columns) are done. **Every layout stage is done; K — the lives'
+paragraphs, `saints/*/life.md` only — is what is left.**
 
 Stage I left the phone's half of its own ruling open — `STRUCTURE.md` §6 item 3.
 
-Two `tile-diff` baselines exist. Do not re-shoot either.
+Three `tile-diff` baselines exist. Do not re-shoot any of them.
 
 - `shots/baseline-stage-h-before` — 8 tiles, `--still --routes=/saints,/prayer
   --widths=360,768 --themes=day,vigil --langs=en`, shot at `db73f995`.
@@ -57,6 +59,9 @@ Two `tile-diff` baselines exist. Do not re-shoot either.
   build twice moves it by exactly 135,936 px (48.41%) and back, so a single
   changed reading of that tile is the camera. Shoot twice before calling it a
   finding.
+- `shots/baseline-baseline-stageJ-gutters-before-2026-09-18` — 4 tiles,
+  `--still --routes=/prayer --widths=360,768 --themes=day,vigil --langs=en`,
+  shot at `0e5581d4`; after stage J all four compared identical.
 
 **The corpus run (`scratchpad/corpus-plan.md` §5) is in Phase B.** Civil
 20 September – 6 October is read for all four churches. **Civil 7 October is

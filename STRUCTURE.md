@@ -803,7 +803,7 @@ html[data-route~='prayer'][data-fills-window]
 └ body
   └ main.chrome                    100dvh − --chrome-h, overflow hidden (≥1024)
     └ #view                        height 100%
-      └ .hymnal                    flex column; height 100% (≥1024)
+      └ .hymnal                    flex column; height 100%, full bleed (≥1024)
         │                          touch-action: pan-y — the swipe
         ├ h1.sr-only               the route's focus target; never drawn
         ├ .hy-find                 flex; wraps to two lines below 1024
@@ -864,7 +864,16 @@ day.** The middle is the page and the two outside it are its margins.
 - **The dividers are the middle column's own `border-inline`**, so neither
   aside has to know it has a neighbour.
 - **The two asides are one width apiece and the saint takes the slack** —
-  `--hy-side-w` either side of `minmax(0, 1fr)`.
+  `--hy-side-w` either side of `minmax(0, 1fr)`, a clamp on `vw` so neither can
+  feed back into a scrollbar appearing and disappearing.
+- **Edge to edge, no gutter**, as on Daily and for the same reason. `.hymnal`
+  runs the laid-out page's full width — `margin-inline: calc(var(--page-pad) *
+  -1)` against the padding `#view` pays on every route — and `--page-pad` is
+  paid inside the two asides and inside the find row instead, once. That puts
+  the asides' content and the field's left edge on one line, which is where the
+  mockup puts them. The laid-out page on a desk is the window less the reserved
+  scrollbar gutter, so the middle column is that much narrower than the
+  mockup's, exactly as Daily's reading column is.
 - **The pair inside the card is 4 / 6**, picture to hymns: the hymn is what the
   reader came for and the icon is what they are looking at while they read it.
 - **The arrows are absolute inside the middle column**, over the content, at

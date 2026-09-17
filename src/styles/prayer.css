@@ -410,6 +410,23 @@ html[data-route~='prayer'] .hy-arrow.is-next {
 @media (min-width: 1024px) {
   html[data-route~='prayer'] .hymnal {
     height: 100%;
+    /* **Full bleed** (`../mockup-review/REVIEW.md` finding 15, stage J). `#view`
+       pays `--page-pad` either side on every route (base.css) and the row and
+       the two asides pay it again inside themselves, so the page's gutter was
+       being charged twice: the mockup's `.hy-body` starts at x0 and its asides'
+       content at x32, where this page's body started at x32 and its content at
+       x64. The negative margin takes the outer charge off and leaves the inner
+       one, which is where the mockup puts it. Daily's `.cal` is the same rule
+       for the same reason (calendar.css) — one answer, not two.
+
+       The asides keep the mockup's width exactly (`--hy-side-w` is read off the
+       viewport, not off this box), so the middle column is what the recovered
+       64 px goes to. It lands 15 px short of the mockup's at every width
+       because every desktop route reserves the scrollbar's gutter in
+       `base.css`, which the mockup — one standalone file with no chrome — does
+       not; Daily's column 3 is 15 px short of the mockup's for that same
+       reason and stage B accepted it. */
+    margin-inline: calc(var(--page-pad) * -1);
   }
 
   /* The row takes the same side margin the three columns under it take, so the
