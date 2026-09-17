@@ -10,6 +10,16 @@
     {
       "form": "Άγιος Φωκάς Ιερομάρτυρας ο Θαυματουργός",
       "lang": "el"
+    },
+    {
+      "form": "Фока Синопский",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Священномученик Фока Синопский»."
+    },
+    {
+      "form": "Фока",
+      "lang": "sr",
+      "note": "Read out of «Свешт. муч. Фока еп. Синопски» in the Ohrid Prologue for 05.10.2026."
     }
   ],
   "sex": "male",
@@ -20,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 9 сентября ст. ст. (civil 22 September, checked 2026-08-30); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 сентября ст. ст. — «Сщмч. Фоки , еп. Синопийского (117)»",
+        "url": "https://days.pravoslavie.ru/Days/20260922.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -53,8 +72,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.10.2026 (22. септембар ст. ст.) — „Свешт. муч. Фока еп. Синопски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-05&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -66,7 +94,7 @@
       "latest": 117,
       "display": "98–117",
       "basis": "traditional",
-      "note": "saint.gr: „επί των χρόνων του αυτοκράτορος Τραϊανού (98 - 117 μ.Χ.)”. doxologia.ro prints no year."
+      "note": "saint.gr: „επί των χρόνων του αυτοκράτορος Τραϊανού (98 - 117 μ.Χ.)”. doxologia.ro prints no year. The Sretensky day prints «(117)» and its life «мученически скончался в 117 году»; the Ohrid Prologue: «Пострада у време цара Трајана»."
     }
   },
   "hymns": [
@@ -101,6 +129,42 @@
       "model": "Ἡ Παρθένος σήμερον.",
       "english": {
         "text": "Having in thy soul the richly-given grace of the Holy Spirit as a spring welling up from God, thou didst quench the flame of error with the sweat of thy labours, and thou pourest forth streams of miracles for those who cry aloud: Rejoice, glory of priests and of martyrs, O blessed Phocas.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "И нравом причастник,/ и престолом наместник апостолом быв,/ деяние обрел еси, богодухновенне,/ в видения восход,/ сего ради слово истины исправляя,/ и веры ради пострадал еси даже до крове,/ священномучениче Фоко,/ моли Христа Бога,// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 сентября ст. ст. — «Тропарь священномученика Фоки»",
+        "url": "https://days.pravoslavie.ru/Days/20260922.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having been a participant of the character and a successor of the apostles on the throne, thou, O God-inspired one, didst find work in coming into visions; whilst therefore rightly dividing the word of truth, for the sake of the faith didst thou suffer even unto the shedding of thy blood. O hieromartyr (mentioned by name), intercede before Christ the God that our souls may be saved.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter XVI, The General Service to One Hieromartyr",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Яко архиерей принося, отче, жертвы,/ на конец себе принесл еси жертву живую,/ свидетельствовав законно о Христе Бозе,/ от Ангел укрепляем/ и смерть изволяя,/ сый с вопиющими тебе:// прииди, Фоко, с нами, и никтоже на ны.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 сентября ст. ст. — «Кондак священномученика Фоки»",
+        "url": "https://days.pravoslavie.ru/Days/20260922.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a hierarch offering sacrifices, O father, at the last thou didst offer thyself a living sacrifice, having borne lawful witness to Christ God, strengthened by angels and choosing death; be with those who cry to thee: Come, O Phocas, be with us, and none shall be against us.",
         "rendered": "site"
       }
     }

@@ -5,6 +5,16 @@
     {
       "form": "Όσιος Ιωνάς ο Σαβαΐτης",
       "lang": "el"
+    },
+    {
+      "form": "Иона",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Преподобный Иона пресвитер»."
+    },
+    {
+      "form": "Јона",
+      "lang": "sr",
+      "note": "Read out of «Св. Јона презвитер» in the Ohrid Prologue for 05.10.2026."
     }
   ],
   "sex": "male",
@@ -19,13 +29,29 @@
       "display": "829",
       "basis": "attested",
       "note": "saint.gr: „ήταν Πρεσβύτερος το έτος 829 μ.Χ.”."
+    },
+    "death": {
+      "earliest": 829,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "The Sretensky day prints «(IX)» and its life says he laboured at the Lavra «до своей кончины в IX веке»; the Ohrid Prologue: «Скончао у ман. Св. Саве Освештаног у IX столећу». The lower bound is saint.gr’s 829, when he was living."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 21 сентября ст. ст. (civil 4 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 сентября ст. ст. — «Прп. Ионы пресвитера, отца (IX) свв. Феофана, творца канонов, и Феодора Начертанных»",
+        "url": "https://days.pravoslavie.ru/Days/20260922.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -48,8 +74,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 21. септембар ст. ст. (civil 4 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.10.2026 (22. септембар ст. ст.) — „Св. Јона презвитер“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-05&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

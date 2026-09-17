@@ -5,6 +5,11 @@
     {
       "form": "Οσία Παρασκευή του Σάρωφ - Ντιβέεβο",
       "lang": "el"
+    },
+    {
+      "form": "Параскева Дивеевская",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Блаженная Параскева Дивеевская», its stress marks left out."
     }
   ],
   "sex": "female",
@@ -15,17 +20,17 @@
   "dates": {
     "birth": {
       "earliest": 1795,
-      "latest": 1795,
-      "display": "1795",
+      "latest": 1830,
+      "display": "1795 or early 19th century",
       "basis": "traditional",
-      "note": "saint.gr prints her as „(1795 - 1915)” and says she died in 1915 „σε ηλικία 120 χρονών”."
+      "note": "saint.gr prints her as „(1795 - 1915)” and says she died in 1915 „σε ηλικία 120 χρονών”; azbyka.ru’s life: «родилась в начале XIX столетия». The upper bound reads that “beginning of the nineteenth century” as its first three decades."
     },
     "death": {
       "earliest": 1915,
       "latest": 1915,
       "display": "1915",
       "basis": "attested",
-      "note": "saint.gr: „κοιμήθηκε ειρηνικά το έτος 1915 μ.Χ.”, on 22 September."
+      "note": "saint.gr: „κοιμήθηκε ειρηνικά το έτος 1915 μ.Χ.”, on 22 September. The Sretensky day prints «(1915)»."
     }
   },
   "related": [
@@ -34,8 +39,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 9 сентября ст. ст. (civil 22 September, checked 2026-09-17); saint.gr says the Russian Church keeps her on 22 September, and the page for 22 сентября ст. ст. was not read."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 сентября ст. ст. — «Блж. Параскевы Дивеевской (1915)»",
+        "url": "https://days.pravoslavie.ru/Days/20260922.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -59,7 +73,7 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not among the names in the Ohrid Prologue for 9. септембар ст. ст. on pravoslavno.rs (civil 22 September, checked 2026-09-17); no other day checked."
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 05.10.2026 (22. септембар ст. ст.) (checked 2026-09-17); no other day checked."
     }
   ],
   "text": {

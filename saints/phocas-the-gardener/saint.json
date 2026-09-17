@@ -5,6 +5,16 @@
     {
       "form": "Άγιος Φωκάς ο κηπουρός",
       "lang": "el"
+    },
+    {
+      "form": "Фока Вертоградарь",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Мученик Фока Вертоградарь (Садовник), Синопский», its stress marks left out."
+    },
+    {
+      "form": "Фока Баштован",
+      "lang": "sr",
+      "note": "Read out of «Св. муч. Фока Баштован» in the Ohrid Prologue for 05.10.2026."
     }
   ],
   "sex": "male",
@@ -14,8 +24,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 9 сентября ст. ст. (civil 22 September, checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 сентября ст. ст. — «Мч. Фоки вертоградаря (ок. 320)»",
+        "url": "https://days.pravoslavie.ru/Days/20260922.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -38,11 +57,29 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not among the names in the Ohrid Prologue for 9. септембар ст. ст. on pravoslavno.rs (civil 22 September, checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.10.2026 (22. септембар ст. ст.) — „Св. муч. Фока Баштован“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-05&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 315,
+      "latest": 325,
+      "display": "c. 320",
+      "basis": "traditional",
+      "note": "The Sretensky day prints «(ок. 320)»; the Ohrid Prologue: «Пострада 320. год.». saint.gr says nothing of when he lived."
+    }
   }
 }

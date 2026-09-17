@@ -1,0 +1,101 @@
+{
+  "slug": "macarius-of-zhabyn",
+  "display_name": "Macarius of Zhabyn",
+  "names": [
+    {
+      "form": "Макарий Жабынский",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Преподобный Макарий Жабынский, Белевский чудотворец»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1539,
+      "latest": 1539,
+      "display": "1539",
+      "basis": "attested",
+      "note": "The Sretensky calendar’s first life: «родился в 1539 году»."
+    },
+    "death": {
+      "earliest": 1623,
+      "latest": 1623,
+      "display": "1623",
+      "basis": "attested",
+      "note": "The Sretensky day prints «(1623)»; its first life: «Он скончался 84-х лет в 1623 году», and its second: «Скончался преподобный Макарий на 84 году жизни в 1623 г.»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The Russian calendar also keeps him on 22 January, the day of his burial; the corpus holds one feast a church."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 сентября ст. ст. — «Прп. Макария Жабынского, Белевского чудотворца (1623)»",
+        "url": "https://days.pravoslavie.ru/Days/20260922.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 5 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 5 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 05.10.2026 (22. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От мирскаго жития изшед / в тихое пристанище жизни иноческия, преподобне Макарие, вшел еси, / в нейже добре подвизався, душу твою добродетельми превысокими обогатил еси, / и явился еси добр пастырь и учитель иноческому собору, / емуже и обитель возградил еси, / таже в безмолвие вшед и Боговидения сподобився, ко Господу преставился еси, / Иже даром чудес тя обогати. / Егоже ныне моли, / да спасет верою и любовию почитающих святую память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 сентября ст. ст. — «Тропарь преподобного Макария Жабынского, Белевского чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20260922.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Going out from the life of the world, O venerable Macarius, thou didst enter the quiet haven of the monastic life, and struggling well in it thou didst enrich thy soul with most lofty virtues, and didst show thyself a good shepherd and teacher to the monastic brotherhood, for which thou didst also build a monastery; then, entering into stillness and granted the vision of God, thou didst depart to the Lord, who enriched thee with the gift of miracles. Pray to him now to save those who with faith and love honour thy holy memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Житие чистое, терпение, кротость и любовь нелицемерну,/ воздержание совершенное,/ умиление Божественное,/ веру же и надежду истинну и милосердие стяжав,/ равноангельно, Макарие, на земли пожил еси/ и на Небеси Богови с лики Безплотных предстоиши./ С ними же, святе, молися/ мир Российстей Церкви даровати/ и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 сентября ст. ст. — «Кондак преподобного Макария Жабынского, Белевского чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20260922.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having gained a pure life, patience, meekness and unfeigned love, perfect abstinence, divine compunction, true faith and hope, and mercy, thou didst live on earth like the angels, O Macarius, and in heaven thou standest before God with the choirs of the Bodiless. With them, O saint, pray that peace be granted to the Russian Church, and great mercy to our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

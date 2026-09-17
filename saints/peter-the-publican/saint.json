@@ -1,0 +1,72 @@
+{
+  "slug": "peter-the-publican",
+  "display_name": "Peter the Publican",
+  "names": [
+    {
+      "form": "Петр",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Святой Петр, бывший мытарь»."
+    },
+    {
+      "form": "Петар Милостиви",
+      "lang": "sr",
+      "note": "Read out of «Св. Петар Милостиви» in the Ohrid Prologue for 05.10.2026."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "The Sretensky day prints «(VI)» and its life sets him «в царствование императора Юстиниана (527 - 565)»; the Ohrid Prologue: «Угодник Божји из VI века»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 сентября ст. ст. — «Прав. Петра , бывшего мытаря (VI)»",
+        "url": "https://days.pravoslavie.ru/Days/20260922.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 5 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 5 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.10.2026 (22. септембар ст. ст.) — „Св. Петар Милостиви“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-05&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

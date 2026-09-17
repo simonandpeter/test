@@ -1,0 +1,66 @@
+{
+  "slug": "benjamin-voskresensky",
+  "display_name": "Benjamin (Voskresensky)",
+  "names": [
+    {
+      "form": "Вениамин Воскресенский",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Священномученик Вениамин (Воскресенский), Романовский, епископ», its stress marks left out."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1871,
+      "latest": 1871,
+      "display": "1871",
+      "basis": "attested",
+      "note": "azbyka.ru’s life: «родился 15 января 1871 года в селе Переславцево Угличского уезда Ярославской губернии»."
+    },
+    "death": {
+      "earliest": 1930,
+      "latest": 1932,
+      "display": "1930–1932",
+      "basis": "attested",
+      "note": "The Sretensky day prints «(1930)»; azbyka.ru’s day prints «(1932)», its summary «(Воскресенский, 1871-1931)» and «Скончался в 1931 году в тюремной больнице Уральска», and its life, after the sentence of 10 September 1931: «Приговор этот над ним уже свершиться не мог – епископ Вениамин скончался в тюремной больнице». The three are kept as one interval."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 сентября ст. ст. — «Сщмч. Вениамина , еп. Романовского (1930)»",
+        "url": "https://days.pravoslavie.ru/Days/20260922.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 5 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 5 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 05.10.2026 (22. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

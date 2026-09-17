@@ -6,6 +6,11 @@
     {
       "form": "Sfântul Sfințit Mucenic Teodosie de la Mănăstirea Brazi",
       "lang": "ro"
+    },
+    {
+      "form": "Феодосий Бразский",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Священномученик Феодосий Бразский, митрополит», its stress marks left out."
     }
   ],
   "sex": "male",
@@ -16,8 +21,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 9 сентября ст. ст. (civil 22 September, checked 2026-08-30); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 сентября ст. ст. — «Сщмч. Феодосия Бразского (1694) (Рум.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260922.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -41,7 +55,7 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 05.10.2026 (22. септембар ст. ст.) (checked 2026-09-17); no other day checked."
     }
   ],
   "dates": {

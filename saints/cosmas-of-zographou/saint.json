@@ -9,6 +9,11 @@
     {
       "form": "Όσιος Κοσμάς ο Ζωγραφίτης",
       "lang": "el"
+    },
+    {
+      "form": "Козма Зографски",
+      "lang": "sr",
+      "note": "Read out of «Преп. Козма Зографски» in the Ohrid Prologue for 05.10.2026."
     }
   ],
   "sex": "male",
@@ -52,8 +57,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.10.2026 (22. септембар ст. ст.) — „Преп. Козма Зографски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-05&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "dates": {
