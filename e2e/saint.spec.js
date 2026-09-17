@@ -14,6 +14,14 @@ import {
 
 const MANIFEST = JSON.parse(readFileSync(new URL('../data/manifest.json', import.meta.url), 'utf8'));
 const MANIFEST_CARDS = MANIFEST.saints ?? MANIFEST;
+const folder = (slug) => JSON.parse(readFileSync(new URL(`../saints/${slug}/saint.json`, import.meta.url), 'utf8'));
+const EUSTATHIUS = folder('eustathius-the-great-martyr');
+const UNREAD_ON_GREEK_20_SEPT = MANIFEST_CARDS.filter((c) =>
+  c.attestations.some((a) => a.church === 'greek' && a.feast?.day === 20 && a.feast?.month === 9),
+)
+  .map((c) => c.slug)
+  .sort()
+  .find((slug) => folder(slug).attestations.some((a) => a.church === 'russian' && /^Not checked: days\.pravoslavie\.ru/.test(a.note ?? '')));
 
 /**
  * A saint's own page: the register, the life, the hymns, the licence.
@@ -610,8 +618,17 @@ test('the Greek calendar’s saints past the runway are in the corpus but not ye
    * Checked rather than assumed: a Greek text missing from a Greek reading
    * would be a real regression, and this is where it would show.
    */
-  await expect(page.locator('[data-hymns-box] .hymn')).toHaveCount(1);
-  await expect(page.locator('[data-hymns-box] .hymn-kind').first()).toContainText('Kontakion');
+  /*
+   * The counts are read off his folder, not typed: the Russian 20 September
+   * gave him a troparion and the same kontakion in Slavonic, and a literal 1
+   * went red without having found anything. English prints one hymn per
+   * distinct rendering (`mergeForReading`), Greek every Greek text, and the
+   * Greek reader's own church comes first.
+   */
+  const english = new Set(EUSTATHIUS.hymns.map((h) => h.english.text.replace(/\s+/g, ' ').trim().toLowerCase()));
+  const greekFirst = EUSTATHIUS.hymns.find((h) => h.church === 'greek').kind;
+  await expect(page.locator('[data-hymns-box] .hymn')).toHaveCount(english.size);
+  await expect(page.locator('[data-hymns-box] .hymn-kind').first()).toContainText(greekFirst[0].toUpperCase() + greekFirst.slice(1));
   await expect(page.locator('[data-hymns-box] .hymn-text').first()).toHaveAttribute('lang', 'en');
 
   await page.evaluate(() => {
@@ -621,7 +638,7 @@ test('the Greek calendar’s saints past the runway are in the corpus but not ye
   });
   await page.goto('/saints/eustathius-the-great-martyr', { waitUntil: 'networkidle' });
   const hymn = page.locator('[data-hymns-box] .hymn-text[lang="el"]');
-  await expect(hymn).toHaveCount(1);
+  await expect(hymn).toHaveCount(EUSTATHIUS.hymns.filter((h) => h.lang === 'el').length);
   await expect(hymn).toContainText(/μιμησ/);
   // And back to the reader this test started with: everything below is about
   // what an English reader is shown, and a stored language outlives a goto.
@@ -631,9 +648,13 @@ test('the Greek calendar’s saints past the runway are in the corpus but not ye
     localStorage.setItem(key, JSON.stringify({ ...now, language: 'en' }));
   });
 
-  // The three churches that were not read say so, rather than implying a
-  // refusal — behind the disclosure, because the reader's own church is the
-  // one that keeps him and the other three are folded away.
+  // The churches that were not read say so, rather than implying a refusal —
+  // behind the disclosure, because the reader's own church is the one that
+  // keeps the saint and the others are folded away. Eustathius has since been
+  // read in all four, so the saint is one of his Greek day that still carries
+  // an unread Russian row, found in the folders.
+  expect(UNREAD_ON_GREEK_20_SEPT, 'a Greek 20 September saint with an unread Russian row').toBeTruthy();
+  await page.goto(`/saints/${UNREAD_ON_GREEK_20_SEPT}`, { waitUntil: 'networkidle' });
   await page.locator('[data-reveal]').click();
   await expect(page.locator('main')).toContainText('Not checked');
   await expect(page.locator('main')).toContainText('days.pravoslavie.ru');
