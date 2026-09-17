@@ -1,0 +1,64 @@
+{
+  "slug": "sabbas-of-vishera",
+  "display_name": "Sabbas of Vishera",
+  "names": [
+    {
+      "form": "Όσιος Σάββας ο εν Βησερία ο Θαυματουργός",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1381,
+      "latest": 1381,
+      "display": "1381",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε το 1381 μ.Χ.»; heading «(1381 - 1461)»."
+    },
+    "death": {
+      "earliest": 1461,
+      "latest": 1461,
+      "display": "1461",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε το 1461 μ.Χ.»; heading «(1381 - 1461)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 1 октября ст. ст. (civil 14 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 1 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Οκτωβρίου — «Όσιος Σάββας ο εν Βησερία ο Θαυματουργός»",
+        "url": "https://www.saint.gr/10/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 1. октобар ст. ст. (civil 14 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

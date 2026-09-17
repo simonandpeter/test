@@ -1,0 +1,143 @@
+{
+  "slug": "john-koukouzelis",
+  "display_name": "John Koukouzelis",
+  "names": [
+    {
+      "form": "Όσιος Ιωάννης ο ψάλτης ο καλούμενος Κουκουζέλης",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Ioan Cucuzel",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1118,
+      "latest": 1433,
+      "display": "12th or early 15th century",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησε στα χρόνια των Κομνηνών» and «απεβίωσε ειρηνικά στις αρχές του 15ου μ.Χ. αιώνα»; doxologia.ro’s life puts him at the court of «împăratul Ioan al II-lea Comnenul (1118-1143)» before he went to Athos. The sources disagree by centuries, so the interval runs from the Romanian’s reign to the Greek’s early fifteenth century."
+    }
+  },
+  "related": [
+    "gregory-the-domestikos"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 1 октября ст. ст. (civil 14 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 1 octombrie — „Sfântul Ioan Cucuzel”",
+        "url": "https://doxologia.ro/1-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Οκτωβρίου — «Όσιος Ιωάννης ο ψάλτης ο καλούμενος Κουκουζέλης»",
+        "url": "https://www.saint.gr/10/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 1. октобар ст. ст. (civil 14 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "text": "Ἡ ἡδύφωνος χάρις Πάτερ τῆς γλώττης σου, κατακηλεῖ καὶ εὐφραίνει τὴν Ἐκκλησίαν Χριστοῦ· σὺ γὰρ ἔνθους ὑμνῳδὸς ὤφθης μακάριε· ὅθεν νομίσματι χρυσῷ, σὲ ἠμείψατο λαμπρῶς, ἡ Ἄχραντος Θεοτόκος, ἣν Ἰωάννη δυσώπει, ἐλεηθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ιωάννης ο ψάλτης ο καλούμενος Κουκουζέλης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2568/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "english": {
+        "text": "The sweet-voiced grace of thy tongue, O father, charms and gladdens the Church of Christ; for thou wast shown to be a God-inspired singer of hymns, O blessed one. Wherefore the immaculate Theotokos splendidly rewarded thee with a golden coin; entreat her, O John, that our souls may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Τῆς Λαύρας τὰ θρέμματα, καὶ ἡδυφώνους αὐλούς, ὡς θείους θεράποντας, καὶ ὑμνολόγους Χριστοῦ, συμφώνως αἰνέσωμεν, ὕμνοις τὸν Κουκουζέλην, καὶ κλεινὸν Ἰωάννην, ἅμα σὺν Γρηγορίῳ, τῷ σοφῷ Δομεστίκῳ· Χριστὸν γὰρ ἱκετεύουσιν, ὑπὲρ τῶν ψυχῶν ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ιωάννης ο ψάλτης ο καλούμενος Κουκουζέλης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2568/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "Let us with one accord praise in hymns the nurslings of the Lavra, its sweet-voiced pipes, as divine servants and hymn-singers of Christ: the renowned John Koukouzelis together with Gregory the wise Domestikos; for they entreat Christ for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ὡς ἀηδὼν θείων ᾀσμάτων καλλικέλαδος Καὶ ταπεινώσεως ἐξαίρετον ὑπόδειγμα Ἀνυμνοῦμέν σε θεόληπτε Ἰωάννη. Ἐν τῷ Ἄθῳ γὰρ ὡς ἄγγελος ἐβίωσας Καὶ Θεὸν ἡδίστοις χείλεσιν ἀνύμνησας· Ὅθεν κράζομεν, χαῖρε Πάτερ ἡδύφωνε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ιωάννης ο ψάλτης ο καλούμενος Κουκουζέλης, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2568/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τῇ ὑπερμάχῳ.",
+      "english": {
+        "text": "As a sweet-singing nightingale of divine songs and a surpassing example of humility, we sing thy praise, O God-inspired John; for on Athos thou didst live as an angel and didst hymn God with sweetest lips. Wherefore we cry: Rejoice, O sweet-voiced father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Τὴν δυάδα μέλψωμεν, τῶν θεοφόρων Πατέρων, Ἰωάννην ἅπαντες, σὺν τῷ κλεινῷ Γρηγορίῳ· οὗτοι γὰρ, ὧδε βιώσαντες θεοφρόνως, ᾔνεσαν, λόγῳ καὶ ἔργῳ τὸν πάντων Κτίστην· ᾧ πρεσβεύουσιν ἀπαύστως, ἡμῖν δοθῆναι, πταισμάτων ἄφεσιν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ιωάννης ο ψάλτης ο καλούμενος Κουκουζέλης, Λειτουργικά κείμενα: Έτερον Κοντάκιον",
+        "url": "https://www.saint.gr/2568/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ἡ Παρθένος σήμερον.",
+      "english": {
+        "text": "Let us all sing of the pair of God-bearing fathers, John with the renowned Gregory; for, having lived here in godly wisdom, they praised the Creator of all in word and deed, and to Him they intercede unceasingly that forgiveness of offences be given us.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "slug": "joseph-of-bisericani",
+  "display_name": "Joseph of Bisericani",
+  "names": [
+    {
+      "form": "Sfântul Cuvios Iosif de la Bisericani",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "related": [
+    "cyriacus-of-bisericani"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 1 октября ст. ст. (civil 14 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 1 octombrie — „Sfântul Cuvios Iosif de la Bisericani”",
+        "url": "https://doxologia.ro/1-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 1 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 1. октобар ст. ст. (civil 14 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Povățuitori sihaștrilor, ocrotitori ai celor din nevoi și celor mâhniți mângâietori, Sfinților Cuvioși Iosif și Chiriac cei ce ați dobândit rugăciunea cea de foc și vase alese a Sfântului Duh v-ați făcut, rugați-vă lui Dumnezeu să dăruiască sufletelor noastre pace și mare milă!",
+      "source": {
+        "text": "Doxologia — Troparul Sfinților Cuvioși Iosif și Chiriac de la Bisericani",
+        "url": "https://doxologia.ro/troparul-sfintilor-cuviosi-iosif-chiriac-de-la-bisericani",
+        "year": 2026
+      },
+      "english": {
+        "text": "Guides of hermits, protectors of those in need and comforters of the sorrowful, holy and venerable Joseph and Cyriacus, who acquired the prayer of fire and became chosen vessels of the Holy Spirit: pray to God to grant our souls peace and great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Rugăciunea și liniștea iubind, nevoința și răbdarea îmbrățișând, patimile cele pierzătoare le-ați stins cu ostenelile pustiei, Sfinților Cuvioși Iosif și Chiriac de la Bisericani. Unul, luminător al chinoviei s-a făcut și iscusit păstor, iar celălalt sfeșnic al luminii neînserate s-a arătat, prin rugăciunea cea înaltă.",
+      "source": {
+        "text": "Doxologia — Condacul Sfinților Cuvioși Iosif și Chiriac de la Bisericani",
+        "url": "https://doxologia.ro/condacul-sfintilor-cuviosi-iosif-chiriac-de-la-bisericani",
+        "year": 2026
+      },
+      "english": {
+        "text": "Loving prayer and stillness, embracing struggle and patience, you quenched the destroying passions with the labours of the wilderness, holy and venerable Joseph and Cyriacus of Bisericani. The one became a light of the common life and a skilful shepherd; the other showed himself a lampstand of the unwaning light through lofty prayer.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

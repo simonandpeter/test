@@ -1,0 +1,138 @@
+{
+  "slug": "romanos-the-melodist",
+  "display_name": "Romanos the Melodist",
+  "names": [
+    {
+      "form": "Όσιος Ρωμανός ο Μελωδός",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Cuvios Roman Melodul",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hymnographer"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 800,
+      "display": "6th or 8th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησε ή τον 6ο αιώνα μ.Χ. επί του βασιλέως Αναστασίου του Α' ή κατά μία άλλη εκδοχή, τον 8ο αιώνα μ.Χ. επί τού βασιλέως Αναστασίου του Β'»; the interval spans both readings. doxologia.ro’s life says only «în anii domniei împăratului Anastasie»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 1 октября ст. ст. (civil 14 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 1 octombrie — „Sfântul Cuvios Roman Melodul”",
+        "url": "https://doxologia.ro/1-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Οκτωβρίου — «Όσιος Ρωμανός ο Μελωδός»",
+        "url": "https://www.saint.gr/10/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 1. октобар ст. ст. (civil 14 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ὡς σάλπιγξ θεόληπτος, τῶν οὐρανίων ᾠδῶν, ἐνθέως ἐφαίδρυνας, τὴν Ἐκκλησίαν Χριστοῦ, τοὶς θείοις σου ἄσμασι, σὺ γὰρ τῆς Θεοτόκου, ἐμπνευσθεῖς τὴ ἑλλάμψει, ἔνθεος ὑμνηπόλος, ἐγνωρίσθης ἐν κόσμῳ, διὸ σὲ πόθω τιμῶμεν, Ρωμανὲ Ὅσιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ρωμανός ο Μελωδός, Λειτουργικά κείμενα: Ἀπολυτίκιον (Κατέβασμα)",
+        "url": "https://www.saint.gr/2571/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "As a God-inspired trumpet of heavenly songs, thou didst divinely gladden the Church of Christ with thy sacred hymns; for, inspired by the radiance of the Theotokos, thou becamest known in the world as a God-filled hymn-writer. Wherefore we honour thee with longing, O venerable Romanos.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ἐν σοὶ Πάτερ ἀκριβῶς διεσώθη τὸ κατ᾽ εἰκόνα· λαβὼν γὰρ τὸν σταυρόν, ἠκολούθησας τῷ Χριστῷ, καὶ πράττων ἐδίδασκες, ὑπερορᾷν μὲν σαρκός, παρέρχεται γάρ· ἐπιμελεῖσθαι δὲ ψυχῆς, πράγματος ἀθανάτoυ· διὸ καὶ μετὰ Ἀγγέλων συναγάλλεται, Ὅσιε Ῥωμανὲ τὸ πνεῦμά σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ρωμανός ο Μελωδός, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2571/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O father, the image of God was kept safe and whole; for thou didst take up the cross and follow Christ, and by thy deeds didst teach us to disregard the flesh, for it passeth away, but to care for the soul, a thing immortal. Wherefore thy spirit, O venerable Romanos, rejoiceth together with the angels.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru tine, părinte, cu osârdie s-a mântuit cel după chip; că luând crucea ai urmat lui Hristos; şi lucrând ai învăţat să nu se uite la trup, că este trecător; ci, să poarte grijă de suflet, de lucrul cel nemuritor. Pentru aceasta şi cu îngerii împreună se bucură, Preacuvioase Părinte Roman, duhul tău.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Roman Melodul",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-roman-melodul",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O father, the image of God was kept safe and whole; for thou didst take up the cross and follow Christ, and by thy deeds didst teach us to disregard the flesh, for it passeth away, but to care for the soul, a thing immortal. Wherefore thy spirit, O venerable Romanos, rejoiceth together with the angels.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu Dumnezeieştile fapte bu­ne ale Duhului, din tinereţe înfrumuseţându-te, Sfinte Preacuvioase Părinte Roman, Preaînţelepte, cinstitei Biserici a lui Hristos înfrumuseţător ai fost; căci cu cântări frumoase ai în­frumuseţat-o, fericite. Pentru aceea te rugăm: dăruieşte celor ce doresc Dumnezeieştile tale da­ruri, ca să strigăm ţie: bucură-te, părinte preafericite, podoaba Bisericii.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Roman Melodul",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-roman-melodul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned from thy youth with the divine virtues of the Spirit, O holy and most venerable father Romanos, most wise, thou wast the adorner of the honoured Church of Christ, for thou didst beautify it with fair songs, O blessed one. Wherefore we pray thee: grant thy divine gifts to those who long for them, that we may cry to thee: Rejoice, most blessed father, adornment of the Church.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

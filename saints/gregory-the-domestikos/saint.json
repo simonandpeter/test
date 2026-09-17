@@ -1,0 +1,60 @@
+{
+  "slug": "gregory-the-domestikos",
+  "display_name": "Gregory the Domestikos",
+  "names": [
+    {
+      "form": "Όσιος Γρηγόριος ο Δομέστικος",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1405,
+      "latest": 1405,
+      "display": "1405",
+      "basis": "traditional",
+      "note": "saint.gr’s heading for the entry: «Οσιος Γρηγοριος ο Δομεστικος (; - 1405)»."
+    }
+  },
+  "related": [
+    "john-koukouzelis"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 1 октября ст. ст. (civil 14 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 1 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Οκτωβρίου — «Όσιος Γρηγόριος ο Δομέστικος»",
+        "url": "https://www.saint.gr/10/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 1. октобар ст. ст. (civil 14 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

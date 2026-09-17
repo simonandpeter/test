@@ -1,0 +1,155 @@
+{
+  "slug": "ananias-the-apostle",
+  "display_name": "Ananias",
+  "names": [
+    {
+      "form": "Άγιος Ανανίας ο Απόστολος",
+      "lang": "el"
+    },
+    {
+      "form": "Sfântul Apostol Anania",
+      "lang": "ro"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle",
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 1 октября ст. ст. (civil 14 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 1 octombrie — „Sfântul Apostol Anania”",
+        "url": "https://doxologia.ro/1-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Οκτωβρίου — «Άγιος Ανανίας ο Απόστολος»",
+        "url": "https://www.saint.gr/10/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 1. октобар ст. ст. (civil 14 October) was not read (2026-09-17)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ὡς ἔμπλεως χάριτος, τοῦ Τρισηλίου φωτός, τὸ σκεῦος ἐφώτισας, τῆς ἐκλογῆς τοῦ Χριστοῦ, Ἀνανία Ἀπόστολε, ὅθεν ἀνακηρύξας, εὐσέβειας τὸν λόγον, ἄθλοις ἐβεβαιώσω, τὴν σωτήριον χάριν δι' ἧς τοὶς σὲ εὐφημούσι, δίδου τὰ πρόσφορα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ανανίας ο Απόστολος, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2572/saint.aspx",
+        "year": 2026
+      },
+      "model": "Ταχὺ προκατάλαβε.",
+      "english": {
+        "text": "As one filled with the grace of the thrice-radiant Light, thou didst enlighten the chosen vessel of Christ, O apostle Ananias; wherefore, having proclaimed the word of piety, thou didst confirm by thy contests the saving grace, through which grant what is fitting to those who praise thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Ἀπόστολε Ἅγιε Ἀνανία, πρέσβευε τῷ ἐλεήμονι Θεῷ, ἵνα πταισμάτων ἄφεσιν, παράσχῃ ταῖς ψυχαῖς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ανανίας ο Απόστολος, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2572/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostle (mentioned by name), entreat the Merciful God that He may grant the remission of sins to our souls.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter VIII, The General Service to an Apostle",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Ὁ ἐν πρεσβείαις θερμότατος ἀντιλήπτωρ, καὶ τῶν αἰτούντων ταχύτατα εἰσακούων, δέξαι τὴν δέησιν Ἀνανάα ἡμῶν, καὶ τὸν Χριστὸν δυσώπει, τοῦ σῶσαι τοὺς ὑμνούντάς σε, τὸν μόνον ὑπάρχοντα φιλάνθρωπον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ανανίας ο Απόστολος, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2572/saint.aspx",
+        "year": 2026
+      },
+      "model": "Τὴν ἐν πρεσβείαις.",
+      "english": {
+        "text": "O most fervent helper in intercession, who most swiftly hearkenest to those who ask, receive our supplication, O Ananias, and implore Christ, who alone loveth mankind, to save those who sing thy praise.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Apostole Sfinte Anania, roagă pe Milostivul Dumnezeu, ca să dăruiască iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Apostol Anania, unul din cei şaptezeci",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-anania-unul-din-cei-saptezeci",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostle (mentioned by name), entreat the Merciful God that He may grant the remission of sins to our souls.",
+        "source": {
+          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter VIII, The General Service to an Apostle",
+          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
+          "year": 1899
+        }
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Cel ce întru rugăciuni eşti cald folositor şi celor ce cer, eşti grabnic ascultător, primeşte rugăciunea noastră, Sfinte Apostole Anania şi te roagă lui Hristos să ne miluiască pe noi, Cel Ce Unul este întru Sfinţi Preamărit.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Apostol Anania, unul din cei şaptezeci",
+        "url": "https://doxologia.ro/condacul-sfantului-apostol-anania-unul-din-cei-saptezeci",
+        "year": 2026
+      },
+      "model": "Pe cea întru rugăciuni...",
+      "english": {
+        "text": "Thou who art a fervent helper in prayers and swift to hearken to those who ask, receive our prayer, O holy apostle Ananias, and pray to Christ, who alone is glorified in the saints, to have mercy on us.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

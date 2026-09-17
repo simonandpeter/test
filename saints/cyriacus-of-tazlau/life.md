@@ -36,7 +36,7 @@ He went to the Lord about 1660 and was buried in the porch of the monastery
 church. The people held him a saint in his lifetime, and so did Dositheus,
 metropolitan of Moldavia, who knew him and afterwards kissed his relics —
 we have caught in our days fathers high in struggle and bowed in deep
-humility, he wrote, Father Chiriac of Bisericani and Chiriac of Tazlău —
+humility, he wrote, Father [Chiriac of Bisericani](/saints/cyriacus-of-bisericani) and Chiriac of Tazlău —
 and the Paterikon of the Moldo-Romanian saints of 1888 says he fought hard
 against the unseen enemies and wholly conquered them, and gives his feast
 as 31 December. When his body was taken up after his death, by the old

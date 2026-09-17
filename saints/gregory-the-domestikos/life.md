@@ -1,0 +1,5 @@
+# Gregory the Domestikos
+
+The Greek synaxarion calls Gregory a famous chanter of the Great Lavra. When James Prikanas was abbot, at the liturgy on the eve of Theophany he sang «Ἐπὶ σοὶ χαίρει» instead of «Ἄξιόν ἐστι», and at the end of the vigil, half asleep, he saw the Theotokos standing over him, who told him to take his fee for the chanting, called him Domestikos and thanked him warmly, and put a gold coin in his hand; he afterwards placed it on the icon of the Theotokos at the Lavra. All this, the synaxarion says, is by the tradition of the monastery. He lived pleasing to God and died in peace; the heading of the entry gives the year 1405, and his head is at the Great Lavra. The entry has no hymns of its own, but [John Koukouzelis](/saints/john-koukouzelis), who chanted with him at the Lavra and is kept on the same day, has an apolytikion and a kontakion printed as common to the two.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 1 Οκτωβρίου — [the entry](https://www.saint.gr/2567/saint.aspx), and John Koukouzelis — [the entry](https://www.saint.gr/2568/saint.aspx); read 17 September 2026.*

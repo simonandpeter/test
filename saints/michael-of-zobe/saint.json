@@ -1,0 +1,58 @@
+{
+  "slug": "michael-of-zobe",
+  "display_name": "Michael of Zobe, with thirty-six venerable martyrs",
+  "names": [
+    {
+      "form": "Άγιος Μιχαήλ ηγούμενος της Μονής Ζώβης και τριάντα έξι άλλοι Οσιομάρτυρες",
+      "lang": "el"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "abbot"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 780,
+      "latest": 780,
+      "display": "c. 780",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησαν στα χρόνια του βασιλιά Κωνσταντίνου ΣΤ’ και της μητέρας του Ειρήνης (780 μ.Χ.)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 1 октября ст. ст. (civil 14 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 1 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Οκτωβρίου — «Άγιος Μιχαήλ ηγούμενος της Μονής Ζώβης και τριάντα έξι άλλοι Οσιομάρτυρες»",
+        "url": "https://www.saint.gr/10/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 1. октобар ст. ст. (civil 14 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
