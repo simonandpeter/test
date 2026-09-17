@@ -34,43 +34,38 @@ here, because a PAT push never updates `origin/main`.
 ## In flight
 
 **The corpus run (`scratchpad/corpus-plan.md` §5) is in Phase B.** Civil
-20 September – 1 October is read for all four churches. **2 October is not
-read** for any church; B3 starts there.
-
-What `day-candidates.mjs 2026-10-02` prints, not yet read against the pages:
-the Russian 19 September (12 lines — the afterfeast of the Cross, Trophimus,
-Sabbatius and Dorymedon, Theodore of Smolensk with David and Constantine,
-Alexis of Zosimova, Zosimas the hermit, Igor of Chernigov, and five new
-martyrs of 1918–1939), the Serbian 19 September (3; Trophimus's company and
-Zosimas), saint.gr 2 October (12) and doxologia.ro (4). Its UPGRADE block names
-eight folders the corpus holds on the menologion 19 September — Trophimus,
-Sabbatius, Dorymedon, Theodore of Yaroslavl with David and Constantine,
-Theodore of Tarsus, Amphilochius of Patmos — so the Julian columns are mostly
-upgrades, and the name "Theodore" there is not yet Theodore of Smolensk. The Serbian
-list misses Prologue entries; read the page.
+20 September – 2 October is read for all four churches. **3 October is not
+read** for any church, and `day-candidates.mjs 2026-10-03` has not been run;
+B4 starts there. The Serbian list misses Prologue entries; read the page.
 
 Open identities, each written into the folders: whether the Greek 30 September's
 Two Women Martyrs are the two virgins the Romanian long life has die with
 Gaiane; whether the Fifty Martyrs of Palestine are the Sretensky 151's burned;
-Gregory of Pelshma, Michael of Kyiv (30 September) and Sabbas of Vishera
-(1 October) are Greek one-liners the Russian 30 September and 1 October (civil
-13 and 14 October) must read before anyone calls them the Russian saints; John
-Koukouzelis carries a 1118–1433 death because the Greek and Romanian pages put
-him centuries apart. The older open ones (Trophimus and Dorymedon, Tryphon)
-stand.
+Gregory of Pelshma, Michael of Kyiv (30 September), Sabbas of Vishera
+(1 October) and Cyprian of Soundal (2 October) are Greek one-liners the Russian
+30 September – 2 October (civil 13–15 October) must read before anyone calls
+them the Russian saints; John Koukouzelis carries a 1118–1433 death because the
+Greek and Romanian pages put him centuries apart; Zosimas the Hermit's
+Sretensky name page files a second, unread life of a venerable martyr Zosimas
+of Cilicia beside his. The Julian 19 September names no Tryphon, so whether the
+Greek 29 September's Trophimus and Dorymedon are the 19 September martyrs
+stays open; the Romanian Tryphon stands open too.
 
-The empty-range test reads `emptyRange()` from the manifest since `f476223`;
-no untouched year is left between 1 and 2002, and the gate prints the range it
-finds.
+**Hymns for new martyrs off azbyka.ru are not taken**: the Russian batches take
+hymns only from the Sretensky day, though azbyka prints some (Nicholas of
+Iskrovka has two troparia and two kontakia there) and `eae87ce` once cited it
+for two Caves saints. Unsettled; the author's call.
 
-Helpers in `.tmp/`: `mk1001a.py` (Russian and Serbian, new folders and
-upgrades), `mk1001b.py` (Russian-only after azbyka), `mk1001c.py` with
-`mk1001c-text.json` (Greek and Romanian, hymns pulled off the cached pages by
-label, lives and English kept in the JSON), `fetch.mjs` (cached, polite),
-`lookday.mjs` (the rendered day per church and language), `daycount1001.mjs`
-(the back-out's day count). Two committed batches go out one at a time by
-parking the second (`git branch -f hold-x <sha>; git reset --keep <first>`),
-pushing, then `git merge --ff-only hold-x`.
+`quality-floor.spec.js:228` is no longer a known flake: it was a race, fixed in
+`03a4003`.
+
+Helpers in `.tmp/`: `mk1002a.py` (Russian and Serbian, new folders and
+upgrades), `mk1002b.py` (Russian-only after azbyka), `mk1002c.py` (Greek and
+Romanian, hymns pulled off the cached pages by label), `upgrade.py` (applies an
+upgrade file), `fetch.mjs` (cached, polite), `txt.py` (a cached page as lines),
+`lookday.mjs` and `grepday.mjs` (the rendered day per church and language),
+`daycount1002.mjs` (the back-out's day count), `qf.py <sha>` (a run's job log
+into `.tmp/joblog-<sha>.txt` when `ci-flaky.py` meets a 404 on the blob).
 
 ## Three things git cannot tell you
 
