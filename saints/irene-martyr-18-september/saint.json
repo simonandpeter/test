@@ -5,6 +5,11 @@
     {
       "form": "Αγίες Σοφία και Ειρήνη",
       "lang": "el"
+    },
+    {
+      "form": "Ирина Египетская",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Мученицы София и Ирина Египетские»."
     }
   ],
   "sex": "female",
@@ -14,8 +19,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 18 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 сентября ст. ст. — «Мцц. Софии и Ирины (III)»",
+        "url": "https://days.pravoslavie.ru/Days/20260918.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

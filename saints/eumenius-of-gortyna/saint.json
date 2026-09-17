@@ -10,6 +10,16 @@
     {
       "form": "Sfântul Ierarh Eumenie, Episcopul Gortinei",
       "lang": "ro"
+    },
+    {
+      "form": "Евмений Гортинский",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Преподобный Евмений Гортинский»."
+    },
+    {
+      "form": "Евменије",
+      "lang": "sr",
+      "note": "Read out of «Св. Евменије еп. Гортински, на Криту.» in this folder’s Serbian citation."
     }
   ],
   "sex": "male",
@@ -30,8 +40,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 18 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 сентября ст. ст. — «Прп. Евмения , еп. Гортинского (VII)»",
+        "url": "https://days.pravoslavie.ru/Days/20260918.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -63,8 +82,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 18. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.10.2026 (18. септембар ст. ст.) — „Св. Евменије еп. Гортински, на Криту.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-01&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "locations": [
@@ -151,6 +179,22 @@
       },
       "english": {
         "text": "With the streams of thy tears thou didst till the barren desert, and with sighings from the depths thou didst make thy labours fruitful a hundredfold; and thou wast made a luminary to the world, shining with miracles, O Eumenius our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Светом Божественным просветився, всеблаженне,/ просвещаеши ны,/ любовию поющия твое честное и славное/ и святое, отче, преставление,/ иерарше Евмение,// моля непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 сентября ст. ст. — «Кондак преподобного Евмения»",
+        "url": "https://days.pravoslavie.ru/Days/20260918.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened with the light of God, O most blessed one, thou dost enlighten us who with love hymn thy honoured and glorious and holy passing, O father and hierarch Eumenius; for thou dost intercede without ceasing for us all.",
         "rendered": "site"
       }
     }

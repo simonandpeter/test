@@ -33,9 +33,11 @@ Optina elders were glorified for the whole church in August 2000.
 The Greek and Romanian calendars keep him on 18 September, the Romanian
 with the prayers of the elders of Optina and no life.
 
+The Russian calendar keeps him on 18 September old style, and also on 27 June for the finding of his relics and on 11 October with the Optina elders. Its life names his parents, Nikita Filimonovich and Euphemia Nikiforovna Ponomarev, of the Novokhopyorsk district of Voronezh province; his father followed him into Optina as the monk Niphont, worked at the skete’s apiary and died in 1849. It says his mother foretold his monastic life when he was seven; that at twenty-four, in 1829, he moved with his family to Saratov, where he taught the men of his tailoring artel church singing and reading and, under Bishop Jacob, contended with the Old Believers; that he spent part of 1837 and all of 1838 visiting the monasteries of Russia and found peace only at Optina, where he was received into the skete on 13 March 1839; and that he was cell-attendant to [Macarius](/saints/macarius-of-optina) for twenty years, until the elder’s death in 1860, and on 8 April 1863 became superior of the skete and confessor of the monastery.
+
 *After the life printed by the Orthodox Church in America for 18 September —
 [the day’s lives](https://www.oca.org/saints/all-lives/2026/09/18); the Greek
 entry is the Ορθόδοξος Συναξαριστής (saint.gr), 18 Σεπτεμβρίου —
 [the entry](https://www.saint.gr/2478/saint.aspx); the Romanian page is at
 doxologia.ro — [the page](https://doxologia.ro/sfantul-ilarion-de-la-optina);
-read 5 September 2026.*
+read 5 September 2026; the life printed by the Sretensky calendar (days.pravoslavie.ru), 18 сентября ст. ст. — [the entry](https://days.pravoslavie.ru/Life/life4635.htm), read 17 September 2026.*

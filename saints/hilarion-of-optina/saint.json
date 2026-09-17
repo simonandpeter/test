@@ -9,6 +9,11 @@
     {
       "form": "Sfântul Ilarion de la Optina",
       "lang": "ro"
+    },
+    {
+      "form": "Иларион Оптинский",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Преподобный Иларион Оптинский»."
     }
   ],
   "sex": "male",
@@ -34,8 +39,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 18 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 сентября ст. ст. — «Прп. Илариона Оптинского (1873)»",
+        "url": "https://days.pravoslavie.ru/Days/20260918.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -89,5 +103,8 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "macarius-of-optina"
   ]
 }

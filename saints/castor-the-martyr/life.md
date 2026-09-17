@@ -10,8 +10,10 @@ beside him, and places the three at Alexandria, which is the one fact its
 line adds. The Romanian calendar keeps him the same day with the readings for
 a martyr and no life.
 
+The Russian calendar keeps him on 18 September old style beside Sophia and Irene, and prints no year. The Russian church calendar at azbyka.ru says little is known of his life and death beyond his name, and that he died for confessing the faith openly and boldly.
+
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 18 Σεπτεμβρίου —
 [the entry](https://www.saint.gr/2476/saint.aspx); the Orthodox Church in
 America’s line for 18 September — [the day’s lives](https://www.oca.org/saints/all-lives/2026/09/18);
 the Romanian page is at doxologia.ro — [the page](https://doxologia.ro/sfantul-mucenic-castor);
-read 5 September 2026.*
+read 5 September 2026; the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-kastor-muchenik), read 17 September 2026.*

@@ -9,6 +9,16 @@
     {
       "form": "Sfânta Muceniță Ariadna",
       "lang": "ro"
+    },
+    {
+      "form": "Ариадна Промисская",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Мученица Ариадна Промисская»."
+    },
+    {
+      "form": "Ариадна",
+      "lang": "sr",
+      "note": "Read out of «Св. муч. Ариадна.» in this folder’s Serbian citation."
     }
   ],
   "sex": "female",
@@ -27,8 +37,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 18 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 сентября ст. ст. — «Мц. Ариадны (II)»",
+        "url": "https://days.pravoslavie.ru/Days/20260918.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -60,8 +79,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 18. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.10.2026 (18. септембар ст. ст.) — „Св. муч. Ариадна.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-01&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

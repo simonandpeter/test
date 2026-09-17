@@ -1,0 +1,63 @@
+{
+  "slug": "elizbar-of-ksani",
+  "display_name": "Elizbar of Ksani",
+  "names": [
+    {
+      "form": "Элизбар",
+      "lang": "ru",
+      "note": "Read out of the Sretensky life’s heading «Мученики Бидзин, Шалва и Элизбар Ксанские»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "prince"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1660,
+      "latest": 1664,
+      "display": "1660–1664",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life: «Это событие совершилось 18 сентября 1660 года (по другим сведениям, мученики пострадали при шахе Сефи, сыне Аббаса II, в 1664 году)»; the Ohrid Prologue says «1661. год.»"
+    }
+  },
+  "related": [
+    "bidzina-of-ksani",
+    "shalva-of-ksani"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 сентября ст. ст. — «Мчч. Бидзины , Шалвы и Элизбара , князей Ксанских (1660) (Груз.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260918.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s lists for 18 septembrie or 1 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s lists for 18 Σεπτεμβρίου or 1 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "The Ohrid Prologue on pravoslavno.rs for 01.10.2026 (18. септембар ст. ст.) names Elizbar and Shalva as Bidzina’s kinsmen inside his entry but gives them no entry of their own (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
