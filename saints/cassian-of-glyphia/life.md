@@ -22,7 +22,9 @@ south side of the hillock, nearer his cell, is still there — water the
 faithful who came to venerate his relic would surely have held to be holy
 after his death.
 
+The Greek calendar keeps a Cassian “of Glyfa” again on 6 October, with [Hilarion the New](/saints/hilarion-the-new-of-cyprus), [John](/saints/john-companion-of-hilarion-the-new), [Joseph “at Lythrodontas”](/saints/joseph-of-lythrodontas), [Kalandios in Tamasia](/saints/kalandios-of-tamasia) and [Cassian of Axylou](/saints/cassian-of-axylou), and says only that they were five of the three hundred martyrs and venerable fathers called the Alamanoi who bore witness in Cyprus, marking the entry as not cross-checked. That he is this Cassian of Glyphia is a thin call, on the name and the Cypriot place alone: this entry tells nothing of the hermitage near Alektora, and the life above does not call him an Alaman.
+
 *After the Ορθόδοξος Συναξαριστής (saint.gr), 16 Σεπτεμβρίου —
 [the entry](https://www.saint.gr/4162/saint.aspx), read 5 September 2026 — this
 time whole: its page shows seventy words and the rest behind a link, which is
-where the earlier reading stopped.*
+where the earlier reading stopped; the Ορθόδοξος Συναξαριστής (saint.gr), 6 Οκτωβρίου — [the entry](https://www.saint.gr/1023/saint.aspx), read 17 September 2026.*

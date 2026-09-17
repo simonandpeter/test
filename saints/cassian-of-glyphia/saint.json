@@ -28,7 +28,8 @@
       "feast": {
         "day": 16,
         "month": 9,
-        "calendar": "revised-julian"
+        "calendar": "revised-julian",
+        "note": "saint.gr keeps him a second time on 6 Οκτωβρίου, as «Κασσιανός ο της Γλυφάς» among the Alaman saints of Cyprus in «Άγιοι Ιλαρίων ο Νέος, Ιωάννης, Ιωσήφ «εις τον Λυθροδώνταν», Καλάντιος εν Ταμασία, Κασσιανός ο της Γλυφάς, Κασσιανός ο της Αξύλου, οι εξ' Αλαμανών, εν Κύπρω»; the corpus holds one feast a church, so that day does not list him."
       },
       "source": {
         "text": "Ορθόδοξος Συναξαριστής (saint.gr), 16 Σεπτεμβρίου — «Όσιος Κασσιανός ο εν τη Γλυφία, παρά της κώμης Αλέκτορα εσκήσας»",
@@ -44,5 +45,12 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "hilarion-the-new-of-cyprus",
+    "john-companion-of-hilarion-the-new",
+    "joseph-of-lythrodontas",
+    "kalandios-of-tamasia",
+    "cassian-of-axylou"
+  ]
 }

@@ -1,0 +1,53 @@
+{
+  "slug": "john-companion-of-hilarion-the-new",
+  "display_name": "John, companion of Hilarion the New",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr’s heading «Άγιοι Ιλαρίων ο Νέος, Ιωάννης, Ιωσήφ «εις τον Λυθροδώνταν», Καλάντιος εν Ταμασία, Κασσιανός ο της Γλυφάς, Κασσιανός ο της Αξύλου, οι εξ' Αλαμανών, εν Κύπρω»."
+    }
+  ],
+  "sex": "male",
+  "related": [
+    "hilarion-the-new-of-cyprus",
+    "joseph-of-lythrodontas",
+    "kalandios-of-tamasia",
+    "cassian-of-glyphia",
+    "cassian-of-axylou"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru’s page for 6 октября ст. ст. (civil 19 October) was not read (2026-09-17)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 6 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 6 Οκτωβρίου — «Άγιοι Ιλαρίων ο Νέος, Ιωάννης, Ιωσήφ «εις τον Λυθροδώνταν», Καλάντιος εν Ταμασία, Κασσιανός ο της Γλυφάς, Κασσιανός ο της Αξύλου, οι εξ' Αλαμανών, εν Κύπρω»",
+        "url": "https://www.saint.gr/10/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs’s page for 6. октобар ст. ст. (civil 19 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
