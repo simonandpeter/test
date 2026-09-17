@@ -34,45 +34,43 @@ here, because a PAT push never updates `origin/main`.
 ## In flight
 
 **The corpus run (`scratchpad/corpus-plan.md` §5) is in Phase B.** Civil
-20–30 September is read for all four churches. **1 October is half read:** the
-Russian and Serbian columns (Julian 18 September) are done in two batches; the
-**Greek and Romanian 1 October are not**, and B3 starts there, then 2 October.
+20 September – 1 October is read for all four churches. **2 October is not
+read** for any church; B3 starts there.
 
-**`main` is red on Lighthouse FCP alone, at `635553a`** (the Greek and Romanian
-30 September): calendar populated 1504 ms (1357/1674/1504/1683/1355) and all
-saints 1523 ms (1692/1445/1692/1519/1523) against a 1500 ms floor, a11y 100,
-entry stylesheet unchanged; e2e 1044 passed, 6 known flakes. A re-run is the
-author's call. **Three commits sit unpushed on top of it** — the two Russian 1
-October batches and this handoff — and go out only once `main` is green: one
-push each, by resetting `main` back and fast-forwarding a commit at a time.
-
-What the Greek and Romanian 1 October hold, from `day-candidates.mjs` and not
-yet read against the pages: saint.gr — Ananias the Apostle, Romanos the
-Melodist, John Koukouzelis, Michael of Zobe and thirty-six venerable martyrs,
-Domninus, Gregory the Domestikos, Sabbas of Vishera, with the Protection, the
-Gorgoepikoos and Eleftherotria synaxes and two sidebar entries (Paisios,
-Nicodemus) that are not the day's. doxologia.ro — Cyriacus and Joseph of
-Bisericani, Romanos, John Koukouzelis, Ananias, Mirian and Nana, Sidonia of
-Georgia, the Lord's Robe, and five icons. Grep for Romanos, Ananias and
-Koukouzelis before drafting: a Julian 1 October has not been read, but another
-day may hold them.
+What `day-candidates.mjs 2026-10-02` prints, not yet read against the pages:
+the Russian 19 September (12 lines — the afterfeast of the Cross, Trophimus,
+Sabbatius and Dorymedon, Theodore of Smolensk with David and Constantine,
+Alexis of Zosimova, Zosimas the hermit, Igor of Chernigov, and five new
+martyrs of 1918–1939), the Serbian 19 September (3; Trophimus's company and
+Zosimas), saint.gr 2 October (12) and doxologia.ro (4). Its UPGRADE block names
+eight folders the corpus holds on the menologion 19 September — Trophimus,
+Sabbatius, Dorymedon, Theodore of Yaroslavl with David and Constantine,
+Theodore of Tarsus, Amphilochius of Patmos — so the Julian columns are mostly
+upgrades, and the name "Theodore" there is not yet Theodore of Smolensk. The Serbian
+list misses Prologue entries; read the page.
 
 Open identities, each written into the folders: whether the Greek 30 September's
 Two Women Martyrs are the two virgins the Romanian long life has die with
-Gaiane; whether the Fifty Martyrs of Palestine are the Sretensky 151's burned
-(they carry no Russian row); Gregory of Pelshma and Michael of Kyiv are Greek
-one-liners that the Russian 30 September (civil 13 October) must read before
-anyone calls them the Russian saints; the older open ones (Trophimus and
-Dorymedon, Tryphon) stand.
+Gaiane; whether the Fifty Martyrs of Palestine are the Sretensky 151's burned;
+Gregory of Pelshma, Michael of Kyiv (30 September) and Sabbas of Vishera
+(1 October) are Greek one-liners the Russian 30 September and 1 October (civil
+13 and 14 October) must read before anyone calls them the Russian saints; John
+Koukouzelis carries a 1118–1433 death because the Greek and Romanian pages put
+him centuries apart. The older open ones (Trophimus and Dorymedon, Tryphon)
+stand.
 
-Helpers in `.tmp/`: `mk30a.py` + `mk30a_up.py` and `mk1001a.py` (new folders and
-upgrades in one) are a Russian and Serbian day; `mk1001b.py` a Russian-only
-batch after azbyka; `mk30b.py` a Greek and Romanian day with Orloff commons and
-doxologia hymns. A batch parked on a branch (`git branch -f hold-x HEAD; git
-reset --keep <prev>`) lets two committed batches push one at a time, since
-`push.sh` pushes HEAD. A life that names a church "of John the Theologian" or a
-namesake "Mardonius of Nicomedia" links that saint; `cross-link-audit.mjs`
-diffed against the last batch shows it.
+The empty-range test reads `emptyRange()` from the manifest since `f476223`;
+no untouched year is left between 1 and 2002, and the gate prints the range it
+finds.
+
+Helpers in `.tmp/`: `mk1001a.py` (Russian and Serbian, new folders and
+upgrades), `mk1001b.py` (Russian-only after azbyka), `mk1001c.py` with
+`mk1001c-text.json` (Greek and Romanian, hymns pulled off the cached pages by
+label, lives and English kept in the JSON), `fetch.mjs` (cached, polite),
+`lookday.mjs` (the rendered day per church and language), `daycount1001.mjs`
+(the back-out's day count). Two committed batches go out one at a time by
+parking the second (`git branch -f hold-x <sha>; git reset --keep <first>`),
+pushing, then `git merge --ff-only hold-x`.
 
 ## Three things git cannot tell you
 
