@@ -1,0 +1,9 @@
+# John (Flerov)
+
+John Flerov built the church of the Archangel Michael in the village of Semyany in the Vasilsursk district of Nizhny Novgorod province and was its first priest. It was built and consecrated shortly before the revolution of 1917, and when he had consecrated it he said that his church would stand a long time and no one would lay a hand on it. In the winter of 1918, at forty, he was arrested and taken to Vasilsursk. In the prison there he was tormented for a long time and questioned again and again, and told to renounce Christ or his priesthood, and he would not. Then he was taken out to the cemetery and told to dig a grave. When he had dug it he prayed, and when he had finished he said that he was ready, and he was killed by a volley in the back.
+
+His word held, the life says. The godless could not close the church for a long time, and when they did close it they could not wreck it, and the parishioners would not give up the keys: Tatiana, who kept them, told the chairman of the village soviet that she would not hand them over until a service was announced, and the church stood unwrecked until it was reopened in the 1940s. The priest [John (Bystrov)](/saints/john-bystrov), martyred in 1938, was born in that village, and azbyka.ru prints one life of the two.
+
+The Russian calendar keeps him on 21 September old style on one line with the priests [Alexander (Fedoseev)](/saints/alexander-fedoseev), [Alexis (Stabnikov)](/saints/alexis-stabnikov) and [Constantine (Shirokinsky)](/saints/constantine-shirokinsky), of 1918; azbyka.ru keeps him also with the saints of Nizhny Novgorod, and prints no hymns for him.
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-ioann-flerov), after lib.eparhia-saratov.ru; the Sretensky calendar (days.pravoslavie.ru), 21 сентября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260921.html); read 17 September 2026.*

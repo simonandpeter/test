@@ -1,0 +1,70 @@
+{
+  "slug": "john-bystrov",
+  "display_name": "John (Bystrov)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Иоанн Быстров",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Священномученик Иоанн Быстров, пресвитер», its stress mark left out."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1888,
+      "latest": 1889,
+      "display": "1888–1889",
+      "basis": "attested",
+      "note": "azbyka.ru’s life: «родился в 1888(9?) году»; its short life: «родился около 1888 года»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "azbyka.ru: arrested «11 сентября 1938 года» and drowned in the Volga, with no date given for the death; the Sretensky day prints «Сщмч. Иоанна пресвитера (1938)»."
+    }
+  },
+  "related": [
+    "john-flerov"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 сентября ст. ст. — «Сщмч. Иоанна пресвитера (1938)»",
+        "url": "https://days.pravoslavie.ru/Days/20260921.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 4 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 04.10.2026 (21. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

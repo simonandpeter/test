@@ -1,0 +1,102 @@
+{
+  "slug": "basil-kondratiev",
+  "display_name": "Basil (Kondratiev)",
+  "names": [
+    {
+      "form": "Василий Кондратьев",
+      "lang": "ru",
+      "note": "Read out of azbyka.ru’s heading «Мученик Василий Кондратьев», its stress mark left out."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1887,
+      "latest": 1887,
+      "display": "1887",
+      "basis": "attested",
+      "note": "azbyka.ru: «родился 1 марта 1887 года в деревне Гинутьево»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "azbyka.ru: «Расстрелян 4 октября 1937 года по постановлению тройки УНКВД по Карагандинской области от 28 сентября 1937 года»; the Sretensky day prints «(1937)»."
+    }
+  },
+  "related": [
+    "maurice-poletaev"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 сентября ст. ст. — «Прмч. Маврикия и с ним мч. Василия (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20260921.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro’s list for 4 octombrie (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr’s list for 4 Οκτωβρίου (checked 2026-09-17); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 04.10.2026 (21. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "На ка́мени благоче́стия утверди́вся,/ па́стырь ре́вностный яви́лся еси́,/ преподобному́чениче Маври́кие сла́вне./ Моли́твою и посто́м, я́ко мече́м обоюдоо́стрым, вооружи́вся,/ вра́жеския наве́ты препобеди́л еси́,/ о слу́жбе церко́вней да́же во у́зах раде́я,/ тя́жкия му́ки и са́мую смерть за Христа́ во смире́нии прия́л еси́,/ и на по́двиг Васи́лия сострада́льца твоего́ укрепи́л еси́./ Те́мже ны́не моли́ся/ благода́ть Свята́го Ду́ха нам стяжа́ти// и Ца́рствия Небе́снаго дости́гнути.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Василий Кондратьев», тропарь и кондак",
+        "url": "https://azbyka.ru/days/sv-vasilij-kondratev",
+        "year": 2026
+      },
+      "english": {
+        "text": "Established on the rock of piety, thou wast shown a zealous shepherd, O glorious venerable martyr Maurice. Armed with prayer and fasting as with a two-edged sword, thou didst overcome the snares of the enemy, caring for the Church’s services even in bonds; thou didst accept in humility grievous torments and death itself for Christ, and didst strengthen Basil, thy fellow sufferer, for the contest. Therefore pray now that we may acquire the grace of the Holy Spirit and attain the Kingdom of Heaven.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Благослове́ние Кроншта́дтскаго па́стыря Иоа́нна исполня́я,/ путь служе́ния Це́ркви и лю́дем избра́л еси́,/ о во́инех же земны́х попече́ние име́я,/ сам во́ин Христо́в добропобе́дный яви́лся еси́/ и, а́нгельскаго жития́ взыску́я,/ под сень преподо́бнаго Се́ргия устреми́лся еси́,/ иде́же служе́ния во хра́ме Всех святы́х сподо́бился еси́,/ преподобному́чениче Маври́кие./ Во дни же гоне́ний на Це́рковь Ру́сскую,/ вку́пе с му́чеником Васи́лием да́же до сме́рти пострада́л еси́./ И ны́не со все́ми святы́ми Тро́ицу Живонача́льную прославля́я,/ моли́ спасти́ся душа́м на́шим.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Василий Кондратьев», тропарь и кондак",
+        "url": "https://azbyka.ru/days/sv-vasilij-kondratev",
+        "year": 2026
+      },
+      "english": {
+        "text": "Fulfilling the blessing of John, the shepherd of Kronstadt, thou didst choose the path of service to the Church and to the people, and having care for earthly soldiers thou wast thyself shown a victorious soldier of Christ; and seeking the angelic life, thou didst hasten to the shelter of the venerable Sergius, where thou wast counted worthy to serve in the church of All Saints, O venerable martyr Maurice. In the days of the persecution of the Russian Church thou didst suffer even unto death together with the martyr Basil. And now, glorifying the life-giving Trinity with all the saints, pray that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
