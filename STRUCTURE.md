@@ -507,7 +507,8 @@ html[data-route~='calendar'][data-fills-window]
       └ .cal                         grid: --side-w --saint-w minmax(0,1fr)
         │                            --side-w, full bleed   (≥1024)
         ├ .cal-main [data-col=main]   column 1, laid out by `order`
-        │ ├ .cal-head                h1.cal-date · ◂ prev · next ▸
+        │ ├ .cal-head                p.cal-today · ◂ prev · next ▸
+        │ │                          h1.cal-date under them (≥1024)
         │ ├ p.cal-liturgy
         │ ├ .slot-viewport[data-slot=main] > .day-panel.day-main
         │ │                          the phone's whole day; not drawn ≥1024
@@ -655,11 +656,22 @@ else.
   between the rule and the first line is the head's margin and paints nothing,
   so the head covers it with a band of `--gesso` (`../mockup-review/REVIEW-2.md` N4): closing
   the gap instead would carry the rule down the column.
-- **The day's column in the mockup's order** (findings 2 and 14): the date on
-  the column's edge with its two stepper buttons, each half a cross, together
-  at its top right; the cycle, then the fast; the month; the readings; the name
-  days last, in two columns at `--text-sm`, the mockup's 13 px and the one size
-  taken from it. The head scrolls with the column and is not pinned.
+- **The day's column in the mockup's order** (findings 2 and 14): the day's own
+  name at `--text-2xs`, uppercase and tracked, with the two stepper buttons —
+  each half a cross, 24 × 32 — together at the top right of that same line;
+  the date under them at `--text-lg`, on one line, from the column's own edge
+  to the margin between the columns; the cycle, then the fast; the month; the
+  readings; the name days last, in two columns at `--text-sm`. The head scrolls
+  with the column and is not pinned.
+  **Two of the mockup's type sizes are taken here and nowhere else**: the name
+  days' 13 px ("The left sidebar Name Days are meant to be smaller font as per
+  the mockup") and the date's 17 px, ruled 2026-09-18 on `REVIEW-2.md`'s
+  finding 14. The date wants 254 px spelled in full and the column's measure is
+  246 at 1440 and 213 at 1280, so past 1024 px the month is abbreviated as it
+  is on a phone; between 560 and 1023.98 px, where the day panel is the width
+  of the window, it is still spelled out. The word over the date is *Today*,
+  *Yesterday*, *Tomorrow* or the day's own weekday name
+  (`daily/format.js`'s `relativeDayWord`), and it is drawn past 1024 px only.
 - **The site's header is the same as on every other route** (author,
   2026-09-17): full width, with the calendar, language and theme controls in
   it. `main` takes no top padding here, and the four columns start `--headgap`

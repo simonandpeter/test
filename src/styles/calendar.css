@@ -920,6 +920,13 @@
   margin-bottom: var(--space-4);
 }
 
+/* The word over the date is the four-column desk's alone (REVIEW-2 finding
+   14); the phone's date stands inside the picker, under a rail that already
+   names the day. Hidden rather than absent so the markup is one markup. */
+.cal-today {
+  display: none;
+}
+
 /* **The date, and the two steps beside it** (author, 2026-09-01: "add some
    &lt;Yesterday and Tomorrow&gt; Buttons to the right of today's date print in
    large font, right justified to the margin between left and right columns").
@@ -1294,21 +1301,39 @@
   }
 
   /*
-   * **The date at the column's edge, its two marks together at the top right**
-   * — the mockup's day-side head (../mockup-review/REVIEW.md finding 14), which
-   * puts ‹ › at the right and the date under nothing. The marks keep their
-   * drawing, half a cross each; only their place changed. The words are their
-   * accessible name and their `title`. The head is not pinned: it scrolls with
-   * the column, as the mockup's does.
+   * **The day's name and its two marks on one line, the date across the whole
+   * column under them** — the mockup's day-side head (`../mockup-review/REVIEW-2.md`
+   * finding 14, ruled 2026-09-18). The mockup writes TODAY at the left of that line
+   * with ‹ › at its right, and gives the date the column's full measure on the
+   * line below; the head is not pinned, and scrolls with the column as the
+   * mockup's does. The marks keep their drawing, half a cross each; only their
+   * place and their height changed. The words are their accessible name and
+   * their `title`.
    *
-   * `stretch` rather than `align-items: baseline`: a mark is a rule and wants
-   * the block's own height.
+   * **Two rows and not one, because the date needs the measure.** Beside the
+   * marks the heading had 166 px at 1440 and 133 px at 1280, and the finding's
+   * 17 px date wants 194 px in the shortest form this site prints. Across the
+   * whole head it has 246 and 213.
    */
   .cal-head {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto auto;
-    align-items: stretch;
+    align-items: center;
     column-gap: var(--space-4);
+  }
+
+  /* The label sits on the marks' line, in the same 12 px uppercase utility
+     voice the shelf's own label takes — this column names itself the way the
+     one at the other edge of the page does. */
+  .cal-today {
+    display: block;
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+    font-size: var(--text-2xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
   }
 
   /* `.cal-head >` rather than `.cal-date` alone: `.chrome h1` in base.css sets
@@ -1316,11 +1341,10 @@
      class here loses and the row grows by 8 px nobody declared. Measured — the
      marks' clearance was right and the rule sat 8 px too low. */
   .cal-head > .cal-date {
-    grid-column: 1;
-    grid-row: 1;
-    /* The row *is* the heading's box, which is what the two marks stretch to,
-       so the heading carries no margin of its own inside it. The space under
-       the block is `--rulegap` on the wrapper. */
+    grid-column: 1 / -1;
+    grid-row: 2;
+    /* The space under the block is `--rulegap` on the wrapper, and the space
+       over it is the label's own row; the heading carries neither. */
     margin: 0;
   }
 
@@ -1337,18 +1361,19 @@
    * background and no border — the box is a hit area and a positioning context,
    * 24 px wide, and the ink stands on the page.
    *
-   * **From the nav rule to the rule under the date, 5 px clear of each.** The
-   * row is the heading's own box, so the two margins are what reach past it:
-   * negative above, where the gap to the nav rule is 8, and positive below,
-   * where the gap to its own rule is 4. Both are written as the same
-   * subtraction from 5, so the pair stays correct whatever either gap becomes.
+   * **On the label's line, at the head's top right** (REVIEW-2 finding 14).
+   * They ran the whole height of the head until the date took a row of its
+   * own; there is no longer a box between two rules for them to reach across,
+   * so the height is declared. `--space-8` and not smaller: the drawing is a
+   * diamond 6 px from each end with the stem between them, and under 32 px the
+   * stem is shorter than the caps it joins.
    */
   .day-step {
     display: block;
     position: relative;
-    align-self: stretch;
+    align-self: center;
     width: 24px;
-    margin-block: calc(5px - var(--headgap)) calc(5px - var(--rulegap));
+    height: var(--space-8);
     padding: 0;
     border: 0;
     background: none;
@@ -3316,10 +3341,9 @@ a.name-day:hover {
    sitting inside it. */
 .cal-head:has(+ .cal-liturgy:not(:empty)) {
   margin-bottom: var(--space-2);
-  /* `--rulegap` past 1024 px, where it is hoisted to the route so the marks
-     either side of the date can reach exactly to it; `--space-1` everywhere
-     else, which is the same 4 px the author asked for on 2026-08-26 and which
-     the fallback keeps for every width that declares nothing. */
+  /* `--rulegap` past 1024 px, where it is hoisted to the route; `--space-1`
+     everywhere else, which is the same 4 px the author asked for on 2026-08-26
+     and which the fallback keeps for every width that declares nothing. */
   padding-bottom: var(--rulegap, var(--space-1));
   position: relative;
 }
@@ -4632,12 +4656,16 @@ a.name-day:hover {
   }
 
   /*
-   * **The date comes down two steps.** `--text-3xl` is `5vw` at its middle,
+   * **The date comes down four steps, to the mockup's own size** (REVIEW-2
+   * finding 14, ruled 2026-09-18 — the one element where the mockup's type
+   * size is taken and the site's is not). `--text-3xl` is `5vw` at its middle,
    * which is 64 px at 1280 — a heading sized for a column two thirds of the
    * page standing in one a fifth of it, where "Wednesday, 3 September 2026"
-   * took four lines. `--text-xl` is the last step that holds the date on two.
+   * took four lines. `--text-xl` held it to two. `--text-lg` is the mockup's
+   * 17 px and, with the short month and the head's full measure under the
+   * label, holds it to one at 1440 and 1280 alike.
    */
   html[data-route~='calendar'] .cal-head > .cal-date {
-    font-size: var(--text-xl);
+    font-size: var(--text-lg);
   }
 }

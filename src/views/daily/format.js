@@ -1,6 +1,7 @@
-import { dateIn, parseIso } from '../../lib/calendar-page.js';
+import { dateIn, parseIso, todayIso } from '../../lib/calendar-page.js';
 import { reckoningInForce } from '../../lib/church.js';
 import { formatDate, formatDateParts } from '../../lib/i18n.js';
+import { STRINGS } from '../../ui/strings.js';
 
 /**
  * The Daily page's dates, in words.
@@ -122,4 +123,28 @@ export const monthLongFmt = (d) =>
 export const utc = (iso) => {
   const d = parseIso(iso);
   return new Date(Date.UTC(d.year, d.month - 1, d.day));
+};
+
+/**
+ * **What the day is called, over the date it carries** — the mockup's
+ * `.td-label` (`../mockup-review/REVIEW-2.md` finding 14, ruled 2026-09-18).
+ * The three words a reader can say without counting, and the day's own weekday
+ * name for anything further out: a page three weeks back is a Thursday, not a
+ * "yesterday". `ui/strings.js` has described this function since 2026-09-02
+ * and named its three words; until now nothing called it.
+ *
+ * The comparison is in whole civil days, both sides taken as UTC midnight, so
+ * a reader an hour either side of their own midnight gets the same answer the
+ * URL does. The weekday is the civil weekday and not the reckoned one, for the
+ * reason `reckonedDate` gives: a Wednesday is a Wednesday in every reckoning.
+ */
+const DAY_MS = 86400000;
+
+export const relativeDayWord = (iso, now = new Date()) => {
+  const C = STRINGS.calendar;
+  const days = Math.round((utc(iso) - utc(todayIso(now))) / DAY_MS);
+  if (days === 0) return C.today;
+  if (days === -1) return C.yesterday;
+  if (days === 1) return C.tomorrow;
+  return formatDate({ weekday: 'long', timeZone: 'UTC' }, utc(iso));
 };

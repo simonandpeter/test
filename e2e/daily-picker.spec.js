@@ -1865,7 +1865,7 @@ test('the full-screen calendar prints the month’s fasts, feasts and seasons', 
 
   await page.locator('.fc-day[data-iso="2026-04-16"]').click();
   await expect(page.locator('dialog.fullcal')).toBeHidden();
-  await expect(page.locator('.cal-date')).toContainText('16 April 2026');
+  await expect(page.locator('.cal-date')).toHaveText(/16 Apr(il)? 2026/);
 });
 
 /* ---- the round of 2026-09-02, late -------------------------------------- */
@@ -1920,8 +1920,14 @@ test('a phone prints the month short, on one line, close under the rail', async 
   expect(m.lines, 'the date still takes two rows').toBe(1);
   expect(m.gap, 'the date is not pushed up into the picker').toBeLessThan(16);
 
-  // And the desktop keeps the long month, which is the other half of it.
-  await page.setViewportSize({ width: 1440, height: 900 });
+  /*
+   * And the tablet keeps the long month, which is the other half of it. It
+   * was the desk that kept it until 2026-09-18, when REVIEW-2's finding 14
+   * put the date in a 213-246 px column at 17 px and the long month stopped
+   * fitting on the line the finding asks for. Between 560 and 1023.98 the day
+   * panel is still the width of the window and the month is still spelled.
+   */
+  await page.setViewportSize({ width: 900, height: 900 });
   await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
   await expect(page.locator('.cal-date')).toContainText('September');
 });
@@ -2111,7 +2117,7 @@ test('the calendar names its own reckoning, and the reader may change it', async
   await button.click();
   await page.locator('[data-reckoning-pop] [data-pick="gregorian"]').click();
   await expect(button).toHaveText('Gregorian');
-  await expect(page.locator('.cal-date')).toHaveText(/14 September/);
+  await expect(page.locator('.cal-date')).toHaveText(/14 Sep(tember)?/);
 });
 
 
@@ -2150,7 +2156,7 @@ test('a chosen reckoning renames the day and moves nothing it names', async ({ p
    * date" rule now holds only for a reader whose church actually keeps
    * Gregorian, or who has chosen it outright (checked below).
    */
-  await expect(heading).toHaveText('Wednesday, 20 August 2026');
+  await expect(heading).toHaveText(/Wednesday, 20 Aug(ust)? 2026/);
   const civilHero = await hero.textContent();
 
   const pick = async (id) => {
@@ -2162,14 +2168,14 @@ test('a chosen reckoning renames the day and moves nothing it names', async ({ p
   // in, and still nothing re-sourced — the same saints as every other
   // reckoning shows for this same real day.
   await pick('gregorian');
-  await expect(heading).toHaveText('Wednesday, 2 September 2026');
+  await expect(heading).toHaveText(/Wednesday, 2 Sep(tember)? 2026/);
   await expect(hero).toHaveText(civilHero);
 
   // Julian, the Russian church's own: the day is renamed, and there is
   // nothing to re-source — the same saints, thirteen days earlier in the
   // reader's own reckoning.
   await pick('julian');
-  await expect(heading).toHaveText('Wednesday, 20 August 2026');
+  await expect(heading).toHaveText(/Wednesday, 20 Aug(ust)? 2026/);
   await expect(monthName).toHaveText('August 2026');
   await expect(hero).toHaveText(civilHero);
 
@@ -2198,7 +2204,7 @@ test('a chosen reckoning renames the day and moves nothing it names', async ({ p
    * over one unmoved saint.
    */
   await pick('revised-julian');
-  await expect(heading).toHaveText('Wednesday, 2 September 2026');
+  await expect(heading).toHaveText(/Wednesday, 2 Sep(tember)? 2026/);
   await expect(hero).toHaveText(civilHero);
 
   // Neither reckoning goes anywhere: the URL, and what a link on the page
@@ -2213,7 +2219,7 @@ test('a chosen reckoning renames the day and moves nothing it names', async ({ p
    * touching that row — with the civil day's saints unchanged either way.
    */
   await pick('');
-  await expect(heading).toHaveText('Wednesday, 20 August 2026');
+  await expect(heading).toHaveText(/Wednesday, 20 Aug(ust)? 2026/);
   await expect(monthName).toHaveText('August 2026');
   await expect(hero).toHaveText(civilHero);
 });

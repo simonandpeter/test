@@ -1,8 +1,10 @@
 import { CHURCHES } from '../src/data/churches.js';
+import { STRINGS } from '../src/ui/strings.js';
 import { test, expect } from './fixtures.js';
 import {
   EMPTY,
   POPULATED,
+  aDayThatIsNotToday,
   answered,
   dragGrain,
   desk,
@@ -3831,8 +3833,10 @@ test('the day steps are half a cross each, together at the top right of the date
    * from `--day-cols` and nothing in the markup knows — and the pair is desktop
    * only. The third, "to the right of today's date", is the one the redraw
    * reversed and stage F of ../mockup-review/REVIEW.md put back: the mockup's
-   * day-side head sets ‹ › together at the top right (finding 14), so both marks
-   * follow the date now, which starts on the column's own edge.
+   * day-side head sets ‹ › together at the top right (finding 14). They sat on
+   * the date's own line until 2026-09-18, when REVIEW-2's reading of the same
+   * finding gave the date a row of its own — so the marks keep the top right
+   * and now share it with the day's name, which is what the mockup puts there.
    * **The words themselves are not gone**, and that is asserted: both buttons
    * carry them as their accessible name and, since this commit, as a `title`.
    */
@@ -3852,6 +3856,7 @@ test('the day steps are half a cross each, together at the top right of the date
     const main = r('.cal-main');
     const head = r('.cal-head');
     const date = r('.cal-date');
+    const label = r('.cal-today');
     const prev = r('.day-step-prev');
     const next = r('.day-step-next');
     /*
@@ -3886,11 +3891,13 @@ test('the day steps are half a cross each, together at the top right of the date
       columnLeft: Math.round(main.left + parseFloat(getComputedStyle(document.querySelector('.cal-main')).paddingLeft)),
       columnRight: Math.round(main.right - parseFloat(getComputedStyle(document.querySelector('.cal-main')).paddingRight)),
       dateLeft: Math.round(date.left),
+      dateRight: Math.round(date.right),
       nextRight: Math.round(next.right),
       prevBeforeNext: prev.right <= next.left + 1,
-      afterDateBack: prev.left >= date.right - 1,
-      afterDate: next.left >= date.right - 1,
-      sharesLine: prev.top < date.bottom && prev.bottom > date.top,
+      afterLabelBack: prev.left >= label.right - 1,
+      afterLabel: next.left >= label.right - 1,
+      sharesLine: prev.top < label.bottom && prev.bottom > label.top,
+      overDate: Math.round(prev.bottom) <= Math.round(date.top),
       topClear: Math.round(prev.top - navRule),
       bottomClear: Math.round(dateRule - prev.bottom),
       sameSpan: Math.round(prev.top - next.top) === 0 && Math.round(prev.bottom - next.bottom) === 0,
@@ -3900,23 +3907,25 @@ test('the day steps are half a cross each, together at the top right of the date
     };
   });
 
-  // The date on the column's own edge, both marks after it, the forward one on the column's margin.
-  expect(m.dateLeft, 'the date is not on the column’s own edge').toBe(m.columnLeft);
-  expect(Math.abs(m.nextRight - m.columnRight), 'the forward mark is not on the column margin').toBeLessThan(2);
-  expect(m.afterDateBack, 'the back mark is not after the date').toBe(true);
-  expect(m.prevBeforeNext, 'the back mark is not before the forward one').toBe(true);
-  expect(m.afterDate, 'the forward mark is not after the date').toBe(true);
-  expect(m.sharesLine, 'the marks are not on the date’s line').toBe(true);
-
   /*
-   * **From the nav rule to the rule under the date, 5 px clear of each** — the
-   * whole of what `--headgap` and `--rulegap` are hoisted for. In the mockup
-   * they were declared on the mark itself, where the two boxes that read them
-   * are its ancestors and fell through to their fallbacks; this is the
-   * assertion that says the hoist worked.
+   * **The label's line, then the date's** (REVIEW-2 finding 14). The two marks
+   * share the label's line at the head's top right; the date has the row under
+   * them and the column's whole measure, from its own left edge to the margin
+   * between the columns. Until 2026-09-18 the marks shared the date's line and
+   * the date had only what they left it, which is why it took two rows.
    */
-  expect(m.topClear, 'the marks do not clear the nav rule by 5 px').toBe(5);
-  expect(m.bottomClear, 'the marks do not clear the date’s rule by 5 px').toBe(5);
+  expect(m.dateLeft, 'the date is not on the column’s own edge').toBe(m.columnLeft);
+  expect(Math.abs(m.dateRight - m.columnRight), 'the date does not reach the column margin').toBeLessThan(2);
+  expect(Math.abs(m.nextRight - m.columnRight), 'the forward mark is not on the column margin').toBeLessThan(2);
+  expect(m.afterLabelBack, 'the back mark is not after the label').toBe(true);
+  expect(m.prevBeforeNext, 'the back mark is not before the forward one').toBe(true);
+  expect(m.afterLabel, 'the forward mark is not after the label').toBe(true);
+  expect(m.sharesLine, 'the marks are not on the label’s line').toBe(true);
+  expect(m.overDate, 'the marks are not above the date').toBe(true);
+
+  // Inside the head, not hanging off it: the marks' row is the head's first.
+  expect(m.topClear, 'the marks do not start at the head’s own top').toBe(8);
+  expect(m.bottomClear, 'the marks reach past the head’s foot').toBeGreaterThan(0);
   expect(m.sameSpan, 'the two marks are not the same height').toBe(true);
 
   /*
@@ -3958,6 +3967,100 @@ test('the day steps are half a cross each, together at the top right of the date
 });
 
 
+test('the day’s head names the day over a date that keeps to one line', async ({ page }) => {
+  /*
+   * ../mockup-review/REVIEW-2.md finding 14, ruled by the author 2026-09-18: "the mockup has a
+   * TODAY label and the date on one line at 17 px; live has no label and 21 px
+   * over two lines". **The one element where the mockup's type size is taken
+   * and the site's is not** — the standing rule against the mockup's sizes is
+   * suspended here because the author asked for this one.
+   *
+   * Three things have to hold together or the finding is not fixed: the label
+   * is there and is the mockup's 12 px uppercase utility word; the date is the
+   * mockup's 17 px; and it is *one line*, which it can only be with the head's
+   * whole measure under the label rather than the strip the marks left it.
+   * Backing out any one of the three fails this: at 21 px the date wraps, in
+   * the old single row it wraps, and without the label there is nothing to
+   * find.
+   *
+   * The reading is at both of the review's widths, and the date's line count
+   * comes off the text's own rectangles rather than a division of two rounded
+   * numbers.
+   */
+  await ready(page, { church: 'romanian' });
+  for (const [width, height] of [
+    [1440, 900],
+    [1280, 800],
+  ]) {
+    await page.setViewportSize({ width, height });
+    await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+    const m = await page.evaluate(() => {
+      const label = document.querySelector('.cal-head .cal-today');
+      const date = document.querySelector('.cal-head .cal-date');
+      const lines = (el) => {
+        const r = document.createRange();
+        r.selectNodeContents(el);
+        return new Set([...r.getClientRects()].filter((b) => b.height > 0).map((b) => Math.round(b.top))).size;
+      };
+      // The two sizes by what they paint, not by what a property hands back
+      // (trap 9): a probe in the same box takes the token's own value.
+      const probe = document.createElement('span');
+      document.querySelector('.cal-main').append(probe);
+      const at = (token) => {
+        probe.style.fontSize = `var(${token})`;
+        return getComputedStyle(probe).fontSize;
+      };
+      const sizes = { xs: at('--text-2xs'), lg: at('--text-lg') };
+      probe.remove();
+      const ls = getComputedStyle(label);
+      return {
+        // A hidden element reports 0 and would pass every size assertion
+        // silently (trap 7), so the premise is asserted first.
+        drawn: label.clientWidth > 0,
+        word: label.textContent.trim(),
+        labelSize: ls.fontSize,
+        labelCase: ls.textTransform,
+        labelFamily: ls.fontFamily,
+        dateSize: getComputedStyle(date).fontSize,
+        dateLines: lines(date),
+        labelAbove: Math.round(label.getBoundingClientRect().bottom) <= Math.round(date.getBoundingClientRect().top),
+        sizes,
+      };
+    });
+    const at = `at ${width}`;
+    expect(m.drawn, `the day’s name is not drawn ${at}`).toBe(true);
+    expect(m.word, `the day’s name is empty ${at}`).not.toBe('');
+    expect(m.labelSize, `the label is not at --text-2xs ${at}`).toBe(m.sizes.xs);
+    expect(m.sizes.xs, 'premise: --text-2xs is no longer the mockup’s 12 px').toBe('12px');
+    expect(m.labelCase, `the label is not uppercased ${at}`).toBe('uppercase');
+    expect(m.labelFamily, `the label is not in the utility voice ${at}`).toContain('system-ui');
+    expect(m.dateSize, `the date is not at --text-lg ${at}`).toBe(m.sizes.lg);
+    expect(m.sizes.lg, 'premise: --text-lg is no longer the mockup’s 17 px').toBe('17px');
+    expect(m.dateLines, `the date takes more than one line ${at}`).toBe(1);
+    expect(m.labelAbove, `the label is not over the date ${at}`).toBe(true);
+  }
+
+  /*
+   * The word itself: the three a reader can say without counting, and the
+   * day's own weekday for anything further out. `/` is today by definition, so
+   * this is not a test that turns over once a year (trap 4) — and the far day
+   * is taken three days back for the same reason.
+   */
+  await page.goto('/', { waitUntil: 'networkidle' });
+  await expect(page.locator('.cal-head .cal-today')).toHaveText(STRINGS.calendar.today);
+  await page.goto(await aDayThatIsNotToday(page), { waitUntil: 'networkidle' });
+  const far = await page.locator('.cal-head .cal-today').textContent();
+  expect([STRINGS.calendar.today, STRINGS.calendar.yesterday, STRINGS.calendar.tomorrow]).not.toContain(far);
+  expect(far, 'a day out of reach of the three words is not named by its weekday').toMatch(/day$/i);
+
+  // The phone's date stands inside the picker under a rail that already names
+  // the day; the label is not laid out there at all.
+  await page.setViewportSize({ width: 360, height: 780 });
+  await expect(page.locator('.cal-head .cal-today')).toBeHidden();
+});
+
+
 test('the day’s column reads in the mockup’s order, with the name days last and at its size', async ({ page }) => {
   /*
    * Stage F of ../mockup-review/REVIEW.md (findings 2 and 14). The mockup's
@@ -3993,6 +4096,7 @@ test('the day’s column reads in the mockup’s order, with the name days last 
       return {
         edge: main.getBoundingClientRect().left + parseFloat(getComputedStyle(main).paddingLeft),
         date: box(q('.cal-head .cal-date')),
+        label: box(q('.cal-head .cal-today')),
         prev: box(q('.day-step-prev')),
         cycle: box(q('.cal-liturgy .cal-cycle')),
         fast: box(q('.cal-liturgy .fast-chip')),
@@ -4005,7 +4109,10 @@ test('the day’s column reads in the mockup’s order, with the name days last 
     });
     const at = `at ${width}`;
     expect(Math.abs(m.date.left - m.edge), `the date is not on the column’s edge ${at}`).toBeLessThan(1);
-    expect(m.prev.left, `the marks are not to the right of the date ${at}`).toBeGreaterThanOrEqual(m.date.right - 1);
+    expect(m.prev.bottom, `the marks are not above the date ${at}`).toBeLessThanOrEqual(m.date.top + 1);
+    expect(m.prev.left, `the marks are not to the right of the day’s name ${at}`).toBeGreaterThanOrEqual(
+      m.label.right - 1,
+    );
     expect(m.cycle.bottom, `the cycle is not above the fast ${at}`).toBeLessThanOrEqual(m.fast.top + 1);
     expect(m.fast.bottom, `the fast is not above the month ${at}`).toBeLessThanOrEqual(m.month.top + 1);
     expect(m.month.bottom, `the month is not above the readings ${at}`).toBeLessThanOrEqual(m.readings.top + 1);

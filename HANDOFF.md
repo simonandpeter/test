@@ -48,11 +48,11 @@ inside the columns), K (the lives' paragraphs) and L (the hymn languages) are
 done. **Stages A–L are all done.** The second independent review of them is
 `../mockup-review/REVIEW-2.md`: 13 of its 17 findings fixed, and its two new
 defects — N1, the selection marker clipped away, and N4, the band of the life
-under the pinned head — are fixed too. **Five items are open there and are the
-author's to rule**: finding 14 (the day-side head's label and one-line date),
-16 (`.is-dim` at .65 against the mockup's .45), 17 (italic hymn text), N2
-(Prayer's four-line preview clamp) and N3 (Prayer's missing picture credit).
-Then Series M.
+under the pinned head — are fixed too. **The author ruled its five open items
+on 2026-09-18: all five are to match the mockup.** Finding 14 (the day-side
+head's label and one-line date) is done. Open: 16 (`.is-dim` at .65 against
+the mockup's .45), 17 (italic hymn text), N2 (Prayer's four-line preview
+clamp) and N3 (Prayer's missing picture credit). Then Series M.
 
 **K's tools stay** (`saints/*/life.md` and `docs/CORPUS.md` were all it
 touched): `scratchpad/k-split.py` breaks any body paragraph over 900 characters
@@ -73,7 +73,13 @@ keyed by index into `l-unmatched.json`.
 
 Stage I left the phone's half of its own ruling open — `STRUCTURE.md` §6 item 3.
 
-Four `tile-diff` baselines exist. Do not re-shoot any of them.
+Five `tile-diff` baselines exist. Do not re-shoot any of them.
+
+- `shots/baseline-r2-five-before` — 8 tiles, `--still
+  --routes=/calendar,/prayer --widths=360,768 --themes=day,vigil --langs=en`,
+  shot at `1210d011` with REVIEW-2's five open items backed out. The same build
+  shot twice came back identical on all 8, so its noise floor is zero; after
+  finding 14 all 8 compared identical.
 
 - `shots/baseline-stage-h-before` — 8 tiles, `--still --routes=/saints,/prayer
   --widths=360,768 --themes=day,vigil --langs=en`, shot at `db73f995`.

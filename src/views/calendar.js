@@ -36,7 +36,7 @@ import { reducedMotion } from '../lib/motion.js';
 import { onWideChange } from '../lib/viewport.js';
 import { buildRail, growMonthBody, markRail, measure, monthCursor, moveMonth, paintMonth, paintMonthInto, revealSelected, stepCursor, stepMonth, toggleMonth, wireDayKeys, wireDaySwipe, wireRail } from './daily/picker.js';
 import { countFor, dayRecordFor } from './daily/entries.js';
-import { monthFmt, reckonedHeading, weekdayFmt } from './daily/format.js';
+import { monthFmt, reckonedHeading, relativeDayWord, weekdayFmt } from './daily/format.js';
 import { markChosen, paintChosen, paintDay, showReadTab } from './daily/panel.js';
 import { fullCalButton, wireFullCal } from './daily/fullcal.js';
 
@@ -187,6 +187,15 @@ export function render(el, { data, params, router }) {
           here for the same reason, but the box earns its place twice over.
         -->
         <div class="cal-head">
+          <!--
+            **What the day is called, over the date** (REVIEW-2 finding 14,
+            ruled 2026-09-18): the mockup's td-label, a 12 px utility word
+            on the line the two marks stand on. Drawn past 1024 px only — the
+            phone's date sits inside the picker with the rail naming the day
+            above it, and a second name for it there would say twice what one
+            glance already says.
+          -->
+          <p class="cal-today utility" data-cal-today></p>
           <button type="button" class="day-step day-step-prev" data-dstep="-1"
             aria-label="${esc(STRINGS.calendar.prevDay)}"
             title="${esc(STRINGS.calendar.prevDay)}">${DAY_MARK}</button>
@@ -922,14 +931,23 @@ function paintChrome() {
   const { el, selected } = state;
   markRail();
   /*
-   * **The short month on a phone** (author, 2026-09-02). The date is the
-   * largest type on the page and "Saturday, 5 September 2026" takes two rows
-   * at 360 px, which costs the day itself a row of content. Asked of the
-   * window rather than written into the CSS, because a month's name is text
-   * and not a style — and re-asked on resize below, so turning a tablet does
-   * not leave the wrong one standing.
+   * **The short month wherever the date's column is narrow** (author,
+   * 2026-09-02, for the phone; widened to the desk 2026-09-18 for REVIEW-2
+   * finding 14). The date is the largest type on the page and "Saturday, 5
+   * September 2026" takes two rows at 360 px, which costs the day itself a row
+   * of content. Asked of the window rather than written into the CSS, because
+   * a month's name is text and not a style.
+   *
+   * Past 1024 px the same problem returns for the opposite reason: the day is
+   * one of four columns and its whole measure is 246 px at 1440 and 213 px at
+   * 1280, where the finding's 17 px heading wants 254 px in full. The short
+   * month costs 60 px of that and buys the mockup's single line at both. In
+   * between — 560 px to 1023.98 — the day panel is the width of the window and
+   * the month is spelled out, which is where the 2026-09-01 instruction to
+   * spell it ("on Daily page print the full month name") was given.
    */
-  const short = window.matchMedia('(max-width: 559.98px)').matches;
+  const short =
+    window.matchMedia('(max-width: 559.98px)').matches || window.matchMedia('(min-width: 1024px)').matches;
   /*
    * **The day is named in the reckoning in force, not only the reckoning
    * chosen** (author, 2026-09-02, widened 2026-09-05: "Follow my church"
@@ -945,6 +963,13 @@ function paintChrome() {
    * than branching for it.
    */
   el.querySelector('.cal-date').textContent = reckonedHeading(selected, reckoningInForce(), { short });
+  /*
+   * The word over the date is the civil day's own, not the reckoned one: it
+   * answers "which day is this, counting from the one I am in", and no
+   * reckoning changes that answer.
+   */
+  const label = el.querySelector('[data-cal-today]');
+  if (label) label.textContent = relativeDayWord(selected);
   paintLiturgy();
   if (state.monthOpen) paintMonth();
 }
