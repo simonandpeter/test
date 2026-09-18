@@ -1075,9 +1075,14 @@ is discussed.
    fixed velocity instead of eight `mouse.move` steps. Until then CI retries
    hide it, which is how a flake here once masked a 16/16 regression.
 
-6. **201 of 211 feast hymns in `src/data/liturgical-days.js` have no English.**
-   The saints' hymns are done, 428 of 428; that is the whole of what "the hymns
-   are translated" means today.
+6. **No hymn has a rendering in Russian, Romanian, Greek or Serbian.** English
+   is complete in both halves of the build — the corpus's own hymns and the
+   feast hymns of `src/data/liturgical-days.js` — and the other four packs get
+   the source's own tongue, which is theirs only where the source happens to be
+   in it. `node scripts/hymn-language-sweep.mjs` prints the size of it per
+   calendar and per language, and **Church Slavonic is not Russian and not
+   Serbian** (author, 2026-09-17), so a Slavonic original is a fallback for
+   both.
 
    **The two books are exhausted for troparia and not for kontakia.** Orloff's
    *General Menaion* (1899) and Hapgood's *Service Book* (1906) were both read
@@ -1087,30 +1092,39 @@ is discussed.
    rendering wherever one exists. Hapgood carries the great feasts alone and
    has nothing further to give.
 
-7. **Raise the cross-linker's ceiling.** `lib/cross-link.js` can match 375 of the
+7. **40 English renderings print "(mentioned by name)" where the saint's name
+   belongs**, across 27 folders — Orloff's placeholder for the name a general
+   service leaves to the server, copied into the corpus with the text around
+   it. A reader meeting "O holy apostle (mentioned by name)" is being shown the
+   rubric rather than the hymn. Every one is a common (apostle, martyr, prophet,
+   hierarch, venerable woman), so the fix is the saint's name in the form that
+   folder already prints. Found by the stage-L sweep, 2026-09-18; not a language
+   fault and deliberately not swept up with one.
+
+8. **Raise the cross-linker's ceiling.** `lib/cross-link.js` can match 375 of the
    corpus's folders; the rest have name forms too short or ambiguous to be safe.
    The way past it is better *name forms in the data*, not looser rules. Both
    other mechanical tiers are exhausted, so the remaining work is writing links
    into lives by hand — `node scripts/link-coverage.mjs --isolated` prints the
    list.
 
-8. **Make `test:lighthouse` usable locally.** It costs eight minutes and fails
+9. **Make `test:lighthouse` usable locally.** It costs eight minutes and fails
    FCP on all four routes on this desk *identically on an unmodified tree*. The
    number a session actually needs is the entry sheet's size, which is a build
    and a `stat`. A flag that checks the sheet and skips the Lighthouse passes.
 
-9. **`scripts/state.sh` should report who holds 4173, 5173 and 5174.** A stray
+10. **`scripts/state.sh` should report who holds 4173, 5173 and 5174.** A stray
    server from an earlier sitting makes Playwright refuse to start with no hint
    who holds the port, and makes `contact-sheet.mjs` quietly shoot the wrong
    tree.
 
-10. **Tie a test's name to the prose about it.** `tests/citations.test.mjs`
+11. **Tie a test's name to the prose about it.** `tests/citations.test.mjs`
     checks that a named file exists and that a named path exists, but not that a
     named *test* does, so a renamed test leaves stale headings in
     `docs/SRC-DECISIONS.md`. Asserting that every `### …` heading there resolves
     to a symbol that exists is the same instrument, in two seconds.
 
-11. **`docs/PROBES.md` is the last document with no owner.** 250 lines
+12. **`docs/PROBES.md` is the last document with no owner.** 250 lines
     describing four debug scripts, and its table is a hand-copy of
     `package.json`'s own script names. Either generate it or fold it into
     `CLAUDE.md` beside the traps it serves.

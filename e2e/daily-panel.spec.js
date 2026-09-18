@@ -1778,14 +1778,21 @@ test('an English reader is given a published English hymn where one exists', asy
 });
 
 
-test('a hymn with no published English stays in its own tongue', async ({ browser }) => {
+test('a feast hymn is English for an English reader, on every calendar that sings one', async ({ browser }) => {
   /*
-   * The 2026-09-12 pass gave every hymn in `saints/` an English rendering, so
-   * the gap this test names now lives in the *feast* hymns of
-   * `data/liturgical-days.js` — a day's own troparia, hand-sourced and mostly
-   * untranslated. No slug or saint is pinned: the day is asked what it holds,
-   * the premise is asserted, and the test goes quiet on its own the day the
-   * feast hymns are translated too.
+   * **The day the author saw it** (2026-09-17): Saturday 13 September, Greek
+   * and Romanian, English chosen, and the hymns in Greek and Romanian. The
+   * 2026-09-12 pass had given every hymn in `saints/` an English rendering and
+   * left the *feast* hymns of `data/liturgical-days.js` untouched — 201 of 211
+   * of them — because `scripts/hymn-english.mjs` walks the corpus folders and
+   * has never seen the records. `ui/hymns.js` was choosing correctly the whole
+   * time; there was nothing to choose.
+   *
+   * A test that stood here asserted the gap instead, on the reasoning that it
+   * would "go quiet on its own the day the feast hymns are translated". It did
+   * not go quiet, it went red, which is the better outcome and the reason this
+   * one is written the other way round: the day is asked what it holds and
+   * nothing is pinned to a slug, so it stays true as the records grow.
    */
   const ctx = await browser.newContext();
   const page = await ctx.newPage();
@@ -1793,13 +1800,20 @@ test('a hymn with no published English stays in its own tongue', async ({ browse
   await page.addInitScript(() =>
     localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'greek', language: 'en' })),
   );
-  await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
-  const untranslated = page
-    .locator('[data-hymns] .hymn')
-    .filter({ has: page.locator('.hymn-text[lang="el"]') });
-  expect(await untranslated.count(), 'premise: this day still holds a hymn with no English').toBeGreaterThan(0);
-  await expect(untranslated.first().locator('.hymn-text')).toHaveAttribute('lang', 'el');
-  await expect(untranslated.first().locator('.hymn-source')).toContainText('saint.gr');
+  for (const [church, iso] of [['greek', '2026-09-13'], ['romanian', '2026-09-13'], ['greek', '2026-09-14']]) {
+    await page.addInitScript((id) =>
+      localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: id, language: 'en' })),
+    church);
+    await page.goto(`/calendar/${iso}`, { waitUntil: 'networkidle' });
+    const hymns = page.locator('[data-hymns] .hymn');
+    expect(await hymns.count(), `premise: ${church} ${iso} still sings`).toBeGreaterThan(0);
+    // Every text on the page is the English one, and every one of them says
+    // which kind of claim it is — a book, or a rendering made here.
+    await expect(page.locator('[data-hymns] .hymn-text:not([lang="en"])')).toHaveCount(0);
+    for (const foot of await page.locator('[data-hymns] .hymn-source').allTextContents()) {
+      expect(foot.trim(), `${church} ${iso}: a hymn says where its English came from`).toMatch(/Rendered for this site|Text from \S/);
+    }
+  }
   await ctx.close();
 });
 

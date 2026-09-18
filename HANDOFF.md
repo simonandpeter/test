@@ -44,8 +44,9 @@ tile's anatomy and its press), H (one search field, `ui/search-field.js` +
 `styles/search-field.css`, mounted by All Saints, Prayer and the saint page's
 side column), I (Prayer's margins wear that tile, and every name opens
 something past 1024 px) and J (Prayer full-bleed, the page gutter charged once
-inside the columns) and K (the lives' paragraphs) are done. **Stages A–K are
-done; L, the hymn languages, is what is left.**
+inside the columns), K (the lives' paragraphs) and L (the hymn languages) are
+done. **Stages A–L are all done.** What follows them is the second independent
+review of A–L against the mockup, then Series M.
 
 **K's tools stay** (`saints/*/life.md` and `docs/CORPUS.md` were all it
 touched): `scratchpad/k-split.py` breaks any body paragraph over 900 characters
@@ -53,6 +54,16 @@ at sentence ends, `k-verify.py` proves every changed file identical to `HEAD`
 under whitespace collapse, `k-literals.py` proves no `e2e/` prose literal is
 cut, `k-stats.py` prints the paragraph distribution. A new life is written to
 the shape `docs/CORPUS.md` now states, so the pass should find nothing to do.
+
+**L's tools stay.** `node scripts/hymn-language-sweep.mjs` is the standing
+instrument: every date × four calendars × five languages, what tongue the page
+would print, and the fallback rows. The one-off writers are in `scratchpad/`:
+`l-analyse.mjs` (the gap and what the corpus can lend), `l-match.mjs` and
+`l-dump.mjs` (the work list, with any corpus hymn close enough to lend its
+wording), `l-reuse.mjs` (the corpus's own English for a text the records repeat),
+`l-write.mjs <work.json>` (the only writer into `src/data/liturgical-days.js`;
+`--dry` first), and `l-en-{a…e,reuse}.json`, the renderings as they were typed,
+keyed by index into `l-unmatched.json`.
 
 Stage I left the phone's half of its own ruling open — `STRUCTURE.md` §6 item 3.
 

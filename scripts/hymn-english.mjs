@@ -31,6 +31,17 @@
  * The work file is a list of `{ key, english: { text, rendered | source } }`.
  * An entry with no `english.text` is skipped, so a file may be filled in over
  * several sittings.
+ *
+ * **It walks `saints/` and nothing else, and that is where a gap hid for five
+ * days.** The Daily page prints a second table of hymns — the feast hymns
+ * recorded with the day in `src/data/liturgical-days.js` — which this has never
+ * seen, so "every hymn is translated" was true of the corpus and false of the
+ * page: 201 of 211 of the records' hymns had no English, and an English reader
+ * met Greek and Romanian on 13 September 2026. They were filled by hand in
+ * stage L. Nothing here was changed to reach them, because a test is the
+ * cheaper guard: `tests/hymn-language.test.mjs` asserts both tables together,
+ * and `scripts/hymn-language-sweep.mjs` asks the question per date, per
+ * calendar and per language.
  */
 /*
  * **The standing English for the formulas**, so that a hymn rendered in one
