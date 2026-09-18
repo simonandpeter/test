@@ -2221,6 +2221,24 @@
     margin-bottom: var(--space-3);
   }
 
+  /*
+   * **The head's own ground reaches the first line** (`../mockup-review/REVIEW-2.md` N4): the
+   * head's background stops at its rule and the `--space-3` under it is the
+   * head's *margin*, which paints nothing — so a 12 px band of the life slid
+   * through the gap between the rule and the first line while the column
+   * scrolled. The band is covered rather than closed: making it padding would
+   * carry the rule 12 px down and the head is 64 px by measurement (finding
+   * 4). `100% + 1px` clears the 1 px rule, which the head paints over this.
+   */
+  html[data-route~='calendar'] .cal-read .hero-head::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    top: calc(100% + 1px);
+    height: var(--space-3);
+    background: var(--gesso);
+  }
+
   html[data-route~='calendar'] .cal-read .hero-name {
     margin: 0;
   }
@@ -4450,6 +4468,30 @@ a.name-day:hover {
    * read marked by the rubric at its edge and one the saint lacks in `--rule`.
    * The bar hangs in the column's own padding, so the words keep its edge.
    */
+  /*
+   * **The clip box makes room for the bar that hangs into the margin**
+   * (`../mockup-review/REVIEW-2.md` N1): the rubric marker is the tab's own `border-left`,
+   * pulled `--space-3` left of the words so the words keep the picture's edge
+   * — the mockup's `.toc-item` exactly. Here that bar fell outside
+   * `.slot-viewport`, which is `overflow: hidden` for the day's roll, and was
+   * cut away at x327: the selected section was marked in ink alone.
+   *
+   * The viewport's *border* box moves 12 px left and its padding puts the
+   * content back where it was, so the picture, the list and the column keep
+   * every measurement of finding 5 while the clip edge sits on the bar. The
+   * leaving panel is absolutely positioned against that padding box and is
+   * pushed back by the same 12 px, or a day change would widen the picture
+   * for the length of the roll.
+   */
+  html[data-route~='calendar'] .cal-saint > .slot-viewport {
+    margin-inline-start: calc(var(--space-3) * -1);
+    padding-inline-start: var(--space-3);
+  }
+
+  html[data-route~='calendar'] .cal-saint > .slot-viewport > .slot-leaving {
+    inset-inline-start: var(--space-3);
+  }
+
   html[data-route~='calendar'] .cal-saint .read-tabs {
     display: flex;
     flex-direction: column;

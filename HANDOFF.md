@@ -45,8 +45,14 @@ tile's anatomy and its press), H (one search field, `ui/search-field.js` +
 side column), I (Prayer's margins wear that tile, and every name opens
 something past 1024 px) and J (Prayer full-bleed, the page gutter charged once
 inside the columns), K (the lives' paragraphs) and L (the hymn languages) are
-done. **Stages A–L are all done.** What follows them is the second independent
-review of A–L against the mockup, then Series M.
+done. **Stages A–L are all done.** The second independent review of them is
+`../mockup-review/REVIEW-2.md`: 13 of its 17 findings fixed, and its two new
+defects — N1, the selection marker clipped away, and N4, the band of the life
+under the pinned head — are fixed too. **Five items are open there and are the
+author's to rule**: finding 14 (the day-side head's label and one-line date),
+16 (`.is-dim` at .65 against the mockup's .45), 17 (italic hymn text), N2
+(Prayer's four-line preview clamp) and N3 (Prayer's missing picture credit).
+Then Series M.
 
 **K's tools stay** (`saints/*/life.md` and `docs/CORPUS.md` were all it
 touched): `scratchpad/k-split.py` breaks any body paragraph over 900 characters
@@ -67,7 +73,7 @@ keyed by index into `l-unmatched.json`.
 
 Stage I left the phone's half of its own ruling open — `STRUCTURE.md` §6 item 3.
 
-Three `tile-diff` baselines exist. Do not re-shoot any of them.
+Four `tile-diff` baselines exist. Do not re-shoot any of them.
 
 - `shots/baseline-stage-h-before` — 8 tiles, `--still --routes=/saints,/prayer
   --widths=360,768 --themes=day,vigil --langs=en`, shot at `db73f995`.
@@ -80,6 +86,9 @@ Three `tile-diff` baselines exist. Do not re-shoot any of them.
 - `shots/baseline-baseline-stageJ-gutters-before-2026-09-18` — 4 tiles,
   `--still --routes=/prayer --widths=360,768 --themes=day,vigil --langs=en`,
   shot at `0e5581d4`; after stage J all four compared identical.
+- `shots/baseline-before-n1n4` — 4 tiles, `--still --routes=/calendar
+  --widths=360,768 --themes=day,vigil --langs=en`, shot at `cd503dbc` with the
+  N1/N4 rules backed out; after them all four compared identical.
 
 **The corpus run (`scratchpad/corpus-plan.md` §5) is in Phase B.** Civil
 20 September – 6 October is read for all four churches. **Civil 7 October is

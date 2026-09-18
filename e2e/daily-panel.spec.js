@@ -5124,3 +5124,141 @@ test('past 1024 px Writings opens the saint’s own source texts, where the fold
   expect((await readTabs(page)).shown).toEqual(['writings']);
   expect(fetched).toBeGreaterThan(0);
 });
+
+test('past 1024 px the chosen section’s rubric bar is painted, not clipped away', async ({ page }) => {
+  /*
+   * `../mockup-review/REVIEW-2.md` N1. The marker is the tab's own
+   * `border-left`, hung `--space-3` left of the words so the words keep the
+   * picture's edge; it fell outside `.slot-viewport`'s clip and the selection
+   * survived as ink alone. Asserted against every clipping ancestor rather
+   * than against that one box, and beside the geometry it must not have
+   * bought it with (finding 5's columns, finding 6's edge).
+   */
+  await ready(page, { church: 'romanian' });
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
+  const [rubric] = await tokenColours(page, '--rubric');
+
+  for (const [width, height] of [
+    [1440, 900],
+    [1280, 800],
+  ]) {
+    await page.setViewportSize({ width, height });
+    await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+    await expect(page.locator('.cal-saint [data-read-tab="life"]')).toHaveAttribute('aria-selected', 'true');
+
+    const g = await page.evaluate(() => {
+      const tab = document.querySelector('.cal-saint [role="tab"][aria-selected="true"]');
+      const cs = getComputedStyle(tab);
+      const b = tab.getBoundingClientRect();
+      const bar = { left: b.left, right: b.left + parseFloat(cs.borderLeftWidth), colour: cs.borderLeftColor };
+      // Every box between the bar and the page that cuts what leaves it.
+      const clips = [];
+      for (let el = tab.parentElement; el && el !== document.documentElement; el = el.parentElement) {
+        const s = getComputedStyle(el);
+        if (s.overflowX === 'visible' && s.overflowY === 'visible') continue;
+        const r = el.getBoundingClientRect();
+        clips.push({
+          what: el.className,
+          left: r.left + parseFloat(s.borderLeftWidth),
+          right: r.right - parseFloat(s.borderRightWidth),
+        });
+      }
+      const media = document.querySelector('.cal-saint .hero-media').getBoundingClientRect();
+      const col = document.querySelector('.cal-saint').getBoundingClientRect();
+      const colStyle = getComputedStyle(document.querySelector('.cal-saint'));
+      return {
+        bar,
+        clips,
+        words: b.left + parseFloat(cs.borderLeftWidth) + parseFloat(cs.paddingLeft),
+        media: { left: media.left, width: media.width },
+        col: { left: col.left, width: col.width },
+        colInset: parseFloat(colStyle.borderInlineStartWidth) + parseFloat(colStyle.paddingInlineStart),
+        colPadEnd: parseFloat(colStyle.paddingInlineEnd),
+        listLeft: document.querySelector('.cal-saint .read-tabs').getBoundingClientRect().left,
+      };
+    });
+
+    expect(g.bar.colour, `${width}: the chosen section is not marked in the rubric`).toBe(rubric);
+    expect(g.bar.right - g.bar.left, `${width}: the marker is not 2 px`).toBeCloseTo(2, 1);
+    expect(g.clips.length, `${width}: premise — something between the bar and the page clips`).toBeGreaterThan(0);
+    for (const c of g.clips) {
+      expect(g.bar.left, `${width}: ${c.what} cuts the marker's outer edge`).toBeGreaterThanOrEqual(c.left - 0.5);
+      expect(g.bar.right, `${width}: ${c.what} cuts the marker`).toBeLessThanOrEqual(c.right + 0.5);
+    }
+
+    // And the columns the marker had to fit inside have not moved for it.
+    expect(g.media.left - g.col.left, `${width}: the picture has left the column's padding`).toBeCloseTo(g.colInset, 1);
+    expect(g.media.width, `${width}: the picture no longer fills the column`).toBeCloseTo(g.col.width - g.colInset - g.colPadEnd, 0);
+    expect(g.listLeft, `${width}: the list has left the picture's edge`).toBeCloseTo(g.media.left, 1);
+    expect(g.words, `${width}: the words are not on the picture's edge`).toBeCloseTo(g.media.left + 2, 1);
+  }
+
+  // The day's roll is drawn in the same place: the leaving panel is positioned
+  // against the clip box, which now starts `--space-3` further out.
+  const rolling = await page.evaluate(() => {
+    const panel = document.querySelector('.cal-saint > .slot-viewport > .day-panel');
+    panel.classList.add('slot-leaving');
+    const r = panel.getBoundingClientRect();
+    const media = document.querySelector('.cal-saint .hero-media').getBoundingClientRect();
+    panel.classList.remove('slot-leaving');
+    return { left: r.left, width: r.width, mediaLeft: media.left, mediaWidth: media.width };
+  });
+  expect(rolling.left, 'a day change would shift the picture').toBeCloseTo(rolling.mediaLeft, 1);
+  expect(rolling.width, 'a day change would widen the picture').toBeCloseTo(rolling.mediaWidth, 1);
+});
+
+test('past 1024 px no band of the life shows between the pinned head and its first line', async ({ page }) => {
+  /*
+   * `../mockup-review/REVIEW-2.md` N4. The `--space-3` under the head is the
+   * head's margin and paints nothing, so the life slid through it while the
+   * column scrolled. The gap stays — closing it would carry the rule down and
+   * the head is measured at its height — and the head covers it.
+   */
+  await ready(page, { church: 'romanian' });
+  for (const [width, height] of [
+    [1440, 900],
+    [1280, 800],
+  ]) {
+    await page.setViewportSize({ width, height });
+    await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+    await expect(page.locator('.cal-read .hero-head')).toContainText('Theodora of Alexandria');
+
+    const g = await page.evaluate(() => {
+      const col = document.querySelector('.cal-read');
+      const head = document.querySelector('.cal-read .hero-head');
+      const first = document.querySelector('.cal-read [data-read-life] > p');
+      const resting = first.getBoundingClientRect().top - head.getBoundingClientRect().bottom;
+      col.scrollTop = 300;
+      const hb = head.getBoundingClientRect();
+      const band = { top: hb.bottom, bottom: hb.bottom + parseFloat(getComputedStyle(head).marginBottom) };
+      const crossing = [...document.querySelectorAll('.cal-read [data-read-life] > p')].filter((p) => {
+        const r = p.getBoundingClientRect();
+        return r.top < band.bottom - 1 && r.bottom > band.top + 1;
+      }).length;
+      const mid = (band.top + band.bottom) / 2;
+      const at = (x) => {
+        const el = document.elementFromPoint(x, mid);
+        return el ? el.closest('.hero-head') !== null : null;
+      };
+      return {
+        scrolled: col.scrollTop,
+        resting,
+        band: band.bottom - band.top,
+        crossing,
+        headOwnsBand: [at(hb.left + 4), at(hb.left + hb.width / 2), at(hb.right - 4)],
+        headHeight: hb.height,
+        rule: getComputedStyle(head).borderBottomWidth,
+      };
+    });
+
+    expect(g.scrolled, `${width}: the reading column did not scroll`).toBeGreaterThan(0);
+    expect(g.band, `${width}: the gap under the head is no longer the mockup's`).toBeCloseTo(12, 1);
+    expect(g.resting, `${width}: the first line has moved off the head`).toBeCloseTo(12, 1);
+    expect(g.rule, `${width}: the head has lost its rule`).toBe('1px');
+    expect(g.crossing, `${width}: premise — nothing of the life is passing through the band`).toBeGreaterThan(0);
+    expect(g.headOwnsBand, `${width}: the life shows in the band under the head`).toEqual([true, true, true]);
+  }
+});

@@ -641,10 +641,20 @@ else.
   does not carry, so that line is disabled until the payload says otherwise and
   a source is fetched only when chosen. The choice is `state.readTab`: kept
   across saints and days, not stored, and a saint without it sends it back to
-  Life — the mockup's `pick`.
+  Life — the mockup's `pick`. The rubric is the chosen line's `border-left`,
+  hung `--space-3` outside the words so the words keep the picture's edge, so
+  **column two's `.slot-viewport` is pulled `--space-3` into the column's
+  padding and puts its content back with the same padding**: the clip box
+  stands on the bar instead of cutting it (`../mockup-review/REVIEW-2.md` N1), and the picture,
+  the list and the column keep their widths. The leaving panel is positioned
+  against that box and is inset by the same `--space-3`, or a day's roll would
+  widen the picture while it ran.
 - **The name and its dates head the reading column, pinned** (finding 4): a
   sticky head on `--gesso` over one rule, the life scrolling under it. Its
-  `.slot-viewport` is `overflow: clip` for the shelf's reason.
+  `.slot-viewport` is `overflow: clip` for the shelf's reason. The `--space-3`
+  between the rule and the first line is the head's margin and paints nothing,
+  so the head covers it with a band of `--gesso` (`../mockup-review/REVIEW-2.md` N4): closing
+  the gap instead would carry the rule down the column.
 - **The day's column in the mockup's order** (findings 2 and 14): the date on
   the column's edge with its two stepper buttons, each half a cross, together
   at its top right; the cycle, then the fast; the month; the readings; the name
