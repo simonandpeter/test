@@ -49,10 +49,11 @@ done. **Stages A–L are all done.** The second independent review of them is
 `../mockup-review/REVIEW-2.md`: 13 of its 17 findings fixed, and its two new
 defects — N1, the selection marker clipped away, and N4, the band of the life
 under the pinned head — are fixed too. **The author ruled its five open items
-on 2026-09-18: all five are to match the mockup.** Finding 14 (the day-side
-head's label and one-line date) is done. Open: 16 (`.is-dim` at .65 against
-the mockup's .45), 17 (italic hymn text), N2 (Prayer's four-line preview
-clamp) and N3 (Prayer's missing picture credit). Then Series M.
+on 2026-09-18: all five are to match the mockup, and all five are done** —
+finding 14 (the day-side head's label and one-line date), 16 (the dim at the
+lowest opacity the 4.5:1 floor allows, .64, the mockup's .45 being 2.69:1),
+17 (the hymn at 19 px italic), N2 (the preview six lines deep past 1024 px)
+and N3 (the picture's credit). Next: Series M.
 
 **K's tools stay** (`saints/*/life.md` and `docs/CORPUS.md` were all it
 touched): `scratchpad/k-split.py` breaks any body paragraph over 900 characters
@@ -79,7 +80,12 @@ Five `tile-diff` baselines exist. Do not re-shoot any of them.
   --routes=/calendar,/prayer --widths=360,768 --themes=day,vigil --langs=en`,
   shot at `1210d011` with REVIEW-2's five open items backed out. The same build
   shot twice came back identical on all 8, so its noise floor is zero; after
-  finding 14 all 8 compared identical.
+  finding 14 and after the four Prayer items all 8 compared identical.
+  **`tile-calendar-360-day-en` is a two-state tile**: one reading in four moved
+  it by 96,726 px (34.45%) against a change that cannot reach `/calendar` at
+  all, and three further shots of that same build were identical. Shoot it
+  more than once before calling it a finding, as with
+  `tile-prayer-360-day-en`.
 
 - `shots/baseline-stage-h-before` — 8 tiles, `--still --routes=/saints,/prayer
   --widths=360,768 --themes=day,vigil --langs=en`, shot at `db73f995`.

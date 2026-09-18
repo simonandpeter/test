@@ -844,8 +844,9 @@ html[data-route~='prayer'][data-fills-window]
           │ ├ .hy-hold#hy-hold     the box the fade animates; the card is
           │ │ │                    rewritten inside it
           │ │ └ article.hy-saint   grid: 4fr 6fr (≥1024); data-slug
-          │ │   ├ .hy-pic          picture, name, dates, the life's first line
-          │ │   │                  clamped to --hy-lede-lines
+          │ │   ├ .hy-pic          picture, its credit (≥1024), name, dates,
+          │ │   │                  the life's first line clamped to
+          │ │   │                  --hy-lede-lines
           │ │   └ .hy-hymns        `ui/hymns.js`'s markup; the only scroller
           │ │                      for the text at the desk
           │ └ button#hy-next       ≥1024 only
@@ -898,6 +899,13 @@ day.** The middle is the page and the two outside it are its margins.
   mockup's, exactly as Daily's reading column is.
 - **The pair inside the card is 4 / 6**, picture to hymns: the hymn is what the
   reader came for and the icon is what they are looking at while they read it.
+- **The hymn is set at `--text-lede`, italic** — the mockup's 19 px
+  (`REVIEW-2.md` finding 17, ruled 2026-09-18), against the site's 17 px
+  upright reading voice, because on this page the hymn is not prose among
+  prose but quoted song with a reader standing in front of it. The same
+  `.hymn-text` on the saint's page, in Daily's Hymns tab and on a phone keeps
+  the reading voice: the rule is `html[data-route~='prayer'] .hy-hymns`'s and
+  lives inside the 1024 px query.
 - **The arrows are absolute inside the middle column**, over the content, at
   its two edges. In the flow they would take a line of every screen.
 - **Each aside's heading is sticky at the top of its own column**, on
@@ -926,10 +934,15 @@ The two widths are free to diverge except here.
   the saint's own folder a moment after the card is drawn, into a flex column
   whose picture is allowed to shrink — so a lede growing from nothing took
   338 px off the icon above it and moved the card, the columns and everything
-  in them. It is clamped to `--hy-lede-lines` and given that height from the
-  start, and the asides are drawn once, when the folder answers, rather than
-  twice: on a phone they stand under a card that fills from the same fetch, so
-  drawing them early bought nothing and cost a jolt.
+  in them. It is clamped to `--hy-lede-lines` — four on a phone and six past
+  1024 px, the mockup's own depth (`REVIEW-2.md` N2) — and given that height
+  from the start, and the asides are drawn once, when the folder answers,
+  rather than twice: on a phone they stand under a card that fills from the
+  same fetch, so drawing them early bought nothing and cost a jolt. **The
+  picture's credit keeps its line the same way**: it is Daily's column-2
+  credit, the same `ui/credit.js` line, drawn empty above the name whenever the
+  card has a picture and filled from the folder with the life (`REVIEW-2.md`
+  N3). It is drawn past 1024 px only, as the mockup's is.
 - **The saint changes by a fade and nothing travels.** It is a Web Animations
   fade whose `finished` drives the swap — not a CSS transition and not a timer.
   A transition was measured on this desk and did not start at all on one press
@@ -966,10 +979,13 @@ The two widths are free to diverge except here.
   only "this page can reach them". **Below 1024 px a row the hymnal does not
   hold is still the inert button it shipped with** — §6 carries that half.
 - **A saint the hymnal does not hold is dimmed, and the dim is legible.**
-  `opacity: 0.65` on the row, and its two small lines take `--ink` inside it:
+  `opacity: 0.64` on the row, and its two small lines take `--ink` inside it:
   the mockup's 0.45 is affordable on an inert tile and not on a live one —
-  `--ink` at .45 is 2.69:1 on gesso, and `--ink-soft` clears 4.5:1 at no useful
-  depth. .65 gives 4.74:1 in day and 6.18:1 in vigil.
+  `--ink` at .45 is 2.69:1 in day and 3.60:1 in vigil, and `--ink-soft` clears
+  4.5:1 at no useful depth. The author ruled on 2026-09-18 that the mockup's
+  value be taken if the floor allowed it; it does not, so the page stands at
+  the lowest hundredth that passes both themes — .64, giving 4.60:1 in day and
+  6.02:1 in vigil, where .63 is 4.46:1 and fails.
 - **The field narrows the book itself**, so the arrows step through what the
   query left and the count line is that book's length. It searches the names,
   the line of office and dates, and the names of whoever the corpus records the

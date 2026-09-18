@@ -318,6 +318,12 @@ html[data-route~='prayer'] .hy-sub {
   margin: 0;
 }
 
+/* Not drawn until the desk asks for it (N3): the markup is one markup and the
+   credit is the four-column page's. */
+html[data-route~='prayer'] .hy-credit {
+  display: none;
+}
+
 html[data-route~='prayer'] .hy-line {
   font-size: var(--text-sm);
   line-height: 1.5;
@@ -531,20 +537,23 @@ html[data-route~='prayer'] .hy-arrow.is-next {
      saint's own page instead — so it is dimmed rather than painted in a rule
      colour at full opacity, which is what read as broken.
 
-     **0.65 and not the mockup's 0.45, because the row is live now.** The
-     mockup's tile is inert and its text has no contrast floor to meet; a link
-     does. `--ink` at .45 is 2.69:1 on gesso and 3.60:1 on the bole, both under
-     the 4.5:1 normal text asks. The lowest opacity that clears it on both is
-     .64 in day and .53 in vigil, so .65 carries the pair: 4.74:1 and 6.18:1.
-     `--ink-soft` cannot be carried at any useful opacity — it needs .88 in day
-     — so the two small lines take `--ink` inside a dim tile and the fade is
-     what marks them, which is the mockup's own mechanism at a legible depth.
+     **0.64, the lowest that clears the floor, and not the mockup's 0.45,
+     because the row is live now.** The mockup's tile is inert and its text has
+     no contrast floor to meet; a link does. `--ink` at .45 is 2.69:1 in day
+     and 3.60:1 in vigil, both under the 4.5:1 normal text asks. The author
+     ruled on 2026-09-18 that the mockup's value should be taken if it can be;
+     it cannot, so this is as near it as the floor allows — re-measured that
+     day, and .64 is the lowest hundredth that passes both themes (4.60:1 in
+     day, 6.02:1 in vigil; .63 is 4.46:1 in day and fails). `--ink-soft` cannot
+     be carried at any useful opacity — it needs .88 in day — so the two small
+     lines take `--ink` inside a dim tile and the fade is what marks them,
+     which is the mockup's own mechanism at a legible depth.
 
      The underline on hover and the pointer stay, where the mockup takes both
      off: there is somewhere to go now. */
   html[data-route~='prayer'] .hy-side .day-tile.is-dim,
   html[data-route~='prayer'] .hy-side .hy-link.is-dim {
-    opacity: 0.65;
+    opacity: 0.64;
   }
 
   html[data-route~='prayer'] .hy-side .day-tile.is-dim .reg-sub,
@@ -580,5 +589,54 @@ html[data-route~='prayer'] .hy-arrow.is-next {
     min-height: 0;
     overflow-y: auto;
     padding-right: var(--space-2);
+  }
+
+  /*
+   * **The hymn at the mockup's size and in its italic**
+   * (`../mockup-review/REVIEW-2.md` finding 17, ruled 2026-09-18). The mockup
+   * sets the sung text at 19 px italic where the site's prose voice is 17 px
+   * upright; this is the one place the mockup's type is taken, and it is taken
+   * because the hymn is not prose — it is quoted song, and the page has a
+   * reader standing in front of it for the length of one text.
+   *
+   * Only here, and only past 1024 px: the same `.hymn-text` is read on the
+   * saint's page and in Daily's Hymns tab, where it is one passage among many
+   * and keeps the reading voice, and on a phone, where 19 px in a 360 px
+   * measure buys wrapping rather than weight.
+   */
+  html[data-route~='prayer'] .hy-hymns .hymn-text {
+    font-size: var(--text-lede);
+    font-style: italic;
+  }
+
+  /*
+   * **Six lines, not four** (`../mockup-review/REVIEW-2.md` N2). The mockup's
+   * preview runs to six at 1440; the clamp here was set at four for the phone,
+   * where the card is one column and the picture above it is already tall. The
+   * count is the whole of the change — the box still takes its full height
+   * from the start, for the CLS reason the base rule gives.
+   */
+  html[data-route~='prayer'] .hy-line[data-hy-lede] {
+    --hy-lede-lines: 6;
+  }
+
+  /*
+   * **Where the picture came from, under it** (`../mockup-review/REVIEW-2.md`
+   * N3): the mockup's `.pic-src`. It is Daily's column-2 credit — the same
+   * `ui/credit.js` line, the same 12 px utility voice — because a credit is
+   * one thing the site says one way. Desktop only, as the mockup's is: below
+   * 1024 px this card is the whole page and its picture is the register's, not
+   * a plate of its own.
+   */
+  html[data-route~='prayer'] .hy-credit {
+    display: block;
+    flex: none;
+    /* The line it will have, from the start: the box under it does the same,
+       and for the same reason. */
+    min-height: 1lh;
+    font-size: var(--text-2xs);
+    line-height: 1.4;
+    color: var(--ink-soft);
+    margin: 0;
   }
 }

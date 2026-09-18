@@ -7,6 +7,7 @@ import { currentLanguage } from '../../lib/i18n.js';
 import { escapeHtml as esc, firstParagraphText } from '../../lib/markdown.js';
 import { DUR, EASE, reducedMotion } from '../../lib/motion.js';
 import { neighboursAt } from '../../lib/prayer-order.js';
+import { creditLine } from '../../ui/credit.js';
 import { hymnMarkup, mergeForReading } from '../../ui/hymns.js';
 import { STRINGS } from '../../ui/strings.js';
 import { clearAsides, fillAsides } from './asides.js';
@@ -51,6 +52,19 @@ export function cardMarkup(card) {
   return `<article class="hy-saint" data-slug="${esc(card.slug)}">
     <div class="hy-pic">
       ${picture(card)}
+      <!--
+        Where the picture came from, under it and over the name, as the mockup
+        prints it (../mockup-review/REVIEW-2.md N3). It is Daily's column-2
+        credit: the same ui/credit.js line, filled from the saint's own folder
+        with the life, because the manifest's card carries no licence.
+
+        Drawn empty and holding its line from the start, for the reason the
+        lede under it holds four: this column is a fixed height whose picture
+        is allowed to shrink, so a line arriving with the fetch would take the
+        icon's height off it and move the card. A saint with no picture has no
+        credit and no line to keep.
+      -->
+      ${card.image ? '<p class="hy-credit utility" data-hy-credit></p>' : ''}
       <h2 class="hy-name">${esc(saintName(card))}</h2>
       <p class="hy-sub utility">${esc(formatSubtext(card))}</p>
       <p class="hy-line" data-hy-lede></p>
@@ -112,6 +126,9 @@ function fillDetail(root, card, generation) {
       if (!article) return;
       const lede = article.querySelector('[data-hy-lede]');
       if (lede) lede.textContent = firstParagraphText(payload?.life) ?? '';
+      const credit = article.querySelector('[data-hy-credit]');
+      const image = payload?.images?.[0];
+      if (credit && image) credit.innerHTML = creditLine(image.credit);
       const box = article.querySelector('[data-hy-hymns]');
       if (box) box.innerHTML = hymnsMarkup(payload?.saint?.hymns);
     },

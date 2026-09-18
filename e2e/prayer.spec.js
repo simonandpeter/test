@@ -844,10 +844,17 @@ test('a tile in the same-day column prints the day, not the lifespan', async ({ 
 /**
  * **The dim is live, so it has to be legible** (finding 16; the ruling's own
  * condition). The mockup fades the whole tile to .45, which its inert tile can
- * afford and a link cannot: `--ink` at .45 is 2.69:1 on gesso. The lowest
- * opacity clearing 4.5:1 in both themes is .65, and the two small lines take
- * `--ink` inside a dim tile because `--ink-soft` cannot be carried at any
- * useful depth.
+ * afford and a link cannot: `--ink` at .45 is 2.69:1 on gesso in day and
+ * 3.60:1 in vigil. The author ruled on 2026-09-18 that the mockup's value be
+ * taken if the floor allows it; it does not, so the page takes the lowest
+ * hundredth that passes both themes — .64, re-measured that day (4.60:1 and
+ * 6.02:1; .63 is 4.46:1 in day and fails). The two small lines take `--ink`
+ * inside a dim tile because `--ink-soft` cannot be carried at any useful
+ * depth.
+ *
+ * **The 4.5 floor below is the assertion, and the opacity is the reading.**
+ * Lowering one to let the other pass is the one move this test exists to
+ * prevent.
  *
  * Composited by hand from painted colours (trap 9), and asserted in both
  * themes, because the browser suite ran in light only until 2026-08-22 and a
@@ -888,7 +895,7 @@ test('a dimmed name is faded, not faint: it clears 4.5:1 in both themes', async 
         sub: of('.reg-sub'),
       };
     });
-    expect(read.opacity, `${theme}: the mockup's fade, at a legible depth`).toBeCloseTo(0.65, 2);
+    expect(read.opacity, `${theme}: the mockup's fade, at a legible depth`).toBeCloseTo(0.64, 2);
 
     const rgb = (s) => s.match(/[\d.]+/g).slice(0, 3).map(Number);
     const lum = (c) => {
@@ -907,6 +914,121 @@ test('a dimmed name is faded, not faint: it clears 4.5:1 in both themes', async 
     expect(ratio(read.name), `${theme}: the dimmed name clears AA`).toBeGreaterThanOrEqual(4.5);
     expect(ratio(read.sub), `${theme}: and so does its date`).toBeGreaterThanOrEqual(4.5);
   }
+});
+
+/**
+ * **The card the mockup draws**: the hymn at 19 px italic (finding 17), the
+ * preview running to six lines and not four (N2), and the picture's credit
+ * under it (N3) — the three of `../mockup-review/REVIEW-2.md` the author ruled
+ * on 2026-09-18 to be matched to the mockup.
+ *
+ * All three are past 1024 px only, so the phone is read at the end of the same
+ * test: it keeps the reading voice for the hymn, the four-line clamp, and no
+ * credit at all. That second half is what stops the fix reaching a width it
+ * was never meant to.
+ *
+ * The saint is stepped to rather than taken off the opening screen (trap 5):
+ * the first card in the book need not have a picture, and a credit cannot be
+ * asserted on a card that has none.
+ */
+test('the saint in hand wears the mockup’s hymn, preview and credit', async ({ page }) => {
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hy-saint')).toBeVisible();
+
+  // A card with a picture, a life long enough to fill the preview, and a hymn.
+  let found = false;
+  for (let i = 0; i < 12 && !found; i += 1) {
+    if (i > 0) await stepTo(page, 1);
+    await expect(page.locator('.hy-saint')).toBeVisible();
+    found = await page
+      .locator('.hy-saint .hy-pic-frame')
+      .count()
+      .then((n) => n > 0);
+    if (found) {
+      // The credit and the hymn arrive with the saint's own folder.
+      await expect
+        .poll(() => page.locator('.hy-pic [data-hy-credit]').textContent())
+        .not.toBe('');
+      await expect(page.locator('.hy-hymns .hymn-text').first()).toBeVisible();
+      found = await page.evaluate(
+        () => (document.querySelector('.hy-line[data-hy-lede]')?.scrollHeight ?? 0) > 120,
+      );
+    }
+  }
+  expect(found, 'no saint in the first twelve has a picture and a long life').toBe(true);
+
+  const read = () =>
+    page.evaluate(() => {
+      const q = (s) => document.querySelector(s);
+      // The tokens by what they paint, not by what a property hands back (trap 9).
+      const probe = document.createElement('span');
+      q('.hy-pic').append(probe);
+      const at = (token) => {
+        probe.style.fontSize = `var(${token})`;
+        return getComputedStyle(probe).fontSize;
+      };
+      const sizes = { xs: at('--text-2xs'), lg: at('--text-lg'), lede: at('--text-lede') };
+      probe.remove();
+
+      const credit = q('.hy-pic [data-hy-credit]');
+      const frame = q('.hy-pic .hy-pic-frame');
+      const name = q('.hy-pic .hy-name');
+      const lede = q('.hy-line[data-hy-lede]');
+      const hymn = q('.hy-hymns .hymn-text');
+      const box = (el) => (el ? el.getBoundingClientRect() : null);
+      const cs = (el) => (el ? getComputedStyle(el) : null);
+      const lc = cs(lede);
+      const cc = cs(credit);
+      return {
+        sizes,
+        // A hidden element reports 0 and would pass a size assertion in
+        // silence (trap 7), so every premise is a reading of its own.
+        creditDrawn: credit ? credit.clientWidth > 0 : false,
+        creditText: credit ? credit.textContent.trim() : null,
+        creditSize: cc?.fontSize ?? null,
+        creditUnderPicture: credit && frame ? Math.round(box(frame).bottom) <= Math.round(box(credit).top) : false,
+        creditOverName: credit && name ? Math.round(box(credit).bottom) <= Math.round(box(name).top) : false,
+        ledeLines: lede ? Math.round(box(lede).height / parseFloat(lc.lineHeight)) : null,
+        ledeClamped: lede ? lede.scrollHeight > lede.clientHeight : false,
+        hymnSize: cs(hymn)?.fontSize ?? null,
+        hymnStyle: cs(hymn)?.fontStyle ?? null,
+      };
+    });
+
+  const desktop = await read();
+  expect(desktop.sizes, 'premise: the three tokens are no longer the mockup’s sizes').toEqual({
+    xs: '12px',
+    lg: '17px',
+    lede: '19px',
+  });
+
+  // 17: the hymn is sung, not read — the mockup's 19 px italic.
+  expect(desktop.hymnSize, 'the hymn is not at --text-lede').toBe(desktop.sizes.lede);
+  expect(desktop.hymnStyle, 'the hymn is not italic').toBe('italic');
+
+  // N2: six lines of the life, as the mockup shows, and actually clamped.
+  expect(desktop.ledeLines, 'the preview is not six lines deep').toBe(6);
+  expect(desktop.ledeClamped, 'premise: this life is shorter than the clamp').toBe(true);
+
+  // N3: the credit, under the picture and over the name, in the same 12 px
+  // utility voice Daily's column-2 credit takes.
+  expect(desktop.creditDrawn, 'the picture has no credit line').toBe(true);
+  expect(desktop.creditText, 'the credit line is empty').not.toBe('');
+  expect(desktop.creditSize, 'the credit is not at --text-2xs').toBe(desktop.sizes.xs);
+  expect(desktop.creditUnderPicture, 'the credit is not under the picture').toBe(true);
+  expect(desktop.creditOverName, 'the credit is not over the name').toBe(true);
+
+  /*
+   * And the phone keeps what it had. Same saint — the page is not reloaded, so
+   * nothing is re-sourced; only the width changes.
+   */
+  await phone(page);
+  await expect(page.locator('.hy-saint')).toBeVisible();
+  const small = await read();
+  expect(small.hymnSize, 'the phone’s hymn left the reading voice').toBe(small.sizes.lg);
+  expect(small.hymnStyle, 'the phone’s hymn was set in italic').toBe('normal');
+  expect(small.ledeLines, 'the phone’s preview changed depth').toBe(4);
+  expect(small.creditDrawn, 'the phone grew a credit line').toBe(false);
 });
 
 /**
