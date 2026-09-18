@@ -4463,12 +4463,6 @@ a.name-day:hover {
   }
 
   /*
-   * **Life, Hymns, Writings under the picture** (`../mockup-review/REVIEW.md`
-   * finding 6): the mockup's `.toc`, a list over one rule, the section being
-   * read marked by the rubric at its edge and one the saint lacks in `--rule`.
-   * The bar hangs in the column's own padding, so the words keep its edge.
-   */
-  /*
    * **The clip box makes room for the bar that hangs into the margin**
    * (`../mockup-review/REVIEW-2.md` N1): the rubric marker is the tab's own `border-left`,
    * pulled `--space-3` left of the words so the words keep the picture's edge
@@ -4492,6 +4486,12 @@ a.name-day:hover {
     inset-inline-start: var(--space-3);
   }
 
+  /*
+   * **Life, Hymns, Writings under the picture** (`../mockup-review/REVIEW.md`
+   * finding 6): the mockup's `.toc`, a list over one rule, the section being
+   * read marked by the rubric at its edge and one the saint lacks in `--rule`.
+   * The bar hangs in the column's own padding, so the words keep its edge.
+   */
   html[data-route~='calendar'] .cal-saint .read-tabs {
     display: flex;
     flex-direction: column;
