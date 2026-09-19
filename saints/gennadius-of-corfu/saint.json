@@ -1,0 +1,66 @@
+{
+  "slug": "gennadius-of-corfu",
+  "display_name": "Gennadius of Corfu",
+  "names": [
+    {
+      "form": "Ghenadie din Corfu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromonk",
+    "wonderworker"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1805,
+      "latest": 1805,
+      "display": "1805",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Născut în 1805, a fost unul dintre cei șapte copii ai lui Atanasie și Elisabeta»."
+    },
+    "death": {
+      "earliest": 1859,
+      "latest": 1859,
+      "display": "1859",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Părintele Ghenadie s-a odihnit în pace la 2 ianuarie 1859, la vârsta de 54 de ani»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 2 ianuarie — «Sfântul Ghenadie din Corfu»",
+        "url": "https://doxologia.ro/2-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

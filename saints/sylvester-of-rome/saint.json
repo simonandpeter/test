@@ -1,0 +1,60 @@
+{
+  "slug": "sylvester-of-rome",
+  "display_name": "Sylvester of Rome",
+  "office": "Bishop of Rome",
+  "names": [
+    {
+      "form": "Silvestru",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 314,
+      "latest": 335,
+      "display": "314–335",
+      "basis": "traditional",
+      "note": "doxologia.ro: «În episcopie a petrecut 23 de ani și 10 luni (314-335)». The page gives no year of birth and none of death; this is the episcopate it states."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 2 ianuarie — «Sfântul Ierarh Silvestru, Episcopul Romei»",
+        "url": "https://doxologia.ro/2-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -216,9 +216,12 @@ test('the feast-month filter reckons each tradition in its own calendar', async 
   // civil one, which is precisely what "reckons each tradition in its own
   // calendar" is asserting.
   //
-  // Seven since the Romanian 1 January: Emilia, mother of Basil the Great,
-  // whom doxologia.ro keeps on the day with her son.
-  await expect(page.locator('[data-count]')).toHaveText('7');
+  // The Romanian year run moves this number a day at a time — every saint
+  // doxologia.ro keeps in January is a feast in the Romanian church's own
+  // January — and `scripts/corpus-gate.mjs` carries the same literal, so the
+  // gate goes red on the batch that moves it and both are changed in that
+  // batch's commit.
+  await expect(page.locator('[data-count]')).toHaveText('12');
   await expect(page.locator('.index-name', { hasText: 'Anthony the Great' })).toHaveCount(1);
 });
 

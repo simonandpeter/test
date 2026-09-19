@@ -767,6 +767,7 @@ export const sr = {
     'Bishop of Nicomedia': 'Епископ никомидијски',
     'Bishop of Penza': 'Епископ пензански',
     'Bishop of Roman': 'Епископ романски',
+    'Bishop of Rome': 'Епископ римски',
     'Bishop of Sardis': 'Епископ сардски',
     'Bishop of Selenginsk': 'Епископ селенгински',
     'Bishop of Shlisselburg': 'Епископ шлиселбуршки',

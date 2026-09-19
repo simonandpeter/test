@@ -1,0 +1,66 @@
+{
+  "slug": "seraphim-of-sarov",
+  "display_name": "Seraphim of Sarov",
+  "names": [
+    {
+      "form": "Serafim de Sarov",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1759,
+      "latest": 1759,
+      "display": "1759",
+      "basis": "traditional",
+      "note": "doxologia.ro: «s-a înălțat ca un astru deasupra pământului rusesc la 19 iulie 1759»."
+    },
+    "death": {
+      "earliest": 1833,
+      "latest": 1833,
+      "display": "1833",
+      "basis": "traditional",
+      "note": "doxologia.ro: «La 1 ianuarie 1833… își dădu duhul în mâinile lui Dumnezeu chiar în aceeași noapte»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 2 ianuarie — «Sfântul Cuvios Serafim de Sarov»",
+        "url": "https://doxologia.ro/2-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

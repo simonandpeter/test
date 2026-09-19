@@ -766,6 +766,7 @@ export const el = {
     'Bishop of Nicomedia': 'Επίσκοπος Νικομηδείας',
     'Bishop of Penza': 'Επίσκοπος Πένζα',
     'Bishop of Roman': 'Επίσκοπος Ρομάν',
+    'Bishop of Rome': 'Επίσκοπος Ρώμης',
     'Bishop of Sardis': 'Επίσκοπος Σάρδεων',
     'Bishop of Selenginsk': 'Επίσκοπος Σελεγκίνσκ',
     'Bishop of Shlisselburg': 'Επίσκοπος Σλίσελμπουργκ',
