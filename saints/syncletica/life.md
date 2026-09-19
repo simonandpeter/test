@@ -1,0 +1,11 @@
+# Syncletica
+
+Syncletica was of Macedonia by descent. Her forebears, hearing of the love of God and the faith in Christ that had spread in the city of the Alexandrians, went there; and arriving they found the deeds greater than the report, and were received with a friendly love. They took their joy not in the multitude of the people nor in the greatness of the houses, but in the faith and the true love, which were less in their own country.
+
+She was not only of a famous family but adorned besides with the other qualities that are counted in this life as making it pleasant. She had a sister and two brothers of one mind with her, who also lived honourably. One of the brothers died while still a child; the other, coming to twenty-five, was urged by his parents to marry, and with all the wedding prepared and the customary things done the young man flew like a bird out of the snare, taking in place of the earthly bride the spotless assembly of the saints.
+
+Her sister, still in her parents' arms, adorned her soul with the love of God and gave the body no more care than nature required. Syncletica herself was pure and very beautiful, and many suitors came for her, drawn by her dowry, by her parents' family and by her beauty. Her parents pressed her towards marriage so that their line should not die out; she would not agree, but the more she heard of an earthly wedding the more she looked to the divine one, and passing over many suitors she turned her eye to the heavenly Bridegroom.
+
+She was a true disciple of the blessed Thecla, the life says, following her in her lessons; for Christ was the betrothed of them both and the same Paul was the bringer of the Bridegroom to them both, and she knew no road in the city but the road to the church. Of her ascetic life the same page says that she surpassed in her good beginnings even those who had the habit of the monastic life, and that when she meant to do good she took care to hide it — not for praise, but being strengthened by the heavenly gift, having in mind the divine word that the left hand should not know what the right hand does. Doxologia.ro gives her no year.
+
+*After doxologia.ro's calendar for 5 ianuarie — [the day](https://doxologia.ro/5-ianuarie) and [the life](https://doxologia.ro/viata-sfintei-cuvioase-sinclitichia); read 19 September 2026.*

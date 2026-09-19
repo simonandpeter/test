@@ -1,0 +1,9 @@
+# Theopemptus of Nicomedia
+
+In the first year of the persecution he raised against the Christians, the emperor Diocletian (284-305) came from Rome into the city of Nicomedia, made many idols there and worshipped them; and a few days later Theopemptus, the man of God and bishop, was seized before the city and brought before him. He told the emperor that the idols of silver and gold and wood and stone he worshipped were no gods, for they can neither breathe nor speak nor do anything good or ill, and that the heavenly and almighty God made heaven, earth and sea and all that is in them.
+
+The emperor, vexed, told him to stop his many words and sacrifice to the god Apollo. Theopemptus answered that he would never sacrifice to such gods and would not fear his torments, for it is written: fear not those who kill the body and cannot kill the soul; and that having power over his body the emperor might do what he liked. He was ordered burnt alive in a furnace. The soldiers heated it from morning till noon, and the bishop asked them to stop a little, saying he would show the power of the Lord his God for whose holy name the furnace was heated to destroy him; then he threw himself in and sat down in the middle of it, and they went away supposing he would burn at once. At midnight he came out.
+
+Then the magician [Theonas](/saints/theonas-called-synesius) was brought to undo what he called the Christians' spells, and was converted by what he could not undo, falling at the bishop's feet and saying that he was a Christian. In the prison Theopemptus taught him the faith, named him Synesius, which is to say full of understanding, and baptised him there. The two of them, the page says, finished their martyr's contest under the emperor Diocletian at Nicomedia.
+
+*After doxologia.ro's calendar for 5 ianuarie — [the day](https://doxologia.ro/5-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-teopempt); read 19 September 2026.*

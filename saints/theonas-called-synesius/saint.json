@@ -1,0 +1,61 @@
+{
+  "slug": "theonas-called-synesius",
+  "display_name": "Theonas, called Synesius",
+  "names": [
+    {
+      "form": "Teonas",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "theopemptus-of-nicomedia"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "284–305",
+      "basis": "traditional",
+      "note": "doxologia.ro gives no year, only the reign: «Împăratul Dioclețian (284-305), în anul întâi al prigonirii ce s-a făcut de dânsul asupra creștinilor». The interval is that reign."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 5 ianuarie — «Sfântul Mucenic Teonas»",
+        "url": "https://doxologia.ro/5-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

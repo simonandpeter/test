@@ -1,0 +1,50 @@
+{
+  "slug": "syncletica",
+  "display_name": "Syncletica",
+  "names": [
+    {
+      "form": "Sinclitichia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 ianuarie."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 5 ianuarie — «Sfânta Cuvioasă Sinclitichia»",
+        "url": "https://doxologia.ro/5-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
