@@ -768,6 +768,7 @@ export const sr = {
     'Bishop of Narva': 'Епископ нарвски',
     'Bishop of Nicaea': 'Епископ никејски',
     'Bishop of Nicomedia': 'Епископ никомидијски',
+    'Bishop of Nisibis': 'Епископ низибијски',
     'Bishop of Nyssa': 'Епископ нисијски',
     'Bishop of Penza': 'Епископ пензански',
     'Bishop of Roman': 'Епископ романски',

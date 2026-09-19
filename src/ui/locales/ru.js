@@ -785,6 +785,7 @@ export const ru = {
     'Bishop of Narva': 'Епископ Нарвский',
     'Bishop of Nicaea': 'Епископ Никейский',
     'Bishop of Nicomedia': 'Епископ Никомидийский',
+    'Bishop of Nisibis': 'Епископ Низибийский',
     'Bishop of Nyssa': 'Епископ Нисский',
     'Bishop of Penza': 'Епископ Пензенский',
     'Bishop of Roman': 'Епископ Романский',

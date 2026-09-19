@@ -1,0 +1,65 @@
+{
+  "slug": "hilary-of-poitiers",
+  "display_name": "Hilary of Poitiers",
+  "names": [
+    {
+      "form": "Ilarie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 ianuarie, «Sfântul Ilarie de Poitiers»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "theologian"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 300,
+      "latest": 300,
+      "display": "300",
+      "basis": "traditional",
+      "note": "doxologia.ro's note on his page: «Sfântul Ilarie (300-368)»."
+    },
+    "death": {
+      "earliest": 368,
+      "latest": 368,
+      "display": "368",
+      "basis": "traditional",
+      "note": "doxologia.ro's note on his page: «Sfântul Ilarie (300-368)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 13 ianuarie — «Sfântul Ilarie de Poitiers»",
+        "url": "https://doxologia.ro/13-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 13 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

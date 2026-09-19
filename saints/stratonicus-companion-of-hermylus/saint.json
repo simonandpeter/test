@@ -1,0 +1,106 @@
+{
+  "slug": "stratonicus-companion-of-hermylus",
+  "display_name": "Stratonicus, companion of Hermylus",
+  "names": [
+    {
+      "form": "Stratonic",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 ianuarie, «Sfântul Mucenic Stratonic»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "hermylus"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 307,
+      "latest": 324,
+      "display": "307–324",
+      "basis": "traditional",
+      "note": "doxologia.ro's life sets the passion in the reign it dates «Împărăţind Liciniu păgânul (307-324)»; it gives no year of its own."
+    }
+  },
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "the Danube at Singidunum",
+      "modern_name": "Belgrade, Serbia",
+      "lat": 44.8206,
+      "lon": 20.4622,
+      "uncertainty_km": 15,
+      "note": "doxologia.ro's life: he was drowned in the Danube with Hermylus, and the bodies were buried «ca la 18 stadii departe de cetatea Singhidon (Belgrad)»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 13 ianuarie — «Sfântul Mucenic Stratonic»",
+        "url": "https://doxologia.ro/13-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 13 Ιανουαρίου (19 September 2026). The corpus already holds a folder `stratonicus` for a «Άγιος Στρατόνικος» whom saint.gr keeps on 30 Σεπτεμβρίου and whose synaxarion says he was martyred by the sword; that is a different day and a different death from this one, and the two were not merged."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nestricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Mucenici Ermil şi Stratonic",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-ermil-stratonic",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contest received the crowns of incorruption from Thee, our God; for having Thy strength they cast down the tyrants and broke also the feeble boldness of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "De zbuciumul cel lumesc aţi fugit şi la limanul cel lin v-aţi mutat, prin sângiurile muceniciei; şi cu ostenelile pustniciei v-aţi încununat. Pentru aceasta v-aţi şi arătat cu mucenicii şi cuvioşii împreună locuitori.",
+      "source": {
+        "text": "Doxologia — Condacul Sfinţilor Mucenici Ermil şi Stratonic; printed to the melody «Căutând cele de sus...»",
+        "url": "https://doxologia.ro/condacul-sfintilor-mucenici-ermil-stratonic",
+        "year": 2026
+      },
+      "english": {
+        "text": "You fled the tumult of the world and passed over to the quiet haven through the blood of martyrdom; and you were crowned with the labours of the hermit's life. Therefore you were shown to be fellow dwellers with the martyrs and with the venerable ones.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

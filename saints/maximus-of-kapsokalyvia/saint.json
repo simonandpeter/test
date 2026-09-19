@@ -1,0 +1,97 @@
+{
+  "slug": "maximus-of-kapsokalyvia",
+  "display_name": "Maximus of Kapsokalyvia",
+  "names": [
+    {
+      "form": "Maxim Kavsokalivitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 ianuarie, «Sfântul Cuvios Maxim Kavsokalivitul»."
+    },
+    {
+      "form": "Manuil",
+      "lang": "ro",
+      "note": "His baptismal name, as doxologia.ro's life gives it: «pe care din Sfântul Botez l-au numit Manuil»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "fool-for-christ"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1320,
+      "latest": 1320,
+      "display": "1320",
+      "basis": "traditional",
+      "note": "doxologia.ro's life opens «Cuviosul părinte Maxim, care a trăit la anul 1320»; it gives no year of birth or death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 13 ianuarie — «Sfântul Cuvios Maxim Kavsokalivitul»",
+        "url": "https://doxologia.ro/13-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 13 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Darul rugăciunii minţii primind de la Dătătoarea milostivirii,\nAi purtat în cămara inimii pe Focul Cel nestins al iubirii,\nSfinţit de roua Duhului, ai alergat pe pajiştea rugăciunii,\nŞi îmbrăcându-te cu smerenia, ai aflat plata nepătimirii,\nPărinte Cuvioase Maxim, ca unul ce stai înaintea Treimii,\nRoagă-te să ne luminăm noi cu darul înţelepciunii.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Maxim Kavsokalivitul; the page prints no glas",
+        "url": "https://doxologia.ro/troparul-sfantului-maxim-kavsokalivitul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Receiving the gift of the prayer of the mind from her who gives mercy, thou didst carry in the chamber of the heart the unquenched Fire of love; hallowed by the dew of the Spirit thou didst run in the meadow of prayer, and clothing thyself in humility thou didst find the wage of dispassion. Venerable Father Maximus, as one who stands before the Trinity, pray that we too may be enlightened with the gift of wisdom.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "text": "În curgerile lacrimilor tale ai înecat pe vrăjmaşul mântuirii,\nŞi ai alergat cu dor spre lăcaşurile sfinţite ale Treimii,\nVăzând cuvioase, în oglinda Duhului tainele dumnezeieşti,\nTe-ai făcut luminător lumii şi stâlp al credinţei creştineşti.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Maxim Kavsokalivitul; the page prints no glas",
+        "url": "https://doxologia.ro/condacul-sfantului-maxim-kavsokalivitul",
+        "year": 2026
+      },
+      "english": {
+        "text": "In the streams of thy tears thou didst drown the enemy of salvation, and thou didst run with longing towards the hallowed dwellings of the Trinity; seeing, venerable one, the divine mysteries in the mirror of the Spirit, thou wast made a light to the world and a pillar of the Christian faith.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
