@@ -1,0 +1,63 @@
+{
+  "slug": "eleusippus",
+  "display_name": "Eleusippus",
+  "names": [
+    {
+      "form": "Elasip",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "speusippus",
+    "meleusippus",
+    "neonilla"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 161,
+      "latest": 180,
+      "display": "161–180",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Deci, s-au întâmplat acestea în vremea împărăției lui MarcusAelius Aurelius Verus (161-180), care se numea și Antoninus, în 16 zile ale lunii ianuarie.» The reign is what the page gives; it names no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 16 ianuarie — «Sfântul Mucenic Elasip»",
+        "url": "https://doxologia.ro/16-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,9 @@
+# Meleusippus
+
+Meleusippus was the third of three brothers born at a single birth in the city doxologia.ro's life calls Lingonia, in Gaul, brought up by their grandmother [Neonilla](/saints/neonilla) after their father's death. The brothers had learned the liberal arts and served the idols of their house until the presbyter Benignus, sent into Gaul from Smyrna by Polycarp, came to their grandmother and taught them with her; each of the three then told a vision of the night before.
+
+Meleusippus said he had seen a great king holding a sceptre, who enrolled the three together in his own army and girded them with a soldier's belt; who redeemed them at a great price out of the bonds of slavery and wrote them eternal liberty in letters of gold, saying that he had meant to set the three brothers in his palace and crown them, because their grandmother prayed to him night and day for them. Benignus baptised them, and they broke the idol of Nemesis and twelve more in their own house.
+
+When the judges struck [Speusippus](/saints/speusippus) and [Eleusippus](/saints/eleusippus) and not him, Meleusippus cried out to know why he was denied the same kindness. Hung with his brothers from a beam, he said that the Lord had been nailed to the Cross for our redemption, and that the tree which bore three martyrs was a blessed fruit offered to the Trinity; threatened with burning, he answered that they would be the more blessed if fire tried them and they passed out of darkness to the light that is not quenched. The three came out of the fire unharmed, and then knelt and gave up their souls.
+
+*After doxologia.ro's calendar for 16 ianuarie — [the day](https://doxologia.ro/16-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-pevsip); read 19 September 2026.*
