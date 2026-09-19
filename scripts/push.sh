@@ -51,7 +51,22 @@ SHA="$(git rev-parse HEAD)"
 echo "pushing ${SHA:0:8} $(git log -1 --format=%s | cut -c1-60)"
 
 # The token goes in the URL and never in the output.
-git push "https://${PAT}@github.com/simonandpeter/test.git" main 2>&1 \
+#
+# **The token is the password, and the account name is the user.**
+# `https://<token>@github.com/…` gives git a username and no password, so git
+# goes looking for one: with a credential helper and a terminal that is a
+# prompt nobody sees, and without either -- which is this session, 2026-09-19 --
+# it is `could not read Password for 'https://***@github.com'` and a push that
+# never left the desk, with nine commits behind it. `x-access-token:<token>` is
+# the GitHub *App* form and this is a classic PAT: it reads a public repo,
+# because anonymous does, and is refused on push with "Invalid username or
+# token". The account name is in the token file beside the token, and
+# `simonandpeter:<token>` is what GitHub accepts.
+#
+# `GIT_TERMINAL_PROMPT=0` and an emptied helper make a bad token fail in a
+# second rather than block on a prompt nobody can answer.
+GIT_TERMINAL_PROMPT=0 git -c credential.helper= \
+  push "https://simonandpeter:${PAT}@github.com/simonandpeter/test.git" main 2>&1 \
   | sed "s/${PAT}/***/g" | tail -3
 PUSH_RC=${PIPESTATUS[0]}
 git remote set-url origin "$REMOTE_URL"
