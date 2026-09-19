@@ -1,0 +1,66 @@
+{
+  "slug": "genevieve-of-paris",
+  "display_name": "Genevieve of Paris",
+  "names": [
+    {
+      "form": "Genoveva",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 ianuarie."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 422,
+      "latest": 422,
+      "display": "c. 422",
+      "basis": "traditional",
+      "note": "doxologia.ro: «s-a născut din părinți bogați în Galia… în satul Nanterre, lângă Paris, în jurul anului 422» — „around the year 422”."
+    },
+    "death": {
+      "earliest": 512,
+      "latest": 512,
+      "display": "probably 512",
+      "basis": "traditional",
+      "note": "doxologia.ro: «a trecut la cele veșnice în ziua de 3 ianuarie, cel mai probabil în anul 512, la vârsta de optzeci și nouă de ani» — „most probably”."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 3 ianuarie — «Sfânta Cuvioasă Genoveva, ocrotitoarea Parisului»",
+        "url": "https://doxologia.ro/3-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

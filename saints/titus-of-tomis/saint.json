@@ -1,0 +1,51 @@
+{
+  "slug": "titus-of-tomis",
+  "display_name": "Titus of Tomis",
+  "office": "Bishop of Tomis",
+  "names": [
+    {
+      "form": "Tit",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 3 ianuarie — «Sfântul Mucenic Tit, episcopul Tomisului»",
+        "url": "https://doxologia.ro/3-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,11 @@
+# Gordius of Caesarea
+
+Gordius was of the city of Caesarea, born of Christian parents and brought up in the right faith. Come to his full age he was called to the army and was a centurion, for he surpassed other men both in the body's strength and in the soul's courage. In that time Licinius, emperor of Rome (307-324), poured out the poison of tyranny upon the Christians and lifted his hand against God and the Church of Christ.
+
+Orders and imperial letters went out everywhere, into every market and every noted place, that men should not worship Christ, and whoever went against the command was to die. Idols of stone and wood were set before the people, and those who would not bow were forced with torments. The life doxologia.ro prints describes the city in that trouble: the goods of Christians plundered and the houses of the faithful laid waste, the prisons full and the rich houses emptied of their people, father giving up son and brother rising against brother, the houses of prayer pulled down by unclean hands and the holy altars overturned.
+
+Seeing such a danger, Gordius chose exile of his own will. He threw off the soldier's belt and the glory of his life and everything that pleases men who love the world and its delights, choosing rather to live with the beasts in the desert and in untrodden places than among the worshippers of idols — following in this, the life says, the prophet Elias, who on seeing the idolatry of Sidon fled to Mount Horeb and went into the cave, seeking to see God.
+
+He came back to the city and confessed Christ, and to those who urged him to deny God with his mouth he answered: why should I buy a passing life with the life that is everlasting and lose my soul? Learn, he told them, good understanding and the truth, and cast away the lie. Saying this and signing himself with the cross he went to his death without fear in his soul, his bright face unchanged, and looked on the executioner who waited for him as on an angel into whose hands he wished to give his soul. He was beheaded.
+
+*After doxologia.ro's calendar for 3 ianuarie — [the day](https://doxologia.ro/3-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-gordie); read 19 September 2026.*
