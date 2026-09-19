@@ -1,0 +1,61 @@
+{
+  "slug": "bassus-companion-of-eusebius",
+  "display_name": "Bassus, companion of Eusebius",
+  "names": [
+    {
+      "form": "Vas",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "eusebius-companion-of-bassus"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Aceşti sfinţi mucenici, au trăit pe vremea împăratului Diocleţian.» The page gives the emperor and no year; the bounds are the reign of Diocletian, which the page does not date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 ianuarie — «Sfântul Mucenic Vas»",
+        "url": "https://doxologia.ro/20-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "slug": "laurence-of-chernigov",
+  "display_name": "Laurence of Chernigov",
+  "names": [
+    {
+      "form": "Lavrentie de Cernigov",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromonk",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1868,
+      "latest": 1868,
+      "display": "1868",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Sfântul Lavrentie din Cernigov – după numele său de botez, Luca Evseevici Proscura – s-a născut în anul 1868, în localitatea rusească Karilsk, din regiunea Cernigov.»"
+    },
+    "death": {
+      "earliest": 1950,
+      "latest": 1950,
+      "display": "1950",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Sfântul Cuvios Lavrentie de Cernigov a adormit întru Domnul în anul 1950, în ziua Botezului Domnului, la ora 10.30» — on the day of the Theophany, the page says, and it gives no civil date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 ianuarie — «Sfântul Lavrentie de Cernigov»",
+        "url": "https://doxologia.ro/20-ianuarie",
+        "year": 2026
+      },
+      "note": "The calendar keeps him on 20 ianuarie; the life on the same site says he died on the day of the Theophany, 1950."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

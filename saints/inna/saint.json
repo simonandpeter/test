@@ -1,0 +1,54 @@
+{
+  "slug": "inna",
+  "display_name": "Inna",
+  "names": [
+    {
+      "form": "In",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 ianuarie, «Sfinții Mucenici In, Pin și Rim»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "pinna",
+    "rimma"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 ianuarie — «Sfinții Mucenici In, Pin și Rim»",
+        "url": "https://doxologia.ro/20-ianuarie",
+        "year": 2026
+      },
+      "note": "The hymn-page heading for the three marks the day ✝."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

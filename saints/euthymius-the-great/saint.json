@@ -1,0 +1,95 @@
+{
+  "slug": "euthymius-the-great",
+  "display_name": "Euthymius the Great",
+  "names": [
+    {
+      "form": "Eftimie cel Mare",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "monk",
+    "hermit",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 367,
+      "latest": 383,
+      "display": "367–383",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «El s-a născut, precum am aflat, în luna august, în anul al patrulea al stăpânirii lui Grațian (367-383).» The page gives the reign and not a year; the interval is the reign as it prints it."
+    }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Veseleşte-te pustiu care nu rodeai, bucură-te ceea ce nu aveai durere; că bărbatul doririlor Duhului ţi-a înmulţit ţie fii, sădindu-i cu dreapta cinstire de Dumnezeu şi hrănindu-i cu înfrânarea, spre împlinirea faptelor bune. Cu ale cărui rugăciuni, Hristoase Dumnezeule, mântuieşte sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Eftimie cel Mare, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-eftimie-cel-mare",
+        "year": 2026
+      },
+      "english": {
+        "text": "Be glad, O barren wilderness; rejoice, thou that hadst no pangs: for the man of the Spirit's desires has multiplied children for thee, planting them in the right worship of God and feeding them with abstinence unto the fulfilling of every virtue. By his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "model": "Ca nişte pârgă a firii...",
+      "text": "Întru cinstita naşterea ta, făptura a aflat veselie; şi întru Dumnezeiasca pomenirea ta, cuvioase, bucurie a primit de pe urma multelor tale minuni; din care dai destul şi sufletelor noastre şi ne curăţeşte de spurcăciunea păcatelor, ca să cântăm: Aliluia.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Eftimie cel Mare, Glasul 8, «Ca nişte pârgă a firii...»",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-eftimie-cel-mare",
+        "year": 2026
+      },
+      "english": {
+        "text": "At thy honoured birth creation found gladness, and at thy divine memorial, O venerable one, it received joy from thy many wonders; give of them abundantly to our souls also, and cleanse us from the defilement of our sins, that we may sing: Alleluia.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 ianuarie — «Sfântul Cuvios Eftimie cel Mare»",
+        "url": "https://doxologia.ro/20-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
