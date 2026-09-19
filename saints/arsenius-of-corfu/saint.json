@@ -1,0 +1,67 @@
+{
+  "slug": "arsenius-of-corfu",
+  "display_name": "Arsenius of Corfu",
+  "office": "Archbishop of Corfu",
+  "names": [
+    {
+      "form": "Arsenie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 ianuarie, «Sfântul Ierarh Arsenie, Arhiepiscop de Corfu»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 876,
+      "latest": 876,
+      "display": "876",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Acest bărbat cuvios s-a născut în anul 876, în vremea domniei împăratului Vasile Macedoneanul (867-886), în cetatea Ierusalim, din Palestina.»"
+    },
+    "death": {
+      "earliest": 953,
+      "latest": 953,
+      "display": "19 January 953",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «s-a îmbolnăvit lângă Skyros și a adormit lângă Corint pe 19 ianuarie 953», at seventy-seven."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 ianuarie — «Sfântul Ierarh Arsenie, Arhiepiscop de Corfu»",
+        "url": "https://doxologia.ro/19-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "slug": "macarius-of-alexandria",
+  "display_name": "Macarius of Alexandria",
+  "names": [
+    {
+      "form": "Macarie Alexandrinul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "monk",
+    "presbyter"
+  ],
+  "related": [
+    "anthony-the-great"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Locuitor pustiului, înger în trup şi de minuni făcător te-ai arătat, purtătorule de Dumnezeu, Părintele nostru Macarie. Cu postul, cu privegherea şi prin rugăciune primind daruri cereşti, tămăduieşti pe cei bolnavi şi sufletele celor ce aleargă la tine cu credinţă. Slavă Celui Ce ţi-a dat ţie putere; Slavă Celui Ce te-a încununat pe tine; Slavă Celui Ce lucrează prin tine tuturor tămăduiri.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Macarie Alexandrinul, Glasul 1. The site prints the same troparion under both Macarii of 19 ianuarie.",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-macarie-alexandrinul",
+        "year": 2026
+      },
+      "english": {
+        "text": "A dweller of the wilderness, an angel in the body and a worker of wonders wast thou shown to be, O God-bearing Macarius our father. Receiving heavenly gifts by fasting, by vigil and by prayer, thou healest the sick and the souls of those who run to thee in faith. Glory to him who gave thee strength; glory to him who crowned thee; glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "model": "Arătatu-Te-ai astăzi...",
+      "text": "În casa înfrânării Domnul te-a aşezat, cu adevărat, ca pe o stea nerătăcitoare, luminând marginile, părinte al părinţilor, Sfinte Macarie, Preacuvioase.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Macarie Alexandrinul, Glasul 4, «Arătatu-Te-ai astăzi...»",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-macarie-alexandrinul",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Lord has set thee truly in the house of abstinence as a star that does not wander, lighting the ends of the earth, O father of fathers, most venerable Saint Macarius.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 ianuarie — «Sfântul Cuvios Macarie Alexandrinul»",
+        "url": "https://doxologia.ro/19-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

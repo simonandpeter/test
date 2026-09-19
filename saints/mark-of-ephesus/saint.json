@@ -1,0 +1,69 @@
+{
+  "slug": "mark-of-ephesus",
+  "display_name": "Mark of Ephesus",
+  "office": "Metropolitan of Ephesus",
+  "names": [
+    {
+      "form": "Marcu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 ianuarie, «Sfântul Ierarh Marcu, Mitropolitul Efesului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan",
+    "confessor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1392,
+      "latest": 1392,
+      "display": "1392",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Părintele nostru între sfinți Marcu Eugenicul (1392-1444), mitropolitul Efesului, s-a născut Manuel, din Gheorghe și Maria... în Constantinopol»."
+    },
+    "death": {
+      "earliest": 1444,
+      "latest": 1444,
+      "display": "23 June 1444",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «şi-a dat viteazul și sfântul său suflet... în ziua de 23 iunie 1444, în casa părintească din Galata Constantinopolului, la vârsta de 52 de ani»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 ianuarie — «Sfântul Ierarh Marcu, Mitropolitul Efesului»",
+        "url": "https://doxologia.ro/19-ianuarie",
+        "year": 2026
+      },
+      "note": "The calendar keeps him on 19 ianuarie; the life on the same site gives 23 June 1444 as the day of his repose."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

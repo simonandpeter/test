@@ -1,0 +1,9 @@
+# Anthony of Martkopi
+
+Anthony of Martkopi came to Georgia in the sixth century with the rest of the thirteen Assyrian Fathers and settled in Kakheti to preach the Gospel of Christ. He carried always with him an icon of the Saviour «not made by human hands». He withdrew into the wilderness, and the does came to him every evening to feed him with their milk.
+
+One day the does arrived earlier than he expected; something had happened, something had frightened them. Following their tracks, Anthony came upon a nobleman hunting nearby, who was astonished to find him among the does carrying the icon, and, being a pagan, thought him a threat and ordered his servants to take him to a smith to have his hands cut off. As the smith made ready to sever them he suddenly fell, and his arms went stiff as wood; seeing it, Anthony made the sign of the Cross over him and the smith was healed.
+
+Hearing of the miracle, the nobleman understood that Father Anthony was truly a saint and told him to name what he needed, and he would give it. The monk asked for a single piece of salt, and they brought him two great blocks; he broke off a small piece and set it beside his cell for the does. After the affair with the smith many began to visit him, and he built a monastery for the faithful; and when the crowds grew he decided to withdraw to a mountain top, where he began to preach from the top of a pillar and remained fifteen years. God revealed to him the day of his departure from this world: he gathered his disciples, gave them his last words of wisdom, blessed them, and died on his knees before his beloved icon. His body was taken down from the pillar and buried in the monastery he had founded, before the icon of the Mother of God.
+
+*After doxologia.ro's calendar for 19 ianuarie — [the day](https://doxologia.ro/19-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-antonie-stilitul-din-georgia); read 19 September 2026.*

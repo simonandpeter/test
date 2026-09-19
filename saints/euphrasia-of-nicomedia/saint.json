@@ -1,0 +1,59 @@
+{
+  "slug": "euphrasia-of-nicomedia",
+  "display_name": "Euphrasia of Nicomedia",
+  "names": [
+    {
+      "form": "Eufrasia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 ianuarie."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 305,
+      "display": "286–305",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Aceasta a fost din cetatea Nicomidia, în vremea împărăției lui Maximian (286-305)». The reign is what the page gives; it names no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 ianuarie — «Sfânta Muceniță Eufrasia»",
+        "url": "https://doxologia.ro/19-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

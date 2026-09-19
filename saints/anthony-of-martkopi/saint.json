@@ -1,0 +1,59 @@
+{
+  "slug": "anthony-of-martkopi",
+  "display_name": "Anthony of Martkopi",
+  "names": [
+    {
+      "form": "Antonie Stilitul din Georgia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 ianuarie; the life on the same site calls him «Sfântul Antonie de Martkopi»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "monk",
+    "stylite"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Sfântul Antonie de Martkopi a ajuns în Georgia în secolul al VI-lea împreună cu restul de treisprezece Părinți asirieni»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 ianuarie — «Sfântul Antonie Stilitul din Georgia»",
+        "url": "https://doxologia.ro/19-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

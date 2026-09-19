@@ -1,0 +1,89 @@
+{
+  "slug": "macarius-the-egyptian",
+  "display_name": "Macarius the Egyptian",
+  "names": [
+    {
+      "form": "Macarie Egipteanul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "monk",
+    "hermit",
+    "presbyter"
+  ],
+  "related": [
+    "anthony-the-great"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Locuitor pustiului, înger în trup şi de minuni făcător te-ai arătat, purtătorule de Dumnezeu, Părintele nostru Macarie. Cu postul, cu privegherea şi prin rugăciune primind daruri cereşti, tămăduieşti pe cei bolnavi şi sufletele celor ce aleargă la tine cu credinţă. Slavă Celui Ce ţi-a dat ţie putere; Slavă Celui Ce te-a încununat pe tine; Slavă Celui Ce lucrează prin tine tuturor tămăduiri.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Macarie Egipteanul, Glasul 1",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-macarie-egipteanul",
+        "year": 2026
+      },
+      "english": {
+        "text": "A dweller of the wilderness, an angel in the body and a worker of wonders wast thou shown to be, O God-bearing Macarius our father. Receiving heavenly gifts by fasting, by vigil and by prayer, thou healest the sick and the souls of those who run to thee in faith. Glory to him who gave thee strength; glory to him who crowned thee; glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "model": "Ceata îngerească...",
+      "text": "Viaţă fericită ducând în lume, te-ai învrednicit a te sălăşlui în pământul celor blânzi, împreună cu cetele fericiţilor, Sfinte Macarie, purtătorule de Dumnezeu; şi locuind în pustiu, ca într-o cetate, ai primit de la Dumnezeu harul minunilor. Pentru aceasta te cinstim.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Macarie Egipteanul, Glasul 1, «Ceata îngerească...»",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-macarie-egipteanul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Leading a blessed life in the world, thou wast counted worthy to dwell in the land of the meek with the ranks of the blessed, O God-bearing Saint Macarius; and dwelling in the wilderness as in a city, thou didst receive from God the grace of wonders. Therefore do we honour thee.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 ianuarie — «Sfântul Cuvios Macarie Egipteanul»",
+        "url": "https://doxologia.ro/19-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

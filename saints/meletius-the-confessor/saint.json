@@ -1,0 +1,66 @@
+{
+  "slug": "meletius-the-confessor",
+  "display_name": "Meletius the Confessor",
+  "names": [
+    {
+      "form": "Meletie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 ianuarie, «Sfântul Meletie Mărturisitorul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor",
+    "monk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1209,
+      "latest": 1209,
+      "display": "c. 1209",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «De obârșie din ținutul Mării Negre (în jurul anului 1209) și fiu al unui general celebru» — around 1209, the page says, and no closer."
+    },
+    "death": {
+      "earliest": 1286,
+      "latest": 1286,
+      "display": "1286",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Când și-a dat în cele din urmă duhul Domnului, chipul său strălucea mai mult decât soarele (1286).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 ianuarie — «Sfântul Meletie Mărturisitorul»",
+        "url": "https://doxologia.ro/19-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
