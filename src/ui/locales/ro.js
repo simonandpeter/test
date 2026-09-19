@@ -703,6 +703,7 @@ export const ro = {
     'Abbot of Kiziltash': 'Egumen de Kiziltaș',
     'Abbot of Melicucca': 'Egumen de Melicucca',
     'Abbot of Pelecete': 'Egumen de Pelechit',
+    'Abbot of Simonopetra': 'Egumen de Simonopetra',
     'Abbot of the St Simeon Monastery': 'Egumen al Mănăstirii Sfântul Simeon',
     'Apologist': 'Apologet',
     'Apostle of the Seventy': 'Apostol din cei Șaptezeci',

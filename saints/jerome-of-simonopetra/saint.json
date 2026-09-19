@@ -1,0 +1,67 @@
+{
+  "slug": "jerome-of-simonopetra",
+  "display_name": "Jerome of Simonopetra",
+  "office": "Abbot of Simonopetra",
+  "names": [
+    {
+      "form": "Ieronim Simonopetritul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1871,
+      "latest": 1871,
+      "display": "1871",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Cuviosul Ieronim, în lume Ioan Diakoghorghis, s-a născut în anul 1871, la Reiz-Dere din Asia Mică.»"
+    },
+    "death": {
+      "earliest": 1957,
+      "latest": 1957,
+      "display": "1957",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Douăzeci de ani mai târziu, pe 7 ianuarie 1957 (ajunul Sărbătorii Nașterii Domnului, după calendarul vechi), își dă ultima suflare, părăsind lumea aceasta.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 7 ianuarie — «Sfântul Cuvios Ieronim Simonopetritul»",
+        "url": "https://doxologia.ro/7-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

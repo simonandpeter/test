@@ -704,6 +704,7 @@ export const el = {
     'Abbot of Kiziltash': 'Ηγούμενος Κιζιλτάς',
     'Abbot of Melicucca': 'Ηγούμενος Μελικουκκά',
     'Abbot of Pelecete': 'Ηγούμενος Πελεκητής',
+    'Abbot of Simonopetra': 'Ηγούμενος Σιμωνόπετρας',
     'Abbot of the St Simeon Monastery': 'Ηγούμενος της Μονής Αγίου Συμεών',
     'Apologist': 'Απολογητής',
     'Apostle of the Seventy': 'Απόστολος εκ των Εβδομήκοντα',

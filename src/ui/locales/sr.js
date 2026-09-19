@@ -705,6 +705,7 @@ export const sr = {
     'Abbot of Kiziltash': 'Игуман кизилташки',
     'Abbot of Melicucca': 'Игуман Меликуке',
     'Abbot of Pelecete': 'Игуман пелекитски',
+    'Abbot of Simonopetra': 'Игуман Симонопетре',
     'Abbot of the St Simeon Monastery': 'Игуман манастира светог Симеона',
     'Apologist': 'Апологета',
     'Apostle of the Seventy': 'Апостол из Седамдесеторице',
