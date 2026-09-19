@@ -1,0 +1,49 @@
+{
+  "slug": "emilia-mother-of-basil-the-great",
+  "display_name": "Emilia, mother of Basil the Great",
+  "names": [
+    {
+      "form": "Emilia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 ianuarie."
+    }
+  ],
+  "sex": "female",
+  "related": [
+    "basil-the-great"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 1 ianuarie — «Sfânta Emilia, mama Sfântului Ierarh Vasile cel Mare»",
+        "url": "https://doxologia.ro/1-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

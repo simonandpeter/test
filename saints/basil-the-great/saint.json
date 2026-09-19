@@ -9,6 +9,11 @@
     {
       "form": "Βασίλειος ὁ Μέγας",
       "lang": "el"
+    },
+    {
+      "form": "Vasile cel Mare",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 ianuarie."
     }
   ],
   "sex": "male",
@@ -53,8 +58,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 1 ianuarie — «(✝) Sfântul Ierarh Vasile cel Mare, Arhiepiscopul Cezareei Capadociei»",
+        "url": "https://doxologia.ro/1-ianuarie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -70,5 +84,8 @@
   "historicity": "attested",
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "emilia-mother-of-basil-the-great"
+  ]
 }

@@ -102,12 +102,19 @@ Five `tile-diff` baselines exist. Do not re-shoot any of them.
   --widths=360,768 --themes=day,vigil --langs=en`, shot at `cd503dbc` with the
   N1/N4 rules backed out; after them all four compared identical.
 
-**The corpus run (`scratchpad/corpus-plan.md` §5) is in Phase B.** Civil
-20 September – 6 October is read for all four churches. **Civil 7 October is
-read for the Russian and Serbian only; the Greek and Romanian 7 October are
-next** (`day-candidates.mjs 2026-10-07` has been run; neither page has been
-read beyond what it printed).
-The Serbian list misses Prologue entries; read the page.
+**The Romanian year is the run in progress** — every saint doxologia.ro prints
+for all 366 days, then the Greek, the Russian and the Serbian. `../ro-run/BRIEF.md`
+is the whole briefing and binding. It splits the work: **readers** read the
+calendar and life pages and write drafts only, **one writer** owns the folders,
+the commits and the push. `.tmp/ro-cand/` holds the 366 day pages
+(`scripts/day-candidates.mjs`, cached), `.tmp/ro-drafts/MM-DD.json` a day's new
+folders and `up-MM-DD.json` its upgrades, `.tmp/ro-dupscan.mjs` every draft
+against every other and against the corpus, `.tmp/ro-namesweep.mjs` a draft
+against the corpus by name across Romanian and English. **Landed: 1 January.**
+A candidate file's menologion scan cannot see a saint the corpus keeps on
+another day — Juliana of Lazarevo is on the Romanian 2 January and in the corpus
+only on 11 August, for her relics — which is what the name sweep is for, and its
+rows are questions, not answers.
 
 Open identities, each written into the folders: whether the Greek 30 September's
 Two Women Martyrs are the two virgins the Romanian long life has die with

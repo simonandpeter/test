@@ -6,4 +6,6 @@ He was given the fullest education his age could offer, and his contemporaries d
 
 He died in 379. The liturgy that bears his name is served on his feast, and the Russian calendar keeps him on the day of the Circumcision of the Lord.
 
-*After the life printed by the Orthodox Church in America — [the entry](https://www.oca.org/saints/lives/2026/01/01/100003-saint-basil-the-great-archbishop-of-caesarea-in-cappadocia); the feast and the year are from the Moscow Patriarchate's calendar — [the day](https://days.pravoslavie.ru/Days/20260101.html); read 31 August 2026.*
+The Romanian calendar keeps him on 1 January as well, at the head of the day and marked with its cross, and it keeps his mother beside him: [Emilia](/saints/emilia-mother-of-basil-the-great) is named on the same page as «mama Sfântului Ierarh Vasile cel Mare».
+
+*After the life printed by the Orthodox Church in America — [the entry](https://www.oca.org/saints/lives/2026/01/01/100003-saint-basil-the-great-archbishop-of-caesarea-in-cappadocia); the feast and the year are from the Moscow Patriarchate's calendar — [the day](https://days.pravoslavie.ru/Days/20260101.html); read 31 August 2026; and doxologia.ro's calendar for 1 ianuarie — [the day](https://doxologia.ro/1-ianuarie), read 19 September 2026.*

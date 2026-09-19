@@ -215,7 +215,10 @@ test('the feast-month filter reckons each tradition in its own calendar', async 
   // this count on the strength of his own calendar's month rather than the
   // civil one, which is precisely what "reckons each tradition in its own
   // calendar" is asserting.
-  await expect(page.locator('[data-count]')).toHaveText('6');
+  //
+  // Seven since the Romanian 1 January: Emilia, mother of Basil the Great,
+  // whom doxologia.ro keeps on the day with her son.
+  await expect(page.locator('[data-count]')).toHaveText('7');
   await expect(page.locator('.index-name', { hasText: 'Anthony the Great' })).toHaveCount(1);
 });
 
