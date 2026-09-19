@@ -1,0 +1,94 @@
+{
+  "slug": "polyeuctus-of-melitene",
+  "display_name": "Polyeuctus of Melitene",
+  "names": [
+    {
+      "form": "Polieuct",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 259,
+      "display": "249-259",
+      "basis": "traditional",
+      "note": "doxologia.ro's life gives no year, only the reigns it sets him in: «În vremea lui Deciu (249-251) și Valerian (253-259), împărații Romei». The interval is those two reigns end to end."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 9 ianuarie — «Sfântul Mucenic Polieuct»",
+        "url": "https://doxologia.ro/9-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Polieuct, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Mucenic Polieuct», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-polieuct",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Polyeuctus, O Lord, in his contest received the crown of incorruption from thee our God; for having thy strength he overthrew the tormentors and broke the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "model": "Arătatu-Te-ai astăzi...",
+      "text": "Stăpânul, plecându-Şi capul în Iordan, a sfărâmat capetele diavolilor; iar capul purtătorului de biruinţă tăindu-se, pe cel înşelător a ruşinat.",
+      "source": {
+        "text": "doxologia.ro, «Condacul Sfântului Mucenic Polieuct», Glasul 4, podobie «Arătatu-Te-ai astăzi...»",
+        "url": "https://doxologia.ro/condacul-sfantului-mucenic-polieuct",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Master, bowing his head in the Jordan, crushed the heads of the devils; and when the head of the victorious one was struck off, the deceiver was put to shame.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

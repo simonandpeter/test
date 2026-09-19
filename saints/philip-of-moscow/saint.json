@@ -1,0 +1,73 @@
+{
+  "slug": "philip-of-moscow",
+  "display_name": "Philip of Moscow",
+  "office": "Metropolitan of Moscow and All Russia",
+  "names": [
+    {
+      "form": "Filip",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 ianuarie, «Sfântul Ierarh Filip, Mitropolitul Moscovei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan",
+    "confessor"
+  ],
+  "related": [
+    "sabbatius-of-solovki",
+    "alexander-of-svir"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1507,
+      "latest": 1507,
+      "display": "1507",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Teodor s-a născut în anul 1507, fiind primul copil al boierului Ștefan Ivanovici și al soției sale, Varvara.»"
+    },
+    "death": {
+      "earliest": 1569,
+      "latest": 1569,
+      "display": "1569",
+      "basis": "traditional",
+      "note": "doxologia.ro: «La data de 23 decembrie 1569, Sfântul Filip, Mitropolitul Moscovei a primit cununa muceniciei, fiind sufocat cu o pernă de Maliuta Skuratov.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 9 ianuarie — «Sfântul Ierarh Filip, Mitropolitul Moscovei»",
+        "url": "https://doxologia.ro/9-ianuarie",
+        "year": 2026
+      },
+      "note": "doxologia.ro's article on him adds that he is kept on 9 ianuarie, 31 mai, 3 iulie and 5 octombrie; this row holds the 9 January commemoration, which is the one the day page prints."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

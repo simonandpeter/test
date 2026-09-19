@@ -1,0 +1,63 @@
+{
+  "slug": "peter-of-sebaste",
+  "display_name": "Peter of Sebaste",
+  "office": "Bishop of Sebaste",
+  "names": [
+    {
+      "form": "Petru",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 ianuarie, «Sfântul Ierarh Petru al Sevastiei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "related": [
+    "basil-the-great"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «În secolul al IV-lea, această familie oferă un exemplu remarcabil despre cum sfințenia odrăslește sfințenie». The page gives the family a century and gives him no year of his own."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 9 ianuarie — «Sfântul Ierarh Petru al Sevastiei»",
+        "url": "https://doxologia.ro/9-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

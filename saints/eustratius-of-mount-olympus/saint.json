@@ -1,0 +1,60 @@
+{
+  "slug": "eustratius-of-mount-olympus",
+  "display_name": "Eustratius of Mount Olympus",
+  "office": "Abbot of the monastery of Augarus",
+  "names": [
+    {
+      "form": "Eustratie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 820,
+      "latest": null,
+      "display": "after 820",
+      "basis": "traditional",
+      "note": "doxologia.ro's life gives no year for him, only reigns: he left his monastery when «Leon Armeanul (813-820)» revived the heresy against the icons, and returned «după ce Biserica iarăși și-a luat podoaba sa prin așezarea și închinarea la sfintele icoane», dying later at ninety-five. 820 is therefore a lower bound and the page gives no upper one."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 9 ianuarie — «Sfântul Cuvios Eustratie»",
+        "url": "https://doxologia.ro/9-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
