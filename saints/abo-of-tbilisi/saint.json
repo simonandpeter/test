@@ -1,0 +1,58 @@
+{
+  "slug": "abo-of-tbilisi",
+  "display_name": "Abo of Tbilisi",
+  "names": [
+    {
+      "form": "Abo",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 ianuarie, «Sfântul Mucenic Abo, ocrotitorul orașului Tbilisi, Georgia»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 790,
+      "latest": 790,
+      "display": "790",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Era ziua de 8 ianuarie 790. La această dată în fiecare an se prăznuiește pomenirea lui.» The same life opens «În secolul al VII-lea», which its own dates — 786, 789, 790 — contradict; the years are taken, the century sentence is not."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 8 ianuarie — «Sfântul Mucenic Abo, ocrotitorul orașului Tbilisi, Georgia»",
+        "url": "https://doxologia.ro/8-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

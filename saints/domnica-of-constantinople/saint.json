@@ -1,0 +1,77 @@
+{
+  "slug": "domnica-of-constantinople",
+  "display_name": "Domnica of Constantinople",
+  "names": [
+    {
+      "form": "Domnica",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 ianuarie."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 457,
+      "latest": 491,
+      "display": "457-491",
+      "basis": "traditional",
+      "note": "doxologia.ro's life gives no year, only reigns: she came to Constantinople «pe vremea împărăției marelui Teodosie (379-395)» and reposed «ajungând la adânci bătrâneți, până pe vremea împărăției lui Leon (457-474) și a lui Zenon (474-491)». The interval is those two reigns end to end."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 8 ianuarie — «Sfânta Cuvioasă Domnica»",
+        "url": "https://doxologia.ro/8-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru tine, maică, cu osârdie s-a mântuit cel după chip; că, luând crucea, ai urmat lui Hristos; şi lucrând, ai învăţat să nu se uite la trup, căci este trecător; ci să poarte grijă de suflet, de lucrul cel nemuritor. Pentru aceasta şi cu îngerii împreună se bucură, Preacuvioasă Maică Domnica, duhul tău.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintei Cuvioase Domnica», Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-domnica",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O Mother, that which was made after God's image was kept safe with care; for taking up the cross thou didst follow Christ, and by thy labour thou didst teach us to pay no heed to the flesh, since it passes away, but to take thought for the soul, a thing immortal. Therefore, O venerable Mother Domnica, thy spirit rejoices together with the angels.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

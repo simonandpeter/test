@@ -1,0 +1,95 @@
+{
+  "slug": "george-the-chozebite",
+  "display_name": "George the Chozebite",
+  "names": [
+    {
+      "form": "Gheorghe Hozevitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monastic",
+    "wonderworker"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 614,
+      "latest": null,
+      "display": "after 614",
+      "basis": "traditional",
+      "note": "doxologia.ro's life gives one year, the Persian invasion: «Înainte de a năvăli păgânii perși (614) Sfântul Gheorghe a prorocit căderea Ierihonului și împresurarea Ierusalimului.» He survived it, returned to Chozeba and «a rămas zăvorât până la sfârșitul zilelor lui», so 614 is a lower bound and the page gives no upper one."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 8 ianuarie — «Sfântul Cuvios Gheorghe Hozevitul»",
+        "url": "https://doxologia.ro/8-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Gheorghe, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Gheorghe Hozevitul», Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-gheorghe-hozevitul",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren desert, and with sighing from the depths thou didst make thy labours bear fruit a hundredfold; and thou wast made a lamp to the world, shining with wonders, O George our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "model": "Arătatu-Te-ai astăzi...",
+      "text": "Lumină prealuminoasă te-ai arătat, Sfinte Părinte Gheorghe, strălucind cu Razele cele Dumnezeieşti, pe cei ce cu credinţă te cheamă pe tine. Roagă-te pentru noi lui Hristos Mântuitorul, Care S-a arătat în Iordan şi a luminat pe cei zidiţi din pământ.",
+      "source": {
+        "text": "doxologia.ro, «Condacul Sfântului Cuvios Gheorghe Hozevitul», Glasul 4, podobie «Arătatu-Te-ai astăzi...»",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-gheorghe-hozevitul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown to be a light most radiant, O holy Father George, shining with the divine rays upon those who call on thee in faith. Pray for us to Christ the Saviour, who was made manifest in the Jordan and gave light to those formed out of the earth.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

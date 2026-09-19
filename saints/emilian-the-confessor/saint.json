@@ -1,0 +1,50 @@
+{
+  "slug": "emilian-the-confessor",
+  "display_name": "Emilian the Confessor",
+  "names": [
+    {
+      "form": "Emilian Mărturisitorul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 8 ianuarie — «Sfântul Cuvios Emilian Mărturisitorul»",
+        "url": "https://doxologia.ro/8-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
