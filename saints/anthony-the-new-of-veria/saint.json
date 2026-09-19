@@ -1,0 +1,62 @@
+{
+  "slug": "anthony-the-new-of-veria",
+  "display_name": "Anthony the New of Veria",
+  "names": [
+    {
+      "form": "Antonie cel Nou de la Veria",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "monk",
+    "hermit"
+  ],
+  "related": [
+    "anthony-the-great"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": null,
+      "latest": 1500,
+      "display": "before 1500",
+      "basis": "traditional",
+      "note": "The life gives no year and says the date of his birth is unknown («Nu se cunoaște însă data nașterii sale»); its first footnote says «Unele descoperiri arheologice recente tind să arate că Sfântul Antonie cel Tânăr ar fi trăit înainte de veacul al XII-lea, iar nu între veacurile XIV și XV, cum se credea.» The two readings are left standing side by side and the bound is the later of them."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 ianuarie — «Sfântul Cuvios Antonie cel Nou de la Veria»",
+        "url": "https://doxologia.ro/17-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

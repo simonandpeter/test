@@ -1,0 +1,59 @@
+{
+  "slug": "george-of-ioannina",
+  "display_name": "George of Ioannina",
+  "names": [
+    {
+      "form": "Gheorghe din Ioannina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1838,
+      "latest": 1838,
+      "display": "1838",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «A fost spânzurat primind astfel cununa muceniciei pe 27 ianuarie 1838, în Ioannina, la vârsta de treizeci de ani.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 ianuarie — «Sfântul Noul Mucenic Gheorghe din Ioannina»",
+        "url": "https://doxologia.ro/17-ianuarie",
+        "year": 2026
+      },
+      "note": "The calendar keeps him on 17 ianuarie; the life on the same site dates the hanging 27 January 1838 and says he was condemned on the feast of St Anthony, which is this day."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

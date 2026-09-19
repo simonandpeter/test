@@ -25,6 +25,11 @@
       "form": "Αντώνιος ο Μέγας",
       "lang": "el",
       "note": "The nominative of «Ἀντωνίου ὁσίου τοῦ μεγάλου (†356)» in this folder's Greek citation, monotonic as the pack is."
+    },
+    {
+      "form": "Antonie cel Mare",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 ianuarie, «✝) Sfântul Cuvios Antonie cel Mare»."
     }
   ],
   "sex": "male",
@@ -143,6 +148,41 @@
     {
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Asemănându-te cu obiceiurile râvnitorului Ilie şi urmând Botezătorului pe drepte cărări, Preacuvioase Părinte Antonie, te-ai făcut locuitor pustiului şi ai întărit lumea cu rugăciunile tale. Pentru aceasta, roagă-te lui Hristos Dumnezeu, să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Antonie cel Mare, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-antonie-cel-mare",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst make thyself like the zealous Elias in his ways, and didst follow the Baptist along straight paths, O most venerable Father Anthony; thou wast made a dweller of the wilderness, and didst strengthen the world by thy prayers. Wherefore, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "model": "Căutând cele de sus...",
+      "text": "Lepădând tulburările lumeşti, viaţa sihăstrească ai dus-o până la capăt, Botezătorului urmând îndeaproape, preacuvioase. Deci împreună cu dânsul te cinstim, părinte al părinţilor, Sfinte Antonie.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Antonie cel Mare, Glasul 2, «Căutând cele de sus...»",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-antonie-cel-mare",
+        "year": 2026
+      },
+      "english": {
+        "text": "Casting off the troubles of the world, thou didst carry the hermit's life through to its end, following the Baptist closely, O most venerable one. Therefore together with him we honour thee, father of fathers, O Saint Anthony.",
+        "rendered": "site"
+      }
     }
   ]
 }
