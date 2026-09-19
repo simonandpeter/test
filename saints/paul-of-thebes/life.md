@@ -45,4 +45,4 @@ the situation this project records rather than resolves. The Russian
 calendar keeps him on 15 January of the old style, 28 January, and the Greek
 and Romanian calendars on 15 January.
 
-*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-pavel-fivejskij), read 6 September 2026; the first form of this entry, written from Jerome’s Life without a source line, survives in the last paragraph.*
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-pavel-fivejskij), read 6 September 2026; the first form of this entry, written from Jerome’s Life without a source line, survives in the last paragraph; and, for the Romanian tropar and condac, doxologia.ro's calendar for 15 ianuarie — [the day](https://doxologia.ro/15-ianuarie), read 19 September 2026.*

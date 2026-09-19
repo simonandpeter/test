@@ -20,6 +20,11 @@
       "form": "Παύλος ο Θηβαίος",
       "lang": "el",
       "note": "As this folder's Greek citation prints it: «Όσιος Παύλος ο Θηβαίος»."
+    },
+    {
+      "form": "Pavel Tebeul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 ianuarie, «Sfântul Cuvios Pavel Tebeul»."
     }
   ],
   "sex": "male",
@@ -122,6 +127,40 @@
     {
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Locuitor pustiului, înger în trup şi de minuni făcător te-ai arătat, purtătorule de Dumnezeu, Părintele nostru Pavel. Cu postul, cu privegherea şi prin rugăciune primind daruri cereşti, tămăduieşti pe cei bolnavi şi sufletele celor ce aleargă la tine cu credinţă. Slavă Celui Ce ţi-a dat ţie putere; Slavă Celui Ce te-a încununat pe tine; Slavă Celui Ce lucrează prin tine tuturor tămăduiri.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Pavel Tebeul",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-pavel-tebeul",
+        "year": 2026
+      },
+      "english": {
+        "text": "A dweller of the desert, an angel in the body and a worker of wonders thou wast shown to be, God-bearing Paul our father. Receiving heavenly gifts by fasting, by vigil and by prayer, thou healest the sick and the souls of those who run to thee in faith. Glory to him who gave thee strength; glory to him who crowned thee; glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Săvârşind trecerea cea secetoasă a vieţii, purtătorule de Dumnezeu, ai cufundat pe vrăjmaşii cei netrupeşti cu căinţa lacrimilor tale, Cuvioase Pavel, Părintele nostru; şi primind har de minuni, roagă-te neîncetat pentru noi.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Pavel Tebeul",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-pavel-tebeul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having finished the parched crossing of this life, God-bearer, thou didst drown the bodiless enemies in the repentance of thy tears, venerable Paul our father; and having received the grace of wonders, pray for us without ceasing.",
+        "rendered": "site"
+      }
     }
   ]
 }

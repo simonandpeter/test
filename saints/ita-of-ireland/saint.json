@@ -1,0 +1,66 @@
+{
+  "slug": "ita-of-ireland",
+  "display_name": "Ita of Ireland",
+  "names": [
+    {
+      "form": "Ita",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 ianuarie, «Sfânta Cuvioasă Ita din Irlanda»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "abbess"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 400,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «S-a născut în secolul al V-lea, în regiunea Waterford»; the page gives the century and no year."
+    },
+    "death": {
+      "earliest": 570,
+      "latest": 570,
+      "display": "570",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfânta Ita s-a odihnit în pace, în anul 570, în mănăstirea ei»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 15 ianuarie — «Sfânta Cuvioasă Ita din Irlanda»",
+        "url": "https://doxologia.ro/15-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 15 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

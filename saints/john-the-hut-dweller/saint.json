@@ -1,0 +1,93 @@
+{
+  "slug": "john-the-hut-dweller",
+  "display_name": "John the Hut-dweller",
+  "names": [
+    {
+      "form": "Ioan Colibașul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 ianuarie, «Sfântul Cuvios Ioan Colibașul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 457,
+      "latest": 474,
+      "display": "457–474",
+      "basis": "traditional",
+      "note": "doxologia.ro's life opens in the reign it dates «împăratul Leon cel Mare (457-474)»; it gives no year of his birth or death, so only the reign is recorded."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 15 ianuarie — «Sfântul Cuvios Ioan Colibașul»",
+        "url": "https://doxologia.ro/15-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 15 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Din pruncie iubind cu căldură pe Domnul, lumea şi cele frumoase ale lumii ai părăsit şi ai sihăstrit în chip desăvârşit; ţi-ai ridicat coliba înaintea porţilor părinţilor tăi; zdrobit-ai cursele demonilor, preafericite; pentru aceasta pe tine, Preacuvioase Părinte Ioan, Hristos după vrednicie te-a preamărit.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Ioan Colibaşul",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-ioan-colibasul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Loving the Lord warmly from thy childhood, thou didst forsake the world and the fair things of the world and didst live perfectly as a hermit; thou didst raise thy hut before thy parents' gates and didst break the snares of the demons, most blessed one; wherefore Christ has worthily glorified thee, most venerable Father John.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Râvnind, înţelepte, sărăcia ce nu se fură, ai urât bogăţia părinţilor tăi. Şi având Evanghelia în mâinile tale, ai urmat lui Hristos Dumnezeu, Preacuvioase Părinte Ioan, rugându-te neîncetat pentru noi toţi.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Ioan Colibaşul; printed to the melody «Cele de sus căutând...»",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-ioan-colibasul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Longing, O wise one, for the poverty that cannot be stolen, thou didst hate the wealth of thy parents; and holding the Gospel in thy hands thou didst follow Christ God, most venerable Father John, praying without ceasing for us all.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
