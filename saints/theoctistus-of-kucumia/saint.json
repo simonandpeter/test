@@ -1,0 +1,53 @@
+{
+  "slug": "theoctistus-of-kucumia",
+  "display_name": "Theoctistus of Kucumia",
+  "names": [
+    {
+      "form": "Teoctist",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "related": [
+    "theoctistus-of-palestine"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 4 ianuarie — «Sfântul Cuvios Teoctist, egumenul de la Kucumia Siciliei»",
+        "url": "https://doxologia.ro/4-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

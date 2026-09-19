@@ -1,0 +1,53 @@
+{
+  "slug": "zosimas-of-cilicia",
+  "display_name": "Zosimas of Cilicia",
+  "names": [
+    {
+      "form": "Zosima",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "monk"
+  ],
+  "related": [
+    "athanasius-the-commentarisius"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 4 ianuarie — «Sfântul Mucenic Zosima»",
+        "url": "https://doxologia.ro/4-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

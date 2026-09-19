@@ -124,8 +124,12 @@ Gregory of Pelshma, Michael of Kyiv (30 September), Sabbas of Vishera
 Caves (3 October) are Greek one-liners the Russian 30 September – 3 October
 (civil 13–16 October) must read before anyone calls them the Russian saints;
 John Koukouzelis carries a 1118–1433 death because the Greek and Romanian pages
-put him centuries apart; Zosimas the Hermit's Sretensky name page files a
-second, unread life of a venerable martyr Zosimas of Cilicia beside his. The
+put him centuries apart; the second, unread life of a venerable martyr Zosimas
+of Cilicia that Zosimas the Hermit's Sretensky name page filed beside his is
+the Romanian 4 January's «Sfântul Mucenic Zosima», now `zosimas-of-cilicia`
+with `athanasius-the-commentarisius` — days.pravoslavie.ru keeps that pair on
+4 January old style and the hermit on 19 September, two days and two lives, so
+they are kept as two. The
 Julian 19 September names no Tryphon, so whether the Greek 29 September's
 Trophimus and Dorymedon are the 19 September martyrs stays open; the Romanian
 Tryphon stands open too. Theoctistus (3 October) is one folder for the Greek

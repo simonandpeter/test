@@ -1,0 +1,11 @@
+# Apollinaria
+
+Apollinaria lived in the days of the emperor Leo the Great (457-474), the daughter of Artemius, whom the emperor had appointed to govern Rome. She surpassed many women of her time in beauty and in understanding, and while she was still young she desired virginity and prayed to God day and night that she might have her wish and remain a virgin until her death.
+
+She asked leave of her parents to go to Jerusalem, and having got it took servants and maids, gold and silver and costly clothes, and gave them all away to the poor in the holy city. When she had venerated the Holy Places she freed her men and women slaves, keeping only an old man and a eunuch, and set out for Alexandria. Coming to a level place they stopped to rest from the labour of the road, and when her people had fallen asleep she left everything and fled in secret into the marsh that lay there.
+
+She stayed in it many years, until the skin of her body was hardened by the bites of the mosquitoes. Then she went to a skete where there were many holy fathers, saying that she was a eunuch and that her name was Dorotheus; the venerable Macarius who was there received her and gave her a cell, and shutting herself into it she prayed day and night. Her father had another daughter, greatly afflicted by an unclean spirit, whom he sent to the fathers of the skete to be healed, having wearied of looking for Apollinaria and asking after her no longer.
+
+The fathers sent the possessed girl to her own sister, who passed for Dorotheus, and in a few days she was freed and sent home well. But after a time the girl began to seem with child, and her father, supposing Dorotheus had got her so, sent riders in haste to bring him before him. Then the saint made herself known by certain signs as the daughter of Artemius, and all were amazed and afraid, and the more so at the wonder worked on her sister. She stayed a few days with her parents and returned to her cell, no one knowing what had happened; and only after her end did the monks learn that she was a woman, at which they were all astonished and moved to give thanks to God.
+
+*After doxologia.ro's calendar for 4 ianuarie — [the day](https://doxologia.ro/4-ianuarie) and [the life](https://doxologia.ro/viata-sfintei-cuvioase-apolinaria); read 19 September 2026.*

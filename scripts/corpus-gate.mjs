@@ -105,11 +105,30 @@ for (const { slug, saint } of corpus) {
     folded.get(key).push(slug);
   }
 }
+/**
+ * **The folds that have been read, and what the reading was.** A fold is a
+ * suspicion and the gate is right to stop on it; but a calendar year of one
+ * church hands the same forename to men centuries apart — the Romanian
+ * «Teoctist» is three different saints in this corpus — and a suspicion that
+ * has been settled by reading both pages is not a finding any more. The key is
+ * the folded form and both slugs, sorted, so that a *third* folder joining the
+ * fold is an unread pair again and stops the gate as it should.
+ */
+const READ_FOLDS = {
+  'teoctist theoctistus-of-kucumia theoctistus-the-martyr':
+    'the abbot of Kucumia in Sicily, Romanian 4 January, against the martyr by the sword the Greek and Romanian keep on 3 October; doxologia’s own page for 4 January is a note saying which Theoctistus the day is not (read 19 September 2026)',
+};
+const foldKey = (key, slugs) => [key, ...[...slugs].sort()].join(' ');
+
 const collisions = [...folded].filter(([, slugs]) => slugs.length > 1);
 const fresh = collisions.filter(([, slugs]) => slugs.some((s) => !batchSlugs || batchSlugs.has(s)));
+const unread = fresh.filter(([key, slugs]) => !READ_FOLDS[foldKey(key, slugs)]);
 console.log(`name forms two or more folders share : ${collisions.length}`);
-for (const [key, slugs] of fresh) console.log(`  ? "${key}" — ${slugs.join(', ')}`);
-if (BATCH && fresh.length) fail('duplicates', `${fresh.length} folded name form(s) shared with the batch — read each pair`);
+for (const [key, slugs] of fresh) {
+  const read = READ_FOLDS[foldKey(key, slugs)];
+  console.log(`  ${read ? '·' : '?'} "${key}" — ${slugs.join(', ')}${read ? `\n      read: ${read}` : ''}`);
+}
+if (BATCH && unread.length) fail('duplicates', `${unread.length} folded name form(s) shared with the batch — read each pair`);
 
 /* ---- 4. the naming contract ---------------------------------------------- */
 
@@ -304,7 +323,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '16'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '22'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

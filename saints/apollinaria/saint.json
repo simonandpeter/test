@@ -1,0 +1,59 @@
+{
+  "slug": "apollinaria",
+  "display_name": "Apollinaria",
+  "names": [
+    {
+      "form": "Apolinaria",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 ianuarie."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "virgin"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 457,
+      "latest": 474,
+      "display": "457–474",
+      "basis": "traditional",
+      "note": "doxologia.ro gives no year of birth or death, only the reign she lived under: «Pururea pomenita Apolinaria a trăit pe vremea împăratului Leon cel Mare (457-474)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 4 ianuarie — «Sfânta Cuvioasă Apolinaria»",
+        "url": "https://doxologia.ro/4-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

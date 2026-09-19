@@ -1,0 +1,69 @@
+{
+  "slug": "nicephorus-the-leper",
+  "display_name": "Nicephorus the Leper",
+  "names": [
+    {
+      "form": "Nichifor Leprosul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "related": [
+    "anthimos-of-chios"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1890,
+      "latest": 1890,
+      "display": "1890",
+      "basis": "attested",
+      "note": "doxologia.ro: «Nicolae Tzanakakis s-a născut în anul 1890… în satul Sirikari, în regiunea Chania din insula Creta»."
+    },
+    "death": {
+      "earliest": 1964,
+      "latest": 1964,
+      "display": "1964",
+      "basis": "attested",
+      "note": "doxologia.ro: «Părintele Nichifor a trecut la Domnul pe 4 ianuarie 1964, la vârsta de 74 ani»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 4 ianuarie — «Sfântul Cuvios Nichifor Leprosul»",
+        "url": "https://doxologia.ro/4-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
