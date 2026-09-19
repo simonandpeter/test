@@ -1,0 +1,101 @@
+{
+  "slug": "antipas-of-calapodesti",
+  "display_name": "Antipas of Calapodești",
+  "names": [
+    {
+      "form": "Antipa de la Calapodești",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1816,
+      "latest": 1816,
+      "display": "1816",
+      "basis": "traditional",
+      "note": "doxologia.ro: «numit din botez Alexandru Luchian, s-a născut în anul 1816 într-o familie de țărani credincioși din satul Calapodești - Bacău»"
+    },
+    "death": {
+      "earliest": 1882,
+      "latest": 1882,
+      "display": "1882",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Cuviosul Antipa Athonitul și-a dat sufletul cu pace în brațele Mântuitorului Hristos, la 10 ianuarie 1882, și a fost înmormântat în gropnița Mănăstirii Valaam.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 10 ianuarie — «✝) Sfântul Cuvios Antipa de la Calapodești»",
+        "url": "https://doxologia.ro/10-ianuarie",
+        "year": 2026
+      },
+      "note": "Marked (✝) on doxologia.ro, the mark the Romanian calendar puts on its highest rank; the typikon rank itself is not stated on the page."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 5",
+      "text": "Peste pământ arcuindu-te ca un curcubeu, ai ajuns din Sfântul Munte în Athosul de la miazănoapte, Valaam. O, Sfinte Părinte Antipa, mult lăudatule, asemenea mult minunaților bătrâni ai Moldovei te-ai făcut; și acum, locuind în slava cerescului Valaam, roagă-L pe Hristos Dumnezeul nostru să ne povățuiască pe calea îngerească.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Antipa de la Calapodești», Glasul 5",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-antipa-de-la-calapodesti",
+        "year": 2026
+      },
+      "english": {
+        "text": "Arching over the earth like a rainbow, thou didst pass from the Holy Mountain to the Athos of the north, to Valaam. O holy Father Antipas, much praised, thou wast made like the much-marvelled elders of Moldavia; and now, dwelling in the glory of the heavenly Valaam, pray Christ our God to guide us on the way of the angels.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glas 4",
+      "text": "Din frământătura ostenelilor înmuiate cu lacrimile milostivirii tale, ai dospit rugăciunea cea mult roditoare, Părintele nostru Antipa. Adu-ți aminte și de neamul nostru din care ai odrăslit, Preafericite, și ocrotește patria ta cu mijlocirile tale către Dumnezeu, ca să-ți cântăm ție: Bucură-te, odrasla Moldovei, iubitorule de pustnicie!",
+      "source": {
+        "text": "doxologia.ro, «Condacul Sfântului Cuvios Antipa de la Calapodești», Glas 4",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-antipa-de-la-calapodesti",
+        "year": 2026
+      },
+      "english": {
+        "text": "Out of the dough of thy labours, kneaded with the tears of thy mercy, thou didst leaven a prayer of much fruit, Antipas our father. Remember also the people from whom thou didst spring, O most blessed one, and shelter thy homeland by thy intercessions before God, that we may sing to thee: Rejoice, offspring of Moldavia, lover of the hermit's life!",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

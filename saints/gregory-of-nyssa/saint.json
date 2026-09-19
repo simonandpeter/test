@@ -1,0 +1,100 @@
+{
+  "slug": "gregory-of-nyssa",
+  "display_name": "Gregory of Nyssa",
+  "office": "Bishop of Nyssa",
+  "names": [
+    {
+      "form": "Grigorie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 ianuarie, «Sfântul Ierarh Grigorie, Episcopul Nyssei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "theologian"
+  ],
+  "related": [
+    "basil-the-great",
+    "gregory-the-theologian"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 364,
+      "latest": 395,
+      "display": "364–395",
+      "basis": "traditional",
+      "note": "doxologia.ro's life gives him no year of his own, only reigns and one council: «Împărățind în acea vreme Valens (364-378)», who drove him from his see for eight years, and «În vremea împărăției marelui Teodosie (379-395), fiind al doilea sobor a toată lumea în Constantinopol (381)», where he sat with the Fathers. He died later, «șezând pe scaunul său mulți ani», at a deep old age the page does not date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 10 ianuarie — «Sfântul Ierarh Grigorie, Episcopul Nyssei»",
+        "url": "https://doxologia.ro/10-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Dumnezeul părinţilor noştri Care faci pururea cu noi după blândeţile Tale, nu îndepărta mila Ta de la noi; ci, pentru rugăciunile lor, în pace îndreptează viaţa noastră.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Ierarh Grigorie, Episcopul Nissei», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-grigorie-episcopul-nissei",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who dealest with us always according to thy gentleness, take not thy mercy from us; but at their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "model": "Pe cea întru rugăciuni...",
+      "text": "Insuflatul de Dumnezeu ierarh al Bisericii şi cinstitul scriitor de cântări al înţelepciunii, mintea cea priveghetoare a Nissei, Sfântul Grigorie, dănţuind şi desfătându-se cu îngerii întru Dumnezeiasca Lumină, se roagă neîncetat pentru noi toţi.",
+      "source": {
+        "text": "doxologia.ro, «Condacul Sfântului Ierarh Grigorie, Episcopul Nissei», Glasul 2, podobie «Pe cea întru rugăciuni...»",
+        "url": "https://doxologia.ro/condacul-sfantului-ierarh-grigorie-episcopul-nissei",
+        "year": 2026
+      },
+      "english": {
+        "text": "The God-inspired hierarch of the Church and honoured writer of the songs of wisdom, the watchful mind of Nyssa, Saint Gregory, dancing and delighting with the angels in the divine Light, prays without ceasing for us all.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

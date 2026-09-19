@@ -110,7 +110,9 @@ the commits and the push. `.tmp/ro-cand/` holds the 366 day pages
 (`scripts/day-candidates.mjs`, cached), `.tmp/ro-drafts/MM-DD.json` a day's new
 folders and `up-MM-DD.json` its upgrades, `.tmp/ro-dupscan.mjs` every draft
 against every other and against the corpus, `.tmp/ro-namesweep.mjs` a draft
-against the corpus by name across Romanian and English. **Landed: 1 January.**
+against the corpus by name across Romanian and English. **Landed: 1–5 and 7–10
+January**, a commit a day; 6 January is the Theophany alone and yields no
+folder, and the drafts for 11–19 January are read and waiting.
 A candidate file's menologion scan cannot see a saint the corpus keeps on
 another day — Juliana of Lazarevo is on the Romanian 2 January and in the corpus
 only on 11 August, for her relics — which is what the name sweep is for, and its

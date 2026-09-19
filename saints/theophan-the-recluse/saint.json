@@ -1,0 +1,71 @@
+{
+  "slug": "theophan-the-recluse",
+  "display_name": "Theophan the Recluse",
+  "office": "Bishop of Vladimir",
+  "names": [
+    {
+      "form": "Teofan Zăvorâtul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "ascetic"
+  ],
+  "related": [
+    "tikhon-of-zadonsk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1815,
+      "latest": 1815,
+      "display": "1815",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Episcopul Teofan s-a numit în lume Gheorghie Vasilievici Govorov și s-a născut pe 10 ianuarie 1815 într-un sat din apropierea Orlovului, unde tatăl său era preot.»"
+    },
+    "death": {
+      "earliest": 1891,
+      "latest": 1891,
+      "display": "1891",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Pe 6 ianuarie ora 4,30 după amiază, ajutorul său de chilie... a intrat în camera sa. Episcopul zăcea mort pe pat.» — the year given a few lines before is 1891."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 10 ianuarie — «Sfântul Teofan Zăvorâtul»",
+        "url": "https://doxologia.ro/10-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

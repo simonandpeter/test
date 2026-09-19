@@ -1,0 +1,69 @@
+{
+  "slug": "dometian-of-melitene",
+  "display_name": "Dometian of Melitene",
+  "office": "Bishop of Melitene",
+  "names": [
+    {
+      "form": "Dometian",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 ianuarie, «Sfântul Cuvios Dometian, Episcopul Melitinei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 10 ianuarie — «Sfântul Cuvios Dometian, Episcopul Melitinei»",
+        "url": "https://doxologia.ro/10-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Dumnezeul părinţilor noştri Care faci pururea cu noi după blândeţile Tale, nu îndepărta mila Ta de la noi; ci, pentru rugăciunile lor, în pace îndreptează viaţa noastră.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Ierarh Dometian, Episcopul Melitinei», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-dometian-episcopul-melitinei",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who dealest with us always according to thy gentleness, take not thy mercy from us; but at their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
