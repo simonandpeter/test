@@ -803,6 +803,7 @@ export const sr = {
     'Emperor': 'Цар',
     'Father of monasticism': 'Отац монаштва',
     'First Archbishop of Serbia': 'Први архиепископ српски',
+    'First Bishop of Estonia': 'Први епископ Естоније',
     'Fool for Christ': 'Јуродиви',
     'Grand Prince': 'Велики кнез',
     'Great Martyr': 'Великомученик',

@@ -9,6 +9,16 @@
     {
       "form": "Савва Сербский",
       "lang": "ru"
+    },
+    {
+      "form": "Sava",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 ianuarie."
+    },
+    {
+      "form": "Rastko",
+      "lang": "ro",
+      "note": "His name in the world, as doxologia.ro's life gives it: «pururea pomenitul Rastko sau Sava, după numele primit la tunderea sa în monahism»."
     }
   ],
   "sex": "male",
@@ -53,8 +63,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 14 ianuarie — «Sfântul Cuvios Sava, arhiepiscopul Serbiei și ctitorul mănăstirii Hilandar»",
+        "url": "https://doxologia.ro/14-ianuarie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

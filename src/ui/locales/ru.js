@@ -820,6 +820,7 @@ export const ru = {
     'Emperor': 'Император',
     'Father of monasticism': 'Отец монашества',
     'First Archbishop of Serbia': 'Первый архиепископ Сербский',
+    'First Bishop of Estonia': 'Первый епископ Эстонии',
     'Fool for Christ': 'Юродивый',
     'Grand Prince': 'Великий князь',
     'Great Martyr': 'Великомученик',

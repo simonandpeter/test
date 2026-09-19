@@ -1,0 +1,73 @@
+{
+  "slug": "platon-kulbusch",
+  "display_name": "Platon Kulbusch",
+  "names": [
+    {
+      "form": "Platon Kulbusch",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 ianuarie, «Sfântul Ierarh Platon Kulbusch, primul episcop al Estoniei»."
+    },
+    {
+      "form": "Pavel",
+      "lang": "ro",
+      "note": "His baptismal name, as doxologia.ro's life gives it: «primind la botez numele Pavel»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "hierarch",
+    "bishop"
+  ],
+  "office": "First Bishop of Estonia",
+  "dates": {
+    "birth": {
+      "earliest": 1869,
+      "latest": 1869,
+      "display": "1869",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «s-a născut la 13 iulie 1869 în localitatea Pootsi din regiunea Pätnu, Estonia»."
+    },
+    "death": {
+      "earliest": 1919,
+      "latest": 1919,
+      "display": "1919",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «după ce a fost torturat a fost împușcat la 14 ianuarie 1919»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 14 ianuarie — «Sfântul Ierarh Platon Kulbusch, primul episcop al Estoniei»",
+        "url": "https://doxologia.ro/14-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 14 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -801,6 +801,7 @@ export const ro = {
     'Emperor': 'Împărat',
     'Father of monasticism': 'Părintele monahismului',
     'First Archbishop of Serbia': 'Primul arhiepiscop al Serbiei',
+    'First Bishop of Estonia': 'Primul episcop al Estoniei',
     'Fool for Christ': 'Nebun pentru Hristos',
     'Grand Prince': 'Mare cneaz',
     'Great Martyr': 'Mare Mucenic',

@@ -1,0 +1,87 @@
+{
+  "slug": "nina-of-georgia",
+  "display_name": "Nina of Georgia",
+  "names": [
+    {
+      "form": "Nina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 ianuarie, «Sfânta Nina, cea întocmai cu Apostolii și luminătoarea Georgiei»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "equal-to-the-apostles"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 270,
+      "latest": 300,
+      "display": "late 3rd century",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Sfânta Nina s-a născut la sfârșitul secolului al III-lea în Capadocia»; the bounds are that century's last third, and the page gives no year."
+    },
+    "death": {
+      "earliest": 338,
+      "latest": 338,
+      "display": "338",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «și-a dat duhul în pace în mâinile lui Hristos la 14 ianuarie, cel mai probabil în anul 338» — most probably in 338, which is the only year the page offers for her death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 14 ianuarie — «Sfânta Nina, cea întocmai cu Apostolii și luminătoarea Georgiei»",
+        "url": "https://doxologia.ro/14-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 14 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 4",
+      "text": "Slujitoare a cuvântului dumnezeiesc, cea întocmai cu Apostolii, Nina, lui Andrei cel întâi chemat şi altor apostoli în apostolească propovăduire te-ai asemănat, luminătoarea Iviriei şi alăută a Duhului Sfânt, roagă-L pe Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Nina",
+        "url": "https://doxologia.ro/troparul-sfintei-nina",
+        "year": 2026
+      },
+      "english": {
+        "text": "Handmaid of the divine word, equal to the apostles, Nina, thou wast made like to Andrew the First-called and to the other apostles in apostolic preaching, enlightener of Iberia and harp of the Holy Spirit: pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "mirian-of-georgia",
+    "nana-of-georgia"
+  ]
+}
