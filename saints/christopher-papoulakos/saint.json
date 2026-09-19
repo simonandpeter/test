@@ -1,0 +1,67 @@
+{
+  "slug": "christopher-papoulakos",
+  "display_name": "Christopher Papoulakos",
+  "names": [
+    {
+      "form": "Hristofor Papoulakos",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "monk",
+    "preacher",
+    "ascetic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1780,
+      "latest": 1780,
+      "display": "c. 1780",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «s-a născut în jurul anului 1780 în satul Armpounas, în zonele muntoase și pădurile luxuriante din provincia Kalavryta» — around 1780, the page says, and no closer."
+    },
+    "death": {
+      "earliest": 1861,
+      "latest": 1861,
+      "display": "18 January 1861",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «A trecut la Domnul pe 18 ianuarie 1861 și a fost canonizat de Patriarhia Ecumenică pe 30 august 2024.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 18 ianuarie — «Sfântul Cuvios Hristofor Papoulakos»",
+        "url": "https://doxologia.ro/18-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

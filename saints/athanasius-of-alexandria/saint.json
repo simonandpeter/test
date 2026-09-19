@@ -25,6 +25,11 @@
       "form": "Αθανάσιος ο Μέγας",
       "lang": "el",
       "note": "As this folder's Greek citation names him: «Άγιοι Αθανάσιος ο Μέγας και Κύριλλος Πατριάρχες Αλεξανδρείας»."
+    },
+    {
+      "form": "Atanasie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 ianuarie, «Sfântul Ierarh Atanasie, Arhiepiscopul Alexandriei»."
     }
   ],
   "sex": "male",
@@ -149,6 +154,41 @@
     {
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Pe ierarhii Domnului, pe tâlcuitorii dogmelor; pe păstorii alexandrinilor propovăduitori ai adevărului, perechea cea iubită de Dumnezeu; pe străluciţii luminători, risipitori ai întunericului celor nelegiuiţi: pe Sfântul Atanasie cel Mare, secerătorul ereticilor, împreună cu Sfântul Ierarh Chiril, cel ce a cinstit precum se cuvine pe Născătoarea de Dumnezeu, veniţi toţi iubitorii de prăznuire şi adunându-ne cu veselie şi cu cântări să-i cinstim; că ei se roagă neîncetat lui Dumnezeu pentru noi toţi.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Atanasie, Arhiepiscopul Alexandriei, Glasul 3",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-atanasie-arhiepiscopul-alexandriei",
+        "year": 2026
+      },
+      "english": {
+        "text": "The hierarchs of the Lord, the interpreters of the dogmas, the shepherds of the Alexandrians and heralds of the truth, the pair beloved of God, the shining luminaries who scatter the darkness of the ungodly — Athanasius the Great, the reaper of heretics, together with the hierarch Cyril, who honoured the Mother of God as is due: come, all lovers of the feast, and let us gather with gladness and with hymns to honour them; for they pray unceasingly to God for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "model": "Cu curgerile sângiurilor...",
+      "text": "Învăţăturile dreptei credinţe sădind şi spinii relei credinţe tăind, ai înmulţit sămânţa credinţei cu ploaia Duhului, cuvioase. Pentru aceasta pe tine te lăudăm Sfinte Ierarhe Atanasie.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Ierarh Atanasie, Arhiepiscopul Alexandriei, Glasul 2, «Cu curgerile sângiurilor...»",
+        "url": "https://doxologia.ro/condacul-sfantului-ierarh-atanasie-arhiepiscopul-alexandriei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Planting the teachings of the right faith and cutting away the thorns of the false, thou didst multiply the seed of faith with the rain of the Spirit, O venerable one. Wherefore we praise thee, O hierarch Athanasius.",
+        "rendered": "site"
+      }
     }
   ]
 }

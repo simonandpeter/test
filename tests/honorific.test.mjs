@@ -183,9 +183,19 @@ test('every name in the corpus resolves, and the split left nothing behind', () 
       assert.equal(times, 1, `${slug}: "${label}" appears ${times} times in "${shown}"`);
     }
   }
-  // The shape of the corpus, which is what makes "St." the marked case: it is
-  // 58 of 742, against 253 martyrs and 156 hieromartyrs.
+  /*
+   * The shape of the corpus, which is what makes "St." the marked case: it was
+   * 58 of 742 when this was written, against 253 martyrs and 156 hieromartyrs.
+   *
+   * **The claim is a share, not a count.** Written as `< 100` it was a fact
+   * about a 742-folder corpus wearing the shape of a rule: it went red on the
+   * Romanian 18 January at exactly 100 of 1192, which is 8.4% against the 7.8%
+   * it was written at. The share had barely moved; only the corpus had grown.
+   * A seventh of the corpus is still plainly the marked case, a third would
+   * not be, and that is the line worth failing on.
+   */
   assert.ok(counts.get('(collective)') > 0, 'the corpus holds companies, so the rule above was exercised');
-  assert.ok(counts.get('honorific') < 100, `St is the marked case (${counts.get('honorific')} of ${slugs.length})`);
+  const share = counts.get('honorific') / slugs.length;
+  assert.ok(share < 0.15, `St is the marked case (${counts.get('honorific')} of ${slugs.length}, ${(share * 100).toFixed(1)}%)`);
   assert.ok(counts.get('martyr') > 200);
 });

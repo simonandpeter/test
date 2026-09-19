@@ -1,0 +1,107 @@
+{
+  "slug": "cyril-of-alexandria",
+  "display_name": "Cyril of Alexandria",
+  "office": "Archbishop of Alexandria",
+  "names": [
+    {
+      "form": "Chiril",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 ianuarie, «Sfântul Ierarh Chiril, Arhiepiscopul Alexandriei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "related": [
+    "athanasius-of-alexandria",
+    "john-chrysostom"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 378,
+      "latest": 378,
+      "display": "378",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Chiril, marele învățător al Bisericii, s-a născut în 378, la Mahalla, în Egipt»."
+    },
+    "death": {
+      "earliest": 446,
+      "latest": 446,
+      "display": "446",
+      "basis": "traditional",
+      "note": "The life's note 71 quotes Theophanes the Confessor: «În acest an (446), au murit întru cucernicie Chiril al Alexandriei și Proclu al Constantinopolului.» The same page says the day of his repose is 9 June, on the authority of Christopher of Mitylene's distich, and that 18 January is not the day of his repose."
+    }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Îndreptătorule al Ortodoxiei, învăţătorule al dreptei cinstiri de Dumnezeu şi al curaţiei şi luminătorule al lumii, podoaba călugărilor cea de Dumnezeu insuflată Sfinte Ierarhe Chiril, înţelepte, cu învăţăturile tale pe toţi i-ai luminat. Alăută duhovnicească, roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Chiril, Arhiepiscopul Alexandriei, Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-chiril-arhiepiscopul-alexandriei",
+        "year": 2026
+      },
+      "english": {
+        "text": "O guide of Orthodoxy, teacher of the right worship of God and of purity, and light of the world, God-inspired adornment of monks, O wise hierarch Cyril: by thy teachings thou hast enlightened all. O spiritual harp, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 6",
+      "model": "Plinind rânduiala cea pentru...",
+      "text": "Adâncul învăţăturilor cuvântării de Dumnezeu, lămurit ne-ai izvorât nouă din izvoarele Mântuitorului, care îneacă eresurile, fericite şi turma nevătămată de întreitele valuri o păzeşte; că marginilor eşti învăţător, ca cel ce arăţi cele dumnezeieşti.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Ierarh Chiril, Arhiepiscopul Alexandriei, Glasul 6, «Plinind rânduiala cea pentru...»",
+        "url": "https://doxologia.ro/condacul-sfantului-ierarh-chiril-arhiepiscopul-alexandriei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou hast poured out for us clearly, from the Saviour's own springs, the depth of the teachings of theology, which drowns the heresies, O blessed one, and keeps the flock unharmed by the threefold waves; for thou art a teacher to the ends of the earth, as one who shows forth the things of God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 18 ianuarie — «Sfântul Ierarh Chiril, Arhiepiscopul Alexandriei»",
+        "url": "https://doxologia.ro/18-ianuarie",
+        "year": 2026
+      },
+      "note": "Kept on 18 ianuarie with St Athanasius; the life on the same site says this is not the day of his repose and that he is also commemorated on 9 June, which it gives as the day he left this world. The hymn page marks the day ✝."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
