@@ -795,6 +795,7 @@ export const ro = {
     'Blessed': 'Fericit',
     'Deacon': 'Diacon',
     'Deacon of Alexandria': 'Diacon al Alexandriei',
+    'Deaconess of the Church of Rome': 'Diaconiță a Bisericii Romei',
     'Elder of Moscow': 'Stareț de Moscova',
     'Emperor': 'Împărat',
     'Father of monasticism': 'Părintele monahismului',

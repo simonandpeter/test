@@ -796,6 +796,7 @@ export const el = {
     'Blessed': 'Μακάριος',
     'Deacon': 'Διάκονος',
     'Deacon of Alexandria': 'Διάκονος Αλεξανδρείας',
+    'Deaconess of the Church of Rome': 'Διακόνισσα της Εκκλησίας της Ρώμης',
     'Elder of Moscow': 'Γέροντας Μόσχας',
     'Emperor': 'Αυτοκράτορας',
     'Father of monasticism': 'Πατέρας του μοναχισμού',

@@ -1,0 +1,106 @@
+{
+  "slug": "tatiana-of-rome",
+  "display_name": "Tatiana of Rome",
+  "names": [
+    {
+      "form": "Tatiana",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 ianuarie, «Sfânta Muceniță Tatiana, diaconița»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "deaconess",
+    "virgin"
+  ],
+  "office": "Deaconess of the Church of Rome",
+  "dates": {
+    "death": {
+      "earliest": 222,
+      "latest": 235,
+      "display": "222–235",
+      "basis": "traditional",
+      "note": "doxologia.ro's life places her passion in the reign it dates «Alexandru Sever (222-235)», under Ulpian, prefect of the city; the page gives no year of her own."
+    }
+  },
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Rome",
+      "modern_name": "Rome, Italy",
+      "lat": 41.8931,
+      "lon": 12.4828,
+      "uncertainty_km": 15,
+      "note": "doxologia.ro's life: born «în Roma cea veche», «diaconița Bisericii Romei», tried and beheaded in the city."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 12 ianuarie — «Sfânta Muceniță Tatiana, diaconița»",
+        "url": "https://doxologia.ro/12-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 12 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mieluşeaua Ta, Iisuse, Tatiana, strigă cu glas mare: pe Tine, Mirele meu, te iubesc și pe Tine căutându-Te mă chinuiesc și împreună mă răstignesc și împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru tine, ca să viez pentru Tine; ci, ca o jertfă fără de prihană, primește-mă pe mine ceea ce cu dragoste mă jertfesc Ție. Pentru rugăciunile ei, ca un Milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Muceniţe Tatiana, diaconiţa",
+        "url": "https://doxologia.ro/troparul-sfintei-mucenite-tatiana-diaconita",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy lamb, O Jesus, Tatiana, cries out with a great voice: Thee, my Bridegroom, I love, and seeking Thee I am in torment; I am crucified with Thee and buried with Thee in Thy baptism; and I suffer for Thee, that I may reign in Thee; and I die for Thee, that I may live for Thee. But as a sacrifice without blemish receive me, who offer myself to Thee in love. At her prayers, as Thou art merciful, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Luminat-ai strălucit întru pătimirea ta, răbdătoare de chinuri, ceea ce te-ai înroşit în sângiurile tale şi ca o frumoasă porumbiţă, către cer ai zburat, Sfântă Muceniţă Tatiana. Roagă-te deci pentru cei ce pururea te cinstesc pe tine.",
+      "source": {
+        "text": "Doxologia — Condacul Sfintei Muceniţe Tatiana, diaconiţa; printed to the melody «Arătatu-Te-ai astăzi lumii...»",
+        "url": "https://doxologia.ro/condacul-sfintei-mucenite-tatiana-diaconita",
+        "year": 2026
+      },
+      "english": {
+        "text": "Brightly didst thou shine out in thy suffering, O patient one, reddened in thine own blood; and like a fair dove thou didst fly up towards heaven, holy Martyr Tatiana. Pray, then, for those who honour thee for ever.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
