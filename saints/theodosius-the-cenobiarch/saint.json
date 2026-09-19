@@ -1,0 +1,87 @@
+{
+  "slug": "theodosius-the-cenobiarch",
+  "display_name": "Theodosius the Cenobiarch",
+  "names": [
+    {
+      "form": "Teodosie cel Mare",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 ianuarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "related": [
+    "symeon-the-stylite"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 11 ianuarie — «Sfântul Cuvios Teodosie cel Mare, începătorul vieții călugărești de obște din Palestina»",
+        "url": "https://doxologia.ro/11-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 11 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Teodosie, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Teodosie cel Mare, începătorul vieţii călugăreşti de obşte",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-teodosie-cel-mare-incepatorul-vietii-calugaresti-de-obste",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren wilderness, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with wonders, Theodosius our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Sădit fiind în Lăcaşurile Domnului tău, cu preastrălucitele tale fapte bune, ai înflorit şi ai înmulţit pe fiii tăi în pustiu, cu ploile lacrimilor tale udându-i, păstorule al turmelor lui Dumnezeu. Pentru aceasta strigăm ţie: bucură-te, Părinte Teodosie.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Teodosie cel Mare, începătorul vieţii călugăreşti de obşte; printed to the melody «Apărătoare Doamnă...»",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-teodosie-cel-mare-incepatorul-vietii-calugaresti-de-obste",
+        "year": 2026
+      },
+      "english": {
+        "text": "Planted in the courts of thy Lord, thou didst blossom with thy most radiant virtues, and thou didst multiply thy sons in the wilderness, watering them with the rains of thy tears, O shepherd of the flocks of God. Therefore we cry to thee: rejoice, Father Theodosius.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
