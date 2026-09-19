@@ -1,0 +1,84 @@
+{
+  "slug": "anastasius-the-persian",
+  "display_name": "Anastasius the Persian",
+  "names": [
+    {
+      "form": "Anastasie Persul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 ianuarie, «Sfântul Cuvios Mucenic Anastasie Persul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Anastasie, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Mucenic Anastasie Persul, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-mucenic-anastasie-persul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Anastasius, O Lord, in his contest received the crown of incorruption from thee our God; for having thy strength he cast down the tormentors, and broke also the feeble daring of the demons. At his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "model": "Ceata îngerească...",
+      "text": "Pe Dumnezeiescul ucenic şi împreună călător cu Apostolul Pavel, pe Sfântul Timotei, toţi credincioşii să-l laude cu cântări; împreună cu dânsul cinstind şi pe Înţeleptul Anastasie, ce a strălucit din Persia ca o stea, care alungă patimile noastre cele sufleteşti şi bolile trupului.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Apostol Timotei şi al Sfântului Cuvios Mucenic Anastasie Persul, Glasul 1, «Ceata îngerească...»",
+        "url": "https://doxologia.ro/condacul-sfantului-apostol-timotei-al-sfantului-cuvios-mucenic-anastasie-persul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let all the faithful praise in hymns the divine disciple and fellow traveller of the apostle Paul, Saint Timothy; and with him let them honour the wise Anastasius, who shone out of Persia like a star, and who drives away the passions of our souls and the sicknesses of our bodies.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 ianuarie — «Sfântul Cuvios Mucenic Anastasie Persul»",
+        "url": "https://doxologia.ro/22-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

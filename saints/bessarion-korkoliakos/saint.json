@@ -1,0 +1,71 @@
+{
+  "slug": "bessarion-korkoliakos",
+  "display_name": "Bessarion Korkoliakos",
+  "names": [
+    {
+      "form": "Visarion Agathonitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 ianuarie, «Sfântul Cuvios Visarion Agathonitul»."
+    },
+    {
+      "form": "Visarion Korkoliakos",
+      "lang": "ro",
+      "note": "Read out of the heading of doxologia.ro's life, «Sfântul Cuvios Visarion Korkoliakos»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1908,
+      "latest": 1908,
+      "display": "1908",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Cuvios Visarion Korkoliakos s-a născut în Petalidi, Messinia, în anul 1908, primind la botez numele de Andrei»."
+    },
+    "death": {
+      "earliest": 1991,
+      "latest": 1991,
+      "display": "1991",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Visarion a adormit în Domnul la spitalul Sotiria din Atena din cauza unui edem pulmonar, în ziua de 22 ianuarie 1991»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 ianuarie — «Sfântul Cuvios Visarion Agathonitul»",
+        "url": "https://doxologia.ro/22-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

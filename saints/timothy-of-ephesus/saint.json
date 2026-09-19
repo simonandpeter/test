@@ -1,0 +1,87 @@
+{
+  "slug": "timothy-of-ephesus",
+  "display_name": "Timothy of Ephesus",
+  "names": [
+    {
+      "form": "Timotei",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 ianuarie, «Sfântul Apostol Timotei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle"
+  ],
+  "related": [
+    "john-the-theologian"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Bunătatea învăţându-te şi întru toate cumpătat fiind, îmbrăcându-te cu buna conştiinţă, precum i se cuvine unui sfânt, ai scos din vasul alegerii lucrurile tainice; şi credinţa păzind, aceeaşi cale ai săvârşit, Sfinte Apostole Timotei, roagă-te lui Hristos Dumnezeu, să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Apostol Timotei, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-timotei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taught in goodness and temperate in all things, clothed with a good conscience as befits a saint, thou didst draw out the hidden things from the chosen vessel; and keeping the faith thou didst finish the same course, O apostle Timothy. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "model": "Ceata îngerească...",
+      "text": "Pe Dumnezeiescul ucenic şi împreună călător cu Apostolul Pavel, pe Sfântul Timotei, toţi credincioşii să-l laude cu cântări; împreună cu dânsul cinstind şi pe Înţeleptul Anastasie, ce a strălucit din Persia ca o stea, care alungă patimile noastre cele sufleteşti şi bolile trupului.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Apostol Timotei şi al Sfântului Cuvios Mucenic Anastasie Persul, Glasul 1, «Ceata îngerească...»",
+        "url": "https://doxologia.ro/condacul-sfantului-apostol-timotei-al-sfantului-cuvios-mucenic-anastasie-persul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let all the faithful praise in hymns the divine disciple and fellow traveller of the apostle Paul, Saint Timothy; and with him let them honour the wise Anastasius, who shone out of Persia like a star, and who drives away the passions of our souls and the sicknesses of our bodies.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 ianuarie — «Sfântul Apostol Timotei»",
+        "url": "https://doxologia.ro/22-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
