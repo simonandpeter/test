@@ -5,6 +5,11 @@
     {
       "form": "Максим Исповедник",
       "lang": "ru"
+    },
+    {
+      "form": "Maxim Mărturisitorul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 ianuarie."
     }
   ],
   "sex": "male",
@@ -45,8 +50,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 21 ianuarie — «Sfântul Cuvios Maxim Mărturisitorul»",
+        "url": "https://doxologia.ro/21-ianuarie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -152,6 +166,56 @@
       },
       "english": {
         "text": "The thrice-radiant Light, having made its dwelling in thy soul, showed thee forth as a chosen vessel, O all-blessed one, making manifest things divine unto the ends of the earth; for thou didst set forth understandings hard to attain, O blessed one, and didst preach clearly unto all, O Maximus, the Trinity superessential and without beginning.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Îndreptătorule al Ortodoxiei, învăţătorule al dreptei cinstiri de Dumnezeu şi al curăţiei şi luminătorule al lumii, podoaba călugărilor cea de Dumnezeu insuflată Sfinte Părinte Maxim, înţelepte, cu învăţăturile tale pe toţi i-ai luminat. Alăută duhovnicească, roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Maxim Mărturisitorul, Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-maxim-marturisitorul",
+        "year": 2026
+      },
+      "english": {
+        "text": "O guide of Orthodoxy, teacher of the right worship of God and of purity, light of the world, God-inspired adornment of monks, wise father Maximus: by thy teachings thou hast enlightened all. O lyre of the Spirit, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "model": "Apărătoare Doamnă...",
+      "text": "Pe Marele Maxim, iubitorul Preasfintei Treimi, pe cel ce a propovăduit în chip lămurit Dumnezeiasca credinţă şi ne-a învăţat să credem că Hristos este în două firi şi cu două voinţe şi lucrări, întru cântări credincioşii să-l cinstim, precum se cuvine, strigând: bucură-te propovăduitorule al credinţei.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Maxim Mărturisitorul, Glasul 8, «Apărătoare Doamnă...»",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-maxim-marturisitorul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful honour in hymns, as is due, the great Maximus, the lover of the Most Holy Trinity, who preached the divine faith plainly and taught us to believe that Christ is in two natures and with two wills and two operations, crying out: rejoice, O herald of the faith.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "model": "Arătatu-Te-ai astăzi...",
+      "text": "Cu mărturisiri sfinţite te-ai împodobit şi te-ai ridicat încununat de la pământ, către Lumina Cea Neînserată şi către Mărire, Sfinte Părinte Maxim. Păzeşte pe cei ce cinstesc sfântă pomenirea ta.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Maxim Mărturisitorul, Glasul 4, «Arătatu-Te-ai astăzi...»",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-maxim-marturisitorul-0",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with holy confessions, thou wast taken up crowned from the earth to the Light that knows no evening and to glory, O father Maximus. Keep those who honour thy holy memory.",
         "rendered": "site"
       }
     }

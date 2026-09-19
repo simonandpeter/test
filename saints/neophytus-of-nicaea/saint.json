@@ -1,0 +1,76 @@
+{
+  "slug": "neophytus-of-nicaea",
+  "display_name": "Neophytus of Nicaea",
+  "names": [
+    {
+      "form": "Neofit",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 ianuarie, «Sfântul Mucenic Neofit»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "284–305",
+      "basis": "traditional",
+      "note": "doxologia.ro's life gives no year for the martyrdom but dates the reign it fell in: «Într-acea vreme împărăţeau la Răsărit şi la Apus tiranii Dioclețian (284-305) și Maximian (286-305)». The day it gives is 21 January."
+    }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Neofit, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Neofit, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-neofit",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Neophytus, O Lord, in his contest received the crown of incorruption from thee our God; for having thy strength he cast down the tormentors, and broke also the feeble daring of the demons. At his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 21 ianuarie — «Sfântul Mucenic Neofit»",
+        "url": "https://doxologia.ro/21-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

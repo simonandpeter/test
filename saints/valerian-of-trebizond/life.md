@@ -1,0 +1,9 @@
+# Valerian of Trebizond
+
+Valerian is named first of the three whom the life doxologia.ro prints for 21 ianuarie says were taken together: Valerian, [Candidus](/saints/candidus-of-trebizond) and [Aquila](/saints/aquila-of-trebizond), in the mountains above Trebizond, in the reign of Diocletian and Maximian and at the hands of a man the page names Lysias. The persecution being hard upon them, they had left their houses and their goods behind and gone out into the hills, preferring, the life says, the company of wild beasts to that of men who hated God.
+
+They were caught in the land of Lazica, in a small fortress the page calls Până, and were shut up there in a narrow prison; after a time they were brought to Trebizond and set before Lysias. Asked about the faith of Christ and pressed to sacrifice, they refused, and were stripped and beaten with sinews, hung up and torn with iron claws, and burned with lighted torches. The tormentors, says the life, fell to the ground like dead men, and Lysias in fear ordered the three back to prison.
+
+Not many days later [Eugene](/saints/eugene-of-trebizond) was taken too. All four were thrown at the end into a burning furnace, came out of it unharmed, and were killed by the sword.
+
+*After doxologia.ro's calendar for 21 ianuarie — [the day](https://doxologia.ro/21-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-valerian-0); read 19 September 2026.*

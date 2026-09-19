@@ -1,0 +1,66 @@
+{
+  "slug": "agnes-of-rome",
+  "display_name": "Agnes of Rome",
+  "names": [
+    {
+      "form": "Agnia din Roma",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 ianuarie, «Sfânta Muceniţă Agnia din Roma»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "late 3rd century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfânta Muceniţă Agnia s-a născut la Roma spre sfârşitul secolului al III-lea». The page gives no year, so the interval is the century it names."
+    },
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "early 4th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Cert este că ea a fost martirizată la începutul secolului al IV-lea, la vârsta de 13 ani, sub prigoana împăratului Dioclețian». The page gives no year, so the interval is the century it names."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 21 ianuarie — «Sfânta Muceniţă Agnia din Roma»",
+        "url": "https://doxologia.ro/21-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

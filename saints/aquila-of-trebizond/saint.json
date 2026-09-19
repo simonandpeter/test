@@ -1,0 +1,54 @@
+{
+  "slug": "aquila-of-trebizond",
+  "display_name": "Aquila of Trebizond",
+  "names": [
+    {
+      "form": "Achila",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 ianuarie, «Sfântul Mucenic Achila»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "valerian-of-trebizond",
+    "candidus-of-trebizond",
+    "eugene-of-trebizond"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 21 ianuarie — «Sfântul Mucenic Achila»",
+        "url": "https://doxologia.ro/21-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

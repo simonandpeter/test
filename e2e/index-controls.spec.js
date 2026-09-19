@@ -221,7 +221,7 @@ test('the feast-month filter reckons each tradition in its own calendar', async 
   // January — and `scripts/corpus-gate.mjs` carries the same literal, so the
   // gate goes red on the batch that moves it and both are changed in that
   // batch's commit.
-  await expect(page.locator('[data-count]')).toHaveText('77');
+  await expect(page.locator('[data-count]')).toHaveText('86');
   await expect(page.locator('.index-name', { hasText: 'Anthony the Great' })).toHaveCount(1);
 });
 
