@@ -1,0 +1,9 @@
+# George of Pisidian Antioch
+
+George, the confessor of Christ, lived in the years of the iconoclasts. Loving Christ from his youth, he was tonsured a monk, and for his many labours and struggles in the Church he became, the page says, a dwelling and a house of the Holy Spirit. He was made bishop of Antioch in Pisidia, and shepherded well the flock entrusted to him.
+
+When the heresy of the icon-fighters had grown strong and all the bishops were called by an imperial letter to the city of Constantine, this hierarch went up with the rest. He stood bravely for the right faith, telling the emperor to submit to the ordinances of the Church and of the councils of the holy fathers, the teachers of Orthodoxy, and to follow their faith rather than be carried away to strange and various teachings, as the apostle Paul commands.
+
+He too was pressed to renounce the veneration of the holy icons, and he would not yield. For that he was driven from his seat, and in his banishment he departed to the Lord. The notice is the whole of what the page prints: it gives no year, does not name the emperor who summoned the bishops, and carries no troparion.
+
+*After doxologia.ro's calendar for 19 aprilie — [the day](https://doxologia.ro/19-aprilie) and [the life](https://doxologia.ro/viata-sfantului-ierarh-gheorghe-marturisitorul-episcopul-antiohiei-pisidei); read 20 September 2026.*

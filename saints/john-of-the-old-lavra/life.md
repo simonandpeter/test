@@ -1,0 +1,11 @@
+# John of the Old Lavra
+
+The Old Lavra was the house of [Chariton](/saints/chariton-the-confessor), near Jerusalem in the wilderness of Palestine, and it was called old because he built it before the other lavras, as his own life tells at length. In that old lavra of Chariton this John struggled as a hermit. From his youth he had been wounded with the love of God and clove to him, after what is written: but for me it is good to cleave to God.
+
+He passed over the pleasures and the pride of the empty world, left his own country for the sake of the Lord, who was himself a stranger upon earth with nowhere to lay his head, and took up the cross of the monastic life in a foreign land. When he had come to the holy places of Jerusalem and venerated the precious Cross and the life-receiving Tomb of Christ, he went to the lavra spoken of above; and there, for the goodness of his life, he was accounted worthy of the priesthood.
+
+He showed himself a follower of the hermits of old, restraining the passions of the body with great abstinence, with standings at prayer through whole nights, with the remembrance of death and with labours of many kinds, by which he so wore his flesh thin that he became, the page says, an earthly angel in the body. After a long life lived out to God's pleasure he departed to the Lord, his soul carried by the hands of the bodiless angels to the dwelling in heaven that does not grow old.
+
+Some call him John of the Old Cave rather than of the Old Lavra, and the page explains why: the old lavra of Chariton had been at first a robbers' cave. Chariton, bound there by the robbers, was loosed by a miracle when they all died at once of wine poisoned by a serpent's venom; finding much gold in the cave, he made a church in the cave itself, gathered brethren, and afterwards built the monastery above it. Because John lived in that old cave and served in its church, the second name was given him as well. No year is given.
+
+*After doxologia.ro's calendar for 19 aprilie — [the day](https://doxologia.ro/19-aprilie), [the life](https://doxologia.ro/viata-sfantului-cuvios-ioan-de-la-lavra-veche) and [the troparion](https://doxologia.ro/troparul-sfantului-cuvios-ioan-de-la-lavra-veche-1); read 20 September 2026.*

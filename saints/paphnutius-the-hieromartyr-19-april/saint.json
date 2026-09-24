@@ -1,0 +1,84 @@
+{
+  "slug": "paphnutius-the-hieromartyr-19-april",
+  "display_name": "Paphnutius (19 April)",
+  "names": [
+    {
+      "form": "Pafnutie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 aprilie, «Sfântul Sfințit Mucenic Pafnutie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 aprilie — «Sfântul Sfințit Mucenic Pafnutie»",
+        "url": "https://doxologia.ro/19-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor Apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge, Sfinţite Mucenice Pafnutie, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Sfințit Mucenic Pafnutie», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-pafnutie",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharer in the apostles' way and successor to their thrones, you found in action, O inspired of God, an ascent to contemplation. Therefore, rightly teaching the word of truth, you endured in the faith unto blood, O hieromartyr Paphnutius: entreat Christ our God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "model": "Degrab ne întâmpină...",
+      "text": "Preoţind mai întâi cu suflet curat şi pe urmă pătimind cu minte preatare, ai bineplăcut lui Dumnezeu. Drept aceea petrecând întru cele cereşti, părinte, dănţuieşti cu mucenicii şi te bucuri împreună cu ierarhii, Sfinţite Mucenice, Preafericite Pafnutie.",
+      "source": {
+        "text": "doxologia.ro, «Condacul Sfântului Sfinţit Mucenic Pafnutie», Glasul 4, podobie «Degrab ne întâmpină...»",
+        "url": "https://doxologia.ro/condacul-sfantului-sfintit-mucenic-pafnutie",
+        "year": 2026
+      },
+      "english": {
+        "text": "Serving first as a priest with a pure soul, and suffering afterwards with a most steadfast mind, you were well-pleasing to God. Therefore, dwelling in the heavens, father, you dance with the martyrs and rejoice together with the hierarchs, O hieromartyr, most blessed Paphnutius.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
