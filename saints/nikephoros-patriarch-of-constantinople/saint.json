@@ -1,0 +1,70 @@
+{
+  "slug": "nikephoros-patriarch-of-constantinople",
+  "display_name": "Nikephoros of Constantinople",
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Nichifor",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 iunie, «Sfântul Ierarh Nichifor, Patriarhul Constantinopolului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 iunie — «Sfântul Ierarh Nichifor, Patriarhul Constantinopolului»",
+        "url": "https://doxologia.ro/2-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Îndreptător credinţei şi chip blândeţilor, învăţător înfrânării te-a arătat pe tine turmei tale adevărul lucrurilor. Pentru aceasta ai câştigat cu smerenia cele înalte, cu sărăcia cele bogate. Părinte Ierarhe Nichifor, roagă pe Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Nichifor Mărturisitorul, Patriarhul Constantinopolului; the text is the common of a hierarch with his name set in it.",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-nichifor-marturisitorul-patriarhul-constantinopolului",
+        "year": 2026
+      },
+      "english": {
+        "text": "A rule of faith and an image of meekness, a teacher of abstinence: so did the truth of things show thee to thy flock. Therefore thou hast gained by humility the things on high, and by poverty the things that are rich. Father and hierarch Nikephoros, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

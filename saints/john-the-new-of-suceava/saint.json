@@ -1,0 +1,67 @@
+{
+  "slug": "john-the-new-of-suceava",
+  "display_name": "John the New of Suceava",
+  "names": [
+    {
+      "form": "Ioan cel Nou de la Suceava",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 iunie, «Sfântul Mare Mucenic Ioan cel Nou de la Suceava»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "great-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 iunie — «Sfântul Mare Mucenic Ioan cel Nou de la Suceava»",
+        "url": "https://doxologia.ro/2-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Viaţa ta pe pământ bine cârmuind, pătimitorule, cu milostenii şi cu neîncetate rugăciuni şi lacrimi şi iarăşi către pătimire bărbăteşte pornindu-te, necredinţa persienească ai mustrat. Drept aceea Bisericii te-ai făcut întărire şi creştinilor laudă, Sfinte Ioane pururea pomenite.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mare Mucenic Ioan cel Nou de la Suceava; «necredinţa persienească» is the page's own reading, although its life names the fire-worship of the Persians nowhere and sets his trial before a Turkish official.",
+        "url": "https://doxologia.ro/troparul-sfantului-mare-mucenic-ioan-cel-nou-de-la-suceava",
+        "year": 2026
+      },
+      "english": {
+        "text": "Guiding thy life well on earth, O sufferer, with almsgiving and unceasing prayers and tears, and setting out again manfully to suffering, thou didst rebuke the unbelief of the Persians. Therefore thou art become a strength to the Church and a praise to Christians, O ever-remembered Saint John.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

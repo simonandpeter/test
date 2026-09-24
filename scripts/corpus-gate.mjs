@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'nichifor nicephorus-4-may nicephorus-of-antioch nicephorus-of-corinth nikephoros-patriarch-of-constantinople':
+    'four men called Nichifor, on four days: the bare line of 4 May, a venerable with no life; the martyr of Antioch, Romanian 9 February; one of the seven of Corinth, Romanian 31 January; and the patriarch of Constantinople, son of Theodore and Eudocia, Romanian 2 June. Three martyrs and a hierarch (read 25 September 2026)',
   'agapit agapitus-of-synnada agapitus-of-the-kyiv-caves':
     'the hierarch and bishop of Synnada, Romanian 18 February, against the unmercenary physician of the Lavra of the Caves whom Anthony tonsured, Romanian 1 June (read 25 September 2026)',
   'chariton companion justin chariton-companion-of-justin justin-companion-of-chariton':
