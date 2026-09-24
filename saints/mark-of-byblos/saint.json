@@ -10,6 +10,11 @@
       "form": "Μάρκος",
       "lang": "el",
       "note": "Read out of «Άγιοι Μάρκος, Αρίσταρχος και Ζήνων οι Απόστολοι από τους Εβδομήκοντα» in this folder’s Greek citation."
+    },
+    {
+      "form": "Marcu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 aprilie, «Sfântul Apostol Marcu»."
     }
   ],
   "sex": "male",
@@ -28,8 +33,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 27 septembrie (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 aprilie — «Sfântul Apostol Marcu»",
+        "url": "https://doxologia.ro/27-aprilie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

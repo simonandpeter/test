@@ -1,0 +1,52 @@
+{
+  "slug": "symeon-kinsman-of-the-lord",
+  "display_name": "Symeon, kinsman of the Lord",
+  "names": [
+    {
+      "form": "Simeon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 aprilie, «Sfântul Sfințit Mucenic Simeon, ruda Domnului»."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop",
+  "types": [
+    "hieromartyr",
+    "bishop",
+    "apostle"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 aprilie — «Sfântul Sfințit Mucenic Simeon, ruda Domnului»",
+        "url": "https://doxologia.ro/27-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
