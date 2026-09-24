@@ -1,0 +1,66 @@
+{
+  "slug": "leontius-of-radauti",
+  "display_name": "Leontius of Rădăuți",
+  "names": [
+    {
+      "form": "Leontie de la Rădăuți",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 iulie, «Sfântul Ierarh Leontie de la Rădăuți»."
+    },
+    {
+      "form": "Lavrentie",
+      "lang": "ro",
+      "note": "His name in the monastic tonsure, read out of the life: «Pentru viața lui duhovnicească a fost călugărit, primind numele de Lavrentie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "abbot",
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1301,
+      "latest": 1350,
+      "display": "early 14th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Acest sfânt purtător de Dumnezeu, Leontie, s-a născut din părinți dreptmăritori creștini, în orașul Rădăuți, la începutul secolului al XIV-lea». The page gives no year of his death; the interval here is the whole first half of the century, because “la începutul” fixes no closer bound."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 iulie — «Sfântul Ierarh Leontie de la Rădăuți»",
+        "url": "https://doxologia.ro/1-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

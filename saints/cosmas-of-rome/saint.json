@@ -1,0 +1,72 @@
+{
+  "slug": "cosmas-of-rome",
+  "display_name": "Cosmas of Rome",
+  "names": [
+    {
+      "form": "Cosma",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 iulie, «Sfinții Mucenici Doctori fără de arginți Cosma și Damian, cei din Roma»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "unmercenary",
+    "physician",
+    "martyr"
+  ],
+  "related": [
+    "damian-of-rome"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 iulie — «Sfinții Mucenici Doctori fără de arginți Cosma și Damian, cei din Roma»",
+        "url": "https://doxologia.ro/1-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Sfinţilor cei fără de arginţi şi de minuni făcătorilor, cercetaţi neputinţele noastre. Şi ca unii care în dar aţi luat, în dar daţi-ne nouă.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinților Mucenici Doctori fără de arginți Cosma și Damian din Roma; the troparion is printed for the two of them together and is the common of the unmercenaries.",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-doctori-fara-de-arginti-cosma-damian-din-roma",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy unmercenaries and workers of wonders, visit our infirmities; freely you have received, freely give to us.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

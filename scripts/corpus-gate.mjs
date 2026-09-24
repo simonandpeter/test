@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'cosma cosmas-of-chalcedon cosmas-of-rome':
+    'the unmercenary physician martyred at Rome with his brother Damian, Romanian 1 July, against the hierarch and confessor of Chalcedon, a monk of Constantinople, Romanian 18 April (read 25 September 2026)',
+  'damian damian-of-agrafa damian-of-rome damian-the-healer':
+    'three men called Damian, on three days: the unmercenary physician martyred at Rome with his brother Cosmas, Romanian 1 July; the new-martyr of Agrafa, of Philotheou on Athos, Romanian 14 February; and the presbyter-healer of the Kyiv Caves under Theodosius, Romanian 5 October (read 25 September 2026)',
+  'lavrentie laurence-venerable-10-may leontius-of-radauti':
+    'the bishop of Rădăuți in Moldavia, Romanian 1 July, whose own life gives Lavrentie as his monastic name before the schema, against the bare «Sfântul Cuvios Lavrentie» the Romanian calendar prints on 10 May with no life, no country and no century (read 25 September 2026)',
   'teodul theodulus-companion-of-agathopodes theodulus-of-the-forty-martyrs theodulus-of-tripoli':
     'three men called Teodul, on three days: the young reader of Thessalonica who drowned with the deacon Agathopodes under Diocletian, Romanian 5 April; one of the Forty frozen at Sebaste, Romanian 9 March; and the tribune’s friend converted at Tripoli in Phoenicia beside Leontius, Romanian 18 June (read 25 September 2026)',
   'inochentie innocent-of-apollonia innocent-of-moscow':
