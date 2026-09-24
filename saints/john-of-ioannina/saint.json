@@ -1,0 +1,59 @@
+{
+  "slug": "john-of-ioannina",
+  "display_name": "John of Ioannina",
+  "names": [
+    {
+      "form": "Ioan din Ianina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 aprilie, «Sfântul Mucenic Ioan din Ianina»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1500,
+      "latest": 1500,
+      "display": "1500",
+      "basis": "attested",
+      "note": "doxologia.ro dates his confession «în ziua Vinerii celei Mari, în anul 1500» and says he was killed «în 18 zile ale lunii aprilie» of that same Paschal season, the beatings falling in «zilele Paștilor»; the year is the page's, given at the confession."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 18 aprilie — «Sfântul Mucenic Ioan din Ianina»",
+        "url": "https://doxologia.ro/18-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

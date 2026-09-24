@@ -1,0 +1,11 @@
+# John, disciple of Gregory the Decapolite
+
+The Decapolis, the life begins, was once two lands of that name: the one near Galilee in Palestine, which the Evangelist Matthew remembers when he writes that many peoples followed him out of Galilee and out of the ten cities, and a smaller one in Isauria. It was from the Isaurian Decapolis that Gregory the Decapolite came, the teacher of this John whose memory is kept today.
+
+John left the world in his youth for the love of Christ, came to Gregory and was tonsured a monk by him. He lived with his teacher, labouring in everything and pleasing God, and came to such humility, such obedience and such readiness for every good work that Gregory himself rejoiced over him and glorified God.
+
+When the emperor Leo the Armenian renewed the heresy of the iconoclasts and raised a persecution against the Church, John went to Byzantium with his teacher and with Joseph the writer of hymns; and they walked about the city strengthening the Orthodox to stand in their confession. Joseph was then sent to Rome and never reached it, for he fell into the hands of the heretics and was held in chains in Crete; and after he was sent away, Gregory the Decapolite departed to the Lord.
+
+John stayed on in Byzantium at his accustomed labours, caring not for his own salvation only but for that of others. When Joseph was at last freed and came back, John too departed to the Lord, to take the wages of his labours, and Joseph buried him beside Gregory's grave. The life of Joseph the hymnographer, which the page quotes at length, tells the rest: that Joseph afterwards settled in a quiet place outside the city, not far from the church of Saint John Chrysostom, built there a church in the name of the hierarch Nicholas, and translated the relics of both fathers, Gregory's and John's, to it. No year is given anywhere in the notice.
+
+*After doxologia.ro's calendar for 18 aprilie — [the day](https://doxologia.ro/18-aprilie), [the life](https://doxologia.ro/viata-sfantului-cuvios-ioan-ucenicul-sfantului-grigorie-decapolitul) and [the troparion](https://doxologia.ro/troparul-sfantului-cuvios-ioan-ucenicul-sfantului-grigorie-decapolitul-1); read 20 September 2026.*

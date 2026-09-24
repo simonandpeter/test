@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ioan john-disciple-of-gregory-the-decapolite john-of-antioch john-of-edessa john-of-the-forty-martyrs john-son-of-xenophon john-the-theologian':
+    'six men called Ioan, and the fold is bare because the corpus stores the bare forename for each: the disciple of Gregory the Decapolite, Romanian 18 April; the archbishop of Antioch, Romanian 18 April, whose page gives no life; the soldier of Edessa, Romanian 31 January; one of the Forty of Sebaste, Romanian 9 March; the elder son of Xenophon and Mary of Constantinople, Romanian 26 January; and the son of Zebedee, Romanian 26 September. The two on 18 April are the day’s own pair and the calendar prints them as two lines, a monk and a hierarch; a third John of the same day, of Ioannina, does not fold in because his Romanian form carries his city (read 25 September 2026)',
   'acachie acacius-of-melitene acacius-of-the-forty-martyrs':
     'the bishop of Melitene in Armenia, asked of God by childless parents, Romanian 17 April, against one of the Forty frozen on the lake at Sebaste under Licinius, Romanian 9 March. Armenia and Sebaste are near neighbours and the two men are not (read 25 September 2026)',
   'simeon simeon-of-persia symeon-the-god-receiver':

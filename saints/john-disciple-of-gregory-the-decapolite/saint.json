@@ -1,0 +1,68 @@
+{
+  "slug": "john-disciple-of-gregory-the-decapolite",
+  "display_name": "John, disciple of Gregory the Decapolite",
+  "names": [
+    {
+      "form": "Ioan",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 aprilie, «Sfântul Cuvios Ioan, ucenicul Sfântului Grigorie Decapolitul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 18 aprilie — «Sfântul Cuvios Ioan, ucenicul Sfântului Grigorie Decapolitul»",
+        "url": "https://doxologia.ro/18-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Ioan, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Ioan, ucenicul Sfântului Grigorie Decapolitul», Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-ioan-ucenicul-sfantului-grigorie-decapolitul-1",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of your tears you worked the barren desert, and with sighs from the depths you made your labours bear fruit a hundredfold; and you became a light to the world, shining with wonders, John our father. Pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
