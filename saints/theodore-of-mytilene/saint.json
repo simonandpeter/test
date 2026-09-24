@@ -1,0 +1,59 @@
+{
+  "slug": "theodore-of-mytilene",
+  "display_name": "Theodore of Mytilene",
+  "names": [
+    {
+      "form": "Theodor Hagiul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 30 ianuarie, «Sfântul Theodor Hagiul Noul Mucenic din Mitilini»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1784,
+      "latest": 1784,
+      "display": "1784",
+      "basis": "attested",
+      "note": "doxologia.ro's life, of the hanging at Parmak Kapi: «Era 30 ianuarie 1784»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 ianuarie — «Sfântul Theodor Hagiul Noul Mucenic din Mitilini»",
+        "url": "https://doxologia.ro/30-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 30 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
