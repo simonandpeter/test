@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'marturisitorul nichita nicetas-of-apollonias nicetas-of-medikion':
+    'two confessors of the war on the icons, and doxologia prints both under the same words, «Nichita Mărturisitorul», which is why the fold is exact. The first is the bishop of Apollonias whose life on the page is two sentences long, Romanian 20 March; the second is of Medikion, born at Caesarea of Bithynia, whose father Philaret was tonsured a monk when the mother died on the eighth day after the birth, Romanian 3 April. One generation, one persecution, two men and two days (read 25 September 2026)',
   'aedesius amphianus brother aedesius-brother-of-amphianus amphianus-brother-of-aedesius':
     'two brothers of Lycia, each named in doxologia’s 2 aprilie as the other’s brother, so the fold is the key sorting their two names into one. both were drowned in the sea after torture, Amphianus with a stone tied to him and Aedesius after striking a judge in the face, and the calendar keeps them on the one day (read 25 September 2026)',
   'vlasie blaise-of-amorion blaise-of-sebaste':

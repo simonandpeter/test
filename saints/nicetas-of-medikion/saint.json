@@ -1,0 +1,71 @@
+{
+  "slug": "nicetas-of-medikion",
+  "display_name": "Nicetas of Medikion",
+  "names": [
+    {
+      "form": "Nichita Mărturisitorul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 aprilie, «Sfântul Cuvios Nichita Mărturisitorul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "hieromonk",
+    "confessor",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 3 aprilie — «Sfântul Cuvios Nichita Mărturisitorul»",
+        "url": "https://doxologia.ro/3-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 3 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Nichita, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Nichita Mărturisitorul, egumenul Mănăstirii Midichiei, Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-nichita-marturisitorul-egumenul-manastirii-midichiei",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with miracles, O Nicetas our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
