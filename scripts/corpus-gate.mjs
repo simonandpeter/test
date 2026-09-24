@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'valeria valeria-martyr-6-june valeria-the-martyr-23-july':
+    'two women, and it took a page outside doxologia to say so. Both Romanian lines are bare -- «Sfanta Mucenita Valeria», a rank and a day and nothing else, on 6 iunie and on 23 iulie -- so the folder for the July line was written on 25 September, undone the same hour, and written again only once saint.gr/489 had been read: it keeps 6 Iouniou for the five virgins of Caesarea in Palestine, Martha, Maria, Kyria, Vareria (or Valeria) and Markia, tortured to death one after another under the citys archon. That is the June woman. No source read names a Valeria on 23 July at all, so the July line stands as a bare attestation and her own identity is unattested -- she is emphatically not made the wife of the Vitalis doxologia prints beside her, whom saint.gr/2036 puts at Ravenna in the first century (read 25 September 2026)',
   'companion theophilus trophimus theophilus-companion-of-trophimus trophimus-companion-of-theophilus':
     'the two men the Romanian 23 July names together, who suffered under Diocletian with thirteen others and share one life between two folders, as Simeon and John of Emesa do on 21 July (read 25 September 2026)',
   'teofil theophilus-companion-of-trophimus theophilus-of-the-forty-martyrs':
