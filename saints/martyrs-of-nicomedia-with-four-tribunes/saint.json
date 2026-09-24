@@ -1,0 +1,50 @@
+{
+  "slug": "martyrs-of-nicomedia-with-four-tribunes",
+  "display_name": "The Martyrs of Nicomedia with four tribunes",
+  "names": [
+    {
+      "form": "Sfinții 4 Mucenici tribuni, împreună cu cei 1003 mucenici din Nicomidia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 februarie. The calendar's whole line is the only name it gives them; it names no member of the company."
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 februarie — «Sfinții 4 Mucenici tribuni, împreună cu cei 1003 mucenici din Nicomidia»",
+        "url": "https://doxologia.ro/7-februarie",
+        "year": 2026
+      },
+      "note": "Their own page on the site carries the line, the date and the readings appointed for martyrs, and no life and no troparion. The company is not enumerated, so it is kept here as one entry."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

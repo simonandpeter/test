@@ -766,6 +766,7 @@ export const el = {
     'Bishop of Iconium': 'Επίσκοπος Ικονίου',
     'Bishop of Kirillov': 'Επίσκοπος Κιρίλοφ',
     'Bishop of Kourion': 'Επίσκοπος Κουρίου',
+    'Bishop of Lampsacus': 'Επίσκοπος Λαμψάκου',
     'Bishop of Lefkada': 'Επίσκοπος Λευκάδος',
     'Bishop of Lipetsk': 'Επίσκοπος Λίπετσκ',
     'Bishop of Lydia': 'Επίσκοπος Λυδίας',

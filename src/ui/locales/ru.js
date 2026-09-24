@@ -784,6 +784,7 @@ export const ru = {
     'Bishop of Iconium': 'Епископ Иконийский',
     'Bishop of Kirillov': 'Епископ Кирилловский',
     'Bishop of Kourion': 'Епископ Курийский',
+    'Bishop of Lampsacus': 'Епископ Лампсакийский',
     'Bishop of Lefkada': 'Епископ Лефкадский',
     'Bishop of Lipetsk': 'Епископ Липецкий',
     'Bishop of Lydia': 'Епископ Лидийский',
