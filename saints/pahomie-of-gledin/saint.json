@@ -1,0 +1,65 @@
+{
+  "slug": "pahomie-of-gledin",
+  "display_name": "Pahomie of Gledin",
+  "office": "Bishop of Roman",
+  "names": [
+    {
+      "form": "Pahomie de la Gledin",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 aprilie, «Sfântul Ierarh Pahomie de la Gledin, Episcopul Romanului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "monk"
+  ],
+  "related": [
+    "demetrius-of-rostov"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1724,
+      "latest": 1724,
+      "display": "1724",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «A murit la Lavra Pecerska în anul 1724»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "His own page prints no feast date, but the site's troparion page for him is headed «Troparul Sfântului Ierarh Pahomie de la Gledin, Episcopul Romanului (14 aprilie)», and his life says the Holy Synod of the Romanian Church, approving his canonisation on 14–15 November 2006, «a fost stabilită ca dată de sărbătorire a lui ziua de 14 aprilie»."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 14 aprilie — «Sfântul Ierarh Pahomie de la Gledin, Episcopul Romanului»",
+        "url": "https://doxologia.ro/14-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 14 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

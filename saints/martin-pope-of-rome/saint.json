@@ -6,6 +6,11 @@
     {
       "form": "Άγιος Μαρτίνος Πάπας Ρώμης",
       "lang": "el"
+    },
+    {
+      "form": "Martin",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 aprilie, «Sfântul Ierarh Martin Mărturisitorul, Episcopul Romei»; the bare personal name, without the rank the line carries."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "The Romanian calendar keeps him on 14 April; the Greek synaxarion this folder already cited keeps him on 13 April."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 14 aprilie — «Sfântul Ierarh Martin Mărturisitorul, Episcopul Romei»",
+        "url": "https://doxologia.ro/14-aprilie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -58,5 +73,23 @@
   },
   "related": [
     "maximus-the-confessor"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Îndreptător credinţei şi chip blândeţelor, învăţător înfrânării te-a arătat pe tine, turmei tale, adevărul lucrurilor. Pentru aceasta ai dobândit cu smerenia cele înalte şi cu sărăcia cele bogate; Părinte Ierarhe Martin, roagă pe Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Ierarh Martin Mărturisitorul, Episcopul Romei», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-martin-marturisitorul-episcopul-romei",
+        "year": 2026
+      },
+      "english": {
+        "text": "A rule of faith and an image of gentleness, a teacher of abstinence: so the truth of things has shown you to your flock. Therefore you gained by humility the things on high, and by poverty the things that are rich. Father and hierarch Martin, entreat Christ God to save our souls.",
+        "rendered": "site"
+      }
+    }
   ]
 }
