@@ -1,0 +1,66 @@
+{
+  "slug": "argyra-of-prusa",
+  "display_name": "Argyra of Prusa",
+  "names": [
+    {
+      "form": "Arghira",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 30 aprilie, «Sfânta Muceniță Arghira»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1692,
+      "latest": 1692,
+      "display": "c. 1692",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «s-a născută în Prusia Bitiniei (astăzi orașul Bursa din Turcia) în jurul anului 1692» — the page says “around 1692” and gives no closer bound."
+    },
+    "death": {
+      "earliest": 1725,
+      "latest": 1725,
+      "display": "1725",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «și-a sfârșit viața primind nepieritoarea cunună a muceniciei, în anul 1725»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 aprilie — «Sfânta Muceniță Arghira»",
+        "url": "https://doxologia.ro/30-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 30 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

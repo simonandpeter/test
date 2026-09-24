@@ -1,0 +1,54 @@
+{
+  "slug": "james-son-of-zebedee",
+  "display_name": "James, son of Zebedee",
+  "names": [
+    {
+      "form": "Iacob",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 30 aprilie, «Sfântul Apostol Iacob, fratele Sfântului Apostol Ioan Evanghelistul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle",
+    "martyr"
+  ],
+  "related": [
+    "john-the-theologian"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "Doxologia keeps him twice: its calendar prints him on 30 aprilie and again on 30 iunie — «Soborul Sfinților 12 Apostoli». One attestation row per church is the schema, so the row is the day this folder was read from and the second day is recorded here. The 30 iunie line is the Synaxis of the Twelve, which names each apostle in turn. Read 25 September 2026."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 aprilie — «Sfântul Apostol Iacob, fratele Sfântului Apostol Ioan Evanghelistul»",
+        "url": "https://doxologia.ro/30-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 30 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

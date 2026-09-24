@@ -1,0 +1,90 @@
+{
+  "slug": "ignatius-brianchaninov",
+  "display_name": "Ignatius Brianchaninov",
+  "names": [
+    {
+      "form": "Ignatie Briancianinov",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 30 aprilie, «Sfântul Ierarh Ignatie Briancianinov»."
+    },
+    {
+      "form": "Dimitrie",
+      "lang": "ro",
+      "note": "His name at baptism, as doxologia.ro's life prints it: «Din botez s-a numit Dimitrie»."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1807,
+      "latest": 1807,
+      "display": "1807",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «s-a născut în anul 1807, într-o familie de nobili ruși, în provincia Vologda»."
+    },
+    "death": {
+      "earliest": 1867,
+      "latest": 1867,
+      "display": "1867",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «La 30 Aprilie 1867 își dă duhul în mâinile Domnului»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026). doxologia.ro's own life says the Russian Church canonised him in 1988 with his day at 30 April, but that is the Romanian page's report and not the Russian calendar read."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 aprilie — «Sfântul Ierarh Ignatie Briancianinov»",
+        "url": "https://doxologia.ro/30-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 30 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Apărătorule al Ortodoxiei, învățător și lucrător râvnitor al pocăinței și al rugăciunii, podoaba purtătoare de Duh Sfânt a arhiereilor, slava și lauda călugărilor, Sfinte Ignatie de Dumnezeu înțelepțite, prin scrierile tale pe toți i-ai luminat. Alăută duhovnicească, roagă pe Hristos, Dumnezeu-Cuvântul, pe Care L-ai purtat în inima ta, să ne dăruiască nouă pocăință mai înainte de sfârșit.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Ignatie Briancianinov», Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-ignatie-briancianinov",
+        "year": 2026
+      },
+      "english": {
+        "text": "Defender of Orthodoxy, teacher and zealous worker of repentance and of prayer, Spirit-bearing adornment of bishops, glory and praise of monks, Ignatius made wise by God, by thy writings thou hast enlightened all. Spiritual harp, entreat Christ, God the Word, whom thou didst carry in thy heart, to grant us repentance before the end.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

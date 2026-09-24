@@ -1,0 +1,17 @@
+# Ignatius Brianchaninov
+
+This great teacher of the Jesus prayer — so the life opens — was born in 1807 into a family of Russian nobles in the province of Vologda, and was named Dimitry at baptism. From childhood he was wise and devout beyond his years, loving quiet, prayer, the services of the Church and the reading of holy books above all else.
+
+Gifted with an exceptional intelligence, the young Dimitry was soon noticed by the Grand Duke Nicholas, the future tsar, and taken under his protection; but his success in the high circles of society gave his soul no fulfilment, and he found his comfort only in the services of the Church and in the writings of the Fathers, where he found sure directions toward salvation. At last he resigned his commission as an officer in the tsar's army, left the world, and in 1827 entered on the monastic struggle with a friend at the monastery of Saint Alexander of Svir, under the guidance of Saint Leonid, the future elder of Optina.
+
+At first he was given obedience in the kitchen, under the orders of a man who had been his father's serf, and so tasted for the first time the fruits of real humility; wholly submissive to everyone, the young disciple was loved by all the fathers of the monastery for his humility and obedience. In 1829 he settled with his elder in the brotherhood of the monastery of Optina, a famous hermitage of Orthodox Russia.
+
+He then had to pass through several monasteries, suffering illness, hunger and cold, yet without falling into despair. In 1832 he was tonsured a monk under the name Ignatius and appointed superior of the monastery of Lopotov; and in 1834 he was made abbot of the monastery of Saint Sergius near Petersburg, where he renewed the spiritual life entirely and raised up many spiritual children.
+
+His work was not without labours, troubles, temptations and enemies — a cross the archimandrite Ignatius bore with much patience, and of which he later wrote that there he had been counted worthy to meet the enemy who wished to take his life, and the enemy's face became in his eyes as the face of a bright angel: what a privilege, he wrote, to be a sacrifice like Christ, or rather, what a privilege to be crucified beside the Saviour.
+
+Having gained the gift of tears, of humility and of the holy prayer of the heart, he gathered about him many souls of chosen life, burning like an unquenched lamp among them and sought by all as a great teacher of the Jesus prayer. He also wrote, with great wisdom, several books of spiritual building, showing everyone the way to gain the holy prayer of the heart.
+
+In 1857 he was consecrated bishop of Stavropol, a city of the Caucasus; but after four years he withdrew again to quiet on account of illness, becoming a skilled physician of souls and sought out by many spiritual children. On 30 April 1867 he gave up his spirit into the Lord's hands, leaving many disciples behind him. After his blessed end he appeared in the midst of a blinding light to one of his spiritual sons and said, «Tot ce am scris în cărțile mele este adevărat!» — all that I have written in my books is true. For the holiness of his life the Russian Orthodox Church canonised him in 1988, with his day at 30 April.
+
+*After doxologia.ro's calendar for 30 aprilie — [the day](https://doxologia.ro/30-aprilie), [the life](https://doxologia.ro/viata-sfantului-ignatie-briancianinov) and [the troparion](https://doxologia.ro/troparul-sfantului-ignatie-briancianinov); read 20 September 2026.*

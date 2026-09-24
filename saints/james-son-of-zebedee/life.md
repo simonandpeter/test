@@ -1,0 +1,15 @@
+# James, son of Zebedee
+
+James was the son of Zebedee and the brother of [John the Evangelist](/saints/john-the-theologian), and one of the twelve apostles. With his brother he left the boat, his father and his net and went after Jesus at His divine call, following Him everywhere, attending to the teaching that came out of His most pure mouth and seeing the wonders He worked. The Lord loved the two brothers so much, the life says, that to one He gave His breast to lean upon, and to this one He promised His cup, which He drank on the Cross.
+
+They loved their Lord as much in return, and showed such zeal for Him that they wanted to bring fire down from heaven on those who would not believe in Christ, and would have done it had the long-suffering Christ not stopped them. These two brothers and the apostle Peter the Lord never left without a word, and revealed His divine mysteries to them more than to the rest — as on Tabor, when, wishing to show the glory of His godhead, He took Peter, James and John.
+
+After the voluntary Passion, the Resurrection, the Ascension and the coming of the Holy Spirit, James went into Spain and other parts, preaching the word of God, and came back again to Jerusalem. He was terrible to the Jews as a thunderclap, for without wavering he taught with all boldness that Jesus Christ is the true Messiah, the Saviour of the world, and overcame the Pharisees and the teachers of the Law out of the divine Scriptures, rebuking the hardness of their hearts.
+
+Unable to stand against his words, they hired with gold a philosopher and sorcerer named Hermogenes to dispute with James and put his teaching to shame. That contest, and what came of it, fills the middle of the life; at the end of it Herod took James and put him in prison.
+
+Eusebius, bishop of Caesarea in Palestine, writes — and the life quotes him — that while James was under sentence of death, one of the men who had accused him to Herod, named Josias, seeing his courage and boldness, knowing his innocence and holiness, and understanding the truth of what he had said about the coming of the Messiah, believed in Christ and at once showed himself a confessor; and Josias was condemned to death with him.
+
+Going together to the place of execution, the apostle healed a paralytic who lay by the road. As he was making ready his neck for the sword, Josias begged James to forgive the sin he had done in ignorance in slandering him to the king; and the apostle embraced and kissed him and said, «Pace ție» — peace to thee. So they both bowed their heads to the sword and ended. After the beheading, his disciples took their teacher's body and by divine guidance carried it into Spain, where healings of diseases are given from his tomb to this day. The page gives no year, and dates him only by Herod.
+
+*After doxologia.ro's calendar for 30 aprilie — [the day](https://doxologia.ro/30-aprilie) and [the life](https://doxologia.ro/viata-sfantului-apostol-iacob-fratele-sfantului-apostol-ioan-evanghelistul); read 20 September 2026.*

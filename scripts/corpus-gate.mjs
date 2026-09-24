@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'dimitrie demetrius-of-georgia ignatius-brianchaninov':
+    'not two saints sharing a forename but one form standing for two people: Ignatius Brianchaninov, Romanian 30 April, was christened Dimitri and the corpus stores that baptismal form beside his monastic one, so it folds onto Demetrius of Georgia, Romanian 16 March. The same shape as Platon Kulbusch and the Pauls below (read 25 September 2026)',
   'filimon philemon-of-cyzicus philemon-of-gaza':
     'one of the nine martyrs of Cyzicus in Lesser Mysia, Romanian 29 April, against the martyr of the Romanian 14 February, whose page carries his name, his day and the day’s readings and no life. Nothing on the February page puts him at Cyzicus (read 25 September 2026)',
   'teodot theodotus-of-cyzicus theodotus-of-kyrenia':
@@ -255,8 +257,8 @@ const READ_FOLDS = {
     'Platon Kulbusch, the first bishop of Estonia, was christened Paul at Pootsi in 1869, and the corpus stores that baptismal form beside his monastic one. A third Pavel joins them: the third of the twelve who suffered at Caesarea in Palestine under Diocletian, of the town of Jamnia, Romanian 16 February. The second is the third of the three the governor Firmilian sentenced at Caesarea, beheaded after Ennatha and Valentina went to the fire, Romanian 10 February. A baptismal name against a martyr’s, and sixteen centuries between them (read 24 September 2026)',
   'nichifor nicephorus-of-antioch nicephorus-of-corinth':
     'the townsman of Antioch the Great who begged the priest Sapricius on his way to the sword not to deny Christ and, when he denied him anyway, asked the executioners to cut him down in his place and was beheaded on the ninth day of February, against one of the seven men of Corinth seized under Decius in 250 whose page doxologia prints under each of their names, Romanian 31 January. Two cities, two persecutions, two days (read 24 September 2026)',
-  'iacob jacob-the-hermit james-of-nisibis james-of-samosata':
-    'three men called Iacob and nothing else shared: the hermit of the Romanian 28 January, fifteen years in a cave and then a murder and the rest of his life in a tomb; the bishop of Nisibis who fasted on the mountains, 13 January; and one of the seven of Samosata hung up with iron nails driven through their heads, Romanian 29 January, whose page gives no year and no emperor (read 19 September 2026)',
+  'iacob jacob-the-hermit james-of-nisibis james-of-samosata james-son-of-zebedee':
+    'three men called Iacob and nothing else shared: the hermit of the Romanian 28 January, fifteen years in a cave and then a murder and the rest of his life in a tomb; the bishop of Nisibis who fasted on the mountains, 13 January; and one of the seven of Samosata hung up with iron nails driven through their heads, Romanian 29 January, whose page gives no year and no emperor. A fourth joins them, the son of Zebedee, Romanian 30 April (read 25 September 2026)',
   'arsenie arsenios-of-paros arsenius-of-corfu':
     'the schoolmaster of Paros, born at Ioannina in 1800 and reposed on Paros in 1877, Romanian 31 January, against the archbishop of Corfu who died in 953 and is kept on the Romanian 19 January. Nine centuries (read 19 September 2026)',
   'victor victor-of-corinth victor-presbyter-martyr-1918':
