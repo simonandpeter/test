@@ -1,0 +1,70 @@
+{
+  "slug": "benedict-of-nursia",
+  "display_name": "Benedict of Nursia",
+  "names": [
+    {
+      "form": "Benedict de Nursia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 martie, «Sfântul Cuvios Benedict de Nursia»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "abbot",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 14 martie — «Sfântul Cuvios Benedict de Nursia»",
+        "url": "https://doxologia.ro/14-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 14 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Benedict, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Benedict de Nursia, glasul 8. It is the common of venerable fathers with his name in it; the day page carries a second troparion for him as well.",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-benedict-de-nursia",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of your tears you tilled the barren desert, and with sighs from the depths you made your labours bear fruit a hundredfold; and you became a light to the world, shining with wonders, Benedict our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

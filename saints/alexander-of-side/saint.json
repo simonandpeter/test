@@ -1,0 +1,59 @@
+{
+  "slug": "alexander-of-side",
+  "display_name": "Alexander of Side",
+  "names": [
+    {
+      "form": "Alexandru",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 martie, «Sfântul Sfințit Mucenic Alexandru preotul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 270,
+      "latest": 275,
+      "display": "under Aurelian (270–275)",
+      "basis": "traditional",
+      "note": "doxologia.ro opens the life «Împărățind Aurelian (270-275) și fiind prigonire asupra creștinilor». The interval is the reign the page prints; it gives no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 14 martie — «Sfântul Sfințit Mucenic Alexandru preotul»",
+        "url": "https://doxologia.ro/14-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 14 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
