@@ -1,0 +1,81 @@
+{
+  "slug": "irene-of-lesvos",
+  "display_name": "Irene of Lesvos",
+  "names": [
+    {
+      "form": "Irina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 aprilie, «Sfinții Mucenici Rafail, Irina și Nicolae din Insula Lesvos»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "related": [
+    "raphael-of-lesvos",
+    "nicholas-of-lesvos"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1463,
+      "latest": 1463,
+      "display": "1463",
+      "basis": "traditional",
+      "note": "doxologia.ro's life heads the section «5. Făcliile Paștilor anului 1463 în Thermi» and puts her death in the rising of «În 1463, creștinii s-au răsculat împotriva turcilor»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "doxologia.ro's own life page heads itself «prăznuire în ziua de marți din Săptămâna Luminată și pe 9 aprilie», and the calendar prints the three of them on Bright Tuesday as well as on this fixed day; the movable day cannot be held as a feast here, so the fixed 9 April is the row."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 aprilie — «Sfinții Mucenici Rafail, Irina și Nicolae din Insula Lesvos»",
+        "url": "https://doxologia.ro/9-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Sfeșnic în trei lumini al lui Hristos v-ați arătat, sfinților mucenici, lauda Lesvosului, cu strălucirea minunilor voastre Biserica ați luminat-o, Rafail, mare făcătorule de minuni, cinstea preoților, slăvite Nicolae, odorul diaconiei și Irina, trandafir al fecioriei; pentru aceasta pe voi cu cântări vă mărim.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Mucenici Rafail, Nicolae și Irina»; the page prints no glas",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-rafail-nicolae-irina",
+        "year": 2026
+      },
+      "english": {
+        "text": "A lamp of three lights of Christ you have shown yourselves to be, O holy martyrs, the praise of Lesvos; with the shining of your wonders you have given light to the Church — Raphael, great worker of wonders, the honour of priests; glorious Nicholas, the jewel of the diaconate; and Irene, rose of virginity. Therefore with hymns we magnify you.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "slug": "eupsychius-of-caesarea-under-julian",
+  "display_name": "Eupsychius of Caesarea (under Julian)",
+  "names": [
+    {
+      "form": "Eupsihie din Cezareea Capadociei",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 aprilie, «Sfântul Mucenic Eupsihie din Cezareea Capadociei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 aprilie — «Sfântul Mucenic Eupsihie din Cezareea Capadociei»",
+        "url": "https://doxologia.ro/9-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Eupsihie, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Mucenic Eupsihie din Cezareea Capadociei», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-eupsihie-din-cezareea-capadociei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Eupsychius, O Lord, in his struggle has won from Thee, our God, the crown of incorruption; for having Thy strength, he overthrew his tormentors and broke the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "basil-the-great",
+    "eupsychius-of-caesarea-under-hadrian"
+  ]
+}

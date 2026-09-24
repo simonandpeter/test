@@ -1,0 +1,52 @@
+{
+  "slug": "vadim-of-persia",
+  "display_name": "Vadim of Persia",
+  "office": "Archimandrite",
+  "names": [
+    {
+      "form": "Vadim",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 aprilie, «Sfântul Cuvios Vadim, arhimandritul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "The day page and the life page agree on 9 aprilie as the commemoration, but the life itself says he was killed «în 8 Aprilie»; the day is the calendar's, the 8th is the life's date of death."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 aprilie — «Sfântul Cuvios Vadim, arhimandritul»",
+        "url": "https://doxologia.ro/9-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

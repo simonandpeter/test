@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'nicolae nicholas-of-lesvos nicholas-of-the-forty-martyrs':
+    'the young Greek studying in France whom Raphael’s preaching turned, and who died with him and Irene on Lesvos, Romanian 9 April, against one of the Forty frozen on the lake at Sebaste under Licinius, Romanian 9 March. Twelve centuries apart and nothing shared but the forename (read 25 September 2026)',
   'eutihie eutychius-of-constantinople eutychius-of-the-forty-martyrs':
     'the patriarch of Constantinople, from the Phrygian village of Divine, where he later built a church of the Forty Martyrs, Romanian 6 April, against one of those Forty themselves, frozen on the lake at Sebaste under Licinius, Romanian 9 March. The first built a church to the second’s company, which is the whole of the connection (read 25 September 2026)',
   'iosif joseph-the-hymnographer joseph-the-merciful':
