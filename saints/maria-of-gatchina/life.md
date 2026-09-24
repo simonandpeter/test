@@ -1,0 +1,17 @@
+# Maria of Gatchina
+
+Maria was a nun at Gatchina, a small town some fifty kilometres from Petrograd, known to everyone there for its gardens, its parks and its palaces. The account doxologia.ro prints is Ivan Andreev's, from his *Saints of the Russian Catacombs*, and it says the revolution of 1917 found her already on her bed of suffering. She had had encephalitis and then Parkinson's disease: her body was wholly still, as though shackled, her bloodless face like a mask, and she could speak only slowly and half under her breath, through her teeth.
+
+Andreev, who was a physician, sets down that the disease commonly brings irritability, a wearying stubbornness, an exaggerated self-regard, and that such patients often end in asylums. Mother Maria, completely disabled in body, did not decline in mind at all. She grew submissive, humble and obedient, asking nothing, gathered into herself and absorbed in unceasing prayer, and carried the hard illness without the least murmur.
+
+He visited her in March 1927, in the wooden house on the edge of the town. Among the photographs in her waiting room he noticed two: Metropolitan Veniamin of Petrograd, the new martyr, who had written to her only that she had consoled him, a sinner, among many who were afflicted; and Metropolitan Iosif, soon to lead the “Josephite” movement, who had inscribed his at length.
+
+Andreev watched people come out of her room. A young man who had fallen into despair at his priest father's arrest and exile left her smiling and resolved to be ordained deacon; a suffering young woman left radiant and resolved to become a nun; an elderly man grieving for his son left with his head up; an old woman who had come in tears went away calm and firm.
+
+He told her of a depression that fell on him for weeks at a time and that he could find no way out of. Despondency is a spiritual cross, she answered, sent to the penitent who does not know how to repent, and there are only two medicines for it: either to learn to repent and to offer the fruits of repentance, or else to carry the cross with humility, obedience, patience and great thanksgiving, for the Lord reckons the carrying of it as the fruit. He wrote that her words were like an operation on his soul, and that he went away another man.
+
+About 1930 she was arrested, charged under paragraphs 10 and 11 of article 58 with counter-revolutionary propaganda and with belonging to a counter-revolutionary organisation. The organisation, Andreev says, was two people, and the propaganda was her gift of consoling those in suffering; the charge was aggravated by her refusal to recognise Metropolitan Sergius after the Declaration of 1927. Two Chekists dragged the paralysed woman from her bed by her arms, twisted behind her, across the floor and the ground to a lorry, and threw her in. Her brother was taken away in another car.
+
+Parcels were accepted at the prison for a month. Then they were refused, with the words that she had died in hospital; the body was never given back. Her brother, a slight young man who had nursed her and received her visitors, was given five years in a Siberian camp after nine months of investigation. doxologia.ro's short notice adds that her relics are venerated in the cathedral of the Apostle Paul at Gatchina, in the Leningrad region, and prints her year of death with a query mark.
+
+*After doxologia.ro's calendar for 26 ianuarie — [the day](https://doxologia.ro/26-ianuarie) and [the life](https://doxologia.ro/viata-sfintei-maria-din-gatcina); read 19 September 2026.*

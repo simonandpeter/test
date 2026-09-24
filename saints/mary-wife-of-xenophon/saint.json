@@ -1,0 +1,89 @@
+{
+  "slug": "mary-wife-of-xenophon",
+  "display_name": "Mary, wife of Xenophon",
+  "names": [
+    {
+      "form": "Maria",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 ianuarie, «Sfânta Cuvioasă Maria, soţia Sfântului Cuvios Xenofont»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "related": [
+    "xenophon-of-constantinople",
+    "john-son-of-xenophon",
+    "arcadius-son-of-xenophon"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Dumnezeul părinţilor noştri Care faci pururea cu noi după blândeţile Tale, nu îndepărta mila Ta de la noi; ci, pentru rugăciunile lor, în pace îndreptează viaţa noastră.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Xenofont, al soţiei sale Maria şi al fiilor lor Arcadie şi Ioan, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-xenofont-al-sotiei-sale-maria-al-fiilor-lor-arcadie-ioan",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who ever dealest with us according to thy gentleness, take not thy mercy from us, but by their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "model": "Arătatu-Te-ai astăzi lumii...",
+      "text": "În curţile Stăpânului ai priveghiat împreună cu soţia şi cu fiii tăi, împărţindu-ţi averea ta săracilor, cu veselie, fericite. Pentru aceasta moşteniţi Dumnezeiasca Desfătare.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Xenofont, al soţiei sale Maria şi al fiilor lor Arcadie şi Ioan, Glasul 4, «Arătatu-Te-ai astăzi lumii...»",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-xenofont-al-sotiei-sale-maria-al-fiilor-lor-arcadie-ioan",
+        "year": 2026
+      },
+      "english": {
+        "text": "In the courts of the Master thou didst keep vigil together with thy wife and thy sons, dividing thy goods among the poor with gladness, O blessed one. Therefore ye inherit the divine delight.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 ianuarie — «Sfânta Cuvioasă Maria, soţia Sfântului Cuvios Xenofont»",
+        "url": "https://doxologia.ro/26-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

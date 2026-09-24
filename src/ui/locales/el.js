@@ -820,6 +820,7 @@ export const el = {
     'Hieromonk of Zilantov': 'Ιερομόναχος Ζιλάντοφ',
     'Hieroschemamonk': 'Ιεροσχημόναχος',
     'Iconographer': 'Αγιογράφος',
+    'King of Georgia': 'Βασιλιάς της Γεωργίας',
     'King of India': 'Βασιλιάς της Ινδίας',
     'King of Judah': 'Βασιλιάς του Ιούδα',
     'King of the East Saxons': 'Βασιλιάς των Ανατολικών Σαξόνων',

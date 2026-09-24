@@ -1,0 +1,59 @@
+{
+  "slug": "maria-of-gatchina",
+  "display_name": "Maria of Gatchina",
+  "names": [
+    {
+      "form": "Maria",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 ianuarie, «Sfânta Cuvioasă Muceniţă Maria din Gatcina»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1930,
+      "latest": 1930,
+      "display": "1930",
+      "basis": "traditional",
+      "note": "doxologia.ro prints the year with a query mark: «Sfânta Noua Muceniţă Maria din Gatcina (? 1930) este sărbătorită la 26 ianuarie»; the life it carries says «Prin 1930, maica Maria a fost arestată» and that the prison stopped accepting parcels a month later with the words that she had died in hospital."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 ianuarie — «Sfânta Cuvioasă Muceniţă Maria din Gatcina»",
+        "url": "https://doxologia.ro/26-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

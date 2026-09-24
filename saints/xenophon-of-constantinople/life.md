@@ -1,0 +1,15 @@
+# Xenophon of Constantinople
+
+Xenophon was one of the foremost noblemen of Constantinople, rich, doxologia.ro's life says, in outward goods and richer in inward ones, and as humble in mind as he was high in honour; he sent his wealth on ahead of him into heaven through the hands of the poor. His wife [Mary](/saints/mary-wife-of-xenophon) followed him in every good work and was of one mind with him in all things, and their two sons, [John](/saints/john-son-of-xenophon) and [Arcadius](/saints/arcadius-son-of-xenophon), they raised in learning and in the fear of God and sent to Berytus in Phoenicia to study.
+
+While the sons were away Xenophon fell gravely ill and looked to die. Mary sent for them; they came, and at his bedside he set out how he had lived — that he had wronged nobody and slandered nobody, had kept peace with all, had not left the churches of God evening or morning, had visited those in prison and ransomed many captives. He charged them to give alms, to help widows and orphans, to visit the sick, to do good to their enemies, and not to forget those who wander for God in the deserts, the mountains and the caves of the earth.
+
+In the night he was assured in a dream that God would leave him longer in this life, and he began to mend. He put the boys back on a ship for Berytus, meaning to marry them when their studies were done. A storm broke the ship apart. The brothers came ashore alive in different countries and each, knowing nothing of the other, became a monk; and a servant who had survived brought word home that both were drowned.
+
+Xenophon said he believed God would not let his children perish. He and Mary shut themselves in their chapel and prayed the night through, and towards dawn each was shown the two sons standing in great glory before Christ. They went to Jerusalem, gave much gold at the Holy Places, and searched the monasteries around the city without finding them; on the road towards the Jordan they met the clairvoyant elder who had tonsured Arcadius, and he promised to show them their sons.
+
+At their own table the elder sat with two young monks who kept their faces down, and the parents, who could not know them for the monastic habit and for the faces worn away by abstinence, said they loved these young men as if they saw their own. Then Arcadius was asked to tell where he was born, and while he told it his parents knew him.
+
+Xenophon and Mary asked to be tonsured too, and the elder tonsured them with his own hand and taught them the monastic rule, appointing that they should not live together. Mary was given to a convent of virgins; the sons went with the elder into the desert; and Xenophon sent to Byzantium, sold the house and all the goods, gave them to those in need and set his slaves free, and found a cell in the desert and lived quietly. There, the life says, he received from God the gift of wonderworking and of foresight, and told what was to come, and was a seer of great mysteries.
+
+*After doxologia.ro's calendar for 26 ianuarie — [the day](https://doxologia.ro/26-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-xenofont); read 19 September 2026.*

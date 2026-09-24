@@ -1,0 +1,66 @@
+{
+  "slug": "david-the-builder",
+  "display_name": "David the Builder",
+  "office": "King of Georgia",
+  "names": [
+    {
+      "form": "David",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 ianuarie, «Sfântul David Ziditorul, regele Georgiei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "king"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1073,
+      "latest": 1073,
+      "display": "1073",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «David al IV-lea, denumit David Ziditorul, (1073-1125) a fost rege al Georgiei între anii 1089-1125»."
+    },
+    "death": {
+      "earliest": 1125,
+      "latest": 1125,
+      "display": "1125",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «David al IV-lea, denumit David Ziditorul, (1073-1125) a fost rege al Georgiei între anii 1089-1125»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 ianuarie — «Sfântul David Ziditorul, regele Georgiei»",
+        "url": "https://doxologia.ro/26-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

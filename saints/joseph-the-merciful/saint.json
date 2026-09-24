@@ -1,0 +1,103 @@
+{
+  "slug": "joseph-the-merciful",
+  "display_name": "Joseph the Merciful",
+  "office": "Metropolitan of Moldavia",
+  "names": [
+    {
+      "form": "Iosif",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 ianuarie, «Sfântul Ierarh Iosif cel Milostiv, Mitropolitul Moldovei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1818,
+      "latest": 1818,
+      "display": "1818",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Mitropolitul Iosif Naniescu […] s-a născut în Basarabia […] la 15 iulie 1818»."
+    },
+    "death": {
+      "earliest": 1902,
+      "latest": 1902,
+      "display": "1902",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «s-a mutat la cereştile lăcaşuri cu pace în anul 1902, în ziua de 26 ianuarie»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "model": "Degrab ne întâmpină..",
+      "text": "Cu evlavie urmând milostivirii cereşti, Moldovei te-ai arătat arhipăstor milostiv şi plin de sfinţenie; pentru aceasta, Sfinte Ierarhe, prin cuvânt şi prin fapte chemând la mântuire turma ta, te bucuri acum cu toţi drepţii în cer, Părinte Iosif.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Iosif cel Milostiv, Mitropolitul Moldovei, Glasul 4, «Degrab ne întâmpină..»",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-iosif-cel-milostiv-mitropolitul-moldovei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Following with reverence the mercy of heaven, thou wast shown to Moldavia a merciful chief shepherd and full of holiness; wherefore, O holy hierarch, calling thy flock to salvation by word and by deed, thou now rejoicest with all the righteous in heaven, O Father Joseph.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "model": "Apărătoare Doamnă...",
+      "text": "Milostivirii lui Hristos urmând, Părinte, tuturor toate te-ai făcut, precum Apostolul, Ierarhe Iosif, cu milostivirea; deci în ceruri, fericite, odihnindu-te, te rogi pentru cei ce-ţi cântă cu evlavie, zicând: Bucură-te, Sfinte Iosif, de Hristos înţelepţite!",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Ierarh Iosif cel Milostiv, Mitropolitul Moldovei, Glasul 8, «Apărătoare Doamnă...»",
+        "url": "https://doxologia.ro/condacul-sfantului-ierarh-iosif-cel-milostiv-mitropolitul-moldovei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Following the mercy of Christ, O Father, thou didst become all things to all men, as the Apostle did, by thy mercy, O hierarch Joseph; therefore, resting now in the heavens, O blessed one, thou prayest for those who sing to thee with reverence: Rejoice, holy Joseph, made wise by Christ!",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 ianuarie — «Sfântul Ierarh Iosif cel Milostiv, Mitropolitul Moldovei»",
+        "url": "https://doxologia.ro/26-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

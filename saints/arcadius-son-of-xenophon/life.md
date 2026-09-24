@@ -1,0 +1,11 @@
+# Arcadius, son of Xenophon
+
+Arcadius was the younger son of [Xenophon](/saints/xenophon-of-constantinople) and [Mary](/saints/mary-wife-of-xenophon) of Constantinople and the brother of [John](/saints/john-son-of-xenophon). doxologia.ro prints under his name the same life it prints under his father's. He was sent with his brother to Berytus in Phoenicia to learn the Greek wisdom, called home when their father fell mortally ill, and sent back when their father recovered.
+
+Their ship was broken apart in a storm and the brothers were carried away from one another in the water, each on a plank. Arcadius came ashore at Tetrapyrgia, fell on his face and thanked God, and begged that his brother John might be kept as he had been kept. In a village near by a Christian gave him an old garment; he asked for a little bread and ate, prayed in the church with tears, and fell asleep on a bench beside it, and saw John in a dream telling him that by the grace of Christ he was alive.
+
+Rather than go home without his brother he went to Jerusalem, venerated the Holy Places, and set out meaning to enter whatever monastery he met. On the road he fell at the feet of an old monk, grey-headed and clairvoyant, who told him his brother was alive and that all who had been with them were saved. The elder led him to the lavra of Saint Chariton, called Souka in the Syrian tongue, tonsured him there and gave him a cell in which one of the great fathers had laboured fifty years.
+
+The elder stayed with him a year, teaching him the monastic life and the war against the unseen enemies, and then went into the desert, promising to see him again in three years. When Arcadius came again to Jerusalem, worn out and dried in the face and his eyes hardly to be seen from his abstinence, he found the elder sitting with John; and hearing his brother tell his story, he knew him and cried out. Two days later their parents came from the Jordan, and the elder brought the four together and tonsured the parents as well. The life says the two brothers shone among the desert-dwellers like lights, lived many years, foresaw their end and departed to the Lord.
+
+*After doxologia.ro's calendar for 26 ianuarie — [the day](https://doxologia.ro/26-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-arcadie); read 19 September 2026.*

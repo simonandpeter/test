@@ -1,0 +1,11 @@
+# Mary, wife of Xenophon
+
+Mary was the wife of [Xenophon](/saints/xenophon-of-constantinople), one of the foremost noblemen of Constantinople. The life doxologia.ro prints under her name is the family's life, and of her it says that she followed her husband in all his good works and was of one mind with him in everything, and that the two lived blamelessly in all the commandments and ordinances of the Lord. They had two sons, [John](/saints/john-son-of-xenophon) and [Arcadius](/saints/arcadius-son-of-xenophon), and raised them not only in the understanding of books but in the fear of God, wanting heirs to their life rather than to their goods.
+
+When Xenophon fell gravely ill at home it was Mary who wrote to Berytus, where the boys were studying, telling them of their father's sickness and bidding them come quickly, so as to have his last blessing and be at the burial. He recovered instead, and the two were sent back to their studies. Their ship was broken up in a storm, and after two years a servant returned from the search with the news that both had drowned.
+
+Mary heard it first and could not bring herself to tell her husband. She put him off at table until he pressed her, and then could answer only that it would have been better if the children were ill, for they had perished in the sea. Xenophon blessed the name of God and told her he believed the divine care would not let them be lost. That night they prayed together in their chapel, and towards morning both were shown their sons standing before Christ in great glory.
+
+They set out for Jerusalem, venerated the Holy Places and searched the monasteries around the city, gave alms there and by the Jordan, and were brought at last, by the clairvoyant elder who had tonsured Arcadius, face to face with their sons at their own table. Mary asked with her husband to be tonsured, and the elder tonsured them and appointed that they should live apart; she was given to a convent of virgins. The life says of her end only that she worked many miracles, gave light to the blind and drove out demons, and passed by a blessed death from earthly things to heavenly.
+
+*After doxologia.ro's calendar for 26 ianuarie — [the day](https://doxologia.ro/26-ianuarie) and [the life](https://doxologia.ro/viata-sfintei-cuvioase-maria-sotia-sfantului-cuvios-xenofont); read 19 September 2026.*

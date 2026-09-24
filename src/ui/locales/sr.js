@@ -821,6 +821,7 @@ export const sr = {
     'Hieromonk of Zilantov': 'Јеромонах зилантовски',
     'Hieroschemamonk': 'Јеросхимонах',
     'Iconographer': 'Иконописац',
+    'King of Georgia': 'Краљ Грузије',
     'King of India': 'Краљ индијски',
     'King of Judah': 'Краљ јудејски',
     'King of the East Saxons': 'Краљ источних Саса',

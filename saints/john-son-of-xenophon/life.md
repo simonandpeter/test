@@ -1,0 +1,13 @@
+# John, son of Xenophon
+
+John was the elder son of [Xenophon](/saints/xenophon-of-constantinople) and [Mary](/saints/mary-wife-of-xenophon), noble people of Constantinople, and the brother of [Arcadius](/saints/arcadius-son-of-xenophon). doxologia.ro keeps him on 26 January under the bare line «Sfântul Cuvios Ioan» and prints no separate life for him; what it gives of him is in the life of his father. He and his brother were raised in the fear of God and sent to Berytus in Phoenicia for the Greek learning, and were called home when their father fell ill and was expected to die.
+
+Their father recovered, and the brothers were put back on a ship. A storm broke it apart. The sailors got into a small boat and left them; the two young men stripped so as to swim, embraced and asked each other's forgiveness, and prayed that if they had to die one wave might cover them both and one belly of a sea-beast be the grave of both. Each caught a plank, and the water carried them apart; both came ashore alive, John at a place called Melphitanus, each believing the other drowned.
+
+Ashamed to show himself naked before people, he decided to serve God in poverty rather than in the world's riches, and went until he found a monastery. The gatekeeper gave him his own garment and set bread and lentils before him; the abbot, seeing the divine calling in him, kept him and shortly tonsured him. He laboured there in prayer, fasting and obedience, and prayed for his brother, that if he had been kept alive his mind might be opened to want the monastic life too.
+
+He came to Jerusalem to venerate the Holy Places and found the clairvoyant elder, who told him to sit and he would soon see his brother. Arcadius arrived, dried up in the face and his eyes scarcely to be seen from his fasting, and as John told his story Arcadius knew him and cried out. Two days later their parents came from the Jordan, and all four were brought together. The life says the brothers shone among the desert-dwellers like lights, lived many years, foresaw their own end and passed to the Lord.
+
+A note at the end of the same page records, without settling it, that some take this John for John Climacus, on the ground that the writer of John Climacus's life covers his birth and his city; and that some say he was the son of Xenophon and that his brother was George Arselaites, who was called Arcadius from birth. The note is the page's, and it is set down here as a report and not as a finding.
+
+*After doxologia.ro's calendar for 26 ianuarie — [the day](https://doxologia.ro/26-ianuarie), [his own page](https://doxologia.ro/sfantul-cuvios-ioan) and [the family's life](https://doxologia.ro/viata-sfantului-cuvios-xenofont); read 19 September 2026.*

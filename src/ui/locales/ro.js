@@ -819,6 +819,7 @@ export const ro = {
     'Hieromonk of Zilantov': 'Ieromonah de la Zilantov',
     'Hieroschemamonk': 'Ieroschimonah',
     'Iconographer': 'Iconar',
+    'King of Georgia': 'Rege al Georgiei',
     'King of India': 'Rege al Indiei',
     'King of Judah': 'Rege al lui Iuda',
     'King of the East Saxons': 'Rege al saxonilor de răsărit',
