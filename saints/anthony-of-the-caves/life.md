@@ -55,6 +55,10 @@ his ninetieth year, on 7 May 1073. His relics, by God’s dispensation, remain
 hidden. The Russian calendar keeps him on 2 September (Julian) with
 Theodosius, the two founders of monasticism in the Russian land.
 
+The Romanian calendar keeps him on 10 iulie and prints there a short life taken from an Athonite book, Moses the Athonite's The Saints of the Holy Mountain. It calls him the founder and father of monasticism in Russia, and has his abbot Theoctistus, who tonsured him, send him away by a divine revelation: it is God's will, my son, that you go to Rus to carry the blessing of Mount Athos. He went, was driven back to Athos by men's malice, and stilled himself in a cave near Esphigmenou which is kept to this day with a church in his honour; then his elder sent him a second time, saying that the blessing of the Holy Mountain would be upon him there and that many monks would come out of him.
+
+Finding in no monastery of that country the hard struggle of the Athonites, the page says, he wandered until he ended in a cave near Kyiv and prayed, Lord, establish me in this place, that the blessing of the Holy Mountain and of the abbot who tonsured me may remain upon it. Crowds came for his blessing; some stayed as monks, Varlaam was chosen abbot and Anthony withdrew out of sight; and when the brethren had multiplied under Theodosius and asked his blessing to found a monastery he gave it gladly, and the house dedicated to the Mother of God became the mother of Russian monasticism after the Athonite rule.
+
 *After the life printed by the Sretensky calendar (days.pravoslavie.ru) —
 [the entry](https://days.pravoslavie.ru/Life/life4208.htm), read 5 September 2026 — this
-time whole; the earlier reading had stopped partway.*
+time whole; the earlier reading had stopped partway; doxologia.ro's calendar for 10 iulie keeps him too, with a short Athonite life — [the day](https://doxologia.ro/10-iulie) and [that life](https://doxologia.ro/viata-cuviosului-antonie-de-la-lavra-kievului-inainte-vazator-tamaduitor-al-bolnavilor); read 24 September 2026.*

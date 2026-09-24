@@ -5,6 +5,11 @@
     {
       "form": "Антоний Печерский",
       "lang": "ru"
+    },
+    {
+      "form": "Antonie de la Lavra Pecerska",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 iulie, «Sfântul Cuvios Antonie de la Lavra Pecerska», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 2 septembrie (checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 iulie — «Sfântul Cuvios Antonie de la Lavra Pecerska»",
+        "url": "https://doxologia.ro/10-iulie",
+        "year": 2026
+      },
+      "note": "doxologia.ro's life for this day is the life of this man — born at Lyubech in 983, tonsured on Athos, settled in a cave near Kyiv, with Varlaam and Theodosius after him and his life written by his disciple Nestor — so the Romanian row is this folder's and not a second Anthony's. The Romanian calendar keeps him on 10 iulie, where the Russian keeps him on 2 septembrie old style; only doxologia's 10 iulie page was read (24 September 2026), and whether the Romanian calendar also names him on the Russian day is unknown."
     },
     {
       "church": "greek",

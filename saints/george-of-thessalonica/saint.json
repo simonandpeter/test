@@ -1,0 +1,52 @@
+{
+  "slug": "george-of-thessalonica",
+  "display_name": "George of Thessalonica",
+  "office": "Bishop of Thessalonica",
+  "names": [
+    {
+      "form": "Gheorghe",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 iulie, «Sfântul Ierarh Gheorghe, episcopul Tesalonicului», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 iulie — «Sfântul Ierarh Gheorghe, episcopul Tesalonicului»",
+        "url": "https://doxologia.ro/10-iulie",
+        "year": 2026
+      },
+      "note": "His page says in as many words that no synaxarion knows his commemoration — «Pomenirea lui este necunoscută sinaxarelor» — and that he is honoured with the Vatopedi saints on 10 iulie. So the Romanian day is a house commemoration of the Holy Mountain, not an inherited one, and that is what this row records."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

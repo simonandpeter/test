@@ -1,0 +1,68 @@
+{
+  "slug": "forty-five-martyrs-of-nicopolis",
+  "display_name": "The Forty-five Martyrs of Nicopolis in Armenia",
+  "names": [
+    {
+      "form": "Cei 45 de Mucenici din Nicopolea Armeniei",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 iulie, «Sfinții 45 de Mucenici din Nicopolea Armeniei», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 iulie — «Sfinții 45 de Mucenici din Nicopolea Armeniei»",
+        "url": "https://doxologia.ro/10-iulie",
+        "year": 2026
+      },
+      "note": "This is one folder and not forty-five, because the page does not enumerate the company: its narrative names six men — Leontius, Mauricius, Daniel, Antoninus, Alexander and Sisinius — out of the forty-five, and no list of the rest is printed anywhere on it."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoințele lor, cununile nestricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au și ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuiește sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților 45 de Mucenici din Nicopolea Armeniei», Glasul 4 — the common troparion of martyrs, printed here for this company",
+        "url": "https://doxologia.ro/troparul-sfintilor-45-de-mucenici-din-nicopolea-armeniei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, Lord, in their struggles received from You, our God, the crowns of incorruption; for having Your strength they overthrew their torturers and broke the powerless insolence of the demons. At their prayers, Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

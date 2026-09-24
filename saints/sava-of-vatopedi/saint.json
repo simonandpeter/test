@@ -1,0 +1,51 @@
+{
+  "slug": "sava-of-vatopedi",
+  "display_name": "Sava of Vatopedi",
+  "names": [
+    {
+      "form": "Sava Vatopedinul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 iulie, «Sfântul Cuvios Sava Vatopedinul», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "deacon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 iulie — «Sfântul Cuvios Sava Vatopedinul»",
+        "url": "https://doxologia.ro/10-iulie",
+        "year": 2026
+      },
+      "note": "His page says he is honoured with the Vatopedi saints on 10 iulie and also remembered in the service of the Vimatarissa icon, which is kept on the Tuesday of Bright Week: «Se pomenește și în slujba icoanei Vimatarissa și se prăznuiește în Marțea din Săptămâna Luminată.» That second, moveable commemoration is recorded here and the folder renders on 10 iulie only."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
