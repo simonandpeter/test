@@ -1,0 +1,68 @@
+{
+  "slug": "elijah-the-tishbite",
+  "display_name": "Elijah the Tishbite",
+  "names": [
+    {
+      "form": "Ilie Tesviteanul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 iulie, «Sfântul Slăvitul Proroc Ilie Tesviteanul», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 iulie — «Sfântul Slăvitul Proroc Ilie Tesviteanul»",
+        "url": "https://doxologia.ro/20-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Cel ce a fost înger în trup, temeiul proorocilor, al doilea Înaintemergător al venirii lui Hristos, Ilie Măritul, care a trimis de sus lui Elisei dar, goneşte bolile şi pe cei leproşi curăţeşte. Pentru aceasta şi celor ce-l cinstesc pe dânsul le izvorăşte tămăduiri.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Slăvitul Proroc Ilie Tesviteanul», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-slavitul-proroc-ilie-tesviteanul",
+        "year": 2026
+      },
+      "english": {
+        "text": "You who were an angel in the flesh, the foundation of the prophets, the second Forerunner of the coming of Christ, glorious Elijah, who sent down grace from on high to Elisha: drive away sicknesses and cleanse the lepers. And so for those who honour him he pours out healings.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
