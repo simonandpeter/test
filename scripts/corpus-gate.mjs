@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'inochentie innocent-of-apollonia innocent-of-moscow':
+    'one of the three martyrs of Apollonia, Romanian 17 June, against the metropolitan of Moscow and Kolomna, Russian 23 September, Romanian 31 March, Greek 6 October (read 25 September 2026)',
+  'manuil manuel-of-persia maximus-of-kapsokalyvia':
+    'one of the three Persian brothers of one mother, Romanian 17 June, against Maximus of Kapsokalyvia, whose second `ro` name form is Manuil because that is the name his own life gives him at baptism; he is kept on 13 January under Maxim (read 25 September 2026)',
   'marcu mark-of-apollonias mark-of-arethusa mark-of-byblos mark-of-ephesus mark-the-ascetic mark-the-evangelist':
     'six men called Marcu, on six days: the hieromartyr bishop of Apollonias, Romanian 16 June; the hieromartyr bishop of Arethusa, Romanian 29 March; the apostle of Byblos, Romanian 27 April and Greek 27 September; the metropolitan of Ephesus, Romanian 19 January; the hermit, Romanian 5 March; and the Evangelist, Romanian 25 April (read 25 September 2026)',
   'tihon tikhon-of-amathus tikhon-of-moscow':

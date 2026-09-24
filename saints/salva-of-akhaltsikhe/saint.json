@@ -1,0 +1,59 @@
+{
+  "slug": "salva-of-akhaltsikhe",
+  "display_name": "Salva of Akhaltsikhe",
+  "names": [
+    {
+      "form": "Salva",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 iunie, «Sfântul Mucenic Salva din Akhaltsikhe, Georgia»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1227,
+      "latest": 1227,
+      "display": "1227",
+      "basis": "traditional",
+      "note": "doxologia.ro: «în anul 1227 fericitul Salva și-a încredințat sfințitul său suflet în mâinile Domnului». The same page dates the victory at Basiani to 1203 and the campaign in which he was taken to 1225; it gives no birth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 iunie — «Sfântul Mucenic Salva din Akhaltsikhe, Georgia»",
+        "url": "https://doxologia.ro/17-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
