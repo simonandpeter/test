@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'eutihie eutychius-of-constantinople eutychius-of-melitene eutychius-of-the-forty-martyrs':
+    'three men called Eutihie, on three days: the patriarch of Constantinople, Romanian 6 April; the hieromartyr bishop of Melitene of 28 May, a line the calendar names and whose page carries no life; and one of the Forty frozen at Sebaste under Licinius, Romanian 9 March (read 25 September 2026)',
+  'nichita nicetas-of-chalcedon nikitas-of-nea-moni':
+    'the confessor raised to the throne of Chalcedon, Romanian 28 May, against the eleventh-century father of Nea Moni on Chios who struggled in a cave on Mount Provateon, Romanian 20 May. A hierarch and a hermit (read 25 September 2026)',
   'terapont therapon-of-cyprus therapon-of-sardis':
     'the bishop in Cyprus of the Romanian 14 May, whose own life opens by saying almost nothing about him can be told — not his country, not his family, not his age — against the hierarch of Sardis who turned many pagans from idols and was seized by a ruler, Romanian 27 May. Doxologia keeps them on two days with two pages and two hymns; the 14 May page makes no claim that would join them (read 25 September 2026)',
   'alfeu alphaeus-martyr-10-may alphaeus-the-apostle':

@@ -1,0 +1,69 @@
+{
+  "slug": "nicetas-of-chalcedon",
+  "display_name": "Nicetas of Chalcedon",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Nichita",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 mai, «Sfântul Ierarh Nichita Mărturisitorul, Episcopul Calcedonului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 mai — «Sfântul Ierarh Nichita Mărturisitorul, Episcopul Calcedonului»",
+        "url": "https://doxologia.ro/28-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Îndreptător credinţei şi chip blândeţilor, învăţător înfrânării te-a arătat pe tine turmei tale adevărul lucrurilor. Pentru aceasta ai câştigat cu smerenia cele înalte, cu sărăcia cele bogate. Părinte Ierarhe Nichita, roagă pe Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Nichita Mărturisitorul, Episcopul Calcedonului; the text is the common of a hierarch with his name set in it.",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-nichita-marturisitorul-episcopul-calcedonului",
+        "year": 2026
+      },
+      "english": {
+        "text": "A rule of faith and an image of meekness, a teacher of abstinence: so did the truth of things show thee to thy flock. Therefore thou hast gained by humility the things on high, and by poverty the things that are rich. Father and hierarch Nicetas, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

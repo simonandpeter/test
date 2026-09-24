@@ -1,0 +1,69 @@
+{
+  "slug": "eutychius-of-melitene",
+  "display_name": "Eutychius of Melitene",
+  "office": "Bishop of Melitene",
+  "names": [
+    {
+      "form": "Eutihie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 mai, «Sfântul Sfințit Mucenic Eutihie, Episcopul Melitinei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 mai — «Sfântul Sfințit Mucenic Eutihie, Episcopul Melitinei»",
+        "url": "https://doxologia.ro/28-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Eutihie, întru nevoinţa sa, cununa nesctricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfinţit Mucenic Eutihie, Episcopul Melitinei; the text is the common of a martyr with his name set in it, and «nesctricăciunii» is doxologia's own reading.",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-eutihie-episcopul-melitinei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Eutychius, O Lord, in his contest received the crown of incorruption from Thee our God; for having Thy strength he overcame the tormentors and broke the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
