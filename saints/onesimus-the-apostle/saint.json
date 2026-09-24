@@ -1,0 +1,72 @@
+{
+  "slug": "onesimus-the-apostle",
+  "display_name": "Onesimus",
+  "names": [
+    {
+      "form": "Onisim",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 februarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle",
+    "bishop",
+    "martyr"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Sfinţilor Apostoli, rugaţi pe Milostivul Dumnezeu ca să dea iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinților Apostoli Filimon, Arhip, Onisim și al celor împreună cu dânșii, Glasul 3",
+        "url": "https://doxologia.ro/troparul-sfintilor-apostoli-filimon-arhip-onisim-al-celor-impreuna-cu-dansii",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy Apostles, entreat the merciful God to grant our souls forgiveness of sins.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "related": [
+    "john-the-theologian"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 15 februarie — «Sfântul Apostol Onisim»",
+        "url": "https://doxologia.ro/15-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,4 +115,4 @@ portion of his relics are kept in the chapel of the university hospital at
 Patras. The Greek calendar keeps him on 15 February, and on 3 September for
 the finding of his relics.
 
-*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-anfim-hiosskij), read 6 September 2026; the Greek synaxarion’s line for the translation of his relics (saint.gr, 3 September) was all this entry had until then.*
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-anfim-hiosskij), read 6 September 2026; the Greek synaxarion’s line for the translation of his relics (saint.gr, 3 September) was all this entry had until then; and doxologia.ro's calendar for 15 februarie — [the day](https://doxologia.ro/15-februarie) and [its life](https://doxologia.ro/sfantul-cuvios-antim-din-chios), which gives the same birth on 1 July 1869 and the repose on 15 February 1960 in his ninety-first year, read 19 September 2026.*

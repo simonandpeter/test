@@ -5,6 +5,11 @@
     {
       "form": "Όσιος Άνθιμος ο Βαγιάνος ο εν Χίω",
       "lang": "el"
+    },
+    {
+      "form": "Antim din Chios",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 februarie."
     }
   ],
   "sex": "male",
@@ -19,8 +24,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 3 septembrie (checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 15 februarie — «Sfântul Cuvios Antim din Chios»",
+        "url": "https://doxologia.ro/15-februarie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
