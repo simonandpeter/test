@@ -1,0 +1,17 @@
+# Julian of Tarsus
+
+Julian was of the city of Anazarbus, which doxologia's life calls the second eparchy of its province. His father was of good senatorial family and a pagan in belief; his mother was a Christian, and after her husband's death she moved to Tarsus in Cilicia. There she had her child baptized into the holy faith and brought him up in letters and in the right belief. When the boy was eighteen a great persecution of the Christians began by the order of Diocletian, and Julian was taken and brought before the governor Marcian for questioning.
+
+Marcian tortured him much, coaxing him at times with kindnesses and at other times forcing him towards the idol sacrifices by threats and torments; but he would not deny Christ. So he was carried a whole year through the various cities of Cilicia, and in every one of them he was tormented in one way or another, and in all of it he was like hard diamond in his confession of Jesus Christ.
+
+When he had been brought to the city by the sea called Aegae, the servants of the devil forced the saint's mouth open and poured in wine and put in meat sacrificed to idols, wanting to defile with those offerings the clean and holy servant of Christ. Then he was thrown into prison, and his blessed mother came to him there; she had followed him at a distance everywhere he was taken, praying God to strengthen her son in the martyr's struggle.
+
+The pagans seized her and set her before the judgement, and she asked the governor to let her have three days with her son, to counsel him to worship their gods. He told her to go to her son without hindrance. She sat beside him day and night, and with many tears and words of love, as a good mother, begged and urged him to endure for Christ to the end torments that would last only a little while, so as to be counted worthy of the everlasting good things of the Lord and numbered in the company of the holy martyrs.
+
+After the three days the saint and his mother were brought out before the governor, who, hoping she had persuaded her son to sacrifice, began to praise and congratulate her. But she opened her honourable and God-inspired mouth and confessed the name of Jesus Christ with a great voice, and shamed the idolatrous impiety with many rebukes; and Julian did the same, confessing Christ with boldness as the one true God and reviling the multitude of the pagan gods.
+
+Then the governor in his anger tormented them both without mercy. The martyr's mother he had beaten long, and then ordered the heels cut off the feet with which she had followed her son from Tarsus, and had her driven away. Julian he ordered put into a sack of sand with venomous beasts and creeping things in it, and thrown into the sea. So he took the crown of martyrdom, and his holy mother ended as a martyr too, both receiving the crowns of victory from Christ our God.
+
+The waves carried Julian's body ashore, and a believing widow took it up and brought it to Alexandria and buried it with honour; after a time his holy relics were brought to Antioch. His memory, the life ends, was blessed and honoured with a word of praise by [Saint John Chrysostom](/saints/john-chrysostom) while he was living at Antioch. The page names Diocletian and the governor Marcian and prints no year, so none is recorded here.
+
+*After doxologia.ro's calendar for 21 iunie — [the day](https://doxologia.ro/21-iunie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-iulian-din-tars); read 24 September 2026.*
