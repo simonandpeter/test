@@ -809,6 +809,7 @@ export const ru = {
     'Bishop of Nyssa': 'Епископ Нисский',
     'Bishop of Ossory': 'Епископ Оссорийский',
     'Bishop of Penza': 'Епископ Пензенский',
+    'Bishop of Ravenna': 'Епископ Равеннский',
     'Bishop of Roman': 'Епископ Романский',
     'Bishop of Rome': 'Епископ Римский',
     'Bishop of Sardis': 'Епископ Сардийский',

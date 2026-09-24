@@ -1,0 +1,52 @@
+{
+  "slug": "theophilus-companion-of-trophimus",
+  "display_name": "Theophilus, companion of Trophimus",
+  "names": [
+    {
+      "form": "Teofil",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 iulie, «Sfinţii Mucenici Trofim şi Teofil», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "trophimus-companion-of-theophilus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 23 iulie — «Sfinţii Mucenici Trofim şi Teofil»",
+        "url": "https://doxologia.ro/23-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 23 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

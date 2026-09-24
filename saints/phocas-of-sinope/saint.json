@@ -54,7 +54,8 @@
         "text": "doxologia.ro, 22 Septembrie — „Sfântul Sfințit Mucenic Foca, Episcopul de Sinope”",
         "url": "https://doxologia.ro/sfantul-sfintit-mucenic-foca-episcopul-de-sinope",
         "year": 2026
-      }
+      },
+      "note": "The same calendar keeps a second day of his on 23 iulie, «Aducerea moaștelor Sfântului Sfințit Mucenic Foca» — the bringing of his relics. Its life there is this man's: «Sfântul Mucenic Foca este unul din cei patru Foca pomeniți de sinaxar. El a trăit în Sinope, în zilele împăratului Traian». One row per church is the schema, so the July day is recorded here and he renders on 22 September only."
     },
     {
       "church": "greek",
@@ -165,6 +166,22 @@
       },
       "english": {
         "text": "As a hierarch offering sacrifices, O father, at the last thou didst offer thyself a living sacrifice, having borne lawful witness to Christ God, strengthened by angels and choosing death; be with those who cry to thee: Come, O Phocas, be with us, and none shall be against us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge Sfinţite Mucenice Foca, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Tropar la sărbătoarea aducerii moaștelor Sfântului Sfințit Mucenic Foca», Glasul 4 — printed on the 23 iulie feast of the translation of his relics",
+        "url": "https://doxologia.ro/tropar-la-sarbatoarea-aducerii-moastelor-sfantului-sfintit-mucenic-foca",
+        "year": 2026
+      },
+      "english": {
+        "text": "A sharer in their ways and a successor to the apostles' thrones, you found in action, God-inspired one, a way up to the vision of the things on high. Therefore, rightly teaching the word of truth and enduring in faith even to blood, hieromartyr Phocas, pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
     }

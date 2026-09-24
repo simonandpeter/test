@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'companion theophilus trophimus theophilus-companion-of-trophimus trophimus-companion-of-theophilus':
+    'the two men the Romanian 23 July names together, who suffered under Diocletian with thirteen others and share one life between two folders, as Simeon and John of Emesa do on 21 July (read 25 September 2026)',
+  'teofil theophilus-companion-of-trophimus theophilus-of-the-forty-martyrs':
+    'two men called Teofil, on two days: the companion of Trophimus under Diocletian, Romanian 23 July, and the Theophilus frozen at Sebaste with the Forty, 9 March (read 25 September 2026)',
+  'trofim trophimus-companion-of-paul trophimus-companion-of-theophilus trophimus-of-laodicea trophimus-of-nicomedia':
+    'four men called Trofim, on four days: the companion of Theophilus under Diocletian, Romanian 23 July; the companion of Paul, 15 April; Trophimus of Laodicea, 11 March; and Trophimus of Nicomedia, 18 March (read 25 September 2026)',
+  'vitalie vitalis vitalis-the-martyr-23-july':
+    'two men called Vitalie, and the calendar itself separates them: the Romanian 11 January line reads «Sfantul Cuvios Vitalie», a venerable, and the 23 July line «Sfantul Mucenic Vitalie», a martyr. Both lines are bare -- no life, no hymn, no place, no century on either page -- so the two are held apart on the rank and the day and on nothing else, which the 23 July life says in as many words (read 25 September 2026)',
   'ioan john-companion-of-simeon john-disciple-of-gregory-the-decapolite john-of-antioch john-of-edessa john-of-gothia john-of-nea-moni john-of-the-forty-martyrs john-of-the-old-lavra john-of-valaam john-son-of-xenophon john-the-theologian':
     'eleven men whose `ro` form is Ioan, on eleven separate Romanian days. The new one is the companion of Simeon the Fool for Christ, Romanian 21 July: a Syrian of good family, twenty-four years old and newly married, who turned aside from the pilgrimage to the Cross with Simeon under Justinian. The other ten are unchanged and each keeps its own day -- the disciple of Gregory the Decapolite and John of Antioch, both 18 April and two men; John of Edessa, 31 January; John of Gothia, 26 June; John of Nea Moni, 20 May; the John frozen at Sebaste, 9 March; John of the Old Lavra, 19 April; John of Valaam, 5 June; the son of Xenophon, 26 January; and the Theologian, 26 September (read 25 September 2026)',
   'simeon simeon-martyr-16-may simeon-of-persia simeon-the-fool-for-christ symeon-kinsman-of-the-lord symeon-the-god-receiver':
