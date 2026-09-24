@@ -1,0 +1,51 @@
+{
+  "slug": "athanasius-of-corinth",
+  "display_name": "Athanasius of Corinth",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Atanasie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 mai, «Sfântul Ierarh Atanasie, Episcopul Corintului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 mai — «Sfântul Ierarh Atanasie, Episcopul Corintului»",
+        "url": "https://doxologia.ro/4-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

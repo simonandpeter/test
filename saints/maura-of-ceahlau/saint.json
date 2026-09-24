@@ -1,0 +1,60 @@
+{
+  "slug": "maura-of-ceahlau",
+  "display_name": "Maura of Ceahlău",
+  "names": [
+    {
+      "form": "Mavra",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 mai, «Sfânta Cuvioasă Mavra de pe Ceahlău»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "ascetic",
+    "abbess"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1601,
+      "latest": 1700,
+      "display": "17th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Aceasta a trăit pe la sfârșitul veacului al XVII-lea». The same page says that the written notices give her no year: a Romanian paterikon of 1888, quoted by Fr Liviu Stan, names her without one, and the page offers only that she may have been a contemporary of others dated 1660."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 mai — «Sfânta Cuvioasă Mavra de pe Ceahlău»",
+        "url": "https://doxologia.ro/4-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
