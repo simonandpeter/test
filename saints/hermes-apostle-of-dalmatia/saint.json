@@ -1,0 +1,78 @@
+{
+  "slug": "hermes-apostle-of-dalmatia",
+  "display_name": "Hermes of Dalmatia",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Ermis",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 aprilie, «Sfântul Apostol Ermis»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle",
+    "bishop",
+    "martyr"
+  ],
+  "related": [
+    "agabus-the-apostle",
+    "herodion-the-apostle",
+    "rufus-apostle-of-thebes",
+    "phlegon-of-marathon",
+    "asyncritus-the-apostle"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "The day page for 8 aprilie carries him, and the shared troparion is headed for the six of 8 aprilie; but his own page gives different days — «prăznuirea lui se face la 8 martie și la 4 ianuarie, împreună cu cei 70 de Apostoli» — and does not name 8 aprilie at all. The disagreement between the day list and the saint's own page is left standing; 8 aprilie is recorded because that is the day the Romanian calendar prints him on."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 aprilie — «Sfântul Apostol Ermis»",
+        "url": "https://doxologia.ro/8-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Sfinţilor Apostoli rugaţi pe Milostivul Dumnezeu, ca să dea iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Apostoli Irodion, Agav, Ruf, Flegon, Asincrit şi Ermis, Glasul 3",
+        "url": "https://doxologia.ro/troparul-sfintilor-apostoli-irodion-agav-ruf-flegon-asincrit-ermis",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostles, pray the merciful God to grant our souls forgiveness of sins.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

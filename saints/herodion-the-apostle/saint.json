@@ -1,0 +1,78 @@
+{
+  "slug": "herodion-the-apostle",
+  "display_name": "Herodion",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Irodion",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 aprilie, «Sfântul Apostol Irodion»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle",
+    "bishop",
+    "hieromartyr"
+  ],
+  "related": [
+    "agabus-the-apostle",
+    "rufus-apostle-of-thebes",
+    "phlegon-of-marathon",
+    "asyncritus-the-apostle",
+    "hermes-apostle-of-dalmatia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "His own page names four days: «Prăznuirea lui se face la 4 ianuarie împreună cu cei 70 de Apostoli, la 28 martie, 8 aprilie și la 10 noiembrie.» 8 aprilie is the day the Romanian calendar prints him on and the only one held here."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 aprilie — «Sfântul Apostol Irodion»",
+        "url": "https://doxologia.ro/8-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Sfinţilor Apostoli rugaţi pe Milostivul Dumnezeu, ca să dea iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Apostoli Irodion, Agav, Ruf, Flegon, Asincrit şi Ermis, Glasul 3",
+        "url": "https://doxologia.ro/troparul-sfintilor-apostoli-irodion-agav-ruf-flegon-asincrit-ermis",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostles, pray the merciful God to grant our souls forgiveness of sins.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
