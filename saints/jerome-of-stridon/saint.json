@@ -1,0 +1,67 @@
+{
+  "slug": "jerome-of-stridon",
+  "display_name": "Jerome",
+  "office": "Presbyter",
+  "names": [
+    {
+      "form": "Ieronim",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 iunie, «Fericitul Ieronim»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 347,
+      "latest": 347,
+      "display": "347",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Fericitul Ieronim s-a născut în orășelul Stridon, aproape de Acvileia, în anul 347.»"
+    },
+    "death": {
+      "earliest": 420,
+      "latest": 420,
+      "display": "420",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Cuviosul Ieronim a murit la Betleem, în anul 420.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 15 iunie — «Fericitul Ieronim»",
+        "url": "https://doxologia.ro/15-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

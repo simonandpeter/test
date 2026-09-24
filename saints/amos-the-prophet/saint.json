@@ -1,0 +1,68 @@
+{
+  "slug": "amos-the-prophet",
+  "display_name": "Amos",
+  "names": [
+    {
+      "form": "Amos",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 iunie, «Sfântul Proroc Amos»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet",
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 15 iunie — «Sfântul Proroc Amos»",
+        "url": "https://doxologia.ro/15-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "A prorocului Tău Amos pomenire, Doamne, prăznuind, printr-însul Te rugăm, mântuieşte sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Proroc Amos; the common troparion of a prophet, with his name set in it.",
+        "url": "https://doxologia.ro/troparul-sfantului-proroc-amos",
+        "year": 2026
+      },
+      "english": {
+        "text": "As we keep the memorial of Thy prophet Amos, O Lord, through him we entreat Thee: save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

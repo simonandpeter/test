@@ -1,0 +1,85 @@
+{
+  "slug": "lazar-of-serbia",
+  "display_name": "Lazar of Serbia",
+  "office": "Prince",
+  "names": [
+    {
+      "form": "Lazăr",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 iunie, «Sfântul Mare Mucenic Lazăr, Cneazul Serbiei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "great-martyr",
+    "prince"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1329,
+      "latest": 1329,
+      "display": "1329",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfântul Lazăr s-a născut în satul Prilepac din Serbia în anul 1329»."
+    },
+    "death": {
+      "earliest": 1389,
+      "latest": 1389,
+      "display": "1389",
+      "basis": "attested",
+      "note": "doxologia.ro: «în câmpia Kosovo la 15 iunie 1389, legendarul domnitor dreptcredincios a fost decapitat, după ce a fusese rănit de șaisprezece ori în timpul bătăliei»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 15 iunie — «Sfântul Mare Mucenic Lazăr, Cneazul Serbiei»",
+        "url": "https://doxologia.ro/15-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026). Doxologia's life is plainly an account of a Serbian saint, but no Serbian calendar was read for this row."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Slava lumii lepădându-o, Voievodule Lazăre, și asemenea lui Hristos făcându-te, ai dobândit împărăția cea cerească. Roagă-te, deci, Mântuitorului pentru robii tăi, mijlocind către Dânsul, împreună cu tine să ne învrednicească de vederea slavei Sale.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mare Mucenic Lazăr, Cneazul Serbiei; the page heads it «Glasul 3» and gives the model, «Podobie: „Să se veselească cele cerești...\"».",
+        "url": "https://doxologia.ro/troparul-sfantului-mare-mucenic-lazar-cneazul-serbiei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Casting off the glory of the world, O Prince Lazar, and being made like unto Christ, thou hast gained the kingdom of heaven. Pray therefore to the Saviour for thy servants, interceding with him that he may count us worthy, together with thee, to behold his glory.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
