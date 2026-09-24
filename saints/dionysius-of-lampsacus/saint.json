@@ -1,0 +1,70 @@
+{
+  "slug": "dionysius-of-lampsacus",
+  "display_name": "Dionysius of Lampsacus",
+  "names": [
+    {
+      "form": "Dionisie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 mai, «Sfântul Mucenic Dionisie»; the epithet is not the calendar's but is taken from the life it links, which has him imprisoned at Lampsacus."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "peter-of-lampsacus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 18 mai — «Sfântul Mucenic Dionisie»",
+        "url": "https://doxologia.ro/18-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Mucenici Petru, Dionisie, Paulin și al Sfântului Mucenic Teodot și al celor șapte», Glasul 4 — the one troparion the page prints for all the martyrs of the day",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-petru-dionisie-paulin-al-sfantului-mucenic-teodot-al-celor-sapte",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contests received the crowns of incorruption from Thee our God; for having Thy strength, they cast down the tyrants and broke the feeble insolence of the demons. At their prayers, O Christ our God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

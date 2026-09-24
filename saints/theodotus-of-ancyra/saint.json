@@ -1,0 +1,68 @@
+{
+  "slug": "theodotus-of-ancyra",
+  "display_name": "Theodotus of Ancyra",
+  "names": [
+    {
+      "form": "Teodot din Ancira",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 mai, «Sfântul Mucenic Teodot din Ancira»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "revised-julian",
+        "note": "Doxologia keeps him twice: its calendar prints him on 18 mai and again on 7 iunie — «Sfântul Sfințit Mucenic Teodot, Episcopul Ancirei». One attestation row per church is the schema, so the row is the day this folder was read from and the second day is recorded here. The 7 iunie page tells the same life — the innkeeper of Ancyra who buried the martyrs and drew the seven virgins out of the lake, taken by the governor Theotecnus — and closes by sending the reader to 18 mai for it: «Viața și pătimirea lui, împreună cu a sfintelor șapte fecioare, a fost pusă pe larg în ziua de optsprezece mai». Its «Episcopul Ancirei» is doxologia's own heading; its text has him working «sub chipul de cârciumar ... ca un episcop». Read 25 September 2026."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 18 mai — «Sfântul Mucenic Teodot din Ancira»",
+        "url": "https://doxologia.ro/18-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Mucenici Petru, Dionisie, Paulin și al Sfântului Mucenic Teodot și al celor șapte», Glasul 4 — the one troparion the page prints for all the martyrs of the day",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-petru-dionisie-paulin-al-sfantului-mucenic-teodot-al-celor-sapte",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contests received the crowns of incorruption from Thee our God; for having Thy strength, they cast down the tyrants and broke the feeble insolence of the demons. At their prayers, O Christ our God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

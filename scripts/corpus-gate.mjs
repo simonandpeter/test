@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'dionisie dionysius-companion-of-quadratus dionysius-of-lampsacus':
+    'the martyr of Corinth taken with Quadratus, Romanian 10 March, against the man killed at Lampsacus beside Peter, Romanian 18 May. Two cities and two months (read 25 September 2026)',
+  'petru peter-of-lampsacus peter-of-sebaste':
+    'the young martyr tortured and beheaded at Lampsacus, Romanian 18 May, against the bishop of Sebaste, Romanian 9 January. A martyr and a hierarch (read 25 September 2026)',
   'andronicus companion junia andronicus-the-apostle junia-the-apostle':
     'two apostles of the Seventy whom doxologia keeps together on 17 May, each named in this corpus as the other’s companion, so the fold is the key sorting their two names into one — the same shape as bassus/eusebius on 20 January (read 25 September 2026)',
   'teofan theophanes-of-sigriane theophanes-venerable-17-may':
