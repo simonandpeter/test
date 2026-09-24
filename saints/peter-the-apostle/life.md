@@ -1,0 +1,17 @@
+# Peter
+
+Peter was called Simon before his apostleship. He was a Jew of Bethsaida, a small and unregarded town within the borders of Galilee in Palestine, the son of Jonah and of the tribe of Simeon, and the brother of the apostle Andrew. He married the daughter of Aristobulus, who was the brother of the apostle Barnabas, and had by her a son and a daughter. He was plain in his ways and unlearned, the life says, but he feared God and walked blamelessly before Him.
+
+He was a fisherman by trade, and being poor he fed his wife, his children, his wife's mother and his aged father Jonah by the work of his hands. Andrew his brother had left the emptiness and quarrelling of the world and gone to [John the Baptist](/saints/john-the-baptist), who preached repentance at the Jordan, and become his disciple. Hearing his teacher point to Jesus and say, Behold the Lamb of God who takes away the sin of the world, Andrew followed Christ.
+
+The next day Andrew came to his brother Simon Peter and said: We have found the Messiah, which is interpreted Christ. He brought him to Jesus, who looked at him and said: You are Simon, the son of Jonah; you shall be called Cephas, which is interpreted Peter. Peter was wounded at once with love for the Lord and believed Him to be the true Christ sent by God for the salvation of the world, but he did not yet leave his house and his trade, for he still had his household to care for.
+
+After John was put in prison, the Lord walked by the sea of Galilee and saw Peter and Andrew casting their nets, and said: Come after Me and I will make you fishers of men. He went into Simon's boat and told him to let the nets down; and Peter said, Master, we have laboured all night and taken nothing, but at Your word I will let down the net. They took so great a multitude of fish that the net was breaking. Peter fell at the feet of Jesus and said, Depart from me, Lord, for I am a sinful man.
+
+From that hour he followed Christ, and the Lord loved him for the upright simplicity of his heart. Christ came to his poor house and healed his wife's mother of a fever by the touch of His hand. When the Lord asked the disciples at Caesarea Philippi who they said that He was, Simon Peter answered for the rest: You are the Christ, the Son of the living God. The Lord called that confession blessed and promised him the keys of the kingdom of heaven.
+
+His love made him want no harm to come to Christ, so that when he learned beforehand of the Passion he tried in ignorance to hinder it, saying: Lord, be merciful to Yourself, this shall not happen to You. At the end he came to Rome, where he had to do with Simon the sorcerer, and Nero, being provoked, sought out both him and [Paul](/saints/paul-the-apostle) and condemned them to death: Peter, as a foreigner, he gave over to be crucified. The faithful laid the two apostles' bodies in one place.
+
+The life sets out at length the disagreement among the church historians over the year in which the two suffered, and settles on none, so no year is recorded here.
+
+*After doxologia.ro's calendar for 29 iunie — [the day](https://doxologia.ro/29-iunie) and [the life](https://doxologia.ro/viata-sfintilor-apostoli-petru-pavel); read 24 September 2026.*

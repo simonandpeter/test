@@ -1,0 +1,72 @@
+{
+  "slug": "paul-the-apostle",
+  "display_name": "Paul",
+  "names": [
+    {
+      "form": "Pavel",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 iunie, «Sfinții Apostoli Petru și Pavel»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle"
+  ],
+  "related": [
+    "peter-the-apostle",
+    "timothy-of-ephesus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 6,
+        "calendar": "revised-julian",
+        "note": "doxologia.ro also names him in the Synaxis of the Twelve Apostles on 30 iunie; under the corpus rule of one row per church the second day is recorded here and he is not rendered on it."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 29 iunie — «Sfinții Apostoli Petru și Pavel»",
+        "url": "https://doxologia.ro/29-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Cei ce sunteți între Apostoli mai întâi pe scaun șezători și lumii învățători, Stăpânului tuturor rugați-vă, pace lumii să dăruiască și sufletelor noastre mare milă.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinților Apostoli Petru și Pavel; the troparion is printed for the two of them together.",
+        "url": "https://doxologia.ro/troparul-sfintilor-apostoli-petru-pavel",
+        "year": 2026
+      },
+      "english": {
+        "text": "O ye who are first enthroned among the Apostles and teachers of the world, pray to the Master of all that He grant peace to the world and to our souls great mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

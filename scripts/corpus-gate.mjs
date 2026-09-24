@@ -173,6 +173,14 @@ const READ_FOLDS = {
     'one of the Forty frozen at Sebaste, Romanian 9 March, against one of the company taken with Leontius at Tripoli, Romanian 18 June (read 25 September 2026)',
   'ipatie hypatius-companion-of-lucillian hypatius-of-chalcedon hypatius-of-gangra':
     'three men called Ipatie, on three days: one of the four young men of the prison at Nicomedia whom Lucillian suffered with, under Aurelian, Romanian 3 June; the abbot of Chalcedon, Romanian 25 February; and the hieromartyr bishop of Gangra, Romanian 31 March. A martyr boy, a venerable abbot and a bishop (read 25 September 2026)',
+  'paul paul-bishop-of-nicaea paul-companion-of-lucillian paul-the-apostle':
+    'three men called Paul in the English forms: the bishop of Nicaea, Russian and Greek 10 September; one of the four young men of the prison at Nicomedia whom Lucillian suffered with, Romanian 3 June; and the Apostle, Romanian 29 June (read 25 September 2026)',
+  'pavel paul-of-jamnia paul-of-plousias paul-of-ptolemais paul-the-apostle paul-with-valentina-and-ennatha platon-kulbusch':
+    'six folders whose Romanian form folds to Pavel, on six days: the martyr of Jamnia, Romanian 16 February; the bishop and confessor of Plousias, Romanian 8 March; the martyr of Ptolemais, Russian 17 August and Romanian 4 March; the Apostle, Romanian 29 June; the man kept with Valentina and Ennatha, Romanian 10 February; and platon-kulbusch, the hieromartyr bishop, Romanian 14 January, whose second ro form is Pavel because that is the name his own life gives him at baptism (read 25 September 2026)',
+  'peter peter-bishop-of-nicaea peter-of-bathys-ryax peter-of-dabar-bosnia peter-of-moscow peter-the-apostle':
+    'five men whose English form is the bare Peter: the bishop of Nicaea, Russian and Greek 10 September; the abbot of Bathys Ryax, Greek 7 September; the hieromartyr of Dabar-Bosnia, Russian and Serbian 4 September; the hierarch of Moscow, Russian and Greek 24 August; and the Apostle, Romanian 29 June (read 25 September 2026)',
+  'petru peter-of-lampsacus peter-of-murom peter-of-sebaste peter-the-apostle':
+    'four men called Petru, on four days: the young martyr of Lampsacus, Romanian 18 May; the prince of Murom, Romanian 25 June; the bishop of Sebaste, Romanian 9 January; and the Apostle, Romanian 29 June (read 25 September 2026)',
   'paul paul-bishop-of-nicaea paul-companion-of-lucillian':
     'the hierarch and bishop of Nicaea, kept on 10 September by the Russian and the Greek, against one of the four young men imprisoned at Nicomedia whom Lucillian found there and suffered with, under Aurelian, Romanian 3 June (read 25 September 2026)',
   'nichifor nicephorus-4-may nicephorus-of-antioch nicephorus-of-corinth nikephoros-patriarch-of-constantinople':
