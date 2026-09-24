@@ -175,11 +175,21 @@ test('every name in the corpus resolves, and the split left nothing behind', () 
       `${slug}: an office is back in the name`,
     );
 
-    // And the printed name never says its rank twice.
+    /*
+     * And the printed name never says its rank twice.
+     *
+     * Counted on whole words, not on substrings. `split(label)` counted the
+     * "St" inside *Stephen* and called "St Stephen the Great" a doubled rank
+     * — a false red on the Romanian 2 July, and one that would have gone on
+     * failing for every saint whose name begins with his rank's letters while
+     * he takes the fallback honorific. The rank is drawn with a space after
+     * it, so a word boundary is the thing that was always meant.
+     */
     const shown = saintName(rec);
     const label = /^The\s/.test(rec.display_name) ? null : rankLabel(rec);
     if (label) {
-      const times = shown.split(label).length - 1;
+      const word = new RegExp(`(?<![\\p{L}.])${label.replace(/[.*+?^${}()|[\]\\]/gu, '\\$&')}(?![\\p{L}])`, 'gu');
+      const times = (shown.match(word) ?? []).length;
       assert.equal(times, 1, `${slug}: "${label}" appears ${times} times in "${shown}"`);
     }
   }
