@@ -56,7 +56,8 @@
       "feast": {
         "day": 16,
         "month": 9,
-        "calendar": "revised-julian"
+        "calendar": "revised-julian",
+        "note": "doxologia.ro keeps her a second time on 11 iulie, printing the same life of her martyrdom under the same heading «Sfânta Mare Muceniță Eufimia» (https://doxologia.ro/11-iulie, read 24 September 2026), with a troparion of its own that is about the Fourth Council and not about her passion. One attestation row per church is the schema, so the July day is recorded here and the saint renders on 16 septembrie only."
       },
       "source": {
         "text": "doxologia.ro, 16 septembrie — „Sfânta Mare Muceniță Eufimia”",
@@ -226,6 +227,22 @@
       },
       "english": {
         "text": "In thy suffering thou didst contend nobly, and after death thou dost sanctify us with streams of wonders, O all-praised one. Therefore we sing of thy holy falling asleep, hastening with faith to thy divine temple, that we may be delivered from the ailments of the soul and may draw the grace of wonders.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 3",
+      "text": "Ai veselit pe cei credincioși și ai rușinat pe cei răumărturisitori, Eufimia, preafrumoasă fecioară a lui Hristos. Căci ai întărit dogmele Sinodului al patrulea, pe care părinții bine le-au rânduit. Muceniță mărită, roagă-L pe Hristos Dumnezeu să ne dăruiască nouă mare milă.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintei Mucenițe Eufimia», Glas 3, printed on the 11 iulie page",
+        "url": "https://doxologia.ro/troparul-sfintei-mucenite-eufimia",
+        "year": 2026
+      },
+      "english": {
+        "text": "You gladdened the faithful and put the false confessors to shame, Euphemia, most fair virgin of Christ; for you confirmed the dogmas of the Fourth Council, which the fathers had well appointed. Glorious martyr, entreat Christ God to grant us great mercy.",
         "rendered": "site"
       }
     }

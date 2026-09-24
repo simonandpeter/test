@@ -1,0 +1,87 @@
+{
+  "slug": "sophrony-of-essex",
+  "display_name": "Sophrony of Essex",
+  "names": [
+    {
+      "form": "Sofronie de la Essex",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 iulie, «Sfântul Cuvios Sofronie de la Essex», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "related": [
+    "silouan-the-athonite"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1896,
+      "latest": 1896,
+      "display": "1896",
+      "basis": "attested",
+      "note": "doxologia.ro: «Părintele Sofronie (Serghei Simeonovici) Saharov s-a născut pe 23 septembrie 1896, în familia unor credincioși ortodocși din Moscova, Rusia.»"
+    },
+    "death": {
+      "earliest": 1993,
+      "latest": 1993,
+      "display": "1993",
+      "basis": "attested",
+      "note": "doxologia.ro: «Părintele Sofronie Saharov a trecut la cele veșnice în ziua de 11 iulie 1993, la vârsta de aproape 97 de ani.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 11 iulie — «Sfântul Cuvios Sofronie de la Essex»",
+        "url": "https://doxologia.ro/11-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Fiu preadorit te-ai arătat, Preafericite, lui Siluan, Preacuviosului Părinte, dascăl fiind, Sofronie, de cele cerești, în Apus ai strălucit cu a ta înțelepciune și, prin sfântă viața ta, la lumină mânat-ai pe cei ce Tată Îl numesc pe Dumnezeu, pe Care cândva vedea-L-vom, prin ruga Ta.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Sofronie de la Essex», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-sofronie-de-la-essex",
+        "year": 2026
+      },
+      "english": {
+        "text": "A most beloved son you were shown to be, most blessed one, to Silouan the venerable father; and being yourself a teacher of heavenly things, Sophrony, you shone in the West by your wisdom, and by your holy life you led into the light those who call God their Father — whom one day we shall see, through your prayer.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

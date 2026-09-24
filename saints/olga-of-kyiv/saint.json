@@ -1,0 +1,68 @@
+{
+  "slug": "olga-of-kyiv",
+  "display_name": "Olga of Kyiv",
+  "names": [
+    {
+      "form": "Olga",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 iulie, «Sfânta Olga, Împărăteasa Rusiei», with the rank word and the title left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "equal-to-the-apostles"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 11 iulie — «Sfânta Olga, Împărăteasa Rusiei»",
+        "url": "https://doxologia.ro/11-iulie",
+        "year": 2026
+      },
+      "note": "Her life on the same site gives the day: «Fericita Olga, numită Elena din Sfântul Botez, s-a săvârșit la 11 Iulie.» The day's line calls her împărăteasa, empress; the life calls her throughout marea doamnă, the grand lady, beside her husband the marele domn, so no office is recorded in this folder."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 1",
+      "text": "Cu aripile cunoștinței de Dumnezeu întraripându-ți mintea ta, ai zburat mai presus de făptura cea văzută, căutând pe Dumnezeu și Ziditorul a toate, și pe Acela aflându-L, naștere prin botez iarăși ai luat, îndulcindu-te de pomul vieții; neputredă petreci în veci, Olga, pururea mărită.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintei întocmai cu Apostolii Împărătese Olga», Glas 1",
+        "url": "https://doxologia.ro/troparul-sfintei-intocmai-cu-apostolii-imparatese-olga",
+        "year": 2026
+      },
+      "english": {
+        "text": "Giving your mind wings with the wings of the knowledge of God, you flew above all visible creation, seeking God, the Maker of all; and having found Him you were born again by baptism, and took your delight in the tree of life. Incorrupt you abide for ever, Olga, for ever glorified.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
