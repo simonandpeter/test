@@ -1,0 +1,68 @@
+{
+  "slug": "boniface-apostle-of-germany",
+  "display_name": "Boniface of Germany",
+  "names": [
+    {
+      "form": "Bonifatie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 iunie, «Sfântul Bonifatie, Apostolul Germaniei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "archbishop",
+    "monk"
+  ],
+  "office": "Archbishop",
+  "dates": {
+    "birth": {
+      "earliest": 672,
+      "latest": 672,
+      "display": "672",
+      "basis": "attested",
+      "note": "doxologia.ro: «Născut în satul Crescent din ținutul Devon, în sud‑vestul Angliei, în anul 672»."
+    },
+    "death": {
+      "earliest": 754,
+      "latest": 755,
+      "display": "754 or 755",
+      "basis": "traditional",
+      "note": "doxologia.ro: «în ziua de Rusalii a anului 754 sau 755, a fost ucis împreună cu 52 de oameni de către războinici păgâni prădători», and «Acest lucru se întâmpla pe data de 5 iunie»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 iunie — «Sfântul Bonifatie, Apostolul Germaniei»",
+        "url": "https://doxologia.ro/5-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

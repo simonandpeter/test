@@ -1,0 +1,67 @@
+{
+  "slug": "elizabeth-of-pasarea",
+  "display_name": "Elizabeth of Pasărea",
+  "names": [
+    {
+      "form": "Elisabeta",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 iunie, «Sfânta Cuvioasă Elisabeta de la Pasărea»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "hermit",
+    "monastic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1970,
+      "latest": 1970,
+      "display": "1970",
+      "basis": "attested",
+      "note": "doxologia.ro: «Născută pe 7 mai 1970, în comuna Moldova Sulița, județul Suceava, purta în viața civilă numele Rodica Lazăr»."
+    },
+    "death": {
+      "earliest": 2014,
+      "latest": 2014,
+      "display": "2014",
+      "basis": "attested",
+      "note": "doxologia.ro: «Pe 6 iunie 2014, Sfânta Cuvioasă Elisabeta a trecut la Domnul»; the same page heads her life «Sfânta Cuvioasă Elisabeta (Lazăr) de la Pasărea (1970–2014)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 iunie — «Sfânta Cuvioasă Elisabeta de la Pasărea»",
+        "url": "https://doxologia.ro/5-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

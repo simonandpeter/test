@@ -1,0 +1,66 @@
+{
+  "slug": "john-of-valaam",
+  "display_name": "John of Valaam",
+  "names": [
+    {
+      "form": "Ioan",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 iunie, «Sfântul Ioan de Valaam»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "monk",
+    "monastic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1873,
+      "latest": 1873,
+      "display": "1873",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Ioan s-a născut în data de 14 februarie 1873 în satul Gubka»."
+    },
+    "death": {
+      "earliest": 1958,
+      "latest": 1958,
+      "display": "1958",
+      "basis": "attested",
+      "note": "doxologia.ro: «A trecut la cele veșnice în 5 iunie 1958»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 iunie — «Sfântul Ioan de Valaam»",
+        "url": "https://doxologia.ro/5-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
