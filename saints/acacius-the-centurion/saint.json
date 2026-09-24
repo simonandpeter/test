@@ -1,0 +1,68 @@
+{
+  "slug": "acacius-the-centurion",
+  "display_name": "Acacius the Centurion",
+  "names": [
+    {
+      "form": "Acachie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 mai, «Sfântul Mucenic Acachie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 mai — «Sfântul Mucenic Acachie»",
+        "url": "https://doxologia.ro/7-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Acachie, întru nevoinţa sa, cununa nesctricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Acachie",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-acachie",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Acacius, O Lord, in his struggle received from thee, our God, the crown of incorruption; for having thy strength he overcame the torturers and broke the powerless daring of the demons. By his prayers save our souls, O Christ God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

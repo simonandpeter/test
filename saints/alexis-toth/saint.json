@@ -1,0 +1,66 @@
+{
+  "slug": "alexis-toth",
+  "display_name": "Alexis Toth",
+  "names": [
+    {
+      "form": "Alexie Toth",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 mai, «Sfântul Preot Mărturisitor Alexie Toth»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1854,
+      "latest": 1854,
+      "display": "1854",
+      "basis": "attested",
+      "note": "doxologia.ro, Viața Sfântului Preot Mărturisitor Alexie Toth: «Sfântul Alexie s-a născut în Imperiul Austro-Ungar în 1854»."
+    },
+    "death": {
+      "earliest": 1909,
+      "latest": 1909,
+      "display": "1909",
+      "basis": "attested",
+      "note": "doxologia.ro, Viața Sfântului Preot Mărturisitor Alexie Toth: «s-a mutat la Domnul la vârsta de 56 de ani, pe data de 7 mai 1909»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 mai — «Sfântul Preot Mărturisitor Alexie Toth»",
+        "url": "https://doxologia.ro/7-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

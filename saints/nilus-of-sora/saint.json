@@ -1,0 +1,67 @@
+{
+  "slug": "nilus-of-sora",
+  "display_name": "Nilus of Sora",
+  "names": [
+    {
+      "form": "Nil Sorski",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 mai, «Sfântul Nil Sorski»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "hermit"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1433,
+      "latest": 1433,
+      "display": "1433",
+      "basis": "attested",
+      "note": "doxologia.ro, Viața Sfântului Nil Sorski: «Acest cuvios s-a născut în anul 1433, într-o familie aleasă, iubitoare de Hristos, din Moscova»."
+    },
+    "death": {
+      "earliest": 1508,
+      "latest": 1508,
+      "display": "1508",
+      "basis": "attested",
+      "note": "doxologia.ro, Viața Sfântului Nil Sorski: «La 7 mai 1508 și-a dat sufletul său în mâinile lui Hristos»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 mai — «Sfântul Nil Sorski»",
+        "url": "https://doxologia.ro/7-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
