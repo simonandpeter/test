@@ -1,0 +1,81 @@
+{
+  "slug": "filotimia-of-ramet",
+  "display_name": "Filotimia of Râmeț, mother of Dometie",
+  "names": [
+    {
+      "form": "Filotimia de la Râmeț",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 iulie, «Sfânta Cuvioasă Filotimia de la Râmeț, mama Sfântului Cuvios Dometie cel Milostiv», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "related": [
+    "dometie-of-ramet"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1989,
+      "latest": 1989,
+      "display": "1989",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cu puțin timp înainte de adormirea sa în Domnul, petrecută în anul 1989…»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 iulie — «Sfânta Cuvioasă Filotimia de la Râmeț, mama Sfântului Cuvios Dometie cel Milostiv»",
+        "url": "https://doxologia.ro/6-iulie",
+        "year": 2026
+      },
+      "note": "Her life on the same site says the Holy Synod of the Romanian Orthodox Church canonised her on 1 July 2025 and appointed her feast on 6 iulie."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 4",
+      "text": "În sânul familiei, spre Dumnezeu căutai, hrănind pe toți pruncii tăi cu învățături creștinești, pe tine jertfindu-te, apoi, prin cuviință, împodobit-ai Râmețul, rugându-te pentru lume și răspândind bunătate; de aceea, Sfântă Filotimia, cinstim pomenirea ta.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintei Cuvioase Filotimia de la Râmeț», Glas 4",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-filotimia-de-la-ramet",
+        "year": 2026
+      },
+      "english": {
+        "text": "In the midst of your family you sought after God, feeding all your children with Christian teaching; then, offering up yourself, by a holy life you adorned Râmeț, praying for the world and pouring out goodness; and therefore, holy Filotimia, we honour your memory.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

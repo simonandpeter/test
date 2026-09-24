@@ -1,0 +1,71 @@
+{
+  "slug": "sisoes-the-great",
+  "display_name": "Sisoes the Great",
+  "names": [
+    {
+      "form": "Sisoe cel Mare",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 iulie, «Sfântul Cuvios Sisoe cel Mare», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "related": [
+    "anthony-the-great"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 iulie — «Sfântul Cuvios Sisoe cel Mare»",
+        "url": "https://doxologia.ro/6-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Locuitor pustiului şi înger în trup şi de minuni făcător te-ai arătat, purtătorule de Dumnezeu, părintele nostru Sisoe; cu postul, cu privegherea, cu rugăciunea, cereşti daruri luând, vindeci pe cei bolnavi şi sufletele celor ce aleargă la tine cu credinţă. Slavă Celui Ce ţi-a dat ţie putere; slavă Celui Ce te-a încununat pe tine; Slavă Celui Ce lucrează prin tine tuturor tămăduiri.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Sisoe cel Mare», Glasul 1",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-sisoe-cel-mare",
+        "year": 2026
+      },
+      "english": {
+        "text": "A dweller of the desert and an angel in the body and a worker of wonders you were shown to be, God-bearing father Sisoes; by fasting, by vigil and by prayer you received heavenly gifts, and you heal the sick and the souls of those who run to you in faith. Glory to Him who gave you strength; glory to Him who crowned you; glory to Him who works healing for all through you.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

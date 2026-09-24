@@ -1,0 +1,61 @@
+{
+  "slug": "astius-of-dyrrachium",
+  "display_name": "Astius of Dyrrachium",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Astie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 iulie, «Sfântul Sfințit Mucenic Astie, episcopul Dirahiei», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 98,
+      "latest": 117,
+      "display": "c. 98",
+      "basis": "traditional",
+      "note": "doxologia.ro: «A fost arestat de Agricola, guvernatorul roman al Dirahiei, și torturat până la moarte în jurul anului 98… A fost martirizat în timpul persecuției creștinilor sub împăratul roman Traian.» The page opens by calling him «un martir creștin din secolul al II-lea», which its own year of 98 does not fit; the interval is Trajan's reign, on which the page is consistent, and the display keeps the year the page states."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 iulie — «Sfântul Sfințit Mucenic Astie, episcopul Dirahiei»",
+        "url": "https://doxologia.ro/6-iulie",
+        "year": 2026
+      },
+      "note": "His own page agrees with the day page: «Prăznuirea lui se face pe data de 6 iulie.»"
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

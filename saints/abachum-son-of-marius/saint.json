@@ -1,0 +1,82 @@
+{
+  "slug": "abachum-son-of-marius",
+  "display_name": "Abachum, son of Marius and Martha",
+  "names": [
+    {
+      "form": "Avacum",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 iulie, «Sfinții Mucenici Marius și Marta, soția sa, și fiii lor Audifaciu și Avacum»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "marius-of-persia",
+    "martha-wife-of-marius",
+    "audifax-son-of-marius"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 270,
+      "latest": 270,
+      "display": "c. 270",
+      "basis": "traditional",
+      "note": "doxologia.ro reasons from the names in the account: «Deoarece în istorisirea din Viețile Sfinților sunt amintiți Episcopul Calist al Romei (217-222) și Împăratul Claudiu al II-lea Goticul (268-270), se înțelege că venirea la Roma a celor patru sfinți a fost în jurul anului 220, iar moartea lor mucenicească prin anul 270.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 iulie — «Sfinții Mucenici Marius și Marta, soția sa, și fiii lor Audifaciu și Avacum»",
+        "url": "https://doxologia.ro/6-iulie",
+        "year": 2026
+      },
+      "note": "The day's line enumerates the four by name and the life tells each of their deaths, so the corpus keeps one folder for each."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 5",
+      "text": "Ca niște stele strălucitoare ați călătorit din Persia, țara celor trei magi, de la Răsărit până la Apus, în Roma cea veche, râvnind să cinstiți pe stelele Soarelui Dreptății Celui răsărit în Betleem și să vă închinați la moaștele Sfinților Apostoli Petru și Pavel și ale altor Sfinți Mărturisitori. O, iubitorilor de mucenici, Marius și Marta cu fiii Audifaciu și Avacum, prin pătimiri mucenicești adăugându-vă lor, mijlociți pentru noi iertare de păcate, pace și mare milă.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Mucenici Marius, soția sa Marta și fiii lor Audifaciu și Avacum», Glas 5",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-marius-sotia-sa-marta-fiii-lor-audifaciu-avacum",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like shining stars you journeyed out of Persia, the land of the three magi, from the East as far as the West, to old Rome, longing to honour the stars of the Sun of Righteousness who rose in Bethlehem, and to venerate the relics of the holy apostles Peter and Paul and of the other holy confessors. O lovers of the martyrs, Marius and Martha with your sons Audifax and Abachum, who by a martyr's sufferings were added to their number: intercede for us, for the forgiveness of sins, for peace and for great mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

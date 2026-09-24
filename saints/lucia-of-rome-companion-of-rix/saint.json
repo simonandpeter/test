@@ -1,0 +1,49 @@
+{
+  "slug": "lucia-of-rome-companion-of-rix",
+  "display_name": "Lucia of Rome, companion of Rix",
+  "names": [
+    {
+      "form": "Lucia din Roma",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 iulie, «Sfânta Muceniță Lucia din Roma», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 iulie — «Sfânta Muceniță Lucia din Roma»",
+        "url": "https://doxologia.ro/6-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

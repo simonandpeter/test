@@ -1,0 +1,87 @@
+{
+  "slug": "dometie-of-ramet",
+  "display_name": "Dometie the Merciful of Râmeț",
+  "names": [
+    {
+      "form": "Dometie cel Milostiv de la Râmeț",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 iulie, «Sfântul Cuvios Dometie cel Milostiv de la Râmeț», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "abbot"
+  ],
+  "related": [
+    "filotimia-of-ramet"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1924,
+      "latest": 1924,
+      "display": "1924",
+      "basis": "attested",
+      "note": "doxologia.ro: «S-a născut în satul Mărculești, comuna Bălănești, județul Buzău, pe 15 octombrie 1924.»"
+    },
+    "death": {
+      "earliest": 1975,
+      "latest": 1975,
+      "display": "1975",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Dometie s-a mutat la odihna cea de veci, în vara anului 1975»; the same page says he entered Prislop on 6 July 1949, «în aceeaşi zi şi lună în care avea să treacă la cele veşnice»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 iulie — «Sfântul Cuvios Dometie cel Milostiv de la Râmeț»",
+        "url": "https://doxologia.ro/6-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Îndrumător al monahilor, al monahiilor și al credincioșilor mireni te-am cunoscut și te cinstim, ajutător săracilor întru toate nevoile, dar și pildă de milostenie, Sfinte Cuvioase Părinte Dometie, roagă-te pentru sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Dometie cel Milostiv de la Râmeț» — the page prints no glas",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-dometie-cel-milostiv-de-la-ramet",
+        "year": 2026
+      },
+      "english": {
+        "text": "A guide of monks, of nuns and of the faithful in the world we have known you, and we honour you: a helper of the poor in all their need and a pattern of mercy, venerable father Dometie; pray for our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

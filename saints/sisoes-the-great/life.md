@@ -1,0 +1,15 @@
+# Sisoes the Great
+
+Sisoes loved God from his youth, doxologia says, took the yoke of the cross upon himself and followed Christ with zeal, living out the fasting struggle in the deserts of Egypt, where by humility and prayer, in a life like the angels', he overcame the camps of the unseen enemy. He lived on the mountain where [Anthony the Great](/saints/anthony-the-great) had struggled, and he followed Anthony's manner of life; and for his humble mind he received such grace from God that he even raised the dead.
+
+The story the page gives from the Paterikon is this. A layman came up to Anthony's mountain for the elder's blessing with his small son, and the boy fell ill on the road and died; the father, untroubled, carried him in and laid him face down at the elder's feet as though asking a prayer, then went out, leaving him lying there. Sisoes, not knowing the child was dead, said to him, “Rise, my son, and go from here” — and the boy rose and followed his father out.
+
+When the man came back with his living son and gave thanks, the elder understood what had happened and was greatly grieved, for he never wished to be a worker of wonders; and he bound the man to tell nobody until his own death. The brothers once asked him whether a year of repentance was enough for a brother who had fallen. That word is harsh, he answered; and when they said six months, and then forty days, he said each was too much.
+
+He trusted, he told them, in the mercy of the Lover of mankind, that if a man repents with his whole soul God accepts his repentance in three days. To another brother who asked what he should do, having fallen into sin, he said, “Rise.” The brother said that after rising he had fallen again. “Rise again.” And when he asked how long the falling and the rising would go on, the elder said, until the end overtakes you and finds you either in good or in evil.
+
+He spent sixty years in that place. As he was dying, with the monks sitting beside him, his face shone like light, and he said that Abba Anthony had come; then, after a silence, that the choir of the prophets had come; then that the choir of the apostles had come, and his face shone twice as bright, and he spoke with faces the brothers could not see.
+
+They asked him whom he was speaking with, and he said the angels had come to take him and he was begging them to leave him a little to repent. You have no need of repentance, father, they said; and he answered that he did not know himself to have so much as touched the beginning of it — and all of them knew him to be perfect. Then his face became as the sun, so that they were all afraid, and he said, “Behold, the Lord comes, and He says: bring Me the vessel of election out of the desert.” At the word he gave up his spirit, and there was lightning, and the cell was filled with a sweet smell.
+
+*After doxologia.ro's calendar for 6 iulie — [the day](https://doxologia.ro/6-iulie), [the life](https://doxologia.ro/viata-sfantului-cuvios-sisoe-cel-mare) and [the troparion](https://doxologia.ro/troparul-sfantului-cuvios-sisoe-cel-mare); read 24 September 2026.*

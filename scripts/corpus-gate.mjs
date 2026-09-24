@@ -119,6 +119,12 @@ const READ_FOLDS = {
     'Athanasius the Athonite, Romanian 5 July, whose second `ro` form is Avramie because his own life gives that as his baptismal name, against the hieromartyr bishop of Arbela under Shapur II, Romanian 4 February (read 25 September 2026)',
   'ciprian cyprian-companion-of-quadratus cyprian-martyr-10-may cyprian-the-new-martyr':
     'three men called Ciprian, on three days: the hieromonk new-martyr of Kletzos in Agrafa, Romanian 5 July; the companion of Quadratus of Corinth under Decius and Valerian, Romanian 10 March; and the bare «Sfantul Mucenic Ciprian» the calendar prints on 10 May with no life and no century (read 25 September 2026)',
+  'arhip archippus-6-july archippus-the-apostle':
+    'the bare «Sfantul Mucenic Arhip» the Romanian calendar prints on 6 July, whose own page on doxologia.ro carries the name and nothing else, against the apostle of the Seventy and bishop of Colossae, Romanian 19 February. The source holds them apart itself -- a different rank, Mucenic against Apostol, and a different page -- and there is no life on the July one to read further (read 25 September 2026)',
+  'filimon philemon-6-july philemon-of-cyzicus philemon-of-gaza':
+    'three men called Filimon, on three days: the bare «Sfantul Mucenic Filimon» of 6 July, whose page carries the name only; the martyr of Cyzicus, Romanian 29 April; and the bishop of Gaza, Romanian 14 February, also a bare line (read 25 September 2026)',
+  'marta martha-of-antioch martha-of-aza martha-sister-of-lazarus martha-sister-of-lykarion martha-wife-of-marius':
+    'five women called Marta, on five days: the Persian wife of Marius, martyred with her sons Audifax and Abachum at Rome, Romanian 6 July; the mother of Symeon of the Wonderful Mountain, 4 July; one of the five canonical virgins of Aza, 9 June; the sister of Lazarus, 4 June; and the sister of Lykarion, 8 February (read 25 September 2026)',
   'marta martha-of-antioch martha-of-aza martha-sister-of-lazarus martha-sister-of-lykarion':
     'four women called Marta, on four days: the mother of Symeon of the Wonderful Mountain, of Antioch, Romanian 4 July; one of the five canonical virgins of Aza under Shapur, Romanian 9 June and Greek 26 September; the sister of Lazarus, Romanian 4 June, whose page gives three sentences and no life; and the sister of Lykarion, martyred with her sister Mary, Romanian 8 February (read 25 September 2026)',
   'meliton meliton-of-caesarea meliton-of-the-forty-martyrs':

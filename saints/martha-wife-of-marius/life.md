@@ -1,0 +1,17 @@
+# Martha, wife of Marius of Persia
+
+[Marius](/saints/marius-of-persia) and his wife Martha were Persians, born at the beginning of the third century of noble and wealthy families; doxologia sets them beside the three magi as the offering that the old land between the Tigris and the Euphrates brought to Christ, and counts them among the earliest martyrs of Persia, though they suffered outside it. They were baptised, married, and had two sons, [Audifax](/saints/audifax-son-of-marius) and [Abachum](/saints/abachum-son-of-marius), whom they raised in the faith.
+
+The family loved the martyrs and honoured their relics, and it was that love, the page says, which moved them to leave their earthly homeland and go west to Rome, to venerate the tombs of the apostles Peter and Paul and of the other martyrs. They came during a short lull in the persecutions, and after kissing the holy relics they said, Lord, it is good for us to be here, and resolved to stay in the city. Soon a fresh persecution came upon the Roman church, and upon the four Persians with it.
+
+They cared for Quirinus, who lay wounded in prison, and helped the priest John to bury the bodies of two hundred and sixty Christians and of Blastus the tribune, shot with arrows and burnt: they drew the bodies out of the fire, wrapped them in clean linen and buried them in the Cucumer catacomb on the Via Salaria. Then, though soldiers were looking for them, they went by night and found the body of Quirinus, killed and thrown into the river, and buried it honourably in the catacomb of Pontian.
+
+For several months they stayed hidden. In that time the priest Valentine brought the official Asterius and his whole household to faith in Christ, and the family went to Asterius's house to strengthen him and remained there thirty-two days; and at the emperor's order all of them were taken and imprisoned. Asterius and his household, forty-six Christians, men and women, were sent to Ostia and put to death there, some by the sword and some by stoning, and Valentine, left at Rome, was beaten and then beheaded.
+
+The four were tried by Flavius, prefect of Rome, and the governor Muscian, who tried flattery and then threats to make them sacrifice. The three men refused, and were beaten, torn with iron claws and had their hands cut off, saying nothing but, Glory to You, Lord Jesus Christ. In the end all four were condemned, and the men were beheaded on the road called Via Cornelia.
+
+From the names in the story — Bishop Callistus of Rome, who held the see from 217 to 222, and the emperor Claudius II the Goth, who reigned from 268 to 270 — doxologia reckons that the four came to Rome about the year 220 and died about 270. Their bodies were taken by a faithful woman named Felicitas and buried on her farm called Buxus, today Boccea, where a church was later built; the relics are now in several churches in Rome and in Germany, and fragments are honoured at the seat of the Romanian Orthodox Diocese of Northern Europe in Stockholm.
+
+Of Martha the page says that it was she who never ceased urging her husband and sons to endure their torments, and that she was not beheaded with them but drowned in a pool beside the Nymphaeum.
+
+*After doxologia.ro's calendar for 6 iulie — [the day](https://doxologia.ro/6-iulie), [the life](https://doxologia.ro/viata-sfintilor-mucenici-marius-marta-sotia-sa-fiilor-lor-audifaciu-avacum) and [the troparion](https://doxologia.ro/troparul-sfintilor-mucenici-marius-sotia-sa-marta-fiii-lor-audifaciu-avacum); read 24 September 2026.*
