@@ -1,0 +1,94 @@
+{
+  "slug": "amphilochius-of-pochaev",
+  "display_name": "Amphilochius of Pochaev",
+  "names": [
+    {
+      "form": "Amfilohie de la Poceaev",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 mai, «Sfântul Cuvios Amfilohie de la Poceaev»."
+    },
+    {
+      "form": "Iacov Golovatiuc",
+      "lang": "ro",
+      "note": "His baptismal name, read out of doxologia.ro's life: «În anul 1912, la vârsta de 15 ani, Iacov Golovatiuc a fost înrolat în armata țarului.»"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "wonderworker"
+  ],
+  "related": [
+    "job-of-pochaev"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1897,
+      "latest": 1897,
+      "display": "1897",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Amfilohie s-a născut la data de 27 noiembrie 1897, în satul Ilovița Mică din regiunea Sumscina, în familia lui Varnava Golovatiuc.»"
+    },
+    "death": {
+      "earliest": 1971,
+      "latest": 1971,
+      "display": "1971",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Amfilohie a trăit 77 de ani. După mai multe tentative de omor asupra sa, a murit otrăvit prin mâncare pe 1 ianuarie 1971.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian",
+        "note": "doxologia.ro's calendar keeps him on 12 mai, and its own life of him says «Ziua prăznuirii Sfântului Amfilohie este pe data de 29 aprilie. Proclamarea oficială a avut loc pe data de 12 mai 2002» — 29 April old style being the same day as 12 May new style, and 12 May 2002 the day of his glorification."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 mai — «Sfântul Cuvios Amfilohie de la Poceaev»",
+        "url": "https://doxologia.ro/12-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Al pământului Volâniului preaslăvit nevoitor și al mănăstirii Poceaevului vrednic locuitor, tămăduitor minunat al oamenilor ortodocși te-a arătat Bisericii Sale, Hristos, Dumnezeul nostru, Cuvioase Părintele nostru, Amfilohie, Aceluia cu osârdie roagă-te ca să ne izbăvească de năvălirile vrăjmașilor și să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Amfilohie de la Poceaev», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-amfilohie-de-la-poceaev",
+        "year": 2026
+      },
+      "english": {
+        "text": "Most glorious ascetic of the land of Volhynia and worthy dweller of the monastery of Pochaev, Christ our God has shown thee to His Church as a wondrous healer of Orthodox people, our venerable father Amphilochius. Pray to Him earnestly, that He may deliver us from the onslaughts of our enemies and save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "slug": "epiphanius-of-cyprus",
+  "display_name": "Epiphanius of Cyprus",
+  "names": [
+    {
+      "form": "Epifanie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 mai, «Sfântul Ierarh Epifanie, Arhiepiscopul Ciprului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop",
+    "monk"
+  ],
+  "office": "Archbishop",
+  "related": [
+    "john-chrysostom"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 mai — «Sfântul Ierarh Epifanie, Arhiepiscopul Ciprului»",
+        "url": "https://doxologia.ro/12-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Dumnezeul părinţilor noştri, Care faci pururea cu noi după blândeţile Tale, nu depărta mila Ta de la noi; ci pentru rugăciunile lor, în pace îndreptează viaţa noastră.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Ierarh Epifanie, Arhiepiscopul Ciprului», Glasul 4; the page prints the common troparion of the holy fathers, in the plural — «pentru rugăciunile lor»",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-epifanie-arhiepiscopul-ciprului",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who ever dealest with us according to Thy gentleness: take not Thy mercy from us, but by their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "germanus-of-constantinople",
+  "display_name": "Germanus of Constantinople",
+  "names": [
+    {
+      "form": "Gherman",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 mai, «Sfântul Ierarh Gherman, Patriarhul Constantinopolului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch",
+    "confessor"
+  ],
+  "office": "Patriarch of Constantinople",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 mai — «Sfântul Ierarh Gherman, Patriarhul Constantinopolului»",
+        "url": "https://doxologia.ro/12-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Dumnezeul părinţilor noştri, Care faci pururea cu noi după blândeţile Tale, nu depărta mila Ta de la noi; ci pentru rugăciunile lor, în pace îndreptează viaţa noastră.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Ierarh Gherman, Patriarhul Constantinopolului», Glasul 4; the page prints the common troparion of the holy fathers, in the plural — «pentru rugăciunile lor» — and the same text stands on this calendar's page for Epiphanius of Cyprus on the same day",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-gherman-patriarhul-constantinopolului",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who ever dealest with us according to Thy gentleness: take not Thy mercy from us, but by their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "slug": "john-the-wallachian",
+  "display_name": "John the Wallachian",
+  "names": [
+    {
+      "form": "Ioan Valahul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 mai, «Sfântul Mucenic Ioan Valahul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "related": [
+    "nicodemus-the-hagiorite"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1662,
+      "latest": 1662,
+      "display": "1662",
+      "basis": "attested",
+      "note": "doxologia.ro: «Și astfel, în anul 1662, în a douăsprezecea zi a lunii mai, pururea-fericitul tânăr Ioan a primit din mâna Domnului cununa biruinței.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 mai — «Sfântul Mucenic Ioan Valahul»",
+        "url": "https://doxologia.ro/12-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Astăzi duhovniceşte prăznuieşte Biserica dreptcredincioşilor, şi cu bucurie strigă: Veniţi, iubitorilor de mucenici, să prăznuim pomenirea cea de peste an a luptelor noului mucenic Ioan! Că acesta, dintre noi cu voia lui Dumnezeu răsărind, în împărăteasca cetate a lui Constantin a înflorit minunat, aducând Stăpânului rod bogat şi bine primit, prin mucenicie. Iar acum se roagă neîncetat în ceruri, să se mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Mucenic Ioan Valahul», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-ioan-valahul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today the Church of the Orthodox keeps spiritual feast, and cries out with joy: come, lovers of the martyrs, let us keep the yearly memory of the struggles of the new martyr John! For he, springing up from among us by the will of God, flowered wonderfully in the imperial city of Constantine, and brought to the Master a rich and well-received fruit by his martyrdom. And now he prays without ceasing in the heavens, that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
