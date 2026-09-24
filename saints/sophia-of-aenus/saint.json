@@ -1,0 +1,50 @@
+{
+  "slug": "sophia-of-aenus",
+  "display_name": "Sophia of Aenus",
+  "names": [
+    {
+      "form": "Sofia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 iunie, «Sfânta Cuvioasă Sofia»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 iunie — «Sfânta Cuvioasă Sofia»",
+        "url": "https://doxologia.ro/4-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

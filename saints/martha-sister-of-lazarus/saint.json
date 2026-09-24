@@ -1,0 +1,49 @@
+{
+  "slug": "martha-sister-of-lazarus",
+  "display_name": "Martha, sister of Lazarus",
+  "names": [
+    {
+      "form": "Marta",
+      "lang": "ro",
+      "note": "Her own name, read out of doxologia.ro's line for 4 iunie, «Sfintele Mironosițe Maria și Marta, surorile Dreptului Lazăr», which names two women."
+    }
+  ],
+  "sex": "female",
+  "related": [
+    "mary-sister-of-lazarus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 iunie — «Sfintele Mironosițe Maria și Marta, surorile Dreptului Lazăr»",
+        "url": "https://doxologia.ro/4-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

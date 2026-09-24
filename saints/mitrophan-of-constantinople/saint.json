@@ -1,0 +1,73 @@
+{
+  "slug": "mitrophan-of-constantinople",
+  "display_name": "Mitrophan of Constantinople",
+  "names": [
+    {
+      "form": "Mitrofan",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 iunie, «Sfântul Ierarh Mitrofan, Patriarhul Constantinopolului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "office": "Patriarch of Constantinople",
+  "related": [
+    "alexander-patriarch-of-constantinople",
+    "athanasius-of-alexandria"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 iunie — «Sfântul Ierarh Mitrofan, Patriarhul Constantinopolului»",
+        "url": "https://doxologia.ro/4-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Îndreptător credinţei şi chip blândeţilor, învăţător înfrânării te-a arătat pe tine turmei tale adevărul lucrurilor. Pentru aceasta ai câştigat cu smerenia cele înalte, cu sărăcia cele bogate. Părinte Ierarhe Mitrofan, roagă pe Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Mitrofan, Patriarhul Constantinopolului, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-mitrofan-patriarhul-constantinopolului",
+        "year": 2026
+      },
+      "english": {
+        "text": "A rule of faith and a likeness of meekness, a teacher of abstinence — so did the truth of things show thee to thy flock. Therefore thou hast gained the heights by humility, and riches by poverty. Father and hierarch Mitrophan, pray Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

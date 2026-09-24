@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'maria maria-of-gatchina mary-of-aza mary-sister-of-lazarus mary-sister-of-lykarion mary-wife-of-xenophon':
+    'five women called Maria, on five days: the venerable new-martyr of Gatchina, Romanian 26 January; one of the five virgins of Aza, Romanian 9 June; the sister of Lazarus, Romanian 4 June; the sister of Lykarion, Romanian 8 February; and the wife of Xenophon, Romanian 26 January. Two martyrs, two venerables and one of the household at Bethany (read 25 September 2026)',
+  'marta martha-of-aza martha-sister-of-lazarus martha-sister-of-lykarion':
+    'three women called Marta, on three days: one of the five virgins of Aza, Romanian 9 June; the sister of Lazarus, Romanian 4 June; and the sister of Lykarion, Romanian 8 February (read 25 September 2026)',
+  'filip philip-of-moscow philippus-of-niculitel':
+    'the metropolitan of Moscow, a hierarch and confessor, Romanian 9 January, against one of the four martyrs of Niculițel — Zoticus, Attalus, Camasis and Philippus, named in the Syriac martyrology and that of Jerome and suffering under Diocletian and Maximian — Romanian 4 June (read 25 September 2026)',
+  'sofia sophia-of-aenus sophia-of-kleisoura sophia-the-physician':
+    'three women called Sofia, on three days: the mother of six children born at Aenus in Rhodope who became a monastic after they died, Romanian 4 June; the ascetic of Kleisoura, Romanian 6 May; and «Sfânta Muceniță Sofia Doctorița» of 22 May, whose page opens no life (read 25 September 2026)',
   'claudie claudius-companion-of-lucillian claudius-of-the-forty-martyrs':
     'one of the four young men imprisoned at Nicomedia whom Lucillian found there and suffered with, under Aurelian, Romanian 3 June, against one of the Forty frozen at Sebaste under Licinius, Romanian 9 March (read 25 September 2026)',
   'dionisie dionysius-companion-of-lucillian dionysius-companion-of-quadratus dionysius-of-lampsacus':
