@@ -1,0 +1,66 @@
+{
+  "slug": "basil-of-poiana-marului",
+  "display_name": "Basil of Poiana Mărului",
+  "names": [
+    {
+      "form": "Vasile de la Poiana Mărului",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 25 aprilie, «Sfântul Cuvios Vasile de la Poiana Mărului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1692,
+      "latest": 1692,
+      "display": "1692",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Acesta s-a născut din părinți dreptcredincioși, la anul 1692, în părțile Rusiei»."
+    },
+    "death": {
+      "earliest": 1767,
+      "latest": 1767,
+      "display": "1767",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «a trecut cu pace la Domnul, la 25 aprilie, în anul mântuirii 1767»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 25 aprilie — «Sfântul Cuvios Vasile de la Poiana Mărului»",
+        "url": "https://doxologia.ro/25-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 25 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
