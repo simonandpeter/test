@@ -1,0 +1,89 @@
+{
+  "slug": "simeon-the-myrrh-streaming",
+  "display_name": "Simeon the Myrrh-streaming",
+  "names": [
+    {
+      "form": "Simeon Izvorâtorul de Mir",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 februarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "monk",
+    "prince",
+    "wonderworker"
+  ],
+  "related": [
+    "sava-of-serbia",
+    "stefan-the-first-crowned"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1113,
+      "latest": 1113,
+      "display": "c. 1113",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «un sfânt de origine sârbă, care a trăit între anii 1113-1199», and «Ștefan Nemanja s-a născut în jurul anului 1113, în localitatea Ribnica, din regiunea Zeta». The page's own «în jurul» is kept in the display."
+    },
+    "death": {
+      "earliest": 1199,
+      "latest": 1199,
+      "display": "1199",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «care a trăit între anii 1113-1199»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Luminat fiind prin Har chiar și după moarte ne arăți strălucirea vieții tale, căci reverși mir îmbelșugat celor ce vin la cinstita ta icoană, povățuindu-i pe toți la cunoașterea lui Dumnezeu. Preacuvioase Părinte Simeon, roagă-L pe Hristos Dumnezeu să ne dăruiască mare milă.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Simeon Izvorâtorul de Mir, Glasul 3",
+        "url": "https://doxologia.ro/troparul-sfantului-simeon-izvoratorul-de-mir",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by grace, thou showest us the brightness of thy life even after death, for thou pourest out myrrh in abundance upon those who come to thy honoured icon, and guidest them all to the knowledge of God. Most venerable Father Simeon, pray to Christ God to grant us great mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 februarie — «Sfântul Simeon Izvorâtorul de Mir»",
+        "url": "https://doxologia.ro/13-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

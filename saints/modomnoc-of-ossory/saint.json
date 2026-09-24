@@ -1,0 +1,61 @@
+{
+  "slug": "modomnoc-of-ossory",
+  "display_name": "Modomnoc of Ossory",
+  "names": [
+    {
+      "form": "Modomnoc",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 februarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "monk",
+    "hermit"
+  ],
+  "office": "Bishop of Ossory",
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 550,
+      "display": "c. 550",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «A trăit în prima jumătate a secolului al VI-lea», and its closing line «Sfântul nostru părinte Modomnoc a adormit în Domnul, în jurul anului 550.» The interval is the half-century the page names; its «în jurul anului 550» is kept in the display."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 februarie — «Sfântul Ierarh Modomnoc, Episcop de Ossory»",
+        "url": "https://doxologia.ro/13-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,11 @@
+# Priscilla
+
+Doxologia keeps Priscilla with her husband and tells their story in one life, which is largely his. She was the wife of [Aquila](/saints/aquila), one of the seventy apostles and a disciple of the Apostle Paul, and she lived with him in Italy before either of them believed in Christ. When Claudius Caesar ordered all the Jews out of Rome and out of all Italy — for the quarrels between believing and unbelieving Jews had been reported to him, and he feared a rising over one who was called king of Israel — Priscilla crossed over with her husband to Corinth.
+
+There the Apostle Paul, coming from Athens, found them, lodged with them, and worked with them at their trade of tent-making, for it was his own; and teaching them to believe in Christ he baptised them both. Paul stayed at Corinth a while, disputing with Jews and Greeks and teaching the word of God for more than a year.
+
+He remembered her by name, with her husband, in the last chapter of the letter to the Romans: «Greet Aquila and Priscilla, my helpers in Jesus Christ, who for my soul laid down their own necks; to whom not only I give thanks, but all the churches of the nations.» And when he was taken in chains to Rome and wrote from there the second epistle to Timothy, he said again: «Salute Priscilla and Aquila.»
+
+After a time in Rome, she went back with Aquila into Asia, where he had been appointed by his teacher to the preaching of the word of God, and at Ephesus they helped the Apostle Timothy, whom Paul had left there as bishop. Of her own end the page says nothing; the calendar's line for the day calls both of them apostles and martyrs, and of Aquila the life says that at the last he was killed by the unbelieving. The page gives no year and no hymn.
+
+*After doxologia.ro's calendar for 13 februarie — [the day](https://doxologia.ro/13-februarie) and [the life](https://doxologia.ro/viata-sfintilor-apostoli-mucenici-acvila-sotia-sa-priscila); read 19 September 2026.*
