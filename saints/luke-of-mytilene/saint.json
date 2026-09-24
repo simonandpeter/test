@@ -1,0 +1,62 @@
+{
+  "slug": "luke-of-mytilene",
+  "display_name": "Luke of Mytilene",
+  "names": [
+    {
+      "form": "Luca din Mitilini",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 martie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "new-martyr"
+  ],
+  "related": [
+    "theodore-hadji-of-mytilene"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1802,
+      "latest": 1802,
+      "display": "1802",
+      "basis": "attested",
+      "note": "doxologia.ro heads the life «Viața Sfântului Nou Mucenic Luca din Mitilini (†23 martie 1802)»; the life itself gives no year and says only that he was nineteen."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 23 martie — «Sfântul Cuvios Nou Mucenic Luca din Mitilini»",
+        "url": "https://doxologia.ro/23-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 23 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
