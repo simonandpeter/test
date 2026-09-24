@@ -1,0 +1,58 @@
+{
+  "slug": "leonides-father-of-origen",
+  "display_name": "Leonides, father of Origen",
+  "names": [
+    {
+      "form": "Leonid",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 aprilie, «Sfântul Mucenic Leonid»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 202,
+      "latest": 202,
+      "display": "202",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Leonid a fost decapitat în anul 202»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 aprilie — «Sfântul Mucenic Leonid»",
+        "url": "https://doxologia.ro/22-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

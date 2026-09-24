@@ -1,0 +1,70 @@
+{
+  "slug": "theodore-of-sykeon",
+  "display_name": "Theodore of Sykeon",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Teodor Sicheotul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 aprilie, «Sfântul Ierarh Teodor Sicheotul, Episcopul Anastasiopolei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "hierarch",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 aprilie — «Sfântul Ierarh Teodor Sicheotul, Episcopul Anastasiopolei»",
+        "url": "https://doxologia.ro/22-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Cunoscut fiind din scutece sfinţit şi arătându-te plin de haruri, ai luminat lumea cu minunile şi mulţimile demonilor ai alungat, lucrătorule de sfinţenie, Părinte Ierarhe Teodor. Pentru aceasta roagă-te Domnului pentru noi.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Ierarh Teodor Sicheotul, Episcopul Anastasiopolei», Glasul 2",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-teodor-sicheotul-episcopul-anastasiopolei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Known from your swaddling clothes as one sanctified, and shown to be full of graces, you lit up the world with wonders and drove off multitudes of demons, O worker of holiness, father and hierarch Theodore. Therefore pray to the Lord for us.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
