@@ -1,0 +1,68 @@
+{
+  "slug": "isidore-of-chios",
+  "display_name": "Isidore of Chios",
+  "names": [
+    {
+      "form": "Isidor din Chios",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 mai, «Sfântul Mucenic Isidor din Chios»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 14 mai — «Sfântul Mucenic Isidor din Chios»",
+        "url": "https://doxologia.ro/14-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 14 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Isidor, întru nevoinţa sa, cununa nesctricăciunii a dobândit de la Tine, Dumnezeul nostru.; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Mucenic Isidor din Hios», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-isidor-din-hios",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Isidore, O Lord, in his contest received the crown of incorruption from Thee our God; for having Thy strength, he cast down the tyrants and broke the feeble insolence of the demons. At his prayers, O Christ our God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
