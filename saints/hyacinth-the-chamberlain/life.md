@@ -1,0 +1,13 @@
+# Hyacinth the Chamberlain
+
+While Trajan was reigning in Rome there was a great persecution of the Christians, for an imperial order had gone out that all under his rule should sacrifice to the gods, and that those who would not should be given over to torments. At that time there was in the imperial palace a chosen young man named Hyacinth, of Caesarea in Cappadocia, twenty years old. He stood always before the emperor's face, holding the office of chamberlain, and he was a true Christian, serving Christ God in secret and adorned with purity, self-restraint, meekness and every good work.
+
+When a feast of the unclean gods came round and the emperor with all the people was sacrificing to the idols, Hyacinth did not go with the emperor to the idols but stayed in the palace, and going into a small room apart he prayed earnestly to the true God. Another young man of his own age named Urbicius, who held the same office of chamberlain, saw this and heard his prayer, and went and told the emperor that Hyacinth had broken the imperial command and was praying to a certain Jesus Christ, calling Him God.
+
+Trajan was at that moment dining before the people at that unclean feast. He had Hyacinth brought, gave him some of the meat sacrificed to the idols, and ordered him to eat it in front of him. But Hyacinth, signing himself with the cross, said to the emperor: God forbid that I, who am a Christian, should eat that unclean food. I would rather that you also turned away from the deceit of the idols, from this devilish feast and these unclean sacrifices, and came to know the one true God and served Him. All who sat at meat with the emperor were angered at the young man's boldness.
+
+The martyr of Christ, Hyacinth, ended his life at Rome on the third day of July, killed by hunger and thirst but fed by faith, by prayer and by the grace of the Holy Spirit, while the pagan emperor Trajan was reigning. Afterwards a widow kept his relics, and when she died the man she had brought to baptism sealed the coffin and sent it with faithful men to Caesarea in Cappadocia, with orders to loose the mules at the gates and let them go where they would, as the saint had commanded in a vision; and the mules, led by nobody, went to the house in which the martyr had been born. There the faithful of that city laid his relics with honour in a marble coffin.
+
+The life names the emperor Trajan and prints no year, so none is recorded here.
+
+*After doxologia.ro's calendar for 3 iulie — [the day](https://doxologia.ro/3-iulie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-iachint); read 24 September 2026.*

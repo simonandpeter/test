@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'meliton meliton-of-caesarea meliton-of-the-forty-martyrs':
+    'the martyr under Trajan at Caesarea in Cappadocia, with Theodotus, Theodota, Diomedes, Eulampius, Peter, Asclepiodotus and Golinduch, Romanian 3 July, against one of the Forty frozen at Sebaste, Romanian 9 March (read 25 September 2026)',
   'iuvenalie juvenal-of-alaska juvenal-of-jerusalem':
     'two men the Romanian calendar keeps on the same 2 July: the patriarch of Jerusalem between 420 and 458, of the Council of Ephesus, and the hieromonk of Valaam martyred in Alaska, born at Ekaterinburg in 1761 (read 25 September 2026)',
   'mihail john-maximovitch michael-of-synada':

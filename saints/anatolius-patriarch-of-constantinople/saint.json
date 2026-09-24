@@ -1,0 +1,63 @@
+{
+  "slug": "anatolius-patriarch-of-constantinople",
+  "display_name": "Anatolius",
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Anatolie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 iulie, «Sfântul Ierarh Anatolie, Patriarhul Constantinopolului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "related": [
+    "gennadius-patriarch-of-constantinople"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 451,
+      "latest": 451,
+      "display": "451",
+      "basis": "attested",
+      "note": "doxologia.ro dates one event of his patriarchate and nothing else: «l-a caterisit la Sinodul al IV-lea a toată lumea de la Calcedon din anul 451». It adds that he shepherded the Church eight years, and gives no year for his enthronement or for his death, so no wider interval is recorded here."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 3 iulie — «Sfântul Ierarh Anatolie, Patriarhul Constantinopolului»",
+        "url": "https://doxologia.ro/3-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 3 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
