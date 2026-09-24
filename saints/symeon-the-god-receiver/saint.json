@@ -1,0 +1,55 @@
+{
+  "slug": "symeon-the-god-receiver",
+  "display_name": "Symeon the God-receiver",
+  "names": [
+    {
+      "form": "Simeon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 februarie, «Sfântul și Dreptul Simeon, primitorul de Dumnezeu»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "related": [
+    "zacharias-father-of-the-forerunner",
+    "athanasius-of-alexandria",
+    "anna-the-prophetess"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 3 februarie — «Sfântul și Dreptul Simeon, primitorul de Dumnezeu»",
+        "url": "https://doxologia.ro/3-februarie",
+        "year": 2026
+      },
+      "note": "Kept the day after the Meeting of the Lord, with the Prophetess Anna. The site's hymn page for the day is an audio recording of the troparion of the two of them sung in Greek, and prints no Romanian text, so no hymn is recorded here."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 3 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

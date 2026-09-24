@@ -1,0 +1,86 @@
+{
+  "slug": "ansgar",
+  "display_name": "Ansgar",
+  "office": "Archbishop of Hamburg-Bremen",
+  "names": [
+    {
+      "form": "Ansgar",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 februarie, «Sfântul Ansgar, luminătorul Danemarcei și al Suediei». The life on the same site adds that he is also called Anskar or Oscar."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "archbishop",
+    "monastic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 801,
+      "latest": 801,
+      "display": "801",
+      "basis": "traditional",
+      "note": "doxologia.ro's life heads him «(8 septembrie (?), 801 - 3 februarie, 865)» and says «S-a născut la Corbie, în Piccardia, în Franţa septentrională, în 801, la un an după încoronarea imperială a lui Carol cel Mare». The day of birth the page itself marks with a question mark."
+    },
+    "death": {
+      "earliest": 865,
+      "latest": 865,
+      "display": "865",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Sfântul Ansgar (Oscar) a murit la 3 februarie 865 în Bremen, după o viaţă dăruită cu totul vestirii Sfintei Evanghelii. A trăit 64 de ani, între care, 34 de ani ca misionar.»"
+    }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "În întregime fiind cuprins de dragostea pentru Dumnezeu şi pentru oameni, la fel ca Apostolii, Sfinte Mucenice Ansgar, ai călătorit în depărtări ca să duci mântuire celor aflaţi în întuneric, jertfind durerea ta pe altarul inimii tale, iar prin truda şi osteneala ta aducând mărturie despre Mântuitorul ca un mucenic şi îndurând pericolele uscatului şi mării de dragul Său, fără să fii descurajat de ispite şi necazuri. Pentru acestea, roagă-te cu îndrăzneală să fie mântuite sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ansgar, luminătorul Danemarcei și al Suediei, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-ansgar-luminatorul-danemarcei-al-suediei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Wholly taken up with love for God and for men, like the Apostles, O holy martyr Ansgar, thou didst journey into far countries to carry salvation to those who sat in darkness, offering up thy pain upon the altar of thine heart; and by thy toil and thy labour thou didst bear witness to the Saviour as a martyr, enduring for His sake the perils of land and sea, undismayed by temptations and afflictions. Wherefore pray with boldness that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 3 februarie — «Sfântul Ansgar, luminătorul Danemarcei și al Suediei»",
+        "url": "https://doxologia.ro/3-februarie",
+        "year": 2026
+      },
+      "note": "The life says «Prăznuirea sa se face în ziua adormirii în ziua de 3 februarie». Its troparion addresses him as «Sfinte Mucenice Ansgar», martyr, on the reading of his biographer Rimbert that his was the hidden martyrdom of peaceful times."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 3 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

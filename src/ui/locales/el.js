@@ -720,6 +720,7 @@ export const el = {
     'Archbishop of Canterbury': 'Αρχιεπίσκοπος Καντερβουρίας',
     'Archbishop of Chernigov': 'Αρχιεπίσκοπος Τσερνίγκοφ',
     'Archbishop of Constantinople': 'Αρχιεπίσκοπος Κωνσταντινουπόλεως',
+    'Archbishop of Hamburg-Bremen': 'Αρχιεπίσκοπος Αμβούργου-Βρέμης',
     'Archbishop of Larissa': 'Αρχιεπίσκοπος Λαρίσης',
     'Archbishop of Novgorod, Wonderworker': 'Αρχιεπίσκοπος Νόβγκοροντ, θαυματουργός',
     'Archbishop of Omsk': 'Αρχιεπίσκοπος Ομσκ',

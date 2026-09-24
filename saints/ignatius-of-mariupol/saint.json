@@ -1,0 +1,60 @@
+{
+  "slug": "ignatius-of-mariupol",
+  "display_name": "Ignatius of Mariupol",
+  "names": [
+    {
+      "form": "Ignatie de Marioupolis",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 februarie, «Sfântul Ierarh Ignatie de Marioupolis»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1786,
+      "latest": 1786,
+      "display": "1786",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Locuind într-o chilie de piatră, ridicată de el la 6,5 kilometri distanță de Marioupolis, după două săptămâni de boală, la 3 februarie 1786 şi-a dat sufletul cu pace Ziditorului.» The page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 3 februarie — «Sfântul Ierarh Ignatie de Marioupolis»",
+        "url": "https://doxologia.ro/3-februarie",
+        "year": 2026
+      },
+      "note": "The life adds that in 1977 the Ukrainian Orthodox Church recognised his sanctity and fixed 3 February as his day. The site prints no troparion for him."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 3 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
