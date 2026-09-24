@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'cel ilarion nou hilarion-the-new-of-dalmatou hilarion-the-new-of-pelecete':
+    'two abbots both called Ilarion cel Nou, on two days: the son of Peter the Cappadocian who set the bread on the imperial table and of Theodosia, of the monastery of Dalmatou, Romanian 6 June; and the confessor of Pelecete who shut himself in a dark cell for many years, Romanian 28 March. Doxologia keeps them on two days with two lives (read 25 September 2026)',
   'gheorghe george-of-egypt george-of-pisidian-antioch':
     'one of the ten martyrs the Romanian 5 June keeps in a single sentence, tormented by the ruler of Egypt with hunger, thirst and cold, against the bishop and confessor of Pisidian Antioch, Romanian 19 April (read 25 September 2026)',
   'irineu irenaeus-of-egypt irenaeus-of-sirmium':

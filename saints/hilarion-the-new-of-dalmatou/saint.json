@@ -1,0 +1,70 @@
+{
+  "slug": "hilarion-the-new-of-dalmatou",
+  "display_name": "Hilarion the New of Dalmatou",
+  "names": [
+    {
+      "form": "Ilarion cel Nou",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 iunie, «Sfântul Cuvios Ilarion cel Nou, egumenul Mănăstirii Dalmaților»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "abbot"
+  ],
+  "office": "Abbot",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 iunie — «Sfântul Cuvios Ilarion cel Nou, egumenul Mănăstirii Dalmaților»",
+        "url": "https://doxologia.ro/6-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Ilarion, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Ilarion cel Nou, egumenul Mănăstirii Dalmaților, Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-ilarion-cel-nou-egumenul-manastirii-dalmatilor",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren desert, and with sighs out of the deep thou didst make thy labours bear fruit a hundredfold; and thou wast made a light to the world, shining with wonders, Hilarion our father. Pray Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

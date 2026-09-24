@@ -8,4 +8,4 @@ And as Joshua the son of Nun once stopped the sun in its course until he had bea
 
 He did other signs too by the power of the Cross, and served God into deep old age, and so departed to the eternal dwellings. Doxologia gives him no year and no century, names no monastery and no teacher, and its page for him carries no troparion.
 
-*After doxologia.ro's calendar for 20 februarie — [the day](https://doxologia.ro/20-februarie) and [the life](https://doxologia.ro/sfantul-cuvios-visarion); read 19 September 2026.*
+*After doxologia.ro's calendar for 20 februarie — [the day](https://doxologia.ro/20-februarie) and [the life](https://doxologia.ro/sfantul-cuvios-visarion); read 19 September 2026; and doxologia.ro's calendar for 6 iunie, which keeps him a second time — [the day](https://doxologia.ro/6-iunie), [the life](https://doxologia.ro/viata-sfantului-cuvios-visarion) and [the troparion](https://doxologia.ro/troparul-sfantului-cuvios-visarion), read 25 September 2026.*

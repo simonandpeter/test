@@ -26,7 +26,8 @@
       "feast": {
         "day": 20,
         "month": 2,
-        "calendar": "revised-julian"
+        "calendar": "revised-julian",
+        "note": "Doxologia keeps him twice: its calendar prints him on 20 februarie and again on 6 iunie — «Sfântul Cuvios Visarion». One attestation row per church is the schema, so the row is the day this folder was read from and the second day is recorded here. The 6 iunie page carries the fuller life — the same Bessarion the Great of Egypt, who saw Gerasimus in the desert of the Jordan and died in great old age — and the troparion below is from it. Read 25 September 2026."
       },
       "source": {
         "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 februarie — «Sfântul Cuvios Visarion»",
@@ -47,5 +48,23 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Visarion, părintele nostru. Roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Visarion, Glas 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-visarion",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren desert, and with sighs out of the deep thou didst make thy labours bear fruit a hundredfold; and thou wast made a light to the world, shining with wonders, Bessarion our father. Pray Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
