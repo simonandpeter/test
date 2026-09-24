@@ -1,0 +1,89 @@
+{
+  "slug": "sophronius-of-jerusalem",
+  "display_name": "Sophronius of Jerusalem",
+  "office": "Patriarch",
+  "names": [
+    {
+      "form": "Sofronie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 martie, «Sfântul Ierarh Sofronie, Patriarhul Ierusalimului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "related": [
+    "mary-of-egypt"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 11 martie — «Sfântul Ierarh Sofronie, Patriarhul Ierusalimului»",
+        "url": "https://doxologia.ro/11-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Îndreptător credinţei şi chip blândeţelor, învăţător înfrânârii te-a arătat pe tine, turmei tale, adevărul lucrurilor. Pentru aceasta ai dobândit cu smerenia cele înalte şi cu sărăcia cele bogate; Părinte Ierarhe Sofronie, roagă pe Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Sofronie, Patriarhul Ierusalimului, glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-sofronie-patriarhul-ierusalimului",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown you to your flock as a rule of faith, an image of gentleness and a teacher of abstinence. Therefore you gained the heights by humility and riches by poverty; father and hierarch Sophronius, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "model": "Apărătoare Doamnă...",
+      "text": "De râvna cea Dumnezeiască fiind pus în mişcare şi lărgind gura Poruncilor celor adevăra­te, temeliile Bisericii după Lege le-ai aşezat; şi cuvinte preaînţelepte dând călugărilor celor ce se aflau acolo, te-ai arătat lumii preaînţelepte între patri­arhii Ierusalimului, Sfinte Ierarhe Sofronie. Prin care, îndreptându-ne, stri­găm ţie: bucură-te, lauda cea luminoasă a credincioşilor!",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Ierarh Sofronie, Patriarhul Ierusalimului, glasul 8, podobie «Apărătoare Doamnă...»",
+        "url": "https://doxologia.ro/condacul-sfantului-ierarh-sofronie-patriarhul-ierusalimului",
+        "year": 2026
+      },
+      "english": {
+        "text": "Moved by divine zeal, and opening wide your mouth upon the true commandments, you laid the foundations of the Church according to the Law; and giving most wise words to the monks who were there, you were shown to the world as most wise among the patriarchs of Jerusalem, holy hierarch Sophronius. Being set right by them, we cry to you: rejoice, bright praise of the faithful!",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

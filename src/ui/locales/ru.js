@@ -885,6 +885,7 @@ export const ru = {
     'Novice': 'Послушник',
     'Novice of Zilantov': 'Послушник Зилантовский',
     'Nun': 'Монахиня',
+    'Patriarch': 'Патриарх',
     'Patriarch of Alexandria': 'Патриарх Александрийский',
     'Patriarch of Constantinople': 'Патриарх Константинопольский',
     'Patriarch of Moscow': 'Патриарх Московский',

@@ -866,6 +866,7 @@ export const ro = {
     'Novice': 'Ascultător',
     'Novice of Zilantov': 'Ascultător de la Zilantov',
     'Nun': 'Monahie',
+    'Patriarch': 'Patriarh',
     'Patriarch of Alexandria': 'Patriarh al Alexandriei',
     'Patriarch of Constantinople': 'Patriarh de Constantinopol',
     'Patriarch of Moscow': 'Patriarh al Moscovei',

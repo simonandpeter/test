@@ -867,6 +867,7 @@ export const el = {
     'Novice': 'Δόκιμος',
     'Novice of Zilantov': 'Δόκιμος Ζιλάντοφ',
     'Nun': 'Μοναχή',
+    'Patriarch': 'Πατριάρχης',
     'Patriarch of Alexandria': 'Πατριάρχης Αλεξανδρείας',
     'Patriarch of Constantinople': 'Πατριάρχης Κωνσταντινουπόλεως',
     'Patriarch of Moscow': 'Πατριάρχης Μόσχας',

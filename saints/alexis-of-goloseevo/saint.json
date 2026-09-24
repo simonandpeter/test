@@ -1,0 +1,66 @@
+{
+  "slug": "alexis-of-goloseevo",
+  "display_name": "Alexis of Goloseevo",
+  "names": [
+    {
+      "form": "Alexie de la Goloseev",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 martie, «Sfântul Cuvios Alexie de la Goloseev»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1840,
+      "latest": 1840,
+      "display": "1840",
+      "basis": "attested",
+      "note": "doxologia.ro: «În anul 1840, într-o familie din Kiev se năștea al nouălea copil»."
+    },
+    "death": {
+      "earliest": 1917,
+      "latest": 1917,
+      "display": "1917",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Alexie a trecut la Domnul în anul 1917»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 11 martie — «Sfântul Cuvios Alexie de la Goloseev»",
+        "url": "https://doxologia.ro/11-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

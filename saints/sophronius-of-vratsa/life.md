@@ -6,4 +6,4 @@ Widowed, he took the monastic schema at Tarnovo under the name Seraphim, and in 
 
 The Bulgarian Church numbered him among the saints on 31 December 1964; his memory is kept on 22 September and on 11 March.
 
-*After doxologia.ro, [Sfântul Sofronie, episcopul Vratsei](https://doxologia.ro/viata-sfantului-sofronie-episcopul-vratsei) (Moise Aghioritul, Sfinții Sfântului Munte); read 30 August 2026.*
+*After doxologia.ro, [Sfântul Sofronie, episcopul Vratsei](https://doxologia.ro/viata-sfantului-sofronie-episcopul-vratsei) (Moise Aghioritul, Sfinții Sfântului Munte); read 30 August 2026; doxologia.ro's calendar keeps him on 11 martie as well — [that day](https://doxologia.ro/11-martie), read 19 September 2026.*

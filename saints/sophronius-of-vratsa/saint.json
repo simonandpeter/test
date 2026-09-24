@@ -25,7 +25,8 @@
       "feast": {
         "day": 22,
         "month": 9,
-        "calendar": "revised-julian"
+        "calendar": "revised-julian",
+        "note": "doxologia.ro's day calendar prints him twice: on 22 septembrie, «Sfântul Sofronie, Episcopul Vratsei», and again on 11 martie under the same line. His own life page on that site says «Pomenirea lui se cinstește pe 22 septembrie și pe 11 martie». The folder keeps 22 September, which is the day the corpus already held; the 11 March commemoration is recorded here and is not rendered as a second feast (19 September 2026)."
       },
       "source": {
         "text": "doxologia.ro, 22 Septembrie — „Sfântul Sofronie, Episcopul Vratsei”",

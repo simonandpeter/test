@@ -1,0 +1,59 @@
+{
+  "slug": "pionius-of-smyrna",
+  "display_name": "Pionius of Smyrna",
+  "names": [
+    {
+      "form": "Pionie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 martie, «Sfântul Sfinţit Mucenic Pionie, preotul din Smirna»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 245,
+      "latest": 251,
+      "display": "245–251",
+      "basis": "traditional",
+      "note": "doxologia.ro prints the reign twice and not alike: early in the life «pe vremea împărăției lui Deciu (245-251)», and at the end «pe vremea împărăției lui Deciu (249-251)». The interval is the wider of the two readings the page itself gives; it states no year for the martyrdom, only the day."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 11 martie — «Sfântul Sfinţit Mucenic Pionie, preotul din Smirna»",
+        "url": "https://doxologia.ro/11-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

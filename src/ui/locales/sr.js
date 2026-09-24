@@ -868,6 +868,7 @@ export const sr = {
     'Novice': 'Искушеник',
     'Novice of Zilantov': 'Искушеник зилантовски',
     'Nun': 'Монахиња',
+    'Patriarch': 'Патријарх',
     'Patriarch of Alexandria': 'Патријарх александријски',
     'Patriarch of Constantinople': 'Патријарх цариградски',
     'Patriarch of Moscow': 'Патријарх московски',
