@@ -1,0 +1,81 @@
+{
+  "slug": "agapius-of-caesarea-in-palestine",
+  "display_name": "Agapius of Caesarea in Palestine",
+  "names": [
+    {
+      "form": "Agapie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 martie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "timolaus",
+    "plesius",
+    "agapius-of-gaza"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian (284–305)",
+      "basis": "traditional",
+      "note": "doxologia.ro's life for the day: «Acești sfinți mucenici, multpătimitori, au fost pe vremea împărăției lui Dioclețian (284-305)» and «întru al doilea an al prigonirii de atunci». The reign is the interval the page prints; it gives no year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 15 martie — «Sfântul Mucenic Agapie»",
+        "url": "https://doxologia.ro/15-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Mucenici Agapie, Plisie, Timolau şi cei împreună cu dânşii",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-agapie-plisie-timolau-cei-impreuna-cu-dansii",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contest received crowns of incorruption from Thee, our God; for having Thy strength, they cast down the tormentors and broke the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
