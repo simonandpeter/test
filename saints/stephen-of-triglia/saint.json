@@ -1,0 +1,79 @@
+{
+  "slug": "stephen-of-triglia",
+  "display_name": "Stephen of Triglia",
+  "names": [
+    {
+      "form": "Ștefan",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 martie, «Sfântul Cuvios Ștefan, făcătorul de minuni»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "confessor",
+    "wonderworker"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 813,
+      "latest": 820,
+      "display": "813–820",
+      "basis": "traditional",
+      "note": "doxologia.ro: «a fost în anii împăratului Leon Armeanul (813-820)» — the reign the life gives, in which he was summoned, tortured and sent into exile, where he died. The life gives no year for his death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 28 martie — «Sfântul Cuvios Ștefan, făcătorul de minuni»",
+        "url": "https://doxologia.ro/28-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Ştefan, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Ştefan, făcătorul de minuni",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-stefan-facatorul-de-minuni",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with miracles, O Stephen our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "slug": "hilarion-the-new-of-pelecete",
+  "display_name": "Hilarion the New of Pelecete",
+  "names": [
+    {
+      "form": "Ilarion cel Nou",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 martie, «Sfântul Cuvios Ilarion cel Nou, egumenul Pelechitului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "confessor"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 717,
+      "latest": 820,
+      "display": "8th–9th century",
+      "basis": "traditional",
+      "note": "The life sets out a disagreement and does not settle it: «a viețuit, precum se povestește într-o cuvântare, pe vremea împărăției lui Leon Armeanul (813-820)», while «altora li se pare … că a trăit pe vremea împărăției lui Leon Isaurul (717-741) și a lui Copronim, fiul lui (741-775)». The interval is the one both readings fit."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 28 martie — «Sfântul Cuvios Ilarion cel Nou, egumenul Pelechitului»",
+        "url": "https://doxologia.ro/28-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Ilarion, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Ilarion cel Nou, egumenul Pelechitului",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-ilarion-cel-nou-egumenul-pelechitului",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with miracles, O Hilarion our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
