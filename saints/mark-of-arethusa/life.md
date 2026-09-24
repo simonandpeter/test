@@ -1,0 +1,17 @@
+# Mark of Arethusa
+
+What happened to the wonderful Mark of Arethusa, says St Gregory of Nazianzus in his first oration against Julian the Apostate, who does not know? In the reign of Constantine the Great, after the authority then given to the Christians, he pulled down an idol-temple and led a great many people from the error of the pagans to the straight way of salvation, not only by the blameless manner of his life but by the beauty of his speech; and for that he was long held in hatred and anger by the devil-loving men of Arethusa.
+
+Afterwards, when the Christian rule changed and the pagan power began to grow and revive again, he did not escape the hands of the tormentors. The crowd had held its anger a while, like fire hidden in fuel or a river dammed by force; but finding its time, as fire catches and a river bursts out, the people's unchecked rage and revenge spread at once under the emperor Julian the Apostate, 361 to 363.
+
+The holy old man was carried about the city before them all, honoured for his age and more honoured for his amended life, and was tormented by everyone, men and women, young and old, by those who ordered the city's affairs and by those marked with any dignity; and all had one zeal, to outdo one another in anger and cruelty. He was dragged through the streets and pushed into the mud, pulled by the hair and by the other parts of his body, handed from child to child.
+
+At the place of torture they hung him up and pierced his brave body with knives and spears, making a laughing-stock of the spectacle; with instruments of torture they pierced his feet to the bone, and with very fine, very strong linen threads they tore off his nails. Then they raised him naked in a basket, smeared him all over with honey and fat, and at noon, in the great heat of the sun, the bees and the wasps ate him — and the more the blessed man melted in the terrible heat, the worse he suffered from their stinging.
+
+Old in years, he showed himself young in that contest. The brightness of his face did not change; rather he took a sweetness from those torments and mocked the tormentors, and — this is remembered of him — he comforted himself that he hung on high for Christ's sake while they were below. He was so far above the men tormenting him that he felt no pain in himself, as though it were another and not he who suffered; and he reckoned the suffering glory, and not peril.
+
+So he endured, and for the temple he had thrown down he gave the tormentors not a penny, which shows that it was for the right faith that he bore such torments. The Arethusians set a great price on the ruined temple and demanded either the whole of it in gold or that he build it again; and the saint was seen to resist the more for his faith, refusing to do what was commanded, until by his patience he slowly overcame them. They wondered at his great endurance, loosed him and let him go free; and hearing his teaching words they learned the holy faith and all became Christians.
+
+The same notice carries, after his, the passage of Theodoret about [Cyril the deacon](/saints/cyril-of-heliopolis) of Heliopolis in Phoenicia, killed in the same reaction.
+
+*After doxologia.ro's calendar for 29 martie — [the day](https://doxologia.ro/29-martie), [the life](https://doxologia.ro/viata-sfantului-sfintit-mucenic-chiril-diaconul) and [the troparion](https://doxologia.ro/troparul-sfintilor-sfintiti-mucenici-marcu-episcopul-aretuselor-chiril-diaconul-al-celor-impreuna); read 19 September 2026.*

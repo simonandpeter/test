@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'chiril cyril-of-alexandria cyril-of-heliopolis cyril-of-jerusalem cyril-of-the-forty-martyrs':
+    'four men called Chiril: the archbishop of Alexandria born at Mahalla in 378, Romanian 18 January; the archbishop of Jerusalem of Constantius’s reign, Romanian 18 March; one of the Forty of Sebaste under Licinius, Romanian 9 March; and the deacon of Heliopolis whom the pagans of Julian’s reign killed, told by Theodoret in the same notice as Mark of Arethusa, Romanian 29 March. Four days, four cities, and no two of them one man (read 25 September 2026)',
+  'marcu mark-of-arethusa mark-of-ephesus mark-the-ascetic':
+    'the bishop of Arethusa of Gregory of Nazianzus’s first oration against Julian, Romanian 29 March; Mark Eugenikos, born Manuel at Constantinople in 1392 and metropolitan of Ephesus, Romanian 19 January; and the ascetic and writer, Romanian 5 March. Eleven centuries between the first and the second (read 25 September 2026)',
   'zaharia zacharias-son-of-barachias zacharias-son-of-carion':
     'the prophet of Israel, of the tribe of Levi, son of Barachias, Romanian 8 February, against the monk of the Egyptian skete whose father Carion left wife and children for the desert and brought the boy with him, Romanian 24 March. A prophet against a desert father, and the forename is all they share (read 25 September 2026)',
   'vasile basil-of-ancyra basil-of-thessalonica basil-the-confessor':

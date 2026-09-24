@@ -1,0 +1,80 @@
+{
+  "slug": "cyril-of-heliopolis",
+  "display_name": "Cyril of Heliopolis",
+  "names": [
+    {
+      "form": "Chiril",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 martie, «Sfântul Sfințit Mucenic Chiril, diaconul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "deacon"
+  ],
+  "related": [
+    "mark-of-arethusa"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 363,
+      "display": "361–363",
+      "basis": "traditional",
+      "note": "The life places his idol-breaking «pe când împărăţia Constantin» and his killing in the pagan revenge that the same notice dates «sub împăratul Iulian Apostatul (361-363)», the years doxologia.ro prints. No year is given for the killing itself."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 29 martie — «Sfântul Sfințit Mucenic Chiril, diaconul»",
+        "url": "https://doxologia.ro/29-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Sfinţiţi Mucenici Marcu, Episcopul Aretuselor, Chiril diaconul şi al celor împreună cu dânşii (the page prints «nesctricăciunii»)",
+        "url": "https://doxologia.ro/troparul-sfintilor-sfintiti-mucenici-marcu-episcopul-aretuselor-chiril-diaconul-al-celor-impreuna",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contending won from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke also the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

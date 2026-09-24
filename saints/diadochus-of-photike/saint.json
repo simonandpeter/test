@@ -1,0 +1,86 @@
+{
+  "slug": "diadochus-of-photike",
+  "display_name": "Diadochus of Photike",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Diadoh",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 martie, «Sfântul Ierarh Diadoh, Episcopul Foticeii»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 395,
+      "latest": 405,
+      "display": "c. 400",
+      "basis": "traditional",
+      "note": "doxologia.ro: «s-a născut în jurul anului 400 în provincia romană Iliric (Illyricum)»; the bounds are the span «în jurul anului 400» will carry."
+    },
+    "death": {
+      "earliest": null,
+      "latest": 486,
+      "display": "before 486",
+      "basis": "traditional",
+      "note": "doxologia.ro: «nu se ştie cum şi-a sfârşit viaţa Sfântul Diadoh. Trecerea sa la cele veşnice a avut loc cu puţin timp înainte de anul 486.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "revised-julian",
+        "note": "doxologia.ro's life adds that he is kept also in the Synaxis of all the Venerable Fathers, on Cheesefare Saturday — a movable commemoration the schema cannot hold."
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 29 martie — «Sfântul Ierarh Diadoh, Episcopul Foticeii»",
+        "url": "https://doxologia.ro/29-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 1",
+      "text": "Păstor și dascăl preaînțelept al Bisericii te-ai arătat, Sfinte Diadoh, iar de dumnezeiasca înțelepciune și cunoștință împărtășindu-te, te-ai ridicat întru smerenie și dragoste la desăvârșitul chip al Arhieriei Domnului. Pentru aceasta rugămu-te, fii nouă mijlocitor și pururi rugător înaintea Scaunului Treimii, ca să aflăm iertare de greșeli și sufletelor noastre mare milă.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Diadoh, Episcopul Foticeii",
+        "url": "https://doxologia.ro/troparul-sfantului-diadoh-episcopul-foticeii",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown to be a shepherd and a most wise teacher of the Church, O holy Diadochus; and having partaken of divine wisdom and knowledge, thou didst rise in humility and love to the perfect likeness of the Lord's high priesthood. Therefore we pray thee: be our intercessor, and pray always before the Throne of the Trinity, that we may find forgiveness of our sins, and great mercy for our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

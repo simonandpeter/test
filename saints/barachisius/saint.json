@@ -1,0 +1,86 @@
+{
+  "slug": "barachisius",
+  "display_name": "Barachisius",
+  "names": [
+    {
+      "form": "Varahisie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 martie, «Sfântul Mucenic Varahisie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "jonah-martyr-29-march"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 29 martie — «Sfântul Mucenic Varahisie»",
+        "url": "https://doxologia.ro/29-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Mucenici Iona şi Varahisie şi al celor împreună cu dânşii (the page prints «nesctricăciunii»)",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-iona-varahisie-al-celor-impreuna-cu-dansii",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contending won from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke also the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Luminaţi fiind de Harul Cel Adevărat, cu dreaptă credinţă îndreptaţi, în chip luminat, marginile pământului, sfinţiţilor şi măriţilor mucenici. Pentru aceasta, cu credinţă, vă fericim pe voi.",
+      "source": {
+        "text": "Doxologia — Condacul Sfinţilor Mucenici Iona şi Varahisie şi al celor împreună cu dânşii, «Arătatu-Te-ai astăzi...»",
+        "url": "https://doxologia.ro/condacul-sfintilor-mucenici-iona-varahisie-al-celor-impreuna-cu-dansii",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by the true Grace, O consecrated and glorious martyrs, you set the ends of the earth aright in the true faith, and made them shine. Therefore we call you blessed in faith.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
