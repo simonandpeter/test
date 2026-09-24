@@ -1522,9 +1522,21 @@ test('a rendering made here says so, where a citation names its book', async ({ 
   // The English is there, in English, and it says who made it.
   await expect(own.first().locator('.hymn-text')).toHaveAttribute('lang', 'en');
   await expect(own.first().locator('.hymn-text')).toContainText('noetic stars');
-  await expect(own.first().locator('.hymn-source')).toHaveText('Rendered for this site');
-  // And never a citation, which is the whole distinction: there is no book.
-  await expect(own.first().locator('.hymn-source a')).toHaveCount(0);
+  await expect(own.first().locator('.hymn-source')).toContainText('Rendered for this site');
+  /*
+   * **And which text it was made from** (author, 2026-09-24: the rendering
+   * "doesnt list the original thing it was translated from"). This asserted
+   * the footer had no link at all until then, on the reading that a rendering
+   * has no book and so nothing to cite. It has no *book*; it has an original,
+   * and a translation nobody can put beside its source is a claim the reader
+   * cannot check. The distinction the test exists for is unchanged and is
+   * carried by the words: `Rendered for this site from` against `Text from`,
+   * and Mamas below still names Orloff.
+   */
+  await expect(own.first().locator('.hymn-source')).toContainText('Rendered for this site from');
+  await expect(own.first().locator('.hymn-source a')).toHaveCount(1);
+  await expect(own.first().locator('.hymn-source a')).toHaveAttribute('href', /pravoslavie\.ru/);
+  await expect(own.first().locator('.hymn-source')).not.toContainText(/^Text from/);
 
   await ctx.close();
 

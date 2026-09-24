@@ -53,6 +53,37 @@ export function hymnMarkup(h, { withChurch = false } = {}) {
   const rendering = currentLanguage() === 'en' && h.english ? h.english : h;
   const lang = rendering === h ? h.lang : 'en';
   /*
+   * **Whether the reader is being shown the original at all**, which the
+   * heading has to know as well as the body does (author, 2026-09-24: "there
+   * are still errors where some hymns show in other languages when English is
+   * chosen"). The `english` block covers the *text* and nothing else, so with
+   * English chosen the page printed an English troparion under a heading
+   * quoting the source's own calendar — `Troparion · Tone 4 · Ταχὺ
+   * προκατάλαβε. · Greek`. **263 of the corpus's 872 hymns carry a `model`**
+   * (`scratchpad/hymn-head-language.mjs` prints the rows) and it was written
+   * into the heading untouched whatever language the reader had chosen, in
+   * Greek, Church Slavonic or Romanian. Three more print a `tone` the eight-
+   * tone reader cannot resolve — `Ἦχος πλ.`, truncated at its source — and
+   * those fell back to the Greek string for the same reason.
+   *
+   * So both follow the text: they are the source's own words about the
+   * source's own hymn, and they are printed beside the source's own hymn.
+   * Where an English rendering stands in its place the heading **says the
+   * melody was not rendered** rather than quoting it in a tongue the reader
+   * did not ask for — CLAUDE.md's errors rule, a failure may degrade the page
+   * and never fake it. Nothing here translates an incipit: a `model` names
+   * another hymn by quoting its opening words, so rendering it would be
+   * inventing a citation, which is the one thing the 2026-09-07 reversal did
+   * not license.
+   *
+   * An unreadable tone is dropped instead of admitted because a tone the page
+   * could not read is not a fact the page holds — there is no eighth of the
+   * Octoechos to name and no silence to explain, only a string it could not
+   * parse. The melody is different: the corpus *has* it and has not rendered
+   * it, and that is a gap the reader should be able to see.
+   */
+  const showingOriginal = rendering === h;
+  /*
    * **The tone in the reader's own words** (author, 2026-09-07: the hymns
    * "say Glasul 3 (Romanian) instead of ἦχος or whatever it's supposed to
    * be"). It was printed exactly as its source wrote it, which put a Romanian
@@ -74,23 +105,23 @@ export function hymnMarkup(h, { withChurch = false } = {}) {
     : null;
   const head = [
     H[h.kind] ?? h.kind,
-    toneNo ? fill(STRINGS.calendar.liturgy.tone, { tone: toneNo }) : h.tone,
-    h.model,
+    toneNo ? fill(STRINGS.calendar.liturgy.tone, { tone: toneNo }) : (showingOriginal ? h.tone : null),
+    h.model && (showingOriginal ? h.model : H.modelNotRendered),
     churches,
   ]
     .filter(Boolean)
     .map(esc)
     .join(' · ');
   /*
-   * **What is under the hymn is either a source or an admission.** A site
-   * rendering has no citation to give — there is no book — so printing
-   * "Text from" with an empty name would read as a gap rather than as the
-   * different thing it is. Four words, and no naming of the tongue it came
-   * from: the heading already says whose hymn it is where more than one
-   * church's are shown, the text carries its own `lang`, and the original is
-   * one press of the language control away on the same page. A second string
-   * per locale pack to say what the page already says is four packs of work
-   * for nothing.
+   * **What is under the hymn is either a book or the text this one was made
+   * from, and it is always a citation** (author, 2026-09-24: the rendering
+   * "doesnt list the original thing it was translated from"). Until now a site
+   * rendering printed four words and no source at all, on the argument that
+   * the original was one press of the language control away. The author has
+   * ruled otherwise: a translation is a claim about a particular text, and a
+   * reader cannot check it against a text the page declines to name. So the
+   * footer says which book published the English, or — where this site made
+   * it — which published the original it was made from.
    */
   const own = rendering !== h && rendering.rendered === 'site';
   const cite = (o) =>
@@ -98,19 +129,27 @@ export function hymnMarkup(h, { withChurch = false } = {}) {
       ? `<a href="${esc(o.url)}" rel="noopener noreferrer">${esc(o.text)}</a>`
       : esc(o?.text ?? '');
   /*
-   * **And every book that printed it.** A merged hymn carries the citation of
-   * each tradition that published the text, in the order the page names the
-   * calendars, because "cite this as a Greek source, and this as a Russian
-   * source" is the whole of what the merge owes the reader. A rendering made
-   * here has no book to name and says so instead, exactly as before — the
-   * sources of the originals it was made from are one press of the language
-   * control away, on the same page.
+   * **And every book that printed it** — or, for a rendering made here, every
+   * calendar whose text it was made from. A merged hymn carries one citation
+   * per tradition in the order the page names the calendars, because "cite
+   * this as a Greek source, and this as a Russian source" is the whole of what
+   * the merge owes the reader; `mergeForReading` records each tradition's own
+   * `original` beside the book that published its English, so the two lists
+   * are the same length whichever kind of claim the footer is making.
+   *
+   * Deduplicated on the rendered citation because one book very often prints
+   * the whole of a general service: Orloff's Chapter VIII answers for a Greek
+   * apostle and a Slavonic one alike, and the merged row said so twice.
    */
-  const src = [rendering.source, ...(own ? [] : (h.alsoIn ?? []).map((a) => a.source))]
+  const src = [
+    own ? h.source : rendering.source,
+    ...(h.alsoIn ?? []).map((a) => (own ? a.original : a.source)),
+  ]
     .filter(Boolean)
     .map(cite)
+    .filter((c, i, all) => all.indexOf(c) === i)
     .join('; ');
-  const foot = own ? esc(H.renderedHere) : fill(H.source, { source: src });
+  const foot = fill(own ? H.renderedFrom : H.source, { source: src });
   return `<div class="hymn"${own ? ' data-rendered="site"' : ''}>
     <h3 class="hymn-kind utility">${head}</h3>
     <p class="hymn-text" lang="${esc(lang)}">${esc(rendering.text)}</p>
@@ -166,7 +205,10 @@ export function mergeForReading(hymns, language = currentLanguage()) {
     }
     // The second and later tradition to sing it: the text is already on the
     // page, so what this one adds is its church and its book.
-    seen.alsoIn.push({ church: h.church, source: h.english?.source ?? h.source });
+    // `original` is kept beside `source` because the footer needs one or the
+    // other and cannot recover it later: a rendering made here cites the text
+    // it was made from, a citation cites the book that printed the English.
+    seen.alsoIn.push({ church: h.church, source: h.english?.source ?? h.source, original: h.source });
   }
   return out;
 }

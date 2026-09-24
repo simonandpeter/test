@@ -55,6 +55,14 @@ lowest opacity the 4.5:1 floor allows, .64, the mockup's .45 being 2.69:1),
 17 (the hymn at 19 px italic), N2 (the preview six lines deep past 1024 px)
 and N3 (the picture's credit). Next: Series M.
 
+**Series M's size is measured, not estimated**:
+`node scratchpad/hymn-corpus-count.mjs` prints every hymn in both tables and
+which renderings each carries. **The schema has no field for a rendering into
+ru, ro, el or sr** — `schema/saint.schema.json`'s hymn item is
+`additionalProperties: false` — so the series begins with a schema change and
+not with a translation, and that script's last line is what says whether it
+has happened.
+
 **K's tools stay** (`saints/*/life.md` and `docs/CORPUS.md` were all it
 touched): `scratchpad/k-split.py` breaks any body paragraph over 900 characters
 at sentence ends, `k-verify.py` proves every changed file identical to `HEAD`
