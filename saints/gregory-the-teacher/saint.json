@@ -1,0 +1,66 @@
+{
+  "slug": "gregory-the-teacher",
+  "display_name": "Gregory the Teacher",
+  "names": [
+    {
+      "form": "Grigorie Dascălul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 iunie, «Sfântul Ierarh Grigorie Dascălul, Mitropolitul Țării Românești»; the form is the name and the byname the line gives, the rest being rank and see."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "metropolitan"
+  ],
+  "office": "Metropolitan of Wallachia",
+  "dates": {
+    "birth": {
+      "earliest": 1765,
+      "latest": 1765,
+      "display": "1765",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Născut la București în 1765»."
+    },
+    "death": {
+      "earliest": 1834,
+      "latest": 1834,
+      "display": "1834",
+      "basis": "attested",
+      "note": "doxologia.ro's page for the synaxis of the Athonite saints prints him as «Sfântul Ierarh Grigorie Dascălul, Mitropolitul Țării Românești (1765-1834)»; his own life gives 1823–1834 as his years in the see and no year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 iunie — «Sfântul Ierarh Grigorie Dascălul, Mitropolitul Țării Românești»",
+        "url": "https://doxologia.ro/22-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

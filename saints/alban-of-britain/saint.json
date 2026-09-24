@@ -5,6 +5,11 @@
     {
       "form": "Св. Албан",
       "lang": "sr"
+    },
+    {
+      "form": "Alban din Verulamul Britaniei",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 iunie, «Sfântul Mucenic Alban din Verulamul Britaniei»."
     }
   ],
   "sex": "male",
@@ -28,8 +33,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 23 august (checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 iunie — «Sfântul Mucenic Alban din Verulamul Britaniei»",
+        "url": "https://doxologia.ro/22-iunie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

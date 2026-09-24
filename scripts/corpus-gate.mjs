@@ -181,6 +181,8 @@ const READ_FOLDS = {
     'four men called Valerian: the bare line of the Romanian 4 May, a venerable; one of the company tried at Rome with Justin before Rusticus, Romanian 1 June; the martyr under Licinius kept on 13 September by the Russian, Romanian and Greek; and one of the three of Trebizond, Romanian 21 January. The 4 May line calls its man a venerable and the other three are martyrs (read 25 September 2026)',
   'haralambie charalampus-31-may charalampus-of-magnesia':
     'the bare line of the Romanian 31 May, a martyr whose page opens neither a Viață nor a Tropar tab and gives no country and no century, against the hieromartyr bishop of Magnesia, Romanian 10 February (read 25 September 2026)',
+  'eusebiu eusebius-31-may eusebius-companion-of-bassus eusebius-of-samosata':
+    'three men called Eusebiu, on three days: the bare line of 31 May, a martyr with no life at all; the martyr the calendar names as the companion of Bassus, dead under Diocletian, Romanian 20 January; and the bishop of Samosata, Romanian 22 June (read 25 September 2026)',
   'eusebiu eusebius-31-may eusebius-companion-of-bassus':
     'the bare line of the Romanian 31 May, a martyr with no life at all, against the martyr the calendar names as the companion of Bassus, dead under Diocletian, Romanian 20 January. Nothing on the 31 May page joins its man to that company (read 25 September 2026)',
   'ermie hermas-31-may hermias-of-comana':
