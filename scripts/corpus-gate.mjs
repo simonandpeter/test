@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'anastasie sinaitul anastasius-of-antioch anastasius-the-sinaite':
+    'both are kept on the Romanian 20 April and both fold onto the same key, and they are two men: the patriarch of Antioch who succeeded Domninus the younger in the thirty-fifth year of Justinian, and the monk of Sinai born at Alexandria in the seventh century. The calendar prints them as two lines on the one day (read 25 September 2026)',
+  'atanasie athanasius-of-alexandria athanasius-of-meteora athanasius-of-the-forty-martyrs athanasius-the-commentarisius athanasius-the-confessor':
+    'five men called Atanasie: the archbishop of Alexandria of Nicaea, Romanian 18 January; the founder of Meteora, born 1310, Romanian 20 April; one of the Forty of Sebaste, Romanian 9 March; the prison registrar converted at the torment of Zosimas of Cilicia, Romanian 4 January; and the confessor born at Constantinople, Romanian 22 February. Ten centuries across five days (read 25 September 2026)',
   'ioan john-disciple-of-gregory-the-decapolite john-of-antioch john-of-edessa john-of-the-forty-martyrs john-of-the-old-lavra john-son-of-xenophon john-the-theologian':
     'six men called Ioan, and the fold is bare because the corpus stores the bare forename for each: the disciple of Gregory the Decapolite, Romanian 18 April; the archbishop of Antioch, Romanian 18 April, whose page gives no life; the soldier of Edessa, Romanian 31 January; one of the Forty of Sebaste, Romanian 9 March; the elder son of Xenophon and Mary of Constantinople, Romanian 26 January; and the son of Zebedee, Romanian 26 September. The two on 18 April are the day’s own pair and the calendar prints them as two lines, a monk and a hierarch; a third John of the same day, of Ioannina, does not fold in because his Romanian form carries his city. A seventh joins them, the monk of the Old Lavra of Chariton near Jerusalem, Romanian 19 April (read 25 September 2026)',
   'acachie acacius-of-melitene acacius-of-the-forty-martyrs':

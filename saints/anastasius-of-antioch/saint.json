@@ -1,0 +1,61 @@
+{
+  "slug": "anastasius-of-antioch",
+  "display_name": "Anastasius of Antioch",
+  "office": "Patriarch",
+  "names": [
+    {
+      "form": "Anastasie Sinaitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 aprilie, «Sfântul Anastasie Sinaitul, Patriarhul Antiohiei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "patriarch",
+    "hierarch",
+    "confessor"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 599,
+      "latest": 599,
+      "display": "599",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a mutat către Domnul în al 14-lea an al împărăției lui Mavrichie, în anul 599»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 aprilie — «Sfântul Anastasie Sinaitul, Patriarhul Antiohiei»",
+        "url": "https://doxologia.ro/20-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

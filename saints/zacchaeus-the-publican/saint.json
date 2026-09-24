@@ -1,0 +1,49 @@
+{
+  "slug": "zacchaeus-the-publican",
+  "display_name": "Zacchaeus",
+  "names": [
+    {
+      "form": "Zaheu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 aprilie, «Sfântul Apostol Zaheu»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 aprilie — «Sfântul Apostol Zaheu»",
+        "url": "https://doxologia.ro/20-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,15 @@
+# Theotimus of Tomis
+
+Theotimus the First was, doxologia says, a Daco-Roman born in Pontic Dacia, and is reckoned the first teacher and spiritual father of John Cassian and Germanus, his contemporaries, with whom he had been formed in youth in the same monastery «in the borders of the Cassians and of the caves». That house of the eparchy of Tomis gave the Church learned monks, and the early Christian historians surnamed Theotimus «the Scythian» and «the Philosopher».
+
+He came to the see of Tomis about the years 385 to 390, after the repose of bishop Gerontius. He is first named as its bishop in 392 by blessed Jerome, in De viris illustribus, who calls him a shining pastor with a great love of God and of men, a learned theologian and a tireless writer, and says that he wrote short treatises in the form of dialogues in the manner of the old eloquence. Jerome ends: «I hear that he is writing other works also».
+
+Fragments of his writing survive in the Sacred Parallels of John of Damascus, from which it appears that he wrote homilies on Gospel texts. Sozomen writes that he was a Scythian by race, that his living was modest, and that he was a healer of the sick; Socrates says that he was known to all — emperors, bishops, monks, believers and pagans — for his piety and the uprightness of his life. The page calls him, for his patristic writings, the maker of the Romanian Philokalia, and says he speaks beautifully of the stillness of mind and heart.
+
+Under his shepherding the monasteries and hermitages of fourth-century Dobrogea lived a golden age, and in the fifth and sixth centuries their «Scythian monks» were known through the empire, from north of the Danube to Jerusalem, Constantinople, Rome and Africa. The basilicas he raised, whose ruins are still to be seen, were large and finely laid with mosaic. As a missionary he suffered much from the migrating peoples, whom he could hardly gentle with gifts, with prayers and with the holiness of his life; for which the pagans called him «the god of the Romans».
+
+He was well known to the emperor Arcadius and above all to [John Chrysostom](/saints/john-chrysostom), whose devoted friend he was. In 399 the patriarch sent him missionary monks for the Scythian nomads of the Isthmus, that is, for the Huns. In 400 he took part in a local council at Constantinople called by Chrysostom against the teaching of Antoninus of Ephesus, and in 403 he was at Constantinople again, defending Chrysostom against the accusations brought by Epiphanius of Cyprus.
+
+Toward the end of the first decade of the fifth century he passed in peace from this life. The Acta Sanctorum, which the page quotes, say of him: «At Tomis, in Scythia, is the memory of Saint Theotimus the bishop, whom even the unbelieving barbarians honoured for his holiness and his miracles».
+
+*After doxologia.ro's calendar for 20 aprilie — [the day](https://doxologia.ro/20-aprilie), [the life](https://doxologia.ro/viata-sfantului-ierarh-teotim-episcopul-tomisului) and [the troparion](https://doxologia.ro/troparul-sfantului-ierarh-teotim-episcopul-tomisului); read 20 September 2026.*

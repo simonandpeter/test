@@ -1,0 +1,66 @@
+{
+  "slug": "anastasius-the-sinaite",
+  "display_name": "Anastasius the Sinaite",
+  "names": [
+    {
+      "form": "Anastasie Sinaitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 aprilie, «Sfântul Cuvios Anastasie Sinaitul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 601,
+      "latest": 650,
+      "display": "early 7th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfântul Anastasie s-a născut la Alexandria, în Egipt în prima jumătate a secolului al VII-lea»."
+    },
+    "death": {
+      "earliest": 700,
+      "latest": null,
+      "display": "after 700",
+      "basis": "traditional",
+      "note": "doxologia.ro: «A trecut la Domnul cu pace, la adânci bătrânețe, cândva după anul 700»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 aprilie — «Sfântul Cuvios Anastasie Sinaitul»",
+        "url": "https://doxologia.ro/20-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "athanasius-of-meteora",
+  "display_name": "Athanasius of Meteora",
+  "names": [
+    {
+      "form": "Atanasie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 aprilie, «Sfântul Cuvios Atanasie»; the icons on his page and on Joasaph's are titled «Cuviosul Atanasie de la Meteor» and «Sfinții Cuvioși Atanasie și Ioasaf de la Meteora»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "related": [
+    "joasaph-of-meteora"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1310,
+      "latest": 1310,
+      "display": "1310",
+      "basis": "attested",
+      "note": "doxologia.ro: «Acest cuvios Atanasie s-a născut în anul 1310»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 aprilie — «Sfântul Cuvios Atanasie»",
+        "url": "https://doxologia.ro/20-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

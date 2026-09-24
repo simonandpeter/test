@@ -1,0 +1,69 @@
+{
+  "slug": "theodore-trichinas",
+  "display_name": "Theodore Trichinas",
+  "names": [
+    {
+      "form": "Teodor Trihina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 aprilie, «Sfântul Cuvios Teodor Trihina»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 aprilie — «Sfântul Cuvios Teodor Trihina»",
+        "url": "https://doxologia.ro/20-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Teodor, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Teodor Trihina», Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-teodor-trihina-1",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of your tears you worked the barren desert, and with sighs from the depths you made your labours bear fruit a hundredfold; and you became a light to the world, shining with wonders, Theodore our father. Pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
