@@ -53,6 +53,37 @@ export function hymnMarkup(h, { withChurch = false } = {}) {
   const rendering = currentLanguage() === 'en' && h.english ? h.english : h;
   const lang = rendering === h ? h.lang : 'en';
   /*
+   * **Whether the reader is being shown the original at all**, which the
+   * heading has to know as well as the body does (author, 2026-09-24: "there
+   * are still errors where some hymns show in other languages when English is
+   * chosen"). The `english` block covers the *text* and nothing else, so with
+   * English chosen the page printed an English troparion under a heading
+   * quoting the source's own calendar — `Troparion · Tone 4 · Ταχὺ
+   * προκατάλαβε. · Greek`. **263 of the corpus's 872 hymns carry a `model`**
+   * (`scratchpad/hymn-head-language.mjs` prints the rows) and it was written
+   * into the heading untouched whatever language the reader had chosen, in
+   * Greek, Church Slavonic or Romanian. Three more print a `tone` the eight-
+   * tone reader cannot resolve — `Ἦχος πλ.`, truncated at its source — and
+   * those fell back to the Greek string for the same reason.
+   *
+   * So both follow the text: they are the source's own words about the
+   * source's own hymn, and they are printed beside the source's own hymn.
+   * Where an English rendering stands in its place the heading **says the
+   * melody was not rendered** rather than quoting it in a tongue the reader
+   * did not ask for — CLAUDE.md's errors rule, a failure may degrade the page
+   * and never fake it. Nothing here translates an incipit: a `model` names
+   * another hymn by quoting its opening words, so rendering it would be
+   * inventing a citation, which is the one thing the 2026-09-07 reversal did
+   * not license.
+   *
+   * An unreadable tone is dropped instead of admitted because a tone the page
+   * could not read is not a fact the page holds — there is no eighth of the
+   * Octoechos to name and no silence to explain, only a string it could not
+   * parse. The melody is different: the corpus *has* it and has not rendered
+   * it, and that is a gap the reader should be able to see.
+   */
+  const showingOriginal = rendering === h;
+  /*
    * **The tone in the reader's own words** (author, 2026-09-07: the hymns
    * "say Glasul 3 (Romanian) instead of ἦχος or whatever it's supposed to
    * be"). It was printed exactly as its source wrote it, which put a Romanian
@@ -74,8 +105,8 @@ export function hymnMarkup(h, { withChurch = false } = {}) {
     : null;
   const head = [
     H[h.kind] ?? h.kind,
-    toneNo ? fill(STRINGS.calendar.liturgy.tone, { tone: toneNo }) : h.tone,
-    h.model,
+    toneNo ? fill(STRINGS.calendar.liturgy.tone, { tone: toneNo }) : (showingOriginal ? h.tone : null),
+    h.model && (showingOriginal ? h.model : H.modelNotRendered),
     churches,
   ]
     .filter(Boolean)

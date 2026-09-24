@@ -476,6 +476,14 @@ export const STRINGS = {
       kontakion: 'Kontakion',
       source: 'Text from {source}',
       /*
+       * In place of the hymn's `model` — the automelon, named by quoting its
+       * opening words — where the reader is being shown an English rendering
+       * and not the text those words belong to. It is a quotation of another
+       * hymn and cannot be rendered without inventing one, so the heading
+       * names the gap rather than printing Greek beside English.
+       */
+      modelNotRendered: 'Melody not rendered',
+      /*
        * Under a hymn this site rendered itself, in place of the citation there
        * is none. the corpus's no-invention rule forbade rendering anything here until the author
        * reversed it for hymns alone on 2026-09-07, and the line exists because

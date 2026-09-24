@@ -205,6 +205,7 @@ export const ru = {
       troparion: 'Тропарь',
       kontakion: 'Кондак',
       source: 'Текст: {source}',
+      modelNotRendered: 'Подобен не переведён',
       renderedHere: 'Перевод сделан для этого сайта',
       noEnglish: 'Английский перевод не записан',
       noneInYourLanguage: 'Русский текст не записан',

@@ -117,3 +117,75 @@ test("a reader who chose another language is shown the source's own tongue, unto
     chooseLanguage('en');
   }
 });
+
+/*
+ * **And the heading is a place a hymn can show in another tongue too** (author,
+ * 2026-09-24: "there are still errors where some hymns show in other languages
+ * when English is chosen"). Every test above this one asked whether the hymn's
+ * *text* had an English and whether `hymnMarkup` chose it, and all of them
+ * passed while a third of the corpus printed `Troparion · Tone 4 · Ταχὺ
+ * προκατάλαβε. · Greek` over an English troparion: the `model` — the automelon,
+ * named by quoting its opening words — is the source's own string and went into
+ * the heading untouched. 263 of 872 hymns carry one, and three more carry a
+ * `tone` the eight-tone reader cannot resolve and fell back to the Greek.
+ *
+ * So this asserts what a reader sees rather than what the data holds, over the
+ * whole corpus: with English chosen, nothing `hymnMarkup` prints in the heading
+ * or the body is written in a script English does not use. It is the same
+ * question the sweep asks per date, asked of the rendered markup instead.
+ */
+const OTHER_SCRIPT = /[Ѐ-ԯͰ-Ͽἀ-῿]/;
+/*
+ * **The heading is held to the stricter rule, and the body cannot be.** A
+ * Romanian incipit — `Pe cea întru rugăciuni...` — is Latin script, so a test
+ * that only refused Greek and Cyrillic would pass over 53 of the 263 models.
+ * An English *rendering* legitimately carries the same diacritics in a proper
+ * name, though: Neamţ, Măgura. The heading holds only the kind, the tone, the
+ * melody and the church names and can never need one, so the two lines are
+ * read against two rules rather than one loose one.
+ */
+const DIACRITIC = /[ăâîșşțţĂÂÎȘŞȚŢčćđžšČĆĐŽŠ]/;
+
+const lines = (markup, re) => [...markup.matchAll(re)].map((m) => m[1]);
+const heading = (markup) => lines(markup, /<h3 class="hymn-kind[^"]*">([^<]*)<\/h3>/g);
+const body = (markup) => lines(markup, /<p class="hymn-text[^"]*"[^>]*>([^<]*)<\/p>/g);
+
+test('with English chosen, no part of a hymn a reader reads is in another tongue', () => {
+  chooseLanguage('en');
+  const offenders = [];
+  for (const { iso, church, hymn } of [...dayHymns, ...saintHymns]) {
+    const markup = hymnMarkup(hymn, { withChurch: true });
+    const where = `${iso} ${church} ${hymn.kind}`;
+    for (const line of heading(markup)) {
+      if (OTHER_SCRIPT.test(line) || DIACRITIC.test(line)) offenders.push(`head ${where}: ${line}`);
+    }
+    for (const line of body(markup)) {
+      if (OTHER_SCRIPT.test(line)) offenders.push(`text ${where}: ${line.slice(0, 60)}`);
+    }
+  }
+  assert.deepEqual(offenders.slice(0, 12), [], `${offenders.length} hymns print another tongue to a reader who chose English`);
+});
+
+/*
+ * The other half, and the one that says the removal is a rule and not a blanket
+ * strip: a reader in the hymn's own tongue is shown the melody, because there
+ * the incipit is a line of the very text beside it.
+ */
+const withModel = { ...sample, tone: 'Ἦχος πλ.', model: 'Ταχὺ προκατάλαβε.' };
+
+test('the melody is named beside the original and admitted as a gap beside a rendering', () => {
+  chooseLanguage('el');
+  try {
+    const out = hymnMarkup(withModel);
+    assert.match(out, /Ταχὺ προκατάλαβε\./, 'the original carries its own melody');
+    assert.match(out, /Ἦχος πλ\./, "and a tone the eight-tone reader cannot resolve keeps the source's own words");
+  } finally {
+    chooseLanguage('en');
+  }
+
+  const en = hymnMarkup(withModel);
+  assert.doesNotMatch(en, /Ταχὺ προκατάλαβε\./, 'an English reader is not given the incipit in Greek');
+  assert.match(en, /Melody not rendered/, 'and is told the melody was not rendered rather than left to guess');
+  assert.doesNotMatch(en, /Ἦχος πλ\./, 'nor the unresolvable tone in Greek');
+  assert.doesNotMatch(en, /Tone \d/, 'and no tone is invented in its place');
+});
