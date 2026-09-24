@@ -1,0 +1,50 @@
+{
+  "slug": "joanna-the-myrrhbearer",
+  "display_name": "Joanna, wife of Chuza",
+  "names": [
+    {
+      "form": "Ioana",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 iunie, «Sfânta Ioana Mironosița»; the form is the bare name, «Mironosița» being the title the calendar gives her, the myrrhbearer."
+    }
+  ],
+  "sex": "female",
+  "related": [
+    "john-the-baptist"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "revised-julian",
+        "note": "doxologia.ro's life adds that the Church keeps her also on the Sunday of the Myrrhbearers, which is a Pascha offset and not a fixed day; only the fixed day is recorded here."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 iunie — «Sfânta Ioana Mironosița»",
+        "url": "https://doxologia.ro/27-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "samson-the-hospitable",
+  "display_name": "Samson the Hospitable",
+  "names": [
+    {
+      "form": "Samson",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 iunie, «Sfântul Cuvios Samson, primitorul de străini»; the form is the bare name, the rest of the line being rank and the byname the calendar gives him, the receiver of strangers."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "physician"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 iunie — «Sfântul Cuvios Samson, primitorul de străini»",
+        "url": "https://doxologia.ro/27-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "În răbdare ţi-ai agonisit plata ta, părinte cuvioase; în rugăciuni neîncetat răbdând, pe săraci iubind şi pe aceia îndestulând. Ci te roagă lui Hristos Dumnezeu, Sfinte Samson, milostive fericite, să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Samson, primitorul de străini, glasul 8.",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-samson-primitorul-de-straini",
+        "year": 2026
+      },
+      "english": {
+        "text": "In patience thou didst gain thy reward, O venerable father, enduring unceasingly in prayer, loving the poor and satisfying their need. Wherefore, O blessed and merciful Samson, pray Christ God for the salvation of our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
