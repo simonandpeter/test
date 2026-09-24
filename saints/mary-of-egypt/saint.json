@@ -9,6 +9,11 @@
     {
       "form": "Μαρία ἡ Αἰγυπτία",
       "lang": "el"
+    },
+    {
+      "form": "Maria Egipteanca",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 aprilie, «Sfânta Cuvioasă Maria Egipteanca»."
     }
   ],
   "sex": "female",
@@ -45,8 +50,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 aprilie — «Sfânta Cuvioasă Maria Egipteanca»",
+        "url": "https://doxologia.ro/1-aprilie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -62,5 +76,22 @@
   "historicity": "traditional",
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Întru tine maică cu osârdie s-a mântuit cel după chip; că luând crucea ai urmat lui Hristos; și lucrând ai învățat să nu se uite la trup, că este trecător; ci să poarte grijă de suflet, de lucrul cel nemuritor. Pentru aceasta și cu îngerii împreună se bucură, cuvioasă Marie, duhul tău.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Cuvioase Maria Egipteanca (the page prints no glas)",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-maria-egipteanca",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O mother, that which was made after the image was kept safe with care; for taking up the cross thou didst follow Christ, and by thy labour thou didst teach men to overlook the flesh, since it passes away, and to take thought for the soul, a thing immortal. Therefore, O venerable Mary, thy spirit rejoices together with the angels.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

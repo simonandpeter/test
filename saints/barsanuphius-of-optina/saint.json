@@ -1,0 +1,67 @@
+{
+  "slug": "barsanuphius-of-optina",
+  "display_name": "Barsanuphius of Optina",
+  "names": [
+    {
+      "form": "Varsanufie de la Optina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 aprilie, «Sfântul Cuvios Varsanufie de la Optina»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1845,
+      "latest": 1845,
+      "display": "1845",
+      "basis": "attested",
+      "note": "doxologia.ro: «Pavel Ivanovici Plihankov, fiul lui Ioan și Natalia Plihankov, s-a născut în orașul Samara în 5 iulie 1845»."
+    },
+    "death": {
+      "earliest": 1913,
+      "latest": 1913,
+      "display": "1913",
+      "basis": "attested",
+      "note": "doxologia.ro: «La începutul lui 1913, Sfântul Varsanufie s-a îmbolnăvit din nou… Sfântul s-a dus la cele sfinte în ziua de 1 aprilie»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 aprilie — «Sfântul Cuvios Varsanufie de la Optina»",
+        "url": "https://doxologia.ro/1-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

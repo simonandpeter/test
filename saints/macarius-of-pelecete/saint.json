@@ -6,6 +6,11 @@
     {
       "form": "Макарий Пеликитский",
       "lang": "ru"
+    },
+    {
+      "form": "Macarie Mărturisitorul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 aprilie, «Sfântul Cuvios Macarie Mărturisitorul»."
     }
   ],
   "sex": "male",
@@ -40,8 +45,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 18 august was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 aprilie — «Sfântul Cuvios Macarie Mărturisitorul»",
+        "url": "https://doxologia.ro/1-aprilie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
