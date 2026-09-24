@@ -714,6 +714,7 @@ export const ro = {
     'Apostle of the Seventy, Bishop of Laodicea': 'Apostol din cei Șaptezeci, episcop de Laodiceea',
     'Apostle of the Seventy, Bishop of Sardis': 'Apostol din cei Șaptezeci, episcop de Sardes',
     'Archbishop of Alexandria': 'Arhiepiscop al Alexandriei',
+    'Archbishop of Antioch the Great': 'Arhiepiscop al Antiohiei celei Mari',
     'Archbishop of Corfu': 'Arhiepiscop de Corfu',
     'Archbishop of Caesarea in Cappadocia': 'Arhiepiscop de Cezareea Capadociei',
     'Archbishop of Canterbury': 'Arhiepiscop de Canterbury',

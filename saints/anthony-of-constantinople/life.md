@@ -1,0 +1,11 @@
+# Anthony of Constantinople
+
+This saint came from Asia by his father and from Europe by his mother, and had as a third homeland the city of Constantinople — which embraced him, fed him, saw him put off his mother's swaddling clothes and grow in stature, taught him the holy Scriptures, and at the last gained him for its own shepherd. So doxologia's life begins, and it keeps that shape throughout: it is a short account of a man known by his works rather than by his dates.
+
+When he embraced the monastic life and gave proof of much manliness in carrying that practical philosophy through, he was ordained priest against his will and made abbot of the monastery. From then on he pursued vigil, fasting and perseverance in prayer with still greater zeal, so that he brought his own father to put on the monastic habit as well; and taking his occasion from that, he gave alms, as the proverb says, with both hands.
+
+Once, as the saint was passing through a narrow place and distributing alms, someone appeared to him holding in his hands a great bundle full of gold coins, who said to him: take this and spend it on the poor. The hand holding the coins could be seen, but the face of the one who held the bundle of money out to him could not be seen at all. With good things of this kind was this wonderful father enriched.
+
+So when the time came that a hierarch was being sought for the imperial city, Anthony was ordained patriarch of Constantinople by the decision of the holy synod and of the emperor. After that, as though winged by the power of the Holy Spirit, and although his body was old, he visited all the churches of the city with every zeal, and with prayers made the good God merciful; he helped the churches that had fallen into ruin with age, gave abundantly what was needed to poor clergy and readers, and comforted many thousands of the poor with gifts of wheat and with alms. So, having been the cause of much good to many and having worked very great wonders, in deep old age he passed over to the Lord. The page gives no year, does not number him among the patriarchs of his name, and prints no hymn.
+
+*After doxologia.ro's calendar for 12 februarie — [the day](https://doxologia.ro/12-februarie) and [the life](https://doxologia.ro/viata-sfantului-ierarh-antonie-patriarhul-constantinopolului); read 19 September 2026.*

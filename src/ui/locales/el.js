@@ -715,6 +715,7 @@ export const el = {
     'Apostle of the Seventy, Bishop of Laodicea': 'Απόστολος εκ των Εβδομήκοντα, επίσκοπος Λαοδικείας',
     'Apostle of the Seventy, Bishop of Sardis': 'Απόστολος εκ των Εβδομήκοντα, επίσκοπος Σάρδεων',
     'Archbishop of Alexandria': 'Αρχιεπίσκοπος Αλεξανδρείας',
+    'Archbishop of Antioch the Great': 'Αρχιεπίσκοπος Αντιοχείας της Μεγάλης',
     'Archbishop of Corfu': 'Αρχιεπίσκοπος Κερκύρας',
     'Archbishop of Caesarea in Cappadocia': 'Αρχιεπίσκοπος Καισαρείας Καππαδοκίας',
     'Archbishop of Canterbury': 'Αρχιεπίσκοπος Καντερβουρίας',

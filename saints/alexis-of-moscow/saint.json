@@ -1,0 +1,65 @@
+{
+  "slug": "alexis-of-moscow",
+  "display_name": "Alexis of Moscow",
+  "names": [
+    {
+      "form": "Alexie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 februarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "metropolitan",
+    "monk",
+    "wonderworker"
+  ],
+  "office": "Metropolitan of Moscow and All Russia",
+  "related": [
+    "sergius-of-radonezh",
+    "peter-of-moscow"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1378,
+      "latest": 1378,
+      "display": "1378",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «s-a dus către Domnul, în anul 6886 (1378 d.Hr.) în 12 zile ale lunii februarie. A petrecut în arhierie 24 de ani, iar vârsta lui era de 85 de ani.» The page gives no year of birth of its own."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 februarie — «Sfântul Ierarh Alexie, Mitropolitul Moscovei și al Întregii Rusii»",
+        "url": "https://doxologia.ro/12-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -733,6 +733,7 @@ export const ru = {
     'Apostle of the Seventy, Bishop of Laodicea': 'Апостол от семидесяти, епископ Лаодикийский',
     'Apostle of the Seventy, Bishop of Sardis': 'Апостол от семидесяти, епископ Сардийский',
     'Archbishop of Alexandria': 'Архиепископ Александрийский',
+    'Archbishop of Antioch the Great': 'Архиепископ Антиохии Великой',
     'Archbishop of Corfu': 'Архиепископ Керкирский',
     'Archbishop of Caesarea in Cappadocia': 'Архиепископ Кесарии Каппадокийской',
     'Archbishop of Canterbury': 'Архиепископ Кентерберийский',

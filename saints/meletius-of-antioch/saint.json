@@ -1,0 +1,58 @@
+{
+  "slug": "meletius-of-antioch",
+  "display_name": "Meletius of Antioch",
+  "names": [
+    {
+      "form": "Meletie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 februarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "office": "Archbishop of Antioch the Great",
+  "related": [
+    "basil-the-great",
+    "john-chrysostom",
+    "babylas-of-antioch",
+    "symeon-the-stylite",
+    "gregory-the-theologian"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 februarie — «Sfântul Ierarh Meletie, Arhiepiscopul Antiohiei celei Mari»",
+        "url": "https://doxologia.ro/12-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

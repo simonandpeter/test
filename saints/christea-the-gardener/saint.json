@@ -1,0 +1,75 @@
+{
+  "slug": "christea-the-gardener",
+  "display_name": "Christea the Gardener",
+  "names": [
+    {
+      "form": "Hristea",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 februarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1748,
+      "latest": 1748,
+      "display": "1748",
+      "basis": "attested",
+      "note": "doxologia.ro's whole life of him: «Sfântul Mucenic Hristea a fost grădinar și a trăit în Constantinopol. În anul 1748, mărturisind dreapta credință, a murit de sabie.»"
+    }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "În grădina ta Preamilostive flori săditai pentru veșnicie pe martirii ce sângele vărsatuși-au Printre aceștia socotit-ai prea bunule pe crediciosul Hristea grădinarul, daruri multe i-ai hărăzit pentru jefa lui de oameni iubitorule, pomenește-ne Stăpâne pentru dragostea lui.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Hristea; the page prints the text with no tone and with the spelling and punctuation kept here as they stand on it",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-hristea",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thy garden, O most merciful one, thou hast planted flowers for eternity: the martyrs who have poured out their blood. Among them thou hast counted, O most good one, the faithful Christea the gardener, and hast granted him many gifts for his offering; O lover of mankind, remember us, O Master, for the love of him.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 februarie — «Sfântul Mucenic Hristea»",
+        "url": "https://doxologia.ro/12-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
