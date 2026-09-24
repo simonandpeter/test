@@ -1,0 +1,82 @@
+{
+  "slug": "quadratus-of-corinth",
+  "display_name": "Quadratus of Corinth",
+  "names": [
+    {
+      "form": "Codrat",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 martie, «Sfântul Mucenic Codrat»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "physician",
+    "hermit"
+  ],
+  "related": [
+    "cyprian-companion-of-quadratus",
+    "dionysius-companion-of-quadratus"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 249,
+      "latest": 259,
+      "display": "249–259",
+      "basis": "traditional",
+      "note": "doxologia.ro opens the life «Pe vremea lui Deciu (249-251) și a lui Valerian (253-259) s-a născut Sfântul Mucenic Codrat». The bounds are the two reigns the page prints; it gives no year for the martyrdom, only that it fell on 10 March."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 martie — «Sfântul Mucenic Codrat»",
+        "url": "https://doxologia.ro/10-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinților Mucenici Codrat, Ciprian, Dionisie și al celor împreună cu dânșii, glasul 4. The page prints the common of martyrs for all of them together, with the reading «nesctricăciunii».",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-codrat-ciprian-dionisie-al-celor-impreuna-cu-dansii",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, in their contests received from you, our God, the crowns of incorruption. For having your strength, they overthrew the tormentors and broke the feeble insolence of the demons. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
