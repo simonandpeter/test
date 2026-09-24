@@ -1,0 +1,70 @@
+{
+  "slug": "michael-of-synada",
+  "display_name": "Michael of Synada",
+  "names": [
+    {
+      "form": "Mihail",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 mai, «Sfântul Ierarh Mihail Mărturisitorul, Episcopul Sinadei»."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop",
+  "types": [
+    "hierarch",
+    "bishop",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 23 mai — «Sfântul Ierarh Mihail Mărturisitorul, Episcopul Sinadei»",
+        "url": "https://doxologia.ro/23-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 23 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Îndreptător credinţei şi chip blândeţilor, învăţător înfrânării te-a arătat pe tine turmei tale adevărul lucrurilor. Pentru aceasta ai câştigat cu smerenia cele înalte, cu sărăcia cele bogate. Părinte Ierarhe Mihail, roagă pe Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Ierarh Mihail Mărturisitorul, Episcopul Sinadei», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-mihail-marturisitorul-episcopul-sinadei",
+        "year": 2026
+      },
+      "english": {
+        "text": "A rule of faith and a model of meekness, a teacher of abstinence — so has the truth of things shown you to your flock. Therefore you gained the heights by humility and riches by poverty. Father and hierarch Michael, entreat Christ our God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

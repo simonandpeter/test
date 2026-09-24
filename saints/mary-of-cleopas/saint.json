@@ -1,0 +1,46 @@
+{
+  "slug": "mary-of-cleopas",
+  "display_name": "Mary of Cleopas",
+  "names": [
+    {
+      "form": "Maria lui Cleopa",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 mai, «Sfânta Mironosiță Maria lui Cleopa»."
+    }
+  ],
+  "sex": "female",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 23 mai — «Sfânta Mironosiță Maria lui Cleopa»",
+        "url": "https://doxologia.ro/23-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 23 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

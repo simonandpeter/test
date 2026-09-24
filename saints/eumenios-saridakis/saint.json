@@ -1,0 +1,58 @@
+{
+  "slug": "eumenios-saridakis",
+  "display_name": "Eumenios Saridakis",
+  "names": [
+    {
+      "form": "Evmenie Saridakis",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 mai, «Sfântul Evmenie Saridakis»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1930,
+      "latest": 1930,
+      "display": "1930",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «s-a născut la 1 ianuarie 1930, în satul Ethia din insula Creta». The page gives no year for his death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 23 mai — «Sfântul Evmenie Saridakis»",
+        "url": "https://doxologia.ro/23-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 23 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
