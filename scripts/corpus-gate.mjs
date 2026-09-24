@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'celestin celestine-martyr-25-may celestine-of-rome':
+    'the bare line of the Romanian 25 May, a martyr with no epithet, no city, no country and no century, whose page opens no life, against the hierarch and bishop of Rome, Romanian 8 April. A martyr and a hierarch, six weeks apart (read 25 September 2026)',
   'marciana marciana-martyr-24-may marciana-the-empress':
     'the bare line of the Romanian 24 May, a martyr with no epithet, no city, no country and no century, whose page opens no life, against the empress the calendar calls equal-to-the-apostles, Romanian 27 January (read 25 September 2026)',
   'serapion serapion-martyr-24-may serapion-of-corinth serapion-venerable-21-march':
