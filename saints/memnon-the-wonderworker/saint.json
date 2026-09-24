@@ -1,0 +1,69 @@
+{
+  "slug": "memnon-the-wonderworker",
+  "display_name": "Memnon the Wonderworker",
+  "names": [
+    {
+      "form": "Memnon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 aprilie, «Sfântul Cuvios Memnon, făcătorul de minuni»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 29 aprilie — «Sfântul Cuvios Memnon, făcătorul de minuni»",
+        "url": "https://doxologia.ro/29-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Memnon, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Memnon, făcătorul de minuni», Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-memnon-facatorul-de-minuni",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst work the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with wonders, Memnon our father. Pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

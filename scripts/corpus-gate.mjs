@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'filimon philemon-of-cyzicus philemon-of-gaza':
+    'one of the nine martyrs of Cyzicus in Lesser Mysia, Romanian 29 April, against the martyr of the Romanian 14 February, whose page carries his name, his day and the day’s readings and no life. Nothing on the February page puts him at Cyzicus (read 25 September 2026)',
+  'teodot theodotus-of-cyzicus theodotus-of-kyrenia':
+    'another of the nine of Cyzicus, Romanian 29 April, against the bishop of the Cypriot city doxologia’s life page spells Cirene and its calendar line Chirinia, Romanian 2 March. An island see against a company on the Hellespont (read 25 September 2026)',
   'vasilevs basileus-of-amasea basileus-of-cherson':
     'the bishop of Amasea, the metropolis of Pontus, under Licinius, Romanian 26 April, against one of the bishops the patriarch of Jerusalem sent out in the sixteenth year of Diocletian, who was killed at Cherson, Romanian 7 March. Two bishops of one name in two persecutions (read 25 September 2026)',
   'valerie valerius valerius-of-the-forty-martyrs':

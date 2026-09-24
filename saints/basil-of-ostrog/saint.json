@@ -1,0 +1,73 @@
+{
+  "slug": "basil-of-ostrog",
+  "display_name": "Basil of Ostrog",
+  "names": [
+    {
+      "form": "Vasile de Ostrog",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 aprilie, «Sfântul Ierarh Vasile de Ostrog»."
+    },
+    {
+      "form": "Stoian",
+      "lang": "ro",
+      "note": "His name at baptism, as doxologia.ro's life prints it: «La botez a primit numele Stoian»."
+    }
+  ],
+  "sex": "male",
+  "office": "Metropolitan",
+  "types": [
+    "hierarch",
+    "metropolitan",
+    "wonderworker"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1610,
+      "latest": 1610,
+      "display": "1610",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «S-a născut la 28 decembrie 1610 în satul Mrkonjić din Herțegovina»."
+    },
+    "death": {
+      "earliest": 1671,
+      "latest": 1671,
+      "display": "1671",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Sfântul Vasile a trecut la Domnul la 29 aprilie 1671, în chilia sa de la Ostrog»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 29 aprilie — «Sfântul Ierarh Vasile de Ostrog»",
+        "url": "https://doxologia.ro/29-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

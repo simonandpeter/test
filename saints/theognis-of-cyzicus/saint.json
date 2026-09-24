@@ -1,0 +1,59 @@
+{
+  "slug": "theognis-of-cyzicus",
+  "display_name": "Theognis of Cyzicus",
+  "names": [
+    {
+      "form": "Teognid",
+      "lang": "ro",
+      "note": "Read out of the life doxologia.ro prints for 29 aprilie under the line «Sfinții 9 Mucenici din Cizic», which names the nine: «Teognid, Ruf, Antipatru, Teostih, Artema, Magn, Teodot, Tavmasie și Filimon»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "rufus-of-cyzicus",
+    "antipater-of-cyzicus",
+    "theostichus-of-cyzicus",
+    "artemas-of-cyzicus",
+    "magnus-of-cyzicus",
+    "theodotus-of-cyzicus",
+    "thaumasius-of-cyzicus",
+    "philemon-of-cyzicus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 29 aprilie — «Sfinții 9 Mucenici din Cizic»",
+        "url": "https://doxologia.ro/29-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
