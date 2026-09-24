@@ -1,0 +1,68 @@
+{
+  "slug": "hypomone",
+  "display_name": "Hypomone",
+  "names": [
+    {
+      "form": "Ipomoni",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 martie, «Sfânta Cuvioasă Ipomoni»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "empress",
+    "monastic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1372,
+      "latest": 1372,
+      "display": "c. 1372",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfânta Ipomoni s-a născut în jurul anului 1372 în familia lui Constantin Dragasteș» — the page says “around” that year."
+    },
+    "death": {
+      "earliest": 1450,
+      "latest": 1450,
+      "display": "1450",
+      "basis": "attested",
+      "note": "doxologia.ro: «chemând-o la Sine pe 13 martie 1450, cu trei ani înainte de căderea Constantinopolului sub turcii otomani»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 3,
+        "calendar": "revised-julian",
+        "note": "doxologia's life page says she is kept twice a year: «pe 13 martie (în ziua trecerii sale la cele veșnice) și pe 29 mai (ziua căderii Constantinopolului și a morții fiului ei, Împăratul Constantin al XI-lea Paleologul)». The folder keeps 13 March, the day the calendar page prints her on; the 29 May commemoration is recorded here and is not rendered as a second feast (19 September 2026)."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 martie — «Sfânta Cuvioasă Ipomoni»",
+        "url": "https://doxologia.ro/13-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
