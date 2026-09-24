@@ -1,0 +1,83 @@
+{
+  "slug": "john-the-bulgarian",
+  "display_name": "John the Bulgarian",
+  "names": [
+    {
+      "form": "Ioan Bulgarul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 martie, «Sfântul Nou-Mucenic Ioan Bulgarul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "monk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1765,
+      "latest": 1765,
+      "display": "1765",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Nou Mucenic Ioan s-a născut în Bulgaria în anul 1765»."
+    },
+    "death": {
+      "earliest": 1784,
+      "latest": 1784,
+      "display": "1784",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Ioan a primit cununa muceniciei pe 5 martie 1784, la vârsta de 19 ani»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 martie — «Sfântul Nou-Mucenic Ioan Bulgarul»",
+        "url": "https://doxologia.ro/5-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Înălțimea pocăinței tuturor ai arătat fericite,\nȘi ai alergat spre mărturisirea celor mărite,\nCununa muceniciei luând de la Hristos pentru nevoință,\nÎntărește-mă și pe mine cu rugăciunea ta întru credință.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Nou-Mucenic Ioan Bulgarul (the page prints no tone)",
+        "url": "https://doxologia.ro/troparul-sfantului-nou-mucenic-ioan-bulgarul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou hast shown to all the height of repentance, O blessed one, and hast run to the confession of glorious things, receiving from Christ the crown of martyrdom for thy striving; strengthen me also in the faith by thy prayer.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

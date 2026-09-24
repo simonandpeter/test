@@ -1,0 +1,68 @@
+{
+  "slug": "mark-the-ascetic",
+  "display_name": "Mark the Ascetic",
+  "names": [
+    {
+      "form": "Marcu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 martie, «Sfântul Cuvios Marcu Pustnicul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 martie — «Sfântul Cuvios Marcu Pustnicul»",
+        "url": "https://doxologia.ro/5-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 1",
+      "text": "Locuitor pustiului, înger în trup și de minuni făcător te-ai arătat, purtătorule de Dumnezeu, Părintele nostru Marcu. Cu postul, cu privegherea și prin rugăciune primind daruri cerești, tămăduiești pe cei bolnavi și sufletele celor ce aleargă la tine cu credință. Slavă Celui Ce ți-a dat ție putere; Slavă Celui Ce te-a încununat pe tine; Slavă Celui Ce lucrează prin tine tuturor tămăduiri.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Marcu Pustnicul",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-marcu-pustnicul",
+        "year": 2026
+      },
+      "english": {
+        "text": "A dweller of the desert, an angel in the body and a worker of wonders wast thou shown to be, our God-bearing father Mark. By fasting, by vigil and by prayer thou didst receive heavenly gifts, and thou healest the sick and the souls of those who run to thee in faith. Glory to him who gave thee strength; glory to him who crowned thee; glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

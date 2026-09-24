@@ -1,0 +1,58 @@
+{
+  "slug": "conon-the-gardener",
+  "display_name": "Conon the Gardener",
+  "names": [
+    {
+      "form": "Conon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 martie, «Sfântul Mucenic Conon Grădinarul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "between 249 and 251",
+      "basis": "traditional",
+      "note": "doxologia.ro gives the reign and no year: «Acest Sfânt Conon a fost pe vremea lui Decius împăratul (249-251)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 martie — «Sfântul Mucenic Conon Grădinarul»",
+        "url": "https://doxologia.ro/5-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
