@@ -1,0 +1,60 @@
+{
+  "slug": "athanasius-iii-patelarios",
+  "display_name": "Athanasius III Patelarios",
+  "names": [
+    {
+      "form": "Atanasie al III-lea (Patelarie)",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 mai, «Sfântul Ierarh Atanasie al III-lea (Patelarie), Patriarhul Constantinopolului»."
+    }
+  ],
+  "sex": "male",
+  "office": "Patriarch of Constantinople",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1654,
+      "latest": 1654,
+      "display": "1654",
+      "basis": "attested",
+      "note": "doxologia.ro, Viața Sfântului Ierarh Atanasie al III-lea (Patelarie): «a adormit în Domnul, la 5 aprilie 1654». The same page says he was born «către sfârșitul veacului al XVI-lea» and gives no year for it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 mai — «Sfântul Ierarh Atanasie al III-lea (Patelarie), Patriarhul Constantinopolului»",
+        "url": "https://doxologia.ro/2-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

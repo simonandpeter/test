@@ -1,0 +1,87 @@
+{
+  "slug": "matrona-of-moscow",
+  "display_name": "Matrona of Moscow",
+  "names": [
+    {
+      "form": "Matrona din Moscova",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 mai, «Sfânta Matrona din Moscova»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "righteous",
+    "wonderworker"
+  ],
+  "related": [
+    "john-of-kronstadt"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1881,
+      "latest": 1881,
+      "display": "1881",
+      "basis": "attested",
+      "note": "doxologia.ro, Viața Sfintei Matrona din Moscova: «Sfânta Matrona s-a născut în anul 1881, în familia unor țărani săraci din satul Sebino, guberia Tula»."
+    },
+    "death": {
+      "earliest": 1952,
+      "latest": 1952,
+      "display": "1952",
+      "basis": "attested",
+      "note": "doxologia.ro, Viața Sfintei Matrona din Moscova: «La 2 mai 1952, se mută în lăcașurile cele de sus»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 mai — «Sfânta Matrona din Moscova»",
+        "url": "https://doxologia.ro/2-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul al 4-lea",
+      "text": "Pe ceea ce a strălucit de curând în Rusia prin răbdare în multe suferinţe, prin dragoste către Dumnezeu şi către cei ce pătimesc, prin smerenie, prin nepătimire şi trezvie, să o lăudăm cu alese cântări, pe Matrona cea purtătoare de Dumnezeu, cerând cu evlavie stăruitoarele ei rugăciuni către Stăpânul Hristos.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Matrona de la Moscova",
+        "url": "https://doxologia.ro/troparul-sfintei-matrona-de-la-moscova",
+        "year": 2026
+      },
+      "english": {
+        "text": "Her who has lately shone forth in Russia by patience in many sufferings, by love towards God and towards those who suffer, by humility, by dispassion and by watchfulness, let us praise with chosen songs — the God-bearing Matrona — and ask with reverence her unwearying prayers to Christ the Master.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
