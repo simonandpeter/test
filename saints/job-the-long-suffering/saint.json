@@ -1,0 +1,67 @@
+{
+  "slug": "job-the-long-suffering",
+  "display_name": "Job the Long-Suffering",
+  "names": [
+    {
+      "form": "Iov",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 mai, «Sfântul și Dreptul Iov, mult răbdătorul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 mai — «Sfântul și Dreptul Iov, mult răbdătorul»",
+        "url": "https://doxologia.ro/6-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Bogăţia virtuţilor lui Iov văzând-o vrăjmaşul drepţilor, a uneltit a o fura, şi rupând turnul trupului, vistieria duhului nu o a furat; căci a aflat întrarmat sufletul celui fără prihană, iar pe mine şi golindu-mă m-a robit. Deci mai înainte de sfârşit întâmpinându-mă, izbăveşte-mă de cel viclean, Mântuitorule, şi mă mântuieşte.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului și Dreptului Iov», Glasul 1",
+        "url": "https://doxologia.ro/troparul-sfantului-dreptului-iov",
+        "year": 2026
+      },
+      "english": {
+        "text": "Seeing the wealth of Job's virtues, the enemy of the righteous plotted to steal it, and though he broke down the tower of the body he did not steal the treasury of the spirit, for he found the soul of the blameless man armed; but me he stripped and took captive. Therefore meet me before the end, O Saviour, deliver me from the evil one, and save me.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "sophia-of-kleisoura",
+  "display_name": "Sophia of Kleisoura",
+  "names": [
+    {
+      "form": "Sofia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 mai, «Sfânta Cuvioasă Sofia, asceta din Kleisoura»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1883,
+      "latest": 1883,
+      "display": "1883",
+      "basis": "attested",
+      "note": "doxologia.ro: «S-a născut în anul 1883, în regiunea Trapezunt, în Asia Mică». The page gives no year for her death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 mai — «Sfânta Cuvioasă Sofia, asceta din Kleisoura»",
+        "url": "https://doxologia.ro/6-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
