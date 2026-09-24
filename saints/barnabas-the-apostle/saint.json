@@ -1,0 +1,67 @@
+{
+  "slug": "barnabas-the-apostle",
+  "display_name": "Barnabas",
+  "names": [
+    {
+      "form": "Barnaba",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 iunie, «Sfântul Apostol Barnaba»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 11 iunie — «Sfântul Apostol Barnaba»",
+        "url": "https://doxologia.ro/11-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Sfinţilor Apostoli rugaţi pe milostivul Dumnezeu ca să dea iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Apostol Barnaba, Glasul 3",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-barnaba",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy apostles, entreat the merciful God to grant our souls forgiveness of offences.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "luke-of-crimea",
+  "display_name": "Luke of Crimea",
+  "names": [
+    {
+      "form": "Luca",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 iunie, «Sfântul Ierarh Luca, Arhiepiscopul Crimeei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop",
+    "confessor",
+    "physician",
+    "unmercenary"
+  ],
+  "office": "Archbishop",
+  "dates": {
+    "birth": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "1877",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut la 14/ 27 aprilie 1877, în orașul Kesț, vechiul Ponticap ... care se află la capătul estic al peninsulei Crimeea»."
+    },
+    "death": {
+      "earliest": 1961,
+      "latest": 1961,
+      "display": "1961",
+      "basis": "attested",
+      "note": "doxologia.ro: «În ziua de 11 iunie 1961 ... Arhiepiscopul Luca a inspirat de două ori puternic, și de alte două ori mai slab, și așa sufletul lui și-a luat zborul spre ceruri»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 11 iunie — «Sfântul Ierarh Luca, Arhiepiscopul Crimeei»",
+        "url": "https://doxologia.ro/11-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

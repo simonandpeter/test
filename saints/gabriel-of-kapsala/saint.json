@@ -1,0 +1,60 @@
+{
+  "slug": "gabriel-of-kapsala",
+  "display_name": "Gabriel of Kapsala",
+  "names": [
+    {
+      "form": "Gavriil",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 iunie, «Sfântul Cuvios Gavriil din Kapsala»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "hermit"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 901,
+      "latest": 1000,
+      "display": "10th century",
+      "basis": "traditional",
+      "note": "The page dates the wonder it tells: the archangel's finger engraved the hymn on a slab of stone «pentru amintire imnul Maicii Domnului, Cuvine-se cu adevărat (980)». No year is given for his birth or his death, so the interval recorded is the century that year falls in."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 11 iunie — «Sfântul Cuvios Gavriil din Kapsala»",
+        "url": "https://doxologia.ro/11-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

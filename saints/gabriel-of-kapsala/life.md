@@ -1,0 +1,9 @@
+# Gabriel of Kapsala
+
+Gabriel lived as a hermit at Karyes, in the cell of the Dormition of the Mother of God belonging to what is today the monastery of Pantocrator — Kapsala — in obedience to a virtuous elder. He was counted worthy to lodge in his cell the archangel Gabriel, who appeared to him in the likeness of a monk while his elder was away at the vigil in the church of the Protaton.
+
+From the angel he heard the hymn *Axion estin* — "It is truly meet to call thee blessed, O Theotokos" — and spoke with him; and the angel brought him a slab of stone, on which the archangel's finger engraved, for a remembrance, that hymn to the Mother of God, *It is truly meet*, in the year 980. From that time the hymn spread to all the ends of the world. The cell of the venerable one was named Axion estin, the well that stood nearby was named Song, and the wonder-working icon of the Mother of God before which the hymn was first sung was moved into the holy church of the Protaton and set behind the holy table, where it is to this day.
+
+Of this wonderful venerable father and of the archangel's wonder wrote the Protos of the Holy Mountain, the hieromonk Seraphim Thuipolos, who lived in the sixteenth century. The venerable Gabriel is honoured together with other venerable Athonites on 11 June, the day on which the wonder-working icon Axion estin is kept; the service was composed by the hierodeacon Benedict of the holy monastery of Saint Panteleimon in 1838. The page names no year for his birth or for his repose, and prints no troparion; it gives as its own source the monk Moses of the Holy Mountain, *Saints of the Holy Mountain* (Mygdonia, Karyes, 2008, pp. 140–141).
+
+*After doxologia.ro's calendar for 11 iunie — [the day](https://doxologia.ro/11-iunie) and [the life](https://doxologia.ro/cuviosul-gavriil-cel-care-l-gazduit-chilia-sa-pe-arhanghelul-gavriil); read 24 September 2026.*

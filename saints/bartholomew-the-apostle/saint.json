@@ -17,6 +17,11 @@
     {
       "form": "Свети апостол Вартоломеј",
       "lang": "sr"
+    },
+    {
+      "form": "Bartolomeu",
+      "lang": "ro",
+      "note": "His bare name, read out of doxologia.ro's line for 11 iunie, «Sfântul Apostol Bartolomeu»."
     }
   ],
   "sex": "male",
@@ -55,14 +60,13 @@
         "day": 25,
         "month": 8,
         "calendar": "revised-julian",
-        "note": "The translation of his relics; his principal feast is 11 June."
+        "note": "The translation of his relics; his principal feast is 11 June. doxologia.ro's calendar keeps him on both days and prints his full life on the 11 iunie page — «Sfântul Apostol Bartolomeu» — where it says that after Pentecost the lot fell to him, with the apostle Philip, to go into Syria and upper Asia. The corpus holds one feast a church, so the row is left on the day it already carried and 11 June is recorded here rather than moved (read 24 September 2026)."
       },
       "source": {
         "text": "doxologia.ro, 25 august — „Aducerea moaștelor Sfântului Apostol Bartolomeu”",
         "url": "https://doxologia.ro/25-august",
         "year": 2026
-      },
-      "note": "The translation of his relics; his principal feast is 11 June."
+      }
     },
     {
       "church": "greek",
@@ -134,6 +138,22 @@
         "text": "Thou hast appeared as a great sun unto the Church, enlightening with the radiance of thy teachings and with awesome wonders those who hymn thee, O Bartholomew, apostle of the Lord.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Sfinţilor Apostoli rugaţi pe milostivul Dumnezeu ca să dea iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Apostol Bartolomeu, Glasul 3",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-bartolomeu",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy apostles, entreat the merciful God to grant our souls forgiveness of offences.",
+        "rendered": "site"
+      }
     }
   ],
   "images": [
@@ -141,5 +161,8 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "john-the-theologian"
   ]
 }

@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'gavriil gabriel-of-kapsala gabriel-the-martyr-2-february':
+    'the hermit of Karyes who lived in the cell of the Dormition at Kapsala, Romanian 11 June, against the bare martyr of 2 February (read 25 September 2026)',
+  'luca luke-of-crimea luke-of-emesa':
+    'the archbishop, surgeon and confessor of the Crimea, Romanian 11 June, against the deacon of Emesa seized with the bishop Silvanus and the reader Mocius under Numerian in 284, Romanian 29 January (read 25 September 2026)',
   'marcian marcian-of-durostorum marcian-the-emperor':
     'one of the two soldiers of the Danube legions at Durostorum in Moesia Inferior, taken under Diocletian and Galerius after the Persian war of 298, Romanian 8 June, against the emperor the calendar calls righteous, Romanian 17 February (read 25 September 2026)',
   'nicandru nicander-of-durostorum nicander-of-egypt':
