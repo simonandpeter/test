@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'vlasie blaise-of-amorion blaise-of-sebaste':
+    'the monk of Amorion, born Basil at Aplatiani and gone to Constantinople at the beginning of the ninth century, Romanian 31 March, against the bishop of Sebaste of the persecutions, Romanian 11 February. Five centuries and two lives with nothing in common but the name (read 25 September 2026)',
+  'ipatie hypatius-of-chalcedon hypatius-of-gangra':
+    'the martyr of the Romanian 25 February, whose day page prints «Sfântul Mucenic Ipatie» and whose linked life names him otherwise, against the bishop of Gangra in Paphlagonia who sat among the three hundred and eighteen fathers at Nicaea, Romanian 31 March. A martyr against a council father, on two days (read 25 September 2026)',
+  'iona jonah-martyr-29-march jonah-of-moscow':
+    'the martyr of the Romanian 29 March, whose page carries no life at all and only the service texts, against the metropolitan of Moscow and All Russia, Romanian 31 March, whose page likewise gives no life. Two bare lines two days apart, a martyr and a Russian hierarch, and the corpus keeps them apart on the calendar’s own words (read 25 September 2026)',
   'chiril cyril-of-alexandria cyril-of-heliopolis cyril-of-jerusalem cyril-of-the-forty-martyrs':
     'four men called Chiril: the archbishop of Alexandria born at Mahalla in 378, Romanian 18 January; the archbishop of Jerusalem of Constantius’s reign, Romanian 18 March; one of the Forty of Sebaste under Licinius, Romanian 9 March; and the deacon of Heliopolis whom the pagans of Julian’s reign killed, told by Theodoret in the same notice as Mark of Arethusa, Romanian 29 March. Four days, four cities, and no two of them one man (read 25 September 2026)',
   'marcu mark-of-arethusa mark-of-ephesus mark-the-ascetic':

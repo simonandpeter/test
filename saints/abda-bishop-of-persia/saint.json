@@ -14,6 +14,11 @@
     {
       "form": "Άγιος Αβδαίος επίσκοπος Περσίας",
       "lang": "el"
+    },
+    {
+      "form": "Avdas",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 31 martie, «Sfântul Ierarh Avdas»."
     }
   ],
   "sex": "male",
@@ -47,8 +52,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 5 septembrie (checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 31 martie — «Sfântul Ierarh Avdas»",
+        "url": "https://doxologia.ro/31-martie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -72,5 +86,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "benjamin-the-deacon"
+  ]
 }

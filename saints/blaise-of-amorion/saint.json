@@ -1,0 +1,59 @@
+{
+  "slug": "blaise-of-amorion",
+  "display_name": "Blaise of Amorion",
+  "names": [
+    {
+      "form": "Vlasie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 31 martie, «Cuviosul Vlasie, cel din Amorio»; the life gives his lay name as Vasile."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 909,
+      "latest": 912,
+      "display": "909 or 912",
+      "basis": "traditional",
+      "note": "doxologia.ro heads the life «Viața Cuviosului Vlasie, cel din Amorio (†909/912)» and leaves the two readings standing; the body of the life gives no year for his death, and dates his coming to Athos «în jurul anului 896»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 31 martie — «Cuviosul Vlasie, cel din Amorio»",
+        "url": "https://doxologia.ro/31-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 31 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

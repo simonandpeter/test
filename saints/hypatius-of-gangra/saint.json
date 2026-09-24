@@ -1,0 +1,79 @@
+{
+  "slug": "hypatius-of-gangra",
+  "display_name": "Hypatius of Gangra",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Ipatie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 31 martie, «Sfântul Sfințit Mucenic Ipatie, Episcopul Gangrei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop",
+    "wonderworker"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 337,
+      "latest": 361,
+      "display": "between 337 and 361",
+      "basis": "traditional",
+      "note": "The life has him among the 318 fathers of the council «ce s-a adunat în Niceea la anul 325, pe vremea împărăției marelui Constantin (306-337)», and sets the dragon of the treasury and his killing by the Novatians afterwards, «după moartea marelui Constantin, împărățind fiul său Constantie (337-361)» — the years doxologia.ro prints. It gives no year for the killing."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 31 martie — «Sfântul Sfințit Mucenic Ipatie, Episcopul Gangrei»",
+        "url": "https://doxologia.ro/31-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 31 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor Apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge, Sfinţite Mucenice Ipatie, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfinţit Mucenic Ipatie, Episcopul Gangrei",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-ipatie-episcopul-gangrei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharing in their ways and successor to the thrones of the Apostles, thou didst find in action, O God-inspired one, a way of ascent to the vision of the things on high. Therefore, rightly teaching the word of truth and enduring in the faith even unto blood, O hieromartyr Hypatius, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

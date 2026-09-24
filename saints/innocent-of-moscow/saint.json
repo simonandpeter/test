@@ -12,6 +12,11 @@
       "form": "Ιννοκέντιος",
       "lang": "el",
       "note": "Read out of saint.gr’s heading «Όσιος Ιννοκέντιος Βενιάμινωφ Μητροπολίτης Μόσχας και Ιεραπόστολος Αλάσκας»."
+    },
+    {
+      "form": "Inochentie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 31 martie, «Sfântul Inochentie, Mitropolitul Moscovei, luminător al Siberiei și Americii»."
     }
   ],
   "sex": "male",
@@ -53,8 +58,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 6 octombrie (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 31 martie — «Sfântul Inochentie, Mitropolitul Moscovei, luminător al Siberiei și Americii»",
+        "url": "https://doxologia.ro/31-martie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

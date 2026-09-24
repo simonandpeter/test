@@ -1,0 +1,51 @@
+{
+  "slug": "jonah-of-moscow",
+  "display_name": "Jonah of Moscow",
+  "office": "Metropolitan of Moscow and All Russia",
+  "names": [
+    {
+      "form": "Iona",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 31 martie, «Sfântul Ierarh Iona, Mitropolitul Moscovei și al Întregii Rusii»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 31 martie — «Sfântul Ierarh Iona, Mitropolitul Moscovei și al Întregii Rusii»",
+        "url": "https://doxologia.ro/31-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 31 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

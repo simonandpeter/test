@@ -1,0 +1,11 @@
+# Benjamin the Deacon
+
+doxologia.ro prints one notice for Benjamin the deacon and for the bishop [Abda](/saints/abda-bishop-of-persia), and it begins with the bishop. In the reign of Theodosius the Younger, Yazdegerd, emperor of the Persians, made war on the churches, and took his occasion from this: a certain bishop, Abda, adorned with many kinds of virtue and driven by divine zeal, destroyed the Pyreion — that is, the temple in which the Persians worshipped fire.
+
+Learning of it from the magi, the emperor had Abda brought before him, asked him first gently why he had done it, and ordered him to build that temple again. When Abda resisted and said he could by no means do such a thing, Yazdegerd threatened to destroy all the churches, and began his threats by ordering the divine Abda killed first; and hearing it the saint rejoiced greatly, and so, rejoicing and glad, received his end.
+
+The holy martyrs Abda the bishop, Benjamin the deacon, nine martyrs with them and many other saints who confessed in Persia were thrown into prison, and were eaten alive by the mice and the cats shut in with them. Thirty years later the storm of persecution loosed by the magi, like strong winds, brought the trials of torment on the faithful again: many were consumed with every kind of suffering and then put to death, and others, made to bear long exiles and every kind of torture, were released from life by deaths of every kind.
+
+We should not wonder at it, says the notice, for these things happened by the permission of God, and our Master said that struggles of this kind would come; and for this these saints received, by their patience and their martyrdom, the crowns of victory. The Romanian calendar gives them no year, and no troparion.
+
+*After doxologia.ro's calendar for 31 martie — [the day](https://doxologia.ro/31-martie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-veniamin-diaconul); read 19 September 2026.*
