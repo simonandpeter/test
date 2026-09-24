@@ -1,0 +1,50 @@
+{
+  "slug": "anthimus-the-presbyter",
+  "display_name": "Anthimus the Presbyter",
+  "names": [
+    {
+      "form": "Antim",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 iunie, «Sfântul Cuvios Antim, preotul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 iunie — «Sfântul Cuvios Antim, preotul»",
+        "url": "https://doxologia.ro/7-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
