@@ -1,0 +1,80 @@
+{
+  "slug": "cleonicus-of-cappadocia",
+  "display_name": "Cleonicus of Cappadocia",
+  "names": [
+    {
+      "form": "Cleonic",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 martie, «Sfântul Mucenic Cleonic»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "eutropius-of-cappadocia",
+    "basiliscus-of-amasea"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 305,
+      "display": "between 286 and 305",
+      "basis": "traditional",
+      "note": "doxologia.ro gives the reign and no year: «Căci îi era dată lui stăpânire asupra creștinilor de la împăratul Maximian (286-305)». The same life says he and Eutropius «și-au dat sufletele lor în ziua a treia a lunii lui martie»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 3 martie — «Sfântul Mucenic Cleonic»",
+        "url": "https://doxologia.ro/3-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 3 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinților Mucenici Eutropie, Cleonic și Vasilisc",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-eutropie-cleonic-vasilisc",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contests received crowns of incorruption from Thee, our God; for having Thy strength they overcame their tormentors, and broke the strengthless daring of the demons. At their prayers, O Christ our God, save Thou our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

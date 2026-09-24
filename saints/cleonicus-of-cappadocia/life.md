@@ -1,0 +1,11 @@
+# Cleonicus of Cappadocia
+
+Cleonicus was of Cappadocian stock and brother by the same mother to [Eutropius](/saints/eutropius-of-cappadocia). Both were soldiers and close friends of Theodore Tiron, and when Theodore had finished his passion at Amasea they were left in prison for Christ together with [Basiliscus](/saints/basiliscus-of-amasea), Theodore's nephew; for love's sake the three called one another brothers. Publius, who had tortured Theodore, had perished, and Asclepiodotus, a Phrygian, cruel and godless, had the government in his place.
+
+He held authority from the emperor Maximian to force Christians to sacrifice to the idols and to destroy with torments any who refused. Having the record of Theodore's trial read out before him, and seeing the burnt temple of the goddess they called Hera, mother of the gods, he sent soldiers to bring the three out of the prison. They came before him with shining faces, and when he asked Cleonicus and Basiliscus whether they would sacrifice, they refused with Eutropius.
+
+Each of them was stretched out by four soldiers and beaten with rods, until a great earthquake shook the whole court and the soldiers doing the work begged to be relieved of it. The governor, seeing the people in an uproar, had them bound and taken back to prison. There the three prayed together, and there was thunder and an earthquake so great that the foundation of the pagan temple was shaken; cauldrons were set boiling for them, and Cleonicus spoke to Eutropius before they prayed and the Lord showed his power.
+
+They were tortured again with iron claws and with mustard mixed with salt upon the wounds, and at midnight the Lord appeared to them. In the morning Cleonicus and Eutropius were led out of the city to the crosses made ready for them; they prayed for the Church and for peace for the Christian people, and the soldiers crucified them. A voice came from heaven calling them to eternal rest, and they gave up their souls on the third day of March. Conit, a citizen of Amasea, anointed the body of Cleonicus with myrrh and carried it with honour to the village called Chima, and healings were worked at the martyrs' graves.
+
+*After doxologia.ro's calendar for 3 martie — [the day](https://doxologia.ro/3-martie) and [the life](https://doxologia.ro/viata-sfantul-mucenic-cleonic); read 19 September 2026.*
