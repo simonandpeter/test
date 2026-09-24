@@ -1,0 +1,11 @@
+# Athanasius the Athonite
+
+Athanasius was brought forth into this mortal life by the great city of Trebizond, learned his letters in Byzantium, and was given as a gift to God by the mountains of Kyminas and of Athos. His parents were of good family and right-believing; his father came from Antioch and his mother from Colchis, and they lived at Trebizond. His father died before he was born, and his mother, having borne him and had him enlightened by holy baptism, followed her husband to God. The child's name in baptism was Abramius.
+
+Left an orphan from his swaddling clothes, he was taken in and fed by a nun of good family. From his infancy the signs of what his life would be showed in him: small as he was, he was wise in everything and good in his ways, so that when he played with children of his own age they did not make him emperor or general in their games, but abbot. And this was right, for from childhood he was schooling himself in the monastic life, seeing the nun who was raising him spend her time in prayer and fasting and striving to follow her as far as he could.
+
+Set to learn grammar, he outstripped those of his own age; and growing in body and in understanding he passed out of childhood. Then the nun who had been a mother to him departed to the Lord, and Abramius, orphaned a second time, wept for her as for his own mother and wished to go to Byzantium to seek the wisdom of books; and God, who cares for orphans, arranged that his wish should be fulfilled.
+
+Doxologia's account of him is a long one, gathered, it says, out of a larger book about his life, his struggles and his wonders, and it closes with the healings worked at his intercession after his death. The Romanian calendar keeps with him on the same day [his six disciples](/saints/six-disciples-of-athanasius-the-athonite), who were covered by the falling dome of the church they had climbed with him to inspect. No year is printed for his birth or his death, so none is recorded here.
+
+*After doxologia.ro's calendar for 5 iulie — [the day](https://doxologia.ro/5-iulie), [the life](https://doxologia.ro/viata-sfantului-cuvios-atanasie-athonitul) and [the notice of his six disciples](https://doxologia.ro/viata-celor-sase-cuviosi-ucenici-ai-cuviosului-atanasie-athonitul-10014); read 24 September 2026.*

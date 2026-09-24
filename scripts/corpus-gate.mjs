@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'avramie abramius-of-arbela athanasius-the-athonite':
+    'Athanasius the Athonite, Romanian 5 July, whose second `ro` form is Avramie because his own life gives that as his baptismal name, against the hieromartyr bishop of Arbela under Shapur II, Romanian 4 February (read 25 September 2026)',
+  'ciprian cyprian-companion-of-quadratus cyprian-martyr-10-may cyprian-the-new-martyr':
+    'three men called Ciprian, on three days: the hieromonk new-martyr of Kletzos in Agrafa, Romanian 5 July; the companion of Quadratus of Corinth under Decius and Valerian, Romanian 10 March; and the bare «Sfantul Mucenic Ciprian» the calendar prints on 10 May with no life and no century (read 25 September 2026)',
   'marta martha-of-antioch martha-of-aza martha-sister-of-lazarus martha-sister-of-lykarion':
     'four women called Marta, on four days: the mother of Symeon of the Wonderful Mountain, of Antioch, Romanian 4 July; one of the five canonical virgins of Aza under Shapur, Romanian 9 June and Greek 26 September; the sister of Lazarus, Romanian 4 June, whose page gives three sentences and no life; and the sister of Lykarion, martyred with her sister Mary, Romanian 8 February (read 25 September 2026)',
   'meliton meliton-of-caesarea meliton-of-the-forty-martyrs':

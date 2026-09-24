@@ -1,0 +1,76 @@
+{
+  "slug": "athanasius-the-athonite",
+  "display_name": "Athanasius the Athonite",
+  "names": [
+    {
+      "form": "Atanasie Athonitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 iulie, «Sfântul Cuvios Atanasie Athonitul»."
+    },
+    {
+      "form": "Avramie",
+      "lang": "ro",
+      "note": "His baptismal name, read out of the life: «Numele pruncului din botez a fost Avramie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "related": [
+    "six-disciples-of-athanasius-the-athonite"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 iulie — «Sfântul Cuvios Atanasie Athonitul»",
+        "url": "https://doxologia.ro/5-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "De viaţa ta cea în trup s-au minunat cetele îngereşti, cum, cu trupul, la luptele cele nevăzute ai ieşit, pururea mărite şi ai rănit cetele demonice. Pentru care, Sfinte Atanasie, Hristos ţi-a răsplătit cu bogate daruri. Drept aceea, părinte, roagă-te lui Hristos Dumnezeu să se mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Atanasie Athonitul",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-atanasie-athonitul",
+        "year": 2026
+      },
+      "english": {
+        "text": "The ranks of angels marvelled at your life in the flesh: how, being in the body, you went out to the unseen battles, ever-glorious one, and wounded the hosts of the demons. For this, holy Athanasius, Christ repaid you with rich gifts. Therefore, father, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

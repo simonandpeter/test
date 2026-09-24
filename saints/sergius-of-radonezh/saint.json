@@ -36,7 +36,8 @@
       "feast": {
         "day": 25,
         "month": 9,
-        "calendar": "revised-julian"
+        "calendar": "revised-julian",
+        "note": "doxologia.ro also prints him on 5 iulie, «Sfântul Cuvios Serghie de la Radonej» (read 24 September 2026). One row per church is the schema, so the second day is recorded here and he does not render on it."
       },
       "source": {
         "text": "doxologia.ro, 25 Septembrie — „Sfântul Cuvios Serghie de la Radonej”",

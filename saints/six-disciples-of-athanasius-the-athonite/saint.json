@@ -1,0 +1,53 @@
+{
+  "slug": "six-disciples-of-athanasius-the-athonite",
+  "display_name": "The Six Disciples of Athanasius the Athonite",
+  "names": [
+    {
+      "form": "Cei șase cuvioși ucenici ai Sfântului Atanasie Athonitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 iulie. The company is named on the calendar as a company; of the six only one name is given on the page, «Daniil»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "related": [
+    "athanasius-the-athonite"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 iulie — «Cei șase cuvioși ucenici ai Sfântului Atanasie Athonitul»",
+        "url": "https://doxologia.ro/5-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
