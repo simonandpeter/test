@@ -1,0 +1,63 @@
+{
+  "slug": "hilaria-wife-of-claudius",
+  "display_name": "Hilaria, wife of Claudius",
+  "names": [
+    {
+      "form": "Ilaria",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 martie."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "claudius-husband-of-hilaria",
+    "chrysanthus",
+    "daria"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 283,
+      "latest": 284,
+      "display": "283–284",
+      "basis": "traditional",
+      "note": "doxologia.ro's life for her: «Când împăratul Numerian (283-284) a aflat de acest lucru, a dat ordin ca toți să fie executați»; she was taken afterwards, at the martyrs' grave. The reign is the interval the page prints; it gives no year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 19 martie — «Sfânta Muceniță Ilaria»",
+        "url": "https://doxologia.ro/19-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

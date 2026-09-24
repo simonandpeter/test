@@ -1,0 +1,64 @@
+{
+  "slug": "diodorus-the-presbyter",
+  "display_name": "Diodorus the Presbyter",
+  "names": [
+    {
+      "form": "Diodor",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 martie, «Sfântul Mucenic Diodor preotul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "presbyter"
+  ],
+  "related": [
+    "marianus-the-deacon",
+    "chrysanthus",
+    "daria"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 283,
+      "latest": 284,
+      "display": "283–284",
+      "basis": "traditional",
+      "note": "The life of Chrysanthus and Daria, on doxologia.ro, names «împăratul Numerian (283-284)» as the emperor of the persecution in which they and the crowd in the cave died. The reign is the interval the page prints; it gives no year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 19 martie — «Sfântul Mucenic Diodor preotul»",
+        "url": "https://doxologia.ro/19-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -145,6 +145,10 @@ const READ_FOLDS = {
     'the Serbian monastic of 16 August, whom the corpus holds on that calendar alone, against the martyr of the Romanian 16 March, one of the thin lines of that day. Different calendar, different month, different rank (read 25 September 2026)',
   'trofim trophimus-of-laodicea trophimus-of-nicomedia':
     'the martyr of Laodicea whom doxologia keeps on 11 March with Thalus, against the martyr of Nicomedia kept on 18 March with Eucarpion. Seven days apart on one calendar, two cities and two companions (read 25 September 2026)',
+  'claudiu claudius-husband-of-hilaria claudius-of-corinth':
+    'the martyr of Corinth whom the Romanian 31 January keeps with Diodorus and the rest, against the tribune of the Romanian 19 March, to whom the prefect handed Chrysanthus over to be forced to sacrifice, and who believed with his wife Hilaria and his household. A Corinthian passion against a Roman one, and the same fold repeats one name lower with Diodorus (read 25 September 2026)',
+  'diodor diodorus-of-corinth diodorus-the-presbyter':
+    'the martyr of Corinth of the Romanian 31 January against the presbyter of the Romanian 19 March, the priest who suffered with Chrysanthus and Daria at Rome, at the cave by the pit on the Salarian way where the Christians kept their day. The two folds are the same two days and the same two companies (read 25 September 2026)',
   'conon conon-of-isauria conon-the-gardener':
     'two martyrs of one name on one day, which is the fold hardest to part and the one doxologia parts itself: «Sfantul Mucenic Conon din Isauria», son of Nestor and Nada of the village Vidania, baptised by the Archangel Michael in the generation the apostle Paul preached to Isauria, against «Sfantul Mucenic Conon Gradinarul», of Nazareth by descent, who kept a garden at Carmila outside Mandon in Pamphylia and was taken under Decius by the governor Publius. Two lines on the 5 March page, two epithets, two lives, two centuries (read 25 September 2026)',
   'evloghie eulogius-of-alexandria eulogius-of-palestine':
