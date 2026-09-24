@@ -1,0 +1,72 @@
+{
+  "slug": "dimas-companion-of-terentius",
+  "display_name": "Dimas, companion of Terentius",
+  "names": [
+    {
+      "form": "Dima",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 aprilie, «Sfinții Mucenici Terentie, Pompie, African, Maxim, Macarie și Dima»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "terentius-of-africa",
+    "macarius-companion-of-terentius"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "Named on doxologia.ro's calendar line for the day and in the title of the day's troparion page, but not in the body of the life the same site carries."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 aprilie — «Sfinții Mucenici Terentie, Pompie, African, Maxim, Macarie și Dima»",
+        "url": "https://doxologia.ro/10-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, the troparion page for the martyrs Terentie, Pompei, African, Maxim, Macarie, Dima and those with them, Glasul 4; the reading «nesctricăciunii» is the page's own",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-terentie-pompei-african-maxim-macarie-dima-al-celor-impreuna-cu-dansii",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their struggles have won from Thee, our God, the crowns of incorruption; for having Thy strength, they overthrew their tormentors and broke the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

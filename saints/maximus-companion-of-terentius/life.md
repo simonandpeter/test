@@ -1,0 +1,9 @@
+# Maximus, companion of Terentius
+
+Maximus stood with the forty who would not sacrifice when the edict of Decius came to Africa and the governor Fortunatianus called the people together and set the instruments of torture before them. When [Terentius](/saints/terentius-of-africa) had answered for them all about the power of Christ crucified, the governor picked out four — Terentius, [Africanus](/saints/africanus-companion-of-terentius), Maximus and [Pompeius](/saints/pompeius-companion-of-terentius) — and had them shut in the innermost prison, keeping them for a second questioning while the rest were judged.
+
+They would not yield at it. Iron was put on their necks, their hands and feet were bound, iron nails were strewn on the ground under them, and no Christian was let in to feed them. At midnight the prison filled with light; the Angel of the Lord stood over them, called them by their four names, broke their chains at a touch, and told them to rest and take the food Christ had sent them, and a table stood there covered with it.
+
+The governor's last device was to loose serpents, asps and vipers into the cell. The guards who looked in through the roof saw the martyrs sitting and the angel standing and the creatures held off; and when the enchanters came in the morning to charm them out, the creatures fell on the enchanters and killed them instead. Fortunatianus, furious at finding the four unharmed, sentenced them to be beheaded, and they went to their death singing.
+
+*After doxologia.ro's calendar for 10 aprilie — [the day](https://doxologia.ro/10-aprilie), [the life](https://doxologia.ro/viata-sfintilor-mucenici-terentie-pompie-african-maxim-macarie-dima) and [the troparion](https://doxologia.ro/troparul-sfintilor-mucenici-terentie-pompei-african-maxim-macarie-dima-al-celor-impreuna-cu-dansii); read 20 September 2026.*

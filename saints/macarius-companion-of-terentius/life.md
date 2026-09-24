@@ -1,0 +1,9 @@
+# Macarius, companion of Terentius
+
+Macarius is named by doxologia.ro's calendar for 10 April among the martyrs of that day — «Sfinții Mucenici Terentie, Pompie, African, Maxim, Macarie și Dima» — and again in the heading of the troparion the same site prints for them, which is sung to all of them together and to those with them. The life page the calendar links, however, does not name him anywhere: it tells of forty faithful in Africa under the emperor Decius, of the four whom the governor Fortunatianus set apart, and of thirty-six more among whom it names Zeno, Alexander and Theodore. This entry therefore rests on the calendar's line and on the hymn's heading, and on nothing else.
+
+What the source does say of the company he is numbered with is this. The edict of Decius reached Africa and Fortunatianus called the people together, set the instruments of torture in front of them and told them to sacrifice; many were frightened and fell away, and forty stood and strengthened one another. [Terentius](/saints/terentius-of-africa) answered for them all. Four were kept for a second hearing and the rest were beaten with heavy staves and dried sinews and put to death; the four were chained, fed by an angel, guarded by him from the serpents loosed into their cell, and at the last beheaded and buried two stadia from the city.
+
+Which of those deaths was Macarius's, the page does not say, and neither does this folder. [Dimas](/saints/dimas-companion-of-terentius), the sixth name on the line, stands in exactly the same position.
+
+*After doxologia.ro's calendar for 10 aprilie — [the day](https://doxologia.ro/10-aprilie), [the life](https://doxologia.ro/viata-sfintilor-mucenici-terentie-pompie-african-maxim-macarie-dima) and [the troparion](https://doxologia.ro/troparul-sfintilor-mucenici-terentie-pompei-african-maxim-macarie-dima-al-celor-impreuna-cu-dansii); read 20 September 2026.*

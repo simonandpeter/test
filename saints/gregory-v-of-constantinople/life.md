@@ -1,0 +1,13 @@
+# Gregory V of Constantinople
+
+Gregory was George Angelopoulos in the world, born in 1745 at Dimitsana in the Peloponnese to devout parents named John and Asimina. He began his schooling in the village, his father not being able to afford better, and in 1765 went to Athens to study under the well-known teacher Demetrios Vodas. In 1767 he moved to Smyrna, to his uncle the sacristan Meletios, and attended the Evangelical School there; afterwards he studied philosophy on Patmos under Daniel Kerameas.
+
+He was tonsured at the monastery of the Transfiguration on the Strophades islands and took the name Gregory. Procopius, metropolitan of Smyrna, called him back and ordained him archdeacon, and after his ordination to the priesthood he returned to Dimitsana and gave fifteen hundred groschen for the lodging of poor pupils. In 1785 he was consecrated bishop and chosen metropolitan of Smyrna, and on 19 August 1785 he was elected Ecumenical Patriarch, holding the throne until December 1798.
+
+He was an ascetic who kept the fasts and gave himself to the unceasing prayer of the heart, and his labours, the life says, drew the envy of many bishops who slandered him, so that he was removed and exiled to the Holy Mountain from 1798 to 1806. In 1818 he was elected to the ecumenical throne for the third time and held it until the day of his martyrdom. He set up a fund for the poor of Constantinople and reorganised the patriarchal press, publishing many spiritual books.
+
+In that same year, 1818, he joined the Filiki Eteria, which was preparing a rising against the Turkish occupation, and his links with the Greek patriots came out only after Alexander Ypsilantis crossed the Prut with his army against Sultan Mahmud. On 10 April 1821, the night of Pascha, having served the Liturgy of the Resurrection with eight other hierarchs, Gregory was arrested and imprisoned; at three that afternoon, vested as a bishop, he was hanged from the gate in front of the Ecumenical Patriarchate. His body hung there three days, and the gate has stood shut ever since.
+
+It was then taken and carried about the city and thrown into the Bosphorus. A Greek sailor, Nicholas Sklavos, recovered it from the sea; it was taken secretly to Odessa and buried in the Greek church of the Holy Trinity on 19 June 1821. The Holy Synod of the Church of Greece proclaimed him a saint on 10 April 1921, a hundred years to the day, and his relics now lie in the Metropolitan Cathedral of Athens. The page carries no troparion.
+
+*After doxologia.ro's calendar for 10 aprilie — [the day](https://doxologia.ro/10-aprilie) and [the life](https://doxologia.ro/viata-sfantului-grigorie-al-v-lea-patriarhul-constantinopolului); read 20 September 2026.*

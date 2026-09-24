@@ -1,0 +1,9 @@
+# Africanus, companion of Terentius
+
+Africanus was one of the forty who refused to sacrifice when the edict of the emperor Decius reached Africa and the governor Fortunatianus set the instruments of torture out before the people. Most of the forty were judged together and put to death together; but Fortunatianus separated four of them — [Terentius](/saints/terentius-of-africa), Africanus, [Maximus](/saints/maximus-companion-of-terentius) and [Pompeius](/saints/pompeius-companion-of-terentius) — and had them shut in the innermost prison under close guard while he dealt with the rest.
+
+Brought out and told again to sacrifice, the four answered that they were Christians and had put their hope in Christ, that they would not serve his gods and did not fear his torments. He sent them back with heavy irons on their necks, their hands and feet bound, iron nails strewn under them and no Christian allowed in with food. At midnight a great light filled the prison and an angel called them by name — «Terentie, Africane, Maxime și Pompie» — touched their chains so that they broke and fell, and set a table before them full of good things.
+
+Serpents, asps and vipers were then loosed on them; the guards watching from the roof saw the saints sitting and the Angel of the Lord standing and keeping the creatures off, and in the morning the enchanters could not call them back, but were themselves killed by them. Fortunatianus, seeing the four wholly unhurt, condemned them to the sword. They went to death singing, and devout men buried them about two stadia from the city.
+
+*After doxologia.ro's calendar for 10 aprilie — [the day](https://doxologia.ro/10-aprilie), [the life](https://doxologia.ro/viata-sfintilor-mucenici-terentie-pompie-african-maxim-macarie-dima) and [the troparion](https://doxologia.ro/troparul-sfintilor-mucenici-terentie-pompei-african-maxim-macarie-dima-al-celor-impreuna-cu-dansii); read 20 September 2026.*

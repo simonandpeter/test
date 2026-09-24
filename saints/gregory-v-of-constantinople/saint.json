@@ -1,0 +1,68 @@
+{
+  "slug": "gregory-v-of-constantinople",
+  "display_name": "Gregory V of Constantinople",
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Grigorie al V-lea",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 aprilie, «Sfântul Grigorie al V-lea, Patriarhul Constantinopolului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "patriarch",
+    "new-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1745,
+      "latest": 1745,
+      "display": "1745",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «s-a născut în 1745 în localitatea Dimitsana din Peloponez, din părinți evlavioși și virtuoși, Ioan și Asimina»."
+    },
+    "death": {
+      "earliest": 1821,
+      "latest": 1821,
+      "display": "1821",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Pe 10 aprilie 1821, în noaptea de Paști … a fost arestat și întemnițat. În aceeași zi, la ora trei după-amiază … a fost spânzurat de poarta din fața Patriarhiei Ecumenice»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 aprilie — «Sfântul Grigorie al V-lea, Patriarhul Constantinopolului»",
+        "url": "https://doxologia.ro/10-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

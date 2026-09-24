@@ -1,0 +1,9 @@
+# Pompeius, companion of Terentius
+
+Pompeius was one of the forty in Africa who would not obey the edict of Decius, and one of the four whom the governor Fortunatianus set apart from the rest. The life spells his name two ways, «Pompia» where the four are first shut up and «Pompie» where the angel calls them; the calendar's own line for the day has «Pompie». With [Terentius](/saints/terentius-of-africa), [Africanus](/saints/africanus-companion-of-terentius) and [Maximus](/saints/maximus-companion-of-terentius) he was thrown into the innermost prison and kept under close guard for a second hearing.
+
+At that hearing they told the governor plainly that they were Christians, that their hope was in Christ, that they would not bow to demons nor serve his gods, and that he might lay on them whatever torment he liked. He sent them back in heavy irons, hands and feet bound, iron nails scattered under them and nobody allowed to bring them food; and at midnight a light filled the prison, the Angel of the Lord stood before them and named them one by one, their chains broke at his touch, and a table full of good things was set for them.
+
+When serpents, asps and vipers were loosed into the cell the guards saw from the roof that the creatures would not come near, being held off by the angel; in the morning they turned on the enchanters who had brought them and killed them. Fortunatianus then condemned the four to the sword. They went to the place of execution singing that the Lord had saved them from those who afflicted them, were beheaded there, and were buried about two stadia outside the city.
+
+*After doxologia.ro's calendar for 10 aprilie — [the day](https://doxologia.ro/10-aprilie), [the life](https://doxologia.ro/viata-sfintilor-mucenici-terentie-pompie-african-maxim-macarie-dima) and [the troparion](https://doxologia.ro/troparul-sfintilor-mucenici-terentie-pompei-african-maxim-macarie-dima-al-celor-impreuna-cu-dansii); read 20 September 2026.*
