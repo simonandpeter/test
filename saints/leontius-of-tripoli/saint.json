@@ -1,0 +1,72 @@
+{
+  "slug": "leontius-of-tripoli",
+  "display_name": "Leontius of Tripoli",
+  "names": [
+    {
+      "form": "Leontie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 iunie, «Sfântul Mucenic Leontie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "related": [
+    "hypatius-the-tribune",
+    "theodulus-of-tripoli"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 18 iunie — «Sfântul Mucenic Leontie»",
+        "url": "https://doxologia.ro/18-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Leontie, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Leontie; the common troparion of a single martyr, with his name set in it. Doxologia prints no troparion on the pages for Hypatius and Theodulus.",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-leontie",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Leontius, O Lord, in his contest received from Thee, our God, the crown of incorruption; for having Thy power, he overthrew the tormentors and broke also the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

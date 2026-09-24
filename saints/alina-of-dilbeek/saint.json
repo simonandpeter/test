@@ -1,0 +1,59 @@
+{
+  "slug": "alina-of-dilbeek",
+  "display_name": "Alina of Dilbeek",
+  "names": [
+    {
+      "form": "Alina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 iunie, «Sfânta Muceniță Alina»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 601,
+      "latest": 700,
+      "display": "7th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfânta Alina (Alena) s-a născut în secolul al VII-lea în Belgia, în localitatea Dilbeek», in the time of the king the page calls «Clavis al II-lea, care a domnit între anii 635-637». The century is the page's; no year of her death is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 18 iunie — «Sfânta Muceniță Alina»",
+        "url": "https://doxologia.ro/18-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

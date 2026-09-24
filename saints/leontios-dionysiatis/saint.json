@@ -1,0 +1,60 @@
+{
+  "slug": "leontios-dionysiatis",
+  "display_name": "Leontios the Myrrh-gusher",
+  "names": [
+    {
+      "form": "Leontie Dionisiatul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 iunie, «Sfântul Cuvios Leontie Dionisiatul, Izvorâtorul de mir»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "wonderworker"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1605,
+      "latest": 1605,
+      "display": "1605",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Leontie și-a cunoscut dinainte sfârșitul și a adormit cu pace, după o scurtă boală, în ziua de 16 martie 1605»; the same page has him entering Dionysiou «în 1537» and struggling there sixty-eight years. It gives no birth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 18 iunie — «Sfântul Cuvios Leontie Dionisiatul, Izvorâtorul de mir»",
+        "url": "https://doxologia.ro/18-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -157,6 +157,12 @@ const READ_FOLDS = {
     'one of the four young men imprisoned at Nicomedia whom Lucillian found there and suffered with, under Aurelian, Romanian 3 June, against one of the Forty frozen at Sebaste under Licinius, Romanian 9 March (read 25 September 2026)',
   'dionisie dionysius-companion-of-lucillian dionysius-companion-of-quadratus dionysius-of-lampsacus':
     'three men called Dionisie, on three days: one of the four young men of the prison at Nicomedia whom Lucillian suffered with, under Aurelian, Romanian 3 June; the martyr of Corinth taken with Quadratus, Romanian 10 March; and the man killed at Lampsacus beside Peter, Romanian 18 May. Three companies, three cities (read 25 September 2026)',
+  'ipatie hypatius-companion-of-lucillian hypatius-of-chalcedon hypatius-of-gangra hypatius-the-tribune':
+    'four men called Ipatie, on four days: one of the four young men of the prison at Nicomedia whom Lucillian suffered with, Romanian 3 June; the abbot of Chalcedon, Romanian 25 February; the hieromartyr bishop of Gangra, Romanian 31 March; and the tribune, Romanian 18 June (read 25 September 2026)',
+  'leontie leontius-of-the-forty-martyrs leontius-of-tripoli':
+    'one of the Forty frozen at Sebaste, Romanian 9 March, against the martyr of Tripoli taken under the senator Hadrian in the days of Vespasian, Romanian 18 June (read 25 September 2026)',
+  'teodul theodulus-of-the-forty-martyrs theodulus-of-tripoli':
+    'one of the Forty frozen at Sebaste, Romanian 9 March, against one of the company taken with Leontius at Tripoli, Romanian 18 June (read 25 September 2026)',
   'ipatie hypatius-companion-of-lucillian hypatius-of-chalcedon hypatius-of-gangra':
     'three men called Ipatie, on three days: one of the four young men of the prison at Nicomedia whom Lucillian suffered with, under Aurelian, Romanian 3 June; the abbot of Chalcedon, Romanian 25 February; and the hieromartyr bishop of Gangra, Romanian 31 March. A martyr boy, a venerable abbot and a bishop (read 25 September 2026)',
   'paul paul-bishop-of-nicaea paul-companion-of-lucillian':
