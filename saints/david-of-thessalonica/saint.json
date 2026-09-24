@@ -1,0 +1,69 @@
+{
+  "slug": "david-of-thessalonica",
+  "display_name": "David of Thessalonica",
+  "names": [
+    {
+      "form": "David din Tesalonic",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 iunie, «Sfântul Cuvios David din Tesalonic»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 iunie — «Sfântul Cuvios David din Tesalonic»",
+        "url": "https://doxologia.ro/26-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru tine părinte cu osârdie s-a mântuit cel după chip; că luând crucea ai urmat lui Hristos; şi lucrând ai învăţat să nu se uite la trup, că este trecător; ci să poarte grijă de suflet, de lucrul cel nemuritor. Pentru aceasta şi cu îngerii împreună se bucură, Preacuvioase Părinte David, duhul tău.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios David din Tesalonic, glasul 8; the text is the common of a venerable father, printed with his name in it.",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-david-din-tesalonic",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O father, was the image restored with care; for taking up the cross thou didst follow Christ, and by thy works thou didst teach us to overlook the flesh, which passes away, and to care for the soul, a thing immortal. Wherefore thy spirit, O most venerable father David, rejoices together with the angels.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
