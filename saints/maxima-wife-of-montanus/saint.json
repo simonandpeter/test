@@ -1,0 +1,90 @@
+{
+  "slug": "maxima-wife-of-montanus",
+  "display_name": "Maxima, wife of Montanus",
+  "names": [
+    {
+      "form": "Maxima",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 martie, «Sfânta Muceniţă Maxima, soţia Sfântului Mucenic Montanus, preotul»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "montanus-of-singidunum"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "attested",
+      "note": "doxologia.ro: «la 26 martie 304, a pătimit pentru credința în Domnul Hristos preotul daco-roman Montanus și soția sa, Maxima»."
+    }
+  },
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "the Sava at its mouth on the Danube, by Singidunum",
+      "modern_name": "Belgrade, Serbia",
+      "lat": 44.8176,
+      "lon": 20.4569,
+      "uncertainty_km": 15,
+      "note": "The life has her drowned with her husband «la malul râului Sava, la vărsarea lui în Dunăre» — the confluence at Singidunum, «azi Belgrad»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 26 martie — «Sfânta Muceniţă Maxima, soţia Sfântului Mucenic Montanus, preotul»",
+        "url": "https://doxologia.ro/26-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Pe cei ce cu vrednicie au slujit Biserica mântuitoare şi n-au voit să se închine idolilor, să-i cinstim cu cuviinţă cerându-le a mijloci la Stăpânul tuturor să ne mântuiască de orice patimă idolească.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Mucenici Montanus preotul şi Maxima, soţia sa",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-montanus-preotul-sotiei-sale-maxima",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour as is fitting those who served the saving Church worthily and would not bow down to idols, and let us ask them to intercede with the Master of all, that we may be saved from every idolatrous passion.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

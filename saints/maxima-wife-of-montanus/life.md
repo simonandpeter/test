@@ -1,0 +1,9 @@
+# Maxima, wife of Montanus
+
+Maxima was the wife of the priest [Montanus](/saints/montanus-of-singidunum) of Singidunum, the city on the Danube that is Belgrade today, and she suffered with him on 26 March 304, in the persecution of the fourth edict that Maximian Galerius wrung from Diocletian. Her husband, having fled from Singidunum to Sirmium at the beginning of the persecution, had been seized there and brought before Probus, governor of Pannonia Inferior, who put him to the torments when he would not sacrifice.
+
+Seeing that the priest's endurance would not break, Probus called in his wife, thinking — so the life says — that a woman, being weaker by nature, would be softened by her husband's torments and would urge him to sacrifice to the gods. To the pagan's astonishment, Maxima asked to be taken to the torments herself, that she too might be made a sharer in the Saviour's Passion; and the governor, bewildered by the courage of the two, said that Christians were mad and set no value on life.
+
+Probus gave sentence that Montanus and Maxima be thrown into the river as disobedient to the imperial commands, and the two received it as a priceless gift and gave thanks that they had been found worthy of the everlasting glory. They were brought to the bank of the Sava at its mouth on the Danube, a stone was tied to the neck of each, and they were drowned. The waves drew their relics to the banks, and the faithful took them up in secret and kept their bodies carefully, as treasures of great price.
+
+*After doxologia.ro's calendar for 26 martie — [the day](https://doxologia.ro/26-martie), [the life](https://doxologia.ro/viata-sfintilor-mucenici-montanus-preotul-sotiei-sale-maxima) and [the troparion](https://doxologia.ro/troparul-sfintilor-mucenici-montanus-preotul-sotiei-sale-maxima); read 19 September 2026.*

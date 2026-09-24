@@ -1,0 +1,49 @@
+{
+  "slug": "twenty-six-martyrs-of-gothia",
+  "display_name": "The Twenty-six Martyrs of Gothia",
+  "names": [
+    {
+      "form": "Cei 26 de Mucenici din Goția/Dacia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 martie, «Sfinții 26 de Mucenici din Goția/Dacia»."
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 26 martie — «Sfinții 26 de Mucenici din Goția/Dacia»",
+        "url": "https://doxologia.ro/26-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
