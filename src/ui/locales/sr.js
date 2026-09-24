@@ -717,6 +717,7 @@ export const sr = {
     'Apostle of the Seventy, Bishop of Laodicea': 'Апостол из Седамдесеторице, епископ лаодикијски',
     'Apostle of the Seventy, Bishop of Sardis': 'Апостол из Седамдесеторице, епископ сардски',
     'Archbishop of Alexandria': 'Архиепископ александријски',
+    'Archbishop of Antioch': 'Архиепископ антиохијски',
     'Archbishop of Antioch the Great': 'Архиепископ Антиохије Велике',
     'Archbishop of Boguchar': 'Архиепископ богучарски',
     'Archbishop of Corfu': 'Архиепископ крфски',

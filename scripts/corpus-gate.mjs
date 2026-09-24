@@ -121,14 +121,16 @@ const READ_FOLDS = {
     'the martyr of Tomis kept on 13 September with Gordian, Macrobius, Helias and Lucian, against the soldier taken in the mountains above Trebizond with Candidus and Aquila on the Romanian 21 January: another day, another passion, another province (read 19 September 2026)',
   'agapie agapius-disciple-of-babylas agapius-son-of-eustathius':
     'the boy martyred at Sicily with his teacher Babylas and with Timothy, Romanian 24 January, against the son of Eustathius Placidas roasted with his parents and brother at Rome under Hadrian, kept on 20 September by all four. Two boys, two passions (read 19 September 2026)',
-  'timotei timothy-disciple-of-babylas timothy-of-ephesus':
-    'the second of Babylas of Sicily’s two disciples, Romanian 24 January, against the apostle and first bishop of Ephesus clubbed to death at the Catagogion, Romanian 22 January. A third Timothy, of Gaza, is kept on 19 August (read 19 September 2026)',
+  'timotei timothy-disciple-of-babylas timothy-of-ephesus timothy-of-symbola':
+    'the second of Babylas of Sicily’s two disciples, Romanian 24 January, against the apostle and first bishop of Ephesus clubbed to death at the Catagogion, Romanian 22 January. A third joins them on the Romanian 21 February: the venerable of Symbola, the desert place by Mount Olympus whose archimandrite was the venerable Theoctistus. A fourth, of Gaza, is kept on 19 August and folds with none of these (read 24 September 2026)',
   'david david-of-georgia david-the-builder':
     'the prince of Argveti drowned in the Rioni with his brother Constantine in 740, Romanian 2 October, against the king of Georgia who rebuilt the country after the Seljuks and died in 1125, Romanian 26 January. Four centuries apart (read 19 September 2026)',
   'ioan john-of-edessa john-son-of-xenophon john-the-theologian':
     'three men called Ioan and nothing else shared: the soldier of Edessa who left the army under Diocletian and suffered at Alexandria with Cyrus, Romanian 31 January; the elder of Xenophon’s two sons, Romanian 26 January; and the apostle and evangelist (read 19 September 2026)',
   'maria maria-of-gatchina mary-sister-of-lykarion mary-wife-of-xenophon':
     'a third Maria joins the two of the Romanian 26 January: the virgin of Asia who with her sister Martha called out to a pagan governor from their door that they were Christians and was hung on a cross beside her and run through with a sword, sister of the child martyr Lykarion, Romanian 8 February. Her passion, her province and her day are all her own (read 24 September 2026). And, as before, the nun of Gatchina, paralysed, taken from her bed by the Cheka and dead in prison about 1930, against the wife of the nobleman Xenophon of Constantinople, who took the habit at Jerusalem with her husband and whose years doxologia gives not at all. Both fall on the Romanian 26 January, so the date scan cannot part them and the reading has to (read 19 September 2026)',
+  'eustatie eustathius-of-antioch eustathius-the-great-martyr':
+    'the archbishop who took the throne of Antioch after Philogonius, Romanian 21 February, against Placidas, the distinguished officer at Rome who was called Eustathius after his baptism, kept on 20 September. A see against a soldier (read 24 September 2026)',
   'leon leo-of-catania leo-the-great':
     'the pope of Rome, of Italy by race and son of Quintian, Romanian 18 February, against the bishop of Catania born in the metropolis of Ravenna, Romanian 20 February. Two days apart on the same calendar, which is what makes the fold worth stopping on, and two lives that share nothing but the name (read 24 September 2026)',
   'evghenie eugene-of-trebizond eugenius-the-confessor':

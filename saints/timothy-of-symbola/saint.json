@@ -1,0 +1,69 @@
+{
+  "slug": "timothy-of-symbola",
+  "display_name": "Timothy of Symbola",
+  "names": [
+    {
+      "form": "Timotei",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 februarie, «Sfântul Cuvios Timotei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 4",
+      "text": "Dumnezeul părinţilor noştri, Care Te porţi pururea cu noi după blândeţile Tale, nu depărta mila Ta de la noi, ci, pentru rugăciunile părinţilor noştri, îndreptează viaţa noastră în pace.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Timotei din Simboli, Glas 4",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-timotei-din-simboli",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who dealest with us always according to Thy gentleness, take not Thy mercy from us, but by the prayers of our fathers direct our life in peace.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 21 februarie — «Sfântul Cuvios Timotei»",
+        "url": "https://doxologia.ro/21-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

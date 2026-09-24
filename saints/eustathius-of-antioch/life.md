@@ -1,0 +1,15 @@
+# Eustathius of Antioch
+
+When Philogonius, archbishop of Antioch, died, this blessed Eustathius took the throne after him — a man truly worthy of such an office, famous, of holy life, of wisdom and of great zeal for the right faith, which was shown at the first council of the holy fathers at Nicaea, in the reign of Constantine the Great. Striving there with the fathers against Arius, he exposed that man's blasphemous opinion, which said that the Son of God is a creature and not a maker, and a stranger to the Father's honour and power.
+
+Shaming that blasphemous heresy and putting it under anathema, and confessing the Son to be of one essence with the Father, Eustathius stirred the heretics to envy, and above all Eusebius of Nicomedia and Theognis of Nicaea. After the death of the great Constantine, his son Constantius took the empire and took Arius's heresy with it; and defending it strongly he gave the Arians power to drive out the Church of the Orthodox and do it harm, confirming the heresy with that lawless and unjust authority.
+
+So Eusebius of Nicomedia, after the banishment of Paul the Confessor, patriarch of Constantinople, went towards Jerusalem with Theognis of Nicaea, came into Antioch, and there gathered an unjust council against the hierarch of Christ, put him out of his throne and cast him from his honour, inventing unjust charges against him: that he did not believe rightly but as Sabellius did, and that he lived in uncleanness. For Eusebius had paid a loose woman with great gifts to slander the saint, as though she had conceived by him and borne a child.
+
+The woman came into the middle of the council carrying the child in her arms, crying out that it was the archbishop's, and swore, wretched as she was, that she had it by Eustathius and by no other man. The council, judging so, deposed the saint and sent him into exile; and the innocent confessor of Christ, bearing that unjust slander and banishment, departed to the Lord in his exile and went to the heavenly country.
+
+The woman who had slandered him fell into a cruel and heavy sickness, and knowing that the punishment of God was on her for her unjust slander of an innocent and pure hierarch, she confessed the truth: that she had been paid with gold to say that thing of him, and by whom. As for her oath that she had conceived by Eustathius, it was true — but the man was Eustathius the blacksmith, and not Eustathius the archbishop.
+
+A hundred years later, when Zeno held the Greek empire, the honoured and holy body of our father among the saints Eustathius the Confessor was brought back from exile to Antioch with great honour, all the people going out to meet it some eighteen stadia and further, with singing, with candles and with incense. Doxologia prints no year for him anywhere in the life, and the page it offers as his troparion is a recording in Greek with no text.
+
+*After doxologia.ro's calendar for 21 februarie — [the day](https://doxologia.ro/21-februarie) and [the life](https://doxologia.ro/sfantul-ierarh-eustatie-arhiepiscopul-antiohiei); read 19 September 2026.*
