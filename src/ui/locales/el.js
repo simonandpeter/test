@@ -804,6 +804,7 @@ export const el = {
     'Deaconess of the Church of Rome': 'Διακόνισσα της Εκκλησίας της Ρώμης',
     'Elder of Moscow': 'Γέροντας Μόσχας',
     'Emperor': 'Αυτοκράτορας',
+    'Empress': 'Αυτοκράτειρα',
     'Father of monasticism': 'Πατέρας του μοναχισμού',
     'First Archbishop of Serbia': 'Πρώτος Αρχιεπίσκοπος Σερβίας',
     'First Bishop of Estonia': 'Πρώτος επίσκοπος Εσθονίας',

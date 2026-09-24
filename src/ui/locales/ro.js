@@ -803,6 +803,7 @@ export const ro = {
     'Deaconess of the Church of Rome': 'Diaconiță a Bisericii Romei',
     'Elder of Moscow': 'Stareț de Moscova',
     'Emperor': 'Împărat',
+    'Empress': 'Împărăteasă',
     'Father of monasticism': 'Părintele monahismului',
     'First Archbishop of Serbia': 'Primul arhiepiscop al Serbiei',
     'First Bishop of Estonia': 'Primul episcop al Estoniei',

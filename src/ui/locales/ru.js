@@ -822,6 +822,7 @@ export const ru = {
     'Deaconess of the Church of Rome': 'Диаконисса Римской Церкви',
     'Elder of Moscow': 'Старец Московский',
     'Emperor': 'Император',
+    'Empress': 'Императрица',
     'Father of monasticism': 'Отец монашества',
     'First Archbishop of Serbia': 'Первый архиепископ Сербский',
     'First Bishop of Estonia': 'Первый епископ Эстонии',
