@@ -1,0 +1,54 @@
+{
+  "slug": "basileus-of-amasea",
+  "display_name": "Basileus of Amasea",
+  "names": [
+    {
+      "form": "Vasilevs",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 aprilie, «Sfântul Sfințit Mucenic Vasilevs, Episcopul Amasiei»."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "related": [
+    "glaphyra"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 aprilie — «Sfântul Sfințit Mucenic Vasilevs, Episcopul Amasiei»",
+        "url": "https://doxologia.ro/26-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

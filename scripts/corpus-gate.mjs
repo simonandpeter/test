@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'vasilevs basileus-of-amasea basileus-of-cherson':
+    'the bishop of Amasea, the metropolis of Pontus, under Licinius, Romanian 26 April, against one of the bishops the patriarch of Jerusalem sent out in the sixteenth year of Diocletian, who was killed at Cherson, Romanian 7 March. Two bishops of one name in two persecutions (read 25 September 2026)',
   'valerie valerius valerius-of-the-forty-martyrs':
     'the martyr of the Romanian 23 April, whose page carries neither a Viață tab nor a Tropar tab and whose line is all the calendar gives, against one of the Forty frozen on the lake at Sebaste under Licinius, Romanian 9 March. A bare line against a named member of a named company, six weeks apart; nothing on the 23 April page puts him at Sebaste (read 25 September 2026)',
   'anastasie sinaitul anastasius-of-antioch anastasius-the-sinaite':
@@ -157,8 +159,8 @@ const READ_FOLDS = {
     'the martyr of the Romanian 25 February, whose day page prints «Sfântul Mucenic Ipatie» and whose linked life names him otherwise, against the bishop of Gangra in Paphlagonia who sat among the three hundred and eighteen fathers at Nicaea, Romanian 31 March. A martyr against a council father, on two days (read 25 September 2026)',
   'iona jonah-martyr-29-march jonah-of-moscow':
     'the martyr of the Romanian 29 March, whose page carries no life at all and only the service texts, against the metropolitan of Moscow and All Russia, Romanian 31 March, whose page likewise gives no life. Two bare lines two days apart, a martyr and a Russian hierarch, and the corpus keeps them apart on the calendar’s own words (read 25 September 2026)',
-  'chiril cyril-of-alexandria cyril-of-heliopolis cyril-of-jerusalem cyril-of-the-forty-martyrs':
-    'four men called Chiril: the archbishop of Alexandria born at Mahalla in 378, Romanian 18 January; the archbishop of Jerusalem of Constantius’s reign, Romanian 18 March; one of the Forty of Sebaste under Licinius, Romanian 9 March; and the deacon of Heliopolis whom the pagans of Julian’s reign killed, told by Theodoret in the same notice as Mark of Arethusa, Romanian 29 March. Four days, four cities, and no two of them one man (read 25 September 2026)',
+  'chiril cyril-of-alexandria cyril-of-axiopolis cyril-of-heliopolis cyril-of-jerusalem cyril-of-the-forty-martyrs':
+    'four men called Chiril: the archbishop of Alexandria born at Mahalla in 378, Romanian 18 January; the archbishop of Jerusalem of Constantius’s reign, Romanian 18 March; one of the Forty of Sebaste under Licinius, Romanian 9 March; and the deacon of Heliopolis whom the pagans of Julian’s reign killed, told by Theodoret in the same notice as Mark of Arethusa, Romanian 29 March. A fifth joins them, one of the three of Axiopolis at Cernavodă on the Danube, Romanian 26 April, whose line the calendar prints bare. Five days, five places, and no two of them one man (read 25 September 2026)',
   'marcu mark-of-arethusa mark-of-ephesus mark-the-ascetic mark-the-evangelist':
     'the bishop of Arethusa of Gregory of Nazianzus’s first oration against Julian, Romanian 29 March; Mark Eugenikos, born Manuel at Constantinople in 1392 and metropolitan of Ephesus, Romanian 19 January; and the ascetic and writer, Romanian 5 March. Eleven centuries between the first and the second. A fourth joins them, the Evangelist, Romanian 25 April (read 25 September 2026)',
   'zaharia zacharias-son-of-barachias zacharias-son-of-carion':

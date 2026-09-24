@@ -1,0 +1,53 @@
+{
+  "slug": "glaphyra",
+  "display_name": "Glaphyra",
+  "names": [
+    {
+      "form": "Glafira",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 aprilie, «Sfânta Cuvioasă Glafira»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "virgin"
+  ],
+  "related": [
+    "basileus-of-amasea"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 aprilie — «Sfânta Cuvioasă Glafira»",
+        "url": "https://doxologia.ro/26-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

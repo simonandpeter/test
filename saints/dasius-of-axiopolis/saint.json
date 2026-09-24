@@ -1,0 +1,58 @@
+{
+  "slug": "dasius-of-axiopolis",
+  "display_name": "Dasius of Axiopolis",
+  "names": [
+    {
+      "form": "Tasie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 aprilie, «Sfinții Mucenici Chiril, Chindeu și Tasie din Axiopolis (Cernavodă)»."
+    },
+    {
+      "form": "Dasie",
+      "lang": "ro",
+      "note": "The same man, spelled so in the headings doxologia.ro prints above its own articles on the page for the three: «Sfinţii Mucenici Chiril, Chindeu şi Dasie din Axiopolis (Cernavodă)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "cyril-of-axiopolis",
+    "quindeus-of-axiopolis"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 aprilie — «Sfinții Mucenici Chiril, Chindeu și Tasie din Axiopolis (Cernavodă)»",
+        "url": "https://doxologia.ro/26-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
