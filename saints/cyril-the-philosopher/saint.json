@@ -1,0 +1,60 @@
+{
+  "slug": "cyril-the-philosopher",
+  "display_name": "Cyril the Philosopher",
+  "names": [
+    {
+      "form": "Chiril",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 mai, «Sfântul Cuvios Chiril, Apostolul slavilor»."
+    },
+    {
+      "form": "Constantin",
+      "lang": "ro",
+      "note": "His name before the schema, read out of doxologia.ro's life: «pe Metodie și Constantin, care, mai pe urmă, s-a numit în sfânta schimă Chiril»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "presbyter"
+  ],
+  "related": [
+    "methodius-of-moravia",
+    "gregory-the-theologian"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 11 mai — «Sfântul Cuvios Chiril, Apostolul slavilor»",
+        "url": "https://doxologia.ro/11-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

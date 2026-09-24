@@ -1,0 +1,89 @@
+{
+  "slug": "dionysius-of-colciu",
+  "display_name": "Dionysius of Colciu",
+  "names": [
+    {
+      "form": "Dionisie Vatopedinul de la Colciu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 mai, «Sfântul Cuvios Dionisie Vatopedinul de la Colciu»."
+    },
+    {
+      "form": "Dumitru Ignat",
+      "lang": "ro",
+      "note": "His baptismal name, read out of doxologia.ro's life: «Cuviosul Dionisie Ignat … La botez a primit numele Dumitru»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1909,
+      "latest": 1909,
+      "display": "1909",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Dionisie Ignat s-a născut la 22 septembrie 1909, în comuna Vorniceni din judeţul Botoşani, într-o familie de ţărani cu opt copii.»"
+    },
+    "death": {
+      "earliest": 2004,
+      "latest": 2004,
+      "display": "2004",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Dionisie a trecut la cele veşnice în 28 aprilie/ 11 mai 2004, la vârsta de 95 de ani, dintre care 78 de ani petrecuţi în Sfântul Munte.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 11 mai — «Sfântul Cuvios Dionisie Vatopedinul de la Colciu»",
+        "url": "https://doxologia.ro/11-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul al 4-lea",
+      "text": "Cel ce privești cele din suflet prin harul dumnezeiesc locuitor întru tine, Părinte Dionisie, îndreptător preaînțelept al tuturor celor ce sârguiesc către tine, tu călăuzește-ne și de mână ne poartă, mântuitoarea cale să umblăm a pocăinței, de Duh purtătorule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Dionisie Vatopedinul de la Colciu», Glasul al 4-lea",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-dionisie-vatopedinul-de-la-colciu",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou who seest the things of the soul by the divine grace that dwells in thee, Father Dionysius, most wise guide of all who hasten to thee: lead us, and take us by the hand, that we may walk the saving way of repentance, O bearer of the Spirit.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

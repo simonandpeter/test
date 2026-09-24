@@ -1,0 +1,59 @@
+{
+  "slug": "olympia-of-lesvos",
+  "display_name": "Olympia of Lesvos",
+  "names": [
+    {
+      "form": "Olimpia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 mai, «Sfânta Muceniță Olimpia din Insula Lesvos»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "abbess",
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1235,
+      "latest": 1235,
+      "display": "1235",
+      "basis": "attested",
+      "note": "doxologia.ro: «Pe 11 mai, în anul 1235, pirații au atacat mănăstirea și au încercat la început să pângărească călugărițele.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 11 mai — «Sfânta Muceniță Olimpia din Insula Lesvos»",
+        "url": "https://doxologia.ro/11-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

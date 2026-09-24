@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'chiril cyril-of-alexandria cyril-of-axiopolis cyril-of-heliopolis cyril-of-jerusalem cyril-of-the-forty-martyrs cyril-the-philosopher':
+    'six men called Chiril, on six days: the patriarch of Alexandria dead 446, Romanian 18 January; the martyr of Axiopolis, Romanian 26 April; the deacon of Heliopolis killed under Julian, Romanian 29 March; the archbishop of Jerusalem, Romanian 18 March; one of the Forty frozen at Sebaste under Licinius, Romanian 9 March; and Constantine of Thessalonica, brother of Methodius and teacher of the Slavs, who took the name Cyril with the schema at the end of his life, Romanian 11 May (read 25 September 2026)',
+  'constantin constantine-of-georgia cyril-the-philosopher':
+    'the prince of Georgia martyred with his brother David in 740, Romanian 2 October, against the Constantine born at Thessalonica to Leo and Maria who is called Cyril the Philosopher, Romanian 11 May, and who bore the name Constantine until he took the schema. A Georgian prince and a Greek missionary to the Slavs (read 25 September 2026)',
+  'mochie mocius-of-amphipolis mocius-of-emesa':
+    'the reader of Emesa seized with the bishop Silvanus and the deacon Luke under Numerian in 284, Romanian 29 January, against the presbyter of Amphipolis in Macedonia who broke up the feast of Dionysus under Diocletian, Romanian 11 May. Two cities, two ranks, two days (read 25 September 2026)',
   'ciprian cyprian-companion-of-quadratus cyprian-martyr-10-may':
     'the bare line «Sfântul Mucenic Ciprian» of the Romanian 10 May, whose page opens neither a Viață nor a Tropar tab and gives no country and no century, against the martyr of Corinth taken with Quadratus under Decius and Valerian, Romanian 10 March. Two months apart, and nothing on the 10 May page puts that man at Corinth (read 25 September 2026)',
   'david david-of-gareji david-of-georgia david-of-wales david-the-builder':
