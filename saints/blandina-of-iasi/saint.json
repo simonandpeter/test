@@ -1,0 +1,70 @@
+{
+  "slug": "blandina-of-iasi",
+  "display_name": "Blandina of Iași",
+  "names": [
+    {
+      "form": "Blandina de la Iași",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 mai, «Sfânta Mărturisitoare Blandina de la Iași»."
+    },
+    {
+      "form": "Blondina Gobjilă",
+      "lang": "ro",
+      "note": "Her name in the world, read out of the first sentence of doxologia.ro's life: «Blondina Gobjilă, cunoscută îndeobște ca „mama Blandina”»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "confessor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1906,
+      "latest": 1906,
+      "display": "1906",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «s-a născut la 24 februarie 1906 în satul Grușenți-Chelmești din Basarabia, într-o familie de preot»."
+    },
+    "death": {
+      "earliest": 1971,
+      "latest": 1971,
+      "display": "1971",
+      "basis": "attested",
+      "note": "The book doxologia.ro's life cites at its foot: «Suferințele mamei Blondina (1906-1971), o martiră a Siberiei, ediția a treia, Editura Mănăstirea Sihăstria, 2010»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 mai — «Sfânta Mărturisitoare Blandina de la Iași»",
+        "url": "https://doxologia.ro/24-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

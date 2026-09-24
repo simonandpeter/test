@@ -1,0 +1,51 @@
+{
+  "slug": "symeon-of-the-wonderful-mountain",
+  "display_name": "Symeon of the Wonderful Mountain",
+  "names": [
+    {
+      "form": "Simeon cel din Muntele Minunat",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 mai, «Sfântul Cuvios Simeon cel din Muntele Minunat»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "stylite",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 mai — «Sfântul Cuvios Simeon cel din Muntele Minunat»",
+        "url": "https://doxologia.ro/24-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
