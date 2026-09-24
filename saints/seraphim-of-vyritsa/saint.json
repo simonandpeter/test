@@ -1,0 +1,67 @@
+{
+  "slug": "seraphim-of-vyritsa",
+  "display_name": "Seraphim of Vyritsa",
+  "names": [
+    {
+      "form": "Serafim de Virița",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 martie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1865,
+      "latest": 1865,
+      "display": "1865",
+      "basis": "attested",
+      "note": "doxologia.ro's life for the day: «Vasile Muraviev (viitorul Sfânt Serafim) s-a născut în anul 1865, în orașul Cheremovsky din provincia Yaroslavl»."
+    },
+    "death": {
+      "earliest": 1949,
+      "latest": 1949,
+      "display": "1949",
+      "basis": "attested",
+      "note": "doxologia.ro's life for the day: «Sfântul Serafim a plecat la Domnul la 21 martie 1949»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "The Romanian life says the Church of Russia canonised him in August 2000, but no Russian calendar was read for him: days.pravoslavie.ru was not checked (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 21 martie — «Sfântul Serafim de Virița»",
+        "url": "https://doxologia.ro/21-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

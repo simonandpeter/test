@@ -1,0 +1,79 @@
+{
+  "slug": "james-the-confessor",
+  "display_name": "James the Confessor",
+  "names": [
+    {
+      "form": "Iacob Mărturisitorul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 martie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "confessor",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 740,
+      "latest": 775,
+      "display": "740–775",
+      "basis": "traditional",
+      "note": "doxologia.ro's life for the day: «în timpul luptătorilor de icoane, sub împăratul Constantin Copronim (740-775), a fost silit să se lepede de închinarea cinstitelor icoane». The reign is the interval the page prints; it gives no year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 21 martie — «Sfântul Ierarh Iacob Mărturisitorul»",
+        "url": "https://doxologia.ro/21-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Îndreptător credinţei şi chip blândeţelor, învăţător înfrânârii te-a arătat pe tine, turmei tale, adevărul lucrurilor. Pentru aceasta ai dobândit cu smerenia cele înalte şi cu sărăcia cele bogate; Părinte Ierarhe Iacob, roagă pe Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Iacob Mărturisitorul",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-iacob-marturisitorul",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things revealed thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence; therefore thou hast won the heights by humility and riches by poverty. Father and hierarch James, entreat Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

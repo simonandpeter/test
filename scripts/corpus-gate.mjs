@@ -149,6 +149,10 @@ const READ_FOLDS = {
     'the martyr of Corinth whom the Romanian 31 January keeps with Diodorus and the rest, against the tribune of the Romanian 19 March, to whom the prefect handed Chrysanthus over to be forced to sacrifice, and who believed with his wife Hilaria and his household. A Corinthian passion against a Roman one, and the same fold repeats one name lower with Diodorus (read 25 September 2026)',
   'diodor diodorus-of-corinth diodorus-the-presbyter':
     'the martyr of Corinth of the Romanian 31 January against the presbyter of the Romanian 19 March, the priest who suffered with Chrysanthus and Daria at Rome, at the cave by the pit on the Salarian way where the Christians kept their day. The two folds are the same two days and the same two companies (read 25 September 2026)',
+  'serapion serapion-of-corinth serapion-venerable-21-march':
+    'the martyr whom the Romanian 31 January keeps at Corinth against the venerable of the Romanian 21 March, of whom doxologia prints «Sfantul Cuvios Serapion», the day and nothing else — no Viata tab, no Tropar tab. A martyr against a cuvios, and two months apart (read 25 September 2026)',
+  'toma thomas-of-constantinople thomas-the-apostle':
+    'the apostle against the patriarch of Constantinople of the Romanian 21 March, who was made deacon of the Great Church by John the Faster and came to the throne after Cyriacus. Nothing shared but the name (read 25 September 2026)',
   'conon conon-of-isauria conon-the-gardener':
     'two martyrs of one name on one day, which is the fold hardest to part and the one doxologia parts itself: «Sfantul Mucenic Conon din Isauria», son of Nestor and Nada of the village Vidania, baptised by the Archangel Michael in the generation the apostle Paul preached to Isauria, against «Sfantul Mucenic Conon Gradinarul», of Nazareth by descent, who kept a garden at Carmila outside Mandon in Pamphylia and was taken under Decius by the governor Publius. Two lines on the 5 March page, two epithets, two lives, two centuries (read 25 September 2026)',
   'evloghie eulogius-of-alexandria eulogius-of-palestine':

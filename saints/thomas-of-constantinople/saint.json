@@ -1,0 +1,63 @@
+{
+  "slug": "thomas-of-constantinople",
+  "display_name": "Thomas of Constantinople",
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Toma",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 martie, «Sfântul Ierarh Toma, Patriarhul Constantinopolului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "related": [
+    "john-the-faster-patriarch-of-constantinople"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 602,
+      "latest": 610,
+      "display": "602–610",
+      "basis": "traditional",
+      "note": "doxologia.ro's life for the day: he was chosen patriarch «în vremea împărăției tiranului Foca(602-610)» and departed «în vremea împărăției aceluiași Foca», having shepherded the Church «trei ani și două luni». The reign is the interval the page prints; it gives no year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 21 martie — «Sfântul Ierarh Toma, Patriarhul Constantinopolului»",
+        "url": "https://doxologia.ro/21-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
