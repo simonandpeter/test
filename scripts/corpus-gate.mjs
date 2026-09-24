@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'alfeu alphaeus-martyr-10-may alphaeus-the-apostle':
+    'two bare lines of the Romanian calendar, neither with a life: «Sfântul Mucenic Alfeu» of 10 May, a martyr, and «Sfântul Apostol Alfeu» of 26 May, an apostle. Sixteen days apart, two different ranks, and neither page gives a country or a century (read 25 September 2026)',
+  'elena helen-martyr-26-may helen-the-empress':
+    'the bare line of the Romanian 26 May, a martyr with no epithet, no city, no country and no century, whose page opens no life, against the mother of Constantine the Great, empress and equal-to-the-apostles, Romanian 21 May (read 25 September 2026)',
   'celestin celestine-martyr-25-may celestine-of-rome':
     'the bare line of the Romanian 25 May, a martyr with no epithet, no city, no country and no century, whose page opens no life, against the hierarch and bishop of Rome, Romanian 8 April. A martyr and a hierarch, six weeks apart (read 25 September 2026)',
   'marciana marciana-martyr-24-may marciana-the-empress':

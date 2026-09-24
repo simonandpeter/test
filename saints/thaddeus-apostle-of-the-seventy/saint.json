@@ -10,6 +10,11 @@
     {
       "form": "Свети апостол Тадеј",
       "lang": "sr"
+    },
+    {
+      "form": "Tadeu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 mai, «Sfântul Apostol Tadeu»."
     }
   ],
   "sex": "male",
@@ -42,8 +47,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 21 august was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 mai — «Sfântul Apostol Tadeu»",
+        "url": "https://doxologia.ro/26-mai",
+        "year": 2026
+      },
+      "note": "doxologia.ro's life for this day is the life of this man — Thaddeus of Edessa, one of the seventy, sent to Abgar — so the Romanian row is this folder's and not a second Thaddeus's. Only doxologia's 26 mai page was read; its page for 21 august, the day the Russian and Serbian calendars keep him, was not read (24 September 2026), so whether the Romanian calendar also names him there is unknown."
     },
     {
       "church": "greek",
@@ -118,6 +133,22 @@
       },
       "english": {
         "text": "As a most radiant star hath the Church gained thee, O apostle Thaddeus, being ever enlightened by thy wonders; save thou those who with faith honour thy memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Apostole Sfinte Tadeu, roagă pe Milostivul Dumnezeu, ca să dăruiască iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Apostol Tadeu», Glasul 3",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-tadeu",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy apostle Thaddeus, entreat the merciful God to grant our souls forgiveness of our sins.",
         "rendered": "site"
       }
     }
