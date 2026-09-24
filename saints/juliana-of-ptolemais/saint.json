@@ -5,6 +5,11 @@
     {
       "form": "Иулиания",
       "lang": "ru"
+    },
+    {
+      "form": "Iuliana",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 martie, «Sfânta Muceniţă Iuliana»."
     }
   ],
   "sex": "female",
@@ -37,8 +42,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 17 august was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 martie — «Sfânta Muceniţă Iuliana»",
+        "url": "https://doxologia.ro/4-martie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -56,5 +70,23 @@
   },
   "related": [
     "paul-of-ptolemais"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoințele lor, cununile nestricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au și ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuiește sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinților Mucenici Pavel și sora sa Iuliana",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-pavel-sora-sa-iuliana",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contests received crowns of incorruption from Thee, our God; for having Thy strength they overcame their tormentors, and broke the strengthless daring of the demons. At their prayers, O Christ our God, save Thou our souls.",
+        "rendered": "site"
+      }
+    }
   ]
 }

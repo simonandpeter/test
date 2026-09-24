@@ -1,0 +1,80 @@
+{
+  "slug": "gerasimus-of-the-jordan",
+  "display_name": "Gerasimus of the Jordan",
+  "names": [
+    {
+      "form": "Gherasim",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 martie, «Sfântul Cuvios Gherasim de la Iordan»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "related": [
+    "cyriacus-the-anchorite"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 475,
+      "latest": 475,
+      "display": "475",
+      "basis": "traditional",
+      "note": "doxologia.ro's own closing note weighs the sources and concludes: «a ajuns până la domnia lui Zenon (474-481), întru a cărui vreme, în anul al doilea, Cuviosul Gherasim a murit. Și a fost această moarte în anul 475, după nașterea lui Hristos, indictionul 13». The same note rejects the Prologue's placing of him under Constantine the Bearded (668-685)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 martie — «Sfântul Cuvios Gherasim de la Iordan»",
+        "url": "https://doxologia.ro/4-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Gherasim, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Gherasim de la Iordan",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-gherasim-de-la-iordan",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou wast made a light to the world, shining with wonders, Gerasimus our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
