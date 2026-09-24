@@ -1,0 +1,13 @@
+# Julius the Veteran
+
+Julius was a soldier of the Roman army at Durostorum in the province of Moesia Inferior. Doxologia's life sets him in the persecution under Diocletian (284–305) and his son-in-law Maximian Galerius (305–311): after the victory over the Persians in 297, Galerius held the Christians unjustly to blame for the weakening and decay of the empire, and decided to put Christian soldiers out of the army, because they would not show valour by killing its enemies in battle.
+
+Julius was brought to judgement at Durostorum before Maximus, the governor of the place, who was told that the veteran would not obey the emperors' command to sacrifice to the gods. Julius answered that what the servants said was true. «I do not despise the commands», he said, «but I am a Christian and cannot do what you want. For it is not fitting that I should forget my true and living God.» He had done a soldier's duty: six times he had gone to war and fought, behind no one.
+
+Maximus urged him gently — it was no great thing to offer incense and go away — and then offered him his discharge with the pay of twenty years' service, so that he might go home in safety and nobody be troubled on his account. Julius answered that this money of the devil and his cunning counsel should not rob him of the everlasting light; he could not deny God, and he asked that sentence be given against him as against a Christian.
+
+The governor warned him of the sword, and Julius asked him to carry out his thought, so that his vows might be completed. Told that he was foolish to fear a crucified and dead man more than living emperors, he answered that Christ died for our sins to give us eternal life and remains to the ages, and that whoever confesses Him will have life and whoever denies Him everlasting punishment. Maximus gave sentence: Julius, unwilling to submit to the emperors' commands, receives the punishment of beheading.
+
+As he was led to the place of execution all kissed him. Hesychius, a Christian soldier who was imprisoned with him, asked him to fulfil his promise with joy, to receive the crown, and to remember him, for he would follow shortly; and he asked him to greet Pasicrate and Valentin, servants of God, whom doxologia names as having gone before them to the Lord by a good confession. Julius kissed him, told him to hurry into the Kingdom of Heaven, bound his eyes with a cloth and covered his head, and prayed Christ to receive his soul among His martyrs. He was beheaded with the sword.
+
+*After doxologia.ro's calendar for 27 mai — [the day](https://doxologia.ro/27-mai) and [the life](https://doxologia.ro/sfantul-mucenic-iuliu-veteranul); read 24 September 2026.*

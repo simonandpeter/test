@@ -1,0 +1,69 @@
+{
+  "slug": "therapon-of-sardis",
+  "display_name": "Therapon of Sardis",
+  "office": "Bishop of Sardis",
+  "names": [
+    {
+      "form": "Terapont",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 mai, «Sfântul Sfințit Mucenic Terapont, Episcopul Sardei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 mai — «Sfântul Sfințit Mucenic Terapont, Episcopul Sardei»",
+        "url": "https://doxologia.ro/27-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Dumnezeul părinţilor noştri, Care faci pururea cu noi după blândeţile Tale, nu îndepărta mila Ta de la noi; ci pentru rugăciunile lor, în pace îndreptează viaţa noastră.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfinţit Mucenic Terapont, Episcopul Sardei; the text doxologia prints here is the common of hieromartyrs, which it prints unchanged for Helladius on the same day.",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-terapont-episcopul-sardei",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who dealest with us always according to Thy gentleness, take not Thy mercy from us; but at their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "slug": "john-the-russian",
+  "display_name": "John the Russian",
+  "names": [
+    {
+      "form": "Ioan Rusul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 mai, «Sfântul Mărturisitor Ioan Rusul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1690,
+      "latest": 1690,
+      "display": "probably 1690",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Anul cel mai probabil al nașterii sale este 1690, și aceasta deoarece sfântul a participat ca soldat la războiul pe care îndrăznețul țar l-a întreprins împotriva turcilor în 1711.»"
+    },
+    "death": {
+      "earliest": 1730,
+      "latest": 1730,
+      "display": "1730",
+      "basis": "attested",
+      "note": "doxologia.ro's life, of his repose in the stable at Prokopi: «Acestea s-au petrecut pe 27 mai, 1730.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 mai — «Sfântul Mărturisitor Ioan Rusul»",
+        "url": "https://doxologia.ro/27-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "model": "Fecioara astăzi...",
+      "text": "Cel ce te-a chemat pe tine de pe pământ la lumea cea cerească, ține și după moarte, neschimbat, trupul tău, Sfinte. Căci tu în Asia ai fost dus prizonier și acolo te-ai unit cu Hristos, Ioane. Deci pe Acela roagă-l să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ioan Rusul",
+        "url": "https://doxologia.ro/troparul-sfantului-ioan-rusul",
+        "year": 2026
+      },
+      "english": {
+        "text": "He who called thee from earth to the world of heaven keeps thy body even after death unchanged, O holy one. For thou wast carried captive into Asia, and there wast joined to Christ, O John. Pray thou to Him, then, that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "slug": "helladius-27-may",
+  "display_name": "Helladius (27 May)",
+  "names": [
+    {
+      "form": "Eladie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 mai, «Sfântul Sfințit Mucenic Eladie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 mai — «Sfântul Sfințit Mucenic Eladie»",
+        "url": "https://doxologia.ro/27-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "model": "Arătatu-Te-ai astăzi...",
+      "text": "Arătatu-te-ai mare îndreptător nouă, sfinte, prin rugăciunile tale cele către Dumnezeu. Pentru aceasta astăzi te cinstim pe tine, sfinţite pătimitorule Eladie, pururea mărite.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Sfinţit Mucenic Eladie",
+        "url": "https://doxologia.ro/condacul-sfantului-sfintit-mucenic-eladie",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou hast shown thyself a great setter-right for us, O holy one, through thy prayers to God. Therefore we honour thee today, O consecrated sufferer Helladius, ever-glorious.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Dumnezeul părinţilor noştri, Care faci pururea cu noi după blândeţile Tale, nu îndepărta mila Ta de la noi; ci pentru rugăciunile lor, în pace îndreptează viaţa noastră.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfinţit Mucenic Eladie; the text is the common of hieromartyrs, printed unchanged for Therapon of Sardis on the same day.",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-eladie",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who dealest with us always according to Thy gentleness, take not Thy mercy from us; but at their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

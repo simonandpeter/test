@@ -1,0 +1,77 @@
+{
+  "slug": "julius-the-veteran",
+  "display_name": "Julius the Veteran",
+  "names": [
+    {
+      "form": "Iuliu Veteranul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 mai, «Sfântul Mucenic Iuliu Veteranul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 311,
+      "display": "between 284 and 311",
+      "basis": "traditional",
+      "note": "doxologia.ro's life opens «În timpul persecuției împăraților Dioclețian (284-305) și Maximian Galeriu (305-311)» and dates the decree that removed Christian soldiers from the army to after the victory over the Persians «în anul 297». The page states no year for his death; the interval recorded is the span of the two reigns it does print."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 mai — «Sfântul Mucenic Iuliu Veteranul»",
+        "url": "https://doxologia.ro/27-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 5",
+      "text": "Cu podoaba virtuților strălucind și împodobit cu lumina muceniciei fiind, Sfinte Iuliu, strălucești mai mult decât soarele, diamantule slăvit, luminând pe cei ce-ți fac cu dragoste pomenirea cea delumină-purtătoare, de-Hristos încununatule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Iuliu Veteranul",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-iuliu-veteranul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining with the adornment of the virtues and arrayed in the light of martyrdom, holy Julius, thou shinest brighter than the sun, O glorious diamond, giving light to those who keep with love thy light-bearing memory, thou who art crowned by Christ.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
