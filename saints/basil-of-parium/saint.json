@@ -1,0 +1,70 @@
+{
+  "slug": "basil-of-parium",
+  "display_name": "Basil of Parium",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Vasile",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 aprilie, «Sfântul Ierarh Vasile Mărturisitorul, Episcopul Pariei»; the bare personal name, without the rank the line carries."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 aprilie — «Sfântul Ierarh Vasile Mărturisitorul, Episcopul Pariei»",
+        "url": "https://doxologia.ro/12-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Îndreptător credinţei şi chip blândeţelor, învăţător înfrânârii te-a arătat pe tine, turmei tale, adevărul lucrurilor. Pentru aceasta ai dobândit cu smerenia cele înalte şi cu sărăcia cele bogate; Părinte Ierarhe Vasile, roagă pe Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Ierarh Vasile Mărturisitorul, Episcop de Parion», Glasul 4; the reading «înfrânârii» is the page's own",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-vasile-marturisitorul-episcop-de-parion",
+        "year": 2026
+      },
+      "english": {
+        "text": "A rule of faith and an image of gentleness, a teacher of abstinence: so the truth of things has shown you to your flock. Therefore you gained by humility the things on high, and by poverty the things that are rich. Father and hierarch Basil, entreat Christ God to save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

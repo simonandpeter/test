@@ -1,0 +1,62 @@
+{
+  "slug": "athanasia-of-aegina",
+  "display_name": "Athanasia of Aegina",
+  "names": [
+    {
+      "form": "Atanasia de la Eghina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 aprilie, «Sfânta Cuvioasă Atanasia de la Eghina»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "abbess",
+    "nun",
+    "wonderworker"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 860,
+      "latest": 860,
+      "display": "860",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «trecerea ei la cele veșnice s-a petrecut la 14 august 860», and again, of her last day, «Era 14 august 860». The same page dates the writing of her life «în jurul anului 916» and the finding of her relics to 861."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "The calendar keeps her on 12 April; the life the same site carries dates her repose to 14 August 860 and the finding of her relics to 861, and gives no reason for the April day."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 aprilie — «Sfânta Cuvioasă Atanasia de la Eghina»",
+        "url": "https://doxologia.ro/12-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
