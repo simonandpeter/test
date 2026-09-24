@@ -1,0 +1,70 @@
+{
+  "slug": "maura-wife-of-timothy",
+  "display_name": "Maura, wife of Timothy",
+  "names": [
+    {
+      "form": "Mavra",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 mai, «Sfânta Muceniță Mavra»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "timothy-husband-of-maura"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 3 mai — «Sfânta Muceniță Mavra»",
+        "url": "https://doxologia.ro/3-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 3 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nestricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Mucenici Timotei și Mavra», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-timotei-mavra",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their struggles have won from Thee, our God, the crowns of incorruption; for having Thy strength, they overthrew their tormentors and broke the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'diodor diodorus-martyr-3-may diodorus-of-corinth diodorus-the-presbyter':
+    'the bare line of the Romanian 3 May, whose page gives no country, no century, no death and no hymn, and whom the calendar sets beside the deacon Rhodopianus without saying they suffered together; against one of the seven of Corinth, Romanian 31 January, whose page is the page of all seven; against the priest who suffered with Chrysanthus and Daria at Rome, Romanian 19 March. Three days; nothing on the 3 May page puts that man at Corinth (read 25 September 2026)',
+  'irodion herodion-of-lainici herodion-the-apostle':
+    'the Romanian hesychast born Ioan at Bucharest in 1821 and tonsured at Cernica under the elder Calinic, Romanian 3 May, against the apostle of the Seventy, Romanian 8 April. Eighteen centuries apart (read 25 September 2026)',
+  'timotei timothy-disciple-of-babylas timothy-husband-of-maura timothy-of-ephesus timothy-of-symbola':
+    'four men called Timotei: the disciple of Babylas of Antioch, Romanian 24 January; the husband of Maura, brought before Arian the governor of the Thebaid, Romanian 3 May; the apostle of Ephesus out of Lycaonia, Romanian 22 January; and the monk of Symbola near Mount Olympus, Romanian 21 February. Four days and four lives (read 25 September 2026)',
   'dimitrie demetrius-of-georgia ignatius-brianchaninov':
     'not two saints sharing a forename but one form standing for two people: Ignatius Brianchaninov, Romanian 30 April, was christened Dimitri and the corpus stores that baptismal form beside his monastic one, so it folds onto Demetrius of Georgia, Romanian 16 March. The same shape as Platon Kulbusch and the Pauls below (read 25 September 2026)',
   'filimon philemon-of-cyzicus philemon-of-gaza':

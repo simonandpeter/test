@@ -1,0 +1,66 @@
+{
+  "slug": "herodion-of-lainici",
+  "display_name": "Herodion of Lainici",
+  "names": [
+    {
+      "form": "Irodion",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 mai, «Sfântul Cuvios Irodion de la Lainici»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1821,
+      "latest": 1821,
+      "display": "1821",
+      "basis": "attested",
+      "note": "doxologia.ro: «S-a născut în 1821 la București primind numele la botez de Ioan»."
+    },
+    "death": {
+      "earliest": 1900,
+      "latest": 1900,
+      "display": "1900",
+      "basis": "attested",
+      "note": "doxologia.ro: «Pe 3 mai 1900 Cuviosul Irodion se mută la Domnul»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 3 mai — «Sfântul Cuvios Irodion de la Lainici»",
+        "url": "https://doxologia.ro/3-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 3 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

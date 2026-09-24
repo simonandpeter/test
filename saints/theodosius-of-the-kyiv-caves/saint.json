@@ -10,6 +10,11 @@
       "form": "Θεοδόσιος",
       "lang": "el",
       "note": "From «Όσιος Θεοδόσιος καθηγούμενος της Λαύρας των Σπηλαίων του Κιέβου» in this folder's Greek citation; the office is its own field here."
+    },
+    {
+      "form": "Teodosie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 mai, «Sfântul Cuvios Teodosie de la Lavra Pecerska»."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 3 mai — «Sfântul Cuvios Teodosie de la Lavra Pecerska»",
+        "url": "https://doxologia.ro/3-mai",
+        "year": 2026
+      },
+      "note": "His principal feast, his repose, as the Romanian calendar keeps it; doxologia's life of him ends by saying that from 1108 he began to be commemorated «în fiecare an la 3 mai»."
     },
     {
       "church": "greek",
@@ -123,6 +138,22 @@
       },
       "english": {
         "text": "Let us praise the firm pillars of piety, the unshaken foundations of the monastic ordinances, and the unassailable walls of Rus': Anthony who loved God, and Theodosius who was beloved of God; for He who alone is glorified in His saints received their labours and ascetic struggles above every whole burnt offering.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Înălțându-te asupra faptelor bune, de tânăr ai iubit viața călugărească și cu dorirea ta vitejește ajungând, te-ai sălășluit în peșteră și ai împodobit viața ta cu postirea și cu luminarea, întru rugăciuni ca un fără de trup ai petrecut, și ca o făclie luminoasă ai strălucit, părinte Teodosie, roagă pe Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Teodosie de la Lavra Pecerska», Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-teodosie-de-la-lavra-pecerska",
+        "year": 2026
+      },
+      "english": {
+        "text": "Raised above the virtues, from your youth you loved the monastic life, and reaching it bravely by your desire you made your dwelling in the cave and adorned your life with fasting and with light; in prayer you lived as one without a body, and you shone as a bright lamp. Father Theodosius, pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
     }

@@ -1,0 +1,60 @@
+{
+  "slug": "ahmed-the-calligrapher",
+  "display_name": "Ahmed the Calligrapher",
+  "names": [
+    {
+      "form": "Ahmed",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 mai, «Sfântul Mucenic Ahmed Caligraful»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1682,
+      "latest": 1682,
+      "display": "1682",
+      "basis": "attested",
+      "note": "doxologia.ro: «a murit ca martir creștin ortodox la 3 mai 1682»; the same page: «A fost torturat și condamnat la moarte prin decapitare în data de 3 mai 1682»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian",
+        "note": "doxologia.ro keeps him twice: his own page closes «Sfântul Mucenic Ahmed este prăznuit pe 24 decembrie și 3 mai». One row is one feast, so 3 May, the day of his beheading and the day this calendar line was read, is the row; he is not rendered on 24 December."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 3 mai — «Sfântul Mucenic Ahmed Caligraful»",
+        "url": "https://doxologia.ro/3-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 3 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
