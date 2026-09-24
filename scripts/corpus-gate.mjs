@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'iosif joseph-the-hymnographer joseph-the-merciful':
+    'the hymnographer, born in Sicily of Plotinus and Agatha, Romanian 4 April, against Joseph Naniescu, metropolitan of Moldavia, born at Răzălăi in Soroca in 1818 and christened Ioan, Romanian 26 January. A Byzantine hymn-writer against a nineteenth-century Romanian hierarch (read 25 September 2026)',
+  'zosima zosimas-of-cilicia zosimas-of-palestine':
+    'the monk of Cilicia whom the governor Domitian tortured and to whose torment a lion came out of the desert, Romanian 4 January, against the monk of the monastery by the Jordan under Theodosius the Younger who found Mary of Egypt and carried her the Communion, Romanian 4 April. Two deserts, two days (read 25 September 2026)',
   'marturisitorul nichita nicetas-of-apollonias nicetas-of-medikion':
     'two confessors of the war on the icons, and doxologia prints both under the same words, «Nichita Mărturisitorul», which is why the fold is exact. The first is the bishop of Apollonias whose life on the page is two sentences long, Romanian 20 March; the second is of Medikion, born at Caesarea of Bithynia, whose father Philaret was tonsured a monk when the mother died on the eighth day after the birth, Romanian 3 April. One generation, one persecution, two men and two days (read 25 September 2026)',
   'aedesius amphianus brother aedesius-brother-of-amphianus amphianus-brother-of-aedesius':

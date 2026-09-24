@@ -1,0 +1,70 @@
+{
+  "slug": "theonas-of-thessalonica",
+  "display_name": "Theonas of Thessalonica",
+  "office": "Archbishop of Thessalonica",
+  "names": [
+    {
+      "form": "Teona",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 aprilie, «Sfântul Ierarh Teona, Arhiepiscopul Tesalonicului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop",
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1450,
+      "latest": 1500,
+      "display": "late 15th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfântul Teona s-a născut în a doua jumătate a secolului al XV-lea.»"
+    },
+    "death": {
+      "earliest": 1542,
+      "latest": 1542,
+      "display": "1542",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Teona a trecut la Domnul la 4 aprilie 1542»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "The life page adds a second, movable commemoration: «Pomenirea lui se cinstește la data de 4 aprilie și în a patra duminică a Postului Mare» — also on the fourth Sunday of Great Lent, which is not a fixed day and is not held here."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 aprilie — «Sfântul Ierarh Teona, Arhiepiscopul Tesalonicului»",
+        "url": "https://doxologia.ro/4-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

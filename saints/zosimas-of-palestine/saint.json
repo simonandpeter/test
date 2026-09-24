@@ -1,0 +1,54 @@
+{
+  "slug": "zosimas-of-palestine",
+  "display_name": "Zosimas of Palestine",
+  "names": [
+    {
+      "form": "Zosima",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 aprilie, «Sfântul Cuvios Zosima»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "hieromonk"
+  ],
+  "related": [
+    "mary-of-egypt"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 aprilie — «Sfântul Cuvios Zosima»",
+        "url": "https://doxologia.ro/4-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "slug": "joseph-the-hymnographer",
+  "display_name": "Joseph the Hymnographer",
+  "names": [
+    {
+      "form": "Iosif",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 aprilie, «Sfântul Cuvios Iosif, scriitorul de cântări»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hymnographer",
+    "hieromonk",
+    "abbot",
+    "confessor"
+  ],
+  "related": [
+    "bartholomew-the-apostle"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 883,
+      "latest": 883,
+      "display": "883",
+      "basis": "attested",
+      "note": "doxologia.ro's closing note: «s-a săvârșit pe vremea împărăției lui Vasile Macedon, în anul de la facerea lumii 6391, iar de la întruparea Cuvântului lui Dumnezeu 883, în a patra zi a lunii Aprilie, în săptămâna luminată a Învierii lui Hristos»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 aprilie — «Sfântul Cuvios Iosif, scriitorul de cântări»",
+        "url": "https://doxologia.ro/4-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Iosif, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Iosif Imnograful, Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-iosif-imnograful",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with miracles, O Joseph our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
