@@ -1,0 +1,69 @@
+{
+  "slug": "theodore-the-sanctified",
+  "display_name": "Theodore the Sanctified",
+  "names": [
+    {
+      "form": "Teodor cel Sfințit",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 mai, «Sfântul Cuvios Teodor cel Sfințit»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 16 mai — «Sfântul Cuvios Teodor cel Sfințit»",
+        "url": "https://doxologia.ro/16-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Locuitor pustiului şi înger în trup şi de minuni făcător te-ai arătat, purtătorule de Dumnezeu, părintele nostru Teodor; cu postul, cu privegherea, cu rugăciunea, cereşti daruri luând, vindeci pe cei bolnavi şi sufletele celor ce aleargă la tine cu credinţă. Slavă Celui ce ţi-a dat ţie putere; slavă Celui ce te-a încununat pe tine; Slavă Celui ce lucrează prin tine tuturor tămăduiri.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Teodor cel Sfințit», Glasul 1",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-teodor-cel-sfintit",
+        "year": 2026
+      },
+      "english": {
+        "text": "A dweller of the desert and an angel in the body and a worker of wonders wast thou shown to be, our God-bearing father Theodore; receiving heavenly gifts by fasting, by vigil and by prayer, thou healest the sick and the souls of those who run to thee with faith. Glory to Him who gave thee strength; glory to Him who crowned thee; glory to Him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

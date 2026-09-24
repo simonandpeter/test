@@ -1,0 +1,89 @@
+{
+  "slug": "nathan-of-sihastria-putnei",
+  "display_name": "Nathan of Sihăstria Putnei",
+  "names": [
+    {
+      "form": "Natan",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 mai, «Sfinții Cuvioși Sila, Paisie și Natan de la Sihăstria Putnei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "abbot"
+  ],
+  "related": [
+    "silas-of-sihastria-putnei",
+    "paisius-of-sihastria-putnei"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1717,
+      "latest": 1717,
+      "display": "1717",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Sfântul Cuvios Natan s-a născut în anul 1717, fiind originar din Pașcani»."
+    },
+    "death": {
+      "earliest": 1784,
+      "latest": 1784,
+      "display": "1784",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Cuviosul ieroschimonah Natan s-a mutat la Domnul … pe 26 decembrie 1784»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 16 mai — «Sfinții Cuvioși Sila, Paisie și Natan de la Sihăstria Putnei»",
+        "url": "https://doxologia.ro/16-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Mărturisitori ai dreptei credinţe şi apărători ai neamului românesc v-aţi arătat, Sfinţilor Cuvioşi Sila, Paisie şi Natan. Cu postul, cu privegherea şi cu rugăciunea ostenindu-vă, cereştile daruri aţi luat. Rugaţi-vă lui Hristos Dumnezeu să se mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Cuvioși Sila, Paisie și Natan de la Sihăstria Putnei», Glasul 1 — the one troparion the page prints for the three together",
+        "url": "https://doxologia.ro/troparul-sfintilor-cuviosi-sila-paisie-natan-de-la-sihastria-putnei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Confessors of the right faith and defenders of the Romanian people have ye shown yourselves to be, holy venerable ones Silas, Paisius and Nathan. Labouring with fasting, with vigil and with prayer, ye received the gifts of heaven. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

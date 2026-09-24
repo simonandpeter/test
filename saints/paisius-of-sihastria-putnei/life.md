@@ -1,0 +1,9 @@
+# Paisius of Sihăstria Putnei
+
+Paisius was born in 1701 and entered the monastic life young. For his worthiness he was ordained deacon and then priest, and became abbot of the monastery of Saint Elias, from which he passed to the monastery of Râșca. After a time he came to the skete of Sihăstria Putnei, where the monks of Putna withdrew who wanted more prayer and stillness, and there he lived in deep humility.
+
+He was never abbot of the skete. What doxologia records of him is that he was a burning man of prayer, that he held up in the Orthodox faith everyone who came to him, above all in the time of foreign rule, and that he had received from God the gift of foresight, which, added to his other virtues, made him honoured by all as a great spiritual father. With the abbots [Silas](/saints/silas-of-sihastria-putnei) and [Nathan](/saints/nathan-of-sihastria-putnei) he was a witness of the hardships of the Austrian years, and proved a zealous struggler through them. He passed to eternity in peace on 16 December 1784.
+
+The skete fell empty soon after the three hieroschemamonks had died, and stayed so for more than two hundred years. At the beginning of Lent in 1990 a monk of Putna living on the site of the old skete saw a heavenly light above the porch of the ruined church; and on 24 April 1990, when the rebuilding began, the three graves were found in that porch, the bones yellow as wax and giving off a sweet scent. Many healings followed at the reliquary, and the Holy Synod of the Romanian Orthodox Church numbered Silas, Paisius and Nathan among the saints at its session of 6–7 June 2016, with 16 May as their day.
+
+*After doxologia.ro's calendar for 16 mai — [the day](https://doxologia.ro/16-mai), [the life of the three](https://doxologia.ro/viata-sfintilor-cuviosi-sila-paisie-natan-de-la-sihastria-putnei) and [their troparion](https://doxologia.ro/troparul-sfintilor-cuviosi-sila-paisie-natan-de-la-sihastria-putnei); read 24 September 2026.*

@@ -1,0 +1,11 @@
+# Nathan of Sihăstria Putnei
+
+Nathan was born in 1717 and came from Pașcani. He lived first at the monastery of Putna, where he was ecclesiarch and where he was ordained deacon and then priest. Wanting more prayer and stillness, he withdrew to the skete of Sihăstria Putnei, and there received the great schema with the name Nathan. He was known as a very skilled confessor, and was the spiritual father of the great metropolitan Jacob Putneanul himself; and the monks who struggled beside him, and the pilgrims who came, honoured him as a true father and a keeper of the good Orthodox order.
+
+He occupied himself also with the copying of manuscripts and with the drawing up of the founders' commemoration books. In 1781 he was appointed abbot by [Silas](/saints/silas-of-sihastria-putnei), who was preparing for his own death. Though he was old, the hieroschemamonk Nathan carried on his predecessor's spiritual work with much zeal and self-sacrifice, guiding the community entrusted to him for three years and a half, while the want and the hardship grew worse under the Habsburg occupation.
+
+At the end of a life given to God in poverty and purity, having borne the weight of illness with much patience and unceasing prayer, he passed to the Lord on 26 December 1784, the day after the Nativity of Christ.
+
+The skete fell empty soon after the three hieroschemamonks had died, and stayed so for more than two hundred years. At the beginning of Lent in 1990 a monk of Putna living on the site of the old skete saw a heavenly light above the porch of the ruined church; and on 24 April 1990, when the rebuilding began, the three graves were found in that porch, the bones yellow as wax and giving off a sweet scent. Many healings followed at the reliquary, and the Holy Synod of the Romanian Orthodox Church numbered Silas, [Paisius](/saints/paisius-of-sihastria-putnei) and Nathan among the saints at its session of 6–7 June 2016, with 16 May as their day.
+
+*After doxologia.ro's calendar for 16 mai — [the day](https://doxologia.ro/16-mai), [the life of the three](https://doxologia.ro/viata-sfintilor-cuviosi-sila-paisie-natan-de-la-sihastria-putnei) and [their troparion](https://doxologia.ro/troparul-sfintilor-cuviosi-sila-paisie-natan-de-la-sihastria-putnei); read 24 September 2026.*

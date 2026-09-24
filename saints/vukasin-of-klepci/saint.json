@@ -1,0 +1,64 @@
+{
+  "slug": "vukasin-of-klepci",
+  "display_name": "Vukašin of Klepci",
+  "names": [
+    {
+      "form": "Vakusin din Klepci",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 mai, «Sfântul Martir Vakusin din Klepci»."
+    },
+    {
+      "form": "Vukasin Mandrapa",
+      "lang": "ro",
+      "note": "The form doxologia.ro's life page uses in its first sentence: «Sfântul Martir Vukasin Mandrapa din Klepci»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1945,
+      "display": "between 1941 and 1945",
+      "basis": "traditional",
+      "note": "doxologia.ro's life gives no year of death, only that he was arrested «la începutul celui de-al Doilea Război Mondial» and killed at Jasenovac, and that the camp existed «În timpul domniei lui Ante Pavelic în Croația (1941-1945)». The interval is those years; the page adds that the event was «dezvăluit în 1946»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 16 mai — «Sfântul Martir Vakusin din Klepci»",
+        "url": "https://doxologia.ro/16-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026). doxologia.ro's life says he was entered on the list of saints of the Serbian Orthodox Church in 1998, but no Serbian calendar was read for this folder."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
