@@ -893,6 +893,7 @@ export const el = {
     'Schemamonk': 'Σχημοναχός',
     'Stylite': 'Στυλίτης',
     'Venerable': 'Όσιος',
+    'Voivode': 'Βοεβόδας',
     'Voivode of Wallachia': 'Βοεβόδας Βλαχίας',
     'Wonderworker': 'Θαυματουργός',
     'of Lycia': 'Λυκίας',

@@ -1,0 +1,65 @@
+{
+  "slug": "juvenal-of-alaska",
+  "display_name": "Juvenal of Alaska",
+  "names": [
+    {
+      "form": "Iuvenalie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 iulie, «Sfântul Mucenic Iuvenalie din Alaska»."
+    },
+    {
+      "form": "Iacov Govoruchkin",
+      "lang": "ro",
+      "note": "His name before the tonsure, read out of the life: «s-a născut în localitatea Ekaterinburg din Rusia, în anul 1761, sub numele de Iacov Govoruchkin»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromonk",
+    "martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1761,
+      "latest": 1761,
+      "display": "1761",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul s-a născut în localitatea Ekaterinburg din Rusia, în anul 1761, sub numele de Iacov Govoruchkin. Potrivit altor surse s-ar fi născut în localitatea Nerchinsk din Siberia»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 7,
+        "calendar": "revised-julian",
+        "note": "His own page adds that he is kept also on 24 September with all the saints of Alaska and on 12 December with the first martyrs of the American land; the Romanian calendar prints him on 2 iulie, which is the day recorded here."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 iulie — «Sfântul Mucenic Iuvenalie din Alaska»",
+        "url": "https://doxologia.ro/2-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

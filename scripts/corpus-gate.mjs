@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'iuvenalie juvenal-of-alaska juvenal-of-jerusalem':
+    'two men the Romanian calendar keeps on the same 2 July: the patriarch of Jerusalem between 420 and 458, of the Council of Ephesus, and the hieromonk of Valaam martyred in Alaska, born at Ekaterinburg in 1761 (read 25 September 2026)',
+  'mihail john-maximovitch michael-of-synada':
+    'the archbishop and wonderworker, Romanian 2 July, whose second `ro` form is Mihail because his own life gives that as his baptismal name in honour of the archangel, against the bishop of Synada, Romanian 23 May (read 25 September 2026)',
   'cosma cosmas-of-chalcedon cosmas-of-rome':
     'the unmercenary physician martyred at Rome with his brother Damian, Romanian 1 July, against the hierarch and confessor of Chalcedon, a monk of Constantinople, Romanian 18 April (read 25 September 2026)',
   'damian damian-of-agrafa damian-of-rome damian-the-healer':

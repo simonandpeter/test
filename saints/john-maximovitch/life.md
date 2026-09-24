@@ -1,0 +1,11 @@
+# John (Maximovitch)
+
+John Maximovitch is held by Orthodox Christians everywhere, doxologia's life says, to be one of the greatest saints of the twentieth century. Showing several forms of holiness at once, he was a great theologian inspired by God and a fool for Christ, a zealous missionary hierarch and a defender of the poor, a perfect ascetic and a loving father to orphans. Like Moses he led his flock out of bondage, bringing them from China to the free world.
+
+He was born on the estate of Adamovka in the flourishing region of Kharkov in southern Russia, on 4 June 1896, to Boris and Glafira of the noble family of Maximovitch, and at his baptism was given the name Michael in honour of the archangel. The most illustrious man of that old family had been the hierarch John, metropolitan of Tobolsk, a writer and spiritual poet who sent the first Orthodox mission to China and was numbered among the saints in 1916.
+
+The life says that he received from God the power to heal suffering souls and bodies, and that he knew and answered people's thoughts before they had spoken them; that what drew people to him was not his many miracles but the power of the love of Christ. In a Catholic church in Paris a priest told the young that there was no need of arguments for holiness, since a saint was walking the streets of Paris that day — Saint John the Barefoot. In the European hospitals he was known as the bishop who could pray all night for a dying man, and he was called to the bedside of Catholic, Protestant, Orthodox and Jew alike.
+
+The whole Orthodox world called him the wonderworker of Shanghai, of Western Europe and of North America. In an age of spiritual exhaustion and of great social upheaval he chose to live as the great ascetics of the Thebaid and of Palestine had lived. On 2 July 1994 the glorification of Archbishop John of San Francisco, a hierarch of the Russian Orthodox Church outside Russia, took place in America; and he continues, the life says, to pray for and to visit those who call on him.
+
+*After doxologia.ro's calendar for 2 iulie — [the day](https://doxologia.ro/2-iulie) and [the life](https://doxologia.ro/viata-sfantului-ierarh-ioan-maximovici); read 24 September 2026.*

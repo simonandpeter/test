@@ -894,6 +894,7 @@ export const sr = {
     'Schemamonk': 'Схимонах',
     'Stylite': 'Столпник',
     'Venerable': 'Преподобни',
+    'Voivode': 'Војвода',
     'Voivode of Wallachia': 'Војвода влашки',
     'Wonderworker': 'Чудотворац',
     'of Lycia': 'ликијски',

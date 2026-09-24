@@ -892,6 +892,7 @@ export const ro = {
     'Schemamonk': 'Schimonah',
     'Stylite': 'Stâlpnic',
     'Venerable': 'Cuvios',
+    'Voivode': 'Voievod',
     'Voivode of Wallachia': 'Voievod al Țării Românești',
     'Wonderworker': 'Făcător de minuni',
     'of Lycia': 'al Liciei',
