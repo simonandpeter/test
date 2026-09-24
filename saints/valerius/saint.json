@@ -1,0 +1,49 @@
+{
+  "slug": "valerius",
+  "display_name": "Valerius",
+  "names": [
+    {
+      "form": "Valerie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 aprilie, «Sfântul Mucenic Valerie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 23 aprilie — «Sfântul Mucenic Valerie»",
+        "url": "https://doxologia.ro/23-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 23 Απριλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

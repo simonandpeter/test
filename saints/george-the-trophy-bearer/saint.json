@@ -1,0 +1,68 @@
+{
+  "slug": "george-the-trophy-bearer",
+  "display_name": "George the Trophy-bearer",
+  "names": [
+    {
+      "form": "Gheorghe, Purtătorul de biruință",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 aprilie, «Sfântul Mare Mucenic Gheorghe, Purtătorul de biruință»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "great-martyr",
+    "soldier"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 23 aprilie — «Sfântul Mare Mucenic Gheorghe, Purtătorul de biruință»",
+        "url": "https://doxologia.ro/23-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 23 Απριλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Ca un izbăvitor al celor robiţi şi celor săraci ocrotitor, celor bolnavi doctor, împăraţilor ajutător, purtătorule de biruinţă, Mare Mucenice Gheorghe, roagă pe Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mare Mucenic Gheorghe, Purtătorul de biruință",
+        "url": "https://doxologia.ro/troparul-sfantului-mare-mucenic-gheorghe-purtatorul-de-biruinta-1-0",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a deliverer of the captive and a protector of the poor, a physician to the sick and a helper of kings, trophy-bearing Great Martyr George, pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

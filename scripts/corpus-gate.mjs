@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'valerie valerius valerius-of-the-forty-martyrs':
+    'the martyr of the Romanian 23 April, whose page carries neither a Viață tab nor a Tropar tab and whose line is all the calendar gives, against one of the Forty frozen on the lake at Sebaste under Licinius, Romanian 9 March. A bare line against a named member of a named company, six weeks apart; nothing on the 23 April page puts him at Sebaste (read 25 September 2026)',
   'anastasie sinaitul anastasius-of-antioch anastasius-the-sinaite':
     'both are kept on the Romanian 20 April and both fold onto the same key, and they are two men: the patriarch of Antioch who succeeded Domninus the younger in the thirty-fifth year of Justinian, and the monk of Sinai born at Alexandria in the seventh century. The calendar prints them as two lines on the one day (read 25 September 2026)',
   'atanasie athanasius-of-alexandria athanasius-of-meteora athanasius-of-the-forty-martyrs athanasius-the-commentarisius athanasius-the-confessor':
