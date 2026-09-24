@@ -1,0 +1,50 @@
+{
+  "slug": "theodoula-of-anazarbus",
+  "display_name": "Theodoula of Anazarbus",
+  "names": [
+    {
+      "form": "Teodula",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 februarie, «Sfânta Muceniță Teodula»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 februarie — «Sfânta Muceniță Teodula»",
+        "url": "https://doxologia.ro/5-februarie",
+        "year": 2026
+      },
+      "note": "The site prints no troparion for her. Her life gives 24 January as the day of the martyrdom of Comentarisius, who was converted by her, but no day and no year for her own."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

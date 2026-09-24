@@ -1,0 +1,69 @@
+{
+  "slug": "agatha-of-catania",
+  "display_name": "Agatha of Catania",
+  "names": [
+    {
+      "form": "Agata",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 februarie, «Sfânta Muceniță Agata»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mieluşeaua Ta, Iisuse, Agata, strigă cu glas mare: pe Tine, Mirele meu, te iubesc și pe Tine căutându-Te mă chinuiesc și împreună mă răstignesc și împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru tine, ca să viez pentru Tine; ci, ca o jertfă fără de prihană, primește-mă pe mine ceea ce cu dragoste mă jertfesc Ție. Pentru rugăciunile ei, ca un Milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Mucenițe Agata, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfintei-mucenite-agata",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy lamb Agatha, O Jesus, cries out with a loud voice: Thee, my Bridegroom, do I love, and seeking Thee I suffer; I am crucified with Thee and buried with Thee in Thy Baptism; I suffer for Thee that I may reign in Thee; I die for Thee that I may live in Thee. Receive me as an unblemished sacrifice, offered to Thee with love. At her prayers, O Merciful One, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 februarie — «Sfânta Muceniță Agata»",
+        "url": "https://doxologia.ro/5-februarie",
+        "year": 2026
+      },
+      "note": "The life closes by saying that the wonder at Catania happened «în luna februarie, în cinci zile, în care sfânta a pătimit», the day on which she suffered. The troparion the site prints for her is the common of one woman martyr."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
