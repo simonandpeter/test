@@ -1,0 +1,53 @@
+{
+  "slug": "procopius-of-decapolis",
+  "display_name": "Procopius of Decapolis",
+  "names": [
+    {
+      "form": "Procopie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 februarie, «Sfântul Cuvios Mărturisitor Procopie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "related": [
+    "basil-the-confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 februarie — «Sfântul Cuvios Mărturisitor Procopie»",
+        "url": "https://doxologia.ro/27-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

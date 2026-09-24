@@ -1,0 +1,85 @@
+{
+  "slug": "ephraim-of-katounakia",
+  "display_name": "Ephraim of Katounakia",
+  "names": [
+    {
+      "form": "Efrem Katunakiotul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 februarie, «Sfântul Cuvios Efrem Katunakiotul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1912,
+      "latest": 1912,
+      "display": "1912",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Părintele Efrem Katunakiotul s-a născut de ziua Sfântului Nicolae, de 6 decembrie 1912, în satul Ambelohori din Tiva, într-o familie patriarhală.»"
+    },
+    "death": {
+      "earliest": 1998,
+      "latest": 1998,
+      "display": "1998",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Tot în această poziție se afla și atunci când l-a luat Dumnezeu în liniște la El, pe 14/27 februarie 1998.»"
+    }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 4",
+      "model": "Cel Ce Te-ai înălțat pre Cruce…",
+      "text": "Cel ce ca Iov ai pătimit pană la moarte și răstignitu-te-ai pre crucea vieții: nu înceta rugându-te, Părinte Efrem, pentru toți cei ce te laudă să-i ajuți în primejdie, boală și ispitele ce vin cu prisosință ca vijelia preste cei ce vor legile sfinte să aibă în inimă.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Efrem Katunakiotul, Glas 4, «Cel Ce Te-ai înălțat pre Cruce…»",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-efrem-katunakiotul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou who like Job didst suffer unto death and wast crucified upon the cross of this life: cease not to pray, Father Ephraim, for all who praise thee, that thou mayest help them in danger, in sickness, and in the temptations that come in abundance, like a storm, upon those who would hold the holy laws in their heart.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 februarie — «Sfântul Cuvios Efrem Katunakiotul»",
+        "url": "https://doxologia.ro/27-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

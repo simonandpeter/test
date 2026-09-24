@@ -1,0 +1,67 @@
+{
+  "slug": "leander-of-seville",
+  "display_name": "Leander of Seville",
+  "office": "Archbishop of Seville",
+  "names": [
+    {
+      "form": "Leandru",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 februarie, «Sfântul Leandru, Arhiepiscop al Sevillei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 534,
+      "latest": 534,
+      "display": "c. 534",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Sfântul Leandru (n. Cartagena, cca. 534 – m. Sevilla, 13 martie 600/601)» — the page writes the year as an approximation."
+    },
+    "death": {
+      "earliest": 600,
+      "latest": 601,
+      "display": "600 or 601",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «m. Sevilla, 13 martie 600/601» — the page prints both years and does not choose between them."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 februarie — «Sfântul Leandru, Arhiepiscop al Sevillei»",
+        "url": "https://doxologia.ro/27-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

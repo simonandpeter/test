@@ -1,0 +1,85 @@
+{
+  "slug": "raphael-of-brooklyn",
+  "display_name": "Raphael of Brooklyn",
+  "office": "Bishop of Brooklyn",
+  "names": [
+    {
+      "form": "Rafail din Brooklyn",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 februarie, «Sfântul Ierarh Rafail din Brooklyn»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1860,
+      "latest": 1860,
+      "display": "1860",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Părintele nostru între sfinți Rafail de Brooklyn s-a născut la data de 8 noiembrie 1860, în Beirut, din părinți sirieni refugiați din Damasc.»"
+    },
+    "death": {
+      "earliest": 1915,
+      "latest": 1915,
+      "display": "1915",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Sfântul Rafail a trecut la Domnul, în ziua de 27 februarie 1915 la reședința din Brooklyn, aflată vizavi de Catedrala de pe Pacific Street.»"
+    }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 3",
+      "text": "Bucură-te, o, Părinte Rafail, podoabă a Sfintei Biserici! Tu ești apărător neînfricat al Adevăratei Credințe, căutător al celor pierduți, mângâierea celor asupriți, părinte al orfanilor și prieten al săracilor, făcător de pace și bun păstor, bucurie tuturor ortodocșilor, fiu al Antiohiei, slava Americii. Mijlocește la Hristos Dumnezeu pentru noi și pentru toți cei care te cinstesc pe tine.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Rafail din Brooklyn, Glas 3",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-rafail-din-brooklyn",
+        "year": 2026
+      },
+      "english": {
+        "text": "Rejoice, O Father Raphael, adornment of the holy Church! Thou art the undaunted defender of the true faith, seeker of the lost, comfort of the oppressed, father of orphans and friend of the poor, peacemaker and good shepherd, joy of all the Orthodox, son of Antioch and glory of America. Intercede with Christ God for us and for all who honour thee.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 februarie — «Sfântul Ierarh Rafail din Brooklyn»",
+        "url": "https://doxologia.ro/27-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
