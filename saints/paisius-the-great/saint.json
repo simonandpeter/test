@@ -1,0 +1,72 @@
+{
+  "slug": "paisius-the-great",
+  "display_name": "Paisius the Great",
+  "names": [
+    {
+      "form": "Paisie cel Mare",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 iunie, «Sfântul Cuvios Paisie cel Mare»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "ascetic"
+  ],
+  "related": [
+    "poemen-the-great"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 iunie — «Sfântul Cuvios Paisie cel Mare»",
+        "url": "https://doxologia.ro/19-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Îngerul cel în trup, cununa călugărilor, omul cel fără de trup, locuitorul cerurilor, dumnezeiescul Paisie se bucură prăznuind împreună cu noi pomenirea sa, dând dumnezeiesc dar celor ce se ostenesc pentru el; pentru aceasta cu multă osârdie să-l slăvim.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Paisie cel Mare.",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-paisie-cel-mare",
+        "year": 2026
+      },
+      "english": {
+        "text": "The angel in the flesh, the crown of monks, the man without a body, the dweller of the heavens, the divine Paisius rejoices, keeping the feast of his memory together with us, and giving divine grace to those who labour for his sake; wherefore let us glorify him with much zeal.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "jude-the-apostle",
+  "display_name": "Jude, brother of the Lord",
+  "names": [
+    {
+      "form": "Iuda",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 iunie, «Sfântul Apostol Iuda, ruda Domnului»; the line's «ruda Domnului» is the kinship, not part of the name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle",
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 iunie — «Sfântul Apostol Iuda, ruda Domnului»",
+        "url": "https://doxologia.ro/19-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Al lui Hristos frate şi mucenic tare, ştiindu-te pe tine, Sfinte Iuda, cu sfinţenie te lăudăm pe tine, cel ce ai călcat înşelăciunea şi credinţa ai păzit. Pentru aceasta astăzi preasfântă pomenirea ta prăznuind, dezlegare de păcate cu rugăciunile tale luăm.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Apostol Iuda, ruda Domnului.",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-iuda-ruda-domnului",
+        "year": 2026
+      },
+      "english": {
+        "text": "Knowing thee to be the brother of Christ and a strong martyr, O holy Jude, we praise thee with holiness, who didst trample down deceit and keep the faith. Wherefore, keeping today thy most holy memory, by thy prayers we receive release from sins.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

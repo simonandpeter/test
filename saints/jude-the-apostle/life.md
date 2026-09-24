@@ -1,0 +1,11 @@
+# Jude, brother of the Lord
+
+Jude was one of the twelve apostles of Christ, of the line of David and Solomon. He was born in Nazareth of Galilee, of his father Joseph the carpenter, who was afterwards the betrothed of the most pure Virgin Mary, and of his mother Salome — not the Salome of Bethlehem, doxologia says, but another, the daughter of Haggai, son of Barachiah and brother of Zacharias. Joseph took her in lawful marriage, and she bore him the sons named in the Gospel of Matthew: James, Joses, Simon and Jude.
+
+This Jude is called Jude of James, that is the brother of James who is called the brother of the Lord; out of humility he held himself unworthy to be called the Lord's brother after the flesh, because at the beginning he had sinned against him in ignorance, partly through unbelief and partly through want of brotherly love. Of the unbelief, the page cites the words of Saint John, "Neither did his brethren believe in him," and Theophylact's comment that the sons of Joseph reviled him out of a rotten judgement and out of envy, since it is the way of relations always to hate their own more than strangers.
+
+The page then turns to his epistle, and says that he showed great things in few words. He writes against those who would turn the grace of God into an excuse and take up teachings unworthy of salvation, and sets before them the angels and the men whom God punished: the evil angels, whom God bound in darkness with everlasting bonds and keeps for his judgement because they did not keep their own order, and the people brought out of Egypt, whom he destroyed in the wilderness because they did not walk after God's calling but turned aside into stubbornness.
+
+He bore many pains and labours, passing through many countries, preaching Christ, baptising, confirming the peoples and guiding them to salvation. Then, having gone into the parts of Ararat and turned a multitude from the error of idols to Christ, he was taken by the idolaters, and after they had tortured him much they hanged him on a tree in the form of a cross; and being pierced with arrows by the unbelievers he finished his contest and his course, and passed over to Christ God.
+
+*After doxologia.ro's calendar for 19 iunie — [the day](https://doxologia.ro/19-iunie) and [the life](https://doxologia.ro/sfantul-apostol-iuda-ruda-domnului); read 24 September 2026.*
