@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'artemon artemon-of-laodicea artemon-of-seleucia':
+    'the presbyter of Laodicea of Diocletian’s persecution, Romanian 13 April, against the bishop of Seleucia in Pisidia, born there in the days of the Apostles and set over the city by the Apostle Paul, Romanian 24 March. Two and a half centuries and two cities apart (read 25 September 2026)',
   'macarie macarius-companion-of-terentius macarius-the-confessor':
     'one of the six the Romanian 10 April names together, «Terentie, Pompie, African, Maxim, Macarie şi Dima», against the confessor of the Romanian 19 February, whose page carries a line, a date and the day’s readings and no life at all. Two days and nothing shared but the forename (read 25 September 2026)',
   'maxim maximus-companion-of-fausta maximus-companion-of-terentius':

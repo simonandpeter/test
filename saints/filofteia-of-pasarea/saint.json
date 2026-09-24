@@ -1,0 +1,71 @@
+{
+  "slug": "filofteia-of-pasarea",
+  "display_name": "Filofteia of Pasărea, mother of Calinic of Cernica",
+  "names": [
+    {
+      "form": "Filofteia de la Pasărea",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 aprilie, «Sfânta Cuvioasă Filofteia de la Pasărea, mama Sfântului Ierarh Calinic de la Cernica»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "nun"
+  ],
+  "related": [
+    "calinic-of-cernica"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "The day is the one doxologia.ro printed her on, and nothing else read here confirms it: her own page carries no feast date, and the same 13 aprilie page was also carrying saints moved out of Holy Week in 2026 (her son Calinic, whose day is 11 April). Her canonisation was proclaimed on 6 February 2026, so the day is new."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 aprilie — «Sfânta Cuvioasă Filofteia de la Pasărea, mama Sfântului Ierarh Calinic de la Cernica»",
+        "url": "https://doxologia.ro/13-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Floare în lume ai fost, blândă și harnică, crescând căminul tău în frica Domnului, o, iubitoare de Dumnezeu, preavrednică Filofteia, iar apoi la mănăstire schimonahie ai ajuns și-ai primit belșug de har spre lucrarea minunilor; de aceea îți cerem rugăciunea și te cinstim cu bucurie.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintei Cuvioase Filofteia de la Pasărea – interpretat de Grupul psaltic „Tronos” în ziua proclamării generale a canonizării celor 16 Sfinte femei românce (6 februarie 2026)»; the page prints no glas",
+        "url": "https://doxologia.ro/video-troparul-sfintei-cuvioase-filofteia-de-la-pasarea",
+        "year": 2026
+      },
+      "english": {
+        "text": "A flower in the world you were, gentle and hard-working, raising your household in the fear of the Lord, O lover of God, most worthy Filofteia; and afterwards in the monastery you became a schemanun and received grace in abundance for the working of wonders. Therefore we ask your prayer and honour you with joy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

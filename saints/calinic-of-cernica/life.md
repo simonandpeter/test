@@ -1,0 +1,11 @@
+# Calinic of Cernica
+
+Calinic was born on 7 October 1787 in Bucharest, near the church of Saint Bessarion, and was given the name Constantine at his baptism. His parents, Antonie and [Floarea](/saints/filofteia-of-pasarea), were very devout: the eldest of their children was a married priest in his youth and afterwards became a monk under the name Acachie, and their mother, when her children were grown, withdrew to the monastery of Pasărea and took the great and angelic habit as the schemanun Filoteia. Constantine, the youngest, had a careful religious upbringing and learned his letters at the schools that then went with the churches of Bucharest.
+
+In 1807 he entered on the monastic struggle at the monastery of Cernica, under the obedience of the venerable abbot, the archimandrite Timotei. He was tonsured into the monastic habit on 12 November 1808 under the name Calinic, and ordained hierodeacon on 3 December of the same year. A chosen vessel of the Holy Spirit, the life says, he loved prayer, silence, honesty and almsgiving from his childhood; as a young monk at Cernica he fasted a great deal, kept his rule and his prayers faithfully, fought against sleep, and was never missing from the services.
+
+On 14 September 1850, by common counsel, he was chosen bishop at Râmnicu-Vâlcea, and parted from his spiritual children at Cernica with much grief and many tears, because — as the life puts it — he could not refuse the wish of his beloved spiritual son Barbu Dimitrie Știrbei, prince of Wallachia, and submitted to the will of the general Assembly.
+
+Such was the struggle and the life full of holiness, and such the wonderful end, of Calinic of Cernica the wonderworker, who passed to the heavenly dwellings, in the company of the God-bearing Fathers, on 11 April 1868. His canonisation was made on 20 October 1955 under Justinian, Patriarch of Romania, and his commemoration, the page says, is kept on 11 April.
+
+*After doxologia.ro's calendar for 13 aprilie — [the day](https://doxologia.ro/13-aprilie), [the life](https://doxologia.ro/viata-sfantului-ierarh-calinic-de-la-cernica) and [the troparion](https://doxologia.ro/troparul-sfantului-ierarh-calinic-de-la-cernica-episcopul-ramnicului); read 20 September 2026.*

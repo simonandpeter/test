@@ -1,0 +1,87 @@
+{
+  "slug": "sava-of-buzau",
+  "display_name": "Sava of Buzău",
+  "names": [
+    {
+      "form": "Sava de la Buzău",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 aprilie, «Sfântul Mucenic Sava de la Buzău»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "basil-the-great"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 334,
+      "latest": 334,
+      "display": "334",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Sfântul Sava s-a născut în anul 334, fiind fiul unor creştini evlavioşi din părţile Buzăului»."
+    },
+    "death": {
+      "earliest": 372,
+      "latest": 372,
+      "display": "372",
+      "basis": "attested",
+      "note": "doxologia.ro's life, of the drowning: «Era ziua de 12 aprilie a anului 372»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "Read with care. doxologia.ro printed him on its 13 aprilie page, but that page's movable feasts are those of 2026, when 11 April was Holy Saturday and 12 April Pascha, and the same page carries Calinic of Cernica, whose own life on the same site says «prăznuirea lui se face la 11 aprilie» — so the day page is moving the Romanian saints of Holy Week onto Bright Monday. His own page prints no feast date; his life dates the martyrdom «Era ziua de 12 aprilie a anului 372», and 12 April is the day taken here. The reader flagged this for checking against a printed Romanian calendar."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 aprilie — «Sfântul Mucenic Sava de la Buzău»",
+        "url": "https://doxologia.ro/13-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Astăzi, duhovniceşte prăznuieşte Biserica dreptcredincioşilor români şi cu bucurie strigă: veniţi, iubitorilor de mucenici, să serbăm pomenirea cea de peste an a luptelor Mucenicului Sava! Că acesta dintre noi cu voia lui Dumnezeu răsărind, a înflorit minunat, aducând Stăpânului rod bogat şi bineprimit, prin muce­nicie. Iar acum se roagă neîncetat în ceruri, să se mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Mucenic Sava de la Buzău», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-sava-de-la-buzau",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today the Church of the right-believing Romanians keeps spiritual feast and cries out with joy: come, lovers of the martyrs, and let us keep the yearly memory of the contests of the martyr Sava! For he rose up from among us by the will of God and flowered wondrously, bringing to the Master a rich and acceptable fruit through martyrdom; and now he prays without ceasing in heaven for the salvation of our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

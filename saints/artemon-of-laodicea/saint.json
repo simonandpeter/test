@@ -1,0 +1,68 @@
+{
+  "slug": "artemon-of-laodicea",
+  "display_name": "Artemon of Laodicea",
+  "names": [
+    {
+      "form": "Artemon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 aprilie, «Sfântul Sfințit Mucenic Artemon preotul, din Laodiceea»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 aprilie — «Sfântul Sfințit Mucenic Artemon preotul, din Laodiceea»",
+        "url": "https://doxologia.ro/13-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge Sfinţite Mucenice Artemon, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Sfințit Mucenic Artemon preotul, din Laodiceea», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-artemon-preotul-din-laodiceea",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharer in their ways and successor to the thrones of the apostles, you found in action, O God-inspired one, the way up to contemplation of things on high. Therefore, rightly teaching the word of truth and enduring for the faith even unto blood, hieromartyr Artemon, entreat Christ God to save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

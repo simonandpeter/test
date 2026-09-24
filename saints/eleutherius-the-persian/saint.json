@@ -1,0 +1,49 @@
+{
+  "slug": "eleutherius-the-persian",
+  "display_name": "Eleutherius the Persian",
+  "names": [
+    {
+      "form": "Elefterie Persul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 aprilie, «Sfântul Mucenic Elefterie Persul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 aprilie — «Sfântul Mucenic Elefterie Persul»",
+        "url": "https://doxologia.ro/13-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

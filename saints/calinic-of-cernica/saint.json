@@ -1,0 +1,91 @@
+{
+  "slug": "calinic-of-cernica",
+  "display_name": "Calinic of Cernica",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Calinic de la Cernica",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 aprilie, «Sfântul Ierarh Calinic de la Cernica, Episcopul Râmnicului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "monk",
+    "wonderworker"
+  ],
+  "related": [
+    "filofteia-of-pasarea"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1787,
+      "latest": 1787,
+      "display": "1787",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «s-a născut la 7 octombrie, 1787 în București, aproape de biserica Sfântul Visarion. Din sfântul botez a primit numele de Constantin»."
+    },
+    "death": {
+      "earliest": 1868,
+      "latest": 1868,
+      "display": "1868",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «s-a mutat la cereștile locașuri … la 11 aprilie, 1868»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "doxologia.ro listed him on its 13 aprilie page, whose movable feasts are those of 2026 — 11 April Holy Saturday, 12 April Pascha — but his own life on the same site says plainly «prăznuirea lui se face la 11 aprilie», the day of his repose in 1868, and that is the day kept here."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 aprilie — «Sfântul Ierarh Calinic de la Cernica, Episcopul Râmnicului»",
+        "url": "https://doxologia.ro/13-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "De Dumnezeu purtătorule, părintele nostru Calinic, povăţuitorule al călugărilor, podoaba cuvioşilor şi lauda arhiereilor, ajutătorule al celor din nevoi şi făcătorule de minuni! Cu nevoinţele tale chip de sfinţenie te-ai arătat, iar acum cu îngerii în ceruri te veseleşti; cu care roagă pe Milostivul Dumnezeu să ne dăruiască nouă pace şi mare milă.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Ierarh Calinic de la Cernica, Episcopul Râmnicului», Glasul 1",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-calinic-de-la-cernica-episcopul-ramnicului",
+        "year": 2026
+      },
+      "english": {
+        "text": "God-bearing father Calinic, guide of monks, adornment of the venerable and praise of bishops, helper of those in need and worker of wonders! By your labours you were shown to be an image of holiness, and now you rejoice with the angels in heaven; with them entreat the merciful God to grant us peace and great mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
