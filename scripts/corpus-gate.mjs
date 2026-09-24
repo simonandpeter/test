@@ -211,6 +211,10 @@ const READ_FOLDS = {
     'the physician of Phoenicia, son of the hierarch Verouchios, martyred, Romanian 20 May, against the Cilician who went first to the monastery of Saint Sabbas and then to Gabala under the metropolis of Laodicea, a hermit and presbyter, Romanian 27 February. A martyr and a confessor, three months apart (read 25 September 2026)',
   'memnon memnon-the-venerable-19-may memnon-the-wonderworker':
     'the bare line of the Romanian 19 May, a venerable whose page opens neither a Viață nor a Tropar tab and gives no country and no century, against the abbot and wonderworker, Romanian 29 April. Three weeks apart, and nothing on the 19 May page joins them (read 25 September 2026)',
+  'alexandra alexandra-of-ancyra alexandra-of-diveevo alexandra-the-empress':
+    'three women called Alexandra, on three days: one of the seven virgins of Ancyra, Romanian 18 May; the foundress of the convent at Diveevo, dead 1789, Romanian 13 June; and the empress, wife of Diocletian, Romanian 21 April (read 25 September 2026)',
+  'achilina aquilina-of-byblos aquilina-the-martyr-7-april':
+    'the girl of Byblos in Palestine, daughter of Eutolmius, Romanian 13 June, against the bare martyr of 7 April, whose page gives no city and no century (read 25 September 2026)',
   'alexandra alexandra-of-ancyra alexandra-the-empress':
     'one of the seven virgins drowned in the lake at Ancyra, read out of the life of Theodotus, Romanian 18 May, against the empress, wife of Diocletian, Romanian 21 April (read 25 September 2026)',
   'eufrasia euphrasia-of-ancyra euphrasia-of-nicomedia':

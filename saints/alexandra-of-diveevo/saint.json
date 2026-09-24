@@ -1,0 +1,62 @@
+{
+  "slug": "alexandra-of-diveevo",
+  "display_name": "Alexandra of Diveevo",
+  "names": [
+    {
+      "form": "Alexandra",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 iunie, «Sfânta Alexandra Schimonahia, Stareța și Întemeietoarea Mănăstirii Diveevo»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "abbess"
+  ],
+  "related": [
+    "seraphim-of-sarov"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1789,
+      "latest": 1789,
+      "display": "1789",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Domnul a chemat-o la Sine în ziua de 13 iunie 1789.» The same page dates her birth only as «începutul secolului al XVIII-lea», which is not a year, so no birth interval is recorded."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 iunie — «Sfânta Alexandra Schimonahia, Stareța și Întemeietoarea Mănăstirii Diveevo»",
+        "url": "https://doxologia.ro/13-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

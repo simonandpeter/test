@@ -1,0 +1,68 @@
+{
+  "slug": "aquilina-of-byblos",
+  "display_name": "Aquilina of Byblos",
+  "names": [
+    {
+      "form": "Achilina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 iunie, «Sfânta Muceniță Achilina»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 iunie — «Sfânta Muceniță Achilina»",
+        "url": "https://doxologia.ro/13-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mieluşeaua Ta, Iisuse, Achilina, strigă cu glas mare: pe Tine, Mirele meu, te iubesc și pe Tine căutându-Te mă chinuiesc și împreună mă răstignesc și împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru tine, ca să viez pentru Tine; ci, ca o jertfă fără de prihană, primește-mă pe mine ceea ce cu dragoste mă jertfesc Ție. Pentru rugăciunile ei, ca un milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Mucenițe Achilina; the common troparion of a woman martyr, with her name set in it. The lower-case «pentru tine» in the page's fourth clause is the page's own reading.",
+        "url": "https://doxologia.ro/troparul-sfintei-mucenite-achilina",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy lamb, O Jesus, Aquilina, crieth out with a loud voice: Thee, my Bridegroom, do I love, and seeking Thee I am in torment; and I am crucified with Thee and buried with Thee in Thy baptism; and I suffer for Thy sake, that I may reign in Thee; and I die for Thee, that I may live for Thee. Receive me, then, as a sacrifice without blemish, who with love offer myself to Thee. At her prayers, as Thou art merciful, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

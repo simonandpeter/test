@@ -1,0 +1,64 @@
+{
+  "slug": "triphyllius-of-leucosia",
+  "display_name": "Triphyllius of Leucosia",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Trifilie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 iunie, «Sfântul Ierarh Trifilie, Episcopul Levcosiei din Cipru»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "related": [
+    "spyridon-of-trimythous",
+    "athanasius-of-alexandria"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 370,
+      "latest": 370,
+      "display": "370",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfântul Trifilie a trecut la cele veșnice în anul 370.» The same page puts him at the Council of Sardica «în anul 347»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 iunie — «Sfântul Ierarh Trifilie, Episcopul Levcosiei din Cipru»",
+        "url": "https://doxologia.ro/13-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
