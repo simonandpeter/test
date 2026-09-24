@@ -1,0 +1,66 @@
+{
+  "slug": "christodoulos-of-patmos",
+  "display_name": "Christodoulos of Patmos",
+  "names": [
+    {
+      "form": "Hristodul din Patmos",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 martie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1020,
+      "latest": 1020,
+      "display": "1020",
+      "basis": "traditional",
+      "note": "doxologia.ro's life for the day: «Sfântul Hristodul (1020-1093), care era de loc din regiunea Neceea, în Bitinia»."
+    },
+    "death": {
+      "earliest": 1093,
+      "latest": 1093,
+      "display": "1093",
+      "basis": "traditional",
+      "note": "doxologia.ro's life for the day: «unde a și murit, către sfârșitul secolului al XII-lea (+1093), într-o zi de 16 martie». The page's «sfârșitul secolului al XII-lea» does not agree with the year it prints twice; the year printed is 1093."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 16 martie — «Sfântul Cuvios Hristodul din Patmos»",
+        "url": "https://doxologia.ro/16-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

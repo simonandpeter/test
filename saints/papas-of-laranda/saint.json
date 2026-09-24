@@ -5,6 +5,11 @@
     {
       "form": "Άγιος Πάπας",
       "lang": "el"
+    },
+    {
+      "form": "Papa",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 martie."
     }
   ],
   "sex": "male",
@@ -28,8 +33,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 14 septembrie (checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 16 martie — «Sfântul Mucenic Papa»",
+        "url": "https://doxologia.ro/16-martie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

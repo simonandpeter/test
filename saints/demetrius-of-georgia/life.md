@@ -1,0 +1,15 @@
+# Demetrius of Georgia
+
+Demetrius was the great-grandson of Tamara, queen of Georgia, and God sent him many troubles in childhood, strengthening him in the faith from a tender age. He was still a child when the Mongols killed his mother, the pious queen Gvantsa, and his father, King David V, who reigned from 1258 to 1269, died when Demetrius was ten years old. At twelve the royal court sent him to the Mongol military camp at Mughan in Azerbaijan.
+
+The camp was held by the khan Abaqa, and since the Georgians were under Mongol rule they asked him to proclaim Demetrius king, and the request was granted. The life says that he ruled the people in wisdom and kindness, that by night he gave alms to the poor, the crippled and the orphaned, and that he used a time of peace to build and restore churches and monasteries and to strengthen the fortifications of the country.
+
+Much of what he intended was never done, because the khan made war on Georgia and a great number of its best soldiers fought and died in it, and the country was soon exhausted. In that hard time, the page says plainly, Demetrius gave way under the pressure: he made a political marriage, carrying off Natela, daughter of Beka Jakeli, the ruler of southern Georgia. Of that alliance was born a son, Giorgi, later honoured as Giorgi V the Brilliant.
+
+After Abaqa's death the throne passed to his brother Ahmad Tegüder and then to Abaqa's own son Arghun; and when a plot against Arghun was broken and its makers executed on 17 January 1289, the khan summoned Demetrius and suspected him of it. He understood at once what the summons meant. He told his court that the khan meant him harm, but that his kingdom would be left defenceless if he did not go — how many Christians would die or be made slaves, how many churches scattered? — and that his own life could not be worth so much that he should live and bear that sin.
+
+The bishops of the country answered that if he gave his life for his people they would carry his sins and pray that he be numbered among the holy martyrs, for no man has greater love than this. He took with him the Patriarch Abraham, a priest named Mose, his son David and some of his court. The Mongols found no fault in the young king, and imprisoned him all the same; Georgians who got in to see him offered to help him escape, and he refused them, saying the country would be destroyed if he fled.
+
+The khan ordered his execution. Demetrius prayed fervently, received the Holy Gifts and gave his soul into the hand of God, and those present saw the sun darken and a deep mourning take the whole city. His relics were guarded until the Patriarch and the priest Mose secretly recovered the body and, with the help of a party of fishermen from Tbilisi, carried it back to Georgia; he was buried at Mtskheta, in the burial vault of his ancestors at the Svetitskhoveli Cathedral. The page gives no year for his own death.
+
+*After doxologia.ro's calendar for 16 martie — [the day](https://doxologia.ro/16-martie) and [the life](https://doxologia.ro/viata-sfantului-dimitrie-regele-georgiei); read 19 September 2026.*
