@@ -1,0 +1,85 @@
+{
+  "slug": "petroniu-of-prodromu",
+  "display_name": "Petroniu of Prodromu",
+  "names": [
+    {
+      "form": "Petroniu de la Prodromu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 februarie, «Sfântul Cuvios Petroniu de la Prodromu»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1916,
+      "latest": 1916,
+      "display": "1916",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Sfântul Cuvios Petroniu de la Prodromu s-a născut la 23 mai 1916, în comuna Fărcașa, din ținutul Neamțului, în binecuvântatul pământ al României, într-o familie de țărani evlavioși, primind la botez numele Petru.»"
+    },
+    "death": {
+      "earliest": 2011,
+      "latest": 2011,
+      "display": "2011",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Bineplăcând lui Dumnezeu și oamenilor, prin viețuirea sa cea întocmai cu îngerii, și-a sfârșit viața aceasta la 22 februarie 2011.»"
+    }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 5",
+      "text": "Pe-a Athonului slavă și mare laudă, pe-a României podoabă și al Prodromului stâlp, să-l cinstim cei credincioși, toți, pe Petroniu, cel care-n vremea de acum ca un soare-a strălucit prin semne și prin cuvinte, desăvârșit în nevoință, frumsețe Duhului arătatu-s-a.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Petroniu de la Prodromu, Glas 5",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-petroniu-de-la-prodromu",
+        "year": 2026
+      },
+      "english": {
+        "text": "The glory of Athos and its great praise, the adornment of Romania and the pillar of Prodromu — let us all who believe honour Petroniu, who in our own time shone out like a sun by signs and by words, and who, made perfect in ascetic labour, was shown forth as a beauty of the Spirit.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 februarie — «Sfântul Cuvios Petroniu de la Prodromu»",
+        "url": "https://doxologia.ro/24-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
