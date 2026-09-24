@@ -5,6 +5,11 @@
     {
       "form": "Όσιος Παΐσιος ο Αγιορείτης",
       "lang": "el"
+    },
+    {
+      "form": "Paisie Aghioritul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 iulie, «Sfântul Cuvios Paisie Aghioritul», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -19,8 +24,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 iulie — «Sfântul Cuvios Paisie Aghioritul»",
+        "url": "https://doxologia.ro/12-iulie",
+        "year": 2026
+      },
+      "note": "doxologia.ro's life for this day is the life of this man — born at Pharasa in Cappadocia on 25 July 1924, baptised by the venerable Arsenios with his own name, and dying at the Suroti monastery — so the Romanian row is this folder's. The Romanian calendar keeps him on 12 iulie; this folder's Greek row cites saint.gr for 20 Σεπτεμβρίου, and why the two sites differ was not looked into (24 September 2026)."
     },
     {
       "church": "greek",
@@ -124,6 +139,22 @@
       "model": "δ ́.Τῇ Ὑπερμάχῳ.",
       "english": {
         "text": "Let us praise with hymns and with our whole heart the far-renowned ascetic of the Holy Mountain and the newly-shining luminary of the Church; for guiding the faithful toward the most excellent life, thou didst fill them with rivers of gifts. Wherefore they cry aloud: Rejoice, O father Paisios.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 5",
+      "text": "Pe bărbatul ales din Muntele Athonului, pe cel ce-n vremurile cele din urmă întunericul a risipit ca un luminător, bolile tuturor vindecând, pe Paisie cel Nou să-l lăudăm credincioșii; căci el se roagă neîncetat pentru întreaga lume.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Paisie Aghioritul», Glasul 5",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-paisie-aghioritul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful praise the chosen man of the mountain of Athos, who in the last times scattered the darkness like a lamp and healed the sicknesses of all — Paisios the New; for he prays without ceasing for the whole world.",
         "rendered": "site"
       }
     }

@@ -119,6 +119,8 @@ const READ_FOLDS = {
     'Athanasius the Athonite, Romanian 5 July, whose second `ro` form is Avramie because his own life gives that as his baptismal name, against the hieromartyr bishop of Arbela under Shapur II, Romanian 4 February (read 25 September 2026)',
   'ciprian cyprian-companion-of-quadratus cyprian-martyr-10-may cyprian-the-new-martyr':
     'three men called Ciprian, on three days: the hieromonk new-martyr of Kletzos in Agrafa, Romanian 5 July; the companion of Quadratus of Corinth under Decius and Valerian, Romanian 10 March; and the bare «Sfantul Mucenic Ciprian» the calendar prints on 10 May with no life and no century (read 25 September 2026)',
+  'ilarie hilary-companion-of-proclus hilary-of-poitiers':
+    'the martyr of Callippi near Ancyra, tortured with his kinsman Proclus under the governor Maximus, Romanian 12 July, against the bishop of Poitiers, Romanian 13 January, whose page on doxologia.ro carries his icon and his translated texts but no life (read 25 September 2026)',
   'gheorghe george-of-egypt george-of-pisidian-antioch george-of-thessalonica':
     'three men called Gheorghe, on three days: the bishop of Thessalonica remembered in that metropolis’s Synodikon after Niketas, Romanian 10 July; the bishop and confessor of Pisidian Antioch under the iconoclasts, 19 April; and one of ten martyrs of Egypt the calendar gives in a single sentence, 5 June (read 25 September 2026)',
   'andrei andrew-9-july andrew-the-first-called':

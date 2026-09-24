@@ -1,0 +1,71 @@
+{
+  "slug": "proclus-of-callippi",
+  "display_name": "Proclus of Callippi",
+  "names": [
+    {
+      "form": "Proclu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 iulie, «Sfântul Mucenic Proclu», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "hilary-companion-of-proclus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 iulie — «Sfântul Mucenic Proclu»",
+        "url": "https://doxologia.ro/12-iulie",
+        "year": 2026
+      },
+      "note": "The day prints the two men on separate lines, each with its own copy of one shared life, so the corpus keeps one folder for each. The life itself dates Hilary's death to 15 July, three days after Proclus's, and the Romanian calendar keeps them both on 12 iulie."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Mucenici Proclu și Ilarie», Glasul 4 — the common troparion of martyrs, printed here for the two of them; the spelling «nesctricăciunii» is the page's own",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-proclu-ilarie",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, Lord, in their struggles received from You, our God, the crowns of incorruption; for having Your strength they overthrew their torturers and broke the powerless insolence of the demons. At their prayers, Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

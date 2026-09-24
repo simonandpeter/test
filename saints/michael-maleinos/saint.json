@@ -1,0 +1,68 @@
+{
+  "slug": "michael-maleinos",
+  "display_name": "Michael Maleinos",
+  "names": [
+    {
+      "form": "Mihail Maleinul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 iulie, «Sfântul Cuvios Mihail Maleinul», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 iulie — «Sfântul Cuvios Mihail Maleinul»",
+        "url": "https://doxologia.ro/12-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru tine, părinte, cu osârdie s-a mântuit cel după chip; că luând crucea ai urmat lui Hristos; şi lucrând ai învăţat să nu se uite la trup, că este trecător; ci să poarte grijă de suflet, de lucrul cel nemuritor. Pentru aceasta şi cu îngerii împreună se bucură, Preacuvioase Părinte Mihail, duhul tău.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Mihail Maleinul», Glasul 8 — the common troparion of a venerable father, printed here with his name",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-mihail-maleinul",
+        "year": 2026
+      },
+      "english": {
+        "text": "In you, father, what was made after the image was saved with diligence; for taking up the cross you followed Christ, and by your labour you taught us to look past the flesh, which passes away, and to care for the soul, which is a thing immortal. Therefore your spirit rejoices together with the angels, most venerable father Michael.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

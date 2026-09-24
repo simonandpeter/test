@@ -1,0 +1,15 @@
+# Proclus of Callippi
+
+Proclus and [Hilary](/saints/hilary-companion-of-proclus) were from the district of the city of Callippi, which is near Ancyra, and they were tortured by the governor Maximus in the reign of the emperor Trajan. Proclus was taken first and brought before the emperor himself, who was then in those parts; he was put in irons and thrown into prison, and when the emperor had questioned him and found him unwilling to obey his pagan order, he handed him over to Maximus to be tortured.
+
+Maximus, sitting in judgment, set Christ's prisoner before him and asked what his family was. My family is Christ's, he answered, and my hope is my God. I swear by the gods that I will not spare you, said the governor, and asked whether he knew the imperial orders published everywhere, that all Christians should sacrifice to the gods. I have heard of the orders of lawless men, said the saint, which they have set before many for a stumbling-block and before themselves for destruction.
+
+Do you insult the emperor and dare to blaspheme his laws? said Maximus. Do you not see the torments in front of you, wretch? Do what you like, the martyr answered, for I will not sacrifice to your gods, and I do not fear torments that kill the body and not the soul; it is better to fear God than men. Choose one of the two, said the governor, life or death; the rack is ready for you and the instruments are laid out, and we are waiting for your answer.
+
+If you fear to break the emperor's order, said Proclus, so as not to fall into torments that last a little while, how much more do we Christians fear to break God's order, so as not to fall into the everlasting torments that our God has prepared for those who deny Him and worship your lying gods, which at the judgment that is coming will be given over to endless destruction.
+
+The page's account of the torments is long and is not all set down here. Proclus was put to death first; and Hilary, taken after him, confessed that he was a Christian as his whole family had been, was hung up and beaten a long while, then sentenced to be dragged some three stadia outside the city and beheaded there. He died on 15 July, the third day after Proclus, and the faithful came by night and buried his body with honour beside that of Proclus.
+
+The page gives no year, and no day of its own for Proclus's death; the Romanian calendar keeps the two of them together on 12 iulie.
+
+*After doxologia.ro's calendar for 12 iulie — [the day](https://doxologia.ro/12-iulie), [the life](https://doxologia.ro/viata-sfantului-mucenic-proclu) and [the troparion](https://doxologia.ro/troparul-sfintilor-mucenici-proclu-ilarie); read 24 September 2026.*

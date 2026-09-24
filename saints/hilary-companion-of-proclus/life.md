@@ -1,0 +1,11 @@
+# Hilary, companion of Proclus
+
+Hilary and [Proclus](/saints/proclus-of-callippi) were from the district of the city of Callippi, near Ancyra, and both were tortured by the governor Maximus in the reign of the emperor Trajan. Proclus was taken first, brought before the emperor himself, put in irons and given over to Maximus, and questioned and tormented at the tribunal until he was put to death; and the shared life the Romanian calendar prints under both their names gives most of its length to that examination.
+
+Hilary was taken after him. Asked whether he was a Christian, he said, Yes, truly I am a Christian, as all my family have been in Christianity, and all of them honoured Christ and so ended. The governor, filled with anger, had him hung up at the torture and beaten hard a long while, and then condemned him to death, ordering that he be dragged some three stadia outside the city and beheaded there.
+
+The soldiers bound the martyr's hands, threw him on the ground, tied a rope to his feet and dragged him; and as he was dragged he sang, His foundations are on the holy mountains, the Lord loves the gates of Sion more than all the dwellings of Jacob. His body was broken as it went and the ground was reddened with his blood. When he was about three stadia from the city the executioner drew his sword, and the saint prayed, Lord Jesus Christ, receive my soul; and they struck off his head.
+
+He died on the fifteenth day of July, the third day after Proclus, and his body was left where he was beheaded. The faithful came by night, took it up, and buried it with honour beside the body of Proclus. The page gives no year.
+
+*After doxologia.ro's calendar for 12 iulie — [the day](https://doxologia.ro/12-iulie), [the life](https://doxologia.ro/viata-sfantului-mucenic-ilarie) and [the troparion](https://doxologia.ro/troparul-sfintilor-mucenici-proclu-ilarie); read 24 September 2026.*
