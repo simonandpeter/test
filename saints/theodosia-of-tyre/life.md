@@ -1,0 +1,11 @@
+# Theodosia of Tyre
+
+Doxologia's life for Theodosia is a quotation. About the virgin of Tyre, it says, Eusebius, bishop of Caesarea in Palestine, who saw it himself, wrote thus: the persecution by the idol-worshippers had run over them for five years when, on the second day of April, at the very feast of the Lord's Resurrection, in the city of Caesarea in Palestine, a faithful and well-born virgin from Tyre, not yet eighteen, came up to those shut in prison and bound for Christ, and spoke to them boldly about the kingdom of God.
+
+She wished them well and asked them to remember her before the Lord when they should stand before Him, after the end of their martyr's contest. The soldiers, seeing her talking with men bound for Christ, seized her as though she had done some great wrong and brought her for questioning to the governor Urban. He, full of anger and of a beast's savagery, tormented her cruelly, tearing her ribs and breasts to the bone with iron claws; but her face was bright and she bore it all with courage. He then ordered her drowned in the depth of the sea.
+
+This, doxologia says, is what Eusebius relates, who was an eyewitness to all the torments. To it the page adds what it calls the Romans' account: that after her drowning Theodosia was brought up alive out of the deep to dry land by angels, and walked carrying in her hands the stone that had been tied to her neck; that, taken again and brought to judgement, she was given to the beasts and they did not harm her; and that the torturer then ordered her beheaded.
+
+When her head was struck off, a dove was seen flying out of her mouth, shining brighter than gold, and it went up towards heaven. That night she appeared to her parents in the midst of the holy virgins, in a garment whiter than snow, a golden cross in her hands and a crown on her head, saying: see how great is the glory and the gift of my Christ, of which you wished to deprive me. Her parents had seen her longing for the martyr's contest and had held her back from it; hiding from them, she ran to those bound for Christ and gave herself up. The page prints no year.
+
+*After doxologia.ro's calendar for 29 mai — [the day](https://doxologia.ro/29-mai) and [the life](https://doxologia.ro/viata-sfintei-mucenite-teodosia-fecioara); read 24 September 2026.*

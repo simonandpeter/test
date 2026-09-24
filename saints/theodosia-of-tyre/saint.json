@@ -1,0 +1,68 @@
+{
+  "slug": "theodosia-of-tyre",
+  "display_name": "Theodosia of Tyre",
+  "names": [
+    {
+      "form": "Teodosia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 mai, «Sfânta Muceniță Teodosia, fecioara»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 29 mai — «Sfânta Muceniță Teodosia, fecioara»",
+        "url": "https://doxologia.ro/29-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "La fapta bună muceniţă, cu osârdie deprinzându-te, te-ai făcut vas iubit al lui Hristos şi locaş iubit al Preasfântului Duh. Pentru aceasta ai ruşinat pe vrăjmaşul, cel ce se luptă cu neamul omenesc, bine pătimind şi arătat cu sabia credinţei ai ucis pe cel cu nume de fiară, Teodosia; şi bucurându-te te-ai mutat la cer, cerând pururea mare milă, celor ce cu credinţă te cinstesc pe tine.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Mucenițe Teodosia, fecioara",
+        "url": "https://doxologia.ro/troparul-sfintei-mucenite-teodosia-fecioara",
+        "year": 2026
+      },
+      "english": {
+        "text": "Training thyself with zeal in the good work, O martyr, thou becamest a beloved vessel of Christ and a beloved dwelling of the All-Holy Spirit. Therefore thou didst shame the enemy who fights against the human race, suffering well; and openly, with the sword of faith, thou didst slay him whose name is the beast's, O Theodosia. Rejoicing, thou wast taken up to heaven, asking always great mercy for those who honour thee with faith.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

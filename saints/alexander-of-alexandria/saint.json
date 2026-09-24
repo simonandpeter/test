@@ -1,0 +1,51 @@
+{
+  "slug": "alexander-of-alexandria",
+  "display_name": "Alexander of Alexandria",
+  "office": "Archbishop of Alexandria",
+  "names": [
+    {
+      "form": "Alexandru",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 mai, «Sfântul Ierarh Alexandru, Arhiepiscopul Alexandriei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 29 mai — «Sfântul Ierarh Alexandru, Arhiepiscopul Alexandriei»",
+        "url": "https://doxologia.ro/29-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

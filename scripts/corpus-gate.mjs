@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'alexandru alexander-of-alexandria alexander-of-cartagena alexander-of-side alexander-of-the-forty-martyrs':
+    'four men called Alexandru, on four days: the archbishop of Alexandria, Romanian 29 May, a line the calendar names and whose page carries no life; the martyr of Cartagena, Romanian 25 February; the presbyter of Side who suffered under Aurelian, Romanian 14 March; and one of the Forty frozen at Sebaste under Licinius, Romanian 9 March. One hierarch and three martyrs (read 25 September 2026)',
   'eutihie eutychius-of-constantinople eutychius-of-melitene eutychius-of-the-forty-martyrs':
     'three men called Eutihie, on three days: the patriarch of Constantinople, Romanian 6 April; the hieromartyr bishop of Melitene of 28 May, a line the calendar names and whose page carries no life; and one of the Forty frozen at Sebaste under Licinius, Romanian 9 March (read 25 September 2026)',
   'nichita nicetas-of-chalcedon nikitas-of-nea-moni':
