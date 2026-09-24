@@ -1,5 +1,27 @@
 #!/usr/bin/env node
-/* Counts every hymn the corpus holds and which renderings each carries. */
+/**
+ * **How big Series M actually is**, counted rather than estimated.
+ *
+ *   node scratchpad/hymn-corpus-count.mjs
+ *
+ * Every hymn the corpus holds, from both tables — the saints' own folders and
+ * the day records in `src/data/liturgical-days.js`, which are separate halves
+ * that reach the same `ui/hymns.js` and have twice now been measured one at a
+ * time. Then which renderings each carries: `english`, and a field for each of
+ * the four packs' languages.
+ *
+ * It asks for `ru`, `ro`, `el` and `sr` by name on purpose. **The schema has
+ * no such field** — `schema/saint.schema.json`'s hymn item is
+ * `additionalProperties: false` over `church, kind, lang, tone, model, text,
+ * source, english` — so the four counts are not a gap in the corpus but a gap
+ * in the shape it is allowed to take, and a rendering into Romanian has
+ * nowhere to be written until that changes. The last line prints the fields
+ * actually seen, which is what says whether that is still true.
+ *
+ * `hymn-language-sweep.mjs` is the reader-facing question; this is the
+ * corpus-facing one, and they answer different things: the sweep counts what
+ * the page would print per date and calendar, this counts texts.
+ */
 import fs from 'node:fs';
 import { LITURGICAL_DAYS } from '../src/data/liturgical-days.js';
 
