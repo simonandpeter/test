@@ -1,0 +1,73 @@
+{
+  "slug": "pancratius-of-tauromenium",
+  "display_name": "Pancratius of Tauromenium",
+  "names": [
+    {
+      "form": "Pangratie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 februarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop of Tauromenium",
+  "related": [
+    "marcellus-of-sicily"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge Sfinţite Mucenice Pangratie, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfințit Mucenic Pangratie, Episcopul Taorminei, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-pangratie-episcopul-taorminei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharer of their ways and successor to the thrones of the apostles, thou didst find in action, O God-inspired one, a way of ascent to the vision of things on high. Therefore, rightly dividing the word of truth, thou didst contend for the faith unto blood, O Hieromartyr Pancratius: pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "Doxologia keeps him twice: its calendar prints him on 9 februarie and again on 9 iulie, and his own page's feast line gives «9 Iulie». One row per church is the schema, so the row is the day this folder was read from and the second day is recorded here. Read 24 September 2026."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 februarie — «Sfântul Sfințit Mucenic Pangratie, Episcopul Tavromeniei»",
+        "url": "https://doxologia.ro/9-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

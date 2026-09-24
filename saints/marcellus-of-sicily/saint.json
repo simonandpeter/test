@@ -1,0 +1,54 @@
+{
+  "slug": "marcellus-of-sicily",
+  "display_name": "Marcellus of Sicily",
+  "names": [
+    {
+      "form": "Marcel",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 februarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop of Sicily",
+  "related": [
+    "pancratius-of-tauromenium"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 februarie — «Sfântul Sfințit Mucenic Marcel, Episcopul Siciliei»",
+        "url": "https://doxologia.ro/9-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
