@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'andronicus companion junia andronicus-the-apostle junia-the-apostle':
+    'two apostles of the Seventy whom doxologia keeps together on 17 May, each named in this corpus as the other’s companion, so the fold is the key sorting their two names into one — the same shape as bassus/eusebius on 20 January (read 25 September 2026)',
+  'teofan theophanes-of-sigriane theophanes-venerable-17-may':
+    'the bare line of the Romanian 17 May, a venerable with no epithet, no monastery, no country and no century, whose page opens no life, against the confessor of Sigriane, Romanian 12 March. Two months apart, and nothing on the 17 May page puts that man at Sigriane (read 25 September 2026)',
   'simeon simeon-martyr-16-may simeon-of-persia symeon-kinsman-of-the-lord symeon-the-god-receiver':
     'four men called Simeon, on four days: the bare line of the Romanian 16 May, a martyr with no epithet, no see, no country and no century, whose page opens no life; the bishop of Persia, Romanian 17 April; the kinsman of the Lord and bishop of Jerusalem, Romanian 27 April; and the elder who received the Lord in the temple, Romanian 3 February. Nothing on the 16 May page joins its man to any of the other three (read 25 September 2026)',
   'eftimie euthymius-of-dimitsana euthymius-of-madytos euthymius-of-vatopedi jacob-of-putna':

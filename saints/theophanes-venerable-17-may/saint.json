@@ -1,0 +1,49 @@
+{
+  "slug": "theophanes-venerable-17-may",
+  "display_name": "Theophanes (17 May)",
+  "names": [
+    {
+      "form": "Teofan",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 mai, «Sfântul Cuvios Teofan»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 mai — «Sfântul Cuvios Teofan»",
+        "url": "https://doxologia.ro/17-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
