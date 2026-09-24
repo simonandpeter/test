@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'anastasia basilissa rome anastasia-of-rome-15-april basilissa-of-rome':
+    'two women of Rome, disciples of the Apostles, whom doxologia keeps together on 15 April and whose display names each carry the other, so the fold is the key sorting their two names into one. Not one person under two spellings (read 25 September 2026)',
+  'trofim trophimus-companion-of-paul trophimus-of-laodicea trophimus-of-nicomedia':
+    'three men called Trofim: the companion of the Apostle Paul, whom Paul left sick at Miletus, Romanian 15 April; the martyr taken with Thalus at Laodicea under Diocletian and Maximian and the governor Asclepius, Romanian 11 March; and the soldier of Nicomedia who suffered with Eucarpion under Maximian, Romanian 18 March. One apostolic companion and two martyrs of the same persecution in two different cities (read 25 September 2026)',
   'artemon artemon-of-laodicea artemon-of-seleucia':
     'the presbyter of Laodicea of Diocletian’s persecution, Romanian 13 April, against the bishop of Seleucia in Pisidia, born there in the days of the Apostles and set over the city by the Apostle Paul, Romanian 24 March. Two and a half centuries and two cities apart (read 25 September 2026)',
   'macarie macarius-companion-of-terentius macarius-the-confessor':

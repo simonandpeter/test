@@ -1,0 +1,71 @@
+{
+  "slug": "pudens-of-rome",
+  "display_name": "Pudens of Rome",
+  "names": [
+    {
+      "form": "Pud",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 aprilie, «Sfântul Apostol Pud»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle"
+  ],
+  "related": [
+    "trophimus-companion-of-paul",
+    "aristarchus-of-apamea"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 15 aprilie — «Sfântul Apostol Pud»",
+        "url": "https://doxologia.ro/15-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Sfinţilor Apostoli rugaţi pe Milostivul Dumnezeu, ca să dea iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Apostoli Aristarh, Pud, Trofim», Glasul 3",
+        "url": "https://doxologia.ro/troparul-sfintilor-apostoli-aristarh-pud-trofim",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostles, entreat the merciful God to grant our souls forgiveness of sins.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

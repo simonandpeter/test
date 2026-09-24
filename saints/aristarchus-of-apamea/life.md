@@ -2,4 +2,6 @@
 
 Aristarchus, one of the Seventy, had the great honour, the Greek synaxarion says, of being a fellow-worker of the apostle Paul (Philemon 23) and his fellow prisoner (Colossians 4:10), and was afterwards a distinguished bishop of Apamea in Syria. His memory is repeated on 14 April. The synaxarion keeps him on 27 September with [Mark](/saints/mark-of-byblos) and [Zeno](/saints/zeno-of-diospolis), and gives no date.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 27 Σεπτεμβρίου — [the entry](https://www.saint.gr/2520/saint.aspx); read 17 September 2026.*
+The Romanian calendar keeps him on 15 April together with two other apostles, and prints one short notice for the three. It says the same of him as the Greek — that the Acts of the Apostles and Paul's letters to the Colossians and to Philemon remember him, and that he was bishop in Apamea of Syria — and then adds what became of them: that [Trophimus](/saints/trophimus-companion-of-paul) with [Pudens](/saints/pudens-of-rome) and Aristarchus followed Paul through all his persecutions, and that at the end, when Paul was beheaded by Nero at Rome, these three apostles of the Lord were beheaded with him.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 27 Σεπτεμβρίου — [the entry](https://www.saint.gr/2520/saint.aspx); read 17 September 2026; and doxologia.ro's calendar for 15 aprilie — [the day](https://doxologia.ro/15-aprilie), [the life](https://doxologia.ro/viata-sfantului-apostol-aristarh-0) and [the troparion](https://doxologia.ro/troparul-sfintilor-apostoli-aristarh-pud-trofim), read 20 September 2026.*

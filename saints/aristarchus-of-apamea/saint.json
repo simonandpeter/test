@@ -10,6 +10,11 @@
       "form": "Αρίσταρχος",
       "lang": "el",
       "note": "Read out of «Άγιοι Μάρκος, Αρίσταρχος και Ζήνων οι Απόστολοι από τους Εβδομήκοντα» in this folder’s Greek citation."
+    },
+    {
+      "form": "Aristarh",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 aprilie, «Sfântul Apostol Aristarh»."
     }
   ],
   "sex": "male",
@@ -18,7 +23,9 @@
   ],
   "related": [
     "mark-of-byblos",
-    "zeno-of-diospolis"
+    "zeno-of-diospolis",
+    "trophimus-companion-of-paul",
+    "pudens-of-rome"
   ],
   "office": "Bishop of Apamea",
   "attestations": [
@@ -29,8 +36,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 27 septembrie (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "The Romanian calendar keeps him on 15 April, with Pudens and Trophimus; the Greek synaxarion this folder already cited keeps him on 27 September and repeats his memory on 14 April."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 15 aprilie — «Sfântul Apostol Aristarh»",
+        "url": "https://doxologia.ro/15-aprilie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -54,5 +71,23 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Sfinţilor Apostoli rugaţi pe Milostivul Dumnezeu, ca să dea iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Apostoli Aristarh, Pud, Trofim», Glasul 3",
+        "url": "https://doxologia.ro/troparul-sfintilor-apostoli-aristarh-pud-trofim",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostles, entreat the merciful God to grant our souls forgiveness of sins.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
