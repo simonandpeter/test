@@ -1,0 +1,69 @@
+{
+  "slug": "archippus-the-apostle",
+  "display_name": "Archippus",
+  "names": [
+    {
+      "form": "Arhip",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 februarie, «Sfântul Apostol Arhip»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle",
+    "bishop",
+    "martyr"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Sfinţilor Apostoli, rugaţi pe Milostivul Dumnezeu ca să dea iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinților Apostoli Filimon, Arhip, Onisim și al celor împreună cu dânșii, Glasul 3",
+        "url": "https://doxologia.ro/troparul-sfintilor-apostoli-filimon-arhip-onisim-al-celor-impreuna-cu-dansii",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy Apostles, entreat the merciful God to grant our souls forgiveness of sins.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 februarie — «Sfântul Apostol Arhip»",
+        "url": "https://doxologia.ro/19-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

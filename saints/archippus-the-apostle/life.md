@@ -1,0 +1,13 @@
+# Archippus
+
+Archippus, one of the seventy apostles, was bishop at Colossae, a city of Phrygia, after Epaphras, on the testimony of Saint Ambrose; and this is why the Apostle Paul calls him his fellow soldier in the letter to Philemon. Philemon was a citizen of note in Colossae, and Apphia, John Chrysostom says, was his wife. Believing in Christ, Philemon made his house a church, for all the faithful of Colossae gathered at his house and the divine services were done there as in a church.
+
+Philemon was afterwards a bishop in the apostolate. In the days of the apostles, the life explains, some bishops had a see and others had none but went about through cities and countries; these last were called apostolic bishops, since they were sent out on the apostolate to preach. Philemon was set in such a bishopric and was numbered among the seventy apostles, going through the cities of Phrygia and others preaching the word of God; and it is written of him that he was bishop in Gaza as well.
+
+Apphia ordered the church at Colossae, serving God day and night in fasting and prayer, giving rest to the saints who laboured at the good news of Christ, and feeding the poor, the ruined and the stranger; so that her house was not only a church but a place for strangers, a hospital and a shelter for everyone who had nowhere to lay his head.
+
+Once, while the feast of the unclean Artemis was being kept at Colossae, Archippus with those who were there and with Philemon gathered all the faithful into the house Apphia ordered, and they were offering their accustomed prayers to God and doing the holy service. The idolaters, who hated the faithful, knew that all the Christians were gathered in Philemon's house, fell on them without warning and drove out the flock of Christ, beating some and killing others; and Archippus, Philemon and Apphia they seized and brought to Artocles, the chief man of the city of Ephesus, who ordered them all tortured.
+
+First they were stretched on the ground and dragged, and beaten with staves without mercy; then each was buried apart in the earth up to the hips and stoned. Philemon and Apphia they killed with the stones; but Archippus, after the beating, they left alive for the children to mock. The children gathered and pierced the saint with knives. So the apostolic three went up to heaven, the life says, before the throne of the Holy, life-giving and undivided Trinity. Doxologia gives no year for any of them.
+
+*After doxologia.ro's calendar for 19 februarie — [the day](https://doxologia.ro/19-februarie) and [the life](https://doxologia.ro/sfantul-apostol-arhip); read 19 September 2026.*

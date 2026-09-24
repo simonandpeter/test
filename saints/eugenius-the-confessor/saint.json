@@ -1,0 +1,50 @@
+{
+  "slug": "eugenius-the-confessor",
+  "display_name": "Eugenius the Confessor",
+  "names": [
+    {
+      "form": "Evghenie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 februarie, «Sfântul Cuvios Mărturisitor Evghenie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 februarie — «Sfântul Cuvios Mărturisitor Evghenie»",
+        "url": "https://doxologia.ro/19-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

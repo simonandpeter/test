@@ -1,0 +1,67 @@
+{
+  "slug": "philothei-of-athens",
+  "display_name": "Philothei of Athens",
+  "names": [
+    {
+      "form": "Filoteea din Atena",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 februarie, «Sfânta Cuvioasă Filoteea din Atena»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "new-martyr",
+    "wonderworker"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1522,
+      "latest": 1522,
+      "display": "1522",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Sfânta Maică Muceniță Filoteea s-a născut în Atena în anul 1522»."
+    },
+    "death": {
+      "earliest": 1589,
+      "latest": 1589,
+      "display": "1589",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «l-au dus la Kalogreza, unde s-a stins din viață la 19 februarie 1589»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 februarie — «Sfânta Cuvioasă Filoteea din Atena»",
+        "url": "https://doxologia.ro/19-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
