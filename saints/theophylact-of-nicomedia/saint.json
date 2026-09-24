@@ -1,0 +1,87 @@
+{
+  "slug": "theophylact-of-nicomedia",
+  "display_name": "Theophylact of Nicomedia",
+  "office": "Bishop of Nicomedia",
+  "names": [
+    {
+      "form": "Teofilact",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 martie, «Sfântul Ierarh Teofilact Mărturisitorul, Episcopul Nicomidiei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "confessor",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 martie — «Sfântul Ierarh Teofilact Mărturisitorul, Episcopul Nicomidiei»",
+        "url": "https://doxologia.ro/8-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 6",
+      "text": "Neştiut ai trăit, preafericite, dar Hristos te-a arătat pe tine tuturor, luminând ca un astru, punându-te ca pe o lumină în­ţelegătoare în sfeşnic. Şi ţi-a înmânat tablele dogmelor Du­hului, cu care luminează-ne şi pe noi.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Mărturisitor Teofilact, Episcopul Nicomidiei, glasul 6",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-marturisitor-teofilact-episcopul-nicomidiei",
+        "year": 2026
+      },
+      "english": {
+        "text": "You lived unknown, most blessed one, but Christ showed you to all, shining like a star, and set you as a spiritual light upon the lampstand. And he put into your hands the tablets of the dogmas of the Spirit; by them give light to us also.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "model": "Cele de sus căutând...",
+      "text": "Luminător marginilor te-ai arătat, Sfinţite Părinte Teofilact, pro­povăduind Cuvântul Cel de o fiinţă cu Tatăl şi cu Duhul şi ceata Dumnezeieştilor părinţi ai luminat-o, arătându-te plă­cut Preasfintei Treimi, înaintea Căreia stând, roagă-te neîncetat pen­tru noi toţi.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Ierarh Mărturisitor Teofilact, Episcopul Nicomidiei, glasul 2, podobie «Cele de sus căutând...»",
+        "url": "https://doxologia.ro/condacul-sfantului-ierarh-marturisitor-teofilact-episcopul-nicomidiei",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be a light to the ends of the earth, holy father Theophylact, preaching the Word who is one in being with the Father and the Spirit, and you gave light to the company of the godly fathers, showing yourself pleasing to the Most Holy Trinity; standing before it, pray without ceasing for us all.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

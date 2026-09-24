@@ -1,0 +1,73 @@
+{
+  "slug": "john-karhapaa",
+  "display_name": "John Karhapää",
+  "names": [
+    {
+      "form": "Ioan de Sonkajanranta",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 martie, «Sfântul Martir Mărturisitor Ioan de Sonkajanranta»."
+    },
+    {
+      "form": "Johannes Vasilinpoika Karhapää",
+      "lang": "fi",
+      "note": "Read out of the opening line of his life page, «Johannes Vasilinpoika Karhapää (Sfântul Martir Mărturisitor Ioan de Sonkajanranta)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "confessor",
+    "new-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1884,
+      "latest": 1884,
+      "display": "1884",
+      "basis": "attested",
+      "note": "doxologia.ro: «S-a născut pe 13 iulie 1884, în Finlanda»."
+    },
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "doxologia.ro: «A primit moarte martirică la numai 33 de ani, pe 8 aprilie 1918»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 martie — «Sfântul Martir Mărturisitor Ioan de Sonkajanranta»",
+        "url": "https://doxologia.ro/8-martie",
+        "year": 2026
+      },
+      "note": "doxologia keeps him on 8 martie; his life page on the same site gives 8 April 1918 as the day of his death and names no commemoration day."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

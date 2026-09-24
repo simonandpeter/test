@@ -1,0 +1,106 @@
+{
+  "slug": "liviu-galaction-munteanu",
+  "display_name": "Liviu Galaction Munteanu",
+  "names": [
+    {
+      "form": "Liviu-Galaction de la Cluj",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 martie, «✝) Sfântul Preot Mucenic Liviu-Galaction de la Cluj»."
+    },
+    {
+      "form": "Liviu Galaction Munteanu",
+      "lang": "ro",
+      "note": "Read out of the caption on his life page, «Pr. Liviu Galaction Munteanu»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1898,
+      "latest": 1898,
+      "display": "1898",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut în 16 mai 1898, într-o familie de învățători din Cristian, județul Brașov»."
+    },
+    "death": {
+      "earliest": 1961,
+      "latest": 1961,
+      "display": "1961",
+      "basis": "attested",
+      "note": "doxologia.ro: «A murit în 8 martie 1961, la Aiud, ca urmare a tratamentului inuman la care a fost supus de regimul comunist»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 martie — «✝) Sfântul Preot Mucenic Liviu-Galaction de la Cluj»",
+        "url": "https://doxologia.ro/8-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Mărturisitorule al Ortodoxiei, povățuitorule al tinerilor și lauda dascălilor, Părinte Liviu Galaction, cu învățăturile tale pe toți i-ai luminat; sprijinitorul celor din necazuri și pătimitorule pentru dreapta credință roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Preot Mucenic Liviu-Galaction de la Cluj. The page prints no glas.",
+        "url": "https://doxologia.ro/troparul-sfantului-preot-mucenic-liviu-galaction-de-la-cluj",
+        "year": 2026
+      },
+      "english": {
+        "text": "Confessor of Orthodoxy, guide of the young and praise of teachers, Father Liviu Galaction, by your teaching you gave light to all; helper of those in trouble and sufferer for the right faith, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "model": "Podobie: Ca pe o pârgă...",
+      "text": "Strălucind între preoți prin râvna mărturisirii lui Hristos, ai surpat uneltirile cele mincinoase ale vrăjmașului, punându-ți viața pentru luminarea tinerilor și propovăduirea adevărului. Pentru aceasta, cinstindu-te, cu taină strigăm: Izbăvește-ne din nevoi, prin rugăciunile tale, Părinte Liviu-Galaction, mult pătimitorule.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Preot Mucenic Liviu-Galaction de la Cluj, glasul 8, podobie «Ca pe o pârgă...»",
+        "url": "https://doxologia.ro/condacul-sfantului-preot-mucenic-liviu-galaction-de-la-cluj",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining out among priests by your zeal in confessing Christ, you threw down the lying devices of the enemy, laying down your life for the enlightening of the young and the preaching of the truth. Therefore, honouring you, we cry out in secret: deliver us from our distresses by your prayers, Father Liviu-Galaction, much-suffering one.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "paul-of-plousias",
+  "display_name": "Paul of Plousias",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Pavel",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 martie, «Sfântul Ierarh Pavel Mărturisitorul, Episcopul Plusiadei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "confessor"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 701,
+      "latest": 900,
+      "display": "late 8th or early 9th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Cuviosul Pavel a trăit în perioada iconoclastă (sfârșitul secolului al VIII-lea și începutul secolului al IX-lea)». The bounds are the two centuries the page names; it gives no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 martie — «Sfântul Ierarh Pavel Mărturisitorul, Episcopul Plusiadei»",
+        "url": "https://doxologia.ro/8-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
