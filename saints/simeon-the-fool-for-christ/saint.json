@@ -1,0 +1,71 @@
+{
+  "slug": "simeon-the-fool-for-christ",
+  "display_name": "Simeon the Fool for Christ",
+  "names": [
+    {
+      "form": "Simeon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 iulie, «Sfântul Cuvios Simeon», with the rank words left off. The site's troparion page names him «Simeon cel nebun pentru Hristos»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "fool-for-christ"
+  ],
+  "related": [
+    "john-companion-of-simeon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 21 iulie — «Sfântul Cuvios Simeon»",
+        "url": "https://doxologia.ro/21-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Dumnezeul părinţilor noştri, Care faci pururea cu noi după blândeţile Tale, nu îndepărta mila Ta de la noi; ci pentru rugăciunile lor, în pace îndreptează viaţa noastră.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Simeon cel nebun pentru Hristos și al Sfântului Cuvios Ioan Pustnicul», Glasul 4 — one hymn printed for the two of them.",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-simeon-cel-nebun-pentru-hristos-sfantului-cuvios-ioan-pustnicul",
+        "year": 2026
+      },
+      "english": {
+        "text": "God of our fathers, who always deal with us according to Your gentleness: do not take Your mercy from us, but at their prayers direct our life in peace.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

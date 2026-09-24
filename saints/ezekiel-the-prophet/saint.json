@@ -1,0 +1,68 @@
+{
+  "slug": "ezekiel-the-prophet",
+  "display_name": "Ezekiel",
+  "names": [
+    {
+      "form": "Iezechiel",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 iulie, «Sfântul Proroc Iezechiel», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet",
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 21 iulie — «Sfântul Proroc Iezechiel»",
+        "url": "https://doxologia.ro/21-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "A prorocului Tău Iezechiel pomenire, Doamne, prăznuind, printr-însul Te rugăm, mântuieşte sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Proroc Iezechiel», Glasul 2",
+        "url": "https://doxologia.ro/troparul-sfantului-proroc-iezechiel",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping the memory of Your prophet Ezekiel, O Lord, through him we entreat You: save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

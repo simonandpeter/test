@@ -1,0 +1,13 @@
+# Parthenius of Agapia Veche
+
+Parthenius, the holy and wonderful father, a worthy successor of the hermits of the mountains of Agapia, lived in those places in the seventeenth century. The holy hierarch Dosoftei, metropolitan of Moldavia, who knew many monks of high spiritual life in Moldavia, numbers Parthenius among the Romanian saints whose life and manner of living he had seen.
+
+He was a disciple of the elder Euphrosynus, the founder of the monastery in the Fathers' Orchard, and received the tonsure into the monastic habit from his hands. How long he spent in the common life and how long he struggled in the hermitage cannot be known. Tradition says that he lived as a hermit on the mountain called Scaunele, after the example of the fathers of old.
+
+Their struggle was this: by day they prayed in solitude, chiefly with the Psalter, which they knew by heart; at sunset they took a little bread and boiled vegetables; and all night they struggled at prayer with the mind — the Jesus prayer — while their hands plaited baskets. They dozed only a little when they were tired, on benches set between the trunks of the firs, and the struggle went on without a break until morning. Their disciples carried the baskets to market and sold them, and with the money bought food and what a hermit's life needs. From those benches, the scaune, the mountain and the clearing took the name Scaune.
+
+He went up into that mountain of the blessed as into another Tabor when the elder Euphrosynus allowed him to go to stillness, for having tasted the sweetness of divine grace his spirit longed for the good things the desert brings forth. There he shut the gates of his senses with the laws of God as with bolts and spoke with the Master of all in secret prayer, and his labour was his delight. Who can tell the measureless struggles, the vigils with tears, the fight with thoughts and with the spirits of deceit? By bearing the straits of the desert and the drying up of the body he became like the angels and a worthy dweller in the monastery of the bodiless ones.
+
+This godly man is numbered among the abbots of Agapia, and many monks and hermits were saved by his prayer and his gentle guidance. The middle of the Romanian page is left here unsummarised; it is one life printed for him and for [Raphael](/saints/raphael-of-agapia-veche) together, and the calendar keeps the two of them on 21 iulie as the venerable fathers of Agapia Veche.
+
+*After doxologia.ro's calendar for 21 iulie — [the day](https://doxologia.ro/21-iulie), [the life](https://doxologia.ro/viata-sfintilor-cuviosi-rafael-partenie-de-la-agapia-veche) and [the troparion](https://doxologia.ro/troparul-sfintilor-cuviosi-rafael-partenie-de-la-agapia-veche); read 24 September 2026.*

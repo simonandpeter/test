@@ -1,0 +1,73 @@
+{
+  "slug": "raphael-of-agapia-veche",
+  "display_name": "Raphael of Agapia Veche",
+  "names": [
+    {
+      "form": "Rafael de la Agapia Veche",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 iulie, «Sfinții Cuvioși Rafael și Partenie de la Agapia Veche», with the rank words left off. The site's troparion page for the two spells the name «Rafail»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "abbot"
+  ],
+  "related": [
+    "parthenius-of-agapia-veche"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 21 iulie — «Sfinții Cuvioși Rafael și Partenie de la Agapia Veche»",
+        "url": "https://doxologia.ro/21-iulie",
+        "year": 2026
+      },
+      "note": "doxologia.ro prints one shared life for him and Parthenius; it states a century for Parthenius and none for Raphael, so no dates are recorded for him."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 5",
+      "text": "Următori şi împlinitori ai Evangheliei lui Hristos, Cuvioşilor Părinţi Partenie şi Rafail, sihaştrii prealuminaţi ai munţilor Moldovei; ostenindu-vă cu postul şi cu rugăciunea, aţi dobândit de la Dumnezeu aripi ale sufletului vostru, pentru aceasta vă rugăm să ne trimiteţi de la Hristos milă şi har celor ce prăznuim cu dragoste pomenirea voastră!",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Cuvioși Rafael și Partenie de la Agapia Veche», Glas 5 — the hymn spells the name «Rafail» where the day's line has «Rafael».",
+        "url": "https://doxologia.ro/troparul-sfintilor-cuviosi-rafael-partenie-de-la-agapia-veche",
+        "year": 2026
+      },
+      "english": {
+        "text": "Followers and fulfillers of the Gospel of Christ, venerable fathers Parthenius and Raphael, most radiant hermits of the mountains of Moldavia: having laboured with fasting and with prayer, you received from God wings for your souls; and so we ask you to send us from Christ mercy and grace, who keep your memory with love.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

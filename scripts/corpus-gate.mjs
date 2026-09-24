@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ioan john-companion-of-simeon john-disciple-of-gregory-the-decapolite john-of-antioch john-of-edessa john-of-gothia john-of-nea-moni john-of-the-forty-martyrs john-of-the-old-lavra john-of-valaam john-son-of-xenophon john-the-theologian':
+    'eleven men whose `ro` form is Ioan, on eleven separate Romanian days. The new one is the companion of Simeon the Fool for Christ, Romanian 21 July: a Syrian of good family, twenty-four years old and newly married, who turned aside from the pilgrimage to the Cross with Simeon under Justinian. The other ten are unchanged and each keeps its own day -- the disciple of Gregory the Decapolite and John of Antioch, both 18 April and two men; John of Edessa, 31 January; John of Gothia, 26 June; John of Nea Moni, 20 May; the John frozen at Sebaste, 9 March; John of the Old Lavra, 19 April; John of Valaam, 5 June; the son of Xenophon, 26 January; and the Theologian, 26 September (read 25 September 2026)',
+  'simeon simeon-martyr-16-may simeon-of-persia simeon-the-fool-for-christ symeon-kinsman-of-the-lord symeon-the-god-receiver':
+    'five men whose `ro` form is Simeon, on five separate Romanian days. The new one is Simeon the Fool for Christ of Emesa, Romanian 21 July, who set out from Syria under Justinian with the John of the same batch and shares his life; the two are one story told in one text and two folders. The other four are unchanged -- the bare martyr the calendar prints on 16 May; Simeon of Persia, 17 April; the kinsman of the Lord, 27 April; and the God-receiver who held the Child, 3 February (read 25 September 2026)',
   'avramie abramius-of-arbela athanasius-the-athonite':
     'Athanasius the Athonite, Romanian 5 July, whose second `ro` form is Avramie because his own life gives that as his baptismal name, against the hieromartyr bishop of Arbela under Shapur II, Romanian 4 February (read 25 September 2026)',
   'ciprian cyprian-companion-of-quadratus cyprian-martyr-10-may cyprian-the-new-martyr':
