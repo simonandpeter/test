@@ -1,0 +1,60 @@
+{
+  "slug": "evangelus-of-tomis",
+  "display_name": "Evangelus of Tomis",
+  "office": "Bishop of Tomis",
+  "names": [
+    {
+      "form": "Evanghel",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 iulie, «Sfântul Mucenic Evanghel, Episcopul Tomisului», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian (284–305)",
+      "basis": "traditional",
+      "note": "doxologia.ro: «A păstorit credicioșii de la Gurile Dunării spre sfârșitul secolului al III-lea… Se crede că Sfântul Mucenic Evanghel a fost martirizat în timpul persecuției lui Dioclețian (284-305).» The page gives the reign and no year, and marks the martyrdom itself as believed rather than recorded."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 iulie — «Sfântul Mucenic Evanghel, Episcopul Tomisului»",
+        "url": "https://doxologia.ro/7-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

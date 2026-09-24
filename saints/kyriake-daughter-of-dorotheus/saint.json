@@ -1,0 +1,77 @@
+{
+  "slug": "kyriake-daughter-of-dorotheus",
+  "display_name": "Kyriake, daughter of Dorotheus and Eusebia",
+  "names": [
+    {
+      "form": "Chiriachi",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 iulie, «Sfânta Mare Muceniță Chiriachi», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "great-martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 282,
+      "latest": 305,
+      "display": "under Diocletian",
+      "basis": "traditional",
+      "note": "doxologia.ro opens «În zilele împăratului Dioclețian, la anul 282», which is the year it gives for her parents' vow, and places her trial before Diocletian, the caesar Maximian at Nicomedia and the governors of Bithynia; the interval is Diocletian's persecution, which the page names but does not date her death within."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 iulie — «Sfânta Mare Muceniță Chiriachi»",
+        "url": "https://doxologia.ro/7-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mieluşeaua Ta, Iisuse, Chiriachi, strigă cu glas mare: pe Tine, Mirele meu, te iubesc și pe Tine căutându-Te mă chinuiesc și împreună mă răstignesc și împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru tine, ca să viez pentru Tine; ci, ca o jertfă fără de prihană, primește-mă pe mine ceea ce cu dragoste mă jertfesc Ție. Pentru rugăciunile ei, ca un milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintei Mari Mucenițe Chiriachi», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfintei-mari-mucenite-chiriachi",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your ewe-lamb Kyriake cries out to You, Jesus, with a loud voice: You, my Bridegroom, I love, and seeking You I am in torment; I am crucified with You and buried with You in Your baptism; I suffer for You, that I may reign in You, and I die for You, that I may live in You. Receive me, then, as an unblemished sacrifice, who sacrifice myself to You in love. At her prayers, as the merciful One, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

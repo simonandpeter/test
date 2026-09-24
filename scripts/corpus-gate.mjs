@@ -119,6 +119,10 @@ const READ_FOLDS = {
     'Athanasius the Athonite, Romanian 5 July, whose second `ro` form is Avramie because his own life gives that as his baptismal name, against the hieromartyr bishop of Arbela under Shapur II, Romanian 4 February (read 25 September 2026)',
   'ciprian cyprian-companion-of-quadratus cyprian-martyr-10-may cyprian-the-new-martyr':
     'three men called Ciprian, on three days: the hieromonk new-martyr of Kletzos in Agrafa, Romanian 5 July; the companion of Quadratus of Corinth under Decius and Valerian, Romanian 10 March; and the bare «Sfantul Mucenic Ciprian» the calendar prints on 10 May with no life and no century (read 25 September 2026)',
+  'acachie acacius-of-melitene acacius-of-the-forty-martyrs acacius-the-centurion acacius-the-new-of-neochorion acacius-the-obedient':
+    'five men called Acachie, on five days: the obedient monk of John of the Ladder’s fourth step, Romanian 7 July; the bishop of Melitene, 17 April; one of the Forty frozen at Sebaste, 9 March; the centurion under Maximian, 7 May; and the new-martyr of Neochorion in Macedonia, 1 May. Whether the 31 March and 17 April Melitene pages are one man or two is still open, and is recorded in the run’s own notes outside this repo; it does not touch the other four (read 25 September 2026)',
+  'chiriachi kyriake-daughter-of-dorotheus kyriake-martyr-19-may':
+    'the great-martyr and virgin born to Dorotheus and Eusebia under Diocletian, Romanian 7 July, against the bare «Sfanta Mucenita Chiriachi» of 19 May, whose page prints one sentence naming her companions and nothing else (read 25 September 2026)',
   'arhip archippus-6-july archippus-the-apostle':
     'the bare «Sfantul Mucenic Arhip» the Romanian calendar prints on 6 July, whose own page on doxologia.ro carries the name and nothing else, against the apostle of the Seventy and bishop of Colossae, Romanian 19 February. The source holds them apart itself -- a different rank, Mucenic against Apostol, and a different page -- and there is no life on the July one to read further (read 25 September 2026)',
   'filimon philemon-6-july philemon-of-cyzicus philemon-of-gaza':

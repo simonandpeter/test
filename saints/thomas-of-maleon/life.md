@@ -1,0 +1,11 @@
+# Thomas of Maleon
+
+Thomas, at the beginning of his life in the world, was a soldier of great renown, for his wealth on the one side and on the other for his courage: strong in body, brave in war, and often the victor over the enemy's ranks. Afterwards, loving Christ, he left the world with all its quarrelling and took up the light yoke of Christ, put on the monastic habit in the likeness of his Lord's poverty and humility, and went round the monastic dwellings, guided towards the virtues by ascetics pleasing to God.
+
+When he wished to go out into the desert for a more perfect solitude and stillness, a pillar of fire went before him by night and the prophet Elijah appeared to him, leading him into the depths of the wilderness; and by such guides he was brought, as to another Carmel, to the mountain of Malein, where he lived for God and was granted divine revelations and visions. As he had once overcome visible enemies bravely in the world, so after renouncing it he threw down and drove off the unseen camps of the evil spirits with unceasing prayer, as with a sharp sword.
+
+But a city set on a mountain cannot be hidden, nor a lamp shining high up towards heaven, and Thomas was not concealed on his desert mountain: he rose there like a bright star and lit the earth by his holiness. Being found out by men, he became a light to those in darkness and a harbour to those who ran to him, for he received from God the power of working wonders and the gift of healing, and cured all diseases; he gave sight to the blind and good walking to the lame, and he brought a spring of water out of the ground by prayer.
+
+The wonders did not stop at his death. At his honoured relics, doxologia says, sudden healings beyond nature were given to those who came and venerated them in faith, from every incurable weakness and sickness, and unclean spirits were driven out of men by his holy prayers and the grace of Christ our God. The page gives no year for his life and no year for his death.
+
+*After doxologia.ro's calendar for 7 iulie — [the day](https://doxologia.ro/7-iulie), [the life](https://doxologia.ro/viata-sfantului-cuvios-toma-din-maleon) and [the troparion](https://doxologia.ro/troparul-sfantului-cuvios-toma-din-maleon); read 24 September 2026.*
