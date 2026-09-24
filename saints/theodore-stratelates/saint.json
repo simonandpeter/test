@@ -1,0 +1,68 @@
+{
+  "slug": "theodore-stratelates",
+  "display_name": "Theodore Stratelates",
+  "names": [
+    {
+      "form": "Teodor Stratilat",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 februarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "great-martyr",
+    "soldier"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Strălucit voievod al adevăratei Oşti a Împăratului Ceresc ai ajuns, Fericite Teodor, purtătorule de biruinţă; că înţelepţeşte te-ai luptat cu armele credinţei şi mulţimile demonilor le-ai biruit şi adevărat biruitor te-ai arătat. Pentru aceasta pe tine cu credinţă pururea te fericim.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mare Mucenic Teodor Stratilat, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mare-mucenic-teodor-stratilat",
+        "year": 2026
+      },
+      "english": {
+        "text": "A shining commander of the true army of the Heavenly King thou hast become, O blessed Theodore, bearer of victory; for thou didst fight wisely with the weapons of the faith, and didst overcome the multitudes of the demons, and wast shown a true victor. Therefore we ever call thee blessed with faith.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 februarie — «Sfântul Mare Mucenic Teodor Stratilat»",
+        "url": "https://doxologia.ro/8-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

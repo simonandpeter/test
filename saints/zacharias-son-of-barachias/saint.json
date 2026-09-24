@@ -1,0 +1,67 @@
+{
+  "slug": "zacharias-son-of-barachias",
+  "display_name": "Zacharias, son of Barachias",
+  "names": [
+    {
+      "form": "Zaharia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 februarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "A prorocului Tău, Doamne, Zaharia pomenire prăznuind, printr-însul Te rugăm, mântuieşte sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Proroc Zaharia, Glasul 2",
+        "url": "https://doxologia.ro/troparul-sfantului-proroc-zaharia-0",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping the memorial of Thy prophet Zacharias, O Lord, through him we entreat Thee: save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 februarie — «Sfântul Proroc Zaharia»",
+        "url": "https://doxologia.ro/8-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
