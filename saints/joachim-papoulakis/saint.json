@@ -1,0 +1,66 @@
+{
+  "slug": "joachim-papoulakis",
+  "display_name": "Joachim Papoulakis of Ithaca",
+  "names": [
+    {
+      "form": "Ioachim Papoulakis",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 martie, «Sfântul Cuvios Ioachim Papoulakis din Ithaca»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1786,
+      "latest": 1786,
+      "display": "1786",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut în anul 1786 în cătunul Kalyvia, din Ithaka, Grecia»."
+    },
+    "death": {
+      "earliest": 1868,
+      "latest": 1868,
+      "display": "1868",
+      "basis": "attested",
+      "note": "doxologia.ro: «A trecut la Domnul în pace la 2 martie 1868»; the same page gives 1827 for his return to Ithaca and 1998 for his canonization."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 martie — «Sfântul Cuvios Ioachim Papoulakis din Ithaca»",
+        "url": "https://doxologia.ro/2-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

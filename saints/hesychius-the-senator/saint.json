@@ -1,0 +1,67 @@
+{
+  "slug": "hesychius-the-senator",
+  "display_name": "Hesychius the Senator",
+  "names": [
+    {
+      "form": "Isihie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 martie, «Sfântul Mucenic Isihie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 martie — «Sfântul Mucenic Isihie»",
+        "url": "https://doxologia.ro/2-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Isihie, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Isihie",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-isihie",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Hesychius, O Lord, in his contest received the crown of incorruption from Thee, our God; for having Thy strength he overcame his tormentors, and broke the strengthless daring of the demons. At his prayers, O Christ our God, save Thou our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

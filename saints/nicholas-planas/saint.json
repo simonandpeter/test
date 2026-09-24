@@ -1,0 +1,59 @@
+{
+  "slug": "nicholas-planas",
+  "display_name": "Nicholas Planas",
+  "names": [
+    {
+      "form": "Nicolae Planas",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 martie, «Sfântul Nicolae Planas, ocrotitorul celor căsătoriți»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1932,
+      "latest": 1932,
+      "display": "1932",
+      "basis": "attested",
+      "note": "doxologia.ro: «În anul 1932, Sfântul Nicolae Planas pleacă la cele veșnice»; the same page gives 1879 for his ordination as deacon, 1884 for the priesthood, and 23 July 1992 for his canonization, and no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 martie — «Sfântul Nicolae Planas, ocrotitorul celor căsătoriți»",
+        "url": "https://doxologia.ro/2-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

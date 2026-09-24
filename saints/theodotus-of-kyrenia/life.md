@@ -1,0 +1,13 @@
+# Theodotus of Kyrenia
+
+In the island of Cyprus there is a city that doxologia's life page spells Cirene and its calendar line Chirinia; in that city Theodotus was bishop. He was of Galatian stock, born of Christian parents and brought up in learning, and from his youth, having trained himself in wisdom and good works, he went over to Cyprus, where he taught the Greeks to leave the error and deceit of the idols and to believe in Christ, the true God.
+
+He turned many from pagan uncleanness by the preaching of the word of God and led them into the way of salvation, and for that he was chosen bishop of the city. There was then a great persecution of the Christians, the pagan Licinius reigning, and Sabinus was governor in Cyprus; and Theodotus, wishing to suffer for Christ, disputed boldly with the Greeks, rebuking their error and preaching Christ the true God.
+
+When the governor gave orders to seize him, the bishop did not wait to be fetched, but rose and went to him of his own accord, and said that here was the man he was looking for: he had not hidden, nor was he brought by force, for the truth must be shown and not concealed. He told Sabinus that the pagans were more fearful than frogs, since one Christian had thrown a whole city and an army into confusion. The governor, not bearing the rebuke, ordered him beaten without mercy with raw sinews.
+
+Many of the pagan people, seeing his endurance and hearing his words, believed in Christ, mocked the idols and reviled the tyrant; so Sabinus ordered him back into prison, saying that the people must not be deceived by his teaching, and took counsel on what death to put him to. Days passed and his wounds multiplied, and the faithful came with clean cloths to wipe them.
+
+Then Constantine the Great overcame Maxentius by the power of the Cross and gave liberty to all Christians, and an order came from him that the persecution should cease and that those held in chains for Christ should go free. Theodotus grieved deeply at it, for he had wished to die in torments for Christ. Being set free, he went back to his own city, and after two years more upon his throne he fell asleep in the Lord, having received a double crown, of the priesthood and of martyrdom.
+
+*After doxologia.ro's calendar for 2 martie — [the day](https://doxologia.ro/2-martie) and [the life](https://doxologia.ro/viata-sfantului-sfintit-mucenic-teodot-episcopul-cirenei-0); read 19 September 2026.*

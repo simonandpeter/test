@@ -1,0 +1,78 @@
+{
+  "slug": "theodotus-of-kyrenia",
+  "display_name": "Theodotus of Kyrenia",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Teodot",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 martie, «Sfântul Sfințit Mucenic Teodot, Episcopul Chiriniei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 308,
+      "latest": 324,
+      "display": "under Licinius (308–324)",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Atunci era prigonire mare înpotriva creștinilor, împărățind păgânul Liciniu (308-324), iar în Cipru era ighemon Savin». The same life dates his release from Constantine's victory over Maxentius (312) and the liberty given to Christians (313), and says he lived «după pătimire doi ani pe scaunul său» before he died; it prints no year for his birth or his death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 martie — «Sfântul Sfințit Mucenic Teodot, Episcopul Chiriniei»",
+        "url": "https://doxologia.ro/2-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor Apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge, Sfinţite Mucenice Teodot, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfințit Mucenic Teodot, Episcopul Chiriniei",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-teodot-episcopul-chiriniei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharing in the ways of the Apostles and succeeding to their thrones, thou didst find, O God-inspired one, a work that lifts the gaze to the things on high. Therefore, teaching the word of truth aright and enduring in the faith even unto blood, O Hieromartyr Theodotus, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
