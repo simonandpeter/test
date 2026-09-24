@@ -1,0 +1,98 @@
+{
+  "slug": "clement-of-ancyra",
+  "display_name": "Clement of Ancyra",
+  "names": [
+    {
+      "form": "Clement",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 ianuarie, «Sfântul Sfinţit Mucenic Clement, Episcopul Ancirei»."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Ancyra",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "related": [
+    "agathangelus"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 250,
+      "latest": 259,
+      "display": "c. 250",
+      "basis": "traditional",
+      "note": "doxologia.ro's life opens: «După ce au trecut de la naşterea Domnului nostru Iisus Hristos 250 de ani - în vremea împărăţiei lui Valerian (253-259) -, cetatea de scaun a Ancirei, din părţile Galatiei, a odrăslit pe acest Sfânt Mucenic Clement». The two readings the page gives do not agree exactly, so the interval is the one that holds both."
+    }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Viţă de cuvioşie şi stâlpare de luptă grea, floare preasfinţită şi rod de Dumnezeu dăruit, de-a pururi înfloritor ai fost dat credincioşilor, preasfinţite. Ci, ca cel ce eşti cu mucenicii împreună luptător şi cu ierarhii împreună locuitor, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfinţit Mucenic Clement, Episcopul Ancirei, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-clement-episcopul-ancirei",
+        "year": 2026
+      },
+      "english": {
+        "text": "A vine of holiness and a branch of hard contest, a most holy flower and a fruit given by God, thou wast given to the faithful for ever in bloom, O most holy one. As one who contended with the martyrs and dwells with the hierarchs, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "model": "Arătatu-Te-ai astăzi...",
+      "text": "Mlădiţă cinstită a viţei lui Hristos te-ai făcut, Prealăudate Mucenice Clement, biruitorule în multe lupte. Pentru aceasta cu cel ce împreună ai pătimit, ai strigat: Hristoase, Tu eşti Bucuria mucenicilor.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Sfinţit Mucenic Clement, Episcopul Ancirei, şi al Sfântului Mucenic Agatanghel, Glasul 4, «Arătatu-Te-ai astăzi...»",
+        "url": "https://doxologia.ro/condacul-sfantului-sfintit-mucenic-clement-episcopul-ancirei-al-sfantului-mucenic-agatanghel",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast made an honoured shoot of the vine of Christ, O all-praised martyr Clement, victor in many contests. Therefore with him who suffered together with thee thou didst cry: Christ, thou art the joy of the martyrs.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 23 ianuarie — «Sfântul Sfinţit Mucenic Clement, Episcopul Ancirei»",
+        "url": "https://doxologia.ro/23-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 23 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

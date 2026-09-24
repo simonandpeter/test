@@ -752,6 +752,7 @@ export const ru = {
     'Bishop in Persia': 'Епископ Персидский',
     'Bishop of Akhtala in Iberia': 'Епископ Ахтальский в Иверии',
     'Bishop of Alexandria Minor': 'Епископ Малой Александрии',
+    'Bishop of Ancyra': 'Епископ Анкирский',
     'Bishop of Antioch': 'Епископ Антиохийский',
     'Bishop of Apamea': 'Епископ Апамейский',
     'Bishop of Arsinoe': 'Епископ Арсинойский',

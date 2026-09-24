@@ -1,0 +1,65 @@
+{
+  "slug": "dionysius-of-olympus",
+  "display_name": "Dionysius of Olympus",
+  "names": [
+    {
+      "form": "Dionisie din Olimp",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 ianuarie, «Sfântul Cuvios Dionisie din Olimp»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1401,
+      "latest": 1500,
+      "display": "late 15th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Acesta s-a născut spre sfârșitul veacului al XV-lea în localitatea Sklataina, din regiunea Karditsa, Grecia». The page gives no year, so the interval is the century it names."
+    },
+    "death": {
+      "earliest": 1501,
+      "latest": 1600,
+      "display": "16th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfântul Dionisie din Olimp este unul dintre sfinții isihaști care au trăit în veacul al XVI-lea». The page gives no year of death, so the interval is the century in which it places his life."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 23 ianuarie — «Sfântul Cuvios Dionisie din Olimp»",
+        "url": "https://doxologia.ro/23-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 23 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

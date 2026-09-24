@@ -119,6 +119,8 @@ const READ_FOLDS = {
     'two men, each named in the calendar as the other’s companion, so the fold is the key sorting their two names into one — doxologia’s 20 January prints both and its life has them die together (read 19 September 2026)',
   'valerian valerian-of-tomis valerian-of-trebizond':
     'the martyr of Tomis kept on 13 September with Gordian, Macrobius, Helias and Lucian, against the soldier taken in the mountains above Trebizond with Candidus and Aquila on the Romanian 21 January: another day, another passion, another province (read 19 September 2026)',
+  'clement clement-apostle-of-sardis clement-of-ancyra':
+    'one of the Seventy, kept on 10 September by the Russian, Greek and Serbian, against the bishop of Ancyra the Romanian keeps on 23 January — twenty-eight years of torments and a death at the altar. Two men (read 19 September 2026)',
   'teoctist theoctistus-of-kucumia theoctistus-the-martyr':
     'the abbot of Kucumia in Sicily, Romanian 4 January, against the martyr by the sword the Greek and Romanian keep on 3 October; doxologia’s own page for 4 January is a note saying which Theoctistus the day is not (read 19 September 2026)',
 };
@@ -327,7 +329,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '89'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '92'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;
