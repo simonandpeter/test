@@ -1,0 +1,70 @@
+{
+  "slug": "dionysius-companion-of-lucillian",
+  "display_name": "Dionysius, companion of Lucillian",
+  "names": [
+    {
+      "form": "Dionisie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 iunie, which names the four youths «Ipatie, Paul, Dionisie și Claudie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "lucillian"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 3 iunie — «Sfântul Mucenic Luchilian şi cei împreună cu el patru tineri: Ipatie, Paul, Dionisie și Claudie»",
+        "url": "https://doxologia.ro/3-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 3 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nestricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Luchilian; the text is the common of several martyrs, printed for him and those with him.",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-luchilian",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contests received the crowns of incorruption from Thee our God; for having Thy strength they overcame the tormentors and broke the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

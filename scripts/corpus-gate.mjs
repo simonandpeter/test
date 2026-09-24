@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'claudie claudius-companion-of-lucillian claudius-of-the-forty-martyrs':
+    'one of the four young men imprisoned at Nicomedia whom Lucillian found there and suffered with, under Aurelian, Romanian 3 June, against one of the Forty frozen at Sebaste under Licinius, Romanian 9 March (read 25 September 2026)',
+  'dionisie dionysius-companion-of-lucillian dionysius-companion-of-quadratus dionysius-of-lampsacus':
+    'three men called Dionisie, on three days: one of the four young men of the prison at Nicomedia whom Lucillian suffered with, under Aurelian, Romanian 3 June; the martyr of Corinth taken with Quadratus, Romanian 10 March; and the man killed at Lampsacus beside Peter, Romanian 18 May. Three companies, three cities (read 25 September 2026)',
+  'ipatie hypatius-companion-of-lucillian hypatius-of-chalcedon hypatius-of-gangra':
+    'three men called Ipatie, on three days: one of the four young men of the prison at Nicomedia whom Lucillian suffered with, under Aurelian, Romanian 3 June; the abbot of Chalcedon, Romanian 25 February; and the hieromartyr bishop of Gangra, Romanian 31 March. A martyr boy, a venerable abbot and a bishop (read 25 September 2026)',
+  'paul paul-bishop-of-nicaea paul-companion-of-lucillian':
+    'the hierarch and bishop of Nicaea, kept on 10 September by the Russian and the Greek, against one of the four young men imprisoned at Nicomedia whom Lucillian found there and suffered with, under Aurelian, Romanian 3 June (read 25 September 2026)',
   'nichifor nicephorus-4-may nicephorus-of-antioch nicephorus-of-corinth nikephoros-patriarch-of-constantinople':
     'four men called Nichifor, on four days: the bare line of 4 May, a venerable with no life; the martyr of Antioch, Romanian 9 February; one of the seven of Corinth, Romanian 31 January; and the patriarch of Constantinople, son of Theodore and Eudocia, Romanian 2 June. Three martyrs and a hierarch (read 25 September 2026)',
   'agapit agapitus-of-synnada agapitus-of-the-kyiv-caves':
