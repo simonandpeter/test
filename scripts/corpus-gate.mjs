@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'eftimie euthymius-of-dimitsana euthymius-of-madytos euthymius-of-vatopedi jacob-of-putna':
+    'three men called Eftimie and a fourth name that is not his usual one: the new-martyr of Dimitsana hanged in 1814, Romanian 22 March; the bishop of Madytos, Romanian 5 May; the abbot of Vatopedi taken with twelve monks, Romanian 4 January; and Jacob of Putna, metropolitan of Moldavia, who received the name Eftimie in the great schema five days before his death and is kept on 15 May under his own name (read 25 September 2026)',
   'serghie sergius-martyr-2-january sergius-the-confessor':
     'the bare line of the Romanian 2 January, whose page carries one sentence saying only that the martyr Sergius was cut down with the sword, against the bare line of the Romanian 13 May, whose page opens neither a Viață nor a Tropar tab. One is called a martyr and the other a venerable confessor, and neither page gives a country or a century (read 25 September 2026)',
   'chiril cyril-of-alexandria cyril-of-axiopolis cyril-of-heliopolis cyril-of-jerusalem cyril-of-the-forty-martyrs cyril-the-philosopher':

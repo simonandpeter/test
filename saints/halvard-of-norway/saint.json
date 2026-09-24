@@ -1,0 +1,65 @@
+{
+  "slug": "halvard-of-norway",
+  "display_name": "Halvard of Norway",
+  "names": [
+    {
+      "form": "Halvard Norvegianul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 mai, «Sfântul Mucenic Halvard Norvegianul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1015,
+      "latest": 1025,
+      "display": "c. 1020",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Sfântul Halvard s-a născut în jurul anului 1020, în localitatea Husaby, în partea de sud-est a Norvegiei». The page's «în jurul» is kept as a ten-year interval rather than a point."
+    },
+    "death": {
+      "earliest": 1043,
+      "latest": 1043,
+      "display": "1043",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «În primăvara anului 1043, tânărul Halvard se afla pe malul mării», and the killing follows in the same passage."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 15 mai — «Sfântul Mucenic Halvard Norvegianul»",
+        "url": "https://doxologia.ro/15-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

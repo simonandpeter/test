@@ -1,0 +1,51 @@
+{
+  "slug": "achillius-of-larissa",
+  "display_name": "Achillius of Larissa",
+  "names": [
+    {
+      "form": "Ahile",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 mai, «Sfântul Ierarh Ahile, Episcopul Larisei»."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 15 mai — «Sfântul Ierarh Ahile, Episcopul Larisei»",
+        "url": "https://doxologia.ro/15-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

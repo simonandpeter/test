@@ -1,0 +1,91 @@
+{
+  "slug": "jacob-of-putna",
+  "display_name": "Jacob of Putna",
+  "names": [
+    {
+      "form": "Iacob Putneanul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 mai, «Sfântul Ierarh Iacob Putneanul, Mitropolitul Moldovei»."
+    },
+    {
+      "form": "Eftimie",
+      "lang": "ro",
+      "note": "The name he received in the great schema five days before his death, read out of doxologia.ro's life: «A primit numele de Eftimie, după Sfântul Eftimie cel Mare»."
+    }
+  ],
+  "sex": "male",
+  "office": "Metropolitan of Moldavia",
+  "types": [
+    "hierarch",
+    "metropolitan",
+    "monk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1719,
+      "latest": 1719,
+      "display": "1719",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Sfântul Mitropolit Iacob s-a născut la 20 ianuarie 1719, într-o familie credincioasă și așezată din nordul Moldovei»."
+    },
+    "death": {
+      "earliest": 1778,
+      "latest": 1778,
+      "display": "1778",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «în 15 mai 1778, sufletul sfântului păstor s-a înălțat la cer»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 15 mai — «Sfântul Ierarh Iacob Putneanul, Mitropolitul Moldovei»",
+        "url": "https://doxologia.ro/15-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Podobie: Mare apărător…\nGrija cea lumească lepădând şi viaţa pustnicească trăind, ca un bun păstor turma cea cuvântătoare a Moldovei ai păzit, pentru aceasta cu îngerii în ceruri te veseleşti, Sfinte Ierarhe Iacob, Arhiereul lui Hristos, roagă-te pentru sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Ierarh Iacob Putneanul, Mitropolitul Moldovei», Glasul 3",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-iacob-putneanul-mitropolitul-moldovei",
+        "year": 2026
+      },
+      "english": {
+        "text": "To the melody of “Great defender…”. Casting off the care of the world and living the life of a hermit, as a good shepherd thou didst keep the rational flock of Moldavia; wherefore thou rejoicest with the angels in heaven, holy hierarch Jacob, high priest of Christ: pray for our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

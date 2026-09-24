@@ -1,0 +1,69 @@
+{
+  "slug": "pachomius-the-great",
+  "display_name": "Pachomius the Great",
+  "names": [
+    {
+      "form": "Pahomie cel Mare",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 mai, «Sfântul Cuvios Pahomie cel Mare»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 15 mai — «Sfântul Cuvios Pahomie cel Mare»",
+        "url": "https://doxologia.ro/15-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Arătatu-te-ai mai mare turmei Păstorului celui mare, în dreptând turmele sihastrilor la staulul cel ceresc, părinte Pahomie, şi schima cea de acolo, cuvioase, pustnicilor deprin zând, şi pe aceasta iarăţi o ai învăţat; şi acum împreună cu aceia te bucuri şi te veseleşti în cereştile locaşuri.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Pahomie cel Mare», Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-pahomie-cel-mare",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown to be a chief of the flock of the great Shepherd, guiding the companies of hermits to the heavenly fold, father Pachomius; and having learned the habit of that place, O venerable one, thou didst teach it again to the solitaries; and now thou rejoicest and art glad together with them in the dwellings of heaven.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
