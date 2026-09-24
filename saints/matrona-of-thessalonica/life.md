@@ -1,0 +1,11 @@
+# Matrona of Thessalonica
+
+Matrona was a servant in the house of a Jewish woman named Pautila, the wife of the governor of Thessalonica. She had been taught the Christian faith from her youth, and her mistress kept forcing her towards the Jewish faith; and because she would not submit, Pautila tormented her cruelly and beat her often. Matrona bore it all readily for Christ, and went secretly to church.
+
+One day Pautila learned that Matrona had been at the Christian church, and asked her why she had not gone to their synagogue. The blessed Matrona answered boldly that since God is in the Christian church, and has departed from the Jewish synagogue, she would go to the church and not to the synagogue. At this her mistress grew angrier still, beat her without sparing, and shut her up bound in a dark room; but the next day the saint was found loosed from her bonds by the power of God, glorifying Christ.
+
+Her mistress beat her again with raw sinews until the blood ran, bound her more tightly, shut her in that room again and sealed the door, so that no one should come in to ease her. The saint stayed four days in that prison without food or drink, God strengthening her. Then Pautila broke the seal and opened the door and found her loosed from her bonds again and standing at prayer; and boiling with anger she beat her with thick sticks and shut her, barely breathing, in the same prison, where the saint ended her life and gave up her soul to God.
+
+That wicked woman threw her body down from the wall, for those houses stood high. The Christians took up the much-tormented body of the martyr Matrona and buried it with honour; and afterwards Alexander, bishop of Thessalonica, built a church in the saint's name and laid her honoured relics in it. As for Pautila, the judgement of God overtook her quickly and as she deserved: from the height of that same wall from which she had thrown down Matrona's body she slipped and fell, and died badly, and so gave up her wretched soul.
+
+*After doxologia.ro's calendar for 27 martie — [the day](https://doxologia.ro/27-martie), [the life](https://doxologia.ro/viata-sfintei-mucenite-matrona-din-tesalonic) and [the troparion](https://doxologia.ro/troparul-sfintei-mucenite-matroana-din-tesalonic); read 19 September 2026.*

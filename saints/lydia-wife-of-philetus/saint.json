@@ -1,0 +1,52 @@
+{
+  "slug": "lydia-wife-of-philetus",
+  "display_name": "Lydia, wife of Philetus",
+  "names": [
+    {
+      "form": "Lidia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 martie, «Sfânta Muceniţă Lidia»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "philetus-the-senator"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 27 martie — «Sfânta Muceniţă Lidia»",
+        "url": "https://doxologia.ro/27-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

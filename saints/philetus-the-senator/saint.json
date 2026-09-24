@@ -1,0 +1,52 @@
+{
+  "slug": "philetus-the-senator",
+  "display_name": "Philetus the Senator",
+  "names": [
+    {
+      "form": "Filit",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 martie, «Sfântul Mucenic Filit, cu cei patru fii ai săi»; the same site's page for his wife spells him «Filet Sincliticul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "lydia-wife-of-philetus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 27 martie — «Sfântul Mucenic Filit, cu cei patru fii ai săi»",
+        "url": "https://doxologia.ro/27-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

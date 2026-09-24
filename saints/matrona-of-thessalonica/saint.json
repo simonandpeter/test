@@ -1,0 +1,67 @@
+{
+  "slug": "matrona-of-thessalonica",
+  "display_name": "Matrona of Thessalonica",
+  "names": [
+    {
+      "form": "Matrona din Tesalonic",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 martie; the troparion page spells her «Matroana»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 27 martie — «Sfânta Muceniță Matrona din Tesalonic»",
+        "url": "https://doxologia.ro/27-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mieluşeaua Ta, Iisuse, Matroana, strigă cu glas mare: pe Tine, Mirele meu, te iubesc și pe Tine căutându-Te mă chinuiesc și împreună mă răstignesc și împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru tine, ca să viez pentru Tine; ci, ca o jertfă fără de prihană, primește-mă pe mine ceea ce cu dragoste mă jertfesc Ție. Pentru rugăciunile ei, ca un Milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Muceniţe Matroana din Tesalonic",
+        "url": "https://doxologia.ro/troparul-sfintei-mucenite-matroana-din-tesalonic",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy ewe-lamb, O Jesus, Matrona, cries out with a loud voice: Thee, my Bridegroom, I love, and seeking Thee I am in torment; I am crucified with Thee and buried with Thee in Thy baptism; I suffer for Thee, that I may reign in Thee; I die for Thee, that I may live for Thee. Receive me, then, as an unblemished sacrifice, who offer myself to Thee in love. At her prayers, since Thou art merciful, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

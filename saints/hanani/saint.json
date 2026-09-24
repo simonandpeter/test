@@ -1,0 +1,58 @@
+{
+  "slug": "hanani",
+  "display_name": "Hanani",
+  "names": [
+    {
+      "form": "Anania",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 martie, «Sfântul Proroc Anania»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": -960,
+      "latest": -950,
+      "display": "c. 955 BC",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Prorocul Anania a trăit în vremea regelui Iuda, în jurul anului 955 î.Hr.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 27 martie — «Sfântul Proroc Anania»",
+        "url": "https://doxologia.ro/27-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
