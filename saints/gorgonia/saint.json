@@ -1,0 +1,52 @@
+{
+  "slug": "gorgonia",
+  "display_name": "Gorgonia",
+  "names": [
+    {
+      "form": "Gorgonia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 februarie, «Sfânta Cuvioasă Gorgonia»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "related": [
+    "gregory-the-theologian"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 23 februarie — «Sfânta Cuvioasă Gorgonia»",
+        "url": "https://doxologia.ro/23-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 23 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

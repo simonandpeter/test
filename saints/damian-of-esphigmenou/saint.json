@@ -1,0 +1,63 @@
+{
+  "slug": "damian-of-esphigmenou",
+  "display_name": "Damian of Esphigmenou",
+  "names": [
+    {
+      "form": "Damian Esfigmenitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 februarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1280,
+      "latest": 1280,
+      "display": "1280",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Sfântul Damian a adormit cu pace în ziua de 23 februarie a anului 1280.»"
+    }
+  },
+  "related": [
+    "anthony-of-the-caves",
+    "cosmas-of-zographou"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 23 februarie — «Sfântul Damian Esfigmenitul»",
+        "url": "https://doxologia.ro/23-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 23 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
