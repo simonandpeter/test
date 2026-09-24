@@ -8,4 +8,6 @@ After eight years as a brother in the monastery he was tonsured with the name Se
 
 From 1807 to 1810 his infirmity brought him to the struggle of silence in complete solitude; in 1826 the Mother of God told him the time had come to leave it, and he began to give others the fruit of what he had learned. He was given the gift of prophecy, which out of humility he hid. At seventy, on 1 January 1833, after receiving Communion he bowed before every icon in the church and lit a candle before each, and blessed the brethren, saying: „Lucrați pentru mântuirea voastră; vegheați! Cununile vă sunt pregătite”. That same night, kneeling in his cell and singing the hymns of the Resurrection, he gave up his spirit. He was canonised on 19 July 1903.
 
-*After doxologia.ro's calendar for 2 ianuarie — [the day](https://doxologia.ro/2-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-serafim-de-sarov); read 19 September 2026.*
+The Romanian calendar keeps a second day for him on 19 iulie, the finding of his relics; its page for that day prints no life, only the troparion recorded here.
+
+*After doxologia.ro's calendar for 2 ianuarie — [the day](https://doxologia.ro/2-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-serafim-de-sarov); read 19 September 2026; doxologia.ro's page for [the finding of his relics on 19 iulie](https://doxologia.ro/aflarea-moastelor-sfantului-cuvios-serafim-de-sarov) and [the troparion](https://doxologia.ro/troparul-sfantului-serafim-de-sarov) read 24 September 2026.*

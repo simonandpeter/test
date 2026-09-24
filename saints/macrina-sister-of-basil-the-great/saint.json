@@ -1,0 +1,73 @@
+{
+  "slug": "macrina-sister-of-basil-the-great",
+  "display_name": "Macrina, sister of Basil the Great",
+  "names": [
+    {
+      "form": "Macrina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 iulie, «Sfânta Cuvioasă Macrina, sora Sfântului Vasile cel Mare», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "virgin"
+  ],
+  "related": [
+    "basil-the-great",
+    "gregory-of-nyssa",
+    "emilia-mother-of-basil-the-great"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 iulie — «Sfânta Cuvioasă Macrina, sora Sfântului Vasile cel Mare»",
+        "url": "https://doxologia.ro/19-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru tine, maică, cu osârdie s-a mântuit cel după chip; că, luând crucea, ai urmat lui Hristos; şi lucrând, ai învăţat să nu se uite la trup, căci este trecător; ci să poarte grijă de suflet, de lucrul cel nemuritor. Pentru aceasta şi cu îngerii împreună se bucură, Cuvioasă Maică Macrina, duhul tău.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintei Cuvioase Macrina, sora Sfântului Vasile cel Mare», Glasul 8 — the common of a woman ascetic.",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-macrina-sora-sfantului-vasile-cel-mare",
+        "year": 2026
+      },
+      "english": {
+        "text": "In you, mother, what was made in God's image was saved with diligence; for taking up the cross you followed Christ, and by your works you taught us to overlook the body, since it passes away, and to care for the soul, a thing immortal. Therefore your spirit rejoices together with the angels, venerable mother Macrina.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

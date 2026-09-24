@@ -47,7 +47,8 @@
         "text": "doxologia.ro, calendarul zilei pentru 2 ianuarie — «Sfântul Cuvios Serafim de Sarov»",
         "url": "https://doxologia.ro/2-ianuarie",
         "year": 2026
-      }
+      },
+      "note": "doxologia.ro keeps a second Romanian day for him, 19 iulie, «Aflarea moaștelor Sfântului Cuvios Serafim de Sarov» — the finding of his relics, which is a feast and not a second person. The day's entry is recorded here as a note rather than as a feast row, since the schema keeps one feast per church; he does not render on 19 iulie. Read 24 September 2026 at https://doxologia.ro/19-iulie."
     },
     {
       "church": "greek",
@@ -62,5 +63,23 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Din tinerețe L-ai îndrăgit pe Hristos, fericite, și numai Lui, Unul, ai dorit cu înflăcărare să îi slujești, prin rugãciune neîntreruptă în pustie, nevoindu-te cu inima plină de umilință dobândind iubirea lui Dumnezeu și arătându-te ales al Maicii Domnului. Pentru aceasta ne rugăm ție: Mântuiește-ne pre noi cu rugăciunile tale, preacuvioase Serafime, Părintele nostru.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Serafim de Sarov», Glasul 4 — reached from the page for the finding of his relics on 19 iulie; the spelling «rugãciune» is the page's own.",
+        "url": "https://doxologia.ro/troparul-sfantului-serafim-de-sarov",
+        "year": 2026
+      },
+      "english": {
+        "text": "From your youth you loved Christ, blessed one, and burned to serve Him alone, with unbroken prayer in the wilderness, struggling with a heart full of compunction, gaining the love of God and being shown to be a chosen one of the Mother of God. And so we pray to you: save us by your prayers, most venerable Seraphim, our father.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
