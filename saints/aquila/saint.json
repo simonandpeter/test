@@ -6,6 +6,11 @@
       "form": "Acvila",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 februarie."
+    },
+    {
+      "form": "Achila",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 iulie, «Sfântul Apostol Achila», with the rank word left off; the life page spells him «Acvila» in its prose."
     }
   ],
   "sex": "male",
@@ -29,7 +34,8 @@
       "feast": {
         "day": 13,
         "month": 2,
-        "calendar": "revised-julian"
+        "calendar": "revised-julian",
+        "note": "doxologia.ro also keeps him on 14 iulie, «Sfantul Apostol Achila», with a life of its own and a troparion; that page and this one are the same man -- the Jew of Pontus, the tent-maker, the husband of Priscilla, driven from Rome by Claudius and baptised by Paul (read 24 September 2026). One row per church is the schema, so the second day is recorded here and he does not render on it."
       },
       "source": {
         "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 februarie — «Sfinți Apostoli și Mucenici Acvila și soția sa, Priscila»",
@@ -50,5 +56,23 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Apostole sfinte Achila, roagă pe milostivul Dumnezeu, ca să dăruiască iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Apostol Achila, unul din cei șaptezeci», Glasul 3",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-achila-unul-din-cei-saptezeci",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy apostle Aquila, pray the merciful God that He grant our souls forgiveness of our offences.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

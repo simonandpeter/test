@@ -1,0 +1,59 @@
+{
+  "slug": "justus-the-soldier",
+  "display_name": "Justus the Soldier",
+  "names": [
+    {
+      "form": "Iust",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 iulie, «Sfântul Mucenic Iust», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 350,
+      "latest": 353,
+      "display": "350–353",
+      "basis": "inferred",
+      "note": "doxologia.ro gives no year for his death, only the reign he served under: «A fost ostaș roman în armata tribunului Claudiu pe vremea împăratului Magnențiu (350-353)». The interval is that reign."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 14 iulie — «Sfântul Mucenic Iust»",
+        "url": "https://doxologia.ro/14-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 14 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

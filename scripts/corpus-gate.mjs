@@ -119,6 +119,10 @@ const READ_FOLDS = {
     'Athanasius the Athonite, Romanian 5 July, whose second `ro` form is Avramie because his own life gives that as his baptismal name, against the hieromartyr bishop of Arbela under Shapur II, Romanian 4 February (read 25 September 2026)',
   'ciprian cyprian-companion-of-quadratus cyprian-martyr-10-may cyprian-the-new-martyr':
     'three men called Ciprian, on three days: the hieromonk new-martyr of Kletzos in Agrafa, Romanian 5 July; the companion of Quadratus of Corinth under Decius and Valerian, Romanian 10 March; and the bare «Sfantul Mucenic Ciprian» the calendar prints on 10 May with no life and no century (read 25 September 2026)',
+  'achila aquila aquila-of-trebizond':
+    'the apostle of the Seventy, the tent-maker of Pontus and husband of Priscilla, kept on the Romanian 13 February with a note for his second day of 14 July, against one of four men the calendar keeps together on 21 January under one passion (read 25 September 2026)',
+  'iust justus-1-june justus-the-soldier':
+    'the Roman soldier of the tribune Claudius, to whom doxologia gives five lines on 14 July, against the bare «Sfantul Mucenic Iust» of 1 June, whose page carries the name and no life (read 25 September 2026)',
   'maria golinduhia-of-persia maria-of-gatchina mary-of-aza mary-sister-of-lazarus mary-sister-of-lykarion mary-wife-of-xenophon':
     'six women whose `ro` form is Maria, on five days: Golinduhia of Persia, Romanian 13 July, whose second form is Maria because doxologia’s own last line says «Sfanta Mucenita Maria, care mai inainte s-a numit Golinduhia»; Maria of Gatchina and Mary the wife of Xenophon, both 26 January and plainly two women; one of the five canonical virgins of Aza, 9 June; the sister of Lazarus, 4 June; and the sister of Lykarion, 8 February (read 25 September 2026)',
   'ilarie hilary-companion-of-proclus hilary-of-poitiers':

@@ -5,6 +5,11 @@
     {
       "form": "Όσιος Νικόδημος ο Αγιορείτης ο σοφός διδάσκαλος της εκκλησίας",
       "lang": "el"
+    },
+    {
+      "form": "Nicodim Aghioritul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 iulie, «Sfântul Cuvios Nicodim Aghioritul», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -19,8 +24,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 14 iulie — «Sfântul Cuvios Nicodim Aghioritul»",
+        "url": "https://doxologia.ro/14-iulie",
+        "year": 2026
+      },
+      "note": "The Romanian calendar keeps him on his own day of death, 14 iulie; this folder's existing Greek row stands under 20 September, where saint.gr's day list carried him when the corpus was first read, and the folder's life already says the Greek calendar keeps him on 14 July."
     },
     {
       "church": "greek",
