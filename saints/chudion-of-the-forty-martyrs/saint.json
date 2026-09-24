@@ -1,0 +1,95 @@
+{
+  "slug": "chudion-of-the-forty-martyrs",
+  "display_name": "Chudion, one of the Forty of Sebaste",
+  "names": [
+    {
+      "form": "Hudion",
+      "lang": "ro",
+      "note": "Read out of the list of the forty names in doxologia.ro's life for 9 martie: «Iar numele acestor patruzeci de Sfinți Mucenici sunt acestea: „Chirion, Candid, Domnos, … Meliton și Aglaie”»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 308,
+      "latest": 324,
+      "display": "under Licinius (308–324)",
+      "basis": "traditional",
+      "note": "doxologia.ro opens the life «Pe vremea împărăției necredinciosului împărat Liciniu (308-324)» and closes it «și-au dat sufletele lor Domnului … în ziua a noua a lunii martie, stăpânind Liciniu în Răsărit». The page gives no year, so the interval is the reign it prints."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 martie — «✝ Sfinții 40 de Mucenici din Sevastia»",
+        "url": "https://doxologia.ro/9-martie",
+        "year": 2026
+      },
+      "note": "doxologia keeps the forty under one line, «✝ Sfinții 40 de Mucenici din Sevastia»; the life names all forty, and this folder is one of them."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Purtătorilor de chinuri, cin­stiţi patruzeci de ostaşi ai lui Hristos, prin foc şi prin apă aţi trecut şi v-aţi arătat împreună locuitori cu îngerii. Cu care rugaţi-vă lui Hristos, pentru cei ce vă laudă pe voi cu credinţă. Slavă Celui Ce v-a dat vouă tă­rie; Slavă Celui Ce v-a încunu­nat pe voi; Slavă Celui Ce a dă­ruit prin voi tuturor tămăduiri!",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor 40 de Mucenici din Sevastia, glasul 1",
+        "url": "https://doxologia.ro/troparul-sfintilor-40-de-mucenici-din-sevastia-0",
+        "year": 2026
+      },
+      "english": {
+        "text": "Bearers of torments, honoured forty soldiers of Christ, you passed through fire and through water and were shown to be fellow-dwellers with the angels. With them pray to Christ for those who praise you in faith. Glory to him who gave you strength; glory to him who crowned you; glory to him who through you has granted healing to all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 6",
+      "model": "Împlinind rânduiala...",
+      "text": "Toată oştirea lumii pără­sind-o, de Stăpânul Cel din ce­ruri v-aţi lipit, purtătorilor de biruinţă ai Domnului, sfinţilor patruzeci de mucenici. Că, prin foc şi prin apă trecând, fericiţilor, după vrednicie aţi primit mărire din ceruri şi mulţime de cununi.",
+      "source": {
+        "text": "Doxologia — Condacul Sfinţilor 40 de Mucenici din Sevastia, glasul 6, podobie «Împlinind rânduiala...»",
+        "url": "https://doxologia.ro/condacul-sfintilor-40-de-mucenici-din-sevastia",
+        "year": 2026
+      },
+      "english": {
+        "text": "Leaving behind the whole army of the world, you clung to the Master who is in heaven, victory-bearers of the Lord, holy forty martyrs. For having passed through fire and through water, blessed ones, you worthily received glory out of heaven and a multitude of crowns.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
