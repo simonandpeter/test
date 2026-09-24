@@ -1,0 +1,83 @@
+{
+  "slug": "neophytus-the-cretan",
+  "display_name": "Neophytus the Cretan",
+  "office": "Metropolitan of Wallachia",
+  "names": [
+    {
+      "form": "Neofit Cretanul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 iunie, «Sfântul Ierarh Martir Neofit Cretanul, Mitropolitul Țării Românești»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan",
+    "martyr"
+  ],
+  "related": [
+    "antim-ivireanul",
+    "dionysius-exiguus"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1753,
+      "latest": 1753,
+      "display": "1753",
+      "basis": "attested",
+      "note": "doxologia.ro: «la scurt timp, în data de 16 iunie 1753, Mitropolitul Neofit a trecut la Domnul, ca un Ierarh Martir, după aproape 15 ani de păstorire». The page gives no birth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 16 iunie — «Sfântul Ierarh Martir Neofit Cretanul, Mitropolitul Țării Românești»",
+        "url": "https://doxologia.ro/16-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Pe păstorul cel vrednic și înțelept al Țării Românești, pe Sfântul Ierarh Neofit, vlăstarul Cretei și luminătorul credincioșilor, să-l cinstim astăzi cu bucurie, că, punându-și viața pentru păstoriții săi, a dobândit slava cea veșnică de la Hristos, Căruia se roagă pentru noi.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Martir Neofit Cretanul, Mitropolitul Țării Românești.",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-martir-neofit-cretanul-mitropolitul-tarii-romanesti",
+        "year": 2026
+      },
+      "english": {
+        "text": "The worthy and wise shepherd of the Romanian Land, the holy hierarch Neophytus, the shoot of Crete and the enlightener of the faithful, let us honour today with gladness; for laying down his life for his flock, he gained everlasting glory from Christ, to whom he prays for us.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

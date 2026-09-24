@@ -1,0 +1,70 @@
+{
+  "slug": "moses-of-optina",
+  "display_name": "Moses of Optina",
+  "office": "Schema-archimandrite",
+  "names": [
+    {
+      "form": "Moise",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 iunie, «Sfântul Cuvios Moise de la Optina»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "related": [
+    "seraphim-of-sarov"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1782,
+      "latest": 1782,
+      "display": "1782",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut la 15 ianuarie 1782, în orașul Borisoglebsk, din gubernia Iaroslavsk, primind la Sfântul Botez numele de Timotei»."
+    },
+    "death": {
+      "earliest": 1862,
+      "latest": 1862,
+      "display": "1862",
+      "basis": "attested",
+      "note": "doxologia.ro: his repose «a avut loc la 16 iunie 1862, în al 81-lea an al vieții sale»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 16 iunie — «Sfântul Cuvios Moise de la Optina»",
+        "url": "https://doxologia.ro/16-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

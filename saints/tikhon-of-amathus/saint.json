@@ -1,0 +1,70 @@
+{
+  "slug": "tikhon-of-amathus",
+  "display_name": "Tikhon of Amathus",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Tihon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 iunie, «Sfântul Ierarh Tihon, Episcopul Amatundei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 16 iunie — «Sfântul Ierarh Tihon, Episcopul Amatundei»",
+        "url": "https://doxologia.ro/16-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Locuitor pustiului şi înger în trup şi de minuni făcător te-ai arătat, purtătorule de Dumnezeu, părintele nostru Tihon; cu postul, cu privegherea, cu rugăciunea, cereşti daruri luând, vindeci pe cei bolnavi şi sufletele celor ce aleargă la tine cu credinţă. Slavă Celui Ce ţi-a dat ţie putere; slavă Celui Ce te-a încununat pe tine; Slavă Celui Ce lucrează prin tine tuturor tămăduiri.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Tihon, Episcopul Amatundei. The page prints the common troparion of a venerable desert-dweller with his name set in it, although its own life makes him a city bishop and not a hermit.",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-tihon-episcopul-amatundei",
+        "year": 2026
+      },
+      "english": {
+        "text": "A dweller of the wilderness and an angel in the body and a wonderworker thou wast shown to be, O God-bearing father Tikhon; by fasting, by vigil and by prayer receiving heavenly gifts, thou healest the sick and the souls of those who run to thee with faith. Glory to him who gave thee power; glory to him who crowned thee; glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

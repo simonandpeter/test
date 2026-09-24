@@ -1,0 +1,51 @@
+{
+  "slug": "mark-of-apollonias",
+  "display_name": "Mark of Apollonias",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Marcu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 iunie, «Sfântul Sfinţit Mucenic Marcu, Episcopul Apoloniadei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 16 iunie — «Sfântul Sfinţit Mucenic Marcu, Episcopul Apoloniadei»",
+        "url": "https://doxologia.ro/16-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
