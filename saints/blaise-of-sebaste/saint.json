@@ -1,0 +1,69 @@
+{
+  "slug": "blaise-of-sebaste",
+  "display_name": "Blaise of Sebaste",
+  "names": [
+    {
+      "form": "Vlasie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 februarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop of Sebaste",
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor Apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge Sfinţite Mucenice Vlasie, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Vlasie, Episcopul Sevastiei, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-vlasie-episcopul-sevastiei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharer of their ways and successor to the thrones of the apostles, thou didst find in action, O God-inspired one, a way of ascent to the vision of things on high. Therefore, rightly dividing the word of truth, thou didst contend for the faith unto blood, O Hieromartyr Blaise: pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 11 februarie — «Sfântul Ierarh Vlasie, Episcopul Sevastiei»",
+        "url": "https://doxologia.ro/11-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
