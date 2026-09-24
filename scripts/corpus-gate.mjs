@@ -135,6 +135,8 @@ const READ_FOLDS = {
     'the schoolmaster of Paros, born at Ioannina in 1800 and reposed on Paros in 1877, Romanian 31 January, against the archbishop of Corfu who died in 953 and is kept on the Romanian 19 January. Nine centuries (read 19 September 2026)',
   'victor victor-of-corinth victor-presbyter-martyr-1918':
     'one of the seven of Corinth whose page doxologia prints under each of their names, Romanian 31 January, against the Russian priest killed in 1918. The forename is all (read 19 September 2026)',
+  'iulian julian-of-emesa julian-of-samosata':
+    'the physician of Emesa who encouraged Silvanus, Luke and Mocius on their way to the beasts and was himself nailed through the head, hands and feet in 312, Romanian 6 February, against one of the seven of Samosata, Romanian 29 January. A third Iulian, the presbyter of Ancyra, is kept on 12 September (read 19 September 2026)',
   'clement clement-apostle-of-sardis clement-of-ancyra':
     'one of the Seventy, kept on 10 September by the Russian, Greek and Serbian, against the bishop of Ancyra the Romanian keeps on 23 January — twenty-eight years of torments and a death at the altar. Two men (read 19 September 2026)',
   'teoctist theoctistus-of-kucumia theoctistus-the-martyr':

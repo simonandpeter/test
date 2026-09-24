@@ -1,0 +1,9 @@
+# John the Prophet of Gaza
+
+John was the disciple of [Barsanuphius the Great](/saints/barsanuphius-the-great), and the two of them lived in the sixth century, in the reign of the emperor Justinian I, at the monastery of Abba [Seridos](/saints/seridos-of-gaza) in Palestine near Gaza. From the years 524 and 525 he lived in a cell outside the monastery, next to Barsanuphius's own, and stayed in it for eighteen years until his death. The life says that nothing is known of his house or his family.
+
+He imitated his teacher in virtue, in the ascetic life and in the keeping of silence, and listening to Barsanuphius's counsels he came to the heights of perfection, growing wholly like his mentor. Out of humility he would send on to Abba Barsanuphius those who came asking a word of profit from him. Because of the gift of foresight he had been granted, he was called "the Prophet": he foresaw and foretold a great many things, and among them the day of his own death, which was to be a week after the death of Abba Seridos. Abba Elian, the young abbot who followed Seridos, begged him to stay another fortnight to teach him how to govern the monastery; John granted the request and died a fortnight later.
+
+The two elders stayed shut in their cells and answered by letters dictated to Seridos, upholding one another and often sending an enquirer on with the words, "Go and ask the other elder." What they wrote became the book *A guide of the spiritual life: answers to the questions of the disciples*, well known to the saints and writers of the generations after them.
+
+*After doxologia.ro's calendar for 6 februarie — [the day](https://doxologia.ro/6-februarie) and [the life](https://doxologia.ro/viata-sfintilor-cuviosi-varsanufie-cel-mare-ioan-profetul), which it prints for the two elders together; read 19 September 2026.*

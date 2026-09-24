@@ -1,0 +1,11 @@
+# Barsanuphius the Great
+
+Barsanuphius and [John the Prophet](/saints/john-the-prophet-of-gaza) lived in the sixth century, in the reign of the emperor Justinian I, and led an ascetic life in the monastery of Abba [Seridos](/saints/seridos-of-gaza) in Palestine, near the city of Gaza. From his cell Barsanuphius guided the brotherhood of the monastery through Seridos its abbot, who was the only person who opened the door of his cell. The life says we do not know when he came to that monastery.
+
+The two elders stayed shut in their cells and spoke with people through letters, which they dictated to Seridos in answer to the questions sent them by the brethren of the community and by the lay people who lived near the monastery. They upheld one another, valued each other deeply, and often told those who came to them: "Go and ask the other elder." Barsanuphius would answer enquirers through John, sometimes asking him to give the answers himself; at other times Seridos helped, writing down what he said. In their answers, which were a guide of the spiritual life not only for their own contemporaries but for the generations that came after, their growth from strength to strength is very plain.
+
+Of our venerable father Barsanuphius it is said that he was one of those few for whose sake God upheld the world in his own time, and he was surnamed the Great Elder. He outlived his disciple and friend John, but then embraced silence and refused to give answers to men any longer. He passed to the Lord about the year 540, in a wonderful manner.
+
+The two of them left as an inheritance the soul-saving book called *A guide of the spiritual life: answers to the questions of the disciples*, which was well known among the saints, the ascetics and the writers of the generations that followed. There are manuscripts about their life, their deeds and the gifts they were given, which were translated into Romanian and Slavonic in the days of Saint Paisius Velichkovsky; the manuscripts were turned into Russian and published in the nineteenth century by the fathers of the Optina monastery.
+
+*After doxologia.ro's calendar for 6 februarie — [the day](https://doxologia.ro/6-februarie) and [the life](https://doxologia.ro/viata-sfintilor-cuviosi-varsanufie-cel-mare-ioan-profetul), which it prints for the two elders together; read 19 September 2026.*

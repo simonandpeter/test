@@ -786,6 +786,7 @@ export const ro = {
     'Bishop of Sinope': 'Episcop de Sinope',
     'Bishop of Sirmium': 'Episcop de Sirmium',
     'Bishop of Skepsis in Mysia': 'Episcop de Skepsis în Misia',
+    'Bishop of Smyrna': 'Episcop de Smirna',
     'Bishop of Starodub': 'Episcop de Starodub',
     'Bishop of Tamasos': 'Episcop de Tamasos',
     'Bishop of Tarsus': 'Episcop de Tars',

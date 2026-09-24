@@ -1,0 +1,73 @@
+{
+  "slug": "bucolus-of-smyrna",
+  "display_name": "Bucolus of Smyrna",
+  "office": "Bishop of Smyrna",
+  "names": [
+    {
+      "form": "Vucol",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 februarie, «Sfântul Ierarh Vucol, Episcopul Smirnei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "related": [
+    "john-the-theologian"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Îndreptător credinţei şi chip blândeţelor, învăţător înfrânârii te-a arătat pe tine, turmei tale, adevărul lucrurilor. Pentru aceasta ai dobândit cu smerenia cele înalte şi cu sărăcia cele bogate; Părinte Ierarhe Vucol, roagă pe Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Vucol, Episcopul Smirnei, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-vucol-episcopul-smirnei",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has revealed thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence. Therefore thou hast gained the heights by humility and riches by poverty. O father and hierarch Bucolus, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 februarie — «Sfântul Ierarh Vucol, Episcopul Smirnei»",
+        "url": "https://doxologia.ro/6-februarie",
+        "year": 2026
+      },
+      "note": "The troparion the site prints for him is the common of a hierarch."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

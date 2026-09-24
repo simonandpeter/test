@@ -1,0 +1,68 @@
+{
+  "slug": "photius-of-constantinople",
+  "display_name": "Photius of Constantinople",
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Fotie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 februarie, «Sfântul Ierarh Fotie, patriarhul Constantinopolului». The life the site prints heads him «Sfântul Fotie cel Mare»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 810,
+      "latest": 820,
+      "display": "810 or 820",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «A venit pe lume în cetatea Constantinopolului, în anul 810 (dipă alții, 820)» — the page gives both readings and settles neither."
+    },
+    "death": {
+      "earliest": 891,
+      "latest": 891,
+      "display": "891",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Sfântul Fotie a adormit întru Domnul în anul 891, în timp ce se afla în exil la Mănăstirea Armenilor.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 februarie — «Sfântul Ierarh Fotie, patriarhul Constantinopolului»",
+        "url": "https://doxologia.ro/6-februarie",
+        "year": 2026
+      },
+      "note": "The site's hymn page for him is an audio recording of his troparion sung in Greek and prints no Romanian text, so no hymn is recorded here."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

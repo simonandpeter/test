@@ -1,0 +1,60 @@
+{
+  "slug": "arsenius-of-ikalto",
+  "display_name": "Arsenius of Ikalto",
+  "names": [
+    {
+      "form": "Arsenie din Ikalto",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 februarie, «Sfântul Cuvios Arsenie din Ikalto, Georgia»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hymnographer"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1001,
+      "latest": 1200,
+      "display": "11th–12th century",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «S-au păstrat puține detalii despre viața Sfântului Arsenie, dar știm că el a trăit în secolele XI și XII și a fost un tânăr contemporan al Sfântului Efrem Mtsire.» The one fixed year the page gives is 1114, when King David the Builder called him back to Georgia."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 februarie — «Sfântul Cuvios Arsenie din Ikalto, Georgia»",
+        "url": "https://doxologia.ro/6-februarie",
+        "year": 2026
+      },
+      "note": "The site prints no troparion for him."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

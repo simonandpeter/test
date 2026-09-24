@@ -788,6 +788,7 @@ export const sr = {
     'Bishop of Sinope': 'Епископ синопски',
     'Bishop of Sirmium': 'Епископ сремски',
     'Bishop of Skepsis in Mysia': 'Епископ скепсијски у Мизији',
+    'Bishop of Smyrna': 'Епископ смирнски',
     'Bishop of Starodub': 'Епископ стародупски',
     'Bishop of Tamasos': 'Епископ тамаски',
     'Bishop of Tarsus': 'Епископ тарски',

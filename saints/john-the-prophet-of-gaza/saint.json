@@ -1,0 +1,64 @@
+{
+  "slug": "john-the-prophet-of-gaza",
+  "display_name": "John the Prophet of Gaza",
+  "names": [
+    {
+      "form": "Ioan din Gaza",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 februarie, «Sfântul Cuvios Ioan din Gaza». The life the site prints for him heads him «Ioan Profetul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "related": [
+    "barsanuphius-the-great",
+    "seridos-of-gaza"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Sfântul Varsanufie cel Mare și Ioan Profetul au trăit în timpul secolului al VI-lea, în timpul domniei împăratului Iustinian I (483-565).» The same page says he lived in his cell «începând cu anii 524-525 … timp de 18 ani până la moartea sa», but prints no year for his death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 februarie — «Sfântul Cuvios Ioan din Gaza»",
+        "url": "https://doxologia.ro/6-februarie",
+        "year": 2026
+      },
+      "note": "The day prints him and Barsanuphius the Great as two lines over one and the same life. The site's hymn page for the two of them is a video recording and prints no text but a refrain, so no hymn is recorded here."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

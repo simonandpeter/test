@@ -1,0 +1,54 @@
+{
+  "slug": "evilasius-companion-of-fausta",
+  "display_name": "Evilasius, companion of Fausta",
+  "names": [
+    {
+      "form": "Evilasie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 februarie, «Sfântul Mucenic Evilasie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "fausta-of-cyzicus",
+    "maximus-companion-of-fausta"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 februarie — «Sfântul Mucenic Evilasie»",
+        "url": "https://doxologia.ro/6-februarie",
+        "year": 2026
+      },
+      "note": "The day prints him, Fausta and Maximus as three separate lines over one and the same life, which the site heads «Pătimirea Sfintei Mucenițe Fausta Fecioara, a lui Evilasie și a lui Maxim (6 februarie) - după Sfântul Simeon Metafrast». The site prints no troparion for them."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

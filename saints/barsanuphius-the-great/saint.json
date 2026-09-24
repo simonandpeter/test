@@ -1,0 +1,64 @@
+{
+  "slug": "barsanuphius-the-great",
+  "display_name": "Barsanuphius the Great",
+  "names": [
+    {
+      "form": "Varsanufie cel Mare",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 februarie, «Sfântul Cuvios Varsanufie cel Mare»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "related": [
+    "john-the-prophet-of-gaza",
+    "seridos-of-gaza"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 540,
+      "latest": 540,
+      "display": "c. 540",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «A trecut la Domnul pe la anul 540, în chip minunat.» The page says “about the year 540”, not 540; it opens by putting both elders in the sixth century, «în timpul domniei împăratului Iustinian I (483-565)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 februarie — «Sfântul Cuvios Varsanufie cel Mare»",
+        "url": "https://doxologia.ro/6-februarie",
+        "year": 2026
+      },
+      "note": "The day prints him and John the Prophet as two lines over one and the same life. The site's hymn page for the two of them is a video recording and prints no text but the refrain «Sfinților Cuvioși Varsanufie cel Mare și Ioan Profetul, rugați-vă lui Dumnezeu pentru noi!», so no hymn is recorded here."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
