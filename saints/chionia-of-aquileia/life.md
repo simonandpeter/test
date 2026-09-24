@@ -1,0 +1,11 @@
+# Chionia of Aquileia
+
+Chionia was the sister of [Agape](/saints/agape-of-aquileia) and of [Irene](/saints/irene-of-aquileia), sisters in the body and in the spirit, whose house stood near that of the priest Zoilus outside Aquileia in Italy. Diocletian was staying in that city when he had Chrysogonus brought from Rome and beheaded on a deserted stretch of shore nearby, and it was Zoilus who found the martyr's body by a revelation from God and hid it in a coffin in his room.
+
+Thirty days later Chrysogonus appeared to Zoilus in a dream and told him that within nine days the three virgins of Christ would be put to torture; he was to tell Anastasia, the servant of God, to care for them and to rouse them to the struggle until they were crowned. The same was revealed to Anastasia herself. Not long afterwards the emperor went into Macedonia, and the Christians held in the prisons of Aquileia were taken after him, the three sisters among them, with Anastasia following at a distance; and there Dulcius the governor was given the task of forcing them to sacrifice.
+
+Sisinius the count passed the sentence on the two elder sisters: Agape and Chionia, who had not submitted to the threat of judgement and carried out the imperial order, were to be burned. At that they were filled with joy and cried aloud: «Mulțumesc Ție, Doamne Iisuse Hristoase, că ne-ai învrednicit a fi mărturisitoare numelui Tău celui Preasfânt, în mâinile Tale, Stăpâne, primește sufletele noastre» — we thank Thee, Lord Jesus Christ, that Thou hast counted us worthy to confess Thy most holy name; into Thy hands, Master, receive our souls.
+
+They were thrown into the fire and gave up their souls to their Lord in prayer, and the great fire, though it burned, touched neither their bodies nor their clothes nor left a mark on them. Their younger sister Irene was sentenced the next day and killed with arrows, and her body was afterwards laid beside theirs.
+
+*After doxologia.ro's calendar for 16 aprilie — [the day](https://doxologia.ro/16-aprilie), [the life](https://doxologia.ro/viata-sfintelor-mucenite-fecioare-agapia-irina-hionia) and [the troparion](https://doxologia.ro/troparul-sfintelor-mucenite-fecioare-agapia-irina-hionia); read 20 September 2026.*

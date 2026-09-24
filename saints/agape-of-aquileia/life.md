@@ -1,0 +1,13 @@
+# Agape of Aquileia
+
+Agape, [Chionia](/saints/chionia-of-aquileia) and [Irene](/saints/irene-of-aquileia) were three sisters, in the body and in the spirit, who lived near Aquileia in Italy at the time when the emperor Diocletian was staying in that city. Word had reached him from Rome that the prisons there were full of Christians who would not deny their Christ and who all held to the teaching of Chrysogonus; he ordered the Christians put to death and Chrysogonus brought to him, and had him beheaded at a desert place outside the city, his body left on the shore for the beasts and the birds.
+
+Near that place lived a priest named Zoilus, a holy man, and next to him the three sisters. Zoilus learned by a revelation from God where the martyr's body lay, took it up with the head, laid it in a wooden coffin and hid it in his room. Thirty days later Chrysogonus appeared to him in a dream and told him that within nine days the three virgins of Christ would be put to torture, that he was to tell Anastasia, the servant of God, to care for them and rouse them to the brave struggle until they were crowned, and that he himself would soon be released from this life. The same was revealed to Anastasia.
+
+Not many days afterwards the emperor had to go into Macedonia, and all the Christians held in the prisons of Aquileia were taken after him, the three sisters among them, with Anastasia following at a distance. In Macedonia he gave the examination of the Christians to Dulcius the governor, who was to force them to sacrifice and destroy with various torments those who would not be persuaded.
+
+The sentence upon the two elder sisters was given by Sisinius the count: «Agapia și Hionia, care nu s-au supus prin îngrozirea de judecată să împlinească împărăteasca poruncă, poruncesc să se ardă» — Agape and Chionia, who have not submitted, I order to be burned. Hearing it the virgins were filled with joy and cried out with a loud voice, thanking the Lord Jesus Christ for counting them worthy to confess His most holy name and asking Him to receive their souls. They were thrown into the fire and gave up their souls in prayer; and that great fire, burning as it was, touched neither their bodies nor so much as their clothes.
+
+[Irene](/saints/irene-of-aquileia), the youngest, was brought out the next day and died apart from them, shot with arrows on a hill; Anastasia's servants took up her body by night and laid it beside her sisters'.
+
+*After doxologia.ro's calendar for 16 aprilie — [the day](https://doxologia.ro/16-aprilie), [the life](https://doxologia.ro/viata-sfintelor-mucenite-fecioare-agapia-irina-hionia) and [the troparion](https://doxologia.ro/troparul-sfintelor-mucenite-fecioare-agapia-irina-hionia); read 20 September 2026.*

@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'irina irene-of-aquileia irene-of-lesvos':
+    'the youngest of the three sisters of Aquileia, taken to Macedonia with the Christians of the priest Zoilus, Romanian 16 April, against the twelve-year-old daughter of Basil the headman of Thermi, killed when the Turks put down the rising of 1463 on Lesvos, Romanian 9 April. Eleven centuries and two seas apart (read 25 September 2026)',
   'anastasia basilissa rome anastasia-of-rome-15-april basilissa-of-rome':
     'two women of Rome, disciples of the Apostles, whom doxologia keeps together on 15 April and whose display names each carry the other, so the fold is the key sorting their two names into one. Not one person under two spellings (read 25 September 2026)',
   'trofim trophimus-companion-of-paul trophimus-of-laodicea trophimus-of-nicomedia':

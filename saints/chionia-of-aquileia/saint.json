@@ -1,0 +1,72 @@
+{
+  "slug": "chionia-of-aquileia",
+  "display_name": "Chionia of Aquileia",
+  "names": [
+    {
+      "form": "Hionia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 aprilie, «Sfintele Mucenițe fecioare Agapia, Irina și Hionia»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "related": [
+    "agape-of-aquileia",
+    "irene-of-aquileia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 16 aprilie — «Sfintele Mucenițe fecioare Agapia, Irina și Hionia»",
+        "url": "https://doxologia.ro/16-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintelor Mucenițe fecioare Agapia, Irina, Hionia», Glasul 4; the reading «nesctricăciunii» is the page's own",
+        "url": "https://doxologia.ro/troparul-sfintelor-mucenite-fecioare-agapia-irina-hionia",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their struggles have won from Thee, our God, the crowns of incorruption; for having Thy strength, they overthrew their tormentors and broke the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
