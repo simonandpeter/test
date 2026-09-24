@@ -1,0 +1,72 @@
+{
+  "slug": "constantine-the-great",
+  "display_name": "Constantine the Great",
+  "names": [
+    {
+      "form": "Constantin",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 mai, «Sfinții Împărați și întocmai cu Apostolii Constantin și mama sa, Elena»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "equal-to-the-apostles",
+    "king"
+  ],
+  "related": [
+    "helen-the-empress",
+    "sylvester-of-rome"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 21 mai — «Sfinții Împărați și întocmai cu Apostolii Constantin și mama sa, Elena»",
+        "url": "https://doxologia.ro/21-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 21 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Chipul Crucii Tale pe cer văzându-l şi ca Pavel chemarea nu de la oameni luând, cel între împăraţi Apostolul Tău, Doamne, împărăteasca cetate în mâinile Tale o a pus. Pe care pazeşte-o totdeauna în pace, pentru rugăciunile Născătoarei de Dumnezeu, Unule Iubitorule de oameni.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Mari Împărați și întocmai cu Apostolii Constantin și mama sa, Elena», Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfintilor-mari-imparati-intocmai-cu-apostolii-constantin-mama-sa-elena",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having seen the figure of Your Cross in the sky, and having received his calling, like Paul, not from men, Your apostle among kings, O Lord, laid the imperial city in Your hands. Keep it always in peace, at the prayers of the Mother of God, O only Lover of mankind.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

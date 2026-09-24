@@ -1,0 +1,13 @@
+# Helen, mother of Constantine
+
+The calendar keeps her with her son on the same day, and the life it prints is one life for the two of them. Helen was the mother of [Constantine the Great](/saints/constantine-the-great), whom she bore to Constas, the emperor in Britain; of her, the page says, Constantine alone was born, and he was the heir of his father's rule. She was living with him in Britain when the Romans sent secretly to beg him to come against Maxentius, and the page says nothing of her own beginnings, her country or her years.
+
+What it tells at length is her journey. When Constantine had built his city and called the council at Nicaea, he sent his mother to Jerusalem with much wealth, as one who loved God greatly, to search for the honourable Cross. Wishing to find the life-giving Cross of the Lord, which the Jews had hidden, she called them all together and questioned them; and at the prayer of the patriarch Macarius a sweet fragrance came out of the place, and the Tomb and the place of the Skull, Golgotha, were shown to the east.
+
+Three crosses were found there, and Macarius had them laid one by one on a dead man being carried past; when the Cross of Christ was laid on him the dead man at once rose. Then Macarius, standing on a high place, lifted the honourable Cross and showed it to the people, who cried out, Lord have mercy; and from that the feast of the Exaltation is kept. The Jew Judas who had shown her the place believed with a multitude of Jews and was baptised with the name Cyriacus, and was afterwards patriarch of Jerusalem and was tortured for Christ under Julian the Apostate.
+
+Helen took with her a part of the holy wood and the holy nails, and put the rest in a silver casket and gave it to the patriarch Macarius to keep for the generations to come. She ordered churches to be built in Jerusalem at the holy places: first the church of the Resurrection, beside the Holy Sepulchre where the Cross had been found, then a church at Gethsemane, where the tomb of the Most Holy Mother of God is, of her honourable Dormition, and eighteen others besides.
+
+When she had adorned them all and endowed them richly, she came to Constantinople, bringing a part of the wood of the life-giving Cross and the holy nails with which the body of Christ was fixed. Not long afterwards, the page says, she passed to God, having pleased Him, and was buried with honour; her son lived ten years and more after her. It gives her no year, either for her birth or for her death.
+
+*After doxologia.ro's calendar for 21 mai — [the day](https://doxologia.ro/21-mai) and [the life](https://doxologia.ro/viata-sfintilor-mari-imparati-intocmai-cu-apostolii-constantin-mama-sa-elena); read 20 September 2026.*
