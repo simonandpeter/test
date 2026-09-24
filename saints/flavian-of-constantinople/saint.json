@@ -1,0 +1,61 @@
+{
+  "slug": "flavian-of-constantinople",
+  "display_name": "Flavian",
+  "office": "Archbishop of Constantinople",
+  "names": [
+    {
+      "form": "Flavian",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 februarie, «Sfântul Ierarh Flavian, Arhiepiscopul Constantinopolului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch",
+    "confessor"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 449,
+      "latest": 449,
+      "display": "449",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «înainte de acela, la Sinodul al II-lea de la Efes din 449, cunoscut în istorie drept „Sinodul tâlhăresc”, el a fost bătut cu sălbăticie și călcat în picioare, de unde, după trei zile, i s-a tras și moartea»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 16 februarie — «Sfântul Ierarh Flavian, Arhiepiscopul Constantinopolului»",
+        "url": "https://doxologia.ro/16-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

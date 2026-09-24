@@ -1,0 +1,55 @@
+{
+  "slug": "pamphilus-of-caesarea",
+  "display_name": "Pamphilus of Caesarea",
+  "names": [
+    {
+      "form": "Pamfil",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 februarie, «Sfântul Mucenic Pamfil preotul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "related": [
+    "valens-the-deacon",
+    "paul-of-jamnia",
+    "seleucus-of-cappadocia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 16 februarie — «Sfântul Mucenic Pamfil preotul»",
+        "url": "https://doxologia.ro/16-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
