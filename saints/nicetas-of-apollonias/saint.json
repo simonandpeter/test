@@ -1,0 +1,52 @@
+{
+  "slug": "nicetas-of-apollonias",
+  "display_name": "Nicetas of Apollonias",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Nichita Mărturisitorul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 martie, «Sfântul Ierarh Nichita Mărturisitorul, Episcopul Apoloniadei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 20 martie — «Sfântul Ierarh Nichita Mărturisitorul, Episcop al Apoloniadei»",
+        "url": "https://doxologia.ro/20-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

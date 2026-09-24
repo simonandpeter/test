@@ -1,0 +1,91 @@
+{
+  "slug": "cuthbert-of-lindisfarne",
+  "display_name": "Cuthbert of Lindisfarne",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Cuthbert",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 martie, «Sfântul Ierarh Cuthbert»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "abbot",
+    "hermit",
+    "wonderworker"
+  ],
+  "related": [
+    "aidan-of-lindisfarne"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 634,
+      "latest": 634,
+      "display": "c. 634",
+      "basis": "traditional",
+      "note": "doxologia.ro's life for the day: «Sfântul Cuthbert s-a născut într-o familie engleză bogată și de neam mare, în partea de nord a Angliei, în jurul anului 634»."
+    },
+    "death": {
+      "earliest": 687,
+      "latest": 687,
+      "display": "687",
+      "basis": "attested",
+      "note": "doxologia.ro's life for the day: «a adormit întru Domnul la data de 20 martie 687, fiind îngropat la Mănăstirea Lindisfarne, așa după cum voise»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 20 martie — «Sfântul Ierarh Cuthbert»",
+        "url": "https://doxologia.ro/20-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 5",
+      "text": "O, făcătorule de minuni al Britaniei, Sfinte Părinte Cuthbert, binecuvântatule slujitor al lui Dumnezeu, care ai vorbit cu îngerii şi prin propovăduirea ta te-ai făcut uşă de mântuire pentru mulţi; acum cinstim şi noi pomenirea ta şi îţi cântăm cântări de laudă. Slavă lui Dumnezeu, Celui ce te-a slăvit pe tine!",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuthbert",
+        "url": "https://doxologia.ro/troparul-sfantului-cuthbert",
+        "year": 2026
+      },
+      "english": {
+        "text": "O wonderworker of Britain, holy father Cuthbert, blessed servant of God, who didst speak with angels and by thy preaching wast made a door of salvation for many: we too now honour thy memory and sing thee songs of praise. Glory to God, who hath glorified thee!",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

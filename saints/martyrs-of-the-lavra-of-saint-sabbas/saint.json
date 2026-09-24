@@ -1,0 +1,77 @@
+{
+  "slug": "martyrs-of-the-lavra-of-saint-sabbas",
+  "display_name": "The Martyrs of the Lavra of Saint Sabbas",
+  "names": [
+    {
+      "form": "Cuvioșii Mucenici din Mănăstirea Sfântului Sava cel Sfințit",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 martie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 780,
+      "latest": 797,
+      "display": "780–797",
+      "basis": "traditional",
+      "note": "doxologia.ro's life for the day: «În zilele preasfințitului patriarh al Ierusalimului, Ilie, care era al doilea cu același nume … iar în Constantinopol împărățind Constantin și Irina (780-797)». The reign is the interval the page prints; it gives no year for the killing, only that it fell on 20 March, Great Thursday."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 20 martie — «Sfinții Cuvioși Mucenici din Mănăstirea Sfântului Sava cel Sfințit»",
+        "url": "https://doxologia.ro/20-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Cuvioşi Mucenici din Mănăstirea Sfântului Sava cel Sfinţit",
+        "url": "https://doxologia.ro/troparul-sfintilor-cuviosi-mucenici-din-manastirea-sfantului-sava-cel-sfintit",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contest received crowns of incorruption from Thee, our God; for having Thy strength, they cast down the tormentors and broke the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
