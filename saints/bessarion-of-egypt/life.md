@@ -1,0 +1,11 @@
+# Bessarion of Egypt
+
+Bessarion, our venerable father, was born in the flesh in Egypt. When he was grown and had been taught the holy Scriptures, the holy light shone in his heart, and from his tender years he loved God greatly, in no way staining the holy baptism he had received as an infant. So he went up into a desert place and laboured there as one without a body, despising the flesh as a corruptible thing, putting every evil under the good, and having for his help the God whom he loved.
+
+Keeping the image of God in him clean, he did with all his strength the same works as the great prophets who spoke with God face to face. Moses, the foundation of all the prophets, turned bitter water sweet with a piece of wood — the figure of the Lord's Cross — to quiet the murmuring of the Jews; and this blessed man, walking once on the road with his disciple and burnt with thirst for want of water, made the sign of the Cross in the air and turned the water of the sea from salt and undrinkable into water sweet and cold and good to drink, so that he and many others drank their fill of it and gave thanks to God.
+
+And as Joshua the son of Nun once stopped the sun in its course until he had beaten Amalek, so this blessed man, being in a certain place and speaking for the profit of many when evening was coming on, asked it of God and held the sun until he had finished the teaching. He brought water down out of heaven more than once, as Elias did, when men asked it of him; and where the prophet Elisha crossed the Jordan dry with the mantle of Elias, this man crossed the Nile instead of the Jordan, and used the sign of the Cross instead of the mantle.
+
+He did other signs too by the power of the Cross, and served God into deep old age, and so departed to the eternal dwellings. Doxologia gives him no year and no century, names no monastery and no teacher, and its page for him carries no troparion.
+
+*After doxologia.ro's calendar for 20 februarie — [the day](https://doxologia.ro/20-februarie) and [the life](https://doxologia.ro/sfantul-cuvios-visarion); read 19 September 2026.*

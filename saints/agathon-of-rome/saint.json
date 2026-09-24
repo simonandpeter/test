@@ -1,0 +1,53 @@
+{
+  "slug": "agathon-of-rome",
+  "display_name": "Agathon of Rome",
+  "office": "Bishop of Rome",
+  "names": [
+    {
+      "form": "Agaton",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 februarie, «Sfântul Ierarh Agaton, Episcopul Romei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "monk",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 februarie — «Sfântul Ierarh Agaton, Episcopul Romei»",
+        "url": "https://doxologia.ro/20-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

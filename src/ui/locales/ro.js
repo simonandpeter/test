@@ -750,6 +750,7 @@ export const ro = {
     'Bishop of Carrhae': 'Episcop de Carrhae',
     'Bishop of Carthage': 'Episcop de Cartagina',
     'Bishop of Cetatea Albă-Ismail': 'Episcop de Cetatea Albă-Ismail',
+    'Bishop of Catania': 'Episcop de Catania',
     'Bishop of Chernigov': 'Episcop de Cernigov',
     'Bishop of Chytri in Cyprus': 'Episcop de Chytri în Cipru',
     'Bishop of Comana': 'Episcop de Comana',

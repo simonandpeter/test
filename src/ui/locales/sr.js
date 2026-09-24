@@ -752,6 +752,7 @@ export const sr = {
     'Bishop of Carrhae': 'Епископ харански',
     'Bishop of Carthage': 'Епископ картагински',
     'Bishop of Cetatea Albă-Ismail': 'Епископ Четатеа Албе-Измаила',
+    'Bishop of Catania': 'Епископ катански',
     'Bishop of Chernigov': 'Епископ черниговски',
     'Bishop of Chytri in Cyprus': 'Епископ хитарски на Кипру',
     'Bishop of Comana': 'Епископ комански',
