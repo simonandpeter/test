@@ -1,0 +1,86 @@
+{
+  "slug": "patrick-of-ireland",
+  "display_name": "Patrick of Ireland",
+  "names": [
+    {
+      "form": "Patrick, Luminătorul Irlandei",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 martie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "equal-to-the-apostles",
+    "wonderworker"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 381,
+      "latest": 381,
+      "display": "c. 381",
+      "basis": "traditional",
+      "note": "doxologia.ro's life for the day: «Sfântul Patrick, luminătorul Irlandei, s-a născut în jurul anului 381 d.Hr., într-un sat numit Bannaven Taberniae»."
+    },
+    "death": {
+      "earliest": 480,
+      "latest": 480,
+      "display": "c. 480",
+      "basis": "traditional",
+      "note": "doxologia.ro's life for the day: «Sfântul Patrick a trecut la cele veșnice pe 17 martie în jurul anului 480»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 17 martie — «Sfântul Ierarh Patrick, Luminătorul Irlandei»",
+        "url": "https://doxologia.ro/17-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Sfinte Ierarhe Patrick, făcătorule de minuni întocmai cu Apostolii, luminătorule al Irlandei, roagă-L pe Milostivul Dumnezeu să dăruiască sufletelor noastre iertare de greşale.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Patrick, Luminătorul Irlandei",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-patrick-luminatorul-irlandei",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy hierarch Patrick, wonderworker equal to the Apostles, enlightener of Ireland, entreat the merciful God to grant our souls forgiveness of offences.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

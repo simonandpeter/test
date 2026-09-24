@@ -1,0 +1,77 @@
+{
+  "slug": "alexis-the-man-of-god",
+  "display_name": "Alexis the Man of God",
+  "names": [
+    {
+      "form": "Alexie, omul lui Dumnezeu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 martie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 411,
+      "latest": 411,
+      "display": "411",
+      "basis": "traditional",
+      "note": "doxologia.ro's life for the day: «Sfântul Alexie s-a mutat la cele veșnice în a șaisprezecea calendă a lui aprilie, adică la 17 martie, în anul de la facerea lumii 5919, iar de la întruparea Cuvântului lui Dumnezeu 411»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 17 martie — «Sfântul Cuvios Alexie, omul lui Dumnezeu»",
+        "url": "https://doxologia.ro/17-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Alexie, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Alexie, omul lui Dumnezeu",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-alexie-omul-lui-dumnezeu",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with wonders, O Alexis our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
