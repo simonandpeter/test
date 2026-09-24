@@ -119,6 +119,10 @@ const READ_FOLDS = {
     'Athanasius the Athonite, Romanian 5 July, whose second `ro` form is Avramie because his own life gives that as his baptismal name, against the hieromartyr bishop of Arbela under Shapur II, Romanian 4 February (read 25 September 2026)',
   'ciprian cyprian-companion-of-quadratus cyprian-martyr-10-may cyprian-the-new-martyr':
     'three men called Ciprian, on three days: the hieromonk new-martyr of Kletzos in Agrafa, Romanian 5 July; the companion of Quadratus of Corinth under Decius and Valerian, Romanian 10 March; and the bare «Sfantul Mucenic Ciprian» the calendar prints on 10 May with no life and no century (read 25 September 2026)',
+  'faustus faustus-martyr-16-july faustus-presbyter-of-alexandria faustus-the-martyr':
+    'three men called Faustus: the martyr of the Romanian 16 July, whom doxologia gives two sentences -- under Decius, tortured five days, no place, no judge, no company; the presbyter of Alexandria, one of eleven with Abibus the deacon, Russian and Greek 6 September, also under Decius; and the martyr kept with Andrew the Stratelates, Romanian and Greek 31 August, under Maximian. The July page itself distinguishes him from the August one. It does not mention Alexandria, and the two Decian men are held apart here on the day and the company rather than on anything the July page says, which is little (read 25 September 2026)',
+  'iulia julia-of-ancyra julia-the-virgin':
+    'the virgin of Carthage carried captive into Syria, Romanian 16 July, against one of the seven virgins of Ancyra read out of the life of Theodotus, Romanian 18 May (read 25 September 2026)',
   'iosif joseph-archbishop-of-thessalonica joseph-of-nea-moni joseph-the-hymnographer joseph-the-merciful':
     'four men called Iosif, on four days: the archbishop of Thessalonica, Romanian 15 July, whose page carries the feast line and nothing else; one of the venerable fathers of Nea Moni on Chios, 20 May; the hymnographer, 4 April; and Joseph Naniescu, metropolitan of Moldavia, born in Bessarabia in 1818, 26 January (read 25 September 2026)',
   'vladimir vladimir-metropolitan-of-kiev vladimir-the-great':

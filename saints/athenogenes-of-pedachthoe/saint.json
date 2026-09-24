@@ -1,0 +1,70 @@
+{
+  "slug": "athenogenes-of-pedachthoe",
+  "display_name": "Athenogenes of Pedachthoe",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Atinoghen",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 iulie, «Sfântul Sfințit Mucenic Atinoghen cu cei 10 ucenici ai săi», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 16 iulie — «Sfântul Sfințit Mucenic Atinoghen cu cei 10 ucenici ai săi»",
+        "url": "https://doxologia.ro/16-iulie",
+        "year": 2026
+      },
+      "note": "The ten disciples are commemorated with him in the day's line and in the troparion, but neither the line nor the life names any of them, so they are kept here within his entry and not enumerated."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge Sfinţite Mucenice Atinoghen, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Sfințit Mucenic Atinoghen cu cei 10 ucenici ai săi», Glasul 4 — the common of hieromartyrs, printed there under his name.",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-atinoghen-cu-cei-10-ucenici-ai-sai",
+        "year": 2026
+      },
+      "english": {
+        "text": "A sharer in their ways and a successor to the apostles' thrones, you found in action, God-inspired one, a way up to the vision of the things on high. Therefore, rightly teaching the word of truth and enduring in faith even to blood, hieromartyr Athenogenes, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

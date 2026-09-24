@@ -1,0 +1,59 @@
+{
+  "slug": "faustus-martyr-16-july",
+  "display_name": "Faustus",
+  "names": [
+    {
+      "form": "Faust",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 iulie, «Sfântul Mucenic Faust», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "249–251",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Mucenic Faust (sec. III) a pătimit în timpul împăratului Deciu (249-251)». The interval is the reign the page prints; the page gives no year of its own."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 16 iulie — «Sfântul Mucenic Faust»",
+        "url": "https://doxologia.ro/16-iulie",
+        "year": 2026
+      },
+      "note": "Not the Faustus the corpus already keeps on 31 august, who is one of the company of Andrew the Stratelates: that page places him under Maximian, this one under Decius, and doxologia keeps the two on different days."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
