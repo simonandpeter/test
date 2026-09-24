@@ -1,0 +1,62 @@
+{
+  "slug": "theodosia-mother-of-procopius",
+  "display_name": "Theodosia, mother of Procopius",
+  "names": [
+    {
+      "form": "Teodosia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 iulie, «Sfânta Teodosia», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "procopius-of-jerusalem"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian",
+      "basis": "traditional",
+      "note": "doxologia.ro sets the whole story under «Dioclețian, păgânul împărat al Romei» and gives no year; she is beheaded with the twelve women before her son's own death, which the page dates only to 8 July. The interval is Diocletian's reign."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 iulie — «Sfânta Teodosia»",
+        "url": "https://doxologia.ro/8-iulie",
+        "year": 2026
+      },
+      "note": "The day page gives her a line of her own and links it to the joint life «Viața Sfântului Mare Mucenic Procopie și a mamei sale Teodosia», which is how this folder is identified as Procopius's mother and not another Theodosia."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

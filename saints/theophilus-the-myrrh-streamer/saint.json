@@ -1,0 +1,59 @@
+{
+  "slug": "theophilus-the-myrrh-streamer",
+  "display_name": "Theophilus the Myrrh-streamer",
+  "names": [
+    {
+      "form": "Teofil, Izvorâtorul de mir",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 iulie, «Sfântul Cuvios Teofil, Izvorâtorul de mir», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1548,
+      "latest": 1548,
+      "display": "1548",
+      "basis": "attested",
+      "note": "doxologia.ro: «Când sfântul a trecut la Domnul pe 8 iulie 1548…»; the same page calls him «trăitor în veacul al XVI-lea»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 iulie — «Sfântul Cuvios Teofil, Izvorâtorul de mir»",
+        "url": "https://doxologia.ro/8-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

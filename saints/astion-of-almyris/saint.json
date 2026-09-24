@@ -1,0 +1,63 @@
+{
+  "slug": "astion-of-almyris",
+  "display_name": "Astion, disciple of Epictetus",
+  "names": [
+    {
+      "form": "Astion",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 iulie, «Sfinții Mucenici Epictet și Astion»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "related": [
+    "epictetus-of-almyris"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian",
+      "basis": "traditional",
+      "note": "doxologia.ro opens «Pe timpul lui Dioclețian, păgânul împărat al Romei…» and gives no year for the martyrdom; the interval is Diocletian's reign. The page does give his age at the trial: «Sfântul Astion era… având vârsta de treizeci și cinci de ani»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 iulie — «Sfinții Mucenici Epictet și Astion»",
+        "url": "https://doxologia.ro/8-iulie",
+        "year": 2026
+      },
+      "note": "The day's line names the two men and the life tells each of their deaths, so the corpus keeps one folder for each."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

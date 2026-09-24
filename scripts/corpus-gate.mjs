@@ -119,6 +119,10 @@ const READ_FOLDS = {
     'Athanasius the Athonite, Romanian 5 July, whose second `ro` form is Avramie because his own life gives that as his baptismal name, against the hieromartyr bishop of Arbela under Shapur II, Romanian 4 February (read 25 September 2026)',
   'ciprian cyprian-companion-of-quadratus cyprian-martyr-10-may cyprian-the-new-martyr':
     'three men called Ciprian, on three days: the hieromonk new-martyr of Kletzos in Agrafa, Romanian 5 July; the companion of Quadratus of Corinth under Decius and Valerian, Romanian 10 March; and the bare «Sfantul Mucenic Ciprian» the calendar prints on 10 May with no life and no century (read 25 September 2026)',
+  'procopie procopius-of-decapolis procopius-of-jerusalem procopius-the-martyr-25-june':
+    'three men called Procopie, on three days: the great-martyr and soldier of Aelia, son of Theodosia, Romanian 8 July; the venerable confessor of the Decapolis, 27 February; and the bare «Sfantul Mucenic Procopie» of 25 June, whose page carries the day and no life (read 25 September 2026)',
+  'teodosia theodosia-mother-of-procopius theodosia-of-tyre':
+    'the wife of the senator Christopher of Aelia, martyred with her son the great-martyr Procopius, Romanian 8 July, against the virgin of Tyre whose life doxologia gives as a quotation from Eusebius, Romanian 29 May (read 25 September 2026)',
   'acachie acacius-of-melitene acacius-of-the-forty-martyrs acacius-the-centurion acacius-the-new-of-neochorion acacius-the-obedient':
     'five men called Acachie, on five days: the obedient monk of John of the Ladder’s fourth step, Romanian 7 July; the bishop of Melitene, 17 April; one of the Forty frozen at Sebaste, 9 March; the centurion under Maximian, 7 May; and the new-martyr of Neochorion in Macedonia, 1 May. Whether the 31 March and 17 April Melitene pages are one man or two is still open, and is recorded in the run’s own notes outside this repo; it does not touch the other four (read 25 September 2026)',
   'chiriachi kyriake-daughter-of-dorotheus kyriake-martyr-19-may':
