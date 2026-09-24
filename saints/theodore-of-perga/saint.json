@@ -1,0 +1,67 @@
+{
+  "slug": "theodore-of-perga",
+  "display_name": "Theodore of Perga",
+  "names": [
+    {
+      "form": "Teodor din Perga",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 aprilie, «Sfântul Mucenic Teodor din Perga»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 21 aprilie — «Sfântul Mucenic Teodor din Perga»",
+        "url": "https://doxologia.ro/21-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Dumnezeul părinţilor noştri Care faci pururea cu noi după blândeţile Tale, nu îndepărta mila Ta de la noi; ci, pentru rugăciunile lor, în pace îndreptează viaţa noastră.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Mucenic Teodor din Perga Pamfiliei», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-teodor-din-perga-pamfiliei",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who deal with us always according to your gentleness: take not your mercy from us, but by their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

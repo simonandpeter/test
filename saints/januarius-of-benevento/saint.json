@@ -1,0 +1,69 @@
+{
+  "slug": "januarius-of-benevento",
+  "display_name": "Januarius of Benevento",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Ianuarie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 aprilie, «Sfântul Sfințit Mucenic Ianuarie, Episcop de Benevent»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 21 aprilie — «Sfântul Sfințit Mucenic Ianuarie, Episcop de Benevent»",
+        "url": "https://doxologia.ro/21-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Dumnezeul părinţilor noştri Care faci pururea cu noi după blândeţile Tale, nu îndepărta mila Ta de la noi; ci, pentru rugăciunile lor, în pace îndreptează viaţa noastră.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Sfințit Mucenic Ianuarie, Episcop de Benevent, și al celor împreună cu dânsul», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-ianuarie-episcop-de-benevent-al-celor-impreuna-cu-dansul",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who deal with us always according to your gentleness: take not your mercy from us, but by their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
