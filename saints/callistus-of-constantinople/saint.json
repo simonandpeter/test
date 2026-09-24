@@ -1,0 +1,59 @@
+{
+  "slug": "callistus-of-constantinople",
+  "display_name": "Callistus I of Constantinople",
+  "names": [
+    {
+      "form": "Calist",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 iunie, «Sfântul Ierarh Calist, Patriarhul Constantinopolului»; the form is the bare name, the rest of the line being rank and see."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "patriarch"
+  ],
+  "office": "Patriarch of Constantinople",
+  "dates": {
+    "death": {
+      "earliest": 1363,
+      "latest": 1363,
+      "display": "1363",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Sfântul Patriarh Calist s-a stins din viață în anul 1363 în Serbia»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 iunie — «Sfântul Ierarh Calist, Patriarhul Constantinopolului»",
+        "url": "https://doxologia.ro/20-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

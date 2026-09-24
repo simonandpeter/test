@@ -1,0 +1,59 @@
+{
+  "slug": "florentina-of-cartagena",
+  "display_name": "Florentina of Cartagena",
+  "names": [
+    {
+      "form": "Florentina din Cartagina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 iunie, «Sfânta Cuvioasă Florentina din Cartagina»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "abbess"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 612,
+      "latest": 612,
+      "display": "c. 612",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Sfânta Florentina a trecut la cele veșnice în jurul anului 612» — the page says about 612 and gives no closer bound."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 iunie — «Sfânta Cuvioasă Florentina din Cartagina»",
+        "url": "https://doxologia.ro/20-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "slug": "nicholas-cabasilas",
+  "display_name": "Nicholas Cabasilas",
+  "names": [
+    {
+      "form": "Nicolae Cabasila",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 iunie, «Sfântul Nicolae Cabasila»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "theologian"
+  ],
+  "related": [
+    "gregory-palamas"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1322,
+      "latest": 1322,
+      "display": "c. 1322",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Născut la Tesalonic în jurul anului 1322»."
+    },
+    "death": {
+      "earliest": 1391,
+      "latest": 1397,
+      "display": "between 1391 and 1397",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Sfântul Nicolae a adormit în pace, fără să lase nici o mărturie despre ultimele zile ale sale, între 1391 și 1397»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 iunie — «Sfântul Nicolae Cabasila»",
+        "url": "https://doxologia.ro/20-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Fiind părtaș veseliei cel veșnice, roagă-te totdeauna pentru noi, cei ce te cinstim pe tine, fericite Nicolae, ca să fim izbăviți de ispite, și de primejdii, și de toată strâmtorarea, și de neputințe cumplite, și să ne umplem de luminarea cea dumnezeiască noi, cei ce alergăm la fierbinte ocrotirea ta.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Nicolae Cabasila, glasul 4.",
+        "url": "https://doxologia.ro/troparul-sfantului-nicolae-cabasila",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being a partaker of the everlasting gladness, pray without ceasing for us who honour thee, O blessed Nicholas, that we may be delivered from temptations and from dangers and from every distress and from grievous infirmities, and that we who run to thy fervent protection may be filled with the divine illumination.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

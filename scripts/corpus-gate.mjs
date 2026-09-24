@@ -125,6 +125,8 @@ const READ_FOLDS = {
     'the bishop and wonderworker of Amathus in Cyprus, Romanian 16 June, against the patriarch of Moscow, Romanian 7 April (read 25 September 2026)',
   'isihie hesychius-of-durostorum hesychius-of-the-forty-martyrs hesychius-the-senator':
     'three men called Isihie, on three days: the soldier martyred at Durostorum in Moesia Inferior, Romanian 15 June; one of the Forty frozen at Sebaste, Romanian 9 March; and the senator, Romanian 2 March (read 25 September 2026)',
+  'metodie methodius-of-constantinople methodius-of-moravia methodius-of-patara':
+    'three men called Metodie, on three days: the Sicilian who suffered under Leo the Armenian and afterwards held the throne of Constantinople, Romanian 14 June; the elder brother of Cyril, of Thessalonica, Romanian 11 May; and the bishop of Patara in Lycia, Romanian 20 June (read 25 September 2026)',
   'metodie methodius-of-constantinople methodius-of-moravia':
     'the Sicilian who suffered under Leo the Armenian while Nikephoros held the throne and afterwards held it himself, Romanian 14 June, against the elder brother of Cyril, son of Leo and Maria of Thessalonica, Romanian 11 May (read 25 September 2026)',
   'gavriil gabriel-of-kapsala gabriel-the-martyr-2-february':

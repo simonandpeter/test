@@ -1,0 +1,46 @@
+{
+  "slug": "callistus-angelikoudes",
+  "display_name": "Callistus Angelikoudes",
+  "names": [
+    {
+      "form": "Calist Angelicoudes",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 iunie, «Sfântul Calist Angelicoudes»."
+    }
+  ],
+  "sex": "male",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 iunie — «Sfântul Calist Angelicoudes»",
+        "url": "https://doxologia.ro/20-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "methodius-of-patara",
+  "display_name": "Methodius of Patara",
+  "names": [
+    {
+      "form": "Metodie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 iunie, «Sfântul Sfințit Mucenic Metodie, Episcopul Patarelor»; the form is the bare name, the rest of the line being rank and see."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 iunie — «Sfântul Sfințit Mucenic Metodie, Episcopul Patarelor»",
+        "url": "https://doxologia.ro/20-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge Sfinţite Mucenice Metodie, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfințit Mucenic Metodie, Episcopul Patarelor, glasul 4; the text is the common of a hieromartyr, printed for him.",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-metodie-episcopul-patarelor",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having become a sharer of the apostles' ways and a successor to their thrones, thou didst find in action, O God-inspired one, an ascent to contemplation. Therefore, rightly dividing the word of truth, and contending for the faith even unto blood, O Hieromartyr Methodius, intercede with Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
