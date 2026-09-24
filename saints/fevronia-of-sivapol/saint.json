@@ -1,0 +1,69 @@
+{
+  "slug": "fevronia-of-sivapol",
+  "display_name": "Fevronia of Sivapol",
+  "names": [
+    {
+      "form": "Fevronia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 25 iunie, «Sfânta Mare Muceniță Fevronia»; the epithet in the English form is the city her life names, «cetatea Sivapol, care se afla în hotarele asirienilor»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "great-martyr",
+    "virgin",
+    "monastic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 25 iunie — «Sfânta Mare Muceniță Fevronia»",
+        "url": "https://doxologia.ro/25-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 25 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mieluşeaua Ta, Iisuse, Fevronia, strigă cu glas mare: pe Tine, Mirele meu, te iubesc și pe Tine căutându-Te mă chinuiesc și împreună mă răstignesc și împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru tine, ca să viez pentru Tine; ci, ca o jertfă fără de prihană, primește-mă pe mine ceea ce cu dragoste mă jertfesc Ție. Pentru rugăciunile ei, ca un milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Mari Mucenițe Fevronia, glasul 4; the text is the common of a woman martyr, printed with her name in it.",
+        "url": "https://doxologia.ro/troparul-sfintei-mari-mucenite-fevronia",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy lamb Fevronia, O Jesus, cries out with a loud voice: Thee, my Bridegroom, do I love, and seeking Thee I am in torment; with Thee I am crucified and with Thee I am buried in Thy baptism; I suffer for Thee that I may reign in Thee, and I die for Thee that I may live for Thee. Accept me, then, as a spotless offering, who sacrifice myself to Thee in love. At her prayers, O merciful One, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

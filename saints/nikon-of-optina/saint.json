@@ -1,0 +1,46 @@
+{
+  "slug": "nikon-of-optina",
+  "display_name": "Nikon of Optina",
+  "names": [
+    {
+      "form": "Nicon de la Optina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 25 iunie, «Sfântul Nicon de la Optina»."
+    }
+  ],
+  "sex": "male",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 25 iunie — «Sfântul Nicon de la Optina»",
+        "url": "https://doxologia.ro/25-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 25 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

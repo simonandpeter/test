@@ -1,0 +1,53 @@
+{
+  "slug": "dionysius-of-athos",
+  "display_name": "Dionysius of Athos",
+  "names": [
+    {
+      "form": "Dionisie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 25 iunie, «Sfântul Cuvios Dionisie»; the epithet in the English form is from his life, which sets his whole labour on the Holy Mountain."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "related": [
+    "dometius-disciple-of-dionysius"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 25 iunie — «Sfântul Cuvios Dionisie»",
+        "url": "https://doxologia.ro/25-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 25 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

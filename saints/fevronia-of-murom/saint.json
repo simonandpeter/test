@@ -6,6 +6,11 @@
     {
       "form": "Феврония Муромская",
       "lang": "ru"
+    },
+    {
+      "form": "Fevronia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 25 iunie, «Sfânta Fevronia, Cneaghină de Murom»; the form is the bare name, the rest of the line being rank and principality."
     }
   ],
   "sex": "female",
@@ -40,8 +45,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 31 august (checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 25 iunie — «Sfânta Fevronia, Cneaghină de Murom»",
+        "url": "https://doxologia.ro/25-iunie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

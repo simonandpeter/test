@@ -157,6 +157,12 @@ const READ_FOLDS = {
     'three women called Sofia, on three days: the mother of six children born at Aenus in Rhodope who became a monastic after they died, Romanian 4 June; the ascetic of Kleisoura, Romanian 6 May; and «Sfânta Muceniță Sofia Doctorița» of 22 May, whose page opens no life (read 25 September 2026)',
   'claudie claudius-companion-of-lucillian claudius-of-the-forty-martyrs':
     'one of the four young men imprisoned at Nicomedia whom Lucillian found there and suffered with, under Aurelian, Romanian 3 June, against one of the Forty frozen at Sebaste under Licinius, Romanian 9 March (read 25 September 2026)',
+  'dionisie dionysius-companion-of-lucillian dionysius-companion-of-quadratus dionysius-of-athos dionysius-of-lampsacus':
+    'four men called Dionisie, on four days: one of the four young men of the prison at Nicomedia whom Lucillian suffered with, Romanian 3 June; the martyr of Corinth taken with Quadratus, Romanian 10 March; the abbot on Athos, Romanian 25 June; and the man killed at Lampsacus beside Peter, Romanian 18 May. Three martyrs and a venerable (read 25 September 2026)',
+  'fevronia fevronia-of-murom fevronia-of-sivapol':
+    'the princess of Murom, Russian 31 August and Romanian 25 June, against the great-martyr and virgin of Sivapol, Romanian 25 June. Doxologia keeps both on 25 iunie and prints a separate life for each; one is a married princess of Rus and the other a nun under persecution (read 25 September 2026)',
+  'procopie procopius-of-decapolis procopius-the-martyr-25-june':
+    'the venerable confessor of the Decapolis, Romanian 27 February, against the bare martyr of 25 June (read 25 September 2026)',
   'dionisie dionysius-companion-of-lucillian dionysius-companion-of-quadratus dionysius-of-lampsacus':
     'three men called Dionisie, on three days: one of the four young men of the prison at Nicomedia whom Lucillian suffered with, under Aurelian, Romanian 3 June; the martyr of Corinth taken with Quadratus, Romanian 10 March; and the man killed at Lampsacus beside Peter, Romanian 18 May. Three companies, three cities (read 25 September 2026)',
   'ipatie hypatius-companion-of-lucillian hypatius-of-chalcedon hypatius-of-gangra hypatius-the-tribune':
