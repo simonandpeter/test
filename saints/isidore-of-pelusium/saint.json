@@ -1,0 +1,56 @@
+{
+  "slug": "isidore-of-pelusium",
+  "display_name": "Isidore of Pelusium",
+  "names": [
+    {
+      "form": "Isidor Pelusiotul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 februarie, «Sfântul Cuvios Isidor Pelusiotul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "presbyter"
+  ],
+  "related": [
+    "john-chrysostom",
+    "cyril-of-alexandria"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 februarie — «Sfântul Cuvios Isidor Pelusiotul»",
+        "url": "https://doxologia.ro/4-februarie",
+        "year": 2026
+      },
+      "note": "The site's hymn page for him is an audio recording of his troparion sung in Greek and prints no Romanian text, so no hymn is recorded here."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

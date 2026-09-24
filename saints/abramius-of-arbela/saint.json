@@ -1,0 +1,52 @@
+{
+  "slug": "abramius-of-arbela",
+  "display_name": "Abramius of Arbela",
+  "office": "Bishop of Arbela",
+  "names": [
+    {
+      "form": "Avramie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 februarie, «Sfântul Sfințit Mucenic Avramie». The life adds «episcop de Arbilia»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 februarie — «Sfântul Sfințit Mucenic Avramie»",
+        "url": "https://doxologia.ro/4-februarie",
+        "year": 2026
+      },
+      "note": "The site's hymn page for him is a video recording and prints no text but the refrain «Sfinte Sfințite Mucenice Avramie, roagă-te lui Dumnezeu pentru noi!», so no hymn is recorded here."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

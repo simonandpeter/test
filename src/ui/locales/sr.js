@@ -740,6 +740,7 @@ export const sr = {
     'Bishop of Ancyra': 'Епископ анкирски',
     'Bishop of Antioch': 'Епископ антиохијски',
     'Bishop of Apamea': 'Епископ апамејски',
+    'Bishop of Arbela': 'Епископ арбелски',
     'Bishop of Arsinoe': 'Епископ арсинојски',
     'Bishop of Belgorod': 'Епископ белгородски',
     'Bishop of Bohemia and Moravia-Silesia': 'Епископ чешки и моравско-шлески',

@@ -738,6 +738,7 @@ export const ro = {
     'Bishop of Ancyra': 'Episcop de Ancira',
     'Bishop of Antioch': 'Episcop al Antiohiei',
     'Bishop of Apamea': 'Episcop de Apameea',
+    'Bishop of Arbela': 'Episcop de Arbela',
     'Bishop of Arsinoe': 'Episcop de Arsinoe',
     'Bishop of Belgorod': 'Episcop de Belgorod',
     'Bishop of Bohemia and Moravia-Silesia': 'Episcop al Boemiei și Moraviei-Silezia',

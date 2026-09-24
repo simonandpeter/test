@@ -739,6 +739,7 @@ export const el = {
     'Bishop of Ancyra': 'Επίσκοπος Αγκύρας',
     'Bishop of Antioch': 'Επίσκοπος Αντιοχείας',
     'Bishop of Apamea': 'Επίσκοπος Απαμείας',
+    'Bishop of Arbela': 'Επίσκοπος Αρβήλων',
     'Bishop of Arsinoe': 'Επίσκοπος Αρσινόης',
     'Bishop of Belgorod': 'Επίσκοπος Μπελγκορόντ',
     'Bishop of Bohemia and Moravia-Silesia': 'Επίσκοπος Βοημίας και Μοραβίας-Σιλεσίας',
