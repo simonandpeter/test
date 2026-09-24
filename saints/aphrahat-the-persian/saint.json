@@ -1,0 +1,66 @@
+{
+  "slug": "aphrahat-the-persian",
+  "display_name": "Aphrahat the Persian",
+  "names": [
+    {
+      "form": "Afraat",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 ianuarie, «Sfântul Afraat Persanul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "ascetic",
+    "martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 260,
+      "latest": 275,
+      "display": "between 260 and 275",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Născut la graniţa Siriei cu Irakul de astăzi, între 260 şi 275»."
+    },
+    "death": {
+      "earliest": 345,
+      "latest": 345,
+      "display": "c. 345",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Moare ca martir creştin – prin tăiere de sabie – în jurul anului 345, pe când rege al Persiei era Sapor»; the page says «around» and no narrower bound is recorded."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 29 ianuarie — «Sfântul Afraat Persanul»",
+        "url": "https://doxologia.ro/29-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

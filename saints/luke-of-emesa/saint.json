@@ -1,0 +1,64 @@
+{
+  "slug": "luke-of-emesa",
+  "display_name": "Luke of Emesa",
+  "office": "Deacon of Emesa",
+  "names": [
+    {
+      "form": "Luca",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 ianuarie, «Sfântul Mucenic Luca»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "deacon"
+  ],
+  "related": [
+    "silvanus-of-emesa",
+    "mocius-of-emesa"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 284,
+      "display": "284",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Pe vremea împăratului Numerian în anii 284, s-a pornit prigoană asupra creştinilor»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 29 ianuarie — «Sfântul Mucenic Luca»",
+        "url": "https://doxologia.ro/29-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "slug": "philotheus-of-samosata",
+  "display_name": "Philotheus of Samosata",
+  "names": [
+    {
+      "form": "Filotei",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 ianuarie, «Sfântul Mucenic Filotei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "hyperechius-of-samosata",
+    "abibus-of-samosata",
+    "julian-of-samosata",
+    "romanus-of-samosata",
+    "james-of-samosata",
+    "paregorius-of-samosata"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 29 ianuarie — «Sfântul Mucenic Filotei»",
+        "url": "https://doxologia.ro/29-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
