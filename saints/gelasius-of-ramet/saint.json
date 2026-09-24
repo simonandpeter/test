@@ -1,0 +1,80 @@
+{
+  "slug": "gelasius-of-ramet",
+  "display_name": "Gelasius of Râmeț",
+  "names": [
+    {
+      "form": "Ghelasie de la Râmeț",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 30 iunie, «Sfântul Ierarh Ghelasie de la Râmeț»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop",
+    "abbot",
+    "hermit",
+    "wonderworker"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1500,
+      "display": "14th–15th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfântul Ierarh Ghelasie s-a nevoit în veacul al XIV-lea»; the same page reports an inscription found in 1978 in the monastery church naming «Arhiepiscopului Ghelasie» and the year 1337, and concludes that he «a fost Arhiepiscop și păstor sufletesc al credincioșilor din centrul Transilvaniei și din Munții Apuseni în secolele XIV-XV»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 iunie — «Sfântul Ierarh Ghelasie de la Râmeț»",
+        "url": "https://doxologia.ro/30-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 30 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "De Dumnezeu purtătorule, Părintele nostru Ghelasie, povăţuitorul călugărilor, preoţilor şi credincioşilor, podoaba cuvioşilor şi lauda arhiereilor, sprijinitorul celor în necazuri şi făcătorule de minuni, cu nevoinţele tale chip de sfinţenie te-ai arătat, iar acum cu îngerii în ceruri te veseleşti. Cu aceştia roagă-L pe milostivul Dumnezeu să ne dăruiască nouă pace şi mare milă.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Ghelasie de la Râmeț",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-ghelasie-de-la-ramet",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God-bearing father Gelasius, guide of monks, of priests and of the faithful, adornment of the venerable and praise of the hierarchs, support of those in trouble and worker of wonders: by your struggles you were shown forth as an image of holiness, and now you rejoice with the angels in heaven. With them entreat the merciful God to grant us peace and great mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

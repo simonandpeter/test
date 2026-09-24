@@ -1,0 +1,69 @@
+{
+  "slug": "gervasios-of-patras",
+  "display_name": "Gervasios of Patras",
+  "names": [
+    {
+      "form": "Ghervasie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 30 iunie, «Sfântul Cuvios Ghervasie din Patras»; the life gives his surname as «Paraskevopoulos»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "related": [
+    "nektarios-of-aegina"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "1877",
+      "basis": "attested",
+      "note": "doxologia.ro: «Părintele Ghervasie Paraskevopoulos s-a născut în Nymfasia, Gortyna, la 1 ianuarie 1877»."
+    },
+    "death": {
+      "earliest": 1964,
+      "latest": 1964,
+      "display": "1964",
+      "basis": "attested",
+      "note": "doxologia.ro: «A trecut la Domnul în data de 30 iunie 1964, la vârsta de 87 de ani»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 iunie — «Sfântul Cuvios Ghervasie din Patras»",
+        "url": "https://doxologia.ro/30-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 30 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -173,6 +173,12 @@ const READ_FOLDS = {
     'one of the Forty frozen at Sebaste, Romanian 9 March, against one of the company taken with Leontius at Tripoli, Romanian 18 June (read 25 September 2026)',
   'ipatie hypatius-companion-of-lucillian hypatius-of-chalcedon hypatius-of-gangra':
     'three men called Ipatie, on three days: one of the four young men of the prison at Nicomedia whom Lucillian suffered with, under Aurelian, Romanian 3 June; the abbot of Chalcedon, Romanian 25 February; and the hieromartyr bishop of Gangra, Romanian 31 March. A martyr boy, a venerable abbot and a bishop (read 25 September 2026)',
+  'matthew matthew-monk-martyr-1918 matthew-the-apostle':
+    'the Russian venerable-martyr of 1918, Russian 14 August, against the Evangelist called from the tax booth, Romanian 30 June (read 25 September 2026)',
+  'philip philip-martyr-1918 philip-of-heraclea philip-the-apostle':
+    'three folders whose English form is the bare Philip: the Russian martyr of 1918, Russian 2 September; the hieromartyr bishop of Heraclea, Serbian 20 August; and the Apostle, Romanian 30 June (read 25 September 2026)',
+  'filip philip-of-moscow philip-the-apostle philippus-of-niculitel':
+    'three men called Filip, on three days: the metropolitan of Moscow, Romanian 9 January; the Apostle, Romanian 30 June; and one of the four martyrs of Niculițel, Romanian 4 June (read 25 September 2026)',
   'paul paul-bishop-of-nicaea paul-companion-of-lucillian paul-the-apostle':
     'three men called Paul in the English forms: the bishop of Nicaea, Russian and Greek 10 September; one of the four young men of the prison at Nicomedia whom Lucillian suffered with, Romanian 3 June; and the Apostle, Romanian 29 June (read 25 September 2026)',
   'pavel paul-of-jamnia paul-of-plousias paul-of-ptolemais paul-the-apostle paul-with-valentina-and-ennatha platon-kulbusch':

@@ -22,6 +22,11 @@
       "form": "Bartolomeu",
       "lang": "ro",
       "note": "His bare name, read out of doxologia.ro's line for 11 iunie, «Sfântul Apostol Bartolomeu»."
+    },
+    {
+      "form": "Vartolomeu",
+      "lang": "ro",
+      "note": "The bare name, read out of «Sfântul Apostol Vartolomeu» in doxologia.ro's account of the Synaxis of the Twelve Apostles for 30 iunie; this folder's other Romanian form carries the rank and the spelling «Bartolomeu»."
     }
   ],
   "sex": "male",
@@ -60,13 +65,14 @@
         "day": 25,
         "month": 8,
         "calendar": "revised-julian",
-        "note": "The translation of his relics; his principal feast is 11 June. doxologia.ro's calendar keeps him on both days and prints his full life on the 11 iunie page — «Sfântul Apostol Bartolomeu» — where it says that after Pentecost the lot fell to him, with the apostle Philip, to go into Syria and upper Asia. The corpus holds one feast a church, so the row is left on the day it already carried and 11 June is recorded here rather than moved (read 24 September 2026)."
+        "note": "The translation of his relics; his principal feast is 11 June. doxologia.ro also names him in «Soborul Sfinților 12 Apostoli» on 30 iunie, the Synaxis of the Twelve Apostles, whose life calls him «Sfântul Apostol Vartolomeu» (read 24 September 2026). One row per church is the schema, so the second day is recorded here and he does not render on it."
       },
       "source": {
         "text": "doxologia.ro, 25 august — „Aducerea moaștelor Sfântului Apostol Bartolomeu”",
         "url": "https://doxologia.ro/25-august",
         "year": 2026
-      }
+      },
+      "note": "The translation of his relics; his principal feast is 11 June."
     },
     {
       "church": "greek",

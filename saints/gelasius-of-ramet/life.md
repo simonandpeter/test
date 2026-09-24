@@ -1,0 +1,15 @@
+# Gelasius of Râmeț
+
+Gelasius struggled in the fourteenth century, first as a hermit in the valley of the Râmeț brook in the Apuseni mountains and afterwards as abbot of the monastery of Râmeț in the county of Alba. He was a native of those parts. Taking the yoke of Christ from his youth, he learned the craft of spiritual struggle from the most practised of the hermits; and having cleansed his mind of evil thoughts and been granted the gift of working wonders, he came down to the community, became a famous guide of souls, and founded a brotherhood of chosen monks.
+
+The tradition of the place says that he had twelve disciples with whom he prayed and fasted, performing the holy services with great diligence and the fear of God. Through the whole week he took no food, content with the Holy Mysteries alone; by day he went out with his disciples to their obedience, and by night he kept vigil and served the Liturgy. Only on Saturday and Sunday did he eat with the monks in the refectory.
+
+He was a great spiritual father to the hermits of the Râmeț mountains and to the villagers of the Țara Moților. In the fasts he visited all the hermits who struggled in the caves of the rock and laboured at prayer together with them, and then came down to the monastery, where the faithful and the shepherds of the mountains were waiting for him. Many sick people came to him, especially those held by evil spirits, and they were healed by his prayers, for he had a great gift from God.
+
+Once, when he was with his disciples gathering hay in the monastery clearing called Hopați, and the heat was so great that all of them suffered from thirst, he fell to prayer and at once found a spring of water. That cold spring can be seen to this day and is called the spring of the Venerable Gelasius, and many villagers take water from it for health and blessing.
+
+Another time, going up to the clearing with his donkey to gather hay, he knew his end beforehand. He prayed much, called his disciples, and charged them to live in perfect love, to love the Church, and to flee drunkenness, fornication and every sin; then, having kissed them all, he gave his soul into the hands of Christ.
+
+What the tradition of the place had handed down through whole generations was borne out in our own time. In 1978 an inscription was found in the monastery church naming the Archbishop Gelasius, the painter Mihul of Crișul Alb, and the year 1337. This archbishop of Transylvania, the first attested there by name, is the Gelasius whom the people honour as a saint: archbishop and pastor of the faithful of central Transylvania and the Apuseni mountains in the fourteenth and fifteenth centuries, who withdrew in old age to the monastery of his tonsure at Râmeț. The brotherhood there keep part of his relics, and the page records healings at them in our own day.
+
+*After doxologia.ro's calendar for 30 iunie — [the day](https://doxologia.ro/30-iunie) and [the life](https://doxologia.ro/viata-sfantului-ierarh-ghelasie-de-la-ramet); read 24 September 2026.*

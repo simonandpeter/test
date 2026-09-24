@@ -1,0 +1,70 @@
+{
+  "slug": "matthew-the-apostle",
+  "display_name": "Matthew",
+  "names": [
+    {
+      "form": "Matei",
+      "lang": "ro",
+      "note": "Read out of «Sfântul Apostol Matei» in doxologia.ro's account of the Synaxis of the Twelve Apostles for 30 iunie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle",
+    "evangelist",
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 6,
+        "calendar": "revised-julian",
+        "note": "doxologia.ro keeps 30 iunie as the Synaxis of the Twelve Apostles, a common commemoration of all of them, and names each apostle in turn. His own day elsewhere in the Romanian calendar was not checked (24 September 2026)."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 iunie — «Soborul Sfinților 12 Apostoli», whose life names him: «Sfântul Apostol Matei, fratele lui Iacov al lui Alfeu»",
+        "url": "https://doxologia.ro/30-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 30 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Cei ce sunteţi între apostoli mai întâi pe scaun şezători şi lumii învăţători, Stăpânului tuturor rugaţi-vă să dăruiască pace lumii şi sufletelor noastre mare milă.",
+      "source": {
+        "text": "Doxologia — Tropar la Soborul Sfinților 12 Apostoli; the troparion is printed for the twelve together.",
+        "url": "https://doxologia.ro/tropar-la-soborul-sfintilor-12-apostoli",
+        "year": 2026
+      },
+      "english": {
+        "text": "O ye who are first enthroned among the Apostles and teachers of the world, pray to the Master of all that He grant peace to the world and to our souls great mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
