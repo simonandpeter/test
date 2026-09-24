@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'gheorghe george-of-egypt george-of-pisidian-antioch':
+    'one of the ten martyrs the Romanian 5 June keeps in a single sentence, tormented by the ruler of Egypt with hunger, thirst and cold, against the bishop and confessor of Pisidian Antioch, Romanian 19 April (read 25 September 2026)',
+  'irineu irenaeus-of-egypt irenaeus-of-sirmium':
+    'one of the ten of the Romanian 5 June, of whom the page says only that they died of hunger, thirst and cold under the ruler of Egypt, against the hieromartyr bishop of Sirmium, Romanian 6 April and Greek 23 August (read 25 September 2026)',
+  'leonid leonidas-of-egypt leonides-father-of-origen':
+    'one of the ten of the Romanian 5 June against the father of Origen, Romanian 22 April. The 5 June page gives its man no country beyond Egypt and no century (read 25 September 2026)',
+  'marchian marcian-of-constantinople marcian-of-egypt':
+    'one of the ten of the Romanian 5 June, a martyr, against the venerable of Constantinople, Romanian 10 January (read 25 September 2026)',
   'maria maria-of-gatchina mary-of-aza mary-sister-of-lazarus mary-sister-of-lykarion mary-wife-of-xenophon':
     'five women called Maria, on five days: the venerable new-martyr of Gatchina, Romanian 26 January; one of the five virgins of Aza, Romanian 9 June; the sister of Lazarus, Romanian 4 June; the sister of Lykarion, Romanian 8 February; and the wife of Xenophon, Romanian 26 January. Two martyrs, two venerables and one of the household at Bethany (read 25 September 2026)',
   'marta martha-of-aza martha-sister-of-lazarus martha-sister-of-lykarion':
