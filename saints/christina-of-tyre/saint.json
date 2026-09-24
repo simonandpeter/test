@@ -1,0 +1,68 @@
+{
+  "slug": "christina-of-tyre",
+  "display_name": "Christina of Tyre",
+  "names": [
+    {
+      "form": "Hristina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 iulie, «Sfânta Mare Muceniță Hristina», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "great-martyr",
+    "virgin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 iulie — «Sfânta Mare Muceniță Hristina»",
+        "url": "https://doxologia.ro/24-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mieluşeaua Ta, Iisuse, Hristina, strigă cu glas mare: pe Tine, Mirele meu, te iubesc și pe Tine căutându-Te mă chinuiesc și împreună mă răstignesc și împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru tine, ca să viez pentru Tine; ci, ca o jertfă fără de prihană, primește-mă pe mine ceea ce cu dragoste mă jertfesc Ție. Pentru rugăciunile ei, ca un milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintei Mari Mucenițe Hristina», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfintei-mari-mucenite-hristina",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your lamb, Jesus, Christina, cries out with a great voice: You, my Bridegroom, I love, and seeking You I am tormented, and I am crucified with You and buried with You in Your baptism; and I suffer for You, that I may reign in You; and I die for You, that I may live for You. But receive me, as a spotless sacrifice, offering myself to You in love. By her prayers, as You are merciful, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'hristina christina-martyr-18-may christina-of-tyre':
+    'two women called Hristina, and the calendar distinguishes them in its own words: the 18 mai line is «Sfanta Hristina si cele 7 sfinte fecioare impreuna cu ea», a Christina kept with seven virgins, and the 24 iulie line is «Sfanta Mare Mucenita Hristina», a great-martyr who is alone on her day and whose long life names Tyre and her father the governor Urban (read 25 September 2026)',
+  'ermoghen hermogenes-of-moscow hermogenes-the-martyr-24-july':
+    'two men called Ermoghen, on two days and two ranks: the patriarch of Moscow, Romanian 17 februarie, whose line gives him his see, and the bare «Sfantul Mucenic Ermoghen» of 24 iulie, a martyr with no city, no century and no life on the page. The July folder says so itself and holds itself apart from every Hermogenes the corpus already keeps (read 25 September 2026)',
   'valeria valeria-martyr-6-june valeria-the-martyr-23-july':
     'two women, and it took a page outside doxologia to say so. Both Romanian lines are bare -- «Sfanta Mucenita Valeria», a rank and a day and nothing else, on 6 iunie and on 23 iulie -- so the folder for the July line was written on 25 September, undone the same hour, and written again only once saint.gr/489 had been read: it keeps 6 Iouniou for the five virgins of Caesarea in Palestine, Martha, Maria, Kyria, Vareria (or Valeria) and Markia, tortured to death one after another under the citys archon. That is the June woman. No source read names a Valeria on 23 July at all, so the July line stands as a bare attestation and her own identity is unattested -- she is emphatically not made the wife of the Vitalis doxologia prints beside her, whom saint.gr/2036 puts at Ravenna in the first century (read 25 September 2026)',
   'companion theophilus trophimus theophilus-companion-of-trophimus trophimus-companion-of-theophilus':
