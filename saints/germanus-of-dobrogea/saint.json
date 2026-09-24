@@ -1,0 +1,89 @@
+{
+  "slug": "germanus-of-dobrogea",
+  "display_name": "Germanus of Dobrogea",
+  "names": [
+    {
+      "form": "Gherman din Dobrogea",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 februarie, «Sfântul Cuvios Gherman din Dobrogea»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 368,
+      "latest": 368,
+      "display": "c. 368",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Acest sfânt și purtător de Dumnezeu Gherman s-a născut pe la anul 368 în nordul Dobrogei, din părinți străromâni, fiind din același sat și contemporan cu Sfântul Ioan Casian.» — the page writes the year as an approximation."
+    },
+    "death": {
+      "earliest": 405,
+      "latest": 415,
+      "display": "405–415",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Cuviosul Părintele nostru Gherman a răposat la Roma, prin anii 405-415, dându-și sufletul cu pace în mâinile lui Hristos.» — the page gives the interval and not a year."
+    }
+  },
+  "related": [
+    "john-cassian",
+    "john-chrysostom"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 8",
+      "text": "Cu ostenelile tale, cu privegheri neîncetate, cu rugăciune şi post te-ai nevoit Cuvioase Părinte Gherman, împreună cu Sfântul Ioan Casian, din pământul Dobrogei odrăslind; şi curgerile harului preoţesc, cu rugăciunile Sfântului Ioan cel cu Gură de Aur, te-ai învrednicit a le primi. Bogăţie de daruri duhovniceşti din Ţara Sfântă, prin osârdie ai agonisit şi prin aceasta pe mulţi ai învrednicit pe Hristos a urma. Pentru aceasta părinte al Dobrogei roagă pe Hristos Dumnezeu, să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Gherman din Dobrogea, Glas 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-gherman-din-dobrogea",
+        "year": 2026
+      },
+      "english": {
+        "text": "By thy labours, by unceasing vigils, by prayer and by fasting thou didst struggle, venerable father Germanus, springing up out of the land of Dobrogea together with Saint John Cassian; and by the prayers of Saint John Chrysostom thou wast counted worthy to receive the streams of priestly grace. A wealth of spiritual gifts thou didst gather with zeal out of the Holy Land, and by it thou madest many worthy to follow Christ. Therefore, father of Dobrogea, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "doxologia.ro's life: «cu data de prăznuire la 29 februarie, iar când nu sunt ani bisecți, la 28 februarie.»"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 29 februarie — «Sfântul Cuvios Gherman din Dobrogea»",
+        "url": "https://doxologia.ro/29-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

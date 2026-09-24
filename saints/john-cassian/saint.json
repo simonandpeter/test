@@ -1,0 +1,86 @@
+{
+  "slug": "john-cassian",
+  "display_name": "John Cassian",
+  "names": [
+    {
+      "form": "Ioan Casian Romanul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 februarie, «Sfântul Cuvios Ioan Casian Romanul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 365,
+      "latest": 365,
+      "display": "c. 365",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Acest Cuvios Părinte de neam străromân s-a născut prin anii 365 de la venirea mântuirii prin Hristos-Domnul, în Dobrogea, numită pe atunci Sciția Mică» — the page writes the year as an approximation."
+    },
+    "death": {
+      "earliest": 435,
+      "latest": 435,
+      "display": "c. 435",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «El își încredință în pace sufletul său lui Dumnezeu către anul 435.» — the page writes the year as an approximation."
+    }
+  },
+  "related": [
+    "germanus-of-dobrogea"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 8",
+      "text": "Întru tine, părinte, cu osârdie s-a mântuit cel după chip; că, luând crucea, ai urmat lui Hristos; şi lucrând, ai învăţat să nu se uite la trup, căci este trecător; ci, să poarte grijă de suflet, de lucrul cel nemuritor. Pentru aceasta şi cu îngerii împreună se bucură, Preacuvioase Părinte Ioan, duhul tău.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Ioan Casian, Glas 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-ioan-casian",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, father, that which is according to the image was saved with diligence; for taking up the cross thou didst follow Christ, and working thou didst teach us to overlook the flesh, since it passes away, and to care for the soul, a thing immortal. Therefore thy spirit, most venerable father John, rejoices together with the angels.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 29 februarie — «Sfântul Cuvios Ioan Casian Romanul»",
+        "url": "https://doxologia.ro/29-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
