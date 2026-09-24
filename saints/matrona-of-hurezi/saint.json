@@ -1,0 +1,60 @@
+{
+  "slug": "matrona-of-hurezi",
+  "display_name": "Matrona of Hurezi",
+  "names": [
+    {
+      "form": "Matrona",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 mai, «Sfânta Cuvioasă Matrona de la Hurezi»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "abbess"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1935,
+      "latest": 1935,
+      "display": "1935",
+      "basis": "attested",
+      "note": "doxologia.ro: «În vara anului 1935, simțindu-și sfârșitul apropiat, și-a chemat ucenicele… iar a doua zi, în timp ce recita acatistul Bunei Vestiri, și-a dat duhul cu chip senin». The page gives the year and the season, not the day."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 mai — «Sfânta Cuvioasă Matrona de la Hurezi»",
+        "url": "https://doxologia.ro/5-mai",
+        "year": 2026
+      },
+      "note": "Canonised by the Holy Synod of the Romanian Orthodox Church on 1 July 2025, with this title and this day, as her page states."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

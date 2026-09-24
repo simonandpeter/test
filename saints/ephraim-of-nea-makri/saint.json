@@ -1,0 +1,67 @@
+{
+  "slug": "ephraim-of-nea-makri",
+  "display_name": "Ephraim of Nea Makri",
+  "names": [
+    {
+      "form": "Efrem",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 mai, «Sfântul Cuvios Mucenic Efrem cel Nou»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "wonderworker"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1384,
+      "latest": 1384,
+      "display": "1384",
+      "basis": "traditional",
+      "note": "doxologia.ro: «s-a născut în Grecia pe data de 14 septembrie 1384 (de ziua Sfintei Cruci)»."
+    },
+    "death": {
+      "earliest": 1426,
+      "latest": 1426,
+      "display": "1426",
+      "basis": "traditional",
+      "note": "doxologia.ro: his martyrdom «s-a sfârșit pe data de 5 mai 1426, într-o zi de marți, la ora 9 dimineața»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "revised-julian",
+        "note": "His repose. His page adds that he is kept twice a year, «pe 3 ianuarie (ziua aflării Sfintelor sale Moaște) și pe 5 mai (ziua adormirii sale întru Domnul)»; one row is one feast, so the January finding of the relics is recorded here and he is not rendered on it."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 mai — «Sfântul Cuvios Mucenic Efrem cel Nou»",
+        "url": "https://doxologia.ro/5-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

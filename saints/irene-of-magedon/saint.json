@@ -1,0 +1,68 @@
+{
+  "slug": "irene-of-magedon",
+  "display_name": "Irene of Magedon",
+  "names": [
+    {
+      "form": "Irina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 mai, «Sfânta Mare Muceniță Irina»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "great-martyr",
+    "virgin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 mai — «Sfânta Mare Muceniță Irina»",
+        "url": "https://doxologia.ro/5-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mieluşeaua Ta, Iisuse, Irina, strigă cu glas mare: pe Tine, Mirele meu, te iubesc și pe Tine căutându-Te mă chinuiesc și împreună mă răstignesc, și împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru tine, ca să viez pentru Tine; ci, ca o jertfă fără de prihană, primește-mă pe mine ceea ce cu dragoste mă jertfesc Ție. Pentru rugăciunile ei, ca un milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintei Mari Mucenițe Irina», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfintei-mari-mucenite-irina",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy ewe-lamb, O Jesus, Irene, cries out with a great voice: Thee, my Bridegroom, I love, and seeking Thee I am in torment; I am crucified with Thee and buried with Thee in Thy baptism; I suffer for Thee that I may reign in Thee, and I die for Thee that I may live for Thee. Receive me as a sacrifice without spot, who offer myself to Thee in love. At her prayers, in Thy mercy, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

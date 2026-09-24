@@ -1,0 +1,70 @@
+{
+  "slug": "euthymius-of-madytos",
+  "display_name": "Euthymius of Madytos",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Eftimie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 mai, «Sfântul Ierarh Eftimie, fratele Cuvioasei Parascheva de la Iași»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 mai — «Sfântul Ierarh Eftimie, fratele Cuvioasei Parascheva de la Iași»",
+        "url": "https://doxologia.ro/5-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 4",
+      "text": "Pe tine, fiul Epivatelor, întâistătător al Maditelor și vestit ierarh, harul te-a arătat următor al lui Hristos, Cuvioase Eftimie. Căci slujind Domnului ca preot cu dumnezeiesc cuget, te-ai arătat tâlcuitor cu fapta al dreptei credințe, și acum, Părinte, roagă-te pentru cei ce te cinstesc pe tine.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Ierarh Eftimie, fratele Cuvioasei Parascheva de la Iași», Glas 4",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-eftimie-fratele-cuvioasei-parascheva-de-la-iasi",
+        "year": 2026
+      },
+      "english": {
+        "text": "Son of Epivates, first among the shepherds of Madytos and a hierarch of renown, grace showed you a follower of Christ, venerable Euthymius; for serving the Lord as a priest with a mind set on God, you became an interpreter of the right faith by your deeds. And now, Father, pray for those who honour you.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

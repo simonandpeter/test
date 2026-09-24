@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'efrem ephraim-of-nea-makri ephraim-of-tomis ephrem-the-syrian':
+    'three men called Efrem: the martyr of Nea Makri, born in Greece on 14 September 1384, Romanian 5 May; the second known bishop of Tomis in Pontic Dacia, Romanian 7 March; and the Syrian, Romanian 28 January. Ten centuries across three days (read 25 September 2026)',
+  'gaie gaius-5-may gaius-of-the-forty-martyrs':
+    'the bare line «Sfântul Mucenic Gaie» of the Romanian 5 May, whose page opens no Viață tab, against one of the Forty frozen on the lake at Sebaste, Romanian 9 March. Nothing on the 5 May page puts him at Sebaste (read 25 September 2026)',
+  'neofit neophytus-5-may neophytus-of-nicaea':
+    'the bare line «Sfântul Mucenic Neofit» of the Romanian 5 May, with no country and no century, against the martyr born at Nicaea in Bithynia to Theodore and Florentia, Romanian 21 January. Two martyrs, and only one of them has a life (read 25 September 2026)',
   'mavra maura-of-ceahlau maura-wife-of-timothy':
     'the hermit of the mountain of Ceahlău in the Carpathians, which older writers call the Mountain of Pion, against the wife of Timothy brought before Arian the governor of the Thebaid. Doxologia keeps both on 4 May and 3 May respectively and they are a Romanian mountain and an Egyptian persecution apart (read 25 September 2026)',
   'valerian valerian-4-may valerian-of-tomis valerian-of-trebizond':
@@ -145,8 +151,8 @@ const READ_FOLDS = {
     'the bishop of Melitene in Armenia, asked of God by childless parents, Romanian 17 April, against one of the Forty frozen on the lake at Sebaste under Licinius, Romanian 9 March. Armenia and Sebaste are near neighbours and the two men are not. A third joins them, the new martyr born at Neochorion in Macedonia in the eighteenth century and baptised Athanasius, Romanian 1 May (read 25 September 2026)',
   'simeon simeon-of-persia symeon-kinsman-of-the-lord symeon-the-god-receiver':
     'the bishop of the Persian church under the magi’s persecution, Romanian 17 April, against the elder of the Gospel who awaited the consolation of Israel and received the Lord in the temple, Romanian 3 February. Four centuries and a Testament apart. A third joins them, the kinsman of the Lord and bishop of Jerusalem, Romanian 27 April (read 25 September 2026)',
-  'irina irene-of-aquileia irene-of-lesvos':
-    'the youngest of the three sisters of Aquileia, taken to Macedonia with the Christians of the priest Zoilus, Romanian 16 April, against the twelve-year-old daughter of Basil the headman of Thermi, killed when the Turks put down the rising of 1463 on Lesvos, Romanian 9 April. Eleven centuries and two seas apart (read 25 September 2026)',
+  'irina irene-of-aquileia irene-of-lesvos irene-of-magedon':
+    'the youngest of the three sisters of Aquileia, taken to Macedonia with the Christians of the priest Zoilus, Romanian 16 April, against the twelve-year-old daughter of Basil the headman of Thermi, killed when the Turks put down the rising of 1463 on Lesvos, Romanian 9 April. Eleven centuries and two seas apart. A third joins them, born Penelope to a king Licinius of the city of Magedon, Romanian 5 May (read 25 September 2026)',
   'anastasia basilissa rome anastasia-of-rome-15-april basilissa-of-rome':
     'two women of Rome, disciples of the Apostles, whom doxologia keeps together on 15 April and whose display names each carry the other, so the fold is the key sorting their two names into one. Not one person under two spellings (read 25 September 2026)',
   'trofim trophimus-companion-of-paul trophimus-of-laodicea trophimus-of-nicomedia':
@@ -183,8 +189,8 @@ const READ_FOLDS = {
     'the prophet of Israel, of the tribe of Levi, son of Barachias, Romanian 8 February, against the monk of the Egyptian skete whose father Carion left wife and children for the desert and brought the boy with him, Romanian 24 March. A prophet against a desert father, and the forename is all they share (read 25 September 2026)',
   'vasile basil-of-ancyra basil-of-parium basil-of-thessalonica basil-the-confessor':
     'three men called Vasile and nothing else shared: the presbyter of Ancyra in Galatia, tormented under Julian the Apostate, Romanian 22 March; the bishop of Thessalonica, Romanian 1 February; and the monk who stood against Leo the Isaurian in the war on the icons and died a confessor, Romanian 28 February. A fourth joins them: the bishop of Parium in Lesser Mysia, a see under the metropolitan of Cyzicus, Romanian 12 April. Four cities, four days, and the forename is all (read 25 September 2026)',
-  'eftimie euthymius-of-dimitsana euthymius-of-vatopedi':
-    'the new martyr born Eleutherius at Dimitsana in the Peloponnese, schooled there and at the Patriarchal Academy and at Iași, Romanian 22 March, against the venerable-martyr of Vatopedi killed with twelve of his brethren, Romanian 4 January, whose page carries no life and no year. A new martyr of the Turkish centuries against a company on Athos (read 25 September 2026)',
+  'eftimie euthymius-of-dimitsana euthymius-of-madytos euthymius-of-vatopedi':
+    'the new martyr born Eleutherius at Dimitsana in the Peloponnese, schooled there and at the Patriarchal Academy and at Iași, Romanian 22 March, against the venerable-martyr of Vatopedi killed with twelve of his brethren, Romanian 4 January, whose page carries no life and no year. A new martyr of the Turkish centuries against a company on Athos. A third joins them, the bishop of Madytos whom the Romanian calendar names by his sister, «fratele Cuvioasei Parascheva de la Iași», Romanian 5 May (read 25 September 2026)',
   'bassus companion eusebius bassus-companion-of-eusebius eusebius-companion-of-bassus':
     'two men, each named in the calendar as the other’s companion, so the fold is the key sorting their two names into one — doxologia’s 20 January prints both and its life has them die together (read 19 September 2026)',
   'valerian valerian-of-tomis valerian-of-trebizond':
