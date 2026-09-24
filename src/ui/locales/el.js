@@ -795,6 +795,7 @@ export const el = {
     'Bishop of Skepsis in Mysia': 'Επίσκοπος Σκήψεως Μυσίας',
     'Bishop of Smyrna': 'Επίσκοπος Σμύρνης',
     'Bishop of Starodub': 'Επίσκοπος Σταρόντουμπ',
+    'Bishop of Synnada': 'Επίσκοπος Συννάδων',
     'Bishop of Tamasos': 'Επίσκοπος Ταμασού',
     'Bishop of Tarsus': 'Επίσκοπος Ταρσού',
     'Bishop of Tauromenium': 'Επίσκοπος Ταυρομενίου',

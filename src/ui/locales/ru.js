@@ -813,6 +813,7 @@ export const ru = {
     'Bishop of Skepsis in Mysia': 'Епископ Скепсийский в Мисии',
     'Bishop of Smyrna': 'Епископ Смирнский',
     'Bishop of Starodub': 'Епископ Стародубский',
+    'Bishop of Synnada': 'Епископ Синнадский',
     'Bishop of Tamasos': 'Епископ Тамасский',
     'Bishop of Tarsus': 'Епископ Тарсийский',
     'Bishop of Tauromenium': 'Епископ Тавроменийский',

@@ -1,0 +1,55 @@
+{
+  "slug": "leo-the-great",
+  "display_name": "Leo the Great",
+  "office": "Bishop of Rome",
+  "names": [
+    {
+      "form": "Leon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 februarie, «Sfântul Ierarh Leon, Episcopul Romei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "related": [
+    "flavian-of-constantinople",
+    "pulcheria-the-empress"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 18 februarie — «Sfântul Ierarh Leon, Episcopul Romei»",
+        "url": "https://doxologia.ro/18-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
