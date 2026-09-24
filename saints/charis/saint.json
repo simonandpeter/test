@@ -1,0 +1,49 @@
+{
+  "slug": "charis",
+  "display_name": "Charis",
+  "names": [
+    {
+      "form": "Haris",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 ianuarie, «Sfânta Muceniţă Haris»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 ianuarie — «Sfânta Muceniţă Haris»",
+        "url": "https://doxologia.ro/28-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

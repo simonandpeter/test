@@ -1,0 +1,50 @@
+{
+  "slug": "jacob-the-hermit",
+  "display_name": "Jacob the Hermit",
+  "names": [
+    {
+      "form": "Iacob",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 ianuarie, «Sfântul Cuvios Iacob Sihastrul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 ianuarie — «Sfântul Cuvios Iacob Sihastrul»",
+        "url": "https://doxologia.ro/28-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -758,6 +758,7 @@ export const sr = {
     'Bishop of Edessa': 'Епископ едески',
     'Bishop of Gortyna': 'Епископ гортински',
     'Bishop of Great Perm': 'Епископ великопермски',
+    'Bishop of Helenopolis': 'Епископ хеленопољски',
     'Bishop of Heraclea': 'Епископ ираклијски',
     'Bishop of Hippo': 'Епископ хипонски',
     'Bishop of Iconium': 'Епископ иконијски',

@@ -5,6 +5,11 @@
     {
       "form": "Όσιος Ισαάκ ο Σύρος",
       "lang": "el"
+    },
+    {
+      "form": "Isaac",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 ianuarie, «Sfântul Cuvios Isaac Sirul»."
     }
   ],
   "sex": "male",
@@ -20,8 +25,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 28 septembrie (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 ianuarie — «Sfântul Cuvios Isaac Sirul»",
+        "url": "https://doxologia.ro/28-ianuarie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

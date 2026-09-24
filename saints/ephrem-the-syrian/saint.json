@@ -1,0 +1,87 @@
+{
+  "slug": "ephrem-the-syrian",
+  "display_name": "Ephrem the Syrian",
+  "names": [
+    {
+      "form": "Efrem",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 ianuarie, «Sfântul Cuvios Efrem Sirul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "related": [
+    "basil-the-great"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Harul ce izvorăşte din gura ta cuvioase, a umplut de apele vieţii Biserica şi lumii a izbucnit râuri de cucernicie, revărsând asupra noastră apa pocăinţei; ci, învăţându-ne cu cuvintele tale, Sfinte Părinte Efrem, roagă-te lui Hristos, Dumnezeul nostru să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Efrem Sirul, Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-efrem-sirul",
+        "year": 2026
+      },
+      "english": {
+        "text": "The grace that springs from thy mouth, O venerable one, has filled the Church with the waters of life and has poured out upon the world rivers of godliness, shedding on us the water of repentance; teaching us by thy words, holy Father Ephrem, pray to Christ our God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "model": "Căutând cele de sus...",
+      "text": "Ceasul judecăţii pururea mai dinainte văzându-l, ai plâns cu amar, Sfinte Părinte Efrem, ca un iubitor de linişte; şi îndemânatic învăţător ai fost cu faptele, cuvioase. Pentru aceasta, părinte preafericite, pe cei leneşi îi ridici spre pocăinţă.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Efrem Sirul, Glasul 2, «Căutând cele de sus...»",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-efrem-sirul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ever foreseeing the hour of judgement, thou didst weep bitterly, holy Father Ephrem, as a lover of stillness; and thou wast a ready teacher by thy deeds, O venerable one. Therefore, most blessed father, thou raisest up the slothful to repentance.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 ianuarie — «Sfântul Cuvios Efrem Sirul»",
+        "url": "https://doxologia.ro/28-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

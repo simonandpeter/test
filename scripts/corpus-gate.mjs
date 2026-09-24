@@ -129,6 +129,8 @@ const READ_FOLDS = {
     'the elder of Xenophon’s two sons, wrecked on the way back to Berytus and found again years later as a monk in Palestine, Romanian 26 January, against the apostle and evangelist. Doxologia’s line for him is the bare «Sfântul Cuvios Ioan», which is the whole of the resemblance (read 19 September 2026)',
   'maria maria-of-gatchina mary-wife-of-xenophon':
     'the nun of Gatchina, paralysed, taken from her bed by the Cheka and dead in prison about 1930, against the wife of the nobleman Xenophon of Constantinople, who took the habit at Jerusalem with her husband and whose years doxologia gives not at all. Both fall on the Romanian 26 January, so the date scan cannot part them and the reading has to (read 19 September 2026)',
+  'iacob jacob-the-hermit james-of-nisibis':
+    'the hermit of the Romanian 28 January, fifteen years in a cave and then a murder and many years of penance in a tomb, against the bishop of Nisibis who fasted on the mountains and is kept on 13 January. Both are Iacob and nothing else is shared (read 19 September 2026)',
   'clement clement-apostle-of-sardis clement-of-ancyra':
     'one of the Seventy, kept on 10 September by the Russian, Greek and Serbian, against the bishop of Ancyra the Romanian keeps on 23 January — twenty-eight years of torments and a death at the altar. Two men (read 19 September 2026)',
   'teoctist theoctistus-of-kucumia theoctistus-the-martyr':
@@ -339,7 +341,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '110'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '115'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

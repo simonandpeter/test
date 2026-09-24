@@ -1,0 +1,63 @@
+{
+  "slug": "palladius-of-helenopolis",
+  "display_name": "Palladius of Helenopolis",
+  "office": "Bishop of Helenopolis",
+  "names": [
+    {
+      "form": "Paladie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 ianuarie, «Sfântul Cuvios Paladie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "bishop"
+  ],
+  "related": [
+    "john-chrysostom"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 363,
+      "latest": 363,
+      "display": "363",
+      "basis": "traditional",
+      "note": "doxologia.ro's notice: «Cuviosul Paladie s-a născut în anul 363, în Galatia (Asia Mică)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 ianuarie — «Sfântul Cuvios Paladie»",
+        "url": "https://doxologia.ro/28-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
