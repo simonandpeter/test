@@ -1,0 +1,79 @@
+{
+  "slug": "arsenius-the-great",
+  "display_name": "Arsenius the Great",
+  "names": [
+    {
+      "form": "Arsenie cel Mare",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 mai, «Sfântul Cuvios Arsenie cel Mare»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "monk",
+    "deacon"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 354,
+      "latest": 354,
+      "display": "354",
+      "basis": "traditional",
+      "note": "doxologia.ro, Viața Sfântului Cuvios Arsenie cel Mare: «Cuviosul Arsenie s-a născut în Roma cea Veche, în anul 354, din părinți creștini și dreptcredincioși». The page gives no year for his death, only that he was «o sută de ani și mai bine»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 mai — «Sfântul Cuvios Arsenie cel Mare»",
+        "url": "https://doxologia.ro/8-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Arsenie, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Arsenie cel Mare",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-arsenie-cel-mare",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst work the barren desert, and with sighs from the depth thou didst make thy labours bear fruit a hundredfold; and thou wast made a light to the world, shining with wonders, Arsenius our father. Pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -117,6 +117,22 @@
         "text": "Thy mighty deeds, O virgin, who shall tell? For thou gushest forth wonders and wellest up with healings, and intercedest for our souls, as theologian and friend of Christ.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Apostole al lui Hristos de Dumnezeu iubite, grăbeşte de izbăveşte pe poporul cel fără de răspuns. Că te primeşte când cazi către El, Cel ce te-a primit când te-ai rezemat pe pieptu-I; pe Care roagă-L, de Dumnezeu cuvântătorule, şi norul păgânilor cel pus asupra noastră să-l risipească, cerându-ne nouă pace şi mare milă.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Apostol și Evanghelist Ioan (8 mai)",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-evanghelist-ioan",
+        "year": 2026
+      },
+      "english": {
+        "text": "Apostle of Christ beloved of God, hasten to deliver a people who have no defence. He receives thee when thou fallest before him, who received thee when thou didst lean on his breast; entreat him, theologian, to scatter the cloud of the heathen set over us, and ask for us peace and great mercy.",
+        "rendered": "site"
+      }
     }
   ]
 }
