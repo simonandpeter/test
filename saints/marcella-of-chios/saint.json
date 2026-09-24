@@ -1,0 +1,59 @@
+{
+  "slug": "marcella-of-chios",
+  "display_name": "Marcella of Chios",
+  "names": [
+    {
+      "form": "Marcela",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 iulie, «Sfânta Muceniță Marcela», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1401,
+      "latest": 1500,
+      "display": "15th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Născută în nord-vestul insulei Chios, în secolul al XV-lea, din mamă creștină și tată păgân…» — the page gives the century of her birth and no year for her death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 iulie — «Sfânta Muceniță Marcela»",
+        "url": "https://doxologia.ro/22-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

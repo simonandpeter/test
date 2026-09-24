@@ -707,6 +707,7 @@ export const el = {
     'Abbot of Melicucca': 'Ηγούμενος Μελικουκκά',
     'Abbot of Pelecete': 'Ηγούμενος Πελεκητής',
     'Abbot of Simonopetra': 'Ηγούμενος Σιμωνόπετρας',
+    'Abbot of the Skete of the Prophet Elias on Mount Athos': 'Ηγούμενος της Σκήτης του Προφήτη Ηλία στο Άγιον Όρος',
     'Abbot of the monastery of Augarus': 'Ηγούμενος της Μονής Αυγάρου',
     'Abbot of the St Simeon Monastery': 'Ηγούμενος της Μονής Αγίου Συμεών',
     'Apologist': 'Απολογητής',

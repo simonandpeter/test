@@ -1,0 +1,70 @@
+{
+  "slug": "mary-magdalene",
+  "display_name": "Mary Magdalene",
+  "names": [
+    {
+      "form": "Maria Magdalena",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 iulie, «Sfânta Mironosiță și întocmai cu Apostolii Maria Magdalena», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "equal-to-the-apostles"
+  ],
+  "related": [
+    "john-the-theologian"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 iulie — «Sfânta Mironosiță și întocmai cu Apostolii Maria Magdalena»",
+        "url": "https://doxologia.ro/22-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Lui Hristos, Cel Ce pentru noi S-a născut din Fecioară, Cinstită Maria Magdalena, ai urmat şi ai păzit îndreptările şi legile Lui. Pentru aceasta, astăzi, preasfinţită pomenirea ta prăznuind, te lăudăm cu credinţă şi te cinstim cu dragoste.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintei Mironosițe, întocmai cu Apostolii, Maria Magdalena», Glasul 1",
+        "url": "https://doxologia.ro/troparul-sfintei-mironosite-intocmai-cu-apostolii-maria-magdalena",
+        "year": 2026
+      },
+      "english": {
+        "text": "Christ, who for our sake was born of the Virgin, you followed, honoured Mary Magdalene, and you kept His ordinances and His laws. Therefore, keeping today your most holy memory, we praise you in faith and honour you with love.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

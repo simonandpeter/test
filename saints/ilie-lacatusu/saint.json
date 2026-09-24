@@ -1,0 +1,66 @@
+{
+  "slug": "ilie-lacatusu",
+  "display_name": "Ilie Lăcătușu",
+  "names": [
+    {
+      "form": "Ilie Lăcătușu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 iulie, «Sfântul Preot Mărturisitor Ilie Lăcătușu», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1909,
+      "latest": 1909,
+      "display": "1909",
+      "basis": "attested",
+      "note": "doxologia.ro: «S-a născut pe 6 decembrie 1909 în satul Crăpăturile, județul Vâlcea, din părinți binecredincioși.»"
+    },
+    "death": {
+      "earliest": 1983,
+      "latest": 1983,
+      "display": "1983",
+      "basis": "attested",
+      "note": "doxologia.ro: «A trecut la cele veșnice exact la 22 iulie 1983.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 iulie — «Sfântul Preot Mărturisitor Ilie Lăcătușu»",
+        "url": "https://doxologia.ro/22-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

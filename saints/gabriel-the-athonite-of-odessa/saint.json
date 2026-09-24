@@ -1,0 +1,68 @@
+{
+  "slug": "gabriel-the-athonite-of-odessa",
+  "display_name": "Gabriel the Athonite of Odessa",
+  "office": "Abbot of the Skete of the Prophet Elias on Mount Athos",
+  "names": [
+    {
+      "form": "Gavriil Athonitul din Odessa",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 iulie, «Sfântul Cuvios Gavriil Athonitul din Odessa», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1849,
+      "latest": 1849,
+      "display": "1849",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Cuvios Gavriil Athonitul s-a născut la 8 ianuarie 1849, în provincia Kiev, într-o familie de părinți săraci.»"
+    },
+    "death": {
+      "earliest": 1894,
+      "latest": 1894,
+      "display": "1894",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Cuvios Gavriil s-a mutat la Domnul în data 19 octombrie 1894» — the same page dates the consecration of the cathedral he built in Odessa to «22 decembrie 1896», after that death, and does not reconcile the two."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026). doxologia.ro says he was canonised by the Russian Church on 30 November 2017 with 22 July for his feast, but that page is not the Russian calendar and the Russian row is left as not read."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 iulie — «Sfântul Cuvios Gavriil Athonitul din Odessa»",
+        "url": "https://doxologia.ro/22-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

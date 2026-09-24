@@ -725,6 +725,7 @@ export const ru = {
     'Abbot of Melicucca': 'Игумен Меликуккский',
     'Abbot of Pelecete': 'Игумен Пеликитский',
     'Abbot of Simonopetra': 'Игумен Симонопетры',
+    'Abbot of the Skete of the Prophet Elias on Mount Athos': 'Игумен Ильинского скита на Афоне',
     'Abbot of the monastery of Augarus': 'Игумен монастыря Авгара',
     'Abbot of the St Simeon Monastery': 'Игумен монастыря святого Симеона',
     'Apologist': 'Апологет',
