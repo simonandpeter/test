@@ -1,0 +1,86 @@
+{
+  "slug": "nicetas-of-remesiana",
+  "display_name": "Nicetas of Remesiana",
+  "names": [
+    {
+      "form": "Niceta de Remesiana",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 iunie, «Sfântul Ierarh Niceta de Remesiana»; his life gives the name as «Niceta (Nichita)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "hymnographer"
+  ],
+  "office": "Bishop",
+  "dates": {
+    "birth": {
+      "earliest": 338,
+      "latest": 338,
+      "display": "c. 338",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «s-a născut în jurul anului 338, în cetatea Remesiana»."
+    },
+    "death": {
+      "earliest": 414,
+      "latest": null,
+      "display": "after 414",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «a adormit în Domnul puțin după anul 414»; the same page gives his years in the see as «între anii 366 și 414»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 iunie — «Sfântul Ierarh Niceta de Remesiana»",
+        "url": "https://doxologia.ro/24-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 4",
+      "text": "Propovăduitor şi apărător al dreptei credinţe la multe neamuri te-ai arătat, Sfinte Ierarhe Niceta şi cu smerenie ai câştigat pe cele înalte, bine chivernisind darul. Pentru aceasta, Părintele nostru, roagă pe Hristos Dumnezeu să ne ocrotească de tot răul şi să ne mântuiască.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Niceta de Remesiana, glas 4.",
+        "url": "https://doxologia.ro/troparul-sfantului-niceta-de-remesiana",
+        "year": 2026
+      },
+      "english": {
+        "text": "A preacher and a defender of the right faith among many nations thou wast shown to be, O holy hierarch Nicetas, and in humility thou didst gain the things on high, husbanding well the gift given thee. Therefore, our father, pray Christ God to shelter us from every evil and to save us.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
