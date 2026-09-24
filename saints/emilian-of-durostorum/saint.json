@@ -1,0 +1,68 @@
+{
+  "slug": "emilian-of-durostorum",
+  "display_name": "Emilian of Durostorum",
+  "names": [
+    {
+      "form": "Emilian de la Durostor",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 iulie, «Sfântul Mucenic Emilian de la Durostor», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 18 iulie — «Sfântul Mucenic Emilian de la Durostor»",
+        "url": "https://doxologia.ro/18-iulie",
+        "year": 2026
+      },
+      "note": "Not the Emilian the corpus keeps as Emilian of Trebia, nor Emilian the Confessor: this one is the martyr of Durostorum in Moesia, under Julian and the governor Capitolinus."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Emilian, întru nevoinţa sa, cununa nesctricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Mucenic Emilian de la Durostor», Glasul 4 — the common of a martyr; the spelling «nesctricăciunii» is the page's own.",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-emilian-de-la-durostor",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyr Emilian, O Lord, in his contest won from You, our God, the crown of incorruption; for having Your power he overthrew his tormentors and broke the powerless insolence of the demons. At his prayers, Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

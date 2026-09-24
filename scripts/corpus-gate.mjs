@@ -119,6 +119,10 @@ const READ_FOLDS = {
     'Athanasius the Athonite, Romanian 5 July, whose second `ro` form is Avramie because his own life gives that as his baptismal name, against the hieromartyr bishop of Arbela under Shapur II, Romanian 4 February (read 25 September 2026)',
   'ciprian cyprian-companion-of-quadratus cyprian-martyr-10-may cyprian-the-new-martyr':
     'three men called Ciprian, on three days: the hieromonk new-martyr of Kletzos in Agrafa, Romanian 5 July; the companion of Quadratus of Corinth under Decius and Valerian, Romanian 10 March; and the bare «Sfantul Mucenic Ciprian» the calendar prints on 10 May with no life and no century (read 25 September 2026)',
+  'elisabeta elizabeth-of-pasarea elizabeth-of-russia elizabeth-the-wonderworker':
+    'three women called Elisabeta, on three days: the venerable-martyr the Romanian calendar names on 18 July with no life of its own; the hermit of Pasarea, Elizabeth Lazar, 5 June; and the abbess and wonderworker of Constantinople, 24 April (read 25 September 2026)',
+  'iachint hyacinth-son-of-theoclitus hyacinth-the-chamberlain':
+    'the son of Theoclitus and Theopila, whom doxologia gives a single sentence on 18 July, against the chamberlain of Trajan’s household, Romanian 3 July, committed a fortnight ago (read 25 September 2026)',
   'alexandra alexandra-of-ancyra alexandra-of-diveevo alexandra-the-empress alexandra-wife-of-nicholas-ii':
     'four women called Alexandra, on four days: the empress and last tsaritsa, shot at Ekaterinburg with her household, Romanian 17 July; one of the seven virgins of Ancyra, 18 May; the abbess and foundress of Diveevo, 13 June; and the empress, wife of Diocletian, 21 April (read 25 September 2026)',
   'anastasia anastasia-daughter-of-nicholas-ii anastasia-of-rome-15-april':
