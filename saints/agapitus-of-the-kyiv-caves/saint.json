@@ -1,0 +1,65 @@
+{
+  "slug": "agapitus-of-the-kyiv-caves",
+  "display_name": "Agapitus of the Kyiv Caves",
+  "names": [
+    {
+      "form": "Agapit",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 iunie, «Sfântul Cuvios Agapit de la Lavra Pecerska»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "unmercenary",
+    "physician"
+  ],
+  "related": [
+    "anthony-of-the-caves"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1001,
+      "latest": 1100,
+      "display": "11th century",
+      "basis": "traditional",
+      "note": "doxologia.ro's life closes: «Pomenirea Sfântului Agapit se săvârșește la 1 iunie (ziua fericitei sale adormiri, veacul al XI-lea) și la 28 septembrie (Soborul Sfinților din Peșterile de Aproape).» No closer year is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian",
+        "note": "doxologia's life page says he is kept twice: «la 1 iunie (ziua fericitei sale adormiri, veacul al XI-lea) și la 28 septembrie (Soborul Sfinților din Peșterile de Aproape)». The folder keeps 1 June, the day the calendar page prints him on; the 28 September synaxis of the Near Caves is recorded here and is not rendered as a second feast (24 September 2026)."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 iunie — «Sfântul Cuvios Agapit de la Lavra Pecerska»",
+        "url": "https://doxologia.ro/1-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

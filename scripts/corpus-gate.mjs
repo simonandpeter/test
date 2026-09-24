@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'agapit agapitus-of-synnada agapitus-of-the-kyiv-caves':
+    'the hierarch and bishop of Synnada, Romanian 18 February, against the unmercenary physician of the Lavra of the Caves whom Anthony tonsured, Romanian 1 June (read 25 September 2026)',
+  'chariton companion justin chariton-companion-of-justin justin-companion-of-chariton':
+    'two of the company seized at Rome before the prefect Rusticus, each named in this corpus as the other’s companion, so the fold is the key sorting their two names into one — the same shape as bassus/eusebius on 20 January (read 25 September 2026)',
+  'iustin justin-companion-of-chariton justin-the-philosopher':
+    'doxologia prints two lives on 1 iunie and keeps the two men apart itself: Justin the Philosopher, born at Flavia Neapolis in Syria Palestina of a Greek father, and the Justin seized with Chariton, Charito, Euelpistus, Hierax, Paeon and Valerian and tried at Rome before the prefect Rusticus. Two pages, two lives, one day (read 25 September 2026)',
+  'valerian valerian-4-may valerian-companion-of-justin valerian-of-tomis valerian-of-trebizond':
+    'four men called Valerian: the bare line of the Romanian 4 May, a venerable; one of the company tried at Rome with Justin before Rusticus, Romanian 1 June; the martyr under Licinius kept on 13 September by the Russian, Romanian and Greek; and one of the three of Trebizond, Romanian 21 January. The 4 May line calls its man a venerable and the other three are martyrs (read 25 September 2026)',
   'haralambie charalampus-31-may charalampus-of-magnesia':
     'the bare line of the Romanian 31 May, a martyr whose page opens neither a Viață nor a Tropar tab and gives no country and no century, against the hieromartyr bishop of Magnesia, Romanian 10 February (read 25 September 2026)',
   'eusebiu eusebius-31-may eusebius-companion-of-bassus':
