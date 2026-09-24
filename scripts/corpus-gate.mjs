@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'zaharia zacharias-son-of-barachias zacharias-son-of-carion':
+    'the prophet of Israel, of the tribe of Levi, son of Barachias, Romanian 8 February, against the monk of the Egyptian skete whose father Carion left wife and children for the desert and brought the boy with him, Romanian 24 March. A prophet against a desert father, and the forename is all they share (read 25 September 2026)',
   'vasile basil-of-ancyra basil-of-thessalonica basil-the-confessor':
     'three men called Vasile and nothing else shared: the presbyter of Ancyra in Galatia, tormented under Julian the Apostate, Romanian 22 March; the bishop of Thessalonica, Romanian 1 February; and the monk who stood against Leo the Isaurian in the war on the icons and died a confessor, Romanian 28 February. Three cities, three centuries, three days (read 25 September 2026)',
   'eftimie euthymius-of-dimitsana euthymius-of-vatopedi':

@@ -1,0 +1,51 @@
+{
+  "slug": "artemon-of-seleucia",
+  "display_name": "Artemon of Seleucia",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Artemon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 martie, «Sfântul Ierarh Artemon, Episcopul Seleuciei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 24 martie — «Sfântul Ierarh Artemon, Episcopul Seleuciei»",
+        "url": "https://doxologia.ro/24-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

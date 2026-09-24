@@ -1,0 +1,60 @@
+{
+  "slug": "zacharias-the-faster",
+  "display_name": "Zacharias the Faster of the Kyiv Caves",
+  "names": [
+    {
+      "form": "Zaharia Postitorul de la Lavra Peșterilor",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 martie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1201,
+      "latest": 1400,
+      "display": "13th–14th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Acesta s-a nevoit în Peșterile de departe din Marea Lavră a Kievului în veacurile XIII-XIV.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 24 martie — «Sfântul Cuvios Zaharia Postitorul de la Lavra Peșterilor»",
+        "url": "https://doxologia.ro/24-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
