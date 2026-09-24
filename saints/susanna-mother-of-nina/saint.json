@@ -1,0 +1,53 @@
+{
+  "slug": "susanna-mother-of-nina",
+  "display_name": "Susanna, mother of Nina",
+  "names": [
+    {
+      "form": "Suzana",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 mai, «Sfinții Zabulon și Suzana, părinții Sfintei Nina, luminătoarea Georgiei»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "deaconess"
+  ],
+  "related": [
+    "nina-of-georgia",
+    "zabulon-father-of-nina"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 20 mai — «Sfinții Zabulon și Suzana, părinții Sfintei Nina, luminătoarea Georgiei»",
+        "url": "https://doxologia.ro/20-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 20 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

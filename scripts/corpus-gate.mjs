@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ioan john-disciple-of-gregory-the-decapolite john-of-antioch john-of-edessa john-of-nea-moni john-of-the-forty-martyrs john-of-the-old-lavra john-son-of-xenophon john-the-theologian':
+    'eight men called Ioan, on seven days: the disciple of Gregory the Decapolite and the archbishop of Antioch, both Romanian 18 April; the unmercenary soldier of Edessa under Diocletian, Romanian 31 January; the eleventh-century father of Nea Moni on Chios, Romanian 20 May; one of the Forty frozen at Sebaste under Licinius, Romanian 9 March; the hieromonk of the Old Lavra, Romanian 19 April; the son of Xenophon, Romanian 26 January; and the Theologian and Evangelist, Romanian and Greek 26 September (read 25 September 2026)',
+  'iosif joseph-of-nea-moni joseph-the-hymnographer joseph-the-merciful':
+    'the eleventh-century father of Nea Moni on Chios, Romanian 20 May; the hymnographer dead 883, Romanian 4 April; and the metropolitan called the Merciful, dead 1902, Romanian 26 January. A thousand years across three days (read 25 September 2026)',
+  'lidia lydia-of-philippi lydia-wife-of-philetus':
+    'the seller of purple at Philippi whom the calendar calls equal-to-the-apostles, Romanian 20 May, against the wife of Philetus martyred with him, Romanian 27 March. Two months apart and two different kinds of saint (read 25 September 2026)',
+  'talaleu thalaleus-the-physician thalelaeus-of-gabala':
+    'the physician of Phoenicia, son of the hierarch Verouchios, martyred, Romanian 20 May, against the Cilician who went first to the monastery of Saint Sabbas and then to Gabala under the metropolis of Laodicea, a hermit and presbyter, Romanian 27 February. A martyr and a confessor, three months apart (read 25 September 2026)',
   'memnon memnon-the-venerable-19-may memnon-the-wonderworker':
     'the bare line of the Romanian 19 May, a venerable whose page opens neither a Viață nor a Tropar tab and gives no country and no century, against the abbot and wonderworker, Romanian 29 April. Three weeks apart, and nothing on the 19 May page joins them (read 25 September 2026)',
   'alexandra alexandra-of-ancyra alexandra-the-empress':

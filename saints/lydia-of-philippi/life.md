@@ -1,0 +1,11 @@
+# Lydia of Philippi
+
+The life doxologia prints for her begins not with her but with the vision at Troas — «Treci în Macedonia şi ne ajută», the request of a man of Macedonia who appeared to the Apostle Paul on his second missionary journey. Taking the vision for the voice of God, Paul decided without delay to cross into the other part of Europe, into eastern Macedonia, to Philippi, and took with him those who travelled with him: Timothy, Silas and Luke. They landed at Neapolis, today Kavala, and went on from there to Philippi.
+
+Outside the city, near the banks of the river Zygaktis, was the Jewish place of prayer, and there Paul found a group of working women gathered. To them, the page says, he preached for the first time in Europe the word of the Gospel of the Lord. They listened with attention and reverence to the unknown Jew, and the most eager among them was Lydia, a seller of purple from the city of Thyatira, a woman who feared God. The page quotes the Acts of her: «Acesteia Dumnezeu i-a deschis inima ca să ia aminte la cele grăite de Pavel».
+
+An earthquake, the life says, took place inside her. Her heart had never been able to rest, because she could not sacrifice to gods and goddesses given over to orgies; she had come to know the law of Israel, and it had lit in her a thirst to seek the Messiah, and now for the first time she heard an apostle speak of the Redeemer of the world. She embraced the new teaching without a single objection, believed in Christ, and said plainly that she too wished to become a Christian; and Paul baptised her in the waters of the Zygaktis.
+
+The page calls her the first Christian of Europe and the first member of the first Christian church in Greece. Her heart filled at once with gratitude towards those who had opened the eyes of her soul, and she invited them into her house and asked them to lodge there: «De m-aţi socotit că sunt credincioasă Domnului, intrând în casa mea, rămâneţi. Şi ne-a făcut să rămânem». The Orthodox Church, it says, honours her as one equal to the apostles, and on the holy place of her baptism on the bank of the Zygaktis a small church was raised, like the early Christian basilicas of Philippi.
+
+*After doxologia.ro's calendar for 20 mai — [the day](https://doxologia.ro/20-mai) and [the life](https://doxologia.ro/viata-sfintei-lidia-din-filipi); read 20 September 2026.*

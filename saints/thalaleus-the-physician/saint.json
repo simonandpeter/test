@@ -1,0 +1,68 @@
+{
+  "slug": "thalaleus-the-physician",
+  "display_name": "Thalaleus the Physician",
+  "names": [
+    {
+      "form": "Talaleu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 mai, «Sfântul Mucenic Talaleu»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "physician"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 20 mai — «Sfântul Mucenic Talaleu»",
+        "url": "https://doxologia.ro/20-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 20 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Talaleu, întru nevoinţa sa, cununa nesctricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Mucenic Talaleu», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-talaleu",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyr Thalaleus, O Lord, in his contest received from You, our God, the crown of incorruption; for having Your power he overthrew his tormentors and broke the powerless insolence of the demons. At his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
