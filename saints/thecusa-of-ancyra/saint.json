@@ -1,0 +1,78 @@
+{
+  "slug": "thecusa-of-ancyra",
+  "display_name": "Thecusa, aunt of Theodotus",
+  "names": [
+    {
+      "form": "Tecusa",
+      "lang": "ro",
+      "note": "Read out of the list in doxologia.ro's life of Theodotus of Ancyra for 18 mai: «Tecusa, Alexandra, Claudia, Fainia, Eufrasia, Matrona și Iulia»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "related": [
+    "theodotus-of-ancyra",
+    "alexandra-of-ancyra",
+    "claudia-of-ancyra",
+    "phaina-of-ancyra",
+    "euphrasia-of-ancyra",
+    "matrona-of-ancyra",
+    "julia-of-ancyra"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 18 mai — «Sfânta Hristina și cele 7 sfinte fecioare împreună cu ea»",
+        "url": "https://doxologia.ro/18-mai",
+        "year": 2026
+      },
+      "note": "The calendar's line for 18 mai does not name the seven virgins; it counts them, «cele 7 sfinte fecioare împreună cu ea». The names are read out of the life of Theodotus of Ancyra printed for the same day, which lists them — «Tecusa, Alexandra, Claudia, Fainia, Eufrasia, Matrona și Iulia» — and states «Aceste sfinte fecioare au pătimit în optsprezece zile ale lunii lui mai»."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Mucenici Petru, Dionisie, Paulin și al Sfântului Mucenic Teodot și al celor șapte», Glasul 4 — the one troparion the page prints for all the martyrs of the day, «celor șapte» being these seven",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-petru-dionisie-paulin-al-sfantului-mucenic-teodot-al-celor-sapte",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contests received the crowns of incorruption from Thee our God; for having Thy strength, they cast down the tyrants and broke the feeble insolence of the demons. At their prayers, O Christ our God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

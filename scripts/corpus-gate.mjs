@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'alexandra alexandra-of-ancyra alexandra-the-empress':
+    'one of the seven virgins drowned in the lake at Ancyra, read out of the life of Theodotus, Romanian 18 May, against the empress, wife of Diocletian, Romanian 21 April (read 25 September 2026)',
+  'eufrasia euphrasia-of-ancyra euphrasia-of-nicomedia':
+    'one of the seven virgins of Ancyra, Romanian 18 May, against the virgin martyr of Nicomedia who died under Diocletian, Romanian 19 January. Two cities, four months apart (read 25 September 2026)',
+  'matrona matrona-of-ancyra matrona-of-hurezi':
+    'one of the seven virgins of Ancyra, Romanian 18 May, against the abbess of Hurezi in Wallachia who died in 1935, Romanian 5 May. Sixteen centuries apart (read 25 September 2026)',
   'dionisie dionysius-companion-of-quadratus dionysius-of-lampsacus':
     'the martyr of Corinth taken with Quadratus, Romanian 10 March, against the man killed at Lampsacus beside Peter, Romanian 18 May. Two cities and two months (read 25 September 2026)',
   'petru peter-of-lampsacus peter-of-sebaste':
