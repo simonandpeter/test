@@ -1,0 +1,69 @@
+{
+  "slug": "andrew-of-crete",
+  "display_name": "Andrew of Crete",
+  "office": "Archbishop",
+  "names": [
+    {
+      "form": "Andrei Criteanul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 iulie, «Sfântul Ierarh Andrei Criteanul, Arhiepiscopul Cretei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 iulie — «Sfântul Ierarh Andrei Criteanul, Arhiepiscopul Cretei»",
+        "url": "https://doxologia.ro/4-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Îndreptătorule al Ortodoxiei, învăţătorule al dreptei cinstiri de Dumnezeu şi al curaţiei şi luminătorule al lumii, podoaba călugărilor cea de Dumnezeu insuflată Sfinte Ierarhe Andrei, înţelepte, cu învăţăturile tale pe toţi i-ai luminat. Alăută duhovnicească, roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Andrei Ierusalimiteanul, Arhiepiscopul Cretei",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-andrei-ierusalimiteanul-arhiepiscopul-cretei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Guide of Orthodoxy, teacher of the right worship of God and of purity, light of the world, God-inspired adornment of monks, wise hierarch Andrew: by your teachings you have given light to all. O spiritual lyre, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

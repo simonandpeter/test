@@ -1,0 +1,65 @@
+{
+  "slug": "olympias-of-farcasa",
+  "display_name": "Olympias of Fărcașa",
+  "names": [
+    {
+      "form": "Olimpiada din Fărcașa",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 iulie, «Sfânta Olimpiada din Fărcașa»; the life gives the title of her canonisation as «Sfânta Olimpiada de la Fărcașa»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "righteous"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1880,
+      "latest": 1880,
+      "display": "1880",
+      "basis": "attested",
+      "note": "doxologia.ro: «Născută pe 8 septembrie 1880»."
+    },
+    "death": {
+      "earliest": 1967,
+      "latest": 1967,
+      "display": "1967",
+      "basis": "attested",
+      "note": "doxologia.ro: «Pe 4 iulie 1967, la vârsta de 87 de ani, s-a stins liniștită, cu lumânarea aprinsă în mână»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 iulie — «Sfânta Olimpiada din Fărcașa»",
+        "url": "https://doxologia.ro/4-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

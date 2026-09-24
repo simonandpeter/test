@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'marta martha-of-antioch martha-of-aza martha-sister-of-lazarus martha-sister-of-lykarion':
+    'four women called Marta, on four days: the mother of Symeon of the Wonderful Mountain, of Antioch, Romanian 4 July; one of the five canonical virgins of Aza under Shapur, Romanian 9 June and Greek 26 September; the sister of Lazarus, Romanian 4 June, whose page gives three sentences and no life; and the sister of Lykarion, martyred with her sister Mary, Romanian 8 February (read 25 September 2026)',
   'meliton meliton-of-caesarea meliton-of-the-forty-martyrs':
     'the martyr under Trajan at Caesarea in Cappadocia, with Theodotus, Theodota, Diomedes, Eulampius, Peter, Asclepiodotus and Golinduch, Romanian 3 July, against one of the Forty frozen at Sebaste, Romanian 9 March (read 25 September 2026)',
   'iuvenalie juvenal-of-alaska juvenal-of-jerusalem':

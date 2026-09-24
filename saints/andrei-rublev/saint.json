@@ -1,0 +1,70 @@
+{
+  "slug": "andrei-rublev",
+  "display_name": "Andrei Rublev",
+  "names": [
+    {
+      "form": "Andrei Rubliov",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 iulie, «Sfântul Cuvios Andrei Rubliov, iconograful»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "iconographer"
+  ],
+  "related": [
+    "sergius-of-radonezh"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1360,
+      "latest": 1370,
+      "display": "between 1360 and 1370",
+      "basis": "traditional",
+      "note": "doxologia.ro: «s-a născut în apropierea Moscovei, între anii 1360-1370»."
+    },
+    "death": {
+      "earliest": 1427,
+      "latest": 1430,
+      "display": "1427 or 1430",
+      "basis": "traditional",
+      "note": "doxologia.ro prints both readings and settles neither: «a adormit în Domnul pe 29 ianuarie 1427 sau 1430 și a fost înmormântat la Mănăstirea Andronikov de la Moscova, având peste șaptezeci de ani»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 iulie — «Sfântul Cuvios Andrei Rubliov, iconograful»",
+        "url": "https://doxologia.ro/4-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

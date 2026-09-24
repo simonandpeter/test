@@ -1,0 +1,11 @@
+# Andrei Rublev
+
+Andrei Rublev, known as the greatest icon painter of Russia, was born near Moscow between the years 1360 and 1370. While he was still very young he went to the monastery of the Holy Trinity and was deeply impressed by [Sergius of Radonezh](/saints/sergius-of-radonezh), whom the page keeps on 25 September. After the death of Sergius in 1392, Saint Nikon followed him as abbot of the Lavra, and Andrei at once became a novice in the monastery.
+
+Before the year 1405 he moved, with Nikon's blessing, to the Spaso-Andronikov monastery, founded by Saint Andronicus. There he was tonsured a monk and was taught the art of iconography by Theophanes the Greek and by the monk Daniel, who was his friend and his companion in the ascetic life.
+
+He is first mentioned in the chronicles of 1405, when with Theophanes the Greek and Prokhor he painted the cathedral of the Annunciation in Moscow. His next great work, undertaken with the monk Daniel, was the frescoes of the cathedral of the Dormition at Vladimir in 1408. Nikon of Radonezh then asked Andrei and Daniel to paint the new church of the Trinity monastery, which the Tatars had destroyed in 1408, and in those years Andrei painted his best-known icon, the Holy Trinity, or the Hospitality of Abraham, in 1410.
+
+He fell asleep in the Lord on 29 January 1427 or 1430, at over seventy years of age, and was buried at the Andronikov monastery in Moscow. He appeared to his friend the monk Daniel, who was on his deathbed, calling him to join him in everlasting blessedness. Since 1985 the museum housed in the Andronikov monastery has carried his name, and the Holy Synod of the Orthodox Church of Russia numbered him among the saints in its session of 6–9 June 1988. The page prints no troparion for him.
+
+*After doxologia.ro's calendar for 4 iulie — [the day](https://doxologia.ro/4-iulie) and [the life](https://doxologia.ro/sfantul-cuvios-andrei-rubliov-iconograful-2); read 24 September 2026.*
