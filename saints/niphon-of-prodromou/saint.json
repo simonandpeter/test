@@ -1,0 +1,67 @@
+{
+  "slug": "niphon-of-prodromou",
+  "display_name": "Niphon of Prodromou",
+  "names": [
+    {
+      "form": "Nifon Prodromitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 iulie, «Sfântul Cuvios Nifon Prodromitul», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1807,
+      "latest": 1807,
+      "display": "1807",
+      "basis": "attested",
+      "note": "doxologia.ro heads the page «Ieroschimonahul Nifon Ionescu, adevăratul ctitor al Schitului Românesc Prodromu – Muntele Athos (1807 - 1901)»; the body says he was born in Vaslui county of poor and very believing parents and gives no day."
+    },
+    "death": {
+      "earliest": 1901,
+      "latest": 1901,
+      "display": "1901",
+      "basis": "attested",
+      "note": "doxologia.ro: «Iar în anul 1901 şi-a dat sufletul în mâinile Domnului, în vârstă de 94 de ani.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 iulie — «Sfântul Cuvios Nifon Prodromitul»",
+        "url": "https://doxologia.ro/13-iulie",
+        "year": 2026
+      },
+      "note": "Nothing on the page connects him with Niphon, patriarch of Constantinople, whom the corpus keeps; this Niphon is the nineteenth-century Moldavian founder of the Romanian skete of Prodromou on Athos."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

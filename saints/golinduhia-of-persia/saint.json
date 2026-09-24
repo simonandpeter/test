@@ -1,0 +1,72 @@
+{
+  "slug": "golinduhia-of-persia",
+  "display_name": "Golinduhia of Persia",
+  "names": [
+    {
+      "form": "Golinduhia din Persia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 iulie, «Sfânta Muceniță Golinduhia din Persia», with the rank words left off."
+    },
+    {
+      "form": "Maria",
+      "lang": "ro",
+      "note": "Her baptismal name, read out of the last line of doxologia.ro's life: «Sfânta Muceniță Maria, care mai înainte s-a numit Golinduhia»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 iulie — «Sfânta Muceniță Golinduhia din Persia»",
+        "url": "https://doxologia.ro/13-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mieluşeaua Ta, Iisuse, Golinduhia, strigă cu glas mare: pe Tine, Mirele meu, te iubesc și pe Tine căutându-Te mă chinuiesc și împreună mă răstignesc și împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru tine, ca să viez pentru Tine; ci, ca o jertfă fără de prihană, primește-mă pe mine ceea ce cu dragoste mă jertfesc Ție. Pentru rugăciunile ei, ca un milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintei Mucenițe Golinduhia din Persia», Glasul 4 — the common troparion of a woman martyr, printed here with her name",
+        "url": "https://doxologia.ro/troparul-sfintei-mucenite-golinduhia-din-persia",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your ewe-lamb Golinduhia cries out to You, Jesus, with a loud voice: You, my Bridegroom, I love, and seeking You I am in torment; I am crucified with You and buried with You in Your baptism; I suffer for You, that I may reign in You, and I die for You, that I may live in You. Receive me, then, as an unblemished sacrifice, who sacrifice myself to You in love. At her prayers, as the merciful One, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

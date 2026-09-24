@@ -1,0 +1,50 @@
+{
+  "slug": "sara-13-july",
+  "display_name": "Sara (13 July)",
+  "names": [
+    {
+      "form": "Sara",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 iulie, «Sfânta Cuvioasă Sara», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 iulie — «Sfânta Cuvioasă Sara»",
+        "url": "https://doxologia.ro/13-iulie",
+        "year": 2026
+      },
+      "note": "The page the calendar links under this name carries the name and nothing else — no life, no troparion, no year, no place — so nothing identifies her with Syra of Persia or with any other saint of a like name."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

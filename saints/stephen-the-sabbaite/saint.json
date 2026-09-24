@@ -1,0 +1,84 @@
+{
+  "slug": "stephen-the-sabbaite",
+  "display_name": "Stephen the Sabbaite",
+  "names": [
+    {
+      "form": "Ștefan Savaitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 iulie, «Sfântul Cuvios Ștefan Savaitul», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 725,
+      "latest": 725,
+      "display": "725",
+      "basis": "attested",
+      "note": "doxologia.ro: «A fost nepotul nepotul Sfântului Ioan Damaschin (4 decembrie) și s-a născut în anul 725.» The doubled word is the page's own."
+    },
+    "death": {
+      "earliest": 794,
+      "latest": 794,
+      "display": "794",
+      "basis": "attested",
+      "note": "doxologia.ro: «A adormit în Domnul în anul 794, prezicând dinainte ziua morții sale.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 iulie — «Sfântul Cuvios Ștefan Savaitul»",
+        "url": "https://doxologia.ro/13-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Îndreptătorule al Ortodoxiei, învăţătorule al dreptei cinstiri de Dumnezeu şi al curaţiei şi luminătorule al lumii, podoaba călugărilor cea de Dumnezeu insuflată Sfinte Părinte Ştefan, înţelepte, cu învăţăturile tale pe toţi i-ai luminat. Alăută duhovnicească, roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Ștefan Savaitul», Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-stefan-savaitul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Guide of Orthodoxy, teacher of true reverence towards God and of purity, and light of the world, God-inspired adornment of monks, wise father Stephen: by your teachings you enlightened all. Spiritual harp, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

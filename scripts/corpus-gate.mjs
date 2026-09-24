@@ -119,6 +119,8 @@ const READ_FOLDS = {
     'Athanasius the Athonite, Romanian 5 July, whose second `ro` form is Avramie because his own life gives that as his baptismal name, against the hieromartyr bishop of Arbela under Shapur II, Romanian 4 February (read 25 September 2026)',
   'ciprian cyprian-companion-of-quadratus cyprian-martyr-10-may cyprian-the-new-martyr':
     'three men called Ciprian, on three days: the hieromonk new-martyr of Kletzos in Agrafa, Romanian 5 July; the companion of Quadratus of Corinth under Decius and Valerian, Romanian 10 March; and the bare «Sfantul Mucenic Ciprian» the calendar prints on 10 May with no life and no century (read 25 September 2026)',
+  'maria golinduhia-of-persia maria-of-gatchina mary-of-aza mary-sister-of-lazarus mary-sister-of-lykarion mary-wife-of-xenophon':
+    'six women whose `ro` form is Maria, on five days: Golinduhia of Persia, Romanian 13 July, whose second form is Maria because doxologia’s own last line says «Sfanta Mucenita Maria, care mai inainte s-a numit Golinduhia»; Maria of Gatchina and Mary the wife of Xenophon, both 26 January and plainly two women; one of the five canonical virgins of Aza, 9 June; the sister of Lazarus, 4 June; and the sister of Lykarion, 8 February (read 25 September 2026)',
   'ilarie hilary-companion-of-proclus hilary-of-poitiers':
     'the martyr of Callippi near Ancyra, tortured with his kinsman Proclus under the governor Maximus, Romanian 12 July, against the bishop of Poitiers, Romanian 13 January, whose page on doxologia.ro carries his icon and his translated texts but no life (read 25 September 2026)',
   'gheorghe george-of-egypt george-of-pisidian-antioch george-of-thessalonica':
