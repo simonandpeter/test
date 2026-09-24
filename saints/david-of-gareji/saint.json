@@ -1,0 +1,62 @@
+{
+  "slug": "david-of-gareji",
+  "display_name": "David of Gareji",
+  "names": [
+    {
+      "form": "David",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 iunie, «Sfântul David din Gareji, Georgia»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "hermit",
+    "wonderworker"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 550,
+      "latest": 600,
+      "display": "late 6th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Nu se știe exact anul adormirii sale, însă, oricum, a fost în a doua jumătate a secolului al VI-lea»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 6,
+        "calendar": "revised-julian",
+        "note": "Doxologia keeps him twice: its calendar prints him on 9 iunie and again on 7 mai — «Sfântul Cuvios Ioan Zedazneli, dimpreună cu 12 ucenici din Georgia». One attestation row per church is the schema, so the row is the day this folder was read from and the second day is recorded here. The 7 mai line is the company of the thirteen Syrian fathers, and doxologia's life of John of Zedazeni names David of Gareji among the twelve disciples. Read 25 September 2026."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 iunie — «Sfântul David din Gareji, Georgia»",
+        "url": "https://doxologia.ro/9-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -4,4 +4,6 @@ Thecla, [Mariamne](/saints/mariamne-of-aza), [Martha](/saints/martha-of-aza), [M
 
 The Greek synaxarion tells this on 9 June, and on 26 September, where their memory is repeated, says only that their money-loving spiritual father killed them.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 26 Σεπτεμβρίου — [the entry](https://www.saint.gr/2501/saint.aspx), and its entry for 9 June — [the entry](https://www.saint.gr/1834/saint.aspx); read 17 September 2026.*
+The Romanian calendar keeps this company on 9 iunie, where doxologia.ro prints the five names on five separate lines — Mariamni, Tecla, Maria, Enata and Marta — each with a page that gives the name and the day and no life at all. It is the set of five names together, and not any one of them, that identifies the company there.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 26 Σεπτεμβρίου — [the entry](https://www.saint.gr/2501/saint.aspx), and its entry for 9 June — [the entry](https://www.saint.gr/1834/saint.aspx); read 17 September 2026; and doxologia.ro's calendar for 9 iunie — [the day](https://doxologia.ro/9-iunie) and [her page](https://doxologia.ro/sfanta-mucenita-tecla-0), read 24 September 2026.*

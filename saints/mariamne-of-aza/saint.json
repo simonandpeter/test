@@ -10,6 +10,11 @@
       "form": "Μαριάμνη",
       "lang": "el",
       "note": "Read out of «Αγίες Θέκλα, Μαριάμνη, Μάρθα, Μαρία και Ενναθά οι πέντε κανονικές Παρθένες» in this folder’s Greek citation."
+    },
+    {
+      "form": "Mariamni",
+      "lang": "ro",
+      "note": "Her own name, read out of doxologia.ro's line for 9 iunie, «Sfânta Muceniță Mariamni»."
     }
   ],
   "sex": "female",
@@ -40,8 +45,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 26 septembrie (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 iunie — «Sfânta Muceniță Mariamni»",
+        "url": "https://doxologia.ro/9-iunie",
+        "year": 2026
+      },
+      "note": "doxologia.ro's list for 9 iunie prints the five names of this company one after another — «Sfânta Muceniță Mariamni», «Sfânta Muceniță Tecla», «Sfânta Muceniță Maria», «Sfânta Muceniţă Enata», «Sfânta Muceniță Marta» — each on its own line and each with a page that carries no life. The company is identified by the set of five names, not by any one of them; the Romanian calendar keeps them on 9 June where the Greek keeps them on 26 September (read 24 September 2026)."
     },
     {
       "church": "greek",
