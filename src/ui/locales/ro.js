@@ -759,6 +759,7 @@ export const ro = {
     'Bishop of Dmitrov': 'Episcop de Dmitrov',
     'Bishop of Edessa': 'Episcop de Edesa',
     'Bishop of Emesa': 'Episcop de Emesa',
+    'Bishop of Gaza': 'Episcop de Gaza',
     'Bishop of Gortyna': 'Episcop de Gortina',
     'Bishop of Great Perm': 'Episcop de Perm cel Mare',
     'Bishop of Helenopolis': 'Episcop de Elenopolis',

@@ -1,0 +1,73 @@
+{
+  "slug": "auxentius-of-bithynia",
+  "display_name": "Auxentius of Bithynia",
+  "names": [
+    {
+      "form": "Auxentie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 februarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "monk",
+    "hermit",
+    "presbyter",
+    "wonderworker"
+  ],
+  "related": [
+    "symeon-the-stylite"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Locuitor pustiului, înger în trup şi de minuni făcător te-ai arătat, purtătorule de Dumnezeu, Părintele nostru Auxentie. Cu postul, cu privegherea şi prin rugăciune primind daruri cereşti, tămăduieşti pe cei bolnavi şi sufletele celor ce aleargă la tine cu credinţă. Slavă Celui Ce ţi-a dat ţie putere; Slavă Celui Ce te-a încununat pe tine; Slavă Celui Ce lucrează prin tine tuturor tămăduiri.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Auxentie, Glasul 1",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-auxentie",
+        "year": 2026
+      },
+      "english": {
+        "text": "A dweller of the wilderness, an angel in the body and a worker of wonders thou wast shown to be, our God-bearing father Auxentius. By fasting, by vigil and by prayer thou didst receive heavenly gifts, and thou healest the sick and the souls of those who run to thee with faith. Glory to him who gave thee strength; glory to him who crowned thee; glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 14 februarie — «Sfântul Cuvios Auxenție»",
+        "url": "https://doxologia.ro/14-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 14 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

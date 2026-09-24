@@ -1,0 +1,49 @@
+{
+  "slug": "nicholas-of-corinth",
+  "display_name": "Nicholas of Corinth",
+  "names": [
+    {
+      "form": "Nicolae din Corint",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 februarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 14 februarie — «Sfântul Mucenic Nicolae din Corint»",
+        "url": "https://doxologia.ro/14-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 14 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

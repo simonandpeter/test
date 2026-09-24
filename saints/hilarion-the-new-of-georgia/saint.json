@@ -1,0 +1,66 @@
+{
+  "slug": "hilarion-the-new-of-georgia",
+  "display_name": "Hilarion the New of Georgia",
+  "names": [
+    {
+      "form": "Ilarion cel Nou din Georgia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 februarie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromonk",
+    "monk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1776,
+      "latest": 1776,
+      "display": "1776",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Fericitul stareţ Ilarion cel Nou (Iesei Qanchaveli cu numele de mirean) s-a născut în anul 1776 în localitatea Losiantkhevi din Shorapani, în jurisdicţia orașului Kutaisi.»"
+    },
+    "death": {
+      "earliest": 1864,
+      "latest": 1864,
+      "display": "1864",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Sfântul Ilarion a adormit la Mănăstirea Sfântul Pantelimon, într-o chilie a Marele Mucenic Gheorghe, la 14 februarie 1864.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 14 februarie — «Sfântul Cuvios Ilarion cel Nou din Georgia»",
+        "url": "https://doxologia.ro/14-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 14 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
