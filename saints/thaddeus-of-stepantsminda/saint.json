@@ -1,0 +1,53 @@
+{
+  "slug": "thaddeus-of-stepantsminda",
+  "display_name": "Thaddeus of Stepantsminda",
+  "names": [
+    {
+      "form": "Tadeu din Stepantsminda",
+      "lang": "ro",
+      "note": "Read out of the list of the thirteen Syrian fathers in doxologia.ro's life of John of Zedazeni, linked from its calendar line for 7 mai, «Sfântul Cuvios Ioan Zedazneli, dimpreună cu 12 ucenici din Georgia»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "related": [
+    "john-of-zedazeni"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 mai — «Sfântul Cuvios Ioan Zedazneli, dimpreună cu 12 ucenici din Georgia»",
+        "url": "https://doxologia.ro/7-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "slug": "john-of-zedazeni",
+  "display_name": "John of Zedazeni",
+  "names": [
+    {
+      "form": "Ioan Zedazneli",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 mai, «Sfântul Cuvios Ioan Zedazneli, dimpreună cu 12 ucenici din Georgia»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "monk",
+    "wonderworker"
+  ],
+  "related": [
+    "anthony-of-martkopi",
+    "joseph-of-alaverdi",
+    "abibus-of-nekresi",
+    "david-of-gareji",
+    "zeno-of-ikalto",
+    "thaddeus-of-stepantsminda",
+    "jesse-of-tsilkani",
+    "isidore-of-samtavisi",
+    "michael-of-ulumbo",
+    "pyrrhus-of-breti",
+    "stephen-of-khirsa",
+    "shio-of-mgvime"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 476,
+      "latest": 500,
+      "display": "late 5th century",
+      "basis": "traditional",
+      "note": "doxologia.ro, Viața Sfântului Cuvios Ioan Zedazneli: «s-a născut într-un sat de lângă Antiohia, la sfârșitul secolului al V-lea». The page gives no year for his death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 mai — «Sfântul Cuvios Ioan Zedazneli, dimpreună cu 12 ucenici din Georgia»",
+        "url": "https://doxologia.ro/7-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "shio-of-mgvime",
+  "display_name": "Shio of Mgvime",
+  "names": [
+    {
+      "form": "Shio din Mgvime",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 mai, «Sfântul Shio din Mgvime, Georgia». The life of John of Zedazeni, linked from the 7 mai line, prints the same form in its list of the thirteen Syrian fathers and calls him afterwards Sisoe."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "hermit"
+  ],
+  "related": [
+    "john-of-zedazeni",
+    "jesse-of-tsilkani"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "revised-julian",
+        "note": "doxologia.ro prints him twice: alone on 9 mai, «Sfântul Shio din Mgvime, Georgia», with his own life, which says his memory is kept on 9 mai, the day of his repose, and on the Thursday of Cheesefare week; and on 7 mai among the twelve disciples of John of Zedazeni, where the thirteen Syrian fathers are kept together. The 9 mai day, which is his own and which his own page gives, is the one recorded; the 7 mai company is recorded here and not as a second row."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 mai — «Sfântul Shio din Mgvime, Georgia»",
+        "url": "https://doxologia.ro/9-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 501,
+      "latest": 525,
+      "display": "early 6th century",
+      "basis": "traditional",
+      "note": "doxologia.ro, Viața Sfântului Shio din Mgvime, Georgia: «S-a născut în Siria, la Antiohia, la începutul secolului al VI-lea, din părinți nobili și bogați». The page gives no year for his death, only the day, 9 mai."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
