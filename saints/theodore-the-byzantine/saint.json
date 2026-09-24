@@ -1,0 +1,58 @@
+{
+  "slug": "theodore-the-byzantine",
+  "display_name": "Theodore the Byzantine",
+  "names": [
+    {
+      "form": "Teodor Bizantinul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 februarie, «Sfântul Teodor Bizantinul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1795,
+      "latest": 1795,
+      "display": "1795",
+      "basis": "attested",
+      "note": "doxologia.ro's page for him: «Sfântul Teodor Bizantinul a mărturisit pentru Hristos în orașul Mitilini, Insula Lesvos din Grecia la vârsta de 21 de ani, în ziua de 17 februarie a anului 1795, după ce a fost torturat de turci»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 februarie — «Sfântul Teodor Bizantinul»",
+        "url": "https://doxologia.ro/17-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

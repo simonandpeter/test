@@ -1,0 +1,68 @@
+{
+  "slug": "theodore-the-recruit",
+  "display_name": "Theodore the Recruit",
+  "names": [
+    {
+      "form": "Teodor Tiron",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 februarie, «Sfântul Mare Mucenic Teodor Tiron»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "great-martyr",
+    "soldier"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 4",
+      "text": "Mari sunt faptele credinţei! În izvorul văpăii ca într-o apă de odihnă Sfântul Mucenic Teodor s-a bucurat. Că în foc cu totul fiind ars, ca o pâine plăcută Preasfintei Treimi s-a adus. Pentru rugăciunile lui, Hristoase Dumnezeule, mântuieşte sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mare Mucenic Teodor Tiron, Glas 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mare-mucenic-teodor-tiron",
+        "year": 2026
+      },
+      "english": {
+        "text": "Great are the works of faith! In the spring of the flame, as in water of rest, the holy Martyr Theodore rejoiced; for being burned whole in the fire, he was offered up as sweet bread to the Most Holy Trinity. By his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 februarie — «Sfântul Mare Mucenic Teodor Tiron»",
+        "url": "https://doxologia.ro/17-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

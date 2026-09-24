@@ -862,6 +862,7 @@ export const el = {
     'Nun': 'Μοναχή',
     'Patriarch of Alexandria': 'Πατριάρχης Αλεξανδρείας',
     'Patriarch of Constantinople': 'Πατριάρχης Κωνσταντινουπόλεως',
+    'Patriarch of Moscow': 'Πατριάρχης Μόσχας',
     'Patriarch of Serbia': 'Πατριάρχης Σερβίας',
     'Pope of Rome': 'Πάπας Ρώμης',
     'Presbyter': 'Πρεσβύτερος',

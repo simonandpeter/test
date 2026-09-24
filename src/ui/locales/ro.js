@@ -861,6 +861,7 @@ export const ro = {
     'Nun': 'Monahie',
     'Patriarch of Alexandria': 'Patriarh al Alexandriei',
     'Patriarch of Constantinople': 'Patriarh de Constantinopol',
+    'Patriarch of Moscow': 'Patriarh al Moscovei',
     'Patriarch of Serbia': 'Patriarh al Serbiei',
     'Pope of Rome': 'Papă al Romei',
     'Presbyter': 'Presbiter',

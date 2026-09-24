@@ -1,0 +1,68 @@
+{
+  "slug": "hermogenes-of-moscow",
+  "display_name": "Hermogenes",
+  "office": "Patriarch of Moscow",
+  "names": [
+    {
+      "form": "Ermoghen",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 februarie, «Sfântul Ierarh Ermoghen, Patriarhul Moscovei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch",
+    "confessor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1525,
+      "latest": 1535,
+      "display": "c. 1530",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Acesta se născu în Kazan în preajma anului 1530» — the page gives no year but an approximation, and the interval is set as an approximation."
+    },
+    "death": {
+      "earliest": 1612,
+      "latest": 1612,
+      "display": "1612",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «la 17 februarie 1612, din pricina foamei, să își dea sufletul său cel râvnitor în mâinile Domnului»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 februarie — «Sfântul Ierarh Ermoghen, Patriarhul Moscovei»",
+        "url": "https://doxologia.ro/17-februarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -863,6 +863,7 @@ export const sr = {
     'Nun': 'Монахиња',
     'Patriarch of Alexandria': 'Патријарх александријски',
     'Patriarch of Constantinople': 'Патријарх цариградски',
+    'Patriarch of Moscow': 'Патријарх московски',
     'Patriarch of Serbia': 'Патријарх српски',
     'Pope of Rome': 'Папа римски',
     'Presbyter': 'Презвитер',
