@@ -9,6 +9,11 @@
     {
       "form": "Γρηγόριος ὁ Θεολόγος",
       "lang": "el"
+    },
+    {
+      "form": "Grigorie Teologul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 25 ianuarie, «Sfântul Ierarh Grigorie Teologul, Arhiepiscopul Constantinopolului»."
     }
   ],
   "sex": "male",
@@ -52,8 +57,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 25 ianuarie — «Sfântul Ierarh Grigorie Teologul, Arhiepiscopul Constantinopolului»",
+        "url": "https://doxologia.ro/25-ianuarie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -69,5 +83,40 @@
   "historicity": "attested",
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Fluierul cel păstoresc al teologiei tale a biruit trâmbiţele ritorilor; că ţie, celui ce ai încercat adâncurile duhului, ţi s-au adăugat şi Frumuseţile Cuvântului. Ci, roagă pe Hristos Dumnezeu, Sfinte Părinte Grigorie, să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Grigorie Teologul, Arhiepiscopul Constantinopolului, Glasul 1",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-grigorie-teologul-arhiepiscopul-constantinopolului",
+        "year": 2026
+      },
+      "english": {
+        "text": "The shepherd's pipe of thy theology overcame the trumpets of the orators; for to thee, who hadst searched out the depths of the Spirit, the beauties of the Word were added also. Wherefore, holy father Gregory, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "model": "Fecioara astăzi...",
+      "text": "Cu limba ta cea de Dumnezeu grăitoare, încurcăturile ritorilor dezlegând, mărite, ai împodobit Biserica cu veşmântul Ortodoxiei, cel ţesut de sus; pe care şi purtându-l, strigă împreună cu noi, fiii tăi: bucură-te părinte, mintea cea preaînaltă a teologiei.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Ierarh Grigorie Teologul, Arhiepiscopul Constantinopolului, Glasul 3, «Fecioara astăzi...»",
+        "url": "https://doxologia.ro/condacul-sfantului-ierarh-grigorie-teologul-arhiepiscopul-constantinopolului",
+        "year": 2026
+      },
+      "english": {
+        "text": "With thy God-speaking tongue, O glorious one, thou didst unravel the tangles of the orators and adorn the Church with the robe of Orthodoxy woven from above; and wearing it, she cries out with us, thy children: rejoice, father, most lofty mind of theology.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -6,4 +6,4 @@ When the child could read she put the Scriptures into his hands. He was schooled
 
 He is the Gregory Nazianzus of the patristic books, and died in 389.
 
-*After the life printed by the Orthodox Church in America — [the entry](https://www.oca.org/saints/lives/2026/01/25/100298-saint-gregory-the-theologian-archbishop-of-constantinople); the feast and the year are from the Moscow Patriarchate's calendar — [the day](https://days.pravoslavie.ru/Days/20260125.html); read 31 August 2026.*
+*After the life printed by the Orthodox Church in America — [the entry](https://www.oca.org/saints/lives/2026/01/25/100298-saint-gregory-the-theologian-archbishop-of-constantinople); the feast and the year are from the Moscow Patriarchate's calendar — [the day](https://days.pravoslavie.ru/Days/20260125.html); read 31 August 2026; and the Romanian calendar of doxologia.ro, which keeps him on [25 ianuarie](https://doxologia.ro/25-ianuarie) and prints there the troparion and kontakion given above, read 19 September 2026.*

@@ -1,0 +1,72 @@
+{
+  "slug": "bretanion-of-tomis",
+  "display_name": "Bretanion of Tomis",
+  "names": [
+    {
+      "form": "Bretanion",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 25 ianuarie, «Sfântul Ierarh Bretanion, Episcopul Tomisului»."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Tomis",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "related": [
+    "basil-the-great"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Următor fiind Sfântului Andrei, Apostolul cel întâi chemat, Sfinte Ierarhe Bretanion, te-ai arătat păstor preaînțelept al strămoșilor noștri din pământul Dobrogei și apărător al dreptei credințe statornicită de părinții Sinodului de la Niceea. Prietene al Marelui Vasile și cinstitorule al mucenicilor de demult, roagă-te lui Hristos Dumnezeu, să se mântuiască sufletele noastre!",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Bretanion, Episcopul Tomisului, Glasul 1",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-bretanion-episcopul-tomisului",
+        "year": 2026
+      },
+      "english": {
+        "text": "Following Saint Andrew, the first-called apostle, O hierarch Bretanion, thou wast shown a most wise shepherd of our forefathers in the land of Dobrogea and a defender of the right faith settled by the fathers of the Council of Nicaea. O friend of Basil the Great and honourer of the martyrs of old, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 25 ianuarie — «Sfântul Ierarh Bretanion, Episcopul Tomisului»",
+        "url": "https://doxologia.ro/25-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 25 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

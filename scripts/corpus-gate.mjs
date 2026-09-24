@@ -333,7 +333,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '99'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '102'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;
