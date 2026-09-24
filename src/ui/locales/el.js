@@ -203,7 +203,7 @@ export const el = {
       kontakion: 'Κοντάκιο',
       source: 'Κείμενο από {source}',
       modelNotRendered: 'Το μέλος δεν αποδόθηκε',
-      renderedHere: 'Απόδοση που έγινε για αυτόν τον ιστότοπο',
+      renderedFrom: 'Απόδοση που έγινε για αυτόν τον ιστότοπο από {source}',
       noEnglish: 'Δεν έχει καταγραφεί αγγλική απόδοση',
       noneInYourLanguage: 'Δεν έχει καταγραφεί ελληνικό κείμενο',
     },

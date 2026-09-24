@@ -206,7 +206,7 @@ export const ru = {
       kontakion: 'Кондак',
       source: 'Текст: {source}',
       modelNotRendered: 'Подобен не переведён',
-      renderedHere: 'Перевод сделан для этого сайта',
+      renderedFrom: 'Перевод сделан для этого сайта с текста: {source}',
       noEnglish: 'Английский перевод не записан',
       noneInYourLanguage: 'Русский текст не записан',
     },

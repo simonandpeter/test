@@ -203,7 +203,7 @@ export const sr = {
       kontakion: 'Кондак',
       source: 'Текст из {source}',
       modelNotRendered: 'Подобан није преведен',
-      renderedHere: 'Prevod načinjen za ovaj sajt',
+      renderedFrom: 'Prevod načinjen za ovaj sajt prema tekstu: {source}',
       noEnglish: 'Енглески превод није записан',
       noneInYourLanguage: 'Српски текст није записан',
     },

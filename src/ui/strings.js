@@ -484,13 +484,19 @@ export const STRINGS = {
        */
       modelNotRendered: 'Melody not rendered',
       /*
-       * Under a hymn this site rendered itself, in place of the citation there
-       * is none. the corpus's no-invention rule forbade rendering anything here until the author
-       * reversed it for hymns alone on 2026-09-07, and the line exists because
-       * the reversal came with a condition: a reader has to be able to tell a
-       * translation made here from a text copied out of a book.
+       * Under a hymn this site rendered itself. The corpus's no-invention rule
+       * forbade rendering anything here until the author reversed it for hymns
+       * alone on 2026-09-07, and the line exists because the reversal came with
+       * a condition: a reader has to be able to tell a translation made here
+       * from a text copied out of a book.
+       *
+       * **And it names the text it was made from** (author, 2026-09-24: the
+       * rendering "doesnt list the original thing it was translated from").
+       * It said only "Rendered for this site" until then, on the argument that
+       * the original was one press of the language control away — which is a
+       * reason a reader can act on and not a citation they can check.
        */
-      renderedHere: 'Rendered for this site',
+      renderedFrom: 'Rendered for this site from {source}',
       /*
        * The two ways a hymn column can be empty, and they are two because the
        * rule above them is conditional (author, 2026-09-12: "When English is

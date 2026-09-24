@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-import { hymnMarkup } from '../src/ui/hymns.js';
+import { hymnMarkup, mergeForReading } from '../src/ui/hymns.js';
 import { chooseLanguage, currentLanguage } from '../src/lib/i18n.js';
 import { LITURGICAL_DAYS } from '../src/data/liturgical-days.js';
 
@@ -97,6 +97,15 @@ test('an English reader is shown the English, and told which kind of claim it is
   assert.doesNotMatch(own, /\[the Greek\]/, 'the original is not printed to a reader who chose English');
   assert.match(own, /Rendered for this site/, 'a site rendering says so under every one of them');
   assert.match(own, /data-rendered="site"/);
+  /*
+   * **And it names the text it was made from** (author, 2026-09-24: the
+   * rendering "doesnt list the original thing it was translated from"). The
+   * footer used to print four words and no citation at all, on the argument
+   * that the original was one press of the language control away — a reason a
+   * reader can act on, not a claim they can check.
+   */
+  assert.match(own, /saint\.gr/, 'a rendering made here cites the original it was made from');
+  assert.match(own, /https:\/\/example\.invalid\/el/, 'and links it, so the reading can be checked against it');
 
   const book = hymnMarkup(cited);
   assert.match(book, /A published rendering\./);
@@ -171,6 +180,44 @@ test('with English chosen, no part of a hymn a reader reads is in another tongue
  * strip: a reader in the hymn's own tongue is shown the melody, because there
  * the incipit is a line of the very text beside it.
  */
+/*
+ * **Every hymn on the page names a text, and no hymn names none.** The footer
+ * is the one line that says what kind of claim the text above it is, so a site
+ * rendering with nothing under "Rendered for this site from" would be worse
+ * than the four bare words it replaced. Asserted over the whole corpus rather
+ * than a sample, because the citation it prints for a rendering comes from the
+ * *original* and the one for a published English from the book, and only one
+ * of those two branches is exercised by any single hymn.
+ */
+test('every hymn an English reader reads names the text it came from', () => {
+  chooseLanguage('en');
+  const bare = [];
+  for (const { iso, church, hymn } of [...dayHymns, ...saintHymns]) {
+    const foot = /<p class="hymn-source[^"]*">([\s\S]*?)<\/p>/.exec(hymnMarkup(hymn))?.[1] ?? '';
+    const named = foot.replace(/<[^>]*>/g, '').replace(/Rendered for this site from|Text from/, '').trim();
+    if (!named) bare.push(`${iso} ${church} ${hymn.kind}: ${foot}`);
+  }
+  assert.deepEqual(bare.slice(0, 12), [], `${bare.length} hymns print a footer naming no text at all`);
+});
+
+/*
+ * And the merge's half of it: a rendering made here out of two traditions'
+ * texts cites both originals, not the books that published an English neither
+ * of them has. `mergeForReading` keeps `original` beside `source` for exactly
+ * this, so the footer can ask for whichever its own branch needs.
+ */
+test('a merged site rendering cites every original it was made from', () => {
+  chooseLanguage('en');
+  const one = { ...sample, church: 'greek', source: { text: 'saint.gr', url: 'https://example.invalid/el' } };
+  const two = { ...sample, church: 'russian', lang: 'cu', source: { text: 'pravoslavie.ru', url: 'https://example.invalid/cu' } };
+  const [merged] = mergeForReading([one, two], 'en');
+  const out = hymnMarkup(merged, { withChurch: true });
+  assert.match(out, /Rendered for this site from/);
+  assert.match(out, /saint\.gr/, "the Greek original it was made from");
+  assert.match(out, /pravoslavie\.ru/, 'and the Slavonic one beside it');
+  assert.match(out, /Greek · Russian/, 'over one text, named for both calendars');
+});
+
 const withModel = { ...sample, tone: 'Ἦχος πλ.', model: 'Ταχὺ προκατάλαβε.' };
 
 test('the melody is named beside the original and admitted as a gap beside a rendering', () => {

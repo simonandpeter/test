@@ -203,7 +203,7 @@ export const ro = {
       kontakion: 'Condacul',
       source: 'Text din {source}',
       modelNotRendered: 'Podobia nu a fost tălmăcită',
-      renderedHere: 'Tălmăcire făcută pentru acest sit',
+      renderedFrom: 'Tălmăcire făcută pentru acest sit după {source}',
       noEnglish: 'Nu este înregistrată nicio tălmăcire în engleză',
       noneInYourLanguage: 'Nu este înregistrat niciun text în limba română',
     },
