@@ -1,0 +1,71 @@
+{
+  "slug": "quintilian-of-ozovia",
+  "display_name": "Quintilian of Ozovia",
+  "names": [
+    {
+      "form": "Cvintilian",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 aprilie, «Sfinții Mucenici Maxim, Cvintilian și Dadas din Ozovia»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "maximus-of-ozovia",
+    "dadas-of-ozovia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 aprilie — «Sfinții Mucenici Maxim, Cvintilian și Dadas din Ozovia»",
+        "url": "https://doxologia.ro/28-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Mucenici Maxim, Cvintilian și Dadas din Ozovia», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-maxim-cvintilian-dadas-din-ozovia",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their striving won from Thee, our God, the crowns of incorruption; for having Thy strength, they overthrew their tormentors and shattered the feeble daring of the demons. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

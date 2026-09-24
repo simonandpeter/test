@@ -139,8 +139,8 @@ const READ_FOLDS = {
     'the presbyter of Laodicea of Diocletian’s persecution, Romanian 13 April, against the bishop of Seleucia in Pisidia, born there in the days of the Apostles and set over the city by the Apostle Paul, Romanian 24 March. Two and a half centuries and two cities apart (read 25 September 2026)',
   'macarie macarius-companion-of-terentius macarius-the-confessor':
     'one of the six the Romanian 10 April names together, «Terentie, Pompie, African, Maxim, Macarie şi Dima», against the confessor of the Romanian 19 February, whose page carries a line, a date and the day’s readings and no life at all. Two days and nothing shared but the forename (read 25 September 2026)',
-  'maxim maximus-companion-of-fausta maximus-companion-of-terentius':
-    'the eparch of Maximian who tried Fausta and Evilasius, Romanian 6 February, against one of the forty who refused to sacrifice in Africa under Decius and the governor Fortunatianus, Romanian 10 April. A persecutor turned martyr and a martyr of another persecution, on two days (read 25 September 2026)',
+  'maxim maximus-companion-of-fausta maximus-companion-of-terentius maximus-of-ozovia':
+    'the eparch of Maximian who tried Fausta and Evilasius, Romanian 6 February, against one of the forty who refused to sacrifice in Africa under Decius and the governor Fortunatianus, Romanian 10 April. A persecutor turned martyr and a martyr of another persecution, on two days. A third joins them, one of the three of Ozovia who suffered under Diocletian and Maximian when Tarquinius and Gabinius were proconsuls, Romanian 28 April (read 25 September 2026)',
   'nicolae nicholas-of-lesvos nicholas-of-the-forty-martyrs':
     'the young Greek studying in France whom Raphael’s preaching turned, and who died with him and Irene on Lesvos, Romanian 9 April, against one of the Forty frozen on the lake at Sebaste under Licinius, Romanian 9 March. Twelve centuries apart and nothing shared but the forename (read 25 September 2026)',
   'eutihie eutychius-of-constantinople eutychius-of-the-forty-martyrs':

@@ -1,0 +1,15 @@
+# Maximus of Ozovia
+
+Maximus suffered with two companions under Diocletian and Maximian, when Tarquinius and Gabinius were proconsuls; the life dates it by their second year, and by an edict of theirs that it quotes at length — that all under their rule should be brought by every means to the honour and love of the gods, and that whoever in any place should be found naming the name of Christ would bring their anger upon himself.
+
+The peoples gathered and sacrificed, and the proconsul Tarquinius dismissed them home. The next day an idolater came to him and said that there were three men there who the day before had refused to obey the command and sacrifice, and of whom it was said that they worshipped One God who is in the heavens. Servants were sent at once, and found the three in their village, which was called Ozovia, at prayer to God.
+
+They were bound with iron chains and taken to the city of Dorostolon — which the page glosses for its readers as lying in the south of what is now Dobruja — where the two proconsuls were together. It was already evening, and Tarquinius ordered the soldiers to keep them until the morning. The three spent that whole night at prayer, asking the Lord Jesus Christ for strength from heaven to overcome their adversaries and to be counted worthy of the crowns of victory.
+
+In the morning the proconsuls sat in judgement and had them brought. Tarquinius asked whether these were the men who despised the command and held their faith at their own will, and bade them say their names first. Maximus answered that he was a Christian by the faith of Christ, as were these his brothers, and that by human custom he was called Maximus. The questioning went on at length, and was still going on when the proconsul had them thrown down and beaten.
+
+Asked again whether they would obey and sacrifice, they answered together that, being strengthened by their God, they cared nothing for the torments, would not hear the cunning counsel, and would not sacrifice to demons. They were put back in prison until after the seventh hour, when Gabinius asked Maximus once more; and he answered that they would worship none but their Lord Jesus Christ, glorified together with the Father and the Holy Spirit.
+
+Gabinius then threatened to have them taken to barbarian places and beheaded, and the martyrs told him to do in deed what he had said in word. Taking the sentence upon themselves they glorified God, asking Him who had delivered them from this present evil age to receive them into His rest. They were led back to the place named before, which the life here calls Ozevia, and there beheaded with [Dadas](/saints/dadas-of-ozovia) and [Quintilian](/saints/quintilian-of-ozovia), on the twenty-eighth day of April. The page gives no year, only the reign.
+
+*After doxologia.ro's calendar for 28 aprilie — [the day](https://doxologia.ro/28-aprilie), [the life](https://doxologia.ro/viata-sfintilor-mucenici-maxim-cvintilian-dadas-din-ozovia) and [the troparion](https://doxologia.ro/troparul-sfintilor-mucenici-maxim-cvintilian-dadas-din-ozovia); read 20 September 2026.*

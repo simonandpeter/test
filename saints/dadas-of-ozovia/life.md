@@ -1,0 +1,13 @@
+# Dadas of Ozovia
+
+Dadas is the third of the men of Ozovia whom doxologia.ro's calendar keeps on 28 April, and his name is the one the site is not consistent about: the calendar line and the title of the life call him «Dadas», while the closing sentence of the life itself names the three as «Sfinţii Mucenici Maxim, Dada şi Cvintilian». Nothing on the page chooses between the two spellings.
+
+The passion is one account for all three. Diocletian and Maximian, in the second year of the proconsuls Tarquinius and Gabinius, issued the edict the page quotes: that all under Roman rule be brought by every means to the honour and love of the gods, and that whoever anywhere should be found naming the name of Christ would draw their anger on himself. The peoples gathered and sacrificed; the next day an idolater denounced three men who had refused and who worshipped One God in the heavens.
+
+The servants sent after them found them in their village of Ozovia at prayer, bound them in iron chains, and brought them to the city of Dorostolon, in the south of what the page calls today's Dobruja. The three spent the night in prayer for strength to overcome their adversaries and for the crowns of victory, and in the morning stood before the two proconsuls, where [Maximus](/saints/maximus-of-ozovia) answered first for them all.
+
+They were thrown down and beaten, and answered together that, strengthened by their God, they cared nothing for the torments and would not sacrifice to demons. Brought out again after the seventh hour they refused once more; Gabinius threatened them with beheading in barbarian places, and they told him to do in deed what he had said in word.
+
+So, glorifying God and asking Him to receive them into His rest, they were taken back to the place the life here spells Ozevia, and there beheaded with Maximus and [Quintilian](/saints/quintilian-of-ozovia) on the twenty-eighth day of April. The page gives no year, only the reign of Diocletian and Maximian and the proconsulate of Tarquinius and Gabinius.
+
+*After doxologia.ro's calendar for 28 aprilie — [the day](https://doxologia.ro/28-aprilie), [the life](https://doxologia.ro/viata-sfintilor-mucenici-maxim-cvintilian-dadas-din-ozovia) and [the troparion](https://doxologia.ro/troparul-sfintilor-mucenici-maxim-cvintilian-dadas-din-ozovia); read 20 September 2026.*
