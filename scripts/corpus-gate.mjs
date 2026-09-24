@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'varlaam barlaam-30-may varlaam-of-moldavia':
+    'the bare line of the Romanian 30 May, a venerable whose page opens neither a Viață nor a Tropar tab and gives no country and no century, against the hierarch of Moldavia who died in 1657, Russian and Romanian 30 August. Three months apart, and nothing on the 30 May page puts its man in Moldavia (read 25 September 2026)',
   'alexandru alexander-of-alexandria alexander-of-cartagena alexander-of-side alexander-of-the-forty-martyrs':
     'four men called Alexandru, on four days: the archbishop of Alexandria, Romanian 29 May, a line the calendar names and whose page carries no life; the martyr of Cartagena, Romanian 25 February; the presbyter of Side who suffered under Aurelian, Romanian 14 March; and one of the Forty frozen at Sebaste under Licinius, Romanian 9 March. One hierarch and three martyrs (read 25 September 2026)',
   'eutihie eutychius-of-constantinople eutychius-of-melitene eutychius-of-the-forty-martyrs':

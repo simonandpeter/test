@@ -1,0 +1,61 @@
+{
+  "slug": "macrina-the-elder",
+  "display_name": "Macrina the Elder",
+  "names": [
+    {
+      "form": "Macrina cea Bătrână",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 30 mai, «Sfânta Macrina cea Bătrână»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "righteous"
+  ],
+  "related": [
+    "basil-the-great"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "doxologia.ro's life, from the Ohrid Prologue: «Ei amândoi au adormit cu pace în veacul al patrulea, după ce au trecut prin suferințe mari pentru credința lor.» No closer year is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 mai — «Sfânta Macrina cea Bătrână»",
+        "url": "https://doxologia.ro/30-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 30 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

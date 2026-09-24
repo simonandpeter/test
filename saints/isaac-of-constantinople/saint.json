@@ -1,0 +1,69 @@
+{
+  "slug": "isaac-of-constantinople",
+  "display_name": "Isaac of Constantinople",
+  "names": [
+    {
+      "form": "Isaachie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 30 mai, «Sfântul Cuvios Isaachie Mărturisitorul»; the life page spells it «Isachie» throughout."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 mai — «Sfântul Cuvios Isaachie Mărturisitorul»",
+        "url": "https://doxologia.ro/30-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 30 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru tine părinte cu osârdie s-a mântuit cel după chip; că luând crucea ai urmat lui Hristos; şi lucrând ai învăţat să nu se uite la trup, că este trecător; ci să poarte grijă de suflet, de lucrul cel nemuritor. Pentru aceasta şi cu îngerii împreună se bucură, Preacuvioase Părinte Isaachie, duhul tău.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Isaachie Mărturisitorul; the text is the common of a venerable father with his name set in it.",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-isaachie-marturisitorul",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O father, was carefully preserved that which is according to the image; for taking up the cross thou didst follow Christ, and by thy work thou didst teach us to overlook the flesh, because it passes away, and to care for the soul, a thing immortal. Therefore thy spirit rejoices together with the angels, most venerable father Isaac.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
