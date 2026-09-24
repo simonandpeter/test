@@ -1,0 +1,69 @@
+{
+  "slug": "patrick-of-prusa",
+  "display_name": "Patrick of Prusa",
+  "names": [
+    {
+      "form": "Patrichie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 mai, «Sfântul Sfințit Mucenic Patrichie, Episcopul Prusei»."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 19 mai — «Sfântul Sfințit Mucenic Patrichie, Episcopul Prusei»",
+        "url": "https://doxologia.ro/19-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 19 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Sfințit Mucenic Patrichie, celor dimpreună cu dânsul», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-patrichie-celor-dimpreuna-cu-dansul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, in their contest received from You, our God, the crowns of incorruption; for having Your strength they overthrew their tormentors and broke the powerless insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

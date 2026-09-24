@@ -1,0 +1,15 @@
+# Patrick of Prusa
+
+Patrick's see was the city of Prusa in Bithynia, where he preached the faith in Christ, rebuked the Greek error and turned many from the worship of idols. For that he was seized by the pagans together with three of his priests — Acacius, Menander and Polyaenus — and brought for examination before Julius, the governor of Bithynia, whom the life calls the most zealous of the servants of the demons. The governor was going to the hot springs, and ordered the bishop and his priests bound with iron chains and marched behind him.
+
+At the springs the governor bathed for his health, sacrificed to Asclepius and to the goddess Soteria, and then sat down to judge. He pointed to the healing water as proof of his gods' power and told Patrick to fall down before Asclepius with supplication and with sacrifice, if he wished to be loosed from his chains and to live in peace in his own country. Patrick answered him only: «O, cât de multe răutăți ai spus în puține cuvinte, ighemoane» — how many evils you have spoken in few words.
+
+Asked where the heat of the water came from, he had the barrier around the court taken down so that the people could hear, and then answered at length. Fire and water were made out of nothing by one Maker, who made mankind through His only-begotten Son. Foreknowing that men would forsake Him and make themselves lifeless idols, God prepared two places for them after this life: one lit with everlasting light and filled with good things beyond telling, the other with unlit darkness, unquenchable fire and unending torment.
+
+The warm springs, he said, rise where the water runs near that fire beneath the earth, which is as far below the deep as heaven is above the high; and the fire that comes out of the ground in Sicily is proof enough that it is there. The governor asked twice whether it was Christ who had made all this, and twice Patrick said that it was, and that the gods of the nations are demons while the Lord made the heavens.
+
+Then the governor asked whether Christ would keep him unharmed if he were thrown into the boiling water. Patrick said that Christ could, if He willed it, but that for himself he would rather be loosed by that water from this passing life; yet not his own will but God's. He was thrown in naked, calling on Christ to help His servant. The drops that leapt from the spring scalded the bystanders, while he sat in it as in a cool place, praising God.
+
+The governor, angrier still, ordered him taken out and beheaded with an axe, and his priests with him. At the place of execution Patrick lifted his hands and prayed that God, who had made those warm waters for the salvation of the righteous and the punishment of the ungodly, would stand by him as he died in the confession of His faith; then he bent his head to the blade. He suffered, the life says, on the nineteenth day of May, and the three priests were beheaded with him.
+
+*After doxologia.ro's calendar for 19 mai — [the day](https://doxologia.ro/19-mai) and [the life](https://doxologia.ro/sfantul-sfintit-mucenic-patrichie-episcopul-prusei); read 20 September 2026.*

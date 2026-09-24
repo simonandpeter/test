@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'memnon memnon-the-venerable-19-may memnon-the-wonderworker':
+    'the bare line of the Romanian 19 May, a venerable whose page opens neither a Viață nor a Tropar tab and gives no country and no century, against the abbot and wonderworker, Romanian 29 April. Three weeks apart, and nothing on the 19 May page joins them (read 25 September 2026)',
   'alexandra alexandra-of-ancyra alexandra-the-empress':
     'one of the seven virgins drowned in the lake at Ancyra, read out of the life of Theodotus, Romanian 18 May, against the empress, wife of Diocletian, Romanian 21 April (read 25 September 2026)',
   'eufrasia euphrasia-of-ancyra euphrasia-of-nicomedia':

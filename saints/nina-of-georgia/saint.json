@@ -40,13 +40,15 @@
       "feast": {
         "day": 14,
         "month": 1,
-        "calendar": "revised-julian"
+        "calendar": "revised-julian",
+        "note": "doxologia.ro prints the same line a second time on 19 mai — «Sfânta Nina, cea întocmai cu Apostolii și luminătoarea Georgiei» — but one row is one feast, so the day of her repose is the day recorded here and she is not rendered on the May day."
       },
       "source": {
         "text": "doxologia.ro, 14 ianuarie — «Sfânta Nina, cea întocmai cu Apostolii și luminătoarea Georgiei»",
         "url": "https://doxologia.ro/14-ianuarie",
         "year": 2026
-      }
+      },
+      "note": "The Romanian calendar keeps her twice: 14 ianuarie, the day of her falling asleep, which is the row held here, and 19 mai, where doxologia.ro repeats the same line (read 20 September 2026)."
     },
     {
       "church": "greek",

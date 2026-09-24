@@ -1,0 +1,49 @@
+{
+  "slug": "memnon-the-venerable-19-may",
+  "display_name": "Memnon (19 May)",
+  "names": [
+    {
+      "form": "Memnon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 mai, «Sfântul Cuvios Memnon»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 19 mai — «Sfântul Cuvios Memnon»",
+        "url": "https://doxologia.ro/19-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 19 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

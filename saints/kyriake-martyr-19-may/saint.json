@@ -1,0 +1,76 @@
+{
+  "slug": "kyriake-martyr-19-may",
+  "display_name": "Kyriake (19 May)",
+  "names": [
+    {
+      "form": "Chiriachi",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 mai, «Sfânta Muceniță Chiriachi»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 307,
+      "latest": 307,
+      "display": "307",
+      "basis": "traditional",
+      "note": "doxologia.ro's page for her: «a fost martirizată împreună cu alte șase tinere creștine în Nicomedia în anul 307» — the only year the page gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 19 mai — «Sfânta Muceniță Chiriachi»",
+        "url": "https://doxologia.ro/19-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 19 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Muceniţa lui Hristos ne-a chemat pe noi împreună acum să cântăm cu laude luptele şi dumnezeieştile ei nevoinţe. Căci ea, ca o vitează cu cugetul, după numele ce poartă, este doamnă a gândului şi a patimilor celor necuvioase.",
+      "source": {
+        "text": "doxologia.ro, «Condacul Sfintei Mucenițe Chiriachi», Glasul 2, podobie «Cele de sus căutând...»",
+        "url": "https://doxologia.ro/condacul-sfintei-mucenite-chiriachi",
+        "year": 2026
+      },
+      "english": {
+        "text": "The martyr of Christ has called us together now to sing with praises her struggles and her divine contests; for she, valiant in mind, is by the name she bears a lady over thought and over the unseemly passions.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
