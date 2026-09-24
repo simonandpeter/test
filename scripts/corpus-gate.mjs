@@ -125,6 +125,14 @@ const READ_FOLDS = {
     'the second of Babylas of Sicily’s two disciples, Romanian 24 January, against the apostle and first bishop of Ephesus clubbed to death at the Catagogion, Romanian 22 January. A third joins them on the Romanian 21 February: the venerable of Symbola, the desert place by Mount Olympus whose archimandrite was the venerable Theoctistus. A fourth, of Gaza, is kept on 19 August and folds with none of these (read 24 September 2026)',
   'david david-of-georgia david-of-wales david-the-builder':
     'the prince of Argveti drowned in the Rioni with his brother Constantine in 740, Romanian 2 October, against the king of Georgia who rebuilt the country after the Seljuks and died in 1125, Romanian 26 January. Four centuries apart (read 19 September 2026). The third is neither Georgian nor a layman: the bishop of Menevia in Wales, dead about 601, Romanian 1 March (read 25 September 2026)',
+  'alexandru alexander-of-cartagena alexander-of-the-forty-martyrs':
+    'one of the forty soldiers doxologia names for 9 March, drowned in the lake at Sebaste under Licinius, against the martyr of Cartagena of the Romanian 25 February (read 25 September 2026)',
+  'atanasie athanasius-of-alexandria athanasius-of-the-forty-martyrs athanasius-the-commentarisius athanasius-the-confessor':
+    'three men and nothing shared but the forename: the deacon at Nicaea in 325 who became archbishop of Alexandria; the commentarisius, the officer who kept the prison register when Zosimas of Cilicia was brought in; and the confessor born at Constantinople of devout and very rich parents, Romanian 22 February (read 24 September 2026). A fourth is one of the forty of Sebaste, Romanian 9 March (read 25 September 2026)',
+  'chiril cyril-of-alexandria cyril-of-the-forty-martyrs':
+    'the patriarch of Alexandria, 378 to 446, Romanian 18 January, against one of the forty soldiers of Sebaste, Romanian 9 March (read 25 September 2026)',
+  'dometian dometian-of-melitene dometian-of-the-forty-martyrs':
+    'the venerable bishop of Melitene, Romanian 10 January, against one of the forty soldiers of Sebaste, Romanian 9 March (read 25 September 2026)',
   'candid candidus-of-the-forty-martyrs candidus-of-trebizond':
     'one of the forty soldiers doxologia names by name for 9 March, drowned in the frozen lake at Sebaste under Licinius, against the martyr of Trebizond of the Romanian 21 January, one of the four whose single life doxologia prints for all four. Two companies, two days (read 25 September 2026)',
   'isihie hesychius-of-the-forty-martyrs hesychius-the-senator':
@@ -157,8 +165,6 @@ const READ_FOLDS = {
     'the archbishop who took the throne of Antioch after Philogonius, Romanian 21 February, against Placidas, the distinguished officer at Rome who was called Eustathius after his baptism, kept on 20 September. A see against a soldier (read 24 September 2026)',
   'vasile basil-of-thessalonica basil-the-confessor':
     'the monk of Athens tonsured in 875 by Euthymius the New, whose disciple he was, against the confessor who lived under Leo the Isaurian, the fighter against the icons, and suffered for them with Procopius of the Decapolis, Romanian 28 February. A century and a half, and opposite sides of the iconoclast quarrel (read 24 September 2026)',
-  'atanasie athanasius-of-alexandria athanasius-the-commentarisius athanasius-the-confessor':
-    'three men and nothing shared but the forename: the deacon at Nicaea in 325 who became archbishop of Alexandria; the commentarisius, the officer who kept the prison register when Zosimas of Cilicia was brought in; and the confessor born at Constantinople of devout and very rich parents, Romanian 22 February (read 24 September 2026)',
   'leon leo-of-catania leo-the-great':
     'the pope of Rome, of Italy by race and son of Quintian, Romanian 18 February, against the bishop of Catania born in the metropolis of Ravenna, Romanian 20 February. Two days apart on the same calendar, which is what makes the fold worth stopping on, and two lives that share nothing but the name (read 24 September 2026)',
   'evghenie eugene-of-cherson eugene-of-trebizond eugenius-the-confessor':
