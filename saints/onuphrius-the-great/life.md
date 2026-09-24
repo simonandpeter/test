@@ -1,0 +1,9 @@
+# Onuphrius the Great
+
+Onuphrius was the son of a king of Persia whom doxologia's life names Narsita, born in the days when Diocletian reigned at Rome. The devil, in the shape of a stranger, persuaded the king that the child in the queen's womb was not his and that fire would settle it; and when the boy was born his father heated a great fire and threw him into it. The child sat unburnt in the flames and lifted his small hands towards heaven as though praying, and an angel came to rebuke the king, telling him to baptise the boy Onuphrius and carry him into the desert.
+
+Father and child went to the Thebaid in Egypt, fed on the road by a white doe that God sent, which knelt before the king and travelled with them. Near the city of Hermopolis they came to the monastery called Eriti, of a hundred brothers, and the boy was left there; the doe stayed by the house and nursed him until he was three. At seven he would take a piece of bread from the refectory to the icon of the Mother of God in the church porch and speak to the painted Christ child as to a living one, offering him his share, and the hand on the icon reached out and took it.
+
+Later he went out into the deep desert. What doxologia prints of it is the account of the monk Paphnutius, who found an old man covered only by the hair grown over his body. He gave his name as Onuphrius and said that for sixty years he had wandered that desert and its mountains and had seen no man until then; that an angel had brought him a little bread and water daily for thirty years; and that afterwards God gave him a date palm of twelve branches, each ripening in its own month, and a spring of living water beside his cave. Paphnutius buried him where he died.
+
+*After doxologia.ro's calendar for 12 iunie — [the day](https://doxologia.ro/12-iunie) and [the life](https://doxologia.ro/sfantul-cuvios-onufrie-cel-mare); read 24 September 2026.*

@@ -1,0 +1,68 @@
+{
+  "slug": "onuphrius-the-great",
+  "display_name": "Onuphrius the Great",
+  "names": [
+    {
+      "form": "Onufrie cel Mare",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 iunie, «Sfântul Cuvios Onufrie cel Mare»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 iunie — «Sfântul Cuvios Onufrie cel Mare»",
+        "url": "https://doxologia.ro/12-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Dumnezeul părinţilor noştri, Care faci pururea cu noi după blândeţile Tale, nu îndepărta mila Ta de la noi; ci pentru rugăciunile lor, în pace îndreptează viaţa noastră.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Onufrie cel Mare; the page prints the common troparion of venerable fathers, naming no saint in the text.",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-onufrie-cel-mare",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who dealest with us always according to Thy gentleness, take not Thy mercy from us; but at their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
