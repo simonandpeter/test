@@ -1,0 +1,73 @@
+{
+  "slug": "eugene-of-cherson",
+  "display_name": "Eugene of Cherson",
+  "names": [
+    {
+      "form": "Evghenie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 martie, «Sfinții Sfinţiţi Mucenici Episcopi din Cherson: Vasilevs, Evghenie, Capiton, Agatodor, Elpidie și Eterie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "related": [
+    "basileus-of-cherson",
+    "elpidius-of-cherson",
+    "agathodorus-of-cherson"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 martie — «Sfinții Sfinţiţi Mucenici Episcopi din Cherson: Vasilevs, Evghenie, Capiton, Agatodor, Elpidie și Eterie»",
+        "url": "https://doxologia.ro/7-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Dumnezeul părinţilor noştri Care faci pururea cu noi după blândeţile Tale, nu îndepărta mila Ta de la noi; ci, pentru rugăciunile lor, în pace îndreptează viaţa noastră.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinților Sfințiți Mucenici Efrem, episcopul Tomisului, Vasilevs, Evghenie, Agatodor, Capiton",
+        "url": "https://doxologia.ro/troparul-sfintilor-sfintiti-mucenici-efrem-episcopul-tomisului-vasilevs-evghenie-agatodor-capiton",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who deal with us always according to thy gentleness: take not thy mercy away from us, but at their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

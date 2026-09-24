@@ -1,0 +1,11 @@
+# Capito of Cherson
+
+Capito was sent to Cherson in place of [Aetherius](/saints/aetherius-of-cherson), who had died on his way back from the emperor, the Christians of the city having asked Constantine the Great for another bishop. The people there demanded a sign of him, as they had of the others: that he should go into a burning furnace, as the three children once went into the furnace of Babylon, so that the unbelieving people might be convinced.
+
+Hoping in God, Capito agreed to what they asked, and ordered a great furnace to be built for the purpose. When it had been heated fiercely, the bishop, with all the people watching, prayed long; the deacon cried out with a loud voice, Let us attend; and the bishop went into the furnace and stood in that flame for an hour, praying with his hands stretched out to heaven, and took no hurt from it. Then, carrying burning coals in his phelonion, he came out to the people unharmed; the fire had not touched his vestments, and the phelonion full of live coals had not caught alight.
+
+Great wonder and fear came upon them all, and with one voice they cried that the God of the Christians is the one God, great and strong, who kept his servant unburnt in the furnace. The whole city of Cherson and that country received the Christian faith, being convinced by the wonder; and the report of it was carried to Constantine the Great, and to the first Council of the whole world at Nicaea, the three hundred and eighteen holy fathers, who all glorified God and marvelled at the bishop's great faith and boldness.
+
+Some years later, as Capito was sailing from Cherson to Constantinople, a great storm rose and the ship was driven by the waves to the mouth of the river Dnieper. There were godless and unbelieving men in that place, and having taken out everyone who was in the ship and plundered everything, they drowned the bishop of God, Capito, and him alone, in the water. So he ended as a martyr, on the twenty-first day of December; but his memory is reckoned with the bishops of Cherson before him, who suffered on the seventh day of March.
+
+*After doxologia.ro's calendar for 7 martie — [the day](https://doxologia.ro/7-martie) and [the life](https://doxologia.ro/viata-sfintilor-mucenici-episcopi-din-cherson-vasile-efrem-evghenie-capiton-agatodor-elpidie-eterie); read 19 September 2026.*

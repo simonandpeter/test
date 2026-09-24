@@ -1,0 +1,13 @@
+# Ephraim of Tomis
+
+Ephraim was the second known bishop of the eparchy of Tomis, who held for a time the pastoral throne of Pontic Dacia, as the Greek and Latin synaxaria attest. He was born south of the Danube of Christian parents who brought him up from childhood in the fear of God. Going to worship at the Holy Places he stayed there, and was made a priest and a server in one of the churches; in the Roman Empire of that time the services were in Greek, Latin, Syriac and Thracian, the Bessian tongue.
+
+Becoming a disciple of Hermon, patriarch of Jerusalem, he was prepared from his youth to preach the Gospel of Christ to the peoples the page calls barbarian, at the mouths of the Danube and around the Euxine Sea. At the beginning of the fourth century Hermon sent him to shepherd the Daco-Roman faithful of the bishopric of Tomis, and he converted many Dacians, Romans, Goths and Scythians, and bought back from death many slaves, whom he then baptized.
+
+In the days of this blessed bishop's pastorate, scores of Daco-Roman, Scythian, Bessian, Thracian, Greek and Cappadocian Christians who had been banished into Pontic Dacia were martyred for the faith in Christ. Their relics the bishop Ephraim would ransom and bury in hidden places, raising churches of wood or of stone above them and appointing priests to serve the Liturgy there by night.
+
+In the great persecution of Diocletian in the years 304 and 305 the blessed bishop was seized, imprisoned and cruelly tortured at Cherson in the Crimea, so that he should deny the true God and worship the idols. Confessing that he was ready to give his life for Jesus Christ, the Saviour of the world, he was beheaded in the year 304, and his memory is kept on 7 March.
+
+doxologia quotes the Synaxarium of the Church of Constantinople at 7 March: that in the reign of Diocletian, Hermon, bishop of Jerusalem, sent Ephraim as bishop into Scythia and [Basileus](/saints/basileus-of-cherson) to Chersonesus. The same page argues against those who would place Ephraim in Great Scythia, since the Life of Saints Epictetus and Astion names a bishop Ephraim at Tomis, in Little Scythia. The life of the bishops of Cherson printed on the same site tells it a little differently, and calls the patriarch who sent them Ephraim rather than Hermon.
+
+*After doxologia.ro's calendar for 7 martie — [the day](https://doxologia.ro/7-martie) and [the life](https://doxologia.ro/viata-sfantului-sfintit-mucenic-efrem-episcopul-tomisului); read 19 September 2026.*
