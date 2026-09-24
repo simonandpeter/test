@@ -1,0 +1,60 @@
+{
+  "slug": "callistratus-of-timiseni",
+  "display_name": "Callistratus of Timișeni",
+  "names": [
+    {
+      "form": "Calistrat de la Timișeni și Vasiova",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 mai, «Sfântul Cuvios Calistrat de la Timișeni și Vasiova»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1975,
+      "latest": 1975,
+      "display": "1975",
+      "basis": "attested",
+      "note": "doxologia.ro, Viața Sfântului Cuvios Calistrat de la Timișeni și Vasiova: «A trecut la Domnul în ziua de Paști a anului 1975». The page gives no year for his birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 mai — «Sfântul Cuvios Calistrat de la Timișeni și Vasiova»",
+        "url": "https://doxologia.ro/10-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

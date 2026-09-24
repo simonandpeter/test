@@ -1,0 +1,50 @@
+{
+  "slug": "hesychius-confessor-10-may",
+  "display_name": "Hesychius (10 May)",
+  "names": [
+    {
+      "form": "Isihie Mărturisitorul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 mai, «Sfântul Cuvios Isihie Mărturisitorul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 mai — «Sfântul Cuvios Isihie Mărturisitorul»",
+        "url": "https://doxologia.ro/10-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

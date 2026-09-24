@@ -1,0 +1,68 @@
+{
+  "slug": "simon-the-zealot",
+  "display_name": "Simon the Zealot",
+  "names": [
+    {
+      "form": "Simon Zilotul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 mai, «Sfântul Apostol Simon Zilotul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "revised-julian",
+        "note": "Doxologia keeps him twice: its calendar prints him on 10 mai and again on 30 iunie — «Soborul Sfinților 12 Apostoli». One attestation row per church is the schema, so the row is the day this folder was read from and the second day is recorded here. The 30 iunie line is the Synaxis of the Twelve, which names each apostle in turn. Read 25 September 2026."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 mai — «Sfântul Apostol Simon Zilotul»",
+        "url": "https://doxologia.ro/10-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Apostole sfinte Simone, roagă pe milostivul Dumnezeu, ca să dăruiască iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Apostol Simon Zilotul",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-simon-zilotul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy Apostle Simon, entreat the merciful God to grant our souls forgiveness of our offences.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

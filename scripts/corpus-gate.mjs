@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ciprian cyprian-companion-of-quadratus cyprian-martyr-10-may':
+    'the bare line «Sfântul Mucenic Ciprian» of the Romanian 10 May, whose page opens neither a Viață nor a Tropar tab and gives no country and no century, against the martyr of Corinth taken with Quadratus under Decius and Valerian, Romanian 10 March. Two months apart, and nothing on the 10 May page puts that man at Corinth (read 25 September 2026)',
   'david david-of-gareji david-of-georgia david-of-wales david-the-builder':
     'four men called David: the Syrian father who settled the wilderness of Gareji in Kakheti, a venerable of the late 6th century, Romanian 9 June; the prince of Georgia martyred with Constantine in 740, Romanian 2 October; the bishop of Menevia in Wales, dead about 601, Romanian 1 March; and the king of Georgia called the Builder, dead 1125, Romanian 26 January. A hermit, a prince, a bishop and a king, on four days (read 25 September 2026)',
   'efrem ephraim-of-nea-makri ephraim-of-tomis ephrem-the-syrian':
