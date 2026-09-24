@@ -1,0 +1,67 @@
+{
+  "slug": "calliopius-the-martyr",
+  "display_name": "Calliopius",
+  "names": [
+    {
+      "form": "Caliopie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 aprilie, «Sfântul Mucenic Caliopie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 aprilie — «Sfântul Mucenic Caliopie»",
+        "url": "https://doxologia.ro/7-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Caliopie, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Caliopie, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-caliopie",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Calliopius, O Lord, in his contest received the incorruptible crown from thee, our God; for having thy power he overcame the tormentors, and he broke also the feeble insolence of the demons. By his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

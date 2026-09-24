@@ -1,0 +1,71 @@
+{
+  "slug": "george-of-mytilene",
+  "display_name": "George of Mytilene",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Gheorghe Mărturisitorul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 aprilie, «Sfântul Ierarh Gheorghe Mărturisitorul, Episcopul Mitilenei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "confessor",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 aprilie — «Sfântul Ierarh Gheorghe Mărturisitorul, Episcopul Mitilenei»",
+        "url": "https://doxologia.ro/7-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Îndreptător credinţei şi chip blândeţelor, învăţător înfrânârii te-a arătat pe tine, turmei tale, adevărul lucrurilor. Pentru aceasta ai dobândit cu smerenia cele înalte şi cu sărăcia cele bogate; Părinte Ierarhe Gheorghe, roagă pe Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Gheorghe Mărturisitorul, Episcopul Mitilenei, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-gheorghe-marturisitorul-episcopul-mitilenei",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things showed thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence. Therefore thou hast gained by humility the things on high, and by poverty the things that are rich. O father and hierarch George, pray Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

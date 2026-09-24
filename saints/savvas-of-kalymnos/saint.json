@@ -1,0 +1,72 @@
+{
+  "slug": "savvas-of-kalymnos",
+  "display_name": "Savvas the New of Kalymnos",
+  "names": [
+    {
+      "form": "Sava cel Nou din Kalymnos",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 aprilie, «Sfântul Cuvios Sava cel Nou din Kalymnos»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic",
+    "iconographer"
+  ],
+  "related": [
+    "nectarios-of-aegina"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1862,
+      "latest": 1862,
+      "display": "1862",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Sava cel Nou s-a născut în anul 1862, în Herakleitsa, în partea de răsărit a Traciei»."
+    },
+    "death": {
+      "earliest": 1948,
+      "latest": 1948,
+      "display": "1948",
+      "basis": "attested",
+      "note": "doxologia.ro: «își trăiește ultimii săi 20 de ani din viață în asceză și trezvie desăvârșită, până la cuviosul său sfârșit, în 1948»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "His own page prints no feast line of its own; the day page for 7 aprilie carries him, and the life adds a second, movable commemoration: «Pomenirea Cuviosului Sava cel Nou din Kalymnos se face pe data de 7 aprilie și în Duminica a V-a din Postul Mare» — also on the fifth Sunday of Great Lent, which is not a fixed day and is not held here."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 aprilie — «Sfântul Cuvios Sava cel Nou din Kalymnos»",
+        "url": "https://doxologia.ro/7-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

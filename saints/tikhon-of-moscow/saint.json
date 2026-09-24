@@ -1,0 +1,69 @@
+{
+  "slug": "tikhon-of-moscow",
+  "display_name": "Tikhon of Moscow",
+  "office": "Patriarch of Moscow",
+  "names": [
+    {
+      "form": "Tihon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 aprilie, «Sfântul Ierarh Tihon, Patriarhul Moscovei și al Întregii Rusii»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch",
+    "confessor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1865,
+      "latest": 1865,
+      "display": "1865",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Tihon, la botez Vasile Ivanovici Belavin, s-a născut pe 19 ianuarie 1865.»"
+    },
+    "death": {
+      "earliest": 1925,
+      "latest": 1925,
+      "display": "1925",
+      "basis": "attested",
+      "note": "doxologia.ro: «În duminica din 5 aprilie 1925, el a slujit ultima sa Liturghie murind două zile mai târziu… Pe 7 aprilie… la 23:45 pm, a trecut la Domnul.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026). The Romanian life page names 22 februarie, 7 aprilie, 5 and 9 octombrie and 18 noiembrie as his days, but that is doxologia's list and not a reading of the Russian calendar."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "The life page opens with five days: «22 februarie (aflarea moaștelor), 7 aprilie (adormirea), 9 octombrie, 5 octombrie (Soborul Sfinților Ierarhi ai Moscovei), 18 noiembrie (alegerea pe Tronul Patriarhal)». 7 aprilie, the repose, is the day the Romanian calendar prints him on and the only one held here."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 aprilie — «Sfântul Ierarh Tihon, Patriarhul Moscovei și al Întregii Rusii»",
+        "url": "https://doxologia.ro/7-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
