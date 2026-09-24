@@ -1,0 +1,68 @@
+{
+  "slug": "simeon-of-persia",
+  "display_name": "Simeon of Persia",
+  "names": [
+    {
+      "form": "Simeon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 aprilie, «Sfântul Sfințit Mucenic Simeon, Episcopul Persiei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 aprilie — «Sfântul Sfințit Mucenic Simeon, Episcopul Persiei»",
+        "url": "https://doxologia.ro/17-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor Apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge, Sfinţite Mucenice Simeon, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Sfințit Mucenic Simeon, Episcopul Persiei», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-simeon-episcopul-persiei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharer in the apostles' way and successor to their thrones, you found in action, O inspired of God, an ascent to contemplation. Therefore, rightly teaching the word of truth, you kept the faith and endured unto blood, O hieromartyr Simeon: entreat Christ our God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

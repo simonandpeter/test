@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'acachie acacius-of-melitene acacius-of-the-forty-martyrs':
+    'the bishop of Melitene in Armenia, asked of God by childless parents, Romanian 17 April, against one of the Forty frozen on the lake at Sebaste under Licinius, Romanian 9 March. Armenia and Sebaste are near neighbours and the two men are not (read 25 September 2026)',
+  'simeon simeon-of-persia symeon-the-god-receiver':
+    'the bishop of the Persian church under the magi’s persecution, Romanian 17 April, against the elder of the Gospel who awaited the consolation of Israel and received the Lord in the temple, Romanian 3 February. Four centuries and a Testament apart (read 25 September 2026)',
   'irina irene-of-aquileia irene-of-lesvos':
     'the youngest of the three sisters of Aquileia, taken to Macedonia with the Christians of the priest Zoilus, Romanian 16 April, against the twelve-year-old daughter of Basil the headman of Thermi, killed when the Turks put down the rising of 1463 on Lesvos, Romanian 9 April. Eleven centuries and two seas apart (read 25 September 2026)',
   'anastasia basilissa rome anastasia-of-rome-15-april basilissa-of-rome':

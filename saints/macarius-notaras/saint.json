@@ -1,0 +1,72 @@
+{
+  "slug": "macarius-notaras",
+  "display_name": "Macarius Notaras",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Macarie Notara",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 aprilie, «Sfântul Macarie Notara, Episcopul Corintului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "hierarch",
+    "ascetic"
+  ],
+  "related": [
+    "nicodemus-the-hagiorite",
+    "polydorus-the-neomartyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1731,
+      "latest": 1731,
+      "display": "1731",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut în 1731 în Tríkala Corinthíei și provenea din familia importantă Notará»."
+    },
+    "death": {
+      "earliest": 1805,
+      "latest": 1805,
+      "display": "1805",
+      "basis": "attested",
+      "note": "doxologia.ro: «A adormit la 17 aprilie 1805, fiind înmormântat în curta Bisericii Sfinților Apostoli Petru și Pavel din Chios»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 aprilie — «Sfântul Macarie Notara, Episcopul Corintului»",
+        "url": "https://doxologia.ro/17-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

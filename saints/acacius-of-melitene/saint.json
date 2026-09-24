@@ -1,0 +1,74 @@
+{
+  "slug": "acacius-of-melitene",
+  "display_name": "Acacius of Melitene",
+  "office": "Bishop of Melitene",
+  "names": [
+    {
+      "form": "Acachie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 aprilie, «Sfântul Ierarh Acachie, Episcopul Melitinei Armeniei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "hierarch",
+    "wonderworker"
+  ],
+  "related": [
+    "gregory-the-theologian",
+    "polyeuctus-of-melitene"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 aprilie — «Sfântul Ierarh Acachie, Episcopul Melitinei Armeniei»",
+        "url": "https://doxologia.ro/17-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Απριλίου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Îndreptător credinţei şi chip blândeţelor, învăţător înfrânârii te-a arătat pe tine, turmei tale, adevărul lucrurilor. Pentru aceasta ai dobândit cu smerenia cele înalte şi cu sărăcia cele bogate; Părinte Ierarhe Acachie, roagă pe Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Ierarh Acachie, Episcopul Melitinei», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-acachie-episcopul-melitinei",
+        "year": 2026
+      },
+      "english": {
+        "text": "A rule of faith and a model of meekness, a teacher of abstinence — so has the truth of things shown you to your flock. Therefore you gained the heights by humility and riches by poverty. Father and hierarch Acacius, entreat Christ our God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
