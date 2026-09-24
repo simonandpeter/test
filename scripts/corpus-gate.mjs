@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'haralambie charalampus-31-may charalampus-of-magnesia':
+    'the bare line of the Romanian 31 May, a martyr whose page opens neither a Viață nor a Tropar tab and gives no country and no century, against the hieromartyr bishop of Magnesia, Romanian 10 February (read 25 September 2026)',
+  'eusebiu eusebius-31-may eusebius-companion-of-bassus':
+    'the bare line of the Romanian 31 May, a martyr with no life at all, against the martyr the calendar names as the companion of Bassus, dead under Diocletian, Romanian 20 January. Nothing on the 31 May page joins its man to that company (read 25 September 2026)',
+  'ermie hermas-31-may hermias-of-comana':
+    'doxologia prints two lines of this name on one day, 31 mai, and distinguishes them itself: «Sfântul Apostol Ermie», whose page carries no life, and «Sfântul Mucenic Ermie», the old white-haired soldier found at Comana by the governor Sebastian under Antoninus, whose page carries a life and a hymn. An apostle and a soldier, kept together by the source as two (read 25 September 2026)',
   'varlaam barlaam-30-may varlaam-of-moldavia':
     'the bare line of the Romanian 30 May, a venerable whose page opens neither a Viață nor a Tropar tab and gives no country and no century, against the hierarch of Moldavia who died in 1657, Russian and Romanian 30 August. Three months apart, and nothing on the 30 May page puts its man in Moldavia (read 25 September 2026)',
   'alexandru alexander-of-alexandria alexander-of-cartagena alexander-of-side alexander-of-the-forty-martyrs':
