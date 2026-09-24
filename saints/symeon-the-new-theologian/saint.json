@@ -1,0 +1,102 @@
+{
+  "slug": "symeon-the-new-theologian",
+  "display_name": "Symeon the New Theologian",
+  "names": [
+    {
+      "form": "Simeon Noul Teolog",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 martie, «Sfântul Cuvios Simeon Noul Teolog»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "abbot",
+    "theologian"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 949,
+      "latest": 949,
+      "display": "949",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfântul Simeon Noul Teolog s-a născut în anul 949 în Galteea (Paflagonia)»."
+    },
+    "death": {
+      "earliest": 1021,
+      "latest": 1021,
+      "display": "1021",
+      "basis": "traditional",
+      "note": "doxologia.ro: «În anul 1021 sfântul a adormit în pace întru Domnul»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 martie — «Sfântul Cuvios Simeon Noul Teolog»",
+        "url": "https://doxologia.ro/12-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 3",
+      "text": "Dumnezeiască strălucire primind în sufletul tău, Părinte Simeon, luminător preastrălucit în lume te-ai arătat, alungând întunericul înșelăciunii și pe toți îndemnând să caute harul Duhului Sfânt. Pentru aceasta, roagă-te cu dinadinsul să se dăruiască nouă mare milă.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Simeon Noul Teolog, glas 3",
+        "url": "https://doxologia.ro/troparul-sfantului-simeon-noul-teolog",
+        "year": 2026
+      },
+      "english": {
+        "text": "Receiving the divine radiance in your soul, father Symeon, you were shown to the world as a most shining light, driving away the darkness of deceit and urging all to seek the grace of the Holy Spirit. Therefore pray earnestly that great mercy be given to us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glas 3",
+      "text": "Cu lumina cea cu trei sori strălucindu-te de Dumnezeu înțelepțite, te-ai făcut Teolog al Treimii celei preadumnezeiești, de sus cu înțelepciunea cuvintelor îmbogățindu-te, ai izvorât dumnezeiești curgeri ale dumnezeieștii înțelepciuni, dintru care bând noi strigăm:\nBucură-te, de trei ori fericite Simeoane, de Dumnezeu înțelepțite.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Simeon Noul Teolog, glas 3",
+        "url": "https://doxologia.ro/condacul-sfantului-simeon-noul-teolog",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shone upon by the light of the three suns, O wise in God, you became a theologian of the most divine Trinity; enriched from on high with wisdom of words, you poured out divine streams of the wisdom of God, and drinking of them we cry: rejoice, thrice-blessed Symeon, wise in God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

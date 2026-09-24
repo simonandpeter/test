@@ -1,0 +1,61 @@
+{
+  "slug": "gregory-the-dialogist",
+  "display_name": "Gregory the Dialogist",
+  "office": "Pope of Rome",
+  "names": [
+    {
+      "form": "Grigorie Dialogul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 martie, «Sfântul Ierarh Grigorie Dialogul, Episcopul Romei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 602,
+      "latest": 610,
+      "display": "602–610",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Păstorind Sfântul Grigorie Biserica lui Dumnezeu treisprezece ani, șase luni și zece zile, s-a mutat la Domnul pe vremea împărăției lui Foca Tiranul (602-610)». The interval is the reign the page prints; it gives no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 martie — «Sfântul Ierarh Grigorie Dialogul, Episcopul Romei»",
+        "url": "https://doxologia.ro/12-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

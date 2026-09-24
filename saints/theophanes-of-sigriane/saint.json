@@ -1,0 +1,86 @@
+{
+  "slug": "theophanes-of-sigriane",
+  "display_name": "Theophanes of Sigriane",
+  "names": [
+    {
+      "form": "Teofan",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 martie, «Sfântul Cuvios Teofan Mărturisitorul»; the hymn pages for the day print him «Teofan Mărturisitorul din Singriana»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 martie — «Sfântul Cuvios Teofan Mărturisitorul»",
+        "url": "https://doxologia.ro/12-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Teofan, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Teofan Mărturisitorul din Singriana, glasul 8. The day page carries a second troparion for him as well, the common of venerables in glasul 1.",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-teofan-marturisitorul-din-singriana",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of your tears you tilled the barren desert, and with sighs from the depths you made your labours bear fruit a hundredfold; and you became a light to the world, shining with wonders, Theophanes our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "model": "Cele de sus căutând...",
+      "text": "Din înălţime primind Dum­nezeiasca descoperire, ai ieşit în grabă din mijlocul zgomo­telor şi ducând viaţă călugă­rească, cuvioase, ai primit lu­crarea minunilor şi harul pro­feţiei, lipsindu-te de soţie şi de bogăţie.",
+      "source": {
+        "text": "Doxologia — Condacul Sfântului Cuvios Teofan Mărturisitorul din Singriana, glasul 2, podobie «Cele de sus căutând...»",
+        "url": "https://doxologia.ro/condacul-sfantului-cuvios-teofan-marturisitorul-din-singriana",
+        "year": 2026
+      },
+      "english": {
+        "text": "Receiving divine revelation from on high, you went out in haste from the midst of the tumult; and living the monastic life, venerable one, you received the working of wonders and the grace of prophecy, having given up wife and wealth.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
