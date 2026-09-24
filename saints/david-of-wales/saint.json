@@ -1,0 +1,59 @@
+{
+  "slug": "david-of-wales",
+  "display_name": "David of Wales",
+  "names": [
+    {
+      "form": "David",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 martie, «Sfântul David, ocrotitorul Țării Galilor»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 601,
+      "latest": 601,
+      "display": "c. 601",
+      "basis": "traditional",
+      "note": "doxologia.ro: «A adormit în Domnul în jurul anului 601»; the same page says he lived «în a doua jumătate a secolului al VI-lea»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 martie — «Sfântul David, ocrotitorul Țării Galilor»",
+        "url": "https://doxologia.ro/1-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

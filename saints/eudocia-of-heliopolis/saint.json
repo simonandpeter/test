@@ -1,0 +1,76 @@
+{
+  "slug": "eudocia-of-heliopolis",
+  "display_name": "Eudocia of Heliopolis",
+  "names": [
+    {
+      "form": "Evdochia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 martie, «Sfânta Cuvioasă Muceniță Evdochia»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 98,
+      "latest": 117,
+      "display": "98–117",
+      "basis": "traditional",
+      "note": "doxologia.ro's life opens «Pe vremea lui Traian împăratul (98-117), în cetatea ce se numește Iliopolis». The same life later names an emperor it calls Aurelian — saying expressly that he is not the Caesar of Rome of those years — and the governors Diogen and Vichentie, which do not sit inside that reign; the interval recorded is the one the page states, and the disagreement is the page's own."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 martie — «Sfânta Cuvioasă Muceniță Evdochia»",
+        "url": "https://doxologia.ro/1-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mieluşeaua Ta, Iisuse, Evdochia, strigă cu glas mare: pe Tine, Mirele meu, te iubesc și pe Tine căutându-Te mă chinuiesc și împreună mă răstignesc și împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru tine, ca să viez pentru Tine; ci, ca o jertfă fără de prihană, primește-mă pe mine ceea ce cu dragoste mă jertfesc Ție. Pentru rugăciunile ei, ca un milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Cuvioase Mucenițe Evdochia",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-mucenite-evdochia",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy ewe-lamb, O Jesus, Eudocia, cries out with a loud voice: Thee, my Bridegroom, do I love, and seeking Thee I am in torment; with Thee I am crucified and with Thee buried in Thy baptism; I suffer for Thy sake that I may reign in Thee, and I die for Thee that I may live for Thee. Receive me, then, as an offering without blemish, sacrificed to Thee in love. At her prayers, since Thou art merciful, save Thou our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -119,12 +119,20 @@ const READ_FOLDS = {
     'two men, each named in the calendar as the other’s companion, so the fold is the key sorting their two names into one — doxologia’s 20 January prints both and its life has them die together (read 19 September 2026)',
   'valerian valerian-of-tomis valerian-of-trebizond':
     'the martyr of Tomis kept on 13 September with Gordian, Macrobius, Helias and Lucian, against the soldier taken in the mountains above Trebizond with Candidus and Aquila on the Romanian 21 January: another day, another passion, another province (read 19 September 2026)',
-  'agapie agapius-disciple-of-babylas agapius-son-of-eustathius':
-    'the boy martyred at Sicily with his teacher Babylas and with Timothy, Romanian 24 January, against the son of Eustathius Placidas roasted with his parents and brother at Rome under Hadrian, kept on 20 September by all four. Two boys, two passions (read 19 September 2026)',
+  'agapie agapius-disciple-of-babylas agapius-of-colciu agapius-son-of-eustathius':
+    'the boy martyred at Sicily with his teacher Babylas and with Timothy, Romanian 24 January, against the son of Eustathius Placidas roasted with his parents and brother at Rome under Hadrian, kept on 20 September by all four. Two boys, two passions (read 19 September 2026). A third is no martyr at all: the Romanian monk of the Colciu cell on Athos, who lived beside his elder in the second half of the eighteenth century, Romanian 1 March — sixteen centuries from the other two (read 25 September 2026)',
   'timotei timothy-disciple-of-babylas timothy-of-ephesus timothy-of-symbola':
     'the second of Babylas of Sicily’s two disciples, Romanian 24 January, against the apostle and first bishop of Ephesus clubbed to death at the Catagogion, Romanian 22 January. A third joins them on the Romanian 21 February: the venerable of Symbola, the desert place by Mount Olympus whose archimandrite was the venerable Theoctistus. A fourth, of Gaza, is kept on 19 August and folds with none of these (read 24 September 2026)',
-  'david david-of-georgia david-the-builder':
-    'the prince of Argveti drowned in the Rioni with his brother Constantine in 740, Romanian 2 October, against the king of Georgia who rebuilt the country after the Seljuks and died in 1125, Romanian 26 January. Four centuries apart (read 19 September 2026)',
+  'david david-of-georgia david-of-wales david-the-builder':
+    'the prince of Argveti drowned in the Rioni with his brother Constantine in 740, Romanian 2 October, against the king of Georgia who rebuilt the country after the Seljuks and died in 1125, Romanian 26 January. Four centuries apart (read 19 September 2026). The third is neither Georgian nor a layman: the bishop of Menevia in Wales, dead about 601, Romanian 1 March (read 25 September 2026)',
+  'antonie anthony-of-constantinople antony-the-martyr-1-march':
+    'the patriarch of Constantinople who had been an abbot, Romanian 12 February, against the martyr of the Romanian 1 March, of whom doxologia says one thing only — that he was thrown into the fire — and gives neither year nor country, which is why his slug carries his day and his display name stays bare (read 25 September 2026)',
+  'domnina domnina-of-antioch domnina-the-ascetic':
+    'the martyr of Antioch who went into the river with her daughters Berenice and Prosdoce rather than be taken, Romanian and Greek 4 October, against the venerable woman of the Romanian 1 March who lived out her life in a hut of straw by her mother’s garden. A passion against an asceticism, and the epithet on the second is there to keep them apart (read 25 September 2026)',
+  'marcellus marcellus-of-apamea marcellus-the-martyr-1-march':
+    'the bishop of Apamea who pulled down the temples of his diocese and was burnt for it about 389, kept on 14 August, against the martyr of the Romanian 1 March, one of a pair doxologia dismisses in a sentence: thrown into the fire, no see, no year (read 25 September 2026)',
+  'marcel marcellus-of-sicily marcellus-the-martyr-1-march':
+    'the same 1 March martyr against the bishop of Sicily of the Romanian 9 February. The Romanian calendar writes both names «Marcel», so this fold and the «marcellus» one above are the same man met twice through two spellings (read 25 September 2026)',
   'ioan john-of-edessa john-son-of-xenophon john-the-theologian':
     'three men called Ioan and nothing else shared: the soldier of Edessa who left the army under Diocletian and suffered at Alexandria with Cyrus, Romanian 31 January; the elder of Xenophon’s two sons, Romanian 26 January; and the apostle and evangelist (read 19 September 2026)',
   'maria maria-of-gatchina mary-sister-of-lykarion mary-wife-of-xenophon':

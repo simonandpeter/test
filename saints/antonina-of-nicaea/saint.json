@@ -1,0 +1,58 @@
+{
+  "slug": "antonina-of-nicaea",
+  "display_name": "Antonina of Nicaea",
+  "names": [
+    {
+      "form": "Antonina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 martie, «Sfânta Muceniță Antonina»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "between 284 and 305",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfânta muceniță Antonina a suferit în Niceea, în timpul unei persecuții sub împăratul Maximian (284-305)» — the page gives the reign and no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 martie — «Sfânta Muceniță Antonina»",
+        "url": "https://doxologia.ro/1-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

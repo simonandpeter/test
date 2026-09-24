@@ -1,0 +1,59 @@
+{
+  "slug": "martyrius-of-zelenets",
+  "display_name": "Martyrius of Zelenets",
+  "names": [
+    {
+      "form": "Martirie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 martie, «Sfântul Cuvios Martirie din Zelenesk»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1603,
+      "latest": 1603,
+      "display": "1603",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfântul Martirie a adormit întru Domnul în anul 1603»; the same page says he was born at Veliki Luki «în secolul al XVI-lea», ordained presbyter «în anul 1570» and made abbot «în anul 1582»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 martie — «Sfântul Cuvios Martirie din Zelenesk»",
+        "url": "https://doxologia.ro/1-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

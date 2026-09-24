@@ -1,0 +1,81 @@
+{
+  "slug": "agapius-of-colciu",
+  "display_name": "Agapius of Colciu",
+  "names": [
+    {
+      "form": "Agapie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 martie, «Sfântul Cuvios Agapie de la Colciu»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "related": [
+    "nicodemus-the-hagiorite"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1750,
+      "latest": 1800,
+      "display": "late 18th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfântul Agapie a viețuit alături de starețul său în Chilia „Sfânta Treime” în a doua parte a secolului al XVIII-lea» — the page gives no year of birth or death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 martie — «Sfântul Cuvios Agapie de la Colciu»",
+        "url": "https://doxologia.ro/1-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "model": "Locuitor pustiului…",
+      "text": "Ascultând de cuvintele bătrânului celui sfânt ai socotit desfătare a robiei batjocură şi vas al iubirii te-ai arătat trăgându-i pre stăpâni către Hristos. Pentru-aceea, fericite Agapie, cântându-ţi cu osârdie, strigăm: Slavă lui Hristos, Celui ce te-a slăvit, Slavă Celui ce pre tine te-a iubit, Slavă Celui ce tare mijlocitor pre tine nouă te-a dăruit.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Agapie de la Colciu",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-agapie-de-la-colciu",
+        "year": 2026
+      },
+      "english": {
+        "text": "Obeying the words of the holy elder, thou didst count the mockery of slavery a delight, and wast shown to be a vessel of love, drawing thy masters to Christ. Therefore, blessed Agapius, singing to thee with zeal we cry: Glory to Christ who glorified thee, glory to him who loved thee, glory to him who gave thee to us as a strong intercessor.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
