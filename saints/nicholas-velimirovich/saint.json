@@ -1,0 +1,89 @@
+{
+  "slug": "nicholas-velimirovich",
+  "display_name": "Nicholas Velimirovich",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Nicolae Velimirovici",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 martie, «Sfântul Ierarh Nicolae Velimirovici, Episcop al Ohridei și Jicei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "preacher"
+  ],
+  "related": [
+    "sava-of-serbia",
+    "john-of-kronstadt"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1880,
+      "latest": 1880,
+      "display": "1880",
+      "basis": "attested",
+      "note": "doxologia.ro's life for the day: «Episcopul Nicolae s-a născut la 23 decembrie 1880, de praznicul Sfântului Naum al Ohridei, din părinți sârbi binecredincioși, Dragomir și Katarina Velimirovici, în satul Lelici»."
+    },
+    "death": {
+      "earliest": 1956,
+      "latest": 1956,
+      "display": "1956",
+      "basis": "attested",
+      "note": "doxologia.ro's life for the day: «a adormit întru Domnul în țară străină, în anul 1956, în timp ce se ruga în chilia lui modestă de la Seminarul Ortodox „Sfântul Tihon” (America). Sfântul Episcop avea 76 de ani»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 18 martie — «Sfântul Ierarh Nicolae Velimirovici, Episcop al Ohridei și Jicei»",
+        "url": "https://doxologia.ro/18-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "The Romanian life says the Serbian Orthodox Church canonised him in 2003, but no Serbian calendar was read for him: pravoslavno.rs was not checked (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Propovăduitor cu limbă de aur al lui Hristos cel înviat, pururea călăuzitor al norodului sârb cel de Cruce purtător, alăută sunătoare a Sfîntului Duh, iubit de monahii ce întru tine se bucură, slava şi fala preoţilor, învăţător al pocăinţei, vlădică al tuturor neamurilor, dreptar celor din oastea lui Hristos în rugăciunile către Dumnezeu, Sfinte Nicolae, dascăl al Americii şi slavă a norodului sârb, împreună cu toţi sfinţii, roagă pe Unul iubitorul de oameni să ne învrednicească de veşnică pace şi bucurie în Împărăţia Sa cea cerească!",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Nicolae Velimirovici (the page prints no tone)",
+        "url": "https://doxologia.ro/troparul-sfantului-nicolae-velimirovici",
+        "year": 2026
+      },
+      "english": {
+        "text": "Golden-tongued herald of the risen Christ, unfailing guide of the cross-bearing Serbian people, sounding harp of the Holy Spirit, beloved of the monks who rejoice in thee, glory and boast of priests, teacher of repentance, bishop of all nations, rule of those in the army of Christ in their prayers to God: O holy Nicholas, teacher of America and glory of the Serbian people, entreat with all the saints the only Lover of mankind, that we may be counted worthy of eternal peace and joy in His heavenly Kingdom.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

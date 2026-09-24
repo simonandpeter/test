@@ -129,8 +129,8 @@ const READ_FOLDS = {
     'one of the forty soldiers doxologia names for 9 March, drowned in the lake at Sebaste under Licinius, against the martyr of Cartagena of the Romanian 25 February (read 25 September 2026). A third is the presbyter of Side in Pamphylia, seized there by the governor Antoninus under Aurelian, Romanian 14 March: a priest, a province and a day of his own (read 25 September 2026)',
   'atanasie athanasius-of-alexandria athanasius-of-the-forty-martyrs athanasius-the-commentarisius athanasius-the-confessor':
     'three men and nothing shared but the forename: the deacon at Nicaea in 325 who became archbishop of Alexandria; the commentarisius, the officer who kept the prison register when Zosimas of Cilicia was brought in; and the confessor born at Constantinople of devout and very rich parents, Romanian 22 February (read 24 September 2026). A fourth is one of the forty of Sebaste, Romanian 9 March (read 25 September 2026)',
-  'chiril cyril-of-alexandria cyril-of-the-forty-martyrs':
-    'the patriarch of Alexandria, 378 to 446, Romanian 18 January, against one of the forty soldiers of Sebaste, Romanian 9 March (read 25 September 2026)',
+  'chiril cyril-of-alexandria cyril-of-jerusalem cyril-of-the-forty-martyrs':
+    'the patriarch of Alexandria, 378 to 446, Romanian 18 January, against one of the forty soldiers of Sebaste, Romanian 9 March. A third is the archbishop of Jerusalem of the Romanian 18 March, the catechist of the Holy City, who is neither of them (read 25 September 2026)',
   'dometian dometian-of-melitene dometian-of-the-forty-martyrs':
     'the venerable bishop of Melitene, Romanian 10 January, against one of the forty soldiers of Sebaste, Romanian 9 March (read 25 September 2026)',
   'candid candidus-of-the-forty-martyrs candidus-of-trebizond':
@@ -143,6 +143,8 @@ const READ_FOLDS = {
     'five men and the largest fold the Romanian year has thrown up, four of them read apart by their day and their company and the fifth not called Pavel at all. The bishop of Plousias in Bithynia, the city that was Kieros, banished in the iconoclast persecution at the turn of the ninth century, Romanian 8 March. The martyr of Jamnia, Romanian 16 February. The brother of Juliana, of Ptolemais in Phoenicia under Aurelian, Russian 17 August and Romanian 4 March. The martyr the Romanian 10 February keeps with Valentina and Ennatha. And Platon Kulbusch, first bishop of Estonia, shot in 1919, who folds in only because his life records «primind la botez numele Pavel» and the corpus stored that baptismal name as a form (read 25 September 2026)',
   'roman roman-the-venerable romanus-martyr-16-march':
     'the Serbian monastic of 16 August, whom the corpus holds on that calendar alone, against the martyr of the Romanian 16 March, one of the thin lines of that day. Different calendar, different month, different rank (read 25 September 2026)',
+  'trofim trophimus-of-laodicea trophimus-of-nicomedia':
+    'the martyr of Laodicea whom doxologia keeps on 11 March with Thalus, against the martyr of Nicomedia kept on 18 March with Eucarpion. Seven days apart on one calendar, two cities and two companions (read 25 September 2026)',
   'conon conon-of-isauria conon-the-gardener':
     'two martyrs of one name on one day, which is the fold hardest to part and the one doxologia parts itself: «Sfantul Mucenic Conon din Isauria», son of Nestor and Nada of the village Vidania, baptised by the Archangel Michael in the generation the apostle Paul preached to Isauria, against «Sfantul Mucenic Conon Gradinarul», of Nazareth by descent, who kept a garden at Carmila outside Mandon in Pamphylia and was taken under Decius by the governor Publius. Two lines on the 5 March page, two epithets, two lives, two centuries (read 25 September 2026)',
   'evloghie eulogius-of-alexandria eulogius-of-palestine':

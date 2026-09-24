@@ -1,0 +1,11 @@
+# Eucarpion of Nicomedia
+
+Eucarpion and [Trophimus](/saints/trophimus-of-nicomedia) were soldiers at Nicomedia in the days of the emperor Maximian, when the persecution of the Christians there was at its height. Strong of body and bold, and not yet knowing the Christian teaching, they hunted the Christians themselves and became their bitterest enemies: they arrested them and shut them in prison, and having all power over them tormented whom they chose and passed others by. Doxologia prints one life for the two of them, on each of their pages.
+
+Going out one day to make arrests, they saw a great fire descend on them from heaven like a cloud, and a voice came out of it asking why they hurried to bring ruin on God's servants; no one, it said, would be able to break those who had believed in Him, and they would do better to join them and gain the kingdom of heaven. The two fell to the ground, unable to look at the fire or bear the voice thundering out of the cloud, and said only that the God who had appeared to them that day was great, and that they would be blessed if they became His servants.
+
+The cloud parted in two, and the voice told them to rise and repent and their sins would be forgiven. Rising, they saw in the midst of it one in a white garment, altogether beautiful, with a great multitude standing about him, and they asked with one voice to be received, confessing that they had rushed like drunkards against the true God and His servants. The cloud closed and went up; and they wept, turned back from their errand, embraced as brothers the men they had imprisoned, bowed to them and sent them home.
+
+The ruler of the place, hearing this, summoned them in anger and asked why their conduct had changed; and when they had told the vision in full, he had them hung on wood, their sides torn with iron hooks, and the wounds rubbed with hair-cloth. They endured it bravely, praying and giving thanks with joy. At that he grew angrier and ordered a burning furnace prepared in the middle of the city, and the saints thrown into it; and entering it they received there the crown of martyrdom.
+
+*After doxologia.ro's calendar for 18 martie — [the day](https://doxologia.ro/18-martie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-evcarpion); read 19 September 2026.*
