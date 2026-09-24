@@ -1,0 +1,62 @@
+{
+  "slug": "acacius-the-new-of-neochorion",
+  "display_name": "Acacius the New of Neochorion",
+  "names": [
+    {
+      "form": "Acachie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 mai, «Sfântul Cuvios Mucenic Acachie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "venerable-martyr"
+  ],
+  "related": [
+    "euthymius-of-dimitsana"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1816,
+      "latest": 1816,
+      "display": "1816",
+      "basis": "attested",
+      "note": "doxologia.ro, Viața Sfântului Cuvios Mucenic Acachie Pantofarul: «Sfântul Acachie și-a dat viața pentru Hristos pe 1 mai 1816, la ora șase seara», and the page argues the year against the sources that print 1815, citing a letter of his dated 27 April 1816."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 mai — «Sfântul Cuvios Mucenic Acachie»",
+        "url": "https://doxologia.ro/1-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

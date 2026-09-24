@@ -1,0 +1,59 @@
+{
+  "slug": "paphnutius-of-borovsk",
+  "display_name": "Paphnutius of Borovsk",
+  "names": [
+    {
+      "form": "Pafnutie din Borovsk",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 mai, «Sfântul Cuvios Pafnutie din Borovsk»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1477,
+      "latest": 1477,
+      "display": "1477",
+      "basis": "attested",
+      "note": "doxologia.ro, Viața Sfântului Cuvios Pafnutie, egumenul mănăstirii Borovsk: he died «în anul 1477, în întâia zi a lunii mai, mai înainte de apusul soarelui cu un ceas»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 mai — «Sfântul Cuvios Pafnutie din Borovsk»",
+        "url": "https://doxologia.ro/1-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

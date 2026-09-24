@@ -1,0 +1,58 @@
+{
+  "slug": "tamara-of-georgia",
+  "display_name": "Tamara of Georgia",
+  "names": [
+    {
+      "form": "Tamara",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 mai, «Sfânta Tamara, regina Georgiei»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "queen"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1166,
+      "latest": 1166,
+      "display": "1166",
+      "basis": "traditional",
+      "note": "doxologia.ro, Viața Sfintei Tamara, regina Georgiei: «Sfânta Tamara s-a născut în anul 1166 ca fiică a regelui George al III-lea și a reginei Burdukhan a Georgiei». The page gives no year for her death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 mai — «Sfânta Tamara, regina Georgiei»",
+        "url": "https://doxologia.ro/1-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

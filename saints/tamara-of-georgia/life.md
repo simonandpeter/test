@@ -1,0 +1,11 @@
+# Tamara of Georgia
+
+Her name, the Romanian page begins, is Hebrew and means "palm tree". Tamara was born in 1166, the daughter of King George III and of Queen Burdukhan of Georgia, and after her father's death she was crowned queen at eighteen. The courtiers pressed her again and again to marry, for the sake of the dynasty; but the marriage to Yuri, son of Prince Andrei Bogolyubsky of Vladimir-Suzdal, brought her no happiness, for the new king was unsteady in character and without faith, and in the end he was driven out to Constantinople.
+
+In 1195, when the kingdom of Georgia was invaded by a Turkish army, she prayed without ceasing on one of the hills of the Metekhi monastery until word came that the Orthodox Georgian army had beaten the Muslim army; and within a few years, the page says, the Georgian army came to be known as the protector of the Transcaucasus, because of Tamara's faith and the faith of her people.
+
+Many years later one of the sultans of the Ottoman court sent her a proposal that she convert to Islam. She refused, answering that his proposal reckoned only with the wealth and the size of the Ottoman army and not with the divine judgement; that she trusted not in the Georgian army but in the right hand of Almighty God and in the endless help of the Holy Cross, which he did not acknowledge; and that God's will, and God's judgement, and not his, would be done. Soon after, the Georgian army beat the Turks at Basini.
+
+She endowed monasteries not only in Georgia but in Palestine, Cyprus, Greece, the Holy Mountain, Bulgaria, Macedonia, Romania and Constantinople, and many monasteries were built in Georgia itself; she abolished the death sentence and every form of bodily torture. Fasting, long prayers, prostrations and a stone bed on which she slept a few hours a night wore her health down, and she would not speak of it for a long while; when the pain made her accept physicians they could give no exact diagnosis. Where she was buried is still unknown: some say her grave is at Gelati, others that her relics are in the monastery of the Holy Cross in Jerusalem. The page gives no year for her death.
+
+*After doxologia.ro's calendar for 1 mai — [the day](https://doxologia.ro/1-mai) and [the life](https://doxologia.ro/viata-sfintei-tamara-regina-georgiei); the page prints no troparion; read 24 September 2026.*

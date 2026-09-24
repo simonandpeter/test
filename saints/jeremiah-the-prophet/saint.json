@@ -1,0 +1,70 @@
+{
+  "slug": "jeremiah-the-prophet",
+  "display_name": "Jeremiah",
+  "names": [
+    {
+      "form": "Ieremia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 mai, «Sfântul Proroc Ieremia»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "related": [
+    "baruch-the-prophet"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 mai — «Sfântul Proroc Ieremia»",
+        "url": "https://doxologia.ro/1-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "A prorocului Tău, Doamne, Ieremia pomenire prăznuind, printr-însul Te rugăm, mântuieşte sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Prooroc Ieremia",
+        "url": "https://doxologia.ro/troparul-sfantului-prooroc-ieremia",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping the memory of thy prophet Jeremiah, O Lord, we entreat thee through him: save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

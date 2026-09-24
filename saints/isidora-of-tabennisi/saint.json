@@ -1,0 +1,60 @@
+{
+  "slug": "isidora-of-tabennisi",
+  "display_name": "Isidora of Tabennisi",
+  "names": [
+    {
+      "form": "Isidora",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 mai, «Sfânta Cuvioasă Isidora»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "fool-for-christ",
+    "monastic"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "doxologia.ro, Viața Sfintei Cuvioase Isidora: «Această cuvioasă maică s-a nevoit în Mănăstirea Tabena sau Tabenisioților din Egipt în veacul al IV-lea»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026). The Romanian life adds that the Russian Church keeps her on 10 May, which is not verified here."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 mai — «Sfânta Cuvioasă Isidora»",
+        "url": "https://doxologia.ro/1-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Μαΐου (24 September 2026). The Romanian life says the Greek Church keeps her on the same day, which is not verified here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
