@@ -25,6 +25,11 @@
       "form": "Χριστόφορος",
       "lang": "el",
       "note": "From «Άγιος Χριστόφορος ο Μεγαλομάρτυρας» in this folder's Greek citation, without the rank."
+    },
+    {
+      "form": "Hristofor",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 mai, «Sfântul Mucenic Hristofor»."
     }
   ],
   "sex": "male",
@@ -111,5 +116,23 @@
   "text": {
     "life": "life.md"
   },
-  "images": []
+  "images": [],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Cu haine din sângiuiri împodobindu-te, stai înaintea Domnului împăratul puterilor, Hristofore pururea-mărite, unde cu cetele celor fără de trupuri şi ale mucenicilor cânţi dulce cântare întreit-sfântă şi înfricoşătoare; pentru aceasta prin rugăciunile tale mântuieşte turma ta.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Hristofor",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-hristofor",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with garments made of thine own blood, thou standest before the Lord, the King of the powers, ever-glorified Christopher, where with the choirs of the bodiless ones and of the martyrs thou singest the sweet and fearful thrice-holy hymn; therefore by thy prayers save thy flock.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

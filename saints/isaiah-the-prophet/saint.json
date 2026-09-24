@@ -1,0 +1,67 @@
+{
+  "slug": "isaiah-the-prophet",
+  "display_name": "Isaiah",
+  "names": [
+    {
+      "form": "Isaia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 mai, «Sfântul Proroc Isaia»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 mai — «Sfântul Proroc Isaia»",
+        "url": "https://doxologia.ro/9-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Μαΐου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 2",
+      "text": "A prorocului Tău Isaia, pomenirea, Doamne, prăznuind, printr-însul Te rugăm, mântuieşte sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Proroc Isaia",
+        "url": "https://doxologia.ro/troparul-sfantului-proroc-isaia",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping the memory of thy prophet Isaiah, O Lord, we entreat thee through him: save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
