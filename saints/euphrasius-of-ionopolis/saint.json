@@ -1,0 +1,51 @@
+{
+  "slug": "euphrasius-of-ionopolis",
+  "display_name": "Euphrasius of Ionopolis",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Eufrasie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 iulie, «Sfântul Ierarh Eufrasie, Episcopul Ienopolei», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 iulie — «Sfântul Ierarh Eufrasie, Episcopul Ienopolei»",
+        "url": "https://doxologia.ro/17-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

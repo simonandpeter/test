@@ -119,6 +119,18 @@ const READ_FOLDS = {
     'Athanasius the Athonite, Romanian 5 July, whose second `ro` form is Avramie because his own life gives that as his baptismal name, against the hieromartyr bishop of Arbela under Shapur II, Romanian 4 February (read 25 September 2026)',
   'ciprian cyprian-companion-of-quadratus cyprian-martyr-10-may cyprian-the-new-martyr':
     'three men called Ciprian, on three days: the hieromonk new-martyr of Kletzos in Agrafa, Romanian 5 July; the companion of Quadratus of Corinth under Decius and Valerian, Romanian 10 March; and the bare «Sfantul Mucenic Ciprian» the calendar prints on 10 May with no life and no century (read 25 September 2026)',
+  'alexandra alexandra-of-ancyra alexandra-of-diveevo alexandra-the-empress alexandra-wife-of-nicholas-ii':
+    'four women called Alexandra, on four days: the empress and last tsaritsa, shot at Ekaterinburg with her household, Romanian 17 July; one of the seven virgins of Ancyra, 18 May; the abbess and foundress of Diveevo, 13 June; and the empress, wife of Diocletian, 21 April (read 25 September 2026)',
+  'anastasia anastasia-daughter-of-nicholas-ii anastasia-of-rome-15-april':
+    'the youngest daughter of Nicholas II, killed with her family, Romanian 17 July, against the martyr of Rome, Romanian 15 April (read 25 September 2026)',
+  'maria golinduhia-of-persia maria-daughter-of-nicholas-ii maria-of-gatchina mary-of-aza mary-sister-of-lazarus mary-sister-of-lykarion mary-wife-of-xenophon':
+    'seven women whose `ro` form is Maria. The new one is the third daughter of Nicholas II, killed with her family on the Romanian 17 July; the other six were read on 13 July and are unchanged -- Golinduhia of Persia, whose second form is her baptismal name; Maria of Gatchina and Mary the wife of Xenophon, both 26 January and two women; the virgin of Aza, 9 June; the sister of Lazarus, 4 June; and the sister of Lykarion, 8 February (read 25 September 2026)',
+  'nicolae nicholas-ii nicholas-of-lesvos nicholas-of-the-forty-martyrs':
+    'three men called Nicolae, on three days: the last emperor, shot at Ekaterinburg, Romanian 17 July; the deacon and monk of Lesvos, 9 April; and one of the Forty frozen at Sebaste, 9 March (read 25 September 2026)',
+  'olga olga-daughter-of-nicholas-ii olga-of-kyiv':
+    'the eldest daughter of Nicholas II, killed with her family, Romanian 17 July, against the princess of Kyiv, grandmother of Vladimir, Romanian 11 July (read 25 September 2026)',
+  'tatiana tatiana-daughter-of-nicholas-ii tatiana-of-rome':
+    'the second daughter of Nicholas II, killed with her family, Romanian 17 July, against the deaconess of the church of Rome, Romanian 12 January (read 25 September 2026)',
   'faustus faustus-martyr-16-july faustus-presbyter-of-alexandria faustus-the-martyr':
     'three men called Faustus: the martyr of the Romanian 16 July, whom doxologia gives two sentences -- under Decius, tortured five days, no place, no judge, no company; the presbyter of Alexandria, one of eleven with Abibus the deacon, Russian and Greek 6 September, also under Decius; and the martyr kept with Andrew the Stratelates, Romanian and Greek 31 August, under Maximian. The July page itself distinguishes him from the August one. It does not mention Alexandria, and the two Decian men are held apart here on the day and the company rather than on anything the July page says, which is little (read 25 September 2026)',
   'iulia julia-of-ancyra julia-the-virgin':

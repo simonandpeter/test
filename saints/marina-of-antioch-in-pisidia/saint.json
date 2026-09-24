@@ -1,0 +1,68 @@
+{
+  "slug": "marina-of-antioch-in-pisidia",
+  "display_name": "Marina of Antioch in Pisidia",
+  "names": [
+    {
+      "form": "Marina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 iulie, «Sfânta Mare Muceniță Marina», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "great-martyr",
+    "virgin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 iulie — «Sfânta Mare Muceniță Marina»",
+        "url": "https://doxologia.ro/17-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 4",
+      "text": "Mielușeaua Ta, Iisuse, Marina, strigă cu mare glas: Pe Tine, Mirele meu, Te iubesc și pe Tine cântându-Te, mă chinuiesc și împreună mă răstignesc, și mă împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru Tine, ca să viez pentru Tine; ci, ca o jertfă fără prihană primește-mă pe mine, ceea ce cu dragoste mă jertfesc ție. Pentru rugăciunile ei, ca un Milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintei Mare Mucenițe Marina», Glas 4 — the common of a woman martyr; the doubled «și mă împreună mă îngrop» and the lower-case «ție» are the page's own.",
+        "url": "https://doxologia.ro/troparul-sfintei-mare-mucenite-marina",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your ewe-lamb, Jesus, Marina, cries out with a great voice: You, my Bridegroom, I love, and singing to You I am tormented and crucified with You, and buried with You in Your baptism; and I suffer for You, that I may reign in You; and I die for You, that I may live for You. As an unblemished sacrifice receive me, who offer myself to You with love. At her prayers, as the merciful One, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

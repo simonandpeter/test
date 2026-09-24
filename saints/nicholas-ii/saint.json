@@ -1,0 +1,93 @@
+{
+  "slug": "nicholas-ii",
+  "display_name": "Nicholas II",
+  "names": [
+    {
+      "form": "Nicolae",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 iulie, «Sfinții Țari Mucenici Romanov: Nicolae și Alexandra și fiii lor Olga, Tatiana, Maria, Anastasia și Alexei», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "passion-bearer",
+    "king"
+  ],
+  "related": [
+    "alexandra-wife-of-nicholas-ii",
+    "olga-daughter-of-nicholas-ii",
+    "tatiana-daughter-of-nicholas-ii",
+    "maria-daughter-of-nicholas-ii",
+    "anastasia-daughter-of-nicholas-ii",
+    "alexei-son-of-nicholas-ii"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "doxologia.ro: the family was shot at Yekaterinburg «în noaptea de 16-17 iulie 1918»."
+    },
+    "birth": {
+      "earliest": 1868,
+      "latest": 1868,
+      "display": "1868",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut la Țarskoe Selo, astăzi orașul Pușkin, pe 6/18 mai 1868»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 iulie — «Sfinții Țari Mucenici Romanov: Nicolae și Alexandra și fiii lor Olga, Tatiana, Maria, Anastasia și Alexei»",
+        "url": "https://doxologia.ro/17-iulie",
+        "year": 2026
+      },
+      "note": "doxologia.ro keeps the seven under one line and one life; this folder is one of the seven, the calendar's line naming each of them. The page says they were canonised by the Russian Orthodox Church on 4 August 2000, but the Russian calendar itself was not read for this run."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Astăzi, poporul cel binecredincios vine să se închine cu mărire celor șapte cinstiți Mucenici Țari, Mult-pătimitori, ce s-au făcut pe sine biserică vie a lui Hristos: Nicolae și Alexandra, Alexei, Olga, Tatiana, Maria și Anastasia. Căci aceștia, fără să se teamă nici de lanțuri, nici de suferințele cele de multe feluri, răbdând moartea și sfâșierea sfintelor lor trupuri de mâna celor care împotriva lui Dumnezeu luptau, au dobândit îndrăzneală în rugăciune dinaintea Cerescului Împărat și Stăpân. Pentru aceasta, cu dragoste strigăm către ei unele ca acestea: O, Sfinților Țari Mucenici Multpătimitori, luați aminte la glasul pocăinței și la lacrimile poporului, arătând pământul rusesc ca pe un răsad care în adevăr a odrăslit dragostea cea pentru dreapta credință creștinească, păziți țara de războiul cel dintre noi și cereți de la Dumnezeu pace lumii întregi, iar sufletelor noastre mare milă.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Țari Mucenici Romanov: Nicolae și Alexandra și fiii lor Olga, Tatiana, Maria, Anastasia și Alexei», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfintilor-tari-mucenici-romanov-nicolae-alexandra-fiii-lor-olga-tatiana-maria-anastasia",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today the right-believing people come to bow down with glory before the seven honoured Martyr-Tsars, the much-suffering, who made themselves a living church of Christ: Nicholas and Alexandra, Alexei, Olga, Tatiana, Maria and Anastasia. For these, fearing neither chains nor sufferings of many kinds, enduring death and the tearing of their holy bodies at the hands of those who fought against God, have won boldness in prayer before the Heavenly King and Master. And so with love we cry out to them: O holy much-suffering Martyr-Tsars, heed the voice of repentance and the tears of the people, showing the Russian land to be a planting that has truly put out the love of the right Christian faith; guard the country from war among ourselves, and ask of God peace for the whole world and great mercy for our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
