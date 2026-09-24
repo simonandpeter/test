@@ -6,6 +6,11 @@
     {
       "form": "Άγιος Ειρηναίος επίσκοπος Σιρμίου",
       "lang": "el"
+    },
+    {
+      "form": "Irineu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 aprilie, «Sfântul Sfințit Mucenic Irineu, Episcop de Sirmium»."
     }
   ],
   "sex": "male",
@@ -30,8 +35,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 23 August (checked 2026-08-22); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 aprilie — «Sfântul Sfințit Mucenic Irineu, Episcop de Sirmium»",
+        "url": "https://doxologia.ro/6-aprilie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

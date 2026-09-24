@@ -1,0 +1,11 @@
+# Gregory of Sinai
+
+The life doxologia prints opens after his ransoming — the page says nothing of the capture it implies, and begins with the release. Once ransomed, Gregory went to the island of Cyprus and entered the monastic life there, tonsured as a rassophore; later he went to Mount Sinai, where he received the great schema, and from that came the name by which the calendar knows him, the Sinaite. He struggled there with much zeal, was a good calligrapher and diligent in learning, and went on from Sinai to Jerusalem and then to Crete, where he learned the art of hesychast prayer from the ascetic Arsenius.
+
+At the beginning of the fourteenth century he moved to Mount Athos, to the skete of Magoula near the monastery of Philotheou, and showed his disciples the working of deifying prayer, guiding them with much love in the good fight. The enemy, grudging that work, stirred up envy among men, and Gregory moved to a more withdrawn place near the monastery of Simonopetra, where he passed his time in stillness and in the unceasing saying of the prayer of the heart. Together with his contemporary [Gregory Palamas](/saints/gregory-palamas) he helped to make the Holy Mountain the centre of the hesychast movement.
+
+An attack of the Hagarenes drove him out of the Holy Mountain, and he spent a long time in various places. He came at length to Bulgaria, to Paroria, where he built several monasteries and gathered many disciples who wanted to learn the saving work he taught. Among them the best known were his own biographer, Callistus I, patriarch of Constantinople; Saint Theodosius, the founder of the monastery of Kelifarevo; Saint [Romylos of Ravanica](/saints/romylos-of-ravanica); Saint Gregory of Gornjak; Saint Nicodemus of Tismana; Saint Jacob of Serbia, and many others.
+
+He departed to the Lord on 27 November 1346, and is kept on 6 April. The page's Tropar tab for him is a video recording with no printed text, so no hymn is taken from it here.
+
+*After doxologia.ro's calendar for 6 aprilie — [the day](https://doxologia.ro/6-aprilie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-grigorie-sinaitul); read 19 September 2026.*

@@ -1,0 +1,71 @@
+{
+  "slug": "eutychius-of-constantinople",
+  "display_name": "Eutychius of Constantinople",
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Eutihie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 aprilie, «Sfântul Ierarh Eutihie, Patriarhul Constantinopolului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch",
+    "confessor",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 aprilie — «Sfântul Ierarh Eutihie, Patriarhul Constantinopolului»",
+        "url": "https://doxologia.ro/6-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Îndreptător credinţei şi chip blândeţelor, învăţător înfrânârii te-a arătat pe tine, turmei tale, adevărul lucrurilor. Pentru aceasta ai dobândit cu smerenia cele înalte şi cu sărăcia cele bogate; Părinte Ierarhe Eutihie, roagă pe Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Eutihie, Patriarhul Constantinopolului, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-eutihie-patriarhul-constantinopolului",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things showed thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence. Therefore thou hast gained by humility the things on high, and by poverty the things that are rich. O father and hierarch Eutychius, pray Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

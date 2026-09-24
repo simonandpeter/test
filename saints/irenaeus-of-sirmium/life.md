@@ -26,4 +26,6 @@ gives the year as 288. The Greek calendar keeps him on 23 August, and the
 Russian calendar on 26 March of the old style, 8 April, counting him among
 the saints of Serbia, Sirmium being Sremska Mitrovica.
 
-*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-irinej-sirmijskij-sremskij-serbskij), read 6 September 2026; the Ορθόδοξος Συναξαριστής (saint.gr), 23 August — [the entry](https://www.saint.gr/855/saint.aspx), read 23 August 2026, was all this entry had until then.*
+The Romanian calendar keeps him on 6 aprilie, and adds nothing to the account: doxologia's page for him carries no life tab and no troparion, only his name, the day and the appointed readings. Its line names him in full as the holy hieromartyr Irenaeus, bishop of Sirmium, which agrees with the Greek entry in the see and in the rank, and it puts him two days before the 8 April on which the Russian calendar's 26 March of the old style falls.
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-irinej-sirmijskij-sremskij-serbskij), read 6 September 2026; the Ορθόδοξος Συναξαριστής (saint.gr), 23 August — [the entry](https://www.saint.gr/855/saint.aspx), read 23 August 2026, was all this entry had until then; doxologia.ro's calendar for 6 aprilie — [the day](https://doxologia.ro/6-aprilie) and [his page](https://doxologia.ro/sfantul-sfintit-mucenic-irineu-episcop-de-sirmium), which prints no life, read 19 September 2026.*

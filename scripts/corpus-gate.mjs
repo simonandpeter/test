@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'eutihie eutychius-of-constantinople eutychius-of-the-forty-martyrs':
+    'the patriarch of Constantinople, from the Phrygian village of Divine, where he later built a church of the Forty Martyrs, Romanian 6 April, against one of those Forty themselves, frozen on the lake at Sebaste under Licinius, Romanian 9 March. The first built a church to the second’s company, which is the whole of the connection (read 25 September 2026)',
   'iosif joseph-the-hymnographer joseph-the-merciful':
     'the hymnographer, born in Sicily of Plotinus and Agatha, Romanian 4 April, against Joseph Naniescu, metropolitan of Moldavia, born at Răzălăi in Soroca in 1818 and christened Ioan, Romanian 26 January. A Byzantine hymn-writer against a nineteenth-century Romanian hierarch (read 25 September 2026)',
   'zosima zosimas-of-cilicia zosimas-of-palestine':

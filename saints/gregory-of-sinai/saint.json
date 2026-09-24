@@ -1,0 +1,65 @@
+{
+  "slug": "gregory-of-sinai",
+  "display_name": "Gregory of Sinai",
+  "names": [
+    {
+      "form": "Grigorie Sinaitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 aprilie, «Sfântul Cuvios Grigorie Sinaitul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic"
+  ],
+  "related": [
+    "gregory-palamas",
+    "romylos-of-ravanica"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1346,
+      "latest": 1346,
+      "display": "1346",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Grigorie a trecut la Domnul pe 27 noiembrie 1346 și este prăznuit pe 6 aprilie.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "revised-julian",
+        "note": "The life page says he died on 27 November 1346 and is kept on 6 April: «Sfântul Grigorie a trecut la Domnul pe 27 noiembrie 1346 și este prăznuit pe 6 aprilie.» The day of death and the day of commemoration are different, and 6 aprilie is the day the calendar prints him on."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 aprilie — «Sfântul Cuvios Grigorie Sinaitul»",
+        "url": "https://doxologia.ro/6-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
