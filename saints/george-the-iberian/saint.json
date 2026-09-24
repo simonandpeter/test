@@ -1,0 +1,65 @@
+{
+  "slug": "george-the-iberian",
+  "display_name": "George the Iberian",
+  "names": [
+    {
+      "form": "Gheorghe Ivirul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 mai, «Sfântul Cuvios Gheorghe Ivirul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "abbot"
+  ],
+  "related": [
+    "euthymius-the-iberian",
+    "john-the-iberian"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1066,
+      "latest": 1066,
+      "display": "1066",
+      "basis": "traditional",
+      "note": "The title of doxologia.ro's page for him: «Viața Cuviosului Gheorghe Ivirul (†1066)». The body of the page gives no year, only that he fell asleep at Constantinople on 24 May."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian",
+        "note": "doxologia.ro's calendar keeps him on 13 mai with the other Iberian founders, and its own page for him ends «Deși a adormit pe 24 Mai, georgienii prăznuiesc pomenirea lui pe 30 iunie, rânduindu-l împreună cu Sfinții Apostoli. Se cinstește pe 13 Mai.» — so the page itself names three days and settles on this one."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 mai — «Sfântul Cuvios Gheorghe Ivirul»",
+        "url": "https://doxologia.ro/13-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

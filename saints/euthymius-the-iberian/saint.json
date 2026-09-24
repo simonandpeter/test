@@ -1,0 +1,65 @@
+{
+  "slug": "euthymius-the-iberian",
+  "display_name": "Euthymius the Iberian",
+  "names": [
+    {
+      "form": "Eftimie Ivirul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 mai, «Sfântul Cuvios Eftimie Ivirul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "abbot",
+    "hymnographer"
+  ],
+  "related": [
+    "john-the-iberian",
+    "george-the-iberian"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1028,
+      "latest": 1028,
+      "display": "1028",
+      "basis": "traditional",
+      "note": "The title of doxologia.ro's page for him: «Viața Cuviosului Eftimie Ivirul (†1028)». The body of the page gives no year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 mai — «Sfântul Cuvios Eftimie Ivirul»",
+        "url": "https://doxologia.ro/13-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "gabriel-the-iberian",
+  "display_name": "Gabriel the Iberian",
+  "names": [
+    {
+      "form": "Gavriil Ivirul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 mai, «Sfântul Cuvios Gavriil Ivirul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1028,
+      "latest": 1028,
+      "display": "1028",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Cuviosul Gavriil și-a încheiat viața lui în pace (1028) și pomenirea lui se prăznuiește odată cu ctitorii cuvioși iviri pe 13 Mai.» The page's own title dates him «sec. XI»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 mai — «Sfântul Cuvios Gavriil Ivirul»",
+        "url": "https://doxologia.ro/13-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

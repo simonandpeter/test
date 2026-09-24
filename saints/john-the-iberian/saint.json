@@ -1,0 +1,55 @@
+{
+  "slug": "john-the-iberian",
+  "display_name": "John the Iberian",
+  "names": [
+    {
+      "form": "Ioan Ivirul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 mai, «Sfântul Cuvios Ioan Ivirul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "abbot"
+  ],
+  "related": [
+    "euthymius-the-iberian",
+    "george-the-iberian"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 mai — «Sfântul Cuvios Ioan Ivirul»",
+        "url": "https://doxologia.ro/13-mai",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Μαΐου (20 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

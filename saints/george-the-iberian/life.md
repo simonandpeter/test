@@ -1,0 +1,11 @@
+# George the Iberian
+
+George was a great Georgian monk, writer and ascetic, who carried on the work of his cousin the venerable [Euthymius the Iberian](/saints/euthymius-the-iberian). His family belonged to the class of officials at court, and for that reason he received a choice Greek education at Constantinople. He struggled as a novice in various cenobitic houses of his own country, and became a monk in a monastery near Antioch on the Black Mountain, living close to his wonderful guide, George the Recluse.
+
+At his elder's urging he went to Mount Athos and continued his struggle in the monasteries of the Great Lavra and of Iviron. In the second he struggled for nearly fifteen years, and there he became abbot; with the help of the emperor Constantine Monomachos he renewed the monastery, and so became a founder of it himself, of the nave of the church above all.
+
+He gave up the dignity of abbot and went back to the monastery on the Black Mountain. The empress of Georgia employed him in various important missions, and for the five years that he remained in Georgia he was content to help in the raising of the morals of the people and of the higher society. In his old age he wished to end his days on the Holy Mountain; and as he was returning to those friendly places, death found him at Constantinople. His honoured relics were carried to the monastery of Iviron, where he was buried at the monastery's litia.
+
+He wrote the life of his kinsmen and the founders of the monastery, the venerable [John](/saints/john-the-iberian) and Euthymius. He translated from the Greek, or revised, many books of the New Testament and works of canon law, of dogmatics, of hagiography and of liturgics. He and Euthymius are reckoned among the greatest figures of Georgian literature. Although he fell asleep on 24 May, the Georgians keep his memory on 30 June, setting him together with the Holy Apostles; and he is honoured on 13 May.
+
+*After doxologia.ro's calendar for 13 mai — [the day](https://doxologia.ro/13-mai) and [the life](https://doxologia.ro/viata-cuviosului-gheorghe-ivirul-1066), which is from Moses the Hagiorite, «Sfinții Sfântului Munte» (Mygdonia, Karyes, 2008); read 20 September 2026.*

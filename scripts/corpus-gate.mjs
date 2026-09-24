@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'serghie sergius-martyr-2-january sergius-the-confessor':
+    'the bare line of the Romanian 2 January, whose page carries one sentence saying only that the martyr Sergius was cut down with the sword, against the bare line of the Romanian 13 May, whose page opens neither a Viață nor a Tropar tab. One is called a martyr and the other a venerable confessor, and neither page gives a country or a century (read 25 September 2026)',
   'chiril cyril-of-alexandria cyril-of-axiopolis cyril-of-heliopolis cyril-of-jerusalem cyril-of-the-forty-martyrs cyril-the-philosopher':
     'six men called Chiril, on six days: the patriarch of Alexandria dead 446, Romanian 18 January; the martyr of Axiopolis, Romanian 26 April; the deacon of Heliopolis killed under Julian, Romanian 29 March; the archbishop of Jerusalem, Romanian 18 March; one of the Forty frozen at Sebaste under Licinius, Romanian 9 March; and Constantine of Thessalonica, brother of Methodius and teacher of the Slavs, who took the name Cyril with the schema at the end of his life, Romanian 11 May (read 25 September 2026)',
   'constantin constantine-of-georgia cyril-the-philosopher':
