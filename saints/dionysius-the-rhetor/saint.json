@@ -1,0 +1,63 @@
+{
+  "slug": "dionysius-the-rhetor",
+  "display_name": "Dionysius the Rhetor",
+  "names": [
+    {
+      "form": "Dionisie Retorul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 iulie, «Sfinții Cuvioși Dionisie Retorul și Mitrofan Duhovnicul», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "related": [
+    "mitrophan-disciple-of-dionysius"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1606,
+      "latest": 1606,
+      "display": "1606",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Dionisie a adormit întru Domnul pe 6 octombrie 1606». The same page places the two «spre sfârșitul secolului al XVI-lea și începutul secolului al XVII-lea»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 iulie — «Sfinții Cuvioși Dionisie Retorul și Mitrofan Duhovnicul»",
+        "url": "https://doxologia.ro/9-iulie",
+        "year": 2026
+      },
+      "note": "His own page explains the day: he died on 6 October 1606 and his disciple shortly after, «cu toate acestea, Sfinții Dionisie și Mitrofan sunt cinstiți împreună pe 9 iulie». The day's line names the two men, so the corpus keeps one folder for each."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -119,6 +119,8 @@ const READ_FOLDS = {
     'Athanasius the Athonite, Romanian 5 July, whose second `ro` form is Avramie because his own life gives that as his baptismal name, against the hieromartyr bishop of Arbela under Shapur II, Romanian 4 February (read 25 September 2026)',
   'ciprian cyprian-companion-of-quadratus cyprian-martyr-10-may cyprian-the-new-martyr':
     'three men called Ciprian, on three days: the hieromonk new-martyr of Kletzos in Agrafa, Romanian 5 July; the companion of Quadratus of Corinth under Decius and Valerian, Romanian 10 March; and the bare «Sfantul Mucenic Ciprian» the calendar prints on 10 May with no life and no century (read 25 September 2026)',
+  'andrei andrew-9-july andrew-the-first-called':
+    'the bare «Sfantul Mucenic Andrei» the Romanian calendar prints on 9 July, whose own page on doxologia.ro carries the name and nothing else, against the Apostle, the first called, whom the corpus keeps on the Romanian 30 June with the Synaxis of the Twelve. The source holds them apart itself -- a different rank and a different page -- and there is no life on the July one to read further (read 25 September 2026)',
   'procopie procopius-of-decapolis procopius-of-jerusalem procopius-the-martyr-25-june':
     'three men called Procopie, on three days: the great-martyr and soldier of Aelia, son of Theodosia, Romanian 8 July; the venerable confessor of the Decapolis, 27 February; and the bare «Sfantul Mucenic Procopie» of 25 June, whose page carries the day and no life (read 25 September 2026)',
   'teodosia theodosia-mother-of-procopius theodosia-of-tyre':

@@ -1,0 +1,63 @@
+{
+  "slug": "mitrophan-disciple-of-dionysius",
+  "display_name": "Mitrophan, disciple of Dionysius the Rhetor",
+  "names": [
+    {
+      "form": "Mitrofan Duhovnicul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 iulie, «Sfinții Cuvioși Dionisie Retorul și Mitrofan Duhovnicul», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "related": [
+    "dionysius-the-rhetor"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1606,
+      "latest": null,
+      "display": "after 1606",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Cuviosul Dionisie a adormit întru Domnul pe 6 octombrie 1606, iar ucenicul său, Sfântul Mitrofan, s-a mutat la cele veșnice la scurt timp după aceea.» The page gives his master's year and no year of his own, so the interval has no upper bound."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 iulie — «Sfinții Cuvioși Dionisie Retorul și Mitrofan Duhovnicul»",
+        "url": "https://doxologia.ro/9-iulie",
+        "year": 2026
+      },
+      "note": "The day's line names the two men, so the corpus keeps one folder for each; the joint page explains that the pair are honoured together on 9 iulie although Dionysius died on 6 octombrie."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

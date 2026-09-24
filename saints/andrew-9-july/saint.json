@@ -1,0 +1,50 @@
+{
+  "slug": "andrew-9-july",
+  "display_name": "Andrew (9 July)",
+  "names": [
+    {
+      "form": "Andrei",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 iulie, «Sfântul Mucenic Andrei», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 iulie — «Sfântul Mucenic Andrei»",
+        "url": "https://doxologia.ro/9-iulie",
+        "year": 2026
+      },
+      "note": "The page the calendar links under this name carries the name and nothing else — no life, no troparion, no year, no companions — so nothing identifies him with any other Andrew the corpus keeps."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

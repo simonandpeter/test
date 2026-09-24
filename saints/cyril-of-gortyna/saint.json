@@ -6,6 +6,11 @@
     {
       "form": "Кирилл Гортинский",
       "lang": "ru"
+    },
+    {
+      "form": "Chiril",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 iulie, «Sfântul Sfințit Mucenic Chiril», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 6 septembrie (checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 iulie — «Sfântul Sfințit Mucenic Chiril»",
+        "url": "https://doxologia.ro/9-iulie",
+        "year": 2026
+      },
+      "note": "doxologia.ro's life for this day is the life of a Cyril made «episcop al cetății Gortiniei, din insula Creta», a hieromartyr beheaded «în nouă zile ale lunii iulie» — this man, and not a second Cyril of Gortyna. The account differs from the one this folder was built on: doxologia puts him under Decius and the governor Lucius, gives him fifty years in the see and eighty-four years of age, where the Sretensky life has Diocletian and Maximian, the governor Agrippinus and ninety-five years. The two recensions are recorded side by side and neither is preferred. The Sretensky calendar already names 9 July as a second day of his, which is why the Romanian day is read as the same man's."
     },
     {
       "church": "greek",
