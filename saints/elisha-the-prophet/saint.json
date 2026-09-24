@@ -1,0 +1,49 @@
+{
+  "slug": "elisha-the-prophet",
+  "display_name": "Elisha",
+  "names": [
+    {
+      "form": "Elisei",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 iunie, «Sfântul Proroc Elisei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 14 iunie — «Sfântul Proroc Elisei»",
+        "url": "https://doxologia.ro/14-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 14 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

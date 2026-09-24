@@ -1,0 +1,70 @@
+{
+  "slug": "methodius-of-constantinople",
+  "display_name": "Methodius of Constantinople",
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Metodie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 iunie, «Sfântul Ierarh Metodie, Patriarhul Constantinopolului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 14 iunie — «Sfântul Ierarh Metodie, Patriarhul Constantinopolului»",
+        "url": "https://doxologia.ro/14-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 14 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Îndreptătorule al Ortodoxiei, învăţătorule al dreptei cinstiri de Dumnezeu şi al curaţiei şi luminătorule al lumii, podoaba călugărilor cea de Dumnezeu insuflată Sfinte Ierarhe Metodie, înţelepte, cu învăţăturile tale pe toţi i-ai luminat. Alăută duhovnicească, roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Metodie, Patriarhul Constantinopolului.",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-metodie-patriarhul-constantinopolului",
+        "year": 2026
+      },
+      "english": {
+        "text": "Guide of Orthodoxy, teacher of true worship and of purity, light of the world, God-inspired adornment of monks, O wise hierarch Methodius, by thy teachings thou hast enlightened all. O spiritual harp, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

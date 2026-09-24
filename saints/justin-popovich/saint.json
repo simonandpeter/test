@@ -1,0 +1,85 @@
+{
+  "slug": "justin-popovich",
+  "display_name": "Justin Popovich",
+  "office": "Archimandrite",
+  "names": [
+    {
+      "form": "Iustin Popovici",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 iunie, «Sfântul Iustin Popovici»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "theologian"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1894,
+      "latest": 1894,
+      "display": "1894",
+      "basis": "attested",
+      "note": "doxologia.ro: «Blagoie Popovici, ulterior călugărit cu numele Iustin, s-a născut în Vranie pe 6 aprilie 1894 (25 martie după calendarul vechi) în ziua Bunei Vestiri»."
+    },
+    "death": {
+      "earliest": 1979,
+      "latest": 1979,
+      "display": "1979",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Părinte Iustin, a plecat la cele veșnice în ziua în care s-a născut, ziua de Buna Vestire a anului 1979.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 14 iunie — «Sfântul Iustin Popovici»",
+        "url": "https://doxologia.ro/14-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 14 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026). Doxologia's life states that the Holy Synod of the Serbian Orthodox Church entered him in the diptychs of the saints on 29 April 2010 and that his commemoration is kept on 14 June (1 June old style), but no Serbian calendar was read for this row."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 4",
+      "text": "La Cuviosul dascăl și iscusit păstor, să alergăm noi toți în grabă cu dragoste și să-l chemăm rugându-l să ne scape acum din toate ispitele și eresuri vrăjmașe, să tămăduiască-n dar și cumplitele boale, că îndrăznire la Domnul dobândind, Iustin slăvitul, ajută pe toți degrab.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Iustin Popovici, «Glas 4» as the page heads it.",
+        "url": "https://doxologia.ro/troparul-sfantului-iustin-popovici",
+        "year": 2026
+      },
+      "english": {
+        "text": "To the venerable teacher and skilled shepherd let us all run in haste with love, and call upon him, entreating him to deliver us now from every temptation and from hostile heresies, and to heal freely our grievous sicknesses; for having gained boldness before the Lord, the glorious Justin helps all men speedily.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
