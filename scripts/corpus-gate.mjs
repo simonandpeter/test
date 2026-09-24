@@ -119,6 +119,10 @@ const READ_FOLDS = {
     'Athanasius the Athonite, Romanian 5 July, whose second `ro` form is Avramie because his own life gives that as his baptismal name, against the hieromartyr bishop of Arbela under Shapur II, Romanian 4 February (read 25 September 2026)',
   'ciprian cyprian-companion-of-quadratus cyprian-martyr-10-may cyprian-the-new-martyr':
     'three men called Ciprian, on three days: the hieromonk new-martyr of Kletzos in Agrafa, Romanian 5 July; the companion of Quadratus of Corinth under Decius and Valerian, Romanian 10 March; and the bare «Sfantul Mucenic Ciprian» the calendar prints on 10 May with no life and no century (read 25 September 2026)',
+  'iosif joseph-archbishop-of-thessalonica joseph-of-nea-moni joseph-the-hymnographer joseph-the-merciful':
+    'four men called Iosif, on four days: the archbishop of Thessalonica, Romanian 15 July, whose page carries the feast line and nothing else; one of the venerable fathers of Nea Moni on Chios, 20 May; the hymnographer, 4 April; and Joseph Naniescu, metropolitan of Moldavia, born in Bessarabia in 1818, 26 January (read 25 September 2026)',
+  'vladimir vladimir-metropolitan-of-kiev vladimir-the-great':
+    'the prince of Kyiv, equal-to-the-apostles, Romanian 15 July, against the metropolitan of Kiev, Romanian 25 January, whose page carries one line and no life (read 25 September 2026)',
   'achila aquila aquila-of-trebizond':
     'the apostle of the Seventy, the tent-maker of Pontus and husband of Priscilla, kept on the Romanian 13 February with a note for his second day of 14 July, against one of four men the calendar keeps together on 21 January under one passion (read 25 September 2026)',
   'iust justus-1-june justus-the-soldier':

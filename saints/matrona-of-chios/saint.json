@@ -1,0 +1,84 @@
+{
+  "slug": "matrona-of-chios",
+  "display_name": "Matrona of Chios",
+  "names": [
+    {
+      "form": "Matrona din Chios",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 iulie, «Sfânta Cuvioasă Matrona din Chios», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfânta Matrona s-a născut prin secolul al XIV-lea, în satul Volissos din Chios»."
+    },
+    "death": {
+      "earliest": null,
+      "latest": 1455,
+      "display": "before 1455",
+      "basis": "traditional",
+      "note": "doxologia.ro: her akathist «a fost găsit într-un codice din anul 1455, unde se consemnează că sfânta a murit înainte de această dată». The page gives no year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 7,
+        "calendar": "revised-julian",
+        "note": "Doxologia keeps her twice: its calendar prints her on 15 iulie and again on 20 octombrie — «Sfânta Cuvioasă Matrona din Chios». One attestation row per church is the schema, so the row is the day this folder was read from and the second day is recorded here. Both days link the same doxologia page, which says she is kept on 20 octombrie and on 15 iulie, the day her head was found; 15 iulie is the day this folder was read from. Read 25 September 2026."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 15 iulie — «Sfânta Cuvioasă Matrona din Chios»",
+        "url": "https://doxologia.ro/15-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Urmând în pașii lui Hristos, ai renunțat la plăcerile lumii, Cuvioasă, și în trup ai imitat viața îngerilor. Prin urmare, ai umplut Chiosul, insula ta natală, de bucurie și de darurile dăruite de Sfântul Duh, Prea-lăudată fecioară. Prin urmare, strigăm cu bucurie: „Bucură-te, Prea-binecuvântată Matrona.”",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintei Cuvioase Matrona» — the page prints no glas.",
+        "url": "https://doxologia.ro/toparul-sfintei-cuvioase-matrona",
+        "year": 2026
+      },
+      "english": {
+        "text": "Following in the steps of Christ you gave up the pleasures of the world, venerable one, and in the body you imitated the life of the angels. And so you filled Chios, the island of your birth, with joy and with the gifts of the Holy Spirit, all-praised virgin. And so we cry out with joy: Rejoice, most blessed Matrona.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

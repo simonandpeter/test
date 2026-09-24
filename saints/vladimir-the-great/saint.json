@@ -1,0 +1,78 @@
+{
+  "slug": "vladimir-the-great",
+  "display_name": "Vladimir the Great",
+  "office": "Prince",
+  "names": [
+    {
+      "form": "Vladimir",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 iulie, «Sfântul Vladimir, Luminătorul Rusiei», with the rank word and the epithet left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "equal-to-the-apostles",
+    "prince"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1015,
+      "latest": 1015,
+      "display": "1015",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «iar de la întruparea lui Dumnezeu Cuvântul, 1015». The same page reckons thirty-five years of his rule at Kiev, eight before his baptism and twenty-seven and some months after it, his death falling in the twenty-eighth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 15 iulie — «Sfântul Vladimir, Luminătorul Rusiei»",
+        "url": "https://doxologia.ro/15-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Asemănatu-te-ai neguțătorului care căuta piatra cea scumpă, slăvite, puternice Vladimire, șezând pe scaun înalt în maica cetăților, de Dumnezeu păzitul Kiev, ispitind și trimițând către Țarigrad, ca să știi pentru drept măritoarea credință. Și ai aflat pe Hristos, piatra cea fără de preț, Care te-a ales ca pe un al doilea Pavel și a scuturat în sfântă scăldătoare orbirea cea sufletească împreună cu cea trupească. Pentru aceea, săvârșind pomenirea împreună cu tot poporul, roagă-te să se mântuiască mulțimea credincioșilor.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Vladimir, Luminătorul Rusiei», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-vladimir-luminatorul-rusiei",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were like the merchant who sought the precious stone, glorious and mighty Vladimir, seated on a high throne in the mother of cities, Kiev which God guards, searching and sending to Constantinople to learn the right-believing faith. And you found Christ, the stone beyond price, who chose you as a second Paul and shook off in the holy font the blindness of your soul together with the blindness of your body. Therefore, as we keep your memory with all the people, pray that the multitude of the faithful may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
