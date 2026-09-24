@@ -1,0 +1,59 @@
+{
+  "slug": "aristocleus-of-tamassos",
+  "display_name": "Aristocleus of Tamassos",
+  "names": [
+    {
+      "form": "Aristocleu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 iunie, «Sfântul Mucenic Aristocleu, preotul»; the form is the bare name, the rest of the line being rank and office."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 285,
+      "latest": 305,
+      "display": "285–305",
+      "basis": "traditional",
+      "note": "doxologia.ro's life places his death in the persecution it dates «împăratului Maximian Galeriu (285-305)»; the interval is the reign the page prints, no closer year being given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 23 iunie — «Sfântul Mucenic Aristocleu, preotul»",
+        "url": "https://doxologia.ro/23-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 23 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
