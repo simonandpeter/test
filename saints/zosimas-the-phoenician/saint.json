@@ -1,0 +1,60 @@
+{
+  "slug": "zosimas-the-phoenician",
+  "display_name": "Zosimas the Phoenician",
+  "names": [
+    {
+      "form": "Zosima Fenicianul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 iunie, «Sfântul Cuvios Zosima Fenicianul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 351,
+      "latest": 400,
+      "display": "late 4th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Ziua de 10 iunie aminteşte despre Sfântul Cuvios Zosima, un monah care a trăit la sfârşit de secol IV. Născut în Fenicia, nu departe de cetatea Tir, a intrat de tânăr în viața monahicească.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 iunie — «Sfântul Cuvios Zosima Fenicianul»",
+        "url": "https://doxologia.ro/10-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

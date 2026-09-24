@@ -1,0 +1,54 @@
+{
+  "slug": "theophanes-of-antioch",
+  "display_name": "Theophanes of Antioch",
+  "names": [
+    {
+      "form": "Teofan",
+      "lang": "ro",
+      "note": "His own name, read out of doxologia.ro's line for 10 iunie, «Sfinții Cuvioși Teofan și Pansemnia din Antiohia», which names two people."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "hermit"
+  ],
+  "related": [
+    "pansemne-of-antioch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 iunie — «Sfinții Cuvioși Teofan și Pansemnia din Antiohia»",
+        "url": "https://doxologia.ro/10-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

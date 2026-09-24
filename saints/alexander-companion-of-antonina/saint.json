@@ -1,0 +1,71 @@
+{
+  "slug": "alexander-companion-of-antonina",
+  "display_name": "Alexander, companion of Antonina",
+  "names": [
+    {
+      "form": "Alexandru",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 iunie, «Sfântul Mucenic Alexandru»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "related": [
+    "antonina-of-crodamna"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 iunie — «Sfântul Mucenic Alexandru»",
+        "url": "https://doxologia.ro/10-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfințit Mucenic Timotei, Episcopul Prusei, al Sfinților Mucenici Alexandru și Antonina, Glasul 4 (one troparion printed for the martyrs of the day together)",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-timotei-episcopul-prusei-al-sfintilor-mucenici-alexandru",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their struggles received from thee, our God, the crowns of incorruption; for having thy strength they overthrew the tormentors and broke the powerless insolence of the demons. By their prayers save our souls, O Christ God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

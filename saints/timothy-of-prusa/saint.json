@@ -1,0 +1,52 @@
+{
+  "slug": "timothy-of-prusa",
+  "display_name": "Timothy of Prusa",
+  "names": [
+    {
+      "form": "Timotei",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 iunie, «Sfântul Sfințit Mucenic Timotei, Episcopul Prusei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop",
+    "wonderworker"
+  ],
+  "office": "Bishop",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 iunie — «Sfântul Sfințit Mucenic Timotei, Episcopul Prusei»",
+        "url": "https://doxologia.ro/10-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
