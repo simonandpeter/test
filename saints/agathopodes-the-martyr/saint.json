@@ -1,0 +1,71 @@
+{
+  "slug": "agathopodes-the-martyr",
+  "display_name": "Agathopodes",
+  "names": [
+    {
+      "form": "Agatopod",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 aprilie, «Sfântul Mucenic Agatopod»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "deacon"
+  ],
+  "related": [
+    "theodulus-companion-of-agathopodes"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 aprilie — «Sfântul Mucenic Agatopod»",
+        "url": "https://doxologia.ro/5-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Mucenici Teodul şi Agatopod, Glasul 4 (the page's «nesctricăciunii» is the reading printed there)",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-teodul-agatopod",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contest received incorruptible crowns from thee, our God; for having thy strength they overcame the tormentors, and they broke also the feeble insolence of the demons. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

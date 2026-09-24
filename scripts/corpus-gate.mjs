@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'teodul theodulus-companion-of-agathopodes theodulus-of-the-forty-martyrs theodulus-of-tripoli':
+    'three men called Teodul, on three days: the young reader of Thessalonica who drowned with the deacon Agathopodes under Diocletian, Romanian 5 April; one of the Forty frozen at Sebaste, Romanian 9 March; and the tribune’s friend converted at Tripoli in Phoenicia beside Leontius, Romanian 18 June (read 25 September 2026)',
   'inochentie innocent-of-apollonia innocent-of-moscow':
     'one of the three martyrs of Apollonia, Romanian 17 June, against the metropolitan of Moscow and Kolomna, Russian 23 September, Romanian 31 March, Greek 6 October (read 25 September 2026)',
   'manuil manuel-of-persia maximus-of-kapsokalyvia':
