@@ -1,0 +1,67 @@
+{
+  "slug": "arsenios-of-paros",
+  "display_name": "Arsenios of Paros",
+  "names": [
+    {
+      "form": "Arsenie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 31 ianuarie, «Sfântul Cuvios Arsenie din Paros»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1800,
+      "latest": 1800,
+      "display": "1800",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Sfântul Arsenie s-a născut pe 31 ianuarie 1800 în Ioánnina, Epir din părinţi ortodocşi evlavioşi»."
+    },
+    "death": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "1877",
+      "basis": "attested",
+      "note": "doxologia.ro's life: «Pe 31 ianuarie 1877, Sfântul Arsenie a primit Sfânta Împărtăşanie pentru ultima oară şi a adormit în Domnul în mănăstirea Schimbării la Faţă a lui Hristos din Páros»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 31 ianuarie — «Sfântul Cuvios Arsenie din Paros»",
+        "url": "https://doxologia.ro/31-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 31 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

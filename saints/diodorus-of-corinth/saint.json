@@ -1,0 +1,66 @@
+{
+  "slug": "diodorus-of-corinth",
+  "display_name": "Diodorus of Corinth",
+  "names": [
+    {
+      "form": "Diodor",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 31 ianuarie, «Sfântul Mucenic Diodor»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "victorinus-of-corinth",
+    "victor-of-corinth",
+    "nicephorus-of-corinth",
+    "claudius-of-corinth",
+    "serapion-of-corinth",
+    "papias-of-corinth"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «au fost prinşi, pentru mărturisirea lui Hristos, în vremea împăratului Deciu, în anul 250»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 31 ianuarie — «Sfântul Mucenic Diodor»",
+        "url": "https://doxologia.ro/31-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 31 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

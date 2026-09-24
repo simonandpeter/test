@@ -1,0 +1,49 @@
+{
+  "slug": "tryphaena-of-cyzicus",
+  "display_name": "Tryphaena of Cyzicus",
+  "names": [
+    {
+      "form": "Trifena",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 31 ianuarie, «Sfânta Muceniţă Trifena»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 31 ianuarie — «Sfânta Muceniţă Trifena»",
+        "url": "https://doxologia.ro/31-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 31 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

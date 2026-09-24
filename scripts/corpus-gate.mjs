@@ -125,12 +125,16 @@ const READ_FOLDS = {
     'the second of Babylas of Sicily’s two disciples, Romanian 24 January, against the apostle and first bishop of Ephesus clubbed to death at the Catagogion, Romanian 22 January. A third Timothy, of Gaza, is kept on 19 August (read 19 September 2026)',
   'david david-of-georgia david-the-builder':
     'the prince of Argveti drowned in the Rioni with his brother Constantine in 740, Romanian 2 October, against the king of Georgia who rebuilt the country after the Seljuks and died in 1125, Romanian 26 January. Four centuries apart (read 19 September 2026)',
-  'ioan john-son-of-xenophon john-the-theologian':
-    'the elder of Xenophon’s two sons, wrecked on the way back to Berytus and found again years later as a monk in Palestine, Romanian 26 January, against the apostle and evangelist. Doxologia’s line for him is the bare «Sfântul Cuvios Ioan», which is the whole of the resemblance (read 19 September 2026)',
+  'ioan john-of-edessa john-son-of-xenophon john-the-theologian':
+    'three men called Ioan and nothing else shared: the soldier of Edessa who left the army under Diocletian and suffered at Alexandria with Cyrus, Romanian 31 January; the elder of Xenophon’s two sons, Romanian 26 January; and the apostle and evangelist (read 19 September 2026)',
   'maria maria-of-gatchina mary-wife-of-xenophon':
     'the nun of Gatchina, paralysed, taken from her bed by the Cheka and dead in prison about 1930, against the wife of the nobleman Xenophon of Constantinople, who took the habit at Jerusalem with her husband and whose years doxologia gives not at all. Both fall on the Romanian 26 January, so the date scan cannot part them and the reading has to (read 19 September 2026)',
   'iacob jacob-the-hermit james-of-nisibis james-of-samosata':
     'three men called Iacob and nothing else shared: the hermit of the Romanian 28 January, fifteen years in a cave and then a murder and the rest of his life in a tomb; the bishop of Nisibis who fasted on the mountains, 13 January; and one of the seven of Samosata hung up with iron nails driven through their heads, Romanian 29 January, whose page gives no year and no emperor (read 19 September 2026)',
+  'arsenie arsenios-of-paros arsenius-of-corfu':
+    'the schoolmaster of Paros, born at Ioannina in 1800 and reposed on Paros in 1877, Romanian 31 January, against the archbishop of Corfu who died in 953 and is kept on the Romanian 19 January. Nine centuries (read 19 September 2026)',
+  'victor victor-of-corinth victor-presbyter-martyr-1918':
+    'one of the seven of Corinth whose page doxologia prints under each of their names, Romanian 31 January, against the Russian priest killed in 1918. The forename is all (read 19 September 2026)',
   'clement clement-apostle-of-sardis clement-of-ancyra':
     'one of the Seventy, kept on 10 September by the Russian, Greek and Serbian, against the bishop of Ancyra the Romanian keeps on 23 January — twenty-eight years of torments and a death at the altar. Two men (read 19 September 2026)',
   'teoctist theoctistus-of-kucumia theoctistus-the-martyr':
@@ -341,7 +345,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '127'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '138'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

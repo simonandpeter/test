@@ -1,0 +1,99 @@
+{
+  "slug": "cyrus-of-alexandria",
+  "display_name": "Cyrus of Alexandria",
+  "names": [
+    {
+      "form": "Chir",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 31 ianuarie, «Sfântul Doctor fără de arginţi, făcătorul de minuni, Chir»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "unmercenary",
+    "physician",
+    "monk",
+    "martyr"
+  ],
+  "related": [
+    "john-of-edessa"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian (284–305)",
+      "basis": "traditional",
+      "note": "The life gives the day and not the year: the beheading was «în 31 de zile ale lunii ianuarie», in the persecution the page dates by the reign, «Diocleţian (284-305)». The interval is that reign."
+    }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 5",
+      "text": "Sălăşluindu-se darul Treimii în inimile voastre cele curate, Preafericiţilor Chir şi Ioan, v-aţi arătat înfricoşători izgonitori ai duhurilor celor necurate; şi aţi fost tămăduitori ai neputinţelor, nu numai ai celor descoperite, ci şi ai celor ascunse. Drept aceea, îndrăzneală având către Dumnezeu Cel Iubitor de oameni, prin rugăciunile voastre, cele neîncetate, tămăduiţi patimile noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Mucenici doctori fără de arginţi Chir şi Ioan şi al celor împreună cu dânşii, Glasul 5",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-doctori-fara-de-arginti-chir-ioan-al-celor-impreuna-cu-dansii",
+        "year": 2026
+      },
+      "english": {
+        "text": "The grace of the Trinity taking up its dwelling in your pure hearts, most blessed Cyrus and John, ye were shown to be terrible drivers-out of unclean spirits, and ye healed infirmities, not the open ones only but the hidden as well. Wherefore, having boldness before God who loves mankind, heal our passions by your unceasing prayers.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "model": "Fecioara astăzi...",
+      "text": "Din Dumnezeiescul har primind, sfinţilor, dar de minuni, faceţi minuni neîncetat, tăind toate patimile noastre cu meşteşugul tămăduitor cel nevăzut, de Dumnezeu Înţelepţite Chir, cu Sfântul Ioan cel pururea mărit. Că voi sunteţi Dumnezeieşti doctori.",
+      "source": {
+        "text": "Doxologia — Condacul Sfinţilor Mucenici doctori fără de arginţi Chir şi Ioan şi al celor împreună cu dânşii, Glasul 3, «Fecioara astăzi...»",
+        "url": "https://doxologia.ro/condacul-sfintilor-mucenici-doctori-fara-de-arginti-chir-ioan-al-celor-impreuna-cu-dansii",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received from the divine grace, O saints, the gift of wonders, ye work wonders unceasingly, cutting away all our passions by the unseen healing art, O Cyrus made wise by God, with Saint John the ever-glorified. For ye are physicians of God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 31 ianuarie — «Sfântul Doctor fără de arginţi, făcătorul de minuni, Chir»",
+        "url": "https://doxologia.ro/31-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 31 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

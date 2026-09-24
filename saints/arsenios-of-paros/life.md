@@ -1,0 +1,17 @@
+# Arsenios of Paros
+
+Arsenios was born on 31 January 1800 at Ioannina in Epirus, of pious Orthodox parents, and was given the name Athanasius at his baptism. He was left an orphan while still small. At nine he went to Kydonia in Asia Minor and was received into the school of the hieromonk Gregory Sarafis, where his humility and his piety made him loved by Gregory and by the other teachers; he stayed five years and outran the other pupils in learning and in virtue.
+
+The elder Daniel of Zagora in Thessaly came to the school one day to hear the pupils' confessions, and Athanasius became his disciple and stayed with him until Daniel's death. When Daniel decided to go to Athos for stillness, the boy begged not to be left behind. Daniel led him into the monastic life, tonsured him, and told him he had three virtues to work at: to cut off his own will, to gain humility, and to learn perfect obedience; and that if he did those three, God would bring him on in the rest.
+
+After a time of trial he was counted worthy of the great and angelic schema and took the name Arsenios. The two stayed six years on the Holy Mountain and then had to leave it because of the Kollyvades dispute — which had troubled Athos since 1754 over memorial services kept on Sunday instead of Saturday, and behind that over two tendencies, one for adapting the Church's institutions to contemporary life and one, the Kollyvades', against it. The page says they left because of scandals raised by unlearned monks who blamed Arsenios for frequent communion.
+
+Early in 1821, before the Greek war of independence, they went for a short while to the monastery of Penteli near Athens, and then made their way to the Cyclades, stopping first where some of the Kollyvades had settled and deciding at last to live on Folegandros. The islanders, knowing his education, asked Daniel to bless his disciple to teach their children; the elder agreed, Arsenios was ordained deacon by the metropolitan of Thera, and the government appointed him a teacher. He taught from 1829 until 1840, and, the page says, helped his pupils to form a good character and to become pious Christians.
+
+He became a brother of the monastery of Saint George, was ordained priest at forty-seven and made abbot. After his ordination he pressed his ascetic labours harder, studying the Scripture and the Fathers daily, gaining unceasing prayer of the heart and the gift of tears, and following his patron Arsenius the Great. Monks and lay people came from all over Greece to confess to him, for his discernment.
+
+He foresaw his end a month ahead. At the liturgy on Saint Basil's feast he told the nuns of the monastery and his disciples that he would soon be leaving them; with great difficulty he served on Theophany, and told one of the nuns afterwards that it had been his last liturgy. On 31 January 1877 he received communion for the last time and fell asleep in the monastery of the Transfiguration of Christ on Paros, and for three days people came to kiss his body and take leave of their guide.
+
+He was canonised by the Patriarchate of Constantinople in 1967, and is commemorated on 31 January and on 18 August, the day his relics were found. They lie in the great church of the monastery of the Transfiguration on Paros, and a portion of them in the katholikon of the monastery of Dionysiou on Athos.
+
+*After doxologia.ro's calendar for 31 ianuarie — [the day](https://doxologia.ro/31-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-arsenie-din-paros); read 19 September 2026.*
