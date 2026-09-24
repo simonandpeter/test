@@ -1,0 +1,80 @@
+{
+  "slug": "felicitas-of-carthage",
+  "display_name": "Felicitas of Carthage",
+  "names": [
+    {
+      "form": "Felicitas",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 februarie, «Sfânta Muceniță Felicitas»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "perpetua-of-carthage"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 203,
+      "latest": 203,
+      "display": "203",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: the procurator Hilarianus condemned them to the beasts «în ziua de naştere a cezarului, (Geta, fiul împăratului Septimiu Sever), care corespunde datei de şapte martie anul 203»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 3",
+      "text": "Să cinstim pe Sfinții mucenici: pe Perpetua și Saturnin, dimpreună cu Secund și Felicitas, ce al lor sânge l-au vărsat pentru Domnul ca și slăviții Revocat și Satirie. Drept aceea mijlocesc pentru noi toți mare milă de la Dumnezeu.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintelor Mucenițe Perpetua și Felicitas, Glas 3",
+        "url": "https://doxologia.ro/troparul-sfintelor-mucenite-perpetua-felicitas",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour the holy martyrs: Perpetua and Saturninus, together with Secundus and Felicitas, who poured out their blood for the Lord, and the glorious Revocatus and Saturus with them. Therefore do they intercede for us all, for great mercy from God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 februarie — «Sfânta Muceniță Felicitas»",
+        "url": "https://doxologia.ro/1-februarie",
+        "year": 2026
+      },
+      "note": "The day prints her and Perpetua as two separate lines, over one and the same life and one troparion, which names six martyrs."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

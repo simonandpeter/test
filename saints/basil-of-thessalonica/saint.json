@@ -1,0 +1,52 @@
+{
+  "slug": "basil-of-thessalonica",
+  "display_name": "Basil of Thessalonica",
+  "office": "Bishop of Thessalonica",
+  "names": [
+    {
+      "form": "Vasile",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 februarie, «Sfântul Vasile, Episcopul Tesalonicului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 februarie — «Sfântul Vasile, Episcopul Tesalonicului»",
+        "url": "https://doxologia.ro/1-februarie",
+        "year": 2026
+      },
+      "note": "The life the site prints ends «Pomenirea lui se face pe 1 februarie.» The site prints no troparion for him."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

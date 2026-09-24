@@ -1,0 +1,60 @@
+{
+  "slug": "peter-of-galatia",
+  "display_name": "Peter of Galatia",
+  "names": [
+    {
+      "form": "Petru din Galatia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 februarie, «Sfântul Petru din Galatia»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "ascetic",
+    "wonderworker"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 429,
+      "latest": 429,
+      "display": "429",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «După nouăzeci și nouă de ani petrecuți în rugăciune și evlavie, Sfântul Petru și-a predat sufletul lui Dumnezeu … în anul 429.» The same page opens: «Sfântul Petru a trăit în secolele IV-V, în regiunea Galatia din Asia Mică.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 februarie — «Sfântul Petru din Galatia»",
+        "url": "https://doxologia.ro/1-februarie",
+        "year": 2026
+      },
+      "note": "The site prints no troparion for him."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

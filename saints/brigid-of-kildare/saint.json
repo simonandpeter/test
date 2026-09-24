@@ -1,0 +1,67 @@
+{
+  "slug": "brigid-of-kildare",
+  "display_name": "Brigid of Kildare",
+  "names": [
+    {
+      "form": "Bridgit",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 februarie, «Sfânta Bridgit, ocrotitoarea Irlandei». The life on the same site also spells her Brigid."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "monastic",
+    "wonderworker"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 450,
+      "latest": 450,
+      "display": "c. 450",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Sfânta Bridgit s-a născut în jurul anului 450 în Faughart, la aproximativ două mile distanță de Dundalk, în comitatul Louth, Irlanda.» The page says “around the year 450”, not 450."
+    },
+    "death": {
+      "earliest": 523,
+      "latest": 523,
+      "display": "523",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «Sfânta Brigid a adormit în Domnul în anul 523 după ce a primit Sfânta Împărtășanie de la Sfântul Ninnidh din Inismacsaint (18 ianuarie).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 februarie — «Sfânta Bridgit, ocrotitoarea Irlandei»",
+        "url": "https://doxologia.ro/1-februarie",
+        "year": 2026
+      },
+      "note": "The site prints no troparion for her."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Φεβρουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

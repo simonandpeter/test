@@ -1,0 +1,7 @@
+# Basil of Thessalonica
+
+Basil came from Athens. In 875 he was tonsured a monk by the venerable Euthymius the New, whose disciple he was, and the service sung for him puts it so: "By thy teachings, God-inspired and flowing with honey, thou hast drawn us also to thee, and like an Orpheus hast made us thy followers." Euthymius foretold beforehand that he would be chosen a hierarch. The page prints a year, 904, in brackets at that point, without saying what it dates.
+
+He is said to have founded and renewed the monastery dedicated to the name of the Holy Ascension, known as the monastery of Saint Basil, which stands near Hilandar and depends on it. At the beginning of the tenth century he was consecrated Bishop of Thessalonica. He is known chiefly from the life of Euthymius, his spiritual father, which he himself wrote, and for that reason he is also called a writer of synaxaria and a confessor; he tells with much subtlety the labours of his elder, which as far as he was able he imitated. His service was composed by the monk Gerasimos Mikragiannanitis, and his memory is kept on 1 February.
+
+*After doxologia.ro's calendar for 1 februarie — [the day](https://doxologia.ro/1-februarie) and [the life](https://doxologia.ro/viata-sfantului-vasile-episcopul-tesalonicului), which the site prints from Moise Aghioritul, Sfinţii Sfântului Munte (Editura Mygdonia, Karyes, Mount Athos, 2008), p. 135; read 19 September 2026.*

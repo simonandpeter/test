@@ -789,6 +789,7 @@ export const sr = {
     'Bishop of Starodub': 'Епископ стародупски',
     'Bishop of Tamasos': 'Епископ тамаски',
     'Bishop of Tarsus': 'Епископ тарски',
+    'Bishop of Thessalonica': 'Епископ солунски',
     'Bishop of Tobolsk': 'Епископ тоболски',
     'Bishop of Tomis': 'Епископ Томиса',
     'Bishop of Trebia': 'Епископ требијски',

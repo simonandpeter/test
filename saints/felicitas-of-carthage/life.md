@@ -1,0 +1,9 @@
+# Felicitas of Carthage
+
+Felicitas was the slave of [Perpetua](/saints/perpetua-of-carthage), the Roman matron of Thuburbo Minus, and was arrested with her early in 203, when the movement of the fanatics against the Christians was growing at Carthage after the emperor Septimius Severus had forbidden Christian proselytism. She was a catechumen like the rest of them, and with her were taken Saturninus, Secundulus and the slave Revocatus; their catechist Saturus gave himself up to the authorities later. Their names are kept also on the tombstone found in 1907 by the French archaeologist Delattre in the Basilica majorum at Carthage.
+
+They were sent from Thuburbo to Carthage and shut in a dark prison, where the deacons Tertius and Pomponius paid to have their condition eased; and there, before the procurator Hilarianus, all of them refused to deny Christ and were sentenced to the beasts on the Caesar's birthday, the seventh of March in the year 203. Felicitas was pregnant, and Roman justice forbade the execution of a pregnant woman. In the eighth month, and in very hard conditions, she gave birth in the prison to a little girl, whom a Christian sister took away to raise; and so she was able to suffer with the others.
+
+On the day itself, in the amphitheatre of Carthage before a crowded house, Saturninus and Revocatus were set upon by a leopard and a bear, Saturus by a leopard, and Felicitas and Perpetua by a wild cow. After the beasts the martyrs were led into the middle of the amphitheatre and beheaded. Over their graves a great basilica, the Basilica majorum, was afterwards raised.
+
+*After doxologia.ro's calendar for 1 februarie — [the day](https://doxologia.ro/1-februarie) and [the life](https://doxologia.ro/viata-sfintei-mucenite-felicitas); read 19 September 2026.*
