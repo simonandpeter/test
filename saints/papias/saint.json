@@ -1,0 +1,58 @@
+{
+  "slug": "papias",
+  "display_name": "Papias",
+  "names": [
+    {
+      "form": "Papias",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 iunie, «Sfântul Mucenic Papias»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Născut în secolul al IV-lea, pe vremea împăratului Dioclețian, Sfântul Mucenic Papias a moștenit iubirea pentru Dumnezeu». The page gives no year of his death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 iunie — «Sfântul Mucenic Papias»",
+        "url": "https://doxologia.ro/28-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
