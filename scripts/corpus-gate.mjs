@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'aedesius amphianus brother aedesius-brother-of-amphianus amphianus-brother-of-aedesius':
+    'two brothers of Lycia, each named in doxologia’s 2 aprilie as the other’s brother, so the fold is the key sorting their two names into one. both were drowned in the sea after torture, Amphianus with a stone tied to him and Aedesius after striking a judge in the face, and the calendar keeps them on the one day (read 25 September 2026)',
   'vlasie blaise-of-amorion blaise-of-sebaste':
     'the monk of Amorion, born Basil at Aplatiani and gone to Constantinople at the beginning of the ninth century, Romanian 31 March, against the bishop of Sebaste of the persecutions, Romanian 11 February. Five centuries and two lives with nothing in common but the name (read 25 September 2026)',
   'ipatie hypatius-of-chalcedon hypatius-of-gangra':

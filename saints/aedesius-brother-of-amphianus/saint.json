@@ -1,0 +1,52 @@
+{
+  "slug": "aedesius-brother-of-amphianus",
+  "display_name": "Aedesius, brother of Amphianus",
+  "names": [
+    {
+      "form": "Edesie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 aprilie, «Sfântul Mucenic Edesie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "amphianus-brother-of-aedesius"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 aprilie — «Sfântul Mucenic Edesie»",
+        "url": "https://doxologia.ro/2-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

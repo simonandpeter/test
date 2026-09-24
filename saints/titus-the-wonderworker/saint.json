@@ -1,0 +1,70 @@
+{
+  "slug": "titus-the-wonderworker",
+  "display_name": "Titus the Wonderworker",
+  "names": [
+    {
+      "form": "Tit",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 aprilie, «Sfântul Cuvios Tit, făcătorul de minuni»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 aprilie — «Sfântul Cuvios Tit, făcătorul de minuni»",
+        "url": "https://doxologia.ro/2-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Απριλίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Tit, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Tit, făcătorul de minuni, Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-tit-facatorul-de-minuni",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with miracles, O Titus our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
