@@ -1,0 +1,69 @@
+{
+  "slug": "basil-of-ancyra",
+  "display_name": "Basil of Ancyra",
+  "office": "Presbyter of Ancyra",
+  "names": [
+    {
+      "form": "Vasile",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 martie, «Sfântul Sfințit Mucenic Vasile, preotul din Ancira»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 22 martie — «Sfântul Sfințit Mucenic Vasile, preotul din Ancira»",
+        "url": "https://doxologia.ro/22-martie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Μαρτίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor Apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge, Sfinţite Mucenice Vasile, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfinţit Mucenic Vasile, preotul din Ancira",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-vasile-preotul-din-ancira",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharing in the ways of the Apostles and succeeding to their thrones, thou didst find in action, O God-inspired one, a path to the vision of the things on high. Therefore, rightly teaching the word of truth and enduring in faith even unto blood, O hieromartyr Basil, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

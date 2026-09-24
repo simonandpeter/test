@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'vasile basil-of-ancyra basil-of-thessalonica basil-the-confessor':
+    'three men called Vasile and nothing else shared: the presbyter of Ancyra in Galatia, tormented under Julian the Apostate, Romanian 22 March; the bishop of Thessalonica, Romanian 1 February; and the monk who stood against Leo the Isaurian in the war on the icons and died a confessor, Romanian 28 February. Three cities, three centuries, three days (read 25 September 2026)',
+  'eftimie euthymius-of-dimitsana euthymius-of-vatopedi':
+    'the new martyr born Eleutherius at Dimitsana in the Peloponnese, schooled there and at the Patriarchal Academy and at Iași, Romanian 22 March, against the venerable-martyr of Vatopedi killed with twelve of his brethren, Romanian 4 January, whose page carries no life and no year. A new martyr of the Turkish centuries against a company on Athos (read 25 September 2026)',
   'bassus companion eusebius bassus-companion-of-eusebius eusebius-companion-of-bassus':
     'two men, each named in the calendar as the other’s companion, so the fold is the key sorting their two names into one — doxologia’s 20 January prints both and its life has them die together (read 19 September 2026)',
   'valerian valerian-of-tomis valerian-of-trebizond':
