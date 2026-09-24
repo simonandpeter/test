@@ -1,0 +1,59 @@
+{
+  "slug": "xenophon-the-founder",
+  "display_name": "Xenophon the Founder",
+  "names": [
+    {
+      "form": "Xenofon Ctitorul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 aprilie, «Cuviosul Xenofon Ctitorul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1018,
+      "latest": 1018,
+      "display": "1018",
+      "basis": "traditional",
+      "note": "doxologia.ro, Viața Cuviosului Xenofon Ctitorul (sec. X-XI): «Aproape de sfârșitul vieții lui a renunțat la stăreție pentru fratele lui Teodor, ca să se liniștească până la fericitul lui sfârșit. (1018)»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 aprilie — «Cuviosul Xenofon Ctitorul»",
+        "url": "https://doxologia.ro/24-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Απριλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

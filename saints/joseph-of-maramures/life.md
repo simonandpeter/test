@@ -1,0 +1,11 @@
+# Joseph of Maramureș
+
+Joseph was born in a village in the parts of Năsăud, of a family the life calls enlightened and clean of soul and firmly rooted in the Orthodox faith. He got his learning from the priests of the villages and from the monks of the monasteries and sketes of Maramureș, to which he was drawn from childhood. After serving as a priest he was chosen bishop, in 1690, at a hard time for the Romanians of the Maramureș country.
+
+He was consecrated in Moldavia, for the country of Maramureș, by the great metropolitan Dosoftei, and received with the gift of the episcopate the charge to keep watch over the defence of the right faith there — in a place so worked on by the enemies of Orthodoxy that Romanian bishops could seldom hold their throne more than two or three years before they had to take the road into exile. He had his residence first at the monastery of Saint Michael at Peri; when that ceased to exist he moved near the fortress of Hust, and towards the end of his pastorate he stayed in turn at the monasteries of Giulești and Budești.
+
+The documents of the time, the life says, show him a tireless shepherd, careful for his flock and a stubborn defender of the right faith at a time when the enemies of Orthodoxy had managed to break the religious and spiritual unity of the Transylvanian Romanians and were pressing hard to draw the Romanians of Maramureș away too. He was put in prison again, without trial, this time in the fortress of Hust, and his people protested against the high-handedness and asked insistently that their chief shepherd be released. He was set free at the end of 1705, but was not allowed to stand at the head of his flock.
+
+He came back to the episcopal throne of Maramureș in 1711, and a short time afterwards, worn down by what he had endured, passed to eternity with a clear conscience that he had confessed and served the ancestral Law to the end of his days. No Romanian of Maramureș took part in the religious division of the Transylvanian Romanians in 1700, and the life credits that in part to him. The page gives no year for his birth and none for his death.
+
+*After doxologia.ro's calendar for 24 aprilie — [the day](https://doxologia.ro/24-aprilie) and [the life](https://doxologia.ro/viata-sfantului-ierarh-iosif-marturisitorul-din-maramures); read 24 September 2026.*

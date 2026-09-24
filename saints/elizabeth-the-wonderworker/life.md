@@ -1,0 +1,11 @@
+# Elizabeth the Wonderworker
+
+Elizabeth was chosen for the service of Christ from her mother's womb, the life says: her birth was announced to her mother by a divine revelation, which told her beforehand that the child she would bear was to be a chosen vessel of the Holy Spirit. From childhood she gave herself to the service of God and became a bride of Christ, and she lived in the angelic order, in the company of virgins — that is, of nuns — wearing her body down with fasting and with labour. She was given the gift of healing sickness, and not the body's only.
+
+Bodily illnesses she healed by prayer; human souls she healed with words and with counsels breathed into her by God, leading them towards repentance and towards every good work. Her clothing was a single rough hair garment and her body was numb with cold, but her spirit burned always with the flame of the love of God. Set as abbess over the sisters, she showed great diligence and cared for their salvation.
+
+Her abstinence was without measure. For many years she ate no bread but lived on greens and vegetables, and she never tasted oil or wine in the whole of her life. Many times she kept a fast of forty days, like the great Moses, tasting nothing at all. For three years, following the publican's humility, she did not lift her bodily eyes to heaven, while with the eyes of the soul she looked always towards God on his high and lifted-up throne, surrounded by the Seraphim. When she raised the midnight prayers alone, she was lit up from above with a heavenly light.
+
+She was a wonderworker too. She killed a fearful dragon with prayer; she healed a woman who had bled for many years; she drove unclean spirits out of men, and did many other wonders, in her life and after her death. Her grave worked wonders and gave healing to the sick, and even the dust taken from her relics gave sight to the blind. The page gives no year and names no place.
+
+*After doxologia.ro's calendar for 24 aprilie — [the day](https://doxologia.ro/24-aprilie), [the life](https://doxologia.ro/viata-sfintei-cuvioase-elisabeta) and [the troparion](https://doxologia.ro/troparul-sfintei-cuvioase-elisabeta-facatoarea-de-minuni); read 24 September 2026.*

@@ -1,0 +1,68 @@
+{
+  "slug": "sabbas-stratelates",
+  "display_name": "Sabbas Stratelates",
+  "names": [
+    {
+      "form": "Sava Stratilat",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 aprilie, «Sfântul Mucenic Sava Stratilat»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 aprilie — «Sfântul Mucenic Sava Stratilat»",
+        "url": "https://doxologia.ro/24-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Απριλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 5",
+      "text": "Lepădând dregătoria şi cinstea cea pământească, înaintea chinuitorului, împăratului celui viclean ai mărturisit pe Hristos Dumnezeu şi pentru El multe patimi ai suferit, mărite. Pentru aceasta te-ai încununat cu cununa preafrumoasă a biruinţei, de la Împăratul Cel Ce peste toţi împărăţeşte, luminat împodobindu-te. Şi cu Oştile cele cereşti stând înaintea lui Hristos, Sfinte Mucenice Sava, roagă-te să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Sava Stratilat",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-sava-stratilat",
+        "year": 2026
+      },
+      "english": {
+        "text": "Casting away office and earthly honour, before the torturer and the crafty emperor thou didst confess Christ God, and for him didst suffer many torments, O glorious one. Therefore thou wast crowned by the King who reigns over all with the most beautiful crown of victory, and wast adorned with light. And standing before Christ with the hosts of heaven, holy Martyr Sabbas, pray that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

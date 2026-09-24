@@ -1,0 +1,83 @@
+{
+  "slug": "sava-brancovici-of-transylvania",
+  "display_name": "Sava Brancovici of Transylvania",
+  "names": [
+    {
+      "form": "Sava Brancovici",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 aprilie, «Sfântul Ierarh Mărturisitor Sava Brancovici, Mitropolitul Transilvaniei»."
+    }
+  ],
+  "sex": "male",
+  "office": "Metropolitan",
+  "types": [
+    "hierarch",
+    "metropolitan",
+    "confessor"
+  ],
+  "related": [
+    "iorest-of-transylvania",
+    "simeon-stefan-of-transylvania"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1683,
+      "latest": 1683,
+      "display": "1683",
+      "basis": "attested",
+      "note": "doxologia.ro, Viața Sfântului Ierarh Sava Brancovici: «în anul 1683 a fost scos din temniță, dar fiind slăbit de chinuri, îndată și-a dat sfântul său suflet în brațele lui Hristos»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 aprilie — «Sfântul Ierarh Mărturisitor Sava Brancovici, Mitropolitul Transilvaniei»",
+        "url": "https://doxologia.ro/24-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Απριλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Mărturisitori ai Ortodoxiei şi buni arhipăstori ai Bisericii lui Hristos, îndreptători ai poporului, preafericiţi ierarhi purtători de biruinţă, Sfinţilor Iorest şi Sava, cei ce v-aţi învrednicit de cununa vieţii, rugaţi-vă Domnului să se mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Ilie Iorest, Mitropolitul Transilvaniei (precum al Sfântului Ierarh Sava)",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-ilie-iorest-mitropolitul-transilvaniei-precum-al-sfantului-ierarh-sava",
+        "year": 2026
+      },
+      "english": {
+        "text": "Confessors of Orthodoxy and good chief shepherds of the Church of Christ, setters-right of the people, most blessed trophy-bearing hierarchs, Saints Iorest and Sava, who were counted worthy of the crown of life, pray to the Lord that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

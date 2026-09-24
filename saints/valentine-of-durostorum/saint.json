@@ -1,0 +1,53 @@
+{
+  "slug": "valentine-of-durostorum",
+  "display_name": "Valentine of Durostorum",
+  "names": [
+    {
+      "form": "Valentin din Durostorum",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 aprilie, «Sfântul Mucenic Valentin din Durostorum»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "related": [
+    "passicrates-of-durostorum"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 aprilie — «Sfântul Mucenic Valentin din Durostorum»",
+        "url": "https://doxologia.ro/24-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Απριλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

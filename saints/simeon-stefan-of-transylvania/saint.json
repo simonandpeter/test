@@ -1,0 +1,54 @@
+{
+  "slug": "simeon-stefan-of-transylvania",
+  "display_name": "Simeon Ștefan of Transylvania",
+  "names": [
+    {
+      "form": "Simion Ștefan",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 aprilie, «Sfântul Ierarh Simion Ștefan, Mitropolitul Transilvaniei»."
+    }
+  ],
+  "sex": "male",
+  "office": "Metropolitan",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "related": [
+    "sava-brancovici-of-transylvania"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 aprilie — «Sfântul Ierarh Simion Ștefan, Mitropolitul Transilvaniei»",
+        "url": "https://doxologia.ro/24-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Απριλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

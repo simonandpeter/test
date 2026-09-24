@@ -1,0 +1,9 @@
+# Sabbas Stratelates
+
+Sabbas lived in the time of Aurelian, emperor of Rome, and held the office of stratelates, which the Romanian life glosses as voievod, commander. He was a Goth by descent. The account calls him a faithful and well-pleasing servant of the heavenly King, and says that he visited those who were suffering in the prisons for Christ, served them out of his own goods, strengthened them to endure and urged them on to a fearless struggle. His life was so amended that for its purity and its austerity he was given power over the demons and drove unclean spirits out of men.
+
+He was denounced to the emperor as a Christian. Brought forward, he confessed Christ boldly, threw down the soldier's belt and laid aside the rank of commander, showing himself ready for every torment. They hung him up and beat him and burned him with torches, then threw him into a cauldron of boiling pitch; and he came out of it whole and unhurt, kept by the unseen power of God. Seventy soldiers who saw that wonder believed in Christ and confessed him with a loud voice, and at the tyrant's word they were all beheaded.
+
+Sabbas was thrown back into prison, where at midnight, as he was praying, Christ appeared to him shining with the light of his glory and told him not to fear but to take courage. Brought out for a second examination, he was pressed towards the idols by flattery and then by threats and by cruel torments, and would not yield; so they threw him into the river, and by drowning he came to the harbour that no storm troubles. The page names Aurelian but prints no year.
+
+*After doxologia.ro's calendar for 24 aprilie — [the day](https://doxologia.ro/24-aprilie), [the life](https://doxologia.ro/viata-sfantului-mucenic-sava-stratilat) and [the troparion](https://doxologia.ro/troparul-sfantului-mucenic-sava-stratilat); read 24 September 2026.*

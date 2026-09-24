@@ -1,0 +1,11 @@
+# Valentine of Durostorum
+
+Valentine and [Passicrates](/saints/passicrates-of-durostorum) were Christian soldiers serving under the governor of their place, a man the life calls Avsolan; doxologia's one account covers them both, and its opening sentence sets them at Rodostol, a city of Moesia, while the calendar line for the day names them of Durostorum. Seeing the people caught in the deception of the idols, and seeing Christians who feared the torments run away and hide themselves, the two confessed openly and with boldness that they were Christians, glorified the one true God and cursed the lifeless idols.
+
+The idolaters seized them and brought them before the judge, who pressed them to offer incense. There was an idol of Apollo standing there; Passicrates ran up to it, spat in its face and said that such was the honour the god deserved. For that he was loaded with heavy iron chains and thrown into prison, and he wore the chains as if they were the gold ornaments of an emperor. Valentine was brought in with him, and both were set again before the governor.
+
+Passicrates' brother Papian came to the place. He was a Christian, but fear of the torments had made him sacrifice to the idols, and he begged his brother in tears to do as he had done and pretend for a while. Passicrates drove him off and called him unworthy of his family; then he ran to the shrine, put his hand into the fire, and told the governor that this mortal body burns, as he could see, while the soul, being immortal, takes no notice of visible torments. Valentine, questioned in turn, said the same, and the governor condemned them both to the sword.
+
+As the executioners led them out of the city, Passicrates' mother walked behind them, urging her son not to be afraid, for she feared he would lose heart, being young; and so their heads were struck off. Passicrates was twenty-two years old and Valentine thirty. The mother took up their bodies with joy and gladness and buried them with honour. The page gives no year.
+
+*After doxologia.ro's calendar for 24 aprilie — [the day](https://doxologia.ro/24-aprilie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-valentin), which is one account for the two of them; the page prints no troparion; read 24 September 2026.*

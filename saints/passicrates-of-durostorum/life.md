@@ -1,0 +1,11 @@
+# Passicrates of Durostorum
+
+Passicrates and [Valentine](/saints/valentine-of-durostorum) were Christian soldiers serving under the governor of their place, a man the life calls Avsolan; doxologia prints one account for the two of them, opening at Rodostol, a city of Moesia, while the calendar line for the day names them of Durostorum. Seeing the people caught in the deception of the idols, and Christians who feared the torments running away and hiding, the two confessed openly and with boldness that they were Christians and cursed the lifeless idols.
+
+Brought before the judge and pressed to offer incense, Passicrates ran up to the idol of Apollo that stood there, spat in its face and said that such was the honour that god deserved. He was loaded with heavy iron chains and thrown into prison, and the life says he wore them as though they were an emperor's gold ornaments, rejoicing that he had been counted worthy to carry such things for Christ. Valentine was brought in with him, and the two were set again before the governor.
+
+His own brother Papian came there. Papian was a Christian, but fear of the torments had made him sacrifice, and he begged Passicrates in tears to offer incense as he had done and to pretend for a time, so as to escape. Passicrates drove him away and called him unworthy of his family, because he had departed from the faith in Christ. Then he ran alone to the shrine, put his hand into the fire, and said to the governor that this mortal body burns, as he could see, while the soul, being immortal, takes no notice of visible torments.
+
+Valentine, questioned, answered in the same words, and both were condemned to the sword. As they were led out of the city Passicrates' mother followed, urging her son as a mother urges a son to go to his death without fear, for he was young and she was afraid he would falter; and so their heads were struck off. Passicrates was twenty-two years old and Valentine thirty, and the mother took up their bodies with joy and buried them with honour. The page gives no year.
+
+*After doxologia.ro's calendar for 24 aprilie — [the day](https://doxologia.ro/24-aprilie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-pasicrat), which is one account for the two of them; the page prints no troparion; read 24 September 2026.*

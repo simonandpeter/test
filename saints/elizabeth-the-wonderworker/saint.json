@@ -1,0 +1,69 @@
+{
+  "slug": "elizabeth-the-wonderworker",
+  "display_name": "Elizabeth the Wonderworker",
+  "names": [
+    {
+      "form": "Elisabeta",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 aprilie, «Sfânta Cuvioasă Elisabeta»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "abbess",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 aprilie — «Sfânta Cuvioasă Elisabeta»",
+        "url": "https://doxologia.ro/24-aprilie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Απριλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru tine, maică, cu osârdie s-a mântuit cel după chip; că, luând crucea, ai urmat lui Hristos; şi lucrând, ai învăţat să nu se uite la trup, căci este trecător; ci să poarte grijă de suflet, de lucrul cel nemuritor. Pentru aceasta şi cu îngerii împreună se bucură, Preacuvioasă Maică Elisabeta, duhul tău.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Cuvioase Elisabeta, Făcătoarea de minuni",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-elisabeta-facatoarea-de-minuni",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O mother, that which is according to the image was saved with diligence; for taking up the cross thou didst follow Christ, and working, thou didst teach that the flesh is not to be regarded, since it passes away, but that care is to be taken for the soul, a thing immortal. Therefore thy spirit rejoices together with the angels, most venerable mother Elizabeth.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
