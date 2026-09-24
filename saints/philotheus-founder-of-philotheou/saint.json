@@ -1,0 +1,58 @@
+{
+  "slug": "philotheus-founder-of-philotheou",
+  "display_name": "Philotheus, founder of Philotheou",
+  "names": [
+    {
+      "form": "Filotheos ctitorul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 ianuarie, «Cuviosul Filotheos ctitorul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 901,
+      "latest": 1000,
+      "display": "late 10th century",
+      "basis": "traditional",
+      "note": "The only date doxologia.ro gives him is in the heading of its own article on his page, «Cuviosul Filotheos ctitorul (sfârșitul secolului al X-lea)». The body of the page gives no year at all, so the interval is the century that heading names."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 ianuarie — «Cuviosul Filotheos ctitorul»",
+        "url": "https://doxologia.ro/24-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

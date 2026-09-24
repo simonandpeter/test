@@ -1,0 +1,85 @@
+{
+  "slug": "xenia-of-rome",
+  "display_name": "Xenia of Rome",
+  "names": [
+    {
+      "form": "Xenia din Roma",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 ianuarie, «Sfânta Cuvioasă Xenia din Roma»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "deaconess"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru tine, maică, cu osârdie s-a mântuit cel după chip; că, luând crucea, ai urmat lui Hristos; şi lucrând, ai învăţat să nu se uite la trup, căci este trecător; ci, să poarte grijă de suflet, de lucrul cel nemuritor. Pentru aceasta şi cu îngerii împreună se bucură, Preacuvioasă Maică Xenia, duhul tău.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Cuvioase Xenia, Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-xenia",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O mother, that which was made after God's image was saved with diligence; for taking up the cross thou didst follow Christ, and by thy labour thou didst teach men to overlook the flesh, for it passes away, and to care for the soul, a thing immortal. Therefore does thy spirit rejoice with the angels, O most venerable mother Xenia.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "model": "Cu curgerile sângiurilor...",
+      "text": "Pomenirea ta cea minunată, Sfântă Preacuvioasă Xenia, săvârşind-o noi, cei ce te cinstim pe tine cu dragoste, lăudăm pe Hristos, Cel Ce ţi-a dat ţie întru toate putere de tămăduire; pe Acela totdeauna roagă-L pentru noi toţi.",
+      "source": {
+        "text": "Doxologia — Condacul Sfintei Cuvioase Xenia, Glasul 2, «Cu curgerile sângiurilor...»",
+        "url": "https://doxologia.ro/condacul-sfintei-cuvioase-xenia",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping thy wonderful memory, O most venerable Saint Xenia, we who honour thee with love praise Christ, who gave thee power to heal in all things; and him do thou pray always for us all.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 ianuarie — «Sfânta Cuvioasă Xenia din Roma»",
+        "url": "https://doxologia.ro/24-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

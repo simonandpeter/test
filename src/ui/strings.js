@@ -607,6 +607,9 @@ export const STRINGS = {
     flourished: 'Lived {when}',
     before: 'before {y}',
     after: 'after {y}',
+    // A repose the source puts inside a window and no closer: doxologia's
+    // «între 1794 și 1806» for Xenia of Saint Petersburg (2026-09-24).
+    between: 'between {a} and {b}',
     /*
      * **The vocabulary a recorded `display` is written in** (author,
      * 2026-09-08: "change lifespans to translated"), read by

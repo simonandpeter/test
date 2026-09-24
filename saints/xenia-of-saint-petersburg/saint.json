@@ -1,0 +1,93 @@
+{
+  "slug": "xenia-of-saint-petersburg",
+  "display_name": "Xenia of Saint Petersburg",
+  "names": [
+    {
+      "form": "Xenia din Sankt Petersburg",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 ianuarie, «Sfânta Cuvioasă Xenia din Sankt Petersburg»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "fool-for-christ"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1794,
+      "latest": 1806,
+      "display": "between 1794 and 1806",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfânta Xenia a adormit în Domnul la vârsta de șaptezeci și unu de ani (între 1794 și 1806)». The page gives no single year, so the interval is the one it prints."
+    }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 7",
+      "text": "Iubind sărăcia lui Hristos, acum te îndulcești de ospățul cel veșnic; cu nebunia cea părută ai rușinat nebunia acestei lumi, prin smerenia Crucii ai primit puterea lui Dumnezeu. Pentru aceasta, dobândind darul ajutorării prin minuni, fericită Xenia, roagă pe Hristos Dumnezeu să ne izbăvească prin pocăință de tot răul.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Cuvioase Xenia din Sankt Petersburg, Glas 7",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-xenia-din-sankt-petersburg",
+        "year": 2026
+      },
+      "english": {
+        "text": "Loving the poverty of Christ, thou now delightest in the everlasting banquet; with feigned madness thou didst shame the madness of this world, and through the humility of the Cross thou didst receive the power of God. Wherefore, having been given the gift of helping by wonders, blessed Xenia, pray to Christ God to deliver us from every evil through repentance.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "kontakion",
+      "lang": "ro",
+      "tone": "Glas 3",
+      "text": "Luminat saltă astăzi cetatea lui Petru, că mulțimea celor scârbiți află mângâieri, nădăjduind la rugăciunile tale, fericită Xenia, că tu ești lauda și întărirea acestei cetăți",
+      "source": {
+        "text": "Doxologia — Condacul Sfintei Cuvioase Xenia din Sankt Petersburg, Glas 3. The page's text ends without a final stop, and is copied as it stands.",
+        "url": "https://doxologia.ro/condacul-sfintei-cuvioase-xenia-din-sankt-petersburg",
+        "year": 2026
+      },
+      "english": {
+        "text": "Brightly does the city of Peter leap up today, for the multitude of the afflicted find their consolation, hoping in thy prayers, blessed Xenia; for thou art the praise and the strength of this city",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 ianuarie — «Sfânta Cuvioasă Xenia din Sankt Petersburg»",
+        "url": "https://doxologia.ro/24-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -223,6 +223,20 @@ export function translateDisplay(display) {
   }
 
   /*
+   * A window rather than a bound: doxologia gives Xenia of Saint Petersburg's
+   * repose as «între 1794 și 1806» and names no year, so the display is the
+   * pair. Read before the `or` split below, because the `and` is the join here
+   * and splitting on `or` would never reach it.
+   */
+  const window = /^between (.+) and (.+)$/.exec(body);
+  if (window) {
+    const a = readTerm(window[1], null);
+    const b = readTerm(window[2], null);
+    if (a !== null && b !== null) return dress(fill(STRINGS.dates.between, { a, b }));
+    return display;
+  }
+
+  /*
    * A recorded phrase is tried whole before it is taken apart, because one of
    * them has an `or` inside it that is not a join at all: "under Hadrian or
    * Antoninus" is one reign-or-the-other, and splitting it hands the second

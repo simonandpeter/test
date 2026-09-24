@@ -78,6 +78,9 @@ test('a century, a range, an era and a full date each read as their language wri
   assert.equal(translateDisplay('4th or 5th century'), 'IV в. или V в.');
   assert.equal(translateDisplay('late 4th or early 5th century'), 'конец IV в. или начало V в.');
   assert.equal(translateDisplay('probably 1481 or 1482'), 'вероятно, 1481 или 1482');
+  // A window rather than a bound, and the join is `and`, not `or`: doxologia
+  // gives Xenia of Saint Petersburg's repose as «între 1794 și 1806».
+  assert.equal(translateDisplay('between 1794 and 1806'), 'между 1794 и 1806');
   // The month through Intl, so it is the reader's own word and its own order.
   assert.match(translateDisplay('14 September 407'), /сентября 407/);
 

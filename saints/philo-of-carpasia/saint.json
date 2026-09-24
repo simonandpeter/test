@@ -1,0 +1,51 @@
+{
+  "slug": "philo-of-carpasia",
+  "display_name": "Philo of Carpasia",
+  "names": [
+    {
+      "form": "Filon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 ianuarie, «Sfântul Ierarh Filon, episcopul Carpasiei»."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Carpasia",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 ianuarie — «Sfântul Ierarh Filon, episcopul Carpasiei»",
+        "url": "https://doxologia.ro/24-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Ιανουαρίου (19 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

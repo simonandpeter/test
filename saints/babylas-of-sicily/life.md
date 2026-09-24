@@ -1,0 +1,9 @@
+# Babylas of Sicily
+
+Babylas is kept on 24 ianuarie together with his two disciples, [Timothy](/saints/timothy-disciple-of-babylas) and [Agapius](/saints/agapius-disciple-of-babylas), and doxologia.ro prints one short life for the three of them. He was born of well-born and God-loving parents in the city of Antioch, which the page says was also called Theupolis; there he studied hard at learning, at wisdom and at the holy Scriptures, and from his youth he loved Christ and hated the things of the world.
+
+When his parents died he divided his property among the poor, the widows and the orphans, and having shaken off everything he had owned he withdrew to the mountain, where he lived in stillness with his two disciples. He was afterwards made a priest and, the page says, honoured the priestly rank worthily. Because the unbelieving and bloodthirsty Greeks were eager to hand him over to the magistrates, he went to Sicily with his disciples, and there he brought many to the knowledge of God.
+
+But, as a city set on a mountain cannot be hidden, neither could Babylas stay hidden. He was taken with his disciples by the magistrate, and when the three confessed Christ to be the true God they were first beaten with staves until their bodies ran with blood, then carried through the city and struck in various cruel ways — partly, the life says, to frighten the cities of Sicily by their torment, partly to satisfy the tormentors' thirst for it. The saints held firm, looking to the everlasting good things. The next day they were cut down with the swords and thrown into a fire; the fire did not harm their bodies, and Christians took them from there and buried them worthily on the island of Sicily.
+
+*After doxologia.ro's calendar for 24 ianuarie — [the day](https://doxologia.ro/24-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-vavila-din-sicilia); read 19 September 2026.*
