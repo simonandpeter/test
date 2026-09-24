@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'marcian marcian-of-durostorum marcian-the-emperor':
+    'one of the two soldiers of the Danube legions at Durostorum in Moesia Inferior, taken under Diocletian and Galerius after the Persian war of 298, Romanian 8 June, against the emperor the calendar calls righteous, Romanian 17 February (read 25 September 2026)',
+  'nicandru nicander-of-durostorum nicander-of-egypt':
+    'the soldier taken at Durostorum with Marcian, Romanian 8 June, against one of the ten martyrs of Egypt whom the Romanian 5 June keeps in a single sentence. Two companies and two provinces (read 25 September 2026)',
   'cel ilarion nou hilarion-the-new-of-dalmatou hilarion-the-new-of-pelecete':
     'two abbots both called Ilarion cel Nou, on two days: the son of Peter the Cappadocian who set the bread on the imperial table and of Theodosia, of the monastery of Dalmatou, Romanian 6 June; and the confessor of Pelecete who shut himself in a dark cell for many years, Romanian 28 March. Doxologia keeps them on two days with two lives (read 25 September 2026)',
   'gheorghe george-of-egypt george-of-pisidian-antioch':

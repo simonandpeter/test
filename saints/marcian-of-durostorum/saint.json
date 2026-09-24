@@ -1,0 +1,62 @@
+{
+  "slug": "marcian-of-durostorum",
+  "display_name": "Marcian of Durostorum",
+  "names": [
+    {
+      "form": "Marcian",
+      "lang": "ro",
+      "note": "His own name, read out of doxologia.ro's line for 8 iunie, «Sfinții Mucenici Nicandru și Marcian», which names two men."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "related": [
+    "nicander-of-durostorum"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 298,
+      "latest": 298,
+      "display": "298",
+      "basis": "attested",
+      "note": "doxologia.ro: «din dispoziția imperială în ziua de 8 iunie 298 li s-au tăiat capetele»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 iunie — «Sfinții Mucenici Nicandru și Marcian»",
+        "url": "https://doxologia.ro/8-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

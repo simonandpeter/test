@@ -1,0 +1,59 @@
+{
+  "slug": "calliope-the-martyr",
+  "display_name": "Calliope",
+  "names": [
+    {
+      "form": "Caliopia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 iunie, «Sfânta Muceniță Caliopia»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfânta Muceniță Caliopia a trăit la mijlocul secolului al III-lea după Hristos, în timpul împăratului Deciu.» The page names the middle of the third century and the reign of Decius and prints no year, so the interval recorded is the century it states."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 iunie — «Sfânta Muceniță Caliopia»",
+        "url": "https://doxologia.ro/8-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Ιουνίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
