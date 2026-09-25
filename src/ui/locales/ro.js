@@ -750,6 +750,7 @@ export const ro = {
     'Bishop of Arsinoe': 'Episcop de Arsinoe',
     'Bishop of Belgorod': 'Episcop de Belgorod',
     'Bishop of Bohemia and Moravia-Silesia': 'Episcop al Boemiei și Moraviei-Silezia',
+    'Bishop of Bostra in Arabia': 'Episcop de Bostra în Arabia',
     'Bishop of Brooklyn': 'Episcop de Brooklyn',
     'Bishop of Caesarea': 'Episcop de Cezareea',
     'Bishop of Carpasia': 'Episcop al Carpasiei',

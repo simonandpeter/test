@@ -1,0 +1,81 @@
+{
+  "slug": "irene-of-chrysovalantou",
+  "display_name": "Irene of Chrysovalantou",
+  "names": [
+    {
+      "form": "Irina Hrisovalantou",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 iulie, «Sfânta Cuvioasă Irina Hrisovalantou, care a primit mere din Rai», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "abbess",
+    "monastic"
+  ],
+  "related": [
+    "theodora-the-empress"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfânta Irina s-a născut în secolul al IX-lea și a făcut parte dintr-o familie bogată din Capadocia.» The page gives no year for her death, only that «Sfânta Irina avea peste 101 ani când a murit»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 iulie — «Sfânta Cuvioasă Irina Hrisovalantou, care a primit mere din Rai»",
+        "url": "https://doxologia.ro/28-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 5",
+      "text": "Sfântă Preacuvioasă Maică Irina, tu cămara minții ți-ai sfințit cu mirul rugăciunii și ai aprins candela inimii cu focul gânduluismerit, ca să strălucești obștii tale lumina înțelepciunii. Stând acum înaintea Luminii Negrăite, roagă-te să risipească întunericul sufletelor noastre cu fulgerul rugăciunii tale.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintei Cuvioase Irina Hrisovalantou, care a primit mere din Rai», Glasul 5 — printed with «gânduluismerit» run together, as here",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-irina-hrisovalantou-care-primit-mere-din-rai",
+        "year": 2026
+      },
+      "english": {
+        "text": "Most venerable Mother Irene, you hallowed the chamber of your mind with the myrrh of prayer and lit the lamp of your heart with the fire of humble thought, to make the light of wisdom shine for your community. Standing now before the Light unutterable, pray that the lightning of your prayer may scatter the darkness of our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "paul-of-xeropotamou",
+  "display_name": "Paul of Xeropotamou",
+  "names": [
+    {
+      "form": "Pavel de la Xiropotamu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 iulie, «Sfântul Cuvios Pavel de la Xiropotamu», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 iulie — «Sfântul Cuvios Pavel de la Xiropotamu»",
+        "url": "https://doxologia.ro/28-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Înger în trup, temelie a sihaştrilor, Sfântul Pavel Măritul, împodobitorul cel dintâi al Mănăstirii Xiropotamului, cheamă de sus mulţimea îngerilor; iar de jos adună cetele ucenicilor săi, ca să cânte cu cântări, dumnezeiască pomenirea sa.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Pavel de la Xiropotamu», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-pavel-de-la-xiropotamu",
+        "year": 2026
+      },
+      "english": {
+        "text": "An angel in the body, foundation of the hermits, holy Paul the glorious, the first adorner of the monastery of Xeropotamou, calls the multitude of angels from above; and from below he gathers the ranks of his disciples, to sing with songs his godly memory.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "slug": "timon-the-deacon",
+  "display_name": "Timon the Deacon",
+  "office": "Bishop of Bostra in Arabia",
+  "names": [
+    {
+      "form": "Timon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 iulie, «Sfinții Apostoli și Diaconi Prohor, Nicanor, Timon și Parmena, dintre cei 70», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle",
+    "deacon",
+    "bishop",
+    "martyr"
+  ],
+  "related": [
+    "prochorus-the-deacon",
+    "nicanor-the-deacon",
+    "parmenas-the-deacon"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Sfinţilor Apostoli, rugaţi pe Milostivul Dumnezeu ca să dea iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Apostoli și Diaconi Prohor, Nicanor, Timon și Parmena, dintre cei șaptezeci», Glasul 3 — the common of apostles, as the page prints it for the four of them",
+        "url": "https://doxologia.ro/troparul-sfintilor-apostoli-diaconi-prohor-nicanor-timon-parmena-dintre-cei-saptezeci",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy apostles, entreat the merciful God to grant our souls forgiveness of offences.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 iulie — «Sfinții Apostoli și Diaconi Prohor, Nicanor, Timon și Parmena, dintre cei 70»",
+        "url": "https://doxologia.ro/28-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

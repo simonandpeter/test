@@ -751,6 +751,7 @@ export const el = {
     'Bishop of Arsinoe': 'Επίσκοπος Αρσινόης',
     'Bishop of Belgorod': 'Επίσκοπος Μπελγκορόντ',
     'Bishop of Bohemia and Moravia-Silesia': 'Επίσκοπος Βοημίας και Μοραβίας-Σιλεσίας',
+    'Bishop of Bostra in Arabia': 'Επίσκοπος Βόστρων της Αραβίας',
     'Bishop of Brooklyn': 'Επίσκοπος Μπρούκλιν',
     'Bishop of Caesarea': 'Επίσκοπος Καισαρείας',
     'Bishop of Carpasia': 'Επίσκοπος Καρπασίας',

@@ -752,6 +752,7 @@ export const sr = {
     'Bishop of Arsinoe': 'Епископ арсинојски',
     'Bishop of Belgorod': 'Епископ белгородски',
     'Bishop of Bohemia and Moravia-Silesia': 'Епископ чешки и моравско-шлески',
+    'Bishop of Bostra in Arabia': 'Епископ бострански у Арабији',
     'Bishop of Brooklyn': 'Епископ бруклински',
     'Bishop of Caesarea': 'Епископ кесаријски',
     'Bishop of Carpasia': 'Епископ карпасијски',
