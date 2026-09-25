@@ -1,0 +1,71 @@
+{
+  "slug": "hermolaus-of-nicomedia",
+  "display_name": "Hermolaus of Nicomedia",
+  "names": [
+    {
+      "form": "Ermolae",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 iulie, «Sfântul Sfințit Mucenic Ermolae», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "related": [
+    "panteleimon-the-healer"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 iulie — «Sfântul Sfințit Mucenic Ermolae»",
+        "url": "https://doxologia.ro/26-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nestricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Sfințit Mucenic Ermolae», Glasul 4 — the common of martyrs, as the page prints it for him",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-ermolae",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, Lord, in their struggles received from You, our God, the crowns of incorruption. For having Your strength they overthrew the tormentors, and they broke also the powerless daring of the demons. By their prayers, Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

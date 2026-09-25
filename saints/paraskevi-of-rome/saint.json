@@ -1,0 +1,68 @@
+{
+  "slug": "paraskevi-of-rome",
+  "display_name": "Paraskevi of Rome",
+  "names": [
+    {
+      "form": "Paraschevi din Roma",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 iulie, «Sfânta Cuvioasă Muceniță Paraschevi din Roma», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "monastic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 iulie — «Sfânta Cuvioasă Muceniță Paraschevi din Roma»",
+        "url": "https://doxologia.ro/26-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Osârdia ta asemenea chemării făcând-o, cea ce eşti cu acelaşi nume numită, credinţa ta întocmai cu numele întru locuinţă ai moştenit-o, Sfântă Paraschevi cea purtătoare de chinuri. Pentru aceasta, verşi tămăduiri şi te rogi pentru sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintei Cuvioase Mucenițe Paraschevi din Roma», Glasul 1",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-mucenite-paraschevi-din-roma",
+        "year": 2026
+      },
+      "english": {
+        "text": "Making your zeal answer to your calling, you who are named with that name, you have inherited a dwelling that matches your name by your faith, holy Paraskevi, bearer of torments. Therefore you pour out healings and pray for our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

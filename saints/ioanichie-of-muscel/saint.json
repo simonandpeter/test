@@ -1,0 +1,59 @@
+{
+  "slug": "ioanichie-of-muscel",
+  "display_name": "Ioanichie of Muscel",
+  "names": [
+    {
+      "form": "Ioanichie cel Nou de la Muscel",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 iulie, «Sfântul Cuvios Ioanichie cel Nou de la Muscel (Argeș)», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1638,
+      "latest": 1638,
+      "display": "1638",
+      "basis": "attested",
+      "note": "doxologia.ro: the words cut in the stone over his grave in the cave, «Ioanichie Schimonah, 1638»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 iulie — «Sfântul Cuvios Ioanichie cel Nou de la Muscel (Argeș)»",
+        "url": "https://doxologia.ro/26-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

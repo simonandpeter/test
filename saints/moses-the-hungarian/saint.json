@@ -15,6 +15,11 @@
       "form": "Моисей Угрин",
       "lang": "ru",
       "note": "From «Преподобный Моисей Угрин, Печерский» in this folder's Russian citation, without the rank."
+    },
+    {
+      "form": "Moise Ungurul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 iulie, «Sfântul Cuvios Moise Ungurul», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not in the Patriarchate’s calendar for 26 July (basilica.ro, checked 2026-08-22); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 iulie — «Sfântul Cuvios Moise Ungurul»",
+        "url": "https://doxologia.ro/26-iulie",
+        "year": 2026
+      },
+      "note": "doxologia.ro's life under that line is this man's: «Fericitul Moise era de neam ungur și iubit binecredinciosului, Sfântului și răbdătorului de chinuri domn al Rusiei, Boris», taken into Poland with Yaroslav's household, and «s-a mutat la privirea lui Dumnezeu față către față în ziua de 26 iulie, fiind încă viu Cuviosul Antonie, în a cărui peșteră zac și până acum moaștele». Read 24 September 2026."
     },
     {
       "church": "greek",
@@ -188,6 +203,22 @@
       },
       "english": {
         "text": "Seeking in the heights the one God, thou didst despise all earthly things and hadst no care for thy body, giving thyself up manfully to torments; hunger, thirst, bonds and confinement in prison thou didst valiantly endure, and beatings, the shedding of thy blood and the cutting of thy members thou didst manfully bear for the sake of thy pure virginity. And now, standing before the Most Holy Trinity among the choirs of virgins, pray that those who cry to thee may be delivered from every temptation: Rejoice, O Moses, most blessed father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Ca un alt Iosif, al curăţiei şi al fecioriei iubitor, cinstitule şi la fel cu îngerii, Moise, cu cântări sfinte te cinstim noi, păcătoşii; cu sârguinţă ne rugăm ţie: roagă pe Hristos Domnul, să vindece patimile noastre şi să ne dăruiască nouă mare milă.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Cuviosului Moise Ungurul», Glasul 3",
+        "url": "https://doxologia.ro/troparul-cuviosului-moise-ungurul",
+        "year": 2026
+      },
+      "english": {
+        "text": "As another Joseph, lover of purity and of virginity, honoured Moses, equal to the angels, we sinners honour you with holy songs; and we pray you earnestly: entreat Christ the Lord to heal our passions and to grant us great mercy.",
         "rendered": "site"
       }
     }
