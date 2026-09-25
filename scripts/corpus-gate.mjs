@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'clement clement-apostle-of-sardis clement-of-ancyra clement-of-ohrid':
+    'three men called Clement, on three days and three ranks: the archbishop of Ohrid, Romanian 27 July, a hierarch; Clement of Ancyra, «Sfantul Sfintit Mucenic Clement, Episcopul Ancirei», a hieromartyr bishop on the Romanian 23 January; and the apostle and bishop of Sardis, who has no Romanian row at all -- the Russian, Greek and Serbian calendars keep him on 10 September and doxologia has not been read for him (read 25 September 2026)',
   'hristina christina-martyr-18-may christina-of-tyre':
     'two women called Hristina, and the calendar distinguishes them in its own words: the 18 mai line is «Sfanta Hristina si cele 7 sfinte fecioare impreuna cu ea», a Christina kept with seven virgins, and the 24 iulie line is «Sfanta Mare Mucenita Hristina», a great-martyr who is alone on her day and whose long life names Tyre and her father the governor Urban (read 25 September 2026)',
   'ermoghen hermogenes-of-moscow hermogenes-the-martyr-24-july':

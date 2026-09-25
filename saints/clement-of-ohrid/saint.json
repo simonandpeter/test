@@ -1,0 +1,61 @@
+{
+  "slug": "clement-of-ohrid",
+  "display_name": "Clement of Ohrid",
+  "office": "Archbishop of Ohrid",
+  "names": [
+    {
+      "form": "Clement",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 iulie, «Sfântul Clement, Arhiepiscopul Ohridei», with the rank and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 916,
+      "latest": 916,
+      "display": "916",
+      "basis": "attested",
+      "note": "doxologia.ro: «A fondat în Ohrida Mănăstirea „Sfântul Pantelimon”, unde a fost îngropat în anul 916 într-un sicriu pe care l-a făcut cu mâinile sale.» — the year is of his burial, which is the only year the page gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 iulie — «Sfântul Clement, Arhiepiscopul Ohridei»",
+        "url": "https://doxologia.ro/27-iulie",
+        "year": 2026
+      },
+      "note": "The same page says he is kept «în data de 25 noiembrie, ziua adormirii sale, precum și pe 27 iulie». One row per church is the schema, so the November day is recorded here and he renders on 27 July, the day this calendar was read on."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

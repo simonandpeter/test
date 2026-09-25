@@ -728,6 +728,7 @@ export const ro = {
     'Archbishop of Hamburg-Bremen': 'Arhiepiscop de Hamburg-Bremen',
     'Archbishop of Larissa': 'Arhiepiscop de Larisa',
     'Archbishop of Novgorod, Wonderworker': 'Arhiepiscop de Novgorod, făcător de minuni',
+    'Archbishop of Ohrid': 'Arhiepiscop de Ohrida',
     'Archbishop of Omsk': 'Arhiepiscop de Omsk',
     'Archbishop of Seville': 'Arhiepiscop de Sevilla',
     'Archbishop of Serbia': 'Arhiepiscop al Serbiei',

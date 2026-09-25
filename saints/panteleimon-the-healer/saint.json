@@ -9,6 +9,11 @@
     {
       "form": "Παντελεήμων",
       "lang": "el"
+    },
+    {
+      "form": "Pantelimon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 iulie, «Sfântul Mare Mucenic și Tămăduitor Pantelimon», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -47,8 +52,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 iulie — «Sfântul Mare Mucenic și Tămăduitor Pantelimon»",
+        "url": "https://doxologia.ro/27-iulie",
+        "year": 2026
+      },
+      "note": "doxologia.ro's life under that line is this man's: «Intre aceștia a pătimit pentru Hristos și Sfântul Mare Mucenic Pantelimon, din cetatea Nicomidiei, care se află în părțile Bitiniei… din tată de neam bun, cinstit și bogat, cu numele Evstorghie și din maica sa, Euvula», under Maximian. Read 24 September 2026. The site's troparion page for him is an audio recording with no printed text, so no Romanian hymn is added."
     },
     {
       "church": "greek",
