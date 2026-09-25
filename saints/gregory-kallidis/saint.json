@@ -1,0 +1,68 @@
+{
+  "slug": "gregory-kallidis",
+  "display_name": "Gregory Kallidis",
+  "office": "Metropolitan of Heraclea and Rhaedestus",
+  "names": [
+    {
+      "form": "Grigorie Kallidis",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 25 iulie, «Sfântul Grigorie Kallidis, Arhiepiscopul Irakliei și Redestului», with the rank and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1844,
+      "latest": 1844,
+      "display": "1844",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Grigorie Kallidis s-a născut în anul 1844 la Cumbao în Tracia de Răsărit.»"
+    },
+    "death": {
+      "earliest": 1925,
+      "latest": 1925,
+      "display": "1925",
+      "basis": "attested",
+      "note": "doxologia.ro: «A slujit ca Mitropolit al Irakliei și Redestului, al Ioanninei și al Tesalonicului, unde a și adormit pe data de 25 iulie 1925.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 7,
+        "calendar": "revised-julian",
+        "note": "Doxologia keeps him twice: its calendar prints him on 25 iulie and again on 20 octombrie — «Sfântul Grigorie Kallidis, Arhiepiscopul Irakliei și Redestului». One attestation row per church is the schema, so the row is the day this folder was read from and the second day is recorded here. Both days link the same doxologia page. Read 25 September 2026."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 25 iulie — «Sfântul Grigorie Kallidis, Arhiepiscopul Irakliei și Redestului»",
+        "url": "https://doxologia.ro/25-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 25 Ιουλίου (24 September 2026). doxologia.ro says he was recognised as a saint of the Church of Greece by an act of the Patriarchate and the Holy Synod of 22 May 2003, and that he is kept on 25 July and on 20 October, but that page is not the Greek calendar and the Greek row is left as not read."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

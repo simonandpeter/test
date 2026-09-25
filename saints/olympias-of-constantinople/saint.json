@@ -1,0 +1,53 @@
+{
+  "slug": "olympias-of-constantinople",
+  "display_name": "Olympias of Constantinople",
+  "names": [
+    {
+      "form": "Olimpiada",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 25 iulie, «Sfânta Cuvioasă Olimpiada», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "related": [
+    "john-chrysostom"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 25 iulie — «Sfânta Cuvioasă Olimpiada»",
+        "url": "https://doxologia.ro/25-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 25 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

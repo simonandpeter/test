@@ -57,7 +57,8 @@
         "text": "doxologia.ro, 9 septembrie — „Sfinții și Drepții Părinți Ioachim și Ana”",
         "url": "https://doxologia.ro/9-septembrie",
         "year": 2026
-      }
+      },
+      "note": "The same calendar keeps a second day of hers on 25 iulie, «Adormirea Sfintei Ana, mama Preasfintei Născătoare de Dumnezeu» — her falling asleep — with a life and a troparion of its own (https://doxologia.ro/25-iulie, read 24 September 2026). One row per church is the schema, so the July day is recorded here and she renders on 9 September only."
     },
     {
       "church": "greek",
@@ -192,6 +193,22 @@
       },
       "english": {
         "text": "As we keep the feast of the memory of thy righteous ancestors, O Lord, through them we entreat thee: save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Pe Ceea ce a născut Viaţa în pântece o ai purtat, pe Curata Maica lui Dumnezeu, de Dumnezeu Gânditoare, Sfântă Ana. Pentru aceasta acum, la primirea cerească, unde este locaşul celor ce se veselesc întru slavă, bucurându-te acum te-ai mutat; cere pentru cei ce te cinstesc pe tine cu dragoste iertare de greşeli, pururea fericită.",
+      "source": {
+        "text": "doxologia.ro, «Tropar la sărbătoarea adormirii Sfintei Ana, mama Preasfintei Născătoare de Dumnezeu», Glasul 4 — printed on the 25 iulie feast of her falling asleep",
+        "url": "https://doxologia.ro/tropar-la-sarbatoarea-adormirii-sfintei-ana-mama-preasfintei-nascatoare-de-dumnezeu",
+        "year": 2026
+      },
+      "english": {
+        "text": "Her who bore Life in her womb you carried, the pure Mother of God, O God-minded Saint Anna. Therefore now you have passed over rejoicing to the reception in heaven, where is the dwelling of those who are glad in glory; ask forgiveness of offences for those who honour you with love, ever-blessed one.",
         "rendered": "site"
       }
     }
