@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'antuza anthousa-12-april anthousa-the-venerable-27-july':
+    'two women, and both Romanian lines are bare -- «Sfanta Cuvioasa Antuza», the same rank on 12 aprilie and on 27 iulie, no life and no century on either page -- so the July folder was written, undone, and written again only once days.pravoslavie.ru had been read for both days. Its 12 April line is «Prp. Anfusy devy (801)», a virgin with no companions, dated. Its 27 July line is «Prp. Anfisy isp., igumenii i 90 sester ee (VIII)» -- a confessor and abbess of the Mantineon monastery with ninety sisters, whom Constantine Copronymus had seized and icons burnt on her head, hands and feet. A dated virgin alone against an eighth-century abbess of ninety, and saint.gr separates them the same way. Four women of this name are now held: these two, Anthousa of Seleucia on 22 August and Anthousa the New on 27 August (read 25 September 2026)',
   'clement clement-apostle-of-sardis clement-of-ancyra clement-of-ohrid':
     'three men called Clement, on three days and three ranks: the archbishop of Ohrid, Romanian 27 July, a hierarch; Clement of Ancyra, «Sfantul Sfintit Mucenic Clement, Episcopul Ancirei», a hieromartyr bishop on the Romanian 23 January; and the apostle and bishop of Sardis, who has no Romanian row at all -- the Russian, Greek and Serbian calendars keep him on 10 September and doxologia has not been read for him (read 25 September 2026)',
   'hristina christina-martyr-18-may christina-of-tyre':
