@@ -1,0 +1,49 @@
+{
+  "slug": "joseph-of-arimathea",
+  "display_name": "Joseph of Arimathea",
+  "names": [
+    {
+      "form": "Iosif din Arimateea",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 31 iulie, «Sfântul și Dreptul Iosif din Arimateea», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 31 iulie — «Sfântul și Dreptul Iosif din Arimateea»",
+        "url": "https://doxologia.ro/31-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 31 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

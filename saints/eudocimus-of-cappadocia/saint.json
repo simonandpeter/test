@@ -1,0 +1,67 @@
+{
+  "slug": "eudocimus-of-cappadocia",
+  "display_name": "Eudocimus of Cappadocia",
+  "names": [
+    {
+      "form": "Evdochim",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 31 iulie, «Sfântul și Dreptul Evdochim», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 31 iulie — «Sfântul și Dreptul Evdochim»",
+        "url": "https://doxologia.ro/31-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 31 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Cel Ce te-a chemat pe tine de pe pământ la cereştile locaşuri păzeşte şi după moarte nevătămat trupul tău, sfinte; că tu, cu curăţie şi cu cinstită viaţă, fericite, ai vieţuit, nespurcându-ţi trupul, pentru aceasta, cu îndrăznire roagă pe Hristos Dumnezeu să ne mântuiască pe noi.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Dreptului Evdochim», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-dreptului-evdochim",
+        "year": 2026
+      },
+      "english": {
+        "text": "He who called you from earth to the dwellings of heaven keeps your body unharmed even after death, O saint; for you lived, blessed one, in purity and in an honourable life, and did not defile your body. Therefore with boldness pray to Christ God that we may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
