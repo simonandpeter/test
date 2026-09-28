@@ -1,0 +1,72 @@
+{
+  "slug": "eleazar-the-scribe",
+  "display_name": "Eleazar the Scribe",
+  "names": [
+    {
+      "form": "Eleazar",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 august, «Sfinții 7 Mucenici Macabei, cu mama lor Solomoni și dascălul lor Eleazar», with the rank words left off; the line calls him their teacher."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "presbyter"
+  ],
+  "related": [
+    "seven-maccabee-brothers",
+    "solomone-mother-of-the-maccabees"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 august — «Sfinții 7 Mucenici Macabei, cu mama lor Solomoni și dascălul lor Eleazar»",
+        "url": "https://doxologia.ro/1-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Pentru durerile sfinţilor, care pentru Tine au pătimit, fii Milostiv Doamne şi toate durerile noastre le vindecă, Iubitorule de oameni, rugămu-ne Ţie.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinţilor 7 fraţi Macabei, al mamei lor Solomoni şi al dascălului lor Eleazar», Glasul 1 — the one troparion the site prints for the company of the day",
+        "url": "https://doxologia.ro/troparul-sfintilor-7-frati-macabei-al-mamei-lor-solomoni-al-dascalului-lor-eleazar",
+        "year": 2026
+      },
+      "english": {
+        "text": "For the pains of the saints who suffered for You, be merciful, O Lord, and heal all our pains, Lover of mankind: this we pray of You.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

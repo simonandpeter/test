@@ -1,0 +1,64 @@
+{
+  "slug": "elesa-of-kythira",
+  "display_name": "Elesa of Kythira",
+  "names": [
+    {
+      "form": "Elesa",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 august, «Sfânta Muceniţă Elesa (Eliza) din Kythira», with the rank words left off."
+    },
+    {
+      "form": "Eliza",
+      "lang": "ro",
+      "note": "The second form the same line prints, in a parenthesis: «Sfânta Muceniţă Elesa (Eliza) din Kythira»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "ascetic"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 375,
+      "latest": 375,
+      "display": "375",
+      "basis": "traditional",
+      "note": "doxologia.ro: «După lungi căutări, e găsită de tatăl ei care îi taie capul la 1 august 375.» The same page opens «Sfânta Elesa (Eliza) a trăit la jumătatea secolului al IV-lea, în Peloponez, Grecia.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 august — «Sfânta Muceniţă Elesa (Eliza) din Kythira»",
+        "url": "https://doxologia.ro/1-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

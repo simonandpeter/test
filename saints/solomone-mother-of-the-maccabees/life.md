@@ -1,0 +1,9 @@
+# Solomone, mother of the Maccabees
+
+Solomone was the mother of the seven brothers who were taken in the persecution of Antiochus Epiphanes with their teacher's memory still fresh, and who, being well born, were sent to the king at Antioch to be examined. The Romanian calendar's line for 1 august names her «mama lor Solomoni», their mother Solomone, and the life of the seven on the same site calls her Solomonia. She was taken with her sons and stood by while they were pressed to eat swine's flesh against the law of their fathers.
+
+The first of them had his tongue cut out, his skin flayed and his limbs cut away, and was burned alive in a heated pan while his brothers and his mother looked on. As the steam rose the rest with their mother encouraged one another to die manfully, saying that the Lord God sees and is truly comforted in His servants. One after another her sons were mocked, flayed, dismembered and killed in front of her, down to the youngest, who told the king that with him and his brothers the wrath of the Almighty over their people would cease.
+
+When it was over, the blessed mother was filled with unspeakable gladness that she had sent all seven of her sons blameless before God. Standing over their bodies she stretched out her hands, prayed with hot tears, and gave up her soul into the hands of God. So the mother ended with her sons, laying down their souls for the law of God the Almighty. The seven are kept in this corpus as [the Maccabee brothers](/saints/seven-maccabee-brothers), and their teacher, who suffered before them, as [Eleazar](/saints/eleazar-the-scribe).
+
+*After doxologia.ro's calendar for 1 august — [the day](https://doxologia.ro/1-august), [the life of the seven Maccabee martyrs](https://doxologia.ro/viata-sfintilor-7-mucenici-macabei) and [the troparion](https://doxologia.ro/troparul-sfintilor-7-frati-macabei-al-mamei-lor-solomoni-al-dascalului-lor-eleazar); read 24 September 2026.*
