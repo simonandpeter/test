@@ -923,6 +923,7 @@ export const el = {
    * reason: the key is the English the corpus recorded.
    */
   eras: {
+    'in the reign of Theodosius the Younger': 'επί της βασιλείας Θεοδοσίου του Νέου',
     'under Alexander Severus': 'επί Αλεξάνδρου Σεβήρου',
     'under Antoninus Pius': 'επί Αντωνίνου Πίου',
     'under Aurelian': 'επί Αυρηλιανού',

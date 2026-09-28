@@ -1,0 +1,87 @@
+{
+  "slug": "martinian-of-ephesus",
+  "display_name": "Martinian of Ephesus",
+  "names": [
+    {
+      "form": "Martinian",
+      "lang": "ro",
+      "note": "Read out of the roll of the seven in doxologia.ro's life for the day, «Maximilian, Iamvlih, Martinian, Ioan, Dionisie, Exacustodian și Antonin»; the calendar's own line for 4 august names none of them, only «Sfinții 7 tineri din Efes»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "related": [
+    "maximilian-of-ephesus",
+    "iamblichus-of-ephesus",
+    "john-of-ephesus",
+    "dionysius-of-ephesus",
+    "exacustodianus-of-ephesus",
+    "antoninus-of-ephesus"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 431,
+      "latest": 446,
+      "display": "in the reign of Theodosius the Younger",
+      "basis": "traditional",
+      "note": "The life gives no year and says the writers do not agree on how long they slept. Its own anchors: «Deciu, după adormirea sfinților șapte tineri, a pierit în anul 254 de la întruparea lui Dumnezeu Cuvântul; iar Teodosie cel Tânăr a luat împărăția în anul 408», and that by Cedrenus they rose in the twenty-third year of Theodosius the Younger while the Prologue, under 22 October, puts it in his thirty-eighth. The interval here is the two readings, 431 and 446, and it is the second and final repose, not the falling asleep under Decius."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 8,
+        "calendar": "revised-julian",
+        "note": "Doxologia keeps him twice: its calendar prints him on 4 august and again on 22 octombrie — «Sfinții 7 tineri din Efes». One attestation row per church is the schema, so the row is the day this folder was read from and the second day is recorded here. Both days print the same line and link the same doxologia page for the seven youths. Read 25 September 2026."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 august — «Sfinții 7 tineri din Efes»",
+        "url": "https://doxologia.ro/4-august",
+        "year": 2026
+      },
+      "note": "Read off doxologia.ro's day list for 4 august (24 September 2026). The saints' own page on the same site heads their feast «22 Octombrie», the day of their rising, and the day this row records is the day of their falling asleep, on which the calendar prints them. One attestation row per church is the schema, so only 4 august is held; 22 octombrie was not itself read, and whoever reads it should treat these seven as already kept and not make second folders for them."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mari sunt isprăvile credinţei! În peşteră, ca într-o cămară împărătească, au petrecut cei şapte sfinţi tineri şi fără stricăciune au murit. Iar după multă vreme, ca dintr-un somn s-au sculat, pentru încredinţarea învierii tuturor oamenilor. Pentru rugăciunile lor, Hristoase Dumnezeule, miluieşte-ne pe noi.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinţilor 7 tineri din Efes: Maximilian, Exacustodian, Iamvlih, Martinian, Dionisie, Ioan», Glasul 4 — the one troparion the site prints for all seven",
+        "url": "https://doxologia.ro/troparul-sfintilor-7-tineri-din-efes-maximilian-exacustodian-iamvlih-martinian-dionisie-ioan",
+        "year": 2026
+      },
+      "english": {
+        "text": "Great are the achievements of faith! In the cave, as in a royal chamber, the seven holy youths dwelt, and died without corruption; and after a long time they rose as out of sleep, for the assurance of the resurrection of all men. At their prayers, Christ God, have mercy on us.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

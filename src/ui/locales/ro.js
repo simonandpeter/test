@@ -922,6 +922,7 @@ export const ro = {
    * reason: the key is the English the corpus recorded.
    */
   eras: {
+    'in the reign of Theodosius the Younger': 'în vremea lui Teodosie cel Tânăr',
     'under Alexander Severus': 'sub Alexandru Sever',
     'under Antoninus Pius': 'sub Antoninus Pius',
     'under Aurelian': 'sub Aurelian',

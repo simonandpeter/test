@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'dionisie dionysius-companion-of-lucillian dionysius-companion-of-quadratus dionysius-of-athos dionysius-of-ephesus dionysius-of-lampsacus':
+    'the Romanian 4 August is the Seven Sleepers of Ephesus, seven folders off one enumerating line, and three of their names collide with men the corpus already keeps. The new one is the sleeper, 4 August. The other four keep their own days and are unchanged: the companion of Lucillian, 3 June; the companion of Quadratus, 10 March; Dionysius of Athos, 25 June; and Dionysius of Lampsacus, 18 May (read 28 September 2026)',
+  'ioan john-companion-of-simeon john-disciple-of-gregory-the-decapolite john-of-antioch john-of-edessa john-of-ephesus john-of-gothia john-of-nea-moni john-of-the-forty-martyrs john-of-the-old-lavra john-of-valaam john-son-of-xenophon john-the-theologian':
+    'twelve men whose `ro` form is Ioan, on twelve separate Romanian days. The eleven read on 25 September are unchanged; the twelfth, which reopened this fold as it should, is the sleeper of Ephesus on 4 August (read 28 September 2026)',
+  'martinian martinian-of-caesarea martinian-of-ephesus':
+    'the Romanian 4 August is the Seven Sleepers of Ephesus, seven folders off one enumerating line, and three of their names collide with men the corpus already keeps. The new one is the sleeper, 4 August; the other is Martinian of Caesarea, Romanian 13 February (read 28 September 2026)',
   'faust faustus-martyr-16-july faustus-son-of-dalmatus':
     'two men, on two days and in two shapes: the bare «Sfantul Mucenic Faust» of the Romanian 16 July, whom doxologia gives two sentences under Decius with no place and no company, and the son of Dalmatus of the Dalmatian monastery in Constantinople, Romanian 3 August, who is named on his day beside his father and beside Isaac the abbot. The wider «faustus» fold of three men was read on 25 September and is unchanged; this is the Romanian spelling meeting a new folder (read 28 September 2026)',
   'anatolie anatolius-patriarch-of-constantinople anatoly-the-younger-of-optina':

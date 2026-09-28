@@ -941,6 +941,7 @@ export const ru = {
    * reason: the key is the English the corpus recorded.
    */
   eras: {
+    'in the reign of Theodosius the Younger': 'в царствование Феодосия Младшего',
     'under Alexander Severus': 'при Александре Севере',
     'under Antoninus Pius': 'при Антонине Пии',
     'under Aurelian': 'при Аврелиане',
