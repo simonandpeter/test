@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'anatolie anatolius-patriarch-of-constantinople anatoly-the-younger-of-optina':
+    'two men called Anatolie, on two days: the patriarch of Constantinople, Romanian 3 July, and the elder «cel Tanar» of Optina, 30 July, whose doxologia page carries no life at all but the akathist of the Optina elders (read 28 September 2026)',
+  'crescent crescens-of-myra crescens-the-apostle':
+    'two men called Crescent, on two days: Crescens of Myra, Romanian 15 April, and the apostle and bishop of Galatia, 30 July (read 28 September 2026)',
+  'iulita julitta-mother-of-cyricus julitta-of-caesarea':
+    'two women called Iulita, on two days, and the July one has a life of her own: the mother of Cyricus, Romanian 15 July, against the woman of Caesarea in Cappadocia who went to law over her property under Diocletian and lost the case because a Christian was outside the law, 30 July (read 28 September 2026)',
+  'sila silas-of-sihastria-putnei silas-the-apostle':
+    'two men called Sila, on two days and a millennium apart: the Romanian hermit of Sihastria Putnei, 16 May, and the apostle and bishop of Corinth, 30 July (read 28 September 2026)',
+  'silvan silvanus-of-emesa silvanus-the-apostle':
+    'two men called Silvan, on two days and two sees the corpus records as offices: the bishop of Emesa, Romanian 29 January, and the apostle and bishop of Thessalonica, 30 July. A third and bare «Sfantul Mucenic Silvan» stands open on 5 noiembrie and has no folder (read 28 September 2026)',
   'veniamin benjamin-the-deacon benjamin-the-martyr-29-july':
     'two men, and the whole of the separation is one word the calendar prints. The Romanian 31 March line reads «Sfantul Mucenic Veniamin, diaconul» and the 29 July line «Sfantul Mucenic Veniamin», and neither page carries a life, a troparion, a country or a century. So they are held apart on the deacon and on the day, exactly as the two Vitalises of 11 January and 23 July are held apart on venerable against martyr, and the July life says so rather than implying more. Two further Benjamins are in the corpus and are not in question, both Russian new-martyrs of the 1930s: Blagonadezhdin and Voskresensky (read 25 September 2026)',
   'antuza anthousa-12-april anthousa-the-venerable-27-july':

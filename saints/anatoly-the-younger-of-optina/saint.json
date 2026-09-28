@@ -1,0 +1,54 @@
+{
+  "slug": "anatoly-the-younger-of-optina",
+  "display_name": "Anatoly the Younger of Optina",
+  "names": [
+    {
+      "form": "Anatolie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 30 iulie, «Sfântul Anatolie „cel Tânăr” de la Optina», with the rank word left off; the epithet is the calendar's own."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "related": [
+    "macarius-of-optina",
+    "hilarion-of-optina",
+    "isaac-i-of-optina"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 iulie — «Sfântul Anatolie „cel Tânăr” de la Optina»",
+        "url": "https://doxologia.ro/30-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 30 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
