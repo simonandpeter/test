@@ -1,0 +1,66 @@
+{
+  "slug": "justinian-the-great",
+  "display_name": "Justinian the Great",
+  "office": "Emperor",
+  "names": [
+    {
+      "form": "Justinian cel Mare",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 august, «Binecredinciosul Împărat Justinian cel Mare», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "king"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 483,
+      "latest": 483,
+      "display": "483",
+      "basis": "attested",
+      "note": "doxologia.ro: «Binecredinciosul Împărat Justinian cel Mare (527-565) s-a născut în anul 483 din părinți binecredincioși, în Tauresium, un sat la miazăzi de Uskub, lângă Scopje»."
+    },
+    "death": {
+      "earliest": 565,
+      "latest": 565,
+      "display": "565",
+      "basis": "attested",
+      "note": "doxologia.ro: «A trecut la cele veșnice în noiembrie 565.» The same page heads him «(527-565)» for the reign."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 august — «Binecredinciosul Împărat Justinian cel Mare»",
+        "url": "https://doxologia.ro/2-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "slug": "gamaliel-the-teacher-of-the-law",
+  "display_name": "Gamaliel the Teacher of the Law",
+  "names": [
+    {
+      "form": "Gamaliel",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 august, «Dreptul Gamaliel», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "doxologia.ro gives no year, only the century: «Dreptul Gamaliel a fost un renumit învățător al Legii iudaice din secolul I d.Hr.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 august — «Dreptul Gamaliel»",
+        "url": "https://doxologia.ro/2-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
