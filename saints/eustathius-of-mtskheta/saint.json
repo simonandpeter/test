@@ -1,0 +1,58 @@
+{
+  "slug": "eustathius-of-mtskheta",
+  "display_name": "Eustathius of Mtskheta",
+  "names": [
+    {
+      "form": "Eustație din Georgia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 iulie, «Sfântul Mucenic Eustație din Georgia», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 575,
+      "latest": 600,
+      "display": "575–600",
+      "basis": "attested",
+      "note": "doxologia.ro dates his move to Mtskheta by a reign it prints with its years: «În timpul domniei împaratului georgian Guram Kuropalat (575-600), la vârsta de 30 de ani, Eustație și-a luat familia și s-a mutat în vechea capitala a Georgiei, cetatea Mtskheta.» The page gives no year for his birth and none for his death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 29 iulie — «Sfântul Mucenic Eustație din Georgia»",
+        "url": "https://doxologia.ro/29-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Ιουλίου (24 September 2026). doxologia.ro says he is kept «de către toate Bisericile Ortodoxe în ziua de 29 iulie», but that is the Romanian page's word and no other calendar was read."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

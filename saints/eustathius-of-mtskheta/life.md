@@ -1,0 +1,13 @@
+# Eustathius of Mtskheta
+
+Far from the capital of the Eastern Roman Empire, Georgia knew the Christian faith from the fourth century. Lying near the great Persian Empire, where idolatry was more than a religion, it could not enjoy the presence of Christian missionaries as other peoples of Europe did; and yet God made the flowers of the Christian faith bear fruit there too, through simple men with families and daily cares who were lit by the grace of God, threw off the teaching of the idols and preached instead faith in the Saviour Jesus Christ.
+
+One such is Saint Eustathius, kept, the page says, by all the Orthodox Churches on 29 July. He was of Persian stock, and before his baptism he was called Bgrobandaves; he was born into a family that worshipped fire, the image of the god Zoroaster. Young, he made a family of his own and earned his daily living by making sandals; and though he lacked nothing, he felt that life meant more than making straps and soles.
+
+In the reign of the Georgian ruler Guram Kouropalates, between 575 and 600, at thirty years of age, Eustathius took his family and moved to the old capital of Georgia, the city of Mtskheta. He worked at his sandals, and though he was not a Christian he went every day to hear the services in the church of the Christians, and those hours brought him joy. Little by little the love of the Saviour Jesus Christ settled in his soul, and he received baptism at the hands of Archbishop Samuel.
+
+For refusing to go back to the worship of the god Zoroaster he was denounced to the general Arvand-Gubnav. After months of prison, Eustathius and the other confessors of Christ were set free — but not for long, because the new governor of Persia, Bezhan-Buzmil, ordered him brought before him. Eustathius answered with dignity: Can anyone forsake the Maker of the world and adore a simple creature of His? It shall never be. Neither the sun nor the moon nor the stars are gods; God is the one who made the sun to shine by day and the moon with the stars to shine in the darkness of the night. Fire is not God; fire is made by man and is put out by man.
+
+By the order of the Persian governor his head was cut off. Before he received the crown of martyrdom he prayed that after his death his body should be buried in the city of Mtskheta; and from beneath the holy altar table of the church of Svetitskhoveli, Eustathius keeps watch to this day over the whole of Christian Georgia.
+
+*After doxologia.ro's calendar for 29 iulie — [the day](https://doxologia.ro/29-iulie) and [the life](https://doxologia.ro/mucenicul-eustatie-din-georgia-sfantul-facator-de-sandale); read 24 September 2026.*

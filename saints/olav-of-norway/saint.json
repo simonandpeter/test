@@ -1,0 +1,66 @@
+{
+  "slug": "olav-of-norway",
+  "display_name": "Olav of Norway",
+  "names": [
+    {
+      "form": "Olav al Norvegiei",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 iulie, «Sfântul Rege și Martir Olav al Norvegiei», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "king",
+    "martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 995,
+      "latest": 995,
+      "display": "995",
+      "basis": "attested",
+      "note": "doxologia.ro: «Olav s-a născut în anul 995 și, încă de tânăr, a devenit războinic viking»."
+    },
+    "death": {
+      "earliest": 1030,
+      "latest": 1030,
+      "display": "1030",
+      "basis": "attested",
+      "note": "doxologia.ro: «La 29 iulie 1030, Olav și armata sa depășită numeric s-au luptat la Stiklestat, lângă Trondheim, cu trupele daneze unite cu cele ale rebelilor norvegieni», and in that battle he fell."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 29 iulie — «Sfântul Rege și Martir Olav al Norvegiei»",
+        "url": "https://doxologia.ro/29-iulie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Ιουλίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
