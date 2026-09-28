@@ -1,0 +1,67 @@
+{
+  "slug": "heraclius-of-bessarabia",
+  "display_name": "Heraclius of Bessarabia",
+  "names": [
+    {
+      "form": "Iraclie din Basarabia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 august, «Sfântul Cuvios Mărturisitor Iraclie din Basarabia», with the rank words left off. His own life says he was given the name Ioan at baptism."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1893,
+      "latest": 1893,
+      "display": "1893",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Iraclie s-a născut în ziua de 11 martie 1893 la Pojorâta, Suceava, și a primit la botez numele de Ioan.»"
+    },
+    "death": {
+      "earliest": 1964,
+      "latest": 1964,
+      "display": "1964",
+      "basis": "attested",
+      "note": "doxologia.ro: «rămânând în preajma mănăstirii până la trecerea la Domnul, în 16 august 1964»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 3 august — «Sfântul Cuvios Mărturisitor Iraclie din Basarabia»",
+        "url": "https://doxologia.ro/3-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 3 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

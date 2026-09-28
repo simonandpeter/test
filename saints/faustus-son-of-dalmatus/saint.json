@@ -1,0 +1,72 @@
+{
+  "slug": "faustus-son-of-dalmatus",
+  "display_name": "Faustus, son of Dalmatus",
+  "names": [
+    {
+      "form": "Faust",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 august, «Sfântul Cuvios Faust», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "related": [
+    "dalmatus-of-constantinople",
+    "isaac-of-constantinople"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 3 august — «Sfântul Cuvios Faust»",
+        "url": "https://doxologia.ro/3-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 3 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Dumnezeul părinţilor noştri, Care Te porţi pururea cu noi după blândeţile Tale, nu depărta mila Ta de la noi, ci, pentru rugăciunile părinţilor noştri, îndreptează viaţa noastră în pace.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinţilor Cuvioşi Isaachie, Dalmat şi Faust», Glasul 4 — the one troparion the site prints for the three of them",
+        "url": "https://doxologia.ro/troparul-sfintilor-cuviosi-isaachie-dalmat-faust",
+        "year": 2026
+      },
+      "english": {
+        "text": "God of our fathers, who ever deal with us according to Your gentleness, do not take Your mercy from us, but by the prayers of our fathers guide our life in peace.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

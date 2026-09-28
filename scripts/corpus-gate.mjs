@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'faust faustus-martyr-16-july faustus-son-of-dalmatus':
+    'two men, on two days and in two shapes: the bare «Sfantul Mucenic Faust» of the Romanian 16 July, whom doxologia gives two sentences under Decius with no place and no company, and the son of Dalmatus of the Dalmatian monastery in Constantinople, Romanian 3 August, who is named on his day beside his father and beside Isaac the abbot. The wider «faustus» fold of three men was read on 25 September and is unchanged; this is the Romanian spelling meeting a new folder (read 28 September 2026)',
   'anatolie anatolius-patriarch-of-constantinople anatoly-the-younger-of-optina':
     'two men called Anatolie, on two days: the patriarch of Constantinople, Romanian 3 July, and the elder «cel Tanar» of Optina, 30 July, whose doxologia page carries no life at all but the akathist of the Optina elders (read 28 September 2026)',
   'crescent crescens-of-myra crescens-the-apostle':

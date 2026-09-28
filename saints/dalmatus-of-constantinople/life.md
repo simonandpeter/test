@@ -1,0 +1,9 @@
+# Dalmatus of Constantinople
+
+Dalmatus, while he was still living in the world, was first a soldier in the reign of Theodosius the Great, and was much honoured by the emperor. Then he despised all worldly things for God's sake and left his wife and his children, taking with him only one son, [Faustus](/saints/faustus-son-of-dalmatus), and went to [Isaacius](/saints/isaac-of-constantinople), who had a monastery in the town before Constantinople. Isaacius tonsured father and son into the monastic order, and the two lived there in a way pleasing to God, striving well in the labours of the desert.
+
+When Isaacius had reached a deep old age and his end was near, he called the brethren, taught them what was for their salvation, and set Dalmatus as abbot in his place; and after Dalmatus's name the monastery was afterwards called the monastery of Dalmatus. The blessed Dalmatus was ordained priest by Atticus, patriarch of Constantinople.
+
+He kept such a fast that he would go as long as forty days without food, and so overcame the power of the devil by fasting and prayer. He struggled also against the visible devils, that is, against the Nestorian heretics who blasphemed the Most Holy Virgin Mary, the Mother of God, and was a great helper of the holy Fathers at the third ecumenical council, which was held at Ephesus in the time of the emperor Theodosius the Younger. He was loved by the emperor and by the holy fathers, who made him archimandrite in the monastery of Dalmatus; and having pleased God perfectly he passed to Him in a deep old age. The page gives no year for any of it.
+
+*After doxologia.ro's calendar for 3 august — [the day](https://doxologia.ro/3-august), [the life it prints for the three](https://doxologia.ro/viata-sfantului-cuvios-dalmat) and [the troparion](https://doxologia.ro/troparul-sfintilor-cuviosi-isaachie-dalmat-faust); read 24 September 2026.*
