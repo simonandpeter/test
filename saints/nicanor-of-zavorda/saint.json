@@ -1,0 +1,70 @@
+{
+  "slug": "nicanor-of-zavorda",
+  "display_name": "Nicanor of Zavorda",
+  "names": [
+    {
+      "form": "Nicanor",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 august, «Sfântul Cuvios Nicanor», with the rank words left off. The page gives him no epithet; \"of Zavorda\" is the English form chosen here, from the monastery his life says he founded."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "related": [
+    "dionysius-of-olympus"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1491,
+      "latest": 1491,
+      "display": "1491",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Nicanor s-a născut în anul 1491 la Salonic»."
+    },
+    "death": {
+      "earliest": 1549,
+      "latest": 1549,
+      "display": "1549",
+      "basis": "attested",
+      "note": "doxologia.ro: «a trecut la cele veșnice în ziua de 7 august 1549, la vârsta de numai 58 de ani»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 august — «Sfântul Cuvios Nicanor»",
+        "url": "https://doxologia.ro/7-august",
+        "year": 2026
+      },
+      "note": "His own page gives the day as the day of his death, 7 August 1549."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Αυγούστου (24 September 2026). He is a Greek saint of Thessalonica and Grevena and a Greek commemoration is to be expected; it was not looked for."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

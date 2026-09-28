@@ -826,6 +826,7 @@ export const ro = {
     'Bishop of Vyazniki': 'Episcop de Viazniki',
     'Bishop of Zela': 'Episcop de Zela',
     'Blessed': 'Fericit',
+    'Church painter, and monk of Mărgineni and of the skete of Robaia': 'Zugrav de biserici, monah la Mărgineni și la schitul Robaia',
     'Deacon': 'Diacon',
     'Deacon of Alexandria': 'Diacon al Alexandriei',
     'Deacon of Emesa': 'Diacon al Emesei',
@@ -833,6 +834,7 @@ export const ro = {
     'Elder of Moscow': 'Stareț de Moscova',
     'Emperor': 'Împărat',
     'Empress': 'Împărăteasă',
+    'Empress of the Romans, regent for her son Constantine VI': 'Împărăteasă a romanilor, regentă pentru fiul ei Constantin VI',
     'Father of monasticism': 'Părintele monahismului',
     'First Archbishop of Serbia': 'Primul arhiepiscop al Serbiei',
     'First Bishop of Estonia': 'Primul episcop al Estoniei',
@@ -880,6 +882,7 @@ export const ro = {
     'Patriarch': 'Patriarh',
     'Patriarch of Alexandria': 'Patriarh al Alexandriei',
     'Patriarch of Constantinople': 'Patriarh de Constantinopol',
+    'Patriarch of Jerusalem': 'Patriarh al Ierusalimului',
     'Patriarch of Moscow': 'Patriarh al Moscovei',
     'Patriarch of Serbia': 'Patriarh al Serbiei',
     'Pope of Rome': 'Papă al Romei',
@@ -923,6 +926,7 @@ export const ro = {
    */
   eras: {
     'in the reign of Theodosius the Younger': 'în vremea lui Teodosie cel Tânăr',
+    'the 1720s': 'anii 1720',
     'under Alexander Severus': 'sub Alexandru Sever',
     'under Antoninus Pius': 'sub Antoninus Pius',
     'under Aurelian': 'sub Aurelian',

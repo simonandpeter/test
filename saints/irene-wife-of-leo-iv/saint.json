@@ -1,0 +1,51 @@
+{
+  "slug": "irene-wife-of-leo-iv",
+  "display_name": "Irene, wife of Leo IV",
+  "names": [
+    {
+      "form": "Irina, Împărăteasa",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 august, «Sfânta Irina, Împărăteasa», with the rank word left off; her own page heads her «Sfânta Irina – Împărăteasa icoanelor»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "empress"
+  ],
+  "office": "Empress of the Romans, regent for her son Constantine VI",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 august — «Sfânta Irina, Împărăteasa»",
+        "url": "https://doxologia.ro/7-august",
+        "year": 2026
+      },
+      "note": "Her page repeats the day: «Prăznuită de către Biserică în ziua de 7 august». It gives her no years; the only date in it is 787, the year of the council she called."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

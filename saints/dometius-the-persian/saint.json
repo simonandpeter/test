@@ -1,0 +1,69 @@
+{
+  "slug": "dometius-the-persian",
+  "display_name": "Dometius the Persian",
+  "names": [
+    {
+      "form": "Dometie Persul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 august, «Sfântul Cuvios Mucenic Dometie Persul», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "deacon",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 august — «Sfântul Cuvios Mucenic Dometie Persul»",
+        "url": "https://doxologia.ro/7-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Cu pustnicia mai înainte pedepsindu-te în munte, taberele vrăjmaşilor cele netrupeşti cu arma Crucii le-ai pierdut, întru tot fericite şi iarăşi spre chinuire bărbăteşte te-ai întrarmat, ucigând pe Copronim cu sabia credinţei. Iar pentru acestea ai fost încununat de Dumnezeu, Cuvioase Mucenice Dometie, pururea mărite.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Mucenic Dometie Persul», Glasul 4 — the page names Copronymus, the eighth-century emperor, in a hymn to a fourth-century martyr; the reading is the source's own and is copied as printed",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-mucenic-dometie-persul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having first schooled yourself by the desert life on the mountain, you destroyed the bodiless camps of the enemy with the weapon of the Cross, all-blessed one; and you armed yourself manfully again for the contest, slaying Copronymus with the sword of faith. For this you were crowned by God, venerable martyr Dometius, ever-glorified.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

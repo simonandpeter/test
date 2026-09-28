@@ -1,0 +1,52 @@
+{
+  "slug": "narcissus-of-jerusalem",
+  "display_name": "Narcissus of Jerusalem",
+  "names": [
+    {
+      "form": "Narcis",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 august, «Sfântul Sfinţit Mucenic Narcis, Patriarhul Ierusalimului», with the rank words and the office left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "patriarch"
+  ],
+  "office": "Patriarch of Jerusalem",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 august — «Sfântul Sfinţit Mucenic Narcis, Patriarhul Ierusalimului»",
+        "url": "https://doxologia.ro/7-august",
+        "year": 2026
+      },
+      "note": "His own page on doxologia.ro carries the same name and the same day and no text at all — no life, no troparion, no year."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

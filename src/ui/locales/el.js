@@ -827,6 +827,7 @@ export const el = {
     'Bishop of Vyazniki': 'Επίσκοπος Βιάζνικι',
     'Bishop of Zela': 'Επίσκοπος Ζήλων',
     'Blessed': 'Μακάριος',
+    'Church painter, and monk of Mărgineni and of the skete of Robaia': 'Αγιογράφος, μοναχός της Μαρτζινένι και της σκήτης Ρομπάια',
     'Deacon': 'Διάκονος',
     'Deacon of Alexandria': 'Διάκονος Αλεξανδρείας',
     'Deacon of Emesa': 'Διάκονος Εμέσης',
@@ -834,6 +835,7 @@ export const el = {
     'Elder of Moscow': 'Γέροντας Μόσχας',
     'Emperor': 'Αυτοκράτορας',
     'Empress': 'Αυτοκράτειρα',
+    'Empress of the Romans, regent for her son Constantine VI': 'Αυτοκράτειρα των Ρωμαίων, αντιβασίλισσα για τον γιο της Κωνσταντίνο ΣΤ΄',
     'Father of monasticism': 'Πατέρας του μοναχισμού',
     'First Archbishop of Serbia': 'Πρώτος Αρχιεπίσκοπος Σερβίας',
     'First Bishop of Estonia': 'Πρώτος επίσκοπος Εσθονίας',
@@ -881,6 +883,7 @@ export const el = {
     'Patriarch': 'Πατριάρχης',
     'Patriarch of Alexandria': 'Πατριάρχης Αλεξανδρείας',
     'Patriarch of Constantinople': 'Πατριάρχης Κωνσταντινουπόλεως',
+    'Patriarch of Jerusalem': 'Πατριάρχης Ιεροσολύμων',
     'Patriarch of Moscow': 'Πατριάρχης Μόσχας',
     'Patriarch of Serbia': 'Πατριάρχης Σερβίας',
     'Pope of Rome': 'Πάπας Ρώμης',
@@ -924,6 +927,7 @@ export const el = {
    */
   eras: {
     'in the reign of Theodosius the Younger': 'επί της βασιλείας Θεοδοσίου του Νέου',
+    'the 1720s': 'η δεκαετία του 1720',
     'under Alexander Severus': 'επί Αλεξάνδρου Σεβήρου',
     'under Antoninus Pius': 'επί Αντωνίνου Πίου',
     'under Aurelian': 'επί Αυρηλιανού',

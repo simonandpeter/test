@@ -1,0 +1,47 @@
+{
+  "slug": "anthony-of-optina",
+  "display_name": "Anthony of Optina",
+  "names": [
+    {
+      "form": "Antonie de la Optina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 august, «Sfântul Antonie de la Optina», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 august — «Sfântul Antonie de la Optina»",
+        "url": "https://doxologia.ro/7-august",
+        "year": 2026
+      },
+      "note": "His own page on doxologia.ro repeats the day, 7 August, and prints no life, no troparion and no year."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

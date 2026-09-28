@@ -1,0 +1,90 @@
+{
+  "slug": "paphnutius-parvu-the-painter",
+  "display_name": "Paphnutius Pârvu the Painter",
+  "names": [
+    {
+      "form": "Pafnutie – Pârvu Zugravul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 august, «Sfântul Cuvios Pafnutie – Pârvu Zugravul», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "iconographer",
+    "monk"
+  ],
+  "office": "Church painter, and monk of Mărgineni and of the skete of Robaia",
+  "related": [
+    "constantine-brancoveanu"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1657,
+      "latest": 1657,
+      "display": "1657",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut în Câmpulung Muscel, la 12 octombrie 1657»."
+    },
+    "death": {
+      "earliest": 1735,
+      "latest": 1735,
+      "display": "1735",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a nevoit încă patru ani în rugăciune, tăcere, răbdare și smerenie, trecând la Domnul în anul 1735»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 august — «Sfântul Cuvios Pafnutie – Pârvu Zugravul»",
+        "url": "https://doxologia.ro/7-august",
+        "year": 2026
+      },
+      "note": "His own page gives the same day and says the Holy Synod of the Romanian Church appointed it: «rânduindu-i zi de pomenire în data de 7 august»."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 1",
+      "text": "Iconar iscusit al Arătării lui Dumnezeu, zugrav al firii omenești luminate de har și al frumuseților Raiului, Cuvioase Părinte Pafnutie, slujind lui Hristos în toată viața ta, prin lucrare stăruitoare în tăcere, rugăciune și răbdare, vas ales al Duhului te-ai făcut. Pentru aceasta, roagă-te Presfintei Treimi să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Pafnutie – Pârvu Zugravul», Glas 1",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-pafnutie-parvu-zugravul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Skilled iconographer of the Appearing of God, painter of human nature lit by grace and of the beauties of Paradise, venerable Father Paphnutius, serving Christ the whole of your life by steadfast labour in silence, prayer and patience, you became a chosen vessel of the Spirit. Therefore pray to the All-Holy Trinity that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

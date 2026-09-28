@@ -1,0 +1,70 @@
+{
+  "slug": "theodora-of-sihla",
+  "display_name": "Theodora of Sihla",
+  "names": [
+    {
+      "form": "Teodora de la Sihla",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 august, «Sfânta Cuvioasă Teodora de la Sihla», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "related": [
+    "mary-of-egypt"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1640,
+      "latest": 1660,
+      "display": "mid-17th century",
+      "basis": "traditional",
+      "note": "doxologia.ro gives no year: «s-a născut pe la jumătatea secolului al XVII-lea, în satul Vânători - Neamț». The interval is the middle of that century and nothing narrower is claimed."
+    },
+    "death": {
+      "earliest": 1721,
+      "latest": 1730,
+      "display": "the 1720s",
+      "basis": "traditional",
+      "note": "doxologia.ro gives no year, only «Aceasta s-a petrecut în al treilea deceniu al secolului al XVIII-lea» — the third decade of the 18th century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026). Her relics have lain in the caves of the Kyiv Lavra since 1856, by her own life's account, so a Russian commemoration is likely and was not looked for."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 august — «Sfânta Cuvioasă Teodora de la Sihla»",
+        "url": "https://doxologia.ro/7-august",
+        "year": 2026
+      },
+      "note": "Her own page gives the same day and its canonisation: «La 20 iunie 1992, Sfântul Sinod al Bisericii Ortodoxe Române a canonizat-o, trecând-o oficial în rândul sfinților, cu zi de prăznuire la 7 august»."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

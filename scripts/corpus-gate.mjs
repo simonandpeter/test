@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'nicanor nicanor-of-zavorda nicanor-the-deacon':
+    'two men, a millennium and a half apart and on two days: the deacon of the Seventy, one of the four the Romanian 28 July names together, a martyr; and the hieromonk of Zavorda, venerable, 7 August (read 28 September 2026)',
   'dionisie dionysius-companion-of-lucillian dionysius-companion-of-quadratus dionysius-of-athos dionysius-of-ephesus dionysius-of-lampsacus':
     'the Romanian 4 August is the Seven Sleepers of Ephesus, seven folders off one enumerating line, and three of their names collide with men the corpus already keeps. The new one is the sleeper, 4 August. The other four keep their own days and are unchanged: the companion of Lucillian, 3 June; the companion of Quadratus, 10 March; Dionysius of Athos, 25 June; and Dionysius of Lampsacus, 18 May (read 28 September 2026)',
   'ioan john-companion-of-simeon john-disciple-of-gregory-the-decapolite john-of-antioch john-of-edessa john-of-ephesus john-of-gothia john-of-nea-moni john-of-the-forty-martyrs john-of-the-old-lavra john-of-valaam john-son-of-xenophon john-the-theologian':

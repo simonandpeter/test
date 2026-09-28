@@ -828,6 +828,7 @@ export const sr = {
     'Bishop of Vyazniki': 'Епископ вјазниковски',
     'Bishop of Zela': 'Епископ зилски',
     'Blessed': 'Блажени',
+    'Church painter, and monk of Mărgineni and of the skete of Robaia': 'Црквени сликар, монах Мерџиненија и скита Робаја',
     'Deacon': 'Ђакон',
     'Deacon of Alexandria': 'Ђакон александријски',
     'Deacon of Emesa': 'Ђакон емески',
@@ -835,6 +836,7 @@ export const sr = {
     'Elder of Moscow': 'Старац московски',
     'Emperor': 'Цар',
     'Empress': 'Царица',
+    'Empress of the Romans, regent for her son Constantine VI': 'Царица Ромеја, намесница за свога сина Константина VI',
     'Father of monasticism': 'Отац монаштва',
     'First Archbishop of Serbia': 'Први архиепископ српски',
     'First Bishop of Estonia': 'Први епископ Естоније',
@@ -882,6 +884,7 @@ export const sr = {
     'Patriarch': 'Патријарх',
     'Patriarch of Alexandria': 'Патријарх александријски',
     'Patriarch of Constantinople': 'Патријарх цариградски',
+    'Patriarch of Jerusalem': 'Патријарх јерусалимски',
     'Patriarch of Moscow': 'Патријарх московски',
     'Patriarch of Serbia': 'Патријарх српски',
     'Pope of Rome': 'Папа римски',
@@ -925,6 +928,7 @@ export const sr = {
    */
   eras: {
     'in the reign of Theodosius the Younger': 'у време Теодосија Млађег',
+    'the 1720s': '1720-е',
     'under Alexander Severus': 'за Александра Севера',
     'under Antoninus Pius': 'за Антонина Пија',
     'under Aurelian': 'за Аурелијана',
