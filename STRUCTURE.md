@@ -1167,6 +1167,24 @@ is discussed.
     `package.json`'s own script names. Either generate it or fold it into
     `CLAUDE.md` beside the traps it serves.
 
+13. **An attestation row holds one feast, and a saint the calendar keeps twice is
+    therefore invisible on one of his days.** The schema allows one `feast` per
+    church, so where a church keeps a second day the corpus records it as a
+    *note* on the first row and nothing renders on the second. Three apostles
+    are already in that position — Andrew the First-Called, Philip and Matthew
+    are each recorded on the 30 June synaxis while their own principal Romanian
+    days, 30 November, 14 November and 16 November, render them nowhere. A
+    reader who opens the Romanian 30 November will not find Andrew.
+
+    Readers have raised it independently and each correctly refused to move the
+    row, so the rule is working and the schema is the thing that is wrong. The
+    fix is a schema change plus the render that reads it — a second feast per
+    church row, or a list of them — and not a corpus pass: every such note
+    already names the day and the saint, so the data to migrate is written and
+    nothing has to be re-read. `../ro-run/FINDINGS.md` holds the question and
+    the way to count how many saints are waiting on it; the count is a scan of
+    the folders and the pending upgrade files, not a number to copy.
+
 ### Recorded, deliberately not done
 
 - **41 hymns cite Orloff (1899) or Hapgood (1906).** The other renderings have no

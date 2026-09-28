@@ -94,6 +94,16 @@ skips the deploy and leaves the live site alone — a check branch buys nothing 
 costs a second 17-minute run. PAT is in
 `C:\Users\matei\Documents\Agios Website Ex\update git.txt`.
 
+**The only test of a push credential is a push.** `simonandpeter/test` is a
+**public** repo, so `git ls-remote` returns the remote tip with no credential at
+all — and returns it just the same with a revoked token in the URL. On
+2026-09-29 that exit 0 was read as proof the PAT worked and announced as such,
+and the push a few minutes later answered "Invalid username or token. Password
+authentication is not supported for Git operations." Two earlier sessions had
+tested `api.github.com` instead and inferred the push from a 401 there, which is
+the same mistake pointing the other way. `push.sh`'s own header had already said
+a classic PAT "reads a public repo, because anonymous does".
+
 **`git status` lies about pushing here.** Pushing through a URL with the PAT in
 it never updates `origin/main`, so the branch reports itself ahead of everything
 already sent. `git ls-remote origin main` is the answer to "did it land";
@@ -564,5 +574,14 @@ The codebase already holds this line. The rule is to keep it there.
 **Windows.** Prefer Write/Edit or short Python over PowerShell heredocs. A Python
 heredoc through the Bash tool loses one level of backslashes — put regexes in a
 file written with the Write tool. Heredocs over ~9 kB fail to parse.
-`export MSYS_NO_PATHCONV=1` before any leading-slash argument. `azbyka.ru`
-answers 403 to Python and curl; the in-app browser reads it.
+`export MSYS_NO_PATHCONV=1` before any leading-slash argument.
+
+**Python text-mode writes rewrite every line ending in the file.** `io.open(p,
+'w')` on Windows turns `\n` into `\r\n` throughout, so a script that edits one
+paragraph converts the whole document — and `scripts/tokens-table.mjs --check`
+then fails, because it looks for `-->\n` after a generated marker and finds
+`-->\r\n`. That is one unit-test failure with nothing wrong in the diff, and
+`git diff` hides the cause because it normalises. Pass `newline=''` on both the
+read and the write when editing a file in place.
+
+`azbyka.ru` answers 403 to Python and curl; the in-app browser reads it.

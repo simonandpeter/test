@@ -26,8 +26,18 @@ here, because a PAT push never updates `origin/main`.
   alone says otherwise — that comparison is what separated three real defects
   from the noise on 2026-09-15. The shelf-swipe flake is the known one and is
   the test's fault, not the page's (`STRUCTURE.md` §6).
-- The PAT is at `C:\Users\matei\Documents\Agios Website Ex\update git.txt`.
-  `bash scripts/push.sh` pushes and reads the CI run in one step.
+- **The PAT is dead and nothing has been pushed since `bf181d2f`.** It is at
+  `C:\Users\matei\Documents\Agios Website Ex\update git.txt`, it answers
+  `401 Bad credentials` on `api.github.com/user`, and `bash scripts/push.sh`
+  fails on it with "Invalid username or token. Password authentication is not
+  supported for Git operations." Only the author can replace it: a classic PAT
+  with `repo`, or a fine-grained one with Contents write on
+  `simonandpeter/test`. Commits queue locally and lose nothing;
+  `bash scripts/state.sh` says how many. `push.sh` pushes and reads the CI run
+  in one step once there is a token.
+
+- **Do not test that token with a read** — `CLAUDE.md`'s protocol section has
+  why, and it cost an announcement on 2026-09-29.
 
 ---
 
@@ -118,9 +128,26 @@ the commits and the push. `.tmp/ro-cand/` holds the 366 day pages
 (`scripts/day-candidates.mjs`, cached), `.tmp/ro-drafts/MM-DD.json` a day's new
 folders and `up-MM-DD.json` its upgrades, `.tmp/ro-dupscan.mjs` every draft
 against every other and against the corpus, `.tmp/ro-namesweep.mjs` a draft
-against the corpus by name across Romanian and English. **Landed: 1–5 and 7–10
-January**, a commit a day; 6 January is the Theophany alone and yields no
-folder, and the drafts for 11–19 January are read and waiting.
+against the corpus by name across Romanian and English.
+
+**All 366 days are read.** Every civil day has a reader's report under
+`../ro-run/reports/`; the days with no draft file are days that yield no folder
+— a feast, a forefeast, icons, or a day the corpus already held entirely. So
+**the writer is the only bottleneck left**, and the reading needs no more
+agents. What is written and what is waiting is a number, so take it from
+`../ro-run/ORCHESTRATION.md`'s state command rather than from here.
+
+The writer works the queue in date order from the first unapplied batch, one
+batch one commit, and `../ro-run/BRIEF.md` §7 is the order of the checks. Four
+tools under `scratchpad/` were written for it and are worth reading before
+reinventing them: `wb.sh <MM-DD>` takes one batch through §7 steps 1–6 and stops
+at the first red, leaving the folds, the back-out and the commit to the writer;
+`bo.sh <2027-MM-DD> <slug>` is the back-out, which has to copy the file aside
+rather than `git checkout` it because a batch of new folders is untracked;
+`office.py` and `era.py` place a new office or era label in all four locale
+packs, alphabetically, because `tests/i18n.test.mjs` fails the moment a batch
+records one no pack can read. Eleven offices and five eras were needed across
+eleven batches, so that is the ordinary cost of a day, not a surprise.
 A candidate file's menologion scan cannot see a saint the corpus keeps on
 another day — Juliana of Lazarevo is on the Romanian 2 January and in the corpus
 only on 11 August, for her relics — which is what the name sweep is for, and its
