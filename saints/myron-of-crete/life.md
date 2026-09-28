@@ -1,0 +1,11 @@
+# Myron of Crete
+
+Myron was born and brought up on the island of Crete. At the beginning of his life he took a wife and worked the land, eating his bread by the sweat of his face and feeding others besides, for he divided among the poor the crops that grew for him; and his labours were blessed, since the more he gave away the more they multiplied, and he was more merciful than other men.
+
+Once he found thieves on his threshing floor who had filled their sacks with his wheat and could not lift them from the ground. Instead of striking them or doing them any harm, he raised the loads himself, set them on their shoulders with his own hands, and told them to say nothing of it to anyone.
+
+For a life such as this he was made a priest of God's holy church, and taught the people the true faith and strengthened them for the martyrs' contest, for this was the time of the persecution under the pagan emperor Decius. After Decius died and the persecution ceased he was raised to the episcopal throne. He kept the memorials of the martyrs who had suffered for Christ in the persecution, and worked many wonders.
+
+He once stopped the course of a river. It had risen in flood, and a man of rank named Triton had great need to cross; the bishop held back its rushing and would not let it run until the man had crossed over and come back again. Then Myron sent his staff, with orders to the river to run its way once more; and when the messengers reached it and stirred the water with the staff and told it the bishop's command, it ran at once with a great rush and returned to its course as before. This great servant of God worked other wonders like it, and passing all his life in the love of God and in holiness he departed to the Lord at the age of a hundred.
+
+*After doxologia.ro's calendar for 8 august — [the day](https://doxologia.ro/8-august) and [the life](https://doxologia.ro/viata-sfantului-ierarh-miron-episcopul-cretei); read 24 September 2026.*

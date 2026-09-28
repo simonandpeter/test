@@ -1,0 +1,89 @@
+{
+  "slug": "callinicus-of-edessa",
+  "display_name": "Callinicus of Edessa",
+  "names": [
+    {
+      "form": "Calinic al Edessei",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 august, «Sfântul Ierarh Calinic al Edessei», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "office": "Metropolitan of Edessa, Pella and Almopia",
+  "related": [
+    "paisios-the-athonite"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1919,
+      "latest": 1919,
+      "display": "1919",
+      "basis": "attested",
+      "note": "doxologia.ro prints his years in the canonisation notice: «Mitropolitului Calinic al Edessei, Pellei și Almopiei (1919-1984)»."
+    },
+    "death": {
+      "earliest": 1984,
+      "latest": 1984,
+      "display": "1984",
+      "basis": "attested",
+      "note": "doxologia.ro: «(1919-1984) ... pomenirea lui în fiecare an la data de 8 august, ziua slăvitei sale adormiri»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 august — «Sfântul Ierarh Calinic al Edessei»",
+        "url": "https://doxologia.ro/8-august",
+        "year": 2026
+      },
+      "note": "His own page gives the same day and its origin: «Pe 23 iunie 2020, Patriarhia Ecumenică a hotărât canonizarea Mitropolitului Calinic al Edessei, Pellei și Almopiei (1919-1984) și pomenirea lui în fiecare an la data de 8 august, ziua slăvitei sale adormiri»."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Αυγούστου (24 September 2026). He is a hierarch of the Church of Greece canonised by the Ecumenical Patriarchate, so a Greek commemoration is to be expected; it was not looked for."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 1",
+      "text": "Pe păstorul Edessei, pe Ierarhul cel lăudat și strălucitorul luceafăr cel a toată Biserica, pe Sfântul Calinic să îl cinstim, pe călăuzitorul tuturor, că se roagă fără-ncetare pentru toți cei ce îi strigă pururea: Slavă lui Hristos, Celui ce te-a slăvit, slavă Celui ce te-a arătat, slavă Celui ce pururea ne dă vindecări cu solirea ta.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Ierarh Calinic al Edessei», Glas 1",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-calinic-al-edessei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour the shepherd of Edessa, the praised hierarch and shining morning star of the whole Church, Saint Callinicus, the guide of all; for he prays without ceasing for all who cry out to him always: Glory to Christ who glorified you, glory to him who made you manifest, glory to him who through your intercession gives healing to us all.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

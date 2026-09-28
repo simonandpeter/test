@@ -1,0 +1,69 @@
+{
+  "slug": "alexander-of-bessarabia",
+  "display_name": "Alexander of Bessarabia",
+  "names": [
+    {
+      "form": "Alexandru din Basarabia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 august, «Sfântul Preot Mucenic Alexandru din Basarabia», with the rank words left off. The page nowhere prints his surname."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "office": "Priest of the church of Alexander Nevsky at Călărași",
+  "dates": {
+    "birth": {
+      "earliest": 1861,
+      "latest": 1861,
+      "display": "1861",
+      "basis": "attested",
+      "note": "doxologia.ro: «S-a născut în 14 aprilie 1861, într-o familie de preot»."
+    },
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "attested",
+      "note": "doxologia.ro: «A fost deportat la Kazan, Tatarstanul de azi, unde a decedat curând, în ziua de 7 august 1941»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 august — «Sfântul Preot Mucenic Alexandru din Basarabia»",
+        "url": "https://doxologia.ro/8-august",
+        "year": 2026
+      },
+      "note": "The day page keeps him on 8 august; his own page gives no feast day and dates his death to 7 august 1941. The day of the calendar is the one recorded here, and the one-day difference from the day of his death is left standing as the pages have it."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "slug": "myron-of-crete",
+  "display_name": "Myron of Crete",
+  "names": [
+    {
+      "form": "Miron",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 august, «Sfântul Ierarh Miron, Episcopul Cretei», with the rank word and the office left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "office": "Bishop of Crete",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 august — «Sfântul Ierarh Miron, Episcopul Cretei»",
+        "url": "https://doxologia.ro/8-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 4",
+      "model": "Podobie: Cel ce Te-ai înălţat pe Cruce...",
+      "text": "Ca un ierarh al lui Hristos, purtător de Dumnezeu şi râu neîmpuţinat de milostivire şi făcător de minuni, Cuvioase Miron, izbăveşte-ne de toată primejdia şi nevoia ca un prea-milostiv, cu mijlocirea ta fierbinte, pe noi, cei ce ne sârguim la cinstitul tău lăcaş şi cerem har de la tine, Sfinte.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Ierarh Miron, Episcopul Cretei», Glas 4, podobie «Cel ce Te-ai înălţat pe Cruce...»",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-miron-episcopul-cretei",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a hierarch of Christ, a bearer of God, an unfailing river of mercy and a worker of wonders, venerable Myron, deliver us from every danger and need, most merciful one, by your fervent intercession — us who hasten to your honoured shrine and ask for grace from you, O holy one.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
