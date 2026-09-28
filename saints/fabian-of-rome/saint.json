@@ -1,0 +1,60 @@
+{
+  "slug": "fabian-of-rome",
+  "display_name": "Fabian of Rome",
+  "office": "Bishop of Rome",
+  "names": [
+    {
+      "form": "Fabian",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 august, «Sfântul Ierarh Fabian, episcopul Romei», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
+      "basis": "attested",
+      "note": "doxologia.ro: «Prigoana a reînceput sub împăratul Decius, când, în anul 250, Sfântul Fabian, Episcopul Romei, și-a dat viața pentru Hristos, primind cununa muceniciei.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 august — «Sfântul Ierarh Fabian, episcopul Romei»",
+        "url": "https://doxologia.ro/5-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

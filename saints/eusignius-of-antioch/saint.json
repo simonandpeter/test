@@ -1,0 +1,77 @@
+{
+  "slug": "eusignius-of-antioch",
+  "display_name": "Eusignius of Antioch",
+  "names": [
+    {
+      "form": "Evsignie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 august, «Sfântul Mucenic Evsignie», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 363,
+      "display": "under Julian",
+      "basis": "traditional",
+      "note": "doxologia.ro gives no year, only the reign and his age: it has him serving sixty years from Diocletian and Maximian to Constantius the son of Constantine, and then «Iar Iulian, nesuferind să audă aceste cuvinte, a poruncit să-i taie capul ostașului lui Hristos. Astfel s-a sfârșit Sfântul Evsignie pentru Hristos, ca un mucenic, având vârsta de 110 ani». The interval is Julian's reign, 361–363."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 august — «Sfântul Mucenic Evsignie»",
+        "url": "https://doxologia.ro/5-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Evsignie, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Mucenic Evsignie», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-evsignie",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyr Eusignius, O Lord, in his struggle received from You, our God, the crown of incorruption; for having Your strength he overthrew the torturers and broke the powerless insolence of the demons. At his prayers, Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

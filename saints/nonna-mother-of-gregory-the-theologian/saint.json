@@ -1,0 +1,61 @@
+{
+  "slug": "nonna-mother-of-gregory-the-theologian",
+  "display_name": "Nonna, mother of Gregory the Theologian",
+  "names": [
+    {
+      "form": "Nona",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 august, «Sfânta Nona, mama Sfântului Grigorie Teologul», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "righteous"
+  ],
+  "related": [
+    "gregory-the-theologian"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 374,
+      "latest": null,
+      "display": "after 374",
+      "basis": "traditional",
+      "note": "doxologia.ro gives no year for her repose, only that it followed her husband's death: «După moartea soțului ei, în anul 374, Sfânta Nona s-a îmbolnăvit, dar a suferit această ultimă încercare spre slava lui Dumnezeu. Și-a dat sufletul ei în mâinile Domnului, în timpul slujirii dumnezeieștii Liturghii.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 august — «Sfânta Nona, mama Sfântului Grigorie Teologul»",
+        "url": "https://doxologia.ro/5-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

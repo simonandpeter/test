@@ -933,6 +933,7 @@ export const el = {
     'under Galerius': 'επί Γαλερίου',
     'under Hadrian': 'επί Αδριανού',
     'under Hadrian or Antoninus': 'επί Αδριανού ή Αντωνίνου',
+    'under Julian': 'επί Ιουλιανού',
     'under Julian the Apostate': 'επί Ιουλιανού του Παραβάτη',
     'under King Milutin': 'επί του βασιλιά Μιλούτιν',
     'under Licinius': 'επί Λικινίου',

@@ -934,6 +934,7 @@ export const sr = {
     'under Galerius': 'за Галерија',
     'under Hadrian': 'за Хадријана',
     'under Hadrian or Antoninus': 'за Хадријана или Антонина',
+    'under Julian': 'за Јулијана',
     'under Julian the Apostate': 'за Јулијана Отпадника',
     'under King Milutin': 'за краља Милутина',
     'under Licinius': 'за Ликинија',

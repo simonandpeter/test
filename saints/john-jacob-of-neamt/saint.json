@@ -1,0 +1,89 @@
+{
+  "slug": "john-jacob-of-neamt",
+  "display_name": "John Jacob of Neamț",
+  "names": [
+    {
+      "form": "Ioan Iacob de la Neamț",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 august, «Sfântul Cuvios Ioan Iacob de la Neamț», with the rank words left off. His own life says he was given the name Ilie at baptism and the name Ioan at his tonsure."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "hermit"
+  ],
+  "related": [
+    "mary-of-egypt"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1913,
+      "latest": 1913,
+      "display": "1913",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut la 23 iulie 1913, în satul Crăiniceni, comuna Horodiștea, din fostul județ Dorohoi»."
+    },
+    "death": {
+      "earliest": 1960,
+      "latest": 1960,
+      "display": "1960",
+      "basis": "attested",
+      "note": "doxologia.ro: «În vara anului 1960... joi dimineața la orele 5 și-a dat sufletul în mâinile lui Hristos, la vârsta de numai 47 de ani.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 august — «Sfântul Cuvios Ioan Iacob de la Neamț»",
+        "url": "https://doxologia.ro/5-august",
+        "year": 2026
+      },
+      "note": "His life says the Holy Synod of the Romanian Orthodox Church numbered him among the saints on 20–21 June 1992 «sub numele de „Sfântul Ioan Iacob de la Neamț”», and set his feast on 5 august, the day of his passing."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru tine, Părinte, cu osârdie s-a mântuit cel după chip, căci lăsând lumea și patria ta, ai luat Crucea lui Hristos și în valea Iordanului te-ai așezat spre nevoință. Pentru aceasta și cu îngerii acum se bucură, Cuvioase Părinte Ioane, duhul tău. Roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Ioan Iacob de la Neamț», Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-ioan-iacob-de-la-neamt",
+        "year": 2026
+      },
+      "english": {
+        "text": "In you, Father, what is according to the image was saved with diligence; for you left the world and your homeland, took up the Cross of Christ, and settled in the valley of the Jordan to struggle. Therefore your spirit now rejoices with the angels, venerable Father John. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

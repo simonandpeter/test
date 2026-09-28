@@ -932,6 +932,7 @@ export const ro = {
     'under Galerius': 'sub Galerius',
     'under Hadrian': 'sub Hadrian',
     'under Hadrian or Antoninus': 'sub Hadrian sau Antoninus',
+    'under Julian': 'sub Iulian',
     'under Julian the Apostate': 'sub Iulian Apostatul',
     'under King Milutin': 'sub regele Milutin',
     'under Licinius': 'sub Liciniu',

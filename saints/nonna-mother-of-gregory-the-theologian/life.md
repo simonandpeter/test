@@ -1,0 +1,11 @@
+# Nonna, mother of Gregory the Theologian
+
+Nonna was born and brought up in Cappadocia, in Asia Minor, and married Gregory, a magistrate of the town of Nazianzus. As the later writings of her son confirm, her husband belonged to a sect that did not hold the right Orthodox teaching; by patience and prayer she brought him to the Orthodox faith, and that faith led the advocate Gregory into the clergy of the Church and made him bishop of the town, a service he fulfilled for forty-five years.
+
+Behind the bishop of Nazianzus stood his wife in humility. The rearing and teaching of her three children was her altar, the Romanian page says — a sacrifice she offered to the Church, and a gift made to the whole of Christendom by a simple woman, a mother who gave to the Kingdom of God, and to the Christian calendar as well, three saints: Saint Gorgonia, kept on 23 February; Saint Caesarius, kept on 9 March; and [Saint Gregory the Theologian](/saints/gregory-the-theologian), kept on 25 January alone and on 30 January together with Basil the Great and John Chrysostom.
+
+Gregory spoke often of his mother in his writings: In a woman's body she had a soul more manly than the bravest of men. She did not occupy herself with worldly and material things except so far as they could raise the soul. Caring nothing for paint and women's dress, she had one care only, to make the image of God in her soul more shining; and she counted no worldly nobility as nobility at all, but only that by which a man knows, through a working faith and through deeds, that he comes from God and goes to God.
+
+After her husband's death in the year 374 Nonna fell ill, and bore that last trial too for the glory of God. She gave up her soul into the hands of the Lord during the serving of the Divine Liturgy, and has remained through the centuries the mother who gave heaven and the Church three saints. doxologia.ro prints no hymn of hers, and no year for her own repose.
+
+*After doxologia.ro's calendar for 5 august — [the day](https://doxologia.ro/5-august) and [the page it gives for her](https://doxologia.ro/sfanta-nona-o-mama-de-sfinti-ai-lui-dumnezeu); read 24 September 2026.*

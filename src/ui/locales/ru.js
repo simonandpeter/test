@@ -951,6 +951,7 @@ export const ru = {
     'under Galerius': 'при Галерии',
     'under Hadrian': 'при Адриане',
     'under Hadrian or Antoninus': 'при Адриане или Антонине',
+    'under Julian': 'при Юлиане',
     'under Julian the Apostate': 'при Юлиане Отступнике',
     'under King Milutin': 'при короле Милутине',
     'under Licinius': 'при Лицинии',
