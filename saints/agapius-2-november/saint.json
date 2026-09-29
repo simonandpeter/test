@@ -1,0 +1,49 @@
+{
+  "slug": "agapius-2-november",
+  "display_name": "Agapius (2 November)",
+  "names": [
+    {
+      "form": "Agapie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 noiembrie, «Sfântul Mucenic Agapie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 2 noiembrie — «Sfântul Mucenic Agapie»",
+        "url": "https://doxologia.ro/2-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 2 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

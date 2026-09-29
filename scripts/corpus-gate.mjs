@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'agapie agapius-2-november agapius-disciple-of-babylas agapius-of-caesarea-in-palestine agapius-of-colciu agapius-of-gaza agapius-son-of-bassa agapius-son-of-eustathius':
+    'seven folders whose ro form is Agapie, on seven Romanian days, and doxologia keeps seven commemorations. The new one is a bare line: 2 noiembrie prints «Sfantul Mucenic Agapie» and the page behind it carries no life. The other six carry lives and companies of their own — the disciple of Babylas, 24 January; Agapius of Caesarea in Palestine, 15 March; Agapius of Colciu, 1 March; Agapius of Gaza, 19 August; the son of Bassa, 21 August; and the son of Eustathius, 20 September — and the November line names none of them (read 30 September 2026)',
+  'achindin acindynus-of-nicomedia acindynus-the-persian':
+    'two men: the martyr of Nicomedia, Romanian 22 August, and the first named of the five martyred in Persia under Sapor, 2 November. Two entries on one calendar (read 30 September 2026)',
+  'elpidifor elpidephorus-the-martyr elpidephorus-the-persian':
+    'two men. The corpus 3 aprilie folder is a bare line, and saint.gr 3 Apriliou is the same bare «Agios Elpidiforos», standing beside Dios, Vythonios and Galykos and not beside any Persian. The new folder is one of the five martyred in Persia under Sapor with Acindynus, Pegasius, Aphthonius and Anempodistus, 2 November, whose life both calendars print. Two entries on each calendar, so two men (read 30 September 2026)',
   'narcis narcissus-of-athens narcissus-of-jerusalem':
     'two men: Narcissus one of the Seventy, whom Paul greets and who was bishop in Athens, Romanian 31 October; and Narcissus of Jerusalem, patriarch and hieromartyr, Romanian 7 August (read 30 September 2026)',
   'epimah epimachus-9-may epimachus-of-pelusium':

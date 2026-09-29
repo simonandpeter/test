@@ -1,0 +1,86 @@
+{
+  "slug": "gabriel-urgebadze",
+  "display_name": "Gabriel Urgebadze",
+  "names": [
+    {
+      "form": "Gavriil Georgianul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 noiembrie, «Sfântul Cuvios Mărturisitor Gavriil Georgianul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "fool-for-christ",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1929,
+      "latest": 1929,
+      "display": "1929",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Gavril Urgebadze s-a născut în capitala Georgiei, Tbilisi, pe 26 august 1929.»"
+    },
+    "death": {
+      "earliest": 1995,
+      "latest": 1995,
+      "display": "1995",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a retras la Mănăstirea Samtavro de lângă Mtshketa, unde a adormit în ziua de 2 noiembrie 1995»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 2 noiembrie — «Sfântul Cuvios Mărturisitor Gavriil Georgianul»",
+        "url": "https://doxologia.ro/2-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 2 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Glasul Apostolului Pavel ce zice: „Noi suntem nebuni pentru Hristos” auzindu-l robul Tău, Sfântul Gavriil, nebun s-a făcut pentru tine pe pământ. Pentru aceasta, săvârșind pomenirea lui, Ție ne rugăm, Doamne mântuiește sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfântului Cuvios Gavriil Georgianul, Glasul 1",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-gavriil-georgianul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Hearing the voice of the Apostle Paul that says, “We are fools for Christ,” your servant Saint Gabriel became a fool for you upon earth. Therefore, as we keep his memory, we pray to you: Lord, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "slug": "acindynus-the-persian",
+  "display_name": "Acindynus the Persian",
+  "names": [
+    {
+      "form": "Achindin",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 noiembrie, «Sfântul Mucenic Achindin»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 2 noiembrie — «Sfântul Mucenic Achindin»",
+        "url": "https://doxologia.ro/2-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 2 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "related": [
+    "pegasius-the-persian",
+    "anempodistus-the-persian",
+    "aphthonius-the-persian",
+    "elpidephorus-the-persian"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Purtătorilor de lupte ai Domnului, fericit este pământul care s-a adăpat cu sângele vostru şi sfinte locaşurile care au primit trupurile voastre. Că în privelişte pe vrăjmaşi aţi biruit şi pe Hristos cu îndrăznire aţi propovăduit, pe Acela ca pe un Bun rugaţi-L să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfinților Mucenici Achindin, Pigasie, Aftonie, Elpidifor și Anempodist, Glasul 2",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-achindin-pigasie-aftonie-elpidifor-anempodist",
+        "year": 2026
+      },
+      "english": {
+        "text": "Champions of the Lord: blessed is the earth that was watered with your blood, and holy are the shrines that received your bodies. For in the arena you overcame the enemy and preached Christ with boldness. Entreat him, as the Good One, to save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
