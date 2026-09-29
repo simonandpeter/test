@@ -1,0 +1,50 @@
+{
+  "slug": "heliodorus-the-martyr-20-august",
+  "display_name": "Heliodorus (20 August)",
+  "names": [
+    {
+      "form": "Eliodor",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 august, «Sfântul Mucenic Eliodor», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 august — «Sfântul Mucenic Eliodor»",
+        "url": "https://doxologia.ro/20-august",
+        "year": 2026
+      },
+      "note": "The page doxologia's calendar links for him carries neither a Viață tab nor a Tropar tab; the calendar line is everything the source gives. The corpus keeps no Heliodorus on 20 August in any other calendar, so this folder rests on the Romanian day alone."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

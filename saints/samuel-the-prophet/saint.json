@@ -9,6 +9,11 @@
     {
       "form": "Свети пророк Самуило",
       "lang": "sr"
+    },
+    {
+      "form": "Samuel",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 august, «Sfântul Proroc Samuel», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -41,8 +46,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 20 august was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 20 august — «Sfântul Proroc Samuel»",
+        "url": "https://doxologia.ro/20-august",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -149,6 +163,22 @@
       },
       "english": {
         "text": "O anointer of kings, and above all of the holy David who beheld God, O great Samuel, hasten to entreat for us, that we may be anointed with the ointment of the Holy Spirit and be made strangers to the adversary, even as David was a stranger to the unclean spirit of Saul.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "A prorocului Tău Samuel pomenire, Doamne, prăznuind, printr-însul Te rugăm, mântuieşte sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Proroc Samuel», Glasul 2",
+        "url": "https://doxologia.ro/troparul-sfantului-proroc-samuel",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping the memory of your prophet Samuel, O Lord, we entreat you through him: save our souls.",
         "rendered": "site"
       }
     }

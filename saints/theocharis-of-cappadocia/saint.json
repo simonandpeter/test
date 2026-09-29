@@ -1,0 +1,59 @@
+{
+  "slug": "theocharis-of-cappadocia",
+  "display_name": "Theocharis of Cappadocia",
+  "names": [
+    {
+      "form": "Teoharie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 august, «Sfântul Mucenic Teoharie», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1740,
+      "latest": 1740,
+      "display": "1740",
+      "basis": "attested",
+      "note": "doxologia.ro: «a fost ucis cu pietre și apoi spânzurat de un plop, pe 20 august 1740». The page gives no birth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 august — «Sfântul Mucenic Teoharie»",
+        "url": "https://doxologia.ro/20-august",
+        "year": 2026
+      },
+      "note": "His life closes: «Sfântul Mucenic Teoharie este prăznuit de Biserica Ortodoxă pe 20 august», the day on which he was killed."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Αυγούστου (24 September 2026). Doxologia's life makes him a Greek of Cappadocia whose relic is at Thessalonica, so the Greek row is the one most likely to be fillable."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
