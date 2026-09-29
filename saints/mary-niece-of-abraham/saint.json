@@ -1,0 +1,52 @@
+{
+  "slug": "mary-niece-of-abraham",
+  "display_name": "Mary, niece of Abraham the Recluse",
+  "names": [
+    {
+      "form": "Maria",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 octombrie, «Sfântul Cuvios Avramie și Maria, nepoata sa»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 29 octombrie — «Sfântul Cuvios Avramie și Maria, nepoata sa»",
+        "url": "https://doxologia.ro/29-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 Οκτωβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "related": [
+    "abraham-the-recluse"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

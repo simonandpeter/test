@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'maria golinduhia-of-persia maria-daughter-of-nicholas-ii maria-of-gatchina maria-the-patrician mary-niece-of-abraham mary-of-aza mary-sister-of-lazarus mary-sister-of-lykarion mary-wife-of-xenophon':
+    'nine women whose ro form is Maria, on nine separate Romanian days. The new one is the niece of Abraham the Recluse, who fell and was brought back by him from the inn where she lived, 29 October. The other eight were read on 29 September and are unchanged (read 30 September 2026)',
+  'avramie abraham-the-recluse abramius-of-arbela athanasius-the-athonite':
+    'three folders whose ro form is Avramie. The new one is Abraham the Recluse, who shut himself up for fifty years and went out once to bring back his niece Mary, 29 October. Abramius of Arbela is a bishop and hieromartyr, 4 February. The third is Athanasius the Athonite, who carries Avramie as a second ro form because that was his baptismal name; his day is 5 July (read 30 September 2026)',
   'savaitul stefan stephen-the-sabaite stephen-the-sabbaite':
     'two men of the same house and the same epithet, and the two slugs differ by one letter, which is a trap for whoever reads this next. Doxologia keeps both with two lives: the nephew of John Damascene, born in 725 and tonsured at Mar Saba as a boy, Romanian 13 July, held as stephen-the-sabbaite; and the hymnographer of the same Lavra, who with Andrew the Blind was among the first to compose the canons, Romanian 28 October, written here as stephen-the-sabaite. Two commemorations on one calendar, so two men; the near-identical slugs are left as the readers wrote them and are worth a ruling (read 30 September 2026)',
   'teodul theodulus-companion-of-agathopodes theodulus-of-the-forty-martyrs theodulus-of-tripoli theodulus-son-of-terence':

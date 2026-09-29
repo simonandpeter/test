@@ -1,0 +1,72 @@
+{
+  "slug": "abraham-the-recluse",
+  "display_name": "Abraham the Recluse",
+  "names": [
+    {
+      "form": "Avramie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 octombrie, «Sfântul Cuvios Avramie și Maria, nepoata sa»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 29 octombrie — «Sfântul Cuvios Avramie și Maria, nepoata sa»",
+        "url": "https://doxologia.ro/29-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 Οκτωβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "related": [
+    "mary-niece-of-abraham"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru tine, părinte, cu osârdie s-a mântuit cel după chip; că, luând crucea, ai urmat lui Hristos; şi lucrând, ai învăţat să nu se uite la trup, căci este trecător; ci, să poarte grijă de suflet, de lucrul cel nemuritor. Pentru aceasta şi cu îngerii împreună se bucură, Preacuvioase Părinte Avramie, duhul tău.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfântului Cuvios Avramie, Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-avramie",
+        "year": 2026
+      },
+      "english": {
+        "text": "In you, father, the image was saved with all diligence; for taking up the cross you followed Christ, and by your works you taught us to overlook the flesh, since it passes away, and to care for the soul, a thing immortal. Therefore your spirit rejoices together with the angels, most venerable father Abraham.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

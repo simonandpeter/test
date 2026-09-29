@@ -1,0 +1,59 @@
+{
+  "slug": "timothy-of-esphigmenou",
+  "display_name": "Timothy of Esphigmenou",
+  "names": [
+    {
+      "form": "Timotei Esfigmenitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 octombrie, «Sfântul Nou Mucenic Timotei Esfigmenitul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1820,
+      "latest": 1820,
+      "display": "1820",
+      "basis": "attested",
+      "note": "doxologia.ro: «Curând apoi, la 29 octombrie 1820 i s-a tăiat capul, iar sfintele sale moăște au fost aruncate în râu.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 29 octombrie — «Sfântul Nou Mucenic Timotei Esfigmenitul»",
+        "url": "https://doxologia.ro/29-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 Οκτωβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

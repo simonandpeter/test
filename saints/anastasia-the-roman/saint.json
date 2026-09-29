@@ -1,0 +1,69 @@
+{
+  "slug": "anastasia-the-roman",
+  "display_name": "Anastasia the Roman",
+  "names": [
+    {
+      "form": "Anastasia Romana",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 octombrie, «Sfânta Mare Muceniță Anastasia Romana»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "great-martyr",
+    "virgin",
+    "monastic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 29 octombrie — «Sfânta Mare Muceniță Anastasia Romana»",
+        "url": "https://doxologia.ro/29-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 Οκτωβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mielușeaua Ta, Iisuse, Anastasia, strigă cu glas mare: pe Tine, Mirele meu, Te iubesc și pe Tine căutându-Te mă chinuiesc și împreună mă răstignesc și împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru Tine, ca să viez pentru Tine; ci, ca o jertfă fără de prihană, primește-mă pe mine ceea ce cu dragoste mă jertfesc Ție. Pentru rugăciunile ei, ca un Milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfintei Cuvioase Mucenițe Anastasia Romana, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-mucenite-anastasia-romana",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy lamb Anastasia, O Jesus, cries out with a loud voice: Thee, my Bridegroom, I love; and seeking Thee I am in torment; with Thee I am crucified and with Thee buried in Thy baptism; I suffer for Thee that I may reign in Thee, and I die for Thee that I may live for Thee. Receive me, then, as a spotless sacrifice, who offer myself to Thee in love. By her prayers, as the Merciful One, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
