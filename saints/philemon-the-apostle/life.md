@@ -1,0 +1,11 @@
+# Philemon
+
+Philemon was a notable citizen of Colossae in Phrygia. Believing in Christ, he made his house a church: all the faithful of Colossae gathered at his house, and the divine services were celebrated there as in a church. Afterwards he was a bishop in the apostolate, for in the days of the Apostles some bishops had a see and others had none but went through different cities and lands; such men were called apostolic bishops, because they were sent out on apostolate to preach. His wife was [Apphia](/saints/apphia-wife-of-philemon), on the witness of Saint John Chrysostom.
+
+Set in such a bishopric, Philemon was counted in the company of the seventy apostles, going through the cities of Phrygia and others and preaching the word of God; and it is written of him, doxologia's life says, that he was also bishop in Gaza. The Apostle [Paul](/saints/paul-the-apostle) wrote a letter to him, and in it calls [Archippus](/saints/archippus-the-apostle) — who was bishop in Colossae after Saint Epaphras, on the witness of Saint Ambrose — his fellow soldier.
+
+Once, when the god-hated feast of the unclean Artemis was being kept at Colossae, Archippus with those who were there and with Philemon gathered all the faithful in the house that Apphia kept in order, and they offered their usual prayers to God and celebrated the holy service. The idolaters, who hated the faithful and knew that all the Christians were gathered in Philemon's house, fell on them without warning and drove out the flock of Christ, beating some and killing others.
+
+Archippus, Philemon and Apphia they seized and brought to Artocles, the governor of the city of Ephesus, and at his order all three were tortured. First they were stretched on the ground and dragged and beaten with staves without mercy; then each was buried in the earth up to the hips and stoned. Philemon and Apphia were killed under the stones; Archippus they beat and left alive, to be mocked by the children, who gathered and pierced him through with their knives. So the apostolic three went to heaven, before the throne of the Most Holy and undivided Trinity.
+
+*After doxologia.ro's calendar for 22 noiembrie — [the day](https://doxologia.ro/22-noiembrie) and [the life](https://doxologia.ro/sfantul-apostol-filimon-sotia-sa-apfia); read 25 September 2026.*

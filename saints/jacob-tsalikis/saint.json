@@ -1,0 +1,87 @@
+{
+  "slug": "jacob-tsalikis",
+  "display_name": "Jacob Tsalikis",
+  "names": [
+    {
+      "form": "Iacov Tsalikis",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 noiembrie, «Sfântul Cuvios Iacov Tsalikis», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1920,
+      "latest": 1920,
+      "display": "1920",
+      "basis": "attested",
+      "note": "doxologia.ro: «Fericitul părinte Iacov s-a născut în 5 noiembrie 1920, în satul Libisi din Asia Mică», and the same page heads his life «Sfântul Iacov Tsalikis (1920-1991)»."
+    },
+    "death": {
+      "earliest": 1991,
+      "latest": 1991,
+      "display": "1991",
+      "basis": "attested",
+      "note": "doxologia.ro: «În data de 21 noembrie 1991 … părintele Iacov, s-a mutat la locașurile cele cerești»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 noiembrie — «Sfântul Cuvios Iacov Tsalikis»",
+        "url": "https://doxologia.ro/22-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "paisios-the-athonite",
+    "john-the-russian"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Pe vlăstarul Libisiului și lauda Eviei, pe cel arătat în vremurile din urmă, al monahilor prieten adevărat. pe Iacob să-l cinstim credincioși pe noul iubitor al Isichei, pe cel ce vindecării dăruiește celor care îl cinstesc cu bună credință și cu Evlavie strigă cu laude. Slavă Lui Hristos, Celui ce te-a slăvit, slavă Celui care minunat te-a arătat, slavă Celui ce te-a sfințit în vremurile din urmă.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Iacov Tsalikis (the page prints no glas)",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-iacov-tsalikis",
+        "year": 2026
+      },
+      "english": {
+        "text": "The shoot of Livisi and the boast of Evia, shown forth in the last times, the monks' true friend — Jacob let us honour, believers, the new lover of stillness, who grants healing to those who honour him in good faith and cry aloud with praises in reverence: Glory to Christ who glorified you, glory to him who showed you forth wondrously, glory to him who sanctified you in the last times.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

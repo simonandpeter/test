@@ -10,4 +10,4 @@ In old age he was seized by the unbelievers and brought to Rome in the reign of 
 
 After the eighteen days the eparch, making a show of mercy, did not condemn him to death but drove him from the city and sent him into exile at Puteoli, where he did not stop preaching. Hearing of it, Tertyllus took him again, and finding him unmoved in the faith had him stretched out and beaten with staves by four men without sparing, so that the bones of his legs and others were broken; then his head was struck off. A Christian woman of the imperial family took his body, laid it in a silver coffin, and kept the martyr's memory.
 
-*After doxologia.ro's calendar for 15 februarie — [the day](https://doxologia.ro/15-februarie) and [the life](https://doxologia.ro/sfantul-apostol-onisim); read 19 September 2026.*
+*After doxologia.ro's calendar for 15 februarie — [the day](https://doxologia.ro/15-februarie) and [the life](https://doxologia.ro/sfantul-apostol-onisim); read 19 September 2026; doxologia.ro's calendar for 22 noiembrie names him a second time, with the same life — [that day](https://doxologia.ro/22-noiembrie); read 25 September 2026.*

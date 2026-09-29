@@ -10,4 +10,4 @@ Once, while the feast of the unclean Artemis was being kept at Colossae, Archipp
 
 First they were stretched on the ground and dragged, and beaten with staves without mercy; then each was buried apart in the earth up to the hips and stoned. Philemon and Apphia they killed with the stones; but Archippus, after the beating, they left alive for the children to mock. The children gathered and pierced the saint with knives. So the apostolic three went up to heaven, the life says, before the throne of the Holy, life-giving and undivided Trinity. Doxologia gives no year for any of them.
 
-*After doxologia.ro's calendar for 19 februarie — [the day](https://doxologia.ro/19-februarie) and [the life](https://doxologia.ro/sfantul-apostol-arhip); read 19 September 2026.*
+*After doxologia.ro's calendar for 19 februarie — [the day](https://doxologia.ro/19-februarie) and [the life](https://doxologia.ro/sfantul-apostol-arhip); read 19 September 2026; doxologia.ro's calendar for 22 noiembrie names him a second time, with the same life — [that day](https://doxologia.ro/22-noiembrie); read 25 September 2026.*

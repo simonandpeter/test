@@ -1,0 +1,53 @@
+{
+  "slug": "apphia-wife-of-philemon",
+  "display_name": "Apphia, wife of Philemon",
+  "names": [
+    {
+      "form": "Apfia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 noiembrie, «Sfântul Apostol Filimon și soția sa, Apfia»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 noiembrie — «Sfântul Apostol Filimon și soția sa, Apfia»",
+        "url": "https://doxologia.ro/22-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "philemon-the-apostle",
+    "archippus-the-apostle"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

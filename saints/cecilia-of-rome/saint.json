@@ -1,0 +1,68 @@
+{
+  "slug": "cecilia-of-rome",
+  "display_name": "Cecilia of Rome",
+  "names": [
+    {
+      "form": "Cecilia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 noiembrie, «Sfânta Muceniță Cecilia», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 noiembrie — «Sfânta Muceniță Cecilia»",
+        "url": "https://doxologia.ro/22-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mieluşeaua Ta, Iisuse, Cecilia, strigă cu glas mare: pe Tine, Mirele meu, te iubesc și pe Tine căutându-Te mă chinuiesc și împreună mă răstignesc și împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru tine, ca să viez pentru Tine; ci, ca o jertfă fără de prihană, primește-mă pe mine ceea ce cu dragoste mă jertfesc Ție. Pentru rugăciunile ei, ca un Milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Mucenițe Cecilia (the common «Mielușeaua Ta», with her name set into it)",
+        "url": "https://doxologia.ro/troparul-sfintei-mucenite-cecilia",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your ewe-lamb Cecilia cries out to you with a loud voice, O Jesus: you, my Bridegroom, I love, and seeking you I suffer; with you I am crucified and with you buried in your baptism; and I suffer for your sake, that I may reign in you; and I die for you, that I may live for you. Receive me, then, as a spotless sacrifice, offered to you in love. At her prayers, as you are merciful, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

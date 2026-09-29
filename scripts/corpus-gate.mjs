@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'filimon philemon-6-july philemon-of-cyzicus philemon-of-gaza philemon-the-apostle':
+    'four men called Filimon, on four Romanian days. The new one is the apostle of the Seventy to whom Paul wrote, husband of Apphia, 22 November. The others are the bare-line martyr of 6 July, Philemon of Cyzicus, 29 April, and Philemon bishop of Gaza, 14 February (read 30 September 2026)',
   'proclu proclus-of-callippi proclus-of-constantinople':
     'two men: the patriarch of Constantinople, disciple of John Chrysostom, Romanian 20 November; and Proclus of Callippi, a martyr, Romanian 12 July (read 30 September 2026)',
   'varlaam barlaam-30-may barlaam-hutinski barlaam-of-antioch varlaam-of-moldavia':
