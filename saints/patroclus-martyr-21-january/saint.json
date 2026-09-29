@@ -1,0 +1,59 @@
+{
+  "slug": "patroclus-martyr-21-january",
+  "display_name": "Patroclus (21 January)",
+  "names": [
+    {
+      "form": "Πάτροκλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιανουαρίου, «Άγιος Πάτροκλος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 270,
+      "latest": 275,
+      "display": "under Aurelian",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Μάρτυρας Πάτροκλος μαρτύρησε επί αυτοκράτορα Αυρηλιανού (270-275 μ.Χ.).» The reign is what the page gives; it names no year, and it marks the whole entry as uncorroborated (see the Greek attestation's note)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιανουαρίου — «Άγιος Πάτροκλος»",
+        "url": "https://www.saint.gr/01/21/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr marks this entry itself: «* Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου, ή τα βιογραφικά στοιχεία του ή η ημερομηνία εορτής του» — the saint's existence, or his biographical data, or the date of his feast, is not corroborated (https://www.saint.gr/958/saint.aspx). The row records what the day prints, with the source's own caveat."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

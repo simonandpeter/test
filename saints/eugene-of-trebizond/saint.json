@@ -6,6 +6,11 @@
       "form": "Evghenie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 ianuarie, «Sfântul Mucenic Evghenie»."
+    },
+    {
+      "form": "Ευγένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιανουαρίου, «Άγιοι Ευγένιος, Ουαλεριανός, Κάνδιδος και Ακύλας οι εκ Τραπεζούντας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιανουαρίου — «Άγιοι Ευγένιος, Ουαλεριανός, Κάνδιδος και Ακύλας οι εκ Τραπεζούντας»",
+        "url": "https://www.saint.gr/01/21/index.aspx",
+        "year": 2026
+      },
+      "note": "Commemorated with Valerian, Candidus and Aquila on one page. The page's own headings for the other three give the year 292; the typikon of the monastery of Karakallou, which it quotes, notes that «τη 24η Ιουνίου τελείται και η γέννησις του Αγίου και ενδόξου μεγαλομάρτυρας Ευγενίου», so a second day stands in that quotation and not in the Greek calendar's own listing."
     },
     {
       "church": "serbian",

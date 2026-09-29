@@ -6,4 +6,6 @@ They were caught in the land of Lazica, in a small fortress the page calls Pân�
 
 Not many days later [Eugene](/saints/eugene-of-trebizond) was taken too. All four were thrown at the end into a burning furnace, came out of it unharmed, and were killed by the sword.
 
-*After doxologia.ro's calendar for 21 ianuarie — [the day](https://doxologia.ro/21-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-valerian-0); read 19 September 2026.*
+The Greek calendar keeps the four together on the same day and gives him a year the Romanian page did not: the heading for him on their joint page reads «Αγιος Ουαλεριανος ο Εκ Τραπεζουντας (; - 292)». saint.gr names the four patrons of Trebizond, in Turkey, and of Nea Trapezounta in Pieria, and says of their end that they remained unshaken and victorious in their faith through the torments. Of Valerian in particular it prints nothing beyond the name, the city and that year; the relics it locates are those of Eugene and of Candidus, and it gives the four no hymn.
+
+*After doxologia.ro's calendar for 21 ianuarie — [the day](https://doxologia.ro/21-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-valerian-0); read 19 September 2026; and saint.gr's calendar for 21 Ιανουαρίου — [the day](https://www.saint.gr/01/21/index.aspx) and [the life](https://www.saint.gr/964/saint.aspx), read 30 September 2026.*

@@ -8,4 +8,6 @@ The Passio the page follows adds the story. The prefect's son asked her in marri
 
 Condemned then as a sorceress, she was glad, and said that the Bridegroom's servants had come for her and her lamp was ready. She knelt, and the executioner's hands shook until the prefect shouted at him. She was buried in the catacombs on the Via Nomentana that carry her name.
 
-*After doxologia.ro's calendar for 21 ianuarie — [the day](https://doxologia.ro/21-ianuarie) and [the life](https://doxologia.ro/viata-sfintei-mucenite-agnia); read 19 September 2026.*
+The Greek calendar keeps her on the same day. saint.gr says she was born at Rome of noble parents, and it is plain about where her head now is: in the Roman Catholic church of Saint Agnes «ἐκτός τῶν Τειχῶν», outside the Walls, at Rome. The distich it sets over her makes her death by fire the offering: «Ὑπὲρ νέον σοι μόσχον, ὡς Δαυὶδ λέγει, Ἤρεσκεν Ἁγνὴ πυρπολουμένη, Λόγε» — better to thee than a young calf, as David says, was Agnes burning, O Word. Its apolytikion says the same, that she finished the contest by fire.
+
+*After doxologia.ro's calendar for 21 ianuarie — [the day](https://doxologia.ro/21-ianuarie) and [the life](https://doxologia.ro/viata-sfintei-mucenite-agnia); read 19 September 2026; and saint.gr's calendar for 21 Ιανουαρίου — [the day](https://www.saint.gr/01/21/index.aspx) and [the life](https://www.saint.gr/962/saint.aspx), read 30 September 2026.*

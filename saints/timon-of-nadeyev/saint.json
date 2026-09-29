@@ -1,0 +1,59 @@
+{
+  "slug": "timon-of-nadeyev",
+  "display_name": "Timon of Nadeyev",
+  "names": [
+    {
+      "form": "Τίμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιανουαρίου, «Όσιος Τίμων εκ Ρωσίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1840,
+      "latest": 1840,
+      "display": "1840",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Τίμων, ο ένοικος της ερήμου, ασκήτεψε στο Ναδέγεβ της Ρωσίας και κοιμήθηκε με ειρήνη το έτος 1840 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιανουαρίου — «Όσιος Τίμων εκ Ρωσίας»",
+        "url": "https://www.saint.gr/01/21/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

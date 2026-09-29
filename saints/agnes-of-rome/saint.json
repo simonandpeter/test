@@ -6,6 +6,11 @@
       "form": "Agnia din Roma",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 ianuarie, «Sfânta Muceniţă Agnia din Roma»."
+    },
+    {
+      "form": "Αγνή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιανουαρίου, «Αγία Αγνή», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιανουαρίου — «Αγία Αγνή»",
+        "url": "https://www.saint.gr/01/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The same calendar prints a second «Αγία Αγνή», with Thyrsus, on 20 Ιανουαρίου, of whom its page says that it is unknown where and when they bore witness (https://www.saint.gr/3326/saint.aspx). Nothing on either page joins the two, so that entry is kept as its own commemoration and is not folded into this folder."
     },
     {
       "church": "serbian",
@@ -62,5 +77,23 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’. Τὸν συνάναρχον Λόγον.",
+      "text": "Φερωνύμως ἁγνείας ὤφθης κειμήλιον, καὶ ἀνδρικῶς ἠγωνίσω ὑπὲρ τῆς δόξης Χριστοῦ, καλλιπάρθενε σεμνὴ Ἁγνὴ πανεύφημε· ὡς γὰρ θυσία καθαρά, προσενήνεξαι αὐτῷ, τελέσασα τὸν ἀγῶνα, διὰ πυρὸς Ἀθληφόρε, καὶ τοῦ ἐχθροῦ τὴν πλάνην ἔφλεξας.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος πλ. α’, «Τὸν συνάναρχον Λόγον», on the page of Αγία Αγνή",
+        "url": "https://www.saint.gr/962/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Truly to thy name thou wast shown a treasure of chastity, and thou didst contend manfully for the glory of Christ, O fair virgin, modest and all-lauded Agnes; for thou wast offered to him as a pure sacrifice, finishing the contest through fire, O bearer of the prize, and thou didst burn up the deceit of the enemy.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

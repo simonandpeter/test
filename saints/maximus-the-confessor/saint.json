@@ -10,6 +10,11 @@
       "form": "Maxim Mărturisitorul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 ianuarie."
+    },
+    {
+      "form": "Μάξιμος ο Ομολογητής",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιανουαρίου, «Όσιος Μάξιμος ο Ομολογητής», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -65,8 +70,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιανουαρίου — «Όσιος Μάξιμος ο Ομολογητής»",
+        "url": "https://www.saint.gr/01/21/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -217,6 +231,38 @@
       },
       "english": {
         "text": "Adorned with holy confessions, thou wast taken up crowned from the earth to the Light that knows no evening and to glory, O father Maximus. Keep those who honour thy holy memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος γ'. Θείας πίστεως.",
+      "text": "Θείου Πνεύματος, τη επομβρία, ρείθρα έβλυσας, τη Εκκλησία, υπερκοσμίων δογμάτων πανεύφημε, θεολόγων δε του Λόγου την κένωσιν, ομολογίας αγώσι διέλαμψας. Πάτερ Μάξιμε, Χριστόν τον Θεόν ικέτευε, δωρήσασθσι ημίν το μέγα έλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ήχος γ', «Θείας πίστεως», on the page of Όσιος Μάξιμος ο Ομολογητής; monotonic as the page prints it, and its last line is printed with the misspelling «δωρήσασθσι»",
+        "url": "https://www.saint.gr/967/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the rain of the divine Spirit thou didst pour out streams of doctrines above the world upon the Church, O all-lauded one; and speaking of the Word's self-emptying as a theologian, thou didst shine in the struggles of confession. Father Maximus, entreat Christ God to grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ὀρθοδοξίας ὁδηγέ, εὐσεβείας Διδάσκαλε καί σεμνότητος, τῆς Οἰκουμένης ὁ φωστήρ, τῶν Μοναζόντων θεόπνευστον ἐγκαλλώπισμα, Μάξιμε σοφέ, ταῖς διδαχαῖς σου πάντας ἐφώτισας, λύρα τοῦ Πνεύματος. Πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τάς ψυχάς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος πλ. δ’, on the page of Όσιος Μάξιμος ο Ομολογητής; the page prints it as the second of two apolytikia",
+        "url": "https://www.saint.gr/967/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Guide of Orthodoxy, teacher of true worship and of holiness, luminary of the inhabited world, God-inspired adornment of monastics, O wise Maximus, by thy teachings thou hast enlightened all, lyre of the Spirit. Intercede with Christ God that our souls may be saved.",
         "rendered": "site"
       }
     }

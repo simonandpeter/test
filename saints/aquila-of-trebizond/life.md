@@ -6,4 +6,6 @@ They were seized in the land of Lazica, in a small fortress the page calls Pân�
 
 Not many days after, [Eugene](/saints/eugene-of-trebizond) was taken as well, and from then the four are one company. All four were at last thrown into a burning furnace, came out of it unhurt, and were put to death by the sword.
 
-*After doxologia.ro's calendar for 21 ianuarie — [the day](https://doxologia.ro/21-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-achila); read 19 September 2026.*
+The Greek calendar keeps the four together on the same day and gives him a year the Romanian page did not: the heading for him on their joint page reads «Αγιος Ακυλας ο Εκ Τραπεζουντας (; - 292)». saint.gr adds a note on his name, which it derives from the Latin *acula*, a small needle — one who is sharp and useful as a needle — or else from *aquila*, an eagle. It names the four patrons of Trebizond, in Turkey, and of Nea Trapezounta in Pieria, and says of their end that they remained unshaken and victorious in their faith through the torments. It prints no hymn for them.
+
+*After doxologia.ro's calendar for 21 ianuarie — [the day](https://doxologia.ro/21-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-achila); read 19 September 2026; and saint.gr's calendar for 21 Ιανουαρίου — [the day](https://www.saint.gr/01/21/index.aspx) and [the life](https://www.saint.gr/964/saint.aspx), read 30 September 2026.*

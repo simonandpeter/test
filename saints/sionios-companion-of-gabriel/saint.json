@@ -1,0 +1,63 @@
+{
+  "slug": "sionios-companion-of-gabriel",
+  "display_name": "Sionios, companion of Gabriel",
+  "names": [
+    {
+      "form": "Σιώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιανουαρίου, «Άγιοι Γαβριήλ και Σιώνιος οι Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησαν μαζί με άλλους κατά την περίοδο του ηγεμόνα των Βουλγάρων Μουρτάγονος κατά τον 9ο αιώνα μ.Χ.»"
+    }
+  },
+  "related": [
+    "gabriel-companion-of-sionios",
+    "manuel-of-adrianople"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιανουαρίου — «Άγιοι Γαβριήλ και Σιώνιος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/01/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The same calendar names him again on 22 Ιανουαρίου, in the company of Manuel of Adrianople, whose page tells the same martyrdom under Mourtagon and says «τους Γαβριήλ και Σιώνιο τους αποκεφάλισε» (https://www.saint.gr/1148/saint.aspx). The two entries are read here as two commemorations of the same man, so the row records the day whose page names him with Gabriel alone and this note records the other."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

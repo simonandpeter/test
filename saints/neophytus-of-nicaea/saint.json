@@ -6,6 +6,11 @@
       "form": "Neofit",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 ianuarie, «Sfântul Mucenic Neofit»."
+    },
+    {
+      "form": "Νεόφυτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιανουαρίου, «Άγιος Νεόφυτος ο Μάρτυρας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -37,6 +42,38 @@
         "text": "Thy martyr Neophytus, O Lord, in his contest received the crown of incorruption from thee our God; for having thy strength he cast down the tormentors, and broke also the feeble daring of the demons. At his prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος πλ. α'. Τον συνάναρχον Λόγον.",
+      "text": "Εκ σπάργανων επλήσθης της θείας χάριτος, ώσπερ νεόφυτοι έρνος χαριτωθείς την ψυχήν, και θαυμάτων αυτουργός ξένων γενόμενος, ηνδρανάθησας στερρώς, δι' αγώνων Ιερών, Νεόφυτε Αθλοφόρε. Αλλά μη παύση πρεσβεύων, ελεηθήναι τας ψυχάς ημών.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ήχος πλ. α', «Τον συνάναρχον Λόγον», on the page of Άγιος Νεόφυτος ο Μάρτυρας; monotonic as the page prints it",
+        "url": "https://www.saint.gr/966/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy swaddling clothes thou wast filled with divine grace, thy soul made graceful like a newly planted shoot; and having become a worker of strange wonders, thou didst bear thyself manfully and firmly through sacred struggles, O Neophytus, bearer of the prize. Cease not to intercede that our souls may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’. Ταχύ προκατάλαβε.",
+      "text": "Ὁ Μάρτυς σου Κύριε, ἐν τῇ ἀθλήσει αὐτοῦ, τὸ στέφος ἐκομίσατο τῆς ἀφθαρσίας, ἐκ σοῦ τοῦ Θεοῦ ἡμῶν· ἔχων γὰρ τὴν ἰσχύν σου, τοὺς τυράννους καθεῖλεν ἔθραυσε καὶ δαιμόνων τὰ ἀνίσχυρα θράση. Αὐτοῦ ταῖς ἱκεσίαις Χριστέ ὁ Θεός, σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος δ’, «Ταχύ προκατάλαβε», on the page of Άγιος Νεόφυτος ο Μάρτυρας; this is the common of a single martyr, printed there under his name",
+        "url": "https://www.saint.gr/966/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr, O Lord, in his contest received the crown of incorruption from thee, our God; for having thy strength he cast down the tyrants and broke the powerless effrontery of demons. By his entreaties, O Christ God, save our souls.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
@@ -61,8 +98,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιανουαρίου — «Άγιος Νεόφυτος ο Μάρτυρας»",
+        "url": "https://www.saint.gr/01/21/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

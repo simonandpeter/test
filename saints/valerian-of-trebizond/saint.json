@@ -6,6 +6,11 @@
       "form": "Valerian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 ianuarie, «Sfântul Mucenic Valerian»."
+    },
+    {
+      "form": "Ουαλεριανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιανουαρίου, «Άγιοι Ευγένιος, Ουαλεριανός, Κάνδιδος και Ακύλας οι εκ Τραπεζούντας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιανουαρίου — «Άγιοι Ευγένιος, Ουαλεριανός, Κάνδιδος και Ακύλας οι εκ Τραπεζούντας»",
+        "url": "https://www.saint.gr/01/21/index.aspx",
+        "year": 2026
+      },
+      "note": "Commemorated with Eugene, Candidus and Aquila on one page, whose heading for him reads «Αγιος Ουαλεριανος ο Εκ Τραπεζουντας (; - 292)»."
     },
     {
       "church": "serbian",
