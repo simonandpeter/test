@@ -1,0 +1,54 @@
+{
+  "slug": "demetrius-the-myrrhstreamer",
+  "display_name": "Demetrius the Myrrh-streamer",
+  "names": [
+    {
+      "form": "Dimitrie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 octombrie, «Sfântul Mare Mucenic Dimitrie, Izvorâtorul de mir»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "great-martyr",
+    "wonderworker"
+  ],
+  "related": [
+    "lupus-the-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 26 octombrie — «Sfântul Mare Mucenic Dimitrie, Izvorâtorul de mir»",
+        "url": "https://doxologia.ro/26-octombrie",
+        "year": 2026
+      },
+      "note": "The day is the day of his death as the life gives it: «în ziua de douăzeci și șase a lunii octombrie, au intrat ostașii în temniță». The Tropar tab on his page serves the troparion of the earthquake appointed for his feast, not a troparion to him, so no hymn is recorded here. Read 24 September 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

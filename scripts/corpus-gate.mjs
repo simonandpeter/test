@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'dimitrie demetrius-of-georgia demetrius-of-the-brazen-gate demetrius-the-myrrhstreamer ignatius-brianchaninov':
+    'four folders whose ro form is Dimitrie. The new one is the great-martyr of Thessalonica, the Myrrh-streamer, 26 October. The other three were read on 29 September: the king of Georgia, 16 March; the martyr of the Brazen Gate, 9 August; and Ignatius Brianchaninov, whose baptismal name was Dimitrie, 30 April (read 29 September 2026)',
   'valerian valerian-25-october valerian-4-may valerian-companion-of-justin valerian-of-tomis valerian-of-trebizond':
     'five men called Valerian, on five Romanian days, and doxologia keeps five commemorations. The new one is a bare line — 25 octombrie prints the name and the readings and nothing else, no Viata tab and no Tropar tab — and so is the 4 mai folder. The other three carry lives: the companion of Justin, 1 June; Valerian of Tomis, 13 September; and Valerian of Trebizond, 21 January. Five entries on one calendar are five commemorations, and nothing on the October page ties it to any of the other four (read 29 September 2026)',
   'martirie martyrius-companion-of-marcian martyrius-of-zelenets':
