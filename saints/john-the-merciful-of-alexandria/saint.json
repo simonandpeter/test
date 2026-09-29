@@ -1,0 +1,69 @@
+{
+  "slug": "john-the-merciful-of-alexandria",
+  "display_name": "John the Merciful of Alexandria",
+  "office": "Patriarch of Alexandria",
+  "names": [
+    {
+      "form": "Ioan cel Milostiv",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 noiembrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 12 noiembrie — «Sfântul Ierarh Ioan cel Milostiv, Patriarhul Alexandriei»",
+        "url": "https://doxologia.ro/12-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru răbdarea ta, ți-ai agonisit plata ta, Părinte Cuvioase, întru rugăciuni neîncetat stăruind, ci te roagă lui Hristos Dumnezeu, Ioane Milostive fericite, să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — «Troparul Sfântului Ioan cel Milostiv, Patriarhul Alexandriei» (a common of a venerable father, with his own name set into it)",
+        "url": "https://doxologia.ro/troparul-sfantului-ioan-cel-milostiv-patriarhul-alexandriei",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thy patience thou hast won thy reward, venerable father, persevering unceasingly in prayer; pray thou then to Christ God, blessed John the Merciful, that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

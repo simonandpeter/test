@@ -1,0 +1,64 @@
+{
+  "slug": "basil-dumitru-of-mocod",
+  "display_name": "Basil Dumitru of Mocod",
+  "names": [
+    {
+      "form": "Vasile din Mocod",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 noiembrie; the life of the four prints him more fully as «Vasile Dumitru din Mocod»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "confessor"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1763,
+      "latest": 1763,
+      "display": "1763",
+      "basis": "attested",
+      "note": "doxologia.ro: «au suferit martiriul în ziua de 12 noiembrie 1763», and the page says he was hanged at Salva that day for the same fault as Atanasie Todoran. No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 12 noiembrie — «Sfinții Martiri și Mărturisitori Năsăudeni: Atanasie Todoran din Bichigiu, Vasile din Mocod, Grigore din Zagra și Vasile din Telciu»",
+        "url": "https://doxologia.ro/12-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "athanasius-todoran-of-bichigiu",
+    "gregory-of-zagra",
+    "basil-oichi-of-telciu"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,13 @@
+# Nilus the Hermit of Sinai
+
+Doxologia's life gives him as a man of Constantinople, well brought up, who mastered the whole of book learning and became a chosen orator in words. Come to full age he was joined to an honourable wife and had two children by her, a son and a daughter; and for the goodness of his family and the greatness of his wisdom he was chosen prefect of the city in the reign of the emperor Maurice, living in honour and in purity, and pleasing God.
+
+Then, reckoning up the vanity of this world that abides in wickedness — nothing in it steady, nothing right and everlasting, but all things overturned, full of injustice and passing away — he set himself to seek the eternal life, where the gladness is true and unchanging. He counselled his wife to agree to that good resolve, and she did. They gave away the whole of their property to the poor and gave freedom to their servants.
+
+Afterwards they divided their children between them: the wife took her daughter, and he took his son, Theodulus by name, and they went out of Constantinople, leaving the world and everything in it. His wife went with her daughter to Egypt, entered a convent of virgins there, received the monastic life and spent her days well in it, serving the Lord. Nilus went with Theodulus to Mount Sinai, and settling in the desert among the holy fathers he received the habit of the monks, fasting and labouring after their manner.
+
+As they were living so, barbarians fell upon that desert, coming without warning like wild beasts; they killed many of the holy fathers and carried off others captive, and among these they took Theodulus. His father lamented bitterly for him, and the more when he heard that the barbarians meant to slaughter him as a sacrifice, as it is written in the discourse set down about him. But God kept Theodulus alive and whole: the bishop of the city of Elusa ransomed him from the barbarians and made him a cleric for the service of the Church.
+
+Learning of it, Nilus went alone to Elusa and was received with honour by the bishop, who ordained him priest although he did not wish it, and begged him to stay. He would not, wanting to return to Sinai; so the bishop gave him his son and sent them away in peace. Coming back with Theodulus to his first place in Sinai, he lived many years, composed many discourses of the desert full of wisdom and profit, and then, having written various letters, passed to the Lord. The page gives no year.
+
+*After doxologia.ro's calendar for 12 noiembrie — [the day](https://doxologia.ro/12-noiembrie) and [the life](https://doxologia.ro/sfantul-cuvios-nil-pustnicul); read 25 September 2026.*

@@ -1,0 +1,60 @@
+{
+  "slug": "nilus-of-athos",
+  "display_name": "Nilus of Athos the Myrrh-streaming",
+  "names": [
+    {
+      "form": "Nil Athonitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 noiembrie; his life page is headed «Nil Athonitul, Izvorâtorul de Mir» and its text calls him «Sfântul Nil Izvorâtorul de Mir»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "hermit"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1601,
+      "latest": 1700,
+      "display": "17th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «El s-a săvârșit către Domnul în veacul al șaptesprezecelea» — the page states the century of his death and gives no year, and no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 12 noiembrie — «Sfântul Cuvios Nil Athonitul»",
+        "url": "https://doxologia.ro/12-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

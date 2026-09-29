@@ -1,0 +1,64 @@
+{
+  "slug": "athanasius-todoran-of-bichigiu",
+  "display_name": "Athanasius Todoran of Bichigiu",
+  "names": [
+    {
+      "form": "Atanasie Todoran din Bichigiu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 noiembrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "confessor"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1763,
+      "latest": 1763,
+      "display": "1763",
+      "basis": "attested",
+      "note": "doxologia.ro: «au suferit martiriul în ziua de 12 noiembrie 1763». The page also says he was 104 years old at Salva on 10 May 1763, and gives no year of birth; no birth year is recorded here because the page states none."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 12 noiembrie — «Sfinții Martiri și Mărturisitori Năsăudeni: Atanasie Todoran din Bichigiu, Vasile din Mocod, Grigore din Zagra și Vasile din Telciu»",
+        "url": "https://doxologia.ro/12-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "basil-dumitru-of-mocod",
+    "gregory-of-zagra",
+    "basil-oichi-of-telciu"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

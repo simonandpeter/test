@@ -1,0 +1,69 @@
+{
+  "slug": "nilus-the-hermit-of-sinai",
+  "display_name": "Nilus the Hermit of Sinai",
+  "names": [
+    {
+      "form": "Nil Pustnicul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 noiembrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 12 noiembrie — «Sfântul Cuvios Nil Pustnicul»",
+        "url": "https://doxologia.ro/12-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Nil, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — «Troparul Sfântului Cuvios Nil Pustnicul» (a common of a venerable father, with his own name set into it)",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-nil-pustnicul",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren desert, and with thy sighing from the depths thou madest thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with wonders, Nilus our father. Pray thou to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
