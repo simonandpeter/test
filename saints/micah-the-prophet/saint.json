@@ -9,6 +9,11 @@
     {
       "form": "Михеј",
       "lang": "sr"
+    },
+    {
+      "form": "Miheia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 august, «Sfântul Proroc Miheia», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -41,8 +46,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 14 august — «Sfântul Proroc Miheia»",
+        "url": "https://doxologia.ro/14-august",
+        "year": 2026
+      },
+      "note": "The Romanian page for this day is careful that there were two prophets of the name, and says which one the day's service is for: «erau doi proroci cu numele de Miheia: cel dintâi, care a prorocit lui Ahab... iar altul, care a trăit mulți ani după cel dintâi, a fost acela care a prorocit despre nașterea lui Iisus Hristos în Betleem și a scris carte de prorocie. Deci, de vreme ce în Minei s-a pus slujba celui de-al doilea, iar în Prolog sinaxarul este scris despre cel dintâi...» The Menaion service on 14 august is therefore for the second, the writing prophet of the Twelve, who is this folder's man and the Russian and Serbian rows' man; the narrative the page prints beside it is the first, Micaiah son of Imlah, the contemporary of Elijah, who is not this folder and has no folder. Read 24 September 2026."
     },
     {
       "church": "greek",
@@ -86,6 +101,22 @@
           "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
           "year": 1899
         }
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "A prorocului Tău Miheia pomenire, Doamne, prăznuind, printr-însul Te rugăm, mântuieşte sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Proroc Miheia», Glasul 2 — the common troparion of a prophet, printed here with his name in it",
+        "url": "https://doxologia.ro/troparul-sfantului-proroc-miheia",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping the memorial of your prophet Micah, O Lord, through him we entreat you: save our souls.",
+        "rendered": "site"
       }
     }
   ],
