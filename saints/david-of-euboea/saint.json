@@ -1,0 +1,79 @@
+{
+  "slug": "david-of-euboea",
+  "display_name": "David of Euboea",
+  "names": [
+    {
+      "form": "David din Evia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 noiembrie, «Sfântul Cuvios David din Evia»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "abbot",
+    "wonderworker"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1591,
+      "latest": 1591,
+      "display": "1591",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Cuviosul David s-a născut în anul 1591, în satul Gardinița din Locrida.» The page gives no year for his death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 1 noiembrie — «Sfântul Cuvios David din Evia»",
+        "url": "https://doxologia.ro/1-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinele cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii strălucind cu minunile, David, Părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfântului Cuvios David din Evia, Glas 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-david-din-evia",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of your tears you made the barren desert fruitful, and with your sighs out of the depths you made your labours bear a hundredfold; and you became a light to the world, shining with wonders, David our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

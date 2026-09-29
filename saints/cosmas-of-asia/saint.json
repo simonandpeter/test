@@ -1,0 +1,72 @@
+{
+  "slug": "cosmas-of-asia",
+  "display_name": "Cosmas of Asia",
+  "names": [
+    {
+      "form": "Cosma din Asia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 noiembrie, «Sfântul Doctor fără de arginți Cosma din Asia»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "unmercenary",
+    "physician",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 1 noiembrie — «Sfântul Doctor fără de arginți Cosma din Asia»",
+        "url": "https://doxologia.ro/1-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "related": [
+    "damian-of-asia"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Sfinţilor cei fără de arginţi şi de minuni făcători, cercetaţi neputinţele noastre; în dar aţi luat, în dar daţi-ne nouă.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfinților Doctori fără de arginți Cosma și Damian din Asia, Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfintilor-doctori-fara-de-arginti-cosma-damian-din-asia",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy unmercenaries and workers of wonders, visit our infirmities; freely you have received, freely give to us.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

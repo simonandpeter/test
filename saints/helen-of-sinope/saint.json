@@ -1,0 +1,59 @@
+{
+  "slug": "helen-of-sinope",
+  "display_name": "Helen of Sinope",
+  "names": [
+    {
+      "form": "Elena din Sinope",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 noiembrie, «Sfânta Muceniță Elena din Sinope»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "new-martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1700,
+      "latest": 1733,
+      "display": "early 18th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «o sfântă fecioară, care a fost omorâtă cu moarte martirică, pentru credința ei în Hristos, pe la începutul secolului al XVIII-lea» and «Sfânta Elena a viețuit în jurul anului 1700». The page gives no year of its own; the bounds are those two statements and nothing narrower."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 1 noiembrie — «Sfânta Muceniță Elena din Sinope»",
+        "url": "https://doxologia.ro/1-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
