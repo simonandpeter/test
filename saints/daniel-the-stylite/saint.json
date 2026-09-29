@@ -1,0 +1,72 @@
+{
+  "slug": "daniel-the-stylite",
+  "display_name": "Daniel the Stylite",
+  "names": [
+    {
+      "form": "Daniil Stâlpnicul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 decembrie, «Sfântul Cuvios Daniil Stâlpnicul», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "stylite",
+    "wonderworker"
+  ],
+  "related": [
+    "symeon-the-stylite"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 11 decembrie — «Sfântul Cuvios Daniil Stâlpnicul»",
+        "url": "https://doxologia.ro/11-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Stâlp al răbdării ai fost râvnind strămoşilor, cuvioase: Dreptului Iov întru patimi, Sfântului Iosif întru ispite; şi în trup viaţa celor fără de trup având, Sfinte Preacuvioase Daniil, părintele nostru, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Daniil Stâlpnicul",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-daniil-stalpnicul",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were a pillar of patience, emulating the forefathers: righteous Job in his sufferings, Saint Joseph in his temptations; and living the life of the bodiless in the body, most venerable Daniel our father, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
