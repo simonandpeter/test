@@ -1,0 +1,53 @@
+{
+  "slug": "gregory-the-decapolite",
+  "display_name": "Gregory the Decapolite",
+  "names": [
+    {
+      "form": "Grigorie Decapolitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 noiembrie, «Sfântul Cuvios Grigorie Decapolitul», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 noiembrie — «Sfântul Cuvios Grigorie Decapolitul»",
+        "url": "https://doxologia.ro/20-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "john-disciple-of-gregory-the-decapolite"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

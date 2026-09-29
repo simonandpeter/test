@@ -1,0 +1,74 @@
+{
+  "slug": "proclus-of-constantinople",
+  "display_name": "Proclus of Constantinople",
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Proclu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 noiembrie, «Sfântul Ierarh Proclu, Patriarhul Constantinopolului», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 noiembrie — «Sfântul Ierarh Proclu, Patriarhul Constantinopolului»",
+        "url": "https://doxologia.ro/20-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "john-chrysostom",
+    "paul-the-apostle",
+    "pulcheria-the-empress"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Dumnezeul părinţilor noştri Care faci pururea cu noi după blândeţile Tale, nu îndepărta mila Ta de la noi; ci, pentru rugăciunile lor, în pace îndreptează viaţa noastră.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Proclu, Patriarhul Constantinopolului (the common «Dumnezeul părinţilor noştri», printed under his name)",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-proclu-patriarhul-constantinopolului",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who deal with us always according to your gentleness, take not your mercy from us; but by their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
