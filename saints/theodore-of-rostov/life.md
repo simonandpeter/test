@@ -1,0 +1,13 @@
+# Theodore of Rostov
+
+Theodore, archbishop of Rostov, was called John in the world. He was the son of Stephen, the brother of Saint [Sergius of Radonezh](/saints/sergius-of-radonezh), who had held an important place in the government of the principality under Prince Andrew of Radonezh. Left a widower, Stephen became a monk and took his twelve-year-old son with him to Sergius's monastery; Sergius foresaw the ascetic life of the boy John, and tonsured him a monk with the name Theodore on the feast of Saint [Theodore Trichinas](/saints/theodore-trichinas), the twentieth of April.
+
+When he came of age he was blessed to receive ordination to the priesthood. With Sergius's blessing he built a church in honour of the Nativity of the Most Holy Virgin Mary and founded a monastery on the bank of the Moscow river at the place called Simonovo, and it soon began to draw crowds of people. He built himself a cell five versts from the Kremlin and withdrew there in strict asceticism, and there too disciples gathered round him.
+
+Sergius visited the place and gave his blessing for the founding of a monastery, and Metropolitan [Alexis](/saints/alexis-of-moscow) blessed the building of a church dedicated to the Dormition of the Mother of God at New Simonovo, laying its foundation stone in 1379; the old Simonov monastery remained as the burial place of the monks. His virtuous life and hard asceticism made him known in Moscow, so that Alexis raised him to the rank of abbot and Prince Dimitri of the Don chose him for his confessor.
+
+He travelled to Constantinople several times on the business of the Russian Church, and on the first of those journeys, in 1384, Patriarch Nilus made him archimandrite and placed the Simonov monastery directly under the patriarch, as a patriarchal stauropegion. In 1387 he was consecrated archbishop of Rostov. As abbot and then archimandrite, for all the church business that occupied him, he was a model of the monastic life and had many disciples afterwards known as great ascetics: Cyril, whose day is 9 June, and Therapon, whose day is 27 May, the founders of the well-known monastery of the White Lake, were tonsured at Simonov.
+
+He worked at the painting of icons, and with them adorned the Simonov monastery and many churches in Moscow. At Rostov he founded the monastery of the Nativity of the Mother of God. His blessed death came on 28 November 1394, and his relics lie in the cathedral of the Dormition of the Mother of God at Rostov.
+
+*After doxologia.ro's calendar for 28 noiembrie — [the day](https://doxologia.ro/28-noiembrie) and [the life](https://doxologia.ro/sfantul-teodor-arhiepiscop-de-rostov); read 25 September 2026.*

@@ -1,0 +1,68 @@
+{
+  "slug": "theodore-of-rostov",
+  "display_name": "Theodore of Rostov",
+  "office": "Archbishop of Rostov",
+  "names": [
+    {
+      "form": "Teodor",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 noiembrie, «Sfântul Teodor, Arhiepiscop de Rostov», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop",
+    "abbot",
+    "iconographer"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1394,
+      "latest": 1394,
+      "display": "1394",
+      "basis": "attested",
+      "note": "doxologia.ro: «Moartea binecuvântata a sfântului a avut loc pe 28 noiembrie 1394.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "revised-julian",
+        "note": "His own page opens «Sfântul Teodor, Arhiepiscopul de Rostov este prăznuit pe 23 mai (Soborul Sfinților din Rostov și Yaroslav) și 28 noiembrie.» The corpus keeps one feast to a church, so the day the calendar for 28 noiembrie prints is the one recorded, and the 23 mai synaxis of the saints of Rostov and Yaroslavl is noted here."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 noiembrie — «Sfântul Teodor, Arhiepiscop de Rostov»",
+        "url": "https://doxologia.ro/28-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "sergius-of-radonezh",
+    "theodore-trichinas",
+    "alexis-of-moscow"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

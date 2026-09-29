@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'teodor theodore-of-rostov theodore-the-studite':
+    'two men: Theodore archbishop of Rostov, Romanian 28 November; and Theodore the Studite, whom the corpus gained on 11 November. The other Theodores the corpus keeps carry different ro forms (read 30 September 2026)',
   'petru peter-of-alexandria peter-of-lampsacus peter-of-murom peter-of-sebaste peter-of-the-brazen-gate peter-the-apostle':
     'six folders whose ro form is Petru, on six Romanian days. The new one is Peter archbishop of Alexandria, 24 November. The other five were read on 29 September and are unchanged (read 30 September 2026)',
   'clement clement-apostle-of-sardis clement-of-ancyra clement-of-ohrid clement-of-rome':

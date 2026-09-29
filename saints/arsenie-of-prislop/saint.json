@@ -1,0 +1,87 @@
+{
+  "slug": "arsenie-of-prislop",
+  "display_name": "Arsenie of Prislop",
+  "names": [
+    {
+      "form": "Arsenie de la Prislop",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 noiembrie, «Sfântul Cuvios Mărturisitor Arsenie de la Prislop», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1910,
+      "latest": 1910,
+      "display": "1910",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Cuvios Mărturisitor Arsenie s-a născut la data de 29 septembrie 1910, la Vața de Sus, în Hunedoara.»"
+    },
+    "death": {
+      "earliest": 1989,
+      "latest": 1989,
+      "display": "1989",
+      "basis": "attested",
+      "note": "doxologia.ro: «După anul 1984 se retrage la Mănăstirea Sinaia, iar pe data de 28 noiembrie 1989 trece la Domnul, fiind în vârstă de 79 de ani.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 noiembrie — «Sfântul Cuvios Mărturisitor Arsenie de la Prislop»",
+        "url": "https://doxologia.ro/28-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Sfinte Cuvioase Părinte Arsenie, mărturisitorul dreptei credințe, povățuitor înțelept al credincioșilor pe cărarea împărăției, și de minuni făcătorule cel ce în vremuri grele ai strălucit, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Mărturisitor Arsenie de la Prislop",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-marturisitor-arsenie-de-la-prislop",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy venerable father Arsenie, confessor of the right faith, wise guide of the faithful on the path of the kingdom, and worker of wonders, who shone in hard times: pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "john-of-the-ladder"
+  ]
+}

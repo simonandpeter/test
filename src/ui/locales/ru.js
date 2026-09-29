@@ -749,6 +749,7 @@ export const ru = {
     'Archbishop of Novgorod, Wonderworker': 'Архиепископ Новгородский, чудотворец',
     'Archbishop of Ohrid': 'Архиепископ Охридский',
     'Archbishop of Omsk': 'Архиепископ Омский',
+    'Archbishop of Rostov': 'Архиепископ Ростовский',
     'Archbishop of Seville': 'Архиепископ Севильский',
     'Archbishop of Serbia': 'Архиепископ Сербский',
     'Archbishop of Thessalonica': 'Архиепископ Фессалоникийский',

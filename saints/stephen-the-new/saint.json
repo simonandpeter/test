@@ -1,0 +1,81 @@
+{
+  "slug": "stephen-the-new",
+  "display_name": "Stephen the New",
+  "names": [
+    {
+      "form": "Ștefan cel Nou",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 noiembrie, «Sfântul Cuvios Mucenic Ștefan cel Nou», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk",
+    "confessor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 714,
+      "latest": 714,
+      "display": "714",
+      "basis": "traditional",
+      "note": "doxologia.ro: «zic în primul an al împărăției lui, iar de la zidirea lumii, șase mii două sute douăzeci și doi (714), era în Constantinopol un bărbat cunoscut» — the first year of the Emperor Anastasius. The page gives no year for the martyrdom."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 noiembrie — «Sfântul Cuvios Mucenic Ștefan cel Nou»",
+        "url": "https://doxologia.ro/28-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "auxentius-of-bithynia"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Pustniceşte mai înainte pregătindu-te în munte, taberele vrăjmaşilor celor netrupeşti cu toată arma Crucii le-ai pierdut, întru tot fericite. Şi iarăşi spre chinuire bărbăteşte te-ai îmbrăcat, ucigând pe Copronim cu sabia credinţei. Şi pentru amândouă te-ai încununat de la Dumnezeu, Preacuvioase Mucenice Ştefan, pururea pomenite.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Mucenic Ștefan cel Nou",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-mucenic-stefan-cel-nou",
+        "year": 2026
+      },
+      "english": {
+        "text": "Preparing yourself beforehand in the mountain as a hermit, with the whole armour of the Cross you destroyed the camps of the bodiless enemies, all-blessed one. And again you clothed yourself manfully for the contest, slaying Copronymus with the sword of faith. For both you were crowned by God, most venerable martyr Stephen, ever remembered.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
