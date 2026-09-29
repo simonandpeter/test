@@ -7,6 +7,11 @@
       "form": "Filip",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 ianuarie, «Sfântul Ierarh Filip, Mitropolitul Moscovei»."
+    },
+    {
+      "form": "Φίλιππος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιανουαρίου, «Άγιος Φίλιππος Μητροπολίτης Μόσχας και πάσης Ρωσίας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -58,8 +63,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιανουαρίου — «Άγιος Φίλιππος Μητροπολίτης Μόσχας και πάσης Ρωσίας»",
+        "url": "https://www.saint.gr/01/09/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

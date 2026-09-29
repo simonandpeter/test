@@ -1,0 +1,69 @@
+{
+  "slug": "brithwald-of-canterbury",
+  "display_name": "Brithwald of Canterbury",
+  "office": "Archbishop of Canterbury",
+  "sex": "male",
+  "types": [
+    "archbishop"
+  ],
+  "names": [
+    {
+      "form": "Βριθγουόλδος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιανουαρίου, «Άγιος Βριθγουόλδος Αρχιεπίσκοπος Καντουαρίας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 731,
+      "latest": 731,
+      "display": "731",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Βριθγουόλδος κοιμήθηκε οσίως με ειρήνη το έτος 731 μ.Χ.»"
+    },
+    "floruit": {
+      "earliest": 693,
+      "latest": 731,
+      "display": "693–731",
+      "basis": "traditional",
+      "note": "saint.gr: «Στον Αρχιεπισκοπικό θρόνο της Καντουαρίας ανήλθε το έτος 693 μ.Χ.», and he died in 731."
+    }
+  },
+  "related": [
+    "theodore-of-tarsus-archbishop-of-canterbury"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιανουαρίου — «Άγιος Βριθγουόλδος Αρχιεπίσκοπος Καντουαρίας»",
+        "url": "https://www.saint.gr/01/09/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

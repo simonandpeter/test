@@ -1,0 +1,58 @@
+{
+  "slug": "jonah-of-kyiv",
+  "display_name": "Jonah of Kyiv",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Ιωνάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιανουαρίου, «Όσιος Ιωνάς ο Γέροντας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1902,
+      "latest": 1902,
+      "display": "1902",
+      "basis": "attested",
+      "note": "saint.gr: «ασκήτεψε στη μονή της Αγίας Τριάδος Κιέβου, όπου κοιμήθηκε με ειρήνη το έτος 1902 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιανουαρίου — «Όσιος Ιωνάς ο Γέροντας»",
+        "url": "https://www.saint.gr/01/09/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

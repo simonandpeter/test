@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'γρηγοριοσ gregory-the-elder gregory-uncle-of-eustratius':
+    'two men, and the fold is only the bare forename. The Greek 1 Ιανουαρίου keeps Gregory the Elder, bishop of Nazianzus and father of the Theologian, baptised in 325 and consecrated in 328; the Greek 9 Ιανουαρίου keeps a ninth-century wonderworker, one of the two uncles of Eustratius of Mount Olympus, whose whole notice is that he and his brother Basil were the saint mothers brothers and lived in the ninth century. Five centuries and no other point of contact.',
   'πετροσ peter-disciple-of-dionysius-of-alexandria peter-of-capitolias peter-son-of-john-of-syracuse peter-the-peloponnesian peter-the-sign-bearer':
     'five men sharing a forename and nothing else, and the fifth is the one the sources cannot place. saint.gr keeps «Όσιος Πέτρος ο Σημειοφόρος ο εν Αγίω Ζαχαρία Ατρώας» on 3 Ιανουαρίου and says there is no notice for him in the Menaia at all; it reports Nicodemus conjecturing that he is Peter bishop of Argos, kept on 3 Μαΐου, and calls that unlikely. He is not peter-of-atroa either, whose Greek day is 13 September. The other four are the Peloponnesian new-martyr of 1776, the disciple of Dionysius of Alexandria dead about 254, the hieromartyr of Capitolias, and the son of John of Syracuse dead 867.',
   'παντελεημων panteleimon-3-january panteleimon-the-healer':
@@ -1127,7 +1129,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '162'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '169'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

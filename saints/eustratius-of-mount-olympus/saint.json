@@ -7,6 +7,11 @@
       "form": "Eustratie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 ianuarie."
+    },
+    {
+      "form": "Ευστράτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιανουαρίου, «Όσιος Ευστράτιος ο Θαυματουργός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιανουαρίου — «Όσιος Ευστράτιος ο Θαυματουργός»",
+        "url": "https://www.saint.gr/01/09/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -56,5 +70,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "basil-uncle-of-eustratius",
+    "gregory-uncle-of-eustratius"
+  ]
 }

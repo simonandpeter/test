@@ -1,0 +1,61 @@
+{
+  "slug": "adrian-of-canterbury",
+  "display_name": "Adrian of Canterbury",
+  "sex": "male",
+  "types": [
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Αδριανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιανουαρίου, «Άγιος Αδριανός ηγούμενος Καντουαρίας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 710,
+      "latest": 710,
+      "display": "710",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος, διακρινόμενος για τις αρετές και την πνευματικότητά του, κοιμήθηκε με ειρήνη το έτος 710 μ.Χ.»"
+    }
+  },
+  "related": [
+    "theodore-of-tarsus-archbishop-of-canterbury"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιανουαρίου — «Άγιος Αδριανός ηγούμενος Καντουαρίας»",
+        "url": "https://www.saint.gr/01/09/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

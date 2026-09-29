@@ -6,6 +6,11 @@
       "form": "Polieuct",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 ianuarie."
+    },
+    {
+      "form": "Πολύευκτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιανουαρίου, «Άγιος Πολύευκτος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιανουαρίου — «Άγιος Πολύευκτος»",
+        "url": "https://www.saint.gr/01/09/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -84,6 +98,23 @@
       },
       "english": {
         "text": "The Master, bowing his head in the Jordan, crushed the heads of the devils; and when the head of the victorious one was struck off, the deceiver was put to shame.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Μυηθεῖς οὐρανόθεν εὐσέβειας τὴν ἔλλαμψιν, ὤφθης στρατιώτης γενναῖος, τοῦ Σωτῆρος Πολύευκτε καὶ ξίφει ἐκτμηθεῖς τὴν κεφαλήν, Μαρτύρων ἠριθμήθης τοὶς χοροίς, μεθ' ὧν πρέσβευε θεόφρον διὰ παντός, ὑπὲρ τῶν ἐκβοώντων σοῖ, δόξα τῷ δεδωκότι σοὶ ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ δωρουμένῳ διά σοῦ, πάσι τὰ κρείττονα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Πολύευκτος, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1103/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Initiated from heaven into the shining of godliness, thou wast shown a noble soldier of the Saviour, O Polyeuctus; and when thy head was cut off with the sword thou wast numbered with the choirs of the Martyrs. With them intercede without ceasing, O God-minded one, for those who cry aloud to thee: Glory to him who gave thee strength, glory to him who crowned thee, glory to him who through thee grants unto all what is better.",
         "rendered": "site"
       }
     }

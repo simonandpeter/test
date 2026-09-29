@@ -7,6 +7,11 @@
       "form": "Petru",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 ianuarie, «Sfântul Ierarh Petru al Sevastiei»."
+    },
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιανουαρίου, «Όσιος Πέτρος Επίσκοπος Σεβαστείας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -16,7 +21,8 @@
   ],
   "related": [
     "basil-the-great",
-    "gregory-of-nyssa"
+    "gregory-of-nyssa",
+    "macrina-sister-of-basil-the-great"
   ],
   "dates": {
     "floruit": {
@@ -49,8 +55,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιανουαρίου — «Όσιος Πέτρος Επίσκοπος Σεβαστείας»",
+        "url": "https://www.saint.gr/01/09/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

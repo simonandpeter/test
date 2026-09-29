@@ -1,0 +1,63 @@
+{
+  "slug": "gregory-uncle-of-eustratius",
+  "display_name": "Gregory, uncle of Eustratius of Mount Olympus",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιανουαρίου, «Όσιοι Βασίλειος και Γρηγόριος οι Θαυματουργοί», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Όσιοι Βασίλειος και Γρηγόριος ήταν θείοι του Αγίου Ευστρατίου (βλέπε ίδια ημέρα) και έζησαν τον 9ο αιώνα μ.Χ.»"
+    }
+  },
+  "related": [
+    "basil-uncle-of-eustratius",
+    "eustratius-of-mount-olympus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιανουαρίου — «Όσιοι Βασίλειος και Γρηγόριος οι Θαυματουργοί»",
+        "url": "https://www.saint.gr/01/09/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
