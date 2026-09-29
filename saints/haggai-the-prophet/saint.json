@@ -1,0 +1,76 @@
+{
+  "slug": "haggai-the-prophet",
+  "display_name": "Haggai",
+  "names": [
+    {
+      "form": "Agheu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 decembrie, «Sfântul Proroc Agheu», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": -470,
+      "latest": -434,
+      "display": "c. 470 BC",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «a prorocit cu Sfântul Proroc Zaharia, treizeci și șase de ani, mai înainte de întruparea Domnului Hristos cu patru sute șaptezeci de ani» — thirty-six years of prophesying, beginning four hundred and seventy years before the Incarnation; the later bound is that figure less those thirty-six years, and no other year is on the page."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 16 decembrie — «Sfântul Proroc Agheu»",
+        "url": "https://doxologia.ro/16-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "A prorocului Tău, Doamne, Agheu pomenire prăznuind, printr-însul Te rugăm, mântuieşte sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Proroc Agheu",
+        "url": "https://doxologia.ro/troparul-sfantului-proroc-agheu",
+        "year": 2026
+      },
+      "english": {
+        "text": "As we keep the memory of your prophet Haggai, O Lord, we pray to you through him: save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
