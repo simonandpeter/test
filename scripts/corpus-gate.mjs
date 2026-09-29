@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'zaheu zacchaeus-the-deacon-martyr zacchaeus-the-publican':
+    'two men: the deacon martyred with Alphaeus, whose life doxologia gives in two short paragraphs, Romanian 18 November; and Zacchaeus the publican of the Gospel, kept as an apostle on 20 April (read 30 September 2026)',
+  'roman roman-the-venerable romanus-martyr-16-march romanus-the-deacon-of-caesarea':
+    'three folders whose ro form is Roman. The new one is the deacon of Caesarea in Palestine, martyred at Antioch, 18 November. The others are the bare-line martyr of 16 March and Roman the monastic, who has no Romanian row (read 30 September 2026)',
+  'platon plato-of-ancyra plato-the-venerable':
+    'two men: the martyr of Ancyra, brother of Antiochus the physician, Romanian 18 November; and the venerable Plato the corpus keeps on 4 April (read 30 September 2026)',
   'zaharia zacharias-son-of-barachias zacharias-son-of-carion zacharias-the-cobbler':
     'three men called Zaharia, on three Romanian days. The new one is the cobbler whose calendar line is bare and whose page tells the story of a monk named John, keeping vigil at Hagia Sophia in Constantinople, and names the cobbler only at the end, 17 November. The others are the prophet, son of Barachias, 8 February, and Zacharias son of Carion, a monk, 24 March (read 30 September 2026)',
   'aviv abibus-of-samosata abibus-the-deacon-of-edessa':

@@ -1,0 +1,51 @@
+{
+  "slug": "zacchaeus-the-deacon-martyr",
+  "display_name": "Zacchaeus the Deacon",
+  "names": [
+    {
+      "form": "Zaheu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 noiembrie, «Sfântul Mucenic Zaheu diaconul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "deacon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 11,
+        "calendar": "revised-julian",
+        "note": "The day's Tropar tab for him is a video recording headed «Troparul Sfinților Mucenici Platon, Roman diaconul și Zaheu diaconul (18 noiembrie)» whose only printed text is one line of invocation, so no hymn is taken from it."
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 18 noiembrie — «Sfântul Mucenic Zaheu diaconul»",
+        "url": "https://doxologia.ro/18-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

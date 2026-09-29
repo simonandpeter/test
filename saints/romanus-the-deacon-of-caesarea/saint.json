@@ -1,0 +1,71 @@
+{
+  "slug": "romanus-the-deacon-of-caesarea",
+  "display_name": "Romanus the Deacon of Caesarea",
+  "names": [
+    {
+      "form": "Roman",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 noiembrie, «Sfântul Mucenic Roman diaconul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "deacon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 18 noiembrie — «Sfântul Mucenic Roman diaconul»",
+        "url": "https://doxologia.ro/18-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "plato-of-ancyra"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — «Troparul Sfântului Mucenic Platon; al Sfântul Mucenic Roman diaconul», glas 4, a common of martyrs printed once for the two of them; the page's «nesctricăciunii» is its own reading and is copied as it stands",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-platon-al-sfantul-mucenic-roman-diaconul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke the powerless presumption of the demons. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

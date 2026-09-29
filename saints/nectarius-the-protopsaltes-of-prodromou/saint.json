@@ -1,0 +1,89 @@
+{
+  "slug": "nectarius-the-protopsaltes-of-prodromou",
+  "display_name": "Nectarius the Protopsaltes of Prodromou",
+  "names": [
+    {
+      "form": "Nectarie Protopsaltul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 noiembrie, «Sfântul Cuvios Nectarie Protopsaltul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "hymnographer"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1804,
+      "latest": 1804,
+      "display": "1804",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut pe pământul binecuvântat al României, în orașul Huși, în anul 1804, primind la botez numele Nicolae»."
+    },
+    "death": {
+      "earliest": 1899,
+      "latest": 1899,
+      "display": "1899",
+      "basis": "attested",
+      "note": "doxologia.ro: his life says he passed to the eternal things «în 18 noiembrie 1899», the day the calendar keeps him on."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 18 noiembrie — «Sfântul Cuvios Nectarie Protopsaltul»",
+        "url": "https://doxologia.ro/18-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "macarius-the-protopsaltes",
+    "niphon-of-prodromou"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul al 3-lea",
+      "text": "Sfinte Nectarie, chemând în inimă cu înțelegere numele Domnului, te-ai luminat și te-ai sfințit în liniștea din pustie. Glasul tău a bucurat plinătatea Bisericii, iar prin osteneala ta moștenire sfântă ne-ai dat, prin care te cinstim, Cuvioase, și cerem a ta rugăciune.",
+      "source": {
+        "text": "Doxologia — «Troparul Sfântului Cuvios Nectarie Protopsaltul», glas 3, his own proper",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-nectarie-protopsaltul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy Nectarius, calling the name of the Lord in thy heart with understanding, thou wast enlightened and sanctified in the stillness of the desert. Thy voice gladdened the fullness of the Church, and by thy labour thou hast given us a holy inheritance, for which we honour thee, venerable one, and ask thy prayer.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
