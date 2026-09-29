@@ -798,6 +798,7 @@ export const el = {
     'Bishop of Magnesia': 'Επίσκοπος Μαγνησίας',
     'Bishop of Maghid': 'Επίσκοπος Μαγκίντ',
     'Bishop of Melitene': 'Επίσκοπος Μελιτηνής',
+    'Bishop of Myra': 'Επίσκοπος Μύρων',
     'Bishop of Naeson in Persia': 'Επίσκοπος Ναεσών της Περσίας',
     'Bishop of Narva': 'Επίσκοπος Νάρβας',
     'Bishop of Nicaea': 'Επίσκοπος Νικαίας',

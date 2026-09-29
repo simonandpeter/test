@@ -797,6 +797,7 @@ export const ro = {
     'Bishop of Magnesia': 'Episcop de Magnezia',
     'Bishop of Maghid': 'Episcop de Maghid',
     'Bishop of Melitene': 'Episcop de Melitene',
+    'Bishop of Myra': 'Episcop al Mirelor Liciei',
     'Bishop of Naeson in Persia': 'Episcop de Naeson în Persia',
     'Bishop of Narva': 'Episcop de Narva',
     'Bishop of Nicaea': 'Episcop de Niceea',

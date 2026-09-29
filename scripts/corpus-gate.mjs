@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'nicandru nicander-of-durostorum nicander-of-egypt nicander-of-myra':
+    'three men called Nicandru, on three Romanian days. The new one is the bishop of Myra, martyred with the deacon Hermaeus, 4 November. The others are the soldier of Durostorum, 8 June, and Nicander of Egypt, 5 June (read 30 September 2026)',
+  'ioanichie joannicius-of-zographou joannicius-the-great':
+    'two men: Joannicius the Great of Mount Olympus in Bithynia, venerable, 4 November; and Joannicius of Zographou, a venerable-martyr, 10 October (read 30 September 2026)',
+  'gheorghe george-of-drama george-of-egypt george-of-pisidian-antioch george-of-thessalonica':
+    'four men called Gheorghe, on four Romanian days. The new one is the new-martyr of Drama, 4 November. The others are George of Egypt, 5 June; George of Pisidian Antioch, bishop and confessor, 19 April; and George of Thessalonica, bishop, 10 July (read 30 September 2026)',
   'iosif joseph-archbishop-of-thessalonica joseph-of-nea-moni joseph-presbyter-of-persia joseph-the-hymnographer joseph-the-merciful':
     'five men called Iosif, on five Romanian days. The new one is the presbyter martyred in Persia with bishop Acepsimas and the deacon Aithalas, 3 November. The others are unchanged: the archbishop of Thessalonica, 15 July; Joseph of Nea Moni, 20 May; Joseph the Hymnographer, 4 April; and Joseph the Merciful, metropolitan, 26 January (read 30 September 2026)',
   'agapie agapius-2-november agapius-disciple-of-babylas agapius-of-caesarea-in-palestine agapius-of-colciu agapius-of-gaza agapius-son-of-bassa agapius-son-of-eustathius':

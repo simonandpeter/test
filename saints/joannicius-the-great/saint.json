@@ -1,0 +1,72 @@
+{
+  "slug": "joannicius-the-great",
+  "display_name": "Joannicius the Great",
+  "names": [
+    {
+      "form": "Ioanichie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 noiembrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "soldier"
+  ],
+  "related": [
+    "methodius-of-constantinople"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 4 noiembrie — «Sfântul Cuvios Ioanichie cel Mare»",
+        "url": "https://doxologia.ro/4-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Ioanichie, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Ioanichie cel Mare",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-ioanichie-cel-mare",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with wonders, Joannicius our father. Pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "slug": "george-of-drama",
+  "display_name": "George of Drama",
+  "names": [
+    {
+      "form": "Gheorghe",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 noiembrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "hieromonk",
+    "wonderworker"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1901,
+      "latest": 1901,
+      "display": "1901",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Părinte Gheorghe s-a născut în anul 1901, în orașul Arghiropolis din ținutul Pontului»."
+    },
+    "death": {
+      "earliest": 1959,
+      "latest": 1959,
+      "display": "1959",
+      "basis": "attested",
+      "note": "doxologia.ro: «În anul 1959 și-a prevăzut sfârșitul … În zorii zilei de 4 noiembrie … Cuviosul Mărturisitor Gheorghe și-a dat sufletul în mâinile Mântuitorului Hristos»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 4 noiembrie — «Sfântul Cuvios Gheorghe, Mărturisitorul din Drama»",
+        "url": "https://doxologia.ro/4-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Νοεμβρίου (25 September 2026) — the life says the Ecumenical Patriarchate canonised him on 18 March 2008 and appointed 4 November, but the Greek calendar page itself was not read."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul al 5-lea",
+      "text": "Podobie: Pe Cuvântul...\nPe ctitorul cinstitei Mănăstiri a Sfintei Înălțări, pe lucrătorul de taină al plânsului aducător de bucurie, pe învățătorul rugăciunii inimii, al smereniei și al trezviei, pe Cuviosul Gheorghe în cântări să-l cinstim noi, credincioșii, ca pe o laudă nouă a Mărturisitorilor, strigând: Purtătorule de chinuri, cu dumnezeiesc ajutor ocrotește-i pe cei ce se roagă ție!",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Gheorghe Mărturisitorul din Drama",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-gheorghe-marturisitorul-din-drama",
+        "year": 2026
+      },
+      "english": {
+        "text": "The founder of the honoured Monastery of the Holy Ascension, the hidden worker of the mourning that brings joy, the teacher of the prayer of the heart, of humility and of watchfulness — the venerable George let us the faithful honour in hymns, as a new boast of the Confessors, crying out: O bearer of torments, with the help of God shelter those who pray to thee!",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "slug": "hermaeus-companion-of-nicander",
+  "display_name": "Hermaeus, companion of Nicander",
+  "office": "Presbyter",
+  "names": [
+    {
+      "form": "Ermeu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 noiembrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "related": [
+    "titus-the-apostle",
+    "nicander-of-myra"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 4 noiembrie — «Sfântul Mucenic Ermeu, preotul»",
+        "url": "https://doxologia.ro/4-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nestricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinților Sfințiți Mucenici Nicandru, Episcopul Mirelor, și Ermeu, preotul (a common of martyrs, printed for the two of them together)",
+        "url": "https://doxologia.ro/troparul-sfintilor-sfintiti-mucenici-nicandru-episcopul-mirelor-ermeu-preotul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke the powerless presumption of the demons. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
