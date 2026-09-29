@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'tadeu thaddeus-29-december thaddeus-apostle-of-the-seventy':
+    'two men, and the rank is what the calendar gives to tell them apart: «Sfantul Cuvios Tadeu» on 29 decembrie, a bare line with no life and no troparion, venerable; and the apostle of the Seventy sent to Abgar, whose row sits on 26 mai (read 30 September 2026)',
+  'marcel marcellus-of-sicily marcellus-of-the-akoimetoi marcellus-the-martyr-1-march marcellus-the-martyr-22-may':
+    'four folders whose ro form is Marcel, on four Romanian days. The new one is Marcellus, abbot of the monastery of the Akoimetoi, 29 December. The others are Marcellus of Sicily, 9 February, and the two bare-line martyrs of 1 March and 22 May (read 30 September 2026)',
   'simon simon-of-simonopetra simon-of-zographou':
     'two men: Simon the founder of Simonopetra, Romanian 28 December; and Simon of Zographou, 10 October. Simon the Zealot carries a different ro form and does not fold here (read 30 September 2026)',
   'iosif joseph-archbishop-of-thessalonica joseph-of-nea-moni joseph-presbyter-of-persia joseph-the-betrothed joseph-the-hymnographer joseph-the-merciful':

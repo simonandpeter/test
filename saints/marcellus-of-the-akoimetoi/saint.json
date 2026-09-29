@@ -1,0 +1,68 @@
+{
+  "slug": "marcellus-of-the-akoimetoi",
+  "display_name": "Marcellus of the Akoimetoi",
+  "names": [
+    {
+      "form": "Marcel",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 decembrie, «Sfântul Cuvios Marcel», with the rank words left off; the page it keeps for his troparion names him «Sfântul Cuvios Marcel, egumenul Mănăstirii Achimiților»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 29 decembrie — «Sfântul Cuvios Marcel»",
+        "url": "https://doxologia.ro/29-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru tine, părinte, cu osârdie s-a mântuit cel după chip; că, luând crucea, ai urmat lui Hristos; şi lucrând, ai învăţat să nu se uite la trup, căci este trecător; ci, să poarte grijă de suflet, de lucrul cel nemuritor. Pentru aceasta şi cu îngerii împreună se bucură, Preacuvioase Părinte Marcel, duhul tău.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Marcel, egumenul Mănăstirii Achimiților, glasul 8 (the common of a venerable father, printed with his name in it)",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-marcel-egumenul-manastirii-achimitilor",
+        "year": 2026
+      },
+      "english": {
+        "text": "In you, father, what is according to the image was saved with diligence; for taking up the cross you followed Christ, and by your work you taught that the flesh is not to be regarded, since it passes away, but that care is to be taken for the soul, a thing immortal. Therefore your spirit rejoices together with the angels, most venerable father Marcellus.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
