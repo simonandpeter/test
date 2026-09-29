@@ -1,0 +1,71 @@
+{
+  "slug": "mercurius",
+  "display_name": "Mercurius",
+  "names": [
+    {
+      "form": "Mercurie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 25 noiembrie, «Sfântul Mare Mucenic Mercurie», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "great-martyr",
+    "soldier"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 25 noiembrie — «Sfântul Mare Mucenic Mercurie»",
+        "url": "https://doxologia.ro/25-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 25 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "basil-the-great"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Degrab ne întâmpină pre noi...\nNevoințele muceniciei răbdându-le ca un ostaș nebiruit ai stătut înaintea împăratului celui nemuritor, Mare Mucenice Mercurie, unde împreună cu cetele pătimitorilor luând îndrăzneală, grăbește cu rugăciunile tale spre ajutorul celor ce cu credință cinstesc pomenirea ta.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mare Mucenic Mercurie (the page prints the podobie line «Degrab ne întâmpină pre noi...» above the text)",
+        "url": "https://doxologia.ro/troparul-sfantului-mare-mucenic-mercurie",
+        "year": 2026
+      },
+      "english": {
+        "text": "To the model melody: Come quickly to meet us. Having endured the contests of martyrdom as an unconquered soldier, you stood before the immortal King, great martyr Mercurius; and having boldness there with the ranks of the sufferers, hasten with your prayers to the help of those who faithfully honour your memory.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
