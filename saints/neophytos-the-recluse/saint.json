@@ -88,5 +88,22 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Faima Lefkarei şi lauda ciprioţilor, apărătorule al mănăstirii Enklistra, de-Dumnezeu-purtătorule Părintele nostru Neofit, cu bărbăţie te-ai nevoit în postiri, privegheri şi rugăciuni, ca să primeşti dumnezeiescul har, pe care îl dăruieşte credincioşilor racla moaştelor tale. Slavă Celui Ce ne-a hărăzit nouă aceasta! Slavă Celui ce te-a slăvit pe tine! Slavă celui ce dăruieşte prin tine, tuturor, tămăduiri!",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Neofit din Cipru (the page prints no tone)",
+        "url": "https://doxologia.ro/troparul-sfantului-neofit-din-cipru",
+        "year": 2026
+      },
+      "english": {
+        "text": "Glory of Lefkara and boast of the Cypriots, defender of the monastery of Enkleistra, our God-bearing father Neophytos, manfully didst thou labour in fasting, in vigils and in prayer, that thou mightest receive the divine grace which the shrine of thy relics bestows upon the faithful. Glory to Him who granted us this! Glory to Him who glorified thee! Glory to Him who through thee grants healing to all!",
+        "rendered": "site"
+      }
+    }
+  ]
 }
