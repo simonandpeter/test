@@ -1,0 +1,71 @@
+{
+  "slug": "lucian-of-antioch",
+  "display_name": "Lucian of Antioch",
+  "names": [
+    {
+      "form": "Luchian",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 octombrie, «Sfântul Mucenic Luchian preotul»; the life on the same site spells it Lucian."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "presbyter"
+  ],
+  "related": [
+    "anthimus-of-nicomedia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 15 octombrie — «Sfântul Mucenic Luchian preotul»",
+        "url": "https://doxologia.ro/15-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor Apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge Sfinte Mucenice Luchian, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Luchian preotul",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-luchian-preotul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharer of the apostles’ ways and successor to their thrones, thou didst find in action, O God-inspired one, an ascent to contemplation. Therefore, rightly teaching the word of truth and enduring in the faith unto blood, O holy martyr Lucian, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

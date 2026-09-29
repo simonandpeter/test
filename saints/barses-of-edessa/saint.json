@@ -10,6 +10,11 @@
     {
       "form": "Св. исповедници Едески",
       "lang": "sr"
+    },
+    {
+      "form": "Vars",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 octombrie, «Sfântul Ierarh Vars, Episcopul Edesei»."
     }
   ],
   "sex": "male",
@@ -44,8 +49,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 25 august (checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 15 octombrie — «Sfântul Ierarh Vars, Episcopul Edesei»",
+        "url": "https://doxologia.ro/15-octombrie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

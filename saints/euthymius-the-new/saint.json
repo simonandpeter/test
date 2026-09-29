@@ -1,0 +1,66 @@
+{
+  "slug": "euthymius-the-new",
+  "display_name": "Euthymius the New",
+  "names": [
+    {
+      "form": "Eftimie cel Nou",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "stylite"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 823,
+      "latest": 823,
+      "display": "823",
+      "basis": "attested",
+      "note": "doxologia.ro: «S-a născut în zona Ancyrei în anul 823 din părinți credincioși, la botez primind numele de Nichitas.»"
+    },
+    "death": {
+      "earliest": 898,
+      "latest": 898,
+      "display": "898",
+      "basis": "attested",
+      "note": "doxologia.ro: «și acolo și-a dat duhul multnevoitorul cuvios făcător de minuni (898)»; the relics were moved to Thessalonica in 899."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 15 octombrie — «Sfântul Cuvios Eftimie cel Nou»",
+        "url": "https://doxologia.ro/15-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

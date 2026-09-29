@@ -1,0 +1,58 @@
+{
+  "slug": "magdalena-of-malainita",
+  "display_name": "Magdalena of Mălainița",
+  "names": [
+    {
+      "form": "Magdalena de la Mălainița",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 octombrie; the life gives her baptismal form as Măndălina."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "righteous"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1962,
+      "latest": 1962,
+      "display": "1962",
+      "basis": "attested",
+      "note": "doxologia.ro: «La 15 octombrie 1962 (stil vechi: 2 octombrie), cu o lumânare în mână și făcându-și cruce până în ultima clipă, Sfânta Magdalena a trecut la Domnul.» The page gives no year of birth, only that she married at nineteen on 2 February 1914."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 15 octombrie — «Sfânta Magdalena de la Mălainița»",
+        "url": "https://doxologia.ro/15-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

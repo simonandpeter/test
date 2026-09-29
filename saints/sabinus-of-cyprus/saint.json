@@ -1,0 +1,51 @@
+{
+  "slug": "sabinus-of-cyprus",
+  "display_name": "Sabinus of Cyprus",
+  "names": [
+    {
+      "form": "Savin",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 octombrie, «Sfântul Ierarh Savin, Episcopul Ciprului»; the life prints the variant Sabin beside it."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 15 octombrie — «Sfântul Ierarh Savin, Episcopul Ciprului»",
+        "url": "https://doxologia.ro/15-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
