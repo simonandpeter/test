@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'pelaghia pelagia-of-antioch pelagia-of-tarsus':
+    'two women, on two Romanian days: the penitent of Antioch, whom bishop Nonnus baptised and who ended her life as a recluse on the Mount of Olives, whose life doxologia prints in the words of the deacon James, 8 October; and the virgin martyr of Tarsus, 4 May (read 29 September 2026)',
   'iulian julian-companion-of-caesarius julian-of-emesa julian-of-samosata julian-of-the-brazen-gate':
     'four men called Iulian, on four Romanian days. The new one is the presbyter martyred at Terracina with the deacon Caesarius under Claudius, 7 October. The other three are unchanged and were read on 19 and 29 September: the physician of Emesa, 6 February; one of the seven of Samosata, 29 January; and the martyr of the Brazen Gate, 9 August (read 29 September 2026)',
   'serghie sergius-companion-of-bacchus sergius-martyr-2-january sergius-the-confessor':

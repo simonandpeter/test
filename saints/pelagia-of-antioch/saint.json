@@ -1,0 +1,67 @@
+{
+  "slug": "pelagia-of-antioch",
+  "display_name": "Pelagia of Antioch",
+  "names": [
+    {
+      "form": "Pelaghia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 octombrie."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pe 8 octombrie — «Sfânta Cuvioasă Pelaghia»",
+        "url": "https://doxologia.ro/8-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru tine, maică, cu osârdie s-a mântuit cel după chip; că, luând crucea, ai urmat lui Hristos; şi lucrând, ai învăţat să nu se uite la trup, căci este trecător; ci să poarte grijă de suflet, de lucrul cel nemuritor. Pentru aceasta şi cu îngerii împreună se bucură, Cuvioasă Maică Pelaghia, duhul tău.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Cuvioase Pelaghia",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-pelaghia",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O mother, was that which is according to the image kept safe with diligence; for taking up the cross thou didst follow Christ, and in thy labour thou didst teach us to overlook the flesh, since it passeth away, and to care for the soul, a thing immortal. Wherefore thy spirit, O venerable mother Pelagia, rejoiceth together with the angels.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

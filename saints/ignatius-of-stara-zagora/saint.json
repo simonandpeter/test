@@ -1,0 +1,54 @@
+{
+  "slug": "ignatius-of-stara-zagora",
+  "display_name": "Ignatius of Stara Zagora",
+  "names": [
+    {
+      "form": "Ignatie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 10,
+        "calendar": "revised-julian",
+        "note": "Doxologia keeps him twice: its calendar prints him on 8 octombrie, the day of his martyrdom and of his father George's, and again on 1 mai — «Sfântul Nou Mucenic Ignatie», beside the two other new-martyrs of the Holy Mountain, Eftimie and Acachie, whose relics the same day page names at Mănăstirea Neamţ. One attestation row per church is the schema, so the row is his own day and the second day is recorded here. Both days serve the same life, doxologia.ro/viata-sfantului-nou-mucenic-ignatie, so there is nothing to tell the two apart; the «1 Mai» in his page's head is that second commemoration and not a style conversion. Read 25 September 2026."
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pe 8 octombrie — «Sfântul Nou Mucenic Ignatie»",
+        "url": "https://doxologia.ro/8-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "related": [
+    "euthymius-of-dimitsana"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
