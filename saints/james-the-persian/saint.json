@@ -1,0 +1,67 @@
+{
+  "slug": "james-the-persian",
+  "display_name": "James the Persian",
+  "names": [
+    {
+      "form": "Iacob Persul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 noiembrie, «Sfântul Mare Mucenic Iacob Persul», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "great-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 noiembrie — «Sfântul Mare Mucenic Iacob Persul»",
+        "url": "https://doxologia.ro/27-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Cu mucenicia cea neobişnuită şi înfricoşătoare şi cu vitejiile răbdării, pe toţi i-ai minunat, mult pătimitorule, cu tăierea fiecărei părţi din trup, rugăciuni de mulţumire preaminunat ai dat către Dumnezeu. Pentru aceasta în pătimirea ta cunună ai luat şi te-ai suit către Scaunul Împăratului Ceresc al lui Hristos Dumnezeu, Sfinte Iacov. Pe Acela roagă-L să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mare Mucenic Iacob Persul",
+        "url": "https://doxologia.ro/troparul-sfantului-mare-mucenic-iacob-persul",
+        "year": 2026
+      },
+      "english": {
+        "text": "By your strange and fearful martyrdom and by the courage of your patience you amazed all men, much-suffering one: at the cutting off of every part of your body you offered wonderful prayers of thanksgiving to God. Therefore in your suffering you received a crown and went up to the throne of the heavenly King, Christ God, holy James. Pray to him to save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
