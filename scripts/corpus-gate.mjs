@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'iulian julian-companion-of-caesarius julian-of-emesa julian-of-samosata julian-of-the-brazen-gate':
+    'four men called Iulian, on four Romanian days. The new one is the presbyter martyred at Terracina with the deacon Caesarius under Claudius, 7 October. The other three are unchanged and were read on 19 and 29 September: the physician of Emesa, 6 February; one of the seven of Samosata, 29 January; and the martyr of the Brazen Gate, 9 August (read 29 September 2026)',
+  'serghie sergius-companion-of-bacchus sergius-martyr-2-january sergius-the-confessor':
+    'three men called Serghie, on three Romanian days. The new one is the Roman of senatorial rank martyred with Bacchus under Maximian, 7 October; the others are the bare-line martyr of 2 January and Sergius the Confessor, venerable, 13 May (read 29 September 2026)',
+  'caesarius companion julian caesarius-companion-of-julian julian-companion-of-caesarius':
+    'the same word-set artefact: the deacon Caesarius and the presbyter Julian, martyred together at Terracina under Claudius, Romanian 7 October, each named as the other companion, so their display names hold the same three words (read 29 September 2026)',
+  'bacchus companion sergius bacchus-companion-of-sergius sergius-companion-of-bacchus':
+    'not a collision of two names but of one word-set: the fold is the bag of words in a display name, so two men who are each named as the other companion always fold together. These are the two Romans of senatorial rank at Maximian court, martyred together, Romanian 7 October, and each display name carries the other name (read 29 September 2026)',
   'irineu irenaeus-of-egypt irenaeus-of-sirmium irenaeus-the-martyr-22-august':
     'the new folder is a calendar line and nothing else: «Sfantul Mucenic Irineu» on 22 august, no Viata tab and no Tropar tab, so it asserts a martyr, a name and a day. He is not identified with any Irenaeus the corpus already keeps, and all of them keep other days out of other sources: Irenaeus of Egypt, a martyr, Romanian 5 June; Irenaeus of Sirmium, hieromartyr and bishop, 6 April; Irenaeus of Lyon, 23 August; and Irenaeus of Rome, who has no Romanian row (read 29 September 2026)',
   'zinon zeno-of-diospolis zeno-the-martyr-22-august':

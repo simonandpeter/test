@@ -1,0 +1,11 @@
+# Sergius, companion of Bacchus
+
+Sergius and [Bacchus](/saints/bacchus-companion-of-sergius) were Romans of senatorial rank, the first men at the court of the emperor Maximian, who loved them for their skill and their courage in war. The Romanian life says that no one could come near the emperor or ask anything of him except through these two trusted counsellors, and that they held an honour nobody else at court held. They kept their Christianity hidden for fear of him, until men who envied them denounced them as Christians who had given up the worship of the idols.
+
+The emperor would not believe it, and tested them: he went with the whole court to sacrifice in the temple of the idol Zeus, and the two stayed outside at prayer. Brought in by force and refusing to eat what had been offered, they were stripped of the marks of their rank, dressed in women's clothes, collared with iron and led through the city to be laughed at. Maximian then argued with them in private and promised them greater honour, and when that failed he sent them east to the governor Antiochus, a man who owed his office to their own petition.
+
+Antiochus had Bacchus beaten to death and Sergius kept in prison, where he wept for his friend. He was then shod with shoes driven full of nails and made to run before the governor's carriage, and in the night an angel healed his feet, so that his torturer took the healing for sorcery. At the city of Rosaf he was pressed once more to sacrifice, refused, asked leave to pray, heard a voice calling him, and was beheaded; the faithful of the place buried him.
+
+Men from the city of Sur came by night to carry the body away, and a pillar of fire rose from the grave until they understood that he would not leave the ground where he had died. They built him a tomb of stone, a church was raised at Rosaf in his name, and fifteen bishops of the country round about translated his relics into it and appointed his memory for the seventh of October, the day he was killed. The Romanian life adds that each year on that day the wild beasts of the desert came to the place and harmed nothing.
+
+*After doxologia.ro's calendar for 7 octombrie — [the day](https://doxologia.ro/7-octombrie) and [the life](https://doxologia.ro/sfantul-mare-mucenic-serghie); read 24 September 2026.*

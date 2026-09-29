@@ -1,0 +1,53 @@
+{
+  "slug": "julian-companion-of-caesarius",
+  "display_name": "Julian, companion of Caesarius",
+  "names": [
+    {
+      "form": "Iulian",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "presbyter"
+  ],
+  "related": [
+    "caesarius-companion-of-julian"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pe 7 octombrie — «Sfântul Mucenic Iulian, preotul»",
+        "url": "https://doxologia.ro/7-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
