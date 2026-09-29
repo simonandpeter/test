@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'leontie leontius-of-the-brazen-gate leontius-of-the-forty-martyrs leontius-of-tripoli leontius-the-martyr-16-october':
+    'four men called Leontie, on four Romanian days. The new one is the first named of the four who died by fire, doxologia 16 octombrie. The other three are unchanged and were read on 29 September: the martyr of the Brazen Gate, 9 August; one of the Forty of Sebaste, 9 March; and the soldier of Tripoli, 18 June (read 29 September 2026)',
+  'terentie terentius-of-africa terentius-the-martyr-16-october':
+    'two men, both martyrs, on two Romanian days and in two companies. The new one is one of the four who died by fire, doxologia 16 octombrie; the other is Terentius of Africa, 10 April. Two entries on one calendar are two commemorations, and the October sentence names no Africa and no company but its own three (read 29 September 2026)',
+  'dometie dometius-disciple-of-dionysius dometius-the-martyr-16-october':
+    'two men: one of the four whom doxologia 16 octombrie keeps together in a single sentence — «Sfintii Mucenici Leontie, Dometie, Terentie si Domnin prin foc s-au savarsit» — and Dometius the disciple of Dionysius, a hieromonk and venerable, Romanian 25 June (read 29 September 2026)',
   'silvan silvanus-of-cibalae silvanus-of-emesa silvanus-of-gaza silvanus-the-apostle':
     'four men called Silvan, on four Romanian days. The new one is the aged presbyter of Gaza, beaten before the people of Caesarea and beheaded with his company, a bishop and martyr, 14 October. The other three are unchanged and were read on 29 September: the deacon of Cibalae, 21 August; the bishop of Emesa, 29 January; and Silvanus of the Seventy, 30 July (read 29 September 2026)',
   'ignatie ignatius-of-methymna ignatius-of-stara-zagora':

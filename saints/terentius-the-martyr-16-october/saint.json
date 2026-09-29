@@ -1,0 +1,54 @@
+{
+  "slug": "terentius-the-martyr-16-october",
+  "display_name": "Terentius (16 October)",
+  "names": [
+    {
+      "form": "Terentie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "leontius-the-martyr-16-october",
+    "dometius-the-martyr-16-october",
+    "domninus-the-martyr-16-october"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 16 octombrie — «Sfântul Mucenic Terentie»",
+        "url": "https://doxologia.ro/16-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

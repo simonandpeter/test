@@ -1,0 +1,68 @@
+{
+  "slug": "longinus-the-centurion",
+  "display_name": "Longinus the Centurion",
+  "names": [
+    {
+      "form": "Longhin Sutașul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 octombrie, «Sfântul Mucenic Longhin Sutașul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 16 octombrie — «Sfântul Mucenic Longhin Sutașul»",
+        "url": "https://doxologia.ro/16-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Longhin, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Longhin Sutașul",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-longhin-sutasul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Longinus, O Lord, in his struggle received the crown of incorruption from Thee, our God; for having Thy power he overcame his tormentors, and broke the feeble insolence of the demons also. By his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
