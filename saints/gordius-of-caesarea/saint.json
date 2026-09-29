@@ -6,6 +6,11 @@
       "form": "Gordie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 ianuarie."
+    },
+    {
+      "form": "Γόρδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιανουαρίου, «Άγιος Γόρδιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -15,11 +20,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 307,
-      "latest": 324,
-      "display": "307–324",
+      "earliest": 320,
+      "latest": 320,
+      "display": "320",
       "basis": "traditional",
-      "note": "doxologia.ro gives no year, only the reign under which he suffered: «Liciniu, împăratul Romei (307-324), a vărsat otrava tiraniei asupra creștinilor». The interval is that reign."
+      "note": "saint.gr's page head for «Αγιος Γορδιος» dates him «(; - 320)»; the notice itself gives no year, only the war of Licinius with Constantine in 314."
     }
   },
   "attestations": [
@@ -44,8 +49,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Ιανουαρίου — «Άγιος Γόρδιος»",
+        "url": "https://www.saint.gr/01/03/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -55,5 +69,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "model": "Ταχὺ προκατάλαβε",
+      "text": "Τῷ ζήλῳ τῆς πίστεως, πυρποληθεὶς τὴν ψυχήν, αὐτόκλητος ὥρμησας, ἐν τῷ σταδίῳ σοφέ, καὶ χαίρων ἠγώνισαι· ὅθεν τοῖς ἐξ αὐχένος, ὀχετοῖς τῶν αἱμάτων, ἔσβεσας Ἀθλοφόρε, τῆς κακίας τὴν φλόγα· διό σε ὁ Ζωοδότης, Γόρδιε ἐδόξασε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Γόρδιος — Ἀπολυτίκιον, Ἦχος δ’. Ταχὺ προκατάλαβε",
+        "url": "https://www.saint.gr/361/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your soul set alight by zeal for the faith, you rushed uncalled into the stadium, wise one, and contended rejoicing; and so, prize-winner, with the streams of blood from your neck you quenched the flame of wickedness. Therefore the Giver of Life has glorified you, Gordius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ",
+      "model": "Ὡς ἀπαρχὰς τῆς φύσεως",
+      "text": "Οἱ σοὶ ἱδρῶτες ἔνδοξε, τὴν πᾶσαν γῆν κατήρδευσαν, καὶ τοῖς τιμίοις σου αἵμασι Γόρδιε, τὸν κόσμον ἅπαντα εὔφρανας· ταῖς εὐχαῖς σου θεόφρον, σῶσον πάντας τοὺς πίστει σε ἀναμέλποντας, καὶ τιμῶντας ἀξίως, πανεύφημε ὡς πολύαθλον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Γόρδιος — Κοντάκιον, Ἦχος πλ. δ. Ὡς ἀπαρχὰς τῆς φύσεως",
+        "url": "https://www.saint.gr/361/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your sweat, glorious one, watered the whole earth, and with your honourable blood, Gordius, you gladdened the whole world; by your prayers, God-minded one, save all who sing of you in faith and honour you worthily, all-praised, as one who contended much.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

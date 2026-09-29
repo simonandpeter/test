@@ -1,0 +1,59 @@
+{
+  "slug": "panteleimon-3-january",
+  "display_name": "Panteleimon (3 January)",
+  "names": [
+    {
+      "form": "Παντελεήμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιανουαρίου, «Όσιος Παντελεήμων», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1884,
+      "latest": 1884,
+      "display": "1884",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη το 1884 μ.Χ.»; the page head dates him «(; - 1884)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Ιανουαρίου — «Όσιος Παντελεήμων»",
+        "url": "https://www.saint.gr/01/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

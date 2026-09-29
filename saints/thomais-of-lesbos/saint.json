@@ -1,0 +1,96 @@
+{
+  "slug": "thomais-of-lesbos",
+  "display_name": "Thomais of Lesbos",
+  "names": [
+    {
+      "form": "Θωμαΐς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιανουαρίου, «Αγία Θωμαΐς από την Λέσβο», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "righteous",
+    "wonderworker"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 910,
+      "latest": 913,
+      "display": "910–913",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Θωμαΐς γεννήθηκε στη Λέσβο μεταξύ των ετών 910 - 913 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "note": "saint.gr's life page adds that her memory was first kept on 1 January and was moved to 3 January from the tenth century, «διότι η ημέρα της κοιμήσεώς της, που συνέπιπτε με την εορτή της Περιτομής του Κυρίου και την εορτή του Μεγάλου Βασιλείου, δεν ήταν πρόσφορη για τον πανηγυρισμό αυτής». The row records the day page read, 3 Ιανουαρίου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Ιανουαρίου — «Αγία Θωμαΐς από την Λέσβο»",
+        "url": "https://www.saint.gr/01/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'",
+      "model": "Ταχὺ προκατάλαβε",
+      "text": "Τάς θλίψεις τοῦ βίου σου, ὡς προσφορὰν λογικήν, Χριστῷ προσενένκασα, τὴν τῶν θαυμάτων ἰσχύν, Ὁσία, ἀντείληφας. Ὅθεν ὡς συζυγίας, ὑποτύπωσιν θείαν, μέλπομεν Θωμαΐς σε, καὶ πιστῶς σοι βοῶμεν Χαῖρε τῆς νήσου Λέσβου, σεμνὸν ἐγκαλλώπισμα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Αγία Θωμαΐς από την Λέσβο — Ἀπολυτίκιον, Ἦχος δ'. Ταχὺ προκατάλαβε",
+        "url": "https://www.saint.gr/357/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having brought the afflictions of your life to Christ as a reasonable offering, venerable one, you received in return the power of wonders. And so we sing of you, Thomais, as a divine pattern of married life, and cry to you in faith: hail, modest adornment of the island of Lesbos.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "model": "Ἐπεφάνης σήμερον",
+      "text": "Πόνους πλείστους ἤνεγκας καὶ κακουχίας, Θωμαῒς πανθαύμαστε, ἐν τῇ δυνάμει τοῦ Χριστοῦ· ὅθεν ἀξίως δεδόξασαι, καὶ τῶν ῾Αγίων ἐδέξω τὸν στέφανον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Αγία Θωμαΐς από την Λέσβο — Κοντάκιον, Ἦχος δ’. Ἐπεφάνης σήμερον",
+        "url": "https://www.saint.gr/357/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You bore very many pains and hardships, all-wondrous Thomais, in the power of Christ; and so you have been worthily glorified, and have received the crown of the saints.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

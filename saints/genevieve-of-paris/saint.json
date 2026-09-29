@@ -6,6 +6,16 @@
       "form": "Genoveva",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 ianuarie."
+    },
+    {
+      "form": "Γενεβιέβη",
+      "lang": "el",
+      "note": "Read out of saint.gr's notice for 3 Ιανουαρίου, «Η Αγία Γενεβιέβη (Γενοβέφα) γεννήθηκε…»; its day line prints her name in Latin letters, «Αγία Genevieve των Παρισίων»."
+    },
+    {
+      "form": "Γενοβέφα",
+      "lang": "el",
+      "note": "The second Greek form saint.gr's notice for 3 Ιανουαρίου prints, in brackets: «Η Αγία Γενεβιέβη (Γενοβέφα)»."
     }
   ],
   "sex": "female",
@@ -15,18 +25,18 @@
   ],
   "dates": {
     "birth": {
-      "earliest": 422,
-      "latest": 422,
-      "display": "c. 422",
+      "earliest": 419,
+      "latest": 419,
+      "display": "about 419",
       "basis": "traditional",
-      "note": "doxologia.ro: «s-a născut din părinți bogați în Galia… în satul Nanterre, lângă Paris, în jurul anului 422» — „around the year 422”."
+      "note": "saint.gr: «γεννήθηκε, κατά την παράδοση, περί το 419 μ.Χ. στην πόλη Ναντέρν»; the page head gives «(419 - 512)»."
     },
     "death": {
       "earliest": 512,
       "latest": 512,
-      "display": "probably 512",
+      "display": "512",
       "basis": "traditional",
-      "note": "doxologia.ro: «a trecut la cele veșnice în ziua de 3 ianuarie, cel mai probabil în anul 512, la vârsta de optzeci și nouă de ani» — „most probably”."
+      "note": "saint.gr's page head gives «(419 - 512)»; its notice says she fell asleep in peace at the age of ninety-three."
     }
   },
   "attestations": [
@@ -51,8 +61,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Ιανουαρίου — «Αγία Genevieve των Παρισίων»",
+        "url": "https://www.saint.gr/01/03/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

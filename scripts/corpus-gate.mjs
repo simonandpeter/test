@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'πετροσ peter-disciple-of-dionysius-of-alexandria peter-of-capitolias peter-son-of-john-of-syracuse peter-the-peloponnesian peter-the-sign-bearer':
+    'five men sharing a forename and nothing else, and the fifth is the one the sources cannot place. saint.gr keeps «Όσιος Πέτρος ο Σημειοφόρος ο εν Αγίω Ζαχαρία Ατρώας» on 3 Ιανουαρίου and says there is no notice for him in the Menaia at all; it reports Nicodemus conjecturing that he is Peter bishop of Argos, kept on 3 Μαΐου, and calls that unlikely. He is not peter-of-atroa either, whose Greek day is 13 September. The other four are the Peloponnesian new-martyr of 1776, the disciple of Dionysius of Alexandria dead about 254, the hieromartyr of Capitolias, and the son of John of Syracuse dead 867.',
+  'παντελεημων panteleimon-3-january panteleimon-the-healer':
+    'two men, and the great martyr is not the one saint.gr prints here. Its 3 Ιανουαρίου line is «Όσιος Παντελεήμων», founder of the monastery the page calls Kostytsev in Russia, dead 1884; the corpus keeps Panteleimon the Healer, the unmercenary martyred in 305, on the Russian and Romanian 27 July. Nineteenth-century Russia against Diocletian Nicomedia.',
+  'ευθυμιοσ euthymius-of-zographou euthymius-the-man-of-god':
+    'two men, six centuries apart. saint.gr keeps «Άγιος Ευθύμιος ο άνθρωπος του Θεού» on 3 Ιανουαρίου, a Georgian professor of 1863 to 1953 exiled to France in 1921 and canonised by the Church of Georgia on 17 October 2002; the corpus keeps Euthymius of Zographou, one of the martyred monks of Athos, dead between 1275 and 1282, on the Romanian 10 October and the Greek 22 September.',
   'θεαγενησ theagenes-of-parion theagenes-the-martyr':
     'two men, and the deaths are different. saint.gr prints «Άγιος Θεαγένης ιερομάρτυρας» on 2 Ιανουαρίου, bishop of Parion, beaten and then drowned; the corpus keeps a Theagenes on the Greek 3 October whose life has him martyred by fire. Two entries on one calendar are two commemorations, and a bishop drowned at Parion is not a man burned.',
   'σιλβεστροσ sylvester-of-rome sylvester-of-the-kyiv-caves':
@@ -1121,7 +1127,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '155'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '162'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

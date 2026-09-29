@@ -8,4 +8,6 @@ At fifteen she entered the monastic life at Paris. By many vigils, by fasting an
 
 She passed to the things that are eternal on 3 January, most probably in the year 512, at the age of eighty-nine. Her honoured relics were laid first in the church of Dionysius, the first bishop of Paris, and afterwards moved to the church of Saint Stephen at Paris, near the house where she had kept her ascetic life.
 
-*After doxologia.ro's calendar for 3 ianuarie — [the day](https://doxologia.ro/3-ianuarie) and [the life](https://doxologia.ro/viata-sfintei-cuvioase-genoveva-ocrotitoarea-parisului); read 19 September 2026.*
+The Greek calendar keeps her on the same third of January, and names her the patron of Paris. saint.gr says she was born by tradition about 419 at Nanterre, near Paris, and felt the monastic calling in her heart from an early age; her spiritual friendship with Germanus of Auxerre helped that longing grow. After her parents died she was tonsured a nun by the bishop of the city of Paris and reached great heights of ascetic practice and perfection, and she fell asleep in peace at ninety-three. The church of the Holy Apostles in Paris, where her relic was laid, took her name.
+
+*After doxologia.ro's calendar for 3 ianuarie — [the day](https://doxologia.ro/3-ianuarie) and [the life](https://doxologia.ro/viata-sfintei-cuvioase-genoveva-ocrotitoarea-parisului); read 19 September 2026; and after saint.gr's calendar for 3 Ιανουαρίου — [the day](https://www.saint.gr/01/03/index.aspx) and [the life](https://www.saint.gr/356/saint.aspx), read 30 September 2026.*

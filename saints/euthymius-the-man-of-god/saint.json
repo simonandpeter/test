@@ -1,0 +1,66 @@
+{
+  "slug": "euthymius-the-man-of-god",
+  "display_name": "Euthymius the Man of God",
+  "names": [
+    {
+      "form": "Ευθύμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιανουαρίου, «Άγιος Ευθύμιος ο άνθρωπος του Θεού», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1863,
+      "latest": 1863,
+      "display": "1863",
+      "basis": "traditional",
+      "note": "saint.gr's page head dates him «(1863 - 1953)», and its notice adds that he is «Εορτάζεται στις 3 Ιανουαρίου, ημέρα της γέννησής του»."
+    },
+    "death": {
+      "earliest": 1953,
+      "latest": 1953,
+      "display": "1953",
+      "basis": "traditional",
+      "note": "saint.gr's page head dates him «(1863 - 1953)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "note": "saint.gr's life page adds «Εορτάζεται στις 3 Ιανουαρίου, ημέρα της γέννησής του (πράγμα παράξενο, γιατί κατά κανόνα οι άγιοι τιμώνται την ημέρα της κοιμήσεώς τους)» — the day kept is his birthday, which the page itself calls odd.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Ιανουαρίου — «Άγιος Ευθύμιος ο άνθρωπος του Θεού»",
+        "url": "https://www.saint.gr/01/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
