@@ -158,7 +158,8 @@ function readEra(text) {
  * end of it, and one place reading it is the only way that stays true.
  */
 function readNumber(text) {
-  const m = /^(c\. )?(\d+)(?:[–-](\d+))?$/.exec(text);
+  // `about 1228` is the same claim as `c. 1228` and readers write both.
+  const m = /^(c\. |about )?(\d+)(?:[–-](\d+))?$/.exec(text);
   if (!m) return null;
   const out = m[3] ? fill(STRINGS.dates.yearRange, { a: m[2], b: m[3] }) : m[2];
   return m[1] ? fill(STRINGS.dates.circa, { when: out }) : out;
