@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'bonifatie boniface-apostle-of-germany boniface-of-tarsus':
+    'two men: Boniface of Tarsus, the servant of Aglaia sent to bring back relics and martyred instead, Romanian 19 December; and Boniface the apostle of Germany, 5 June (read 30 September 2026)',
   'nicolae nicholas-founder-of-vatopedi nicholas-ii nicholas-of-lesvos nicholas-of-myra nicholas-of-the-forty-martyrs':
     'five folders whose ro form is Nicolae, on five Romanian days. The new one is Nicholas, one of the three founders of Vatopedi, 17 December. The other four were read on 30 September and are unchanged (read 30 September 2026)',
   'misail misael-of-the-three-youths misael-of-turnu':

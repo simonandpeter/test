@@ -1,0 +1,77 @@
+{
+  "slug": "eulogia-of-samurcasesti",
+  "display_name": "Eulogia of Samurcășești",
+  "names": [
+    {
+      "form": "Evloghia de la Samurcășești",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 decembrie, «Sfânta Cuvioasă Muceniță Evloghia de la Samurcășești»; the life gives Ecaterina as her baptismal name and Evloghia as the name she received at her tonsure, and the page's own links to further reading call her «monahia Evloghia Țârlea»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "monastic"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1949,
+      "latest": 1949,
+      "display": "1949",
+      "basis": "attested",
+      "note": "doxologia.ro: «Și-a dat sufletul la Mănăstirea Samurcășești‑Ciorogârla, după ce a primit Sfintele Taine, în ziua de 19 decembrie 1949.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 decembrie — «Sfânta Cuvioasă Muceniță Evloghia de la Samurcășești»",
+        "url": "https://doxologia.ro/19-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (28 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mielușeaua Ta, Iisuse, Evloghia, strigă cu mare glas: Pe Tine Mirele meu Te iubesc și spre Tine căutând mă chinuiesc și împreună mă răstignesc și împre­ună mă îngrop prin botezul Tău și pătimesc pentru Tine, ca să împărățesc cu Tine; și mor pentru Tine, ca să și viez întru Tine, deci, ca o jertfa fără prihană, primește-mă pe mine ceea ce cer dragoste, mă jertfesc Ție. Pentru rugăciunile ei, ca un milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "Doxologia (doxologia.ro), «Troparul Sfintei Cuvioase Mucenițe Evloghia de la Samurcășești» — the common of a woman martyr, «Mielușeaua Ta, Iisuse», printed under her name and with her name inside it",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-mucenite-evloghia-de-la-samurcasesti",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy ewe-lamb, O Jesus, Eulogia, cries out with a great voice: Thee, my Bridegroom, do I love, and seeking Thee I suffer; I am crucified together with Thee and buried together with Thee in Thy baptism; and I suffer for Thy sake, that I may reign with Thee, and I die for Thee, that I may also live in Thee. Receive me therefore as an unblemished sacrifice, who ask for love and am sacrificed to Thee. By her prayers, as one merciful, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "aglaia-of-rome",
+  "display_name": "Aglaia of Rome",
+  "names": [
+    {
+      "form": "Aglaia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 decembrie, «Sfânta Cuvioasă Aglaia». Her own page spells her «Aglaia» throughout; the page kept under Boniface's name prints the same life with «Aglaida»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "related": [
+    "boniface-of-tarsus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 decembrie — «Sfânta Cuvioasă Aglaia»",
+        "url": "https://doxologia.ro/19-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (28 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

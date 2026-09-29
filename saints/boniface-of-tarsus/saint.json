@@ -1,0 +1,52 @@
+{
+  "slug": "boniface-of-tarsus",
+  "display_name": "Boniface of Tarsus",
+  "names": [
+    {
+      "form": "Bonifatie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 decembrie, «Sfântul Mucenic Bonifatie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "aglaia-of-rome"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 decembrie — «Sfântul Mucenic Bonifatie»",
+        "url": "https://doxologia.ro/19-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (28 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
