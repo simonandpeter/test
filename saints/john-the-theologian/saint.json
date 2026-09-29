@@ -134,6 +134,22 @@
         "text": "Apostle of Christ beloved of God, hasten to deliver a people who have no defence. He receives thee when thou fallest before him, who received thee when thou didst lean on his breast; entreat him, theologian, to scatter the cloud of the heathen set over us, and ask for us peace and great mercy.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Apostole iubite al lui Hristos Dumnezeu, grăbeşte de mântuieşte pe poporul cel fără de răspuns. Că te primeşte când cazi către Dânsul, Cel Ce te-a primit când te-ai rezemat pe pieptul Lui: pe Acela roagă-L, de Dumnezeu Cuvântătorule, ca norul vrăjmaşilor cel căzut asupra noastră să se risipească, cerându-ne nouă pace şi mare milă.",
+      "source": {
+        "text": "Doxologia — Tropar la Sărbătoarea Adormirii Sfântului Apostol şi Evanghelist Ioan",
+        "url": "https://doxologia.ro/tropar-la-sarbatoarea-adormirii-sfantului-apostol-evanghelist-ioan",
+        "year": 2026
+      },
+      "english": {
+        "text": "O Apostle beloved of Christ God, hasten to save a people that has no defence. He who received thee when thou didst lean upon His breast receives thee when thou fallest down before Him: entreat Him, O Theologian, that the cloud of enemies fallen upon us may be scattered, and that He may ask for us peace and great mercy.",
+        "rendered": "site"
+      }
     }
   ]
 }
