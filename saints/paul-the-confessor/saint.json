@@ -1,0 +1,73 @@
+{
+  "slug": "paul-the-confessor",
+  "display_name": "Paul of Constantinople",
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Pavel",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 noiembrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch",
+    "confessor"
+  ],
+  "related": [
+    "athanasius-of-alexandria"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 6 noiembrie — «Sfântul Ierarh Pavel Mărturisitorul, Patriarhul Constantinopolului»",
+        "url": "https://doxologia.ro/6-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Pentru mărturisirea...\nPentru mărturisirea Dumnezeieştii credinţe, alt Pavel pe tine Biserica te-a arătat râvnitor între preoţi. Strigă împreună cu tine şi Abel către Domnul şi sângele cel drept al lui Zaharia. Părinte cuvioase, pe Hristos Dumnezeu roagă-L să ne dăruiască nouă mare milă.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Pavel Mărturisitorul, Patriarhul Constantinopolului",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-pavel-marturisitorul-patriarhul-constantinopolului",
+        "year": 2026
+      },
+      "english": {
+        "text": "For the confession of the divine faith the Church has shown thee forth as another Paul, zealous among priests. Abel cries out together with thee to the Lord, and the righteous blood of Zacharias. Venerable father, entreat Christ God to grant us great mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

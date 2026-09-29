@@ -115,12 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'luca luke-of-crimea luke-of-emesa luke-of-sicily luke-the-evangelist':
+    'four men called Luca, on four Romanian days. The new one is Luke of Sicily, a hermit, 6 November. The other three were read on 29 September: Luke the deacon of Emesa, 29 January; Luke of Crimea, 11 June; and the evangelist, 18 October (read 30 September 2026)',
+  'pavel paul-of-jamnia paul-of-plousias paul-of-ptolemais paul-of-zographou paul-the-apostle paul-the-confessor paul-with-valentina-and-ennatha platon-kulbusch':
+    'eight folders whose ro form is Pavel, on eight Romanian days. The new one is Paul of Constantinople, the patriarch exiled and strangled by the Arians, 6 November, whose slug keeps the epithet the calendar gives him. The others are unchanged: Paul of Jamnia, 16 February; Paul of Plousias, 8 March; Paul of Ptolemais, 4 March; Paul of Zographou, 10 October; the apostle; Paul kept with Valentina and Ennatha, 10 February; and Platon Kulbusch, whose baptismal name folds him in, 14 January (read 30 September 2026)',
+  'varlaam barlaam-30-may barlaam-hutinski varlaam-of-moldavia':
+    'three folders whose ro form is Varlaam, on three Romanian days. The new one carries an epithet the calendar gives it — «Sfantul Varlaam Hutinski», 6 noiembrie — though the page behind that line has no life. The 30 mai folder is bare and carries no epithet at all, and Varlaam the metropolitan of Moldavia is kept on 30 august. Three entries on one calendar (read 30 September 2026)',
   'silvan silvanus-of-cibalae silvanus-of-emesa silvanus-of-gaza silvanus-the-apostle silvanus-the-martyr-5-november':
     'five folders whose ro form is Silvan, on five Romanian days. The new one is a bare line: 5 noiembrie prints «Sfantul Mucenic Silvan» and the page carries the name, the day and the readings. The other four were read on 29 and 30 September and carry lives and companies of their own — the deacon of Cibalae, 21 August; the bishop of Emesa, 29 January; the presbyter of Gaza, 14 October; and Silvanus of the Seventy, 30 July — and the November line names none of them (read 30 September 2026)',
   'grigorie gregory-of-alexandria gregory-of-nyssa':
     'two men: Gregory of Alexandria, Romanian 5 November, and Gregory of Nyssa, 10 January. The other Gregories the corpus keeps carry different ro forms and do not fold here (read 30 September 2026)',
   'galaction galaction-of-emesa galaction-the-martyr-22-june':
-    'two entries on one calendar, so two men. The corpus 22 iunie folder is a bare line — the name, the day and the readings — and the new one is the Galaction of Emesa whose life doxologia prints for 5 noiembrie, the son of Clitophon and Leucippe who with his wife Episteme left the world for Publion mountain. Nothing on the June page ties it to him (read 30 September 2026)',
+    'two entries on one calendar, so two men. The corpus 22 iunie folder is a bare line — the name, the day and the readings — and the new one is the Galaction of Emesa whose life doxologia prints for 5 noiembrie, the son of Cleitophon and Leucippe who with his wife Episteme left the world for Publion mountain. Nothing on the June page ties it to him (read 30 September 2026)',
   'nicandru nicander-of-durostorum nicander-of-egypt nicander-of-myra':
     'three men called Nicandru, on three Romanian days. The new one is the bishop of Myra, martyred with the deacon Hermaeus, 4 November. The others are the soldier of Durostorum, 8 June, and Nicander of Egypt, 5 June (read 30 September 2026)',
   'ioanichie joannicius-of-zographou joannicius-the-great':
