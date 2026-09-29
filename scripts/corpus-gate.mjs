@@ -118,7 +118,7 @@ const READ_FOLDS = {
   'nicandru nicander-of-durostorum nicander-of-egypt nicander-of-myra':
     'three men called Nicandru, on three Romanian days. The new one is the bishop of Myra, martyred with the deacon Hermaeus, 4 November. The others are the soldier of Durostorum, 8 June, and Nicander of Egypt, 5 June (read 30 September 2026)',
   'ioanichie joannicius-of-zographou joannicius-the-great':
-    'two men: Joannicius the Great of Mount Olympus in Bithynia, venerable, 4 November; and Joannicius of Zographou, a venerable-martyr, 10 October (read 30 September 2026)',
+    'two men: Joannicius the Great, the soldier who became a monk in Bithynia, venerable, 4 November; and Joannicius of Zographou, a venerable-martyr, 10 October (read 30 September 2026)',
   'gheorghe george-of-drama george-of-egypt george-of-pisidian-antioch george-of-thessalonica':
     'four men called Gheorghe, on four Romanian days. The new one is the new-martyr of Drama, 4 November. The others are George of Egypt, 5 June; George of Pisidian Antioch, bishop and confessor, 19 April; and George of Thessalonica, bishop, 10 July (read 30 September 2026)',
   'iosif joseph-archbishop-of-thessalonica joseph-of-nea-moni joseph-presbyter-of-persia joseph-the-hymnographer joseph-the-merciful':
