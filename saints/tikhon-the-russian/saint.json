@@ -1,0 +1,69 @@
+{
+  "slug": "tikhon-the-russian",
+  "display_name": "Tikhon the Russian",
+  "names": [
+    {
+      "form": "Tihon Rusul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 septembrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "related": [
+    "paisios-the-athonite"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1884,
+      "latest": 1884,
+      "display": "1884",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Tihon (Papa Tihon) s-a născut în Rusia, în Novaia Mihailovsk, în 1884.»"
+    },
+    "death": {
+      "earliest": 1968,
+      "latest": 1968,
+      "display": "1968",
+      "basis": "attested",
+      "note": "doxologia.ro: «Era după amiază, în ajunul nașterii Prea Sfintei Născătoare de Dumnezeu, 7 septembrie 1968, iar după trei zile, la 10 septembrie, s-a odihnit în Domnul.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 10 septembrie — «Sfântul Cuvios Tihon Rusul»",
+        "url": "https://doxologia.ro/10-septembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Σεπτεμβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
