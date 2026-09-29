@@ -1,0 +1,66 @@
+{
+  "slug": "gabriel-of-lesnovo",
+  "display_name": "Gabriel of Lesnovo",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Γαβριήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Ιανουαρίου, «Όσιος Γαβριήλ του Λέσνοβο», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1001,
+      "latest": 1100,
+      "display": "11th century",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στο χωριό Οσσόκε στην περιοχή Κρίβα Παλάνκα της Σερβίας κατά τον 11ο αιώνα μ.Χ.»"
+    },
+    "death": {
+      "earliest": 1101,
+      "latest": 1130,
+      "display": "early 12th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη στις αρχές του 12ου αιώνος μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιανουαρίου — «Όσιος Γαβριήλ του Λέσνοβο»",
+        "url": "https://www.saint.gr/01/15/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

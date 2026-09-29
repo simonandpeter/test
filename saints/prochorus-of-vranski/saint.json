@@ -1,0 +1,59 @@
+{
+  "slug": "prochorus-of-vranski",
+  "display_name": "Prochorus of Vranski",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Πρόχορος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Ιανουαρίου, «Όσιος Πρόχορος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 951,
+      "latest": 1050,
+      "display": "late 10th and early 11th century",
+      "basis": "traditional",
+      "note": "saint.gr: «καταγόταν από τη Βουλγαρία και έζησε περί τα τέλη του 10ου μ.Χ. και αρχές του 11ου αιώνος μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιανουαρίου — «Όσιος Πρόχορος»",
+        "url": "https://www.saint.gr/01/15/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

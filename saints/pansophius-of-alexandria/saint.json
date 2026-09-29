@@ -1,0 +1,58 @@
+{
+  "slug": "pansophius-of-alexandria",
+  "display_name": "Pansophius of Alexandria",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Πανσόφιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Ιανουαρίου, «Άγιος Πανσόφιος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος αυτός ήταν από την Αλεξάνδρεια στα χρόνια του βασιλιά Δεκίου (250)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιανουαρίου — «Άγιος Πανσόφιος»",
+        "url": "https://www.saint.gr/01/15/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

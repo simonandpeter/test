@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-the-sleepless alexander-with-thirty-martyrs':
+    'three men, and the two the corpus already held are both on the Greek 28 September, kept apart there by their companies: the brother of Alphaeus, dead about 290, and the Alexander of the thirty martyrs. The new one is Alexander the Sleepless, the abbot who founded the unsleeping choirs, dead 430, whom saint.gr keeps on 15 Ιανουαρίου. An abbot of the fifth century is neither martyr.',
   'θεοδουλοσ theodulus-of-myropolis theodulus-son-of-nilus theodulus-the-executioner':
     'three men. The new one is the son of Nilus, a monk of before the middle of the fifth century whom saint.gr keeps on 14 Ιανουαρίου; the corpus keeps the martyr of Myropolis, dead 360 to 363, on three calendars on 12 September, and Theodulus the Executioner, the gaoler turned confessor, on the Greek 4 September. A fifth-century monk of Sinai is neither.',
   'στεφανοσ stephen-of-chenolakkos stephen-of-placidianae':
@@ -1167,7 +1169,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '217'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '224'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

@@ -6,6 +6,11 @@
       "form": "Ioan Colibașul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 ianuarie, «Sfântul Cuvios Ioan Colibașul»."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Ιανουαρίου, «Όσιος Ιωάννης ο Καλυβίτης ο δια Χριστόν πτωχός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 15 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιανουαρίου — «Όσιος Ιωάννης ο Καλυβίτης ο δια Χριστόν πτωχός»",
+        "url": "https://www.saint.gr/01/15/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

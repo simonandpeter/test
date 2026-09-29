@@ -1,0 +1,66 @@
+{
+  "slug": "gerasimus-palladas",
+  "display_name": "Gerasimus Palladas",
+  "office": "Patriarch of Alexandria",
+  "sex": "male",
+  "types": [
+    "patriarch"
+  ],
+  "names": [
+    {
+      "form": "Γεράσιμος Παλλαδάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Ιανουαρίου, «Άγιος Γεράσιμος ο Παλλαδάς Πατριάρχης Αλεξανδρείας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1633,
+      "latest": 1633,
+      "display": "1633",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Γεράσιμος ο Παλλαδάς γεννήθηκε το 1633 μ.Χ. ... στο χωριό Σκιλλούς της Πεδιάδος Κρήτης»."
+    },
+    "death": {
+      "earliest": 1714,
+      "latest": 1714,
+      "display": "1714",
+      "basis": "traditional",
+      "note": "saint.gr's own header prints «Αγιος Γερασιμος ο Παλλαδας Πατριαρχης Αλεξανδρειας (1633 - 1714)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιανουαρίου — «Άγιος Γεράσιμος ο Παλλαδάς Πατριάρχης Αλεξανδρείας»",
+        "url": "https://www.saint.gr/01/15/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

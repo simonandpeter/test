@@ -6,6 +6,11 @@
       "form": "Ita",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 ianuarie, «Sfânta Cuvioasă Ita din Irlanda»."
+    },
+    {
+      "form": "Ίτα",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for 15 Ιανουαρίου, whose text prints the Greek form «Η Αγία Ίτα» while the day's line keeps the Latin spelling «Αγία Ita, ηγουμένη (Ιρλανδή)»; the rank words are left off."
     }
   ],
   "sex": "female",
@@ -51,8 +56,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 15 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιανουαρίου — «Αγία Ita, ηγουμένη (Ιρλανδή)»",
+        "url": "https://www.saint.gr/01/15/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

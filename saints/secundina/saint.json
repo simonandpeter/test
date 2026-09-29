@@ -1,0 +1,58 @@
+{
+  "slug": "secundina",
+  "display_name": "Secundina",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Σεκουνδίνη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Ιανουαρίου, «Αγία Σεκουνδίνη», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "between 249 and 251",
+      "basis": "traditional",
+      "note": "saint.gr gives the reign and no year: «Η Αγία Σεκουνδίνη άθλησε επί αυτοκράτορα Δεκίου (249 - 251 μ.Χ.)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιανουαρίου — «Αγία Σεκουνδίνη»",
+        "url": "https://www.saint.gr/01/15/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

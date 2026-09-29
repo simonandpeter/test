@@ -1,0 +1,49 @@
+{
+  "slug": "six-fathers-15-january",
+  "display_name": "The Six Fathers (15 January)",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Έξι Πατέρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Ιανουαρίου, «Άγιοι Έξι Πατέρες», with the rank word Άγιοι left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "note": "The same page adds a second Greek day and a second rank: «Η μνήμη τους επαναλαμβάνεται στις 4 Ιανουαρίου και αναφέρονται σαν έξι Μάρτυρες» — their memory is repeated on 4 January, where they are referred to as six Martyrs (https://www.saint.gr/26/saint.aspx). One attestation row per church is the schema, so the row records the day page read, 15 Ιανουαρίου.",
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιανουαρίου — «Άγιοι Έξι Πατέρες»",
+        "url": "https://www.saint.gr/01/15/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
