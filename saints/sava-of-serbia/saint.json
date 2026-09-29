@@ -19,6 +19,11 @@
       "form": "Rastko",
       "lang": "ro",
       "note": "His name in the world, as doxologia.ro's life gives it: «pururea pomenitul Rastko sau Sava, după numele primit la tunderea sa în monahism»."
+    },
+    {
+      "form": "Σάββας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιανουαρίου, «Όσιος Σάββας πρώτος Αρχιεπίσκοπος Σερβίας και κτήτωρ Ιεράς Μονής Χιλανδαρίου», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -77,8 +82,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιανουαρίου — «Όσιος Σάββας πρώτος Αρχιεπίσκοπος Σερβίας και κτήτωρ Ιεράς Μονής Χιλανδαρίου»",
+        "url": "https://www.saint.gr/01/14/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

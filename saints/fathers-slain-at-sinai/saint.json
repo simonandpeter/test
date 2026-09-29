@@ -1,0 +1,80 @@
+{
+  "slug": "fathers-slain-at-sinai",
+  "display_name": "The Thirty-eight Fathers slain at Sinai",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Τριάντα Οκτώ Πατέρες εν Σινά αναιρεθέντες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιανουαρίου, «Άγιοι Τριάντα Οκτώ Πατέρες εν Σινά αναιρεθέντες», with the rank word Άγιοι left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι αυτοί Πατέρες ζούσαν μέσα στις σπηλιές του όρους Σινά την αγία μοναχική ζωή (κατά τον 5ο αιώνα μ.Χ.)»."
+    }
+  },
+  "related": [
+    "fathers-slain-at-raithu"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιανουαρίου — «Άγιοι Τριάντα Οκτώ Πατέρες εν Σινά αναιρεθέντες»",
+        "url": "https://www.saint.gr/01/14/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ.",
+      "text": "Ὡς ἁγιόλεκτος τοῦ Λόγου χορεία, ἐν τῷ Σινᾷ καὶ Ραϊθῶ οἱ Ἀββάδες, ἀγγελικῶς ἠρίστευσαν ἀγώσιν ἱεροὶς ἰδρώσι γὰρ ἀσκήσεως, τῶν αἱμάτων τοὺς ὄμβρους, μυστικῶς κεράσαντες, χαρισμάτων κρατήρα, πνευματικῶς προτίθενται ἠμίν, ἐξ οὐ τρυφῶντες, αὐτοὺς μακαρίσωμεν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιοι Τριάντα Τρεις Πατέρες εν Ραϊθώ αναιρεθέντες, Λειτουργικά κείμενα: Ἀπολυτίκιον (one apolytikion for the fathers of Sinai and of Raithu together)",
+        "url": "https://www.saint.gr/219/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a choir of the Word, chosen for holiness, the abbas of Sinai and of Raithu contended after the manner of angels in sacred struggles; for having mingled mystically the showers of their blood with the sweat of their asceticism, they set before us a spiritual cup of gifts, from which, as we take our delight, let us call them blessed.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

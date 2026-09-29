@@ -220,7 +220,12 @@ export function translateDisplay(display) {
   if (body.startsWith('before ') || body.startsWith('after ')) {
     const which = body.startsWith('before ') ? 'before' : 'after';
     const rest = readTerm(body.slice(which.length + 1), null);
-    return rest === null ? display : dress(fill(STRINGS.dates[which], { y: rest }));
+    if (rest !== null) return dress(fill(STRINGS.dates[which], { y: rest }));
+    /*
+     * Not a bound this can compose: "before the middle of the 5th century" has a
+     * tail no term reads, and the packs carry it whole. Falling through to the era
+     * table below is the only way such a phrase is ever reached.
+     */
   }
 
   /*

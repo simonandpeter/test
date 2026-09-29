@@ -1,0 +1,9 @@
+# The Thirty-three Fathers slain at Raithu
+
+Two days' journey from Mount Sinai, towards the Red Sea, lay the desert of Raithu, and in its interior lived Christian anchorites, gathered together upon a mountain. On the same day as the slaughter of the fathers on Sinai — on the twenty-second of December, according to others — the barbarians resolved to destroy the fathers of Raithu as well.
+
+The abbot of the monastery, Paul, who is held to have come from the city of Patras, saw the danger, gathered all the brethren inside the church, and spoke to them words that were brave and moving. He reminded them that the purpose of their life was Christ and his Kingdom; that all their prayers, their studies, their longings and their works had been for it; and that now a most splendid chance was set before them to win the fairest crowns of all, by pouring out even their blood for the Lord who repays. He urged them also to pray for the wretched men who were about to kill them. The fathers agreed with these words, and all together they prayed; and as soon as their prayer was finished the barbarians came into the monastery and sowed death everywhere.
+
+These killings are related, saint.gr says, by the blessed [Nilus the Ascetic](/saints/nilus-the-hermit-of-sinai), who had been prefect of Constantinople, by the monk Ammonius in his Narrative, and by the monk [Anastasius the Sinaite](/saints/anastasius-the-sinaite) in the seventh century. Their memory was at first kept on 28 December, but it came to be kept on this day instead. The calendar names only their abbot and not the thirty-three, and so this is one entry and not thirty-three; the same apolytikion serves them and the [fathers of Sinai](/saints/fathers-slain-at-sinai).
+
+*After saint.gr's calendar for 14 Ιανουαρίου — [the day](https://www.saint.gr/01/14/index.aspx) and [the life](https://www.saint.gr/219/saint.aspx); read 30 September 2026.*

@@ -1,0 +1,70 @@
+{
+  "slug": "acacius-of-tver",
+  "display_name": "Acacius of Tver",
+  "office": "Bishop of Tver and Kashin",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ακάκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιανουαρίου, «Άγιος Ακάκιος εκ Ρωσίας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1522,
+      "latest": 1567,
+      "display": "1522–1567",
+      "basis": "traditional",
+      "note": "saint.gr: «Το 1522 εξελέγη Επίσκοπος της περιοχής Τβερ και Κασίν. Κοιμήθηκε οσίως με ειρήνη το έτος 1567»."
+    },
+    "death": {
+      "earliest": 1567,
+      "latest": 1567,
+      "display": "1567",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε οσίως με ειρήνη το έτος 1567»; the page's header prints (; - 1567)."
+    }
+  },
+  "related": [
+    "joseph-the-wonderworker-of-volokolamsk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιανουαρίου — «Άγιος Ακάκιος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/01/14/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδουλοσ theodulus-of-myropolis theodulus-son-of-nilus theodulus-the-executioner':
+    'three men. The new one is the son of Nilus, a monk of before the middle of the fifth century whom saint.gr keeps on 14 Ιανουαρίου; the corpus keeps the martyr of Myropolis, dead 360 to 363, on three calendars on 12 September, and Theodulus the Executioner, the gaoler turned confessor, on the Greek 4 September. A fifth-century monk of Sinai is neither.',
+  'στεφανοσ stephen-of-chenolakkos stephen-of-placidianae':
+    'two men, three days apart on one calendar and neither with a year. saint.gr keeps the abbot of Chenolakkos on 14 Ιανουαρίου and Stephen of Placidianae on the 11th, each with his own house named in his own notice. Two entries on one calendar are two commemorations, and the houses are the only thing either page gives to tell them by, so the slugs keep them.',
+  'ιωαννικιοσ joannicius-of-tarnovo joannicius-of-zographou':
+    'two men. The 14 Ιανουαρίου Joannicius is a thirteenth-century metropolitan of Tarnovo; the corpus keeps Joannicius of Zographou, one of the martyred monks of Athos of 1275 to 1282, on the Romanian 10 October and the Greek 22 September. A Bulgarian metropolitan is not an Athonite martyr, even in the same century.',
+  'ακακιοσ acacius-of-latros acacius-of-tver':
+    'two men. saint.gr keeps Acacius, bishop and monk of Tver, dead 1567, on 14 Ιανουαρίου, and Acacius the Wonderworker, founder of the Great Lavra of the Theotokos of Myrsinon on Latros, on 3 Ιανουαρίου, whose authority the page gives as Paris Coislin 361 f. 88. A sixteenth-century Russian bishop is not a Byzantine founder on Latros, and the two days are eleven apart on one calendar.',
   'companion pachomius papyrinus pachomius-companion-of-papyrinus papyrinus-companion-of-pachomius':
     'one line folded onto itself, the third of its kind in this wave after Peter and Severus and Leucius on the 11th and Zoticus and Rogatus on the 12th. saint.gr names Pachomius and Papyrinus together on 13 Ιανουαρίου; each display name carries the other, so the folded key holds both forenames whichever folder it is read from.',
   'αθανασιοσ athanasius-martyr-13-january athanasius-of-alexandria':
@@ -1159,7 +1167,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '210'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '217'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

@@ -1,0 +1,59 @@
+{
+  "slug": "meletius-of-ryazan",
+  "display_name": "Meletius of Ryazan",
+  "office": "Bishop of Ryazan",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Μελέτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιανουαρίου, «Άγιος Μελέτιος επίσκοπος του Ριαζάν», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1900,
+      "latest": 1900,
+      "display": "1900",
+      "basis": "traditional",
+      "note": "saint.gr's own header prints «Αγιος Μελετιος Επισκοπος Του Ριαζαν (; - 1900)»; the page's text gives no year at all."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιανουαρίου — «Άγιος Μελέτιος επίσκοπος του Ριαζάν»",
+        "url": "https://www.saint.gr/01/14/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

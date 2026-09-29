@@ -1,0 +1,62 @@
+{
+  "slug": "theodulus-son-of-nilus",
+  "display_name": "Theodulus, son of Nilus of Sinai",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Θεόδουλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιανουαρίου, «Όσιος Θεόδουλος, υιός του Οσίου Νείλου», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 450,
+      "display": "before the middle of the 5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι όσιοι έζησαν προ των μέσων του 5ου αιώνος μ.Χ.»"
+    }
+  },
+  "related": [
+    "nilus-the-hermit-of-sinai"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιανουαρίου — «Όσιος Θεόδουλος, υιός του Οσίου Νείλου»",
+        "url": "https://www.saint.gr/01/14/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Nina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 ianuarie, «Sfânta Nina, cea întocmai cu Apostolii și luminătoarea Georgiei»."
+    },
+    {
+      "form": "Νίνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιανουαρίου, «Αγία Νίνα Ισαπόστολος», with the rank words left off. The page adds a second Greek form of the name in brackets, «ή Νίνω»."
     }
   ],
   "sex": "female",
@@ -52,8 +57,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 14 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιανουαρίου — «Αγία Νίνα Ισαπόστολος»",
+        "url": "https://www.saint.gr/01/14/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -84,6 +98,7 @@
   },
   "related": [
     "mirian-of-georgia",
-    "nana-of-georgia"
+    "nana-of-georgia",
+    "george-the-trophy-bearer"
   ]
 }
