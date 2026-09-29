@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'iosif joseph-archbishop-of-thessalonica joseph-of-nea-moni joseph-presbyter-of-persia joseph-the-hymnographer joseph-the-merciful':
+    'five men called Iosif, on five Romanian days. The new one is the presbyter martyred in Persia with bishop Acepsimas and the deacon Aithalas, 3 November. The others are unchanged: the archbishop of Thessalonica, 15 July; Joseph of Nea Moni, 20 May; Joseph the Hymnographer, 4 April; and Joseph the Merciful, metropolitan, 26 January (read 30 September 2026)',
   'agapie agapius-2-november agapius-disciple-of-babylas agapius-of-caesarea-in-palestine agapius-of-colciu agapius-of-gaza agapius-son-of-bassa agapius-son-of-eustathius':
     'seven folders whose ro form is Agapie, on seven Romanian days, and doxologia keeps seven commemorations. The new one is a bare line: 2 noiembrie prints «Sfantul Mucenic Agapie» and the page behind it carries no life. The other six carry lives and companies of their own — the disciple of Babylas, 24 January; Agapius of Caesarea in Palestine, 15 March; Agapius of Colciu, 1 March; Agapius of Gaza, 19 August; the son of Bassa, 21 August; and the son of Eustathius, 20 September — and the November line names none of them (read 30 September 2026)',
   'achindin acindynus-of-nicomedia acindynus-the-persian':

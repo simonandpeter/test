@@ -10,6 +10,11 @@
       "form": "Αειθαλάς",
       "lang": "el",
       "note": "From «Άγιοι Αειθαλάς και Αμών» in this folder's Greek citation — the pair, and this is his half of it."
+    },
+    {
+      "form": "Aitala",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 noiembrie, «Sfântul Mucenic Aitala, diaconul»."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 1 septembrie (checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 3 noiembrie — «Sfântul Mucenic Aitala, diaconul»",
+        "url": "https://doxologia.ro/3-noiembrie",
+        "year": 2026
+      },
+      "note": "The folder's Romanian row stood undocumented because doxologia.ro's list for 1 septembrie — the Russian calendar's day for him — does not name him; the Romanian calendar keeps him on 3 November with the bishop Acepsimas and the presbyter Joseph, and prints the three men's shared passion and their common troparion there. Read 25 September 2026."
     },
     {
       "church": "greek",
@@ -74,6 +89,28 @@
     {
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
+    }
+  ],
+  "related": [
+    "acepsimas-of-naeson",
+    "joseph-presbyter-of-persia"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfinților Sfințiți Mucenici Achepsima episcopul, Iosif preotul și Aitala diaconul, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfintilor-sfintiti-mucenici-achepsima-episcopul-iosif-preotul-aitala-diaconul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contests received incorruptible crowns from Thee our God; for possessing Thy strength they overthrew their torturers, and broke the feeble daring of the demons. By their prayers save Thou our souls, O Christ God.",
+        "rendered": "site"
+      }
     }
   ]
 }

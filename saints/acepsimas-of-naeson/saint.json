@@ -1,0 +1,73 @@
+{
+  "slug": "acepsimas-of-naeson",
+  "display_name": "Acepsimas of Naeson",
+  "office": "Bishop of Naeson in Persia",
+  "names": [
+    {
+      "form": "Achepsima",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 noiembrie, «Sfântul Mucenic Achepsima, episcopul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 3 noiembrie — «Sfântul Mucenic Achepsima, episcopul»",
+        "url": "https://doxologia.ro/3-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "related": [
+    "joseph-presbyter-of-persia",
+    "aithalas-the-deacon"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfinților Sfințiți Mucenici Achepsima episcopul, Iosif preotul și Aitala diaconul, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfintilor-sfintiti-mucenici-achepsima-episcopul-iosif-preotul-aitala-diaconul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contests received incorruptible crowns from Thee our God; for possessing Thy strength they overthrew their torturers, and broke the feeble daring of the demons. By their prayers save Thou our souls, O Christ God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

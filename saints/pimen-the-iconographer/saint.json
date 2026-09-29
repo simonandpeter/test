@@ -1,0 +1,50 @@
+{
+  "slug": "pimen-the-iconographer",
+  "display_name": "Pimen the Iconographer",
+  "names": [
+    {
+      "form": "Pimen Iconarul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 noiembrie, «Sfantul Cuvios Pimen Iconarul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "iconographer"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 3 noiembrie — «Sfantul Cuvios Pimen Iconarul»",
+        "url": "https://doxologia.ro/3-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

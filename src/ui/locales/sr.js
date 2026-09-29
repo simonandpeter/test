@@ -799,6 +799,7 @@ export const sr = {
     'Bishop of Magnesia': 'Епископ магнезијски',
     'Bishop of Maghid': 'Епископ магидски',
     'Bishop of Melitene': 'Епископ мелитински',
+    'Bishop of Naeson in Persia': 'Епископ наесонски у Персији',
     'Bishop of Narva': 'Епископ нарвски',
     'Bishop of Nicaea': 'Епископ никејски',
     'Bishop of Nicomedia': 'Епископ никомидијски',
