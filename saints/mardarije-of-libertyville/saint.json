@@ -1,0 +1,67 @@
+{
+  "slug": "mardarije-of-libertyville",
+  "display_name": "Mardarije of Libertyville",
+  "office": "Bishop for America of the Serbian Orthodox Church",
+  "names": [
+    {
+      "form": "Mardarie (Uskokovic) de Libertyville",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 decembrie, «Sfântul Ierarh Mardarie (Uskokovic) de Libertyville», with the rank word left off; the page spells the family name without its Serbian diacritic."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1889,
+      "latest": 1889,
+      "display": "1889",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Ierarh Mardarie s-a născut la Podgorica la 22 decembrie 1889, din părinții Pero și Jela.»"
+    },
+    "death": {
+      "earliest": 1935,
+      "latest": 1935,
+      "display": "1935",
+      "basis": "attested",
+      "note": "doxologia.ro: «A trecut la Domnul după zece ani de păstorire, pe 12 decembrie 1935 și a fost înmormântat la ctitoria sa, Mănăstirea „Sfântul Sava” din Libertyville.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 decembrie — «Sfântul Ierarh Mardarie (Uskokovic) de Libertyville»",
+        "url": "https://doxologia.ro/12-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

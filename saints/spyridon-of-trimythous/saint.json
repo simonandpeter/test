@@ -9,6 +9,11 @@
     {
       "form": "Σπυρίδων Τριμυθοῦντος",
       "lang": "el"
+    },
+    {
+      "form": "Spiridon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 decembrie, «Sfântul Ierarh Spiridon, Episcopul Trimitundei», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -54,8 +59,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 decembrie — «Sfântul Ierarh Spiridon, Episcopul Trimitundei»",
+        "url": "https://doxologia.ro/12-decembrie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -71,5 +85,23 @@
   "historicity": "attested",
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Soborului celui dintâi te-ai arătat apărător şi de minuni făcător, de Dumnezeu purtătorule Sfinte Spiridon, părintele nostru. Pentru aceasta cu femeia cea moartă în groapă tu ai vorbit şi şarpele în aur l-ai prefăcut. Şi când ai cântat sfintele rugăciuni, îngeri ai avut împreună cu tine slujind, preasfinţite. Slavă Celui Ce te-a preamărit pe tine; Slavă Celui Ce te-a încununat; Slavă Celui Ce lucrează prin tine tuturor tămăduiri.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Spiridon, Episcopul Trimitundei",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-spiridon-episcopul-trimitundei-0",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be a defender of the first council and a worker of wonders, God-bearing Saint Spyridon our father. Therefore you spoke with the dead woman in her grave and turned the serpent into gold; and when you sang the holy prayers you had angels serving with you, most holy one. Glory to him who glorified you, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

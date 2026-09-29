@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'alexandru alexander-companion-of-antonina alexander-of-alexandria alexander-of-cartagena alexander-of-jerusalem alexander-of-side alexander-of-the-forty-martyrs':
+    'six folders whose ro form is Alexandru, on six Romanian days. The new one is Alexander archbishop of Jerusalem, 12 December. The others are unchanged: the companion of Antonina, 10 June; Alexander of Alexandria, 29 May; Alexander of Cartagena, 25 February; Alexander of Side, 14 March; and one of the Forty of Sebaste, 9 March (read 30 September 2026)',
   'mina menas-of-egypt menas-of-zographou menas-the-athenian':
     'three men called Mina, on three Romanian days. The new one is Menas the Athenian, sent to Alexandria by the emperor and martyred there with Hermogenes and Eugraphus, 10 December. The others are Menas the Egyptian, 11 November, and Menas of Zographou, 10 October (read 30 September 2026)',
   'ermoghen hermogenes-of-alexandria hermogenes-of-moscow hermogenes-the-martyr-24-july':

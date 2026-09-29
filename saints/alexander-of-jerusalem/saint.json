@@ -1,0 +1,61 @@
+{
+  "slug": "alexander-of-jerusalem",
+  "display_name": "Alexander of Jerusalem",
+  "office": "Archbishop of Jerusalem",
+  "names": [
+    {
+      "form": "Alexandru",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 decembrie, «Sfântul Ierarh Alexandru, Arhiepiscopul Ierusalimului», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "archbishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 251,
+      "latest": 251,
+      "display": "251",
+      "basis": "attested",
+      "note": "doxologia.ro: «Istovit de pe urma suferințelor, moare în închisoare în anul 251»; the same page dates the persecution «împăratul Deciu (249-251)» and says he was arrested «între anii 249 și 251»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 12,
+        "calendar": "revised-julian",
+        "note": "His own page says he is kept on two days: «Este pomenit în Biserica Ortodoxă pe 16 mai și pe 12 decembrie ca ieromartir». The corpus keeps one feast to a church, so the day the calendar for 12 decembrie prints is the one recorded, and 16 mai is noted here."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 decembrie — «Sfântul Ierarh Alexandru, Arhiepiscopul Ierusalimului»",
+        "url": "https://doxologia.ro/12-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
