@@ -1,0 +1,51 @@
+{
+  "slug": "solomon-of-ephesus",
+  "display_name": "Solomon of Ephesus",
+  "office": "Archbishop of Ephesus",
+  "names": [
+    {
+      "form": "Solomon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 decembrie, «Sfântul Ierarh Solomon, Arhiepiscopul Efesului», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 decembrie — «Sfântul Ierarh Solomon, Arhiepiscopul Efesului»",
+        "url": "https://doxologia.ro/2-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

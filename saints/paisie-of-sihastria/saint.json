@@ -1,0 +1,70 @@
+{
+  "slug": "paisie-of-sihastria",
+  "display_name": "Paisie of Sihăstria",
+  "names": [
+    {
+      "form": "Paisie de la Sihăstria",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 decembrie, «Sfântul Cuvios Paisie de la Sihăstria», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "hermit"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1897,
+      "latest": 1897,
+      "display": "1897",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut în anul 1897, la 20 iunie, în satul Stroiești din ținutul Botoșanilor, în familia binecredincioșilor creștini Ioan și Ecaterina Olaru.»"
+    },
+    "death": {
+      "earliest": 1990,
+      "latest": 1990,
+      "display": "1990",
+      "basis": "attested",
+      "note": "doxologia.ro: «În toamna anului 1990, la 18 octombrie, în vârstă de 93 de ani, Cuviosul Paisie și-a dat sufletul în mâinile lui Hristos.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 decembrie — «Sfântul Cuvios Paisie de la Sihăstria»",
+        "url": "https://doxologia.ro/2-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "cleopa-of-sihastria"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

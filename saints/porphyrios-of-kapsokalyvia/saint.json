@@ -1,0 +1,86 @@
+{
+  "slug": "porphyrios-of-kapsokalyvia",
+  "display_name": "Porphyrios of Kapsokalyvia",
+  "names": [
+    {
+      "form": "Porfirie Kavsokalivitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 decembrie, «Sfântul Cuvios Porfirie Kavsokalivitul», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1906,
+      "latest": 1906,
+      "display": "1906",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut pe 7 februarie 1906 în satul Sfântul Ioan din Karistia, Evia.»"
+    },
+    "death": {
+      "earliest": 1991,
+      "latest": 1991,
+      "display": "1991",
+      "basis": "attested",
+      "note": "doxologia.ro quotes the cross on his grave: «Ieromonah Porfirie. Adormit în Domnul pe 19 noiembrie 1991»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 decembrie — «Sfântul Cuvios Porfirie Kavsokalivitul»",
+        "url": "https://doxologia.ro/2-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "john-the-hut-dweller"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "După cum pe pământ te rugai pentru tămăduirea neputinţelor şi pentru iertarea păcatelor noastre, tot astfel şi acum roagă-te în ceruri, părinte Porfirie, şi roagă-L pe Hristos Dumnezeul nostru să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Porfirie Kavsokalivitul",
+        "url": "https://doxologia.ro/troparul-sfantului-porfirie-kavsokalivitul",
+        "year": 2026
+      },
+      "english": {
+        "text": "As on earth you prayed for the healing of our infirmities and for the forgiveness of our sins, so now also pray in heaven, father Porphyrios, and entreat Christ our God to save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "cleopa-of-sihastria",
+  "display_name": "Cleopa of Sihăstria",
+  "names": [
+    {
+      "form": "Cleopa de la Sihăstria",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 decembrie, «Sfântul Cuvios Cleopa de la Sihăstria», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1912,
+      "latest": 1912,
+      "display": "1912",
+      "basis": "attested",
+      "note": "doxologia.ro: «S-a născut în 10 aprilie 1912, în comuna Sulița, județul Botoșani, în familia lui Alexandru și Ana Ilie.»"
+    },
+    "death": {
+      "earliest": 1998,
+      "latest": 1998,
+      "display": "1998",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a mutat la veșnicele locașuri ale lui Dumnezeu în anul 1998, în ziua a doua a lunii decembrie.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 decembrie — «Sfântul Cuvios Cleopa de la Sihăstria»",
+        "url": "https://doxologia.ro/2-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "paisie-of-sihastria"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

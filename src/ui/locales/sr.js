@@ -727,6 +727,7 @@ export const sr = {
     'Archbishop of Canterbury': 'Архиепископ кентерберијски',
     'Archbishop of Chernigov': 'Архиепископ черниговски',
     'Archbishop of Constantinople': 'Архиепископ цариградски',
+    'Archbishop of Ephesus': 'Архиепископ ефески',
     'Archbishop of Hamburg-Bremen': 'Архиепископ хамбуршко-бременски',
     'Archbishop of Larissa': 'Архиепископ лариски',
     'Archbishop of Novgorod, Wonderworker': 'Архиепископ новгородски, чудотворац',

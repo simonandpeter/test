@@ -725,6 +725,7 @@ export const ro = {
     'Archbishop of Canterbury': 'Arhiepiscop de Canterbury',
     'Archbishop of Chernigov': 'Arhiepiscop de Cernigov',
     'Archbishop of Constantinople': 'Arhiepiscop de Constantinopol',
+    'Archbishop of Ephesus': 'Arhiepiscop al Efesului',
     'Archbishop of Hamburg-Bremen': 'Arhiepiscop de Hamburg-Bremen',
     'Archbishop of Larissa': 'Arhiepiscop de Larisa',
     'Archbishop of Novgorod, Wonderworker': 'Arhiepiscop de Novgorod, făcător de minuni',

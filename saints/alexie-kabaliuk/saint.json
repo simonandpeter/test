@@ -1,0 +1,70 @@
+{
+  "slug": "alexie-kabaliuk",
+  "display_name": "Alexie Kabaliuk the Carpathian",
+  "names": [
+    {
+      "form": "Alexie (Kabaliuk) Carpatinul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 2 decembrie, «Sfântul Cuvios Alexie (Kabaliuk) Carpatinul», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "confessor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "1877",
+      "basis": "attested",
+      "note": "doxologia.ro: «S-a născut la 1 septembrie 1877 în familia unui tăietor de lemne din Transcarpatia.»"
+    },
+    "death": {
+      "earliest": 1947,
+      "latest": 1947,
+      "display": "1947",
+      "basis": "attested",
+      "note": "doxologia.ro: «A trecut la Domnul pe 2 decembrie 1947 la Mănăstirea Dąbok.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 2 decembrie — «Sfântul Cuvios Alexie (Kabaliuk) Carpatinul»",
+        "url": "https://doxologia.ro/2-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "alexander-nevsky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

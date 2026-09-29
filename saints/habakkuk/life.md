@@ -1,0 +1,9 @@
+# Habakkuk
+
+Habakkuk was of the tribe of Simeon, the son of Asaphat, from the parts of Judea, and for his life full of good deeds he received from God the gift of prophecy. He prophesied of the captivity of Jerusalem, of the laying waste of the temple and of the carrying away of the people, and wept much, foreseeing the troubles that were to come upon it. When Nebuchadnezzar, king of the Chaldeans, came in his strength against Jerusalem, Habakkuk fled into the land of the Ishmaelites and was a wanderer in a strange country; and after the captivity of Jerusalem, when Nebuchadnezzar had gone back to his own, Habakkuk returned to his land, ploughing the earth and serving the reapers at harvest time.
+
+Once he had made a pottage and broken bread into a vessel, and said to those in the house: "I am going far off, and if I am long, take bread to the reapers." As he went out the angel of the Lord appeared to him on the road and said: "Habakkuk, take the dinner you have to Daniel in Babylon, into the lions' den." And the angel of the Lord took him by the crown of his head, lifted him by the hair and carried him to Babylon above the pit, in the rushing of his spirit, a distance of two thousand two hundred and sixty-five stadia; and Habakkuk cried out, "Daniel, Daniel, take the dinner God has sent you." And Daniel said: "You have remembered me, O God, and have not forsaken those who love you"; and he rose and ate. And the angel of God set Habakkuk back in his place in the land of Judea.
+
+He prophesied also of the return of the people from Babylon, and of the birth of the Lord Christ and the ending of the old law; and he reposed two years before the people's return from captivity, and was buried in his own village.
+
+*After doxologia.ro's calendar for 2 decembrie — [the day](https://doxologia.ro/2-decembrie) and [the life](https://doxologia.ro/sfantul-proroc-avacum); read 25 September 2026.*

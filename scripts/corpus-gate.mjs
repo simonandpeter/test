@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'avacum abachum-son-of-marius habakkuk':
+    'two men, and one of them is a prophet: Habakkuk, whom the Romanian keeps on 2 December; and Abachum, son of Marius and Martha, martyred at Rome with his father, mother and brother, Romanian 6 July. The ro form Avacum serves both (read 30 September 2026)',
   'anastasia anastasia-daughter-of-nicholas-ii anastasia-of-rome-15-april anastasia-saguna':
     'three women called Anastasia, on three Romanian days. The new one is Anastasia Saguna, the mother of Andrei Saguna, born in 1785, whom the calendar keeps the day after her son, 1 December. The others are Anastasia of Rome, 15 April, and the grand duchess Anastasia, daughter of Nicholas II, 17 July (read 30 September 2026)',
   'teodor theodore-of-rostov theodore-the-studite':
