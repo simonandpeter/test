@@ -1,0 +1,69 @@
+{
+  "slug": "theophanes-of-nicaea",
+  "display_name": "Theophanes of Nicaea",
+  "names": [
+    {
+      "form": "Teofan",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 octombrie, «Sfântul Ierarh Teofan Mărturisitorul, Episcopul Niceei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "confessor",
+    "hymnographer"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 11 octombrie — «Sfântul Ierarh Teofan Mărturisitorul, Episcopul Niceei»",
+        "url": "https://doxologia.ro/11-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Îndreptătorule al Ortodoxiei, învățătorule al dreptei cinstiri de Dumnezeu şi al curăției şi luminătorule al lumii, podoaba călugărilor cea de Dumnezeu insuflată Sfinte Părinte Teofan, înțelepte, cu învățăturile tale pe toți i-ai luminat. Alăută duhovnicească, roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Teofan Mărturisitorul, Episcopul Niceei",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-teofan-marturisitorul-episcopul-niceei",
+        "year": 2026
+      },
+      "english": {
+        "text": "O guide of Orthodoxy, teacher of true reverence for God and of purity, luminary of the world, God-inspired adornment of monks: O wise father Theophanes, by thy teachings thou hast enlightened all. O spiritual harp, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

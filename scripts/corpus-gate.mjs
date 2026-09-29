@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'zenaida zenaida-martyr-7-june zenaida-of-tarsus':
+    'two women, and two calendars keep both of them apart. Doxologia prints a lone «Sfanta Mucenita Zenaida» on 7 iunie, with no life and no hymn, grouped with Theodotus of Ancyra and Sebastiana; saint.gr prints the same trio on 7 Iouniou and heads hers «Agia Zenais i Thaumatourgi», whose own page (saint.gr/503) says «Den echoume leptomereies gia ton vio tis Agias» — no life there either. Both calendars also keep Zenais of Tarsus with her sister Philonilla on 11 October, kinswomen of Paul, with a life. Two entries on one calendar are two commemorations, so two women, and nothing identifies the 7 June one with Tarsus (read 29 September 2026)',
+  'teofan theophanes-of-antioch theophanes-of-nicaea theophanes-of-sigriane theophanes-venerable-17-may':
+    'four men called Teofan, on four Romanian days. The new one is Theophanes the Branded, brother of Theodore and bishop of Nicaea, Romanian 11 October. The others are the hermit of Antioch, 10 June; Theophanes of Sigriane the chronicler, 12 March; and the bare-line venerable of 17 May (read 29 September 2026)',
+  'filip philip-of-moscow philip-the-apostle philip-the-deacon philippus-of-niculitel':
+    'four men called Filip, on four Romanian days. The new one is Philip the deacon, one of the Seven, of Caesarea in Palestine, who had four daughters that prophesied, Romanian 11 October. The others are the metropolitan of Moscow, 9 January; the apostle, kept in the Synaxis of the Twelve on 30 June; and Philippus the soldier of Niculitel, 4 June (read 29 September 2026)',
   'andronic andronicus-of-antioch andronicus-the-apostle':
     'two men, four centuries apart: the goldsmith of Antioch under Theodosius the Great who with his wife Athanasia gave away their goods and went into the desert, Romanian 9 October; and the apostle, one of the Seventy, the companion of Junia, Romanian 17 May (read 29 September 2026)',
   'pelaghia pelagia-of-antioch pelagia-of-tarsus':

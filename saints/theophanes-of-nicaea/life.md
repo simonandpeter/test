@@ -1,0 +1,13 @@
+# Theophanes of Nicaea
+
+Theophanes was born of right-believing parents who lived in Palestine and vied with one another in the love of strangers. His brother was Theodore, afterwards marked out in the suffering for the holy icons. By their parents’ diligence both were trained in all the wisdom of books and became skilled philosophers; and knowing the inconstancy and vanity of this world they left everything and went to the lavra of Saint Sabbas, where they entered the monastic life and lived in fasting, in prayer and in every good work. Theodore was accounted worthy of the priesthood for the goodness of his life.
+
+Then the unlawful war against the icons arose and troubled the whole Church of God, and many were persecuted and tortured for honouring them. The patriarch of Jerusalem sent these two most wise teachers and defenders of the right faith to the emperor Leo, as lambs before a wolf, to rebuke him for his impiety; and they went, stood before the adversary of God, and rebuked him boldly.
+
+For this they suffered much, not only from that emperor but from those who came after him, Michael the Stammerer and Theophilos: every kind of torment, beatings and prison, hunger and thirst, wounds, exile and many sufferings. For more than twenty years, the page says, from the year eight hundred and seventeen to the year eight hundred and forty-two, the iconoclasts persecuted and tormented them; and in those sufferings his brother died, whose memory is kept on the twenty-seventh day of December. At that sentence the page prints the name Teofil rather than Teodor.
+
+Theophanes lived to see the peace of the Church. Michael the son of Theophilos, taking the sceptre of the Greek empire with his mother Theodora, brought the holy icons back into the Church of God, venerated them, and recalled all the saints from exile with great honour. Theophanes then returned and was set over the church of Nicaea as its metropolitan, ordained by the patriarch Methodios, who had overthrown the heresy of the iconoclasts; the calendar line for the day calls him its bishop.
+
+He composed a canon of hymns for the honouring of the holy icons, and leaving many other canons and songs useful to the Church of Christ he passed from this life to the Lord, and after many painful labours dwells in the rest of heaven. The page gives no year for his birth or his death, and none is supplied here.
+
+*After doxologia.ro's calendar for 11 octombrie — [the day](https://doxologia.ro/11-octombrie) and [the life](https://doxologia.ro/sfantul-ierarh-teofan-marturisitorul-episcopul-niceei); read 24 September 2026.*

@@ -1,0 +1,70 @@
+{
+  "slug": "philotheus-kokkinos",
+  "display_name": "Philotheus Kokkinos",
+  "names": [
+    {
+      "form": "Filotei I (Kokkinos)",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 octombrie, «Sfântul Filotei I (Kokkinos), Patriarhul Constantinopolului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "patriarch",
+    "hymnographer"
+  ],
+  "related": [
+    "gregory-palamas"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1295,
+      "latest": 1305,
+      "display": "c. 1300",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Născut în jurul anului 1300, în Tesalonic». The bounds are the page's own „about 1300” and nothing narrower."
+    },
+    "death": {
+      "earliest": 1379,
+      "latest": 1379,
+      "display": "1379",
+      "basis": "attested",
+      "note": "doxologia.ro: «A părăsit tronul ecumenic în anul 1376, din pricina bătrâneții, şi a adormit trei ani mai târziu, în anul 1379.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "revised-julian",
+        "note": "doxologia.ro's life also keeps his memory on the fifth Sunday of Great Lent — «Pomenirea lui se face în Duminica a 5-a a Postului Mare şi pe 11 Octombrie» — a moveable day that is not recorded here; 11 octombrie is the fixed day the calendar prints."
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 11 octombrie — «Sfântul Filotei I (Kokkinos), Patriarhul Constantinopolului»",
+        "url": "https://doxologia.ro/11-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

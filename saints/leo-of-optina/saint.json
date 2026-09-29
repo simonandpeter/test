@@ -1,0 +1,61 @@
+{
+  "slug": "leo-of-optina",
+  "display_name": "Leo of Optina",
+  "names": [
+    {
+      "form": "Lev de la Optina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "related": [
+    "macarius-of-optina"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1841,
+      "latest": 1841,
+      "display": "1841",
+      "basis": "attested",
+      "note": "doxologia.ro: «După suferințe cumplite, Lev s-a mutat la Domnul pe 11 octombrie, în anul 1841.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 11 octombrie — «Sfântul Lev de la Optina»",
+        "url": "https://doxologia.ro/11-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
