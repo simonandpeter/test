@@ -1,0 +1,91 @@
+{
+  "slug": "daniel-the-hesychast",
+  "display_name": "Daniel the Hesychast",
+  "names": [
+    {
+      "form": "Daniil Sihastrul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 decembrie, «Sfântul Cuvios Daniil Sihastrul», with the rank words left off. The life gives his baptismal name as Dumitru, his first monastic name as David and his great-schema name as Daniil."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "hieromonk",
+    "abbot"
+  ],
+  "related": [
+    "leontius-of-radauti",
+    "stephen-the-great"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1395,
+      "latest": 1406,
+      "display": "c. 1400",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: born «la începutul secolului al XV-lea» on the estate of the monastery of Saint Nicholas at Rădăuți, and he died «trecând de vârstă de nouăzeci de ani» in 1496; the interval is the one those two statements together allow, and no year of birth is printed."
+    },
+    "death": {
+      "earliest": 1496,
+      "latest": 1496,
+      "display": "1496",
+      "basis": "traditional",
+      "note": "doxologia.ro's life: «şi-a dat sufletul în brațele lui Hristos la sfârșitul secolului al XV-lea (1496)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "revised-julian",
+        "note": "doxologia.ro's own life adds that in Moldavia his memory was kept for centuries on two days — «la 23 aprilie, hramul Mănăstirii Voroneț, și la 18 decembrie, după Sfântul Daniil Stâlpnicul». The calendar page read here is the December one, and that is the day recorded."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 18 decembrie — «Sfântul Cuvios Daniil Sihastrul»",
+        "url": "https://doxologia.ro/18-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru tine, Părinte, cu osârdie s-a mântuit cel după chip; căci luând Crucea, ai urmat lui Hristos; și luptând, ai învățat să nu se uite la trup, că este trecător; ci să poarte grijă de suflet, de lucrul cel nemuritor. Pentru aceasta și cu îngerii se bucură, Preacuvioase Părinte Daniile, duhul tău.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Daniil Sihastrul; the text is the common of a venerable father, printed under his name with his name in it",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-daniil-sihastrul",
+        "year": 2026
+      },
+      "english": {
+        "text": "In you, Father, that which was made according to the image was saved with diligence; for taking up the Cross you followed Christ, and by your struggle you taught men not to look to the flesh, which passes away, but to care for the soul, a thing immortal. Therefore, most venerable Father Daniel, your spirit rejoices together with the angels.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

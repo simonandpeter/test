@@ -1,0 +1,69 @@
+{
+  "slug": "modestus-of-jerusalem",
+  "display_name": "Modestus of Jerusalem",
+  "office": "Patriarch of Jerusalem",
+  "names": [
+    {
+      "form": "Modest",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 decembrie, «Sfântul Ierarh Modest, Patriarhul Ierusalimului», with the rank words left off; the title of his troparion page calls him «Arhiepiscopul Ierusalimului» instead, and the life «arhiereu al Ierusalimului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 18 decembrie — «Sfântul Ierarh Modest, Patriarhul Ierusalimului»",
+        "url": "https://doxologia.ro/18-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 4",
+      "text": "Petrecând, înţelepte, viaţa ta cu cuvioşie, te-ai împodobit cu veşmântul cel luminat al arhieriei, sfinţite nevoitorule Modest. Drept aceea, şi nevoindu-te prea cu osârdie, Părinte, acum întru veselie împreună cu Hristos te bucuri, rugându-te pentru noi toţi, care te lăudăm pe tine.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Modest, Arhiepiscopul Ierusalimului; the page gives the tone as «Glas 4»",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-modest-arhiepiscopul-ierusalimului",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having passed your life in holiness, O wise one, you were adorned with the shining vesture of the high priesthood, consecrated contender Modestus. Therefore, having striven most diligently, Father, you now rejoice in gladness together with Christ, praying for all of us who praise you.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
