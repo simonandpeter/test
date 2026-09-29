@@ -1,0 +1,11 @@
+# John Kochurov
+
+John Kochurov was a missionary hieromartyr from America, doxologia.ro says, a priest and martyr of the Russian Revolution. He was born on 13 June 1871, the son of a priest. He studied at the theological seminary of Ryazan and then at the theological academy of Saint Petersburg, and after finishing his studies in 1895 he married Alexandra Chernisheva. He was ordained deacon, and on 27 August 1895 ordained priest in the Saint Alexander Nevsky Lavra in Saint Petersburg by Bishop Nicholas (Ziorov) of the diocese of the Aleutians and Alaska.
+
+Having expressed the wish to be a missionary priest in the United States, he was soon transferred, and became the first priest of the church of Saint Vladimir in Chicago — a parish that would later become Holy Trinity Cathedral. Since the parish had no building of its own yet, his first great undertaking was to build the church. The work began in April 1902 and was finished the following year for the consecration by Bishop Tikhon, later [Tikhon, Patriarch of Moscow and All Russia](/saints/tikhon-of-moscow).
+
+He helped to found many parishes in the Chicago area. Together with [Alexis Toth](/saints/alexis-toth) he gave support to the many immigrants in America, and translated a good number of religious texts into English for the faithful. In 1907 he returned to Russia and was assigned to Narva, in what is now Estonia, where he put into practice what he had learned in the United States, teaching the catechism in the schools. Then in 1916 he was transferred to the cathedral of Saint Catherine at Tsarskoye Selo, just outside Saint Petersburg.
+
+On 31 October 1917 the Bolsheviks came in force into Tsarskoye Selo and arrested him. He was taken out of the town and shot, and so became the first hieromartyr of the Soviet Revolution. He was buried a few days later in the crypt of the cathedral of Saint Catherine, and was canonised by the Russian Orthodox Church in 1994. doxologia.ro's page for him carries no Tropar tab, so the calendar prints him no hymn.
+
+*After doxologia.ro's calendar for 31 octombrie — [the day](https://doxologia.ro/31-octombrie) and [the life](https://doxologia.ro/sfantul-preot-marturisitor-ioan-kochurov); read 25 September 2026.*

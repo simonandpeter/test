@@ -1,0 +1,69 @@
+{
+  "slug": "ampliatus-of-diospolis",
+  "display_name": "Ampliatus of Diospolis",
+  "office": "Bishop of Diospolis",
+  "names": [
+    {
+      "form": "Amplie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 31 octombrie, «Sfântul Apostol Amplie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle",
+    "hieromartyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 31 octombrie — «Sfântul Apostol Amplie»",
+        "url": "https://doxologia.ro/31-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 31 Οκτωβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Sfinţilor Apostoli, rugaţi pe Milostivul Dumnezeu, ca să dea iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfinților Apostoli Apelie, Stahie, Amplie, Urban, Aristobul și Narcis, Glasul 3",
+        "url": "https://doxologia.ro/troparul-sfintilor-apostoli-apelie-stahie-amplie-urban-aristobul-narcis",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy Apostles, entreat the merciful God that he may grant our souls forgiveness of our offences.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

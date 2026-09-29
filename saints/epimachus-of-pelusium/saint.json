@@ -1,0 +1,69 @@
+{
+  "slug": "epimachus-of-pelusium",
+  "display_name": "Epimachus of Pelusium",
+  "names": [
+    {
+      "form": "Epimah",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 31 octombrie, «Sfântul Mucenic Epimah»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "hermit"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 31 octombrie — «Sfântul Mucenic Epimah»",
+        "url": "https://doxologia.ro/31-octombrie",
+        "year": 2026
+      },
+      "note": "doxologia.ro also prints «Sfântul Mucenic Epimah» on 9 mai, linking a different page of its own which carries neither a Viață nor a Tropar tab; whether that is this man is not settled by anything either page prints. Read 25 September 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 31 Οκτωβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Epimah, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfântului Mucenic Epimah, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-epimah",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Epimachus, O Lord, in his contest received an incorruptible crown from Thee our God; for possessing Thy strength he overthrew his torturers, and broke the feeble daring of the demons. By his prayers save Thou our souls, O Christ God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

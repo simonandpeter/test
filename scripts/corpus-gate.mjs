@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'narcis narcissus-of-athens narcissus-of-jerusalem':
+    'two men: Narcissus one of the Seventy, whom Paul greets and who was bishop in Athens, Romanian 31 October; and Narcissus of Jerusalem, patriarch and hieromartyr, Romanian 7 August (read 30 September 2026)',
+  'epimah epimachus-9-may epimachus-of-pelusium':
+    'two men, and the Greek names the company the Romanian leaves bare. The corpus 9 mai folder is a calendar line and nothing else — «Sfantul Mucenic Epimah», no Viata tab — and saint.gr keeps 9 Maiou as «Agioi Epimachos kai Gordianos», a pair. The new folder is the Egyptian of Pelusium who went out to the desert and was killed at Alexandria, 31 October, whose life doxologia prints in full. Two (read 30 September 2026)',
   'maria golinduhia-of-persia maria-daughter-of-nicholas-ii maria-of-gatchina maria-the-patrician mary-niece-of-abraham mary-of-aza mary-sister-of-lazarus mary-sister-of-lykarion mary-wife-of-xenophon':
     'nine women whose ro form is Maria, on nine separate Romanian days. The new one is the niece of Abraham the Recluse, who fell and was brought back by him from the inn where she lived, 29 October. The other eight were read on 29 September and are unchanged (read 30 September 2026)',
   'avramie abraham-the-recluse abramius-of-arbela athanasius-the-athonite':

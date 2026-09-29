@@ -1,0 +1,58 @@
+{
+  "slug": "hundred-thousand-martyrs-of-tbilisi",
+  "display_name": "The Hundred Thousand Martyrs of Tbilisi",
+  "names": [
+    {
+      "form": "Cei o sută de mii de mucenici din Tbilisi",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 31 octombrie, «Cei o sută de mii de mucenici din Tbilisi, Georgia»."
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1227,
+      "latest": 1227,
+      "display": "1227",
+      "basis": "attested",
+      "note": "doxologia.ro: «În 1227 sultanul Jalal al-Din din Khwarazm și armata lui au atacat Georgia.» The martyrdom follows in the same night's narrative; the page gives no other year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 31 octombrie — «Cei o sută de mii de mucenici din Tbilisi, Georgia»",
+        "url": "https://doxologia.ro/31-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 31 Οκτωβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
