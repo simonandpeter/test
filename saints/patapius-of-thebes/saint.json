@@ -1,0 +1,69 @@
+{
+  "slug": "patapius-of-thebes",
+  "display_name": "Patapius of Thebes",
+  "names": [
+    {
+      "form": "Patapie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 decembrie, «Sfântul Cuvios Patapie», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "hermit",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 decembrie — «Sfântul Cuvios Patapie»",
+        "url": "https://doxologia.ro/8-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Laudă a creştinilor şi apărător al monahilor te-ai arătat Patapie, părintele nostru. Prin nevoinţă, prin patimi şi rugăciuni ai acum îndrăznire către Dumnezeu a mijloci neîncetat pentru noi creştinii, cei păcătoşi şi vrednici de osândă. Slavă Celui Ce S-a proslăvit prin tine, slavă Celui Ce ţi-a dat ţie putere, slavă Celui Ce ne-a luminat pe noi prin nevoinţa ta.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Patapie (the page prints no glas)",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-patapie",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be the praise of Christians and the defender of monks, Patapius our father. By your ascetic labour, your sufferings and your prayers you have boldness now before God to intercede unceasingly for us Christians, sinners and worthy of condemnation. Glory to him who was glorified in you, glory to him who gave you strength, glory to him who enlightened us through your labour.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

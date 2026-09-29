@@ -19,6 +19,11 @@
     {
       "form": "Онисифор",
       "lang": "sr"
+    },
+    {
+      "form": "Onisifor",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 8 decembrie, «Sfântul Apostol Onisifor», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -43,8 +48,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 7 septembrie (checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 8 decembrie — «Sfântul Apostol Onisifor»",
+        "url": "https://doxologia.ro/8-decembrie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

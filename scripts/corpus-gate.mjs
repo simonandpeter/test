@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'sofronie sophronius-of-cioara sophronius-of-cyprus sophronius-of-jerusalem sophronius-of-soumela':
+    'four folders whose ro form is Sofronie, on four Romanian days. The new one is Sophronius bishop of Cyprus, 8 December. The other three were read on 29 and 30 September: the monk of Cioara, 21 October; the patriarch of Jerusalem, 11 March; and the founder of Panagia Soumela, 18 August (read 30 September 2026)',
   'nicolae nicholas-ii nicholas-of-lesvos nicholas-of-myra nicholas-of-the-forty-martyrs':
     'four folders whose ro form is Nicolae, on four Romanian days. The new one is Nicholas archbishop of Myra in Lycia, 6 December. The others are the tsar Nicholas II, 17 July; Nicholas of Lesvos, 9 April; and one of the Forty of Sebaste, 9 March (read 30 September 2026)',
   'nectarie nectarios-of-bitola nectarius-venerable-17-may':
