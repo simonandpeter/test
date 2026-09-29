@@ -1,0 +1,79 @@
+{
+  "slug": "macarius-the-roman",
+  "display_name": "Macarius the Roman",
+  "names": [
+    {
+      "form": "Macarie Romanul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "ascetic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 325,
+      "latest": 375,
+      "display": "c. 350",
+      "basis": "traditional",
+      "note": "doxologia.ro: «s-a născut în Roma, ca fiu al unui senator creștin cu numele Ioan… pe la jumătatea secolului al IV-lea» — about the middle of the fourth century. The interval is the quarter-century either side that reading allows; the page gives no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 23 octombrie — «Sfântul Cuvios Macarie Romanul»",
+        "url": "https://doxologia.ro/23-octombrie",
+        "year": 2026
+      },
+      "note": "His life closes «fiind pomenit în ziua de 23 octombrie», which is the day the calendar keeps him on."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 23 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Pe cel aflat în adâncul pustiei de treimea de sfinți monahi pelerini: Serghie, Ighin și Teofil, pe fiul Romei și Părintele Răsăritului, pe Preacuviosul Macarie, cel cu nume de fericit, care în peșteră s-a nevoit și de doi lei era slujit, să-l fericim, cântând: Bucură-te, cel călăuzit de Arhanghelul Rafail la chipul îngeresc, crinule al curăției și biruitorule al curselor diavolești, înălțime a smereniei, care ai teologhisit atotputernicia Preasfintei Treimi!",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Macarie Romanul",
+        "url": "https://doxologia.ro/troparul-sfantului-macarie-romanul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Him whom the three pilgrim monks Sergius, Hyginus and Theophilus found in the depth of the wilderness, the son of Rome and father of the East, the most venerable Macarius whose name means blessed, who struggled in a cave and was served by two lions — let us call him blessed, singing: Rejoice, thou who wast led by the Archangel Raphael to the angelic habit, lily of purity and conqueror of the snares of the devil, height of humility, who didst declare the almighty power of the Most Holy Trinity!",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -840,6 +840,7 @@ export const el = {
     'Father of monasticism': 'Πατέρας του μοναχισμού',
     'First Archbishop of Serbia': 'Πρώτος Αρχιεπίσκοπος Σερβίας',
     'First Bishop of Estonia': 'Πρώτος επίσκοπος Εσθονίας',
+    'First Bishop of Jerusalem': 'Πρώτος Επίσκοπος Ιεροσολύμων',
     'Fool for Christ': 'Διά Χριστόν σαλός',
     'Grand Prince': 'Μέγας πρίγκιπας',
     'Great Martyr': 'Μεγαλομάρτυς',

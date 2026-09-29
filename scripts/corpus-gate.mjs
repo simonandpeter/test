@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ignatie ignatius-of-constantinople ignatius-of-methymna ignatius-of-stara-zagora':
+    'three men called Ignatie, on three Romanian days. The new one is the patriarch of Constantinople, son of the emperor Michael I, 23 October. The others were read on 29 September: the metropolitan of Methymna, 14 October, and the new-martyr of Stara Zagora, 8 October (read 29 September 2026)',
+  'iacob jacob-the-hermit james-of-nisibis james-of-samosata james-son-of-zebedee james-the-brother-of-the-lord':
+    'five men called Iacob, on five Romanian days. The new one is the Brother of the Lord, first bishop of Jerusalem, 23 October. The others are unchanged: Jacob the hermit, 28 January; James of Nisibis, bishop and wonderworker, 13 January; one of the seven of Samosata, 29 January; and the apostle son of Zebedee, 30 April (read 29 September 2026)',
   'teodota theodota-of-adrianople theodota-with-her-three-sons':
     'two women, on two Romanian days: one of the four of Adrianople, 22 October, and Theodota who suffered with her three sons, 29 July (read 29 September 2026)',
   'anna anna-nun-martyr-1937 anna-of-adrianople':

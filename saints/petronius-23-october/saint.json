@@ -1,0 +1,50 @@
+{
+  "slug": "petronius-23-october",
+  "display_name": "Petronius (23 October)",
+  "names": [
+    {
+      "form": "Petroniu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 octombrie, «Sfântul Cuvios Petroniu»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 23 octombrie — «Sfântul Cuvios Petroniu»",
+        "url": "https://doxologia.ro/23-octombrie",
+        "year": 2026
+      },
+      "note": "His page carries no Viață tab and no Tropar tab; the one sentence it prints is «Sfântul Petroniu a fost, probabil, un ascet al deșertului, care s-a mutat la Domnul în pace.» Read 24 September 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 23 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

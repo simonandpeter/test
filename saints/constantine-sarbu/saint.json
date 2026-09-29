@@ -1,0 +1,85 @@
+{
+  "slug": "constantine-sarbu",
+  "display_name": "Constantine Sârbu",
+  "names": [
+    {
+      "form": "Constantin Sârbu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 octombrie, «Sfântul Preot Mucenic Constantin Sârbu»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "confessor",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1905,
+      "latest": 1905,
+      "display": "1905",
+      "basis": "attested",
+      "note": "doxologia.ro: «S-a născut în dată de 10 ianuarie 1905, în comuna Cavadinești, din fostul județ Covurlui»."
+    },
+    "death": {
+      "earliest": 1975,
+      "latest": 1975,
+      "display": "1975",
+      "basis": "attested",
+      "note": "doxologia.ro: «În ziua de 23 octombrie 1975, după Spovedanie și Împărtășanie… a trecut la cele veșnice, pe patul de spital»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 23 octombrie — «Sfântul Preot Mucenic Constantin Sârbu»",
+        "url": "https://doxologia.ro/23-octombrie",
+        "year": 2026
+      },
+      "note": "The day the calendar keeps him on is the day of his death, 23 October 1975."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 23 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Din pruncie Părinte, în sărăcie trăind, te-ai curățit spre slujirea cea rânduită de sus, ca să poți purta și sarcina aproapelui, astfel Sfințite Constantin, mucenic al lui Hristos. A tuturor mângâiere te-a arătat Cel ce lumea a mântuit prin răstignirea sa.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Preot Mucenic Constantin Sârbu. The page prints no glas.",
+        "url": "https://doxologia.ro/troparul-sfantului-preot-mucenic-constantin-sarbu",
+        "year": 2026
+      },
+      "english": {
+        "text": "From infancy, O Father, living in poverty, thou wast made clean for the service appointed from above, that thou mightest carry thy neighbour's burden also, O consecrated Constantine, martyr of Christ. He who saved the world by His crucifixion showed thee to be a comfort to all.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "slug": "james-the-brother-of-the-lord",
+  "display_name": "James the Brother of the Lord",
+  "office": "First Bishop of Jerusalem",
+  "names": [
+    {
+      "form": "Iacob",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 octombrie, «Sfântul Apostol Iacob, ruda Domnului, primul episcop al Ierusalimului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle",
+    "bishop",
+    "martyr"
+  ],
+  "related": [
+    "john-the-theologian"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 23 octombrie — «Sfântul Apostol Iacob, ruda Domnului, primul episcop al Ierusalimului»",
+        "url": "https://doxologia.ro/23-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 23 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Ca un ucenic al Domnului ai primit Evanghelia, drepte; ca un mucenic eşti de neînduple­cat; îndrăzneală ca un frate al lui Dumnezeu, a te ruga ca un ierarh. Roagă pe Hristos Dumnezeu, să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Apostol Iacob, ruda Domnului",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-iacob-ruda-domnului",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a disciple of the Lord thou didst receive the Gospel, O righteous one; as a martyr thou art unbending; as a brother of God thou hast boldness; as a hierarch thou canst intercede. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -858,6 +858,7 @@ export const ru = {
     'Father of monasticism': 'Отец монашества',
     'First Archbishop of Serbia': 'Первый архиепископ Сербский',
     'First Bishop of Estonia': 'Первый епископ Эстонии',
+    'First Bishop of Jerusalem': 'Первый епископ Иерусалимский',
     'Fool for Christ': 'Юродивый',
     'Grand Prince': 'Великий князь',
     'Great Martyr': 'Великомученик',
