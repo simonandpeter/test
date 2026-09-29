@@ -1,0 +1,52 @@
+{
+  "slug": "cleopas",
+  "display_name": "Cleopas",
+  "names": [
+    {
+      "form": "Cleopa",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 30 octombrie, «Sfântul Apostol Cleopa»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 30 octombrie — «Sfântul Apostol Cleopa»",
+        "url": "https://doxologia.ro/30-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 30 Οκτωβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "related": [
+    "mary-of-cleopas"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

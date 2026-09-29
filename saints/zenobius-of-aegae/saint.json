@@ -1,0 +1,73 @@
+{
+  "slug": "zenobius-of-aegae",
+  "display_name": "Zenobius of Aegae",
+  "office": "Bishop of Aegae in Cilicia",
+  "names": [
+    {
+      "form": "Zenovie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 30 octombrie, «Sfântul Sfințit Mucenic Zenovie, Episcopul Ciliciei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 30 octombrie — «Sfântul Sfințit Mucenic Zenovie, Episcopul Ciliciei»",
+        "url": "https://doxologia.ro/30-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 30 Οκτωβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+    }
+  ],
+  "related": [
+    "zenobia-sister-of-zenobius"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfântului Sfințit Mucenic Zenovie, Episcopul Ciliciei, și al Sfintei Mucenițe Zenovia, sora sa, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-zenovie-episcopul-ciliciei-al-sfintei-mucenite-zenovia-sora-sa",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contest received incorruptible crowns from Thee our God; for possessing Thy strength they overthrew their torturers, and broke the feeble daring of the demons. By their prayers save Thou our souls, O Christ God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
