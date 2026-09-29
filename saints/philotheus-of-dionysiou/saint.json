@@ -1,0 +1,52 @@
+{
+  "slug": "philotheus-of-dionysiou",
+  "display_name": "Philotheus of Dionysiou",
+  "names": [
+    {
+      "form": "Filothei Dionisiatul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "hermit"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 21 octombrie — «Sfântul Cuvios Filothei Dionisiatul»",
+        "url": "https://doxologia.ro/21-octombrie",
+        "year": 2026
+      },
+      "note": "His life closes «s-a săvârșit cuviosul în ziua a 20-a a lunii octombrie» — it gives 20 October as the day of his repose, while the calendar keeps him on 21 octombrie. The day page stands; the difference of one day is recorded and not resolved. Read 24 September 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

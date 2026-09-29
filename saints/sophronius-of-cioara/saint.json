@@ -1,0 +1,70 @@
+{
+  "slug": "sophronius-of-cioara",
+  "display_name": "Sophronius of Cioara",
+  "names": [
+    {
+      "form": "Sofronie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 octombrie, «Sfântul Cuvios Mărturisitor Sofronie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 21 octombrie — «Sfântul Cuvios Mărturisitor Sofronie»",
+        "url": "https://doxologia.ro/21-octombrie",
+        "year": 2026
+      },
+      "note": "His life adds: «Biserica Ortodoxă Română l-a canonizat în anul 1955… și se face pomenirea lui la 21 octombrie»."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Luptătorilor pentru Orto­doxie, ca nişte îngereşti trâm­biţe aţi înviorat în suflete îndrăznirea mărturisirii dreptei credinţe şi ca nişte înţelepţi propovăduitori, pe popor l-aţi hrănit cu dreaptă şi luminată învăţătură. Mari au fost oste­nelile lucrării voastre; mare şi osârdia propovăduirii; mare a fost şi rodul luptei voastre drep­te, pururea pomeniţilor ostaşi ai lui Hristos.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Cuvioşi Mărturisitori Visarion şi Sofronie şi al Sfântului Mucenic Oprea. The page serves this one troparion, addressed to the three of them together, under each of their names.",
+        "url": "https://doxologia.ro/troparul-sfintilor-cuviosi-marturisitori-visarion-sofronie-al-sfantului-mucenic-oprea",
+        "year": 2026
+      },
+      "english": {
+        "text": "O fighters for Orthodoxy, like trumpets of the angels you quickened in men's souls the courage to confess the right faith, and like wise preachers you fed the people with sound and enlightened teaching. Great were the labours of your work; great the zeal of your preaching; and great the fruit of your righteous struggle, O ever-remembered soldiers of Christ.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

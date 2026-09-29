@@ -1,0 +1,11 @@
+# Oprea of Săliște
+
+Oprea was born at Săliștea Sibiului in the days of the empress Maria Theresa. He was a ploughman, and with his wife and children he led a quiet and God-pleasing life. In those days, the Romanian life says, the empress used much force against the faithful under her rule to break them from the Orthodox Church and bend them to the union with Rome: she took their churches, drove out their priests, loaded with taxes and burdens those who would not bend, and filled the prisons with them.
+
+In their bitterness the Christians prayed, and God raised up Oprea of Săliște to be their defender. He strengthened himself first with fasting and prayer, with the blessings of the priests driven from their altars and the counsel of the wise old men; then he went through the mountains and valleys round about, heartening those who suffered, comforting those who mourned and holding up those who wavered.
+
+He went to the head of the government and asked that the persecution stop, and afterwards to Vienna itself. Word came that he was to be imprisoned the moment he set foot in Ardeal again, so he stayed in the Banat as a shepherd of sheep. But before Pascha, unable to bear the sufferings of the Orthodox any longer, he went to Vienna a second time and asked the empress either for a bishop of their own law or for free passage out of the country. She ordered him seized and sentenced to prison for life in the fortress of Kufstein in the Tyrol.
+
+His wife Stana waited for him a long while, standing at the church door dressed in black, weeping and asking for mercy so that she might raise their children. He never came back; he was crowned in that prison with the unfading crown of the martyrs. In 1784 she was still petitioning the emperor Joseph II to release him after thirty-two years, and the prison answered that nothing more was known of him.
+
+*After doxologia.ro's calendar for 21 octombrie — [the day](https://doxologia.ro/21-octombrie) and [the life](https://doxologia.ro/sfantul-mucenic-oprea); the last detail is from [the life of the priests John of Galeș and Moses Măcinic](https://doxologia.ro/viata-sfantului-preot-marturisitor-ioan-din-gales), which doxologia prints for the same day; read 24 September 2026.*

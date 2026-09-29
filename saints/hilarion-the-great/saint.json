@@ -1,0 +1,73 @@
+{
+  "slug": "hilarion-the-great",
+  "display_name": "Hilarion the Great",
+  "names": [
+    {
+      "form": "Ilarion cel Mare",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "hermit",
+    "wonderworker"
+  ],
+  "related": [
+    "anthony-the-great"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 21 octombrie — «Sfântul Cuvios Ilarion cel Mare»",
+        "url": "https://doxologia.ro/21-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele dintru adânc ai făcut ostenelile tale însutit roditoare; şi te-ai făcut luminător lumii, strălucind cu minunile, Ilarion, părintele nostru. Roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Ilarion cel Mare",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-ilarion-cel-mare",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst make the barren desert bear, and with sighs from the depths thou didst make thy labours bring forth a hundredfold; and thou wast made a light to the world, shining with wonders, Hilarion our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

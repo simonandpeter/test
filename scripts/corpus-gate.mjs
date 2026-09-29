@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'sofronie sophronius-of-cioara sophronius-of-jerusalem sophronius-of-soumela':
+    'three men called Sofronie, on three Romanian days. The new one is the monk of Cioara-Sebes in Alba who led the Transylvanian resistance to the union, 21 October. The others were read on 29 September: the patriarch of Jerusalem, 11 March, and the founder of Panagia Soumela, 18 August (read 29 September 2026)',
+  'visarion bessarion-of-egypt bessarion-the-confessor':
+    'two men, thirteen centuries apart: the Serb born in Bosnia in 1714 who defended the Orthodox of the Banat and Transylvania against the forced union with Rome, a confessor, Romanian 21 October; and Bessarion of Egypt, hermit and wonderworker, Romanian 20 February (read 29 September 2026)',
   'felix felix-companion-of-eusebius felix-of-apollonia':
     'two men: the priest put to the sword with the deacon Eusebius, doxologia 19 octombrie, and Felix of Apollonia, a martyr, Romanian 17 June. Two entries on one calendar (read 29 September 2026)',
   'eusebiu eusebius-31-may eusebius-companion-of-bassus eusebius-companion-of-felix eusebius-of-samosata':

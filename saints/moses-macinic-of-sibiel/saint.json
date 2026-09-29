@@ -1,0 +1,73 @@
+{
+  "slug": "moses-macinic-of-sibiel",
+  "display_name": "Moses Măcinic of Sibiel",
+  "names": [
+    {
+      "form": "Moise Măcinic din Sibiel",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 octombrie, «Sfântul Preot Mărturisitor Moise Măcinic din Sibiel»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "confessor",
+    "presbyter"
+  ],
+  "related": [
+    "john-of-gales",
+    "oprea-of-saliste"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 21 octombrie — «Sfântul Preot Mărturisitor Moise Măcinic din Sibiel»",
+        "url": "https://doxologia.ro/21-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Prealăudaţilor mucenici...\nPreoţi cu chemarea sfântă, Sfinţilor Moise şi Ioan, ca nişte ostaşi adevăraţi ai lui Hristos Dumnezeu, cu putere aţi propovă­duit dreapta credinţă şi mărtu­risitori ai Ortodoxiei v-aţi făcut pentru poporul cel credincios. Drept aceea, moarte mucenicească primind, rugaţi pe Hristos Dumnezeu, să dăruias­că Bisericii Sale pace şi unire, iar sufletelor noastre, mare milă.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Preoţi Mărturisitori Ioan din Galeş şi Moise Măcinic din Sibiel. The page serves this one troparion, addressed to the two of them together, under each name; the first line is the podoben it is sung to.",
+        "url": "https://doxologia.ro/troparul-sfintilor-preoti-marturisitori-ioan-din-gales-moise-macinic-din-sibiel",
+        "year": 2026
+      },
+      "english": {
+        "text": "O most praised martyrs...\nPriests of a holy calling, Saints Moses and John, as true soldiers of Christ God you preached the right faith with power and became confessors of Orthodoxy for the faithful people. Therefore, having received a martyr's death, pray Christ God to grant His Church peace and unity, and to our souls great mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
