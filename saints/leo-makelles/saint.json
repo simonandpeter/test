@@ -1,0 +1,62 @@
+{
+  "slug": "leo-makelles",
+  "display_name": "Leo Makelles",
+  "names": [
+    {
+      "form": "Λέων Μακέλλης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Ιανουαρίου, «Άγιος Λέων Μακέλλης ο Μέγας ο Θράξ», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "king"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 474,
+      "latest": 474,
+      "display": "18 January 474",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Λέων κοιμήθηκε από ασθένεια στις 18 Ιανουαρίου του 474 μ.Χ.» The calendar nonetheless keeps him on 20 Ιανουαρίου."
+    }
+  },
+  "related": [
+    "marcian-the-emperor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιανουαρίου — «Άγιος Λέων Μακέλλης ο Μέγας ο Θράξ»",
+        "url": "https://www.saint.gr/01/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page says he died on 18 January 474 — «Ο Άγιος Λέων κοιμήθηκε από ασθένεια στις 18 Ιανουαρίου του 474 μ.Χ.» (https://www.saint.gr/3327/saint.aspx) — while the day that keeps him is 20 Ιανουαρίου. The row records the day page that was read."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

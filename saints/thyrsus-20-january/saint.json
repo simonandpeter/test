@@ -1,0 +1,52 @@
+{
+  "slug": "thyrsus-20-january",
+  "display_name": "Thyrsus (20 January)",
+  "names": [
+    {
+      "form": "Θύρσος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Ιανουαρίου, «Άγιοι Θύρσος και Αγνή οι Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "agnes-20-january"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιανουαρίου — «Άγιοι Θύρσος και Αγνή οι Μάρτυρες»",
+        "url": "https://www.saint.gr/01/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

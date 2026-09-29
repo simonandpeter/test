@@ -6,6 +6,11 @@
       "form": "Vas",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 ianuarie."
+    },
+    {
+      "form": "Βάσσος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Ιανουαρίου, «Άγιοι Βάσσος, Ευσέβιος, Ευτύχιος και Βασιλίδης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -13,7 +18,9 @@
     "martyr"
   ],
   "related": [
-    "eusebius-companion-of-bassus"
+    "eusebius-companion-of-bassus",
+    "eutychius-companion-of-bassus",
+    "basilides-companion-of-bassus"
   ],
   "dates": {
     "death": {
@@ -46,8 +53,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιανουαρίου — «Άγιοι Βάσσος, Ευσέβιος, Ευτύχιος και Βασιλίδης»",
+        "url": "https://www.saint.gr/01/20/index.aspx",
+        "year": 2026
+      },
+      "note": "Commemorated with Eusebius, Eutychius and Basilides on one page."
     },
     {
       "church": "serbian",

@@ -6,6 +6,11 @@
       "form": "Eftimie cel Mare",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 ianuarie."
+    },
+    {
+      "form": "Ευθύμιος ο Μέγας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Ιανουαρίου, «Όσιος Ευθύμιος ο Μέγας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -56,6 +61,38 @@
         "text": "At thy honoured birth creation found gladness, and at thy divine memorial, O venerable one, it received joy from thy many wonders; give of them abundantly to our souls also, and cleanse us from the defilement of our sins, that we may sing: Alleluia.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Εὐφραίνου ἔρημος ἡ σὺ τίκτουσα, εὐθύμησον ἡ οὐκ ὠδίνουσα· ὅτι ἐπλήθυνέ σοι τέκνα, ἀνήρ ἐπιθυμιῶν τῶν τοῦ Πνεύματος, εὐσεβείᾳ φυτεύσας, ἐγκρατείᾳ ἐκθρέψας, εἰς ἀρετῶν τελειότητα. Ταῖς αὐτοῦ ἱκεσίαις, Χριστέ ὁ Θεός, εἰρήνευσον τήν ζωήν ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος δ’, on the page of Όσιος Ευθύμιος ο Μέγας",
+        "url": "https://www.saint.gr/3322/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Rejoice, O barren wilderness that now bearest children; be of good cheer, thou that didst not travail; for a man of the desires of the Spirit has multiplied thy children, planting them in true worship and rearing them by abstinence unto the perfection of the virtues. By his entreaties, O Christ God, give peace to our life.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’. Ὡς ἀπαρχάς τῆς φύσεως.",
+      "text": "Ἐν τῇ σεπτῇ γεννήσει σου, χαράν ἡ κτίσις εὕρατο· καί ἐν τῇ θείᾳ μνήμῃ σου Ὅσιε, τήν εὐθυμίαν ἔλαβε τῶν πολλῶν σου θαυμάτων· ἐξ ὧν παράσχου πλουσίως ταῖς ψυχαῖς ἡμῶν, καί ἀποκάθαρον ἁμαρτημάτων κηλίδας, ὅπως ψάλλωμεν, Ἀλληλούϊα.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος πλ. δ’, «Ὡς ἀπαρχάς τῆς φύσεως», on the page of Όσιος Ευθύμιος ο Μέγας",
+        "url": "https://www.saint.gr/3322/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "At thy venerable birth creation found joy, and at thy divine memory, O venerable one, it received the good cheer of thy many wonders. Grant of them richly to our souls, and cleanse away the stains of our sins, that we may sing: Alleluia.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
@@ -80,8 +117,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιανουαρίου — «Όσιος Ευθύμιος ο Μέγας»",
+        "url": "https://www.saint.gr/01/20/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr's heading and life give his years as 377 and 473 — «Οσιος Ευθυμιος ο Μεγας (377 - 473)», «γεννήθηκε στη Μελιτηνή της Αρμενίας το έτος 377 μ.Χ.» (https://www.saint.gr/3322/saint.aspx) — which falls inside the interval this folder's Romanian row supports; the folder's dates are not changed."
     },
     {
       "church": "serbian",

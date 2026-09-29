@@ -1,0 +1,62 @@
+{
+  "slug": "laurence-the-recluse",
+  "display_name": "Laurence the Recluse of the Kyiv Caves",
+  "names": [
+    {
+      "form": "Λαυρέντιος ο Έγκλειστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Ιανουαρίου, «Όσιοι Ευθύμιος ο Ησυχαστής και Λαυρέντιος ο Έγκλειστος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1201,
+      "latest": 1400,
+      "display": "13th–14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Λαυρέντιος έζησε μεταξύ 13ου και 14ου αιώνα μ.Χ. στη μονή του Αγίου Δημητρίου σαν έγκλειστος»."
+    }
+  },
+  "related": [
+    "euthymius-the-hesychast"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιανουαρίου — «Όσιοι Ευθύμιος ο Ησυχαστής και Λαυρέντιος ο Έγκλειστος»",
+        "url": "https://www.saint.gr/01/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

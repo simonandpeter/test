@@ -1,0 +1,66 @@
+{
+  "slug": "euthymius-of-tarnovo",
+  "display_name": "Euthymius of Tarnovo",
+  "names": [
+    {
+      "form": "Ευθύμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Ιανουαρίου, «Άγιος Ευθύμιος Αρχιεπίσκοπος Τυρνόβου», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "patriarch",
+    "hymnographer"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1325,
+      "latest": 1330,
+      "display": "c. 1325–1330",
+      "basis": "traditional",
+      "note": "saint.gr: «Γεννήθηκε περί το 1325-1330 μ.Χ. στην τότε Βουλγαρική πρωτεύουσα Τύρνοβο από ευγενή οικογένεια, ίσως εκείνη των Καμπλάκ»."
+    },
+    "death": {
+      "earliest": 1402,
+      "latest": 1402,
+      "display": "1402",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ευθύμιος κοιμήθηκε με ειρήνη το έτος 1402 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιανουαρίου — «Άγιος Ευθύμιος Αρχιεπίσκοπος Τυρνόβου»",
+        "url": "https://www.saint.gr/01/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

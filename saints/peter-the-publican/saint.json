@@ -11,6 +11,11 @@
       "form": "Петар Милостиви",
       "lang": "sr",
       "note": "Read out of «Св. Петар Милостиви» in the Ohrid Prologue for 05.10.2026."
+    },
+    {
+      "form": "Πέτρος ο τελώνης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Ιανουαρίου, «Άγιος Πέτρος ο μακάριος ο τελώνης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -48,8 +53,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not on saint.gr’s list for 5 Οκτωβρίου (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιανουαρίου — «Άγιος Πέτρος ο μακάριος ο τελώνης»",
+        "url": "https://www.saint.gr/01/20/index.aspx",
+        "year": 2026
+      },
+      "note": "This folder's earlier Greek row recorded only that saint.gr's list for 5 Οκτωβρίου did not name him and that no other day had been checked. It does name him on 20 Ιανουαρίου, and the row now records that day."
     },
     {
       "church": "serbian",

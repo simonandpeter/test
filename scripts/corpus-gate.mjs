@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ζαχαριασ zacharias-father-of-the-forerunner zacharias-of-arta':
+    'two men. saint.gr keeps Zacharias of Arta, a new-martyr of 1782, on 20 Ιανουαρίου; the corpus keeps the prophet Zacharias, father of the Forerunner, on all four calendars on 5 September. An eighteenth-century new-martyr under the Turks and the priest of the temple share a name and eighteen centuries divide them.',
+  'θεοδωροσ theodore-companion-of-stephen theodore-of-kandavla theodore-of-novgorod theodore-of-tamasos theodore-of-tomsk theodore-prince-of-yaroslavl theodore-the-envoy-of-nicomedia':
+    'seven now. The new one is Theodore of Tomsk, kept on 20 Ιανουαρίου, and he carries no types at all because his page attests none — the reader would not assign him a rank the source does not give. The other six are read in the el-01-11 and el-01-19 entries for this name form.',
+  'ευθυμιοσ euthymius-of-tarnovo euthymius-of-zographou euthymius-the-man-of-god':
+    'three men. The new one is Euthymius, patriarch of Tarnovo and hymnographer, dead 1402, kept on 20 Ιανουαρίου; the other two are read in the el-01-03 entry for this name form, the Athonite martyr of the 1270s and the Georgian professor of 1863 to 1953. Three days, three centuries, and the only thing shared is the name.',
+  'αννα anna-martyr-20-january anna-the-princess':
+    'two women. saint.gr keeps a martyr Anna on 20 Ιανουαρίου with no year on her page; the corpus keeps Anna the princess, dead 1056, on the Greek 4 October. A bare martyr line and an eleventh-century princess, and neither page names the other.',
   'θεοδωροσ theodore-companion-of-stephen theodore-of-kandavla theodore-of-novgorod theodore-of-tamasos theodore-prince-of-yaroslavl theodore-the-envoy-of-nicomedia':
     'six now. The new one is Theodore of Novgorod, the fool for Christ dead 1392, kept on 19 Ιανουαρίου; the other five are read in the el-01-11 entry for this name form. A fourteenth-century Russian fool for Christ is none of the four martyrs nor the prince of Yaroslavl.',
   'μαξιμοσ maximus-brother-of-dometius maximus-of-kapsokalyvia maximus-of-marcianopolis maximus-of-totma maximus-of-ungrovlachia maximus-son-of-paul-and-tatta':
@@ -1195,7 +1203,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '257'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '270'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

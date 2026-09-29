@@ -1,0 +1,76 @@
+{
+  "slug": "zacharias-of-arta",
+  "display_name": "Zacharias of Arta",
+  "names": [
+    {
+      "form": "Ζαχαρίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Ιανουαρίου, «Άγιος Ζαχαρίας ο Νεομάρτυρας εξ Άρτης», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1782,
+      "latest": 1782,
+      "display": "1782",
+      "basis": "traditional",
+      "note": "saint.gr: «Εκείνος υπέμεινε τα φρικτά μαρτύρια με πνευματική ανδρεία και αξιοθαύμαστη καρτερία, για να παραδώσει το πνεύμα του το 1782 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιανουαρίου — «Άγιος Ζαχαρίας ο Νεομάρτυρας εξ Άρτης»",
+        "url": "https://www.saint.gr/01/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’. Ταχὺ προκατάλαβε.",
+      "text": "Τῆς Ἄρτης ἀγλάισμα, καὶ Νεομάρτυς κλεινός, ἐν Πάτραις ὡς ἤθλησας, ὑπὲρ Χριστοῦ τοῦ Θεοῦ, ἐδείχθης μακάριε, οὐ γὰρ τὸν τρώσοντα σέ, καθελῶν δι’ ἀγώνων, γέρας ἐδέξω θεῖον, Ἀθλητὰ Ζαχαρία, πρεσβεύων ὑπὲρ πάντων ἠμῶν τῶν εὐφημούντων σε.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος δ’, «Ταχὺ προκατάλαβε», on the page of Άγιος Ζαχαρίας ο Νεομάρτυρας εξ Άρτης",
+        "url": "https://www.saint.gr/3329/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adornment of Arta and renowned new martyr, thou wast shown blessed in contending at Patras for Christ God; for having pulled down through thy struggles the one who would wound thee, thou didst receive a divine reward, O contender Zacharias, interceding for all of us who praise thee.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

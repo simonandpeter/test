@@ -6,6 +6,11 @@
       "form": "Rim",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 ianuarie, «Sfinții Mucenici In, Pin și Rim»."
+    },
+    {
+      "form": "Ριμμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Ιανουαρίου, «Άγιοι Ιννάς, Πιννάς και Ριμμάς», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιανουαρίου — «Άγιοι Ιννάς, Πιννάς και Ριμμάς»",
+        "url": "https://www.saint.gr/01/20/index.aspx",
+        "year": 2026
+      },
+      "note": "Commemorated with Inna and Pinna on one page. saint.gr prints all three as men, with masculine forms throughout."
     },
     {
       "church": "serbian",
