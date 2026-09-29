@@ -1,0 +1,70 @@
+{
+  "slug": "nahum",
+  "display_name": "Nahum",
+  "names": [
+    {
+      "form": "Naum",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 decembrie, «Sfântul Proroc Naum», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 decembrie — «Sfântul Proroc Naum»",
+        "url": "https://doxologia.ro/1-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "jonah-the-prophet"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "A prorocului Tău, Doamne, Naum, pomenire prăznuind, printr-însul Te rugăm, mântuieşte sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Proroc Naum; the common of a prophet, with his name set into it",
+        "url": "https://doxologia.ro/troparul-sfantului-proroc-naum",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping the memory of your prophet Nahum, O Lord, through him we entreat you: save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

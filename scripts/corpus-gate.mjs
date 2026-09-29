@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'anastasia anastasia-daughter-of-nicholas-ii anastasia-of-rome-15-april anastasia-saguna':
+    'three women called Anastasia, on three Romanian days. The new one is Anastasia Saguna, the mother of Andrei Saguna, born in 1785, whom the calendar keeps the day after her son, 1 December. The others are Anastasia of Rome, 15 April, and the grand duchess Anastasia, daughter of Nicholas II, 17 July (read 30 September 2026)',
   'teodor theodore-of-rostov theodore-the-studite':
     'two men: Theodore archbishop of Rostov, Romanian 28 November; and Theodore the Studite, whom the corpus gained on 11 November. The other Theodores the corpus keeps carry different ro forms (read 30 September 2026)',
   'petru peter-of-alexandria peter-of-lampsacus peter-of-murom peter-of-sebaste peter-of-the-brazen-gate peter-the-apostle':

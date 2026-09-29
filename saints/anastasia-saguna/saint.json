@@ -1,0 +1,87 @@
+{
+  "slug": "anastasia-saguna",
+  "display_name": "Anastasia Șaguna, mother of Andrei Șaguna",
+  "names": [
+    {
+      "form": "Anastasia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 1 decembrie, «Sfânta Anastasia, mama Sfântului Ierarh Andrei Șaguna», with the rank word left off; her life there gives the family name in the title under which she was canonised, «Sfânta Anastasia Șaguna, mama Sfântului Ierarh Andrei Șaguna»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "righteous"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1785,
+      "latest": 1785,
+      "display": "1785",
+      "basis": "attested",
+      "note": "doxologia.ro: «Născută în anul 1785, a primit din partea părinților o educație aleasă, în duhul fricii de Dumnezeu.»"
+    },
+    "death": {
+      "earliest": 1836,
+      "latest": 1836,
+      "display": "1836",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfânta Anastasia Șaguna a trecut la Domnul în luna ianuarie 1836, la vârsta de 51 de ani, fiind înmormântată la 17 ianuarie în cimitirul Kerepesi din Pesta.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 1 decembrie — «Sfânta Anastasia, mama Sfântului Ierarh Andrei Șaguna»",
+        "url": "https://doxologia.ro/1-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 1 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "andrei-saguna"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 5",
+      "model": "Podobie: Pe Cuvântul…",
+      "text": "Rădăcina cinstită și floarea mamelor, de Dumnezeu purtătoarea Anastasia, a dat pe Andrei ca rod ales țării Ardealului, și cu tărie a păstrat credința dreaptă, viețuind în jertfă și în virtute, și a primit de la Domnul răsplătire și cunună veșnică.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Anastasia, mama Sfântului Ierarh Andrei Șaguna",
+        "url": "https://doxologia.ro/troparul-sfintei-anastasia-mama-sfantului-ierarh-andrei-saguna",
+        "year": 2026
+      },
+      "english": {
+        "text": "Honoured root and flower of mothers, God-bearing Anastasia, you gave Andrei as a chosen fruit to the land of Ardeal, and kept the right faith with strength, living in sacrifice and in virtue, and you received from the Lord your reward and an everlasting crown.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
