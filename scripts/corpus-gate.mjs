@@ -116,7 +116,7 @@ for (const { slug, saint } of corpus) {
  */
 const READ_FOLDS = {
   'zaharia zacharias-son-of-barachias zacharias-son-of-carion zacharias-the-cobbler':
-    'three men called Zaharia, on three Romanian days. The new one is the cobbler of Alexandria, whose calendar line is bare and whose page tells a story of another man and names him only at the end, 17 November. The others are the prophet, son of Barachias, 8 February, and Zacharias son of Carion, a monk, 24 March (read 30 September 2026)',
+    'three men called Zaharia, on three Romanian days. The new one is the cobbler whose calendar line is bare and whose page tells the story of a monk named John, keeping vigil at Hagia Sophia in Constantinople, and names the cobbler only at the end, 17 November. The others are the prophet, son of Barachias, 8 February, and Zacharias son of Carion, a monk, 24 March (read 30 September 2026)',
   'aviv abibus-of-samosata abibus-the-deacon-of-edessa':
     'two men: the deacon of Edessa burned under Licinius, kept with Gurias and Samonas, Romanian 15 November; and one of the seven of Samosata, 29 January (read 30 September 2026)',
   'teodota theodota-of-adrianople theodota-sister-of-gregory-palamas theodota-with-her-three-sons':
