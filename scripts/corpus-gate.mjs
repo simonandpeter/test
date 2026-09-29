@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'silvan silvanus-of-cibalae silvanus-of-emesa silvanus-of-gaza silvanus-the-apostle':
+    'four men called Silvan, on four Romanian days. The new one is the aged presbyter of Gaza, beaten before the people of Caesarea and beheaded with his company, a bishop and martyr, 14 October. The other three are unchanged and were read on 29 September: the deacon of Cibalae, 21 August; the bishop of Emesa, 29 January; and Silvanus of the Seventy, 30 July (read 29 September 2026)',
+  'ignatie ignatius-of-methymna ignatius-of-stara-zagora':
+    'two men, and four centuries apart: the metropolitan of Methymna, born on Lesbos in 1492 to the priest Emmanuel Agallianos, Romanian 14 October; and the new-martyr of Stara Zagora, a monk, Romanian 8 October (read 29 September 2026)',
+  'ghervasie gervasios-of-patras gervasius-of-milan':
+    'two men: the martyr of Milan, twin brother of Protasius, whose relics Ambrose found, Romanian 14 October; and Gervasios of Patras, a hieromonk, venerable, Romanian 30 June. Two (read 29 September 2026)',
   'agatodor agathodorus-of-cherson agathodorus-servant-of-carpus-and-papylas agathodorus-the-martyr-2-february':
     'three men called Agatodor. The new one is the servant of Carpus and Papylas, killed with them at Pergamum, Romanian 13 October. The bishop of Cherson, a hieromartyr, keeps 7 March. The third is a bare line — doxologia 2 februarie prints «Sfantul Mucenic Agatodor» with the readings for a martyr and no life — and the Greek does the same: saint.gr keeps 2 Februariou «Agios Agathodoros» with no photograph and no entry. Two calendars each print a name-only Agathodorus in February and a servant of Carpus with a life in October, so they are two (read 29 September 2026)',
   'carp carpus-of-thyatira carpus-the-apostle':

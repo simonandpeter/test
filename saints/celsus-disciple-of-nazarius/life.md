@@ -1,0 +1,15 @@
+# Celsus, disciple of Nazarius
+
+Celsus was a child of three in a city called Melia, the son of a believing woman of good family, when [Nazarius](/saints/nazarius-of-milan) took him, baptised him and brought him up in the right faith. Nazarius had been born at Rome of a Jewish father and a Christian mother, had spent his inheritance on the poor and on the confessors at Milan, had been beaten and driven out of that city for confessing Christ, and had been sent by his mother’s word in a vision to preach in Gaul.
+
+The boy grew in years and in understanding and was filled with the divine gifts, following his teacher and learning the wisdom from above from him, and laying up in his heart the God-inspired words and his fatherly teaching. He was so wise in Christ, the page says, that he came to be like his teacher, serving the salvation of men as he did, preaching Christ and bearing persecutions and torments; and for that he was in the end counted worthy of the martyr’s crown.
+
+Dionysius, the governor of that country, hearing that Nazarius had turned many cities to Christ, had the two of them taken, beaten and thrown into prison. The next day the governor’s wife, seeing so small and beautiful a child led out to the torments, pitied him and begged her husband to spare him and to set him free with his teacher; and by her warm entreaty she won their liberty. The saints were grieved at it, for they had desired the martyr’s crown and could not finish their sufferings.
+
+They went on to the city of Țimir and won a great many souls for Christ, until the idolaters rose against them and sent them to Nero. Before the emperor they confessed Christ boldly; Nazarius was thrown down and trampled, and Celsus was beaten with rods and pressed to sacrifice, and at his word the idols were overturned on the ground. They were given to the beasts, and the beasts did not harm them.
+
+Afterwards the two came back to Milan, found [Gervasius](/saints/gervasius-of-milan) and [Protasius](/saints/protasius-of-milan) still alive in prison, preached again and were taken again by the governor Anulinus and thrown into the same prison. Nero, hearing that Nazarius was alive, wrote that he should be killed at once, and Anulinus brought Nazarius and his disciple Celsus out and had their honourable heads cut off with the sword.
+
+One of the faithful took their relics in secret to his house, where his bedridden daughter rose up whole as they were carried in, and buried the bodies in his garden. They lay unknown until Ambrose, bishop of Milan, found them by a divine disclosure; Paulinus the presbyter, who was there, says that Celsus lay in the same place, and that the ground had come down from parents to children in one family because, as its owner told them, great treasures are laid up in it that neither moth nor rust destroys and thieves do not dig through and steal. The page gives no year, and none is supplied here.
+
+*After doxologia.ro's calendar for 14 octombrie — [the day](https://doxologia.ro/14-octombrie) and [the life](https://doxologia.ro/sfantul-mucenic-chelsie); read 24 September 2026.*

@@ -1,0 +1,61 @@
+{
+  "slug": "parascheva-of-iasi",
+  "display_name": "Parascheva of Iași",
+  "names": [
+    {
+      "form": "Parascheva de la Iași",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 octombrie."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "related": [
+    "varlaam-of-moldavia"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1000,
+      "latest": 1050,
+      "display": "first half of the 11th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfânta Cuvioasă Parascheva a trăit pe pământ în prima jumătate a veacului al XI-lea.» The page gives no year for her birth or her death; the interval is that statement and nothing narrower."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 14 octombrie — «Sfânta Cuvioasă Parascheva de la Iași»",
+        "url": "https://doxologia.ro/14-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 14 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "pachomius-of-chios",
+  "display_name": "Pachomius of Chios",
+  "names": [
+    {
+      "form": "Pahomie din Chios",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "related": [
+    "nektarios-of-aegina",
+    "anthimos-of-chios"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1840,
+      "latest": 1840,
+      "display": "1840",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Cuvios Pahomie s-a născut în anul 1840, în localitatea Elaia din Insula Chios, Grecia, numele său de naștere fiind Panagiotis Arelias.»"
+    },
+    "death": {
+      "earliest": 1905,
+      "latest": 1905,
+      "display": "1905",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Pahomie a trecut la Domnul la data de 14 octombrie 1905.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 14 octombrie — «Sfântul Cuvios Pahomie din Chios»",
+        "url": "https://doxologia.ro/14-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 14 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

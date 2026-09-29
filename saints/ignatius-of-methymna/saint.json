@@ -1,0 +1,66 @@
+{
+  "slug": "ignatius-of-methymna",
+  "display_name": "Ignatius of Methymna",
+  "names": [
+    {
+      "form": "Ignatie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 octombrie, «Sfântul Ierarh Ignatie, Mitropolit de Mitimna»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1492,
+      "latest": 1492,
+      "display": "1492",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Ignatie s-a născut în 1492, în satul Faranga din Mitileni (lângă localitatea Kalloni).»"
+    },
+    "death": {
+      "earliest": 1566,
+      "latest": 1566,
+      "display": "1566",
+      "basis": "attested",
+      "note": "doxologia.ro: «A adormit în Domnul în data de 14 octombrie 1566.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 14 octombrie — «Sfântul Ierarh Ignatie, Mitropolit de Mitimna»",
+        "url": "https://doxologia.ro/14-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 14 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
