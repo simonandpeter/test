@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'filimon philemon-6-july philemon-of-cyzicus philemon-of-gaza philemon-the-apostle philemon-the-flute-player':
+    'five folders whose ro form is Filimon, on five Romanian days. The new one is Philemon the flute-player of the Thebaid, of the company doxologia keeps on 14 decembrie. The other four were read on 30 September: the bare line of 6 July, Philemon of Cyzicus, 29 April, Philemon of Gaza, 14 February, and the apostle, 22 November (read 30 September 2026)',
+  'calinic callinicus-of-caesarea callinicus-of-cilicia':
+    'two men: Callinicus, the third named of the company at Caesarea in Bithynia under Decius, whom doxologia keeps on 14 decembrie; and Callinicus of Cilicia, Romanian 29 July. The corpus other Callinici — of Constantinople, 23 August, and of Edessa, 8 August — carry different ro forms and do not fold here (read 30 September 2026)',
+  'apolonie apollonius-of-sardis apollonius-the-reader':
+    'two men: Apollonius the reader, one of the company doxologia 14 decembrie keeps with Thyrsus; and Apollonius of Sardis, Romanian 10 July (read 30 September 2026)',
   'orest orestes-companion-of-eustratius orestes-of-tyana':
     'two men: the last of the five with Eustratius, Romanian 13 December; and Orestes of Tyana, a physician and martyr, 10 November (read 30 September 2026)',
   'eustratie eustratius-of-arabraca eustratius-of-mount-olympus':

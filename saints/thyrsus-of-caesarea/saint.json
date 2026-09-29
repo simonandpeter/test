@@ -10,6 +10,11 @@
       "form": "Tirs",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 august, «Sfântul Mucenic Tirs», with the rank words left off."
+    },
+    {
+      "form": "Tirs",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 decembrie, «Sfântul Mucenic Tirs», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -52,7 +57,8 @@
         "text": "doxologia.ro, calendarul zilei pentru 17 august — «Sfântul Mucenic Tirs»",
         "url": "https://doxologia.ro/17-august",
         "year": 2026
-      }
+      },
+      "note": "doxologia.ro prints «Sfântul Mucenic Tirs» twice: on 17 august, where the page behind the line opens neither a Viață nor a Tropar tab, and on 14 decembrie, where it prints the company's whole life — Thyrsus, Leucius, Callinicus, Philemon, Apollonius and Arianus (https://doxologia.ro/14-decembrie, read 25 September 2026). The row here is 17 august, which is the day the Russian calendar keeps and the day this folder was read from, and the December day is recorded here only. **Whether the two lines are one man is not settled**: the corpus's own rule is that two entries on one calendar are two commemorations, and the August line is too bare to test."
     },
     {
       "church": "greek",
@@ -70,6 +76,25 @@
   },
   "related": [
     "coronatus-of-caesarea",
-    "leucius-of-caesarea"
+    "leucius-of-caesarea",
+    "callinicus-of-caesarea"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinților Mucenici Tirs, Levchie, Calinic, Filimon, Apolonie și Arian (a common of martyrs, printed once for the six together; «nesctricăciunii» is the page's own reading)",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-tirs-levchie-calinic-filimon-apolonie-arian",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, in their contest received from you, our God, the crowns of incorruption; for having your strength they overthrew the tormentors, and broke also the feeble insolence of the demons. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
   ]
 }
