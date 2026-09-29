@@ -9,6 +9,11 @@
     {
       "form": "Αἰκατερίνη",
       "lang": "el"
+    },
+    {
+      "form": "Ecaterina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 25 noiembrie, «Sfânta Mare Muceniță Ecaterina», with the rank words left off."
     }
   ],
   "sex": "female",
@@ -45,8 +50,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 25 noiembrie — «Sfânta Mare Muceniță Ecaterina»",
+        "url": "https://doxologia.ro/25-noiembrie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -62,5 +76,23 @@
   "historicity": "traditional",
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Cu înțelepciunea ca și cu razele soarelui ai luminat pe filosofii păgâni și ca o lună prealuminoasă, care strălucea în noaptea necredinței, întunericul l-ai gonit; iar pe împărăteasa o ai încredințat, dimpreună și pe prigonitorul l-ai mustrat, de Dumnezeu chemată, fericită Ecaterino!Cu bucurie ai alergat la cămara cea cerească, către Hristos, Mirele cel preafrumos, și de la Dânsul te-ai încununat cu cunună împărătească, înaintea Căruia împreună cu îngerii stând, roagă-te pentru noi, cei ce cinstim sfântă pomenirea ta.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Mari Mucenițe Ecaterina",
+        "url": "https://doxologia.ro/troparul-sfintei-mari-mucenite-ecaterina",
+        "year": 2026
+      },
+      "english": {
+        "text": "With wisdom, as with the rays of the sun, you enlightened the pagan philosophers; and like a most radiant moon shining in the night of unbelief you drove the darkness away. You brought the empress to faith and rebuked the persecutor as well, Catherine called of God and blessed. With joy you ran to the heavenly bridal chamber, to Christ the most beautiful Bridegroom, and from him you were crowned with a royal crown; standing before him with the angels, pray for us who honour your holy memory.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
