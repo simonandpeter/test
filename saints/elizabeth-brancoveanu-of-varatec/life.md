@@ -1,0 +1,17 @@
+# Elizabeth (Safta) Brâncoveanu of Văratec
+
+Elizabeth, called Safta in the world, was born at Iași in 1776 in the family of the great logothete Teodor Balș and his wife Zoe Rosetti, and was given a careful education in her father's house. In 1791 she married the great ban Grigore, the great-great-grandson of [Constantine Brâncoveanu](/saints/constantine-brancoveanu) and the last male descendant of that family. Their family life was well ordered and of good understanding, but they could have no children, and in 1824 they adopted Safta's niece, Zoe Mavrocordat.
+
+In April 1832 the ban Grigore died and was buried with due honour in the church of Saint George the New in Bucharest, where the bones of his ancestor the martyred prince also lay. When she had seen, as a good Christian, to everything that is done for the departed, giving generously for the good of her husband's soul, Safta Brâncoveanu set herself to carry out a chief wish of his, which was to raise a hospital for the sick poor.
+
+In 1835 she began building it, having bought land beside the church of Domnița Bălașa in Bucharest, which had a school of music and a refuge for widows besides the church itself. For the hospital she drew up a founder's charter regulating its working and its administration by trustees, among them always a representative of the Brâncoveanu family. This whole charitable foundation took the name of the Brâncoveanu Establishments.
+
+After its opening in 1838 she withdrew to the monastery of Văratec, where her mother too had been tonsured. Receiving the name Elizabeth, she spent seventeen years in the monastic life, helping those who asked her support, giving alms for her husband's memory and for her kin, furnishing the great church of Văratec with what the services required, covering the icon of the Mother of God on the iconostasis with silver, and giving a Gospel book bound in silver, a silver box for the Holy Mysteries and a silver censer.
+
+She made gifts to many other monasteries and churches in the country and on Mount Athos — Simonopetra, Xeropotamou, Koutloumousiou, Dionysiou — and to the Patriarchate of Jerusalem. She had a great reverence for the saints, as her dealings with the monastery of Dionysiou show, where the relics of Saint Chariton were kept, whom she honoured particularly for help she had received from him.
+
+She was zealous for the services of the Church, and when illness or old age kept her from the church she read her rule in her cell. Her close disciples bore witness to her labours, her almsgiving, her virtues and her spiritual gifts. One of them, mother Eupraxia Vârnav, wrote a year before her death: for this woman's soul, for her many good works, I should think the angel himself will raise her up at her end; much does she labour at the rule, as in church; then alms, and all in secret. Blessed is her soul.
+
+She departed to the Lord on 11 August 1857, and at the memorial of seven years, in 1864, her bones were taken up and laid in the ossuary beneath the altar of the church of the Dormition at Văratec. The Holy Synod of the Romanian Orthodox Church canonised her on 1 July 2025 under the title Saint Elizabeth (Safta) Brâncoveanu, with her feast on 17 August.
+
+*After doxologia.ro's calendar for 17 august — [the day](https://doxologia.ro/17-august) and [the life](https://doxologia.ro/viata-sfintei-cuvioase-elisabeta-safta-brancoveanu-de-la-varatec); read 24 September 2026.*

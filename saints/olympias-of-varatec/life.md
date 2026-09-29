@@ -1,0 +1,15 @@
+# Olympias of Văratec
+
+Olympias was born in 1758 at Iași, in the family of the priest Mihai of the princely church of Saint Nicholas, and was the niece of Dositei Herescu, bishop of Rădăuți. At her baptism she was given the name Bălașa. At twenty she married and had a daughter, but the marriage lasted only two and a half years, for her husband died suddenly. Wishing to order her life according to the will of God, she came to the elder Paisius, who sent her to the monastery of Topolița, near Neamț, for the preparation due before she put on the angelic habit.
+
+Because Topolița stood close to the villagers' households she asked Paisius's blessing to go to the skete of Durău, where [Nazaria](/saints/nazaria-of-varatec) was abbess, and there she received the rasophore's name Olympias. She was the foundress of the monastery of Văratec in the years 1781 to 1788, with the consent of Veniamin Costache, metropolitan of Moldavia, with the support of the elder Paisius of Neamț, and with the working and counsel of Saint Joseph of Văratec.
+
+She built a house first, with her own money, and then, with help from the faithful, raised a wooden church of the Dormition of the Mother of God. Soon afterwards she was tonsured, keeping the name Olympias, and her daughter received the angelic habit beside her, but died very soon after. Judging herself too young to lead the new monastery, she called the abbess Nazaria to Văratec, and was always at her side, helping her in its good ordering.
+
+After Nazaria's falling asleep in 1814 the schema-nun Olympias refused the office of abbess, but at the nuns' insistence she held it from 1822 to 1828, when she withdrew out of humility, and again from 1834 to 1842. She carried out a considerable work of building and repair, restoring the monastery after the destruction done by Turkish soldiers in 1821, enlarging the stone church with two new porches and the diaconicon, having the interior painted, furnishing the church with the vessels it needed, raising cells and the bell tower, and building the enclosing wall.
+
+She was a tireless seeker and doer of the teachings of the Fathers, as the manuscripts that carry her name show, written by her or by her disciples at her request; and she knew the psaltic chant well, teaching the nuns the craft of beautiful church singing. She departed to the Lord in 1842, at the age of eighty-five, and was buried in the porch of the church she had founded. A comforter and guide to the nuns and to the faithful, she remained in her community's memory as a pattern of humility.
+
+The Holy Synod of the Romanian Orthodox Church canonised her on 1 July 2025 under the title Saint Olympias of Văratec, with her feast on 17 August, the day on which the Romanian calendar keeps her together with Nazaria and with Elizabeth (Safta) Brâncoveanu.
+
+*After doxologia.ro's calendar for 17 august — [the day](https://doxologia.ro/17-august) and [the life](https://doxologia.ro/viata-sfintei-cuvioase-olimpiada-de-la-varatec); read 24 September 2026.*

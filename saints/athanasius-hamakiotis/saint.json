@@ -1,0 +1,66 @@
+{
+  "slug": "athanasius-hamakiotis",
+  "display_name": "Athanasius Hamakiotis",
+  "names": [
+    {
+      "form": "Atanasie Hamakiotis",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 august, «Sfântul Cuvios Atanasie Hamakiotis», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1891,
+      "latest": 1891,
+      "display": "1891",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut în anul 1891 într-un sat de munte din Kalavryta, Grecia»."
+    },
+    "death": {
+      "earliest": 1967,
+      "latest": 1967,
+      "display": "1967",
+      "basis": "attested",
+      "note": "doxologia.ro: «A adormit în Domnul la 17 august 1967»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 august — «Sfântul Cuvios Atanasie Hamakiotis»",
+        "url": "https://doxologia.ro/17-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Αυγούστου (24 September 2026). Doxologia's life makes him a Greek saint, so the Greek row is the one most likely to be fillable."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "slug": "george-the-pilgrim",
+  "display_name": "George the Pilgrim",
+  "names": [
+    {
+      "form": "Gheorghe Pelerinul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 august, «Sfântul Gheorghe Pelerinul», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous",
+    "ascetic"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1916,
+      "latest": 1916,
+      "display": "1916",
+      "basis": "attested",
+      "note": "doxologia.ro: «în anul 1916, de praznicul Adormirii Maicii lui Dumnezeu, trupul Sfântului a fost găsit răposat». The page gives no birth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 august — «Sfântul Gheorghe Pelerinul»",
+        "url": "https://doxologia.ro/17-august",
+        "year": 2026
+      },
+      "note": "His life says the Holy Synod of the Romanian Orthodox Church numbered him among the saints «cu zi de pomenire la 17 august»."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Pe nevoitorul cel mare și următorul sihaștrilor, pe fericitul pelerin al lui Hristos în cântări să-l cinstim, strigându-i cu evlavie: Sfinte Gheorghe, prin rugăciunile tale, luminează calea vieții noastre!",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Gheorghe Pelerinul», Glasul 1",
+        "url": "https://doxologia.ro/troparul-sfantului-gheorghe-pelerinul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour in hymns the great struggler and follower of the hermits, the blessed pilgrim of Christ, crying out to him with reverence: Saint George, by your prayers enlighten the path of our life!",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

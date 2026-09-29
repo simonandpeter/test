@@ -10,6 +10,11 @@
     {
       "form": "Преп. Алимпије, иконописац Печерски",
       "lang": "sr"
+    },
+    {
+      "form": "Alipie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 august, «Sfântul Alipie, iconarul», and out of its life's «Cuviosul părintele nostru Alipie al Pecerscăi»."
     }
   ],
   "sex": "male",
@@ -43,8 +48,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 17 august was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 17 august — «Sfântul Alipie, iconarul»",
+        "url": "https://doxologia.ro/17-august",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

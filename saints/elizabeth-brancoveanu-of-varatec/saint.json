@@ -1,0 +1,70 @@
+{
+  "slug": "elizabeth-brancoveanu-of-varatec",
+  "display_name": "Elizabeth (Safta) Brâncoveanu of Văratec",
+  "names": [
+    {
+      "form": "Elisabeta (Safta) Brâncoveanu de la Văratec",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 august, «Sfânta Cuvioasă Elisabeta (Safta) Brâncoveanu de la Văratec», with the rank words left off. Her life says Safta was her name in the world and Elisabeta her name in the monastic habit."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1776,
+      "latest": 1776,
+      "display": "1776",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut la Iași în anul 1776, în familia marelui logofăt Teodor Balș»."
+    },
+    "death": {
+      "earliest": 1857,
+      "latest": 1857,
+      "display": "1857",
+      "basis": "attested",
+      "note": "doxologia.ro: «A trecut la Domnul în anul 1857, la 11 august»."
+    }
+  },
+  "related": [
+    "constantine-brancoveanu"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 august — «Sfânta Cuvioasă Elisabeta (Safta) Brâncoveanu de la Văratec»",
+        "url": "https://doxologia.ro/17-august",
+        "year": 2026
+      },
+      "note": "Her life says the Holy Synod of the Romanian Orthodox Church canonised her on 1 July 2025 «cu titulatura „Sfânta Cuvioasă Elisabeta (Safta) Brâncoveanu” și prăznuirea în ziua de 17 august». Her death is given as 11 august and the calendar keeps her on 17 august with the other two of Văratec."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

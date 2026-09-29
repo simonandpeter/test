@@ -10,6 +10,11 @@
     {
       "form": "Свети мученик Мирон",
       "lang": "sr"
+    },
+    {
+      "form": "Miron",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 august, «Sfântul Mucenic Miron», with the rank words left off; its life's heading calls him «Sfântul Sfințit Mucenic Miron», the priest."
     }
   ],
   "sex": "male",
@@ -43,8 +48,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 17 august was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 17 august — «Sfântul Mucenic Miron»",
+        "url": "https://doxologia.ro/17-august",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -99,6 +113,22 @@
       },
       "english": {
         "text": "Thy martyr Myron, O Lord, in his suffering received the incorruptible crown from thee, our God; for having thy help he vanquished the tormentors, and he shattered also the feeble insolence of the demons. By his prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Miron, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Mucenic Miron preotul», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-miron-preotul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyr Myron, O Lord, in his struggle received the crown of incorruption from you, our God; for having your strength he overthrew the torturers, and shattered the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
     }
