@@ -1,0 +1,76 @@
+{
+  "slug": "hosea-the-prophet",
+  "display_name": "Hosea",
+  "names": [
+    {
+      "form": "Oseea",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 octombrie; the life on the same site spells it Osea."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": -822,
+      "latest": -822,
+      "display": "822 BC",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Osea a viețuit ani îndelungați, cu 822 de ani înainte de nașterea lui Hristos.» The page gives no year for his birth or his death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 17 octombrie — «Sfântul Proroc Oseea»",
+        "url": "https://doxologia.ro/17-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "A prorocului Tău Oseea pomenire, Doamne, prăznuind, printr-însul Te rugăm, mântuieşte sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Proroc Oseea",
+        "url": "https://doxologia.ro/troparul-sfantului-proroc-oseea",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping the memory of Thy prophet Hosea, O Lord, we entreat Thee through him: save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

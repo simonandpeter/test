@@ -1,0 +1,67 @@
+{
+  "slug": "andrew-the-monk-martyr-of-crete",
+  "display_name": "Andrew the Monk-Martyr of Crete",
+  "names": [
+    {
+      "form": "Andrei din Creta",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 octombrie, «Sfântul Cuvios Mucenic Andrei din Creta»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 17 octombrie — «Sfântul Cuvios Mucenic Andrei din Creta»",
+        "url": "https://doxologia.ro/17-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Pustniceşte mai înainte pedepsindu-te în munte, taberele vrăjmaşilor cele netrupeşti le-ai pierdut cu arma Crucii, întru tot fericite; şi iarăşi spre chinuire bărbăteşte te-ai îmbrăcat, ucigând pe Copronim cu sabia credinţei. Pentru amândouă acestea te-ai încununat de la Dumnezeu, Preacuvioase Părinte Andrei, pururea lăudate.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Mucenic Andrei din Creta",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-mucenic-andrei-din-creta",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having first disciplined thyself as an ascetic on the mountain, thou didst destroy the bodiless armies of the enemy with the weapon of the Cross, O all-blessed one; and again thou didst array thyself manfully for the contest, slaying Copronymus with the sword of faith. For both of these thou hast been crowned by God, O most venerable father Andrew, ever praised.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
