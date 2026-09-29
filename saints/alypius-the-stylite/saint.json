@@ -1,0 +1,72 @@
+{
+  "slug": "alypius-the-stylite",
+  "display_name": "Alypius the Stylite",
+  "names": [
+    {
+      "form": "Alipie Stâlpnicul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 noiembrie, «Sfântul Cuvios Alipie Stâlpnicul», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "stylite",
+    "deacon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 noiembrie — «Sfântul Cuvios Alipie Stâlpnicul»",
+        "url": "https://doxologia.ro/26-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "euphemia-the-great-martyr"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Al răbdării stâlp ai fost, râvnind părinţilor celor mai dinainte, cuvioase, Sfântului Iov întru patimi, Sfântului Iosif întru ispite şi vieţii celor fără de trup, fiind în trup, Sfinte Alipie, părintele nostru. Roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Alipie Stâlpnicul",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-alipie-stalpnicul",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were a pillar of patience, venerable father, emulating the fathers of old — Saint Job in his sufferings, Saint Joseph in his temptations, and the life of the bodiless powers while yet in the body, holy Alypius our father. Pray to Christ God to save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
