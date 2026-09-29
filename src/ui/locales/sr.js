@@ -807,6 +807,7 @@ export const sr = {
     'Bishop of Nisibis': 'Епископ низибијски',
     'Bishop of Nyssa': 'Епископ нисијски',
     'Bishop of Ossory': 'Епископ осорски',
+    'Bishop of Paneas': 'Епископ панејски',
     'Bishop of Penza': 'Епископ пензански',
     'Bishop of Ravenna': 'Епископ равенски',
     'Bishop of Roman': 'Епископ романски',

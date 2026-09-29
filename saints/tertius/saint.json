@@ -1,0 +1,67 @@
+{
+  "slug": "tertius",
+  "display_name": "Tertius",
+  "names": [
+    {
+      "form": "Terţiu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 noiembrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 10 noiembrie — «Sfântul Apostol Terţiu»",
+        "url": "https://doxologia.ro/10-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Sfinţilor Apostoli, rugaţi pe Milostivul Dumnezeu ca să dea iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "Doxologia — «Troparul Sfinților Apostoli Olimp, Rodion, Sosipatru, Erast, Terțiu, Cvart» (a common of the apostles, printed once for the whole company of the day)",
+        "url": "https://doxologia.ro/troparul-sfintilor-apostoli-olimp-rodion-sosipatru-erast-tertiu-cvart",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy Apostles, pray to the merciful God that He grant our souls forgiveness of our offences.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "slug": "arsenios-of-cappadocia",
+  "display_name": "Arsenios of Cappadocia",
+  "names": [
+    {
+      "form": "Arsenie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 noiembrie, «Sfântul Cuvios Arsenie Capadocianul»; the bare personal name, without the epithet."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "deacon",
+    "wonderworker"
+  ],
+  "related": [
+    "paisios-the-athonite"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1840,
+      "latest": 1840,
+      "display": "1840",
+      "basis": "attested",
+      "note": "doxologia.ro: «Pe numele de botez Teodor, părintele Arsenie Capadocianul s-a născut în satul Kefalohori, din ținutul Farasa, la anul 1840»."
+    },
+    "death": {
+      "earliest": 1924,
+      "latest": 1924,
+      "display": "1924",
+      "basis": "attested",
+      "note": "doxologia.ro: «și-a dat sufletul în mâinile Domnului la 10 noiembrie 1924, având în mâini moaștele Sfântului Ioan Gură de Aur»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 10 noiembrie — «Sfântul Cuvios Arsenie Capadocianul»",
+        "url": "https://doxologia.ro/10-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Νοεμβρίου (25 September 2026) — the life says the Ecumenical Patriarchate canonised him in 1986 and that his commemoration is on 10 November, but the Greek calendar page itself was not read."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Viaţă plăcută lui Dumnezeu petrecând şi vas cinstit Mângâietorului făcându-te, purtătorule de Dumnezeu Arsenie, te-ai arătat şi primitor al darului facerii de minuni, tuturor dându-le grabnic ajutor, Părinte Cuvioase, pe Hristos Dumnezeu roagă-L să ne dăruiască nouă mare milă.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Arsenie Capadocianul",
+        "url": "https://doxologia.ro/troparul-sfantului-arsenie-capadocianul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having led a life pleasing to God, and having become an honoured vessel of the Comforter, God-bearing Arsenios, thou wast shown to be a receiver of the gift of wonderworking, giving swift help to all; venerable father, entreat Christ God to grant us great mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

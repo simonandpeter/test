@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'visarion bessarion-of-egypt bessarion-of-lainici bessarion-the-confessor':
+    'three folders whose ro form is Visarion, on three Romanian days. The new one is Bessarion of Lainici, the Romanian hieromonk of the Jiu valley, 10 November. The others were read on 29 September: the Serb who resisted the union in Transylvania, 21 October, and Bessarion of Egypt, hermit, 20 February (read 30 September 2026)',
+  'arsenie arsenios-of-cappadocia arsenios-of-paros arsenius-of-corfu':
+    'three men called Arsenie, on three Romanian days. The new one is Arsenios of Cappadocia, the priest of Farasa who baptised Paisios the Athonite, 10 November. The others are Arsenios of Paros, hieromonk and abbot, 31 January, and Arsenius of Corfu, archbishop, 19 January (read 30 September 2026)',
   'simeon simeon-martyr-16-may simeon-metaphrastes simeon-of-persia simeon-the-fool-for-christ symeon-kinsman-of-the-lord symeon-the-god-receiver':
     'six folders whose ro form is Simeon, on six Romanian days. The new one is Simeon Metaphrastes, born at Constantinople in 886 under Leo the Wise, who gathered the lives of the saints, 9 November. The others are unchanged: the bare-line martyr of 16 May, Simeon of Persia, 17 April, Simeon the Fool for Christ, 21 July, Symeon the kinsman of the Lord, 27 April, and Symeon the God-receiver, 3 February (read 30 September 2026)',
   'neofit neophytos-of-docheiariou neophytus-5-may neophytus-of-nicaea neophytus-of-urbnisi':

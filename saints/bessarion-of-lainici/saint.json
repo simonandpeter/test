@@ -1,0 +1,61 @@
+{
+  "slug": "bessarion-of-lainici",
+  "display_name": "Bessarion of Lainici",
+  "names": [
+    {
+      "form": "Visarion",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 noiembrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "hieromonk",
+    "abbot"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1951,
+      "latest": 1951,
+      "display": "1951",
+      "basis": "attested",
+      "note": "doxologia.ro: «A fost maltratat de Securitate și nu a putut fi salvat nici la spital, astfel încât la 8 noiembrie 1951 a trecut la cele veșnice» — the page gives the day of his death as 8 November 1951 while the calendar keeps him on 10 noiembrie. The page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "revised-julian",
+        "note": "doxologia.ro's day page for 10 noiembrie names him, while his own life gives 8 November 1951 as the day of his death; the day page stands, and the difference is recorded here rather than resolved."
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 10 noiembrie — «Sfântul Cuvios Mucenic Visarion de la Lainici»",
+        "url": "https://doxologia.ro/10-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
