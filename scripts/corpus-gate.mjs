@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'teodor theodore-brother-of-theophanes theodore-of-alexandria-hieromartyr theodore-of-rostov theodore-the-studite':
+    'four folders whose ro form is Teodor, on four Romanian days. The new one is Theodore the Branded, brother of Theophanes of Nicaea, 27 December. The others are Theodore of Alexandria, hieromartyr, 3 December; Theodore of Rostov, 28 November; and Theodore the Studite, 11 November (read 30 September 2026)',
+  'stefan stefan-brancoveanu stephen-of-decani stephen-of-triglia stephen-the-first-martyr':
+    'four folders whose ro form is Stefan, on four Romanian days. The new one is the protomartyr and archdeacon, 27 December. The other three were read on 29 and 30 September and are unchanged (read 30 September 2026)',
   'gherasim gerasimus-of-the-jordan gerasimus-of-tismana':
     'two men: Gerasimus of Tismana, the companion of Nicodemus, Romanian 26 December; and Gerasimus of the Jordan, 4 March. The corpus other Gerasimoi — the New of Kefalonia, 16 August, and of Little St Anne, 7 December — carry different ro forms and do not fold here (read 30 September 2026)',
   'eftimie euthymius-of-dimitsana euthymius-of-madytos euthymius-of-sardis euthymius-of-vatopedi euthymius-of-zographou euthymius-the-cellarer jacob-of-putna':

@@ -1,0 +1,78 @@
+{
+  "slug": "theodore-brother-of-theophanes",
+  "display_name": "Theodore, brother of Theophanes",
+  "names": [
+    {
+      "form": "Teodor",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 decembrie, «Sfântul Cuvios Teodor Mărturisitorul», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "hieromonk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": null,
+      "latest": 842,
+      "display": "before 842",
+      "basis": "traditional",
+      "note": "doxologia.ro gives no year for his death, only that he died in prison at Apamea and that afterwards «Murind împăratul Teofil, s-a dăruit Bisericii pace» and the icons were restored «în anul mântuirii 842». So his death is before that year and the page fixes no lower bound."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 decembrie — «Sfântul Cuvios Teodor Mărturisitorul»",
+        "url": "https://doxologia.ro/27-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Îndreptătorule al Ortodoxiei, învăţătorule al dreptei cinstiri de Dumnezeu şi al curăţiei şi luminătorule al lumii, podoaba călugărilor cea de Dumnezeu insuflată Sfinte Părinte Teodor, înţelepte, cu învăţăturile tale pe toţi i-ai luminat. Alăută duhovnicească, roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Teodor Mărturisitorul, glasul 8 (the common of a venerable teacher, printed with his name in it)",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-teodor-marturisitorul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Guide of Orthodoxy, teacher of the right worship of God and of purity, light of the world, God-inspired adornment of monks: wise father Saint Theodore, by your teachings you have enlightened all. Spiritual harp, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

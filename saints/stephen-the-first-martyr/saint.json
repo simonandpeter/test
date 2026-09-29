@@ -1,0 +1,77 @@
+{
+  "slug": "stephen-the-first-martyr",
+  "display_name": "Stephen the First Martyr",
+  "names": [
+    {
+      "form": "Ștefan",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 decembrie, «Sfântul Apostol, Întâiul Mucenic și Arhidiacon Ștefan», with the ranks left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle",
+    "deacon",
+    "martyr"
+  ],
+  "related": [
+    "prochorus-the-deacon",
+    "nicanor-the-deacon",
+    "timon-the-deacon",
+    "parmenas-the-deacon",
+    "paul-the-apostle",
+    "john-the-theologian"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 27 decembrie — «Sfântul Apostol, Întâiul Mucenic și Arhidiacon Ștefan»",
+        "url": "https://doxologia.ro/27-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 27 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Încununatu-s-a creștetul tău cu diademă împărătească, pe urma luptelor pe care le-ai pătimit pentru Hristos Dumnezeu, luptătorule cel dintâi printre mucenici. Că vădind nebunia iudeilor, ai văzut pe Mântuitorul tău, de-a dreapta Tatălui. Pe Acela roagă-L totdeauna pentru sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Apostol, Arhidiacon Ștefan, glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-arhidiacon-stefan",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your head was crowned with a royal diadem for the contests you endured for Christ God, first among the martyrs in the struggle; for having convicted the madness of the Jews, you saw your Saviour at the right hand of the Father. Pray to him always for our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
