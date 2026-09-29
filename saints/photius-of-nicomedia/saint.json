@@ -9,6 +9,11 @@
     {
       "form": "Фотије",
       "lang": "sr"
+    },
+    {
+      "form": "Fotie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 august, «Sfântul Mucenic Fotie», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -41,8 +46,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 august — «Sfântul Mucenic Fotie»",
+        "url": "https://doxologia.ro/12-august",
+        "year": 2026
+      },
+      "note": "The Romanian life behind that line is the same narrative the folder already holds — Diocletian at Nicomedia, the count Anichit confessing before him, the furnace in which the two stood alive three hours and came out untouched — so this is a row on this folder and not a second Photius. Read 24 September 2026."
     },
     {
       "church": "greek",
@@ -123,6 +138,22 @@
       },
       "english": {
         "text": "Thy martyrs, O Lord, in their sufferings received incorruptible crowns from thee our God; for possessing thy strength, they cast down the tyrants and shattered also the feeble insolence of the demons. By their prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Mucenici Fotie și Anichit», Glasul 4 — the common troparion of martyrs, printed for the two of them together; «nesctricăciunii» is the page's own spelling",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-fotie-anichit",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, in their struggles received from you, our God, the crowns of incorruption; for having your strength they overthrew their torturers and broke the powerless insolence of the demons. At their prayers, Christ God, save our souls.",
         "rendered": "site"
       }
     }

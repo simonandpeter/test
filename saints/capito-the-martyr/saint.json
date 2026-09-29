@@ -5,6 +5,11 @@
     {
       "form": "Капитон",
       "lang": "ru"
+    },
+    {
+      "form": "Capiton",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 august, «Sfântul Mucenic Capiton», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 12 august — «Sfântul Mucenic Capiton»",
+        "url": "https://doxologia.ro/12-august",
+        "year": 2026
+      },
+      "note": "doxologia.ro keeps him on the same menologion day as the Russian calendar's «Мчч. Памфила и Капитона», and prints the pair on that day as the Russian calendar does, so this is a row on this folder. His page opens no Viață tab; what it prints of him is one sentence. Read 24 September 2026."
     },
     {
       "church": "greek",
