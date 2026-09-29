@@ -1,0 +1,50 @@
+{
+  "slug": "zoticus-the-feeder-of-lepers",
+  "display_name": "Zoticus the Feeder of Lepers",
+  "names": [
+    {
+      "form": "Zotic",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 30 decembrie, «Sfântul Cuvios Zotic», with the rank words left off; the page it links for his life is titled for «Sfântul Cuvios Zotic, hrănitorul de leproși», which is where the English epithet comes from."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 decembrie — «Sfântul Cuvios Zotic»",
+        "url": "https://doxologia.ro/30-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 30 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

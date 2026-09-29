@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'zotic zoticus-of-nicomedia zoticus-of-niculitel zoticus-of-the-ten-of-crete zoticus-the-feeder-of-lepers':
+    'four folders whose ro form is Zotic, on four Romanian days. The new one is Zoticus the feeder of lepers, 30 December. The other three were read on 30 September and are unchanged (read 30 September 2026)',
+  'teodora theodora-of-caesarea theodora-the-empress':
+    'two women: Theodora of Caesarea in Bithynia, Romanian 30 December; and Theodora the Empress, 11 February. The corpus other Theodoras — of Alexandria, 11 September, and of Thessalonica, 5 April — carry different ro forms and do not fold here (read 30 September 2026)',
+  'leon leo-of-catania leo-the-archimandrite leo-the-great leo-the-martyr-18-august':
+    'four folders whose ro form is Leon, on four Romanian days. The new one is Leo the archimandrite, 30 December. The other three were read on 29 September: Leo of Catania, 20 February; Leo the Great, 18 February; and the bare-line martyr of 18 August (read 30 September 2026)',
   'tadeu thaddeus-29-december thaddeus-apostle-of-the-seventy':
     'two men, and the rank is what the calendar gives to tell them apart: «Sfantul Cuvios Tadeu» on 29 decembrie, a bare line with no life and no troparion, venerable; and the apostle of the Seventy sent to Abgar, whose row sits on 26 mai (read 30 September 2026)',
   'marcel marcellus-of-sicily marcellus-of-the-akoimetoi marcellus-the-martyr-1-march marcellus-the-martyr-22-may':

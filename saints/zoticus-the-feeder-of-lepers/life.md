@@ -1,0 +1,17 @@
+# Zoticus the Feeder of Lepers
+
+Zoticus was born at old Rome, of an honoured and illustrious family, and from a child he made all the learning of his time his own. Being a learned man, he was brought from Rome to Constantinople by Constantine, the great among emperors, and honoured with the office of magister. Others of the leading men of Rome came to Constantinople with him, and the holy houses they built carry their names to this day.
+
+It is said that in those days leprosy troubled Constantinople, and that the emperor gave an order that all who fell ill of it be thrown into the depths of the sea. Zoticus, an honourable man, would neither see nor hear of such a thing; but, kindled with a divine longing, he went to the emperor and said: «Let the emperor give his servant much gold, to buy pearls and precious shining stones for the greatness and the honour of his empire, for his servant is a judge of such things».
+
+The emperor at once ordered that gold be given him; and that man, a lover of God and a most able workman of God, took the gold and went away full of gladness. With the gold he redeemed from drowning all those whom the prefect of the city handed over to the executioners to be killed: he paid a good price for them and took the lepers beyond Constantinople, to a hill then called Eleon, where he had made huts, and sheltered them in those. That trade, whose gain was divine, did not stay hidden, for the lepers were many and the saint brought them food in plenty every day, and many were afraid that this could bring a great famine on the city.
+
+After the death of the great and ever-remembered emperor Constantine, his son took the whole rule. The page's account of what followed — some two and a half thousand characters of it — was not read; what it prints after is the saint's death, which came when he was dragged behind mules by the emperor's order, so that his body was torn this way and that and his eyes came out of his head.
+
+In the place where this happened a spring of clear and good water came out at once, which heals every sickness and every infirmity, to the praise and glory and honour of God, the lover of men, and of his servant. The blessed one gave up his soul while he was still being dragged by the mules; and at that moment the mules stood still, though the executioners whipped them bitterly, and with a human voice, in the hearing of all, they reproached the cruelty and the madness of the emperor, calling him blind and without feeling, and said of the venerable one that he was to be buried in that very place.
+
+When the emperor saw and heard this he was filled with amazement, and prayed to God with tears, with sighs and with a broken heart to have mercy on him, crying out that he had done what he did in ignorance. He ordered at once that the martyr's body be buried with much care and with particular honour; and he ordered besides that a great building be raised in haste for the lepers at the imperial charge, with very many courts and outbuildings, to which he assigned the revenues of many estates. And Saint Zoticus, from then until today, by the grace of God the lover of men, has not ceased to work numberless wonders.
+
+doxologia.ro's line for the day names him «Sfântul Cuvios Zotic» and gives no year for his birth or his death, and its page for him prints no hymn.
+
+*After doxologia.ro's calendar for 30 decembrie — [the day](https://doxologia.ro/30-decembrie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-zotic-hranitorul-de-leprosi); read 28 September 2026.*
