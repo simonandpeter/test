@@ -1,0 +1,13 @@
+# Artemius
+
+Artemius was an Egyptian by birth and a soldier under Constantine the Great and his son Constantius. The Romanian life says he was a commander in Constantine's army, valiant in war, and that he saw with his own eyes the sign of the Cross in the sky before the battle against Maxentius; from that hour, it says, he was confirmed in the faith and conquered by the power of the Cross. When Constantine died and the empire was divided among his three sons, Artemius served Constantius, who held the East, Constantinople and Egypt.
+
+Under Julian the Apostate he suffered. The life gives a long account of Julian's descent — his secret sacrifices, the grudge he bore his cousins, his claim on the throne — and then brings Artemius before him at Antioch. Julian offered him the high priesthood of the gods and a place second to himself in the empire if he would sacrifice to Apollo of Daphne. Artemius answered that he would not serve the idols, and defended the memory of Constantine against the emperor's charges point by point.
+
+He was stripped and his sides burned with heated spits and his back torn with iron, and he was sent to prison to be starved. In that prison, the life says, Christ appeared to him and healed his wounds, and from the day he was thrown in he ate nothing earthly until his death. Meanwhile Julian went to Daphne to ask Apollo about the Persian war and got no answer, because the relics of [Babylas](/saints/babylas-of-antioch) and of the three youths who suffered with him lay near; and when the relics were removed at his order, fire fell from heaven and burnt the temple with its idol.
+
+Brought out again, Artemius laughed at a god who could not save himself from fire, and told Julian that his own destruction was near. Julian had a great stone split, laid the saint between the halves and let the upper half fall. A day and a night he lay so, his bones crushed and his eyes forced out; and when the stone was lifted he was found alive and walking, flattened like a board, but still able to speak.
+
+He was led out to be beheaded, prayed facing east, heard a voice bidding him enter in with the saints, and was struck down by a soldier's sword on the twentieth day of October, on a Friday. A deaconess of the church of Antioch named Arista asked his body of the judges, anointed it with costly spices and sent it to Constantinople for burial, where many healings followed. Julian died in Persia soon after, as Artemius had told him to his face he would.
+
+*After doxologia.ro's calendar for 20 octombrie — [the day](https://doxologia.ro/20-octombrie) and [the life](https://doxologia.ro/sfantul-mare-mucenic-artemie); read 24 September 2026.*
