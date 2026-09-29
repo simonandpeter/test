@@ -85,5 +85,23 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Ca un neprihănit atlet al nevoinței și adevărat ostaș al lui Hristos Dumnezeul nostru, luptând până la sânge lupta cea bună împotriva patimilor în această viață pământească, nevoindu-te în cântare, în priveghere și în postire, te-ai făcut pildă ucenicilor tăi. Pentru aceasta, Și-a făcut sălaș în tine Duhul Sfânt, a Cărui lucrare te-a împodobit cu frumusețe strălucitoare. Cel ce ai dobândit mare îndrăzneală înaintea Sfintei Treimi, pomenește turma pe care cu înțelepciune ai adunat-o și nu uita să-i cercetezi pe fiii tăi, așa cum ai făgăduit, Sfinte Părinte Serghie.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Serghie de la Radonej",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-serghie-de-la-radonej",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a blameless athlete of the ascetic life and a true soldier of Christ our God, contending unto blood in this earthly life in the good fight against the passions, labouring in psalmody, in vigil and in fasting, thou didst become a pattern to thy disciples. Therefore the Holy Spirit made His dwelling in thee, and by His working adorned thee with a shining beauty. O thou who hast gained great boldness before the Holy Trinity, remember the flock thou didst wisely gather, and forget not to visit thy children, as thou didst promise, O holy Father Sergius.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
