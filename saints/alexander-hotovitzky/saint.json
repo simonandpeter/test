@@ -1,0 +1,70 @@
+{
+  "slug": "alexander-hotovitzky",
+  "display_name": "Alexander Hotovitzky",
+  "names": [
+    {
+      "form": "Alexandru Hotovitzky",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 decembrie, «Sfântul Preot Mărturisitor Alexandru Hotovitzky», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "presbyter",
+    "confessor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1872,
+      "latest": 1872,
+      "display": "1872",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut la 11 februarie 1872, în orașul Kremenetz, în familia evlavioasă a protopopului Alexandru.»"
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "doxologia.ro: «A fost condamnat la moarte și împușcat pe 19 august 1937.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 decembrie — «Sfântul Preot Mărturisitor Alexandru Hotovitzky»",
+        "url": "https://doxologia.ro/4-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 4 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "tikhon-of-moscow"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

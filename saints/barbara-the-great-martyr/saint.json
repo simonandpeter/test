@@ -9,6 +9,11 @@
     {
       "form": "Βαρβάρα",
       "lang": "el"
+    },
+    {
+      "form": "Varvara",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 decembrie, «Sfânta Mare Muceniță Varvara», with the rank words left off."
     }
   ],
   "sex": "female",
@@ -45,8 +50,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 4 decembrie — «Sfânta Mare Muceniță Varvara»",
+        "url": "https://doxologia.ro/4-decembrie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -62,5 +76,23 @@
   "historicity": "traditional",
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Pe Sfânta Mare Muceniţă Varvara să o cin­stim; că a sfărâmat cursele vrăjmasului şi ca o vrăbioară s-a izbăvit dintr-însele, cu ajutorul Armei Crucii, Preacinstita.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Mari Mucenițe Varvara",
+        "url": "https://doxologia.ro/troparul-sfintei-mari-mucenite-varvara",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour the holy great martyr Barbara, for she broke the snares of the enemy and was delivered out of them like a sparrow, by the help of the weapon of the Cross, the all-honoured one.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
