@@ -6,6 +6,11 @@
       "form": "Eufrasia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 ianuarie."
+    },
+    {
+      "form": "Ευφρασία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιανουαρίου, «Αγία Ευφρασία», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -44,8 +49,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιανουαρίου — «Αγία Ευφρασία»",
+        "url": "https://www.saint.gr/01/19/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

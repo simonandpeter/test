@@ -1,0 +1,58 @@
+{
+  "slug": "theodore-of-novgorod",
+  "display_name": "Theodore of Novgorod",
+  "names": [
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιανουαρίου, «Άγιος Θεόδωρος του Νόβγκοροντ», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "fool-for-christ"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1392,
+      "latest": 1392,
+      "display": "1392",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη το έτος 1392 μ.Χ. στη Ρωσία», and the page's own heading, «Αγιος Θεοδωρος Του Νοβγκοροντ (; - 1392)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιανουαρίου — «Άγιος Θεόδωρος του Νόβγκοροντ»",
+        "url": "https://www.saint.gr/01/19/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

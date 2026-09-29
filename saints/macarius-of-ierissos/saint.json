@@ -1,0 +1,61 @@
+{
+  "slug": "macarius-of-ierissos",
+  "display_name": "Macarius of Ierissos",
+  "names": [
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιανουαρίου, «Όσιος Μακάριος Επίσκοπος Ιερισσού», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 395,
+      "latest": 408,
+      "display": "between 395 and 408",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Μακάριος κοιμήθηκε οσίως με ειρήνη επί της βασιλείας του Αρκαδίου (395-408 μ.Χ).» The reign is what the page gives; it names no year."
+    }
+  },
+  "related": [
+    "constantine-the-great"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιανουαρίου — «Όσιος Μακάριος Επίσκοπος Ιερισσού»",
+        "url": "https://www.saint.gr/01/19/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "macarius-kalogeras",
+  "display_name": "Macarius Kalogeras",
+  "names": [
+    {
+      "form": "Μακάριος ο Καλογεράς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιανουαρίου, «Άγιος Μακάριος ο Καλογεράς», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "deacon",
+    "preacher"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1688,
+      "latest": 1688,
+      "display": "1688",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην Πάτμο το 1688 μ.Χ.»"
+    },
+    "death": {
+      "earliest": 1737,
+      "latest": 1737,
+      "display": "1737",
+      "basis": "traditional",
+      "note": "saint.gr: «απεβίωσε στην Πάτμο το 1737 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιανουαρίου — «Άγιος Μακάριος ο Καλογεράς»",
+        "url": "https://www.saint.gr/01/19/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

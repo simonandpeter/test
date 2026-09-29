@@ -6,6 +6,11 @@
       "form": "Meletie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 ianuarie, «Sfântul Meletie Mărturisitorul»."
+    },
+    {
+      "form": "Μελέτιος ο Γαλησιώτης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιανουαρίου, «Όσιος Μελέτιος ο Γαλησιώτης ο Ομολογητής», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιανουαρίου — «Όσιος Μελέτιος ο Γαλησιώτης ο Ομολογητής»",
+        "url": "https://www.saint.gr/01/19/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr gives his years as 1206 and 1283 at the age of seventy-seven — «γεννήθηκε το έτος 1206 μ.Χ.» and «κοιμήθηκε με ειρήνη το 1283 μ.Χ. σε ηλικία 77 ετών» (https://www.saint.gr/1136/saint.aspx) — where doxologia.ro, cited on this folder's Romanian row, gives about 1209 and 1286. The readings are left standing side by side and the folder's dates are not changed."
     },
     {
       "church": "serbian",

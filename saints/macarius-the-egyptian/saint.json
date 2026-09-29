@@ -6,6 +6,11 @@
       "form": "Macarie Egipteanul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 ianuarie."
+    },
+    {
+      "form": "Μακάριος ο Αιγύπτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιανουαρίου, «Όσιοι Μακάριος ο Αιγύπτιος και Μακάριος ο Αλεξανδρεύς», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -15,7 +20,8 @@
     "presbyter"
   ],
   "related": [
-    "anthony-the-great"
+    "anthony-the-great",
+    "macarius-of-alexandria"
   ],
   "hymns": [
     {
@@ -50,6 +56,38 @@
         "text": "Leading a blessed life in the world, thou wast counted worthy to dwell in the land of the meek with the ranks of the blessed, O God-bearing Saint Macarius; and dwelling in the wilderness as in a city, thou didst receive from God the grace of wonders. Therefore do we honour thee.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Τῆς ἐρήμου πολίτης καί ἐν σώματι ἄγγελος, καί θαυματουργός ἀνεδείχθης, θεοφόρε Πατήρ ἡμῶν Μακάριε· νηστείᾳ ἀγρυπνίᾳ προσευχῇ, οὐράνια χαρίσματα λαβών, θεραπεύεις τούς νοσοῦντας, καί τάς ψυχάς τῶν πίστει προστρεχόντων σοι. Δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σέ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διά σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος α’, on the page of Όσιοι Μακάριος ο Αιγύπτιος και Μακάριος ο Αλεξανδρεύς; the hymn is the common of a venerable ascetic, printed there under the two names",
+        "url": "https://www.saint.gr/1141/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A citizen of the wilderness and an angel in the body wast thou shown to be, and a worker of wonders, our God-bearing father Macarius; by fasting, vigil and prayer thou didst receive heavenly gifts, and thou healest the sick and the souls of those who run to thee in faith. Glory to him who gave thee strength, glory to him who crowned thee, glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’. Ἐπεφάνης σήμερον.",
+      "text": "Ἐν τῷ οἴκῳ Κύριος, τῆς ἐγκρατείας, ἀληθῶς σε ἔθετο, ὡσπερ ἀστέρα ἀπλανῆ, φωταγωγοῦντα τά πέρατα, Πάτερ Πατέρων, Μακάριε Ὅσιε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, «Ἐπεφάνης σήμερον», on the page of Όσιοι Μακάριος ο Αιγύπτιος και Μακάριος ο Αλεξανδρεύς",
+        "url": "https://www.saint.gr/1141/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Truly the Lord set thee in the house of abstinence as a star that does not wander, lighting the ends of the earth, O father of fathers, venerable Macarius.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
@@ -74,8 +112,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιανουαρίου — «Όσιοι Μακάριος ο Αιγύπτιος και Μακάριος ο Αλεξανδρεύς»",
+        "url": "https://www.saint.gr/01/19/index.aspx",
+        "year": 2026
+      },
+      "note": "Commemorated with Macarius of Alexandria on one page and under one pair of hymns."
     },
     {
       "church": "serbian",
@@ -85,5 +133,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 301,
+      "latest": 301,
+      "display": "301",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Μακάριος ο Αιγύπτιος γεννήθηκε το 301 μ.Χ. σε κάποιο χωριό της Άνω Αιγύπτου»."
+    },
+    "death": {
+      "earliest": 391,
+      "latest": 391,
+      "display": "391",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη σε ηλικία 90 ετών το έτος 391 μ.Χ.». doxologia.ro, cited on this folder's Romanian row, gave no year at all."
+    }
   }
 }

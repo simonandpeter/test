@@ -7,6 +7,11 @@
       "form": "Arsenie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 ianuarie, «Sfântul Ierarh Arsenie, Arhiepiscop de Corfu»."
+    },
+    {
+      "form": "Αρσένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιανουαρίου, «Άγιος Αρσένιος Αρχιεπίσκοπος Κερκύρας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -52,8 +57,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιανουαρίου — «Άγιος Αρσένιος Αρχιεπίσκοπος Κερκύρας»",
+        "url": "https://www.saint.gr/01/19/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -63,5 +77,23 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος δ'. Ταχύ προκατάλαβε.",
+      "text": "Σοφίας τας χάριτας, καρποφορήσας πιστώς, ποιμήν ιερώτατος, της Εκκλησίας Χριστού, εδείχθης Αρσένιε, όθεν εν τη Κέρκυρα, ευκλεώς διαπρέψας, ίθυνας τον λαόν σου, προς νομάς αληθείας. Και νυν ταις σαις ικεσίαις, σώζε τους δούλους.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ήχος δ', «Ταχύ προκατάλαβε», on the page of Άγιος Αρσένιος Αρχιεπίσκοπος Κερκύρας; monotonic as the page prints it, and the last line is left short there",
+        "url": "https://www.saint.gr/1137/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having faithfully borne the fruit of the graces of wisdom, thou wast shown a most sacred shepherd of the Church of Christ, O Arsenius; and so, shining gloriously in Corfu, thou didst guide thy people to the pastures of truth. And now by thine entreaties save thy servants.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

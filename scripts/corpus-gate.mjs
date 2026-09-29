@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδωροσ theodore-companion-of-stephen theodore-of-kandavla theodore-of-novgorod theodore-of-tamasos theodore-prince-of-yaroslavl theodore-the-envoy-of-nicomedia':
+    'six now. The new one is Theodore of Novgorod, the fool for Christ dead 1392, kept on 19 Ιανουαρίου; the other five are read in the el-01-11 entry for this name form. A fourteenth-century Russian fool for Christ is none of the four martyrs nor the prince of Yaroslavl.',
+  'μαξιμοσ maximus-brother-of-dometius maximus-of-kapsokalyvia maximus-of-marcianopolis maximus-of-totma maximus-of-ungrovlachia maximus-son-of-paul-and-tatta':
+    'six now. The new one is the brother of Dometius on 19 Ιανουαρίου, whose page gives no year; the other five are read in the el-01-16 and el-01-18 entries for this name form. Six men on six Greek days.',
+  'μακαριοσ macarius-companion-of-eudoxius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-of-ierissos macarius-of-kios macarius-of-pisma':
+    'six now, and the new one is a bishop: Macarius of Ierissos, whose page puts him between 395 and 408, kept on 19 Ιανουαρίου. The other five are read in the el-01-10 and el-01-18 entries for this name form. Six men, six days.',
+  'δομετιοσ dometius-brother-of-maximus dometius-of-zographou':
+    'two men. The 19 Ιανουαρίου Dometius is one of two brothers, with no year on his page; the corpus keeps Dometius of Zographou among the Athonite martyrs of 1275 to 1282, on the Romanian 10 October and the Greek 22 September. Neither page names the other and the days are four months apart.',
+  'brother dometius maximus dometius-brother-of-maximus maximus-brother-of-dometius':
+    'one line folded onto itself, the fourth of its kind in this wave. saint.gr names Dometius and Maximus as brothers on 19 Ιανουαρίου and the synaxis ruling makes that two folders, each display name carrying the other, so the folded key holds both forenames whichever of the two it is read from.',
   'μαξιμοσ maximus-of-kapsokalyvia maximus-of-marcianopolis maximus-of-totma maximus-of-ungrovlachia maximus-son-of-paul-and-tatta':
     'five now. The new one is Maximus of Ungrovlachia, bishop and monk, dead 1546, whom saint.gr keeps on 18 Ιανουαρίου; the other four are read in the el-01-16 entry for this name form. Five men, five days.',
   'ιωακειμ joachim-of-tarnovo joachim-the-righteous':
@@ -1185,7 +1195,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '249'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '257'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

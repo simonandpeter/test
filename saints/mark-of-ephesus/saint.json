@@ -7,6 +7,11 @@
       "form": "Marcu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 ianuarie, «Sfântul Ierarh Marcu, Mitropolitul Efesului»."
+    },
+    {
+      "form": "Μάρκος ο Ευγενικός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιανουαρίου, «Άγιος Μάρκος ο Ευγενικός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -54,8 +59,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιανουαρίου — «Άγιος Μάρκος ο Ευγενικός»",
+        "url": "https://www.saint.gr/01/19/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -65,5 +79,23 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος γ’. Θείας πίστεως.",
+      "text": "Θείας πίστεως, ομολογία, μέγον εύρατο, η Εκκλησία, ζηλωτήν σε θειε Μάρκε πανεύφημε, υπερμαχούντα πατρώου φρονήματος, και καθαιρούντα του σκότους υψώματα. Όθεν άφεσιν, Χριστόν τον θεόν ικέτευε, δωρήσασθαι ημίν τοις σε γεραίρουσι.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ήχος γ’, «Θείας πίστεως», on the page of Άγιος Μάρκος ο Ευγενικός; monotonic as the page prints it",
+        "url": "https://www.saint.gr/1135/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "In the confession of the divine faith the Church found thee a great zealot, O divine and all-lauded Mark, championing the mind of the fathers and pulling down the high towers of darkness. Wherefore entreat Christ God to grant forgiveness to us who honour thee.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
