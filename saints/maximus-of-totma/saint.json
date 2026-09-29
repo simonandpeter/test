@@ -1,0 +1,66 @@
+{
+  "slug": "maximus-of-totma",
+  "display_name": "Maximus of Totma",
+  "sex": "male",
+  "types": [
+    "fool-for-christ",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Μάξιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Ιανουαρίου, «Άγιος Μάξιμος της Τότμα», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1565,
+      "latest": 1565,
+      "display": "1565",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Μάξιμος γεννήθηκε το έτος 1565 μ.Χ.»."
+    },
+    "death": {
+      "earliest": 1650,
+      "latest": 1650,
+      "display": "1650",
+      "basis": "attested",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το 1650 μ.Χ.», and the page's own head «Αγιος Μαξιμος Της Τοτμα (1565 - 1650)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Ιανουαρίου — «Άγιος Μάξιμος της Τότμα»",
+        "url": "https://www.saint.gr/01/16/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

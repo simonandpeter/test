@@ -6,6 +6,11 @@
       "form": "Danact",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 ianuarie."
+    },
+    {
+      "form": "Δάναξ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Ιανουαρίου, «Άγιος Δάναξ ο Αναγνώστης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -43,8 +48,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Ιανουαρίου — «Άγιος Δάναξ ο Αναγνώστης»",
+        "url": "https://www.saint.gr/01/16/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

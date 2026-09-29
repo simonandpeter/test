@@ -1,0 +1,60 @@
+{
+  "slug": "damascene-of-gabrovo",
+  "display_name": "Damascene of Gabrovo",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "hieromartyr",
+    "hieromonk"
+  ],
+  "names": [
+    {
+      "form": "Δαμασκηνός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Ιανουαρίου, «Άγιος Δαμασκηνός νέος Ιερομάρτυρας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1771,
+      "latest": 1771,
+      "display": "1771",
+      "basis": "attested",
+      "note": "saint.gr: «Έτσι στις 16 Ιανουαρίου 1771 μ.Χ., δέχτηκε τον μαρτυρικό θάνατο με αγχόνη αφού πρώτα προσευχήθηκε», and the page's own head «Αγιος Δαμασκηνος Νεος Ιερομαρτυρας (; - 1771)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Ιανουαρίου — «Άγιος Δαμασκηνός νέος Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/01/16/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "honoratus-of-arles",
+  "display_name": "Honoratus of Arles",
+  "office": "Archbishop of Arles",
+  "sex": "male",
+  "types": [
+    "archbishop",
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Ονωράτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Ιανουαρίου, «Όσιος Ονωράτος Αρχιεπίσκοπος Αρελάτης», with the rank words and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 429,
+      "latest": 429,
+      "display": "429",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Όσιος Ονωράτος κοιμήθηκε με ειρήνη το έτος 429 μ.Χ., τη χρονιά που ο Αέτιος απέκρουσε στην πόλη της Αρελάτης τους Βησιγότθους»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Ιανουαρίου — «Όσιος Ονωράτος Αρχιεπίσκοπος Αρελάτης»",
+        "url": "https://www.saint.gr/01/16/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
