@@ -106,6 +106,22 @@
         "text": "Like a very great star thou didst shine upon the world, spreading abroad the rays of thy contests and thy wonders upon all who cry: Rejoice, O Callistratus, glory of martyrs.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nestricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinţilor Mucenici Calistrat şi Ghimnasie şi al celor împreună cu dânşii",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-calistrat-ghimnasie-al-celor-impreuna-cu-dansii",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their struggles received crowns of incorruption from Thee our God. For having Thy strength, they overthrew the tyrants and broke in pieces the feeble daring of the demons. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
     }
   ]
 }
