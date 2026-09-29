@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'victor victor-of-corinth victor-of-damascus victor-presbyter-martyr-1918':
+    'three men called Victor. The new one is Victor of Damascus, martyred with Stephanida, Romanian 11 November. The other two were read on 19 September: one of the seven of Corinth, 31 January, and the Russian presbyter killed in 1918, who has no Romanian row (read 30 September 2026)',
+  'stefan stefan-brancoveanu stephen-of-decani stephen-of-triglia':
+    'three men called Stefan, on three Romanian days. The new one is Stephen of Decani, king of Serbia, 11 November. The others were read on 29 September: the second son of Constantin Brancoveanu, 16 August, and the abbot of Triglia, 28 March (read 30 September 2026)',
+  'mina menas-of-egypt menas-of-zographou':
+    'two men: Menas the Egyptian, the soldier martyred at Cotyaeum under Diocletian, Romanian 11 November; and Menas of Zographou, one of the venerable-martyrs of that house, 10 October (read 30 September 2026)',
   'visarion bessarion-of-egypt bessarion-of-lainici bessarion-the-confessor':
     'three folders whose ro form is Visarion, on three Romanian days. The new one is Bessarion of Lainici, the Romanian hieromonk of the Jiu valley, 10 November. The others were read on 29 September: the Serb who resisted the union in Transylvania, 21 October, and Bessarion of Egypt, hermit, 20 February (read 30 September 2026)',
   'arsenie arsenios-of-cappadocia arsenios-of-paros arsenius-of-corfu':

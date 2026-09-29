@@ -1,0 +1,67 @@
+{
+  "slug": "menas-of-egypt",
+  "display_name": "Menas of Egypt",
+  "names": [
+    {
+      "form": "Mina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 noiembrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "great-martyr",
+    "soldier"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 11 noiembrie — «Sfântul Mare Mucenic Mina»",
+        "url": "https://doxologia.ro/11-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Mucenicul Tău, Doamne, Mina întru nevoința sa, cununa nestricăciunii a luat de la Tine, Dumnezeul nostru, că având puterea Ta, pe chinuitori a învins, zdrobit-a și ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuiește sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mare Mucenic Mina (a common of a single martyr, with his name in it; the page prints no glas)",
+        "url": "https://doxologia.ro/troparul-sfantului-mare-mucenic-mina",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Menas, O Lord, in his contest received from Thee, our God, the crown of incorruption; for having Thy power he overthrew the tormentors, and broke the powerless presumption of the demons. By his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

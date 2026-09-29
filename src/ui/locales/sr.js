@@ -871,6 +871,7 @@ export const sr = {
     'King of Georgia': 'Краљ Грузије',
     'King of India': 'Краљ индијски',
     'King of Judah': 'Краљ јудејски',
+    'King of Serbia': 'Краљ Србије',
     'King of the East Saxons': 'Краљ источних Саса',
     'King of the Serbs': 'Краљ српски',
     'Magistros and Logothete': 'Магистар и логотет',

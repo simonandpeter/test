@@ -1,0 +1,13 @@
+# Stephanida
+
+In the reign of Antoninus, emperor of Rome, a woman of the people named Stephanida, a Christian and the wife of one of the soldiers, saw two beautiful crowns coming down from heaven, one to the head of the Martyr [Victor](/saints/victor-of-damascus) and the other to her own; and she began with a loud voice to call him blessed. Blessed art thou, Victor, she said, and blessed are thy sufferings for Christ; thy sacrifice is acceptable to God as Abel's was, for thou hast offered thyself to Him with an upright heart.
+
+She went on through the Scriptures: God has received thee as He received Enoch the righteous man, whom He took to paradise that he should not taste death for a time; thou art righteous as Noah was, full of good works and perfect in his generation; thou hast believed as Abraham did, and hast brought thyself as a sacrifice to God as Isaac was brought; thou hast had labours as Jacob had, and hast been made most wise as Joseph was, to whom it was given to tell beforehand the things that were to be; thou hast borne temptations as Job did, who after much suffering overcame the devil; thou hast followed Isaiah, whom Manasseh cut asunder with a saw; the fire has not touched thee, as it did not touch the three young men in the furnace of Nebuchadnezzar; thou hast set thy hope on God as David the son of Jesse did.
+
+For behold, she said, I see two crowns sent from heaven, one greater and fairer and one smaller: the greater is brought to thee by twelve angels, and the smaller to me, since I too am the weaker vessel; but I am ready to enter the contest and to endure manfully for our Lord, and to lay down my soul for Him.
+
+While she was saying this the commander heard her and ordered those standing by to take her and bring her before him; and looking at her proudly he asked who she was, and she answered that she was a Christian. He asked her then about her name and her age; and the Romanian life goes on from there to her end and Victor's.
+
+At the last her holy soul flew away like a bird and found its nest in heaven and the crown prepared for her. So she suffered together with Victor in the city of Damascus, on the eleventh day of the month of November; and now, the life says, they dwell both together in that city which needs neither sun nor moon to light it, for the glory of God lightens it and the Lamb of God is its lamp. The page gives no year; it places her by the reign of Antoninus and by nothing else.
+
+*After doxologia.ro's calendar for 11 noiembrie — [the day](https://doxologia.ro/11-noiembrie) and [the life](https://doxologia.ro/sfanta-mucenita-stefanida); read 25 September 2026.*

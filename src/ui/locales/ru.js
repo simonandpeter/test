@@ -888,6 +888,7 @@ export const ru = {
     'King of Georgia': 'Царь Грузии',
     'King of India': 'Царь Индийский',
     'King of Judah': 'Царь Иудейский',
+    'King of Serbia': 'Царь Сербии',
     'King of the East Saxons': 'Царь восточных саксов',
     'King of the Serbs': 'Царь сербов',
     'Magistros and Logothete': 'Магистр и логофет',

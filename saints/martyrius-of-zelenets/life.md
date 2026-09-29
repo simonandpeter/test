@@ -8,4 +8,4 @@ After seven years of asceticism and prayer he took with him, with his spiritual 
 
 One night he saw in a dream the figure of the Virgin Mary floating upon the water, and the Archangel Gabriel called him to go and find the holy icon; going down to the lake he saw the icon of the Most Holy Theotokos floating there, took it up with reverence, and carried it to his place of asceticism. In 1570 he was ordained presbyter by the Archbishop of Novgorod, and in 1582 he was made abbot. He fell asleep in the Lord in 1603, crying out to God for the last time: “Lord, give peace to all Orthodox Christians.”
 
-*After doxologia.ro's calendar for 1 martie — [the day](https://doxologia.ro/1-martie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-martirie-din-zelenesk); read 19 September 2026.*
+*After doxologia.ro's calendar for 1 martie — [the day](https://doxologia.ro/1-martie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-martirie-din-zelenesk); read 19 September 2026; doxologia.ro's calendar for 11 noiembrie names him a second time and points to the same life — [that day](https://doxologia.ro/11-noiembrie); read 25 September 2026.*

@@ -1,0 +1,50 @@
+{
+  "slug": "stephen-of-decani",
+  "display_name": "Stephen of Dečani",
+  "office": "King of Serbia",
+  "names": [
+    {
+      "form": "Ștefan",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 noiembrie, «Sfântul Ștefan de la Decani, regele Serbiei»; the bare personal name, without the epithet."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "king"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 11 noiembrie — «Sfântul Ștefan de la Decani, regele Serbiei»",
+        "url": "https://doxologia.ro/11-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 11 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026) — a Serbian king is the likeliest of these four calendars to hold him, and that page has not been opened."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

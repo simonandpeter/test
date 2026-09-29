@@ -870,6 +870,7 @@ export const el = {
     'King of Georgia': 'Βασιλιάς της Γεωργίας',
     'King of India': 'Βασιλιάς της Ινδίας',
     'King of Judah': 'Βασιλιάς του Ιούδα',
+    'King of Serbia': 'Βασιλιάς της Σερβίας',
     'King of the East Saxons': 'Βασιλιάς των Ανατολικών Σαξόνων',
     'King of the Serbs': 'Βασιλιάς των Σέρβων',
     'Magistros and Logothete': 'Μάγιστρος και Λογοθέτης',

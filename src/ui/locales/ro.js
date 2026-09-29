@@ -869,6 +869,7 @@ export const ro = {
     'King of Georgia': 'Rege al Georgiei',
     'King of India': 'Rege al Indiei',
     'King of Judah': 'Rege al lui Iuda',
+    'King of Serbia': 'Rege al Serbiei',
     'King of the East Saxons': 'Rege al saxonilor de răsărit',
     'King of the Serbs': 'Rege al sârbilor',
     'Magistros and Logothete': 'Magistru și logothet',
