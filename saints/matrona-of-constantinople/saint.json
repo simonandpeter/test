@@ -1,0 +1,68 @@
+{
+  "slug": "matrona-of-constantinople",
+  "display_name": "Matrona of Constantinople",
+  "names": [
+    {
+      "form": "Matrona",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 noiembrie."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 9 noiembrie — «Sfânta Cuvioasă Matrona»",
+        "url": "https://doxologia.ro/9-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru tine, maică, cu osârdie s-a mântuit cel după chip; că, luând crucea, ai urmat lui Hristos; şi lucrând, ai învăţat să nu se uite la trup, căci este trecător; ci să poarte grijă de suflet, de lucrul cel nemuritor. Pentru aceasta şi cu îngerii împreună se bucură, Preacuvioasă Maică Matrona, duhul tău.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Cuvioase Matrona (a common of a venerable mother, with her name in the last clause)",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-matrona",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O mother, that which was made in God's image was saved with diligence; for taking up the cross thou didst follow Christ, and working thou didst teach that the flesh is not to be regarded, for it passes away, but that care is to be taken for the soul, a thing immortal. Therefore thy spirit rejoices together with the angels, most venerable mother Matrona.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

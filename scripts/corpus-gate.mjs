@@ -115,6 +115,22 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'simeon simeon-martyr-16-may simeon-metaphrastes simeon-of-persia simeon-the-fool-for-christ symeon-kinsman-of-the-lord symeon-the-god-receiver':
+    'six folders whose ro form is Simeon, on six Romanian days. The new one is Simeon Metaphrastes, born at Constantinople in 886 under Leo the Wise, who gathered the lives of the saints, 9 November. The others are unchanged: the bare-line martyr of 16 May, Simeon of Persia, 17 April, Simeon the Fool for Christ, 21 July, Symeon the kinsman of the Lord, 27 April, and Symeon the God-receiver, 3 February (read 30 September 2026)',
+  'neofit neophytos-of-docheiariou neophytus-5-may neophytus-of-nicaea neophytus-of-urbnisi':
+    'four folders whose ro form is Neofit, on four Romanian days. The new one is Neophytos of Docheiariou, nephew of Euthymius the Cellarer, 9 November. The others were read on 30 September: the bare-line martyr of 5 May, Neophytus of Nicaea, 21 January, and the bishop of Urbnisi, 28 October (read 30 September 2026)',
+  'ioan john-archbishop-of-constantinople john-colobos john-companion-of-simeon john-disciple-of-gregory-the-decapolite john-of-antioch john-of-edessa john-of-ephesus john-of-gothia john-of-nea-moni john-of-the-brazen-gate john-of-the-forty-martyrs john-of-the-old-lavra john-of-valaam john-son-of-xenophon john-the-theologian':
+    'fifteen folders whose ro form is Ioan, on fifteen Romanian days. Two are new since the fold was last read: John Colobos, the Egyptian ascetic whose epithet means the dwarf, 9 November, and John the archbishop of Constantinople, who gained his Romanian row on 30 august. The other thirteen were read on 25 and 28 September and on 29 September and are unchanged (read 30 September 2026)',
+  'eftimie euthymius-of-dimitsana euthymius-of-madytos euthymius-of-vatopedi euthymius-of-zographou euthymius-the-cellarer jacob-of-putna':
+    'six folders whose ro form is Eftimie, on six Romanian days. The new one is Euthymius the Cellarer, the founder of Docheiariou and uncle of Neophytos, 9 November. The others are unchanged: Euthymius of Dimitsana, 22 March; Euthymius of Madytos, 5 May; Euthymius of Vatopedi with the twelve, 4 January; Euthymius of Zographou, 10 October; and Jacob of Putna, whose monastic name folds him in, 15 May (read 30 September 2026)',
+  'matrona matrona-of-ancyra matrona-of-constantinople matrona-of-hurezi':
+    'three women called Matrona, on three Romanian days. The new one is Matrona of Constantinople, born at Perge in Pamphylia and married to Dometian, who left husband and house for the ascetic life, 9 November. The others are Matrona of Ancyra, virgin and martyr, 18 May, and Matrona of Hurezi, abbess, 5 May (read 30 September 2026)',
+  'porfirie porphyrius-martyr-9-november porphyrius-of-gaza':
+    'two men: the martyr the Romanian 9 noiembrie keeps with Onesiphorus, and Porphyrius of Gaza, bishop, 26 February (read 30 September 2026)',
+  'claudiu claudius-husband-of-hilaria claudius-martyr-9-november claudius-of-corinth':
+    'three men called Claudiu, on three Romanian days. The new one is a calendar line of 9 noiembrie, kept with Castor, Sempronian and Nicostratus, and his own life says he is not the Claudius of Corinth, not the husband of Hilaria and not one of the Forty. The others are unchanged: the husband of Hilaria, 19 March, and Claudius of Corinth, 31 January (read 30 September 2026)',
+  'castor castor-martyr-9-november castor-the-martyr':
+    'two men, both thin, and doxologia keeps only the November one. The new folder is a calendar line — «Sfantul Mucenic Castor», 9 noiembrie, no Viata tab, and a Tropar that is the common of the martyrs — and the page names him with Claudius, Sempronian and Nicostratus, the four the day keeps together. The corpus other Castor is the Greek synaxarion 18 September, which says it has no details of his life (read 30 September 2026)',
   'lazar lazar-of-serbia lazarus-of-mount-galesion':
     'two men: the stylite of Mount Galesion near Ephesus, venerable, Romanian 7 November; and Lazar, prince of Serbia, killed at Kosovo, Romanian 15 June (read 30 September 2026)',
   'luca luke-of-crimea luke-of-emesa luke-of-sicily luke-the-evangelist':

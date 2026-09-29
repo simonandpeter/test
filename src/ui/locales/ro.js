@@ -870,6 +870,7 @@ export const ro = {
     'King of Judah': 'Rege al lui Iuda',
     'King of the East Saxons': 'Rege al saxonilor de răsărit',
     'King of the Serbs': 'Rege al sârbilor',
+    'Magistros and Logothete': 'Magistru și logothet',
     'Martyr': 'Mucenic',
     'Metropolitan of Alma-Ata': 'Mitropolit de Alma-Ata',
     'Metropolitan of Dabar-Bosnia': 'Mitropolit de Dabar-Bosnia',

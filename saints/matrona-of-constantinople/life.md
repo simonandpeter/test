@@ -1,0 +1,15 @@
+# Matrona of Constantinople
+
+Matrona was born at Perge in Pamphylia of believing parents, and when she came of age she was married to an honourable man of good family named Dometian, and not long after became the mother of a daughter whom she named Theodotia. Then she went with her husband to Byzantium, where, going to the churches of God and praying earnestly, she came to know a maiden named Eugenia, who kept her virginity in fasting and labour and gave herself to prayer day and night.
+
+Envying that life, Matrona stopped leaving the church, and stayed there in prayer from morning until evening, going home at nightfall and returning very early; and she wore down with abstinence and fasting a body then in the flower of its youth, for she was twenty-five, asking God to release her from the yoke of marriage so that she might serve Him unhindered.
+
+Dometian, seeing his wife leave the house every morning and come back only in the evening, began to suspect her and to think evil, believing that she went not to prayer but elsewhere; and he grew angry and kept her in the house with reproaches and would not let her go out. She begged him with tears not to hinder her going to church, and did not get what she asked, and was in great sorrow, for she would rather be in the house of her God than dwell in the tents of sinners. Once only she prevailed on him, and he let her go to pray.
+
+Running to the Church of the Holy Apostles, she opened her heart before God and begged Him with humility to free her from the weight of that yoke, which was so great a hindrance to the thought of God, and to take her out of this vain and troubled world into a quiet life in which she might please Him unhindered; and she stayed in prayer the whole day.
+
+Near her end she was shown in a vision a place where a multitude of most beautiful birds sang with sweet voices in many ways, where the trees swayed a little in a gently blowing wind and the springs murmured, and the beauty of it could not be told, for it was the paradise of God. Honourable and seemly women there showed her most bright palaces, built by the hand of God and not of man, and said to her: this house is yours, Matrona, built by God; come and live in it.
+
+From that vision she judged that her departure was near, and prepared for it with the more diligence, praying to the Lord, for whose sake she had counted all things vanity. Then she called all the sisters to her, taught them much about the salvation of the soul, gave them peace, and fell asleep in the Lord, passing from the earthly dwelling to the heavenly one she had seen. She ended in a blessed old age full of many years: twenty-five years she spent in the life of the world and seventy-five in the monastic life, and all her years were a hundred. The Romanian life gives no year of the world anywhere, only those ages.
+
+*After doxologia.ro's calendar for 9 noiembrie — [the day](https://doxologia.ro/9-noiembrie) and [the life](https://doxologia.ro/sfanta-cuvioasa-matrona-0); read 25 September 2026.*

@@ -1,0 +1,64 @@
+{
+  "slug": "barnabas-of-docheiariou",
+  "display_name": "Barnabas of Docheiariou",
+  "names": [
+    {
+      "form": "Varnavas",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 noiembrie, «Cuviosul Varnavas Dohiaritul»; the bare personal name, without the epithet."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "abbot"
+  ],
+  "related": [
+    "neophytos-of-docheiariou",
+    "euthymius-the-cellarer"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1100,
+      "latest": 1160,
+      "display": "to the mid-12th century",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Varnavas este menționat în hrisoavele mănăstirii ca egumen până la mijlocul secolului al XII-lea» — the monastery's charters name him as abbot until the middle of the twelfth century. The interval is the half-century that reading allows; the page states no year and no year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 9 noiembrie — «Cuviosul Varnavas Dohiaritul»",
+        "url": "https://doxologia.ro/9-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

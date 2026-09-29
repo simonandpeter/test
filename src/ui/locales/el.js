@@ -871,6 +871,7 @@ export const el = {
     'King of Judah': 'Βασιλιάς του Ιούδα',
     'King of the East Saxons': 'Βασιλιάς των Ανατολικών Σαξόνων',
     'King of the Serbs': 'Βασιλιάς των Σέρβων',
+    'Magistros and Logothete': 'Μάγιστρος και Λογοθέτης',
     'Martyr': 'Μάρτυς',
     'Metropolitan of Alma-Ata': 'Μητροπολίτης Αλμάτι',
     'Metropolitan of Dabar-Bosnia': 'Μητροπολίτης Δάβαρ-Βοσνίας',

@@ -1,0 +1,54 @@
+{
+  "slug": "theoctista-of-lesbos",
+  "display_name": "Theoctista of Lesbos",
+  "names": [
+    {
+      "form": "Teoctista",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 noiembrie."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "virgin",
+    "hermit"
+  ],
+  "related": [
+    "simeon-metaphrastes"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 9 noiembrie — «Sfânta Cuvioasă Teoctista»",
+        "url": "https://doxologia.ro/9-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

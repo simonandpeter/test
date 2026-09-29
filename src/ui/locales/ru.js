@@ -889,6 +889,7 @@ export const ru = {
     'King of Judah': 'Царь Иудейский',
     'King of the East Saxons': 'Царь восточных саксов',
     'King of the Serbs': 'Царь сербов',
+    'Magistros and Logothete': 'Магистр и логофет',
     'Martyr': 'Мученик',
     'Metropolitan': 'Митрополит',
     'Metropolitan of Alma-Ata': 'Митрополит Алма-Атинский',

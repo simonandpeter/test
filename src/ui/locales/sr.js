@@ -872,6 +872,7 @@ export const sr = {
     'King of Judah': 'Краљ јудејски',
     'King of the East Saxons': 'Краљ источних Саса',
     'King of the Serbs': 'Краљ српски',
+    'Magistros and Logothete': 'Магистар и логотет',
     'Martyr': 'Мученик',
     'Metropolitan of Alma-Ata': 'Митрополит алмаатски',
     'Metropolitan of Dabar-Bosnia': 'Митрополит дабробосански',
