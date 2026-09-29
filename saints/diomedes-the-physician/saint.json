@@ -9,6 +9,11 @@
     {
       "form": "Диомид",
       "lang": "sr"
+    },
+    {
+      "form": "Diomid",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 august."
     }
   ],
   "sex": "male",
@@ -42,8 +47,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 16 august — «Sfântul Mucenic Diomid»",
+        "url": "https://doxologia.ro/16-august",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -97,6 +111,22 @@
       },
       "english": {
         "text": "A true and unconquerable passion-bearer, shown forth as a heavenly initiate of piety and of grace, O most glorious Diomedes, having overcome the tormentor and become a bearer of victory, thou wast glorified with the crowns of victory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Diomid, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Mucenic Diomid», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-diomid",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyr Diomedes, O Lord, in his struggle received from You our God the crown of incorruption; for having Your strength he overthrew the torturers and broke the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
     }

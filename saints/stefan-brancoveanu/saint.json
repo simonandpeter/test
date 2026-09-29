@@ -1,0 +1,66 @@
+{
+  "slug": "stefan-brancoveanu",
+  "display_name": "Ștefan Brâncoveanu",
+  "names": [
+    {
+      "form": "Ștefan",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 august."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "constantin-son-of-brancoveanu",
+    "radu-brancoveanu",
+    "matei-brancoveanu",
+    "ianache-vacarescu",
+    "constantine-brancoveanu",
+    "maria-brancoveanu"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1714,
+      "latest": 1714,
+      "display": "1714",
+      "basis": "attested",
+      "note": "doxologia.ro: «În Săptămâna Patimilor din anul 1714, în urma trădării unor boieri… l-au luat pe Constantin Vodă cu fiii și ginerii săi și l-au dus la Înalta Poartă»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 16 august — «Sfinții Martiri Brâncoveni: Constantin Vodă cu cei patru fii ai săi, Constantin, Ștefan, Radu și Matei, și sfetnicul Ianache»",
+        "url": "https://doxologia.ro/16-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

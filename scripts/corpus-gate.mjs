@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'stefan stefan-brancoveanu stephen-of-triglia':
+    'the second son of Constantin Brancoveanu, beheaded with his father and brothers in 1714, Romanian 16 August, against the abbot of Triglia, venerable and a confessor under the iconoclasts, Romanian 28 March. Two (read 29 September 2026)',
+  'matei matei-brancoveanu matthew-the-apostle':
+    'the youngest son of Constantin Brancoveanu, beheaded with his father and brothers in 1714 and about twelve years old, Romanian 16 August, against the apostle and evangelist, whom the Romanian keeps in the Synaxis of the Twelve on 30 June. Two (read 29 September 2026)',
+  'constantin constantin-son-of-brancoveanu constantine-of-georgia constantine-the-great cyril-the-philosopher':
+    'four men called Constantin, on four Romanian days. The new one is the eldest son of Constantin Brancoveanu, beheaded with his father and three brothers at Constantinople in 1714, Romanian 16 August. The others are Constantine of Georgia, prince and martyr, 2 October; Constantine the Great, 21 May; and Cyril the Philosopher, whose baptismal name was Constantin, 11 May. His father, who has his own folder and his own row on the same day, is constantine-brancoveanu and folds under the English form (read 29 September 2026)',
   'dorotei dorotheus-of-gaza dorotheus-of-tyre':
     'two men whose ro form is Dorotei, on two Romanian days: the abbot of Gaza, venerable, who lived under Abba Seridos and wrote the Discourses, Romanian 13 August; and the bishop of Tyre under Diocletian, a hieromartyr, Romanian 5 June. The namesweep proposed the abbot against dorotheus-of-nicomedia and dorotheus-the-hermit-of-egypt and the reader rejected both; this is the Romanian spelling folding in a third (read 29 September 2026)',
   'alexie alexis-of-moscow alexius-of-the-brazen-gate':

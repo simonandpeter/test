@@ -1,0 +1,11 @@
+# Gerasimus the New of Kefalonia
+
+Gerasimus the New, the hermit from the Peloponnese whose relics lie in Kefalonia, was born in the village of Trikkala in the Peloponnese. Doxologia.ro's life says he was tonsured in his first years of manhood on the island of Zakynthos, and went from there to Mount Athos, where he became a schemamonk and studied with the hermits of the Holy Mountain.
+
+With his fathers' blessing he went to Jerusalem to venerate the Life-giving Tomb of the Saviour. After visiting many of the holy places — Jerusalem, Mount Sinai, Antioch, Damascus, Alexandria and Egypt — he returned to Jerusalem and became keeper of the lamps at the Holy Sepulchre. He was ordained deacon and then priest by Patriarch Germanus of Jerusalem (1534–1579), and, seeking solitude, withdrew to the Jordan, where he spent forty days without a break.
+
+Blessed by the patriarch for the solitary life, he went back to the wilderness of Zakynthos and lived there on herbs alone. After five years he felt the wish to go to Kefalonia, where he found shelter in a cave. He restored the church at Omala and built a convent, and there he lived and worked and kept vigil without interruption for thirty years, praying on his knees on the bare ground. For the holiness of his life he was given the gift of healing the sick and of driving out unclean spirits.
+
+At seventy-one he knew that he would soon die. He blessed the nuns and fell asleep in peace on 15 August 1579. Two years later his grave was opened and his relics were found whole and sweet-smelling, and healing sicknesses. Because the Dormition of the Mother of God is kept on 15 August, the life says, Saint Gerasimus is commemorated on 16 August; the uncovering of his relics in 1581 is kept on 20 October.
+
+*After doxologia.ro's calendar for 16 august — [the day](https://doxologia.ro/16-august) and [the life](https://doxologia.ro/viata-sfantului-gherasim-din-kefalonia); read 24 September 2026.*

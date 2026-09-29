@@ -5,6 +5,11 @@
     {
       "form": "Преп. Јоаким Осоговски",
       "lang": "sr"
+    },
+    {
+      "form": "Ioachim Osogovski",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 august and out of its life's «Sfântul Ioachim Osogovski»."
     }
   ],
   "sex": "male",
@@ -42,8 +47,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not found among the names read off doxologia.ro for 29 august 2026 (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 16 august — «Sfântul Cuvios Ioachim Osogovsky»",
+        "url": "https://doxologia.ro/16-august",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -53,5 +67,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "john-of-rila"
+  ]
 }

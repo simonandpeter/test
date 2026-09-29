@@ -1,0 +1,57 @@
+{
+  "slug": "maria-brancoveanu",
+  "display_name": "Maria Brâncoveanu",
+  "names": [
+    {
+      "form": "Maria Brâncoveanu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 august."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "princess"
+  ],
+  "related": [
+    "constantin-son-of-brancoveanu",
+    "stefan-brancoveanu",
+    "radu-brancoveanu",
+    "matei-brancoveanu",
+    "ianache-vacarescu",
+    "constantine-brancoveanu"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 16 august — «Sfânta Doamnă Maria Brâncoveanu»",
+        "url": "https://doxologia.ro/16-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

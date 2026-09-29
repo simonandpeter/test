@@ -1,0 +1,85 @@
+{
+  "slug": "joseph-of-varatec",
+  "display_name": "Joseph of Văratec",
+  "names": [
+    {
+      "form": "Iosif de la Văratec",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 august."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "hermit"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1750,
+      "latest": 1750,
+      "display": "c. 1750",
+      "basis": "traditional",
+      "note": "doxologia.ro: «s-a născut în jurul anului 1750, în satul Valea Jidanului din Transilvania»."
+    },
+    "death": {
+      "earliest": 1828,
+      "latest": 1828,
+      "display": "1828",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul părinte a trecut la cele veșnice la 28 decembrie 1828»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 16 august — «Sfântul Cuvios Iosif de la Văratec»",
+        "url": "https://doxologia.ro/16-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 8",
+      "text": "Purtătorule de Dumnezeu, Cuvioase părinte Iosife, ucenic al Sfântului Paisie de la Neamţ, ctitor şi duhovnic al Mănăstirii Varatic, povăţuitor al monahilor şi credincioşilor evlavioşi, te-ai învrednicit de mari daruri de la milostivul Dumnezeu. Pentru aceasta cu adâncă evlavie facem pomenirea ta şi strigăm ţie, cuvioase părinte: Roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Iosif de la Văratec», Glas 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-iosif-de-la-varatec",
+        "year": 2026
+      },
+      "english": {
+        "text": "God-bearing venerable father Joseph, disciple of Saint Paisius of Neamț, founder and confessor of the monastery of Văratec, guide of monks and of the devout faithful: you were counted worthy of great gifts from the merciful God. Therefore with deep reverence we keep your memory and cry out to you, venerable father: pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

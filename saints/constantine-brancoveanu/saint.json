@@ -6,6 +6,11 @@
     {
       "form": "Константин",
       "lang": "ru"
+    },
+    {
+      "form": "Constantin Brâncoveanu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 august."
     }
   ],
   "sex": "male",
@@ -47,8 +52,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 16 august — «Sfinții Martiri Brâncoveni: Constantin Vodă cu cei patru fii ai săi, Constantin, Ștefan, Radu și Matei, și sfetnicul Ianache»",
+        "url": "https://doxologia.ro/16-august",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -63,5 +77,13 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "constantin-son-of-brancoveanu",
+    "stefan-brancoveanu",
+    "radu-brancoveanu",
+    "matei-brancoveanu",
+    "ianache-vacarescu",
+    "maria-brancoveanu"
+  ]
 }

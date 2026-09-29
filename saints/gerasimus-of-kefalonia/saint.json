@@ -1,0 +1,80 @@
+{
+  "slug": "gerasimus-of-kefalonia",
+  "display_name": "Gerasimus the New of Kefalonia",
+  "names": [
+    {
+      "form": "Gherasim din Kefalonia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 16 august."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "hermit",
+    "wonderworker"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1579,
+      "latest": 1579,
+      "display": "1579",
+      "basis": "attested",
+      "note": "doxologia.ro: «a adormit cu pace întru Domnul în 15 august 1579», at the age of 71."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "revised-julian",
+        "note": "Doxologia keeps him twice: its calendar prints him on 16 august and again on 20 octombrie — «Sfântul Cuvios Gherasim din Kefalonia». One attestation row per church is the schema, so the row is the day this folder was read from and the second day is recorded here. Both days link the same doxologia page. Read 25 September 2026."
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 16 august — «Sfântul Cuvios Gherasim din Kefalonia»",
+        "url": "https://doxologia.ro/16-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 16 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 4",
+      "text": "Vieţuitor al pustiului, ocrotitor al ortodocşilor şi înger în trup, vindecător şi de Dumnezeu purtător te-ai arătat nouă. Pentru aceasta noi, credincioşii, te lăudăm pe tine, dumnezeiescule Gherasim, că în chip vrednic ai dobândit de la Dumnezeu tămăduiri şi harul veşnic, şi îi vindeci pe cei bolnavi, pe demoni îi alungi, iar celor ce te cinstesc pe tine le izvorăşti tămăduiri. Vlăstar dumnezeiesc al Peloponesului şi comoară neprădată a Kefaloniei, lauda cea mare a întregii Elade, Sfinte Gherasim de Dumnezeu purtătorule, ocroteşte pe robii tăi!",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Cuvios Gherasim Kefalonitul», Glas 4",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-gherasim-kefalonitul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Dweller of the wilderness, protector of the Orthodox and angel in the flesh, you were shown to us a healer and a bearer of God. Therefore we the faithful praise you, divine Gerasimus, for worthily you received from God healings and everlasting grace; you heal the sick, you drive out the demons, and on those who honour you you pour forth healings. Divine shoot of the Peloponnese and unplundered treasure of Kefalonia, great boast of all Hellas, holy God-bearing Gerasimus, protect your servants!",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
