@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'valentin valentine-companion-of-mark valentine-of-interamna':
+    'two men: the martyr dragged along the ground with Mark and Soterichus, doxologia 24 octombrie, whose whole record is that one sentence; and Valentine, bishop of Interamna, a hieromartyr, Romanian 30 July (read 29 September 2026)',
+  'marcu mark-companion-of-soterichus mark-of-apollonias mark-of-arethusa mark-of-byblos mark-of-ephesus mark-the-ascetic mark-the-evangelist':
+    'seven men called Marcu, on seven Romanian days. The new one is the martyr of 24 October, one of the three whose whole record is one sentence. The other six are unchanged: Mark of Apollonias, 16 June; Mark of Arethusa, 29 March; Mark of Byblos, 27 April; Mark of Ephesus, 19 January; Mark the Ascetic, 5 March; and the evangelist, 25 April (read 29 September 2026)',
+  'companion mark soterichus mark-companion-of-soterichus soterichus-companion-of-mark':
+    'the word-set artefact once more: Mark and Soterichus, dragged along the ground until they died with Valentine, doxologia 24 octombrie, each named as the other companion (read 29 September 2026)',
   'ignatie ignatius-of-constantinople ignatius-of-methymna ignatius-of-stara-zagora':
     'three men called Ignatie, on three Romanian days. The new one is the patriarch of Constantinople, son of the emperor Michael I, 23 October. The others were read on 29 September: the metropolitan of Methymna, 14 October, and the new-martyr of Stara Zagora, 8 October (read 29 September 2026)',
   'iacob jacob-the-hermit james-of-nisibis james-of-samosata james-son-of-zebedee james-the-brother-of-the-lord':

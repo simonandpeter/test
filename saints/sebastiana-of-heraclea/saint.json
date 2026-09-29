@@ -6,6 +6,11 @@
       "form": "Севастиана Гераклейская",
       "lang": "ru",
       "note": "Read out of the life’s heading «Мученица Севастиана Гераклейская»."
+    },
+    {
+      "form": "Sebastiana",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 octombrie; its life spells the name «Sevastiana (Sebastiana)»."
     }
   ],
   "sex": "female",
@@ -38,8 +43,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s lists for 16 septembrie or 29 septembrie (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 24 octombrie — «Sfânta Muceniță Sebastiana»",
+        "url": "https://doxologia.ro/24-octombrie",
+        "year": 2026
+      },
+      "note": "The Romanian day is 24 octombrie, not the 16 септември ст. ст. the Russian row holds, and doxologia gives no reason for the difference. Its life is the same story — a disciple of the Apostle Paul, under Domitian, at the city of Marcian, the furnace she came out of unhurt, the beasts that lay down like lambs, the beheading, the milk instead of blood, the sack of lead thrown into the sea and the body brought ashore — but it names the governor Serghie where the Russian life names George. Read 24 September 2026."
     },
     {
       "church": "greek",

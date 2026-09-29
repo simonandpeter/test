@@ -1,0 +1,71 @@
+{
+  "slug": "valentine-companion-of-mark",
+  "display_name": "Valentine, companion of Mark",
+  "names": [
+    {
+      "form": "Valentin",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 24 octombrie, «Sfântul Mucenic Valentin»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "mark-companion-of-soterichus",
+    "soterichus-companion-of-mark"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 24 octombrie — «Sfântul Mucenic Valentin»",
+        "url": "https://doxologia.ro/24-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 24 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Pentru durerile Sfinţilor, care pentru Tine au pătimit, fii Mi­lostiv Doamne şi toate durerile noastre le vindecă, Iubitorule de oameni, rugămu-ne Ţie.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mare Mucenic Areta şi al celor împreună cu dânsul. The text is a common of martyrs and names nobody.",
+        "url": "https://doxologia.ro/troparul-sfantului-mare-mucenic-areta-al-celor-impreuna-cu-dansul",
+        "year": 2026
+      },
+      "english": {
+        "text": "For the sufferings of the saints who suffered for Thee, be merciful, O Lord, and heal all our sufferings, O Lover of mankind: this we ask of Thee.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
