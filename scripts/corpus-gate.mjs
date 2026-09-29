@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'lazar lazar-of-serbia lazarus-of-mount-galesion':
+    'two men: the stylite of Mount Galesion near Ephesus, venerable, Romanian 7 November; and Lazar, prince of Serbia, killed at Kosovo, Romanian 15 June (read 30 September 2026)',
   'luca luke-of-crimea luke-of-emesa luke-of-sicily luke-the-evangelist':
     'four men called Luca, on four Romanian days. The new one is Luke of Sicily, a hermit, 6 November. The other three were read on 29 September: Luke the deacon of Emesa, 29 January; Luke of Crimea, 11 June; and the evangelist, 18 October (read 30 September 2026)',
   'pavel paul-of-jamnia paul-of-plousias paul-of-ptolemais paul-of-zographou paul-the-apostle paul-the-confessor paul-with-valentina-and-ennatha platon-kulbusch':

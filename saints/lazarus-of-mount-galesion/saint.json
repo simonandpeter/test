@@ -1,0 +1,71 @@
+{
+  "slug": "lazarus-of-mount-galesion",
+  "display_name": "Lazarus of Mount Galesion",
+  "names": [
+    {
+      "form": "Lazăr",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 noiembrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "stylite",
+    "hieromonk",
+    "abbot",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 7 noiembrie — «Sfântul Cuvios Lazăr din Muntele Galision»",
+        "url": "https://doxologia.ro/7-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu rugăciunile cele cu priveghere, întru curgerile lacrimilor stâlpul ţi-ai udat şi cu suspinurile cele din adâncuri, spre însutite osteneli, l-ai făcut roditor. Şi ai fost păstor, tuturor dând iertare, Cuvioase Lazăr, părintele nostru, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Lazăr din Muntele Galision",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-lazar-din-muntele-galision",
+        "year": 2026
+      },
+      "english": {
+        "text": "With vigilant prayers thou didst water thy pillar with the streams of thy tears, and with sighs from the depths thou didst make it fruitful unto labours a hundredfold. And thou wast a shepherd, granting pardon to all; venerable Lazarus our father, pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
