@@ -928,8 +928,11 @@ export const el = {
    * reason: the key is the English the corpus recorded.
    */
   eras: {
+    '1396, by a popular tradition': '1396, κατά λαϊκή παράδοση',
+    'first half of the 11th century': 'πρώτο μισό του 11ου αι.',
     'in the reign of Theodosius the Younger': 'επί της βασιλείας Θεοδοσίου του Νέου',
     'the 1720s': 'η δεκαετία του 1720',
+    'to the mid-12th century': 'έως τα μέσα του 12ου αι.',
     'under Alexander Severus': 'επί Αλεξάνδρου Σεβήρου',
     'under Antoninus Pius': 'επί Αντωνίνου Πίου',
     'under Aurelian': 'επί Αυρηλιανού',

@@ -927,8 +927,11 @@ export const ro = {
    * reason: the key is the English the corpus recorded.
    */
   eras: {
+    '1396, by a popular tradition': '1396, potrivit unei tradiții populare',
+    'first half of the 11th century': 'prima jumătate a sec. al XI-lea',
     'in the reign of Theodosius the Younger': 'în vremea lui Teodosie cel Tânăr',
     'the 1720s': 'anii 1720',
+    'to the mid-12th century': 'până la mijlocul sec. al XII-lea',
     'under Alexander Severus': 'sub Alexandru Sever',
     'under Antoninus Pius': 'sub Antoninus Pius',
     'under Aurelian': 'sub Aurelian',

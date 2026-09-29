@@ -946,8 +946,11 @@ export const ru = {
    * reason: the key is the English the corpus recorded.
    */
   eras: {
+    '1396, by a popular tradition': '1396, по народному преданию',
+    'first half of the 11th century': 'первая половина XI в.',
     'in the reign of Theodosius the Younger': 'в царствование Феодосия Младшего',
     'the 1720s': '1720-е годы',
+    'to the mid-12th century': 'до середины XII в.',
     'under Alexander Severus': 'при Александре Севере',
     'under Antoninus Pius': 'при Антонине Пии',
     'under Aurelian': 'при Аврелиане',
