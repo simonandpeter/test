@@ -770,6 +770,7 @@ export const ru = {
     'Bishop of Aegae in Cilicia': 'Епископ Эгейский в Киликии',
     'Bishop of Akhtala in Iberia': 'Епископ Ахтальский в Иверии',
     'Bishop of Akragas': 'Епископ Акрагантийский',
+    'Bishop of Alexandria': 'Епископ Александрийский',
     'Bishop of Alexandria Minor': 'Епископ Малой Александрии',
     'Bishop of Ancyra': 'Епископ Анкирский',
     'Bishop of Antioch': 'Епископ Антиохийский',

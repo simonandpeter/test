@@ -1,0 +1,70 @@
+{
+  "slug": "eugraphus",
+  "display_name": "Eugraphus",
+  "names": [
+    {
+      "form": "Evgraf",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 decembrie, «Sfântul Mucenic Evgraf», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "menas-the-athenian",
+    "hermogenes-of-alexandria"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 decembrie — «Sfântul Mucenic Evgraf»",
+        "url": "https://doxologia.ro/10-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Cu înfrânarea omorând pornirile și îndemnurile cele arzătoare ale patimilor, ucenicii lui Hristos au luat harul de a alunga urmările bolilor celor neputincioși și a face minuni, atât în viață, cât și după moarte. Minune uimitoare cu adevărat! Că oase goale izvorăsc tămăduiri. Slavă Ție, Singurului Dumnezeu și Ziditorului.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinților Mucenici Mina, Ermoghen și Evgraf (one hymn printed for the three together; the page prints no glas)",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-mina-ermoghen-evgraf",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having put to death by abstinence the burning stirrings and promptings of the passions, the disciples of Christ received the grace to drive away the effects of the sicknesses of the infirm and to work wonders, both in life and after death. A marvel indeed: that bare bones pour out healings. Glory to you, the only God and Maker.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

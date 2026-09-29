@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'mina menas-of-egypt menas-of-zographou menas-the-athenian':
+    'three men called Mina, on three Romanian days. The new one is Menas the Athenian, sent to Alexandria by the emperor and martyred there with Hermogenes and Eugraphus, 10 December. The others are Menas the Egyptian, 11 November, and Menas of Zographou, 10 October (read 30 September 2026)',
+  'ermoghen hermogenes-of-alexandria hermogenes-of-moscow hermogenes-the-martyr-24-july':
+    'three folders whose ro form is Ermoghen, on three Romanian days. The new one is Hermogenes bishop of Alexandria, martyred with Menas and Eugraphus, 10 December. The others were read on 28 September: the patriarch of Moscow and the bare-line martyr of 24 July (read 30 September 2026)',
   'sofronie sophronius-of-cioara sophronius-of-cyprus sophronius-of-jerusalem sophronius-of-soumela':
     'four folders whose ro form is Sofronie, on four Romanian days. The new one is Sophronius bishop of Cyprus, 8 December. The other three were read on 29 and 30 September: the monk of Cioara, 21 October; the patriarch of Jerusalem, 11 March; and the founder of Panagia Soumela, 18 August (read 30 September 2026)',
   'nicolae nicholas-ii nicholas-of-lesvos nicholas-of-myra nicholas-of-the-forty-martyrs':
