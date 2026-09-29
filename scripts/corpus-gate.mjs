@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδοσιοσ theodosius-companion-of-paisius theodosius-of-the-kyiv-caves theodosius-of-trebizond theodosius-of-triglia theodosius-the-cenobiarch':
+    'five now. The new one is an ascetic of 1802 whom saint.gr names with Paisius on 12 Ιανουαρίου; the other four are read in the el-01-11 entry for this name form — the Cenobiarch and the Trebizond bishop, both on the Greek 11 January, the Bithynian hegumen of Triglia on the 1st, and the founder of the Kyiv Caves. Nineteenth-century asceticism against four earlier men on three earlier days.',
+  'μαρτινιανοσ martinian-of-white-lake martinian-of-zographou':
+    'two men. saint.gr keeps Martinian of White Lake, abbot and deacon, dead 1483, on 12 Ιανουαρίου; the corpus keeps Martinian of Zographou, one of the martyred monks of Athos of 1275 to 1282, on the Romanian 10 October and the Greek 22 September. A Russian abbot of the fifteenth century is not an Athonite martyr of the thirteenth.',
+  'ζωτικοσ zoticus-companion-of-rogatus zoticus-of-tomis':
+    'two men. The 12 Ιανουαρίου Zoticus is a soldier martyred with Rogatus and his page gives no year; the corpus keeps Zoticus of Tomis, dead about 323 to 324, on the Russian, Romanian and Greek 13 September. Two entries on one calendar are two commemorations, and neither page names the other.',
+  'companion rogatus zoticus rogatus-companion-of-zoticus zoticus-companion-of-rogatus':
+    'one line folded onto itself, as with Peter and Severus and Leucius on 11 Ιανουαρίου. saint.gr names two soldier-martyrs together on 12 Ιανουαρίου and the synaxis ruling makes that two folders, each display name carrying the other name, so the folded key holds both forenames whichever folder it is read from.',
+  'φιλοθεοσ philotheus-of-antioch philotheus-the-presbyter':
+    'two men, six centuries apart. saint.gr keeps a fourth-century martyr Philotheus of Antioch on 12 Ιανουαρίου; the corpus keeps a tenth-century presbyter on the Russian, Greek and Serbian 15 September. A martyr under the persecutions is not a presbyter of the tenth century.',
+  'πετροσ peter-abesalamites peter-companion-of-leucius peter-disciple-of-dionysius-of-alexandria peter-of-capitolias peter-of-sebaste peter-son-of-john-of-syracuse peter-the-peloponnesian peter-the-sign-bearer':
+    'eight now. The new one is Peter Abesalamites, whom saint.gr keeps on 12 Ιανουαρίου and gives no year; the other seven are read in the el-01-01, el-01-03 and el-01-11 entries for this name form, and the days and the centuries keep them apart. A forename this common folds once per wave and the reading is the same each time: separate entries on the calendar are separate men unless a page says otherwise.',
   'θεοδοσιοσ theodosius-of-the-kyiv-caves theodosius-of-trebizond theodosius-of-triglia theodosius-the-cenobiarch':
     'four men, and two of them are on this same 11 Ιανουαρίου without being confusable: saint.gr prints Theodosius the Cenobiarch, the founder of the Palestinian coenobium whom the Romanian calendar keeps on the same day, and «Όσιος Θεοδόσιος ο εν Τραπεζούντι», a bishop and abbot of about 1392. The other two are the Bithynian hegumen of Triglia on the Greek 1 January and the founder of the Kyiv Caves, dead 1074. One calendar, two entries on one day and two more on other days, so four men.',
   'θεοδωροσ theodore-companion-of-stephen theodore-of-kandavla theodore-of-tamasos theodore-prince-of-yaroslavl theodore-the-envoy-of-nicomedia':
@@ -1143,7 +1155,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '183'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '201'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

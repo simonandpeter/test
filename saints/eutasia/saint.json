@@ -6,6 +6,11 @@
       "form": "Eutasia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 ianuarie, «Sfânta Muceniță Eutasia»."
+    },
+    {
+      "form": "Ευθασία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Ιανουαρίου, «Αγία Ευθασία», with the rank word left off. The Greek spells the name Ευθασία where the Romanian prints Eutasia."
     }
   ],
   "sex": "female",
@@ -34,8 +39,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 12 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιανουαρίου — «Αγία Ευθασία»",
+        "url": "https://www.saint.gr/01/12/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

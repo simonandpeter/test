@@ -6,6 +6,11 @@
       "form": "Tatiana",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 ianuarie, «Sfânta Muceniță Tatiana, diaconița»."
+    },
+    {
+      "form": "Τατιανή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Ιανουαρίου, «Αγία Τατιανή», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -57,8 +62,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 12 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιανουαρίου — «Αγία Τατιανή»",
+        "url": "https://www.saint.gr/01/12/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -96,6 +110,23 @@
       },
       "english": {
         "text": "Brightly didst thou shine out in thy suffering, O patient one, reddened in thine own blood; and like a fair dove thou didst fly up towards heaven, holy Martyr Tatiana. Pray, then, for those who honour thee for ever.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ἰσχύι τῆς πίστεως, κραταιωθεῖσα σεμνή, νομίμως ἐνήθλησας, ὑπὲρ Χριστοῦ τοῦ Θεοῦ, Τατιανὴ ἔνδοξε πάσας γὰρ τᾶς ἰδέας, τῶν δεινῶν ἐνεγκοῦσα, ἤσχυνας τὸν Βελίαρ, τὴ ἀτρέπτω σου στάσει ἐξ οὐ τῆς κακοτροπίας πάντας ἀπάλλαξαν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Τατιανή, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1391/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Made strong by the might of the faith, O modest one, thou didst contend lawfully for Christ God, O glorious Tatiana; for having borne every kind of torment thou didst put Belial to shame by thy unshaken standing, and from his malice deliver all.",
         "rendered": "site"
       }
     }

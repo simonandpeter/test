@@ -1,0 +1,62 @@
+{
+  "slug": "galaction-disciple-of-martinian",
+  "display_name": "Galaction, disciple of Martinian of White Lake",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "fool-for-christ"
+  ],
+  "names": [
+    {
+      "form": "Γαλακτίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Ιανουαρίου, «Όσιος Γαλακτίων ο διά Χριστόν σαλός», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1506,
+      "latest": 1506,
+      "display": "1506",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1506 μ.Χ. στη Ρωσία»."
+    }
+  },
+  "related": [
+    "martinian-of-white-lake"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιανουαρίου — «Όσιος Γαλακτίων ο διά Χριστόν σαλός»",
+        "url": "https://www.saint.gr/01/12/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

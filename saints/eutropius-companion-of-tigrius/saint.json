@@ -1,0 +1,58 @@
+{
+  "slug": "eutropius-companion-of-tigrius",
+  "display_name": "Eutropius, companion of Tigrius",
+  "sex": "male",
+  "names": [
+    {
+      "form": "Ευτρόπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Ιανουαρίου, «Άγιοι Τίγριος ο Πρεσβύτερος και Ευτρόπιος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 395,
+      "latest": 408,
+      "display": "395–408",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Τίγριος και Ευτρόπιος έζησαν κατά τους χρόνους του βασιλέως Αρκαδίου (395 - 408 μ.Χ.)»."
+    }
+  },
+  "related": [
+    "tigrius-the-presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιανουαρίου — «Άγιοι Τίγριος ο Πρεσβύτερος και Ευτρόπιος»",
+        "url": "https://www.saint.gr/01/12/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

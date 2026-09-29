@@ -1,0 +1,70 @@
+{
+  "slug": "martinian-of-white-lake",
+  "display_name": "Martinian of White Lake",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Μαρτινιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Ιανουαρίου, «Όσιος Μαρτινιανός της Λευκής Λίμνης», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1370,
+      "latest": 1370,
+      "display": "1370",
+      "basis": "traditional",
+      "note": "saint.gr: «κατά κόσμον Μιχαήλ, γεννήθηκε το 1370 μ.Χ. στο χωριό Berezniko». The page's own header instead prints (1397 - 1483), which does not agree with its text; the text is what this life follows."
+    },
+    "death": {
+      "earliest": 1483,
+      "latest": 1483,
+      "display": "1483",
+      "basis": "traditional",
+      "note": "saint.gr's header prints «Οσιος Μαρτινιανος Της Λευκης Λιμνης (1397 - 1483)» and its text says he fell asleep at the age of eighty-five."
+    }
+  },
+  "related": [
+    "galaction-disciple-of-martinian"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιανουαρίου — «Όσιος Μαρτινιανός της Λευκής Λίμνης»",
+        "url": "https://www.saint.gr/01/12/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "slug": "castulus-companion-of-zoticus",
+  "display_name": "Castulus, companion of Zoticus",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Καστούλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Ιανουαρίου, «Άγιοι Ζωτικός, Ρογάτος, Μοδεστός και Καστούλιος οι Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "related": [
+    "zoticus-companion-of-rogatus",
+    "rogatus-companion-of-zoticus",
+    "modestus-companion-of-zoticus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιανουαρίου — «Άγιοι Ζωτικός, Ρογάτος, Μοδεστός και Καστούλιος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/01/12/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
