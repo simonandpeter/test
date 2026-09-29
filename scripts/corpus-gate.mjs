@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'andronic andronicus-of-antioch andronicus-the-apostle':
+    'two men, four centuries apart: the goldsmith of Antioch under Theodosius the Great who with his wife Athanasia gave away their goods and went into the desert, Romanian 9 October; and the apostle, one of the Seventy, the companion of Junia, Romanian 17 May (read 29 September 2026)',
   'pelaghia pelagia-of-antioch pelagia-of-tarsus':
     'two women, on two Romanian days: the penitent of Antioch, whom bishop Nonnus baptised and who ended her life as a recluse on the Mount of Olives, whose life doxologia prints in the words of the deacon James, 8 October; and the virgin martyr of Tarsus, 4 May (read 29 September 2026)',
   'iulian julian-companion-of-caesarius julian-of-emesa julian-of-samosata julian-of-the-brazen-gate':
