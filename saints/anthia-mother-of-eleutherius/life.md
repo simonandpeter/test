@@ -1,0 +1,9 @@
+# Anthia, mother of Eleutherius
+
+doxologia.ro gives Anthia no life of her own: her page serves the same life it gives her son, and she is in its first lines and its last. It says that while Aelius Hadrian reigned at Rome, [Eleutherius](/saints/eleutherius-of-illyricum) became known like a shining star; that his parents were well born, distinguished and rich; and that his mother was counted worthy of a greater honour and glory still for her faith in Christ, having been taught by the Apostle Paul, who baptised her, and that her name was Anthia. She gave her son his name and brought him up well in the right faith, and when he came of age it was through the hands of Anicetus, archbishop of Rome, that he was given to God.
+
+She appears once in the middle of the story, and only in an accusation: when the eparch Coremon turned to Christ in the middle of the trial, the emperor Hadrian asked him whether he had taken gold from the mother of Eleutherius and been bought over in secret by a woman for a little gold. The page does not say that she had; it is Hadrian who says it.
+
+She is there at the end. When the tyrant, unable to move her son by fire or beasts, had him beheaded, Anthia had watched his contest with joy; and she embraced his dead body and kissed it, glad in spirit and giving thanks that the blood of her son, taken out of her own, had been poured out for Christ. Then she fell dead beside him, killed with the sword by the unbelievers. The faithful of Illyricum and of Avlona, her son's own diocese, took the two bodies, anointed them with spices and buried them with honour. doxologia.ro gives no year and no birthplace for her, and this folder gives none.
+
+*After doxologia.ro's calendar for 15 decembrie — [the day](https://doxologia.ro/15-decembrie) and [the life her page serves, which is her son's](https://doxologia.ro/viata-sfintei-mucenite-antia), which prints no troparion for her; read 28 September 2026.*

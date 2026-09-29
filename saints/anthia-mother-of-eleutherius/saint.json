@@ -1,0 +1,52 @@
+{
+  "slug": "anthia-mother-of-eleutherius",
+  "display_name": "Anthia, mother of Eleutherius",
+  "names": [
+    {
+      "form": "Antia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 decembrie, «Sfânta Muceniță Antia», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "eleutherius-of-illyricum"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 15 decembrie — «Sfânta Muceniță Antia»",
+        "url": "https://doxologia.ro/15-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

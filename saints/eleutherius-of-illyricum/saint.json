@@ -1,0 +1,72 @@
+{
+  "slug": "eleutherius-of-illyricum",
+  "display_name": "Eleutherius of Illyricum",
+  "office": "Bishop of Illyricum",
+  "names": [
+    {
+      "form": "Elefterie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 decembrie, «Sfântul Sfințit Mucenic Elefterie, Episcopul Iliriei», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "related": [
+    "anthia-mother-of-eleutherius"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 15 decembrie — «Sfântul Sfințit Mucenic Elefterie, Episcopul Iliriei»",
+        "url": "https://doxologia.ro/15-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 5",
+      "text": "Cu haină de preot fiind împodobit şi cu sângele curgând şiroaie, fericite, ai alergat la Stăpânul tău, Hristos, Înţelepte Elefterie, nimicitorul satanei. Pentru aceasta nu înceta a te ruga pentru cei ce cu credinţă cinstesc fericitele tale nevoinţe.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Sfințit Mucenic Elefterie, Episcopul Iliriei; the page prints the podobie «Pe Cuvântul Cel împreună...» above the text, and hyphenates some words for its own layout",
+        "url": "https://doxologia.ro/troparul-sfantului-sfintit-mucenic-elefterie-episcopul-iliriei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with the robe of a priest and streaming with your own blood, blessed one, you ran to Christ your Master, wise Eleutherius, undoer of Satan. Therefore do not cease to pray for those who with faith honour your blessed contests.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "slug": "paul-of-latros",
+  "display_name": "Paul of Latros",
+  "names": [
+    {
+      "form": "Pavel",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 decembrie, «Sfântul Cuvios Pavel», with the rank words left off. The mountain is «muntele Latru» in the life and «din Latro» in the troparion's title; the English form of the place is chosen, not copied."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 15 decembrie — «Sfântul Cuvios Pavel»",
+        "url": "https://doxologia.ro/15-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 5",
+      "text": "Ca cel ce eşti împreună locuitor cu cei fără de trup şi tuturor cuvioşilor părtaş, Prealăudate Pavel, pe tine te lăudăm şi ne rugăm ţie: roagă-te pentru noi ca întotdeauna să aflăm milă.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Pavel din Latro; the page prints the podobie «Pe Cuvântul Cel împreună...» above the text, and hyphenates some words for its own layout",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-pavel-din-latro",
+        "year": 2026
+      },
+      "english": {
+        "text": "As one who dwells together with the bodiless powers and shares the lot of all the venerable, most praised Paul, we praise you and pray to you: pray for us, that we may always find mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

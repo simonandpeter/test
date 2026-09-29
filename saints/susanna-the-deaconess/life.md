@@ -1,0 +1,9 @@
+# Susanna the Deaconess
+
+doxologia.ro prints a short life of her, and this is the whole of it. Susanna lived in the time of the emperor Maximian and came from Palestine. Her father was a pagan and her mother a Jew, and she fled the unbelief of them both, ran to Christ and was baptised by the bishop Silvanus. After her parents' death she divided all her property among the poor and released her slaves, men and women, from the yoke of servitude. Then she put on men's clothes, cut her hair, and entered a monastery of monks under the name of John.
+
+After twenty years there she was slandered. A woman ascetic came to the monastery and, taking her for a man, urged her to sin; and when Susanna would not, the woman accused her of having tried to dishonour her. The saint bowed to the slander and asked to be given a penance for the sin she was charged with. When the bishop of Eleutheropolis heard of it he came to the monastery and reproached the superior, and the superior then wanted to strip her of the monastic habit. In that strait she asked that two virgins and two deaconesses be brought to her, and to them she disclosed her whole secret. When this became known the bishop was filled with wonder; he made her a deaconess and ordered that she be the house's superior.
+
+She worked many wonders in the name of Christ. When the governor Alexander came to Eleutheropolis and offered sacrifice to the idols, she went there of her own will and by her prayer alone threw the idols to the ground. Accused to the governor, she was brought before him, put to various torments and at the last thrown into the fire, and there she gave up her spirit to God. doxologia.ro prints no year, no troparion and nothing further of her.
+
+*After doxologia.ro's calendar for 15 decembrie — [the day](https://doxologia.ro/15-decembrie) and [the life](https://doxologia.ro/viata-sfintei-mucenite-suzana); read 28 September 2026.*

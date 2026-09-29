@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'suzana susanna-mother-of-nina susanna-the-deaconess':
+    'two women: Susanna the deaconess, Romanian 15 December, and Susanna the mother of Nina of Georgia, 20 May (read 30 September 2026)',
+  'pavel paul-of-jamnia paul-of-latros paul-of-plousias paul-of-ptolemais paul-of-zographou paul-the-apostle paul-the-confessor paul-with-valentina-and-ennatha platon-kulbusch':
+    'nine folders whose ro form is Pavel, on nine Romanian days. The new one is Paul of Latros, 15 December. The other eight were read on 30 September and are unchanged (read 30 September 2026)',
+  'elefterie eleutherius-disciple-of-dionysius eleutherius-of-illyricum':
+    'two men: Eleutherius bishop of Illyricum, martyred with his mother Anthia, Romanian 15 December; and Eleutherius the disciple of Dionysius the Areopagite, who has no Romanian row (read 30 September 2026)',
   'filimon philemon-6-july philemon-of-cyzicus philemon-of-gaza philemon-the-apostle philemon-the-flute-player':
     'five folders whose ro form is Filimon, on five Romanian days. The new one is Philemon the flute-player of the Thebaid, of the company doxologia keeps on 14 decembrie. The other four were read on 30 September: the bare line of 6 July, Philemon of Cyzicus, 29 April, Philemon of Gaza, 14 February, and the apostle, 22 November (read 30 September 2026)',
   'calinic callinicus-of-caesarea callinicus-of-cilicia':
