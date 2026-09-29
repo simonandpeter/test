@@ -120,8 +120,11 @@ Five `tile-diff` baselines exist. Do not re-shoot any of them.
   --widths=360,768 --themes=day,vigil --langs=en`, shot at `cd503dbc` with the
   N1/N4 rules backed out; after them all four compared identical.
 
-**The Romanian year is the run in progress** — every saint doxologia.ro prints
-for all 366 days, then the Greek, the Russian and the Serbian. `../ro-run/BRIEF.md`
+**The Romanian year is written** — every saint doxologia.ro prints for all 366
+days is in `saints/`, finished 30 September 2026, 2,496 folders, `npm test` 442
+green and the Playwright suite 1,045 green. The Greek, the Russian and the
+Serbian are what remain, and the Greek wave can be dispatched whenever the
+author wants it: nothing is queued behind the writer any more. `../ro-run/BRIEF.md`
 is the whole briefing and binding. It splits the work: **readers** read the
 calendar and life pages and write drafts only, **one writer** owns the folders,
 the commits and the push. `.tmp/ro-cand/` holds the 366 day pages
@@ -132,12 +135,12 @@ against the corpus by name across Romanian and English.
 
 **All 366 days are read.** Every civil day has a reader's report under
 `../ro-run/reports/`; the days with no draft file are days that yield no folder
-— a feast, a forefeast, icons, or a day the corpus already held entirely. So
-**the writer is the only bottleneck left**, and the reading needs no more
-agents. What is written and what is waiting is a number, so take it from
-`../ro-run/ORCHESTRATION.md`'s state command rather than from here.
+— a feast, a forefeast, icons, or a day the corpus already held entirely. Every
+one of those drafts has now been applied; the queue is empty. Any number here is
+a number, so take it from `../ro-run/ORCHESTRATION.md`'s state command rather
+than from this file.
 
-The writer works the queue in date order from the first unapplied batch, one
+The writer worked the queue in date order from the first unapplied batch, one
 batch one commit, and `../ro-run/BRIEF.md` §7 is the order of the checks. Four
 tools under `scratchpad/` were written for it and are worth reading before
 reinventing them: `wb.sh <MM-DD>` takes one batch through §7 steps 1–6 and stops
