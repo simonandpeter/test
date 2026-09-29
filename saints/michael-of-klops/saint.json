@@ -1,0 +1,60 @@
+{
+  "slug": "michael-of-klops",
+  "display_name": "Michael of Klops",
+  "sex": "male",
+  "types": [
+    "fool-for-christ",
+    "monk",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Μιχαήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιανουαρίου, «Άγιος Μιχαήλ διά Χριστόν Σαλός και Θαυματουργός», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1456,
+      "latest": 1456,
+      "display": "1456",
+      "basis": "traditional",
+      "note": "saint.gr: «Μόνασε στη Μονή Κλοπς του Νόβγκοροντ της Ρωσίας και κοιμήθηκε με ειρήνη το 1456 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιανουαρίου — «Άγιος Μιχαήλ διά Χριστόν Σαλός και Θαυματουργός»",
+        "url": "https://www.saint.gr/01/11/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "slug": "nicephorus-of-crete",
+  "display_name": "Nicephorus of Crete",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Νικηφόρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιανουαρίου, «Άγιος Νικηφόρος Νεομάρτυρας εκ Κρήτης», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1802,
+      "latest": 1802,
+      "display": "1802",
+      "basis": "traditional",
+      "note": "saint.gr's own header for the page prints «Αγιος Νικηφορος Νεομαρτυρας Εκ Κρητης (1802 - 1832)»."
+    },
+    "death": {
+      "earliest": 1832,
+      "latest": 1832,
+      "display": "1832",
+      "basis": "traditional",
+      "note": "saint.gr's own header for the page prints «Αγιος Νικηφορος Νεομαρτυρας Εκ Κρητης (1802 - 1832)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιανουαρίου — «Άγιος Νικηφόρος Νεομάρτυρας εκ Κρήτης»",
+        "url": "https://www.saint.gr/01/11/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α΄.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τὸν γενναῖον ὁπλίτην Νικηφόρον τιμήσωμεν, τὸν καρτερικὸν στρατιώτην, καὶ Χριστοῦ φίλον γνήσιον, τῆς πίστεως λαμπτῆρα τὸν φαιδρόν, καὶ πλάνης καθαιρέτην θαυμαστόν, δι’ ἀγχόνης τελειώσαντα εὐκλεῶς, τὸν δρόμον τοῦ μαρτυρίου, αἴγλῃ τὸν ἐντρυφῶντα νοερᾷ, πίστει αὐτῷ κραυγάζοντες· μέμνησο τῶν τελούντων σου ἀεί, μνήμην τὴν εὔσημον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Νικηφόρος ο Νεομάρτυρας εκ Κρήτης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1092/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour Nicephorus the noble man-at-arms, the steadfast soldier and true friend of Christ, the bright lamp of the faith and the wondrous overthrower of delusion, who finished gloriously by the noose the course of martyrdom and now delights in the light of the mind; and let us cry to him in faith: remember always those who keep thy notable memory.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδοσιοσ theodosius-of-the-kyiv-caves theodosius-of-trebizond theodosius-of-triglia theodosius-the-cenobiarch':
+    'four men, and two of them are on this same 11 Ιανουαρίου without being confusable: saint.gr prints Theodosius the Cenobiarch, the founder of the Palestinian coenobium whom the Romanian calendar keeps on the same day, and «Όσιος Θεοδόσιος ο εν Τραπεζούντι», a bishop and abbot of about 1392. The other two are the Bithynian hegumen of Triglia on the Greek 1 January and the founder of the Kyiv Caves, dead 1074. One calendar, two entries on one day and two more on other days, so four men.',
+  'θεοδωροσ theodore-companion-of-stephen theodore-of-kandavla theodore-of-tamasos theodore-prince-of-yaroslavl theodore-the-envoy-of-nicomedia':
+    'five men. The new one is the Theodore of the 11 Ιανουαρίου line with Stephen, a monk with no year on his page; the corpus keeps the martyr of Kandavla of 288 to 311 on the Russian and Greek 4 September, Theodore of Tamasos of the first century on the Greek 4 October, the prince of Yaroslavl dead 1298 to 1299 on three calendars on 19 September, and the envoy of Nicomedia of 370 on three calendars on 5 September. Four days, four centuries, and a bare monastic Theodore on a fifth day.',
+  'πετροσ peter-companion-of-leucius peter-disciple-of-dionysius-of-alexandria peter-of-capitolias peter-of-sebaste peter-son-of-john-of-syracuse peter-the-peloponnesian peter-the-sign-bearer':
+    'seven men now, and the new one is the martyr of the 11 Ιανουαρίου line with Severus and Leucius, whose page gives no year and no place. The other six are read in the el-01-01 and el-01-03 entries for this same name form: the Peloponnesian new-martyr of 1776, the disciple of Dionysius of Alexandria of about 254, the hieromartyr of Capitolias, the son of John of Syracuse of 867, the Sign-Bearer whom his own source cannot place, and Peter of Sebaste, the brother of Basil the Great, on the Romanian and Greek 9 January. A forename this common folds every wave; each entry is the reading, and the days and the centuries keep them apart.',
+  'μιχαηλ michael-companion-of-platon-of-reval michael-of-klops':
+    'two men. saint.gr keeps «Όσιος Μιχαήλ ο του Κλωπς» on 11 Ιανουαρίου, the fool for Christ of Klops dead 1456; the Greek 1 Ιανουαρίου keeps a presbyter Michael martyred with Platon of Reval in 1919, of whom the page holds nothing but the name and the year. Five centuries apart and neither page names the other.',
+  'companion leucius peter severus leucius-companion-of-peter peter-companion-of-leucius severus-companion-of-leucius':
+    'not three men folded onto each other but one line folded onto itself. saint.gr 11 Ιανουαρίου names «Άγιοι Πέτρος, Σεβήρος και Λεύκιος οι Μάρτυρες» and the synaxis ruling makes that three folders sharing one life, each relating the other two; every one of the three display names carries the other names, so the fold key holds all three forenames whichever folder it is read from. Three commemorations on one day in one line, and the fold is the corpus doing what it was told.',
   'παυλοσ paul-disciple-of-dionysius-of-alexandria paul-of-damascus paul-of-obnora paul-of-zographou':
     'four men. saint.gr keeps «Όσιος Παύλος της Όμπνορα» on 10 Ιανουαρίου, dead 1429, the founder of the Obnora house; the corpus keeps the disciple of Dionysius of Alexandria, dead 254, on the Greek 3 October, Paul of Damascus on the Greek 25 September, and Paul of Zographou, one of the martyred monks of Athos of 1275 to 1282, on the Romanian 10 October and the Greek 22 September. Three martyrs of three centuries and a fifteenth-century Russian founder.',
   'μακαριοσ macarius-companion-of-eudoxius macarius-magistrate-of-alexandria macarius-of-kios macarius-of-pisma':
@@ -1133,7 +1143,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '173'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '183'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

@@ -1,0 +1,53 @@
+{
+  "slug": "leucius-companion-of-peter",
+  "display_name": "Leucius, companion of Peter and Severus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Λεύκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιανουαρίου, «Άγιοι Πέτρος, Σεβέριος και Λεύκιος οι Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "related": [
+    "peter-companion-of-leucius",
+    "severus-companion-of-leucius"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιανουαρίου — «Άγιοι Πέτρος, Σεβέριος και Λεύκιος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/01/11/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Teodosie cel Mare",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 ianuarie."
+    },
+    {
+      "form": "Θεοδόσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιανουαρίου, «Όσιος Θεοδόσιος ο κοινοβιάρχης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 11 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιανουαρίου — «Όσιος Θεοδόσιος ο κοινοβιάρχης»",
+        "url": "https://www.saint.gr/01/11/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -77,6 +91,23 @@
       },
       "english": {
         "text": "Planted in the courts of thy Lord, thou didst blossom with thy most radiant virtues, and thou didst multiply thy sons in the wilderness, watering them with the rains of thy tears, O shepherd of the flocks of God. Therefore we cry to thee: rejoice, Father Theodosius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλάγιος α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Ἀρεταὶς θεοσδότοις ἐκλάμψας ὅσιε, Μοναστικῆς πολιτείας ὤφθης λαμπρὸς χαρακτήρ, καὶ φωστὴρ θεοειδὴς Πάτερ καὶ ἔξαρχος, Θεοδόσιε σοφέ, τῶν Ἀγγέλων μιμητά, θεράπων ὁ τῆς Τριάδος ἣν ἐκδυσώπει ἀπαύστως, ἐλεηθήναι τᾶς ψυχᾶς ἠμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Θεοδόσιος ο κοινοβιάρχης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1091/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining with virtues given of God, O venerable one, thou wast shown a bright pattern of the monastic polity, and a godlike luminary and exarch, O wise Theodosius, imitator of the angels, servant of the Trinity. Entreat her without ceasing, that our souls may find mercy.",
         "rendered": "site"
       }
     }

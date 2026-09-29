@@ -6,6 +6,11 @@
       "form": "Vitalie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 ianuarie."
+    },
+    {
+      "form": "Βιτάλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιανουαρίου, «Όσιος Βιτάλιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 11 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιανουαρίου — «Όσιος Βιτάλιος»",
+        "url": "https://www.saint.gr/01/11/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -45,5 +59,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "john-the-merciful-of-alexandria",
+    "nicodemus-the-hagiorite"
+  ]
 }

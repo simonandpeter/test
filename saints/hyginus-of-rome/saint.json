@@ -1,0 +1,67 @@
+{
+  "slug": "hyginus-of-rome",
+  "display_name": "Hyginus of Rome",
+  "office": "Bishop of Rome",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Υγίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιανουαρίου, «Άγιος Υγίνος Επίσκοπος Ρώμης», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 136,
+      "latest": 140,
+      "display": "136–140",
+      "basis": "traditional",
+      "note": "saint.gr: «χειροτονήθηκε Επίσκοπος Ρώμης (136 - 140 μ.Χ.)»."
+    },
+    "death": {
+      "earliest": 140,
+      "latest": 140,
+      "display": "140",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησε το έτος 140 μ.Χ. επί αυτοκράτορα Αντωνίνου Πίου (138-161 μ.Χ.)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιανουαρίου — «Άγιος Υγίνος Επίσκοπος Ρώμης»",
+        "url": "https://www.saint.gr/01/11/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
