@@ -6,6 +6,11 @@
       "form": "Ιωάσαφ",
       "lang": "el",
       "note": "Read out of the entry’s list of the twenty-six, which prints him as «Ιωάσαφ»."
+    },
+    {
+      "form": "Ioasaf",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's life of the twenty-six of Zografu for 10 octombrie."
     }
   ],
   "sex": "male",
@@ -53,8 +58,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 22 septembrie (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pe 10 octombrie — «Sfinţii 26 de cuvioşi mucenici de la Zografu»; viaţa lor îi enumeră: «Egumentul Toma, monahii Varsanufie, Chiril, Mihail, Simon, Ilarion, Iacob, Iov, Ciprian, Sava, Iacov, Martinian, Cosma, Serghie, Mina, Ioasaf, Ioanichie, Pavel, Antonie, Eftimie, Dometian, Partenie şi patru mireni.»",
+        "url": "https://doxologia.ro/10-octombrie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

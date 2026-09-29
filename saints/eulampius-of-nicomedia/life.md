@@ -1,0 +1,11 @@
+# Eulampius of Nicomedia
+
+The Romanian life sets Eulampius in a reign it spells Maximilian, when the persecution was so heavy that many of the faithful left their houses and hid in the mountains and caves and waste places. Eulampius was a young man of noble family whose estate lay in the country of Nicomedia, a Christian in faith and in deed; hiding with others, he was sent into the city to buy bread and bring it out to them secretly. Over the city gates he saw the imperial decree for the killing of Christians posted up, read it, and laughed at the folly of an emperor who armed himself not against enemies but against the innocent and so laid his own empire waste.
+
+The idolaters seized him at once, bound him and brought him to judgement. The judge, seeing him young and handsome, first tried to coax him, telling him not to waste so fair a face and dishonour his family; Eulampius answered that the judge's heart was full of deceit and his promises empty. He was then stripped, stretched on the ground and beaten with sinews, and afterwards laid on an iron bed heated red in the fire. When all were waiting for him to die on it he felt a strength come into him, rose and walked about whole, as though he had not been tortured at all.
+
+His sister [Eulampia](/saints/eulampia-sister-of-eulampius), hearing that her brother was suffering for Christ, ran to the place, stood in the middle of the crowd and claimed her share in it. She was struck about the face until the beauty of it was changed and blood ran from her nose and mouth, and her brother strengthened her with words. When a cauldron was heated for them she went into it beside him, the force of the fire went out of it and the water cooled, and the two stood in it unhurt and sang; the life says two hundred of the people believed at that sight.
+
+The judge, not knowing what else to do with them, condemned them to the sword. Their hands were bound behind them and the soldiers led them far off; at the place of execution Eulampius laid his head under the sword and it was struck off, while Eulampia gave up her soul into the hands of God before the blow came, so that the soldiers, seeing her dead, did not behead her.
+
+*After doxologia.ro's calendar for 10 octombrie — [the day](https://doxologia.ro/10-octombrie) and [the life](https://doxologia.ro/sfantul-mucenic-evlampie); read 24 September 2026.*

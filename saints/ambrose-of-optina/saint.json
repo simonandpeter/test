@@ -1,0 +1,68 @@
+{
+  "slug": "ambrose-of-optina",
+  "display_name": "Ambrose of Optina",
+  "names": [
+    {
+      "form": "Ambrozie de la Optina",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "related": [
+    "macarius-of-optina"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1812,
+      "latest": 1812,
+      "display": "1812",
+      "basis": "attested",
+      "note": "doxologia.ro: «Părintele Ambrozie s-a născut la 21 noiembrie 1812, în județul Lipețk, din gubernia Tambov»."
+    },
+    "death": {
+      "earliest": 1891,
+      "latest": 1891,
+      "display": "1891",
+      "basis": "attested",
+      "note": "doxologia.ro puts his last decline in «Spre sfârșitul iernii anului 1891» and «Toamna târziu», and his burial on «La 15 octombrie a fost săvârșită înmormântarea»; the page gives no day of death of its own."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pe 10 octombrie — «Sfântul Ambrozie de la Optina»",
+        "url": "https://doxologia.ro/10-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
