@@ -1,0 +1,13 @@
+# Julian of the Euphrates
+
+Our most venerable father Julian, the one by the river Euphrates, left the world and went to the banks of that water; and finding a cave there he lived the monastic life in it. Many were moved to emulate him and made for that little cave, and building huts around it they came to be a hundred, eating what their teacher ate. This wonderful man killed a dragon, the page says, and made a spring of water rise in dry and waterless ground. Going also to Mount Sinai, he built a church above the rock from which Moses the receiver of the law saw God so far as it was possible to see Him, and it stands to this day.
+
+Many who feared the return of the pagan Julian the Transgressor from the Persians, knowing this man for a chosen servant of God, begged him to deliver them from him. He made long prayer to God for ten days, and heard a voice from above saying that not for his sake only but for the sake of many others who stand all night at prayer, the defiled and pagan Julian had been struck down.
+
+Some years later, when the blessed [Meletius](/saints/meletius-of-antioch) had been driven out of Antioch, he was called for, to the prayer and the comfort of many. He consented and went; and on the road a woman who loved God received him. As the saint sat at supper, her only son, a boy of seven, who had been about the table, strayed a little out of sight and fell into a well. The page tells what that honourable woman did and how the child was given back to her, for the profit of the multitude.
+
+Travelling once on his way to the imperial city, a sick man who had long been bedridden touched only his sheepskin coat and rose up at once and followed him, as the lame man once followed Peter and John. Having strengthened him in the Orthodox faith, Julian turned back to his hermit’s labour, taking his road through the middle of the city of Cyrrhus; and the people of Cyrrhus kept him there for their comfort, saying: servant of God, we are expecting in the place of our bishop a certain Asterius, a man of bad faith and deep in malice; stay with us and help us as you can, lest with his slandering tongue he turn us aside with some words.
+
+So the saint stayed and prayed all night with the few who had gathered; and that man was killed by a wrath sent from God, being left only one day of his tormented life. Then he went back to his disciples, and having spent some years with them he reposed unto the Lord. The page gives no year for his birth or his death, and prints no troparion.
+
+*After doxologia.ro's calendar for 18 octombrie — [the day](https://doxologia.ro/18-octombrie) and [the life](https://doxologia.ro/sfantul-cuvios-iulian); read 24 September 2026.*

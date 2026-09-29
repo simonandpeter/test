@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'iulian julian-companion-of-caesarius julian-of-emesa julian-of-samosata julian-of-the-brazen-gate julian-of-the-euphrates':
+    'five men called Iulian, on five Romanian days. The new one is the hermit who left the world for a cave by the Euphrates, venerable, 18 October. The other four are unchanged and were read on 19 and 29 September: the physician of Emesa, 6 February; one of the seven of Samosata, 29 January; the martyr of the Brazen Gate, 9 August; and the presbyter martyred at Terracina with Caesarius, 7 October (read 29 September 2026)',
+  'luca luke-of-crimea luke-of-emesa luke-the-evangelist':
+    'three men called Luca, on three Romanian days. The new one is the evangelist, 18 October. The others are unchanged: Luke the deacon of Emesa, a martyr, 29 January, and Luke of Crimea, archbishop, confessor and physician, 11 June (read 29 September 2026)',
   'leontie leontius-of-the-brazen-gate leontius-of-the-forty-martyrs leontius-of-tripoli leontius-the-martyr-16-october':
     'four men called Leontie, on four Romanian days. The new one is the first named of the four who died by fire, doxologia 16 octombrie. The other three are unchanged and were read on 29 September: the martyr of the Brazen Gate, 9 August; one of the Forty of Sebaste, 9 March; and the soldier of Tripoli, 18 June (read 29 September 2026)',
   'terentie terentius-of-africa terentius-the-martyr-16-october':

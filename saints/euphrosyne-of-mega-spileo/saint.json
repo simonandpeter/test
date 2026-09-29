@@ -1,0 +1,55 @@
+{
+  "slug": "euphrosyne-of-mega-spileo",
+  "display_name": "Euphrosyne of Mega Spileo",
+  "names": [
+    {
+      "form": "Eufrosina de la Mega Spileo",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 octombrie."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "related": [
+    "simeon-of-mega-spileo",
+    "theodore-of-mega-spileo",
+    "luke-the-evangelist"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 18 octombrie — «Sfânta Cuvioasă Eufrosina de la Mega Spileo»",
+        "url": "https://doxologia.ro/18-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

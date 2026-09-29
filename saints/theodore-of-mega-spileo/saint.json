@@ -1,0 +1,64 @@
+{
+  "slug": "theodore-of-mega-spileo",
+  "display_name": "Theodore of Mega Spileo",
+  "names": [
+    {
+      "form": "Teodor de la Mega Spileo",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "related": [
+    "simeon-of-mega-spileo",
+    "euphrosyne-of-mega-spileo",
+    "luke-the-evangelist"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 301,
+      "latest": 333,
+      "display": "early 4th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Cei doi cuvioși, Simeon și Teodor, au fost frați după trup, născuți în Tesalonic la începutul veacului al IV-lea.» The page gives no year of death, only that both died at Mega Spileo soon after Julian the Apostate."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 18 octombrie — «Sfântul Cuvios Teodor de la Mega Spileo»",
+        "url": "https://doxologia.ro/18-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
