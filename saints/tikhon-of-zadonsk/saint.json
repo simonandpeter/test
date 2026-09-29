@@ -10,6 +10,11 @@
     {
       "form": "Тихон Задонски",
       "lang": "sr"
+    },
+    {
+      "form": "Tihon din Zadonsk",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 august, «Sfântul Ierarh Tihon din Zadonsk», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -50,8 +55,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 august — «Sfântul Ierarh Tihon din Zadonsk»",
+        "url": "https://doxologia.ro/13-august",
+        "year": 2026
+      },
+      "note": "The Romanian life behind that line is this man — born 1724 in a poor sacristan's family at Korotsk in the Novgorod diocese, teacher of rhetoric, tonsured Tihon in 1758, bishop of Voronezh in 1761 at thirty-seven, dead at fifty-nine — so this is a row on this folder and not a second Tikhon. Read 24 September 2026."
     },
     {
       "church": "greek",

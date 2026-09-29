@@ -1,0 +1,58 @@
+{
+  "slug": "dorotheus-of-gaza",
+  "display_name": "Dorotheus of Gaza",
+  "names": [
+    {
+      "form": "Dorotei",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 august, «Sfântul Cuvios Dorotei», with the rank word left off; his own page names him «Părintele nostru Dorotei de Gaza»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic",
+    "abbot"
+  ],
+  "related": [
+    "seridos-of-gaza",
+    "barsanuphius-the-great",
+    "john-the-prophet-of-gaza"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 august — «Sfântul Cuvios Dorotei»",
+        "url": "https://doxologia.ro/13-august",
+        "year": 2026
+      },
+      "note": "His page carries a life of three sentences and no troparion and no year."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026). The Prologue keeps [Seridos](/saints/seridos-of-gaza), the abbot of the house he lived in, on this same day."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

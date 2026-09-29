@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'dorotei dorotheus-of-gaza dorotheus-of-tyre':
+    'two men whose ro form is Dorotei, on two Romanian days: the abbot of Gaza, venerable, who lived under Abba Seridos and wrote the Discourses, Romanian 13 August; and the bishop of Tyre under Diocletian, a hieromartyr, Romanian 5 June. The namesweep proposed the abbot against dorotheus-of-nicomedia and dorotheus-the-hermit-of-egypt and the reader rejected both; this is the Romanian spelling folding in a third (read 29 September 2026)',
   'alexie alexis-of-moscow alexius-of-the-brazen-gate':
     'the Romanian 9 August is «Sfintii 10 Mucenici Marturisitori pentru icoana lui Hristos», ten folders off one enumerating line: the nine men and Maria the patrician beheaded at the Brazen Gate under Leo the Isaurian, about 730. Nine of the ten names collide with men the corpus already keeps, and every collision is the forename and nothing else. Here the new one is the martyr of 9 August; the other is the metropolitan of Moscow, a monk and wonderworker, Romanian 12 February (read 29 September 2026)',
   'antonin antoninus-martyr-9-august antoninus-of-ephesus':
