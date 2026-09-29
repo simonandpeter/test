@@ -749,6 +749,7 @@ export const sr = {
     'Bishop in Persia': 'Епископ персијски',
     'Bishop of Aegae in Cilicia': 'Епископ егејски у Киликији',
     'Bishop of Akhtala in Iberia': 'Епископ ахталски у Иверији',
+    'Bishop of Akragas': 'Епископ акрагантски',
     'Bishop of Alexandria Minor': 'Епископ Мале Александрије',
     'Bishop of Ancyra': 'Епископ анкирски',
     'Bishop of Antioch': 'Епископ антиохијски',

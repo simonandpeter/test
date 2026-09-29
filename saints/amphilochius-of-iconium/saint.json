@@ -1,0 +1,73 @@
+{
+  "slug": "amphilochius-of-iconium",
+  "display_name": "Amphilochius of Iconium",
+  "office": "Bishop of Iconium",
+  "names": [
+    {
+      "form": "Amfilohie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 noiembrie, «Sfântul Ierarh Amfilohie, Episcopul Iconiei», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 23 noiembrie — «Sfântul Ierarh Amfilohie, Episcopul Iconiei»",
+        "url": "https://doxologia.ro/23-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 23 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "basil-the-great",
+    "gregory-the-theologian"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Dumnezeul părinţilor noştri Care faci pururea cu noi după blândeţile Tale, nu îndepărta mila Ta de la noi; ci, pentru rugăciunile lor, în pace îndreptează viaţa noastră.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Amfilohie, Episcopul Iconiei (the common «Dumnezeul părinţilor noştri», printed under his name)",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-amfilohie-episcopul-iconiei",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who deal with us always according to your gentleness, take not your mercy from us; but by their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

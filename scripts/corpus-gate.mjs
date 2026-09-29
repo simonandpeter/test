@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'grigorie gregory-of-akragas gregory-of-alexandria gregory-of-nyssa':
+    'three folders whose ro form is Grigorie, on three Romanian days. The new one is Gregory bishop of Akragas in Sicily, 23 November. The others were read on 30 September: Gregory of Alexandria, 5 November, and Gregory of Nyssa, 10 January. The other Gregories the corpus keeps carry different ro forms (read 30 September 2026)',
   'filimon philemon-6-july philemon-of-cyzicus philemon-of-gaza philemon-the-apostle':
     'four men called Filimon, on four Romanian days. The new one is the apostle of the Seventy to whom Paul wrote, husband of Apphia, 22 November. The others are the bare-line martyr of 6 July, Philemon of Cyzicus, 29 April, and Philemon bishop of Gaza, 14 February (read 30 September 2026)',
   'proclu proclus-of-callippi proclus-of-constantinople':

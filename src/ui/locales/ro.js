@@ -747,6 +747,7 @@ export const ro = {
     'Bishop in Persia': 'Episcop al Persiei',
     'Bishop of Aegae in Cilicia': 'Episcop de Egeea Ciliciei',
     'Bishop of Akhtala in Iberia': 'Episcop de Ahtala în Iberia',
+    'Bishop of Akragas': 'Episcop de Akragas',
     'Bishop of Alexandria Minor': 'Episcop al Alexandriei Mici',
     'Bishop of Ancyra': 'Episcop de Ancira',
     'Bishop of Antioch': 'Episcop al Antiohiei',

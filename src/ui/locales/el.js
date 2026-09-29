@@ -748,6 +748,7 @@ export const el = {
     'Bishop in Persia': 'Επίσκοπος Περσίδος',
     'Bishop of Aegae in Cilicia': 'Επίσκοπος Αιγών της Κιλικίας',
     'Bishop of Akhtala in Iberia': 'Επίσκοπος Αχταλών Ιβηρίας',
+    'Bishop of Akragas': 'Επίσκοπος Ακράγαντος',
     'Bishop of Alexandria Minor': 'Επίσκοπος Αλεξανδρείας της Μικράς',
     'Bishop of Ancyra': 'Επίσκοπος Αγκύρας',
     'Bishop of Antioch': 'Επίσκοπος Αντιοχείας',
