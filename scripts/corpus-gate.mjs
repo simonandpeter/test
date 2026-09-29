@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'valerian valerian-25-october valerian-4-may valerian-companion-of-justin valerian-of-tomis valerian-of-trebizond':
+    'five men called Valerian, on five Romanian days, and doxologia keeps five commemorations. The new one is a bare line — 25 octombrie prints the name and the readings and nothing else, no Viata tab and no Tropar tab — and so is the 4 mai folder. The other three carry lives: the companion of Justin, 1 June; Valerian of Tomis, 13 September; and Valerian of Trebizond, 21 January. Five entries on one calendar are five commemorations, and nothing on the October page ties it to any of the other four (read 29 September 2026)',
+  'martirie martyrius-companion-of-marcian martyrius-of-zelenets':
+    'two men: the subdeacon of Constantinople killed with the notary Marcian, 25 October, and Martyrius of Zelenets, abbot and venerable, Romanian 1 March (read 29 September 2026)',
+  'marcian marcian-companion-of-martyrius marcian-of-durostorum marcian-the-emperor':
+    'three men called Marcian, on three Romanian days. The new one is the notary of Constantinople killed with the subdeacon Martyrius, 25 October. The others are the soldier of Durostorum, 8 June, and the emperor Marcian, 17 February (read 29 September 2026)',
+  'companion marcian martyrius marcian-companion-of-martyrius martyrius-companion-of-marcian':
+    'the word-set artefact: the notary Marcian and the subdeacon Martyrius of Constantinople, put to death together under the Arians, doxologia 25 octombrie, each named as the other companion (read 29 September 2026)',
   'valentin valentine-companion-of-mark valentine-of-interamna':
     'two men: the martyr dragged along the ground with Mark and Soterichus, doxologia 24 octombrie, whose whole record is that one sentence; and Valentine, bishop of Interamna, a hieromartyr, Romanian 30 July (read 29 September 2026)',
   'marcu mark-companion-of-soterichus mark-of-apollonias mark-of-arethusa mark-of-byblos mark-of-ephesus mark-the-ascetic mark-the-evangelist':

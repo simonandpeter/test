@@ -1,0 +1,50 @@
+{
+  "slug": "chrysaphus",
+  "display_name": "Chrysaphus",
+  "names": [
+    {
+      "form": "Hrisaf",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 25 octombrie, «Sfântul Mucenic Hrisaf»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 25 octombrie — «Sfântul Mucenic Hrisaf»",
+        "url": "https://doxologia.ro/25-octombrie",
+        "year": 2026
+      },
+      "note": "His page (https://doxologia.ro/sfantul-mucenic-hrisaf) carries no Viață tab, no Tropar tab and no notice — only the day and the appointed readings. Read 24 September 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 25 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

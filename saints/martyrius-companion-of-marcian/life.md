@@ -1,0 +1,17 @@
+# Martyrius, companion of Marcian
+
+When the unclean heresy of Arius had spread, great divisions came upon the Church of Christ, so that it was split in two, and a great persecution of the faithful began from the Arians, as harsh as any from the idolaters: all who confessed Christ as Maker and not creature, God incarnate and not a mere man, were hated, tormented and killed. The Arian power grew the more because the emperor Constantius, the son of Constantine the Great, fell into the heresy himself.
+
+He had at his court two great nobles, Eusebius and Philip, both Arians, who persecuted the Orthodox and troubled the Church. They were the cause of the exile and the death of Paul the Confessor, patriarch of Constantinople, whom they sent into Armenia and had strangled by the Arians, setting Macedonius in the see in his place; and they destroyed in one way and another many other teachers and confessors of the right faith.
+
+Among these were the martyrs Marcian and Martyrius, who adorned the Church of God greatly with their writings and their words and left many church teachings from which their spiritual children drank. Both served the same patriarch Paul: Marcian was a reader and Martyrius a subdeacon, and both were notaries, who wrote down all their patriarch's teachings and acts. They were great preachers of the word of God and servants of the Church, and defended her like two shields against the heresies.
+
+After Paul's exile and death the heresiarchs turned their poison on his two disciples. At first they hid their anger like a coal in ashes and tried by contrived flattery to turn them from the right faith, giving them much gold and promising to get them great gifts from the emperor, to raise them to bishops' thrones and make them masters of much property, if only they would take the Arian belief. They took neither the gold nor the promised honour, and laughed at the trick, choosing rather to bear reproach and torment and death for the right faith than to live rich and honoured in heresy.
+
+Seeing they could not be bent, the heretics condemned them to death, which the saints desired for Christ more than life. Led out to the place of killing, they asked a little time for prayer, and lifting their eyes and hands they said: “Lord God, who hast made our hearts severally, who knowest our deeds, receive in peace the souls of Thy servants; for Thy sake we die and are counted as sheep led to the slaughter. Yet we rejoice that for Thy name we go out of this life by such a death; make us worthy to share eternal life, Thou who art our life.” When they had said Amen they bowed their heads under the sword, and the unbelieving Arians cut them off, for the confession of the divinity of Jesus Christ.
+
+Some of the faithful took their relics and buried them at the gates of Melantias in the city of Constantinople, and there [John Chrysostom](/saints/john-chrysostom) afterwards built them a church from the foundations, in which many healings were worked at the prayer of the holy martyrs.
+
+Martyrius was the subdeacon of the two. doxologia.ro prints the same life under both names, and one troparion, the common of martyrs, for the two of them together. His companion is [Marcian](/saints/marcian-companion-of-martyrius).
+
+*After doxologia.ro's calendar for 25 octombrie — [the day](https://doxologia.ro/25-octombrie) and [the life](https://doxologia.ro/sfantul-mucenic-martirie); read 24 September 2026.*
