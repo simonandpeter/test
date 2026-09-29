@@ -890,6 +890,7 @@ export const el = {
     'Metropolitan of Moschonisia': 'Μητροπολίτης Μοσχονησίων',
     'Metropolitan of Moscow': 'Μητροπολίτης Μόσχας',
     'Metropolitan of Moscow and All Russia': 'Μητροπολίτης Μόσχας και πάσης Ρωσίας',
+    'Metropolitan of Moscow and Kolomna': 'Μητροπολίτης Μόσχας και Κολόμνας',
     'Metropolitan of Pentapolis': 'Μητροπολίτης Πενταπόλεως',
     'Metropolitan of Tetritskaro': 'Μητροπολίτης Τετριτσκαρό',
     'Metropolitan of Timișoara': 'Μητροπολίτης Τιμισοάρας',

@@ -1,0 +1,70 @@
+{
+  "slug": "obadiah",
+  "display_name": "Obadiah",
+  "names": [
+    {
+      "form": "Avdie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 noiembrie, «Sfântul Proroc Avdie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 19 noiembrie — «Sfântul Proroc Avdie»",
+        "url": "https://doxologia.ro/19-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "elijah-the-tishbite"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "Pomenind prăznuirea prorocului tău Avdie, Doamne, printr-însul Te rugăm: izbăveşte sufletele noastre.",
+      "source": {
+        "text": "Doxologia — «Troparul Sfântului Proroc Avdie», glas 2, the common of a prophet with his name in it",
+        "url": "https://doxologia.ro/troparul-sfantului-proroc-avdie",
+        "year": 2026
+      },
+      "english": {
+        "text": "As we keep the feast of Thy prophet Obadiah, O Lord, through him we entreat Thee: deliver our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

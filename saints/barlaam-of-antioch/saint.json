@@ -1,0 +1,67 @@
+{
+  "slug": "barlaam-of-antioch",
+  "display_name": "Barlaam of Antioch",
+  "names": [
+    {
+      "form": "Varlaam",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 noiembrie, «Sfântul Mucenic Varlaam»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 19 noiembrie — «Sfântul Mucenic Varlaam»",
+        "url": "https://doxologia.ro/19-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Şi părtaş obiceiurilor şi următor scaunelor Apostolilor fiind, lucrare ai aflat, de Dumnezeu insuflate, spre suirea privirii la cele înalte. Pentru aceasta, cuvântul adevărului drept învăţând şi cu credinţa răbdând până la sânge, Sfinţite Mucenice Varlaam, roagă-te lui Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — «Troparul Sfântului Mucenic Varlaam», glas 4. The text is the common of a hieromartyr and addresses him as «Sfinţite Mucenice», a rank neither the calendar's line nor the life gives him; it is printed under his name and is copied whole, as it stands",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-varlaam",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharer in the ways of the Apostles and successor to their thrones, thou didst find in action, O God-inspired one, the ascent to the vision of things on high. Therefore, rightly teaching the word of truth and enduring in the faith unto blood, hieromartyr Barlaam, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

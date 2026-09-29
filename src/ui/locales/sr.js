@@ -891,6 +891,7 @@ export const sr = {
     'Metropolitan of Moschonisia': 'Митрополит мосхонишки',
     'Metropolitan of Moscow': 'Митрополит московски',
     'Metropolitan of Moscow and All Russia': 'Митрополит московски и све Русије',
+    'Metropolitan of Moscow and Kolomna': 'Митрополит московски и коломенски',
     'Metropolitan of Pentapolis': 'Митрополит пентапољски',
     'Metropolitan of Tetritskaro': 'Митрополит тетрицкаројски',
     'Metropolitan of Timișoara': 'Митрополит темишварски',

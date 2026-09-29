@@ -889,6 +889,7 @@ export const ro = {
     'Metropolitan of Moschonisia': 'Mitropolit de Moschonisia',
     'Metropolitan of Moscow': 'Mitropolit de Moscova',
     'Metropolitan of Moscow and All Russia': 'Mitropolit al Moscovei și al întregii Rusii',
+    'Metropolitan of Moscow and Kolomna': 'Mitropolit al Moscovei și Kolomnei',
     'Metropolitan of Pentapolis': 'Mitropolit de Pentapolis',
     'Metropolitan of Tetritskaro': 'Mitropolit de Tetritskaro',
     'Metropolitan of Timișoara': 'Mitropolit al Timișoarei',

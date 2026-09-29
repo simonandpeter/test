@@ -1,0 +1,64 @@
+{
+  "slug": "hilarion-the-georgian",
+  "display_name": "Hilarion the Georgian",
+  "names": [
+    {
+      "form": "Ilarion Georgianul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 noiembrie, «Sfântul Ilarion Georgianul, făcătorul de minuni»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "wonderworker"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 875,
+      "latest": 875,
+      "display": "875",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Ilarion a adormit la data de 19 noiembrie 875», and the emperor who translated his relics is given as Basil the Macedonian (867-886). The page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "revised-julian",
+        "note": "Not the same man as the corpus's Hilarion the New of Georgia, whom doxologia keeps on 14 februarie: that one is Iese Kanchaveli, born 1776 at Shorapani and died 1864, while this one is a Kakhetian of the ninth century who died in 875 at Thessalonica."
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 19 noiembrie — «Sfântul Ilarion Georgianul, făcătorul de minuni»",
+        "url": "https://doxologia.ro/19-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "elijah-the-tishbite"
+  ]
+}

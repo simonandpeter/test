@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'varlaam barlaam-30-may barlaam-hutinski barlaam-of-antioch varlaam-of-moldavia':
+    'four folders whose ro form is Varlaam, on four Romanian days. The new one is Barlaam of Antioch, the old man whose hand was held over the altar fire, 19 November. The other three were read on 30 September: the bare 30 mai line, Barlaam Hutinski on 6 noiembrie, and Varlaam metropolitan of Moldavia, 30 August (read 30 September 2026)',
   'zaheu zacchaeus-the-deacon-martyr zacchaeus-the-publican':
     'two men: the deacon martyred with Alphaeus, whose life doxologia gives in two short paragraphs, Romanian 18 November; and Zacchaeus the publican of the Gospel, kept as an apostle on 20 April (read 30 September 2026)',
   'roman roman-the-venerable romanus-martyr-16-march romanus-the-deacon-of-caesarea':
