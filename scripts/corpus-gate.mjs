@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'irineu irenaeus-of-egypt irenaeus-of-sirmium irenaeus-the-martyr-22-august':
+    'the new folder is a calendar line and nothing else: «Sfantul Mucenic Irineu» on 22 august, no Viata tab and no Tropar tab, so it asserts a martyr, a name and a day. He is not identified with any Irenaeus the corpus already keeps, and all of them keep other days out of other sources: Irenaeus of Egypt, a martyr, Romanian 5 June; Irenaeus of Sirmium, hieromartyr and bishop, 6 April; Irenaeus of Lyon, 23 August; and Irenaeus of Rome, who has no Romanian row (read 29 September 2026)',
+  'zinon zeno-of-diospolis zeno-the-martyr-22-august':
+    'the new folder is a calendar line and nothing else: «Sfantul Mucenic Zinon» on 22 august, and the page behind it opens neither a Viata nor a Tropar tab. The other Zinon the Romanian keeps is Zeno of Diospolis, one of the Seventy, an apostle and not a martyr, 27 April. He is also not zeno-of-nicomedia, whose own life puts him in Anthimus company on the Russian 3 September, and doxologia own life of Agathonicus — the life it prints under five of the 22 august names — names no Zeno, so no connection is asserted (read 29 September 2026)',
   'silvan silvanus-of-cibalae silvanus-of-emesa silvanus-the-apostle':
     'the deacon of Cibalae, a martyr under Diocletian with Donatus the deacon, Romulus the presbyter and Venustus, Romanian 21 August, is new. The other two are unchanged and keep their own days: Silvanus the bishop of Emesa, a martyr, Romanian 29 January, and Silvanus one of the Seventy, Romanian 30 July (read 29 September 2026)',
   'donat donatus-of-cibalae donatus-of-euroea':

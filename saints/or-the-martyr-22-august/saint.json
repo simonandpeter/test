@@ -1,0 +1,50 @@
+{
+  "slug": "or-the-martyr-22-august",
+  "display_name": "Or (22 August)",
+  "names": [
+    {
+      "form": "Or",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 august, «Sfântul Mucenic Or», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 august — «Sfântul Mucenic Or»",
+        "url": "https://doxologia.ro/22-august",
+        "year": 2026
+      },
+      "note": "The page doxologia's calendar links for him carries neither a Viață tab nor a Tropar tab; the calendar line is everything the source gives. The corpus holds no saint of this name on any day."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

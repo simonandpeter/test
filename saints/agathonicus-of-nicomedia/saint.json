@@ -9,6 +9,11 @@
     {
       "form": "Свети мученик Агатоник",
       "lang": "sr"
+    },
+    {
+      "form": "Agatonic",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 august, «Sfântul Mucenic Agatonic», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -41,8 +46,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 22 august was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 22 august — «Sfântul Mucenic Agatonic»",
+        "url": "https://doxologia.ro/22-august",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -110,6 +124,22 @@
         "text": "Thy martyrs, O Lord, in their suffering received the incorruptible crown from thee our God; for having thy help they overcame the tormentors and destroyed also the feeble insolence of the demons. By their prayers save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Mucenic Agatonic și al celor împreună cu dânsul», Glasul 4 — printed for him together with his company",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-agatonic-al-celor-impreuna-cu-dansul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, in their struggles received crowns of incorruption from you, our God; for having your strength they overthrew the torturers, and shattered the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
     }
   ],
   "images": [
@@ -117,5 +147,11 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "zoticus-of-nicomedia",
+    "theoprepius-of-nicomedia",
+    "acindynus-of-nicomedia",
+    "severian-of-nicomedia"
   ]
 }

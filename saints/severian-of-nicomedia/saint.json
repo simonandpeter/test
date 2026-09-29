@@ -5,6 +5,11 @@
     {
       "form": "Севериан",
       "lang": "ru"
+    },
+    {
+      "form": "Severian",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 august, «Sfântul Mucenic Severian», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 22 august was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 22 august — «Sfântul Mucenic Severian»",
+        "url": "https://doxologia.ro/22-august",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -73,5 +87,11 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "agathonicus-of-nicomedia",
+    "zoticus-of-nicomedia",
+    "theoprepius-of-nicomedia",
+    "acindynus-of-nicomedia"
+  ]
 }
