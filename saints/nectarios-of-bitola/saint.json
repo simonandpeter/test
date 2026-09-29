@@ -1,0 +1,59 @@
+{
+  "slug": "nectarios-of-bitola",
+  "display_name": "Nectarios of Bitola",
+  "names": [
+    {
+      "form": "Nectarie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 decembrie, «Sfântul Cuvios Nectarie», with the rank words left off; his life there gives Bitolia as his birthplace and Nicolae as his name in the world."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1500,
+      "latest": 1500,
+      "display": "1500",
+      "basis": "attested",
+      "note": "doxologia.ro: «şi-a dat fericitul său suflet, cu sfârşit paşnic, în mâinile lui Dumnezeu, în anii de la Hristos o mie cinci sute, în luna decembrie, ziua a cincea.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 decembrie — «Sfântul Cuvios Nectarie»",
+        "url": "https://doxologia.ro/5-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

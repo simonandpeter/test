@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'nectarie nectarios-of-bitola nectarius-venerable-17-may':
+    'two men: Nectarios of Bitola, one of the Athonite fathers the Romanian 5 December keeps, and the bare-line venerable of 17 May. Two entries on one calendar, and the May page gives nothing that could be him (read 30 September 2026)',
   'avacum abachum-son-of-marius habakkuk':
     'two men, and one of them is a prophet: Habakkuk, whom the Romanian keeps on 2 December; and Abachum, son of Marius and Martha, martyred at Rome with his father, mother and brother, Romanian 6 July. The ro form Avacum serves both (read 30 September 2026)',
   'anastasia anastasia-daughter-of-nicholas-ii anastasia-of-rome-15-april anastasia-saguna':

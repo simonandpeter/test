@@ -1,0 +1,75 @@
+{
+  "slug": "sabbas-the-sanctified",
+  "display_name": "Sabbas the Sanctified",
+  "names": [
+    {
+      "form": "Sava cel Sfințit",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 5 decembrie, «Sfântul Cuvios Sava cel Sfințit», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "abbot",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 decembrie — «Sfântul Cuvios Sava cel Sfințit»",
+        "url": "https://doxologia.ro/5-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "euthymius-the-great",
+    "theoctistus-of-palestine",
+    "theodosius-the-cenobiarch"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Cu curgerile lacrimilor tale ai lucrat pustiul cel neroditor şi cu suspinurile cele din adânc ai făcut ostenelile tale însutit roditoare şi te-ai făcut luminător lumii, strălucind cu minunile, Sfinte Sava părintele nostru, cuvioase! Roagă-te lui Hristos Dumnezeu, să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Sava cel Sfințit; the common of a venerable father, with his name set into it",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-sava-cel-sfintit",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of your tears you tilled the barren wilderness, and with sighs out of the depths you made your labours bear fruit a hundredfold, and you became a light to the world, shining with wonders, holy Sabbas our venerable father. Pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
