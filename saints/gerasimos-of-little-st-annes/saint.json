@@ -1,0 +1,71 @@
+{
+  "slug": "gerasimos-of-little-st-annes",
+  "display_name": "Gerasimos of Little St Anne's",
+  "names": [
+    {
+      "form": "Gherasim Mikraghiananitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 decembrie, «Sfântul Cuvios Gherasim Mikraghiananitul», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "hymnographer"
+  ],
+  "related": [
+    "dionysius-the-rhetor",
+    "mitrophan-disciple-of-dionysius"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1904,
+      "latest": 1904,
+      "display": "1904",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Gherasim Mikraghiananitul, după numele de botez Anastasie, s-a născut pe 5 septembrie 1904 în satul Droviani din Epirul de Nord.»"
+    },
+    "death": {
+      "earliest": 1991,
+      "latest": 1991,
+      "display": "1991",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Gherasim Mikraghiananintul a trecut la Domnului în anul 1991 și a fost înmormântat în apropierea peșterii Sfinților Dionisie și Mitrofan.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 decembrie — «Sfântul Cuvios Gherasim Mikraghiananitul»",
+        "url": "https://doxologia.ro/7-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

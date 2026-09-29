@@ -1,0 +1,69 @@
+{
+  "slug": "ambrose-of-milan",
+  "display_name": "Ambrose of Milan",
+  "office": "Bishop of Milan",
+  "names": [
+    {
+      "form": "Ambrozie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 decembrie, «Sfântul Ierarh Ambrozie, Episcopul Mediolanului», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 decembrie — «Sfântul Ierarh Ambrozie, Episcopul Mediolanului»",
+        "url": "https://doxologia.ro/7-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Îndreptător credinţei şi chip blândeţelor, învăţător înfrânării te-a arătat pe tine, turmei tale, adevărul lucrurilor. Pentru aceasta ai dobândit cu smerenia cele înalte şi cu sărăcia cele bogate; Părinte Ierarhe Ambrozie, roagă pe Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Ambrozie, Episcopul Mediolanului (the common of a hierarch, «Îndreptător credinţei şi chip blândeţelor», printed under his name with his own name in the last line)",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-ambrozie-episcopul-mediolanului",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown you to your flock as a rule of faith, an image of meekness and a teacher of abstinence. Therefore you gained the heights by humility and riches by poverty. Father and hierarch Ambrose, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

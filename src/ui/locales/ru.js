@@ -821,6 +821,7 @@ export const ru = {
     'Bishop of Magnesia': 'Епископ Магнезийский',
     'Bishop of Maghid': 'Епископ Магидский',
     'Bishop of Melitene': 'Епископ Мелитинский',
+    'Bishop of Milan': 'Епископ Медиоланский',
     'Bishop of Myra': 'Епископ Мирликийский',
     'Bishop of Naeson in Persia': 'Епископ Наесонский в Персии',
     'Bishop of Narva': 'Епископ Нарвский',

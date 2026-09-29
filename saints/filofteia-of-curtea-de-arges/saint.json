@@ -1,0 +1,68 @@
+{
+  "slug": "filofteia-of-curtea-de-arges",
+  "display_name": "Filofteia of Curtea de Argeș",
+  "names": [
+    {
+      "form": "Filofteia de la Curtea de Argeș",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 7 decembrie, «Sfânta Muceniță Filofteia de la Curtea de Argeș», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 7 decembrie — «Sfânta Muceniță Filofteia de la Curtea de Argeș»",
+        "url": "https://doxologia.ro/7-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 7 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru răbdarea ta ţi-ai agonisit plata ta, Fericită Filofteia, întru ispite neîncetat răbdând, bătăi suferind, în necazuri binevoind, pe săraci miluindu-i şi pe flămânzi săturându-i; roagă-te lui Hristos Dumnezeu, bună fecioară, să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Mucenițe Filofteia de la Curtea de Argeș",
+        "url": "https://doxologia.ro/troparul-sfintei-mucenite-filofteia-de-la-curtea-de-arges",
+        "year": 2026
+      },
+      "english": {
+        "text": "In your patience you gained your reward, blessed Filofteia, enduring unceasingly in temptations, bearing blows, taking troubles gladly, showing mercy to the poor and filling the hungry; pray to Christ God, good virgin, that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
