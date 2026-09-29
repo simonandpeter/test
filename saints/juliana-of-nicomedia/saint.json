@@ -1,0 +1,50 @@
+{
+  "slug": "juliana-of-nicomedia",
+  "display_name": "Juliana of Nicomedia",
+  "names": [
+    {
+      "form": "Iuliana din Nicomidia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 decembrie, «Sfânta Muceniță Iuliana din Nicomidia»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 21 decembrie — «Sfânta Muceniță Iuliana din Nicomidia»",
+        "url": "https://doxologia.ro/21-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (28 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

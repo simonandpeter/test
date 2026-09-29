@@ -1,0 +1,49 @@
+{
+  "slug": "themistocles-of-myra",
+  "display_name": "Themistocles of Myra",
+  "names": [
+    {
+      "form": "Temistocle",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 decembrie, «Sfântul Mucenic Temistocle»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 21 decembrie — «Sfântul Mucenic Temistocle»",
+        "url": "https://doxologia.ro/21-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (28 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

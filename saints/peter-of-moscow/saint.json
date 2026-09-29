@@ -10,6 +10,11 @@
     {
       "form": "Петр Московский",
       "lang": "ru"
+    },
+    {
+      "form": "Petru",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 decembrie, «Sfântul Ierarh Petru, Mitropolitul Moscovei»."
     }
   ],
   "sex": "male",
@@ -50,8 +55,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 24 August (checked 2026-08-22); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 21 decembrie — «Sfântul Ierarh Petru, Mitropolitul Moscovei»",
+        "url": "https://doxologia.ro/21-decembrie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
