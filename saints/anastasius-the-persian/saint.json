@@ -6,6 +6,11 @@
       "form": "Anastasie Persul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 ianuarie, «Sfântul Cuvios Mucenic Anastasie Persul»."
+    },
+    {
+      "form": "Αναστάσιος ο Πέρσης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Ιανουαρίου, «Άγιος Αναστάσιος ο Πέρσης ο Οσιομάρτυρας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -45,6 +50,38 @@
         "text": "Let all the faithful praise in hymns the divine disciple and fellow traveller of the apostle Paul, Saint Timothy; and with him let them honour the wise Anastasius, who shone out of Persia like a star, and who drives away the passions of our souls and the sicknesses of our bodies.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος δ'. Ταχύ προκατάλαβε.",
+      "text": "Την πλάνην αφέμενος, την των Περσών νουνεχώς, τη πίστει προσέδραμες, τη του Χριστού ευσεβώς, σοφέ Αναστάσιε, όθεν και εν ασκήσει, διαπρέψας ενθέως, ήθλησας υπέρ φύσιν, και τον όφιν καθείλες διό διπλώ στεφάνω, θεόθεν εστεφάνωσαι.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ήχος δ', «Ταχύ προκατάλαβε», on the page of Άγιος Αναστάσιος ο Πέρσης ο Οσιομάρτυρας; monotonic as the page prints it",
+        "url": "https://www.saint.gr/1149/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having wisely left behind the error of the Persians, thou didst run devoutly to the faith of Christ, O wise Anastasius; and shining divinely in asceticism thou didst contend above nature and cast down the serpent, and so wast crowned from God with a double crown.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος α’. Χορός, Ἀγγελικὸς.",
+      "text": "Τόν θεῖον Μαθητήν, καί συνέκδημον Παύλου, Τιμόθεον πιστοί, ἀνυμνήσωμεν πάντες, σύν τούτῳ γεραίροντες, τόν σοφόν Ἀναστάσιον, τόν ἐκλάμψαντα, ἐκ τῆς Περσίδος ὡς ἄστρον, καί ἐλαύνοντα, τά ψυχικά ἡμῶν πάθη, καί νόσους τοῦ σώματος.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος α’, «Χορός, Ἀγγελικὸς», printed on the page of Άγιος Τιμόθεος ο Απόστολος for the day the two share; the hymn names both Timothy and Anastasius the Persian",
+        "url": "https://www.saint.gr/1150/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful all praise the divine disciple and fellow traveller of Paul, Timothy, honouring with him the wise Anastasius, who shone out of Persia like a star and who drives away the passions of our souls and the sicknesses of our bodies.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
@@ -69,8 +106,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Ιανουαρίου — «Άγιος Αναστάσιος ο Πέρσης ο Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/01/22/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr's own heading for him gives the year 628 — «Αγιος Αναστασιος ο Περσης ο Οσιομαρτυρας (; - 628)» (https://www.saint.gr/1149/saint.aspx). The kontakion it prints for the day is sung to him together with the Apostle Timothy, and its related links include a separate commemoration of the translation of his relics."
     },
     {
       "church": "serbian",
@@ -80,5 +127,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "timothy-of-ephesus"
+  ]
 }

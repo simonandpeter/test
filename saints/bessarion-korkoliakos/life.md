@@ -6,4 +6,6 @@ During the German occupation, the page says, he helped many of his countrymen an
 
 He fell asleep in the Lord on 22 January 1991, of a pulmonary oedema, at the Sotiria hospital in Athens. His relics were found incorrupt on 3 March 2006.
 
-*After doxologia.ro's calendar for 22 ianuarie — [the day](https://doxologia.ro/22-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-visarion-agathonitul-korkoliakos); read 19 September 2026.*
+The Greek calendar keeps him on the same day, under the second epithet the site gives him, the Agathonite. saint.gr says that Bessarion Korkoliakos was born at Petalidi of Messinia in the year 1908, and that his relic lies incorrupt at the holy monastery of Agathon. The page is long and its links are mostly to recordings and to a presentation of a book about him; it prints no hymn.
+
+*After doxologia.ro's calendar for 22 ianuarie — [the day](https://doxologia.ro/22-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-visarion-agathonitul-korkoliakos); read 19 September 2026; and saint.gr's calendar for 22 Ιανουαρίου — [the day](https://www.saint.gr/01/22/index.aspx) and [the life](https://www.saint.gr/4484/saint.aspx), read 30 September 2026.*

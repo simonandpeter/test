@@ -1,0 +1,54 @@
+{
+  "slug": "john-companion-of-manuel",
+  "display_name": "John, companion of Manuel of Adrianople",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Ιανουαρίου, «Ιωάννης», in the company of Manuel of Adrianople; the day gives him no rank and the life calls him one of two generals."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "related": [
+    "manuel-of-adrianople",
+    "leo-companion-of-manuel"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Ιανουαρίου — «Άγιοι Μανουήλ Επίσκοπος, Γεώργιος Επίσκοπος Δεβελτού, Πέτρος Επίσκοπος, Λέων Επίσκοπος Νικαίας, Γαβριήλ, Σιώνιος, Ιωάννης, Λέων, Πάροδος Πρεσβύτερος και άλλοι τριακόσιοι εβδομήντα επτά Μάρτυρες»",
+        "url": "https://www.saint.gr/01/22/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

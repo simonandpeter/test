@@ -1,0 +1,59 @@
+{
+  "slug": "joasaph-of-alaska",
+  "display_name": "Joasaph of Alaska",
+  "names": [
+    {
+      "form": "Ιωάσαφ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Ιανουαρίου, «Άγιος Ιωάσαφ Φωτιστής της Αλάσκας», with the rank word left off; the life page adds the surname in brackets, «ο Άγιος Ιωάσαφ (Μπολότωφ)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "preacher"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1701,
+      "latest": 1800,
+      "display": "18th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιωάσαφ (Μπολότωφ) γεννήθηκε στη Ρωσία τον 18ο αιώνα μ.Χ.» The page gives no year of birth and none of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Ιανουαρίου — «Άγιος Ιωάσαφ Φωτιστής της Αλάσκας»",
+        "url": "https://www.saint.gr/01/22/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

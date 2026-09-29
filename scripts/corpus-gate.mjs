@@ -115,6 +115,22 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'πετροσ peter-abesalamites peter-companion-of-leucius peter-companion-of-manuel peter-disciple-of-dionysius-of-alexandria peter-of-capitolias peter-of-sebaste peter-son-of-john-of-syracuse peter-the-peloponnesian peter-the-sign-bearer':
+    'nine now. The new one is the Peter of Manuel of Adrianople company on 22 Ιανουαρίου; the other eight are read in the el-01-01, el-01-03, el-01-11 and el-01-12 entries for this name form. The reading has not changed and will not: separate entries on one calendar are separate men unless a page says otherwise.',
+  'λεων leo-companion-of-manuel leo-of-nicaea':
+    'two men on one day and saint.gr does not confuse them: 22 Ιανουαρίου carries Leo, bishop of Nicaea and hieromartyr, and a Leo who is one of the soldiers martyred with Manuel of Adrianople. Neither page gives a year and each gives its man his own company or his own see. One calendar, two entries, two men.',
+  'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-mauropous john-of-syracuse john-the-hut-dweller':
+    'five men, and the new one is the John whom the 22 Ιανουαρίου line names with Manuel among his company, with no year on the page. The corpus keeps the companion of Hilarion the New on the Greek 6 October, John Mauropous on the Romanian and Greek 5 October, John of Syracuse dead 867 on 23 September, and John the Hut-Dweller, upgraded on the Greek 15 January earlier in this wave. The commonest forename in the calendar, and five separate days hold these five.',
+  'ιωασαφ joasaph-of-alaska joasaph-of-zographou':
+    'two men. saint.gr keeps Joasaph of Alaska, bishop and preacher, on 22 Ιανουαρίου; the corpus keeps Joasaph of Zographou among the Athonite martyrs of 1275 to 1282, on the Romanian 10 October and the Greek 22 September. Alaska and Athos, five centuries apart.',
+  'γεωργιοσ george-of-develtos george-the-iberian-2-january':
+    'two men. saint.gr keeps George, bishop of Develtos and hieromartyr, on 22 Ιανουαρίου with no year; the Greek 2 Ιανουαρίου keeps George the Iberian, the new-martyr at Mytilene whose death the page reads as 1770 or 1777. A bishop martyred in Thrace is not an eighteenth-century new-martyr, and the corpus keeps a third George of this name family on the Romanian 13 May, the Athonite abbot, whom neither page names.',
+  'ζωσιμοσ zosimas-brother-of-alexander zosimus-of-syracuse':
+    'two men. saint.gr keeps Zosimus, bishop and abbot of Syracuse, on 21 Ιανουαρίου with no year; the corpus keeps Zosimas the brother of Alexander, dead about 290, on the Greek 28 September. A Sicilian bishop is not a martyr of the persecutions.',
+  'γαβριηλ gabriel-companion-of-sionios gabriel-of-lesnovo':
+    'two men, six days apart on one calendar. The 21 Ιανουαρίου Gabriel is one of two named in one line and has no year; the corpus keeps Gabriel of Lesnovo, a monk of the early twelfth century, on the Greek 15 January, written in this same wave. Two entries, two commemorations.',
+  'companion gabriel sionios gabriel-companion-of-sionios sionios-companion-of-gabriel':
+    'one line folded onto itself, the fifth of its kind in this wave. saint.gr names Gabriel and Sionios together on 21 Ιανουαρίου and the synaxis ruling makes that two folders, each display name carrying the other, so the folded key holds both forenames whichever of the two it is read from. Both lives relate Manuel of Adrianople, whom the 22 Ιανουαρίου page keeps with his company, and that link is why 22 Ιανουαρίου had to be written beside this day rather than after it.',
   'ζαχαριασ zacharias-father-of-the-forerunner zacharias-of-arta':
     'two men. saint.gr keeps Zacharias of Arta, a new-martyr of 1782, on 20 Ιανουαρίου; the corpus keeps the prophet Zacharias, father of the Forerunner, on all four calendars on 5 September. An eighteenth-century new-martyr under the Turks and the priest of the temple share a name and eighteen centuries divide them.',
   'θεοδωροσ theodore-companion-of-stephen theodore-of-kandavla theodore-of-novgorod theodore-of-tamasos theodore-of-tomsk theodore-prince-of-yaroslavl theodore-the-envoy-of-nicomedia':
@@ -1203,7 +1219,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '270'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '288'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

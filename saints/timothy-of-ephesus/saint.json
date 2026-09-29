@@ -6,6 +6,11 @@
       "form": "Timotei",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 ianuarie, «Sfântul Apostol Timotei»."
+    },
+    {
+      "form": "Τιμόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Ιανουαρίου, «Άγιος Τιμόθεος ο Απόστολος», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -13,7 +18,8 @@
     "apostle"
   ],
   "related": [
-    "john-the-theologian"
+    "john-the-theologian",
+    "anastasius-the-persian"
   ],
   "hymns": [
     {
@@ -48,6 +54,38 @@
         "text": "Let all the faithful praise in hymns the divine disciple and fellow traveller of the apostle Paul, Saint Timothy; and with him let them honour the wise Anastasius, who shone out of Persia like a star, and who drives away the passions of our souls and the sicknesses of our bodies.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Χρηστότητα ἐκδιδαχθείς, καί νήφων ἐν πᾶσιν, ἀγαθήν συνείδησιν ἱεροπρεπῶς ἐνδυσάμενος, ἤντλησας ἐκ τοῦ Σκεύους τῆς ἐκλογῆς τά ἀπόρρητα, καί τήν πίστιν τηρήσας, τόν ἴσον δρόμον τετέλεκας, Ἀπόστολε Τιμόθεε. Πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τάς ψυχάς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος δ’, on the page of Άγιος Τιμόθεος ο Απόστολος",
+        "url": "https://www.saint.gr/1150/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taught in goodness and sober in all things, clothed as befits a priest in a good conscience, thou didst draw the unutterable things out of the Vessel of election; and having kept the faith, thou didst finish the same course, O Apostle Timothy. Intercede with Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος α’. Χορός, Ἀγγελικὸς.",
+      "text": "Τόν θεῖον Μαθητήν, καί συνέκδημον Παύλου, Τιμόθεον πιστοί, ἀνυμνήσωμεν πάντες, σύν τούτῳ γεραίροντες, τόν σοφόν Ἀναστάσιον, τόν ἐκλάμψαντα, ἐκ τῆς Περσίδος ὡς ἄστρον, καί ἐλαύνοντα, τά ψυχικά ἡμῶν πάθη, καί νόσους τοῦ σώματος.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος α’, «Χορός, Ἀγγελικὸς», on the page of Άγιος Τιμόθεος ο Απόστολος; the hymn names both saints of the day, Timothy and Anastasius the Persian",
+        "url": "https://www.saint.gr/1150/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful all praise the divine disciple and fellow traveller of Paul, Timothy, honouring with him the wise Anastasius, who shone out of Persia like a star and who drives away the passions of our souls and the sicknesses of our bodies.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
@@ -72,8 +110,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Ιανουαρίου — «Άγιος Τιμόθεος ο Απόστολος»",
+        "url": "https://www.saint.gr/01/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The kontakion saint.gr prints on his page is sung to him and to Anastasius the Persian together, both of whom the Greek calendar keeps on this day."
     },
     {
       "church": "serbian",

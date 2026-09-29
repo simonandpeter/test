@@ -11,6 +11,11 @@
       "form": "Visarion Korkoliakos",
       "lang": "ro",
       "note": "Read out of the heading of doxologia.ro's life, «Sfântul Cuvios Visarion Korkoliakos»."
+    },
+    {
+      "form": "Βησσαρίων Κορκολιάκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Ιανουαρίου, «Όσιος Βησσαρίων Κορκολιάκος, ο Αγαθωνίτης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -56,8 +61,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Ιανουαρίου — «Όσιος Βησσαρίων Κορκολιάκος, ο Αγαθωνίτης»",
+        "url": "https://www.saint.gr/01/22/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

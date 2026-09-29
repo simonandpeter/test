@@ -61,5 +61,23 @@
       "basis": "attested",
       "note": "Died past seventy on 22 January 1511, as the entry’s own life says; recorded 2026-09-06."
     }
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος α'. Του λίθου σφραγισθέντος.",
+      "text": "Των Κρητών τε τον γόνον και Ζακύνθου το καύχημα, των πατέρων κλέος και δόξα Ιωσήφ τον αοίδημον τιμήσωμεν εν ύμνοις οι πιστοί ου δόξη αρρήτω η Τριάς ετιμήσατο το σκήνος διασώσασα άφθορον. Δόξα τω αγιάσαντι αυτόν, δόξα τω στεφανώσαντι, δόξα τω αναδείξαντι φρουρόν και άμισθον πιστοίς ιατρόν τοις κάμνουσι.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ήχος α', «Του λίθου σφραγισθέντος», on the page of Όσιος Ιωσήφ ο ηγιασμένος ο Σαμάκος, which the calendar lists on 22 Ιανουαρίου; monotonic as the page prints it",
+        "url": "https://www.saint.gr/1146/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful honour in hymns the son of the Cretans and the boast of Zakynthos, the glory and renown of the fathers, Joseph of blessed memory, whom the Trinity honoured with unspeakable glory, keeping his body incorrupt. Glory to him who sanctified him, glory to him who crowned him, glory to him who showed him a guardian, and a physician without fee to the faithful who are ill.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

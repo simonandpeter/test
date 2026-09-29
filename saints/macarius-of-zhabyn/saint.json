@@ -6,6 +6,11 @@
       "form": "Макарий Жабынский",
       "lang": "ru",
       "note": "Read out of the Sretensky life’s heading «Преподобный Макарий Жабынский, Белевский чудотворец»."
+    },
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Ιανουαρίου, «Όσιος Μακάριος εκ Ρωσίας», with the rank word left off; the life page calls him «ο Όσιος Μακάριος του Ζαμπίνσκιϋ»."
     }
   ],
   "sex": "male",
@@ -52,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not on saint.gr’s list for 5 Οκτωβρίου (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Ιανουαρίου — «Όσιος Μακάριος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/01/22/index.aspx",
+        "year": 2026
+      },
+      "note": "This folder's earlier Greek row recorded only that saint.gr's list for 5 Οκτωβρίου did not name him and that no other day had been checked. It names him on 22 Ιανουαρίου, which is the day of his burial that this folder's Russian row already notes, and the row now records that day."
     },
     {
       "church": "serbian",

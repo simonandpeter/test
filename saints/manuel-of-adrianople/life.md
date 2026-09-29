@@ -1,0 +1,9 @@
+# Manuel of Adrianople
+
+In the year 815, under Leo the Armenian the iconoclast, the Bulgarians came down to make war on Byzantium. Their leader was Krum, and they took Adrianople; for three days, saint.gr says, the bloodthirsty slaughtered the Christians, and after Krum's death his successors Doukoumos, and after him Ditzengos, showed the same beastly behaviour to the unhappy Christians. Ditzengos was succeeded in power by Mourtagon — Omurtag.
+
+Manuel was Metropolitan of Adrianople. He had been taken by the ruler of the Bulgarians together with other bishops, [George](/saints/george-of-develtos) and [Peter](/saints/peter-companion-of-manuel), and with many other Christians. Mourtagon, with his own hands, cut Manuel's arms from his shoulders and threw his body to the dogs. The bishops George and Peter he tore to pieces and then beheaded; the generals [Leo](/saints/leo-companion-of-manuel) and [John](/saints/john-companion-of-manuel) he beheaded himself; [Leo](/saints/leo-of-nicaea), bishop of Nicaea, he ripped the belly open with a sword; [Gabriel](/saints/gabriel-companion-of-sionios) and [Sionios](/saints/sionios-companion-of-gabriel) he beheaded; the venerable presbyter [Parodos](/saints/parodos-the-presbyter) he stoned; and another three hundred and seventy-seven Christians he beheaded.
+
+Manuel is named first of the company, and his see the day line leaves out where the life supplies it. Those three hundred and seventy-seven the source counts and does not name, so they have no folder here. No year of his birth is printed, and no hymn.
+
+*After saint.gr's calendar for 22 Ιανουαρίου — [the day](https://www.saint.gr/01/22/index.aspx) and [the life](https://www.saint.gr/1148/saint.aspx); read 30 September 2026.*
