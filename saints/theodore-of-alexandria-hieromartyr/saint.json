@@ -10,6 +10,11 @@
     {
       "form": "Феодор Александрийский",
       "lang": "ru"
+    },
+    {
+      "form": "Teodor",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 decembrie, «Sfântul Sfințit Mucenic Teodor, Arhiepiscopul Alexandriei», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -33,8 +38,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 12 septembrie (checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "revised-julian",
+        "note": "The Romanian calendar keeps him on a different day from the Greek and the Russian, which have him on 12 September; doxologia.ro prints him on 3 decembrie and serves under that line the same life — the crown of thorns, the blows on the eyes, the mockery and the beheading at the ruler's order."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 3 decembrie — «Sfântul Sfințit Mucenic Teodor, Arhiepiscopul Alexandriei»",
+        "url": "https://doxologia.ro/3-decembrie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

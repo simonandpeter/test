@@ -1,0 +1,70 @@
+{
+  "slug": "gheorghe-of-cernica",
+  "display_name": "Gheorghe of Cernica",
+  "names": [
+    {
+      "form": "Gheorghe de la Cernica",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 3 decembrie, «Sfântul Cuvios Gheorghe de la Cernica», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1730,
+      "latest": 1730,
+      "display": "1730",
+      "basis": "attested",
+      "note": "doxologia.ro: «constatăm că el s-a născut în anul 1730, din părinți credincioși și de bun neam în localitatea Săliște, lângă Sibiu», from the commemoration list he left and from the notes of those who studied his life."
+    },
+    "death": {
+      "earliest": 1806,
+      "latest": 1806,
+      "display": "1806",
+      "basis": "attested",
+      "note": "doxologia.ro quotes the monastery's commemoration list in Calinic's hand: «1806, din decembrie 3: au răposat Părintele Gheorghe, arhimandrit al ăștii obștii»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 3 decembrie — «Sfântul Cuvios Gheorghe de la Cernica»",
+        "url": "https://doxologia.ro/3-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 3 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "calinic-of-cernica"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
