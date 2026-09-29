@@ -1,0 +1,73 @@
+{
+  "slug": "papylas-the-deacon",
+  "display_name": "Papylas the Deacon",
+  "names": [
+    {
+      "form": "Papil",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "deacon"
+  ],
+  "related": [
+    "carpus-of-thyatira",
+    "agathonica-sister-of-papylas",
+    "agathodorus-servant-of-carpus-and-papylas"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 13 octombrie — «Sfântul Mucenic Papil»",
+        "url": "https://doxologia.ro/13-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinților Mucenici Carp, Papil şi al celor împreună cu dânșii",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-carp-papil-al-celor-impreuna-cu-dansii",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their struggles received crowns of incorruption from Thee, our God; for having Thy strength they overcame their tormentors, and broke the feeble insolence of the demons also. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

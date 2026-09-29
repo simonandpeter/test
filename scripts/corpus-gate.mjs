@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'agatodor agathodorus-of-cherson agathodorus-servant-of-carpus-and-papylas agathodorus-the-martyr-2-february':
+    'three men called Agatodor. The new one is the servant of Carpus and Papylas, killed with them at Pergamum, Romanian 13 October. The bishop of Cherson, a hieromartyr, keeps 7 March. The third is a bare line — doxologia 2 februarie prints «Sfantul Mucenic Agatodor» with the readings for a martyr and no life — and the Greek does the same: saint.gr keeps 2 Februariou «Agios Agathodoros» with no photograph and no entry. Two calendars each print a name-only Agathodorus in February and a servant of Carpus with a life in October, so they are two (read 29 September 2026)',
+  'carp carpus-of-thyatira carpus-the-apostle':
+    'two men on two Romanian days, and the calendar that prints them gives each a different see. Doxologia 13 octombrie life makes Carpus born at Pergamum and chosen bishop of Thyatira, martyred there with the deacon Papylas; its 26 mai Carpus is one of the Seventy. Some sources outside doxologia identify the two, and doxologia does not: it keeps two commemorations with two lives, so the corpus keeps two folders and asserts no identification (read 29 September 2026)',
   'prov probus-9-july probus-of-tarsus':
     'two men, and the Greek calendar settles it. The corpus already holds a bare «Sfantul Mucenic Prov» off doxologia 9 iulie, a page that carries the name and nothing more; saint.gr keeps 9 Iouliou «Agioi Andreas kai Provos», a Probus paired with an Andrew and not with a Tarachus. The new folder is the Probus martyred at Tarsus and Anazarbus with Tarachus and Andronicus, 12 October, whose life both calendars print. Two men (read 29 September 2026)',
   'cosma cosmas-companion-of-thomas-of-zographou cosmas-of-chalcedon cosmas-of-maiuma cosmas-of-rome':
