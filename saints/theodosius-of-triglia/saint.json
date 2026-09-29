@@ -1,0 +1,53 @@
+{
+  "slug": "theodosius-of-triglia",
+  "display_name": "Theodosius of Triglia",
+  "names": [
+    {
+      "form": "Θεοδόσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιανουαρίου, «Όσιος Θεοδόσιος ηγούμενος Τριγλίας», with the rank word and the office left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "related": [
+    "nicodemus-the-hagiorite"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Ιανουαρίου — «Όσιος Θεοδόσιος ηγούμενος Τριγλίας»",
+        "url": "https://www.saint.gr/01/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

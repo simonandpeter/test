@@ -11,6 +11,11 @@
       "form": "Pavel",
       "lang": "ro",
       "note": "His baptismal name, as doxologia.ro's life gives it: «primind la botez numele Pavel»."
+    },
+    {
+      "form": "Πλάτων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιανουαρίου, «Άγιος Πλάτων ο Ιερομάρτυρας…», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -58,8 +63,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 14 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Ιανουαρίου — «Άγιος Πλάτων ο Ιερομάρτυρας και οι συν αυτώ μαρτυρήσαντες Μιχαήλ και Νικόλαος οι Πρεσβύτεροι»",
+        "url": "https://www.saint.gr/01/01/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -69,5 +83,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "michael-companion-of-platon-of-reval",
+    "nicholas-companion-of-platon-of-reval"
+  ]
 }

@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδοτοσ theodotus-1-january theodotus-of-marcianopolis':
+    'two men. saint.gr gives the 1 Ιανουαρίου Theodotus one sentence, that he was martyred by the sword, with no year and no place; the corpus keeps Theodotus of Marcianopolis, martyred 305 to 311, on the Russian and Serbian 15 September and the Greek 17 September. Two entries on one calendar are two commemorations, and the Greek calendar prints both.',
+  'θεοδοσιοσ theodosius-of-the-kyiv-caves theodosius-of-triglia':
+    'two men. saint.gr prints «Όσιος Θεοδόσιος ηγούμενος Τριγλίας» on 1 Ιανουαρίου and says plainly that little is known of him beyond his abbacy of one of the four houses at Triglia in Bithynia; the corpus keeps Theodosius of the Kyiv Caves, dead 1074, on the Russian 14 August, the Romanian 3 May and the Greek 2 September. A Bithynian hegumen of the iconoclast centuries is not the founder of the Caves.',
+  'πετροσ peter-disciple-of-dionysius-of-alexandria peter-of-capitolias peter-son-of-john-of-syracuse peter-the-peloponnesian':
+    'four men, and no two of them share a day or a century: saint.gr keeps «Άγιος Πέτρος ο Πελοποννήσιος» on 1 Ιανουαρίου, a new-martyr hanged at Odemis in 1776, and the corpus keeps the disciple of Dionysius of Alexandria on the Greek 3 October, dead about 254; the hieromartyr of Capitolias on the Greek 4 October; and the son of John of Syracuse on 23 September, dead 867. The fold is the bare forename and nothing else.',
   'zotic zoticus-of-nicomedia zoticus-of-niculitel zoticus-of-the-ten-of-crete zoticus-the-feeder-of-lepers':
     'four folders whose ro form is Zotic, on four Romanian days. The new one is Zoticus the feeder of lepers, 30 December. The other three were read on 30 September and are unchanged (read 30 September 2026)',
   'teodora theodora-of-caesarea theodora-the-empress':
@@ -1105,7 +1111,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '138'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '145'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

@@ -221,7 +221,12 @@ test('the feast-month filter reckons each tradition in its own calendar', async 
   // January — and `scripts/corpus-gate.mjs` carries the same literal, so the
   // gate goes red on the batch that moves it and both are changed in that
   // batch's commit.
-  await expect(page.locator('[data-count]')).toHaveText('138');
+  //
+  // Seven more on 2026-09-30, the first batch of the Greek run: saint.gr's
+  // 1 Ιανουαρίου. The Greek church reckons in revised-julian, so its own
+  // January is the civil one, and every Greek January day will move this
+  // number the same way the Romanian ones did.
+  await expect(page.locator('[data-count]')).toHaveText('145');
   await expect(page.locator('.index-name', { hasText: 'Anthony the Great' })).toHaveCount(1);
 });
 

@@ -1,0 +1,58 @@
+{
+  "slug": "telemachus",
+  "display_name": "Telemachus",
+  "names": [
+    {
+      "form": "Τηλέμαχος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιανουαρίου, «Άγιος Τηλέμαχος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 404,
+      "latest": 404,
+      "display": "404",
+      "basis": "traditional",
+      "note": "saint.gr: «την 1 Ιανουαρίου 404 μ.Χ. έλαβε χώρα η τελευταία μονομαχία στην Ιστορία της Ρωμαικής Αυτοκρατορίας αφού εξαιτίας του θανάτου του…»; the page head dates him «(; - 404)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Ιανουαρίου — «Άγιος Τηλέμαχος»",
+        "url": "https://www.saint.gr/01/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

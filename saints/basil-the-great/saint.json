@@ -72,8 +72,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Ιανουαρίου — «Άγιος Βασίλειος ο Μέγας»",
+        "url": "https://www.saint.gr/01/01/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -87,5 +96,40 @@
   },
   "related": [
     "emilia-mother-of-basil-the-great"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’",
+      "text": "Εἰς πᾶσαν τὴν γῆν ἐξῆλθεν ὁ φθόγγος σου, ὡς δεξαμένην τὸν λόγον σου· δι' οὗ θεοπρεπῶς ἐδογμάτισας, τὴν φύσιν τῶν ὄντων ἐτράνωσας, τὰ τῶν ἀνθρώπων ἤθη κατεκόσμησας. Βασίλειον ἱεράτευμα, Πάτερ Ὅσιε· πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Βασίλειος ο Μέγας — Ἀπολυτίκιον, Ἦχος α’",
+        "url": "https://www.saint.gr/1/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your voice has gone out into all the earth, for it received your word; through it you set forth doctrine as befits God, made plain the nature of things that are, and put in order the ways of men. Royal priesthood, venerable Father, intercede with Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "model": "Ἐπεφάνης σήμερον",
+      "text": "Ὥφθης βάσις ἄσειστος τῇ Ἐκκλησίᾳ, νέμων πᾶσιν ἄσυλον, τὴν κυριότητα βροτοῖς, ἐπισφραγίζων σοῖς δόγμασιν, Οὐρανοφάντορ Βασίλειε Ὅσιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Βασίλειος ο Μέγας — Κοντάκιον, Ἦχος δ’, «Ἐπεφάνης σήμερον»",
+        "url": "https://www.saint.gr/1/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be an unshaken foundation for the Church, dealing out to all mortals a lordship none can plunder, and sealing it with your doctrines, Basil, venerable revealer of heaven.",
+        "rendered": "site"
+      }
+    }
   ]
 }
