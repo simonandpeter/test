@@ -1,0 +1,63 @@
+{
+  "slug": "macarius-of-pisma",
+  "display_name": "Macarius of Pisma",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιανουαρίου, «Όσιος Μακάριος ο εκ Ρωσίας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1500,
+      "display": "14th–15th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Μακάριος της Πίσμα έζησε κατά τον 14ο και 15ο αιώνα μ.Χ.»"
+    }
+  },
+  "related": [
+    "sergius-of-radonezh",
+    "paul-of-obnora"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιανουαρίου — «Όσιος Μακάριος ο εκ Ρωσίας»",
+        "url": "https://www.saint.gr/01/10/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

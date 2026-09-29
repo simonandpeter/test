@@ -7,6 +7,11 @@
       "form": "Dometian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 ianuarie, «Sfântul Cuvios Dometian, Episcopul Melitinei»."
+    },
+    {
+      "form": "Δομετιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιανουαρίου, «Όσιος Δομετιανός Επίσκοπος Μελιτηνής», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιανουαρίου — «Όσιος Δομετιανός Επίσκοπος Μελιτηνής»",
+        "url": "https://www.saint.gr/01/10/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -59,6 +73,23 @@
       },
       "english": {
         "text": "O God of our fathers, who dealest with us always according to thy gentleness, take not thy mercy from us; but at their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ.",
+      "text": "Ὡς καθαρὸς καὶ φωτισμοῦ θείου πλήρης, τὴν τοῦ ποιμαίνειν ἐπιστεύθης φροντίδα, τοὺς ἄρνας Πάτερ ὅσιε Χρίστου τοῦ Θεοῦ ὅθεν δι' ἀσκήσεως, καὶ ποικίλων θαυμάτων, τῆς ἱεραρχίας σου, τὴν χλαμύδα κοσμήσας, τῆς Ἐκκλησίας Δομετιανέ, ὤφθης κοσμήτωρ, αὐτῆς προϊστάμενος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Δομετιανός Επίσκοπος Μελιτηνής, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1108/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being pure and full of the divine illumination, thou wast entrusted with the care of shepherding the lambs of Christ our God, O venerable father; wherefore, having adorned the mantle of thy hierarchy by ascetic labour and by manifold wonders, thou wast shown, O Dometian, the ornament of the Church and the one set at its head.",
         "rendered": "site"
       }
     }

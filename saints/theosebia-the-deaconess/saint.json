@@ -1,0 +1,63 @@
+{
+  "slug": "theosebia-the-deaconess",
+  "display_name": "Theosebia",
+  "sex": "female",
+  "types": [
+    "deaconess"
+  ],
+  "names": [
+    {
+      "form": "Θεοσεβία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιανουαρίου, «Αγία Θεοσεβία η Διακόνισσα», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Θεοσεβία έζησε τον 4ο μ.Χ. αιώνα»."
+    }
+  },
+  "related": [
+    "gregory-of-nyssa",
+    "gregory-the-theologian",
+    "cyril-of-jerusalem"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιανουαρίου — «Αγία Θεοσεβία η Διακόνισσα»",
+        "url": "https://www.saint.gr/01/10/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

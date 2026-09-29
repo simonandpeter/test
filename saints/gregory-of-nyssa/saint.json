@@ -7,6 +7,11 @@
       "form": "Grigorie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 ianuarie, «Sfântul Ierarh Grigorie, Episcopul Nyssei»."
+    },
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιανουαρίου, «Άγιος Γρηγόριος Επίσκοπος Νύσσης», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -17,7 +22,8 @@
   ],
   "related": [
     "basil-the-great",
-    "gregory-the-theologian"
+    "gregory-the-theologian",
+    "theosebia-the-deaconess"
   ],
   "dates": {
     "floruit": {
@@ -50,8 +56,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιανουαρίου — «Άγιος Γρηγόριος Επίσκοπος Νύσσης»",
+        "url": "https://www.saint.gr/01/10/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -90,6 +105,23 @@
       },
       "english": {
         "text": "The God-inspired hierarch of the Church and honoured writer of the songs of wisdom, the watchful mind of Nyssa, Saint Gregory, dancing and delighting with the angels in the divine Light, prays without ceasing for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θεῖον γρήγορσιν, ἐνδεδειγμένος, στόμα σύντονον, τῆς εὐσέβειας, ἀνεδείχθης Ἱεράρχα Γρηγόριε τὴ γὰρ σοφία τῶν θείων δογμάτων σου, τῆς Ἐκκλησίας εὐφραίνεις τὸ πλήρωμα. Πάτερ ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Γρηγόριος Επίσκοπος Νύσσης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1109/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Showing forth a divine wakefulness and an unwearying mouth of godliness, thou wast revealed a hierarch, O Gregory; for by the wisdom of thy divine doctrines thou gladdenest the fullness of the Church. Venerable father, entreat Christ God that he grant us great mercy.",
         "rendered": "site"
       }
     }

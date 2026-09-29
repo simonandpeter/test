@@ -6,6 +6,11 @@
       "form": "Antipa de la Calapodești",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 ianuarie."
+    },
+    {
+      "form": "Αντίπας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιανουαρίου, «Όσιος Αντίπας ο Αθωνίτης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -52,8 +57,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιανουαρίου — «Όσιος Αντίπας ο Αθωνίτης»",
+        "url": "https://www.saint.gr/01/10/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -91,6 +105,23 @@
       },
       "english": {
         "text": "Out of the dough of thy labours, kneaded with the tears of thy mercy, thou didst leaven a prayer of much fruit, Antipas our father. Remember also the people from whom thou didst spring, O most blessed one, and shelter thy homeland by thy intercessions before God, that we may sing to thee: Rejoice, offspring of Moldavia, lover of the hermit's life!",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α΄.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Νεαυγῶν θεοφόρων πατέρων σέμνωμα, τῆς Μολδαβίας φωστῆρα, Ἁγίου Ὄρους πυρσόν, καὶ πυρφόροιν Βαλαὰμ φανὸν τῆς σκήτεως, θεῖον Ἀντίπαν εὐλαβῶς, καταστέψωμεν ᾠδαῖς, ὡς λύχνον ἀδύτου φέγγους, βοῶντες· σκέδασον ζόφον, παθῶν ἡμῶν θερμαῖς πρεσβείαις σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Αντίπας ο Αθωνίτης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1112/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The honour of the newly shining God-bearing fathers, the luminary of Moldavia, the torch of the Holy Mountain and the fire-bearing lamp of the skete of Valaam, the divine Antipas, let us reverently crown with hymns as a lamp of the light that never sets, crying aloud: scatter by thy fervent intercessions the gloom of our passions.",
         "rendered": "site"
       }
     }

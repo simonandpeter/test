@@ -6,6 +6,11 @@
       "form": "Marchian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 ianuarie."
+    },
+    {
+      "form": "Μαρκιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιανουαρίου, «Άγιος Μαρκιανός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιανουαρίου — «Άγιος Μαρκιανός»",
+        "url": "https://www.saint.gr/01/10/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -45,5 +59,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "gregory-the-theologian"
+  ]
 }

@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'παυλοσ paul-disciple-of-dionysius-of-alexandria paul-of-damascus paul-of-obnora paul-of-zographou':
+    'four men. saint.gr keeps «Όσιος Παύλος της Όμπνορα» on 10 Ιανουαρίου, dead 1429, the founder of the Obnora house; the corpus keeps the disciple of Dionysius of Alexandria, dead 254, on the Greek 3 October, Paul of Damascus on the Greek 25 September, and Paul of Zographou, one of the martyred monks of Athos of 1275 to 1282, on the Romanian 10 October and the Greek 22 September. Three martyrs of three centuries and a fifteenth-century Russian founder.',
+  'μακαριοσ macarius-companion-of-eudoxius macarius-magistrate-of-alexandria macarius-of-kios macarius-of-pisma':
+    'four men, and the new one is a Russian hermit. saint.gr keeps «Όσιος Μακάριος της Πίσμας» on 10 Ιανουαρίου, a hermit of the fourteenth to fifteenth century; the corpus keeps the companion of Eudoxius, martyred between 303 and 312, on all four calendars on 6 September; the magistrate of Alexandria, dead about 250, on the Greek 6 September; and the new-martyr of Kios, 1590, on the Greek 6 October. A late-medieval Russian hermit is none of the three martyrs.',
   'γρηγοριοσ gregory-the-elder gregory-uncle-of-eustratius':
     'two men, and the fold is only the bare forename. The Greek 1 Ιανουαρίου keeps Gregory the Elder, bishop of Nazianzus and father of the Theologian, baptised in 325 and consecrated in 328; the Greek 9 Ιανουαρίου keeps a ninth-century wonderworker, one of the two uncles of Eustratius of Mount Olympus, whose whole notice is that he and his brother Basil were the saint mothers brothers and lived in the ninth century. Five centuries and no other point of contact.',
   'πετροσ peter-disciple-of-dionysius-of-alexandria peter-of-capitolias peter-son-of-john-of-syracuse peter-the-peloponnesian peter-the-sign-bearer':
@@ -1129,7 +1133,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '169'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '173'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;
