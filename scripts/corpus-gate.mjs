@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'teodota theodota-of-adrianople theodota-with-her-three-sons':
+    'two women, on two Romanian days: one of the four of Adrianople, 22 October, and Theodota who suffered with her three sons, 29 July (read 29 September 2026)',
+  'anna anna-nun-martyr-1937 anna-of-adrianople':
+    'two women: one of the four whom bishop Alexander converted at Adrianople and who were killed with him, Romanian 22 October; and the nun killed in 1937, who has no Romanian row at all (read 29 September 2026)',
+  'averchie abercius-martyr-26-may abercius-of-hierapolis':
+    'two men, and both calendars keep two. The corpus 26 mai folder is a bare line: doxologia prints «Sfantul Mucenic Averchie» with no epithet, no city and no century, and saint.gr 26 Maiou is the same bare «Agios Averkios», standing between the apostle Alphaeus and Agia Eleni, which is the company that day gives him. The new folder is Abercius of Hierapolis, equal-to-the-apostles, whose life both calendars print on 22 October (read 29 September 2026)',
   'sofronie sophronius-of-cioara sophronius-of-jerusalem sophronius-of-soumela':
     'three men called Sofronie, on three Romanian days. The new one is the monk of Cioara-Sebes in Alba who led the Transylvanian resistance to the union, 21 October. The others were read on 29 September: the patriarch of Jerusalem, 11 March, and the founder of Panagia Soumela, 18 August (read 29 September 2026)',
   'visarion bessarion-of-egypt bessarion-the-confessor':

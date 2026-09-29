@@ -6,4 +6,4 @@ Then came the camps. At sixty-three he was felling timber, fourteen hours a day 
 
 Azbyka’s summary counts eight years in camps and exile, and calls him an elder, a clairvoyant and a consoler of thousands, glorified by many wonders after his death. The Sretensky calendar keeps him on 16 September old style as a venerable confessor, and has no life of its own.
 
-*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-kuksha-odesskij); the Sretensky calendar (days.pravoslavie.ru), 16 сентября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260916.html); read 17 September 2026.*
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-kuksha-odesskij); the Sretensky calendar (days.pravoslavie.ru), 16 сентября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260916.html); read 17 September 2026; doxologia.ro's calendar names him for 22 octombrie and prints no life of him — [the day](https://doxologia.ro/22-octombrie), read 24 September 2026.*

@@ -12,6 +12,11 @@
       "form": "Кукша Одесский (Величко)",
       "lang": "ru",
       "note": "As azbyka.ru prints it."
+    },
+    {
+      "form": "Kukșa din Odessa",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 octombrie."
     }
   ],
   "sex": "male",
@@ -53,8 +58,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s lists for 16 septembrie or 29 septembrie (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 22 octombrie — «Sfântul Kukșa din Odessa»",
+        "url": "https://doxologia.ro/22-octombrie",
+        "year": 2026
+      },
+      "note": "doxologia.ro's page for him (https://doxologia.ro/sfantul-kuksa-din-odessa) carries neither a Viață tab nor a Tropar tab, so the calendar's line is the whole of what the Romanian source prints. The day is 22 octombrie, not the 16 septembrie ст. ст. the Russian row holds, and doxologia gives no reason for the difference. Read 24 September 2026."
     },
     {
       "church": "greek",

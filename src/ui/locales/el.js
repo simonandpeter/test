@@ -776,6 +776,7 @@ export const el = {
     'Bishop of Great Perm': 'Επίσκοπος Μεγάλης Περμ',
     'Bishop of Helenopolis': 'Επίσκοπος Ελενουπόλεως',
     'Bishop of Heraclea': 'Επίσκοπος Ηρακλείας',
+    'Bishop of Hierapolis': 'Επίσκοπος Ιεραπόλεως',
     'Bishop of Hippo': 'Επίσκοπος Ιππώνος',
     'Bishop of Iconium': 'Επίσκοπος Ικονίου',
     'Bishop of Interamna in Umbria': 'Επίσκοπος Ιντεράμνης της Ουμβρίας',

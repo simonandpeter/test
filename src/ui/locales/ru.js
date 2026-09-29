@@ -794,6 +794,7 @@ export const ru = {
     'Bishop of Great Perm': 'Епископ Великопермский',
     'Bishop of Helenopolis': 'Епископ Еленопольский',
     'Bishop of Heraclea': 'Епископ Ираклийский',
+    'Bishop of Hierapolis': 'Епископ Иерапольский',
     'Bishop of Hippo': 'Епископ Иппонийский',
     'Bishop of Iconium': 'Епископ Иконийский',
     'Bishop of Interamna in Umbria': 'Епископ Интерамнский в Умбрии',

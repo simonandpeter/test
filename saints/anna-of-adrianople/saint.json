@@ -1,0 +1,55 @@
+{
+  "slug": "anna-of-adrianople",
+  "display_name": "Anna of Adrianople",
+  "names": [
+    {
+      "form": "Anna",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 octombrie, «Sfânta Muceniță Anna»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "theodota-of-adrianople",
+    "glyceria-of-adrianople",
+    "elizabeth-of-adrianople"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 22 octombrie — «Sfânta Muceniță Anna»",
+        "url": "https://doxologia.ro/22-octombrie",
+        "year": 2026
+      },
+      "note": "doxologia.ro prints no separate life for her: the page under her name carries the same four sentences that stand under each of the four women's names, which are the synaxarion notice of Alexander the bishop. The epithet “of Adrianople” is taken from the calendar's own line for Glyceria, «Sfânta Muceniță Gligheria din Adrianopol», the only one of the four whose line names the city; the other three lines give the bare name."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "slug": "abercius-of-hierapolis",
+  "display_name": "Abercius of Hierapolis",
+  "office": "Bishop of Hierapolis",
+  "names": [
+    {
+      "form": "Averchie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 octombrie, «Sfântul Ierarh, întocmai cu apostolii, Averchie, Episcopul Ierapolei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "equal-to-the-apostles",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 22 octombrie — «Sfântul Ierarh, întocmai cu apostolii, Averchie, Episcopul Ierapolei»",
+        "url": "https://doxologia.ro/22-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Îndreptător credinţei şi chip blândeţelor, învăţător înfrânârii te-a arătat pe tine, turmei tale, adevărul lucrurilor. Pentru aceasta ai dobândit cu smerenia cele înalte şi cu sărăcia cele bogate; Părinte Ierarhe Averchie, roagă pe Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Averchie, Episcopul Ierapolei, cel întocmai cu apostolii. The text is the common of a hierarch, with his name in it, as the page prints it.",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-averchie-episcopul-ierapolei-cel-intocmai-cu-apostolii",
+        "year": 2026
+      },
+      "english": {
+        "text": "A rule of faith and a model of meekness, a teacher of abstinence, the truth of things showed thee to thy flock. Therefore thou didst gain by humility the things on high, and by poverty the things that are rich; O Father and Hierarch Abercius, pray Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
