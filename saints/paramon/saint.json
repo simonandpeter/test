@@ -1,0 +1,67 @@
+{
+  "slug": "paramon",
+  "display_name": "Paramon",
+  "names": [
+    {
+      "form": "Paramon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 noiembrie, «Sfântul Mucenic Paramon», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 29 noiembrie — «Sfântul Mucenic Paramon»",
+        "url": "https://doxologia.ro/29-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Paramon, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Paramon; the common of a martyr, with his name set into it",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-paramon",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyr Paramon, O Lord, in his contest received the crown of incorruption from you, our God; for having your strength he overcame the torturers, and broke also the feeble daring of the demons. By his prayers save our souls, O Christ God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

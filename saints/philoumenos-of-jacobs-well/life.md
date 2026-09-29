@@ -1,0 +1,15 @@
+# Philoumenos of Jacob's Well
+
+Philoumenos was Sophocles in the world, born at Lefcosia in Cyprus on 15 October 1913 to the right-believing Georgios and Magdalini. He had a twin brother, Elpidios — Alexandros in the world — and from childhood the two were marked out from the rest by their love for God, so that the longing for the monastic life was kindled in them very early. In 1927, when they were only fourteen, they went together to the holy monastery of Stavrovouni, with the blessing of their spiritual father and of their devout parents.
+
+They stayed there some six years, until the exarch of the Most Holy Sepulchre took them to study at the Patriarchate's gymnasium in Jerusalem, where in 1934 they were pupils at the school of Holy Sion. In 1937 they were tonsured monks, Sophocles receiving the name Philoumenos and Alexandros the name Elpidios, and on 5 September of the same year they were ordained deacons; in 1939 they finished the gymnasium. Father Elpidios left the Holy Land and served elsewhere, while Philoumenos stayed in Jerusalem for forty-five years without a break, until his martyrdom.
+
+He was ordained priest in 1943 and passed through many obediences of the Patriarchate, serving always with responsibility and with the fear of God, and with much love for the fathers of the Holy Sepulchre. On 8 May 1979 he was transferred to Jacob's well, where he served until his martyr's death on 29 November of the same year. There he met with much trouble from fanatical Jews, who threatened him continually that if he did not leave the well and take away his icons and the Crucifix they would kill him; he answered that he would never abandon a place of worship and pilgrimage, and was ready to be martyred as its faithful guardian should be.
+
+On the evening of 29 November 1979, which became the day of his memory, fanatics broke into the precinct of Jacob's well and, while he was serving vespers, attacked him with an axe, beat him and at last killed him. His martyrdom was fearful: they struck him about the face without mercy and cut off the fingers of his right hand, and then vandalised the church and the Cross and threw a grenade, destroying the place.
+
+The testimony of Father Sophronios, who took up the martyr's body to clothe it for burial, is that it stayed warm and soft for five days after the martyrdom and "helped" the elder to dress it. So too is the testimony of his brother Elpidios, who, though many miles away, heard Philoumenos's voice saying: "My brother, they have killed me for the glory of God. I beg you, do not rebel."
+
+The Church honours him on 29 November, and his sweet-smelling and wonderworking body lies in the new and great church of three dedications built at Jacob's well in Samaria. Thousands of Orthodox come every year to venerate his relics there.
+
+*After doxologia.ro's calendar for 29 noiembrie — [the day](https://doxologia.ro/29-noiembrie) and [the life](https://doxologia.ro/sfantul-sfintit-mucenic-filumen-de-la-fantana-lui-iacov); read 25 September 2026.*

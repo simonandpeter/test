@@ -1,0 +1,84 @@
+{
+  "slug": "philoumenos-of-jacobs-well",
+  "display_name": "Philoumenos of Jacob's Well",
+  "names": [
+    {
+      "form": "Filumen de la Fântâna lui Iacov",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 29 noiembrie, «Sfântul Sfințit Mucenic Filumen de la Fântâna lui Iacov», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1913,
+      "latest": 1913,
+      "display": "1913",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Filumen (după numele de mirean Sofocle), s-a născut în Lefcosia la 15 Octombrie 1913.»"
+    },
+    "death": {
+      "earliest": 1979,
+      "latest": 1979,
+      "display": "1979",
+      "basis": "attested",
+      "note": "doxologia.ro: «la data de 8 Mai a anului 1979 a fost transferat la fântâna lui Iacov, unde a slujit până la moartea lui martirică, pe 29 Noiembrie a aceluiași an.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 29 noiembrie — «Sfântul Sfințit Mucenic Filumen de la Fântâna lui Iacov»",
+        "url": "https://doxologia.ro/29-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 29 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Pe Cel împreună fără de început Ieșit din insula Cipru, ai venit la Sion, mucenicind la fântâna lui Iacov și primind tăierea capului și a degetelor. Iar cortul tău Hristos făcându-l nestricăcios, l-a arătat fântână de bogate daruri și felurite tămăduiri, sfinte sfințite mucenice Filumen.",
+      "source": {
+        "text": "Doxologia — Troparul noului sfințit mucenic Filumen",
+        "url": "https://doxologia.ro/troparul-noulul-sfintit-mucenic-filumen",
+        "year": 2026
+      },
+      "english": {
+        "text": "Gone out from the island of Cyprus, you came to Sion, bearing witness at Jacob's well and receiving the cutting of your head and of your fingers. And Christ, making your tabernacle incorrupt, showed it a well of rich gifts and of healings of every kind, holy hieromartyr Philoumenos.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
