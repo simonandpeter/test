@@ -1,0 +1,72 @@
+{
+  "slug": "seraphim-of-sambata-de-sus",
+  "display_name": "Seraphim of Sâmbăta de Sus",
+  "office": "Abbot of Sâmbăta de Sus",
+  "names": [
+    {
+      "form": "Serafim cel Răbdător de la Sâmbăta de Sus",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 decembrie, «Sfântul Cuvios Serafim cel Răbdător de la Sâmbăta de Sus»; the life gives Dimitrie as the name he received at baptism."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "abbot"
+  ],
+  "related": [
+    "dumitru-staniloae",
+    "constantine-brancoveanu"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1912,
+      "latest": 1912,
+      "display": "27 October 1912",
+      "basis": "attested",
+      "note": "doxologia.ro: «Cuviosul Serafim s-a născut în 27 octombrie 1912, în satul Totoi, din județul Alba, primind la botez numele Sfântului Dimitrie.»"
+    },
+    "death": {
+      "earliest": 1990,
+      "latest": 1990,
+      "display": "1990",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a jertfit, vreme de jumătate de veac, în Mănăstirea de la Sâmbăta de Sus până la trecerea sa la Domnul, în 20 decembrie 1990.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 decembrie — «Sfântul Cuvios Serafim cel Răbdător de la Sâmbăta de Sus»",
+        "url": "https://doxologia.ro/20-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 20 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (28 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

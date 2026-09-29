@@ -1,0 +1,13 @@
+# Seraphim of Sâmbăta de Sus
+
+He was born on 27 October 1912 in the village of Totoi in Alba county, and was given at baptism the name of Saint Demetrius. His parents, Nechifor and Catalina, were poor and hard-worked people, and were his first teachers in what is pleasing to God; the figure of his mother stayed with him as a flower of goodness and an icon of forgiving love. From infancy he sought the things of God, warming his heart with prayer and feeding his mind with learning.
+
+He was led to the Andreian Theological Academy at Sibiu, where he was noticed as one of the most distinguished students, in conduct as in study, and as a very good and very poor one. On finishing his theology he was recommended for the post of secretary by the rector of the Academy, [Dumitru Stăniloae](/saints/dumitru-staniloae). So he came to the notice of Metropolitan Nicolae Bălan, to whom he confessed that the question of monasticism had occupied him for a long time, and that he had wrestled with it alone.
+
+In November 1938 he was ordained deacon by his hierarch's hand and soon sent to the Holy Mountain. With Father Arsenie Boca he settled at the Cell of Saint Hypatius and struggled there six months under the obedience of the hieroschemamonk Teodosie Domnariu, its elder, taking counsel also from the great Romanian hesychast Antipa Dinescu. He then spent a year at Athens learning Greek and hearing the lectures of the faculty of theology, and translated pages of the Fathers.
+
+Returning home he settled at the monastery of Sâmbăta de Sus, the foundation of [Constantine Brâncoveanu](/saints/constantine-brancoveanu), and worked at rebuilding it with Father Arsenie through the years of the Second World War. He was ordained priest on 15 January 1941 and tonsured a monk soon after, on the feast of the Life-giving Spring, and spent a year in Germany and Austria learning German at his hierarch's bidding.
+
+In 1944 he was made abbot of the Brâncovan monastery at Sâmbăta de Sus and held that obedience for ten years, through the first years of the communist regime that set itself against the Church. He put the monks' inward life in good order as well as the monastery's outward affairs, and taught that from everything of ours it should be plain that Christ is among us and in us. Crowds came to him for confession, prayer and blessing. He laboured at Sâmbăta half a century, until 20 December 1990.
+
+*After doxologia.ro's calendar for 20 decembrie — [the day](https://doxologia.ro/20-decembrie) and [the life](https://doxologia.ro/sfantul-cuvios-serafim-cel-rabdator-de-la-sambata-de-sus); read 28 September 2026.*

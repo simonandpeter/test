@@ -706,6 +706,7 @@ export const ro = {
     'Abbot of Melicucca': 'Egumen de Melicucca',
     'Abbot of Pelecete': 'Egumen de Pelechit',
     'Abbot of Simonopetra': 'Egumen de Simonopetra',
+    'Abbot of Sâmbăta de Sus': 'Stareț al Mănăstirii Sâmbăta de Sus',
     'Abbot of the Skete of the Prophet Elias on Mount Athos': 'Egumen al Schitului Prorocul Ilie din Athos',
     'Abbot of the monastery of Augarus': 'Egumen al Mănăstirii Augarus',
     'Abbot of the St Simeon Monastery': 'Egumen al Mănăstirii Sfântul Simeon',

@@ -5,6 +5,11 @@
     {
       "form": "Иоанн Кронштадтский",
       "lang": "ru"
+    },
+    {
+      "form": "Ioan de Kronstadt",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 20 decembrie, «Sfântul Ioan de Kronstadt»."
     }
   ],
   "sex": "male",
@@ -49,8 +54,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 decembrie — «Sfântul Ioan de Kronstadt»",
+        "url": "https://doxologia.ro/20-decembrie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -69,5 +83,23 @@
   },
   "related": [
     "john-of-rila"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 1",
+      "text": "Toată grija cea lumească lepădând, cu un glas să lăudăm pe cel ce este lumină călăuzitoare pământului Rusiei şi lumii întregi, pe preotul Ioan, bunul păstor, care ne-a arătat nouă strălucitorul chip al vieţuirii în Hristos, şi pe pământ fiind, de duhul rugăciunii s-a aprins, şi de la Domnul îndoit dar de tămăduire a dobândit. Cu ale lui sfinte rugăciuni, întru credinţă să ne întărească pe noi Hristos, şi fii neclintiţi ai Bisericii să ne arate, spre mântuirea sufletelor noastre!",
+      "source": {
+        "text": "Doxologia (doxologia.ro), «Troparul Sfântului Ioan de Kronstadt», Glas 1",
+        "url": "https://doxologia.ro/troparul-sfantului-ioan-de-kronstadt",
+        "year": 2026
+      },
+      "english": {
+        "text": "Casting off all worldly care, let us praise with one voice the guiding light of the Russian land and of the whole world, the priest John, the good shepherd, who showed us the shining image of life in Christ; who, while yet on earth, was kindled with the spirit of prayer and received from the Lord a twofold gift of healing. By his holy prayers may Christ strengthen us in the faith and show us to be unshaken children of the Church, unto the salvation of our souls.",
+        "rendered": "site"
+      }
+    }
   ]
 }
