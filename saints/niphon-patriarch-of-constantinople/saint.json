@@ -6,11 +6,17 @@
     {
       "form": "Св. Нифонт патријарх Цариградски",
       "lang": "sr"
+    },
+    {
+      "form": "Nifon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 august, «Sfântul Ierarh Nifon, Patriarhul Constantinopolului», with the rank word and the office left off."
     }
   ],
   "sex": "male",
   "types": [
-    "bishop"
+    "bishop",
+    "hierarch"
   ],
   "dates": {
     "birth": {
@@ -50,8 +56,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not found among the names read off doxologia.ro for 24 august 2026 (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 11 august — «Sfântul Ierarh Nifon, Patriarhul Constantinopolului»",
+        "url": "https://doxologia.ro/11-august",
+        "year": 2026
+      },
+      "note": "The Romanian life behind that line is this man — born in the Morea to Manoil and Maria, baptised Nicolae, patriarch of Constantinople, archbishop of Wallachia, buried at Dionysiou on Athos — so this is a row on this folder and not a second Niphon. It also gives the day's origin: the prince of the country gathered a synod and appointed his feast «în ziua de 11 august, zi în care el a adormit», and composed his whole service. Read 24 September 2026."
     },
     {
       "church": "greek",
@@ -79,5 +95,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "model": "Podobie: Cu faptele strălucind...",
+      "text": "Cu faptele dreptei credinţe strălucind toată Biserica ai luminat, însoţindu-te cu smerenia cea dătătoare de înălţare, tu, cinstea cea mărită a celor două sfinte locaşuri, podoaba şi înfrumuseţarea patriarhilor, Mărite Ierarhe Nifon. Iar acum umple de dumnezeieşti daruri pe cei ce cu credinţă te măresc pe tine.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Ierarh Nifon, Patriarhul Constantinopolului», Glasul 3, podobie «Cu faptele strălucind...»",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-nifon-patriarhul-constantinopolului",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining with the works of the true faith you gave light to the whole Church, joining to them the humility that lifts a man up, O glorious hierarch Niphon, honour of the two holy houses, adornment and beauty of patriarchs. And now fill with divine gifts those who magnify you in faith.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

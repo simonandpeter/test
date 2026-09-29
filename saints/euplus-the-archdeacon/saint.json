@@ -9,6 +9,11 @@
     {
       "form": "Евпло",
       "lang": "sr"
+    },
+    {
+      "form": "Evplu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 11 august, «Sfântul Mare Mucenic Evplu, Arhidiaconul», with the rank words and the office left off."
     }
   ],
   "sex": "male",
@@ -33,8 +38,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 11 august — «Sfântul Mare Mucenic Evplu, Arhidiaconul»",
+        "url": "https://doxologia.ro/11-august",
+        "year": 2026
+      },
+      "note": "The Romanian life behind that line is this man — the deacon of Catania in Sicily under Diocletian and Maximian, taken reading the Gospel he carried, beheaded «în 11 zile ale lunii august» — so this is a row on this folder and not a second Euplus. The day page calls him «Mare Mucenic», great-martyr, where his own life page and its heading call him simply «Sfântul Mucenic Evplu diaconul»; the folder's types are left as they were. Read 24 September 2026."
     },
     {
       "church": "greek",
@@ -109,6 +124,22 @@
       },
       "english": {
         "text": "Thy martyr Euplus, O Lord, in his suffering received the incorruptible crown from thee, our God; for having thy help he vanquished the torturers, and he shattered also the feeble insolence of the demons. By his prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Evplu, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Mare Mucenic Evplu, Arhidiaconul», Glasul 4 — the common troparion of a martyr, printed here with his name in it",
+        "url": "https://doxologia.ro/troparul-sfantului-mare-mucenic-evplu-arhidiaconul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyr Euplus, O Lord, in his struggle received from you, our God, the crown of incorruption; for having your strength he overthrew his torturers and broke the powerless insolence of the demons. At his prayers, Christ God, save our souls.",
         "rendered": "site"
       }
     }
