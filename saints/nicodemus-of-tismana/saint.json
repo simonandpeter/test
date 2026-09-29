@@ -1,0 +1,88 @@
+{
+  "slug": "nicodemus-of-tismana",
+  "display_name": "Nicodemus of Tismana",
+  "names": [
+    {
+      "form": "Nicodim",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 decembrie, «Sfântul Cuvios Nicodim de la Tismana», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "wonderworker"
+  ],
+  "related": [
+    "lazar-of-serbia"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1320,
+      "latest": 1320,
+      "display": "1320",
+      "basis": "traditional",
+      "note": "doxologia.ro: «născut din părinți binecredincioși la Prilep, în sudul Serbiei, în anul 1320»."
+    },
+    "death": {
+      "earliest": 1406,
+      "latest": 1406,
+      "display": "1406",
+      "basis": "traditional",
+      "note": "doxologia.ro: «s-a mutat din această viață vremelnică, la viața cerească și nepieritoare, în ziua de douăzeci și șase decembrie, anul mînturii 1406»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 decembrie — «Sfântul Cuvios Nicodim de la Tismana»",
+        "url": "https://doxologia.ro/26-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Celui Ce a Răsărit din Fecioara, Mai Marelui Păstorilor, ca o oaie de turmă ai urmat, Părinte al nostru Sfinte Nicodim. Cu postul, cu privegherea şi cu rugăciunile, te-ai făcut lucrător sfinţit de cele cereşti, tămăduind sufletele celor ce aleargă la tine cu credinţă. Pentru aceasta strigăm: Slavă Celui Ce te-a preaslăvit pe tine; Slavă Celui Ce ţi-a dat ţie putere; Slavă Celui Ce a arătat tuturor prin tine îndreptare.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Nicodim de la Tismana, glasul 1",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-nicodim-de-la-tismana",
+        "year": 2026
+      },
+      "english": {
+        "text": "You followed the Chief Shepherd, who rose from the Virgin, as a sheep of his flock, our father Saint Nicodemus. By fasting, by vigil and by prayers you became a hallowed worker of the things of heaven, healing the souls of those who run to you with faith. Therefore we cry: Glory to him who has glorified you; glory to him who gave you strength; glory to him who through you has shown amendment to all.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "slug": "euthymius-of-sardis",
+  "display_name": "Euthymius of Sardis",
+  "names": [
+    {
+      "form": "Eftimie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 decembrie, «Sfântul Mucenic Eftimie, Episcopul Sardelor», with the rank and the see left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Sardis",
+  "types": [
+    "bishop",
+    "hierarch",
+    "confessor",
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 decembrie — «Sfântul Mucenic Eftimie, Episcopul Sardelor»",
+        "url": "https://doxologia.ro/26-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Îndreptător credinţei şi chip blândeţelor, învăţător înfrânării te-a arătat pe tine, turmei tale, adevărul lucrurilor. Pentru aceasta ai dobândit cu smerenia cele înalte şi cu sărăcia cele bogate; Părinte Ierarhe Eftimie, roagă pe Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Eftimie Mărturisitorul, Episcopul Sardei, glasul 4 (the common of a hierarch, printed with his name in it)",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-eftimie-marturisitorul-episcopul-sardei",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown you to your flock a rule of faith, an image of gentleness and a teacher of continence. Therefore you have gained the heights by humility and riches by poverty. Father and hierarch Euthymius, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

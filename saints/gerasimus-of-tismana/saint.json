@@ -1,0 +1,66 @@
+{
+  "slug": "gerasimus-of-tismana",
+  "display_name": "Gerasimus of Tismana",
+  "names": [
+    {
+      "form": "Gherasim",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 26 decembrie, «Sfântul Cuvios Mucenic Gherasim de la Tismana», with the rank words left off; the life gives his baptismal name as Grigore Iscu."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1912,
+      "latest": 1912,
+      "display": "1912",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut în ziua de 21 ianuarie 1912 în localitatea Poduri, județul Bacău, în familia creștinilor Elena și Grigore Iscu»."
+    },
+    "death": {
+      "earliest": 1951,
+      "latest": 1951,
+      "display": "1951",
+      "basis": "attested",
+      "note": "doxologia.ro: «În ziua de 25 decembrie 1951, Cuviosul Gherasim cere cu stăruință să fie dus lângă patul lui Vasilescu… În noaptea aceea, amândoi au trecut în pace la cele veșnice»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 decembrie — «Sfântul Cuvios Mucenic Gherasim de la Tismana»",
+        "url": "https://doxologia.ro/26-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 26 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
