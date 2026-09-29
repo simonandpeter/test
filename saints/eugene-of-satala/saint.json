@@ -1,0 +1,73 @@
+{
+  "slug": "eugene-of-satala",
+  "display_name": "Eugene of Satala",
+  "names": [
+    {
+      "form": "Evghenie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 decembrie, «Sfântul Mare Mucenic Evghenie», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "great-martyr"
+  ],
+  "related": [
+    "eustratius-of-arabraca",
+    "auxentius-companion-of-eustratius",
+    "mardarius",
+    "orestes-companion-of-eustratius"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 decembrie — «Sfântul Mare Mucenic Evghenie»",
+        "url": "https://doxologia.ro/13-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Statornicia purtătorilor de biruinţă, cei cinci la număr: Sfinţii Mari Mucenici Eustratie şi Auxentie împreună cu ceilalţi luptători, înfruntând cu îndrăzneală focul şi celelalte chinuri, au primit de la Hristos cununile măririi; Căruia se şi roagă, să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinților Mari Mucenici Eustratie, Auxentie, Evghenie, Mardarie și Orest (one hymn printed for the five together)",
+        "url": "https://doxologia.ro/troparul-sfintilor-mari-mucenici-eustratie-auxentie-evghenie-mardarie-orest",
+        "year": 2026
+      },
+      "english": {
+        "text": "The steadfastness of the victory-bearers, five in number — the holy great martyrs Eustratius and Auxentius together with the rest of the contenders — boldly facing the fire and the other torments, received from Christ the crowns of glory; and to him they pray, that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

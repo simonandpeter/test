@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'orest orestes-companion-of-eustratius orestes-of-tyana':
+    'two men: the last of the five with Eustratius, Romanian 13 December; and Orestes of Tyana, a physician and martyr, 10 November (read 30 September 2026)',
+  'eustratie eustratius-of-arabraca eustratius-of-mount-olympus':
+    'two men: Eustratius of Arabraca, the first of the five martyred at Sebaste, Romanian 13 December; and Eustratius of Mount Olympus, abbot, 9 January (read 30 September 2026)',
+  'evghenie eugene-of-cherson eugene-of-satala eugene-of-trebizond eugenius-the-confessor':
+    'four folders whose ro form is Evghenie, on four Romanian days. The new one is Eugene of Satala, one of the five with Eustratius, 13 December. The others are Eugene of Cherson, bishop, 7 March; Eugene of Trebizond, 21 January; and Eugenius the Confessor, 19 February (read 30 September 2026)',
+  'auxentie auxentius-companion-of-eustratius auxentius-of-bithynia':
+    'two men: one of the five martyred at Sebaste with Eustratius, Romanian 13 December; and Auxentius of Bithynia, hermit and wonderworker, 14 February (read 30 September 2026)',
   'alexandru alexander-companion-of-antonina alexander-of-alexandria alexander-of-cartagena alexander-of-jerusalem alexander-of-side alexander-of-the-forty-martyrs':
     'six folders whose ro form is Alexandru, on six Romanian days. The new one is Alexander archbishop of Jerusalem, 12 December. The others are unchanged: the companion of Antonina, 10 June; Alexander of Alexandria, 29 May; Alexander of Cartagena, 25 February; Alexander of Side, 14 March; and one of the Forty of Sebaste, 9 March (read 30 September 2026)',
   'mina menas-of-egypt menas-of-zographou menas-the-athenian':

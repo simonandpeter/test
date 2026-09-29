@@ -1,0 +1,88 @@
+{
+  "slug": "dosoftei-of-moldavia",
+  "display_name": "Dosoftei of Moldavia",
+  "office": "Metropolitan of Moldavia",
+  "names": [
+    {
+      "form": "Dosoftei",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 decembrie, «Sfântul Ierarh Dosoftei, Mitropolitul Moldovei», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "related": [
+    "john-the-new-of-suceava"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1624,
+      "latest": 1624,
+      "display": "1624",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Ierarh Dosoftei s-a născut în anul 1624 la Suceava în familia Barilă.»"
+    },
+    "death": {
+      "earliest": 1693,
+      "latest": 1693,
+      "display": "1693",
+      "basis": "attested",
+      "note": "doxologia.ro: «a refuzat trecerea la uniație și a rămas ortodox până la trecerea sa la veșnicie, la 13 decembrie 1693»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 decembrie — «Sfântul Ierarh Dosoftei, Mitropolitul Moldovei»",
+        "url": "https://doxologia.ro/13-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Apărătorule al Ortodoxiei și învățătorule al sfințeniei, păstor blând ca un miel și mare dascăl al Sfintei Liturghii, Părinte Ierarhe Dosoftei, roagă pe Hristos-Dumnezeu să mântuiască sufletele noastre!",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Dosoftei, Mitropolitul Moldovei",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-dosoftei-mitropolitul-moldovei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Defender of Orthodoxy and teacher of holiness, shepherd gentle as a lamb and great master of the Divine Liturgy, father and hierarch Dosoftei, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

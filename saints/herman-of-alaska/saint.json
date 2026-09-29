@@ -35,7 +35,8 @@
       "feast": {
         "day": 15,
         "month": 11,
-        "calendar": "revised-julian"
+        "calendar": "revised-julian",
+        "note": "doxologia.ro keeps «Sfântul Cuvios Gherman de Alaska» a second time on 13 decembrie (https://doxologia.ro/13-decembrie, read 25 September 2026). The corpus keeps one feast to a church, so he renders on 15 November only and the December day is recorded here."
       },
       "source": {
         "text": "doxologia.ro, calendarul pentru 15 noiembrie — «Sfântul Cuvios Gherman de Alaska»",

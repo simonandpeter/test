@@ -1,0 +1,71 @@
+{
+  "slug": "lucia-of-syracuse",
+  "display_name": "Lucia of Syracuse",
+  "names": [
+    {
+      "form": "Lucia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 decembrie, «Sfânta Muceniță Lucia, fecioara», with the rank word and the word «fecioara» left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "related": [
+    "agatha-of-catania"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 13 decembrie — «Sfânta Muceniță Lucia, fecioara»",
+        "url": "https://doxologia.ro/13-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mieluşeaua Ta, Iisuse, Lucia, strigă cu glas mare: pe Tine, Mirele meu, te iubesc și pe Tine căutându-Te mă chinuiesc și împreună mă răstignesc și împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru tine, ca să viez pentru Tine; ci, ca o jertfă fără de prihană, primește-mă pe mine ceea ce cu dragoste mă jertfesc Ție. Pentru rugăciunile ei, ca un Milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Mucenițe Lucia, fecioara din Siracuza (the common of a virgin martyr, «Mielușeaua Ta, Iisuse», with her name in it)",
+        "url": "https://doxologia.ro/troparul-sfintei-mucenite-lucia-fecioara-din-siracuza",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your lamb Lucia cries out to you with a loud voice, Jesus: you, my Bridegroom, I love; seeking you, I suffer; I am crucified and buried together with you in your baptism; I suffer for you, that I may reign in you; I die for you, that I may live for you. Receive me as an unblemished sacrifice, offering myself to you in love. By her prayers, in your mercy, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
