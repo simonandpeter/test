@@ -9,6 +9,11 @@
     {
       "form": "Света мученица Васа",
       "lang": "sr"
+    },
+    {
+      "form": "Vasa",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 august, «Sfânta Muceniță Vasa, cu fiii ei», with the rank words left off."
     }
   ],
   "sex": "female",
@@ -41,8 +46,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 21 august was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 21 august — «Sfânta Muceniță Vasa, cu fiii ei»",
+        "url": "https://doxologia.ro/21-august",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -71,5 +85,23 @@
     "agapius-son-of-bassa",
     "pistus-son-of-bassa",
     "theognius-son-of-bassa"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfintei Mucenițe Vasa cu cei trei fii ai ei», Glasul 4 — printed for her together with her three sons",
+        "url": "https://doxologia.ro/troparul-sfintei-mucenite-vasa-cu-cei-trei-fii-ai-ei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, in their struggles received crowns of incorruption from you, our God; for having your strength they overthrew the torturers, and shattered the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
   ]
 }

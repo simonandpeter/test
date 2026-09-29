@@ -1,0 +1,63 @@
+{
+  "slug": "venustus-of-cibalae",
+  "display_name": "Venustus of Cibalae",
+  "names": [
+    {
+      "form": "Venust",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 august, «Sfântul Mucenic Venust», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "donatus-of-cibalae",
+    "romulus-of-cibalae",
+    "silvanus-of-cibalae"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "attested",
+      "note": "doxologia.ro: «I s-a tăiat capul cu sabia în ziua de 21 august, anul 304»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 21 august — «Sfântul Mucenic Venust»",
+        "url": "https://doxologia.ro/21-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

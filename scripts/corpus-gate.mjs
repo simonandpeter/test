@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'silvan silvanus-of-cibalae silvanus-of-emesa silvanus-the-apostle':
+    'the deacon of Cibalae, a martyr under Diocletian with Donatus the deacon, Romulus the presbyter and Venustus, Romanian 21 August, is new. The other two are unchanged and keep their own days: Silvanus the bishop of Emesa, a martyr, Romanian 29 January, and Silvanus one of the Seventy, Romanian 30 July (read 29 September 2026)',
+  'donat donatus-of-cibalae donatus-of-euroea':
+    'the deacon of Cibalae, a martyr under Diocletian with Romulus the presbyter, Silvanus the deacon and Venustus, Romanian 21 August, against the bishop of Euroea, a hierarch and wonderworker, Romanian 30 April. Two (read 29 September 2026)',
   'leon leo-of-catania leo-the-great leo-the-martyr-18-august':
     'the new folder is a calendar line and nothing else: doxologia prints «Sfantul Mucenic Leon» on 18 august and the page behind it opens neither a Viata nor a Tropar tab, so the folder asserts a martyr, a name and a day. Neither namesake can be him: the corpus keeps Leo of Catania, a bishop and wonderworker, on the Romanian 20 February, and Leo the Great, bishop of Rome, on 18 February, and neither is a martyr. No other martyr Leo is held on 18 August (read 29 September 2026)',
   'sofronie sophronius-of-jerusalem sophronius-of-soumela':

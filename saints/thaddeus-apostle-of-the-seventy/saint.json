@@ -15,6 +15,11 @@
       "form": "Tadeu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 mai, «Sfântul Apostol Tadeu»."
+    },
+    {
+      "form": "Tadeu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 21 august, «Sfântul Apostol Tadeu», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -58,7 +63,7 @@
         "url": "https://doxologia.ro/26-mai",
         "year": 2026
       },
-      "note": "doxologia.ro's life for this day is the life of this man — Thaddeus of Edessa, one of the seventy, sent to Abgar — so the Romanian row is this folder's and not a second Thaddeus's. Only doxologia's 26 mai page was read; its page for 21 august, the day the Russian and Serbian calendars keep him, was not read (24 September 2026), so whether the Romanian calendar also names him there is unknown."
+      "note": "doxologia.ro's life for 26 mai is the life of this man — Thaddeus of Edessa, one of the seventy, sent to Abgar — so the Romanian row is this folder's and not a second Thaddeus's. The site keeps him a second time on 21 august, «Sfântul Apostol Tadeu», https://doxologia.ro/21-august, read 24 September 2026, with the same life and a troparion; and his own page heads his feast «26 Mai», which is the day this row records. One attestation row per church is the schema, so 21 august is recorded here only, and he does not render on it."
     },
     {
       "church": "greek",
@@ -149,6 +154,22 @@
       },
       "english": {
         "text": "Holy apostle Thaddeus, entreat the merciful God to grant our souls forgiveness of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Apostole Sfinte Tadeu, roagă pe Milostivul Dumnezeu, ca să dăruiască iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Apostol Tadeu», Glasul 3",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-tadeu",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy Apostle Thaddeus, entreat the merciful God to grant our souls forgiveness of sins.",
         "rendered": "site"
       }
     }

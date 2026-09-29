@@ -10,6 +10,11 @@
       "form": "Пист",
       "lang": "sr",
       "note": "From «Света мученица Васа и њена деца Теогније, Агапије и Пист» in this folder's Serbian citation — the mother and her three sons, and this is his own name in it."
+    },
+    {
+      "form": "Pist",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's life for 21 august, which names Bassa's three sons «Teognie, Agapie și Pist»; the calendar's own line for the day names only «Vasa, cu fiii ei»."
     }
   ],
   "sex": "male",
@@ -42,8 +47,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 21 august was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 21 august — «Sfânta Muceniță Vasa, cu fiii ei»",
+        "url": "https://doxologia.ro/21-august",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -69,6 +83,8 @@
     "life": "life.md"
   },
   "related": [
-    "bassa-of-edessa"
+    "agapius-son-of-bassa",
+    "bassa-of-edessa",
+    "theognius-son-of-bassa"
   ]
 }

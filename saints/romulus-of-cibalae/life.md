@@ -1,0 +1,9 @@
+# Romulus of Cibalae
+
+Romulus the priest suffered a martyr's death in the reign of the emperor Diocletian. Doxologia.ro's notice of him sets out the persecution before it comes to the man: the bloody persecutions were begun by Roman emperors who held Christianity a danger to the very existence of the pagan Roman state of that time, in which religion was bound closely to political and social life. Roman citizens were obliged to honour the gods and to offer them sacrifice, and this the Christians did not do.
+
+Many emperors set such persecutions going, Diocletian (284–305) among them. In the years 303 and 304 he issued four edicts against the Christians, providing for the pulling down of their places of worship, the forbidding of their assemblies, and the killing of priests and even of the faithful if they would not sacrifice to the pagan gods. Among the punishments applied were beating with rods or with stones, the tearing of the body with sharp shards, burning with heated iron, the pouring of molten lead on the back, hanging head downwards, the breaking of the legs, strangling, drowning, and beheading with the sword.
+
+The priest Romulus received a martyr's death at Cibalae, near Sirmium. His head was cut off with the sword on 21 August in the year 304, because he confessed that he was a Christian and refused to sacrifice to the pagan gods. Doxologia.ro prints the same account, changing only the last sentence, for [Donatus](/saints/donatus-of-cibalae) and [Silvanus](/saints/silvanus-of-cibalae) the deacons and for [Venustus](/saints/venustus-of-cibalae), who are on the same day and died in the same place; it prints no troparion for any of them.
+
+*After doxologia.ro's calendar for 21 august — [the day](https://doxologia.ro/21-august) and [the life](https://doxologia.ro/viata-sfantului-mucenic-romul-preotul); read 24 September 2026.*
