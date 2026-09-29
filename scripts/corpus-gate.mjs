@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'nicolae nicholas-founder-of-vatopedi nicholas-ii nicholas-of-lesvos nicholas-of-myra nicholas-of-the-forty-martyrs':
+    'five folders whose ro form is Nicolae, on five Romanian days. The new one is Nicholas, one of the three founders of Vatopedi, 17 December. The other four were read on 30 September and are unchanged (read 30 September 2026)',
+  'misail misael-of-the-three-youths misael-of-turnu':
+    'two men: Misael, one of the three youths in the furnace, Romanian 17 December; and Misael of Turnu, 5 October (read 30 September 2026)',
+  'atanasie athanasius-founder-of-vatopedi athanasius-of-alexandria athanasius-of-corinth athanasius-of-meteora athanasius-of-the-forty-martyrs athanasius-the-commentarisius athanasius-the-confessor':
+    'seven folders whose ro form is Atanasie, on seven Romanian days. The new one is Athanasius, one of the three founders of Vatopedi, 17 December. The others are unchanged: Athanasius of Alexandria, 18 January; of Corinth, 4 May; of Meteora, 20 April; one of the Forty of Sebaste, 9 March; the Commentarisius, 4 January; and the Confessor, 22 February (read 30 September 2026)',
+  'antonie anthony-of-constantinople anthony-of-zographou antony-founder-of-vatopedi antony-the-martyr-1-march':
+    'four folders whose ro form is Antonie, on four Romanian days. The new one is Antony, one of the three founders of Vatopedi, 17 December. The others are Anthony of Constantinople, 12 February; Anthony of Zographou, 10 October; and the bare-line martyr of 1 March (read 30 September 2026)',
+  'anania ananias-of-the-three-youths hanani':
+    'two men: Ananias, one of the three youths in the furnace with Daniel, Romanian 17 December; and Hanani, whom the corpus keeps on 27 March (read 30 September 2026)',
+  'avacum abachum-son-of-marius avacum-the-deacon habakkuk':
+    'three folders whose ro form is Avacum, on three Romanian days, and doxologia keeps three commemorations. The new one is a bare line — «Sfantul Mucenic Avacum, diaconul», 17 decembrie, no life — and the calendar gives it the office of deacon, which neither of the others has. The others are the prophet Habakkuk, 2 December, and Abachum the son of Marius and Martha, martyred at Rome, 6 July (read 30 September 2026)',
   'suzana susanna-mother-of-nina susanna-the-deaconess':
     'two women: Susanna the deaconess, Romanian 15 December, and Susanna the mother of Nina of Georgia, 20 May (read 30 September 2026)',
   'pavel paul-of-jamnia paul-of-latros paul-of-plousias paul-of-ptolemais paul-of-zographou paul-the-apostle paul-the-confessor paul-with-valentina-and-ennatha platon-kulbusch':
