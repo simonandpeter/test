@@ -1,0 +1,64 @@
+{
+  "slug": "theodoula-of-diocaesarea",
+  "display_name": "Theodoula of Diocaesarea",
+  "names": [
+    {
+      "form": "Θεοδούλη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιανουαρίου, «Αγία Θεοδούλη και οι πιστεύσαντες δι' αυτής Ευάγριος, Μακάριος, Ελλάδιος ο Κομενταρήσιος και Βοηθός», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 298,
+      "latest": 298,
+      "display": "298",
+      "basis": "traditional",
+      "note": "saint.gr's own heading for her, «Αγια Θεοδουλη (; - 298)». The life adds only the reign: «Η Αγία Θεοδούλη έζησε στα χρόνια του Διοκλητιανού (284-305 μ.Χ.)»."
+    }
+  },
+  "related": [
+    "evagrius-companion-of-theodoula",
+    "macarius-companion-of-theodoula",
+    "helladius-the-commentaresios",
+    "boethus-companion-of-theodoula"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιανουαρίου — «Αγία Θεοδούλη και οι πιστεύσαντες δι' αυτής Ευάγριος, Μακάριος, Ελλάδιος ο Κομενταρήσιος και Βοηθός»",
+        "url": "https://www.saint.gr/01/18/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

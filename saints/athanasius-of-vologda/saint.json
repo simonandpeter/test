@@ -1,0 +1,59 @@
+{
+  "slug": "athanasius-of-vologda",
+  "display_name": "Athanasius of Vologda",
+  "names": [
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιανουαρίου, «Όσιος Αθανάσιος εκ Ρωσίας», with the rank word left off; the life page calls him «ο Όσιος Αθανάσιος του Σγιαντέμσκϊυ»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1550,
+      "latest": 1550,
+      "display": "1550",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Αθανάσιος κοιμήθηκε με ειρήνη το 1550 μ.Χ.», and the page's own heading, «Οσιος Αθανασιος Εκ Ρωσιας (; - 1550)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιανουαρίου — «Όσιος Αθανάσιος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/01/18/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

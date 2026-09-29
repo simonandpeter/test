@@ -1,0 +1,59 @@
+{
+  "slug": "athanasius-of-kargopol",
+  "display_name": "Athanasius of Kargopol",
+  "names": [
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιανουαρίου, «Όσιος Αθανάσιος ο διά Χριστόν Σαλός», with the rank words left off; the life page calls him «ο Όσιος Αθανάσιος του Ναβολόσκυϊ»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "fool-for-christ"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1501,
+      "latest": 1700,
+      "display": "16th–17th century",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησε μεταξύ του 16ου και 17ου αιώνα μ.Χ. στην πόλη Βάγκα»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιανουαρίου — «Όσιος Αθανάσιος ο διά Χριστόν Σαλός»",
+        "url": "https://www.saint.gr/01/18/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

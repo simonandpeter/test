@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'μαξιμοσ maximus-of-kapsokalyvia maximus-of-marcianopolis maximus-of-totma maximus-of-ungrovlachia maximus-son-of-paul-and-tatta':
+    'five now. The new one is Maximus of Ungrovlachia, bishop and monk, dead 1546, whom saint.gr keeps on 18 Ιανουαρίου; the other four are read in the el-01-16 entry for this name form. Five men, five days.',
+  'ιωακειμ joachim-of-tarnovo joachim-the-righteous':
+    'two men. saint.gr keeps Joachim, patriarch of Tarnovo, dead 1248, on 18 Ιανουαρίου; the corpus keeps the righteous Joachim, father of the Mother of God, on all four calendars on 9 September. A thirteenth-century Bulgarian patriarch and the Theotokos father share a name and nothing else.',
+  'αθανασιοσ athanasius-martyr-13-january athanasius-of-alexandria athanasius-of-kargopol athanasius-of-vologda':
+    'four men, and the two new ones are on the great Athanasius own day: saint.gr keeps the patriarch of Alexandria on 18 Ιανουαρίου, where his row was already venerated and was left alone, and on the same day a fool for Christ of Kargopol of the sixteenth to seventeenth century and a monk of Vologda dead 1550. The martyr of 13 Ιανουαρίου, whose page holds nothing but a death by rods, is read in the el-01-13 entry.',
+  'μαρκιανοσ marcian-of-constantinople marcian-of-cyrrhus':
+    'two men, neither with a year, eight days apart on one calendar: the presbyter of Constantinople who built the church of Saint Irene by the sea, whom the Romanian and Greek calendars keep on 10 January, and the hermit of Cyrrhus whom saint.gr keeps on the 18th. A hermit in the Syrian desert is not a church-builder of the capital, and each page gives the place as the only thing to tell them by.',
+  'μακαριοσ macarius-companion-of-eudoxius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-of-kios macarius-of-pisma':
+    'five now. The new one is the Macarius martyred with Theodoula in 298, whom saint.gr names on 18 Ιανουαρίου; the other four are read in the el-01-10 entry for this name form. Five separate days on the Greek calendar and no page naming another.',
   'φιλοθεοσ philotheus-of-antioch philotheus-of-meteora philotheus-the-presbyter':
     'three men. The new one is Philotheus of Meteora, of the first half of the sixteenth century, whom saint.gr keeps on 17 Ιανουαρίου; the other two are read in the el-01-12 entry for this name form, the fourth-century martyr of Antioch on 12 Ιανουαρίου and the tenth-century presbyter on 15 September. Twelve centuries across three days.',
   'αντωνιοσ anthony-of-krasnokholmsk anthony-of-novgorod anthony-of-vologda anthony-of-zadonsk anthony-of-zographou anthony-the-great antony-son-of-john-of-syracuse':
@@ -1175,7 +1185,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '236'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '249'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

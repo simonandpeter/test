@@ -1,0 +1,58 @@
+{
+  "slug": "joachim-of-tarnovo",
+  "display_name": "Joachim of Tarnovo",
+  "names": [
+    {
+      "form": "Ιωακείμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιανουαρίου, «Άγιος Ιωακείμ εκ Βουλγαρίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "patriarch"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1248,
+      "latest": 1248,
+      "display": "1248",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιωακείμ κοιμήθηκε με ειρήνη το έτος 1248 μ.Χ.», and the page's own heading, «Αγιος Ιωακειμ Εκ Βουλγαριας (; - 1248)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιανουαρίου — «Άγιος Ιωακείμ εκ Βουλγαρίας»",
+        "url": "https://www.saint.gr/01/18/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

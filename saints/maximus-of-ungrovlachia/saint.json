@@ -1,0 +1,59 @@
+{
+  "slug": "maximus-of-ungrovlachia",
+  "display_name": "Maximus of Ungrovlachia",
+  "names": [
+    {
+      "form": "Μάξιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιανουαρίου, «Άγιος Μάξιμος Επίσκοπος Ουγγροβλαχίας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1546,
+      "latest": 1546,
+      "display": "1546",
+      "basis": "traditional",
+      "note": "saint.gr: «αποσύρθηκε στη Μονή Κρούσεντολ της Σερβίας και κοιμήθηκε, μετά από πολυχρόνια ασθένεια, το έτος 1546 μ.Χ.», and the page's own heading, «Αγιος Μαξιμος Επισκοπος Ουγγροβλαχιας (; - 1546)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιανουαρίου — «Άγιος Μάξιμος Επίσκοπος Ουγγροβλαχίας»",
+        "url": "https://www.saint.gr/01/18/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

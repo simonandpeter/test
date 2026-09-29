@@ -7,6 +7,11 @@
       "form": "Chiril",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 ianuarie, «Sfântul Ierarh Chiril, Arhiepiscopul Alexandriei»."
+    },
+    {
+      "form": "Κύριλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιανουαρίου, «Άγιοι Αθανάσιος ο Μέγας και Κύριλλος Πατριάρχες Αλεξανδρείας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -67,6 +72,38 @@
         "text": "Thou hast poured out for us clearly, from the Saviour's own springs, the depth of the teachings of theology, which drowns the heresies, O blessed one, and keeps the flock unharmed by the threefold waves; for thou art a teacher to the ends of the earth, as one who shows forth the things of God.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’. Θείας πίστεως.",
+      "text": "Ἒργοις λάμψαντες, Ὀρθοδοξίας, πᾶσαν σβέσαντες κακοδοξίαν, νικηταί τροπαιοφόροι γεγόνατε· τῇ εὐσεβείᾳ τά πάντα πλουτίσαντες, τήν Ἐκκλησίαν μεγάλως κοσμήσαντες, ἀξίως εὕρατε Χριστόν τόν Θεόν, δωρούμενον πᾶσι τό μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος γ’, «Θείας πίστεως», on the page of Άγιοι Αθανάσιος ο Μέγας και Κύριλλος Πατριάρχες Αλεξανδρείας; the hymn is the common of the two hierarchs kept on this day and is in the plural throughout",
+        "url": "https://www.saint.gr/1127/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining forth in your works of Orthodoxy and quenching every false teaching, ye became victors and bearers of the trophy; having enriched all things with true worship and greatly adorned the Church, ye worthily found Christ God, who grants great mercy unto all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’. Ἐπεφάνης σήμερον.",
+      "text": "Ἱεράρχαι μέγιστοι τῆς εὐσεβείας, καί γενναῖοι πρόμαχοι, τῆς Ἐκκλησίας τοῦ Χριστοῦ, πάντας φρουρεῖτε τούς ψάλλοντας· Σῶσον οἰκτίρμον, τούς πίστει τιμῶντάς σε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, «Ἐπεφάνης σήμερον», on the page of Άγιοι Αθανάσιος ο Μέγας και Κύριλλος Πατριάρχες Αλεξανδρείας; the hymn is the common of the two hierarchs kept on this day",
+        "url": "https://www.saint.gr/1127/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Greatest hierarchs of true worship and brave champions of the Church of Christ, guard all those who sing: Save, O compassionate one, those who honour thee in faith.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
@@ -92,8 +129,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιανουαρίου — «Άγιοι Αθανάσιος ο Μέγας και Κύριλλος Πατριάρχες Αλεξανδρείας»",
+        "url": "https://www.saint.gr/01/18/index.aspx",
+        "year": 2026
+      },
+      "note": "Commemorated with St Athanasius the Great. The same page (https://www.saint.gr/1127/saint.aspx) says that St Cyril is kept also on 9 June — «ο Άγιος Κύριλλος, εορτάζεται και στις 9 Ιουνίου» — and its epigram for today names this day as the memory of his flight and not of his repose: «Φυγῆς Κυρίλλου σήμερον μνήμην ἄγει, Ἀλλ' οὐ τελευτῆς τῆς ἀειμνήστου κτίσις.» It gives the repose as 27 June 444, where doxologia.ro, cited on this folder's Romanian row, gives 446 and 9 June; the readings are left standing side by side and the folder's dates are not changed."
     },
     {
       "church": "serbian",

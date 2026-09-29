@@ -1,0 +1,51 @@
+{
+  "slug": "marcian-of-cyrrhus",
+  "display_name": "Marcian of Cyrrhus",
+  "names": [
+    {
+      "form": "Μαρκιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιανουαρίου, «Όσιος Μαρκιανός», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιανουαρίου — «Όσιος Μαρκιανός»",
+        "url": "https://www.saint.gr/01/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The same day page carries a ΣΗΜΕΙΩΣΗ saying that some synaxaristae mention his memory here superfluously and referring the reader to 2 November: «Περιττώς αναφέρεται από ορισμένους συναξαριστές η μνήμη του Oσίου Μαρκιανού (βλέπε 2 Νοεμβρίου).» The line is nonetheless printed in the day's list, and the row records the day page that was read."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
