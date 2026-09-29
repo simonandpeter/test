@@ -1,0 +1,52 @@
+{
+  "slug": "anna-mother-of-samuel",
+  "display_name": "Anna, mother of Samuel",
+  "names": [
+    {
+      "form": "Ana",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 decembrie, «Sfânta Prorociță Ana, mama Prorocului Samuel», with the rank word and the kinship clause left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "prophetess"
+  ],
+  "related": [
+    "samuel-the-prophet"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 decembrie — «Sfânta Prorociță Ana, mama Prorocului Samuel»",
+        "url": "https://doxologia.ro/9-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
