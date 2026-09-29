@@ -1,0 +1,52 @@
+{
+  "slug": "nicholas-of-myra",
+  "display_name": "Nicholas of Myra",
+  "office": "Archbishop of Myra in Lycia",
+  "names": [
+    {
+      "form": "Nicolae",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 decembrie, «Sfântul Ierarh Nicolae, Arhiepiscopul Mirelor Lichiei», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 decembrie — «Sfântul Ierarh Nicolae, Arhiepiscopul Mirelor Lichiei»",
+        "url": "https://doxologia.ro/6-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

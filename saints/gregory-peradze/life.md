@@ -1,0 +1,9 @@
+# Gregory Peradze
+
+Gregory Peradze was born in Georgia on 31 August 1899, in the village of Bakurtsikhe; his father, Roman Peradze, was a priest. He finished his theological studies at Tbilisi and then left for Germany to take his doctorate. From 1922 he studied theology and the eastern languages at the University of Berlin, and in 1925 moved to the philosophy faculty of the University of Bonn, where he was given a doctorate in philosophy for a thesis on monastic life in Georgia from its beginnings to 1064. He taught Georgian literature and patristics at Bonn and at Warsaw.
+
+In 1927 he moved to England and carried on his academic career there, coming to know the old patristic manuscripts kept in the collections of the British Museum's library and of the University of Oxford. He entered monasticism and was ordained priest in 1931, and was appointed parish priest of the Georgian church in Paris; a year later he was invited to Oxford to teach Georgian history. Doxologia's page says he helped to save Georgian cultural treasures, founding a Georgian church in France under the Nazi regime, dedicated to Saint Nina, and that humility and tireless work marked him the whole length of his life.
+
+He was arrested in 1942 and shut up in the Pawiak prison in Warsaw, and deported to Auschwitz at the beginning of November. Some months later, the page says, on 6 December he received the crown of martyrdom, for having taken another man's guilt upon himself. It gives no year for his death. The Georgian Orthodox Church canonised him in September 1995, appointing 6 December for his commemoration.
+
+*After doxologia.ro's calendar for 6 decembrie — [the day](https://doxologia.ro/6-decembrie) and [the life](https://doxologia.ro/sfantul-sfintit-mucenic-grigorie-peradze-din-georgia); read 25 September 2026.*

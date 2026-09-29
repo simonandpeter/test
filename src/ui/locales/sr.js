@@ -730,6 +730,7 @@ export const sr = {
     'Archbishop of Ephesus': 'Архиепископ ефески',
     'Archbishop of Hamburg-Bremen': 'Архиепископ хамбуршко-бременски',
     'Archbishop of Larissa': 'Архиепископ лариски',
+    'Archbishop of Myra in Lycia': 'Архиепископ мирликијски',
     'Archbishop of Novgorod, Wonderworker': 'Архиепископ новгородски, чудотворац',
     'Archbishop of Ohrid': 'Архиепископ охридски',
     'Archbishop of Omsk': 'Архиепископ омски',

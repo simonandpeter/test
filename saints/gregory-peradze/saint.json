@@ -1,0 +1,67 @@
+{
+  "slug": "gregory-peradze",
+  "display_name": "Gregory Peradze",
+  "names": [
+    {
+      "form": "Grigorie Peradze",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 6 decembrie, «Sfântul Sfințit Mucenic Grigorie Peradze din Georgia», with the rank words and the country left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "hieromonk",
+    "new-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1899,
+      "latest": 1899,
+      "display": "1899",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfântul Grigorie Peradze s-a născut în Georgia, la 31 august 1899, în satul Bakurţihe, tatăl său, Roman Peradze fiind preot.»"
+    },
+    "death": {
+      "earliest": 1942,
+      "latest": 1943,
+      "display": "1942 or 1943",
+      "basis": "traditional",
+      "note": "doxologia.ro gives no year of death: «A fost arestat în 1942 și încarcerat în închisoarea Pawiak din Varşovia și deportat la Auschwitz la începutul lunii noiembrie. Câteva luni mai târziu, pe 6 decembrie a primit cununa muceniciei pentru că și-a asumat vina altcuiva.» Arrest is 1942 and the deportation is early November, so the 6 December of «câteva luni mai târziu» is either that same 1942 or the following year; the interval is the one both readings fit."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 6 decembrie — «Sfântul Sfințit Mucenic Grigorie Peradze din Georgia»",
+        "url": "https://doxologia.ro/6-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Δεκεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
