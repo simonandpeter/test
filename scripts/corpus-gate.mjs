@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'teodota theodota-of-adrianople theodota-sister-of-gregory-palamas theodota-with-her-three-sons':
+    'three women called Teodota, on three Romanian days. The new one is the sister of Gregory Palamas, 14 November. The other two were read on 29 September: one of the four of Adrianople, 22 October, and Theodota who suffered with her three sons, 29 July (read 30 September 2026)',
+  'teodosie theodosius-brother-of-gregory-palamas theodosius-of-the-kyiv-caves':
+    'two men: the brother of Gregory Palamas, 14 November, and Theodosius of the Kyiv Caves, 3 May (read 30 September 2026)',
+  'macarie macarius-brother-of-gregory-palamas macarius-companion-of-terentius macarius-the-confessor':
+    'three men called Macarie, on three Romanian days. The new one is the brother of Gregory Palamas, 14 November. The others are the companion of Terentius, 10 April, and Macarius the Confessor, 19 February (read 30 September 2026)',
+  'epiharia epicharis-sister-of-gregory-palamas epiharia-of-rome':
+    'two women: the sister of Gregory Palamas, one of the six of his household the Romanian 14 November keeps with him; and Epiharia of Rome, a martyr, 27 September (read 30 September 2026)',
   'antuza anthousa-12-april anthousa-mother-of-john-chrysostom anthousa-of-seleucia anthousa-the-venerable-27-july':
     'four women called Antuza, on four Romanian days, and doxologia keeps four commemorations. The new one is named by her son: the mother of John Chrysostom, widowed at twenty, 13 November. Of the other three, two are bare lines the corpus settled earlier — 12 aprilie and 27 iulie — and the third is Anthousa of Seleucia, 22 August (read 30 September 2026)',
   'victor victor-of-corinth victor-of-damascus victor-presbyter-martyr-1918':

@@ -1,0 +1,9 @@
+# Kalloni, mother of Gregory Palamas
+
+The Romanian calendar keeps the Palamite saints together on 14 noiembrie — the parents of [Gregory Palamas](/saints/gregory-palamas), [Constantius](/saints/constantius-father-of-gregory-palamas) and Kalloni, his brothers [Theodosius](/saints/theodosius-brother-of-gregory-palamas) and [Macarius](/saints/macarius-brother-of-gregory-palamas), and his sisters [Epicharis](/saints/epicharis-sister-of-gregory-palamas) and [Theodota](/saints/theodota-sister-of-gregory-palamas). Their own page on doxologia carries no life at all, only a troparion that names the six of them, and it is there that she is called Kalonikea, blessed in her children.
+
+What the calendar tells of her, it tells in the life of her son, printed for the same day. Widowed young — her husband died soon after he had taken the angelic habit — she wished to enter a monastery herself, but first saw to the education of the seven children she had. When Gregory resolved, around 1316 or 1314, to leave the vanities of this world, he took her with him into the monastic life, along with two of his sisters, two of his brothers and a great number of their servants.
+
+She died some years afterwards, while Gregory was living in the hermitage he had founded near Berrhoea; at her death he went to Constantinople and brought his sisters back with him, settling them in a hermitage near his own. The page gives no year for her birth or her death, and no name for the monastery she entered.
+
+*After doxologia.ro's calendar for 14 noiembrie — [the day](https://doxologia.ro/14-noiembrie), [the page of the Palamite saints](https://doxologia.ro/sfintii-cuviosi-palamiti-parintii-sfantului-ierarh-grigorie-palama-constantiu-caloni-cali-fratii) and [the life of Gregory Palamas](https://doxologia.ro/viata-sfantului-ierarh-grigorie-palama-arhiepiscopul-tesalonicului); read 25 September 2026.*

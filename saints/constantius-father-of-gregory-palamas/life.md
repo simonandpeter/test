@@ -1,0 +1,9 @@
+# Constantius, father of Gregory Palamas
+
+The Romanian calendar keeps the Palamite saints together on 14 noiembrie — the parents of [Gregory Palamas](/saints/gregory-palamas), Constantius and [Kalloni](/saints/kalloni-mother-of-gregory-palamas), his brothers [Theodosius](/saints/theodosius-brother-of-gregory-palamas) and [Macarius](/saints/macarius-brother-of-gregory-palamas), and his sisters [Epicharis](/saints/epicharis-sister-of-gregory-palamas) and [Theodota](/saints/theodota-sister-of-gregory-palamas). Their own page on doxologia carries no life at all, only a troparion that names the six of them; what the calendar says of them it says in the life of their son, printed for the same day.
+
+There, Constantius is the father. His family had fled Asia Minor because of the Turkish invasions, and he was numbered among the courtiers of the emperor Andronicus II Palaeologus, whose reign the page gives as 1282 to 1328. For all the height of his office he gave himself long to prayer, so that sometimes, sitting in the Senate, it happened that he did not hear the emperor addressing him, so deep was he in prayer.
+
+He died soon after he had put on the angelic habit, while Gregory was still young, leaving his wife with seven children; and she, who wished to enter a monastery herself, first saw to their education. The page gives no year for his birth or his death, no place beyond Asia Minor and Constantinople, and no more of his life than this.
+
+*After doxologia.ro's calendar for 14 noiembrie — [the day](https://doxologia.ro/14-noiembrie), [the page of the Palamite saints](https://doxologia.ro/sfintii-cuviosi-palamiti-parintii-sfantului-ierarh-grigorie-palama-constantiu-caloni-cali-fratii) and [the life of Gregory Palamas](https://doxologia.ro/viata-sfantului-ierarh-grigorie-palama-arhiepiscopul-tesalonicului); read 25 September 2026.*

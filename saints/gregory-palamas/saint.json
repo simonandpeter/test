@@ -9,6 +9,11 @@
     {
       "form": "Γρηγόριος Παλαμᾶς",
       "lang": "el"
+    },
+    {
+      "form": "Grigorie Palama",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 noiembrie, «Sfântul Ierarh Grigorie Palama, Arhiepiscopul Tesalonicului»."
     }
   ],
   "sex": "male",
@@ -52,8 +57,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "revised-julian",
+        "note": "doxologia.ro keeps him on 14 noiembrie. Its life of him adds, in a footnote, that he is also celebrated on the second Sunday of the Great Fast, that at the monastery of the Great Lavra his memory was moved to 5 noiembrie because it fell together with the Apostle Philip's, and that at Thessalonica, on the testimony of Symeon of Thessalonica, he was kept on 13 noiembrie with John Chrysostom; none of those is held here, the moveable one because it is not a fixed day."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 14 noiembrie — «Sfântul Ierarh Grigorie Palama, Arhiepiscopul Tesalonicului»",
+        "url": "https://doxologia.ro/14-noiembrie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -69,5 +84,13 @@
   "historicity": "attested",
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "constantius-father-of-gregory-palamas",
+    "kalloni-mother-of-gregory-palamas",
+    "theodosius-brother-of-gregory-palamas",
+    "macarius-brother-of-gregory-palamas",
+    "epicharis-sister-of-gregory-palamas",
+    "theodota-sister-of-gregory-palamas"
+  ]
 }

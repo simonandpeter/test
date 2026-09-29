@@ -31,7 +31,7 @@
         "day": 30,
         "month": 6,
         "calendar": "revised-julian",
-        "note": "doxologia.ro keeps 30 iunie as the Synaxis of the Twelve Apostles, a common commemoration of all of them, and names each apostle in turn. His own day elsewhere in the Romanian calendar was not checked (24 September 2026)."
+        "note": "doxologia.ro keeps 30 iunie as the Synaxis of the Twelve Apostles, a common commemoration of all of them, and names each apostle in turn. It also keeps him alone on 14 noiembrie, his own day, where the line reads «Sfântul Apostol Filip, unul dintre cei 12 Apostoli» (https://doxologia.ro/14-noiembrie, read 25 September 2026), with a full life and a proper troparion of his own; the corpus keeps one feast to a church, so he renders on 30 iunie only, and whether the proper day should stand instead of the synaxis is left open."
       },
       "source": {
         "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 iunie — «Soborul Sfinților 12 Apostoli», whose life names him: «Sfântul Apostol Filip»",
@@ -64,6 +64,22 @@
       },
       "english": {
         "text": "O ye who are first enthroned among the Apostles and teachers of the world, pray to the Master of all that He grant peace to the world and to our souls great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Apostole Sfinte Filip, roagă pe Milostivul Dumnezeu să dăruiască iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "Doxologia — «Troparul Sfântului Apostol Filip», glas 3, from the Tropar tab of his own page for 14 noiembrie; his proper, as against the common of the Twelve already cited here",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-filip",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy Apostle Philip, pray to the merciful God that He grant our souls forgiveness of offences.",
         "rendered": "site"
       }
     }

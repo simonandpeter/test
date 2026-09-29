@@ -1,0 +1,9 @@
+# Epicharis, sister of Gregory Palamas
+
+The Romanian calendar keeps the Palamite saints together on 14 noiembrie — the parents of [Gregory Palamas](/saints/gregory-palamas), [Constantius](/saints/constantius-father-of-gregory-palamas) and [Kalloni](/saints/kalloni-mother-of-gregory-palamas), his brothers [Theodosius](/saints/theodosius-brother-of-gregory-palamas) and [Macarius](/saints/macarius-brother-of-gregory-palamas), and his sisters Epicharis and [Theodota](/saints/theodota-sister-of-gregory-palamas). Their own page on doxologia carries no life at all, only a troparion that names the six of them, and it is there that she is sung as Epicharis, the bride of Christ.
+
+What the calendar tells of the sisters, it tells in the life of their brother, printed for the same day, and there it does not name them. Around 1316, or 1314, Gregory resolved to leave the vanities of this world and took with him into the monastic life his mother, two of his sisters, two of his brothers and a great number of their servants. Which of the sisters the life means it does not say; the day's line gives the two names, Epiharia and Teodota, and the calendar keeps them both.
+
+Afterwards, at the death of their mother, Gregory went to Constantinople and brought his sisters back with him, settling them in a hermitage near his own outside Berrhoea, where he had been living five years in fasting and vigil. The page gives them no year of birth, no year of death, no monastery by name and nothing of their own labours.
+
+*After doxologia.ro's calendar for 14 noiembrie — [the day](https://doxologia.ro/14-noiembrie), [the page of the Palamite saints](https://doxologia.ro/sfintii-cuviosi-palamiti-parintii-sfantului-ierarh-grigorie-palama-constantiu-caloni-cali-fratii) and [the life of Gregory Palamas](https://doxologia.ro/viata-sfantului-ierarh-grigorie-palama-arhiepiscopul-tesalonicului); read 25 September 2026.*

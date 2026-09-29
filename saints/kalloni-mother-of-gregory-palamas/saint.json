@@ -1,0 +1,80 @@
+{
+  "slug": "kalloni-mother-of-gregory-palamas",
+  "display_name": "Kalloni, mother of Gregory Palamas",
+  "names": [
+    {
+      "form": "Caloni",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 noiembrie, which prints «Caloni (Cali)» — the second form given as its alternative."
+    },
+    {
+      "form": "Kalonicea",
+      "lang": "ro",
+      "note": "The form the troparion on the Palamite saints' page prints: «Kalonicea, cu buni copii»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "revised-julian",
+        "note": "One of six named in the day's line for the Palamite saints. Their own page carries no Viață tab, only a troparion naming all six; what is written of her here is from the life of her son on the same day's calendar."
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 14 noiembrie — «Sfinții Cuvioși Palamiți: părinții Sfântului Ierarh Grigorie Palama, Constanțiu și Caloni (Cali), frații săi, Teodosie și Macarie, și surorile lui, Epiharia și Teodota»",
+        "url": "https://doxologia.ro/14-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 14 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "gregory-palamas",
+    "constantius-father-of-gregory-palamas",
+    "theodosius-brother-of-gregory-palamas",
+    "macarius-brother-of-gregory-palamas",
+    "epicharis-sister-of-gregory-palamas",
+    "theodota-sister-of-gregory-palamas"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Kalonicea, cu buni copii, și Constanțiu cel cu cuget bun, mare nevoitorule, văzătorule de Dumnezeu, ierarhe, Epiharis, mireasa lui Hristos, Cuvioasa Teodota cea înțeleaptă, Teodosie și Macarie sfințite, vă cântăm nevoințele voastre. Slavă Celui ce v-a-ncununat, slavă Celui ce v-a strălucit lumina necreată și pururea fiitoare a îndumnezeirii.",
+      "source": {
+        "text": "Doxologia — «Troparul Sfinților Cuvioși Palamiți», the one hymn on the company's page, which names all six of them together with the hierarch their son and brother; the page prints no glas",
+        "url": "https://doxologia.ro/troparul-sfintilor-cuviosi-palamiti",
+        "year": 2026
+      },
+      "english": {
+        "text": "Kalonikea, blessed in her children, and Constantius of the good mind; great ascetic, seer of God, hierarch; Epicharis, bride of Christ; wise and venerable Theodota; Theodosius and Macarius the consecrated — we sing of your labours. Glory to Him who crowned you, glory to Him who shone upon you the uncreated and everlasting light of deification.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

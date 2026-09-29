@@ -1,0 +1,59 @@
+{
+  "slug": "constantine-of-rhodes-new-martyr",
+  "display_name": "Constantine of Rhodes",
+  "names": [
+    {
+      "form": "Constantin din Rodos",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 14 noiembrie, «Sfântul Noul Mucenic Constantin din Rodos»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1800,
+      "latest": 1800,
+      "display": "1800",
+      "basis": "attested",
+      "note": "doxologia.ro: «În cele din urmă, a fost spânzurat pe 14 noiembrie 1800». The page gives no year of birth, only that he left Hydra for Rhodes at eighteen."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 14 noiembrie — «Sfântul Noul Mucenic Constantin din Rodos»",
+        "url": "https://doxologia.ro/14-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 14 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

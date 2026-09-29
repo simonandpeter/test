@@ -1,0 +1,9 @@
+# Macarius, brother of Gregory Palamas
+
+The Romanian calendar keeps the Palamite saints together on 14 noiembrie — the parents of [Gregory Palamas](/saints/gregory-palamas), [Constantius](/saints/constantius-father-of-gregory-palamas) and [Kalloni](/saints/kalloni-mother-of-gregory-palamas), his brothers [Theodosius](/saints/theodosius-brother-of-gregory-palamas) and Macarius, and his sisters [Epicharis](/saints/epicharis-sister-of-gregory-palamas) and [Theodota](/saints/theodota-sister-of-gregory-palamas). Their own page on doxologia carries no life at all, only a troparion that names the six of them, where he and Theodosius are sung as the consecrated ones.
+
+What the calendar tells of him, it tells in the life of his brother, printed for the same day. Around 1316, or 1314, Gregory resolved to leave the vanities of this world and took with him into the monastic life his mother, two of his sisters and two of his brothers, Macarius being one of them. The three brothers went on foot to the Holy Mountain of Athos and settled near the monastery of Vatopedi, under the guidance of the elder Nicodemus.
+
+When Theodosius died early, and Nicodemus soon after him, Macarius and Gregory went together to settle at the monastery of the Great Lavra. The life of his brother says nothing further of him: no year of birth, no year of death, no office and no account of his own labours apart from that first journey and that move.
+
+*After doxologia.ro's calendar for 14 noiembrie — [the day](https://doxologia.ro/14-noiembrie), [the page of the Palamite saints](https://doxologia.ro/sfintii-cuviosi-palamiti-parintii-sfantului-ierarh-grigorie-palama-constantiu-caloni-cali-fratii) and [the life of Gregory Palamas](https://doxologia.ro/viata-sfantului-ierarh-grigorie-palama-arhiepiscopul-tesalonicului); read 25 September 2026.*
