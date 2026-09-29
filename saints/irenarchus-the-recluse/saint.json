@@ -1,0 +1,67 @@
+{
+  "slug": "irenarchus-the-recluse",
+  "display_name": "Irenarchus of Rostov",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Ειρήναρχος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιανουαρίου, «Όσιος Ειρήναρχος ο Έγκλειστος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1548,
+      "latest": 1548,
+      "display": "1548",
+      "basis": "traditional",
+      "note": "saint.gr: «καταγόταν από το χωριό Κοντάκοβο της Ρωσίας και γεννήθηκε το έτος 1548 μ.Χ.»"
+    },
+    "death": {
+      "earliest": 1616,
+      "latest": 1616,
+      "display": "1616",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1616 μ.Χ.»; the page's header prints (1548 - 1616)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιανουαρίου — «Όσιος Ειρήναρχος ο Έγκλειστος»",
+        "url": "https://www.saint.gr/01/13/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

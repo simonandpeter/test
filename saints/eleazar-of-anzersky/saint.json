@@ -1,0 +1,59 @@
+{
+  "slug": "eleazar-of-anzersky",
+  "display_name": "Eleazar of Anzersky",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ελεάζαρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιανουαρίου, «Όσιος Ελεάζαρος εκ Ρωσίας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1656,
+      "latest": 1656,
+      "display": "1656",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1656 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιανουαρίου — «Όσιος Ελεάζαρος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/01/13/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

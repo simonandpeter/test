@@ -6,6 +6,11 @@
       "form": "Ilarie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 ianuarie, «Sfântul Ilarie de Poitiers»."
+    },
+    {
+      "form": "Ιλάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιανουαρίου, «Άγιος Ιλάριος Επίσκοπος Πικτώνων», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -50,8 +55,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 13 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιανουαρίου — «Άγιος Ιλάριος Επίσκοπος Πικτώνων»",
+        "url": "https://www.saint.gr/01/13/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

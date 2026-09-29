@@ -1,0 +1,80 @@
+{
+  "slug": "fathers-slain-at-the-monastery-of-theodosius",
+  "display_name": "The Fathers slain at the monastery of Theodosius",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Πατέρες εν τη Μονή του Οσίου Θεοδοσίου αναιρεθέντες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιανουαρίου, «Άγιοι Πατέρες εν τη Μονή του Οσίου Θεοδοσίου αναιρεθέντες», with the rank word Άγιοι left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 614,
+      "latest": 614,
+      "display": "614",
+      "basis": "traditional",
+      "note": "saint.gr: «Κατά το έτος 614 μ.Χ. οι αιμοχαρείς ορδές των Περσών οδηγούμενες από το βασιλέα Χοσρόη εισέβαλαν στην Αγία Γη»."
+    }
+  },
+  "related": [
+    "theodosius-the-cenobiarch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιανουαρίου — «Άγιοι Πατέρες εν τη Μονή του Οσίου Θεοδοσίου αναιρεθέντες»",
+        "url": "https://www.saint.gr/01/13/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἤχος πλ. α΄.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Μιαιφόνοις παλάμαις κτανθέντας μέλψωμεν Θεοδοσίου Οσίου σεπτούς Πατέρας Μονής των απίστων και τριβώνιον φοινίξαντας ασκητικόν αυτών ροαίς των αιμάτων ευλαβώς βοώντες· Αναιρεθέντες Πατέρες, επευλογείτε ημάς θεόθεν και ρωννύετε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιοι Πατέρες εν τη Μονή του Οσίου Θεοδοσίου αναιρεθέντες, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/4479/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us sing of the honoured fathers of the monastery of the venerable Theodosius, slain by murderous hands of the unbelieving, who reddened their ascetic cloaks with the streams of their own blood; and let us cry to them reverently: O fathers who were slain, bless us from God and make us strong.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

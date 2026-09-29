@@ -1,0 +1,11 @@
+# The Fathers slain at the monastery of Theodosius
+
+In the year 614 the bloodthirsty hordes of the Persians, led by their king Chosroes, broke into the Holy Land and worked unspeakable destruction, laying Jerusalem and the country about it waste. They slaughtered crowds of the faithful people, pulled down churches and monasteries, and cut down priests, abbots and monks. The monasteries that then flourished — that of the venerable [Theodosius the Cenobiarch](/saints/theodosius-the-cenobiarch), of the venerable Sabbas, of Choziba, of the venerable Gerasimus, of the Jordan, and a multitude of others — were turned into ruins, and the fathers who had been labouring in them for God's love departed for the Kingdom of Heaven, adorned, saint.gr says, with the double crowns of venerableness and of martyrdom.
+
+When the bands of the unbelievers swept like a gale of fire into the monastic complex of the Cenobiarch, they began a merciless slaughter of the fathers, who were quietly and without noise glorifying the all-honourable and majestic name of Christ the Saviour. Nobody could stand against their fury. So all the fathers of Theodosius's house received the crown of martyrdom and sealed their clean ascetic life with their blood; and because not one of them would consent to deny his faith and go over to them, all of them tasted the fruits of that faith — beheadings, impalings, the tearing of their flesh, the driving in of swords, and dismemberment. The monastery was ransacked and plundered and then given to the flames.
+
+After the unbelievers had withdrawn, devout ascetics who had survived in the caves and holes of the earth nearby buried the holy bodies of the martyrs together, in the chambers of the sacred cave of the Magi at the centre of the monastic complex. There, in recent years, their honourable and martyric relics were found, fragrant and pouring myrrh, to be gathered up and set in the monastery's katholikon for the veneration and the sanctification of pilgrims.
+
+The calendar names not one of these fathers, and so this is one entry and not many.
+
+*After saint.gr's calendar for 13 Ιανουαρίου — [the day](https://www.saint.gr/01/13/index.aspx) and [the life](https://www.saint.gr/4479/saint.aspx); read 30 September 2026.*

@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'companion pachomius papyrinus pachomius-companion-of-papyrinus papyrinus-companion-of-pachomius':
+    'one line folded onto itself, the third of its kind in this wave after Peter and Severus and Leucius on the 11th and Zoticus and Rogatus on the 12th. saint.gr names Pachomius and Papyrinus together on 13 Ιανουαρίου; each display name carries the other, so the folded key holds both forenames whichever folder it is read from.',
+  'αθανασιοσ athanasius-martyr-13-january athanasius-of-alexandria':
+    'two men, and the 13 Ιανουαρίου page says so itself by holding nothing: its whole notice is that Athanasius was martyred, tormented with rods, and that we have no further details of his life. The corpus keeps Athanasius the Great, patriarch of Alexandria, venerated on the Russian, Romanian and Greek 18 January, which is the day saint.gr also lists him on and where this wave left his row alone. A nameless martyr with no place and no year is not the patriarch.',
   'θεοδοσιοσ theodosius-companion-of-paisius theodosius-of-the-kyiv-caves theodosius-of-trebizond theodosius-of-triglia theodosius-the-cenobiarch':
     'five now. The new one is an ascetic of 1802 whom saint.gr names with Paisius on 12 Ιανουαρίου; the other four are read in the el-01-11 entry for this name form — the Cenobiarch and the Trebizond bishop, both on the Greek 11 January, the Bithynian hegumen of Triglia on the 1st, and the founder of the Kyiv Caves. Nineteenth-century asceticism against four earlier men on three earlier days.',
   'μαρτινιανοσ martinian-of-white-lake martinian-of-zographou':
@@ -1155,7 +1159,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '201'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '210'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

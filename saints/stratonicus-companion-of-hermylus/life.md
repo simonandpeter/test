@@ -8,4 +8,6 @@ In the prison he prayed that the Lord would not remember his former sins, and th
 
 They were led down singing, put into nets and thrown into the deep. On the third day their bodies were found on the bank and were buried with honour some eighteen stadia from the city of Singidunum, which is Belgrade, the two of them laid in one grave, so that as friends they should hold everything in common.
 
-*After doxologia.ro's calendar for 13 ianuarie — [the day](https://doxologia.ro/13-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-stratonic); read 19 September 2026.*
+The Greek calendar keeps him on the same day, and names him beside Hermylus in the one line. saint.gr sets the two of them in the years of Licinius, emperor of the East, whom it dates 308 to 323, and says that Licinius ordered a persecution of the Christians about 320 to 322 in order to please the idolaters, who disliked Constantine the Great. Its verses put the end of both men in the Danube: that a basket served Hermylus and Stratonicus for a ship on their common voyage into the deep, and that on the thirteenth the Ister drowned Hermylus and his comrade.
+
+*After doxologia.ro's calendar for 13 ianuarie — [the day](https://doxologia.ro/13-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-stratonic); read 19 September 2026; and saint.gr's calendar for 13 Ιανουαρίου — [the Greek day](https://www.saint.gr/01/13/index.aspx) and [the Greek life](https://www.saint.gr/1411/saint.aspx), read 30 September 2026.*

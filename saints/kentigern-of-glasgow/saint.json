@@ -1,0 +1,67 @@
+{
+  "slug": "kentigern-of-glasgow",
+  "display_name": "Kentigern of Glasgow",
+  "office": "Bishop of Glasgow",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Kentigern (Κεντιγκέρνος)",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιανουαρίου, «Άγιος Kentigern Επίσκοπος Γλασκόβης», and the page's own opening, which prints the Latin spelling with the Greek beside it in brackets; the rank words are left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 527,
+      "latest": 527,
+      "display": "527",
+      "basis": "traditional",
+      "note": "saint.gr's own header prints «Αγιος Kentigern Επισκοπος Γλασκοβης (527 - 612)», and its text says he fell asleep in 612 at the age of eighty-five."
+    },
+    "death": {
+      "earliest": 612,
+      "latest": 612,
+      "display": "612",
+      "basis": "traditional",
+      "note": "saint.gr: «Θεωρείται ότι κοιμήθηκε οσίως με ειρήνη το έτος 612 μ.Χ. σε ηλικία 85 ετών» — the page marks it as what is held rather than what is certain."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιανουαρίου — «Άγιος Kentigern Επίσκοπος Γλασκόβης»",
+        "url": "https://www.saint.gr/01/13/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

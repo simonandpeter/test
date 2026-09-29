@@ -6,6 +6,11 @@
       "form": "Iacob",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 ianuarie, «Sfântul Ierarh Iacob, Episcopul din Nisibe»."
+    },
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιανουαρίου, «Όσιος Ιάκωβος Επίσκοπος Νισίβεως», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 13 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "note": "The same page adds a second Greek day: «(Η μνήμη του επαναλαμβάνεται και την 31η Οκτωβρίου)», his memory is repeated also on 31 October — https://www.saint.gr/1412/saint.aspx. One attestation row per church is the schema, so the row records the day page read, 13 Ιανουαρίου.",
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιανουαρίου — «Όσιος Ιάκωβος Επίσκοπος Νισίβεως»",
+        "url": "https://www.saint.gr/01/13/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

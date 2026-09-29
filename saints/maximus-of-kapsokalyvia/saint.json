@@ -11,6 +11,11 @@
       "form": "Manuil",
       "lang": "ro",
       "note": "His baptismal name, as doxologia.ro's life gives it: «pe care din Sfântul Botez l-au numit Manuil»."
+    },
+    {
+      "form": "Μάξιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιανουαρίου, «Όσιος Μάξιμος ο Καυσοκαλυβίτης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -50,8 +55,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 13 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιανουαρίου — «Όσιος Μάξιμος ο Καυσοκαλυβίτης»",
+        "url": "https://www.saint.gr/01/13/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -87,6 +101,23 @@
       },
       "english": {
         "text": "In the streams of thy tears thou didst drown the enemy of salvation, and thou didst run with longing towards the hallowed dwellings of the Trinity; seeing, venerable one, the divine mysteries in the mirror of the Spirit, thou wast made a light to the world and a pillar of the Christian faith.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. ἀ’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Μητρικῆς ἐκ νηδύος Ὅσιε Μάξιμε, ἐκλογῆς ὡς δοχεῖον ἀνατεθεῖς τῷ Θεῷ, τοῦ θείου γνόφου ὡς Μωσῆς κατηξίωσαι, καὶ τὰ πόρρω προορᾶν, κατὰ τὸν μέγον Σαμουήλ, τοῦ Ἄθω τὸ θεῖον θαῦμα, τῆς Θεοτόκου ὁ μύστης ἡ καὶ πρεσβεύεις Πάτερ ὑπὲρ ἠμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Μάξιμος ο Καυσοκαλυβίτης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1416/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy mother's womb, O venerable Maximus, thou wast dedicated to God as a vessel of his choosing; and thou wast counted worthy of the divine darkness as Moses was, and to foresee things far off as the great Samuel did. O divine wonder of Athos, initiate of the Mother of God, who also dost intercede for us, O father.",
         "rendered": "site"
       }
     }

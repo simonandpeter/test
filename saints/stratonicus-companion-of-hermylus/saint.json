@@ -6,6 +6,11 @@
       "form": "Stratonic",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 ianuarie, «Sfântul Mucenic Stratonic»."
+    },
+    {
+      "form": "Στρατόνικος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιανουαρίου, «Άγιοι Έρμυλος και Στρατόνικος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -57,8 +62,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 13 Ιανουαρίου (19 September 2026). The corpus already holds a folder `stratonicus` for a «Άγιος Στρατόνικος» whom saint.gr keeps on 30 Σεπτεμβρίου and whose synaxarion says he was martyred by the sword; that is a different day and a different death from this one, and the two were not merged."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιανουαρίου — «Άγιοι Έρμυλος και Στρατόνικος»",
+        "url": "https://www.saint.gr/01/13/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -96,6 +110,22 @@
       },
       "english": {
         "text": "You fled the tumult of the world and passed over to the quiet haven through the blood of martyrdom; and you were crowned with the labours of the hermit's life. Therefore you were shown to be fellow dwellers with the martyrs and with the venerable ones.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Οἱ Μάρτυρες σου Κύριε, ἐν τῇ ἀθλήσει αὐτῶν, τὸ στέφος ἐκομίσαντο τῆς ἀφθαρσίας, ἐκ σοῦ τοῦ Θεοῦ ἡμῶν· σχόντες γὰρ τὴν ἰσχύν σου, τοὺς τυράννους καθεῖλον· ἔθραυσαν καὶ δαιμόνων τὰ ἀνίσχυρα θράση. Αὐτῶν ταῖς ἱκεσίαις Χριστέ ὁ Θεός, σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιοι Έρμυλος και Στρατόνικος, Λειτουργικά κείμενα: Ἀπολυτίκιον (the common of martyrs, printed under their names)",
+        "url": "https://www.saint.gr/1411/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contending received the crown of incorruption from thee our God; for having thy strength they cast down the tyrants, and broke also the powerless insolence of the demons. By their entreaties, O Christ God, save our souls.",
         "rendered": "site"
       }
     }

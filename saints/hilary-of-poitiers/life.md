@@ -6,4 +6,6 @@ In English: Hilary, 300 to 368, was the one who reunited the episcopate of Gaul,
 
 The day's line prints him without a rank, simply «Sfântul Ilarie de Poitiers», where the other bishop kept on the same day is printed «Sfântul Ierarh Iacob, Episcopul din Nisibe»; so no rank is recorded for him here either.
 
-*After doxologia.ro's calendar for 13 ianuarie — [the day](https://doxologia.ro/13-ianuarie) and [his page](https://doxologia.ro/sfantul-ilarie-de-poitiers); read 19 September 2026.*
+The Greek calendar keeps him on the same day, under the old name of his see — «Επίσκοπος Πικτώνων», bishop of the Pictones — and its header dates him 300 to 368. saint.gr says he came from Gaul and was born in the fourth century in the city of Poitiers; his parents were idolaters, and he himself turned to Christ and became bishop of his birthplace. In the year 356 the emperor Constantius, whom the page dates 337 to 361, exiled him to Phrygia. From Gaul he afterwards went to Italy, where in 364 he presided over the Synod of Milan and fought against Auxentius, the heretical bishop of that city. He fell asleep, venerably, in peace between the years 366 and 368.
+
+*After doxologia.ro's calendar for 13 ianuarie — [the day](https://doxologia.ro/13-ianuarie) and [his page](https://doxologia.ro/sfantul-ilarie-de-poitiers); read 19 September 2026; and saint.gr's calendar for 13 Ιανουαρίου — [the Greek day](https://www.saint.gr/01/13/index.aspx) and [the Greek life](https://www.saint.gr/1420/saint.aspx), read 30 September 2026.*

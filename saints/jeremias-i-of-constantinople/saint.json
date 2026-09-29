@@ -1,0 +1,66 @@
+{
+  "slug": "jeremias-i-of-constantinople",
+  "display_name": "Jeremias I of Constantinople",
+  "office": "Ecumenical Patriarch of Constantinople",
+  "sex": "male",
+  "types": [
+    "patriarch"
+  ],
+  "names": [
+    {
+      "form": "Ιερεμίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιανουαρίου, «Άγιος Ιερεμίας Α' Πατριάρχης Κωνσταντινουπόλεως», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1513,
+      "latest": 1546,
+      "display": "1513–1546",
+      "basis": "attested",
+      "note": "saint.gr: he was elected metropolitan of Sofia «προ του 1513 μ.Χ.» and was Ecumenical Patriarch «από το 1522 μ.Χ. ως το 1546 μ.Χ., με μία διακοπή το έτος 1526 μ.Χ.»"
+    },
+    "death": {
+      "earliest": 1546,
+      "latest": 1546,
+      "display": "13 January 1546",
+      "basis": "attested",
+      "note": "saint.gr: he died «στη Βλαχία, στις 13 Ιανουαρίου 1546 μ.Χ.»; the page's header prints (; - 1546)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιανουαρίου — «Άγιος Ιερεμίας Α' Πατριάρχης Κωνσταντινουπόλεως»",
+        "url": "https://www.saint.gr/01/13/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

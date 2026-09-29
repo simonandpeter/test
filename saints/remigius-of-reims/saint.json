@@ -1,0 +1,67 @@
+{
+  "slug": "remigius-of-reims",
+  "display_name": "Remigius of Reims",
+  "office": "Bishop of Reims",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "preacher"
+  ],
+  "names": [
+    {
+      "form": "Ρεμίγιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιανουαρίου, «Άγιος Ρεμίγιος Επίσκοπος Ρημών», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 437,
+      "latest": 437,
+      "display": "437",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ρεμίγιος γεννήθηκε το έτος 437 μ.Χ. στην πόλη Λαόν της Γαλλίας»."
+    },
+    "death": {
+      "earliest": 533,
+      "latest": 533,
+      "display": "533",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε οσίως με ειρήνη το έτος 533 μ.Χ.»; the page's header prints (; - 533)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιανουαρίου — «Άγιος Ρεμίγιος Επίσκοπος Ρημών»",
+        "url": "https://www.saint.gr/01/13/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
