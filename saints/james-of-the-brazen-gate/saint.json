@@ -1,0 +1,62 @@
+{
+  "slug": "james-of-the-brazen-gate",
+  "display_name": "James of the Brazen Gate",
+  "names": [
+    {
+      "form": "Iacov",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's life for the ten martyrs of 9 august, which names the company's members: «Iulian, Marchian, Ioan, Iacov, Alexie, Dimitrie, Foca, Petru și Leontie» and «Maria patriciana»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "confessor"
+  ],
+  "related": [
+    "julian-of-the-brazen-gate",
+    "marcian-of-the-brazen-gate",
+    "john-of-the-brazen-gate",
+    "alexius-of-the-brazen-gate",
+    "demetrius-of-the-brazen-gate",
+    "phocas-of-the-brazen-gate",
+    "peter-of-the-brazen-gate",
+    "leontius-of-the-brazen-gate",
+    "maria-the-patrician"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 august — «Sfinții 10 Mucenici Mărturisitori pentru icoana lui Hristos»",
+        "url": "https://doxologia.ro/9-august",
+        "year": 2026
+      },
+      "note": "The day page prints the company as one line, «Sfinții 10 Mucenici Mărturisitori pentru icoana lui Hristos», and the life behind it enumerates its members: nine men by name — Iulian, Marchian, Ioan, Iacov, Alexie, Dimitrie, Foca, Petru, Leontie — and «Maria patriciana», beheaded with them. One folder per named member follows docs/CORPUS.md §10.1. The nun Theodosia, taken with them, is kept by the same page on 29 mai and is not a folder here."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

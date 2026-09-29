@@ -1,0 +1,72 @@
+{
+  "slug": "matthias-the-apostle",
+  "display_name": "Matthias",
+  "names": [
+    {
+      "form": "Matia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 9 august, «Sfântul Apostol Matia», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle",
+    "martyr"
+  ],
+  "related": [
+    "symeon-the-god-receiver"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "revised-julian",
+        "note": "Doxologia keeps him twice: its calendar prints him on 9 august and again on 30 iunie — «Soborul Sfinților 12 Apostoli». One attestation row per church is the schema, so the row is the day this folder was read from and the second day is recorded here. The 30 iunie line is the Synaxis of the Twelve, which names each apostle in turn. Read 25 September 2026."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 august — «Sfântul Apostol Matia»",
+        "url": "https://doxologia.ro/9-august",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Sfinte Apostole Matia, roagă pe milostivul Dumnezeu, ca să dăruiască iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Apostol Matia», Glasul 3 — the short common troparion of an apostle, printed here for him",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-matia",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy Apostle Matthias, entreat the merciful God to grant our souls forgiveness of sins.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
