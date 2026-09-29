@@ -6,6 +6,11 @@
     {
       "form": "Άγιος Ιωάννης Αρχιεπίσκοπος Κωνσταντινουπόλεως",
       "lang": "el"
+    },
+    {
+      "form": "Ioan",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 30 august, «Sfântul Ierarh Ioan, Patriarhul Constantinopolului»."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 25 August (checked 2026-08-22); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 30 august — „Sfântul Ierarh Ioan, Patriarhul Constantinopolului”",
+        "url": "https://doxologia.ro/30-august",
+        "year": 2026
+      },
+      "note": "doxologia.ro keeps him on 30 august, third of the three hierarchs Alexandru, Ioan and Pavel cel Nou, under one shared life; the Greek calendar read here keeps him on 25 August with Epiphanius. The shared life identifies him as «Sfântul Ioan care se numea Capadoc», who took the throne after Timothy — the same man the Greek entry calls John II."
     },
     {
       "church": "greek",
@@ -55,6 +70,8 @@
     }
   },
   "related": [
-    "epiphanius-of-constantinople"
+    "epiphanius-of-constantinople",
+    "alexander-patriarch-of-constantinople",
+    "paul-the-new-patriarch-of-constantinople"
   ]
 }
