@@ -9,6 +9,11 @@
     {
       "form": "Свети мученик Андреј Стратилат",
       "lang": "sr"
+    },
+    {
+      "form": "Andrei Stratilat",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 august, «Sfântul Mucenic Andrei Stratilat», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -42,8 +47,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 19 august was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 19 august — «Sfântul Mucenic Andrei Stratilat»",
+        "url": "https://doxologia.ro/19-august",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -114,6 +128,22 @@
       },
       "english": {
         "text": "Forsaking the glory of earthly rank, thou didst inherit the kingdom of heaven; with the drops of thy blood, as with most precious stones, thou didst adorn incorruptible crowns, and thou didst lead to Christ a company of passion-bearers. With the choirs of angels, in the light that knows no evening, thou didst find Christ, the Sun that never sets, O holy Andrew Stratelates. Entreat him without ceasing, together with those who suffered alongside thee, that he may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 5",
+      "text": "Mărirea cea pământească ai lăsat şi Cereasca Împărăţie ai moştenit; sângele picurându-ţi, ca şi cu o cunună de piatră nestricată, prea minunat te-ai împodobit; şi către Hristos ai venit cu sobor răbdător de patimi, cu ceata îngerilor în Lumina Cea Neînserată; şi pe Hristos, Soarele Cel Neapus, ai aflat, Sfinte Andrei Stratilat. Aceluia roagă-te pururea, cu cei împreună cu tine purtători de chinuri, să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Mucenic Andrei Stratilat», Glasul 5",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-andrei-stratilat",
+        "year": 2026
+      },
+      "english": {
+        "text": "You left earthly glory and inherited the Kingdom of Heaven; your blood falling drop by drop, you were adorned most wondrously as with a crown of incorruptible stone; and you came to Christ with a company of passion-bearers, with the choir of angels, into the Light that knows no evening, and found Christ the Sun that never sets, holy Andrew the Stratelates. Pray to Him always, together with those who bore the torments beside you, that our souls may be saved.",
         "rendered": "site"
       }
     }

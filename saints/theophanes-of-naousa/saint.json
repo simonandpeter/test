@@ -6,6 +6,11 @@
     {
       "form": "Преп. Теофан",
       "lang": "sr"
+    },
+    {
+      "form": "Teofan cel Nou de la Dohiariu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 august, «Sfântul Cuvios Teofan cel Nou de la Dohiariu, făcătorul de minuni», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -30,8 +35,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 19 august was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 19 august — «Sfântul Cuvios Teofan cel Nou de la Dohiariu, făcătorul de minuni»",
+        "url": "https://doxologia.ro/19-august",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

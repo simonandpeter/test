@@ -1,0 +1,60 @@
+{
+  "slug": "sebaldus-of-nuremberg",
+  "display_name": "Sebaldus of Nuremberg",
+  "names": [
+    {
+      "form": "Sebaldus",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 august, «Sfântul Sebaldus, ocrotitorul orașului Nürnberg», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 701,
+      "latest": 800,
+      "display": "8th century",
+      "basis": "traditional",
+      "note": "doxologia.ro heads the page «Sfântul Sebaldus, ocrotitorul orașului Nürnberg (†19 august 780)» and opens «Sfântul Sebaldus a fost un eremit care a trăit în secolul al VIII-lea»; but the same page says of its sources that the accounts «prezintă deseori inconcordanțe cronologice și fac astfel deosebit de dificilă o clarificare istorică exactă», so the year 780 is held only to its century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 august — «Sfântul Sebaldus, ocrotitorul orașului Nürnberg»",
+        "url": "https://doxologia.ro/19-august",
+        "year": 2026
+      },
+      "note": "The page says «Cinstirea sa în ziua de 19 august coincide cel mai probabil cu ziua trecerii sale la cele veșnice» — the day is most probably that of his repose."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
