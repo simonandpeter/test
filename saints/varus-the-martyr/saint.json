@@ -1,0 +1,71 @@
+{
+  "slug": "varus-the-martyr",
+  "display_name": "Varus",
+  "names": [
+    {
+      "form": "Uar",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "related": [
+    "cleopatra"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 19 octombrie — «Sfântul Mucenic Uar»",
+        "url": "https://doxologia.ro/19-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Uar, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Mucenic Uar",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-uar",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Varus, O Lord, in his contest received from Thee our God the crown of incorruption; for having Thy strength he brought the torturers low, and broke the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

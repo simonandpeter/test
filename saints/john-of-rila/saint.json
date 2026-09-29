@@ -14,6 +14,11 @@
       "form": "Ioan de la Rila",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 august, «Sfântul Cuvios Ioan de la Rila», with the rank words left off."
+    },
+    {
+      "form": "Ioan de la Rila",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 august and 19 octombrie."
     }
   ],
   "sex": "male",
@@ -58,7 +63,8 @@
         "text": "doxologia.ro, calendarul zilei pentru 18 august — «Sfântul Cuvios Ioan de la Rila»",
         "url": "https://doxologia.ro/18-august",
         "year": 2026
-      }
+      },
+      "note": "doxologia.ro prints him on two days: 18 august, which is the feast line his own page bears, and 19 octombrie, where the calendar for that day names him again («Sfântul Cuvios Ioan de la Rila», https://doxologia.ro/19-octombrie). The row is kept on 18 august because that is the day his own page gives and the day the Russian and Serbian rows already hold; the second Romanian day is recorded here and the saint does not render on it. Read 24 September 2026."
     },
     {
       "church": "greek",

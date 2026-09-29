@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'felix felix-companion-of-eusebius felix-of-apollonia':
+    'two men: the priest put to the sword with the deacon Eusebius, doxologia 19 octombrie, and Felix of Apollonia, a martyr, Romanian 17 June. Two entries on one calendar (read 29 September 2026)',
+  'eusebiu eusebius-31-may eusebius-companion-of-bassus eusebius-companion-of-felix eusebius-of-samosata':
+    'four men called Eusebiu, on four Romanian days. The new one is the deacon put to the sword with the priest Felix, 19 October. The others are unchanged: the bare-line martyr of 31 May, the companion of Bassus, 20 January, and the bishop of Samosata, 22 June (read 29 September 2026)',
+  'companion eusebius felix eusebius-companion-of-felix felix-companion-of-eusebius':
+    'the word-set artefact again: the priest Felix and the deacon Eusebius, put to the sword together, doxologia 19 octombrie, each named as the other companion, so their display names hold the same three words. Two men on one line (read 29 September 2026)',
   'iulian julian-companion-of-caesarius julian-of-emesa julian-of-samosata julian-of-the-brazen-gate julian-of-the-euphrates':
     'five men called Iulian, on five Romanian days. The new one is the hermit who left the world for a cave by the Euphrates, venerable, 18 October. The other four are unchanged and were read on 19 and 29 September: the physician of Emesa, 6 February; one of the seven of Samosata, 29 January; the martyr of the Brazen Gate, 9 August; and the presbyter martyred at Terracina with Caesarius, 7 October (read 29 September 2026)',
   'luca luke-of-crimea luke-of-emesa luke-the-evangelist':

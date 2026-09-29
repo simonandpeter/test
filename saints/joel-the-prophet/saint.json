@@ -1,0 +1,76 @@
+{
+  "slug": "joel-the-prophet",
+  "display_name": "Joel",
+  "names": [
+    {
+      "form": "Ioil",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "dates": {
+    "death": {
+      "earliest": -850,
+      "latest": -750,
+      "display": "c. 800 BC",
+      "basis": "traditional",
+      "note": "doxologia.ro: «El a viețuit mai înainte de nașterea Domnului nostru Iisus Hristos cu 800 de ani» — he lived eight hundred years before the birth of Christ. The interval is the century that reading allows."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 19 octombrie — «Sfântul Proroc Ioil»",
+        "url": "https://doxologia.ro/19-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "A prorocului Tău, Doamne, Ioil pomenire prăznuind, printr-însul Te rugăm: mântuieşte sufletele noastre!",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Prooroc Ioil",
+        "url": "https://doxologia.ro/troparul-sfantului-prooroc-ioil",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping the memory of Thy prophet Joel, O Lord, through him we entreat Thee: save our souls!",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

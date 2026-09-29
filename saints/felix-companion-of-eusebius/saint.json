@@ -1,0 +1,53 @@
+{
+  "slug": "felix-companion-of-eusebius",
+  "display_name": "Felix, companion of Eusebius",
+  "names": [
+    {
+      "form": "Felix",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 19 octombrie, «Sfântul Mucenic Felix, preotul»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "presbyter"
+  ],
+  "related": [
+    "eusebius-companion-of-felix"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 19 octombrie — «Sfântul Mucenic Felix, preotul»",
+        "url": "https://doxologia.ro/19-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 19 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
