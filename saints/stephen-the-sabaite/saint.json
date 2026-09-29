@@ -1,0 +1,69 @@
+{
+  "slug": "stephen-the-sabaite",
+  "display_name": "Stephen the Sabaite",
+  "names": [
+    {
+      "form": "Ștefan Savaitul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 octombrie, «Sfântul Cuvios Ştefan Savaitul, imnograful»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "hymnographer"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 28 octombrie — «Sfântul Cuvios Ştefan Savaitul, imnograful»",
+        "url": "https://doxologia.ro/28-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 28 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Îndreptătorule al Ortodoxiei, învăţătorule al dreptei cinstiri de Dumnezeu şi al curăţiei şi luminătorule al lumii, podoaba călugărilor cea de Dumnezeu insuflată Sfinte Părinte Ştefan, înţelepte, cu învăţăturile tale pe toţi i-ai luminat. Alăută duhovnicească, roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfântului Cuvios Ştefan Savaitul, făcătorul de canoane, Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-stefan-savaitul-facatorul-de-canoane",
+        "year": 2026
+      },
+      "english": {
+        "text": "Guide of Orthodoxy, teacher of true reverence for God and of purity, light of the world, God-inspired adornment of monks, wise father Stephen: by your teachings you gave light to all. Spiritual harp, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -103,4 +103,4 @@ year — 19 May with Job the Much-suffering, 10 September for the finding of
 his relics, which is the day this entry stands under, and 10 November, the
 day of his death.
 
-*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-iov-pochaevskij), read 6 September 2026; until then this entry had only the Sretensky calendar’s note for the day of the relics.*
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-iov-pochaevskij), read 6 September 2026; until then this entry had only the Sretensky calendar’s note for the day of the relics; the Romanian calendar names him on 28 octombrie — [the day](https://doxologia.ro/28-octombrie) — where doxologia.ro's page for him prints no life and no hymn, read 24 September 2026.*

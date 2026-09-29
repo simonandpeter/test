@@ -1,0 +1,60 @@
+{
+  "slug": "neophytus-of-urbnisi",
+  "display_name": "Neophytus of Urbnisi",
+  "office": "Bishop of Urbnisi",
+  "names": [
+    {
+      "form": "Neofit",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 octombrie, «Sfântul Sfințit Mucenic Neofit, Episcop de Urbnisi»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 601,
+      "latest": 700,
+      "display": "7th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfântul Sfințit Mucenic Neofit a trăit în veacul al VII-lea şi se trăgea din neamul perşilor, care se închinau înaintea focului». The page gives no year, only the century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 28 octombrie — «Sfântul Sfințit Mucenic Neofit, Episcop de Urbnisi»",
+        "url": "https://doxologia.ro/28-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 28 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

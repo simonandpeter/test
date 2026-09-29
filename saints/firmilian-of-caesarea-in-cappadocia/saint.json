@@ -1,0 +1,63 @@
+{
+  "slug": "firmilian-of-caesarea-in-cappadocia",
+  "display_name": "Firmilian of Caesarea in Cappadocia",
+  "office": "Bishop of Caesarea in Cappadocia",
+  "names": [
+    {
+      "form": "Firmilian",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 octombrie, «Sfântul Firmilian, Episcopul Cezareei Capadociei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "related": [
+    "cyprian-of-carthage"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 268,
+      "latest": 268,
+      "display": "268",
+      "basis": "attested",
+      "note": "doxologia.ro: «A murit în anul 268 şi este prăznuit pe data de 28 octombrie»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 28 octombrie — «Sfântul Firmilian, Episcopul Cezareei Capadociei»",
+        "url": "https://doxologia.ro/28-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 28 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

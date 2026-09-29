@@ -1,0 +1,83 @@
+{
+  "slug": "theophana-basarab",
+  "display_name": "Theophana Basarab",
+  "names": [
+    {
+      "form": "Teofana Basarab",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 octombrie, «Sfânta Cuvioasă Teofana Basarab»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1300,
+      "latest": 1322,
+      "display": "early 14th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfânta Cuvioasă Teofana s-a născut la începutul secolului al XIV-lea»; the same page marries her in 1322, which is the latest her birth can fall."
+    },
+    "death": {
+      "earliest": 1396,
+      "latest": 1396,
+      "display": "1396, by a popular tradition",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Ea a trecut la Domnul la o vârstă înaintată (o tradiție populară afirmă că Sfânta a murit mucenicește, fiind ucisă de otomanii care au atacat Vidinul în anul 1396)». The page gives no other year; the tradition is the only one it prints."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 28 octombrie — «Sfânta Cuvioasă Teofana Basarab»",
+        "url": "https://doxologia.ro/28-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 28 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 5, podobie «Pe Cuvântul…»",
+      "text": "Pe fiica aleasă a Țării Românești, care, prin viaţa sa sfântă, a strălucit minunat, ca o vrednică povăţuitoare a Bulgariei, iar, primind chipul îngeresc, îndelung s-a nevoit în privegheri și postire, pe Cuvioasa Teofana, cu vrednicie acum toţi să o cinstim.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfintei Cuvioase Teofana Basarab, Glasul 5",
+        "url": "https://doxologia.ro/troparul-sfintei-cuvioase-teofana-basarab",
+        "year": 2026
+      },
+      "english": {
+        "text": "The chosen daughter of the Romanian Land, who by her holy life shone out wonderfully as a worthy guide to Bulgaria, and who, taking the angelic habit, laboured long in vigils and in fasting — the venerable Theophana — let us all now worthily honour.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

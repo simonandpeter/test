@@ -115,6 +115,20 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'savaitul stefan stephen-the-sabaite stephen-the-sabbaite':
+    'two men of the same house and the same epithet, and the two slugs differ by one letter, which is a trap for whoever reads this next. Doxologia keeps both with two lives: the nephew of John Damascene, born in 725 and tonsured at Mar Saba as a boy, Romanian 13 July, held as stephen-the-sabbaite; and the hymnographer of the same Lavra, who with Andrew the Blind was among the first to compose the canons, Romanian 28 October, written here as stephen-the-sabaite. Two commemorations on one calendar, so two men; the near-identical slugs are left as the readers wrote them and are worth a ruling (read 30 September 2026)',
+  'teodul theodulus-companion-of-agathopodes theodulus-of-the-forty-martyrs theodulus-of-tripoli theodulus-son-of-terence':
+    'four men called Teodul, on four Romanian days. The new one is one of the seven sons of Terence and Neonilla, killed with their parents, 28 October. The others are the companion of Agathopodes, 5 April; one of the Forty of Sebaste, 9 March; and the soldier of Tripoli, 18 June (read 30 September 2026)',
+  'teofil theophilus-companion-of-trophimus theophilus-of-the-forty-martyrs theophilus-the-fool-for-christ-of-kyiv':
+    'three men called Teofil, on three Romanian days. The new one is the fool for Christ of Kyiv, 28 October. The others are the companion of Trophimus, 23 July, and one of the Forty of Sebaste, 9 March (read 30 September 2026)',
+  'terentie terence-husband-of-neonilla terentius-of-africa terentius-the-martyr-16-october':
+    'three men called Terentie, on three Romanian days. The new one is the husband of Neonilla, martyred with her and their seven sons, 28 October. The other two were read on 29 September: Terentius of Africa, 10 April, and one of the four who died by fire, 16 October (read 30 September 2026)',
+  'neofit neophytus-5-may neophytus-of-nicaea neophytus-of-urbnisi':
+    'three men called Neofit, on three Romanian days. The new one is the bishop of Urbnisi in Georgia, 28 October. The others are the bare-line martyr of 5 May and Neophytus of Nicaea, 21 January (read 30 September 2026)',
+  'iachint hyacinth-of-vicina hyacinth-son-of-theoclitus hyacinth-the-chamberlain':
+    'three men called Iachint, on three Romanian days. The new one is Hyacinth of Vicina, metropolitan of Ungro-Wallachia, 28 October. The others are the son of Theoclitus, a martyr, 18 July, and Hyacinth the chamberlain, 3 July (read 30 September 2026)',
+  'neonila neonilla neonilla-wife-of-terence':
+    'two women, on two Romanian days and in two countries. The new one is the wife of Terence, martyred with her husband and their seven sons, the place not named on the page, 28 October. The other is the Neonilla of Lingonia in Gaul, sister of the senator Faustus and grandmother of triplets, 16 January (read 30 September 2026)',
   'olga olga-daughter-of-nicholas-ii olga-of-alaska olga-of-kyiv':
     'three women called Olga, on three Romanian days. The new one is Olga Michael of Kwethluk in Alaska, the Yup ik midwife born in 1916, 27 October. The others are Olga of Kyiv, equal-to-the-apostles, 11 July, and the grand duchess Olga, daughter of Nicholas II, 17 July (read 29 September 2026)',
   'nestor nestor-of-maghid nestor-of-thessalonica nestor-the-martyr-2-march':

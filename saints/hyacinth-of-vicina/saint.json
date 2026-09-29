@@ -1,0 +1,78 @@
+{
+  "slug": "hyacinth-of-vicina",
+  "display_name": "Hyacinth of Vicina",
+  "office": "Metropolitan of Ungro-Wallachia",
+  "names": [
+    {
+      "form": "Iachint",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 octombrie, «Sfântul Ierarh Iachint, Mitropolitul Țării Românești»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1372,
+      "latest": 1372,
+      "display": "1372",
+      "basis": "attested",
+      "note": "doxologia.ro: «În prima jumătate a anului 1372, mitropolitul Iachint s-a mutat la cele veșnice, fiind înmormântat în complexul mitropolitan de la Curtea de Argeș»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 28 octombrie — «Sfântul Ierarh Iachint, Mitropolitul Țării Românești»",
+        "url": "https://doxologia.ro/28-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 28 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 1",
+      "text": "Vrednic următor al ierarhilor dobrogeni şi întâiule între mitropoliţii Ţării Româneşti, Sfinte Ierarhe Iachint, te-ai arătat mărturisitor al dreptei credinţe, lucrător al virtuţilor şi rugător pentru sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfântului Ierarh Iachint, Mitropolitul Țării Românești, Glasul 1",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-iachint-mitropolitul-tarii-romanesti",
+        "year": 2026
+      },
+      "english": {
+        "text": "Worthy successor of the hierarchs of Dobrogea and first among the metropolitans of the Romanian Land, holy hierarch Hyacinth, you showed yourself a confessor of the right faith, a worker of the virtues, and an intercessor for our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "slug": "terence-husband-of-neonilla",
+  "display_name": "Terence, husband of Neonilla",
+  "names": [
+    {
+      "form": "Terentie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 octombrie, «Sfântul Mucenic Terentie cu cei 7 fii ai săi»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "neonilla-wife-of-terence",
+    "sarbelus-son-of-terence",
+    "photus-son-of-terence",
+    "theodulus-son-of-terence",
+    "vilas-son-of-terence",
+    "hierax-son-of-terence",
+    "nitus-son-of-terence",
+    "eunicius-son-of-terence"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 28 octombrie — «Sfântul Mucenic Terentie cu cei 7 fii ai săi»",
+        "url": "https://doxologia.ro/28-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 28 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicii Tăi, Doamne, întru nevoinţele lor, cununile nesctricăciunii au dobândit de la Tine, Dumnezeul nostru. Că având tăria Ta, pe chinuitori au învins; zdrobit-au şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lor, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfântului Mucenic Terentie, al Sfintei Neonila și al celor împreună cu dânșii, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-terentie-al-sfintei-neonila-al-celor-impreuna-cu-dansii",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, in their contests received from you, our God, the crowns of incorruption; for possessing your strength they overthrew their torturers and broke the feeble daring of the demons. By their prayers save our souls, O Christ God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

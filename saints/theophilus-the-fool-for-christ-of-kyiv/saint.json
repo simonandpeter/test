@@ -1,0 +1,67 @@
+{
+  "slug": "theophilus-the-fool-for-christ-of-kyiv",
+  "display_name": "Theophilus the Fool for Christ of Kyiv",
+  "names": [
+    {
+      "form": "Teofil",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 octombrie, «Sfântul Cuvios Teofil cel Nebun pentru Hristos»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "fool-for-christ",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1788,
+      "latest": 1788,
+      "display": "1788",
+      "basis": "attested",
+      "note": "doxologia.ro: «În octombrie 1788, în orăşelul Mahnovo din gubernia Kiev … a născut gemeni: Toma şi Calinic»."
+    },
+    "death": {
+      "earliest": 1853,
+      "latest": 1853,
+      "display": "1853",
+      "basis": "attested",
+      "note": "doxologia.ro: «fericitul Teofil şi-a încredinţat sufletul în mâna lui Dumnezeu în ziua de 28 octombrie la ora 5 după-amiaza, anul 1853». The same page earlier writes «sfârşitul său, care s-a întâmplat în ziua de 23 aprilie a anului 1853» and then carries the story on past 15 July; the year is the same either way and only the day differs."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 28 octombrie — «Sfântul Cuvios Teofil cel Nebun pentru Hristos»",
+        "url": "https://doxologia.ro/28-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 28 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

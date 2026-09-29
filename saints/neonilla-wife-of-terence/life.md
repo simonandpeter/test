@@ -1,0 +1,9 @@
+# Neonilla, wife of Terence
+
+Neonilla was the wife of the blessed [Terence](/saints/terence-husband-of-neonilla), and, doxologia's life says, held the same faith as he did; they were married in lawful marriage and had seven sons — [Sarbelus](/saints/sarbelus-son-of-terence), [Photus](/saints/photus-son-of-terence), [Theodulus](/saints/theodulus-son-of-terence), [Vilas](/saints/vilas-son-of-terence), [Hierax](/saints/hierax-son-of-terence), [Nitus](/saints/nitus-son-of-terence) and [Eunicius](/saints/eunicius-son-of-terence) — whom they brought up in the right faith. The Romanian calendar names her on her own line for 28 October as the wife of the martyr Terence.
+
+Then all of them were taken by the pagans, parents and children alike, and brought before a lawless court, where they confessed Christ and reviled the idols. For this they were tortured beyond measure and then hung up; their wounds were sprinkled with vinegar and burned with fire, and the saints prayed quietly for one another and comforted one another. God sent his angels, who loosed them from their bonds and healed their wounds.
+
+The pagans, seeing them loosed and healed, were terrified, and gave them to the beasts; but the beasts at God's command changed their cruelty for the gentleness of sheep and did them no harm. Then they were thrown into a cauldron of boiling pitch, and at once the fire went out and the pitch grew cold. Seeing that the tortures would not touch them, the pagans beheaded them with the sword, and so they came to their end. doxologia prints the same life on her page as on her husband's, and adds nothing of her own.
+
+*After doxologia.ro's calendar for 28 octombrie — [the day](https://doxologia.ro/28-octombrie) and [the life](https://doxologia.ro/sfanta-mucenita-neonila-sotia-sfantului-mucenic-terentie); read 24 September 2026.*

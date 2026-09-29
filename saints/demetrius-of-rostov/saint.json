@@ -11,6 +11,11 @@
       "form": "Димитрије",
       "lang": "sr",
       "note": "Read out of «Св. Димитрије еп. Ростовски» in the Ohrid Prologue for 04.10.2026."
+    },
+    {
+      "form": "Dimitrie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 octombrie, «Sfântul Ierarh Dimitrie, Mitropolitul Rostovului»."
     }
   ],
   "sex": "male",
@@ -52,8 +57,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 4 octombrie (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 28 octombrie — «Sfântul Ierarh Dimitrie, Mitropolitul Rostovului»",
+        "url": "https://doxologia.ro/28-octombrie",
+        "year": 2026
+      },
+      "note": "The Romanian calendar keeps his repose on 28 October, not the finding of his relics which the Russian and Serbian calendars keep on 21 September (Julian). Read 24 September 2026."
     },
     {
       "church": "greek",
@@ -106,6 +121,22 @@
       },
       "english": {
         "text": "The star of Russia, that shone forth from Kyiv and came through Novgorod-Seversky to Rostov, and enlightened all this land with teachings and wonders, let us call blessed, the golden-worded teacher Demetrius; for he wrote all things for all, whatever serves for instruction, that like Paul he might win all for Christ, and save our souls by right belief.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Al smereniei râvnitorule și al dezbinării dezrădăcinătorule, al celor bolnavi vindecătorule și către Dumnezeu noule rugător, cu Scripturile tale pe toți i-ai înțelepțit, alăută duhovnicească, roagă-te lui Hristos Dumnezeu, să se mântuiască poporul dimpreună cu moștenirea stăpânirii sale.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfântului Ierarh Dimitrie, Mitropolitul Rostovului, Glasul 8",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-dimitrie-mitropolitul-rostovului",
+        "year": 2026
+      },
+      "english": {
+        "text": "Zealot of humility and uprooter of division, healer of the sick and new intercessor before God: by your writings you made all men wise. Spiritual harp, pray to Christ God that the people may be saved together with the inheritance of his dominion.",
         "rendered": "site"
       }
     }

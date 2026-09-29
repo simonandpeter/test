@@ -5,6 +5,11 @@
     {
       "form": "Иов Почаевский",
       "lang": "ru"
+    },
+    {
+      "form": "Iov de la Poceaev",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 octombrie, «Sfantul Cuvios Iov de la Poceaev»."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 28 august (checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 28 octombrie — «Sfantul Cuvios Iov de la Poceaev»",
+        "url": "https://doxologia.ro/28-octombrie",
+        "year": 2026
+      },
+      "note": "The Romanian calendar keeps his repose on 28 October, not the finding of his relics which the Russian calendar keeps on 28 August (Julian). doxologia's own page for him carries neither a Viață nor a Tropar tab, so the day's line is the whole of what it prints. Read 24 September 2026."
     },
     {
       "church": "greek",
