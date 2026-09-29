@@ -10,6 +10,11 @@
     {
       "form": "Св. Генадије патријарх Цариградски",
       "lang": "sr"
+    },
+    {
+      "form": "Ghenadie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 noiembrie, «Sfântul Ierarh Ghenadie, patriarhul Constantinopolului»."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 31 august (checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 17 noiembrie — «Sfântul Ierarh Ghenadie, patriarhul Constantinopolului»",
+        "url": "https://doxologia.ro/17-noiembrie",
+        "year": 2026
+      },
+      "note": "His page on doxologia carries no Viață tab; its only other tab is an audio recording of his troparion in Greek, with no text, so no hymn is taken from it."
     },
     {
       "church": "greek",

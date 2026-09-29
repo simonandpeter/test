@@ -1,0 +1,73 @@
+{
+  "slug": "gregory-the-wonderworker-of-neocaesarea",
+  "display_name": "Gregory the Wonderworker of Neocaesarea",
+  "office": "Bishop of Neocaesarea in Pontus",
+  "names": [
+    {
+      "form": "Grigorie Taumaturgul",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 noiembrie, «Sfântul Ierarh Grigorie Taumaturgul, Episcopul Neocezareei Pontului»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 17 noiembrie — «Sfântul Ierarh Grigorie Taumaturgul, Episcopul Neocezareei Pontului»",
+        "url": "https://doxologia.ro/17-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "alexander-of-comana"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Întru rugăciuni priveghind, la lucrările minunilor răbdând, asemenea numire cu îndreptările ai câştigat. Ci, te roagă lui Hristos Dumnezeu, Părinte Grigorie, să lumineze sufletele noastre, ca să nu adormim în moarte cu păcate.",
+      "source": {
+        "text": "Doxologia — «Troparul Sfântului Ierarh Grigorie Taumaturgul, Episcopul Neocezareei», glas 8",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-grigorie-taumaturgul-episcopul-neocezareei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Watchful in prayers and steadfast in the working of wonders, thou didst win a name to match thy deeds. Pray therefore to Christ God, father Gregory, to enlighten our souls, that we sleep not in death with our sins.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

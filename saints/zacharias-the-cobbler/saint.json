@@ -1,0 +1,50 @@
+{
+  "slug": "zacharias-the-cobbler",
+  "display_name": "Zacharias the Cobbler",
+  "names": [
+    {
+      "form": "Zaharia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 17 noiembrie, «Sfântul Cuvios Zaharia»; the account the calendar links is headed «Cizmarul care descuia ușile cu rugăciunea» and names him in its last paragraph."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "revised-julian",
+        "note": "The calendar's line is bare, «Sfântul Cuvios Zaharia»; what identifies him is the account it links, of the cobbler of Constantinople who opened the doors of Hagia Sophia with his prayer."
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 17 noiembrie — «Sfântul Cuvios Zaharia»",
+        "url": "https://doxologia.ro/17-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 17 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -802,6 +802,7 @@ export const sr = {
     'Bishop of Myra': 'Епископ мирликијски',
     'Bishop of Naeson in Persia': 'Епископ наесонски у Персији',
     'Bishop of Narva': 'Епископ нарвски',
+    'Bishop of Neocaesarea in Pontus': 'Епископ неокесаријски у Понту',
     'Bishop of Nicaea': 'Епископ никејски',
     'Bishop of Nicomedia': 'Епископ никомидијски',
     'Bishop of Nisibis': 'Епископ низибијски',
