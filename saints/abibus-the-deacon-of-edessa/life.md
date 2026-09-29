@@ -1,0 +1,15 @@
+# Abibus the Deacon of Edessa
+
+The life doxologia prints for 15 noiembrie is one account of three men, and he is the third. Years after [Gurias](/saints/gurias-of-edessa) and [Samonas](/saints/samonas-of-edessa) had suffered in Edessa, Licinius, who reigned with Constantine the Great and had covenanted to do the Christians no harm, cast off that covenant and rose against them in the eastern parts. In the same Edessa there was then a deacon named Abibus, who went about the whole city from house to house teaching the Christian faith and strengthening people in the confession of Christ.
+
+Lysanias, the eparch of the city, wrote to Licinius that Abibus had filled all Edessa with the Christian error, and asked for authority, not yet having it, to punish Christians; the emperor wrote back at once that Abibus was to be put to death. Soldiers were sent to look for him. He was then staying in a house that was not known, with his mother and his kinsfolk, preaching in secret where he could not preach openly.
+
+Rather than hide, he came out and gave himself into their hands, meeting their officer Theotecus and saying: here I am, the Abibus you are commanded to seek; take me to the man who sent you. When the officer was unwilling, he said that if he would not take him he would go himself and confess his Christ before emperors and lords. Brought to Lysanias and asked his family and his name, he said first that he was a Christian, and then that his name was Abibus, of a village called Telseia.
+
+Lysanias pressed him with threats and with coaxing to sacrifice, and, failing in words, had him hung up and his body raked with iron claws. The martyr answered that nothing would part him from his God, though he were tormented with a thousand torments and worse; and when the persecutor laughed at the Apostle's word about the sufferings of this present time, he condemned him to be burned. A great fire was made outside the city, and Abibus went to it rejoicing.
+
+Coming to the fire he prayed a long while, gave his mother and all his friends the last kiss, and walked into the flame, and at once gave up his soul into the hands of the Lord. When the fire had died his mother and others found his body unharmed by it; they anointed it with myrrh and buried it beside the tomb of Gurias and Samonas, for he suffered on the same day as they, some years later. When the persecution ceased the faithful built a church in the name of the three.
+
+The longest part of the account is what the three did afterwards: a Goth who swore by their names to a mother, Sophia, that he would keep her daughter Euphemia as his wife, took her away, made her a slave to his own wife, and at last had her shut alive in a tomb; and the three martyrs appeared to her there as three lights, took away the stench, promised her deliverance, and carried her asleep in one hour back to their own church in Edessa. The Goth was beheaded for it. The page gives no year for any of this.
+
+*After doxologia.ro's calendar for 15 noiembrie — [the day](https://doxologia.ro/15-noiembrie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-aviv-diaconul); read 25 September 2026.*

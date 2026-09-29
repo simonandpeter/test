@@ -1,0 +1,78 @@
+{
+  "slug": "herman-of-alaska",
+  "display_name": "Herman of Alaska",
+  "names": [
+    {
+      "form": "Gherman de Alaska",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 noiembrie, «Sfântul Cuvios Gherman de Alaska»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1757,
+      "latest": 1757,
+      "display": "c. 1757",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Cuviosul Gherman s-a născut în apropiere de Moscova, în jurul anului 1757» — the page says around that year, and gives no year for his death at all."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 15 noiembrie — «Sfântul Cuvios Gherman de Alaska»",
+        "url": "https://doxologia.ro/15-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 2",
+      "text": "Nevoitorule al pustiirilor nordice și rugător pentru întreaga lume, învățător Ortodoxiei și chip al evlaviei, podoaba Alaskăi și veselia Americii, Sfinte Părinte Gherman, roagă-te pentru noi!",
+      "source": {
+        "text": "Doxologia — «Troparul Sfântului Cuvios Gherman de Alaska», glas 2, his own proper",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-gherman-de-alaska",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ascetic of the northern wastes and intercessor for the whole world, teacher of Orthodoxy and pattern of piety, adornment of Alaska and gladness of America, holy father Herman, pray for us!",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'aviv abibus-of-samosata abibus-the-deacon-of-edessa':
+    'two men: the deacon of Edessa burned under Licinius, kept with Gurias and Samonas, Romanian 15 November; and one of the seven of Samosata, 29 January (read 30 September 2026)',
   'teodota theodota-of-adrianople theodota-sister-of-gregory-palamas theodota-with-her-three-sons':
     'three women called Teodota, on three Romanian days. The new one is the sister of Gregory Palamas, 14 November. The other two were read on 29 September: one of the four of Adrianople, 22 October, and Theodota who suffered with her three sons, 29 July (read 30 September 2026)',
   'teodosie theodosius-brother-of-gregory-palamas theodosius-of-the-kyiv-caves':

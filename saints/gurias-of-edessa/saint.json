@@ -1,0 +1,72 @@
+{
+  "slug": "gurias-of-edessa",
+  "display_name": "Gurias of Edessa",
+  "names": [
+    {
+      "form": "Gurie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 noiembrie, «Sfântul Mucenic Mărturisitor Gurie»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 15 noiembrie — «Sfântul Mucenic Mărturisitor Gurie»",
+        "url": "https://doxologia.ro/15-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "samonas-of-edessa",
+    "abibus-the-deacon-of-edessa"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Ocrotitorii şi apărătorii Edesei, cei ce săvârşiţi minuni mari în lume, cei ce pe tânără aţi dat-o iarăşi în braţele maicii sale şi pe călcătorul de lege got l-aţi arătat osândit cu dreaptă judecată, cereţi pentru noi neîncetat să se mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — «Troparul Sfinților Mucenici Mărturisitori Gurie, Samona, Aviv diaconul», glas 4, the one troparion the three share",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-marturisitori-gurie-samona-aviv-diaconul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Protectors and defenders of Edessa, who work great wonders in the world, who gave the young woman back into her mother's arms and showed the law-breaking Goth condemned by a righteous judgement: ask unceasingly for us, that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

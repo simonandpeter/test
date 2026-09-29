@@ -1,0 +1,89 @@
+{
+  "slug": "paisius-of-neamt",
+  "display_name": "Paisius of Neamț",
+  "names": [
+    {
+      "form": "Paisie de la Neamț",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 15 noiembrie, «Sfântul Cuvios Paisie de la Neamț»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1722,
+      "latest": 1722,
+      "display": "1722",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut în orașul Poltava din Ucraina în anul 1722, la 21 decembrie, într-o binecuvântată familie preoțească, fiind al unsprezecelea copil din cei doisprezece frați»."
+    },
+    "death": {
+      "earliest": 1794,
+      "latest": 1794,
+      "display": "1794",
+      "basis": "attested",
+      "note": "doxologia.ro: in 1794, «îmbolnăvindu-se, și-a dat sufletul său curat în mâinile Domnului nostru Iisus Hristos în seara zilei de joi, 15 noiembrie, la vârsta de 72 de ani», and was buried on Saturday 17 November."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026). His own life says the Holy Synod of the Russian Church canonised him in 1988."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "revised-julian",
+        "note": "His life says his disciples appointed 15 noiembrie as his yearly commemoration, and that the Holy Synod of the Romanian Orthodox Church ordered his commemoration as a saint in 1992, entering him in the calendar on that day."
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 15 noiembrie — «Sfântul Cuvios Paisie de la Neamț»",
+        "url": "https://doxologia.ro/15-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "basil-of-poiana-marului"
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Apărătorule al dreptei credințe și lauda monahilor, Cuvioase Părinte Paisie, din pruncie iubind pe Hristos, ca un alt Avraam ai părăsit patria ta, în Muntele Athosului nevoindu-te; și, adunând ceată de ucenici, te-ai așezat în țara Moldovei cea binecuvântată și Mănăstirea Neamțului rai pământesc ai făcut-o. Pentru aceasta, împreună cu îngerii, nu înceta a te ruga lui Dumnezeu pentru sufletele noastre.",
+      "source": {
+        "text": "Doxologia — «Troparul Sfântului Cuvios Paisie de la Neamț», glas 4, his own proper",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-paisie-de-la-neamt",
+        "year": 2026
+      },
+      "english": {
+        "text": "Defender of the right faith and praise of monks, venerable father Paisius, loving Christ from thy infancy thou didst leave thy homeland like another Abraham, labouring on the Mountain of Athos; and gathering a company of disciples thou didst settle in the blessed land of Moldavia and didst make the monastery of Neamț an earthly paradise. Therefore, together with the angels, cease not to pray to God for our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
