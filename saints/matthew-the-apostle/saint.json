@@ -27,7 +27,7 @@
         "day": 30,
         "month": 6,
         "calendar": "revised-julian",
-        "note": "doxologia.ro keeps 30 iunie as the Synaxis of the Twelve Apostles, a common commemoration of all of them, and names each apostle in turn. His own day elsewhere in the Romanian calendar was not checked (24 September 2026)."
+        "note": "doxologia.ro keeps 30 iunie as the Synaxis of the Twelve Apostles, a common commemoration of all of them, and names each apostle in turn. It also keeps him alone on 16 noiembrie, his own day and the only entry the calendar prints for it, where the line reads «Sfântul Apostol și Evanghelist Matei» (https://doxologia.ro/16-noiembrie, read 25 September 2026), with a full life and a proper troparion of his own; the corpus keeps one feast to a church, so he renders on 30 iunie only, and whether the proper day should stand instead of the synaxis is left open."
       },
       "source": {
         "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 iunie — «Soborul Sfinților 12 Apostoli», whose life names him: «Sfântul Apostol Matei, fratele lui Iacov al lui Alfeu»",
@@ -60,6 +60,22 @@
       },
       "english": {
         "text": "O ye who are first enthroned among the Apostles and teachers of the world, pray to the Master of all that He grant peace to the world and to our souls great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 3",
+      "text": "Apostole Sfinte şi Evanghelist Matei, roagă pe Milostivul Dumnezeu, ca să dea iertare de greşeli sufletelor noastre.",
+      "source": {
+        "text": "Doxologia — «Troparul Sfântului Apostol și Evanghelist Matei», glas 3, from the Tropar tab of his own page for 16 noiembrie; his proper, as against the common of the Twelve already cited here",
+        "url": "https://doxologia.ro/troparul-sfantului-apostol-evanghelist-matei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy Apostle and Evangelist Matthew, pray to the merciful God that He grant our souls forgiveness of offences.",
         "rendered": "site"
       }
     }
