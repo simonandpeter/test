@@ -1,0 +1,15 @@
+# Paul of Neocaesarea
+
+In the time when Licinius reigned at Nicomedia over the Eastern empire (307-321), the fame of the virtues and of the wisdom in pastoring of Paul, the holy bishop of Neocaesarea, reached the ears of that tyrant and persecutor of the Christians. He called the hierarch to his court and tried first to frighten him with threats, and then had him whipped. The father showed such patience and such gentleness and pity towards his persecutors that everyone present was struck with amazement.
+
+The emperor then ordered a smith to melt a great quantity of metal and to lay the saint's hands upon it until the metal should cool. Under the power of that unbearable heat the flesh melted, giving off a sharp smell, and the hands of the fearless athlete of Christ were altogether burned. He was then banished to a fortress on the bank of the far Euphrates.
+
+When Constantine the Great, come from the West, tore the Eastern empire out of the hand of Licinius in 324, he ordered the persecution of the Christians to cease. The prisoners were set free, and those in exile, Paul among them, were able to return to their own country; and the holy archbishop began again to shine out high in the Church of Neocaesarea. In the following year he was called, with the bishops of the whole empire, to the holy and great Ecumenical Council of Nicaea.
+
+Many of the three hundred and eighteen Orthodox fathers who were able to go, at the emperor's call, to the great city of Bithynia bore — like the apostle Paul and like the bishop of the same name from Neocaesarea — the marks of the sufferings of Christ, and showed them to one another as their most precious ornaments and as the signs of their victory. One had his nose cut off, another his ears; a third had had his eyes put out, another some other member of his body cut off by dreadful torments, or had suffered burning with patience, as Paul had.
+
+So they carried on their own bodies the witness of their love for the Saviour, and for that reason were able to reject with all their strength the heretical teachings of Arius, who did not acknowledge the divinity of our Saviour Jesus Christ. At one of the sessions of the Council the emperor Constantine took the lifeless hands of Saint Paul in his own, touched them to his eyes and kissed them as holy relics, saying: «I cannot have enough of kissing these hands that have become lifeless and without feeling for my Christ». Orthodoxy triumphing, Paul returned to his diocese, where he laboured some years more, and then gave up his soul in peace into the hands of the Lord.
+
+doxologia.ro gives this life from the Synaxarion of the hieromonk Macarie of Simonos Petra (Sinaxarul. Viețile sfinților, volumul IV, Editura Sfântul Ioan Casian, Bucharest, 2015, pp. 286-287). The day's line names him «Sfântul Ierarh Pavel, Arhiepiscopul Neocezareei», gives no year for his birth or his death, and the page it links prints no hymn for him.
+
+*After doxologia.ro's calendar for 23 decembrie — [the day](https://doxologia.ro/23-decembrie) and [the life](https://doxologia.ro/sfantul-ierarh-pavel-arhiepiscopul-neocezareei); read 28 September 2026.*

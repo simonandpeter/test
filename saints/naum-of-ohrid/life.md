@@ -1,0 +1,9 @@
+# Naum of Ohrid
+
+Naum of Ohrid was one of the five disciples of Saints [Cyril](/saints/cyril-the-philosopher) and [Methodius](/saints/methodius-of-moravia), the apostles of the Slavs, whose day is 11 May; the five are known also as the five followers. doxologia.ro calls him a wise teacher, a guide of monks, a hard ascetic, a man of prayer and a spiritual father who worked wonders, and says that he lived from 830 to 23 December 910. About the year 843 he became a disciple of Cyril and Methodius and went with them to the mission in Upper Moravia.
+
+About the years 867 to 868 he was ordained priest at Rome, and afterwards returned to Moravia, where he helped Cyril and Methodius as a priest in their missionary work. In 885 he was exiled from Moravia, after a time spent in prison, through the malice of the German clergy of that region. He is one of the founders of the school of literature at Pliska. In 905, after Saint [Clement](/saints/clement-of-ohrid) had been ordained bishop of Drembica-Velika, Naum withdrew to the shore of Lake Ohrid.
+
+A multitude of monks gathered round him there from all over the Balkans, for he was known as a wonderworker while he was still alive; and there he founded the monastery of Ohrid, which was later to carry his name and to hold his relics. In that monastery he translated the holy Scripture from Greek into Slavonic. He fell asleep in the Lord on 23 December 910, and doxologia.ro says that his wonderworking relics work a multitude of wonders to this day for those who pray with faith, above all healings of grave illnesses, and especially of madness. The troparion the site prints for him is in four rhymed Romanian lines and carries no tone.
+
+*After doxologia.ro's calendar for 23 decembrie — [the day](https://doxologia.ro/23-decembrie), [the life](https://doxologia.ro/viata-sfantului-cuvios-naum-al-ohridei) and [the troparion](https://doxologia.ro/troparul-sfantului-cuvios-naum); read 28 September 2026.*

@@ -1,0 +1,89 @@
+{
+  "slug": "naum-of-ohrid",
+  "display_name": "Naum of Ohrid",
+  "names": [
+    {
+      "form": "Naum",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 decembrie, «Sfântul Cuvios Naum», with the rank words left off; the life it links is titled «Sfântul Cuvios Naum al Ohridei»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "related": [
+    "cyril-the-philosopher",
+    "methodius-of-moravia",
+    "clement-of-ohrid"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 830,
+      "latest": 830,
+      "display": "830",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfântul Cuvios Naum a trăit între 830 - 23 decembrie 910»."
+    },
+    "death": {
+      "earliest": 910,
+      "latest": 910,
+      "display": "910",
+      "basis": "traditional",
+      "note": "doxologia.ro: «Sfântul Naum a adormit în Domnul pe 23 decembrie 910»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 23 decembrie — «Sfântul Cuvios Naum»",
+        "url": "https://doxologia.ro/23-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 23 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "text": "Ucenic vrednic al Sfinţilor Chiril şi Metodie, te-ai arătat fericite,\nŞi tămăduiri din destul ai revărsat cu dragoste sufletelor smerite,\nCa cel ce te-ai arătat luminător mare celor din întunericul neştiinţei,\nCu raza rugăciunii tale ne înconjoară şi pe noi în ceasul umilinţei.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Cuvios Naum; the page prints the four rhymed lines and no tone",
+        "url": "https://doxologia.ro/troparul-sfantului-cuvios-naum",
+        "year": 2026
+      },
+      "english": {
+        "text": "A worthy disciple of Saints Cyril and Methodius you were shown to be, O blessed one, and healings in plenty you poured out with love upon humble souls; and as one who was shown a great light to those in the darkness of ignorance, surround us also with the ray of your prayer in the hour of our lowliness.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

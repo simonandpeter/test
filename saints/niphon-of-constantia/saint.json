@@ -1,0 +1,72 @@
+{
+  "slug": "niphon-of-constantia",
+  "display_name": "Niphon of Constantia",
+  "names": [
+    {
+      "form": "Nifon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 23 decembrie, «Sfântul Nifon, Episcop de Constanțiana», with the rank and the see left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Constantia in Cyprus",
+  "types": [
+    "bishop",
+    "hierarch"
+  ],
+  "related": [
+    "athanasius-of-alexandria"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 23 decembrie — «Sfântul Nifon, Episcop de Constanțiana»",
+        "url": "https://doxologia.ro/23-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 23 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 3",
+      "text": "Făcându-te cinstit lăcaş al dumnezeiescului har, Nifone, te-ai arătat păstor al Bisericii, de Dumnezeu chemat; chipuri de pocăinţă ai învăţat şi te-ai îmbogăţit cu darul nepătimirii, Părinte cuvioase, roagă-L pe Hristos Dumnezeu să ne dăruiască mare milă.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Nifon, Episcop de Constanțiana, glas 3",
+        "url": "https://doxologia.ro/troparul-sfantului-nifon-episcop-de-constantiana",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having made yourself an honoured dwelling of the divine grace, Niphon, you were shown a shepherd of the Church, called by God; you taught the ways of repentance and were enriched with the gift of dispassion. Venerable father, pray to Christ God to grant us great mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

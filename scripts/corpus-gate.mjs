@@ -115,6 +115,22 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'pavel paul-of-jamnia paul-of-latros paul-of-neocaesarea paul-of-plousias paul-of-ptolemais paul-of-zographou paul-the-apostle paul-the-confessor paul-with-valentina-and-ennatha platon-kulbusch':
+    'ten folders whose ro form is Pavel, on ten Romanian days. The new one is Paul archbishop of Neocaesarea, 23 December. The other nine were read on 30 September and are unchanged (read 30 September 2026)',
+  'nifon niphon-of-constantia niphon-patriarch-of-constantinople':
+    'two men: Niphon bishop of Constantia in Cyprus, Romanian 23 December; and Niphon patriarch of Constantinople and archbishop of Wallachia, 11 August (read 30 September 2026)',
+  'naum nahum naum-of-ohrid':
+    'two: the prophet Nahum, Romanian 1 December, and Naum of Ohrid, 23 December (read 30 September 2026)',
+  'antonina antonina-of-crodamna antonina-of-nicaea antonina-of-tismana':
+    'three women called Antonina, on three Romanian days. The new one is Antonina of Tismana, 23 December. The others are Antonina of Crodamna, 10 June, and Antonina of Nicaea, 1 March (read 30 September 2026)',
+  'zotic zoticus-of-nicomedia zoticus-of-niculitel zoticus-of-the-ten-of-crete':
+    'three men called Zotic, on three Romanian days. The new one is one of the ten of Crete, 23 December. The others are Zoticus of Nicomedia, 22 August, and Zoticus of Niculitel, 4 June (read 30 September 2026)',
+  'teodul theodulus-companion-of-agathopodes theodulus-of-the-forty-martyrs theodulus-of-the-ten-of-crete theodulus-of-tripoli theodulus-son-of-terence':
+    'five folders whose ro form is Teodul, on five Romanian days. The new one is one of the ten of Crete, 23 December. The other four were read on 30 September and are unchanged (read 30 September 2026)',
+  'pompie pompeius-companion-of-terentius pompeius-of-the-ten-of-crete':
+    'two men: one of the ten of Crete, Romanian 23 December; and Pompeius the companion of Terentius, 10 April (read 30 September 2026)',
+  'ghelasie gelasius-martyr-6-june gelasius-of-the-ten-of-crete':
+    'two men: one of the ten martyred in Crete under Decius, Romanian 23 December; and the bare-line Gelasius of 6 June (read 30 September 2026)',
   'anastasia anastasia-daughter-of-nicholas-ii anastasia-of-rome-15-april anastasia-pupil-of-chrysogonus anastasia-saguna':
     'four women called Anastasia, on four Romanian days. The new one is Anastasia the Deliverer from Bonds, taught by Chrysogonus, 22 December. The other three were read on 30 September and are unchanged (read 30 September 2026)',
   'bonifatie boniface-apostle-of-germany boniface-of-tarsus':
