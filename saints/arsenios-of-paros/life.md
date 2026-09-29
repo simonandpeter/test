@@ -14,4 +14,6 @@ He foresaw his end a month ahead. At the liturgy on Saint Basil's feast he told 
 
 He was canonised by the Patriarchate of Constantinople in 1967, and is commemorated on 31 January and on 18 August, the day his relics were found. They lie in the great church of the monastery of the Transfiguration on Paros, and a portion of them in the katholikon of the monastery of Dionysiou on Athos.
 
+The Romanian calendar keeps him twice. Doxologia.ro prints him on 18 august as well as on 31 ianuarie, and his own life gives the reason: 18 August is the day his honourable relics were uncovered. The same page says he was canonised by the Patriarchate of Constantinople in 1967, that his relics lie in the great church of the monastery of the Transfiguration on the island of Paros, and that a portion of them is kept in the katholikon of the monastery of Dionysiou on the Holy Mountain.
+
 *After doxologia.ro's calendar for 31 ianuarie — [the day](https://doxologia.ro/31-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-arsenie-din-paros); read 19 September 2026.*

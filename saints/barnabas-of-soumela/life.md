@@ -1,0 +1,9 @@
+# Barnabas of Soumela
+
+Barnabas and [Sophronius](/saints/sophronius-of-soumela) were kinsmen in the world, uncle and nephew, called Vasile and Sotirihos, and were born at Athens in the tenth century. When they were tonsured monks and ordained priests they took the names Barnabas and Sophronius. After a sign from God they set out on a long journey into Pontus, to find the wonderworking icon of the Most Holy Mother of God called Soumela and to build a monastery for it.
+
+On that journey, the account says, they venerated the relics of Saint Luke at Steiris, of Barbarus, of Achillius of Larissa and of Demetrius the Myrrh-streamer; they met bishops and ascetics; and they came to the Holy Mountain, where they venerated at the Great Lavra of Athanasius the Athonite and visited the monastery of Vatopedi. At Vatopedi they were received by the monk Lazarus, whom the Mother of God had told of them, and the abbot, when he learned of their holiness, wished to keep them near him for the good of the community. But their purpose was another.
+
+Travelling on from Maroneia they were led to Mount Papikion, and through wonderful works passed through cities and monastic centres until they reached the cave on Mount Mela, where they found the icon of the Mother of God, the Hodegetria of Athens, and began to build the monastery, the water they needed having first sprung up by a miracle and by prayer. With fasting, prayer and vigils and many labours they finished their godly life, and both rested in the Lord on the same day, 18 August, which is also the day of their commemoration.
+
+*After doxologia.ro's calendar for 18 august — [the day](https://doxologia.ro/18-august) and [the life](https://doxologia.ro/viata-cuviosilor-barnaba-sofronie-sec-x-xi), which cites Moise Aghioritul, Sfinţii Sfântului Munte (Mygdonia, Karyes, 2008), pp. 155–156; read 24 September 2026.*

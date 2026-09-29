@@ -14,7 +14,9 @@ impassable places — their flesh torn and their heads covered in wounds, and
 their souls untouched. The Russian calendar keeps the three on 18 August
 (Julian).
 
+The Romanian calendar keeps him on 18 August with his two companions, and doxologia.ro prints one life for all three. It says [Polyaenus](/saints/polyaenus-of-rome), [Serapion](/saints/serapion-of-rome) and Hermas came from the city of Rome and were unyielding in confessing and preaching the right faith against the error of idolatry. Denounced to the chief men of the city and refusing to deny Christ, they were cruelly beaten and thrown into a dark and foul prison, and left in want and much suffering; remaining unmoved in their hope, they were brought out and dragged by the crowd, bound with ropes, over ground full of sharp stones, until their bodies were broken and covered with wounds and blood, and their souls rose to Christ.
+
 *After the life printed by the Sretensky calendar (days.pravoslavie.ru) —
 [the entry](https://days.pravoslavie.ru/Life/life4467.htm); and the life
 printed by the Orthodox Church in America for 18 August —
-[the day’s lives](https://www.oca.org/saints/all-lives/2026/08/18); read 5 September 2026.*
+[the day’s lives](https://www.oca.org/saints/all-lives/2026/08/18); read 5 September 2026; and doxologia.ro's calendar for 18 august — [the day](https://doxologia.ro/18-august) and [the life](https://doxologia.ro/viata-sfintilor-mucenici-polien-serapion-ermi), read 24 September 2026.*

@@ -5,6 +5,11 @@
     {
       "form": "Ерм",
       "lang": "ru"
+    },
+    {
+      "form": "Ermi",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 august, «Sfântul Mucenic Ermi», with the rank words left off; the life prints «Ermi» in the same spelling."
     }
   ],
   "sex": "male",
@@ -37,8 +42,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 18 august was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 18 august — «Sfântul Mucenic Ermi»",
+        "url": "https://doxologia.ro/18-august",
+        "year": 2026
+      }
     },
     {
       "church": "greek",

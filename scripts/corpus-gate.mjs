@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'leon leo-of-catania leo-the-great leo-the-martyr-18-august':
+    'the new folder is a calendar line and nothing else: doxologia prints «Sfantul Mucenic Leon» on 18 august and the page behind it opens neither a Viata nor a Tropar tab, so the folder asserts a martyr, a name and a day. Neither namesake can be him: the corpus keeps Leo of Catania, a bishop and wonderworker, on the Romanian 20 February, and Leo the Great, bishop of Rome, on 18 February, and neither is a martyr. No other martyr Leo is held on 18 August (read 29 September 2026)',
+  'sofronie sophronius-of-jerusalem sophronius-of-soumela':
+    'the nephew of Barnabas of Soumela, baptised Sotirihos, who founded Panagia Soumela with him, Romanian 18 August, against the patriarch of Jerusalem, Romanian 11 March. Two (read 29 September 2026)',
+  'barnaba barnabas-of-soumela barnabas-the-apostle':
+    'the Athenian monk of the tenth century who with his nephew Sophronius founded Panagia Soumela in Pontus, Romanian 18 August — baptised Vasile, and Barnabas only from his tonsure — against the apostle, Romanian 11 June. Two (read 29 September 2026)',
   'stefan stefan-brancoveanu stephen-of-triglia':
     'the second son of Constantin Brancoveanu, beheaded with his father and brothers in 1714, Romanian 16 August, against the abbot of Triglia, venerable and a confessor under the iconoclasts, Romanian 28 March. Two (read 29 September 2026)',
   'matei matei-brancoveanu matthew-the-apostle':

@@ -1,0 +1,63 @@
+{
+  "slug": "barnabas-of-soumela",
+  "display_name": "Barnabas of Soumela",
+  "names": [
+    {
+      "form": "Barnaba",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 august, «Sfinții Cuvioși Barnaba și Sofronie», with the rank words left off; its life prints the form «Barnabas» and says his name in the world was Vasile."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "related": [
+    "sophronius-of-soumela"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 901,
+      "latest": 1000,
+      "display": "10th century",
+      "basis": "traditional",
+      "note": "doxologia.ro: «s-au născut la Athena în secolul al 10-lea»; the page's own title for the life reads «sec. X-XI». No year of death is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 18 august — «Sfinții Cuvioși Barnaba și Sofronie»",
+        "url": "https://doxologia.ro/18-august",
+        "year": 2026
+      },
+      "note": "The life says the two fell asleep on the same day, «pe 18 August, care este și ziua lor de pomenire»."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Αυγούστου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

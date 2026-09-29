@@ -9,6 +9,11 @@
     {
       "form": "Св. муч. Лавр",
       "lang": "sr"
+    },
+    {
+      "form": "Lavru",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 18 august, «Sfântul Mucenic Lavru», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -41,8 +46,17 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for 23 August – 19 September; its page for 18 august was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 18 august — «Sfântul Mucenic Lavru»",
+        "url": "https://doxologia.ro/18-august",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -97,6 +111,22 @@
       },
       "english": {
         "text": "As martyrs of piety and passion-bearers of Christ endowed with godly wisdom, the whole world gloriously honours Florus and Laurus this day, that by their prayers we may obtain grace and mercy, and be delivered from troubles and misfortunes, and from wrath and sorrow in the day of judgement.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Pe preaîmpodobita şi de Dumnezeu înţelepţita doime cea prealuminoasă, pe Fericitul Flor şi pe Preacinstitul Lavru, după vrednicie să-i lăudăm credincioşii, căci aceştia cu osârdie au propovăduit în chip văzut tuturor, pe Treimea Cea Nezidită. Pentru aceasta, pătimind până la sânge, s-au încununat cu cunună prealuminoasă şi se roagă lui Hristos Dumnezeu, ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfinților Mucenici Flor și Lavru», Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-flor-lavru",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful worthily praise the most adorned and divinely wise pair, most radiant, the blessed Florus and the most honoured Laurus; for they preached zealously and openly to all the Uncreated Trinity. Therefore, suffering unto blood, they were crowned with a most radiant crown, and they pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
     }
