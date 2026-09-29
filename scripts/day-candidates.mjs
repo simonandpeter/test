@@ -183,7 +183,21 @@ async function greek() {
   const html = await getPage(url);
   const seen = new Set();
   const entries = [];
+
+  /**
+   * The day's own commemorations are the anchors sitting directly in a
+   * `w3-quarter w3-left-align w3-padding-4` cell. Every other `saint.aspx`
+   * link on the page is furniture — the header, the theme bars, the liturgical
+   * -texts block — and the featured ones do not change with the date: Nikodemos
+   * the Hagiorite (701), Paisios (3200) and the Panagia Megalomata (4313) are
+   * on the 15 June page exactly as they are on 3 January, which cost a reader
+   * three days of candidates before it was caught.
+   */
+  const CELL = 'w3-quarter w3-left-align w3-padding-4';
   for (const a of html.matchAll(/<a[^>]*href="\/(\d+)\/saint\.aspx"[^>]*>([\s\S]*?)<\/a>/gi)) {
+    const before = html.slice(Math.max(0, a.index - 400), a.index);
+    const containers = [...before.matchAll(/(?:id|class)="([^"]{0,60})"/g)];
+    if (containers.at(-1)?.[1] !== CELL) continue;
     const label = strip(/title=\s*"([^"]+)"/i.exec(a[2])?.[1] ?? a[2]);
     if (!label || seen.has(label)) continue;
     seen.add(label);
