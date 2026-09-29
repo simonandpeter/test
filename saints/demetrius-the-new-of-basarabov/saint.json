@@ -1,0 +1,51 @@
+{
+  "slug": "demetrius-the-new-of-basarabov",
+  "display_name": "Demetrius the New of Basarabov",
+  "names": [
+    {
+      "form": "Dimitrie cel Nou",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 octombrie, «Sfântul Cuvios Dimitrie cel Nou, Ocrotitorul Bucureștilor»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 27 octombrie — «Sfântul Cuvios Dimitrie cel Nou, Ocrotitorul Bucureștilor»",
+        "url": "https://doxologia.ro/27-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 27 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

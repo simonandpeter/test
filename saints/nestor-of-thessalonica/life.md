@@ -1,0 +1,13 @@
+# Nestor of Thessalonica
+
+The Romanian life doxologia.ro prints belongs to the account of the great martyr Demetrius of Thessalonica. The emperor Maximian, called also Herculius, the friend of Diocletian, came to Thessalonica, shut Demetrius the proconsul in prison for confessing Christ, and gave himself to public games, boasting of his own fighter, a Vandal named Lyaeus whom nobody could beat. Lyaeus was another Goliath: bigger of body than other men, terrible to look at, with the face and the temper of a beast and a voice like a roaring lion, and unclean spirits lodged in him.
+
+The emperor built him a high, wide platform on pillars in the middle of the city, and under it set a mass of spears point upward, so that whoever Lyaeus beat was thrown down on them. Many brave men died there, and Christians were dragged up by force to fight him, while the emperor and his armies looked on with delight. In the city was a young man named Nestor, brave and fair of face, barely bearded, who knew Demetrius and had learned the faith from him; seeing Christians killed without mercy, he burned with anger and resolved to fight.
+
+He ran to Demetrius in the prison, told him how many Lyaeus had killed, and asked his prayers, that he might beat this adversary and lift the reproach from the Christians. Demetrius signed his forehead and his breast with the cross, blessed him, and told him: you will beat Lyaeus, and you will confess Christ. Nestor ran to the place of combat, threw off his clothes before everybody and cried out that he would fight. The emperor, pitying his youth, asked whether he had not seen how many stronger men Lyaeus had beaten; Nestor answered that he was small and weak, but great and unconquerable was the power of his Christ.
+
+Hearing the name of Christ the emperor knew him for a Christian and sent him to the platform in anger, thinking he would die like the rest. Nestor crossed himself and cried aloud, "God of Demetrius, help me!" — and God, who had once strengthened David against Goliath, strengthened him: he caught Lyaeus up like a bird and threw him from the high platform onto the sharpened spears, and the whole people of Thessalonica cried out that the God of Demetrius is great. The emperor went back to his palace in shame and grief for his fighter.
+
+He ordered Nestor seized, and learning that it was Demetrius who had sent him to the fight and foretold his victory, he ordered them both killed. Demetrius was run through with spears; Nestor was beheaded; and the life ends by saying that both received the crowns of victory from Christ.
+
+*After doxologia.ro's calendar for 27 octombrie — [the day](https://doxologia.ro/27-octombrie) and [the life](https://doxologia.ro/sfantul-mucenic-nestor); read 24 September 2026.*

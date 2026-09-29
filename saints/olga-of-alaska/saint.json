@@ -1,0 +1,65 @@
+{
+  "slug": "olga-of-alaska",
+  "display_name": "Olga of Alaska",
+  "names": [
+    {
+      "form": "Olga",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 octombrie, «Sfânta Olga din Alaska»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "righteous"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1916,
+      "latest": 1916,
+      "display": "1916",
+      "basis": "attested",
+      "note": "doxologia.ro: «Sfânta Olga (Arrsamquq) s-a născut la 3 februarie 1916, în satul Kwethluk din Alaska»."
+    },
+    "death": {
+      "earliest": 1979,
+      "latest": 1979,
+      "display": "1979",
+      "basis": "attested",
+      "note": "doxologia.ro: «A plecat din această lume în ziua de 8 noiembrie 1979, după ce s-a rugat, s-a spovedit și s-a împărtășit»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 27 octombrie — «Sfânta Olga din Alaska»",
+        "url": "https://doxologia.ro/27-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 27 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

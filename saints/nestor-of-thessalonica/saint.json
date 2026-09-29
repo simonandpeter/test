@@ -1,0 +1,67 @@
+{
+  "slug": "nestor-of-thessalonica",
+  "display_name": "Nestor of Thessalonica",
+  "names": [
+    {
+      "form": "Nestor",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 27 octombrie, «Sfântul Mucenic Nestor»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, 27 octombrie — «Sfântul Mucenic Nestor»",
+        "url": "https://doxologia.ro/27-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 27 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne Nestor, întru nevoința sa, cununa nestricăciunii a dobândit de la tine, Dumnezeul nostru; că, având puterea Ta, pe chinuitori a învins; zdrobit-a și ale demonilor neputinciose îndrăzniri. Pentru rugăciunile lui, mântuiește sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, Troparul Sfântului Mucenic Nestor, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-nestor",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Nestor, O Lord, in his contest received an incorruptible crown from Thee our God; for possessing Thy strength he overthrew his torturers, and broke the feeble daring of the demons. By his prayers save Thou our souls, O Christ God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

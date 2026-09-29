@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'olga olga-daughter-of-nicholas-ii olga-of-alaska olga-of-kyiv':
+    'three women called Olga, on three Romanian days. The new one is Olga Michael of Kwethluk in Alaska, the Yup ik midwife born in 1916, 27 October. The others are Olga of Kyiv, equal-to-the-apostles, 11 July, and the grand duchess Olga, daughter of Nicholas II, 17 July (read 29 September 2026)',
+  'nestor nestor-of-maghid nestor-of-thessalonica nestor-the-martyr-2-march':
+    'three men called Nestor, on three Romanian days. The new one is the young man of Thessalonica who threw down Lyaios and was killed the day after Demetrius, 27 October. The others are Nestor of Maghid, hieromartyr and bishop, 28 February, and the bare-line martyr of 2 March (read 29 September 2026)',
   'dimitrie demetrius-of-georgia demetrius-of-the-brazen-gate demetrius-the-myrrhstreamer ignatius-brianchaninov':
     'four folders whose ro form is Dimitrie. The new one is the great-martyr of Thessalonica, the Myrrh-streamer, 26 October. The other three were read on 29 September: the king of Georgia, 16 March; the martyr of the Brazen Gate, 9 August; and Ignatius Brianchaninov, whose baptismal name was Dimitrie, 30 April (read 29 September 2026)',
   'valerian valerian-25-october valerian-4-may valerian-companion-of-justin valerian-of-tomis valerian-of-trebizond':
