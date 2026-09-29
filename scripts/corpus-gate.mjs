@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'prov probus-9-july probus-of-tarsus':
+    'two men, and the Greek calendar settles it. The corpus already holds a bare «Sfantul Mucenic Prov» off doxologia 9 iulie, a page that carries the name and nothing more; saint.gr keeps 9 Iouliou «Agioi Andreas kai Provos», a Probus paired with an Andrew and not with a Tarachus. The new folder is the Probus martyred at Tarsus and Anazarbus with Tarachus and Andronicus, 12 October, whose life both calendars print. Two men (read 29 September 2026)',
+  'cosma cosmas-companion-of-thomas-of-zographou cosmas-of-chalcedon cosmas-of-maiuma cosmas-of-rome':
+    'four men called Cosma, on four Romanian days. The new one is Cosmas of Maiuma, the orphan of Jerusalem taken into the house of John Damascene parents and raised with him, the hymnographer, 12 October. The others are unchanged: the companion of Thomas of Zographou, a venerable-martyr, 10 October; the bishop of Chalcedon, 18 April; and Cosmas of Rome, the unmercenary physician, 1 July (read 29 September 2026)',
+  'andronic andronicus-of-antioch andronicus-of-tarsus andronicus-the-apostle':
+    'three men called Andronic, on three Romanian days. The new one is the youngest of the three martyred at Tarsus and Anazarbus with Tarachus and Probus, 12 October. The others were read on 29 September: the goldsmith of Antioch under Theodosius, 9 October, and the apostle of the Seventy, 17 May (read 29 September 2026)',
   'zenaida zenaida-martyr-7-june zenaida-of-tarsus':
     'two women, and two calendars keep both of them apart. Doxologia prints a lone «Sfanta Mucenita Zenaida» on 7 iunie, with no life and no hymn, grouped with Theodotus of Ancyra and Sebastiana; saint.gr prints the same trio on 7 Iouniou and heads hers «Agia Zenais i Thaumatourgi», whose own page (saint.gr/503) says «Den echoume leptomereies gia ton vio tis Agias» — no life there either. Both calendars also keep Zenais of Tarsus with her sister Philonilla on 11 October, kinswomen of Paul, with a life. Two entries on one calendar are two commemorations, so two women, and nothing identifies the 7 June one with Tarsus (read 29 September 2026)',
   'teofan theophanes-of-antioch theophanes-of-nicaea theophanes-of-sigriane theophanes-venerable-17-may':

@@ -1,0 +1,71 @@
+{
+  "slug": "andronicus-of-tarsus",
+  "display_name": "Andronicus of Tarsus",
+  "names": [
+    {
+      "form": "Andronic",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 octombrie."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "tarachus-of-tarsus",
+    "probus-of-tarsus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 12 octombrie — «Sfântul Mucenic Andronic»",
+        "url": "https://doxologia.ro/12-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 5",
+      "text": "De isprăvile sfinţilor mucenici Puterile Îngereşti foarte s-au minunat; că fiind un trup muritor, pe vrăjmaşul cel fără de trup cu Puterea Crucii nevoindu-se tare, l-au biruit nevăzut. Şi acum se roagă Domnului să se miluiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfinților Mucenici Prov, Tarah şi Andronic",
+        "url": "https://doxologia.ro/troparul-sfintilor-mucenici-prov-tarah-andronic",
+        "year": 2026
+      },
+      "english": {
+        "text": "At the deeds of the holy martyrs the angelic Powers marvelled greatly; for being of mortal flesh, and contending mightily by the power of the Cross, they overcame unseen the bodiless enemy. And now they pray the Lord that our souls may be shown mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

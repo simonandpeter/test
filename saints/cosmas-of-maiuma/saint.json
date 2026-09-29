@@ -1,0 +1,69 @@
+{
+  "slug": "cosmas-of-maiuma",
+  "display_name": "Cosmas of Maiuma",
+  "names": [
+    {
+      "form": "Cosma",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 12 octombrie, «Sfântul Ierarh Cosma, Episcopul Maiumei»; the life on the same site spells it Cozma."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "hymnographer"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 12 octombrie — «Sfântul Ierarh Cosma, Episcopul Maiumei»",
+        "url": "https://doxologia.ro/12-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 12 Οκτωβρίου (24 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 8",
+      "text": "Îndreptătorule al Ortodoxiei, învăţătorule al dreptei cinstiri de Dumnezeu şi al curăţiei şi luminătorule al lumii, podoaba călugărilor cea de Dumnezeu insuflată Sfinte Părinte Cosma, înţelepte, cu învăţăturile tale pe toţi i-ai luminat. Alăută duhovnicească, roagă-te lui Hristos Dumnezeu ca să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ierarh Cosma, Episcopul Maiumei",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-cosma-episcopul-maiumei",
+        "year": 2026
+      },
+      "english": {
+        "text": "O guide of Orthodoxy, teacher of true reverence for God and of purity, luminary of the world, God-inspired adornment of monks: O wise father Cosmas, by thy teachings thou hast enlightened all. O spiritual harp, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
