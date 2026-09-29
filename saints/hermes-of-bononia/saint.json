@@ -1,0 +1,49 @@
+{
+  "slug": "hermes-of-bononia",
+  "display_name": "Hermes of Bononia",
+  "names": [
+    {
+      "form": "Hermes",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 31 decembrie, «Sfântul Mucenic Hermes», with the rank words left off; the life it links calls him «Sfântul Mucenic Hermes, exorcistul» and places him in the city of Bononia."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 31 decembrie — «Sfântul Mucenic Hermes»",
+        "url": "https://doxologia.ro/31-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 31 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

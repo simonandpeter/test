@@ -1,0 +1,17 @@
+# Hermes of Bononia
+
+The line of martyrs from the Daco-Roman people on the banks of the Danube, who early shared in the grace of Christian holiness at the price of their blood, is endless. Some of them were counted worthy of high church service, as bishops, priests or deacons, and others helped their brothers in the faith in humbler services that were useful to their salvation: some read from the holy books at the church services, and others, given a particular power, put away the evil spirits that held certain Christians. These bore the name of exorcists, and had a great part in the preparation of those who wished to receive Christian baptism, reading the prayers of renunciation and of the driving out of the evil spirits from their bodies and their souls — what the priest does today, since exorcists are no longer used.
+
+They took part with much zeal and reverence in the holy works of the church; and in the time of the persecution of the emperor Diocletian many of them faced suffering and death with courage and self-denial, as those in the higher church services did, receiving the martyr's crown and coming to the light of the glory above.
+
+Among these is commemorated the holy martyr Hermes the exorcist, who served Christ with humility and deep reverence in the church of the city of Bononia. There was there a holy house and many worshippers among the native Daco-Romans, who lived, as he did, with much Christian reverence, hearing and following the commandments of the true God.
+
+Not frightened by the harsh measures of persecution against the worshippers and servants of Christ, taken by the emperor Diocletian and carried out by his officials, the exorcist Hermes received in the church those who were held by evil spirits and, by the grace and power of his prayer, drove the spirits out and healed them. He prepared also those who were to be baptised, reading the prayers of renunciation and of cleansing from the defilement of the demons, after which the mystery of Baptism was celebrated by the bishop or by the priest.
+
+When the anger of the pagan rulers was set on destroying the servants of the Church, the exorcist Hermes neither denied nor hid his work among those of one faith with him, but showed the profit of his service in the Church and received with courage and holy martyr's joy the end of his earthly life, when the pagan executioners cut off his head without pity. So, indeed, by the edge of the sword, ended so many fearless confessors from the city of Bononia and along the shores of the Danube.
+
+By that martyr's death the exorcist Hermes stepped into the true and eternal life; his innocent and most precious blood opened and marked out for him the way to the heavens, where he was counted worthy to enter the company of the saints and to live in the everlasting glory. And on earth Hermes the exorcist proved worthy of honour down the centuries, not only in his own city but in the nearby city of Ratiaria too, and wherever there were Christian souls seeking salvation with the help of the brethren who prayed for them from heaven.
+
+doxologia.ro's line for the day names him «Sfântul Mucenic Hermes» and gives no year, and its page for him prints no hymn. He is not the Hermes the Romanian calendar keeps on 8 aprilie among the apostles of the Seventy. The corpus has no type for the office the life gives him, that of exorcist.
+
+*After doxologia.ro's calendar for 31 decembrie — [the day](https://doxologia.ro/31-decembrie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-hermes); read 28 September 2026.*
