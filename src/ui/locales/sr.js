@@ -896,6 +896,7 @@ export const sr = {
     'Metropolitan of Gorky': 'Митрополит горкијски',
     'Metropolitan of Heraclea and Rhaedestus': 'Митрополит ираклијски и редестски',
     'Metropolitan of Iconium': 'Митрополит иконијски',
+    "Metropolitan of Kiev, Galicia and all Rus'": "Митрополит кијевски, галицијски и све Русије",
     'Metropolitan of Kydonies': 'Митрополит кидонијски',
     'Metropolitan': 'Митрополит',
     'Metropolitan of Kyiv': 'Митрополит кијевски',

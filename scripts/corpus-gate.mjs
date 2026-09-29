@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'anastasia anastasia-daughter-of-nicholas-ii anastasia-of-rome-15-april anastasia-pupil-of-chrysogonus anastasia-saguna':
+    'four women called Anastasia, on four Romanian days. The new one is Anastasia the Deliverer from Bonds, taught by Chrysogonus, 22 December. The other three were read on 30 September and are unchanged (read 30 September 2026)',
   'bonifatie boniface-apostle-of-germany boniface-of-tarsus':
     'two men: Boniface of Tarsus, the servant of Aglaia sent to bring back relics and martyred instead, Romanian 19 December; and Boniface the apostle of Germany, 5 June (read 30 September 2026)',
   'nicolae nicholas-founder-of-vatopedi nicholas-ii nicholas-of-lesvos nicholas-of-myra nicholas-of-the-forty-martyrs':

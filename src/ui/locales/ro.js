@@ -894,6 +894,7 @@ export const ro = {
     'Metropolitan of Gorky': 'Mitropolit de Gorki',
     'Metropolitan of Heraclea and Rhaedestus': 'Mitropolit de Heracleea și Rhaedestos',
     'Metropolitan of Iconium': 'Mitropolit de Iconium',
+    "Metropolitan of Kiev, Galicia and all Rus'": "Mitropolit al Kievului, Galiției și a toată Rusia",
     'Metropolitan of Kydonies': 'Mitropolit de Kydonies',
     'Metropolitan': 'Mitropolit',
     'Metropolitan of Kyiv': 'Mitropolit de Kiev',

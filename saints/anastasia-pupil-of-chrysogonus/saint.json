@@ -1,0 +1,71 @@
+{
+  "slug": "anastasia-pupil-of-chrysogonus",
+  "display_name": "Anastasia, pupil of Chrysogonus",
+  "names": [
+    {
+      "form": "Anastasia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 decembrie, «Sfânta Mare Muceniță Anastasia», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "great-martyr",
+    "virgin"
+  ],
+  "related": [
+    "chrysogonus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 decembrie — «Sfânta Mare Muceniță Anastasia»",
+        "url": "https://doxologia.ro/22-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mieluşeaua Ta, Iisuse, Anastasia, strigă cu glas mare: pe Tine, Mirele meu, te iubesc și pe Tine căutându-Te mă chinuiesc și împreună mă răstignesc și împreună mă îngrop cu Botezul Tău; și pătimesc pentru Tine, ca să împărățesc întru Tine; și mor pentru tine, ca să viez pentru Tine; ci, ca o jertfă fără de prihană, primește-mă pe mine ceea ce cu dragoste mă jertfesc Ție. Pentru rugăciunile ei, ca un Milostiv, mântuiește sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintei Mari Mucenițe Anastasia, glasul 4 (the common of a woman martyr, printed with her name in it)",
+        "url": "https://doxologia.ro/troparul-sfintei-mari-mucenite-anastasia",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your ewe-lamb, Jesus, Anastasia, cries out with a loud voice: you, my Bridegroom, I love, and seeking you I suffer, and I am crucified with you and buried with you in your Baptism; and I suffer for you, that I may reign in you; and I die for you, that I may live for you. But receive me, as a sacrifice without blemish, who sacrifice myself to you in love. At her prayers, as the Merciful One, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

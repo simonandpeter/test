@@ -1,0 +1,71 @@
+{
+  "slug": "peter-mohyla",
+  "display_name": "Peter Mohyla",
+  "names": [
+    {
+      "form": "Petru Movilă",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 22 decembrie, «Sfântul Ierarh Petru Movilă, Mitropolitul Kievului», with the rank and the see left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Metropolitan of Kiev, Galicia and all Rus'",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "related": [
+    "john-the-new-of-suceava",
+    "varlaam-of-moldavia"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1596,
+      "latest": 1596,
+      "display": "1596",
+      "basis": "attested",
+      "note": "doxologia.ro: «s-a născut la Suceava, la 21 Decembrie 1596»."
+    },
+    "death": {
+      "earliest": 1646,
+      "latest": 1646,
+      "display": "1646",
+      "basis": "attested",
+      "note": "doxologia.ro: «A trecut la Domnul în ziua de 22 Decembrie 1646, fiind îngropat în biserica mare a Mănăstirii Pecerska»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 decembrie — «Sfântul Ierarh Petru Movilă, Mitropolitul Kievului»",
+        "url": "https://doxologia.ro/22-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 22 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
