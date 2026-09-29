@@ -10,6 +10,11 @@
     {
       "form": "Лаврентије",
       "lang": "sr"
+    },
+    {
+      "form": "Laurențiu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 august, «Sfântul Mucenic Laurențiu Arhidiaconul», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 august — «Sfântul Mucenic Laurențiu Arhidiaconul»",
+        "url": "https://doxologia.ro/10-august",
+        "year": 2026
+      },
+      "note": "The Romanian life behind that line is the same narrative the folder already holds, and closes «Sfântul Mucenic Laurențiu arhidiaconul și-a săvârșit nevoința sa mucenicească în 10 zile ale lunii august». Read 24 September 2026."
     },
     {
       "church": "greek",
@@ -119,6 +134,22 @@
       },
       "english": {
         "text": "Thy martyr Lawrence, O Lord, in his suffering received the incorruptible crown from thee, our God; for having thy help he cast down the tormentors and shattered the feeble insolence of the demons. By his prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "Mucenicul Tău, Doamne, Laurențiu, întru nevoinţa sa, cununa nestricăciunii a dobândit de la Tine, Dumnezeul nostru; că având puterea Ta, pe chinuitori a învins; zdrobit-a şi ale demonilor neputincioase îndrăzniri. Pentru rugăciunile lui, mântuieşte sufletele noastre, Hristoase Dumnezeule.",
+      "source": {
+        "text": "doxologia.ro, «Troparul Sfântului Mucenic Laurențiu Arhidiaconul», Glasul 4 — the common troparion of a martyr, printed here with his name in it",
+        "url": "https://doxologia.ro/troparul-sfantului-mucenic-laurentiu-arhidiaconul",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyr Lawrence, O Lord, in his struggle received from you, our God, the crown of incorruption; for having your strength he overthrew his torturers and broke the powerless insolence of the demons. At his prayers, Christ God, save our souls.",
         "rendered": "site"
       }
     }

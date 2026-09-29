@@ -9,6 +9,11 @@
     {
       "form": "Иполит",
       "lang": "sr"
+    },
+    {
+      "form": "Ipolit",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 august, «Sfântul Mucenic Ipolit», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -41,8 +46,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 august — «Sfântul Mucenic Ipolit»",
+        "url": "https://doxologia.ro/10-august",
+        "year": 2026
+      },
+      "note": "The Romanian calendar keeps him on 10 august, with Sixtus and Lawrence, although his own page on the same site dates his death three days after Lawrence's: «a suferit moarte martirică prin decapitare, în data de 13 august 258». The Russian and Serbian rows on this folder keep him on 13 August, and the day recorded here is the Romanian calendar's own. Read 24 September 2026."
     },
     {
       "church": "greek",

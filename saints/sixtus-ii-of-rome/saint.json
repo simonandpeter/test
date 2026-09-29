@@ -10,6 +10,11 @@
     {
       "form": "Сикст",
       "lang": "sr"
+    },
+    {
+      "form": "Xist",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 10 august, «Sfântul Sfințit Mucenic Xist, Episcopul Romei», with the rank words and the office left off. The life page behind that line spells the name Sixt."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 10 august — «Sfântul Sfințit Mucenic Xist, Episcopul Romei»",
+        "url": "https://doxologia.ro/10-august",
+        "year": 2026
+      },
+      "note": "The Romanian life behind that line is the same narrative the folder already holds — Sixtus of Athens, first a philosopher, raised to the Roman see after Stephen was killed, taken with the deacons Felichisim and Agapit — so this is a row on this folder and not a second Sixtus. Read 24 September 2026."
     },
     {
       "church": "greek",
