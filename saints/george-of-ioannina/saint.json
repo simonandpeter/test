@@ -6,6 +6,11 @@
       "form": "Gheorghe din Ioannina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 ianuarie."
+    },
+    {
+      "form": "Γεώργιος ο Νέος εξ Ιωαννίνων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιανουαρίου, «Άγιος Γεώργιος ο Νέος εξ Ιωαννίνων», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιανουαρίου — «Άγιος Γεώργιος ο Νέος εξ Ιωαννίνων»",
+        "url": "https://www.saint.gr/01/17/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr's life for him dates the hanging to this same day — «Έτσι τη Δευτέρα 17 Ιανουαρίου 1838 μ.Χ., ο Γεώργιος απαγχονίστηκε στην αγορά» (https://www.saint.gr/1115/saint.aspx) — while doxologia.ro's life, cited on this folder's Romanian row, gives 27 ianuarie 1838. Both calendars keep him on 17 January; the two pages disagree about the date of the martyrdom itself and are left standing side by side."
     },
     {
       "church": "serbian",
@@ -55,5 +70,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’. Τὸν συνάναρχον Λόγον.",
+      "text": "Τὸν πανεύφημον Μάρτυν Χριστοῦ Γεώργιον, Ἰωαννίνων τὸ κλέος καὶ πολιοῦχον λαμπρόν, ἐν ᾠδαῖς πνευματικαῖς ἀνευφημήσωμεν· ὅτι ἐνήθλησε στερρῶς, καὶ κατήνεγκεν ἐχθρόν, τοῦ Πνεύματος τῇ δυνάμει· καὶ νῦν ἀπαύστως πρεσβεύει, ἐλεηθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος πλ. α’, «Τὸν συνάναρχον Λόγον», on the page of Άγιος Γεώργιος ο Νέος εξ Ιωαννίνων",
+        "url": "https://www.saint.gr/1115/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise in spiritual songs George, the all-lauded martyr of Christ, the glory of Ioannina and its shining protector; for he contended stoutly and cast down the enemy by the power of the Spirit, and now he intercedes without ceasing that our souls may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’. Ἐπεφάνης σήμερον.",
+      "text": "Εὐκλεῶς ἀγάλλεται μεγαλαυχοῦσα, τῇ σεπτῇ ἀθλήσει σου, δι’ ἧς ἡ πόλις θησαυρόν, Ἰωαννίνω ἐκτήσατο, τῶν ἱερῶν σου Λειψάνων Γεώργιε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, «Ἐπεφάνης σήμερον», on the page of Άγιος Γεώργιος ο Νέος εξ Ιωαννίνων",
+        "url": "https://www.saint.gr/1115/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Gloriously it rejoices and boasts in thy venerable contest, by which the city of Ioannina gained a treasure, even thy holy relics, O George.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

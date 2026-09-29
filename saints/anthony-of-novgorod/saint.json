@@ -1,0 +1,58 @@
+{
+  "slug": "anthony-of-novgorod",
+  "display_name": "Anthony of Novgorod",
+  "names": [
+    {
+      "form": "Αντώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιανουαρίου, «Άγιος Αντώνιος Αρχιεπίσκοπος Νόβγκοροντ Ρωσίας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "archbishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1231,
+      "latest": 1232,
+      "display": "1231 or 1232",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε το έτος 1231 μ.Χ. ή το 1232 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιανουαρίου — «Άγιος Αντώνιος Αρχιεπίσκοπος Νόβγκοροντ Ρωσίας»",
+        "url": "https://www.saint.gr/01/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

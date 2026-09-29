@@ -1,0 +1,65 @@
+{
+  "slug": "anthony-of-vologda",
+  "display_name": "Anthony of Vologda",
+  "names": [
+    {
+      "form": "Αντώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιανουαρίου, «Άγιος Αντώνιος Επίσκοπος Βολογκντά της Ρωσίας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1526,
+      "latest": 1526,
+      "display": "1526",
+      "basis": "traditional",
+      "note": "saint.gr's own heading for him: «Αγιος Αντωνιος Επισκοπος Βολογκντα Της Ρωσιας (1526 - 1588)»"
+    },
+    "death": {
+      "earliest": 1588,
+      "latest": 1588,
+      "display": "1588",
+      "basis": "traditional",
+      "note": "saint.gr's own heading for him: «Αγιος Αντωνιος Επισκοπος Βολογκντα Της Ρωσιας (1526 - 1588)»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιανουαρίου — «Άγιος Αντώνιος Επίσκοπος Βολογκντά της Ρωσίας»",
+        "url": "https://www.saint.gr/01/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

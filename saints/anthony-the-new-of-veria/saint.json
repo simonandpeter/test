@@ -6,6 +6,11 @@
       "form": "Antonie cel Nou de la Veria",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 ianuarie."
+    },
+    {
+      "form": "Αντώνιος ο Νέος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιανουαρίου, «Όσιος Αντώνιος ο νέος ο Θαυματουργός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -47,8 +52,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιανουαρίου — «Όσιος Αντώνιος ο νέος ο Θαυματουργός»",
+        "url": "https://www.saint.gr/01/17/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr places him in the ninth century — «έζησε κατά τον 9ο μ.Χ. αιώνα» (https://www.saint.gr/1119/saint.aspx) — against the reading on doxologia.ro that this folder's dates were built from. The two readings are not reconciled here and the folder's dates are left as they stood."
     },
     {
       "church": "serbian",
@@ -58,5 +73,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’. Θείας πίστεως.",
+      "text": "Μέγα καύχημα, καὶ πολιοῦχον, σὲ πλουτίσασα πόλις Βεροίας, θεοφόρε παμμάκαρ Ἀντώνιε, τῇ σῇ πρεσβείᾳ προστρέχει ἑκάστοτε, προσπτυσσομένη τὴν πάντιμον Κάραν σου. Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος γ’, «Θείας πίστεως», on the page of Όσιος Αντώνιος ο νέος ο Θαυματουργός",
+        "url": "https://www.saint.gr/1119/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having gained thee as its great boast and its protector, O God-bearing and all-blessed Anthony, the city of Veria runs at every hour to thine intercession, embracing thine all-honoured head. Venerable Father, entreat Christ God that great mercy be granted unto us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’. Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ.",
+      "text": "Ἀσκητικῶς ἀκολουθήσας Κυρίῳ, τῶν ὑπὲρ φύσιν ἠξιώθης χαρίτων, ὡς τῆς σαρκὸς νεκρώσας τὰ φρονήματα, Ὅσιε Ἀντώνιε, μιμητὰ τῶν Ἀγγέλων, μεθ’ ὧν ἀεὶ πρέσβευε, πάσης ῥύεσθαι βλάβης, τοὺς σὲ τιμῶντας Πάτερ εὐλαβῶς, πᾶσιν αἰτούμενος, χάριν καὶ ἔλεος.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, «Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ», on the page of Όσιος Αντώνιος ο νέος ο Θαυματουργός",
+        "url": "https://www.saint.gr/1119/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Following the Lord in the ascetic way, thou wast counted worthy of gifts above nature, having put to death the mind of the flesh, venerable Anthony, imitator of the angels; with whom pray thou ever that all who honour thee with reverence, O Father, be delivered from every harm, asking grace and mercy for them all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

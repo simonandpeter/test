@@ -1,0 +1,62 @@
+{
+  "slug": "anthony-of-meteora",
+  "display_name": "Anthony Cantacuzene of Meteora",
+  "names": [
+    {
+      "form": "Αντώνιος ο Μετεωρίτης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιανουαρίου, «Όσιος Αντώνιος ο Μετεωρίτης (Καντακουζηνός)», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1401,
+      "latest": 1450,
+      "display": "first half of the 15th century",
+      "basis": "traditional",
+      "note": "saint.gr: «υπήρξε κτήτορας και ηγούμενος της μονής του Αγίου Στεφάνου, κατά το πρώτο ήμισυ του 15ου αιώνα»"
+    }
+  },
+  "related": [
+    "philotheus-of-meteora"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιανουαρίου — «Όσιος Αντώνιος ο Μετεωρίτης (Καντακουζηνός)»",
+        "url": "https://www.saint.gr/01/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

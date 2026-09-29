@@ -1,0 +1,62 @@
+{
+  "slug": "philotheus-of-meteora",
+  "display_name": "Philotheus of Meteora",
+  "names": [
+    {
+      "form": "Φιλόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιανουαρίου, «Όσιος Φιλόθεος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1501,
+      "latest": 1550,
+      "display": "first half of the 16th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Δεύτερος κτήτορας και ανακαινιστής της μονής του Αγίου Στεφάνου Μετεώρων μαρτυρείται, κατά το πρώτο ήμισυ του 16ου αιώνα μ.Χ., ο ιερομόναχος Όσιος Φιλόθεος»"
+    }
+  },
+  "related": [
+    "anthony-of-meteora"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιανουαρίου — «Όσιος Φιλόθεος»",
+        "url": "https://www.saint.gr/01/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

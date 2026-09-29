@@ -1,0 +1,72 @@
+{
+  "slug": "theodosius-the-great",
+  "display_name": "Theodosius the Great",
+  "names": [
+    {
+      "form": "Θεοδόσιος ο Μεγάλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιανουαρίου, «Άγιος Θεοδόσιος ο Μεγάλος ο βασιλεύς», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "king",
+    "righteous"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 346,
+      "latest": 346,
+      "display": "346",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Μέγας Θεοδόσιος καταγόταν από την Ιβηρία και γεννήθηκε το 346 μ.Χ.»"
+    },
+    "death": {
+      "earliest": 395,
+      "latest": 395,
+      "display": "395",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος κοιμήθηκε με ειρήνη το έτος 395 μ.Χ.»"
+    }
+  },
+  "related": [
+    "placilla-the-empress",
+    "gregory-the-theologian",
+    "ambrose-of-milan",
+    "constantine-the-great"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιανουαρίου — «Άγιος Θεοδόσιος ο Μεγάλος ο βασιλεύς»",
+        "url": "https://www.saint.gr/01/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "junilla-of-cappadocia",
+  "display_name": "Junilla of Cappadocia",
+  "names": [
+    {
+      "form": "Ιουνίλλα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιανουαρίου, «Άγιοι Ιουνίλλα και Τουρβών», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "turbo-of-cappadocia",
+    "neonilla"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιανουαρίου — «Άγιοι Ιουνίλλα και Τουρβών»",
+        "url": "https://www.saint.gr/01/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

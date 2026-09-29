@@ -1,0 +1,58 @@
+{
+  "slug": "anthony-of-krasnokholmsk",
+  "display_name": "Anthony of Krasnokholmsk",
+  "names": [
+    {
+      "form": "Αντώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιανουαρίου, «Όσιος Αντώνιος εκ Ρωσίας», with the rank word left off; the life page calls him «ο Όσιος Αντώνιος του Κρασνοχόλμκιζ»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1401,
+      "latest": 1500,
+      "display": "15th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Αντώνιος του Κρασνοχόλμκιζ έζησε περί τον 15ο αιώνα μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιανουαρίου — «Όσιος Αντώνιος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/01/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

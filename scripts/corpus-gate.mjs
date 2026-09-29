@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'φιλοθεοσ philotheus-of-antioch philotheus-of-meteora philotheus-the-presbyter':
+    'three men. The new one is Philotheus of Meteora, of the first half of the sixteenth century, whom saint.gr keeps on 17 Ιανουαρίου; the other two are read in the el-01-12 entry for this name form, the fourth-century martyr of Antioch on 12 Ιανουαρίου and the tenth-century presbyter on 15 September. Twelve centuries across three days.',
+  'αντωνιοσ anthony-of-krasnokholmsk anthony-of-novgorod anthony-of-vologda anthony-of-zadonsk anthony-of-zographou anthony-the-great antony-son-of-john-of-syracuse':
+    'seven men, and four of them share the Greek 17 Ιανουαρίου — which is the day of Anthony the Great, and the reason the others are there: saint.gr prints the great Anthony of 356 and then three Russian Anthonys who bear his name, Krasnokholmsk of the fifteenth century, Novgorod of 1231 or 1232, and Vologda of 1588, each with his own house and his own century in his own notice. One calendar, four entries on one day, four men. The other three are Zadonsk on the Greek 29 September, Zographou among the Athonite martyrs of the 1270s, and the son of John of Syracuse of 867.',
   'μαξιμοσ maximus-of-kapsokalyvia maximus-of-marcianopolis maximus-of-totma maximus-son-of-paul-and-tatta':
     'four men. The new one is Maximus of Totma, a fool for Christ dead 1650, whom saint.gr keeps on 16 Ιανουαρίου; the corpus keeps Maximus of Kapsokalyvia, dead 1320, on the Romanian and Greek 13 January, the martyr of Marcianopolis of 305 to 311 on three calendars in September, and the son of Paul and Tatta on the Greek 25 September. Two fools for Christ among the four, three centuries and two countries apart, and four separate days on the Greek calendar.',
   'αλεξανδροσ alexander-brother-of-alphaeus alexander-the-sleepless alexander-with-thirty-martyrs':
@@ -1171,7 +1175,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '228'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '236'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

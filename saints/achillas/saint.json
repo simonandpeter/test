@@ -6,6 +6,11 @@
       "form": "Ahila",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 ianuarie."
+    },
+    {
+      "form": "Αχιλλάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιανουαρίου, «Όσιος Αχιλλάς», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιανουαρίου — «Όσιος Αχιλλάς»",
+        "url": "https://www.saint.gr/01/17/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -45,5 +59,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Αχιλλάς ήταν αναχωρητής της ερήμου τον 5ο αιώνα μ.Χ. Έζησε οσίως στην Αίγυπτο και κοιμήθηκε με ειρήνη.» The Romanian calendar, which this folder was first built from, gives no year at all."
+    }
   }
 }
