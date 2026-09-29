@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'simon simon-of-simonopetra simon-of-zographou':
+    'two men: Simon the founder of Simonopetra, Romanian 28 December; and Simon of Zographou, 10 October. Simon the Zealot carries a different ro form and does not fold here (read 30 September 2026)',
+  'iosif joseph-archbishop-of-thessalonica joseph-of-nea-moni joseph-presbyter-of-persia joseph-the-betrothed joseph-the-hymnographer joseph-the-merciful':
+    'six folders whose ro form is Iosif, on six Romanian days. The new one is Joseph the Betrothed, 28 December. The other five were read on 30 September and are unchanged (read 30 September 2026)',
   'teodor theodore-brother-of-theophanes theodore-of-alexandria-hieromartyr theodore-of-rostov theodore-the-studite':
     'four folders whose ro form is Teodor, on four Romanian days. The new one is Theodore the Branded, brother of Theophanes of Nicaea, 27 December. The others are Theodore of Alexandria, hieromartyr, 3 December; Theodore of Rostov, 28 November; and Theodore the Studite, 11 November (read 30 September 2026)',
   'stefan stefan-brancoveanu stephen-of-decani stephen-of-triglia stephen-the-first-martyr':

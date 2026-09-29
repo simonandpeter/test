@@ -1,0 +1,71 @@
+{
+  "slug": "joseph-the-betrothed",
+  "display_name": "Joseph the Betrothed",
+  "names": [
+    {
+      "form": "Iosif",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 decembrie, «Sfântul și Dreptul Iosif, Logodnicul Sfintei Fecioare Maria», with the rank and the clause left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "related": [
+    "joseph-of-arimathea",
+    "john-the-theologian"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 decembrie — «Sfântul și Dreptul Iosif, Logodnicul Sfintei Fecioare Maria»",
+        "url": "https://doxologia.ro/28-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 2",
+      "text": "Binevesteşte Iosif lui David, Dumnezeiescului părinte, mi­nunile: văzut-ai pe Fecioara născând; cu magii te-ai închi­nat; cu păstorii ai Slăvit şi prin îngeri înştiinţare ai primit. Roagă pe Hristos Dumnezeu să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului și Dreptului Iosif, Logodnicul Sfintei Fecioare Maria, glas 2",
+        "url": "https://doxologia.ro/troparul-sfantului-dreptului-iosif-logodnicul-sfintei-fecioare-maria",
+        "year": 2026
+      },
+      "english": {
+        "text": "Bring good tidings, Joseph, to David, the ancestor of God, of the wonders: you saw the Virgin give birth; with the magi you worshipped; with the shepherds you gave glory; and by angels you were told. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

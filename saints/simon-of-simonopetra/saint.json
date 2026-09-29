@@ -1,0 +1,51 @@
+{
+  "slug": "simon-of-simonopetra",
+  "display_name": "Simon of Simonopetra",
+  "names": [
+    {
+      "form": "Simon",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 decembrie, «Sfântul Simon Izvorâtorul de mir, ctitorul Mănăstirii Simonos Petras», with the epithet and the office left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 decembrie — «Sfântul Simon Izvorâtorul de mir, ctitorul Mănăstirii Simonos Petras»",
+        "url": "https://doxologia.ro/28-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

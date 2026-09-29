@@ -1,0 +1,61 @@
+{
+  "slug": "twenty-thousand-martyrs-of-nicomedia",
+  "display_name": "The Twenty Thousand Martyrs of Nicomedia",
+  "names": [
+    {
+      "form": "Cei 20.000 de Mucenici arși în Nicomidia",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 decembrie, «Sfinții 20.000 de Mucenici arși în Nicomidia»."
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "glycerius-of-nicomedia",
+    "anthimus-of-nicomedia",
+    "domna-of-nicomedia",
+    "dorotheus-of-nicomedia",
+    "gorgonius-of-nicomedia",
+    "indes-of-nicomedia",
+    "mardonius-of-nicomedia",
+    "migdonius-of-nicomedia",
+    "peter-of-nicomedia",
+    "zeno-of-nicomedia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 decembrie — «Sfinții 20.000 de Mucenici arși în Nicomidia»",
+        "url": "https://doxologia.ro/28-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

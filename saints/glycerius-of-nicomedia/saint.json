@@ -1,0 +1,53 @@
+{
+  "slug": "glycerius-of-nicomedia",
+  "display_name": "Glycerius of Nicomedia",
+  "names": [
+    {
+      "form": "Glicherie",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 28 decembrie, «Sfântul Sfinţit Mucenic Glicherie preotul», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "related": [
+    "twenty-thousand-martyrs-of-nicomedia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (28 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 decembrie — «Sfântul Sfinţit Mucenic Glicherie preotul»",
+        "url": "https://doxologia.ro/28-decembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Δεκεμβρίου (28 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

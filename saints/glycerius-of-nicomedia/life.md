@@ -1,0 +1,15 @@
+# Glycerius of Nicomedia
+
+doxologia.ro keeps Glycerius his own line on 28 decembrie, «Sfântul Sfinţit Mucenic Glicherie preotul», but the page it links for him carries no life and no hymn; what the site prints about him is in the life of [the twenty thousand martyrs burned at Nicomedia](/saints/twenty-thousand-martyrs-of-nicomedia), which it keeps on the same day, and this is what that life says.
+
+He was a Christian priest, wise and hot with zeal for the right faith, great of soul in his boldness, sweetest in his name and in his deed. In the second year of the reign of Maximian, when the emperor came into the church at Nicomedia, Glycerius withstood him with courage and spoke out and shamed that lawless man, telling him: «We do not desire your promised gifts, O emperor, nor do we fear your threats, for we hold all that is in the world as a dream, and count it torment and perdition not to endure the cruellest torments for Christ.»
+
+He reminded him that he boasted of victory over the barbarians while he was overcome by Christian women and children, which showed the unconquerable power of their Christ; and he asked who would not remember the dreadful thunder and lightning that had lately been, and the hail and the unusual rain, when many of the emperor's own had died all at once and the fruits of the earth had perished in an unlooked-for flood.
+
+Hearing this the emperor grew hot in his anger, but did no harm yet and went out; and the Christian people who were in the church gave glory to God and praised the blessed Glycerius for such boldness. But the emperor could not hold his anger long, and ordered Glycerius to be seized and brought before his unjust court, where, without asking him anything, he ordered him to be beaten hard — until those who beat him were exhausted, and the tormentor cried out to him to speak, and not be proud, nor quarrelsome, nor disorderly, but to honour the emperor and the customs of the Romans.
+
+At those words the cruelty of Maximian was kindled like fire, and he himself ordered them to strike harder and to wound the martyr's body, until the ground was full of blood and, the flesh falling away, the bare bones and all his limbs could be seen, so that the spirit was barely in him. But his tongue spoke easily still, saying: «I am a Christian, a servant of Christ, the true God; one is my Lord, one my King.» Unable to bear it any longer, the tyrant ordered him burned outside the city; and he became to God a sweet-smelling whole burnt offering, well received.
+
+At the end of that life, when it counts the stars with which Nicomedia was adorned, «the wonderful Glycerius» is the first it names after the twenty thousand. The day's line gives no year for him.
+
+*After doxologia.ro's calendar for 28 decembrie — [the day](https://doxologia.ro/28-decembrie), [his own page](https://doxologia.ro/sfantul-sfintit-mucenic-glicherie-preotul), which carries no life, and [the life of the twenty thousand](https://doxologia.ro/sfintii-20000-de-mucenici-arsi-nicomidia-3); read 28 September 2026.*
