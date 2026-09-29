@@ -6,6 +6,11 @@
       "form": "Ghenadie din Corfu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 ianuarie."
+    },
+    {
+      "form": "Γεννάδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιανουαρίου, «Όσιος Γεννάδιος Κερκύρας», with the rank word and the place left off."
     }
   ],
   "sex": "male",
@@ -51,8 +56,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 2 Ιανουαρίου — «Όσιος Γεννάδιος Κερκύρας»",
+        "url": "https://www.saint.gr/01/02/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -62,5 +76,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α´",
+      "model": "Τῆς ἐρήμου πολίτης",
+      "text": "Καλαρρύτων τὸν γόνον, τῆς Κερκύρας τὸ κλέϊσμα, Μονῆς τῆς Κασσωπίτρας τὸν στύλον, μοναζουσῶν τὸν ὑπέρμαχον, βιώσαντα ἐν τήδε τῇ ζωῇ ὡς Ἄγγελος οὐράνιος Θεοῦ· διὸ ὑμνοῦμεν σε πιστῶς ἀπὸ καρδίας κράζοντες, πατῆρ ἡμῶν Γεννάδιε Ὅσιε, χαῖροις τῶν μοναστῶν ἡ καλλονή, χαῖροις ἱερέων καύχημα, χαῖροις πιστῶν ὁ ἀκέστωρ καὶ πρὸς Θεὸν νεοφανής, πρέσβυς ἀκοίμητος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Όσιος Γεννάδιος Κερκύρας — Ἀπολυτίκιον, Ἦχος α´. Τῆς ἐρήμου πολίτης",
+        "url": "https://www.saint.gr/4375/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Offspring of Kalarrytes, boast of Corfu, pillar of the monastery of Kassopitra, champion of nuns, who lived in this life as an angel of God from heaven: therefore we hymn you faithfully, crying from the heart, our venerable father Gennadius. Hail, beauty of monastics; hail, boast of priests; hail, healer of the faithful and newly shown ambassador to God who never sleeps.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

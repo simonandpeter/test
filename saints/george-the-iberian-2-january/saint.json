@@ -1,0 +1,68 @@
+{
+  "slug": "george-the-iberian-2-january",
+  "display_name": "George the Iberian (2 January)",
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιανουαρίου, «Άγιος Γεώργιος (ή Ζώρζης ή Γκιουρτζής) ο Ίβηρ», with the rank word left off."
+    },
+    {
+      "form": "Ζώρζης",
+      "lang": "el",
+      "note": "The second form saint.gr's line for 2 Ιανουαρίου prints for him, «(ή Ζώρζης ή Γκιουρτζής)»."
+    },
+    {
+      "form": "Γκιουρτζής",
+      "lang": "el",
+      "note": "The third form saint.gr's line for 2 Ιανουαρίου prints for him, «(ή Ζώρζης ή Γκιουρτζής)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1770,
+      "latest": 1777,
+      "display": "1770 or 1777",
+      "basis": "traditional",
+      "note": "saint.gr: «Ήταν 2 Ιανουαρίου 1770 μ.Χ. Ο δε Χρυσόστομος Παπαδόπουλος, τοποθετεί το μαρτύριο του Ζώρζη το έτος 1777 μ.Χ.» The page head dates him «(; - 1770)». The two readings are left standing side by side."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 2 Ιανουαρίου — «Άγιος Γεώργιος (ή Ζώρζης ή Γκιουρτζής) ο Ίβηρ»",
+        "url": "https://www.saint.gr/01/02/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Serafim de Sarov",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 ianuarie."
+    },
+    {
+      "form": "Σεραφείμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιανουαρίου, «Όσιος Σεραφείμ του Σαρώφ», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -52,8 +57,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 2 Ιανουαρίου — «Όσιος Σεραφείμ του Σαρώφ»",
+        "url": "https://www.saint.gr/01/02/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -78,6 +92,40 @@
       },
       "english": {
         "text": "From your youth you loved Christ, blessed one, and burned to serve Him alone, with unbroken prayer in the wilderness, struggling with a heart full of compunction, gaining the love of God and being shown to be a chosen one of the Mother of God. And so we pray to you: save us by your prayers, most venerable Seraphim, our father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "model": "Ταχὺ προκατάλαβε",
+      "text": "Χριστῷ ἐκ νεότητος ἀκολουθήσας θερμῶς, εὐχαῖς καὶ δεήσεσιν, ἐν τῇ ἐρήμῳ Σαρώφ, ὡς ἄσαρκος ἤσκησας· ὅθεν τοῦ Παρακλήτου, δεδεγμένος τὴν χάριν, ὤφθης τῆς Θεοτόκου, θεοφόρος θεράπων· διὸ σε μακαρίζομεν, Σεραφεὶμ Πάτερ Ὅσιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Όσιος Σεραφείμ του Σαρώφ — Ἀπολυτίκιον, Ἦχος δ’. Ταχὺ προκατάλαβε",
+        "url": "https://www.saint.gr/14/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Following Christ fervently from your youth, with prayers and supplications you practised the ascetic life in the wilderness of Sarov as though without flesh; and so, having received the grace of the Comforter, you were shown a God-bearing servant of the Mother of God. Therefore we call you blessed, venerable father Seraphim.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "model": "Ἐπεφάνης σήμερον",
+      "text": "Ἐν Σάρωφ ὡς ἄγγελος, βεβιωμένος, Σεραφεὶμ μακάριε, ὤφθης δοχεῖον ἐκλεκτόν, τῶν χαρισμάτων, τοῦ Πνεύματος, λόγῳ πλουσίῳ ἐκφαίνων τὰ κρείττονα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Όσιος Σεραφείμ του Σαρώφ — Κοντάκιον, Ἦχος δ’. Ἐπεφάνης σήμερον",
+        "url": "https://www.saint.gr/14/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lived in Sarov like an angel, blessed Seraphim, you were shown a chosen vessel of the gifts of the Spirit, making the better things plain with a word that was rich.",
         "rendered": "site"
       }
     }

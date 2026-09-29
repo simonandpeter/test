@@ -1,0 +1,68 @@
+{
+  "slug": "nilus-the-sanctified",
+  "display_name": "Nilus the Sanctified",
+  "names": [
+    {
+      "form": "Νείλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιανουαρίου, «Όσιος Νείλος ο Ηγιασμένος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "confessor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1228,
+      "latest": 1228,
+      "display": "about 1228",
+      "basis": "traditional",
+      "note": "saint.gr: «όπου και γεννήθηκε περίπου το 1228 μ.Χ.»; the page head gives «(1228 - 1334)»."
+    },
+    "death": {
+      "earliest": 1334,
+      "latest": 1334,
+      "display": "1334",
+      "basis": "traditional",
+      "note": "saint.gr: «παρέδωσε την αγία του ψυχή στα χέρια του Θεού, τη νύχτα της πρώτης Ιανουαρίου του έτους 1334 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "note": "saint.gr's life page adds that «Η μνήμη του Οσίου Νείλου επαναλαμβάνεται και στις 16 Αυγούστου, χωρίς να γνωρίζουμε τον λόγο» — his memory is repeated on 16 August, and the page says it does not know why. The row records the day page read, 2 Ιανουαρίου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 2 Ιανουαρίου — «Όσιος Νείλος ο Ηγιασμένος»",
+        "url": "https://www.saint.gr/01/02/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

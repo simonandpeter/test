@@ -1,0 +1,13 @@
+# Nilus the Sanctified
+
+Nilus was born at Constantinople about 1228, saint.gr says, of the imperial family of the Laskarids; wealth and glory could not overcome the longing for the monastic life that had settled in him, and while still very young he left it all and became a monk in the famous monastery of the Akoimetoi. He came back to the City years later and, without revealing who he was, went to his mother and his sister as an unknown beggar and took alms from them.
+
+After a pilgrimage to Jerusalem he returned and, following a revered elder, did not hesitate to rebuke the emperor Michael Palaiologos himself for trying to subject the Orthodox Church to the pope of Rome. The emperor's answer was a sentence: they were set adrift on the open sea without food or oars, to be lost. They fought the waves for forty days and came ashore near the monastery of the Holy Abbas, probably Iviron on Athos, where Nilus stayed three years as doorkeeper; then he returned once more and was honoured as a confessor of the faith by the new emperor, the pious Andronikos Palaiologos.
+
+He left the City for good and spent the rest of his life among the shrines and monasteries of the Holy Land and beyond — the Red Sea, the country of Sodom, Sinai, Carmel, Jericho, the Jordan and the monastery of Abba Gerasimos — and came at last, by way of Cyprus, Rhodes and the Cyclades, the Peloponnese and Corfu, to Epirus, to a place called Orykon, where he settled in a hut. At the entreaty of the people of Thesprotia he moved south to Geromeri and took up a cave in a sheer rock.
+
+A brotherhood gathered around him. The tradition of the country says that he used to see at night a divine brightness like fire on the mountain opposite, and that the search for it led the ascetics to find an icon of the Mother of God, which they took as God's will that the monastery should be built on that spot. With much labour, and with the help of the rulers of the Despotate of Epirus and of the local lords, the monastery of Geromeri was finished and set on the principles of cenobitic monasticism.
+
+In deep old age — a hundred and six years, the page says — he named his successor, arranged his own burial in a grave he had prepared outside the monastery beside the torrent, left his autograph Testament as the rule of the house, and gave up his soul on the night of the first of January 1334. Some years later, the tradition adds, the emperor's men came to take his relics to Constantinople, and a great rock fell from the mountain and covered the grave, so that they remain in it still.
+
+*After saint.gr's calendar for 2 Ιανουαρίου — [the day](https://www.saint.gr/01/02/index.aspx) and [the life](https://www.saint.gr/4159/saint.aspx); read 30 September 2026.*

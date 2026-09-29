@@ -7,6 +7,11 @@
       "form": "Silvestru",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 ianuarie."
+    },
+    {
+      "form": "Σίλβεστρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιανουαρίου, «Άγιος Σίλβεστρος Πάπας Ρώμης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 2 Ιανουαρίου — «Άγιος Σίλβεστρος Πάπας Ρώμης»",
+        "url": "https://www.saint.gr/01/02/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -56,5 +70,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'",
+      "model": "Ταχὺ προκατάλαβε",
+      "text": "Στολὴν ἐνδυσάμενος, ἱεραρχίας πιστῶς, ἀμέμπτως ἱέρευσας, τῷ ἐπὶ πάντων Θεῶ, Πατὴρ ἡμῶν Σίλβεστρε· ἔχων γὰρ πολιτείᾳ, συνεκλάμποντα λόγον, θαύμασιν ἐβεβαίους, εὐσεβείας τὴν δόξαν, δι’ ἧς οὐρανίου δόξης, ὤφθης συμμέτοχος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Σίλβεστρος Πάπας Ρώμης — Ἀπολυτίκιον, Ἦχος δ'. Ταχὺ προκατάλαβε",
+        "url": "https://www.saint.gr/20/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Clothed faithfully in the robe of the hierarchy, you served blamelessly the God who is over all, our father Sylvester; for having a word that shone out together with your manner of life, you confirmed by wonders the glory of true religion, and through it were shown a sharer in the glory of heaven.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ'",
+      "model": "Τὰ ἄνω ζητῶν",
+      "text": "Σοφίας Θεοῦ, ἐμπλήσας τὸ στόμα σου, Τριάδος ἡμῖν, τὴν γνῶσιν ἐτράνωσας, καὶ τὴν ἀθεότητα τῶν τυράννων, κατέβαλες Σίλβεστρε, τῇ σφεδόνι τῶν λόγων σου· διὸ ὑπὲρ ἡμῶν δυσώπει τὸν Κύριον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Σίλβεστρος Πάπας Ρώμης — Κοντάκιον, Ἦχος δ'. Τὰ ἄνω ζητῶν",
+        "url": "https://www.saint.gr/20/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having filled your mouth with the wisdom of God, you made plain to us the knowledge of the Trinity, and you brought down the godlessness of the tyrants, Sylvester, with the sling of your words; therefore entreat the Lord on our behalf.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

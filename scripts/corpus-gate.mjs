@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεαγενησ theagenes-of-parion theagenes-the-martyr':
+    'two men, and the deaths are different. saint.gr prints «Άγιος Θεαγένης ιερομάρτυρας» on 2 Ιανουαρίου, bishop of Parion, beaten and then drowned; the corpus keeps a Theagenes on the Greek 3 October whose life has him martyred by fire. Two entries on one calendar are two commemorations, and a bishop drowned at Parion is not a man burned.',
+  'σιλβεστροσ sylvester-of-rome sylvester-of-the-kyiv-caves':
+    'two men, and saint.gr prints them on the same day without confusing them: 2 Ιανουαρίου carries «Άγιος Σίλβεστρος Πάπας Ρώμης», the pope of the first Council, and «Όσιος Σίλβεστρος Ρώσος της Λαύρας του Κιέβου», a twelfth-century hegumen of Vydubychi who continued Nestor the Chronicler. One calendar, one day, two entries, two men.',
+  'νειλοσ nilus-bishop-and-hieromartyr nilus-the-sanctified':
+    'two men. saint.gr keeps «Όσιος Νείλος ο Ηγιασμένος» on 2 Ιανουαρίου, of the Laskarid house, 1228 to 1334, founder of Geromeri in Thesprotia; the corpus keeps a bishop and hieromartyr Nilus of 305 to 311 on the Russian, Greek and Serbian 17 September. A Despotate-era founder is not a martyr of the Diocletian persecution.',
+  'μαρκοσ mark-of-byblos mark-the-deaf mark-the-shepherd':
+    'three men. saint.gr gives «Όσιος Μάρκος ο κωφός» one sentence on 2 Ιανουαρίου and nothing else, and the corpus keeps Mark of Byblos, one of the seventy apostles, on the Romanian 27 April and the Greek 27 September, and Mark the Shepherd, martyred about 290, on the Greek 28 September. A deaf ascetic with no year is neither an apostle of the seventy nor a shepherd of Diocletian time, and the Greek calendar prints all three on days of their own.',
+  'κοσμασ cosmas-companion-of-thomas-of-zographou cosmas-i-of-constantinople':
+    'two men, four centuries and two states of life apart. saint.gr prints «Άγιος Κοσμάς ο Α Αρχιεπίσκοπος Κωνσταντινούπολης» on 2 Ιανουαρίου: an Antiochene who became patriarch in 1075, resigned on 8 May 1081 and died at the monastery of Kallias. The corpus keeps Cosmas the companion of Thomas of Zographou, one of the martyred monks of Athos, dead between 1275 and 1282, on the Romanian 10 October and the Greek 22 September. A patriarch who resigned and died in a monastery is not a monk burned in a tower.',
   'θεοδοτοσ theodotus-1-january theodotus-of-marcianopolis':
     'two men. saint.gr gives the 1 Ιανουαρίου Theodotus one sentence, that he was martyred by the sword, with no year and no place; the corpus keeps Theodotus of Marcianopolis, martyred 305 to 311, on the Russian and Serbian 15 September and the Greek 17 September. Two entries on one calendar are two commemorations, and the Greek calendar prints both.',
   'θεοδοσιοσ theodosius-of-the-kyiv-caves theodosius-of-triglia':
@@ -1111,7 +1121,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '145'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '155'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;
