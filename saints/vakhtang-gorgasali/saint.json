@@ -1,0 +1,62 @@
+{
+  "slug": "vakhtang-gorgasali",
+  "display_name": "Vakhtang Gorgasali",
+  "office": "King of Kartli",
+  "names": [
+    {
+      "form": "Vakhtang Gorgasali",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 30 noiembrie, «Sfântul Vakhtang Gorgasali, regele Georgiei», with the rank word and the country left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "king"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 502,
+      "latest": 502,
+      "display": "502",
+      "basis": "attested",
+      "note": "doxologia.ro: «În anul 502, regele Vakhtang, în vârstă de șaizeci de ani, a fost obligat să-și apere țara pentru ultima dată.» — and he was mortally wounded in that battle."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 noiembrie — «Sfântul Vakhtang Gorgasali, regele Georgiei»",
+        "url": "https://doxologia.ro/30-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 30 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "related": [
+    "mirian-of-georgia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

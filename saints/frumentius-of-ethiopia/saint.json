@@ -1,0 +1,51 @@
+{
+  "slug": "frumentius-of-ethiopia",
+  "display_name": "Frumentius of Ethiopia",
+  "office": "Bishop of Ethiopia",
+  "names": [
+    {
+      "form": "Frumențiu",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 30 noiembrie, «Sfântul Ierarh Frumențiu, Episcopul Etiopiei», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 noiembrie — «Sfântul Ierarh Frumențiu, Episcopul Etiopiei»",
+        "url": "https://doxologia.ro/30-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 30 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

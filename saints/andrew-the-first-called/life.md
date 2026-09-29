@@ -6,4 +6,4 @@ After he had received the Holy Spirit he preached Christ in Bithynia and in all 
 
 Doxologia prints this as one paragraph of its account of the Synaxis of the Twelve Apostles, which the Romanian calendar keeps on 30 June. The page gives no year, so none is recorded here.
 
-*After doxologia.ro's calendar for 30 iunie — [the day](https://doxologia.ro/30-iunie) and [the life of the Synaxis](https://doxologia.ro/soborul-sfintilor-12-apostoli-1); read 24 September 2026.*
+*After doxologia.ro's calendar for 30 iunie — [the day](https://doxologia.ro/30-iunie) and [the life of the Synaxis](https://doxologia.ro/soborul-sfintilor-12-apostoli-1); read 24 September 2026; doxologia.ro keeps him again, as the protector of Romania, in its calendar for 30 noiembrie — [that day](https://doxologia.ro/30-noiembrie) and [the life there](https://doxologia.ro/sfantul-apostol-andrei-cel-intai-chemat-ocrotitorul-romaniei), which closes with the bringing of his relics from Patras by Saint Artemius to the church of the Holy Apostles in Constantinople; read 25 September 2026.*

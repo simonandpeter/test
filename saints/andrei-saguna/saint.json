@@ -1,0 +1,68 @@
+{
+  "slug": "andrei-saguna",
+  "display_name": "Andrei Șaguna",
+  "office": "Metropolitan of Transylvania",
+  "names": [
+    {
+      "form": "Andrei Șaguna",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 30 noiembrie, «Sfântul Ierarh Andrei Șaguna, Mitropolitul Transilvaniei», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1808,
+      "latest": 1808,
+      "display": "1808",
+      "basis": "attested",
+      "note": "doxologia.ro: «S-a născut la 20 decembrie 1808 (1 ianuarie 1809 st. n.) în Mișcolț, în Ungaria» — the old-style date of birth, which the page gives together with its new-style equivalent."
+    },
+    "death": {
+      "earliest": 1873,
+      "latest": 1873,
+      "display": "1873",
+      "basis": "attested",
+      "note": "doxologia.ro: «a trecut la Domnul la 16/28 iunie 1873 în Sibiu (înmormântat în Rășinari)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 noiembrie — «Sfântul Ierarh Andrei Șaguna, Mitropolitul Transilvaniei»",
+        "url": "https://doxologia.ro/30-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 30 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
