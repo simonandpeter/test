@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'antuza anthousa-12-april anthousa-mother-of-john-chrysostom anthousa-of-seleucia anthousa-the-venerable-27-july':
+    'four women called Antuza, on four Romanian days, and doxologia keeps four commemorations. The new one is named by her son: the mother of John Chrysostom, widowed at twenty, 13 November. Of the other three, two are bare lines the corpus settled earlier — 12 aprilie and 27 iulie — and the third is Anthousa of Seleucia, 22 August (read 30 September 2026)',
   'victor victor-of-corinth victor-of-damascus victor-presbyter-martyr-1918':
     'three men called Victor. The new one is Victor of Damascus, martyred with Stephanida, Romanian 11 November. The other two were read on 19 September: one of the seven of Corinth, 31 January, and the Russian presbyter killed in 1918, who has no Romanian row (read 30 September 2026)',
   'stefan stefan-brancoveanu stephen-of-decani stephen-of-triglia':

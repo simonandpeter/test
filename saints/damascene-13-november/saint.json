@@ -1,0 +1,50 @@
+{
+  "slug": "damascene-13-november",
+  "display_name": "Damascene (13 November)",
+  "names": [
+    {
+      "form": "Damaschin",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 13 noiembrie, «Sfântul Cuvios Damaschin»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 11,
+        "calendar": "revised-julian",
+        "note": "The page the calendar links carries no Viață tab and no Tropar tab, so the line is the whole source; which Damascene this is, the source does not say."
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul pentru 13 noiembrie — «Sfântul Cuvios Damaschin»",
+        "url": "https://doxologia.ro/13-noiembrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 13 Νοεμβρίου (25 September 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

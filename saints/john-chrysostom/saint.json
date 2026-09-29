@@ -187,5 +187,23 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 8",
+      "text": "Din gura ta ca o lumină de foc strălucind harul, lumea a luminat. Vistieriile neiubirii de argint lumii a câștigat. Înălțimea gândului smerit nouă ne-a arătat. Iar prin cuvintele tale învățându-ne, Părinte Ioane Gură de Aur, roagă pe Cuvântul, Hristos Dumnezeu, să mântuiască sufletele noastre.",
+      "source": {
+        "text": "Doxologia — «Troparul Sfântului Ierarh Ioan Gură de Aur», glas 8, from the Tropar tab of his page for 13 noiembrie (the page sets soft hyphens inside several words for its own line-breaking; they are not letters and are not copied here)",
+        "url": "https://doxologia.ro/troparul-sfantului-ierarh-ioan-gura-de-aur",
+        "year": 2026
+      },
+      "english": {
+        "text": "Grace shining forth from thy mouth like a torch of fire has enlightened the world; it has won for the world the treasures of freedom from the love of money, and has shown us the height of humility of mind. Instructing us by thy words, father John Chrysostom, pray to the Word, Christ God, that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
   ]
 }
