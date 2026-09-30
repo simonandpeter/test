@@ -1,0 +1,62 @@
+{
+  "slug": "nike",
+  "display_name": "Nike",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Νίκη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Απριλίου, «Αγία Νίκη», with the rank word left off; the life page heads her «Αγια Νικη (; - 303)»."
+    }
+  ],
+  "related": [
+    "george-the-trophy-bearer"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "saint.gr: «υπέστη μαζί με άλλους, θάνατο δια αποκεφαλισμού το 303 μ.Χ.», and the page heads her «(; - 303)»; no year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Απριλίου — «Αγία Νίκη»",
+        "url": "https://www.saint.gr/04/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Απριλίου εκάστου έτους», the same day as the listing. The whole body of the page is two sentences: that she was among those who believed in Christ through the wonders the great martyr George worked in the course of his own glorious martyrdom, under Diocletian, whose reign it dates here 284 to 304; and that she afterwards suffered death by beheading, together with others, in 303. **The others it does not name**, and no company was made of them here. It gives her no country, no city and no judge, and prints no hymn and no relic. The corpus holds nobody else of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

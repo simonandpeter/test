@@ -1,0 +1,65 @@
+{
+  "slug": "silvester-of-obnora",
+  "display_name": "Silvester of Obnora",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Σιλβέστρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Απριλίου, «Όσιος Σιλβέστρος της Ομπνόρα», with the rank word left off."
+    }
+  ],
+  "related": [
+    "sergius-of-radonezh",
+    "alexis-of-moscow"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1479,
+      "latest": 1479,
+      "display": "1479",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Σιλβέστρος κοιμήθηκε το έτος 1479 και ενταφιάσθηκε στην δεξιά πλευρά του ναού της Αναστάσεως», and the page heads him «(; - 1479)». It says he was born in the fifteenth century and gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Απριλίου — «Όσιος Σιλβέστρος της Ομπνόρα»",
+        "url": "https://www.saint.gr/04/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Απριλίου εκάστου έτους», the same day as the listing. The page makes him a fifteenth-century Russian who left the world for the monastery of the Holy Trinity, where he was a novice and a subordinate of Sergius of Radonezh — cross-referenced to 5 Ιουλίου — and was then blessed to go alone into the wilderness; sets his cross and his cell in the thick forest beside the river Obnora, which runs on into the Kostroma; tells of the peasant who lost his way and found the cell, of the bright rays and the layer of cloud people had seen above it, of the saint's bitter tears that his solitude was discovered, of the bark and roots he lived on and the angel in the form of a wonderful man who touched his hand when he fell down from weakness; of the brethren who gathered, of his journey to Moscow for the blessing of Alexis — cross-referenced to 12 Φεβρουαρίου — who gave him an antimension and made him abbot of the new monastery; of the «απαγορευμένο άλσος», the forbidden grove where he told them to fell no tree and dug three wells, and a fourth on a hillside by the Obnora; and of his last words to the brethren in his incurable illness. It says he died in 1479 and was buried on the right side of the church of the Resurrection, and under «Ιερά Λείψανα» puts his relics at the monastery of the Mother of God of Borok in the Kostroma country. It prints no hymn. The corpus's Silvester of Omsk, Sylvester of Rome and Sylvester of the Kyiv Caves are other men on other days."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

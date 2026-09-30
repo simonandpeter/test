@@ -1,0 +1,62 @@
+{
+  "slug": "macedonius-ii-of-constantinople",
+  "display_name": "Macedonius II of Constantinople",
+  "sex": "male",
+  "types": [
+    "patriarch",
+    "confessor"
+  ],
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Μακεδόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Απριλίου, «Άγιος Μακεδόνιος Β' Πατριάρχης Κωνσταντινούπολης», with the rank word, the numeral and the see left off; the numeral is kept in the English form because it is what tells him from the first Macedonius."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 517,
+      "latest": 517,
+      "display": "517",
+      "basis": "traditional",
+      "note": "saint.gr: «κατέφυγε στη Γάγγρα, όπου και πέθανε το 517 μ.Χ.», and the page heads him «(; - 517)»; no year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Απριλίου — «Άγιος Μακεδόνιος Β' Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/04/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Απριλίου εκάστου έτους», the same day as the listing. The page dates his patriarchate 496 to 511, makes him a presbyter and sacristan of Hagia Sophia beforehand, brought up in piety by his own uncle the patriarch Gennadius, and raised to the throne in place of the exiled Euphemius; names the heretical emperor Anastasius Dikoros, whose reign it dates 491 to 518, as the man who demanded back the autograph letter promising to keep the Church's dogmas inviolate, and who deposed and exiled him when he refused, first to Chalcedon and then to Euchaita, from which the Hunnish raids into Pontus drove him to Gangra, where he died in 517. It gives no year of birth. The corpus's Macedonius of Myropolis and Macedonius the Barley-eater are other men on other days. It prints no hymn and names no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

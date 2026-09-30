@@ -1,0 +1,52 @@
+{
+  "slug": "eight-anchorites",
+  "display_name": "The Eight Anchorites",
+  "sex": "unknown",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Οκτώ Οσιομάρτυρες και Αναχωρητές",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Απριλίου, «Άγιοι Οκτώ Οσιομάρτυρες και Αναχωρητές», with the rank word left off. The page names none of the eight, so there is no personal name to store."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Απριλίου — «Άγιοι Οκτώ Οσιομάρτυρες και Αναχωρητές»",
+        "url": "https://www.saint.gr/04/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Απριλίου εκάστου έτους», the same day as the listing. **The page enumerates nobody**, so this is one entry and not eight folders: the whole body is «Οι Άγιοι αυτοί Οκτώ Οσιομάρτυρες ήταν μοναχοί και τελειώθηκαν διά ξίφους» — these eight venerable-martyrs were monks and were perfected by the sword. It gives them no year, no country, no monastery, no judge and no relic, and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

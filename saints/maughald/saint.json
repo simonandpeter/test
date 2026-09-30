@@ -1,0 +1,55 @@
+{
+  "slug": "maughald",
+  "display_name": "Maughald",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "hierarch"
+  ],
+  "office": "Bishop on the Isle of Man",
+  "names": [
+    {
+      "form": "Μαουγάλδιος",
+      "lang": "el",
+      "note": "Read out of the body of saint.gr's page for 25 Απριλίου, «Ο Άγιος Maughald (Μαουγάλδιος)», with the rank word left off. The day's line prints the name in Latin letters, Maughald, and only the parenthesis gives a Greek form; both are the page's own and the Greek one is stored here."
+    }
+  ],
+  "related": [
+    "patrick-of-ireland"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Απριλίου — «Άγιος Maughald (Ιρλανδός)»",
+        "url": "https://www.saint.gr/04/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Απριλίου εκάστου έτους», the same day as the listing. The page makes him an Irishman and a robber in his earlier life, brought to the Orthodox faith by Patrick, who left the world after his baptism to escape the dangers of bad company and settled on «τη νήσο του Ανθρώπου» — the island of Man, which its Greek renders literally — where Patrick had sent Germanus when he consecrated him bishop, and where Maughald arrived after Germanus's repose; it dates his election as bishop of the local church there by the Christians to 498 and says he wore himself out in the missionary work of spreading the faith, and fell asleep in peace. It gives no year of birth or death, so no `dates` were taken; the 498 is the year of an election. The Germanus it names is not among the folders this corpus keeps of that name, so no link was made for him. It prints no hymn and names no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Marcu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 aprilie, «Sfântul Apostol și Evanghelist Marcu»."
+    },
+    {
+      "form": "Μάρκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Απριλίου, «Άγιος Μάρκος ο Απόστολος και Ευαγγελιστής», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Απριλίου — «Άγιος Μάρκος ο Απόστολος και Ευαγγελιστής»",
+        "url": "https://www.saint.gr/04/25/index.aspx",
+        "year": 2026
+      },
+      "note": "**The feast type on his page is not the plain fixed one**: «Ειδικός υπολογισμός. Εορτάζει στις 25 Απριλίου εκάστου έτους. Εάν όμως η εορτή πέσει πρίν το Πάσχα, τότε εορτάζει την Τρίτη της Δικαινησίμου» — a special reckoning: kept on 25 April every year, but if the feast should fall before Pascha then on Bright Tuesday. The fixed 25 April is the day the listing and the page both give and is what this row records; the Paschal transfer is a rule about particular years and has no field in this schema. It is the same day the Romanian calendar keeps him. The page makes him the nephew of the apostle Barnabas, his mother named Mary, his origin rather Cyprus though he later settled at Jerusalem, and John his Jewish name, Mark the Roman surname he took by the custom of the time and kept in the Christian world; it has him enter the Church's service very early, accompanying Barnabas and Paul on their journeys and working a long while beside Peter; and by the tradition preaching the Gospel in Egypt, Libya and Barbary and being first bishop of Alexandria. It gives no year, so this folder's empty `dates` were left empty. On the same day it keeps Annianus, the shoemaker he healed and baptized and left his throne to, who now has a folder. It prints two apolytikia, a kontakion and a megalynarion: the first apolytikion and the kontakion are proper to him and are stored here, the second apolytikion is the common of an apostle and was left, and the megalynarion is neither of the two kinds this corpus holds."
     },
     {
       "church": "serbian",
@@ -49,5 +64,44 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "annianus-of-alexandria"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Τοῦ Πέτρου συνέκδημος, καὶ κοινωνὸς ἱερός, τοῦ Λόγου διάκονος, καὶ ὑποφήτης σοφός, ἐδείχθης Ἀπόστολε, ὅθεν τὸ τοῦ Σωτῆρος, Εὐαγγέλιον θεῖον, Μᾶρκε διαχαράττεις, ὡς οὐράνιος μύστης, διὸ Εὐαγγελιστὰ σέ, πόθω γεραίρομεν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε, on the page of «Άγιος Μάρκος ο Απόστολος και Ευαγγελιστής»",
+        "url": "https://www.saint.gr/323/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown, O apostle, a fellow traveller of Peter and his holy companion, a servant of the Word and a wise interpreter; wherefore thou dost inscribe the divine Gospel of the Saviour, O Mark, as an initiate of heaven. Therefore we honour thee with longing, O Evangelist.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β.",
+      "model": "Τὰ ἄνω ζητῶν.",
+      "text": "Ἐξ ὕψους λαβών, τὴν χάριν τὴν τοῦ Πνεύματος, ῥητόρων πλοκάς, διέλυσας Ἀπόστολε, καί τά ἔθνη ἅπαντα, σαγηνεύσας, Μᾶρκε ἀοίδιμε, τῷ Δεσπότῃ προσήγαγες, τό θεῖον κηρύξας Εὐαγγέλιον.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β, Τὰ ἄνω ζητῶν, on the page of «Άγιος Μάρκος ο Απόστολος και Ευαγγελιστής»",
+        "url": "https://www.saint.gr/323/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received from on high the grace of the Spirit, thou didst break up the twistings of the rhetoricians, O apostle; and having netted all the nations, O Mark of famous memory, thou didst bring them to the Master, preaching the divine Gospel.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

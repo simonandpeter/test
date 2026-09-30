@@ -6,6 +6,11 @@
       "form": "Vasile de la Poiana Mărului",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 aprilie, «Sfântul Cuvios Vasile de la Poiana Mărului»."
+    },
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Απριλίου, «Όσιος Βασίλειος ο Ησυχαστής», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Απριλίου — «Όσιος Βασίλειος ο Ησυχαστής»",
+        "url": "https://www.saint.gr/04/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him, and it is plainly the same man: born 1692 in Romania, an ascetic on the Holy Mountain and in the country of Poiana Mărului, teacher of Paisius Velichkovsky, dead in peace in 1767. **The Greek disagrees with this folder's own life about where he was born** — it says «στη Ρουμανία», in Romania, where doxologia.ro's life says «în părțile Rusiei», in the parts of Russia — and the existing `dates`, which carry the same 1692, were left untouched. The whole body of the Greek page is three sentences, and the only thing in them the Romanian life did not already have is the Holy Mountain. It prints no hymn and names no relic."
     },
     {
       "church": "serbian",

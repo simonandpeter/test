@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'στεφανοσ stephen-27-february stephen-bekh stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-perm stephen-of-placidianae stephen-of-triglia stephen-xylinites':
+    'Nine now. The new one is Stephen of Perm on 26 April; the others are read in the el-04-13 entry for this name form.',
+  'νεστωρ nestor-26-april nestor-father-of-conon nestor-of-maghid nestor-the-martyr-2-march':
+    'Four men: the father of Conon on 5 March, Maghid on 28 February, the martyr of 2 March and the Nestor of 26 April.',
+  'λεων leo-companion-of-gervasius leo-companion-of-manuel leo-of-catania leo-of-nicaea leo-of-patara leo-of-samos leo-the-great':
+    'Seven now. The new one is Leo of Samos on 26 April; the others are read in the el-03-01 entry for this name form, where 18 February keeps two.',
+  'σιλβεστροσ silvester-of-obnora sylvester-companion-of-sophronius sylvester-of-rome sylvester-of-the-kyiv-caves sylvester-the-patriarch':
+    'Five now. The new one is Silvester of Obnora on 25 April; the others are read in the el-03-01 entry for this name form, where two stand on 1 March.',
+  'νικη nike nike-companion-of-leonides':
+    'Two women: the Nike saint.gr keeps on 25 April and Nike the companion of Leonides of Epidaurus on 16 April.',
+  'μακεδονιοσ macedonius-ii-of-constantinople macedonius-of-myropolis macedonius-the-barley-eater':
+    'Three men: Macedonius II of Constantinople, the patriarch, on 25 April and the two read in the el-01-24 entry for this name form.',
   'θωμασ thomas-companion-of-terentius thomas-of-constantinople thomas-of-zographou thomas-the-apostle thomas-the-fool-for-christ':
     'Five now. The new one is Thomas the fool for Christ on 24 April; the others are read in the el-04-10 entry for this name form.',
   'μελιτων meliton-of-beirut meliton-of-the-forty-martyrs mellitus-of-canterbury':

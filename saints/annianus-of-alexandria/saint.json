@@ -1,0 +1,64 @@
+{
+  "slug": "annianus-of-alexandria",
+  "display_name": "Annianus of Alexandria",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "hierarch"
+  ],
+  "office": "Bishop of Alexandria",
+  "names": [
+    {
+      "form": "Αννιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Απριλίου, «Άγιος Αννιανός Επίσκοπος Αλεξανδρείας», with the rank word and the see left off."
+    }
+  ],
+  "related": [
+    "mark-the-evangelist"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 82,
+      "latest": 86,
+      "display": "82, 85 or 86",
+      "basis": "traditional",
+      "note": "saint.gr prints three readings and settles none: «Κοιμήθηκε με ειρήνη το έτος 82 μ.Χ. Κατά άλλη μαρτυρία τελεύτησε κατά την εποχή του αυτοκράτορα Δομετιανού, δηλαδή το έτος 85 μ.Χ. Άλλη όμως παράδοση Ανατολικής προελεύσεως αναφέρει ότι ποίμανε την Εκκλησία της Αλεξάνδρειας επί δέκα οκτώ έτη και κοιμήθηκε με ειρήνη το έτος 86 μ.Χ.» — so the interval carries all three."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Απριλίου — «Άγιος Αννιανός Επίσκοπος Αλεξανδρείας»",
+        "url": "https://www.saint.gr/04/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Απριλίου εκάστου έτους», the same day as the listing. The page makes him the disciple of Mark the Evangelist and his successor on the episcopal throne of Alexandria, quotes Eusebius of Caesarea calling him «ανήρ θεοφιλής και κατά πάντα θαυμάσιος», and tells the meeting: a cobbler at Alexandria while still a pagan, he wounded his own left hand with his tool while mending Mark's broken shoes, and Mark asked him to believe in God in order to be healed, made clay from his spittle, anointed the hand and called on the Name of the Lord, and the hand was made well; after which Annianus was baptized by Mark and succeeded him. **It prints three years for his death and settles none of them**, 82, or 85 under Domitian, or 86 after eighteen years of shepherding the Church of Alexandria, so the interval here carries all three. Under «Ιερά Λείψανα» it puts his relics in the Roman Catholic church of St Thomas at Venice. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
