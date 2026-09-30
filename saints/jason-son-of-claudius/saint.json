@@ -1,0 +1,66 @@
+{
+  "slug": "jason-son-of-claudius",
+  "display_name": "Jason, son of Claudius",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιάσων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαρτίου, «Άγιοι Κλαύδιος ο Τριβούνος, Ιλαρία η σύζυγος του και τα παιδιά τους Ιάσων και Μαύρος», with the rank word left off. His own heading on the life page is «Αγιος Ιασων ο Υιος Του Αγιου Κλαυδιου Του Τριβουνου»."
+    }
+  ],
+  "related": [
+    "claudius-husband-of-hilaria",
+    "hilaria-wife-of-claudius",
+    "maurus-son-of-claudius",
+    "chrysanthus",
+    "daria"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 283,
+      "latest": 284,
+      "display": "283–284",
+      "basis": "traditional",
+      "note": "saint.gr dates his father's office and not the beheading: «Ο Κλαύδιος ήταν Τριβούνος στο αξίωμα στα χρόνια του βασιλιά Νουμεριανου (283 - 284 μ.Χ.)». The reign is the interval the page prints, and it is the same interval the corpus holds for his father and mother."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked whether doxologia.ro's calendar names him in his own right (30 September 2026). Its life of Claudius, already read for that folder, mentions two sons and does not name them in its calendar line."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαρτίου — «Άγιοι Κλαύδιος ο Τριβούνος, Ιλαρία η σύζυγος του και τα παιδιά τους Ιάσων και Μαύρος»",
+        "url": "https://www.saint.gr/03/19/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαρτίου εκάστου έτους.» The day's line names him, and the life page gives him a heading of his own and a couplet shared with his brother, «Εις τους Μαύρον και Ιάσων», which is why he is kept as a folder rather than as a clause in his father's life."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

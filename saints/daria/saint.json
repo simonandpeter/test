@@ -6,6 +6,11 @@
       "form": "Daria",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 martie."
+    },
+    {
+      "form": "Δαρεία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαρτίου, «Άγιοι Χρύσανθος και Δαρεία», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -17,15 +22,17 @@
     "claudius-husband-of-hilaria",
     "hilaria-wife-of-claudius",
     "diodorus-the-presbyter",
-    "marianus-the-deacon"
+    "marianus-the-deacon",
+    "jason-son-of-claudius",
+    "maurus-son-of-claudius"
   ],
   "dates": {
     "death": {
       "earliest": 283,
-      "latest": 284,
-      "display": "283–284",
+      "latest": 283,
+      "display": "283",
       "basis": "traditional",
-      "note": "doxologia.ro's life for the day: «împăratul Numerian (283-284), care împărățea într-acea vreme în Roma». The reign is the interval the page prints; it gives no year of death."
+      "note": "saint.gr: «Στην συνέχεια έριξαν τους Αγίους Χρύσανθο και Δαρεία μέσα σε λάκκο και τους ενταφίασαν ζωντανούς. Ήταν το έτος 283 μ.Χ.», and it heads her «(; - 283)». doxologia.ro gave only the reign of Numerian, «(283-284)», so the interval the corpus first held was the reign; the Greek page states the year, and the two do not conflict."
     }
   },
   "attestations": [
@@ -50,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαρτίου — «Άγιοι Χρύσανθος και Δαρεία»",
+        "url": "https://www.saint.gr/03/19/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαρτίου εκάστου έτους.» The page heads her «Αγιa Δαρεια (; - 283)» and closes the account «Ήταν το έτος 283 μ.Χ.», which is a year where doxologia gave only Numerian's reign. It makes her an Athenian — «η ωραία Δαρεία, η οποία καταγόταν από την Αθήνα και ήταν ειδωλολάτρισσα» — and gives the pair one joint service."
     },
     {
       "church": "serbian",
@@ -73,6 +90,40 @@
       },
       "english": {
         "text": "Thy martyrs, O Lord, in their contest received crowns of incorruption from Thee, our God; for having Thy strength, they cast down the tormentors and broke the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείας πίστεως, τῇ ἐπιγνώσει, πᾶσαν ἔλιπες, πατρῴαν πλάνην, καὶ Χριστῷ κατηκολούθησας Χρύσανθε, ᾧ καὶ προσάγεις Δαρείαν τὴν πάνσεμνον, καὶ σὺν αὐτῇ τὸν ἀγῶνα ἐτέλεσας. Μεθ' ἧς πρέσβευε, δοθῆναι τοῖς σὲ γεραίρουσι, πταισμάτων ἱλασμὸν καὶ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως, on the page of Άγιοι Χρύσανθος και Δαρεία. It is the proper of the pair and names them both, so it stands on both folders; it is addressed to Chrysanthus and names her «Δαρείαν τὴν πάνσεμνον». The page's first apolytikion, Ἦχος δ’ «Οἱ Μάρτυρές σου Κύριε», is the common of martyrs and is not taken.",
+        "url": "https://www.saint.gr/3918/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the knowledge of the divine faith thou didst leave behind all thy father's error and didst follow after Christ, O Chrysanthus; and to him thou dost bring the all-revered Daria, and with her thou didst finish the contest. With her, then, entreat that forgiveness of sins and great mercy be given to those who honour thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Χορὸς Ἀγγελικός.",
+      "text": "Ὡς κρίνον χρυσαυγές, τήν ὀσμήν εὐσεβείας, ἐμπνεύσας δαψιλῶς, Χρύσανθε Ἀθλοφόρε, πρὸς γνῶσιν σωτήριον, τήν Δαρείαν ἐφείλκυσας, μεθ᾽ἧς ἤθλησας, καὶ τὸν ἀρχέκακον ὄφιν, τροπωσάμενος, πρός ἀκηράτους παστάδας, ἀξίως ἐπήρθητε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος α’, Χορὸς Ἀγγελικός, on the page of Άγιοι Χρύσανθος και Δαρεία. It names them both and ends in the dual-plural, «ἀξίως ἐπήρθητε», so it stands on both folders.",
+        "url": "https://www.saint.gr/3918/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Breathing out abundantly the fragrance of piety like a lily of golden light, O prizewinner Chrysanthus, thou didst draw Daria to the knowledge that saves; and having contended together with her and put the serpent, the author of evil, to flight, you were worthily taken up to the undefiled bridal chambers.",
         "rendered": "site"
       }
     }

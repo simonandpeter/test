@@ -1,0 +1,67 @@
+{
+  "slug": "maria-of-vladimir",
+  "display_name": "Maria of Vladimir",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic",
+    "princess"
+  ],
+  "names": [
+    {
+      "form": "Μαρία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαρτίου, «Οσία Μαρία η πριγκίπισσα», with the rank word left off. Her own page adds a second name and a surname: «Η Οσία Μαρία ή Μάρθα (Σβάρνοβα)»."
+    },
+    {
+      "form": "Μάρθα",
+      "lang": "el",
+      "note": "The alternative the page itself prints, «Η Οσία Μαρία ή Μάρθα (Σβάρνοβα)» — Maria or Martha. Read out of saint.gr's life page for 19 Μαρτίου."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1206,
+      "latest": 1206,
+      "display": "1206",
+      "basis": "traditional",
+      "note": "saint.gr: «Έγινε μοναχή στη μονή Κοιμήσεως της Θεοτόκου του Βλαντιμίρ και κοιμήθηκε με ειρήνη το έτος 1206 μ.Χ.», and the page heads her «(; - 1206)», leaving the first date a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The Greek page makes her a princess of Vladimir, so a Russian row is likely and has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαρτίου — «Οσία Μαρία η πριγκίπισσα»",
+        "url": "https://www.saint.gr/03/19/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαρτίου εκάστου έτους.» The page heads her «(; - 1206)» and gives her two names, Maria or Martha, with the surname Svarnova in a parenthesis; the English form chosen here takes the first of the two and the city the page names."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

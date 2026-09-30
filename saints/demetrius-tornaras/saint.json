@@ -1,0 +1,61 @@
+{
+  "slug": "demetrius-tornaras",
+  "display_name": "Demetrius Tornaras",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαρτίου, «Άγιος Δημήτριος ο Τορναράς», with the rank word left off. The epithet Τορναράς is kept in the slug and in the English form and left out of the recorded name."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1564,
+      "latest": 1564,
+      "display": "1564",
+      "basis": "traditional",
+      "note": "saint.gr: «Όταν όμως είδαν την θαυμαστή εμμονή του Αγίου, τον αποκεφάλισαν το 1564 μ.Χ.», and the page heads him «(; - 1564)», leaving the first date a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαρτίου — «Άγιος Δημήτριος ο Τορναράς»",
+        "url": "https://www.saint.gr/03/19/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαρτίου εκάστου έτους.» The page heads him «(; - 1564)», cites the Synaxaristes of the Church of Greece, and files him under «Σύναξη των Αγίων Νεομαρτύρων των μετά την άλωση της Κωνσταντινουπόλεως μαρτυρησάντων», the synaxis of the new martyrs who suffered after the taking of Constantinople — which is a company and no folder, and is the page's own ground for the new-martyr type here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

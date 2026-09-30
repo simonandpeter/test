@@ -6,6 +6,11 @@
       "form": "Claudiu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 martie."
+    },
+    {
+      "form": "Κλαύδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαρτίου, «Άγιοι Κλαύδιος ο Τριβούνος, Ιλαρία η σύζυγος του και τα παιδιά τους Ιάσων και Μαύρος», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -16,7 +21,9 @@
   "related": [
     "hilaria-wife-of-claudius",
     "chrysanthus",
-    "daria"
+    "daria",
+    "jason-son-of-claudius",
+    "maurus-son-of-claudius"
   ],
   "dates": {
     "death": {
@@ -49,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαρτίου — «Άγιοι Κλαύδιος ο Τριβούνος, Ιλαρία η σύζυγος του και τα παιδιά τους Ιάσων και Μαύρος»",
+        "url": "https://www.saint.gr/03/19/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαρτίου εκάστου έτους.» The day's line names the household of four and the page gives each of them a heading of his own and a couplet — one for Claudius, one for Hilaria, one for Maurus and Jason together. It dates only his office: «Ο Κλαύδιος ήταν Τριβούνος στο αξίωμα στα χρόνια του βασιλιά Νουμεριανου (283 - 284 μ.Χ.)», which is the same reign the corpus's interval already rests on, so no year has been changed."
     },
     {
       "church": "serbian",

@@ -1,0 +1,60 @@
+{
+  "slug": "pancharius",
+  "display_name": "Pancharius",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Παγχάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαρτίου, «Άγιος Παγχάριος», with the rank word left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 305,
+      "display": "305",
+      "basis": "traditional",
+      "note": "saint.gr: «Αλλά όταν πείστηκε για την σοβαρότητα του πράγματος, εξοργισμένος, διέταξε και αποκεφάλισαν τον Παγχάριο. Ήταν το έτος 305 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαρτίου — «Άγιος Παγχάριος»",
+        "url": "https://www.saint.gr/03/19/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαρτίου εκάστου έτους.» The page adds that a church of St Pancharius stood in Constantinople before the tenth century."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

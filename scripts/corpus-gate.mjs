@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'μαρθα maria-of-vladimir martha-of-aza martha-sister-of-lykarion':
+    'Three women: Maria of Vladimir, whose second recorded name this is, on 19 March; Martha of Aza on 26 September; and the sister of Lykarion on 8 February.',
+  'μαρια maria-6-january maria-of-olonets maria-of-vladimir mary-called-marinos mary-of-aza mary-sister-of-lykarion mary-wife-of-xenophon':
+    'Seven now. The new one is Maria of Vladimir on 19 March, who also stands in the fold for Μάρθα because the corpus records both of her names; the others are read in the el-02-19 entry for this name form.',
+  'ιννοκεντιοσ innocent-of-moscow innocent-of-nurma':
+    'Two men: Innocent of Moscow, whom three calendars keep on three days of his own, and Innocent of Nurma on 19 March.',
+  'δημητριοσ demetrius-of-chios demetrius-of-constantinople demetrius-of-georgia demetrius-of-prilutsk demetrius-the-skeuophylax demetrius-tornaras':
+    'Six now. The new one is Demetrius Tornaras on 19 March; the others are read in the el-02-11 entry for this name form, and Demetrius of Georgia is the man the Romanian keeps on 16 martie and the Greek on 12 Μαρτίου, one row per church.',
   'κυριλλοσ cyril-bishop-in-africa cyril-companion-of-photius cyril-of-alexandria cyril-of-astrakhan cyril-of-jerusalem cyril-of-kazan cyril-of-the-forty-martyrs cyril-of-the-white-lake cyril-of-zographou':
     'Nine now, and two of them are on the Greek 18 March as two entries: Cyril of Jerusalem, the patriarch, whom the Romanian calendar keeps there too, and Cyril of Astrakhan. The others are read in the el-03-08 entry for this name form.',
   'θεοδουλοσ theodulus-companion-of-agapitus theodulus-companion-of-eventius theodulus-companion-of-pamphilus theodulus-of-caesarea-17-february theodulus-of-myropolis theodulus-of-the-forty-martyrs theodulus-son-of-nilus theodulus-the-executioner theodulus-the-sinaite':

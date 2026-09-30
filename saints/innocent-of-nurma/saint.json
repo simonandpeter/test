@@ -1,0 +1,64 @@
+{
+  "slug": "innocent-of-nurma",
+  "display_name": "Innocent of Nurma",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ιννοκέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαρτίου, «Όσιος Ιννοκέντιος ο Θαυματουργός», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [
+    "nilus-of-sora"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1521,
+      "latest": 1521,
+      "display": "1521",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιννοκέντιος κοιμήθηκε στις 19 Μαρτίου του 1521 μ.Χ.», and the page heads him «(; - 1521)». It adds that a carved stone on his grave gives the year, the month and the day of his repose."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The Greek page makes him a Muscovite and a Russian abbot, so a Russian row is likely and has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαρτίου — «Όσιος Ιννοκέντιος ο Θαυματουργός»",
+        "url": "https://www.saint.gr/03/19/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαρτίου εκάστου έτους.» The page heads him «(; - 1521)», names his family the Okhlyabinin in Latin letters, and cites OCA's Feasts and Saints. Its epithet for him is ο Θαυματουργός, the Wonderworker; the English form chosen here takes instead the river the page says his monastery stood on, because the rank belongs in the types."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

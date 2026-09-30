@@ -6,6 +6,11 @@
       "form": "Diodor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 martie, «Sfântul Mucenic Diodor preotul»."
+    },
+    {
+      "form": "Διόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαρτίου, «Άγιοι Διόδωρος ο πρεσβύτερος και Μαριανός ο διάκονος», with the rank word and the order left off."
     }
   ],
   "sex": "male",
@@ -49,8 +54,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαρτίου — «Άγιοι Διόδωρος ο πρεσβύτερος και Μαριανός ο διάκονος»",
+        "url": "https://www.saint.gr/03/19/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαρτίου εκάστου έτους.» The Greek entry is one sentence and a couplet, and it is even barer than the Romanian: it gives no persecution, no emperor and no year, and does not say the cave was the martyrs' meeting place. No dates object has been written or changed from it."
     },
     {
       "church": "serbian",
