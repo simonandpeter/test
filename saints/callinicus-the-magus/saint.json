@@ -1,0 +1,82 @@
+{
+  "slug": "callinicus-the-magus",
+  "display_name": "Callinicus the Magus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Καλλίνικος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Μαΐου, which names the whole company, and out of the life page's own head line for him or her; the rank words are left off."
+    }
+  ],
+  "related": [
+    "meletius-the-stratelates",
+    "john-companion-of-meletius",
+    "stephen-companion-of-meletius",
+    "susanna-companion-of-meletius",
+    "palladia-companion-of-meletius",
+    "cyriacus-the-infant",
+    "christian-the-infant",
+    "festus-of-the-twelve-tribunes",
+    "faustus-of-the-twelve-tribunes",
+    "marcellus-of-the-twelve-tribunes",
+    "theodore-of-the-twelve-tribunes",
+    "meletius-of-the-twelve-tribunes",
+    "sergius-of-the-twelve-tribunes",
+    "marcellinus-of-the-twelve-tribunes",
+    "felix-of-the-twelve-tribunes",
+    "photinus-of-the-twelve-tribunes",
+    "theodoriscus-of-the-twelve-tribunes",
+    "mercurius-of-the-twelve-tribunes",
+    "didymus-of-the-twelve-tribunes",
+    "serapion-martyr-24-may",
+    "marciana-martyr-24-may"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 218,
+      "latest": 222,
+      "display": "between 218 and 222",
+      "basis": "traditional",
+      "note": "saint.gr gives the reign and no year: «Μαρτύρησαν στα χρόνια του αυτοκράτορα Ηλιογάβαλου (218 - 222 μ.Χ.)». The interval is that reign as the page prints it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Μαΐου — «Άγιος Μελέτιος ο στρατηλάτης και οι συν αυτώ Μάρτυρες Ιωάννης, Στέφανος, Σεραπίων ο Aιγύπτιος, Καλλίνικος ο μάγος, Μαρκιανή, Παλλαδία, και Σωσάννη, Κυριάκος και Χριστιανός τα Νήπια, δώδεκα κομήτες και τριβούνοι, Φήστος, Φαύστος, Μάρκελλος, Θεόδωρος, Μελέτιος, Σέργιος, Μαρκελλίνος, Φήλιξ, Φωτεινός, Θεοδωρίσκος, Μερκούριος και Δίδυμος, καθώς και άλλοι έντεκα χιλιάδες διακόσιοι οκτώ Μάρτυρες»",
+        "url": "https://www.saint.gr/05/24/index.aspx",
+        "year": 2026
+      },
+      "note": "**The company is enumerated and is therefore one folder per named member.** The life page carries a separate head line for each of twenty-two people — Μελέτιος ο Στρατηλάτης, Ιωάννης, Στέφανος, Καλλίνικος ο Μάγος, Μαρκιανή, Σωσάννη, Κυριάκος τὸ Νήπιον, Χριστιανός τὸ Νήπιον, Παλλαδία, Σεραπίων ο Αιγύπτιος, and the twelve komites and tribunes Φήστος, Φαύστος, Μάρκελλος, Θεόδωρος, Μελέτιος, Σέργιος, Μαρκελλίνος, Φήλιξ, Φωτεινός, Θεοδωρίσκος, Μερκούριος, Δίδυμος — so twenty-two are named and twenty are drafted, because the corpus already keeps `serapion-martyr-24-may` and `marciana-martyr-24-may` on this same day from doxologia.ro's bare lines and those two are upgrades. **The eleven thousand two hundred and eight are not named and are no folders**, and are left out and reported. No hymn is printed for any of them. His own head line reads «Αγιος Καλλινικος ο Μαγος». He was a magus who believed when he saw that Meletius had taken no harm from the deadly poison he had been made to drink, confessed Christ steadfastly and was beheaded; his couplet plays on the name, that he was not called Fair-Victor for nothing. `types` is `martyr` only: the page gives him no rank in the Church and his former trade is not in the corpus's vocabulary."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

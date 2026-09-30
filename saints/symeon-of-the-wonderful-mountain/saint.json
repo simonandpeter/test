@@ -6,6 +6,11 @@
       "form": "Simeon cel din Muntele Minunat",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 mai, «Sfântul Cuvios Simeon cel din Muntele Minunat»."
+    },
+    {
+      "form": "Συμεών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Μαΐου, «Όσιος Συμεών ο Θαυμαστορείτης», with the rank word left off and the epithet kept, as the page's own head line prints it."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Μαΐου — «Όσιος Συμεών ο Θαυμαστορείτης»",
+        "url": "https://www.saint.gr/05/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps him, and the epithet is the same in both: «ο Θαυμαστορείτης», the man of the Wonderful Mountain, which is what the corpus's display name says in English. Nothing in the folder's existing `dates` is touched."
     },
     {
       "church": "serbian",

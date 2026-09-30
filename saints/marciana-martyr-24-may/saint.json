@@ -6,6 +6,11 @@
       "form": "Marciana",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 mai, «Sfânta Muceniță Marciana»."
+    },
+    {
+      "form": "Μαρκιανή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Μαΐου, which names her inside Meletius's company as «Μαρκιανή», with the rank word left off; the life page's own head line for her reads «Αγια Μαρκιανη»."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Μαΐου — «Άγιος Μελέτιος ο στρατηλάτης και οι συν αυτώ Μάρτυρες … Μαρκιανή …»",
+        "url": "https://www.saint.gr/05/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Μαΐου εκάστου έτους», the same civil day on which doxologia.ro prints the bare line «Sfânta Muceniță Marciana» that this folder was made from, and it gives her the company and the death the Romanian line withholds: she is one of the three women who believed at the sight of the martyrdom of Meletius the Stratelates's company under Elagabalus, 218 to 222, and her couplet has the three of them killed with wood for not sacrificing to Pallas. **The match is on the day and on the name, which is the whole of what either source gives to match on.** No hymn is printed to her."
     },
     {
       "church": "serbian",
@@ -45,5 +60,16 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "meletius-the-stratelates",
+    "john-companion-of-meletius",
+    "stephen-companion-of-meletius",
+    "callinicus-the-magus",
+    "susanna-companion-of-meletius",
+    "palladia-companion-of-meletius",
+    "cyriacus-the-infant",
+    "christian-the-infant",
+    "serapion-martyr-24-may"
+  ]
 }

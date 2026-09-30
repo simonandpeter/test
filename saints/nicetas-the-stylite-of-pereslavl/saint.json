@@ -1,0 +1,62 @@
+{
+  "slug": "nicetas-the-stylite-of-pereslavl",
+  "display_name": "Nicetas the Stylite of Pereslavl",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "stylite",
+    "monk",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Νικήτας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Μαΐου, «Άγιος Νικήτας ο Στυλίτης Πρεσλαβίας ο Θαυματουργός», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1196,
+      "latest": 1196,
+      "display": "1196",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Νικητας ο Στυλιτης Πρεσλαβιας ο Θαυματουργος (; - 1196)»; the body gives no year and says only that he lived in the twelfth century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Μαΐου — «Άγιος Νικήτας ο Στυλίτης Πρεσλαβίας ο Θαυματουργός»",
+        "url": "https://www.saint.gr/05/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Μαΐου εκάστου έτους», the same day as the listing. The page's head line reads «Αγιος Νικητας ο Στυλιτης Πρεσλαβιας ο Θαυματουργος (; - 1196)» and its body calls him «Ο Άγιος Οσιομάρτυρας Νικήτας», so `venerable-martyr` is the page's own rank for him; the day's line adds `Στυλίτης` and `Θαυματουργός`. The city the body names is Pereslavl, «στην πόλη Περεγιασλάβλ της Ρωσίας», and the monastery Pereslavl-Zalessky, which is why the English form says Pereslavl and not the line's `Πρεσλαβία`. The corpus keeps no Nicetas of this day. The page's closing dates are the relics' and not his: the chains thrown into the Volga, the three shafts of light the elder Symeon saw, and the opening of the tomb between 1420 and 1425 when the body was found incorrupt. The same page sends him to the synaxis of all the saints of Rostov and Yaroslavl, which is on 23 Μαΐου and which this run refuses as an unenumerable heading. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

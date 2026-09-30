@@ -1,0 +1,71 @@
+{
+  "slug": "cyriacus-of-eurychou",
+  "display_name": "Cyriacus of Eurychou",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "hermit",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Κυριακός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Μαΐου, «Όσιος Κυριακός εξ Ευρύχου Κύπρου», with the rank words left off."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Τῆς ἐρήμου πολίτης καὶ ἐν σώματι ἄγγελος καὶ θαυματουργὸς ἀνεδείχθης, Θεοφόρε Κυριακὲ πατὴρ ἠμῶν νηστεία, ἀγρυπνία, προσευχή, οὐράνια χαρίσματα λαβῶν, θεραπεύεις τοὺς νοσοῦντας, καὶ τᾶς ψυχᾶς τῶν πίστει προστρεχόντων σοί. Δόξα τῷ δεδωκότι σοὶ ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διὰ σοῦ πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, on the page of «Όσιος Κυριακός εξ Ευρύχου Κύπρου»; it is the common of a venerable desert-dweller with his name written into it",
+        "url": "https://www.saint.gr/1714/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A citizen of the desert, an angel in the body and a wonderworker wast thou shown to be, O God-bearing Cyriacus our father. By fasting, vigil and prayer thou didst receive heavenly gifts, and thou healest the sick and the souls of them that run to thee in faith. Glory to him who gave thee strength, glory to him who crowned thee, glory to him who through thee works healings for all.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Μαΐου — «Όσιος Κυριακός εξ Ευρύχου Κύπρου»",
+        "url": "https://www.saint.gr/05/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Μαΐου εκάστου έτους», the same day as the listing. The page says outright that it does not know when he lived — «Δέν είναι γνωστό πότε έζησε ο Όσιος Κυριακός, ο ασκητής της Ευρύχου» — and that what it knows comes from his service, so **there is no `dates` object**. That is a stated want of knowledge, not saint.gr's asterisked refusal to vouch for an entry, and the page carries no asterisk and no such sentence, so the folder is made. The corpus keeps no ascetic of Eurychou; its five Cyriaci — the anchorite, the commoner, of Bisericani, of Tazlău and the attendant of Faustus — are other men on other days, and the English form here follows the corpus's own spelling of the name rather than the page's Κυριακός. The Ἀπολυτίκιον is the common of a venerable desert-dweller, «Τῆς ἐρήμου πολίτης», printed under his name with his name written into it, so it is his service and is copied whole."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

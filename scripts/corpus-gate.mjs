@@ -115,6 +115,32 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σεργιοσ sergius-martyr-2-january sergius-of-russia sergius-of-sukhtoma sergius-of-the-twelve-tribunes sergius-of-zographou sergius-the-confessor sergius-zipulin':
+    'Nine now. The new one is one of the twelve tribunes the 24 May page names with Meletius the Stratelates; the others are read in the el-05-19 entry for this name form.',
+  'φωτεινοσ photinos-son-of-photini photinus-of-the-twelve-tribunes':
+    'Two men: Photinus of Lyons and a Photinus who is one of the twelve tribunes the 24 May page names with Meletius the Stratelates.',
+  'θεοδωροσ mstislav-of-kiev theodore-companion-of-pausolypius theodore-companion-of-stephen theodore-companion-of-terentius theodore-founder-of-chora theodore-of-kama-the-philosopher theodore-of-kandavla theodore-of-kythera theodore-of-moscow theodore-of-murom theodore-of-novgorod theodore-of-pavia theodore-of-pentapolis theodore-of-perga theodore-of-samothrace theodore-of-sykeon theodore-of-tamasos theodore-of-the-twelve-tribunes theodore-of-tomsk theodore-of-vrsac theodore-prince-of-yaroslavl theodore-stratelates theodore-the-byzantine theodore-the-envoy-of-nicomedia theodore-the-recruit theodore-the-silent theodore-trichinas':
+    'Twenty-seven now. The new one is one of the twelve tribunes the 24 May page names with Meletius the Stratelates; the others are read in the el-05-21 entry for this name form.',
+  'μαρκελλοσ marcellus-of-sicily marcellus-of-the-twelve-tribunes marcellus-the-martyr-1-march':
+    'Three men: the Marcellus of 1 March, the Marcellus of 22 May, and a Marcellus who is one of the twelve tribunes the 24 May page names with Meletius the Stratelates.',
+  'φηλιξ felix-of-the-twelve-tribunes felix-the-bishop':
+    'Two men: Felix of Korel on 18 April and a Felix who is one of the twelve tribunes the 24 May page names with Meletius the Stratelates.',
+  'φαυστοσ faustus-companion-of-januarius faustus-disciple-of-dionysius-of-alexandria faustus-martyr-6-february faustus-of-the-twelve-tribunes':
+    'Four men. The new one is one of the twelve tribunes the 24 May page names with Meletius the Stratelates; the others are read in the el-04-21 entry for this name form.',
+  'διδυμοσ didymus-companion-of-theodora didymus-of-cyprus didymus-of-the-twelve-tribunes':
+    'Three men: the companion of Theodora on 5 April, Didymus of Cyprus on 20 February and a Didymus who is one of the twelve tribunes the 24 May page names with Meletius the Stratelates.',
+  'στεφανοσ stefan-brancoveanu stephen-27-february stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-khirsa stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-xylinites':
+    'Sixteen now. The new one is the companion of Meletius on 24 May; the others are read in the el-05-20 entry for this name form.',
+  'νικητασ nicetas-alfanov nicetas-of-apollonias nicetas-of-epirus nicetas-of-medikion nicetas-of-novgorod nicetas-of-pythia nicetas-the-sinaite nicetas-the-stylite-of-pereslavl nikitas-of-nea-moni':
+    'Nine now. The new one is Nicetas the Stylite of Pereslavl on 24 May; the others are read in the el-05-14 entry for this name form.',
+  'μελετιοσ meletius-of-antioch meletius-of-kharkov meletius-of-lardos meletius-of-ryazan meletius-of-the-twelve-tribunes meletius-the-stratelates':
+    'Six now, and **two of them stand on 24 May** as the page prints them: Meletius the Stratelates, whose company the day is, and a Meletius among his twelve tribunes. The others are read in the el-02-12 entry for this name form.',
+  'ιωαννησ john-arnaoutogiannis john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-meletius john-companion-of-peter john-disciple-of-limnaeus john-fedorov-of-krasnokutsk john-feodorov-of-tambov john-iii-scholasticus john-kalfas john-kalita john-kaloktenes john-kononenko john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kantara john-of-kazan john-of-lycopolis john-of-manglisi john-of-nea-moni john-of-rouphinianai john-of-santa-cruz john-of-serres john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-old-lavra john-of-the-well john-of-verkhoturye john-of-vilnius john-of-yuryevets john-of-zedazeni john-philosopher-of-georgia john-psychaites john-son-of-xenophon john-the-bulgarian john-the-confessor-of-kathara john-the-goldsmith-of-shumen john-the-hut-dweller john-the-iberian john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-the-wallachian john-timonov john-with-minas-and-david':
+    'Fifty-three now. The new one is the companion of Meletius on 24 May; the others are read in the el-05-19 entry for this name form.',
+  'κυριακοσ cyriacus-attendant-of-faustus cyriacus-of-eurychou cyriacus-son-of-hesperus cyriacus-the-infant':
+    'Four now, and **two of the new ones share 24 May**: Cyriacus of Eurychou and Cyriacus the Infant, one of the children the page names in that company. The others are the son of Hesperus on 2 May and the Cyriacus of the el-09-29 entry.',
+  'καλλινικοσ calinic-of-cernica callinicus-companion-of-eustathius callinicus-the-magus':
+    'Three men. The new one is Callinicus the Magus, whom the 24 May company converted; the others are read in the el-01-29 entry for this name form.',
   'σιμων simon-of-moscow simon-of-suzdal simon-of-vladimir simon-of-zographou simon-the-martyr-3-february simon-the-zealot':
     'Six now. The new one is on 23 May; the others are read in the el-05-10 entry for this name form.',
   'πατρικιοσ patricius-of-bayeux patrick-of-ireland patrick-of-prusa':
