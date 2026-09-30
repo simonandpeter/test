@@ -115,6 +115,36 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σωφρονιοσ sophronius-bishop-19-february sophronius-companion-of-sylvester sophronius-of-bulgaria sophronius-of-irkutsk sophronius-of-jerusalem sophronius-of-vratsa sophronius-the-recluse':
+    'Seven now. The new one is Sophronius of Bulgaria on 28 May, whose folder relates Joachim of Tarnovo because his life names the patriarch as his monastery’s founder; the others are read in the el-03-30 entry for this name form.',
+  'παυλοσ paul-brother-of-pausirius paul-companion-of-andrew paul-companion-of-quadratus paul-disciple-of-dionysius-of-alexandria paul-krasnokutsky paul-martyr-28-may paul-of-cordoba paul-of-corinth paul-of-crete paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-vilnius paul-of-zographou paul-the-martyr-3-february paul-the-peloponnesian paul-the-russian paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
+    'Twenty-four now. The new one is on 28 May; the others are read in the el-05-22 entry for this name form.',
+  'ιγνατιοσ ignatius-brianchaninov ignatius-of-mariupol ignatius-of-rostov ignatius-the-sinaite ignatius-venerable-19-may':
+    'Five now. The new one is on 28 May; the others are read in the el-05-19 entry for this name form.',
+  'γεροντιοσ gerontius-of-milan gerontius-of-moscow gerontius-the-canonarch gerontius-the-martyr':
+    'Four men. The new one is on 28 May; the others are read in the el-05-05 entry for this name form.',
+  'διοσκοριδησ dioscorides dioscorus-of-11-may':
+    'Two men: the Dioscorides of 28 May and Dioscorus of 19 April, whose Greek forms fold together.',
+  'κρησκησ crescens-companion-of-quadratus crescens-martyr-28-may crescens-of-myra':
+    'Two men: Crescens the companion of Quadratus on 10 March and the Crescens of 28 May.',
+  'αρσενιοσ arsenios-of-paros arsenius-bishop-of-tver arsenius-companion-of-elias-speleotes arsenius-of-corfu arsenius-of-elassona arsenius-of-georgia arsenius-of-ikalto arsenius-of-novgorod arsenius-of-rostov arsenius-of-the-kyiv-caves arsenius-of-varnakova arsenius-of-veroia arsenius-the-great':
+    'Thirteen now. The new one is on 28 May; the others are read in the el-05-08 entry for this name form, where four stand on 8 May.',
+  'ανδρεασ andrew-6-january andrew-abbot-of-tobolsk andrew-companion-of-paul andrew-mishenko andrew-of-monodendri andrew-of-mytilene andrew-of-raphailovo andrew-the-fool-for-christ':
+    'Seven now. The new one is on 28 May; the others are read in the el-05-19 entry for this name form.',
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-companion-of-barbarus alexander-companion-of-terentius alexander-companion-of-thalaleus alexander-martyr-1-april alexander-of-cartagena alexander-of-kentoukellai alexander-of-kharkov alexander-of-oshevensk alexander-of-pydna alexander-of-rome-pope alexander-of-the-forty-martyrs alexander-of-thessalonica alexander-of-voskiy alexander-the-dervish alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Nineteen now. The new one is Alexander of Thessalonica on 28 May, whose folder relates Matrona of Thessalonica because his life reads her synaxarion; the others are read in the el-05-26 entry for this name form.',
+  'θεραπων therapon-of-cyprus therapon-of-the-white-lake':
+    'Three men. Therapon of the White Lake is the new one, and his folder relates Cyril of the White Lake and Photius of Kyiv because his own life names both; `tests/life-links.test.mjs` asked for those rows. The others are Therapon of Cyprus on 14 May and the Therapon of the el-05-27 second entry, whom saint.gr sends to 12 Δεκεμβρίου and whom this wave has not drafted.',
+  'φιλιπποσ philip-of-moscow philip-of-sicily philip-of-worms philip-ordinets philip-the-first-of-moscow':
+    'Four men: Worms on 3 May, Sicily on 12 May, Philip Ordinets of the Slobodskaya twenty-seven on 19 May, and the Philip of 27 May.',
+  'ματθαιοσ matei-brancoveanu matthew-helper-of-athanasia matthew-of-yaransk':
+    'Three men. The new one is on 27 May; the others are read in the el-04-18 entry for this name form.',
+  'λαζαροσ lazarus-companion-of-jonah lazarus-of-murom lazarus-of-pskov lazarus-of-tripoli-in-the-peloponnese lazarus-the-shepherd':
+    'Five now. The new one is on 27 May; the others are read in the el-04-23 entry for this name form.',
+  'μιχαηλ boris-michael-of-bulgaria macarius-notaras methodius-of-moravia michael-companion-of-platon-of-reval michael-mavroeidis michael-of-cyprus-of-samothrace michael-of-georgia michael-of-klops michael-of-murom michael-of-synada michael-of-ulumbo michael-of-vourla michael-parekheli michael-the-russian-1-april michael-the-wonderworker':
+    'Fourteen now. The new one is on 27 May; the others are read in the el-05-21 entry for this name form.',
+  'βασιλειοσ basil-companion-of-euphrasius basil-kadomsky basil-martyr-6-february basil-of-ancyra basil-of-braga basil-of-georgia basil-of-mangazeya basil-of-mirozh basil-of-moldovita basil-of-novgorod basil-of-ostrog basil-of-poiana-marului basil-of-rostov basil-of-thessalonica basil-ratishvili basil-the-confessor basil-the-new-of-latros basil-uncle-of-eustratius':
+    'Eighteen now. The new one is on 27 May; the others are read in the el-05-23 entry for this name form.',
   'ζαχαριασ zacharias-father-of-the-forerunner zacharias-of-arta zacharias-of-corinth zacharias-of-jerusalem zacharias-of-prusa zacharias-of-vienne zacharias-son-of-barachias zacharias-son-of-carion zacharias-the-faster':
     'Nine now. The new one is on 26 May; the others are read in the el-05-22 entry for this name form.',
   'συνεσιοσ synesius-of-carpasia synesius-of-irkutsk synesius-of-lysi':

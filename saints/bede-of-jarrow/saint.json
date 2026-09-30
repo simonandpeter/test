@@ -1,0 +1,68 @@
+{
+  "slug": "bede-of-jarrow",
+  "display_name": "Bede of Jarrow",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Βεδέας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαΐου, «Όσιος Βεδέας ο Ομολογητής», with the rank word left off. The same page writes the Latin form as the site has it too, «Ο Όσιος Bede (Βεδέας) γεννήθηκε στη Νορθμπρία της Αγγλίας», so the Greek form is the one copied here."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 673,
+      "latest": 673,
+      "display": "673",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Οσιος Βεδεας ο Ομολογητης (673 - 735)», and the body repeats it: «Ο Όσιος Bede (Βεδέας) γεννήθηκε στη Νορθμπρία της Αγγλίας το 673 μ.Χ.»"
+    },
+    "death": {
+      "earliest": 735,
+      "latest": 735,
+      "display": "735",
+      "basis": "traditional",
+      "note": "saint.gr closes the life with the year: «πρόφερε τους λόγους “Δόξα τῷ Πατρὶ καὶ τῷ Υἱῷ καὶ τῷ Ἁγίῳ Πνεύματι” και παρέδωσε το πνεύμα του στα χέρια του Θεού το 735 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαΐου — «Όσιος Βεδέας ο Ομολογητής»",
+        "url": "https://www.saint.gr/05/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Μαΐου εκάστου έτους», the same day as the listing. It records where part of his relics are — «Μέρος των Ιερών Λειψάνων του Οσίου βρίσκονται στον ρωμαιοκαθολικό Καθεδρικό Ναό του Ντάραμ Βρεττανίας», in the Roman Catholic cathedral of Durham in Britain. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

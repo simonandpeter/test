@@ -1,0 +1,61 @@
+{
+  "slug": "philip-the-first-of-moscow",
+  "display_name": "Philip the First of Moscow",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "office": "Metropolitan of Moscow",
+  "names": [
+    {
+      "form": "Φίλιππος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαΐου, «Άγιος Φίλιππος Α' Μητροπολίτης Μόσχας», with the rank word left off. The day's line carries the numeral that tells him from the later metropolitan of the same name, «Φίλιππος Α'», and the page's head line dates him «(; - 1473)»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1473,
+      "latest": 1473,
+      "display": "1473",
+      "basis": "traditional",
+      "note": "saint.gr: «Ασθένησε στις 4 Απριλίου 1473 μ.Χ. και κοιμήθηκε με ειρήνη», and the head line reads «Αγιος Φιλιππος Α' Μητροπολιτης Μοσχας (; - 1473)». The page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαΐου — «Άγιος Φίλιππος Α' Μητροπολίτης Μόσχας»",
+        "url": "https://www.saint.gr/05/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Μαΐου εκάστου έτους», the same day as the listing. This is not the corpus's `philip-of-moscow`, who is the later metropolitan Philip put to death under Ivan IV and kept on 9 January: saint.gr's own line numbers this one «Φίλιππος Α'» and dates him to 1473, and the two men held the see a century apart. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

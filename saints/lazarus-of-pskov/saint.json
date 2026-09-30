@@ -1,0 +1,67 @@
+{
+  "slug": "lazarus-of-pskov",
+  "display_name": "Lazarus of Pskov",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Λάζαρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαΐου, «Όσιος Λάζαρος του Πσκώφ», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1733,
+      "latest": 1733,
+      "display": "1733",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Οσιος Λαζαρος Του Πσκωφ (1733 - 1824)», and the body repeats it: «Ο Όσιος Λάζαρος γεννήθηκε το 1733 μ.Χ. από ευσεβείς και φιλόθεους γονείς»."
+    },
+    "death": {
+      "earliest": 1824,
+      "latest": 1824,
+      "display": "1824",
+      "basis": "traditional",
+      "note": "saint.gr: «Διακρίθηκε για την ευσέβεια και τον ασκητικό του βίο και κοιμήθηκε με ειρήνη το 1824 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαΐου — «Όσιος Λάζαρος του Πσκώφ»",
+        "url": "https://www.saint.gr/05/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Μαΐου εκάστου έτους», the same day as the listing. It prints no hymn and names no relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

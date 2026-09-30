@@ -1,0 +1,50 @@
+{
+  "slug": "alypius-martyr-27-may",
+  "display_name": "Alypius (27 May)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αλύπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαΐου, «Άγιος Αλύπιος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαΐου — «Άγιος Αλύπιος»",
+        "url": "https://www.saint.gr/05/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Μαΐου εκάστου έτους», the same day as the listing. It gives one sentence of life, a couplet, and no year, no place and no hymn. Its glossary note on the name lists two other Alypii — a fourth-century architect of Antioch and a fourth-century Greek writer on music — as bearers of the name and not as this martyr."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

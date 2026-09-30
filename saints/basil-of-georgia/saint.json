@@ -1,0 +1,59 @@
+{
+  "slug": "basil-of-georgia",
+  "display_name": "Basil of Georgia",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαΐου, «Όσιος Βασίλειος ο εκ Γεωργίας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1001,
+      "latest": 1100,
+      "display": "11th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Βασίλειος έζησε τον 11ο αιώνα μ.Χ. στη Γεωργία και ήταν υιός του βασιλέως Μπαγράτ Γ'. Κοιμήθηκε με ειρήνη.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαΐου — «Όσιος Βασίλειος ο εκ Γεωργίας»",
+        "url": "https://www.saint.gr/05/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Μαΐου εκάστου έτους», the same day as the listing. Its whole life is two sentences; it prints no hymn and no relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

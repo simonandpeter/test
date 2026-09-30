@@ -1,0 +1,68 @@
+{
+  "slug": "matthew-of-yaransk",
+  "display_name": "Matthew of Yaransk",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ματθαίος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαΐου, «Όσιος Ματθαίος ο εκ Ρωσίας», with the rank word left off. The life page gives the place-epithet the day's line leaves out and the name he was born with: «Ο Όσιος Ματθαίος του Ζαράνσκιυ, κατά κόσμον Μητροφάνης Κούζμικ Σβέκωφ»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1861,
+      "latest": 1861,
+      "display": "1861",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Οσιος Ματθαιος ο Εκ Ρωσιας (1861 - 1927)», and the body repeats it: «γεννήθηκε, το 1861 μ.Χ., στην πόλη Βγιάτκα»."
+    },
+    "death": {
+      "earliest": 1927,
+      "latest": 1927,
+      "display": "1927",
+      "basis": "traditional",
+      "note": "saint.gr: «Έτσι, αφού έζησε θεοφιλώς, ο Όσιος κοιμήθηκε με ειρήνη το 1927 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαΐου — «Όσιος Ματθαίος ο εκ Ρωσίας»",
+        "url": "https://www.saint.gr/05/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Μαΐου εκάστου έτους», the same day as the listing. It prints no hymn and names no relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
