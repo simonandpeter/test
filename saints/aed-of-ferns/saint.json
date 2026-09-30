@@ -1,0 +1,61 @@
+{
+  "slug": "aed-of-ferns",
+  "display_name": "Aed of Ferns",
+  "office": "Bishop of Ferns",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 545,
+      "latest": 555,
+      "display": "c. 550",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Aed γεννήθηκε στο Inisbrefny (ένα νησί στη λίμνη Templeport) περί το 550 μ.Χ.» The bounds are the corpus's reading of the page's «περί»."
+    },
+    "death": {
+      "earliest": 632,
+      "latest": 632,
+      "display": "632",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε στις 31 Ιανουαρίου 632 μ.Χ.»; the page's heading dates him «(; - 632)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 31 Ιανουαρίου — «Άγιος Aed από το Ferns»",
+        "url": "https://www.saint.gr/01/31/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr prints his name in Latin letters on both the day page and his own page and gives no Greek form of it, so this folder records no Greek name form."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

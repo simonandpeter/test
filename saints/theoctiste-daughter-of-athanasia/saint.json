@@ -1,0 +1,63 @@
+{
+  "slug": "theoctiste-daughter-of-athanasia",
+  "display_name": "Theoctiste, daughter of Athanasia",
+  "names": [
+    {
+      "form": "Θεοκτίστη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Ιανουαρίου, «Άγιοι Κύρος και Ιωάννης οι Ανάργυροι και η Αγία Αθανασία με τις τρεις θυγατέρες της Θεοδότη, Θεοκτίστη και Ευδοξία», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "athanasia-the-widow",
+    "theodote-daughter-of-athanasia",
+    "eudoxia-daughter-of-athanasia"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 292,
+      "latest": 292,
+      "display": "292",
+      "basis": "traditional",
+      "note": "saint.gr's own heading for her on the page dates her «(; - 292)», and its account puts her death with her mother's and with the beheading of Cyrus and John «το έτος 292 μ.Χ.». It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 31 Ιανουαρίου — «Άγιοι Κύρος και Ιωάννης οι Ανάργυροι και η Αγία Αθανασία με τις τρεις θυγατέρες της Θεοδότη, Θεοκτίστη και Ευδοξία»",
+        "url": "https://www.saint.gr/01/31/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

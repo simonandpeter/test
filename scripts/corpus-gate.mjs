@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδοτη theodote-daughter-of-athanasia theodote-mother-of-the-unmercenaries':
+    'two women, and each is named on her page by her kin: the Theodote whom saint.gr names with her mother Athanasia on 31 Ιανουαρίου, and Theodote the mother of the Unmercenaries, written in this wave on the Greek 2 Ιανουαρίου, whose page sends the reader to 1 November for her sons. A daughter and a mother, two days and two households apart.',
   'ζηνων zeno-of-diospolis zeno-the-faster-of-kiev':
     'two men, and one is an apostle. saint.gr keeps Zeno the Faster of the Kyiv Caves, of the fourteenth century, on 30 Ιανουαρίου; the corpus keeps Zeno of Diospolis, one of the seventy, on the Romanian 27 April and the Greek 27 September. A late-medieval Russian monk is not an apostle of the seventy.',
   'θεοφιλοσ theophilus-the-deacon-of-libya theophilus-the-new':
@@ -1307,7 +1309,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '405'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '412'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

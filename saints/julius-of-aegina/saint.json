@@ -1,0 +1,70 @@
+{
+  "slug": "julius-of-aegina",
+  "display_name": "Julius of Aegina",
+  "names": [
+    {
+      "form": "Ιούλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Ιανουαρίου, «Άγιος Ιούλιος ο Πρεσβύτερος εξ Αιγίνης», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "presbyter",
+    "preacher"
+  ],
+  "related": [
+    "basil-the-great",
+    "gregory-the-theologian"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 330,
+      "latest": 330,
+      "display": "330",
+      "basis": "traditional",
+      "note": "saint.gr: «ο Άγιος Ιούλιος γεννήθηκε το 330 μ.Χ. στην Αίγινα από εύπορους και ευσεβείς γονείς»; the page's heading dates him «(330 - 407)»."
+    },
+    "death": {
+      "earliest": 401,
+      "latest": 407,
+      "display": "401 or 407",
+      "basis": "traditional",
+      "note": "The page contradicts itself: its heading dates him «(330 - 407)», while its text says «κοιμήθηκε με ειρήνη το έτος 401 μ.Χ., σε ηλικία 71 ετών» — which also does not fit a birth in 330. Both readings are the page's, and the interval holds them both."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 31 Ιανουαρίου — «Άγιος Ιούλιος ο Πρεσβύτερος εξ Αιγίνης»",
+        "url": "https://www.saint.gr/01/31/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

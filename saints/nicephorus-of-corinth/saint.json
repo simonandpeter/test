@@ -6,6 +6,11 @@
       "form": "Nichifor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 31 ianuarie, «Sfântul Mucenic Nichifor»."
+    },
+    {
+      "form": "Νικηφόρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's own heading for him on the page for the seven martyrs of 31 Ιανουαρίου, «Αγιος Νικηφορος», with the rank word left off; the day's line keeps the seven together as «Άγιοι Ουικτωρίνος, Ουίκτωρ, Νικηφόρος, Κλαύδιος, Διόδωρος, Σαραπίνος και Παπίας»."
     }
   ],
   "sex": "male",
@@ -52,8 +57,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 31 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 31 Ιανουαρίου — «Άγιοι Ουικτωρίνος, Ουίκτωρ, Νικηφόρος, Κλαύδιος, Διόδωρος, Σαραπίνος και Παπίας»",
+        "url": "https://www.saint.gr/01/31/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

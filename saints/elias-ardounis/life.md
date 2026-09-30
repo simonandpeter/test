@@ -1,0 +1,11 @@
+# Elias Ardounis
+
+Elias was born at Kalamata of devout parents, saint.gr says. He worked as a barber and was much thought of by the notables of the town. Talking with them once he urged them to act to have the taxes the Turks laid on the Christians lightened, since otherwise the Christians were in danger of denying the faith of their fathers. The notables disagreed, saying that the Christians were in no such danger; and he answered that if somebody gave him a fez he would turn over the page himself. At that one of them, as a joke, sent and bought him a fez — and he went straight to the judge and became a Muslim, which grieved all the Christians.
+
+A little while later he felt the fault of it, left his own country and went to the Holy Mountain. There he confessed his mistake with great contrition, kept the penance laid on him, and was anointed with the holy chrism; he became a monk on the Mountain and stayed eight years, practising virtue and prayer and preparing for martyrdom.
+
+Then he went back to Kalamata, presented himself to the judge and confessed the Christian faith before him. Flatteries and fearful tortures left him unshaken, and the judge ordered him burned with green wood. The executioners seized him and led him to the place of sentence; on the road a man brought his sword down across his back, and the saint, without flinching, went on the more cheerfully and the more boldly, chanting the psalms of David.
+
+At the place of sentence they threw him into the fire. The wonder of it, the page says, is that although he gave up his holy soul in the flames, when the fire went out his holy relic had been left untouched: neither his habit nor his beard nor his hair was burned. At night the guards saw a heavenly light come down and surround the martyr's body, and said that since the fire had not burned him God had sent fire from heaven to burn him. The Christians took the relic and buried it, paying much money for it; and when later they took it up again a marvellous fragrance filled the place. His honoured head is treasured at the monastery of Voulkano in Messenia.
+
+*After saint.gr's calendar for 31 Ιανουαρίου — [the day](https://www.saint.gr/01/31/index.aspx) and [the life](https://www.saint.gr/3573/saint.aspx); read 30 September 2026.*
