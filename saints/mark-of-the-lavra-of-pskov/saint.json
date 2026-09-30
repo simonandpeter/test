@@ -1,0 +1,64 @@
+{
+  "slug": "mark-of-the-lavra-of-pskov",
+  "display_name": "Mark of the Lavra of Pskov",
+  "names": [
+    {
+      "form": "Μάρκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Μαρτίου, «Όσιοι Ιωνάς, Μάρκος και Βάσσος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαρτίου — «Όσιοι Ιωνάς, Μάρκος και Βάσσος»",
+        "url": "https://www.saint.gr/03/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole entry is one sentence for the three of them: «Οι Όσιοι Πατέρες Μάρκος, Ιωνάς και Βάσσος έζησαν και ασκήτεψαν στη Λαύρα του Πσκωφ της Ρωσίας κατά τον 14ο και 15ο αιώνα μ.Χ. Κοιμήθηκαν οσίως με ειρήνη.» The narrative names Mark first where the calendar line names Jonah first. No hymn, no relic, no office and no act of any of them. These are Russian saints recorded here only from a Greek source, and the monastery is known to this folder only as saint.gr's «Λαύρα του Πσκωφ»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1500,
+      "display": "14th–15th century",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησαν και ασκήτεψαν στη Λαύρα του Πσκωφ της Ρωσίας κατά τον 14ο και 15ο αιώνα μ.Χ.» The page gives no year of birth and none of death for any of the three, so the interval recorded is the two centuries it names."
+    }
+  },
+  "related": [
+    "jonah-of-the-lavra-of-pskov",
+    "bassos-of-the-lavra-of-pskov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

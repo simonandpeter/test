@@ -1,0 +1,80 @@
+{
+  "slug": "virgins-and-priests-of-ascalon-and-gaza",
+  "display_name": "The Virgins and Priests of Ascalon and Gaza",
+  "names": [
+    {
+      "form": "Των εν Ασκάλωνι και Γάζη παρθένων γυναικών και ιερωμένων ανδρών",
+      "lang": "el",
+      "note": "Read out of saint.gr's own heading for the entry on the life page for 29 Μαρτίου, «Των Εν Ασκαλωνι Και Γαζη Παρθενων Γυναικων Και Ιερωμενων Ανδρων»."
+    }
+  ],
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαρτίου — «Άγιος Μάρκος επίσκοπος Αρεθουσίων, Κύριλλος διάκονος, και των εν Ασκάλωνι και Γάζη παρθένων γυναικών και ιερωμένων ανδρών»",
+        "url": "https://www.saint.gr/03/29/index.aspx",
+        "year": 2026
+      },
+      "note": "They stand as an entry of their own in the page's list of those commemorated, with a couplet of their own, and the page names not one of them and counts none of them: «αρκετές παρθένες γυναίκες στην Ασκάλωνα και τη Γάζα, καθώς και μερικοί ιερωμένοι» — a number of virgin women at Ascalon and at Gaza, and some men in holy orders. One folder, because the source enumerates nobody. Both the apolytikia it prints name Mark and Cyril and then these women and priests, so the first of them is copied here as well as onto their folders."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 363,
+      "latest": 363,
+      "display": "363",
+      "basis": "traditional",
+      "note": "saint.gr sets the whole company under Julian the Apostate, «Επί Ιουλιανού του Παραβάτη (363 μ.Χ.)», in the same sentence in which it says they died the same death as the deacon Cyril. It gives them no year of their own."
+    }
+  },
+  "related": [
+    "mark-of-arethusa",
+    "cyril-of-heliopolis"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’. Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Ἀρεθουσίων ὁ σοφὸς Ποιμενάρχης, ὑπὲρ Χριστοῦ Μᾶρκε στερρῶς ἠνωνίσω, ἐν τὴ Φοινίκη δὲ ὢ Κύριλλε Διάκονε, Μάρτυς ὤφθης ἔνθεος, καὶ ἐν Γάζῃ τὴ πόλει, ἅμα καὶ Ἀσκάλωνι, Ἱερεῖς θεοφόροι, μετὰ Γυναίων ἤθλησον σεμνῶν, οὖς ὡς ὀπλίτας, Χριστοῦ μακαρίσωμεν.",
+      "source": {
+        "text": "saint.gr — Άγιος Μάρκος επίσκοπος Αρεθουσίων, Κύριλλος διάκονος, και των εν Ασκάλωνι και Γάζη, Ἀπολυτίκιον. It is the one hymn for the whole company and names Mark, Cyril, the God-bearing priests and the modest women in turn. Recorded with kind troparion, which is the schema's word for it.",
+        "url": "https://www.saint.gr/102/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Mark, wise chief shepherd of Arethusa, you contended stoutly for Christ; and in Phoenicia you, O Cyril the deacon, were shown a martyr filled with God; and in the city of Gaza, and at Ascalon with it, God-bearing priests together with modest women contended — whom let us call blessed as the armed men of Christ.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

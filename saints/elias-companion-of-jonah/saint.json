@@ -1,0 +1,64 @@
+{
+  "slug": "elias-companion-of-jonah",
+  "display_name": "Elias, companion of Jonah and Barachisius",
+  "names": [
+    {
+      "form": "Ηλίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Μαρτίου, «Άγιοι Ιωνάς, Βαραχήσιος και οι συν αυτοίς Ζανιθάς, Λάζαρος, Μαρουθάς, Ναρσής, Ηλίας, Μάρης, Άβιβος, Σιμιάθης και Σάββας (ή Σώθα)», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "revised-julian",
+        "note": "The page puts the nine martyrs' own perfecting on 27 March and the two ascetics' on 29 March, but it is the 29 March day page that lists all eleven and saint.gr's 27 Μαρτίου page does not name them. This row records the day page that was read."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαρτίου — «Άγιοι Ιωνάς, Βαραχήσιος και οι συν αυτοίς Ζανιθάς, Λάζαρος, Μαρουθάς, Ναρσής, Ηλίας, Μάρης, Άβιβος, Σιμιάθης και Σάββας (ή Σώθα)»",
+        "url": "https://www.saint.gr/03/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The page names all nine of the imprisoned martyrs and prints a couplet for them as a body, «Χριστοῦ ὑπετμηθέντες ἄνδρες ἐννέα, Σύνεισιν ἤδη τάξεσι ταῖς ἐννέα». It then says plainly that the nine died on another day than the two ascetics: «Οι μεν ανωτέρω εννέα Mάρτυρες, τελειώθησαν την εικοστή εβδόμη Mαρτίου, οι δε Άγιοι Iωνάς και Bαραχήσιος τελειώθησαν την εικοστή ενάτη Mαρτίου» — the nine on 27 March, Jonah and Barachisius on 29 March. saint.gr's own day page for 27 Μαρτίου, which was read on the same day as this one, does not name them; so the row records the 29 March listing that was read, and the page's 27 March is set down here and not made into a feast. The page gives «περίπου το 330 μ.Χ.» for the martyrdom and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 330,
+      "latest": 330,
+      "display": "about 330",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Ιωνάς και Βαραχήσιος ήταν ασκητές και μαρτύρησαν περίπου το 330 μ.Χ., όταν βασιλιάς των Περσών ήταν ο Σαβώριος και των Βυζαντινών ο Μέγας Κωνσταντίνος.» The page gives the year for the two ascetics; the nine were already in the prison they were seized in, and died in the same persecution, which is why the same year is recorded with the page's own «περίπου», about."
+    }
+  },
+  "related": [
+    "jonah-martyr-29-march",
+    "barachisius"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "hesychius-the-sinaite",
+  "display_name": "Hesychius the Sinaite",
+  "names": [
+    {
+      "form": "Ησύχιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Μαρτίου, «Όσιος Ησύχιος ο Σιναΐτης», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαρτίου — «Όσιος Ησύχιος ο Σιναΐτης»",
+        "url": "https://www.saint.gr/03/29/index.aspx",
+        "year": 2026
+      },
+      "note": "One sentence: «Ο Όσιος Ησύχιος έζησε τον 7ο αιώνα μ.Χ. και διετέλεσε ηγούμενος της μονής Σινά. Κοιμήθηκε οσίως με ειρήνη.» No hymn, no relic, no writing named. He is a different man from the Hesychius of Jerusalem whom the same calendar keeps on 28 March, who was a presbyter of the fifth century in Palestine and not an abbot of Sinai in the seventh."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 601,
+      "latest": 700,
+      "display": "7th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ησύχιος έζησε τον 7ο αιώνα μ.Χ.» The page gives no year for his birth and none for his repose, so the interval recorded is the century it names."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

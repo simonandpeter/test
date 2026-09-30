@@ -7,6 +7,11 @@
       "form": "Marcu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 martie, «Sfântul Sfințit Mucenic Marcu, Episcopul Aretuselor»."
+    },
+    {
+      "form": "Μάρκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Μαρτίου, «Άγιος Μάρκος επίσκοπος Αρεθουσίων …», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -15,7 +20,8 @@
     "bishop"
   ],
   "related": [
-    "cyril-of-heliopolis"
+    "cyril-of-heliopolis",
+    "virgins-and-priests-of-ascalon-and-gaza"
   ],
   "dates": {
     "floruit": {
@@ -48,8 +54,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαρτίου — «Άγιος Μάρκος επίσκοπος Αρεθουσίων, Κύριλλος διάκονος, και των εν Ασκάλωνι και Γάζη παρθένων γυναικών και ιερωμένων ανδρών»",
+        "url": "https://www.saint.gr/03/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives him a conciliar career the Romanian life does not: the Council of Antioch in 341, where its Acts preserve an «Ἔκθεσις Πίστεως Μάρκου Ἀρεθουσίων»; the embassy of bishops to Trier in 342 to meet the emperor Constans; the Council of Philippopolis in 343; the Council of Sirmium in 351, which condemned Photinus of Sirmium as a follower of Marcellus of Ancyra; and the Council of Seleucia in Isauria in 358. It also ends the story differently from a martyrdom: after the tortures the idolaters repented, he became their teacher, and «Ο Άγιος Μάρκος κοιμήθηκε με ειρήνη», he fell asleep in peace. This folder's `types` carry `hieromartyr` from the Romanian reading and are left as they are; the Greek reading is recorded here. The page's own gloss puts Arethusa «στα ανατολικά του Νομού Θεσσαλονίκης», in eastern Thessalonica, which does not agree with the Syrian Arethusa of the rest of its account, and nothing of that gloss is taken. It prints two apolytikia; the first, which names him and his companions, is added to this folder, and the second is the common of martyrs and is not."
     },
     {
       "church": "serbian",
@@ -71,6 +87,22 @@
       },
       "english": {
         "text": "Thy martyrs, O Lord, in their contending won from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke also the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’. Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Ἀρεθουσίων ὁ σοφὸς Ποιμενάρχης, ὑπὲρ Χριστοῦ Μᾶρκε στερρῶς ἠνωνίσω, ἐν τὴ Φοινίκη δὲ ὢ Κύριλλε Διάκονε, Μάρτυς ὤφθης ἔνθεος, καὶ ἐν Γάζῃ τὴ πόλει, ἅμα καὶ Ἀσκάλωνι, Ἱερεῖς θεοφόροι, μετὰ Γυναίων ἤθλησον σεμνῶν, οὖς ὡς ὀπλίτας, Χριστοῦ μακαρίσωμεν.",
+      "source": {
+        "text": "saint.gr — Άγιος Μάρκος επίσκοπος Αρεθουσίων, Κύριλλος διάκονος, και των εν Ασκάλωνι και Γάζη, Ἀπολυτίκιον. It is one hymn for the whole company and names Mark, Cyril, the God-bearing priests and the modest women in turn. Recorded with kind troparion, which is the schema's word for it.",
+        "url": "https://www.saint.gr/102/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Mark, wise chief shepherd of Arethusa, you contended stoutly for Christ; and in Phoenicia you, O Cyril the deacon, were shown a martyr filled with God; and in the city of Gaza, and at Ascalon with it, God-bearing priests together with modest women contended — whom let us call blessed as the armed men of Christ.",
         "rendered": "site"
       }
     }

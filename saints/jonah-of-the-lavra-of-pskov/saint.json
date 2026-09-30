@@ -1,0 +1,64 @@
+{
+  "slug": "jonah-of-the-lavra-of-pskov",
+  "display_name": "Jonah of the Lavra of Pskov",
+  "names": [
+    {
+      "form": "Ιωνάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Μαρτίου, «Όσιοι Ιωνάς, Μάρκος και Βάσσος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαρτίου — «Όσιοι Ιωνάς, Μάρκος και Βάσσος»",
+        "url": "https://www.saint.gr/03/29/index.aspx",
+        "year": 2026
+      },
+      "note": "One sentence for the three of them, with no year, no office, no act and no hymn. He is a different man from the Jonah the same day page keeps with Barachisius, who was a Persian ascetic sawn in half about 330; the two Jonahs stand on one Greek day and share nothing but the name, and the corpus's other Jonahs — of Kyiv, of Moscow, of Yashezero — are not this one either. The monastery is known to this folder only as saint.gr's «Λαύρα του Πσκωφ»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1500,
+      "display": "14th–15th century",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησαν και ασκήτεψαν στη Λαύρα του Πσκωφ της Ρωσίας κατά τον 14ο και 15ο αιώνα μ.Χ.» The page gives no year of birth and none of death for any of the three, so the interval recorded is the two centuries it names."
+    }
+  },
+  "related": [
+    "mark-of-the-lavra-of-pskov",
+    "bassos-of-the-lavra-of-pskov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

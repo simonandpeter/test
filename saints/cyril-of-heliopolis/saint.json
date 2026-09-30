@@ -6,6 +6,11 @@
       "form": "Chiril",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 martie, «Sfântul Sfințit Mucenic Chiril, diaconul»."
+    },
+    {
+      "form": "Κύριλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Μαρτίου, «… Κύριλλος διάκονος …», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -14,7 +19,8 @@
     "deacon"
   ],
   "related": [
-    "mark-of-arethusa"
+    "mark-of-arethusa",
+    "virgins-and-priests-of-ascalon-and-gaza"
   ],
   "dates": {
     "death": {
@@ -47,8 +53,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαρτίου — «Άγιος Μάρκος επίσκοπος Αρεθουσίων, Κύριλλος διάκονος, και των εν Ασκάλωνι και Γάζη παρθένων γυναικών και ιερωμένων ανδρών»",
+        "url": "https://www.saint.gr/03/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 363)» and calls him the boast of the Church of Phoenicia rather than naming Heliopolis; Heliopolis is a city of Phoenicia, and that is the ground on which this row is put on this folder rather than a new one. It says he stood unmoved in the confession and preached against the idols, and that the idolaters in their fury opened his belly with swords so that his entrails poured out; and it says the virgins of Ascalon and Gaza and some men in holy orders died the same death. It prints two apolytikia; the first names him and is added to this folder, and the second is the common of martyrs and is not."
     },
     {
       "church": "serbian",
@@ -70,6 +86,22 @@
       },
       "english": {
         "text": "Thy martyrs, O Lord, in their contending won from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke also the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’. Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Ἀρεθουσίων ὁ σοφὸς Ποιμενάρχης, ὑπὲρ Χριστοῦ Μᾶρκε στερρῶς ἠνωνίσω, ἐν τὴ Φοινίκη δὲ ὢ Κύριλλε Διάκονε, Μάρτυς ὤφθης ἔνθεος, καὶ ἐν Γάζῃ τὴ πόλει, ἅμα καὶ Ἀσκάλωνι, Ἱερεῖς θεοφόροι, μετὰ Γυναίων ἤθλησον σεμνῶν, οὖς ὡς ὀπλίτας, Χριστοῦ μακαρίσωμεν.",
+      "source": {
+        "text": "saint.gr — Άγιος Μάρκος επίσκοπος Αρεθουσίων, Κύριλλος διάκονος, και των εν Ασκάλωνι και Γάζη, Ἀπολυτίκιον. It is one hymn for the whole company and names Mark, Cyril, the God-bearing priests and the modest women in turn. Recorded with kind troparion, which is the schema's word for it.",
+        "url": "https://www.saint.gr/102/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Mark, wise chief shepherd of Arethusa, you contended stoutly for Christ; and in Phoenicia you, O Cyril the deacon, were shown a martyr filled with God; and in the city of Gaza, and at Ascalon with it, God-bearing priests together with modest women contended — whom let us call blessed as the armed men of Christ.",
         "rendered": "site"
       }
     }

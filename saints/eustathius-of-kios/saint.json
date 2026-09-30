@@ -1,0 +1,52 @@
+{
+  "slug": "eustathius-of-kios",
+  "display_name": "Eustathius of Kios",
+  "names": [
+    {
+      "form": "Ευστάθιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Μαρτίου, «Άγιος Ευστάθιος ο Ομολογητής επίσκοπος Κίου Βιθυνίας», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Kios in Bithynia",
+  "types": [
+    "bishop",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαρτίου — «Άγιος Ευστάθιος ο Ομολογητής επίσκοπος Κίου Βιθυνίας»",
+        "url": "https://www.saint.gr/03/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The page places him «στα χρόνια της εικονομαχίας», in the years of the iconoclasm, and gives no year of any kind — not of birth, not of consecration, not of exile, not of death — so this folder carries no `dates`. It links him to the Synaxis of the Saints of Kios and prints a couplet and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

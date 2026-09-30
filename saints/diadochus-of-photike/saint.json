@@ -7,6 +7,11 @@
       "form": "Diadoh",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 martie, «Sfântul Ierarh Diadoh, Episcopul Foticeii»."
+    },
+    {
+      "form": "Διάδοχος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Μαρτίου, «Άγιος Διάδοχος επίσκοπος Φωτικής», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -53,8 +58,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαρτίου — «Άγιος Διάδοχος επίσκοπος Φωτικής»",
+        "url": "https://www.saint.gr/03/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The page opens by saying the Synaxaristae do not mention him at all — «Τον Άγιο Διάδοχο, δεν τον αναφέρουν οι Συναξαριστές» — and that he is met with in the Lavriotic Codex D 34 folio 68a, together with the presbyter Mark the great ascetic of 5 March, where there is also an unfinished canon common to the two of them. That is a statement about the sources and not a doubt about the man, whose writings it then quotes at length. It puts him in Photike of Old Epirus in the fifth century, names «Τα Εκατό γνωστικά ασκητικά κεφάλαια», the Hundred Gnostic Chapters, and also «Όραση» and a homily on the Ascension of the Lord, and prints the ten definitions from the preface of the Hundred Chapters. It gives no year and no hymn."
     },
     {
       "church": "serbian",

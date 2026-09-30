@@ -6,6 +6,11 @@
       "form": "Varahisie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 martie, «Sfântul Mucenic Varahisie»."
+    },
+    {
+      "form": "Βαραχήσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Μαρτίου, «Άγιοι Ιωνάς, Βαραχήσιος και οι συν αυτοίς …», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -13,7 +18,16 @@
     "martyr"
   ],
   "related": [
-    "jonah-martyr-29-march"
+    "jonah-martyr-29-march",
+    "zanithas-companion-of-jonah",
+    "lazarus-companion-of-jonah",
+    "marouthas-companion-of-jonah",
+    "narses-companion-of-jonah",
+    "elias-companion-of-jonah",
+    "mares-companion-of-jonah",
+    "abibus-companion-of-jonah",
+    "simiathes-companion-of-jonah",
+    "sabbas-companion-of-jonah"
   ],
   "attestations": [
     {
@@ -37,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαρτίου — «Άγιοι Ιωνάς, Βαραχήσιος και οι συν αυτοίς Ζανιθάς, Λάζαρος, Μαρουθάς, Ναρσής, Ηλίας, Μάρης, Άβιβος, Σιμιάθης και Σάββας (ή Σώθα)»",
+        "url": "https://www.saint.gr/03/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The page dates the martyrdom «περίπου το 330 μ.Χ.» under Shapur and Constantine the Great, names the town, the three Persian magistrates and the Christian who bought the relics, and gives his own death in detail: dragged naked through thorns, thrown into a pit, and boiling pitch poured down his throat. It names all nine of the imprisoned martyrs and says their perfecting fell on 27 March and his own and Jonah's on 29 March. It prints no hymn; the two this folder already carries are the Romanian ones."
     },
     {
       "church": "serbian",
@@ -82,5 +106,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 330,
+      "latest": 330,
+      "display": "about 330",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Ιωνάς και Βαραχήσιος ήταν ασκητές και μαρτύρησαν περίπου το 330 μ.Χ., όταν βασιλιάς των Περσών ήταν ο Σαβώριος και των Βυζαντινών ο Μέγας Κωνσταντίνος.» This folder held no `dates` before; the page's «περίπου», about, is why the display says about 330."
+    }
   }
 }
