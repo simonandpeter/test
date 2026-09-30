@@ -1,0 +1,60 @@
+{
+  "slug": "apollos-under-julian",
+  "display_name": "Apollos (under Julian)",
+  "names": [
+    {
+      "form": "Απολλώς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιανουαρίου, «Όσιος Απολλώς», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "wonderworker"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 361,
+      "latest": 363,
+      "display": "under Julian the Apostate, 361–363",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησε κατά τους χρόνους του αυτοκράτορα Ιουλιανού του Παραβάτη (361 - 363 μ.Χ.)». The page gives no year of birth and none of death; this is the reign it prints."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Ιανουαρίου — «Όσιος Απολλώς»",
+        "url": "https://www.saint.gr/01/25/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Bretanion",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 ianuarie, «Sfântul Ierarh Bretanion, Episcopul Tomisului»."
+    },
+    {
+      "form": "Βρετάννιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιανουαρίου, «Άγιος Βρετάννιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -57,8 +62,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Ιανουαρίου — «Άγιος Βρετάννιος»",
+        "url": "https://www.saint.gr/01/25/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -68,5 +82,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Βρετάννιος έζησε τον 4ο αιώνα μ.Χ. και ήταν Επίσκοπος Τομισού». The same page sets his sufferings under the emperor Valens, «(364-378 μ.Χ.)». It gives no year of birth and none of death."
+    }
   }
 }

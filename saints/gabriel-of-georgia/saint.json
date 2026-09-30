@@ -1,0 +1,66 @@
+{
+  "slug": "gabriel-of-georgia",
+  "display_name": "Gabriel of Georgia",
+  "names": [
+    {
+      "form": "Γαβριήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιανουαρίου, «Άγιος Γαβριήλ εκ Γεωργίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1825,
+      "latest": 1825,
+      "display": "1825",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε στις 15 Νοεμβρίου 1825 μ.Χ. στο χωριό Βάκχβι της Γεωργίας»; the page's heading dates him «(1825 - 1896)»."
+    },
+    "death": {
+      "earliest": 1896,
+      "latest": 1896,
+      "display": "1896",
+      "basis": "attested",
+      "note": "saint.gr: «Εξελέγη Επίσκοπος στην Εκκλησία της Γεωργίας και κοιμήθηκε με ειρήνη το έτος 1896 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Ιανουαρίου — «Άγιος Γαβριήλ εκ Γεωργίας»",
+        "url": "https://www.saint.gr/01/25/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

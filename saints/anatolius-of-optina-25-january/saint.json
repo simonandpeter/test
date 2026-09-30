@@ -1,0 +1,65 @@
+{
+  "slug": "anatolius-of-optina-25-january",
+  "display_name": "Anatolius of Optina (25 January)",
+  "names": [
+    {
+      "form": "Ανατόλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιανουαρίου, «Όσιος Ανατόλιος της Όπτινα», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1824,
+      "latest": 1824,
+      "display": "1824",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε στο χωριό Μπόμπυλι της επαρχίας Καλούγκα της Ρωσίας το 1824 μ.Χ.»; the page's heading dates him «(1824 - 1894)»."
+    },
+    "death": {
+      "earliest": 1894,
+      "latest": 1894,
+      "display": "1894",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Όσιος Ανατόλιος κοιμήθηκε με ειρήνη το έτος 1894 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Ιανουαρίου — «Όσιος Ανατόλιος της Όπτινα»",
+        "url": "https://www.saint.gr/01/25/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

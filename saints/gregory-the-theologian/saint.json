@@ -71,8 +71,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Ιανουαρίου — «Άγιος Γρηγόριος ο Θεολόγος»",
+        "url": "https://www.saint.gr/01/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The same calendar keeps him a second time, five days later, in the joint feast of the Three Hierarchs: saint.gr's list for 30 Ιανουαρίου opens with «Άγιοι Τρεις Ιεράρχες» (https://www.saint.gr/01/30/index.aspx, read 30 September 2026), which is Basil the Great, Gregory the Theologian and John Chrysostom together. One attestation row per church is the schema, so the second day is recorded here and he renders on the twenty-fifth."
     },
     {
       "church": "serbian",
@@ -117,6 +127,44 @@
         "text": "With thy God-speaking tongue, O glorious one, thou didst unravel the tangles of the orators and adorn the Church with the robe of Orthodoxy woven from above; and wearing it, she cries out with us, thy children: rejoice, father, most lofty mind of theology.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Ὁ ποιμενικός αὐλός τῆς θεολογίας σου, τάς τῶν ῥητόρων ἐνίκησε σάλπιγγας· ὡς γάρ τά βάθη τοῦ Πνεύματος ἐκζητήσαντι, καί τά κάλλη τοῦ φθέγματος προσετέθη σοι. Ἀλλά πρέσβευε Χριστῷ τῷ Θεῷ, Πάτερ Γρηγόριε, σωθῆναι τάς ψυχάς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Γρηγόριος ο Θεολόγος — Ἀπολυτίκιον, Ἦχος α’.",
+        "url": "https://www.saint.gr/1161/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The shepherd's pipe of your theology overcame the trumpets of the orators; for because you searched out the depths of the Spirit, the beauties of speech were added to you as well. But intercede with Christ God, Father Gregory, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον",
+      "text": "Θεολόγῳ γλώττῃ σου, τάς συμπλοκάς τῶν ῥητόρων, διαλύσας ἔνδοξε, ὀρθοδοξίας χιτῶνα, ἄνωθεν, ἐξυφανθέντα τῇ Ἐκκλησίᾳ, ἐστόλισας, ὅν καί φοροῦσα, σύν ἡμῖν κράζει, τοῖς σοῖς τέκνοις· Χαίροις Πάτερ, θεολογίας ὁ νοῦς ὁ ἀκρότατος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Γρηγόριος ο Θεολόγος — Κοντάκιον, Ἦχος γ’. «Ἡ Παρθένος σήμερον»",
+        "url": "https://www.saint.gr/1161/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "With your theologian's tongue, glorious one, you undid the entanglements of the orators, and clothed the Church in the garment of Orthodoxy woven from above; and wearing it she cries out with us to her children: Rejoice, Father, the uttermost mind of theology.",
+        "rendered": "site"
+      }
     }
+  ],
+  "related": [
+    "nonna-mother-of-gregory-the-theologian",
+    "gorgonia",
+    "basil-the-great"
   ]
 }

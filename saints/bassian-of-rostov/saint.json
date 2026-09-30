@@ -1,0 +1,60 @@
+{
+  "slug": "bassian-of-rostov",
+  "display_name": "Bassian of Rostov",
+  "office": "Archbishop of Rostov",
+  "names": [
+    {
+      "form": "Βασιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιανουαρίου, «Άγιος Βασιανός Αρχιεπίσκοπος Ροστώβ Ρωσίας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1516,
+      "latest": 1516,
+      "display": "1516",
+      "basis": "attested",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1516 μ.Χ.»; the page's heading dates him «(; - 1516)». The same page's opening sentence says he «έζησε στην Ρωσία μεταξύ του 14ου και 15ου αιώνα μ.Χ.», which sits oddly beside the years 1506 and 1516 it then gives; both readings are the page's."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Ιανουαρίου — «Άγιος Βασιανός Αρχιεπίσκοπος Ροστώβ Ρωσίας»",
+        "url": "https://www.saint.gr/01/25/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,4 +6,6 @@ Sozomen tells of the visit of the Arian emperor Valens to Tomis in 369, as he wa
 
 The page gives him one other piece of work. He had an important part in drawing up and sending the documents for the transfer of the relics of Sabbas the Goth to Cappadocia, at the request of Basil the Great; and it was Bretanion who wrote the martyr's act of Sabbas the Goth.
 
-*After doxologia.ro's calendar for 25 ianuarie — [the day](https://doxologia.ro/25-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-ierarh-bretanion-episcopul-tomisului); read 19 September 2026.*
+The Greek calendar keeps him on the same twenty-fifth of January. saint.gr gives him four lines: that he lived in the fourth century and was bishop of Tomis, the present city of Constanța in Romania; that he was a confessor of the Orthodox faith; and that he suffered much from the heretical emperor Valens, a partisan of the Arians, whose reign it dates 364 to 378. The Greek page says nothing of Sabbas the Goth, and prints for him neither apolytikion nor kontakion.
+
+*After doxologia.ro's calendar for 25 ianuarie — [the day](https://doxologia.ro/25-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-ierarh-bretanion-episcopul-tomisului); read 19 September 2026; and after saint.gr's calendar for 25 Ιανουαρίου — [the day](https://www.saint.gr/01/25/index.aspx) and [the life](https://www.saint.gr/1313/saint.aspx), read 30 September 2026.*

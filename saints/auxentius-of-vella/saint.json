@@ -1,0 +1,65 @@
+{
+  "slug": "auxentius-of-vella",
+  "display_name": "Auxentius of Vella",
+  "names": [
+    {
+      "form": "Αυξέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιανουαρίου, «Άγιος Αυξέντιος ο Νεομάρτυρας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1690,
+      "latest": 1690,
+      "display": "1690",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Αυξέντιος γεννήθηκε στην επαρχία Βελλάς των Ιωαννίνων το 1690 μ.Χ., από γονείς ευσεβείς.»; the page's heading dates him «(1690 - 1720)»."
+    },
+    "death": {
+      "earliest": 1720,
+      "latest": 1720,
+      "display": "1720",
+      "basis": "attested",
+      "note": "saint.gr: «Τον αποκεφάλισαν στις 25 Ιανουαρίου 1720 μ.Χ. στην Κωνσταντινούπολη.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Ιανουαρίου — «Άγιος Αυξέντιος ο Νεομάρτυρας»",
+        "url": "https://www.saint.gr/01/25/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

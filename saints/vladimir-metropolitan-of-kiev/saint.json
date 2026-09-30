@@ -6,6 +6,11 @@
       "form": "Vladimir",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 ianuarie, «Sfântul Vladimir, Mitropolitul Kievului»."
+    },
+    {
+      "form": "Βλαδίμηρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιανουαρίου, «Άγιος Βλαδίμηρος ο Ιερομάρτυρας Μητροπολίτης Κιέβου», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Ιανουαρίου — «Άγιος Βλαδίμηρος ο Ιερομάρτυρας Μητροπολίτης Κιέβου»",
+        "url": "https://www.saint.gr/01/25/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -47,5 +61,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1848,
+      "latest": 1848,
+      "display": "1848",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε την 1η Ιανουαρίου 1848 μ.Χ. στο χωριό Μάλιε Μορόσκι της επαρχίας του Ταμπώφ της Ρωσίας»; the page's heading dates him «(1848 - 1918)»."
+    },
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "saint.gr: «Στις 23 Ιανουαρίου 1918 μ.Χ. οι επαναστάτες έφθασαν στη μονή των Σπηλαίων. Τον συνέλαβαν και τον εκτέλεσαν.»"
+    }
   }
 }

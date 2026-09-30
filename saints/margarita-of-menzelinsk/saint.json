@@ -1,0 +1,62 @@
+{
+  "slug": "margarita-of-menzelinsk",
+  "display_name": "Margarita of Menzelinsk",
+  "names": [
+    {
+      "form": "Μαργαρίτα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιανουαρίου, «Αγία Μαργαρίτα η Νέα Οσιομάρτυς», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "abbess"
+  ],
+  "related": [
+    "ambrose-of-optina"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "saint.gr's heading dates her «(; - 1918)», and the life puts her arrest in the days after «το Σεπτέμβριο του 1918 μ.Χ. έφυγαν τα στρατεύματα των «λευκών» από το Καζάν». The page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Ιανουαρίου — «Αγία Μαργαρίτα η Νέα Οσιομάρτυς»",
+        "url": "https://www.saint.gr/01/25/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

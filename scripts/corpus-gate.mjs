@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδοτοσ theodotus-1-january theodotus-of-marcianopolis theodotus-of-the-monastery-of-publius':
+    'three men. The new one is Theodotus, abbot of the monastery of Publius, whose page gives no year, kept on 25 Ιανουαρίου; the other two are read in the el-01-13 entry for this name form — the bare 1 Ιανουαρίου martyr and Marcianopolis, dead 305 to 311.',
+  'γαβριηλ gabriel-companion-of-sionios gabriel-of-georgia gabriel-of-lesnovo':
+    'three men. The new one is Gabriel of Georgia, a bishop dead 1896, kept on 25 Ιανουαρίου; the other two are read in the el-01-21 entry for this name form, the twelfth-century monk of Lesnovo on the 15th and the companion of Sionios on the 21st.',
+  'ανατολιοσ anatolius-of-odessa anatolius-of-optina-25-january':
+    'two men, two days apart on one calendar and both of the last two centuries: Anatolius of Optina, dead 1894, on 25 Ιανουαρίου, and Anatolius of Odessa, a bishop and hieromartyr dead 1938, on the 23rd, written earlier in this wave. An Optina elder is not a bishop shot under the Soviets, and the slug carries the day because Optina had more than one Anatolius.',
   'φιλημων philemon-companion-of-fortunianus philemon-of-karpathos':
     'two bishops, neither with a year, and two days four months apart: saint.gr keeps Philemon of Karpathos on 24 Ιανουαρίου and the corpus keeps the Philemon who is named with Fortunianus on the Greek 27 September. Two entries on one calendar are two commemorations, and a see is the only thing either page gives to tell them by.',
   'παυλοσ paul-brother-of-pausirius paul-disciple-of-dionysius-of-alexandria paul-of-damascus paul-of-obnora paul-of-zographou':
@@ -1269,7 +1275,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '351'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '363'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

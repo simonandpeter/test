@@ -1,0 +1,61 @@
+{
+  "slug": "moses-of-novgorod",
+  "display_name": "Moses of Novgorod",
+  "office": "Archbishop of Novgorod",
+  "names": [
+    {
+      "form": "Μωυσής",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιανουαρίου, «Άγιος Μωυσής ο Θαυματουργός Επίσκοπος Νόβγκοροντ», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop",
+    "wonderworker"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1362,
+      "latest": 1362,
+      "display": "1362",
+      "basis": "attested",
+      "note": "saint.gr: «στο μοναστήρι του Αρχαγγέλου Μιχαήλ στο Σκοβορόντσκ, κοιμήθηκε με ειρήνη το έτος 1362 μ.Χ.»; the page's heading dates him «(; - 1362)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Ιανουαρίου — «Άγιος Μωυσής ο Θαυματουργός Επίσκοπος Νόβγκοροντ»",
+        "url": "https://www.saint.gr/01/25/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

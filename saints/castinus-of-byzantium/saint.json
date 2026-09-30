@@ -1,0 +1,60 @@
+{
+  "slug": "castinus-of-byzantium",
+  "display_name": "Castinus of Byzantium",
+  "office": "Bishop of Byzantium",
+  "names": [
+    {
+      "form": "Καστίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιανουαρίου, «Όσιος Καστίνος επίσκοπος Βυζαντίου», with the rank word left off. His own page adds «(ή Κηστίνος)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 230,
+      "latest": 237,
+      "display": "230–237",
+      "basis": "traditional",
+      "note": "saint.gr: «Χρημάτισε Επίσκοπος Αργυρουπόλεως και επί επτά χρόνια Επίσκοπος Βυζαντίου από το 230 μέχρι το 237 μ.Χ.» The page gives no year of birth and none of death; these are the years of his episcopate as it prints them."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 25 Ιανουαρίου — «Όσιος Καστίνος επίσκοπος Βυζαντίου»",
+        "url": "https://www.saint.gr/01/25/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
