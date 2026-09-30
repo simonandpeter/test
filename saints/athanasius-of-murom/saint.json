@@ -1,0 +1,56 @@
+{
+  "slug": "athanasius-of-murom",
+  "display_name": "Athanasius of Murom",
+  "office": "Abbot of the Dormition monastery of Murom on Lake Onega",
+  "names": [
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαρτίου, «Όσιοι Λάζαρος και Αθανάσιος εκ Ρωσίας», with the rank word and the description left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr cites OCA among its own sources for this page, so a Russian row is likely to exist and has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαρτίου — «Όσιοι Λάζαρος και Αθανάσιος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/03/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/1246/saint.aspx, has its own «Ημερομηνία Εορτής» of 8 Μαρτίου and «Τύπος εορτής: Σταθερή», and carries both men; the day's line names Athanasius second and the page heads him first. Of him it says: «Ο Ηγούμενος Αθανάσιος αγωνίστηκε στο μοναστήρι του Οσίου Λαζάρου του Μουρόμ (ή Μούρμανσκ) στα μέσα του 15ου μ.Χ. αιώνα. Δυστυχώς, δεν υπάρχουν πληροφορίες για τη ζωή του.» — unhappily there is no information about his life. It adds that after his repose his body was placed in a chapel of its own and his chains are kept there as evidence of his struggles; that he is venerated locally at Lazarus's monastery together with him; that the veneration is old, and that in the second half of the 17th century the abbot Athanasius is described as «σεβάσμιος θαυματουργός», a venerable wonderworker; that a troparion and a kontakion in his honour are known to exist, neither of which the page prints; and it describes his iconography, the prayer-rope in the left hand and in the right a scroll reading «Άκου, αδελφέ μου, και μην αμαρτάνεις μέχρι το τέλος του αιώνα», and an icon of the two men at the Dormition monastery of Murom in which they stand at full length praying to the Saviour in heaven. The «μέσα του 15ου αιώνα» is a floruit and not a year of birth or of death, so no dates object is written from it."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "lazarus-of-murom"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

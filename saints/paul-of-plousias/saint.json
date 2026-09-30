@@ -7,6 +7,11 @@
       "form": "Pavel",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 martie, «Sfântul Ierarh Pavel Mărturisitorul, Episcopul Plusiadei»."
+    },
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαρτίου, «Όσιος Παύλος ο Ομολογητής επίσκοπος Πλουσιάδος», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαρτίου — «Όσιος Παύλος ο Ομολογητής επίσκοπος Πλουσιάδος»",
+        "url": "https://www.saint.gr/03/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/1243/saint.aspx, has its own «Ημερομηνία Εορτής» of 8 Μαρτίου and «Τύπος εορτής: Σταθερή». It puts him «κατά την περίοδο της εικονομαχίας (τέλη του 8ου και αρχές του 9ου αιώνα μ.Χ.)» and says he was elected bishop of Plousias, or Prousias, in Bithynia, called Kieros before; that he was one of the tireless defenders and fearless guardians and advocates of Orthodoxy while crowds of his own mind were hunted, exiled, tortured, imprisoned and killed, some with their noses and tongues cut off; that the likelihood of suffering the same did not check his zeal, so that he went from place to place encouraging resistance to the imperial orders, teaching that Christians owe no respect and no obedience to iconoclast patriarchs and bishops, and protesting against the unholy overturning they meant to impose on the Church; and that for this he was hunted, imprisoned and exiled, but stayed unshaken and gave up his breath fighting to the last moment. The period it names is a span of about half a century and not a date, so no dates object is written from it; the page gives no year of birth or of death. It prints no hymn and one distich: «Σάλπιγξ σιωπᾷ Παῦλος ὁ Πλουσιάδος, / Σάλπιγγος ἠχὴν τὴν τελευταίαν μένων»."
     },
     {
       "church": "serbian",

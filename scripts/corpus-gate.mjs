@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σιλβανοσ silvanus-8-march silvanus-of-palestine':
+    'Two men: the Silvanus of 8 March and Silvanus of Palestine on 18 January.',
+  'λαζαροσ lazarus-of-murom lazarus-of-tripoli-in-the-peloponnese':
+    'Two men: Murom on 8 March, and Tripoli in the Peloponnese on 23 February.',
+  'δομετιοσ dometius-8-march dometius-brother-of-maximus dometius-of-zographou':
+    'Three men: the Dometius saint.gr keeps alone on 8 March, the brother of Maximus on 19 January and Zographou on 22 September.',
+  'κυριλλοσ cyril-bishop-in-africa cyril-companion-of-photius cyril-of-alexandria cyril-of-kazan cyril-of-the-white-lake cyril-of-zographou':
+    'Six men on six Greek days. The new one is the bishop in Africa on 8 March; the other five are read in the el-03-05 entry for this name form.',
+  'αθανασιοσ athanasius-martyr-13-january athanasius-of-alexandria athanasius-of-attaleia athanasius-of-kargopol athanasius-of-murom athanasius-of-vologda athanasius-the-confessor':
+    'Seven now. The new one is Athanasius of Murom on 8 March; the other six are read in the el-01-18 entry for this name form.',
   'λαυρεντιοσ laurence-martyr-9-january laurence-of-canterbury laurence-of-salamina laurence-of-turov':
     'Four men on four Greek days: the martyr of 9 January, Canterbury on 3 February, Salamina on 7 March and Turov on 29 January.',
   'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-kazan john-of-lycopolis john-of-spetses john-of-syracuse john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-sinaite-venerable-martyr':

@@ -1,0 +1,50 @@
+{
+  "slug": "urbanus-8-march",
+  "display_name": "Urbanus (8 March)",
+  "names": [
+    {
+      "form": "Ουρβανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαρτίου, «Άγιοι Φηλικίτη, Ερένια, Ρογάτος, Φίλιξ, Ρογάτος, Βεάτος, Ουρβανός, Σιλβάνος και Μαμμίλος οι Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαρτίου — «Άγιοι Φηλικίτη, Ερένια, Ρογάτος, Φίλιξ, Ρογάτος, Βεάτος, Ουρβανός, Σιλβάνος και Μαμμίλος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/03/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/1248/saint.aspx, has its own «Ημερομηνία Εορτής» of 8 Μαρτίου and «Τύπος εορτής: Σταθερή», and its whole notice is one sentence for the company: «Οι Άγιοι αυτοί μάρτυρες, που αναφέρονται στο Ρωμαϊκό Μαρτυρολόγιο, μαρτύρησαν κατ' άγνωστο χρόνο στην Αφρική.» The page's own heading names the nine separately, «Αγιος Ουρβανος ο Μαρτυρας». The year is expressly unknown, so there is no dates object; there is no city, no persecutor, no manner of death, no relic, no hymn and no distich. The corpus keeps three saints whose English form is Urban — a child martyr, Urban of Macedonia and Urban the envoy of Nicomedia — and none of them is kept on this day in any calendar; the display name therefore carries the day rather than a bare name. Two of the nine names on this page are the same name, Ρογάτος, and nothing tells those two apart; both were left without folders for that reason."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "slug": "lazarus-of-murom",
+  "display_name": "Lazarus of Murom",
+  "office": "Founder and abbot of the Dormition monastery of Murom on Lake Onega",
+  "names": [
+    {
+      "form": "Λάζαρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαρτίου, «Όσιοι Λάζαρος και Αθανάσιος εκ Ρωσίας», with the rank word and the description left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "iconographer"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1281,
+      "latest": 1291,
+      "display": "about 1286",
+      "basis": "traditional",
+      "note": "saint.gr: «Στη αυτοβιογραφία του, ο Όσιος Λάζαρος αποκαλεί τον εαυτό του Ρωμαίο, γεννημένο στην Κωνσταντινούπολη γύρω στο 1286 μ.Χ.» — the «γύρω», about, is the page's own, and the bounds are half a decade either side of the year it names. His age at death, 105, agrees with it."
+    },
+    "death": {
+      "earliest": 1391,
+      "latest": 1391,
+      "display": "1391",
+      "basis": "traditional",
+      "note": "saint.gr: «ο Όσιος Λάζαρος εκοιμήθη εν Κύριο στις 8 Μαρτίου 1391 μ.Χ., σε ηλικία 105 ετών» — the page gives the day as well as the year, and it is the day the calendar keeps him on."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr cites OCA among its own sources for this page, so a Russian row is likely to exist and has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαρτίου — «Όσιοι Λάζαρος και Αθανάσιος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/03/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/1246/saint.aspx, has its own «Ημερομηνία Εορτής» of 8 Μαρτίου and «Τύπος εορτής: Σταθερή», and carries both men. It opens «Οι Όσιοι Λάζαρος και Αθανάσιος έζησαν στη Ρωσία και ασκήτεψαν στην περιοχή Μούρμανσκ και κοιμήθηκαν οσίως με ειρήνη», then gives Lazarus a long life from his own autobiography, written up by the elder Theodosius «από τις δηγήσεις του ίδιου του Οσίου Λάζαρου». It names his teachers, the elder Athanasius Diskotes of Constantinople and the bishop Basil of Cappadocia who sent him to Novgorod in 1343 as an iconographer; Basil archbishop of Novgorod, whom he served ten years until that man's death in 1352; the Novgorod merchant Ivan who owned the island and would not let him land; the local Lop and Chud who burnt his hut, beat him and drove him off; the icon of the Dormition that survived the fire and spoke to him; the chief of the Lop whose blind-born child he healed; his countrymen Eleazar, Eumenius and Nazarius, who came to him from Constantinople and later founded the monastery of the Forerunner in the Olonets country, and whose day the page gives as 4 Ιουνίου; and the bishop Moses of Novgorod (1352–1360), whose blessing, antimension and vessels let him build. It names the island twice and differently — «στο Νησί Μούχα στη Λίμνη Ονέγκα» and, in its own parenthesis, «(Νησί Μουρόμ στη Λίμνη Ονέγκα)» — and that wavering is the page's own. He chose the Athonite elder Theodosius as his successor and was buried in a chapel beside the church of the Dormition. No location is recorded in this folder although the page names several, because a coordinate is a reading of its own and none was made."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "athanasius-of-murom",
+    "moses-of-novgorod"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

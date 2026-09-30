@@ -1,0 +1,59 @@
+{
+  "slug": "dometius-8-march",
+  "display_name": "Dometius (8 March)",
+  "names": [
+    {
+      "form": "Δομέτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαρτίου, «Όσιος Δομέτιος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 363,
+      "latest": 363,
+      "display": "363",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Οσιος Δομετιος (; - 363)» and its one sentence is «Ο Όσιος Δομέτιος κοιμήθηκε με ειρήνη το έτος 363 μ.Χ.» No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαρτίου — «Όσιος Δομέτιος»",
+        "url": "https://www.saint.gr/03/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/1240/saint.aspx, has its own «Ημερομηνία Εορτής» of 8 Μαρτίου and «Τύπος εορτής: Σταθερή». Its whole notice is: «Ο Όσιος Δομέτιος κοιμήθηκε με ειρήνη το έτος 363 μ.Χ. Δεν έχουμε περισσότερες λεπτομέρειες για τον βίο του Οσίου.» — he fell asleep in peace in 363, and we have no further details of his life. The distich is «Ὁ Δομέτιος τῆς τελευτῆς τὸ χρέος, / Δι' ἐκβιβαστῶν ἐξέτισεν Ἀγγέλων». The corpus already keeps Dometius the Persian, a venerable-martyr whom the Romanian calendar puts on 7 august and whose death is placed in the same reign; this is not that man, because this page gives its Dometius a peaceful end and another day, and two entries on separate days are two commemorations. The identification is nonetheless thin, and the question is recorded in the reader's report."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

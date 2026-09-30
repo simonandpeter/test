@@ -1,0 +1,50 @@
+{
+  "slug": "dion",
+  "display_name": "Dion",
+  "names": [
+    {
+      "form": "Δίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαρτίου, «Άγιος Δίων ο Μάρτυρας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαρτίου — «Άγιος Δίων ο Μάρτυρας»",
+        "url": "https://www.saint.gr/03/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/1241/saint.aspx, has its own «Ημερομηνία Εορτής» of 8 Μαρτίου and «Τύπος εορτής: Σταθερή». Its whole notice is two sentences: «Ο Άγιος Μάρτυρας Δίων τελειώθηκε διά μάχαιρας. Δεν έχουμε περισσότερες λεπτομέρειες για τον βίο του Αγίου Μάρτυρα.» — he was perfected by the sword, and we have no further details of his life. There is no year, no place, no persecutor, no relic and no hymn. The distich is «Κἄν δεξιὰ σφάττει σε δεινὴ τοῦ πλάνου, / Ἡ δεξιὰ στέφει σε Δεσπότου Δίων». The site's name-gloss above the notice lists a king of Laconia, a Platonist of Syracuse, Dio Cassius the historian, a philosopher of Prusa and the Nereid Dione; all five are lexicon entries and none of them is this martyr."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

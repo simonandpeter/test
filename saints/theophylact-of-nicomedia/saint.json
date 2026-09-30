@@ -7,6 +7,11 @@
       "form": "Teofilact",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 martie, «Sfântul Ierarh Teofilact Mărturisitorul, Episcopul Nicomidiei»."
+    },
+    {
+      "form": "Θεοφύλακτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαρτίου, «Όσιος Θεοφύλακτος Επίσκοπος Νικομηδείας», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαρτίου — «Όσιος Θεοφύλακτος Επίσκοπος Νικομηδείας»",
+        "url": "https://www.saint.gr/03/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/1244/saint.aspx, has its own «Ημερομηνία Εορτής» of 8 Μαρτίου and «Τύπος εορτής: Σταθερή», and heads him «(; - 840)». It says he came from the East and lived in the years of Leo IV (775–780); that he came to Constantinople for his studies, got a name for wisdom and made friends among the higher officers of state and with the future patriarch Tarasius, then protoskrites; that when Tarasius was elected patriarch in 784, in succession to the patriarch Paul, he sent Theophylact with Michael, later bishop of Synada, to a monastery on the Euxine; that a little later, «πιθανόν περί το έτος 800 μ.Χ.» — probably about the year 800, the hedge being the page's own — he was elected bishop of Nicomedia; that he raised churches, the great hospital of the Unmercenaries Cosmas and Damian, homes for the old and for the poor, and collections for destitute widows and orphans, and served the sick himself. It names the six hierarchs who went up with the patriarch Nicephorus to reprove Leo V the Armenian (813–820) over the icons, quotes Theophylact's own words to the emperor, and says he was exiled to Strobilos, where he remained thirty years with patience and reposed in peace in 840; that under the empress Theodora (842–857) and the patriarch Methodius (842–846) his body was brought back to Nicomedia in 846 and laid in the church of Cosmas and Damian he had built himself; and that Theodore the Studite calls him a pillar of truth, the foundation of Orthodoxy, the guardian of piety, the support of the Church."
     },
     {
       "church": "serbian",
@@ -79,9 +94,52 @@
         "text": "You were shown to be a light to the ends of the earth, holy father Theophylact, preaching the Word who is one in being with the Father and the Spirit, and you gave light to the company of the godly fathers, showing yourself pleasing to the Most Holy Trinity; standing before it, pray without ceasing for us all.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Φύλαξ ἄγρυπνος, τῆς Ἐκκλησίας, καὶ καθαίρεσις, τῆς δυασεβείας, Ἱεράρχα Θεοφύλακτε πέφηνας, τοῦ γὰρ Χριστοῦ τὴν Εἰκόνα σεβόμενος, ὑπερορίας καὶ θλίψεις ὑπέμεινας, Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμιν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως, on his own page. It names him and names the exile for the icon, which is his whole story. The page also prints a second apolytikion, Ἦχος πλ. β’, «Λαθῶν ἐβίωσας Παναοίδιμε», which names nobody; the first and the kontakion are the two taken here. The reading «δυασεβείας» for δυσσεβείας is the page's own and is left as printed.",
+        "url": "https://www.saint.gr/1244/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A sleepless guardian of the Church and the pulling down of impiety thou wast shown to be, O hierarch Theophylact; for in revering the Icon of Christ thou didst endure banishment and afflictions. O venerable Father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τούς ἀσφαλεῖς.",
+      "text": "Ὡς ἀῤῥαγῆ, Ὀρθοδοξίας πρόμαχον, καί ἰσχυρόν, κακοδοξίας ἔλεγχον, εὐφημοῦμεν και βοῶμέν σοι, Ἱερομύστα Θεοφύλακτε, ἐκ πάσης ἐπηρείας διαφύλαττε, τοὺς πίστει ἑορτάζοντας τήν μνήμην σου, πρεσβεύων σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος β’, Τούς ἀσφαλεῖς, on his own page. It names him and calls him Ἱερομύστα, an initiate of holy things.",
+        "url": "https://www.saint.gr/1244/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As an unbreakable champion of Orthodoxy and a strong reproof of false belief we praise thee and cry out to thee, O Theophylact, initiate of the holy mysteries: keep from every assault those who in faith keep thy memory, interceding that our souls may be saved.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 840,
+      "latest": 840,
+      "display": "840",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Οσιος Θεοφυλακτος Επισκοπος Νικομηδειας (; - 840)» and says «ο Όσιος Θεοφύλακτος στο Στρόβιλο, όπου επί τριάντα έτη παρέμεινε με καρτερία και εκεί εκοιμήθηκε με ειρήνη το έτος 840 μ.Χ.» No year of birth is printed; doxologia.ro, from which this folder was first written, gave no year at all."
+    }
   }
 }

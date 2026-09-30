@@ -1,0 +1,51 @@
+{
+  "slug": "cyril-bishop-in-africa",
+  "display_name": "Cyril (8 March)",
+  "names": [
+    {
+      "form": "Κύριλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαρτίου, «Άγιος Κύριλλος ο Ιερομάρτυρας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαρτίου — «Άγιος Κύριλλος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/03/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/1247/saint.aspx, has its own «Ημερομηνία Εορτής» of 8 Μαρτίου and «Τύπος εορτής: Σταθερή». Its whole notice is one sentence: «Ο Άγιος Ιερομάρτυρας Κύριλλος, σύμφωνα με το Ρωμαϊκό Μαρτυρολόγιο, ήταν Επίσκοπος και μαρτύρησε στην Αφρική κατ' άγνωστο χρόνο.» — according to the Roman Martyrology he was a bishop and was martyred in Africa at an unknown time. There is no see, no city, no persecutor, no manner of death, no relic, no hymn and no distich, and the year is expressly unknown, so there is no dates object. No office is recorded either: the page says he was a bishop but never says of where. The display name carries the day because nothing on the page distinguishes him otherwise, and the slug carries Africa because that is the one thing the page does give."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

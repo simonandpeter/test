@@ -7,6 +7,11 @@
       "form": "Ermis",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 aprilie, «Sfântul Apostol Ermis»."
+    },
+    {
+      "form": "Ερμής",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαρτίου, «Άγιος Ερμής ο Απόστολος», with the rank word and the title left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαρτίου — «Άγιος Ερμής ο Απόστολος»",
+        "url": "https://www.saint.gr/03/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/1242/saint.aspx, has its own «Ημερομηνία Εορτής» of 8 Μαρτίου and «Τύπος εορτής: Σταθερή». Its whole notice is: «Τον Άγιο Ερμή αναφέρει ο απόστολος Παύλος στην προς Ρωμαίους επιστολή του (ιστ' 14). Κατά την παράδοση έγινε επίσκοπος Δαλματίας και απεβίωσε ειρηνικά. Στον Συναξαριστή Delehaye καλείται Έρμυλος. Στον δε Παρισινό Κώδικα 13 φ. 296 η μνήμη του φέρεται κατά την 8η Απριλίου μετά του Ηρωδίωνος, Ασύγκριτου, Φλέγοντος, Ρούφου, Επαφρά και Αγάβου.» Romans 16:14 and the tradition of the see of Dalmatia are what identify him as this folder's man. The page names two complications and neither is acted on: that Delehaye's synaxarist calls him Έρμυλος — the corpus keeps a Hermylus, the deacon of Singidunum, whom saint.gr itself keeps on 13 Ιανουαρίου, and he is another man; and that the Parisian Codex 13 fol. 296 puts his memory on 8 April with Herodion, Asyncritus, Phlegon, Rufus, Epaphras and Agabus, which is the very company and the very day this folder's Romanian row already records. The Greek row therefore records 8 Μαρτίου, the day page read, and the codex's 8 April stands as the page's own second day. There is no year and no hymn."
     },
     {
       "church": "serbian",
