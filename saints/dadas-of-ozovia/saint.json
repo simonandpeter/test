@@ -11,6 +11,11 @@
       "form": "Dada",
       "lang": "ro",
       "note": "The same man, spelled so in the closing sentence of the life doxologia.ro prints for the three: «Sfinţii Mucenici Maxim, Dada şi Cvintilian»."
+    },
+    {
+      "form": "Δάδας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Απριλίου, «Άγιοι Κυντιλλιανός, Μάξιμος και Δάδας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Απριλίου — «Άγιοι Κυντιλλιανός, Μάξιμος και Δάδας»",
+        "url": "https://www.saint.gr/04/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Απριλίου εκάστου έτους», the same day as the listing, and gives the three no years: it sets them only in the reigns of «Μαξιμιανού (285 - 305 μ.Χ.) και Διοκλητιανού (284 - 305 μ.Χ.)» and under «τῶν ὑπάτων Γαβιβίου και Ταρκυΐνου», so no `dates` were taken. **The Greek keeps the three a fortnight before the Romanian**, which prints them on 28 aprilie; both pages are the same company — the three readers of the Church from Ozovia, beheaded together — and the Greek adds their office, the consuls' names, and the resting place of the relics at Constantinople, in the church of the Most Holy Mother of God «ἐν τοὶς Βιγλεντίου», where their synaxis was kept. The page prints no hymn. The corpus's other Dadas, the companion of Gobdelaas with a Greek row on 29 Σεπτεμβρίου, is another man; nothing on this page joins them."
     },
     {
       "church": "serbian",

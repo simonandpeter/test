@@ -1,0 +1,52 @@
+{
+  "slug": "christopher-of-saint-sabbas",
+  "display_name": "Christopher of the monastery of Saint Sabbas",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Χριστόφορος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Απριλίου, «Άγιος Χριστόφορος ο Οσιομάρτυρας», with the rank words left off."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Απριλίου — «Άγιος Χριστόφορος ο Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/04/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Απριλίου εκάστου έτους», the same day as the listing, and gives him no years. The whole body is one sentence and it says of itself «Δεν έχουμε περισσότερες λεπτομέρειες για τον βίο και το Μαρτύριο του Αγίου», we have no further details of the saint's life and martyrdom — a statement of what the source lacks, not a doubt about the man, so the entry was drafted and the sentence quoted in the life. He is none of the three other Christophers in the corpus: not the great-martyr of the third century whom the same site keeps on 9 Μαΐου, not Christopher the Roman, and not Christopher Papoulakos; the monastery of Saint Sabbas is what identifies him, exactly as it does the Bacchus the same calendar keeps on 11 Απριλίου. The page prints no couplet, no relic and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

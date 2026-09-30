@@ -6,6 +6,11 @@
       "form": "Elefterie Persul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 aprilie, «Sfântul Mucenic Elefterie Persul»."
+    },
+    {
+      "form": "Ελευθέριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Απριλίου, «Άγιος Ελευθέριος ο Πέρσης», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Απριλίου — «Άγιος Ελευθέριος ο Πέρσης»",
+        "url": "https://www.saint.gr/04/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Απριλίου εκάστου έτους», the same day as the listing, and gives him no years at all, so no `dates` were taken. It names the bishop he went to be taught by, Symeon, which the Romanian line does not, and it prints no hymn. He is none of the four other Eleutheriuses in the corpus."
     },
     {
       "church": "serbian",

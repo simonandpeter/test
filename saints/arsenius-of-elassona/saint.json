@@ -1,0 +1,88 @@
+{
+  "slug": "arsenius-of-elassona",
+  "display_name": "Arsenius of Elassona",
+  "sex": "male",
+  "office": "Archbishop of Elassona",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "names": [
+    {
+      "form": "Αρσένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Απριλίου, «Άγιος Αρσένιος Αρχιεπίσκοπος Ελασσώνος», with the rank word and the see left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 1548,
+      "latest": 1548,
+      "display": "1548",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Αρσένιος γεννήθηκε στην Ευρυτανία, το έτος 1548 μ.Χ., από γονείς ευσεβείς και φιλόθεους, τον Θεόδωρο και την Χριστοδούλη», and the page's heading has «(1548 - 1625)»."
+    },
+    "death": {
+      "earliest": 1625,
+      "latest": 1625,
+      "display": "1625",
+      "basis": "traditional",
+      "note": "saint.gr: «αλλά έμεινε οριστικά στη Ρωσία, όπου και κοιμήθηκε με ειρήνη το έτος 1625 μ.Χ.», and the page's heading has «(1548 - 1625)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Απριλίου — «Άγιος Αρσένιος Αρχιεπίσκοπος Ελασσώνος»",
+        "url": "https://www.saint.gr/04/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(1548 - 1625)». The day's line and its own verses call him Αρχιεπίσκοπος, while the page's prose has him elected Επίσκοπος «Δημονίκου και Ελασσώνος» in 1574; the office here follows the day's line and the title he gave himself, and the prose's form is in the life. It says plainly of one thing that it does not know it: «Που έμαθε τα γράμματα δεν μας είναι γνωστό», where he learnt his letters is not known to us. The picture captions put his body in a shrine inside the metropolitan church of Suzdal in Russia, where it had been buried. He is none of the nine other Arseniuses in the corpus."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α'.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Ελασσώνος ποιμένα Θετταλίας το κλέισμα και της Μοσχοβίας απάσης περιβόητον άκουσμα. Αρσένιον υμνήσωμεν πιστοί, βοώντες μετά πόθου ευλαβώς· φύλαττε και σκέπε πάτερ αεί τους πίστει σοι κραυγάζοντας· δόξα τω σε δοξάσαντι Χριστό, δόξα τω σε θαυμαστώσαντι, δόξα τω δωρουμένω δια σου χάριν και έλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος α', Τῆς ἐρήμου πολίτης, on the page of Άγιος Αρσένιος Αρχιεπίσκοπος Ελασσώνος. It is his own and names him, his see and Muscovy; the page prints it in monotonic spelling, as it stands here.",
+        "url": "https://www.saint.gr/1890/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The shepherd of Elassona, the glory of Thessaly and the far-renowned report of all Muscovy — Arsenius let us the faithful hymn, crying to him with longing and reverence: guard and shelter always, O father, those who cry to thee in faith. Glory to Christ who glorified thee, glory to him who made thee wonderful, glory to him who gives grace and mercy through thee.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

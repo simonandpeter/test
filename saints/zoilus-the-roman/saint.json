@@ -1,0 +1,51 @@
+{
+  "slug": "zoilus-the-roman",
+  "display_name": "Zoilus the Roman",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ζωΐλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Απριλίου, «Άγιος Ζωΐλος ο Ρωμαίος», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Απριλίου — «Άγιος Ζωΐλος ο Ρωμαίος»",
+        "url": "https://www.saint.gr/04/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Απριλίου εκάστου έτους», the same day as the listing, and gives him no years. The whole body of the page is one sentence: «Ο Άγιος Ζωΐλος μαρτύρησε αφού τον κρέμασαν επάνω σε ξύλο». The corpus holds nobody else of this name, so there was no namesake to weigh. The day's line calls him ο Ρωμαίος, the Roman, and the page's body does not repeat it. The page prints no relic and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

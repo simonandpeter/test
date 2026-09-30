@@ -1,0 +1,70 @@
+{
+  "slug": "stephen-bekh",
+  "display_name": "Stephen (Bekh)",
+  "sex": "male",
+  "office": "Bishop of Izhevsk",
+  "types": [
+    "hieromartyr",
+    "bishop",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Απριλίου, «Άγιος Στέφανος ο Νέος ο Ιερομάρτυρας», with the rank words and the epithet left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 1872,
+      "latest": 1872,
+      "display": "1872",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιερομάρτυς Στέφανος, κατά κόσμον Βαλέριος Στεπάνοβιτς Μπεκχ, γεννήθηκε το έτος 1872 μ.Χ. στο Ζιτομίρ, κοντά στην περιοχή Βολογκντά», and the page's heading has «(1872 - 1933)»."
+    },
+    "death": {
+      "earliest": 1933,
+      "latest": 1933,
+      "display": "1933",
+      "basis": "traditional",
+      "note": "saint.gr: «Στις 7 Σεπτεμβρίου 1932 μ.Χ. τον κλείνουν και πάλι στη φυλακή, όπου μετά από κακουχίες και βασάνους, το έτος 1933 μ.Χ., παρέδωσε το πνεύμα του στον Κύριο», and the page's heading has «(1872 - 1933)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Απριλίου — «Άγιος Στέφανος ο Νέος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/04/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(1872 - 1933)». The day's line calls him ο Νέος, the New, which is not carried into the display name because the corpus already keeps `stephen-the-new` of the eighth century; the surname the page gives, Μπεκχ, is what tells him from the twenty other Stephens, and it is written here the way the corpus writes the other Russian new-martyrs' surnames. The page gives no day of death, only the year, and it prints no couplet and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

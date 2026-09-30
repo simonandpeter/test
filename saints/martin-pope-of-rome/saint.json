@@ -90,6 +90,40 @@
         "text": "A rule of faith and an image of gentleness, a teacher of abstinence: so the truth of things has shown you to your flock. Therefore you gained by humility the things on high, and by poverty the things that are rich. Father and hierarch Martin, entreat Christ God to save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ'.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείοις δόγμασι, τῆς εὐσέβειας, ὑπεστήριξας, τὴν Ἐκκλησίαν, ὦ Μαρτίνε ἱεράρχα Θεόσοφε, τὸν γὰρ Χριστὸν διπλοῦν ὄντα ταὶς φύσεσιν, ὁμολογήσας τὴν πλάνην κατήσχυνας. Πάτερ Ὅσιε Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ', Θείας πίστεως, on the page of Άγιος Μαρτίνος πάπας Ρώμης και δύο Επισκόπων, saint.gr's 13 Απριλίου. It is his own and names him.",
+        "url": "https://www.saint.gr/261/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the divine teachings of piety thou didst uphold the Church, O Martin, hierarch wise in God; for confessing Christ to be twofold in his natures thou didst put the error to shame. Venerable father, entreat Christ God that great mercy be given to us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ.",
+      "text": "Ὡς Ἱεράρχης τῶν ἀῤῥήτων και διδάσκαλος, Θεολογίας ἀληθοῦς ἐκφάντωρ πέφηνας, καὶ ἀνέβλυσας Μαρτῖνε δογμάτων ρεῖθρα· Τὸν Χριστὸν γὰρ ἐν δυσί τελείαις φύσεσι, καὶ θελήσεσι πανσόφως ἐδογμάτισας, τοῖς βοῶσί σοι, χαίροις Πάτερ πανόλβιε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ, on the page of Άγιος Μαρτίνος πάπας Ρώμης και δύο Επισκόπων, saint.gr's 13 Απριλίου. It is his own, names him, and states the two wills the Monothelites denied.",
+        "url": "https://www.saint.gr/261/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a hierarch and teacher of things unspeakable thou wast shown a declarer of the true theology, and didst pour out streams of doctrine, O Martin; for in all wisdom thou didst teach Christ in two perfect natures and two wills, to those who cry to thee: rejoice, all-blessed father.",
+        "rendered": "site"
+      }
     }
   ]
 }

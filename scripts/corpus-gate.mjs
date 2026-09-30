@@ -115,6 +115,22 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-kalita john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kazan john-of-lycopolis john-of-manglisi john-of-rouphinianai john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-well john-of-vilnius john-of-yuryevets john-philosopher-of-georgia john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-with-minas-and-david':
+    'Thirty-four now. The new one is John of Vilnius on 14 April; the others are read in the el-04-12 entry for this name form.',
+  'ευσταθιοσ eustathius-of-antioch eustathius-of-kios eustathius-of-vilnius eustathius-the-roman':
+    'Four men: Antioch on 21 February, Kios on 29 March, Vilnius on 14 April and the Roman on 28 September.',
+  'δημητριοσ demetrius-ivanov demetrius-of-chios demetrius-of-constantinople demetrius-of-georgia demetrius-of-prilutsk demetrius-the-peloponnesian demetrius-the-skeuophylax demetrius-tornaras demos-the-fisherman':
+    'Nine now. The new one is Demetrius the Peloponnesian on 14 April; the others are read in the el-04-10 entry for this name form.',
+  'αντωνιοσ anthony-meskhi anthony-of-constantinople anthony-of-georgia anthony-of-krasnokholmsk anthony-of-novgorod anthony-of-tobolsk anthony-of-vologda anthony-of-zadonsk anthony-of-zographou anthony-the-great antonius-the-presbyter antony-companion-of-bassus antony-of-novgorod antony-of-vilnius antony-son-of-john-of-syracuse antony-the-athenian antony-the-martyr-1-march':
+    'Seventeen now. The new one is Antony of Vilnius on 14 April, one of the three the day keeps; the others are read in the el-04-01 entry for this name form.',
+  'ζωιλοσ zoilus-companion-of-zeno zoilus-the-roman':
+    'Two men: the companion of Zeno on 3 March and Zoilus the Roman on 13 April.',
+  'στεφανοσ stephen-27-february stephen-bekh stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-placidianae stephen-of-triglia stephen-xylinites':
+    'Eight now. The new one is Stephen Bekh on 13 April; the others are read in the el-03-24 entry for this name form.',
+  'χριστοφοροσ christopher christopher-of-saint-sabbas':
+    'Two men: the Christopher all four calendars keep on 9 May, and Christopher of the monastery of Saint Sabbas on 13 April.',
+  'αρσενιοσ arsenios-of-paros arsenius-bishop-of-tver arsenius-companion-of-elias-speleotes arsenius-of-corfu arsenius-of-elassona arsenius-of-ikalto arsenius-of-rostov':
+    'Seven now. The new one is Arsenius of Elassona on 13 April; the others are read in the el-03-02 entry for this name form, where the 2 March pair is the Tver reading.',
   'μηνασ menas-of-zographou menas-the-martyr-31-august minas-with-david-and-john':
     'Three men: Zographou on 22 September, the martyr of 31 August and the Minas the 12 April page names with David and John.',
   'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-kalita john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kazan john-of-lycopolis john-of-manglisi john-of-rouphinianai john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-well john-of-yuryevets john-philosopher-of-georgia john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-with-minas-and-david':
