@@ -1,0 +1,64 @@
+{
+  "slug": "anatolius-of-raithu",
+  "display_name": "Anatolius of Raithu",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ανατόλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Φεβρουαρίου, «Όσιοι Ανδρέας και Ανατόλιος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "andrew-of-mytilene",
+    "euthymius-the-great"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Όσιοι Πατέρες Ανδρέας και Ανατόλιος έζησαν και ασκήτεψαν στην Εκκλησία των Ιεροσολύμων κατά τον 5ο αιώνα μ.Χ.». The page gives no year of birth and no year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "The row is the day page this folder was read from. Its life page adds «Η μνήμη του Οσίου Ανατολίου επαναλαμβάνεται και στις 26 Απριλίου» — Anatolius's memory is repeated on 26 April as well, where Andrew's is not. One attestation row per church is the schema, so the second day is recorded here. Read 30 September 2026."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Φεβρουαρίου — «Όσιοι Ανδρέας και Ανατόλιος»",
+        "url": "https://www.saint.gr/02/21/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

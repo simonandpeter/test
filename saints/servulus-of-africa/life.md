@@ -1,0 +1,7 @@
+# Servulus of Africa
+
+saint.gr's calendar for 21 Φεβρουαρίου names seven men in one line — «Άγιοι Βερούλιος, Σεκουνδίνος, Σιρίκιος, Φελίσιος, Σέρβουλος, Σατουρνίνος, Φουρτουνάτος και οι συν αυτοίς Μάρτυρες», Verulus, Secundinus, Siricius, Felicius, Servulus, Saturninus, Fortunatus and the martyrs with them — and the page standing under that line gives one sentence and nothing else: «Οι Άγιοι αυτοί Μάρτυρες μαρτύρησαν στην Αφρική, χωρίς να γνωρίζουμε περισσότερες λεπτομέρειες για τον βίο τους», these holy martyrs were martyred in Africa, without our knowing further details of their life.
+
+Because the line names each of the seven, each is kept here: Servulus, with [Verulus](/saints/verulus-of-africa), [Secundinus](/saints/secundinus-of-africa), [Siricius](/saints/siricius-of-africa), [Felicius](/saints/felicius-of-africa), [Saturninus](/saints/saturninus-of-africa) and [Fortunatus](/saints/fortunatus-of-africa). Those the line calls the martyrs with them are neither counted nor named, so they are not kept here. The page gives no year, no emperor, no city in Africa, no manner of death, no relics, no couplet and no hymn; what it prints above the sentence is the seven names again, each with its own rank word.
+
+*After saint.gr's calendar for 21 Φεβρουαρίου — [the day](https://www.saint.gr/02/21/index.aspx) and [the life](https://www.saint.gr/3750/saint.aspx); read 30 September 2026.*

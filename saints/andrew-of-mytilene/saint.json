@@ -1,0 +1,63 @@
+{
+  "slug": "andrew-of-mytilene",
+  "display_name": "Andrew of Mytilene",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ανδρέας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Φεβρουαρίου, «Όσιοι Ανδρέας και Ανατόλιος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "anatolius-of-raithu",
+    "euthymius-the-great"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Όσιοι Πατέρες Ανδρέας και Ανατόλιος έζησαν και ασκήτεψαν στην Εκκλησία των Ιεροσολύμων κατά τον 5ο αιώνα μ.Χ.». The page gives no year of birth and no year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Φεβρουαρίου — «Όσιοι Ανδρέας και Ανατόλιος»",
+        "url": "https://www.saint.gr/02/21/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

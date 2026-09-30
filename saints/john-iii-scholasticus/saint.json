@@ -1,0 +1,61 @@
+{
+  "slug": "john-iii-scholasticus",
+  "display_name": "John III Scholasticus",
+  "sex": "male",
+  "office": "Patriarch of Constantinople",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Φεβρουαρίου, «Άγιος Ιωάννης Γ' Πατριάρχης Κωνσταντινούπολης ο από Σχολαστικών», with the rank word, the numeral and the see left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 577,
+      "latest": 577,
+      "display": "577",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Ιωάννης κοιμήθηκε με ειρήνη το έτος 577 μ.Χ.», and its heading prints «(; - 577)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Φεβρουαρίου — «Άγιος Ιωάννης Γ' Πατριάρχης Κωνσταντινούπολης ο από Σχολαστικών»",
+        "url": "https://www.saint.gr/02/21/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

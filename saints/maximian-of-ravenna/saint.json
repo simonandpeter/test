@@ -1,0 +1,68 @@
+{
+  "slug": "maximian-of-ravenna",
+  "display_name": "Maximian of Ravenna",
+  "sex": "male",
+  "office": "Archbishop of Ravenna",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "names": [
+    {
+      "form": "Μαξιμιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Φεβρουαρίου, «Άγιος Μαξιμιανός, Αρχιεπίσκοπος Ραβέννης», with the rank word and the see left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 498,
+      "latest": 498,
+      "display": "498",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Μαξιμιανός γεννήθηκε το έτος 498 μ.Χ. στην περιοχή της Ιστρίας της Ιταλίας»."
+    },
+    "death": {
+      "earliest": 556,
+      "latest": 556,
+      "display": "556",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Μαξιμιανός κοιμήθηκε με ειρήνη το έτος 556 μ.Χ.», and its heading prints «(; - 556)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Φεβρουαρίου — «Άγιος Μαξιμιανός, Αρχιεπίσκοπος Ραβέννης»",
+        "url": "https://www.saint.gr/02/21/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "slug": "felicius-of-africa",
+  "display_name": "Felicius of Africa",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Φελίσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Φεβρουαρίου, «Άγιοι Βερούλιος, Σεκουνδίνος, Σιρίκιος, Φελίσιος, Σέρβουλος, Σατουρνίνος, Φουρτουνάτος και οι συν αυτοίς Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "related": [
+    "verulus-of-africa",
+    "secundinus-of-africa",
+    "siricius-of-africa",
+    "servulus-of-africa",
+    "saturninus-of-africa",
+    "fortunatus-of-africa"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Φεβρουαρίου — «Άγιοι Βερούλιος, Σεκουνδίνος, Σιρίκιος, Φελίσιος, Σέρβουλος, Σατουρνίνος, Φουρτουνάτος και οι συν αυτοίς Μάρτυρες»",
+        "url": "https://www.saint.gr/02/21/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

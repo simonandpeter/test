@@ -6,6 +6,11 @@
       "form": "Timotei",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 februarie, «Sfântul Cuvios Timotei»."
+    },
+    {
+      "form": "Τιμόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Φεβρουαρίου, «Όσιος Τιμόθεος ὁ ἐν Συμβόλοις», with the rank word and the place clause left off."
     }
   ],
   "sex": "male",
@@ -28,6 +33,40 @@
       },
       "english": {
         "text": "O God of our fathers, who dealest with us always according to Thy gentleness, take not Thy mercy from us, but by the prayers of our fathers direct our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Φερωνύμως τιμήσας Θεὸν Τιμόθεε, διὰ ζωῆς ἐνάρετου ἀπὸ παιδὸς ὡς σοφός, ἐτιμήθης παρ' αὐτοῦ ἀξίως Ὅσιε τῶν γὰρ ἐνθέων δωρεῶν, σκεῦος ὤφθης ἱερόν, παρέχων ἐνὶ ἐκάστω, πολυτελεῖς χορηγίας, πρὸς σωτηρίαν τῶν ψυχῶν ἠμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Τιμόθεος ὁ ἐν Συμβόλοις, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3742/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Honouring God as your name says, Timothy, by a life of virtue from childhood, wisely, you were worthily honoured by him in return, venerable one; for you were shown a holy vessel of the gifts of God, furnishing to each a costly supply for the salvation of our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ὡς ἀστήρ πολύφωτος ἐκ τῆς ἑῴας, ἀναλάμψας ηὔγασας, ἐν ταῖς καρδίαις τῶν πιστῶν, τάς ἀρετάς τῶν θαυμάτων σου, θαυματοφόρε παμμάκαρ Τιμόθεε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Τιμόθεος ὁ ἐν Συμβόλοις, Λειτουργικά κείμενα: Κοντάκιον. A Kathisma follows it on the page and is not copied here, the corpus keeping no kind for it.",
+        "url": "https://www.saint.gr/3742/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining out like a star of many lights from the east, you lit up in the hearts of the faithful the virtues of your wonders, all-blessed wonder-bearing Timothy.",
         "rendered": "site"
       }
     }
@@ -54,8 +93,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Φεβρουαρίου — «Όσιος Τιμόθεος ὁ ἐν Συμβόλοις»",
+        "url": "https://www.saint.gr/02/21/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

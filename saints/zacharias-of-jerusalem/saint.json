@@ -1,0 +1,69 @@
+{
+  "slug": "zacharias-of-jerusalem",
+  "display_name": "Zacharias of Jerusalem",
+  "sex": "male",
+  "office": "Patriarch of Jerusalem",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "names": [
+    {
+      "form": "Ζαχαρίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Φεβρουαρίου, «Άγιος Ζαχαρίας Πατριάρχης Ιεροσολύμων», with the rank word and the see left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 551,
+      "latest": 600,
+      "display": "second half of the 6th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ζαχαρίας γεννήθηκε κατά το δεύτερο ήμισυ του 6ου αιώνα μ.Χ.». The page gives no year."
+    },
+    "death": {
+      "earliest": 632,
+      "latest": 632,
+      "display": "632",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Ζαχαρίας κοιμήθηκε με ειρήνη το έτος 632 μ.Χ.», and its heading prints «(; - 632)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "The row is the day page this folder was read from. The life page closes with a note of its own: «Στο Ιεροσολυμιτικό Κανοναριό η μνήμη του Αγίου αναφέρεται στις 31 Ιανουαρίου και στις 28 Οκτωβρίου» — the Jerusalem Kanonarion puts his memory on 31 January and on 28 October. One attestation row per church is the schema, so those two days are recorded here. Read 30 September 2026."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Φεβρουαρίου — «Άγιος Ζαχαρίας Πατριάρχης Ιεροσολύμων»",
+        "url": "https://www.saint.gr/02/21/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

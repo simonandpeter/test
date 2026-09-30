@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σατουρνινοσ saturninus-martyr-6-february saturninus-of-africa':
+    'Two men: the martyr saint.gr keeps on 6 February, and the African on 21 February.',
+  'ζαχαριασ zacharias-father-of-the-forerunner zacharias-of-arta zacharias-of-jerusalem zacharias-son-of-barachias':
+    'Four men on four Greek days: 5 September, 20 January, 21 February (the patriarch of Jerusalem) and 8 February.',
+  'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-iii-scholasticus john-koulakiotis john-mauropous john-of-edessa john-of-irenopolis john-of-kazan john-of-lycopolis john-of-spetses john-of-syracuse john-son-of-xenophon john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-sinaite-venerable-martyr':
+    'Sixteen now. The new one is John III Scholasticus, patriarch of Constantinople, on 21 February; the other fifteen are read in the el-02-15 entry for this name form, where the two 6 February men are Lycopolis and the prophet of Gaza.',
+  'γεωργιοσ george-konissky george-of-alikianos george-of-amastris george-of-develtos george-of-kratovo george-of-megara george-of-vladimir george-paizanos-of-mytilene george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian':
+    'Twelve now. The new one is the bishop of Amastris on 21 February; the other eleven are read in the el-02-14 entry for this name form.',
+  'ανδρεασ andrew-6-january andrew-of-mytilene':
+    'Two men: the one saint.gr keeps on 6 January, and the neomartyr of Mytilene on 21 February.',
+  'ανατολιοσ anatolius-of-odessa anatolius-of-optina-25-january anatolius-of-raithu':
+    'Three men on three Greek days: Odessa on 23 January, Optina on 25 January and Raithu on 21 February.',
   'πλωτινοσ plotinus-20-february plotinus-companion-of-saturninus':
     'Two men: the one saint.gr keeps alone on 20 February, and the companion of Saturninus on 12 February.',
   'μακαριοσ macarius-companion-of-eudoxius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-metropolitan-of-moscow macarius-of-ierissos macarius-of-kios macarius-of-paphos macarius-of-pisma macarius-of-valaam macarius-of-zhabyn macarius-the-confessor':

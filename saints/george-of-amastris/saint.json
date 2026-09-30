@@ -1,0 +1,63 @@
+{
+  "slug": "george-of-amastris",
+  "display_name": "George of Amastris",
+  "sex": "male",
+  "office": "Bishop of Amastris",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Φεβρουαρίου, «Άγιος Γεώργιος επίσκοπος Αμάστριδος», with the rank word and the see left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 805,
+      "latest": 805,
+      "display": "805",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Γεώργιος κοιμήθηκε με ειρήνη το έτος 805 μ.Χ.», and its heading prints «(; - 805)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "The row is the day page this folder was read from. Its life page adds «Η μνήμη του Αγίου επαναλαμβάνεται και την 25η Οκτωβρίου» — his memory is repeated on 25 October as well. One attestation row per church is the schema, so the second day is recorded here. Read 30 September 2026."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Φεβρουαρίου — «Άγιος Γεώργιος επίσκοπος Αμάστριδος»",
+        "url": "https://www.saint.gr/02/21/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

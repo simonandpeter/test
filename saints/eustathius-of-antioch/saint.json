@@ -7,6 +7,11 @@
       "form": "Eustatie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 februarie, «Sfântul Ierarh Eustatie, Arhiepiscopul Antiohiei»."
+    },
+    {
+      "form": "Ευστάθιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Φεβρουαρίου, «Άγιος Ευστάθιος Αρχιεπίσκοπος Αντιοχείας της Μεγάλης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Φεβρουαρίου — «Άγιος Ευστάθιος Αρχιεπίσκοπος Αντιοχείας της Μεγάλης»",
+        "url": "https://www.saint.gr/02/21/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -48,5 +62,44 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 260,
+      "latest": 260,
+      "display": "260",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε στη Σίδη της Παμφυλίας (άλλοι θεωρούν ότι καταγόταν από τους Φιλίππους της Μακεδονίας) το 260 μ.Χ.», and its heading prints «(260 - 360)»."
+    },
+    "death": {
+      "earliest": 360,
+      "latest": 360,
+      "display": "360",
+      "basis": "attested",
+      "note": "saint.gr: exiled to Trajanopolis in Thrace, «όπου και εκοιμήθη οσιακά το 360 μ.Χ.»."
+    }
+  },
+  "related": [
+    "hosius-of-cordoba",
+    "john-chrysostom"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείας ἔμπλεως σοφίας πέλων, ὁμοούσιον Πατρὶ τὸν Λόγον ἐν τῇ συνόδῳ τῇ πρώτῃ ἐκήρυξας, καὶ διωγμοῖς ὁμιλήσας καὶ θλίψεσιν δόξης ἀρρήτου μετέσχες, Εὐστάθιε. Πάτερ ὅσιε Χριστὸν τὸν Θεὸν ἱκέτευε δωρίσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ευστάθιος Αρχιεπίσκοπος Αντιοχείας της Μεγάλης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3743/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being full of divine wisdom, you proclaimed at the first council the Word to be of one essence with the Father; and having met with persecutions and afflictions, you shared in unspeakable glory, Eustathius. Venerable father, entreat Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
