@@ -7,6 +7,11 @@
       "form": "Tarasie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 februarie, «Sfântul Ierarh Tarasie, Patriarhul Constantinopolului»."
+    },
+    {
+      "form": "Ταράσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Φεβρουαρίου, «Άγιος Ταράσιος Αρχιεπίσκοπος Κωνσταντινούπολης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Φεβρουαρίου — «Άγιος Ταράσιος Αρχιεπίσκοπος Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/02/25/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -47,5 +61,87 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 806,
+      "latest": 806,
+      "display": "806",
+      "basis": "attested",
+      "note": "saint.gr: he was buried in the monastery he founded on the Bosporus «μετά την οσιακή κοίμησή του την Τετάρτη της Α' εβδομάδας των Νηστειών, το έτος 806 μ.Χ.», and its heading prints «(; - 806)»."
+    }
+  },
+  "related": [
+    "photius-of-constantinople",
+    "john-of-damascus"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Κανόνα πίστεως, καὶ εἰκόνα πραότητος, ἐγκρατείας διδάσκαλον, ἀνέδειξε σε τῇ ποίμνῃ σου, ἡ τῶν πραγμάτων ἀλήθεια· διὰ τοῦτο ἐκτήσω τῇ ταπεινώσει τὰ ὑψηλά, τῇ πτωχείᾳ τὰ πλούσια. Πάτερ Ἱεράρχα Ταράσιε, πρέσβευε Χριστῷ τῷ θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ταράσιος Αρχιεπίσκοπος Κωνσταντινούπολης, Λειτουργικά κείμενα: Ἀπολυτίκιον. This is the common of a hierarch, printed under his name with his name in it, as his own service.",
+        "url": "https://www.saint.gr/3671/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown you to your flock a rule of faith, an image of gentleness, a teacher of self-restraint; therefore you gained the heights by humility and riches by poverty. Father and hierarch Tarasius, intercede with Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Βίου ὀρθότητι, καλλωπιζόμενος, φωστὴρ ὑπέρλαμπρος, ὤφθης τοῦ Πνεύματος, καὶ τὴν Εἰκόνα τοῦ Χρίστου, Συνόδω ἐν τὴ Ἕβδομη, προσκυνεὶν ἐκήρυξας, ὀρθοδόξως μακάριε, στῦλος καὶ ἑδραίωμα, Ἐκκλησίας γενόμενος, διὸ τοὺς σοὺς ἀγῶνας γεραίρει, Πάτερ Ἱεράρχα Ταράσιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ταράσιος Αρχιεπίσκοπος Κωνσταντινούπολης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3671/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with the uprightness of your life, you were shown a most radiant luminary of the Spirit; and at the Seventh Council you proclaimed, in the Orthodox manner, blessed one, that the image of Christ is to be venerated, becoming a pillar and a ground of the Church. Therefore she honours your contests, father and hierarch Tarasius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ὥσπερ μέγας ἥλιος, ταῖς τῶν δογμάτων, καὶ θαυμάτων λάμψεσι, φωταγωγεῖς διαπαντός, τῆς οἰκουμένης τὸ πλήρωμα, οὐρανομύστα, παμμάκαρ Ταράσιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ταράσιος Αρχιεπίσκοπος Κωνσταντινούπολης, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/3671/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a great sun you enlighten for ever, by the flashings of your doctrines and your wonders, the fullness of the inhabited world, all-blessed Tarasius, initiate of heaven.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον.",
+      "text": "Ὀρθοδόξοις δόγμασι, τήν Ἐκκλησίαν φαιδρύνας, καί Χριστοῦ μακάριε, τήν σεβασμίαν Εἰκόνα, σέβεσθαι, καί προσκυνεῖσθαι πᾶσι διδάξας, ἤλεγξας, Εἰκονομάχων ἄθεον δόγμα· διά τοῦτο σοι βοῶμεν, Ὦ Πάτερ χαίροις, σοφέ Ταράσιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Ταράσιος Αρχιεπίσκοπος Κωνσταντινούπολης, Λειτουργικά κείμενα: Έτερον Κοντάκιον. Its Oikos and a Kathisma follow it on the page and are not copied here, the corpus keeping no kind for either.",
+        "url": "https://www.saint.gr/3671/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having made the Church bright with Orthodox doctrines, blessed one, and having taught all to reverence and venerate the honoured image of Christ, you refuted the godless doctrine of the iconoclasts. Therefore we cry to you: rejoice, father, wise Tarasius.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

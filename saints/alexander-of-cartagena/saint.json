@@ -6,6 +6,11 @@
       "form": "Alexandru",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 februarie, «Sfântul Mucenic Alexandru»."
+    },
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Φεβρουαρίου, «Άγιος Αλέξανδρος ο Μάρτυρας ο εν Δριζιπάρω της Θράκης», with the rank word and the place clause left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Φεβρουαρίου — «Άγιος Αλέξανδρος ο Μάρτυρας ο εν Δριζιπάρω της Θράκης»",
+        "url": "https://www.saint.gr/02/25/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -45,5 +59,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 325,
+      "display": "early 4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Αλέξανδρος έζησε στις αρχές του 4ου αιώνα μ.Χ. και καταγόταν από την Καρθαγένη». Neither calendar gives a year; doxologia.ro, which this folder was read from, puts him under the emperor Maximian and the governor Tiberian, and saint.gr under the persecution of Diocletian."
+    }
   }
 }
