@@ -6,6 +6,11 @@
       "form": "Andronic",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 mai, «Sfântul Apostol Andronic și soția sa, Iunia»."
+    },
+    {
+      "form": "Ανδρόνικος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαΐου, «Άγιοι Ανδρόνικος και Ιουνία οι Απόστολοι», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαΐου — «Άγιοι Ανδρόνικος και Ιουνία οι Απόστολοι»",
+        "url": "https://www.saint.gr/05/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on, and it is plainly the same man: Paul's kinsman and fellow prisoner of Romans 16.7, kept with Junia. **One page carries both of them**, with «Αγιος Ανδρονικος ο Αποστολος» and «Αγια Ιουνια η Αποστολος» as its two head names, so the pair are two upgrades and not one. **The Greek sends him to two other days and neither is taken as a feast**: «Περισσότερες πληροφορίες για τον Άγιο Ανδρόνικο μπορείτε να διαβάσετε στις 30 Ιουλίου», which is the same 30 July the corpus's Romanian row already records as his second doxologia day and is a cross-reference to more reading rather than a second Greek feast; and it counts both apostles among the Seventy, «τους οποίους εορτάζουμε στις 4 Ιανουαρίου», which is the common commemoration of the Seventy and not his own day. One row per church is the schema, so both are recorded here and nothing is moved. **Two apolytikia stand on the page and only the joint one is taken**: the first, Τὸν τάφον σου Σωτὴρ, names Andronicus and Junia together and is copied; the Έτερον in Ἦχος γ’, «Ἀπόστολοι Ἅγιοι, πρεσβεύσατε», is the bare common of apostles and is left. Neither is a mis-hang. **No year is printed**, so no `dates` object is added."
     },
     {
       "church": "serbian",
@@ -63,6 +78,22 @@
       },
       "english": {
         "text": "Holy apostles, entreat the merciful God to grant our souls forgiveness of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "model": "Τὸν τάφον σου Σωτὴρ",
+      "text": "Δυὰς φωτοειδής, ἱερῶν Ἀποστόλων, καὶ κήρυκες Χριστοῦ, ἀνεδείχθητε κόσμω, τοὶς πάσι κατασπείραντες, τὸ τῆς χάριτος κήρυγμα, ὅθεν σήμερον, ἠμᾶς πιστῶς εὐφημοῦμεν, ὢ Ἀνδρόνικε, καὶ Ἰουνία θεόφρον, Χριστὸν μεγαλύνοντες.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Τὸν τάφον σου Σωτὴρ, on the page of Άγιοι Ανδρόνικος και Ιουνία οι Απόστολοι — the joint hymn of the two; the page gives it no tone line of its own, so none is recorded",
+        "url": "https://www.saint.gr/1616/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A pair full of light, holy apostles and heralds of Christ, you were shown forth to the world, sowing among all the preaching of grace; and so today we faithfully praise you, O Andronicus and God-minded Junia, magnifying Christ.",
         "rendered": "site"
       }
     }

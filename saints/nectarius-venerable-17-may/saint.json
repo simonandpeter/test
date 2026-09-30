@@ -6,6 +6,11 @@
       "form": "Nectarie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 mai, «Sfântul Cuvios Nectarie»."
+    },
+    {
+      "form": "Νεκτάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαΐου, «Όσιοι Νεκτάριος και Θεοφάνης οι αυτάδελφοι κτήτορες της Μονής Βαρλαάμ Μετεώρων», with the rank word and the house left off; the life page carries «Οσιος Νεκταριος Κτητορας Της Μονης Βαρλααμ Μετεωρων» as a head name of its own."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαΐου — «Όσιοι Νεκτάριος και Θεοφάνης οι αυτάδελφοι κτήτορες της Μονής Βαρλαάμ Μετεώρων»",
+        "url": "https://www.saint.gr/05/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on. **The identification rests on the day and the rank, because the Romanian side gives nothing else**: this folder was made from doxologia.ro's bare «Sfântul Cuvios Nectarie» for 17 mai, with no epithet, no monastery, no country and no century, and saint.gr's only Nektarios on that day is this hieromonk of the Apsaras house of Ioannina, brother of Theophanes and founder with him of the Varlaam monastery at Meteora. Same menologion day, same name, same rank word, and one candidate on the Greek side: that is a match on the day and not on the name alone. **It is stronger than it looks because the Romanian day keeps the pair**: doxologia prints a bare Nectarie and a bare Teofan on the same 17 mai, and the Greek 17 May keeps a Nektarios and a Theophanes who are brothers on one page — the co-occurrence, not the names, is the argument. **The reading is named in the reader's report as an open question all the same**, because the Greek day carries a second Theophanes, the myrrh-streamer of Cyprus, who is a new folder in batch `el-05-17`. **The Greek adds everything the corpus does not hold**: the head line's «(; - 1550)» for his death, the noble Apsaras house of Ioannina, the birth there late in the 15th century, the schooling at the Philanthropinon monastery, the habit taken in 1495 from the elder Savvas, the ten years with him on the island of Ioannina to his death on 9 April 1505, the journey to Athos and the rule received from the former patriarch Niphon II at Dionysiou, the building of the Prodromos house on the island in 1506/1507 and of Saint Nicholas at Lepeno for their parents and sisters, and the Varlaam foundation at Meteora which the calendar line names. **The existing folder carries no `dates` object and is not given one here**; the year stands in this note and in the added paragraph. **Theophanes is linked.** **Four men and one woman are named and have no folders**: their sister, probably Magdalene, the elder Savvas of 3 February, the patriarch Niphon II of 11 August, the patriarch Pachomios I, and the hermit Antony of the cave. No hymn is printed."
     },
     {
       "church": "serbian",
@@ -45,5 +60,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "theophanes-venerable-17-may"
+  ]
 }

@@ -1,0 +1,61 @@
+{
+  "slug": "maidulf",
+  "display_name": "Maidulf",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "preacher"
+  ],
+  "names": [
+    {
+      "form": "Μαϊδούλφος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαΐου, «Όσιος Μαϊδούλφος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 673,
+      "latest": 673,
+      "display": "673",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη στο Μαλμέσμπουρυ το 673 μ.Χ.», and its head line reads «Οσιος Μαϊδουλφος (; - 673)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαΐου — «Όσιος Μαϊδούλφος»",
+        "url": "https://www.saint.gr/05/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαΐου εκάστου έτους», the same day as the listing, and its body is two sentences. **Nothing in the corpus reads as him**: the namesweep printed no row for the name. **The display name is the page's Greek form back in Latin letters and nothing more**: it gives him no epithet, no see and no Latin spelling of its own, and «of Malmesbury» is not added, the page naming Malmesbury only as the place he died. **`preacher` is in `types`** on «εργάσθηκε ιεραποστολικά στην χώρα του», and `hermit` on «έζησε ως ερημίτης»; the page does not call him abbot. **No `locations` object**, although England and Malmesbury are named. No hymn, no relics and no parents are printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

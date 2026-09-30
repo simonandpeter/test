@@ -1,0 +1,80 @@
+{
+  "slug": "theophanes-the-myrrh-streamer-of-cyprus",
+  "display_name": "Theophanes the Myrrh-streamer",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "archbishop",
+    "monk",
+    "abbot"
+  ],
+  "office": "Bishop of Soleas and Archbishop of Cyprus",
+  "names": [
+    {
+      "form": "Θεοφάνης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαΐου, «Όσιος Θεοφάνης ο Μυροβλύτης Επίσκοπος Σολέας, Αρχιεπίσκοπος Κύπρου», with the rank word and the two sees left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1550,
+      "latest": 1550,
+      "display": "1550",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Οσιος Θεοφανης ο Μυροβλυτης Επισκοπος Σολεας, Αρχιεπισκοπος Κυπρου (; - 1550)»; the body gives no year at all and places him only «κατά τους χρόνους της κατοχής της από τους Ενετούς (1489 - 1571 μ.Χ.)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαΐου — «Όσιος Θεοφάνης ο Μυροβλύτης Επίσκοπος Σολέας, Αρχιεπίσκοπος Κύπρου»",
+        "url": "https://www.saint.gr/05/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαΐου εκάστου έτους», the same day as the listing, and its synaxarion verse agrees: «Ἑβδομάτῃ δεκάτῃ Θεοφάνης Θεῷ συνεκράθη». **This is the second Theophanes the Greek calendar keeps on 17 May and the two are different men**, which is the identity question of the day and is answered in the report as well as here. The corpus's `theophanes-venerable-17-may`, upgraded in `up-05-17.json`, is the hieromonk of the Apsaras house of Ioannina who with his brother Nektarios founded the Varlaam monastery at Meteora and died in 1544; this one is a Cypriot monk of the Manganon house at Nicosia, bishop of Soleas and archbishop of Cyprus under Venetian rule, who resigned his see and died a hermit above the Prodromos monastery of Mesa Potamos. Two pages, two countries, two offices; **the year 1550 which this page's head line gives him is also the year that page gives Nektarios, and nothing is inferred from that coincidence.** **He is none of the corpus's other Theophaneses** either — of Antioch, of Naousa, of Nicaea, of Sigriane, the Recluse, the Merciful of Gaza, the Confessor of 9 September — which the namesweep flagged and which were read. **The `dates` object holds only the head line's year** and its note says the body gives none. **The page's source is named and is a Latin one**: Stephen Lusignan, Dominican and vicar of the Latin archbishopric of Cyprus, an eyewitness of the exhumation, in his Chorography of the island of Cyprus, published in Italian in 1573 and in French in 1580. **Two people are named and neither has a folder**: Helen Palaiologina, who restored the Manganon monastery in 1453, and the oikonomos who struck him. **No `locations` object**, although Nicosia, Soleas, Mesa Potamos and Troodos are named. **One apolytikion naming him is copied.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Βαθυτάλαντον ὡς θησαυρόν σε οἱ οἰκέται σου χαρᾷ πλουτοῦντες, τὴν πτωχείαν τῶν παθῶν ἐξαλείφοντα καὶ τῆς ζωῆς τὴν ἐλπίδα βραβεύοντα, ἐν εὐφροσύνῃ θερμῶς σοι κραυγάζομεν· Πάτερ ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε φυλάττειν ἐν εἰρήνῃ τὴν ζωὴν ἡμῶν.",
+      "source": {
+        "text": "saint.gr, the last of the hymns printed on the page of Όσιος Θεοφάνης ο Μυροβλύτης Επίσκοπος Σολέας, Αρχιεπίσκοπος Κύπρου; the page gives this one no tone line of its own, so none is recorded",
+        "url": "https://www.saint.gr/506/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your servants, grown rich with joy in you as in a treasure of deep worth, who blot out the poverty of the passions and award the hope of life, cry warmly to you in gladness: venerable father, entreat Christ our God to keep our life in peace.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

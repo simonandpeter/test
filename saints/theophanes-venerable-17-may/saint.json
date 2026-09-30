@@ -6,6 +6,11 @@
       "form": "Teofan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 mai, «Sfântul Cuvios Teofan»."
+    },
+    {
+      "form": "Θεοφάνης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαΐου, «Όσιοι Νεκτάριος και Θεοφάνης οι αυτάδελφοι κτήτορες της Μονής Βαρλαάμ Μετεώρων», with the rank word and the house left off; the life page carries «Οσιος Θεοφανης Κτητορας Της Μονης Βαρλααμ Μετεωρων» as a head name of its own."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαΐου — «Όσιοι Νεκτάριος και Θεοφάνης οι αυτάδελφοι κτήτορες της Μονής Βαρλαάμ Μετεώρων»",
+        "url": "https://www.saint.gr/05/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on. **This is the one upgrade of the day that is a judgement and not a reading, and the writer should weigh it.** The folder was made from doxologia.ro's bare «Sfântul Cuvios Teofan» for 17 mai, which carries no epithet, no monastery, no country and no century — and saint.gr keeps **two** Theophaneses on that day: this hieromonk of Ioannina, brother of Nektarios and founder with him of the Varlaam monastery at Meteora, dead by its head line in 1544; and Theophanes the Myrrh-streamer, bishop of Soleas and archbishop of Cyprus, dead by his own head line in 1550, who is a new folder in batch `el-05-17`. **The ground for taking the brother is that the Romanian day keeps the pair**: doxologia prints a bare Nectarie and a bare Teofan together on 17 mai, and the Greek pair of that day are brothers on one page, so the co-occurrence of the two names is the argument and not either name alone. **If the writer judges otherwise, the fix is to move this row to `theophanes-the-myrrh-streamer-of-cyprus` and to leave this folder's `greek` row `undocumented`**, and the reader's report names it as an open question. **The Greek adds everything the corpus does not hold**: the Apsaras house of Ioannina, the birth late in the 15th century, the schooling at the Philanthropinon monastery, the habit taken about 1495 from the elder Savvas, the ten years with him to his death on 9 April 1505, the rule received from the former patriarch Niphon II at Dionysiou on Athos, the church of the Forerunner raised on the island of Ioannina in 1506/1507, the hermitage of Saint Nicholas at Lepeno built for their parents and sisters, and the Varlaam foundation the calendar line names. **The existing folder carries no `dates` object and is not given one here**; the year 1544 stands in this note and in the added paragraph. **Nektarios is linked.** No hymn is printed."
     },
     {
       "church": "serbian",
@@ -45,5 +60,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "nectarius-venerable-17-may"
+  ]
 }

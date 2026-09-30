@@ -1,0 +1,59 @@
+{
+  "slug": "eleazar-of-vazhen",
+  "display_name": "Eleazar of Vazhen",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ελεάζαρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαΐου, «Άγιος Ελεάζαρος», with the rank word left off; the body adds a second name, «ή Λάζαρος»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1701,
+      "latest": 1800,
+      "display": "18th century",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησε κατά τον 18ο αιώνα μ.Χ. στη Ρωσία και καταγόταν από το χωριό Βαζέν. Μαρτύρησε για την πίστη του Χριστού κοντά στην περιοχή του Όλονετς» — the century is the page's and it gives no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The saint is a Russian one and saint.gr is the source read here; the Russian calendar's own day for him was not looked at."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαΐου — «Άγιος Ελεάζαρος»",
+        "url": "https://www.saint.gr/05/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαΐου εκάστου έτους», the same day as the listing, and its body is two sentences. **He is none of the corpus's three Eleazars** — of Anzersky, the priest, the scribe — which were read: an eighteenth-century Russian of the village of Vazhen martyred near Olonets answers to none of them. **The display name takes the village**, which is the only thing that distinguishes him. **The second form of the name is recorded and not copied**: the page says «Ελεάζαρος ή Λάζαρος», Eleazar or Lazarus, and that alternative is a statement about him rather than a script form to store. **No `locations` object**, although Vazhen and Olonets are named. No manner of death and no hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

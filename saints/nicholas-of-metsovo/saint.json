@@ -6,6 +6,11 @@
       "form": "Nicolae din Metsovo",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 mai, «Sfântul Nou Mucenic Nicolae din Metsovo»."
+    },
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαΐου, «Άγιος Νικόλαος εκ Μετσόβου», with the rank word and the town left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαΐου — «Άγιος Νικόλαος εκ Μετσόβου»",
+        "url": "https://www.saint.gr/05/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on, and it is plainly the same man, the neomartyr of Metsovo in Epirus. **The page's own notes give a second day and it is not taken**: «Ορισμένοι συναξαριστές, όπως του Αγίου Νικοδήμου του Αγιορείτου, αναφέρουν τη μνήμη του Aγίου Νικολάου εκ Μετσόβου στις 16 Μαΐου» — some synaxaria, Nikodemos the Hagiorite's among them, put his memory on 16 May — and the same note says he was formally entered in the Orthodox calendar in 1988 by the Ecumenical Patriarchate, at the request of the metropolitan of Trikke and Stagoi, and «Τιμάται στις 17 Μαΐου». One row per church is the schema, the day page and the page head agree on the seventeenth, and the sixteenth is recorded here. **He is not the day's other Nicholas**: saint.gr keeps a Nicholas the great martyr of Bulgaria, dead in 1555, on this same day, who is a new folder in batch `el-05-17`. **The Greek adds his surname and his two bynames**, Basdanis, Vlachonikolas and Exintatrichis, and his death year 1617 in the head line; the existing folder carries no `dates` object and is not given one here. **It adds the whole of the fall and the recovery**: the bakery at Trikala, the forced conversion, the return to Metsovo, the Turkish barber who caught him selling kindling and made him promise a load a year, and the decision never to compromise again. **It names the two services written for him**, by Nikolaos Kyrkos or Tzartzoulis of Metsovo, printed at Venice in 1757 and 1771, and by the hymnographer Gerasimos of Mikragiannanita in the Epirot Leimonarion of 1968 — but it prints neither, so no hymn is taken. **Dionysios the Philosopher, metropolitan of Trikke, is named** and sent to 10 October; the corpus does not keep him, so he is named without a link."
     },
     {
       "church": "serbian",

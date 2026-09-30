@@ -1,0 +1,62 @@
+{
+  "slug": "nicholas-the-bulgarian-17-may",
+  "display_name": "Nicholas the Bulgarian (17 May)",
+  "sex": "male",
+  "types": [
+    "great-martyr"
+  ],
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαΐου, «Άγιος Νικόλαος ο Μεγαλομάρτυρας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1555,
+      "latest": 1555,
+      "display": "1555",
+      "basis": "traditional",
+      "note": "saint.gr: «καταγόταν από την Βουλγαρία και μαρτύρησε το 1555 μ.Χ.», and its head line reads «Αγιος Νικολαος ο Μεγαλομαρτυρας (; - 1555)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαΐου — «Άγιος Νικόλαος ο Μεγαλομάρτυρας»",
+        "url": "https://www.saint.gr/05/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαΐου εκάστου έτους», the same day as the listing, and its body is two sentences: he came from Bulgaria, he was martyred in 1555, and «Δεν έχουμε περισσότερες λεπτομέρειες για τον βίο και το μαρτύριο του Αγίου». **He is not the day's other Nicholas**: the corpus's [Nicholas of Metsovo](/saints/nicholas-of-metsovo), whom saint.gr also keeps on this same 17 May with a page of its own, is a neomartyr of Epirus who died at Trikala in 1617 — a different country, a different year and a full life against none. **The display name carries the country and the day** and not the rank, which `types` composes; the country is the only thing the page gives him besides the year, and the day tells him from the corpus's other Nicholases. **No `locations` object.** No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "nicholas-of-metsovo"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

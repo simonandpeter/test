@@ -1,0 +1,55 @@
+{
+  "slug": "pamphamer",
+  "display_name": "Pamphamer",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Παμφαμήρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαΐου, «Άγιοι Σολόχων, Παμφαμήρ και Παμφυλών», with the rank word left off; the life page carries «Αγιος Παμφαμηρ» as its own head name."
+    }
+  ],
+  "related": [
+    "solochon",
+    "pamphylon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαΐου — «Άγιοι Σολόχων, Παμφαμήρ και Παμφυλών»",
+        "url": "https://www.saint.gr/05/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαΐου εκάστου έτους», the same day as the listing, and gives him as one of three head names on one page — hence three folders. **He is not one of the corpus's Pamphili**, which the namesweep raised: Pamphamer is a different name, and `pamphilus-of-caesarea`, `pamphilus-the-martyr` and the companions named after that man are other people on other days. **No year, so no `dates` object**, and no `locations` although Egypt and Chalcedon are named. **The page's second couplet is his and Pamphylon's together** — take courage even though you are beaten, you two martyrs; God will make of your wounds a soothing balm, and crowns — and he is named in it only as one of the two."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

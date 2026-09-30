@@ -1,0 +1,105 @@
+{
+  "slug": "athanasius-of-christianoupolis",
+  "display_name": "Athanasius the New of Christianoupolis",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan",
+    "wonderworker"
+  ],
+  "office": "Metropolitan of Christianoupolis",
+  "names": [
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαΐου, «Άγιος Αθανάσιος ο Νέος, ο Θαυματουργός επίσκοπος Χριστιανουπόλεως», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1640,
+      "latest": 1664,
+      "display": "about 1640, or 1664",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην Καρύταινα της Γορτυνίας περί το 1640 μ.Χ. (κατά άλλους στην Κέρκυρα το 1664 μ.Χ.)» — the page gives two births in two places and chooses neither, and the bracket here holds both."
+    },
+    "death": {
+      "earliest": 1707,
+      "latest": 1735,
+      "display": "1707 or 1708, or by other accounts 1735",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε μετά από ολιγοήμερη ασθένεια το 1707 μ.Χ. ή το 1708 μ.Χ. (κατά άλλους το 1735 μ.Χ.)» — again three years and no choice between them, so the bracket holds all three."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαΐου — «Άγιος Αθανάσιος ο Νέος, ο Θαυματουργός επίσκοπος Χριστιανουπόλεως»",
+        "url": "https://www.saint.gr/05/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαΐου εκάστου έτους», the same day as the listing, and its synaxarion verse agrees. **He is none of the corpus's twenty-odd Athanasii**: Anastasios Korfinos in the world, of Karytaina in Gortynia, metropolitan of Christianoupolis, exarch of all Arcadia, with relics at the Prodromos monastery of Gortynia. **`metropolitan` and not `bishop` is in `types`**, although the calendar line says επίσκοπος, because the body is explicit — «χειροτονείται Μητροπολίτης Χριστιανουπόλεως, υπέρτιμος και έξαρχος πάσης Αρκαδίας». **Both `dates` brackets hold the page's alternatives and choose nothing**, and their notes say so: two births and three deaths are printed. **The page reasons where it cannot date**: it supposes his first letters were learnt at home and his schooling at the Philosophou monastery's school, and puts his consecration at the end of 1680 or the start of 1681 because that April is the first time he signs as a member of the patriarchal synod. Those are its inferences and are recorded in the life as such. **Five men are named and none has a folder**: his parents Andreas and Euphrosyne, the patriarch Jacob under whose first patriarchate he was consecrated, his predecessor Eugenios, and the metropolitan of Euripos to whom that letter of excommunication went. **No `locations` object**, although Karytaina, Corfu, Patras, Nauplion, Vidoni, Syrna, Constantinople, Christianoi and Kyparissia are all named. **Its apolytikion and kontakion are copied.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’",
+      "model": "Τῆς ἐρήμου πολίτης",
+      "text": "Τοὺς τελοῦντας τὴν μνήμην, καὶ τιμώντας τὸ σῶμα σου, καὶ πανευλαβῶς προσκυνοῦντας τὴν μυρίπνοον Κάραν σου, ὡς ἔχων παρρησίαν πρὸς Θεόν, ἱκέτευε Χριστὸν τὸν ἀγαθόν, καὶ ταὶς σαὶς θερμαὶς πρεσβείαις, τῶν κινδύνων σῷζε, ὦ ἅγιε Ἀθανάσιε. Ἔχων δὲ καὶ συμπρεσβευτήν, τὸν μέγαν Κυρίου Πρόδρομον, ἔσο ἀοράτως τῆς Μονῆς, φρουρὸς καὶ προπύργιον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης, on the page of Άγιος Αθανάσιος ο Νέος, ο Θαυματουργός επίσκοπος Χριστιανουπόλεως",
+        "url": "https://www.saint.gr/1620/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Those who keep your memory, and honour your body, and venerate with all reverence your myrrh-breathing head — since you have boldness before God, entreat Christ the good one, and by your fervent intercessions save them from dangers, O holy Athanasius. And having as fellow intercessor the Lord's great Forerunner, be unseen the guard and the bulwark of the monastery.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ",
+      "text": "Ὁ δοξασθεὶς παρὰ Θεοῦ θαυμασίως, δι᾽ εὐωδίας καὶ θαυμάτων ποικίλων, ἐν τοῖς ἐσχάτοις χρόνοις, Ἀθανάσιε, φάνηθι ταχύτατος, καὶ θερμὸς ἀντιλήπτωρ, τῶν δεινῶν λυτρούμενος, τοὺς πιστώς σε τιμώντας, καὶ τοὺς τὰ λείψανα κατέχοντας τὰ σά, πρὸς μετανοίας ὁδὸν χειραγώγησον.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ, on the page of Άγιος Αθανάσιος ο Νέος, ο Θαυματουργός επίσκοπος Χριστιανουπόλεως",
+        "url": "https://www.saint.gr/1620/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You who were wonderfully glorified by God, by fragrance and by wonders of many kinds in these last times, Athanasius, show yourself a swift and fervent helper, delivering from hardships those who honour you faithfully; and those who keep your relics, lead by the hand onto the road of repentance.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

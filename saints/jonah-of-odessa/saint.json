@@ -1,0 +1,68 @@
+{
+  "slug": "jonah-of-odessa",
+  "display_name": "Jonah of Odessa",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ιωνάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαΐου, «Όσιος Ιωνάς της Οδησσού», with the rank word and the city left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1855,
+      "latest": 1855,
+      "display": "14 September 1855",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην Οδησσό στις 14 Σεπτεμβρίου 1855 μ.Χ.», and its head line reads «Οσιος Ιωνας Της Οδησσου (1855 - 1924)»."
+    },
+    "death": {
+      "earliest": 1924,
+      "latest": 1924,
+      "display": "1924",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ιωνάς κοιμήθηκε με ειρήνη το 1924 μ.Χ. και η κανονική πράξη της αγιοποιήσεώς του έγινε το 1995 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The saint is a Russian one and saint.gr is the source read here; the Russian calendar's own day for him was not looked at."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαΐου — «Όσιος Ιωνάς της Οδησσού»",
+        "url": "https://www.saint.gr/05/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαΐου εκάστου έτους», the same day as the listing. **He is none of the corpus's seven Jonahs** — of Kyiv, of Moscow, of Yashezero, the Sabaite, the Prophet, the martyr of 29 March — which the namesweep flagged and which were read; a married deacon's son of Odessa, ordained in 1884 and 1886, dead in 1924 and canonised in 1995, answers to none of them. **`presbyter` is in `types`** on the page's «το 1886 μ.Χ. πρεσβύτερος», and `wonderworker` on «Ο Άγιος Θεός τον αξίωσε του χαρίσματος της θαυματουργίας». **His parents are named and have no folders**: the deacon Moses and Glykeria. **No `locations` object**, although Odessa is named throughout. The page adds that his relics were translated in 1996 to the cathedral of the Dormition at Odessa, where they are kept. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

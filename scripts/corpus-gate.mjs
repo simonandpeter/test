@@ -115,6 +115,36 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδοτη theodote-daughter-of-athanasia theodote-mother-of-the-unmercenaries theodote-of-ancyra':
+    'Two women: the Theodote of 18 May and the eighth woman of the 18 May company, whom the page names and the corpus does not fold — the reader who read that day left her without a folder and said so.',
+  'στεφανοσ stephen-27-february stephen-bekh stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-khirsa stephen-of-perm stephen-of-placidianae stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-xylinites':
+    'Eleven now. The new one is on 18 May; the others are read in the el-04-27 entry for this name form.',
+  'παυλοσ paul-brother-of-pausirius paul-companion-of-andrew paul-companion-of-quadratus paul-disciple-of-dionysius-of-alexandria paul-of-cordoba paul-of-corinth paul-of-crete paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-vilnius paul-of-zographou paul-the-martyr-3-february paul-the-russian paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
+    'Twenty-one now. The new one is the companion of Andrew on 18 May; the others are read in the el-05-03 entry for this name form.',
+  'μαρτινιανοσ martinian-of-caesarea martinian-of-white-lake martinian-of-zographou martinianus-of-areobindus':
+    'Four men. The new one is Martinianus of Areobindus on 18 May; the others are read in the el-02-13 entry for this name form.',
+  'ηρακλειοσ heraclius-of-athens heraclius-of-the-forty-martyrs':
+    'Two men: Heraclius of Athens on 18 May and Heracles of Carthage on 11 March, whose Greek forms fold together.',
+  'ιουλιανοσ helianus-of-the-forty-martyrs julian-companion-of-euboulos julian-companion-of-modestus julian-companion-of-pamphilus julian-of-antinoopolis julian-of-emesa julian-of-kandavla julian-of-samosata julian-the-deacon-of-aegina julian-the-martyr-18-may':
+    'Ten now. The new one is the Julian of 18 May; the others are read in the el-03-06 entry for this name form.',
+  'δαβιδ david-brother-of-tarichan david-of-gareji david-of-mytilene david-of-wales david-son-of-prince-theodore david-with-minas-and-john':
+    'Six now. The new one is David the brother of Tarichan on 18 May; the others are read in the el-04-12 entry for this name form.',
+  'brother david tarichan david-brother-of-tarichan tarichan':
+    'The two brothers the 18 May page names together, each named after the other, which is what folds them.',
+  'andrew companion mesopotamia paul andrew-companion-of-paul paul-companion-of-andrew':
+    'The pair the 18 May page names together, each named after the other, which is what folds them.',
+  'ανδρεασ andrew-6-january andrew-abbot-of-tobolsk andrew-companion-of-paul andrew-of-monodendri andrew-of-mytilene andrew-of-raphailovo':
+    'Six now. The new one is the companion of Paul in Mesopotamia on 18 May; the others are read in the el-05-15 entry for this name form.',
+  'θεοφανησ theophan-the-recluse theophanes-of-peritheorion theophanes-of-sigriane theophanes-the-merciful-of-gaza theophanes-the-myrrh-streamer-of-cyprus theophanes-venerable-17-may':
+    'Six now, and **two of them stand on 17 May** as two entries — and this is the pair a reader referred up. The Romanian keeps a bare «Teofan» on 17 mai, which went to the Meteora brother on the ground that doxologia keeps Nectarie and Teofan as a pair; saint.gr’s own 17 Μαΐου prints the Cypriot myrrh-streamer of `/506/` as well, who is this wave’s new folder. Two entries, two commemorations, and the Romanian row’s owner is the reader’s call recorded in ro-run/FINDINGS.md.',
+  'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-katopinos nicholas-kedrov nicholas-of-corinth nicholas-of-japan nicholas-of-magnesia nicholas-of-metsovo nicholas-of-pskov nicholas-of-spetses nicholas-of-the-forty-martyrs nicholas-of-trebizond nicholas-of-valaam nicholas-of-vounena nicholas-patriarch-of-georgia nicholas-the-bulgarian-17-may nicholas-the-mystikos nicholas-the-studite nicholas-velimirovich':
+    'Eighteen now, and **two of the new ones share 17 May** as two entries: Nicholas of Metsovo, whom the Romanian keeps there too and whose own page notes that some synaxaria — Nikodemos the Hagiorite among them — keep him on 16 Μαΐου instead, and Nicholas the Bulgarian. The others are read in the el-05-16 entry for this name form.',
+  'ιωνασ jonah-martyr-29-march jonah-of-kyiv jonah-of-moscow jonah-of-odessa jonah-of-the-lavra-of-pskov jonas-of-great-perm jonas-the-lerian':
+    'Seven now. The new one is Jonah of Odessa on 17 May; the others are read in the el-03-29 entry for this name form.',
+  'ελεαζαροσ eleazar-of-anzersky eleazar-of-vazhen':
+    'Two men: Eleazar of Vazhen on 17 May and the Eleazar of the el-08-01 entry.',
+  'αθανασιοσ athanasius-martyr-13-january athanasius-of-alexandria athanasius-of-attaleia athanasius-of-christianoupolis athanasius-of-corinth athanasius-of-kargopol athanasius-of-meteora athanasius-of-murom athanasius-of-the-forty-martyrs athanasius-of-vologda athanasius-once-a-magician athanasius-the-confessor':
+    'Twelve now. The new one is Athanasius of Christianoupolis on 17 May; the others are read in the el-04-23 entry for this name form.',
   'θεοδωροσ mstislav-of-kiev theodore-companion-of-pausolypius theodore-companion-of-stephen theodore-companion-of-terentius theodore-founder-of-chora theodore-of-kama-the-philosopher theodore-of-kandavla theodore-of-kythera theodore-of-moscow theodore-of-novgorod theodore-of-pentapolis theodore-of-perga theodore-of-samothrace theodore-of-sykeon theodore-of-tamasos theodore-of-tomsk theodore-of-vrsac theodore-prince-of-yaroslavl theodore-stratelates theodore-the-byzantine theodore-the-envoy-of-nicomedia theodore-the-recruit theodore-the-silent theodore-trichinas':
     'Twenty-four now. The new one is Theodore of Vršac on 16 May; the others are read in the el-05-12 entry for this name form.',
   'μακαριοσ macarius-companion-of-eudoxius macarius-companion-of-terentius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-metropolitan-of-moscow macarius-new-hieromartyr-1944 macarius-notaras macarius-of-ierissos macarius-of-kalyazin macarius-of-kios macarius-of-kyiv macarius-of-paphos macarius-of-pelecete macarius-of-pisma macarius-of-rome macarius-of-the-altai macarius-of-valaam macarius-of-zhabyn macarius-the-confessor':
