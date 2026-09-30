@@ -1,0 +1,54 @@
+{
+  "slug": "orestes-martyr-9-june",
+  "display_name": "Orestes (9 June)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ορέστης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιουνίου, «Άγιοι Ορέστης, Διομήδης και Ροδίων», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιουνίου — «Άγιοι Ορέστης, Διομήδης και Ροδίων»",
+        "url": "https://www.saint.gr/06/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The three are carried on one page with a head line each and no year against any of them, and the page's whole account of them is an account of the manuscripts: the saints Orestes, Diomedes and Rhodion, or Rhodon, are unknown to the synaxarist of Saint Nikodemos; they are mentioned in Delehaye's synaxarion without a biographical note; in two codices, 1575 folio 112 of the Paris library and D 10 folio 15 of the Lavra, there is a common service for them by the hymnographer Joseph; and codex 53 of the Vlatades monastery also records their memory. That is a source setting out exactly how far its own authority goes, and it is not the «Δεν είναι διασταυρωμένη» mark, which this page does not carry. There is no year, no place and no manner of death, so there is no `dates` object and no `locations`; `types` hold only what the day's line gives, the rank of a saint in a company the listing calls martyrs. The service the codices hold is not printed on the page, so no hymn is taken. The corpus keeps six men of these names and none of them in this company; the slugs carry the day because the page gives nothing else to tell them apart by. The other two have their own folders in the same batch and `related` rows here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "diomedes-martyr-9-june",
+    "rhodion-martyr-9-june"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

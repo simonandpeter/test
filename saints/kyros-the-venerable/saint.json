@@ -1,0 +1,50 @@
+{
+  "slug": "kyros-the-venerable",
+  "display_name": "Kyros",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Κύρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιουνίου, «Όσιος Κύρος», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιουνίου — «Όσιος Κύρος»",
+        "url": "https://www.saint.gr/06/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The entry is one sentence and a couplet: the venerable Kyros died peacefully. There is no century, no country, no monastery and no year, so there is no `dates` object and no `locations`, and no hymn is printed. He is not the corpus's `cyrus-of-alexandria`, the unmercenary physician, nor `cyrus-of-constantinople`, the patriarch; both are kept on other days and both have lives. The corpus keeps nobody else of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

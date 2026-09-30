@@ -1,0 +1,67 @@
+{
+  "slug": "columba-of-scotland",
+  "display_name": "Columba, enlightener of Scotland",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Columba",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιουνίου, «Άγιος Columba φωτιστής της Σκωτίας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 521,
+      "latest": 521,
+      "display": "521",
+      "basis": "traditional",
+      "note": "saint.gr says he was born «στις 7 Δεκεμβρίου του 521 μ.Χ.» in Ireland, on 7 December 521, and its head line reads «(521 - 597)»."
+    },
+    "death": {
+      "earliest": 597,
+      "latest": 597,
+      "display": "597",
+      "basis": "traditional",
+      "note": "saint.gr says he fell asleep «στις 9 Ιουνίου του 597 μ.Χ.» in Scotland — the day the calendar keeps him on."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιουνίου — «Άγιος Columba φωτιστής της Σκωτίας»",
+        "url": "https://www.saint.gr/06/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. saint.gr's head line dates him «(521 - 597)» and the entry is one sentence, the whole of which is two dates and two countries. The page prints the name in Latin letters, «Άγιος Columba», on the day's line and in the entry, and no Greek-script form of it anywhere; so the stored form is the Latin one the page prints, and nothing is transliterated. Ireland and Scotland are named and no place in either, so `locations` is left out. The corpus keeps nobody of this name. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

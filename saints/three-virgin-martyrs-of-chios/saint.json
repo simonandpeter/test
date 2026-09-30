@@ -1,0 +1,51 @@
+{
+  "slug": "three-virgin-martyrs-of-chios",
+  "display_name": "The Three Virgin Martyrs of Chios",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Τρεις Παρθενομάρτυρες από τη Χίο",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιουνίου, «Αγίες Τρεις Παρθενομάρτυρες από τη Χίο», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιουνίου — «Αγίες Τρεις Παρθενομάρτυρες από τη Χίο»",
+        "url": "https://www.saint.gr/06/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The entry is one sentence and a couplet and names none of the three, so this is one folder for the company and not three, as the corpus already does with `three-women-of-magnesia` and `three-new-martyrs-of-vrachori`. There is no year and no reign, so there is no `dates` object; Chios is where they came from and `locations` is left out. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

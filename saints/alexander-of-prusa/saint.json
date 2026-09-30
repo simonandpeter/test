@@ -1,0 +1,51 @@
+{
+  "slug": "alexander-of-prusa",
+  "display_name": "Alexander of Prusa",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιουνίου, «Άγιος Αλέξανδρος επίσκοπος Προύσας», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιουνίου — «Άγιος Αλέξανδρος επίσκοπος Προύσας»",
+        "url": "https://www.saint.gr/06/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The entry is one sentence and says in its own words that there are no other biographical data for him, only an iconography — «Δεν υπάρχουν άλλα βιογραφικά του στοιχεία, μόνον αγιογραφία του». There is no year and no reign, so there is no `dates` object; Prusa is his see and `locations` is left out. The corpus keeps many men of this name and none of this see. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

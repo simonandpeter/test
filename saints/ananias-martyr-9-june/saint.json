@@ -1,0 +1,50 @@
+{
+  "slug": "ananias-martyr-9-june",
+  "display_name": "Ananias (9 June)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ανανίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιουνίου, «Άγιος Ανανίας», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιουνίου — «Άγιος Ανανίας»",
+        "url": "https://www.saint.gr/06/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The entry is one sentence and a couplet: Saint Ananias bore witness by the sword. There is no year, no reign, no place and no companion, so there is no `dates` object and no `locations`, and no hymn is printed. The corpus keeps four men of this name — the apostle, the one of the Three Youths, one of Crete and one of 26 January — and none of them on this day; the slug carries the day because the page gives nothing else to tell him apart by."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
