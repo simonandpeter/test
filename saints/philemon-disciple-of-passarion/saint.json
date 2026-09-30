@@ -1,0 +1,55 @@
+{
+  "slug": "philemon-disciple-of-passarion",
+  "display_name": "Philemon, disciple of Passarion",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Φιλήμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Μαΐου, «Όσιοι Πασσαρίων ο Πρεσβύτερος, Αγάπιος και Φιλήμων», with the rank word left off; the page's own head line for him is «Οσιος Φιλημων»."
+    }
+  ],
+  "related": [
+    "passarion-the-presbyter",
+    "agapius-disciple-of-passarion"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαΐου — «Όσιοι Πασσαρίων ο Πρεσβύτερος, Αγάπιος και Φιλήμων»",
+        "url": "https://www.saint.gr/05/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Μαΐου εκάστου έτους», the same day as the listing, and gives him his own head line, which is why the company is three folders. **The whole of him on the page is one clause**: he and Agapius «ήταν μαθητές του Οσίου Πασσαρίωνος και συνασκητές». **No `dates` are recorded**, for the same reason as with Agapius: the page dates only his master. **He is none of the eight Philemons the corpus keeps** — the apostle, of Cyzicus, of Gaza, of Karpathos, the flute-player, the companion of Fortunianus, the one of 6 July — none of whom is a disciple of Passarion or kept on this day, and the name sweep raised them all on the name alone. The page's authority for him is «το Ιεροσολυμιτικό Κανονάριο (σελ. 90, εκδ. Αρχιμανδρίτη Κάλλιστου)». No relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

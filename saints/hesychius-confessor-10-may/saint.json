@@ -6,6 +6,11 @@
       "form": "Isihie Mărturisitorul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 mai, «Sfântul Cuvios Isihie Mărturisitorul»."
+    },
+    {
+      "form": "Ησύχιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Μαΐου, «Όσιος Ησύχιος ο Ομολογητής», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαΐου — «Όσιος Ησύχιος ο Ομολογητής»",
+        "url": "https://www.saint.gr/05/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and the Greek epithet ο Ομολογητής matches the folder's Romanian «Isihie Mărturisitorul». **The page carries no life at all and says where the life is**: «Η μνήμη του Οσίου Ησυχίου του Ομολογητού τιμάται την 6η Μαρτίου, όπου και ο βίος του.» So there is a second Greek day for him, and it is recorded here as a note and not as a second row: one attestation row per church is the schema, and the row records the day page read. **Two things a writer should see, and neither is decided here.** First, saint.gr's 6 Μαρτίου listing does not print this epithet: it prints «Όσιος Ησύχιος ο Θαυματουργός», the Wonderworker, and the settled rule is that two entries on one calendar are two commemorations, so the redirect may point at a page for another man of the name. Second, 6 Μαρτίου has already been read for this wave and its drafts contain no Hesychius at all, so no row of that day's is displaced by this one. Both are named in the report. **`dates` stay absent**: the page gives no year, and the 6 Μαρτίου page was not opened by this reader. **No hymn** is on the 10 Μαΐου page. The only other thing it prints is the distich: «Τὸν βίον Ἡσύχιος ἄγων ἡσύχως, / Ἐν ἡσυχίᾳ πρὸς Θεὸν διαβαίνει»."
     },
     {
       "church": "serbian",

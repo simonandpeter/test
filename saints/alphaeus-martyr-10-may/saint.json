@@ -6,6 +6,11 @@
       "form": "Alfeu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 mai, «Sfântul Mucenic Alfeu»."
+    },
+    {
+      "form": "Αλφειός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Μαΐου, «Άγιοι Αλφειός, Κυπρίνος και Φιλάδελφος οι Αυτάδελφοι Μάρτυρες», with the rank word left off; the page's own head line for him is «Αγιος Αλφειος ο Μαρτυρας»."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαΐου — «Άγιοι Αλφειός, Κυπρίνος και Φιλάδελφος οι Αυτάδελφοι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and gives each of the three brothers his own head line and his own distich. **`dates` are added where the folder had none**, as the reign the page prints and nothing narrower. **The Greek adds what the folder lacked**: that the three were brothers, sons of the ruler of the prefects Vitalius, from the country of the Vascones of southern Italy; that they were taught the Orthodox faith and baptised by a venerable man named Onesimus; that they were denounced, seized by one Anengelion under Decius and sent bound to Rome; that after the first examination they were taken on to Puteoli to the governor Diomedes, who sent them to Tertyllus the ruler of Sicily; and that Tertyllus, failing to change their minds, condemned them to death. **His own death is the page's**: they cut out his tongue and then beheaded him. **`related` rows are added for the other two brothers and for the two martyrs of the same day**, `erasmus-10-may` and `onesimus-10-may`, whose own page says they died «μαζί με τους Άγιους Μάρτυρες Αλφειό, Κυπρίνο και Φιλάδελφο». **The venerable Onesimus who baptised them is not identified with the martyr Onesimus of the same day**: the Greek gives the one Ὅσιος and the other Ἅγιος Μάρτυρας and joins them nowhere, and that question is left in the report. No relics, no hymn."
     },
     {
       "church": "serbian",
@@ -45,5 +60,20 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "249–251",
+      "basis": "traditional",
+      "note": "saint.gr gives a reign and no year: «συνελήφθηκαν από τον Ανηγγελίωνα επί αυτοκράτορα Δεκίου (249-251 μ.Χ.)». The interval is that reign as the page prints it."
+    }
+  },
+  "related": [
+    "cyprian-martyr-10-may",
+    "philadelphus-martyr-10-may",
+    "erasmus-10-may",
+    "onesimus-10-may"
+  ]
 }

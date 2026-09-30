@@ -1,0 +1,71 @@
+{
+  "slug": "comgall-of-bangor",
+  "display_name": "Comgall of Bangor",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Κομγάλλιος",
+      "lang": "el",
+      "note": "The Greek form saint.gr prints in its own parenthesis: «Ο Όσιος Comgall (ή Comhghall) (Κομγάλλιος)». The day's line itself prints only «Άγιος Comgall», in Latin letters; the two Latin-letter forms Comgall and Comhghall are the page's own and are not recorded as a language form here, because the page gives no language for them."
+    }
+  ],
+  "related": [
+    "basil-the-great"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 517,
+      "latest": 517,
+      "display": "517",
+      "basis": "traditional",
+      "note": "saint.gr: «καταγόταν από την Ιρλανδία και γεννήθηκε στην πόλη Ούλστερ το 517 μ.Χ.», and the head line of the same page gives «(517 - 602)». The page calls Ulster a city, which it is not, and that word is left as the page's."
+    },
+    "death": {
+      "earliest": 602,
+      "latest": 602,
+      "display": "602",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Comgall κοιμήθηκε με ειρήνη το 602 μ.Χ.», and the head line of the same page gives «(517 - 602)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαΐου — «Άγιος Comgall»",
+        "url": "https://www.saint.gr/05/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Μαΐου εκάστου έτους», the same day as the listing. **The day's line prints his name in Latin letters and nothing else**, which is why the stored form is the Greek one from the life page's parenthesis. **The corpus keeps no Comgall**, so this is a new folder and not an upgrade. **Two things on the page are hedged and are left hedged**: the three thousand monks are «Λέγεται ότι», it is said that; and Ulster is called a city, «στην πόλη Ούλστερ», which it is not, and the word is reported rather than corrected, on the rule that a reading which looks wrong is the source's. **His teacher Finnian has no folder** and is named in the life without a link. **`basil-the-great` is joined to him by the page's own sentence** — «Εφάρμοσε τους μοναχικούς κανόνες του Μεγάλου Βασιλείου» — which is a rule followed and not a dedication. **`locations` are left out**: Ireland, Ulster and Bangor are named and none is located further. No relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

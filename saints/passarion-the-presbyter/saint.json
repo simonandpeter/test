@@ -1,0 +1,67 @@
+{
+  "slug": "passarion-the-presbyter",
+  "display_name": "Passarion the Presbyter",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Πασσαρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Μαΐου, «Όσιοι Πασσαρίων ο Πρεσβύτερος, Αγάπιος και Φιλήμων», with the rank word left off; the page's own head line for him is «Οσιος Πασσαριων ο Πρεσβυτερος»."
+    }
+  ],
+  "related": [
+    "euthymius-the-great",
+    "juvenal-of-jerusalem",
+    "agapius-disciple-of-passarion",
+    "philemon-disciple-of-passarion"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 420,
+      "latest": 458,
+      "display": "420–458",
+      "basis": "traditional",
+      "note": "saint.gr gives no year for him and dates him only by another man's episcopate: «Ήταν σύγχρονος του Πατριάρχη Ιεροσολύμων Ιουβενάλιου (420 - 458 μ.Χ.)». The interval is that episcopate as the page prints it, and it is a floruit and not a lifetime."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαΐου — «Όσιοι Πασσαρίων ο Πρεσβύτερος, Αγάπιος και Φιλήμων»",
+        "url": "https://www.saint.gr/05/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Μαΐου εκάστου έτους», the same day as the listing, **and gives each of the three his own head line**, so the company is three folders. **The page raises two other days for him and neither is taken as a feast here.** It says his memory used to be kept on 21 November in the oratory of his own almshouse — «στον οποίο κατά τις 21 Νοεμβρίου ετελείτο η μνήμη του» — which is a historical note about a building and not a day the calendar keeps him on now; and it says «Ο Όσιος Πασσαρίων ίσως είναι ο ίδιος με αυτόν που εορτάζει στις 11 Αυγούστου», that he is *perhaps* the same as the one kept on 11 August. **That «ίσως» is the page's own and is not resolved here**: the settled rule is that two entries on one calendar are two commemorations, so a second folder could be a second man, and no draft decides it. The row records the day page read; both other days are named in the report. **The corpus keeps no Passarion**, so this is not an upgrade. **The page cites its authority for all three**: «Η μνήμη και των τριών αναφέρεται στο Ιεροσολυμιτικό Κανονάριο (σελ. 90, εκδ. Αρχιμανδρίτη Κάλλιστου)». No relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

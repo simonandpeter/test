@@ -1,0 +1,55 @@
+{
+  "slug": "agapius-disciple-of-passarion",
+  "display_name": "Agapius, disciple of Passarion",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Αγάπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Μαΐου, «Όσιοι Πασσαρίων ο Πρεσβύτερος, Αγάπιος και Φιλήμων», with the rank word left off; the page's own head line for him is «Οσιος Αγαπιος»."
+    }
+  ],
+  "related": [
+    "passarion-the-presbyter",
+    "philemon-disciple-of-passarion"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαΐου — «Όσιοι Πασσαρίων ο Πρεσβύτερος, Αγάπιος και Φιλήμων»",
+        "url": "https://www.saint.gr/05/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Μαΐου εκάστου έτους», the same day as the listing, and gives him his own head line, which is why the company is three folders. **The whole of him on the page is one clause**: «Οι μετ' αυτού φερόμενοι Όσιοι Αγάπιος και Φιλήμων ήταν μαθητές του Οσίου Πασσαρίωνος και συνασκητές.» **No `dates` are recorded** although his master is dated by Juvenal's episcopate: the page gives that interval for Passarion alone, and carrying it across to a disciple would be an inference. **He is none of the eight Agapii the corpus keeps** — of Apamea, of Caesarea in Palestine, of Colciu, of Gaza, the son of Bassa, the son of Eustathius, the disciple of Babylas, the one of 2 November — none of whom is a disciple of Passarion or kept on this day. The page's authority for him is «το Ιεροσολυμιτικό Κανονάριο (σελ. 90, εκδ. Αρχιμανδρίτη Κάλλιστου)». No relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

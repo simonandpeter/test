@@ -6,6 +6,11 @@
       "form": "Lavrentie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 mai, «Sfântul Cuvios Lavrentie»."
+    },
+    {
+      "form": "Λαυρέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Μαΐου, «Όσιος Λαυρέντιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαΐου — «Όσιος Λαυρέντιος»",
+        "url": "https://www.saint.gr/05/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and the Greek of the Demetrias synaxis page names «Λαυρέντιο (βλέπε 10 Μαΐου)» among the saints of that metropolis, which corroborates the day. **`dates` are added where the folder had none**, as a fourteenth-century floruit and nothing narrower. **The page contradicts itself on the reign and is not corrected.** It puts the building under «ο ευσεβής αυτοκράτορας Αλέξιος Κομνηνός» and then dates the finished church to 1378, and no Alexios Komnenos reigned then; on `docs/CORPUS.md` §3's rule that a reading which looks wrong is the source's, the emperor's name is quoted in the life as the page's and no year is derived from it. It is named in the report. **The Greek adds what the folder lacked**: the tonsure at the Great Lavra of the Holy Mountain; his leaving it because the heresy of Barlaam and Akindynos had taken hold there and in the Lavra above all; his coming to the region of Volos, to the village that now bears his name, and beginning to build a monastery; the chrysobull, the gold and the sacred vessels sent to him for the building; the completion of the church in 1378; the skete he then founded in the name of the Transfiguration of the Saviour and of the Prophet Elijah, and the fame that drew many young and educated monks to it; and his repose in peace in deep old age. **One hymn is stored**, the apolytikion, which is proper and names him and his village. `types` are not changed: the folder's `venerable` covers the page's Ὅσιος, and the hymn's «ἰατρὸν ἀσθενούντων» is a hymn's praise and not a rank."
     },
     {
       "church": "serbian",
@@ -45,5 +60,32 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Λαυρέντιος έζησε κατά τον 14ο αιώνα μ.Χ.», and the same page dates the finishing of his church: «Ο ναός αποπερατώθηκε το 1378 μ.Χ.» It gives no year for his birth and none for his death, only that he fell asleep «σε βαθύ γήρας», and its naming of the emperor Alexios Komnenos for those years cannot be reconciled with 1378, so no year is taken from it."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Μέγαν εὔρατο, ἡ κώμη κλέος. τόν Λαυρέντιον βροτῶν τόν θείον, ὡς ἀσκητήν ἐν ἀσκηταῖς δοκιμότατον, καί ἰατρόν ἀσθενοῦντων πανθαύμαστον. πάτερ ὅσιε Χριστόν τόν Θεόν ἱκέτευε, δωρήσασθαι ἡμῖν τό μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. δ’, the only hymn on the page of «Όσιος Λαυρέντιος»",
+        "url": "https://www.saint.gr/1545/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The village has found a great glory: Laurence, the divine among mortals, most tried of ascetics among ascetics and a most wonderful physician of the sick. O venerable father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

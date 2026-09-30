@@ -1,0 +1,65 @@
+{
+  "slug": "simon-of-vladimir",
+  "display_name": "Simon of Vladimir",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "monk"
+  ],
+  "office": "Bishop of Vladimir and Suzdal",
+  "names": [
+    {
+      "form": "Σίμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Μαΐου, «Άγιος Σίμων Επίσκοπος Βλαδιμίρ και Σουζδαλίας», with the rank word and the see left off. No Slavonic form is recorded: saint.gr prints none."
+    }
+  ],
+  "related": [
+    "theodosius-of-the-kyiv-caves"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1226,
+      "latest": 1226,
+      "display": "1226",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Σίμων, την παραμονή της κοιμήσεώς του, το 1226 μ.Χ., έλαβε το μέγα αγγελικό σχήμα», and the head line of the same page gives «(; - 1226)». The page gives no year for his birth, only that he became a monk in the second half of the twelfth century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). He is a Russian saint and that calendar is the one that would settle his own day; it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαΐου — «Άγιος Σίμων Επίσκοπος Βλαδιμίρ και Σουζδαλίας»",
+        "url": "https://www.saint.gr/05/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Μαΐου εκάστου έτους», the same day as the listing. **He is not `simon-the-zealot`**, whose Greek row comes off this very same day page: that is the apostle, this is a thirteenth-century Russian bishop, and the two share nothing but the name and the day. **Two saints are named in his vision and only one has a folder**: the venerable Theodosius is `theodosius-of-the-kyiv-caves` and is linked; the venerable Antony beside him has no folder in this corpus and is named without a link. **`locations` are left out** although Vladimir, Suzdal and the Kyiv Caves are all named: the see is in `office` and the rest are a monastery, a burial and a translation. **The relic is recorded in the note and not as a claim of incorruption of this reader's own**: «Το Λείψανο του Αγίου βρίσκεται αδιάφθορο στη Λαύρα των Σπηλαίων του Κιέβου». No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

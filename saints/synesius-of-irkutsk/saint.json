@@ -1,0 +1,57 @@
+{
+  "slug": "synesius-of-irkutsk",
+  "display_name": "Synesius of Irkutsk",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Συνέσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Μαΐου, «Άγιος Συνέσιος του Ιρκούτσκ», with the rank word left off. No Russian form is recorded: saint.gr prints none."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1787,
+      "latest": 1787,
+      "display": "1787",
+      "basis": "traditional",
+      "note": "The year stands only in the head line over his name on saint.gr's page, «Αγιος Συνεσιος Του Ιρκουτσκ (; - 1787)». The body of the page gives no year at all: its whole text is «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). He is a Russian saint and that calendar is the one that would settle his day, his rank and his life; it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαΐου — «Άγιος Συνέσιος του Ιρκούτσκ»",
+        "url": "https://www.saint.gr/05/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Μαΐου εκάστου έτους», the same day as the listing. **The page carries no asterisk and no sentence of self-doubt** — it is not one of the refusals of BRIEF-GREEK §10 — it simply says it has no details: «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου.» **`types` is empty on purpose.** The only rank word the page gives him is Ἅγιος, which the corpus composes itself, and nothing on the page says whether he was a bishop, a monk or a layman; a type would be a guess, so none is used. It is named in the report. **He is not `theonas-called-synesius`**, the corpus's only other Synesius, who is an Egyptian of another day. **`locations` are left out**: Irkutsk is in the epithet and the page places him nowhere. No relics, no hymn, no century in the body."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

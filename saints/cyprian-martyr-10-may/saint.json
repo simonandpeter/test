@@ -6,6 +6,11 @@
       "form": "Ciprian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 mai, «Sfântul Mucenic Ciprian»."
+    },
+    {
+      "form": "Κυπρίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Μαΐου, «Άγιοι Αλφειός, Κυπρίνος και Φιλάδελφος οι Αυτάδελφοι Μάρτυρες», with the rank word left off; the page's own head line for him is «Αγιος Κυπρινος ο Μαρτυρας». The same page offers three other forms of the one name — «Κυπρίνος (ή Kύριλλος ή Κυρίνος ή Κυπριανός)» — which are left in the note on the attestation rather than stored as separate forms."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαΐου — «Άγιοι Αλφειός, Κυπρίνος και Φιλάδελφος οι Αυτάδελφοι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him. **The Greek and the Romanian call him by different names and the page itself joins them**: the folder's `ro` form is «Ciprian», and saint.gr writes «Κυπρίνος (ή Kύριλλος ή Κυρίνος ή Κυπριανός)» — Cyprinus, or Cyril, or Cyrinus, or Cyprian. That parenthesis is what makes this the same man and not a fifth; the same day, the same two brothers and the same father settle it besides. **The stored Greek form is Κυπρίνος**, the form the day's line prints, and the three alternatives are quoted in the note rather than stored, because the page offers them as variants of one name and choosing among them is not this reader's to do. **`dates` are added where the folder had none**, as the reign the page prints. **The Greek adds** the brotherhood, the father Vitalius, the country of the Vascones in southern Italy, the baptism by a venerable man named Onesimus, the arrest by Anengelion, the journey to Rome and then to Puteoli and Diomedes and then to Tertyllus of Sicily, and his own death: they fried him in an enormous pan. **`related` rows are added** for his two brothers and for `erasmus-10-may` and `onesimus-10-may`. No relics, no hymn."
     },
     {
       "church": "serbian",
@@ -45,5 +60,20 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "249–251",
+      "basis": "traditional",
+      "note": "saint.gr gives a reign and no year: «συνελήφθηκαν από τον Ανηγγελίωνα επί αυτοκράτορα Δεκίου (249-251 μ.Χ.)». The interval is that reign as the page prints it."
+    }
+  },
+  "related": [
+    "alphaeus-martyr-10-may",
+    "philadelphus-martyr-10-may",
+    "erasmus-10-may",
+    "onesimus-10-may"
+  ]
 }

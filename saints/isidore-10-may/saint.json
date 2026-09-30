@@ -1,0 +1,72 @@
+{
+  "slug": "isidore-10-may",
+  "display_name": "Isidore (10 May)",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ισίδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Μαΐου, «Όσιος Ισίδωρος ο μωρός», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [
+    "anthony-the-great",
+    "athanasius-of-alexandria",
+    "john-chrysostom"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 319,
+      "latest": 319,
+      "display": "319",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ισίδωρος γεννήθηκε το 319 μ.Χ. και καταγόταν από την Αλεξάνδρεια», and the head line of the same page gives «(319 - 404)»."
+    },
+    "death": {
+      "earliest": 404,
+      "latest": 404,
+      "display": "404",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ισίδωρος κοιμήθηκε με ειρήνη το 404 μ.Χ.», and the head line of the same page gives «(319 - 404)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαΐου — «Όσιος Ισίδωρος ο μωρός»",
+        "url": "https://www.saint.gr/05/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Μαΐου εκάστου έτους», the same day as the listing. **He is none of the six Isidores the corpus keeps** — of Antioch, of Chios, of Pelusium, of Samtavisi, the one of 8 January: this one is an Alexandrian, disciple of Antony the Great, dated 319 to 404. **The epithet «ο μωρός» is left out of `types` deliberately.** It is the day line's word and would map to `fool-for-christ`, but the page's own account is of a man of meekness, of the gift of tears and of easy ecstasy at table, and of a fight with Patriarch Theophilus — not of folly for Christ — so the type is not claimed on the strength of one word, and the epithet is quoted in the life instead. It is named in the report. **Three of the saints the page names are linked and four are not**: `anthony-the-great`, `athanasius-of-alexandria` and `john-chrysostom` are plain; the Macarius he lived beside, the Pambo he rebuked misers with, «η Οσία Μελανία» with whom he went to the desert, and Patriarch Theophilus have either no folder or no way to tell which of several folders the page means, and are named in the life without links, `melania-the-roman` in particular not being identified with the page's Melania on the name alone. **`locations` are left out**: Alexandria, Rome and the Egyptian desert are all named and the page places him at all three in turn. No relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

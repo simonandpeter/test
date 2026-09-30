@@ -6,6 +6,11 @@
       "form": "Simon Zilotul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 mai, «Sfântul Apostol Simon Zilotul»."
+    },
+    {
+      "form": "Σίμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Μαΐου, «Άγιος Σίμων ο Απόστολος, ο Ζηλωτής», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαΐου — «Άγιος Σίμων ο Απόστολος, ο Ζηλωτής»",
+        "url": "https://www.saint.gr/05/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and it is the apostle of the Twelve. **He is not `simon-of-vladimir`**, drafted from this same day page: that is a Russian bishop of 1226. **The page gives him a second day and it is recorded here as a note, not as a second row**: «Σημείωση: Ο Σίμων ο Ζηλωτής εορτάζει και στις 22 Απριλίου.» One attestation row per church is the schema, so the second day is a note; 22 Απριλίου has already been read for this wave and left him no row, which is named in the report. **Three identifications on the page are quoted and not adopted.** It says he was the brother of Jude Lebbaeus; that he came of Cana of Galilee and is known as Simon the Cananite; and then, in a parenthesis, «(ή Ναθαναήλ ή Βαρθολομαίος - υιός του Θολομαίου)» — or Nathanael, or Bartholomew. The corpus keeps Bartholomew and Nathanael as their own folders, and the settled rule is that deciding two entries are one person is not a machine's work and not a draft's; so no `related` row is added on the strength of that parenthesis, no folder is merged, and the page's words are quoted in the life as the page's. It is named in the report. **The Greek adds what the folder lacked**: the reason for the epithet, «λόγω της θέρμης και του ζήλου με τον οποίο κήρυττε»; the preaching in Persia, then in Africa from Egypt to Mauretania, and last in Britain; and the arrest, torture and death on a cross there. **`dates` are not added**: the page gives no year for anything. **Two hymns are stored**; the page also prints a short general apolytikion in Ἦχος γ’ which names him — «Ἀπόστολε Ἅγιε Σίμων, πρέσβευε τῷ ἐλεήμονι Θεῷ» — and that one is left in the source as the common it is, the proper one in the same tone being taken instead."
     },
     {
       "church": "serbian",
@@ -58,6 +73,40 @@
       },
       "english": {
         "text": "Holy Apostle Simon, entreat the merciful God to grant our souls forgiveness of our offences.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Ζῆλος ἔνθεος, καταλαβῶν σε, τοῦ γνωσθέντος σοι, σαρκὸς ἐν εἴδει, ζηλωτὴν ἐν Ἀποστόλοις ἀνέδειξε καὶ τοῦ Δεσπότου ζηλώσας τὸν θάνατον, διὰ Σταυροῦ πρὸς αὐτὸν ἐξεδήμησας, Σίμων ἔνδοξε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως, the second of two on the page of «Άγιος Σίμων ο Απόστολος, ο Ζηλωτής»; the first is the short general one for an apostle and is left in the source",
+        "url": "https://www.saint.gr/1539/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A zeal from God laid hold of thee for him who was made known to thee in the form of flesh, and showed thee a zealot among the Apostles; and having been zealous for thy Master's death, thou didst depart to him by a cross, O glorious Simon. Entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τοὺς ἀσφαλεῖς.",
+      "text": "Τὸν ἀσφαλῶς τὰ τῆς σοφίας δόγματα, ἐν ταῖς ψυχαῖς τῶν εὐσεβούντων θέμενον, ἐν αἰνέσει μακαρίσωμεν, τὸν θεηγόρον πάντες Σίμωνα· τῷ θρόνῳ γὰρ τῆς δόξης νῦν παρίσταται, καὶ σὺν τοῖς Ἀσωμάτοις ἐπαγάλλεται, πρεσβεύων ἀπαύστως ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τοὺς ἀσφαλεῖς, on the page of «Άγιος Σίμων ο Απόστολος, ο Ζηλωτής»",
+        "url": "https://www.saint.gr/1539/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Him who surely laid the doctrines of wisdom in the souls of the devout, let us all call blessed with praise — Simon who spoke of God; for he stands now at the throne of glory and rejoices with the bodiless ones, interceding without ceasing for us all.",
         "rendered": "site"
       }
     }

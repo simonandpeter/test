@@ -1,0 +1,65 @@
+{
+  "slug": "erasmus-10-may",
+  "display_name": "Erasmus (10 May)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Έρασμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Μαΐου, «Άγιοι Έρασμος, Ονήσιμος και οι συν αυτώ δεκατέσσερις Μάρτυρες», with the rank word left off; the page's own head line for him is «Αγιος Ερασμος ο Μαρτυρας»."
+    }
+  ],
+  "related": [
+    "onesimus-10-may",
+    "alphaeus-martyr-10-may",
+    "cyprian-martyr-10-may",
+    "philadelphus-martyr-10-may"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "249–251",
+      "basis": "traditional",
+      "note": "saint.gr gives a reign and no year: «μαρτύρησαν μαζί με άλλους δεκατέσσερις Μάρτυρες, επί αυτοκράτορα Δεκίου (249 - 251 μ.Χ.)». The interval is that reign as the page prints it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαΐου — «Άγιοι Έρασμος, Ονήσιμος και οι συν αυτώ δεκατέσσερις Μάρτυρες»",
+        "url": "https://www.saint.gr/05/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Μαΐου εκάστου έτους», the same day as the listing, **and gives each of the two named men his own head line**, so the pair is two folders. **The fourteen others are not named** — «μαζί με άλλους δεκατέσσερις Μάρτυρες» — so they are no folders, though the company is numbered. **He is not `erasmus-the-venerable`**, the corpus's only other Erasmus, who is a venerable and not a martyr. **The whole page is one sentence and it joins him to the three brothers of the same day**, `alphaeus-martyr-10-may`, `cyprian-martyr-10-may` and `philadelphus-martyr-10-may`: «μαζί με τους Άγιους Μάρτυρες Αλφειό, Κυπρίνο και Φιλάδελφο». No place, no judge, no manner of death, no relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
