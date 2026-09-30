@@ -6,6 +6,11 @@
       "form": "Gorgonia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 februarie, «Sfânta Cuvioasă Gorgonia»."
+    },
+    {
+      "form": "Γοργονία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Φεβρουαρίου, «Αγία Γοργονία, αδελφή του Αγίου Γρηγορίου του Θεολόγου», with the rank words left off."
     }
   ],
   "sex": "female",
@@ -13,7 +18,9 @@
     "venerable"
   ],
   "related": [
-    "gregory-the-theologian"
+    "gregory-the-theologian",
+    "nonna-mother-of-gregory-the-theologian",
+    "gregory-the-elder"
   ],
   "attestations": [
     {
@@ -37,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 23 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Φεβρουαρίου — «Αγία Γοργονία, αδελφή του Αγίου Γρηγορίου του Θεολόγου»",
+        "url": "https://www.saint.gr/02/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads her «(332 - 370)», names her husband Alypius and her five children — two sons dedicated to God and three daughters, Alypiane, Eugenia and Nonna — and ends her of an illness in 370 at thirty-eight. The distich says Gregory's funeral oration is why it honours her death in silence."
     },
     {
       "church": "serbian",
@@ -48,5 +65,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 332,
+      "latest": 332,
+      "display": "332",
+      "basis": "traditional",
+      "note": "saint.gr heads her page «Αγια Γοργονια Αδελφη Του Αγιου Γρηγοριου Του Θεολογου (332 - 370)», and the life has her die in 370 «σε ηλικία 38 ετών», at thirty-eight, which is the same reckoning."
+    },
+    "death": {
+      "earliest": 370,
+      "latest": 370,
+      "display": "370",
+      "basis": "traditional",
+      "note": "saint.gr: «Μία όμως αρρώστια την έστειλε πρόωρα να συναντήσει τον λυτρωτή και νυμφίο Χριστό το έτος 370 μ.Χ., σε ηλικία 38 ετών.»"
+    }
   }
 }

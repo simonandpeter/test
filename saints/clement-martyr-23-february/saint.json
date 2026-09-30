@@ -1,0 +1,50 @@
+{
+  "slug": "clement-martyr-23-february",
+  "display_name": "Clement (23 February)",
+  "names": [
+    {
+      "form": "Κλήμης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Φεβρουαρίου, «Άγιος Κλήμης», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Φεβρουαρίου — «Άγιος Κλήμης»",
+        "url": "https://www.saint.gr/02/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is one sentence: «Ο Άγιος Μάρτυς Κλήμης μαρτύρησε διά ξίφους. Δεν έχουμε περισσότερες λεπτομέρειες για τον βίο του Αγίου» — he was martyred by the sword and there are no further details. No year, no place, no emperor, no relic, no hymn. He is not the apostle Clement of Sardis whom the corpus keeps on 10 September, nor Clement of Ancyra, nor Clement of Rome."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Damian Esfigmenitul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 februarie."
+    },
+    {
+      "form": "Δαμιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Φεβρουαρίου, «Όσιος Δαμιανός ο Εσφιγμενίτης», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -48,8 +53,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 23 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Φεβρουαρίου — «Όσιος Δαμιανός ο Εσφιγμενίτης»",
+        "url": "https://www.saint.gr/02/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1280)» and is open about its sources: «Πότε και που γεννήθηκε ο Όσιος Δαμιανός δεν γνωρίζουμε. Ο βίος του σώζεται σε νεότερο χειρόγραφο της Ιεράς Μονής Έσφιγμένου» — when and where he was born we do not know, and his life survives in a later manuscript of Esphigmenou — and it gives the rest «σύμφωνα με προφορική παράδοση», by oral tradition. The date already in this folder agrees with it and is left as it stands."
     },
     {
       "church": "serbian",

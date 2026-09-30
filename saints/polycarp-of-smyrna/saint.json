@@ -7,6 +7,11 @@
       "form": "Policarp",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 februarie, «Sfântul Sfințit Mucenic Policarp, Episcopul Smirnei»."
+    },
+    {
+      "form": "Πολύκαρπος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Φεβρουαρίου, «Άγιος Πολύκαρπος Επίσκοπος Σμύρνης», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -15,7 +20,10 @@
     "bishop"
   ],
   "related": [
-    "irenaeus-of-lyon"
+    "irenaeus-of-lyon",
+    "ignatius-of-antioch",
+    "john-the-theologian",
+    "bucolus-of-smyrna"
   ],
   "attestations": [
     {
@@ -39,8 +47,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 23 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Φεβρουαρίου — «Άγιος Πολύκαρπος Επίσκοπος Σμύρνης»",
+        "url": "https://www.saint.gr/02/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 167)», puts his birth «περί το 80 μ.Χ.» of parents Pancratius and Theodora, and lists three relics: the head at the monastery of Prousos in Eurytania, the right hand at the monastery of the Panagia Ampelakiotissa at Nafpaktos, and a portion at the church of St George of the Greeks in Venice. It says his synaxis used to be held at the Great Church."
     },
     {
       "church": "serbian",
@@ -50,5 +68,57 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 80,
+      "latest": 80,
+      "display": "about 80",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Πολύκαρπος γεννήθηκε περί το 80 μ.Χ.» — the page's «περί», about, is why the display says about 80."
+    },
+    "death": {
+      "earliest": 167,
+      "latest": 167,
+      "display": "167",
+      "basis": "traditional",
+      "note": "saint.gr: «Τελικά ο Άγιος συνελήφθη το έτος 167 μ.Χ. και οδηγήθηκε ενώπιον του ανθυπάτου», and the page heads him «(; - 167)». The page also has him answer that he had served Christ for eighty-six years."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Τήν κλῆσιν τοῖς ἔργοις σου, ἐπισφραγίσας σοφέ, ἐλαία κατάκαρπος, ὤφθης ἐν οἴκῳ Θεοῦ, Πολύκαρπε ἔνδοξε∙ σύ γαρ ως Ἱεράρχης, καί στερρός Ἀθλοφόρος, τρέφεις τήν Ἐκκλησίαν, λογικῇ εὐκαρπίᾳ, πρεσβεύων Ἱερομάρτυς, ὑπέρ τῶν ψυχῶν ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε, on the page of Άγιος Πολύκαρπος Επίσκοπος Σμύρνης. It names him and plays on the name, πολύκαρπος, much-fruited, against ἐλαία κατάκαρπος. The page prints a second apolytikion in Ἦχος δ’ as well, which is the common of a hieromartyr who is also a hierarch; the first apolytikion and the kontakion are taken here.",
+        "url": "https://www.saint.gr/3684/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having set thy calling as a seal upon thy works, O wise one, thou wast seen as an olive tree laden with fruit in the house of God, O glorious Polycarp; for as a hierarch and a steadfast prizewinner thou dost feed the Church with the good fruit of reason, interceding, O hieromartyr, for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Χορὸς Ἀγγελικὸς.",
+      "text": "Καρπούς τούς λογικούς, τῷ Κυρίῳ προσφέρων, Πολύκαρπε σοφέ, ἀρετῶν δι᾽ ἐνθέων, ἐδείχθης ἀξιόθεος, Ἱεράρχα μακάριε· ὅθεν σήμερον, οἱ φωτισθέντες σοῖς λόγοις, ἀνυμνοῦμέν σου, τήν ἀξιέπαινον μνήμην, Θεόν μεγαλύνοντες.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Χορὸς Ἀγγελικὸς, on the page of Άγιος Πολύκαρπος Επίσκοπος Σμύρνης.",
+        "url": "https://www.saint.gr/3684/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Offering to the Lord the fruits of reason through virtues filled with God, O wise Polycarp, thou wast shown worthy of God, O blessed hierarch; whence today we who have been enlightened by thy words hymn thy memory, which is worthy of all praise, and magnify God.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

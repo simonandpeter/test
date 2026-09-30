@@ -1,0 +1,57 @@
+{
+  "slug": "john-disciple-of-limnaeus",
+  "display_name": "John, disciple of Limnaeus",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Φεβρουαρίου, «Άγιοι Ιωάννης, Μωυσής, Αντίοχος και Αντωνίνος», with the rank words left off. The life page heads him «Αγιος Ιωαννης» alone and the body calls him «Ο Όσιος Ιωάννης»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Φεβρουαρίου — «Άγιοι Ιωάννης, Μωυσής, Αντίοχος και Αντωνίνος»",
+        "url": "https://www.saint.gr/02/23/index.aspx",
+        "year": 2026
+      },
+      "note": "One page for the four of them. It makes John a disciple of Limnaeus, kept on 22 February, and puts his ascesis on a mountain near the city of Targala; the other three imitated him and passed their lives on the high peak of the mountain of the city of Ramas. It gives no year for any of them and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "limnaeus",
+    "antiochus-of-ramas",
+    "antoninus-of-ramas",
+    "moses-of-ramas"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

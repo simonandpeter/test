@@ -1,0 +1,60 @@
+{
+  "slug": "lazarus-of-tripoli-in-the-peloponnese",
+  "display_name": "Lazarus of Tripoli in the Peloponnese",
+  "names": [
+    {
+      "form": "Λάζαρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Φεβρουαρίου, «Άγιος Λάζαρος ο εκ Τριπόλεως Πελοποννήσου ο Νέος Ιερομάρτυρας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Φεβρουαρίου — «Άγιος Λάζαρος ο εκ Τριπόλεως Πελοποννήσου ο Νέος Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/02/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The page names its own earliest witness — «η πρώτη γραπτή αναφορά που έχομεν για το μαρτύριο του Αγίου νεοϊερομάρτυρος Λαζάρου, είναι αυτή του υπ. αρίθμ 797 κώδικα της Ιεράς Μονής Βατοπαιδίου», codex 797 of Vatopedi, which preserves his service and his synaxarion — and dates the martyrdom «(23/02/±1605 μ.Χ.)», with the year expressly marked approximate."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1605,
+      "latest": 1605,
+      "display": "about 1605",
+      "basis": "traditional",
+      "note": "saint.gr writes the date as «(23/02/±1605 μ.Χ.)» — the plus-or-minus is the page's own and marks the year approximate, so the display says about 1605 rather than 1605."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

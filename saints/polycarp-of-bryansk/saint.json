@@ -1,0 +1,59 @@
+{
+  "slug": "polycarp-of-bryansk",
+  "display_name": "Polycarp of Bryansk",
+  "names": [
+    {
+      "form": "Πολύκαρπος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Φεβρουαρίου, «Οσίος Πολύκαρπος του Μπρυάνσκ», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Φεβρουαρίου — «Οσίος Πολύκαρπος του Μπρυάνσκ»",
+        "url": "https://www.saint.gr/02/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is one sentence, and it is a refusal: «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου παρά μόνο ότι κοιμήθηκε το 1620 ή 1621 μ.Χ.» — we have no details of the Russian saint's life except that he fell asleep in 1620 or 1621. He is not Polycarp of Smyrna, whom the same day page keeps."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1620,
+      "latest": 1621,
+      "display": "1620 or 1621",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε το 1620 ή 1621 μ.Χ.» The interval is the page's own disagreement between the two years, not a finding."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

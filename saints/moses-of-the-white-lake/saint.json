@@ -1,0 +1,60 @@
+{
+  "slug": "moses-of-the-white-lake",
+  "display_name": "Moses of the White Lake",
+  "names": [
+    {
+      "form": "Μωυσής",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Φεβρουαρίου, «Όσιος Μωυσής εκ Ρωσίας», with the rank words left off. Two other men of this name stand on saint.gr's same day, one of Ramas and one a disciple of Polychronius, on pages of their own."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Φεβρουαρίου — «Όσιος Μωυσής εκ Ρωσίας»",
+        "url": "https://www.saint.gr/02/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is two sentences: he lived about the end of the fifteenth and the beginning of the sixteenth century and was an ascetic in the monastery of the Holy Trinity of the White Lake in Russia, and fell asleep in peace in a holy manner. No year, no relic, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1476,
+      "latest": 1525,
+      "display": "late 15th and early 16th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Μωυσής έζησε περί τα τέλη του 15ου και αρχές του 16ου αιώνα μ.Χ.» The interval is the page's own straddle of the two centuries and no more; it gives no year for his repose."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

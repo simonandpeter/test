@@ -1,0 +1,56 @@
+{
+  "slug": "polychronius-disciple-of-zebinas",
+  "display_name": "Polychronius, disciple of Zebinas",
+  "names": [
+    {
+      "form": "Πολυχρόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Φεβρουαρίου, «Όσιοι Ζεβινάς, Πολυχρόνιος, Δαμιανός και Μωυσής», with the rank words left off. The corpus already keeps a Polychronius, a presbyter and martyr on the Romanian 7 October; this is a different man, an ascetic who died in peace."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Φεβρουαρίου — «Όσιοι Ζεβινάς, Πολυχρόνιος, Δαμιανός και Μωυσής»",
+        "url": "https://www.saint.gr/02/23/index.aspx",
+        "year": 2026
+      },
+      "note": "One page for the four of them, resting on Theodoret of Cyrrhus's Philotheos Historia. Zebinas set his hermitage on a mountain; Polychronius came to him; Damian and Moses were Polychronius's disciples, Moses staying in his elder's cell and Damian going to the small town of Niara. It gives no year for any of them and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "zebinas",
+    "damian-disciple-of-polychronius",
+    "moses-disciple-of-polychronius"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

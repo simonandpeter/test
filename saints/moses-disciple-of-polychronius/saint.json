@@ -1,0 +1,56 @@
+{
+  "slug": "moses-disciple-of-polychronius",
+  "display_name": "Moses, disciple of Polychronius",
+  "names": [
+    {
+      "form": "Μωυσής",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Φεβρουαρίου, «Όσιοι Ζεβινάς, Πολυχρόνιος, Δαμιανός και Μωυσής», with the rank words left off. Two other men of this name stand on saint.gr's same day, one of Ramas and one out of Russia, on pages of their own."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Φεβρουαρίου — «Όσιοι Ζεβινάς, Πολυχρόνιος, Δαμιανός και Μωυσής»",
+        "url": "https://www.saint.gr/02/23/index.aspx",
+        "year": 2026
+      },
+      "note": "One page for the four of them, resting on Theodoret of Cyrrhus's Philotheos Historia. Zebinas set his hermitage on a mountain; Polychronius came to him; Damian and Moses were Polychronius's disciples, Moses staying in his elder's cell and Damian going to the small town of Niara. It gives no year for any of them and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "zebinas",
+    "polychronius-disciple-of-zebinas",
+    "damian-disciple-of-polychronius"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

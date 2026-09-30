@@ -1,0 +1,11 @@
+# Lazarus of Tripoli in the Peloponnese
+
+The first written mention we have of the martyrdom of the new hieromartyr Lazarus, saint.gr says, is in codex 797 of the monastery of Vatopedi, which preserves his service and his synaxarion. He was a priest, and Tripoli was his own country; his devout parents Nicholas and Alexandra brought him up in the admonition and teaching of the Lord and led him to a perfect measure of virtue. Once ordained priest he taught those who lived in reverence, and admonished the rest not to wrong the poor.
+
+A man of Tripoli itself, called Seletos, did wrong daily, and Lazarus counselled him continually to stop wronging others. When Seletos was condemned to death for the wrongs he had done he denied Christ to save himself; and having become a Mohammedan and escaped the danger, he set out with other Turks to persuade Lazarus to renounce his faith too. They slandered him many times and brought him before the court, telling him that if he changed his religion they would give him many good things, and if not they would put him to death.
+
+The saint refused the unholy offer, and they decided to torture him with many torments — scourgings, the wrenching of his limbs, the cutting off of members, beatings and much else, the torments common to most of the new martyrs. At last, seeing that the martyr would not yield, they threw him into the fire, in which he gave up his blessed soul at prayer. It is worth noting, the page says, that his mother supported him, telling him to bear the temporary punishment of the fire so as to inherit the eternal Kingdom and rejoice with the other martyrs.
+
+So the holy new hieromartyr Lazarus was perfected; and those standing by, believers and unbelievers alike, astonished and in fear, testified that a light out of heaven covered the place of the martyrdom for three days running. Afterwards some devout Christians gathered up the saint's relics and dust, which healed those who called on him with faith. A life and a full service for him have been published by the monk Paisios of the New Skete.
+
+*After saint.gr's calendar for 23 Φεβρουαρίου — [the day](https://www.saint.gr/02/23/index.aspx) and [the life](https://www.saint.gr/4454/saint.aspx); read 30 September 2026.*

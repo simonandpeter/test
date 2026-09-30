@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'πολυκαρποσ polycarp-of-bryansk polycarp-of-smyrna polycarp-venerable-8-february':
+    'Three men, and two share 23 February as two lines: Polycarp of Smyrna, whom the Romanian calendar keeps there too, and Polycarp of Bryansk, of whom the page says it has no details. The third is the venerable of 8 February.',
+  'κλημησ clement-martyr-23-february clement-of-ancyra clement-of-mount-sagmation':
+    'Three men on three Greek days: the martyr saint.gr keeps alone on 23 February, Ancyra on 23 January, which the Romanian calendar keeps too, and Mount Sagmation on 26 January.',
+  'μωυσησ moses-disciple-of-polychronius moses-of-novgorod moses-of-ramas moses-of-the-white-lake':
+    'Four men, and three of them share 23 February, which the page itself divides. saint.gr prints two companies of four ascetics on that day: one from Theodoret of Cyrrhus Philotheos Historia, where Moses stands with Zebinas, Polychronius and Damian, and one where Moses of Ramas stands with John the disciple of Limnaeus; and beside both it keeps Moses of the White Lake, the Russian of the Holy Trinity monastery about 1500. Three entries, three commemorations. Novgorod is 25 January.',
+  'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-disciple-of-limnaeus john-iii-scholasticus john-koulakiotis john-mauropous john-of-edessa john-of-irenopolis john-of-kazan john-of-lycopolis john-of-spetses john-of-syracuse john-son-of-xenophon john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-sinaite-venerable-martyr':
+    'Seventeen now. The new one is the disciple of Limnaeus on 23 February; the other sixteen are read in the el-02-21 entry for this name form.',
+  'δαμιανοσ damian-disciple-of-polychronius damian-of-agrafa damian-of-esphigmenou':
+    'Three men, and two of them share 23 February as two entries of that day: the disciple of Polychronius, one of the four ascetics whose lives the page takes from Theodoret of Cyrrhus, and Damian of Esphigmenou, whom the Romanian calendar keeps there too. Agrafa is 14 February.',
   'θεοκτιστη theoctiste-daughter-of-athanasia theoktiste-of-voronezh':
     'Two women: the daughter of Athanasia on 31 January, and Voronezh on 22 February.',
   'γερμανοσ germanos-of-stolobnoe germanus-of-novgorod germanus-of-sagmata':

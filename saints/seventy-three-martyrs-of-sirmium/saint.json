@@ -1,0 +1,59 @@
+{
+  "slug": "seventy-three-martyrs-of-sirmium",
+  "display_name": "The Seventy-three Martyrs of Sirmium",
+  "names": [
+    {
+      "form": "Εβδομήντα Τρεις Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Φεβρουαρίου, «Άγιοι Εβδομήντα Τρεις Μάρτυρες», with the rank words left off. The line is a number and not a personal name; it is kept because it is the only form the page gives."
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Φεβρουαρίου — «Άγιοι Εβδομήντα Τρεις Μάρτυρες»",
+        "url": "https://www.saint.gr/02/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is one sentence: «Οι Άγιοι Εβδομήντα Τρεις Μάρτυρες, μαρτύρησαν στην πόλη Σίρμιον, επί Διοκλητιανού (284 - 305 μ.Χ.) το έτος 303 μ.Χ.» It names none of the seventy-three, so the company stands here as one entry and not as seventy-three folders."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "attested",
+      "note": "saint.gr: «μαρτύρησαν στην πόλη Σίρμιον, επί Διοκλητιανού (284 - 305 μ.Χ.) το έτος 303 μ.Χ.» The page gives the year and the reign it falls in."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
