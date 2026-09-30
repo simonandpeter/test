@@ -10,6 +10,11 @@
       "form": "Iov de la Poceaev",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 octombrie, «Sfantul Cuvios Iov de la Poceaev»."
+    },
+    {
+      "form": "Ιώβ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαΐου, «Όσιος Ιώβ ο θαυματουργός», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -66,8 +71,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 28 August (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαΐου — «Όσιος Ιώβ ο θαυματουργός»",
+        "url": "https://www.saint.gr/05/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Μαΐου εκάστου έτους» and «(1551 - 1651)», and names him in its first words: «Ο Όσιος Ιώβ του Ποτσάεφ, κατά κόσμο Ιωάννης Τσέλεζο». That is this folder's man, and 6 May is the day his own Russian row already names — it says his repose is kept on 28 October and 6 May — so the Greek keeps him on a day the corpus had recorded and not rendered. **saint.gr gives all three days in its own words**: «Η Εκκλησία τιμά, επίσης, την μνήμη του στις 28 Αυγούστου και στις 28 Οκτωβρίου». One row is one feast, so the two others are noted here and he is not rendered on them. **`dates` are not touched.** The folder holds a birth about 1551 and a death in 1651, and the Greek agrees on both years; where it differs is the place of birth — «γεννήθηκε περί το 1551 μ.Χ. στο Γκαλισίν της Ρωσίας», Galicia, against azbyka's Pokuttia in the folder's own note — and a place is not a date, so nothing is weakened and the divergence is left standing on both sides. **He is not `job-the-long-suffering`, whom this same Greek day keeps as «Δίκαιος Ιώβ ο Προφήτης»**: two Jobs on one page, one the patriarch of the Old Testament book and one the abbot of Pochaev, and each takes his own row. **What the Greek adds**: the tonsure at twelve, the abbacy from 1597, the struggle for Orthodoxy after the Union of Brest of 1596, and the work by which he upheld Orthodoxy in Volhynia. No Greek hymn is printed; the folder's Russian troparion and kontakion stand."
     },
     {
       "church": "serbian",

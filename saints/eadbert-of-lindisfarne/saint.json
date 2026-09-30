@@ -1,0 +1,64 @@
+{
+  "slug": "eadbert-of-lindisfarne",
+  "display_name": "Eadbert of Lindisfarne",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop of Lindisfarne",
+  "names": [
+    {
+      "form": "Εαντβέρτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for 6 Μαΐου, which heads him «Άγιος Eadbert εκ Σκωτίας» in Latin letters and gives the Greek form in its first sentence, «ο Άγιος Eadbert (Εαντβέρτος)», with the rank word left off."
+    }
+  ],
+  "related": [
+    "cuthbert-of-lindisfarne"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 698,
+      "latest": 698,
+      "display": "698",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Eadbert κοιμήθηκε με ειρήνη το 698 μ.Χ.»; the page's heading prints «(; - 698)», with no year of birth. It also sets his appointment to the see in 687 and says he governed the church eleven years, which is the same arithmetic."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαΐου — «Άγιος Eadbert εκ Σκωτίας»",
+        "url": "https://www.saint.gr/05/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Μαΐου εκάστου έτους», the same day as the listing. **The page's own epithet and the see it gives him do not sit together, and neither is corrected here**: it calls him «εκ Σκωτίας», from Scotland, and links the synaxis of the saints who shone in Scotland, and in the same breath makes him successor in 687 to Cuthbert in the bishopric it spells Λινστισφέιρν, Lindisfarne, which is in Northumbria. The `display_name` follows the see the page states rather than the epithet, because the see is what tells him from other men of the name; the epithet is quoted in the life. **His predecessor is the corpus's `cuthbert-of-lindisfarne`**, whom the Romanian keeps on 20 martie and whom this page sends to 20 Μαρτίου as well — the same man, same see, same year of death 687, and the page records the finding of his incorrupt relics as having happened in Eadbert's own days. `aidan-of-lindisfarne` is the earlier bishop of the same see and is not named on this page, so no row is claimed for him. **Its authority is named**: «Περί του Αγίου Eadbert αναφέρει στην Εκκλησιαστική Ιστορία ο Άγιος Βεδέας», Bede's Ecclesiastical History. No hymn, no relics of his own."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

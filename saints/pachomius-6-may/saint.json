@@ -6,6 +6,11 @@
       "form": "Pahomie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 mai, «Sfântul Cuvios Pahomie»."
+    },
+    {
+      "form": "Παχώμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαΐου, «Όσιοι Μάμας, Παχώμιος και Ιλαρίων», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαΐου — «Όσιοι Μάμας, Παχώμιος και Ιλαρίων»",
+        "url": "https://www.saint.gr/05/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and the rank matches: doxologia's «Sfântul Cuvios Pahomie» against saint.gr's Όσιος, with the same two companions. **The Greek is the first source to say anything about him** — the desert place, the fasting and vigils and good works, the concord of soul, the falling asleep in peace, and the synaxis «εν Οχείαις» — and its couplet names all three together. **He is not Pachomius the Great**, the father of the cenobitic life kept on 15 May, whose account nothing here touches; this one is one of three monks on 6 May with no country and no century. **The third of the trio, Ιλαρίων, becomes a new folder `hilarion-6-may`** rather than a row on `hilarion-4-may`; the reasoning is on that folder. No year, no place, no hymn."
     },
     {
       "church": "serbian",
@@ -45,5 +60,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "mamas-6-may",
+    "hilarion-6-may"
+  ]
 }

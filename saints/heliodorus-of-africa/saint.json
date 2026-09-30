@@ -1,0 +1,62 @@
+{
+  "slug": "heliodorus-of-africa",
+  "display_name": "Heliodorus of Africa",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ηλιόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαΐου, «Άγιοι Ηλιόδωρος και Βενούστος και οι συν αυτοίς μαρτυρήσαντες», with the rank word left off."
+    }
+  ],
+  "related": [
+    "venustus-of-africa"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "284–305",
+      "basis": "traditional",
+      "note": "saint.gr gives the reign and not a year: «μαρτύρησαν μαζί με άλλους εβδομήντα πέντε Χριστιανούς στην Αφρική, επί αυτοκράτορα Διοκλητιανού (284-305 μ.Χ)». The interval is that reign as the page prints it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαΐου — «Άγιοι Ηλιόδωρος και Βενούστος και οι συν αυτοίς μαρτυρήσαντες»",
+        "url": "https://www.saint.gr/05/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Μαΐου εκάστου έτους», the same day as the listing, and gives him and Venustus each a head line. **The company is named for two and counted for the rest**: «μαζί με άλλους εβδομήντα πέντε Χριστιανούς», with seventy-five other Christians, and not one of the seventy-five is named, so they are no folders and nothing is claimed for them. **He is none of the three Heliodori the corpus keeps** — the companion of Mark the Shepherd, the martyr of 20 August, and Heliodorus Golovanitsky — all on other days and none in Africa. No place in Africa beyond the continent, no manner of death, no relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

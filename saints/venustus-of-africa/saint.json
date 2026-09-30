@@ -1,0 +1,62 @@
+{
+  "slug": "venustus-of-africa",
+  "display_name": "Venustus of Africa",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Βενούστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαΐου, «Άγιοι Ηλιόδωρος και Βενούστος και οι συν αυτοίς μαρτυρήσαντες», with the rank word left off."
+    }
+  ],
+  "related": [
+    "heliodorus-of-africa"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "284–305",
+      "basis": "traditional",
+      "note": "saint.gr gives the reign and not a year: «μαρτύρησαν μαζί με άλλους εβδομήντα πέντε Χριστιανούς στην Αφρική, επί αυτοκράτορα Διοκλητιανού (284-305 μ.Χ)». The interval is that reign as the page prints it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαΐου — «Άγιοι Ηλιόδωρος και Βενούστος και οι συν αυτοίς μαρτυρήσαντες»",
+        "url": "https://www.saint.gr/05/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Μαΐου εκάστου έτους», the same day as the listing, and gives him his own head line beside Heliodorus. **He is not the corpus's `venustus-of-cibalae`**, and the two are easy to separate: that man is one of the company of the deacon Donatus at Cibalae in Pannonia, whom the Romanian calendar keeps on 21 august; this one suffered in Africa with Heliodorus and seventy-five others under Diocletian, on 6 May. Different day, different province, different company. **The seventy-five are not named and are therefore no folders.** No place in Africa beyond the continent, no manner of death, no relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

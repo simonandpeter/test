@@ -6,6 +6,11 @@
       "form": "Sofia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 mai, «Sfânta Cuvioasă Sofia, asceta din Kleisoura»."
+    },
+    {
+      "form": "Σοφία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαΐου, «Οσία Σοφία η εν Κλεισούρα ασκήσασα», with the rank word and the clause about Kleisoura left off."
     }
   ],
   "sex": "female",
@@ -19,7 +24,14 @@
       "latest": 1883,
       "display": "1883",
       "basis": "attested",
-      "note": "doxologia.ro: «S-a născut în anul 1883, în regiunea Trapezunt, în Asia Mică». The page gives no year for her death."
+      "note": "doxologia.ro: «S-a născut în anul 1883, în regiunea Trapezunt, în Asia Mică», which gave no year for her death. saint.gr says the same year with the village: «γεννήθηκε το 1883 μ.Χ. στο χωριό Σαρή-ποπά (ή Σαρή-παπά) της επαρχίας Αρδάσης Τριπόλεως, Νόμου Τραπεζούντας του Πόντου», and heads her «(1883 - 1974)»."
+    },
+    "death": {
+      "earliest": 1974,
+      "latest": 1974,
+      "display": "1974",
+      "basis": "attested",
+      "note": "saint.gr: «Η Οσία Σοφία, η «ἀσκήτισσα τῆς Παναγιᾶς» όπως αποκαλείται, εκοιμήθη εν Κυρίω στις 6 Μαΐου 1974 μ.Χ.» — the same day the calendar keeps her. doxologia's page gives no year of death, which is why the folder had none."
     }
   },
   "attestations": [
@@ -44,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαΐου — «Οσία Σοφία η εν Κλεισούρα ασκήσασα»",
+        "url": "https://www.saint.gr/05/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps her, heads her «(1883 - 1974)», and is plainly the same woman: Sophia Hotokouridou, born in the Pontus, half a century of ascetic life at the monastery of the Nativity of the Theotokos at Kleisoura of Kastoria. **The death year is the addition that matters**: the folder held her birth and said in its own note that doxologia gives no year for her death, and saint.gr states it — «εκοιμήθη εν Κυρίω στις 6 Μαΐου 1974 μ.Χ.» — so the day the calendar keeps is the day she died. Her birth is restated from the Greek's own words, which add the village and district the folder did not have. **The Greek adds the whole outline of the life**: the maiden name Amanatiou Saoulidou, the marriage to Iordanis Hotokouridis in 1907, the child born in 1910 and eaten by swine two years later, the husband taken by the Turks into the labour battalions in 1914, the flight to the mountains, Saint George's warning of the Chetes, the ship in the exchange of populations and her prayer to drown alone, the Theotokos sending her to Kleisoura in 1927, the hieromonk Gregory from the Holy Mountain who trained her, the ash on her face, the bare feet and the sharpened stones under the straw, the fasting by both calendars so as to scandalise nobody, the she-bear she called «ρούσα», the illness of 1967 and the archangel's «Θα σε κόψουμε τώρα», and the two translations of her relics, on 7 July 1981 and on 27 May 1998. **Two hymns are stored**, the first of the two apolytikia and the kontakion, both proper and both naming her and Kleisoura; the page also prints a second apolytikion, two megalynaria, an oikos, a kathisma and a page of her sayings, which are left in the source."
     },
     {
       "church": "serbian",
@@ -55,5 +77,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ΄.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Σοφίας γέγονας, μῆτερ ἀοίδημε, Σοφία, σέμνωμα, τῆς Θεομήτορος, ἐν τὴ Μονὴ ἀσκητικῶς τὸν βίον σου διελθοῦσα, ὅθεν καὶ ἀπείληφας τῶν καμάτων σου ἔπαινον, κατατραυματίσασσα τῶν δαιμόνων τὰς φάλαγγας, καὶ πρέσβειρα Χριστῷ παρεστώσα, μὴ ἐπιλάθου τῶν πόθω τιμώντων σέ.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ΄, Τὴν ὡραιότητα, the first of two on the page of «Οσία Σοφία η εν Κλεισούρα ασκήσασα»",
+        "url": "https://www.saint.gr/4265/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou hast become the ornament of wisdom, O mother of song, O Sophia, and the ornament of the Mother of God, having passed thy life ascetically in the monastery; wherefore thou hast received the praise of thy labours, having wounded the ranks of the demons. And standing now as an intercessor before Christ, forget not those who honour thee with longing.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ΄.",
+      "model": "Τῇ Ὑπερμάχῳ.",
+      "text": "Τὴν ὑπὲρ φύσιν, ἐν Κλεισούρᾳ ἐνασκήσασαν, καὶ ὑπομείνασαν, τὸ ψῦχος ὥσπερ ἄσαρκος, παρ’ ἑστίαν καθημένην Μονῆς αὐλείῳ, βιοτῆς αὐτῆς τὰς νύκτας καὶ σχολάζουσαν, προσευχῇ Σοφίαν θείαν εὐφημήσωμεν, πόθω κράζοντες· Χαίροις πάνυ Ἀσκήτρια.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ΄, Τῇ Ὑπερμάχῳ, on the page of «Οσία Σοφία η εν Κλεισούρα ασκήσασα»",
+        "url": "https://www.saint.gr/4265/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise the divine Sophia, who lived beyond nature in her asceticism at Kleisoura and endured the cold as though without flesh, sitting by the hearth in the courtyard of the monastery and giving the nights of her life to prayer; and let us cry to her with longing: Rejoice, thou true ascetic.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

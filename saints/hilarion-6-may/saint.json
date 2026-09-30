@@ -1,0 +1,54 @@
+{
+  "slug": "hilarion-6-may",
+  "display_name": "Hilarion (6 May)",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Ιλαρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαΐου, «Όσιοι Μάμας, Παχώμιος και Ιλαρίων», with the rank word left off. The page's own head line for him reads «Οσιος Ιλαριων»."
+    }
+  ],
+  "related": [
+    "mamas-6-may",
+    "pachomius-6-may"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked as a source for this row (30 September 2026), and deliberately not claimed. doxologia.ro prints «Sfântul Cuvios Ilarion» on 6 mai, at https://doxologia.ro/sfantul-cuvios-ilarion, beside «Sfântul Cuvios Pahomie» and «Sfântul Cuvios Mamant» — the same three the Greek prints together — and the corpus has folders for those two and none for him. That line was not read for this entry and no Romanian row is asserted from it; it is named here so that whoever reads it can finish the job."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαΐου — «Όσιοι Μάμας, Παχώμιος και Ιλαρίων»",
+        "url": "https://www.saint.gr/05/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Μαΐου εκάστου έτους», the same day as the listing, and gives him his own head line beside Mamas and Pachomius; the couplet names all three, «Ἰλαρίωνι καὶ Παχωμίω Μάμας, / Συνεξεδήμει τὴν καλὴν ἐκδημίαν». That is a company the page enumerates, three head lines and three names, so it is three folders, of which the other two are upgrades on `mamas-6-may` and `pachomius-6-may`. **This is not `hilarion-4-may`, and the reason is on both calendars.** doxologia prints a bare «Sfântul Cuvios Ilarion» twice, on 4 mai and again on 6 mai, on two separate pages; the Romanian pass made a folder from the 4 mai line only. saint.gr likewise prints two: «Όσιος Ιλάριος ο Θαυματουργός» on 4 Μαΐου, whose name is Ιλάριος and not Ιλαρίων, and this Ιλαρίων on 6 Μαΐου in a named company of three. Two entries on one calendar are two commemorations, so two men, and the 6 Μαΐου man is the one the trio holds. **If a later reader decides the two are one, this is the newer folder and the one to fold away.** No year, no place, no hymn: the page says only that the three lived in a desert place in fasting, vigils and good works, in concord of soul, and fell asleep in peace."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

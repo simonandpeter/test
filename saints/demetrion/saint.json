@@ -1,0 +1,50 @@
+{
+  "slug": "demetrion",
+  "display_name": "Demetrion",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δημητρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαΐου, «Άγιος Δημητρίων», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαΐου — «Άγιος Δημητρίων»",
+        "url": "https://www.saint.gr/05/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Μαΐου εκάστου έτους», the same day as the listing, and the whole of its text is one sentence: «Ο Άγιος Δημητρίων μαρτύρησε αφού θανατώθηκε με βέλη.» **The name is Δημητρίων and not Δημήτριος**, and it is left in that form: the page prints the name-meaning entry for Δημήτριος beneath it, which is the site's habit of glossing the nearest common name and not a statement that the two are one. None of the twenty-odd Demetrii and Demetriani the corpus keeps stands on this day or is killed by arrows. No year, no place, no emperor, no relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

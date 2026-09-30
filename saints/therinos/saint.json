@@ -1,0 +1,53 @@
+{
+  "slug": "therinos",
+  "display_name": "Therinos",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Θερίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαΐου, «Άγιοι Δάναξ, Μέσιρος και Θερίνος», with the rank word left off. The page's own sentence allows a second form for him, «Θερίνος (ή Θηριανός)»."
+    }
+  ],
+  "related": [
+    "mesiros"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαΐου — «Άγιοι Δάναξ, Μέσιρος και Θερίνος»",
+        "url": "https://www.saint.gr/05/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Μαΐου εκάστου έτους», the same day as the listing, and heads him first among the three, «Αγιος Θερινος». A company the page enumerates is one folder per member. **The page prints two forms of his name in one sentence** — «Θερίνος (ή Θηριανός)» — and only the head-line form is stored, with the alternative quoted in the name's note; nothing is transliterated and no third form is invented. **There is a Θερινός on saint.gr's 23 Απριλίου too, and this reader takes them for two men.** That entry is «Άγιοι Δονάτος και Θερινός οι Μάρτυρες», a pair perfected by the sword, drafted for that day as `therinus`; this one is a trio with Danax and Mesiros whose memory was kept at the Deuteron. Four things printed on the two pages separate them — a different company, a different martyrion, a different accent (Θερινός against Θερίνος), and the alternative form Θηριανός which only this page gives — and nothing on either page joins them; the sword is the one thing they share, and it is the commonest death in the book. **The 23 Απριλίου pair also carries a Δονάτος**, and this day carries a separate `donatus-6-may` who died by arrows and not by the sword, so the two pairs do not fold into one either. If a later reader decides otherwise, `therinos` and `therinus` are the two to fold, and neither was written as a row on a folder that would then have to be unpicked. **Δάναξ of this trio is not drafted here**: the corpus's `danax` already has a `venerated` Greek row on 16 Ιανουαρίου and is not a reader's to move, and whether he and this Danax are one man is left as a question in the report. **No year, no place, no emperor, no hymn**: the three were perfected by the sword and their memory was kept at their martyrion «εν τω Δευτέρω»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

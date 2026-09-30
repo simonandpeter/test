@@ -1,0 +1,86 @@
+{
+  "slug": "seraphim-of-dombou",
+  "display_name": "Seraphim of Dombou",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "names": [
+    {
+      "form": "Σεραφείμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαΐου, «Όσιος Σεραφείμ που ασκήτευσε στο όρος Δομπού Λεβαδείας», with the rank word and the clause about the mountain left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1527,
+      "latest": 1527,
+      "display": "1527",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Όσιος Σεραφείμ που ασκήτευσε στο όρος Δομπού Λεβαδείας (1527 - 1602)». The body prints no year of birth; it says he fell asleep «σε ηλικία 75 ετών, στις 6 Μαΐου του 1602 μ.Χ.», which is the heading's arithmetic."
+    },
+    "death": {
+      "earliest": 1602,
+      "latest": 1602,
+      "display": "1602",
+      "basis": "traditional",
+      "note": "saint.gr: «Εκοιμήθη οσιακά σε ηλικία 75 ετών, στις 6 Μαΐου του 1602 μ.Χ. ήμερα της Μεσοπεντηκοστής στις 6 το απόγευμα, αφού προείδε την κοίμηση του και κοινώνησε των αχράντων Μυστηρίων.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026). doxologia's 6 mai does not name him, but that is the day page and not a statement about him."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαΐου — «Όσιος Σεραφείμ που ασκήτευσε στο όρος Δομπού Λεβαδείας»",
+        "url": "https://www.saint.gr/05/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Μαΐου εκάστου έτους», the same day as the listing. He is none of the ten Seraphims the corpus keeps — all Russian or Romanian, all on other days — and this one is a Boeotian of the sixteenth century, born at the village of Zeli, lay name Σωτήρης. The page names him «Πολιούχος: Λιβαδειά», patron of Livadeia, and gives the relics: «Η Κάρα και μέρος των Ιερών Λειψάνων του Αγίου βρίσκονται στην ομώνυμη Μονή Βοιωτίας. Απότμημα του Ιερού Λειψάνου του Αγίου βρίσκεται στην Μονή Αγάθωνος Φθιώτιδος.» **His repose fell on the day of Mid-Pentecost**, which is why the moveable feast and his fixed day meet on this page: «στις 6 Μαΐου του 1602 μ.Χ. ήμερα της Μεσοπεντηκοστής». Mid-Pentecost itself is kept twenty-four days after Pascha and is no folder. **The page prints two apolytikia; the first is stored** and names him and Boeotia; the second is printed without a tone and is left in the source."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θεῖον βλάστημα, τῆς Βοιωτίας, ἔμπνουν ὄργανον, τῆς ἐγκράτειας, ἀνεδείχθης Σεραφεὶμ ἀξιάγαστε, σὺ γὰρ Ὅσιων βαδίσας τοὶς ἴχνεσιν, ἀρτιφανῶς ἐν τῷ κόσμῳ ἐξέλαμψας, Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως, the first of two on the page of «Όσιος Σεραφείμ που ασκήτευσε στο όρος Δομπού Λεβαδείας»",
+        "url": "https://www.saint.gr/1522/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown forth a divine shoot of Boeotia and a living instrument of self-mastery, O Seraphim worthy of all wonder; for having walked in the footsteps of the venerable ones, thou hast shone out newly in the world. O venerable father, entreat Christ our God to grant us great mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

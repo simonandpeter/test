@@ -1,0 +1,53 @@
+{
+  "slug": "mesiros",
+  "display_name": "Mesiros",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μέσιρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαΐου, «Άγιοι Δάναξ, Μέσιρος και Θερίνος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "therinos"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαΐου — «Άγιοι Δάναξ, Μέσιρος και Θερίνος»",
+        "url": "https://www.saint.gr/05/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Μαΐου εκάστου έτους», the same day as the listing, and gives each of the three a head line of his own, his reading «Αγιος Μεσιρος». A company the page enumerates is one folder per member. **The third name, Δάναξ, is not drafted either way here, and that is deliberate**: the corpus's `danax` already carries a `venerated` Greek row on 16 Ιανουαρίου, from saint.gr's own «Άγιος Δάναξ ο Αναγνώστης», and a row that is already venerated is not a reader's to move. Whether the reader of Aulon on 16 January and the Δάναξ of this trio are one man or two is an open question and is left in the report. Mesiros is owed his own folder in either case. **No year, no place, no emperor, no hymn**: the three were perfected by the sword, and their memory used to be kept at their martyrion «εν τω Δευτέρω», at the Deuteron."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Varvar",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 mai, «Sfântul Mucenic Varvar»."
+    },
+    {
+      "form": "Βάρβαρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαΐου, «Άγιος Βάρβαρος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαΐου — «Άγιος Βάρβαρος»",
+        "url": "https://www.saint.gr/05/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and the rank matches: doxologia's «Sfântul Mucenic Varvar» against saint.gr's Άγιος among the martyrs. **The Greek adds one fact and one couplet and no more.** The fact is the manner of his death, which the folder did not have: «Ο Άγιος Βάρβαρος μαρτύρησε δια ξίφους», he was martyred by the sword. The couplet plays the name against his executioner — «Τὴν κλῆσιν ἡμῖν Βάρβαρος σὺ γεννάδα, / Ὁ δ' αὖ τεμών σε, βάρβαρος τὴν καρδίαν» — you, noble one, are Barbarus to us in name, but he who cut you down was a barbarian in his heart. **He is not Barbara the great martyr**, whose name the site glosses nearby, and not the robber Barbarus other calendars keep. Still no year, no country, no emperor, no relics and no hymn."
     },
     {
       "church": "serbian",

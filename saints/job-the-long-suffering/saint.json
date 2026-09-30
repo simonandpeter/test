@@ -6,6 +6,11 @@
       "form": "Iov",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 mai, «Sfântul și Dreptul Iov, mult răbdătorul»."
+    },
+    {
+      "form": "Ιώβ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαΐου, «Δίκαιος Ιώβ ο Προφήτης», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαΐου — «Δίκαιος Ιώβ ο Προφήτης»",
+        "url": "https://www.saint.gr/05/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and it is the Job of the Old Testament book, which the page names at the end. **The Greek calls him προφήτης where the Romanian calls him only δίκαιος** — «Προφήτης επί σαράντα χρόνια» — but `types` is not changed: the folder's `righteous` is the Romanian reading, and adding `prophet` is a claim of its own; the page's word is quoted in the life instead. **The Greek adds what the folder lacked**: the land of Ausitis between Judaea and Arabia, his father Zareth and his mother Basora, the forty years of prophecy, the seven-year length of the trial, the cave outside the city, his wife's speech in full and his answer to it, the three friends by name — Eliphaz king of the Themanites, Baldad tyrant of the Sauchaeans and Saphar king of the Minaeans — the seven days of their silence, the hundred and forty years he lived afterwards and the age of two hundred and forty at which he died. **`dates` are added where the folder had none**, as a death about 1650 BC; the floruit the page gives is not recorded as an interval because the page itself gives two, «άκμασε περί το 1900 π.Χ. (κατ' άλλους το 1400 π.Χ.)», five hundred years apart, and the alternative is quoted in the note on the death instead. **Two hymns are stored, both proper and both naming him**; the page also prints a second apolytikion in Ἦχος β’, which is left in the source."
     },
     {
       "church": "serbian",
@@ -59,9 +74,52 @@
         "text": "Seeing the wealth of Job's virtues, the enemy of the righteous plotted to steal it, and though he broke down the tower of the body he did not steal the treasury of the spirit, for he found the soul of the blameless man armed; but me he stripped and took captive. Therefore meet me before the end, O Saviour, deliver me from the evil one, and save me.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Ὡς τῆς ἀνδρείας ἀκαθαίρετος πύργος, τᾶς τοῦ Βελίαρ ἀπεκρούσω ἑφόδους, καὶ ἀκλινὴς διέμεινας σοφὲ ἐν πειρασμοίς, ὅθεν χαρακτῆρα σε, ἀρραγοῦς καρτερίας, καὶ λαμπρὸν ὑπόδειγμα, ἀρετῶν οὐρανίων, ἡ Ἐκκλησία μέλπει σε Ἰώβ, λαμπρυνομένη, τοὶς σοὶς προτερήμασι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ, the first of two on the page of «Δίκαιος Ιώβ ο Προφήτης»",
+        "url": "https://www.saint.gr/1515/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As an unshaken tower of manliness thou didst beat back the assaults of Belial, and thou didst remain unbending in temptations, O wise one. Wherefore the Church sings of thee, O Job, as the very stamp of unbroken endurance and a shining pattern of the heavenly virtues, and is made radiant by thy excellences.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Ὡς ἀπαρχᾶς τῆς φύσεως.",
+      "text": "Ὡς ἀληθὴς καὶ δίκαιος, θεοσεβὴς καὶ ἄμεμπτος, ἡγιασμένος τε ὤφθης πανένδοξε, Θεοῦ θεράπον γνήσιε· καὶ ἐδίδαξας κόσμον, ἐν τῇ σῇ καρτερίᾳ Ἰώβ πολύαθλε· ὅθεν πάντες τιμῶντες, ὑμνοῦμέν σου τὸ μνημόσυνον.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Ὡς ἀπαρχᾶς τῆς φύσεως, on the page of «Δίκαιος Ιώβ ο Προφήτης»",
+        "url": "https://www.saint.gr/1515/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "True and just, God-fearing and blameless, thou wast seen also to be sanctified, O all-glorious one, thou genuine servant of God; and thou didst teach the world by thine endurance, O Job of many contests. Wherefore we all honour thee and sing the memory of thee.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": -1650,
+      "latest": -1650,
+      "display": "about 1650 BC",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησε, μετά τη δοκιμασία του, επί εκατόν σαράντα έτη και σε ηλικία διακοσίων σαράντα ετών, περί το 1650 π.Χ., κοιμήθηκε με ειρήνη.» The same page dates his flourishing twice over and the two do not agree — «άκμασε περί το 1900 π.Χ. (κατ' άλλους το 1400 π.Χ.)» — so only the year it gives for his death is recorded, and the disagreement is left here."
+    }
   }
 }

@@ -6,6 +6,11 @@
       "form": "Mamant",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 mai, «Sfântul Cuvios Mamant»."
+    },
+    {
+      "form": "Μάμας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαΐου, «Όσιοι Μάμας, Παχώμιος και Ιλαρίων», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαΐου — «Όσιοι Μάμας, Παχώμιος και Ιλαρίων»",
+        "url": "https://www.saint.gr/05/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and the rank matches: doxologia's «Sfântul Cuvios Mamant» against saint.gr's Όσιος, with the same two companions beside him. **The Greek is the first source to say anything about him.** doxologia named him and gave no life; this page says the three lived in a desert place in fasting, vigils and good works, that they lived in concord of soul and in a conscience set on the good, and that they fell asleep in holiness and in peace, and that their synaxis used to be kept «εν Οχείαις». Its couplet names all three, «Ἰλαρίωνι καὶ Παχωμίω Μάμας, / Συνεξεδήμει τὴν καλὴν ἐκδημίαν». **He is not `mamas-of-caesarea`**, the shepherd martyr of 2 September, nor the Mamas who is a companion of Hermogenes: this one is a monk on 6 May in a named trio. **The third of the trio, Ιλαρίων, becomes a new folder `hilarion-6-may` and not a row on `hilarion-4-may`**, and the reasoning is set down on that folder. No year, no place, no hymn."
     },
     {
       "church": "serbian",
@@ -45,5 +60,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "pachomius-6-may",
+    "hilarion-6-may"
+  ]
 }

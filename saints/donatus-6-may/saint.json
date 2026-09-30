@@ -1,0 +1,50 @@
+{
+  "slug": "donatus-6-may",
+  "display_name": "Donatus (6 May)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δονάτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαΐου, «Άγιος Δονάτος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαΐου — «Άγιος Δονάτος»",
+        "url": "https://www.saint.gr/05/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Μαΐου εκάστου έτους», the same day as the listing, and the whole of its text is one sentence: «Ο Άγιος Δονάτος μαρτύρησε αφού θανατώθηκε με βέλη.» **He is neither of the two Donati the corpus keeps.** `donatus-of-cibalae` is a deacon the Romanian calendar names on 21 august, killed at Cibalae in Pannonia with Romulus, Silvanus and Venustus; `donatus-of-euroea` is the wonderworking bishop of Euroea the Romanian keeps on 30 aprilie. This man has a day of his own, no rank but martyr, and a death by arrows that neither of those accounts carries — the same manner as `demetrion`, whom this page puts beside him on the same day. Whether the two deaths by arrows belong to one persecution the page does not say, and nothing is claimed about it. **A third Δονάτος stands on saint.gr's 23 Απριλίου**, «Άγιοι Δονάτος και Θερινός οι Μάρτυρες», drafted for that day as `donatus-23-april`, and he is taken to be a fourth man again: that pair was perfected by the sword and this one by arrows, on another day and in no company at all. The name is common and the manner of death is the only thing either page gives; if a later reader folds them, this is the newer folder. No year, no place, no emperor, no relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

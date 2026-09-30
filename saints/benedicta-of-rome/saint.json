@@ -1,0 +1,59 @@
+{
+  "slug": "benedicta-of-rome",
+  "display_name": "Benedicta of Rome",
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Βενεδίκτη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαΐου, «Οσία Βενεδίκτη η Ρωμαία», with the rank word and the epithet left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Οσία Βενεδίκτη έζησε τον 6ο αιώνα μ.Χ. και καταγόταν από τη Ρώμη.» The page gives no year; the interval is the century it states and nothing narrower, and it is the century of her life rather than of her death, which the page does not date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαΐου — «Οσία Βενεδίκτη η Ρωμαία»",
+        "url": "https://www.saint.gr/05/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Μαΐου εκάστου έτους», the same day as the listing, and its whole text is two sentences. **She is a woman and neither of the two Benedicts the corpus keeps**: `benedict-of-nursia` and `benedict-biscop` are men on other days, and the feminine form Βενεδίκτη is the page's own. The page sends the monastery she entered to a saint it calls «του Αγίου Γάλλου (τιμάται 6 Νοεμβρίου)», Gallus, kept on 6 November; the corpus has no folder for him, so nothing is linked and no `related` row is made. **The sixth century and that monastery are the page's two statements and they are not reconciled here**, since the page dates neither Gallus nor her death. No place beyond Rome, no relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
