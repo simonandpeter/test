@@ -6,6 +6,11 @@
       "form": "Simeon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 aprilie, «Sfântul Sfințit Mucenic Simeon, Episcopul Persiei»."
+    },
+    {
+      "form": "Συμεών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Απριλίου, «Άγιος Συμεών επίσκοπος Περσίας…», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Απριλίου — «Άγιος Συμεών επίσκοπος Περσίας και οι μαρτυρήσαντες μαζί μ' αυτόν Αύδελας ο πρεσβύτερος, Γοθαζάτ, Φουσίκ και άλλοι 1150»",
+        "url": "https://www.saint.gr/04/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him on. The page gives him no year: it sets him only «κατά τους χρόνους του βασιλέως των Περσών Σαβωρίου», whom it names again as Σαπώρ ο Β’, so no `dates` were taken. It names three of his companions — the presbyter Audelas, Gothazat and Phousik — and gives each a couplet of his own, so each has a folder; the other 1150 are named nowhere. Its verse numbers them in two lots, «Eις τους εκατόν πεντήκοντα» and «Eις τους χιλίους», and its third line names the day, «Ἑβδομάτῃ Συμεὼν δεκάτῃ ἀπὸ αὐχένα τμήθη»."
     },
     {
       "church": "serbian",
@@ -60,9 +75,64 @@
         "text": "Sharer in the apostles' way and successor to their thrones, you found in action, O inspired of God, an ascent to contemplation. Therefore, rightly teaching the word of truth, you kept the faith and endured unto blood, O hieromartyr Simeon: entreat Christ our God that our souls be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὃ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Ὡς ὑποφήτης τῶν ἐνθέων δογμάτων, Μαρτυρικὸν συνασπισμὸν ἐπαλείφεις, λόγοις ὁμοὺ καὶ πράξεσι πρὸς ἄθλους ἱερούς, μεθ' ὧν καὶ συνήθλησας, Συμεὼν Ἱεράρχα, καὶ Χριστῷ ἀνέδραμες, σὺν αὐτοὶς ἀνακράζων. Ἰδοὺ ἠμεῖς ὡς πρόβατα σφαγῆς, τὴ σῆ ἀγάπη, Σωτὴρ ἐλογίσθημεν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ὃ ὑψωθεῖς ἐν τῷ Σταυρῷ, on the page of Άγιος Συμεών επίσκοπος Περσίας. It is his own, names him, and has the company contending beside him.",
+        "url": "https://www.saint.gr/291/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As an interpreter of the divine doctrines thou didst anoint a band of martyrs, by words and by deeds together, for the holy contests; and having contended along with them, Simeon the hierarch, thou didst run up to Christ, crying out with them: behold, for thy love, O Saviour, we were counted as sheep for the slaughter.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "text": "Τῶν ἁγίων Μαρτύρων τά κατορθώματα, οὐρανῶν αἱ δυνάμεις ὑπερεθαύμασαν, ὅτι ἐν σώματι θνητῷ τόν ἀσώματον ἐχθρόν, τῇ δυνάμει τοῦ Σταυροῦ ἀγωνισάμενοι καλῶς, ἐνίκησαν ἀοράτως, καὶ νῦν πρεσβεύουσι τῷ Κυρίῳ, ἐλεηθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος πλ. α’, on the page of Άγιος Συμεών επίσκοπος Περσίας. This is the common apolytikion of martyrs and names nobody; the page prints it under his name, so it is copied whole as the page has it.",
+        "url": "https://www.saint.gr/291/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The powers of the heavens marvelled greatly at the achievements of the holy martyrs: that in a mortal body, having contended well by the power of the Cross, they overcame the bodiless enemy invisibly; and now they intercede with the Lord that our souls may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ἐκ Περσίδος ἔλαμψας ὡς ἑωσφόρος, Συμεών μακάριε, δῆμον Ἁγίων Ἀθλητῶν, ἔχων ἡμῖν συνανίσχοντας, ὥσπερ ἀστέρας· μεθ᾽ὧν εὐφημοῦμέν σε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of Άγιος Συμεών επίσκοπος Περσίας. It is his own, names him and names Persia.",
+        "url": "https://www.saint.gr/291/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Out of Persia thou didst shine like the morning star, blessed Simeon, having a whole people of holy contenders rising with thee for us like stars; and with them we praise thee.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "audelas-companion-of-simeon",
+    "gothazat-companion-of-simeon",
+    "phousik-companion-of-simeon"
+  ]
 }

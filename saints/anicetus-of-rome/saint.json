@@ -1,0 +1,65 @@
+{
+  "slug": "anicetus-of-rome",
+  "display_name": "Anicetus of Rome",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop of Rome",
+  "names": [
+    {
+      "form": "Ανίκητος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Απριλίου, «Άγιος Ανίκητος ο Ιερομάρτυρας πάπας Ρώμης», with the rank words and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 166,
+      "latest": 166,
+      "display": "166",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ανίκητος μαρτύρησε το έτος 166 μ.Χ., επί αυτοκράτορα Μάρκου Αυρηλίου (161 - 180 μ.Χ.)», and its heading has «(; - 166)». The page dates his episcopate «κατά τα μέσα του 2ου αιώνα μ.Χ. (155 - 166 μ.Χ.)» and gives no year of birth."
+    }
+  },
+  "related": [
+    "polycarp-of-smyrna"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Απριλίου — «Άγιος Ανίκητος ο Ιερομάρτυρας πάπας Ρώμης»",
+        "url": "https://www.saint.gr/04/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 166)». The corpus holds one folder whose name folds onto this one, Anicetas of Nicomedia, who is a soldier martyred with Photius and is not this bishop. The page prints no couplet and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

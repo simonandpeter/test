@@ -1,0 +1,67 @@
+{
+  "slug": "paisius-fool-for-christ-of-kyiv",
+  "display_name": "Paisius of Kyiv",
+  "sex": "male",
+  "types": [
+    "fool-for-christ",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Παΐσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Απριλίου, «Όσιος Παΐσιος, διά Χριστόν σαλός», with the rank word and the epithet left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1821,
+      "latest": 1821,
+      "display": "8 July 1821",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στις 8 Ιουλίου 1821 στην πόλη Λούμπνα της επαρχίας Πολτάβα», and its heading has «(1821 - 1893)»."
+    },
+    "death": {
+      "earliest": 1893,
+      "latest": 1893,
+      "display": "1893",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Παΐσιος κοιμήθηκε με ειρήνη το έτος 1893», and its heading has «(1821 - 1893)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Απριλίου — «Όσιος Παΐσιος, διά Χριστόν σαλός»",
+        "url": "https://www.saint.gr/04/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(1821 - 1893)». The corpus holds six folders whose names fold onto this one — Paisios the Athonite, Paisius of Neamț, Paisius the Great, Paisie of Sihăstria, Paisius of Sihăstria Putnei and the Paisius kept on 8 January — and none of them is a nineteenth-century fool for Christ of the Kyiv Lavra. The page prints no couplet and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

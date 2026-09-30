@@ -6,6 +6,11 @@
       "form": "Adrian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 aprilie, «Sfântul Mucenic Adrian»."
+    },
+    {
+      "form": "Αδριανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Απριλίου, «Άγιος Αδριανός ο Νέος», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Απριλίου — «Άγιος Αδριανός ο Νέος»",
+        "url": "https://www.saint.gr/04/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him on, and the story is the same story: prison, the refusal to sacrifice, the overturned altar and death in a furnace. The Greek line calls him «ο Νέος», Adrian the New, which the Romanian line does not; that epithet is left in this note rather than put into the display name, which is the corpus's own and stays. The page gives him no year and names no emperor, so no `dates` were taken. It prints a couplet but no hymn."
     },
     {
       "church": "serbian",

@@ -1,0 +1,50 @@
+{
+  "slug": "azat-the-eunuch",
+  "display_name": "Azat the Eunuch",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αζάτ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Απριλίου, «Άγιος Αζάτ ο Ευνούχος», with the rank word left off; the epithet is kept because it is the whole of what distinguishes him."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Απριλίου — «Άγιος Αζάτ ο Ευνούχος»",
+        "url": "https://www.saint.gr/04/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Απριλίου εκάστου έτους», the same day as the listing. Its four sentences are the whole of the notice and it prints neither couplet nor hymn. He belongs to the same persecution as the company of Simeon of Persia, whom the same page keeps on this day: both were under the Persian king saint.gr calls Σαβώριος, and Azat too died «μαζί με χίλιους άλλους μάρτυρες», with a thousand others. **Whether his thousand are the 1150 of Simeon's line the page does not say, and this row does not decide it.** It gives no year, so there is no `dates` object. The corpus holds nobody of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

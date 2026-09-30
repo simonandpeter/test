@@ -1,0 +1,62 @@
+{
+  "slug": "audelas-companion-of-simeon",
+  "display_name": "Audelas, companion of Simeon of Persia",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "presbyter"
+  ],
+  "office": "Presbyter",
+  "names": [
+    {
+      "form": "Αύδελας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Απριλίου, «Άγιος Συμεών επίσκοπος Περσίας και οι μαρτυρήσαντες μαζί μ' αυτόν Αύδελας ο πρεσβύτερος, Γοθαζάτ, Φουσίκ και άλλοι 1150», with the rank word left off."
+    },
+    {
+      "form": "Αὐδελλᾶς",
+      "lang": "el",
+      "note": "The form saint.gr prints in his own couplet on the same page: «Eις τον Aυδελλάν. Ἄρκτου τὸ δεινὸν Αὐδελλᾶς ἔδυ στόμα»."
+    }
+  ],
+  "related": [
+    "simeon-of-persia",
+    "gothazat-companion-of-simeon",
+    "phousik-companion-of-simeon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Απριλίου — «Άγιος Συμεών επίσκοπος Περσίας και οι μαρτυρήσαντες μαζί μ' αυτόν Αύδελας ο πρεσβύτερος, Γοθαζάτ, Φουσίκ και άλλοι 1150»",
+        "url": "https://www.saint.gr/04/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Απριλίου εκάστου έτους», the same day as the listing. Four men are named in the line and each has a couplet of his own, so four folders; the other 1150, whom the page's couplets number in two lots as «τους εκατόν πεντήκοντα» and «τους χιλίους», are named nowhere and have none. The page gives no year: it sets them only in the reign of the Persian king it calls Σαβώριος and Σαπώρ ο Β’, so there is no `dates` object. The corpus holds nobody of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "donnan-of-eigg",
+  "display_name": "Donnan of Eigg",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Donnan",
+      "lang": "en",
+      "note": "saint.gr prints the name in Latin letters and not in Greek, both in its line for 17 Απριλίου, «Άγιος Donnan και οι συν αυτώ Μάρτυρες», and in its page heading, «Αγιος Donnan (; - 618)». No Greek form of it appears on either."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 618,
+      "latest": 618,
+      "display": "618",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Donnan ήταν μοναχός και μαρτύρησε μαζί με την συνοδεία του το 618 μ.Χ. στο νησάκι Eigg της Σκωτίας», and its heading has «(; - 618)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Απριλίου — «Άγιος Donnan και οι συν αυτώ Μάρτυρες»",
+        "url": "https://www.saint.gr/04/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 618)». Its own first heading is «Αγιοι Μαρτυρες Που Μαρτυρησαν Μαζι Με Τον Αγιο Donnan», the martyrs who were martyred together with him: they are neither named nor numbered, so they are a company that enumerates nobody and have no folder. saint.gr prints his name in Latin letters and gives no Greek form of it, and none is supplied here. The page links him to the synaxis of the saints who shone in Scotland and credits the Archdiocese of Thyateira and Great Britain; it prints neither couplet nor hymn. The corpus holds nobody of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

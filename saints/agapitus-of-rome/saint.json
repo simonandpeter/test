@@ -1,0 +1,62 @@
+{
+  "slug": "agapitus-of-rome",
+  "display_name": "Agapitus of Rome",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "ascetic"
+  ],
+  "office": "Bishop of Rome",
+  "names": [
+    {
+      "form": "Αγαπητός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Απριλίου, «Άγιος Αγαπητός πάπας Ρώμης», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 536,
+      "latest": 536,
+      "display": "536",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Πάπας Αγαπητός πέθανε το 536 στην Κωνσταντινούπολη, ένα χρόνο μετά την ενθρόνιση του», and its heading has «Αγιος Αγαπητος Παπας Ρωμης (; - 536)». The page gives 535 for his election and no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Απριλίου — «Άγιος Αγαπητός πάπας Ρώμης»",
+        "url": "https://www.saint.gr/04/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 536)». The corpus holds three others whose names fold onto this one — Agapitus of Synnada, Agapitus of the Kyiv Caves and Agapitus the deacon — and none of them is a bishop of Rome. The page prints a couplet but no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

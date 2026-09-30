@@ -7,6 +7,21 @@
       "form": "Macarie Notara",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 aprilie, «Sfântul Macarie Notara, Episcopul Corintului»."
+    },
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Απριλίου, «Άγιος Μακάριος Αρχιεπίσκοπος Κορίνθου», with the rank word and the see left off."
+    },
+    {
+      "form": "Νοταράς",
+      "lang": "el",
+      "note": "The family name saint.gr prints on the same page for 17 Απριλίου, in its caption «Άγιος Μακάριος Αρχιεπίσκοπος Κορίνθου, ο Νοταράς» and in its prose, «από γονείς που κατάγονταν από το γένος των διάσημων Νοταράδων»."
+    },
+    {
+      "form": "Μιχαήλ",
+      "lang": "el",
+      "note": "His baptismal name, which saint.gr's page for 17 Απριλίου gives: «Το βαπτιστικό του όνομα ήταν Μιχαήλ»."
     }
   ],
   "sex": "male",
@@ -57,8 +72,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Απριλίου — «Άγιος Μακάριος Αρχιεπίσκοπος Κορίνθου»",
+        "url": "https://www.saint.gr/04/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him on, and its years agree with the folder's: «Αγιος Μακαριος Αρχιεπισκοπος Κορινθου (1731 - 1805)», born at Trikala in Corinthia in 1731, dead on 17 April 1805 on Chios. **The page records a second, local feast that this corpus does not render**: «Στο χωριό Μύλοι της νήσου Σάμου εορτάζεται πανηγυρικά η μνήμη του Αγίου Μακαρίου στις 16 Μαΐου» — at the village of Myloi on Samos his memory is kept with a festival on 16 May. One attestation row per church is the schema, so that day is recorded here and nowhere else. The page also gives 1808 for the translation of his relics, and says part of them is at the Nea Moni of Chios and a fragment at the monastery of the Panagia Koryfi at Kamari in Corinthia."
     },
     {
       "church": "serbian",
@@ -68,5 +93,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τὸν Κορίνθου ποιμένα τὸν τῷ ὄντι Μακάριον, τὸν Θεοῦ πρόνοια τῆς Χίου, ἀναφανέντα κοσμήτορα, ἐν πράξεσιν ὁμοὺ καὶ διδαχαίς, τιμῶμεν σὲ ἐν ὕμνοις καὶ ὠδαίς- θεραπεύεις γὰρ νοσοῦντας, καὶ ἀπελαύνεις ἀκάθαρτα πνεύματα. Δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ τὰ ὀστά σου πηγὴν θαυμάτων ἀναδείξαντι.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης, on the page of Άγιος Μακάριος Αρχιεπίσκοπος Κορίνθου. It is his own and names him, his see and Chios; the page prints it with its punctuation as given here.",
+        "url": "https://www.saint.gr/295/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The shepherd of Corinth, him who was Makarios indeed, who by God's providence was shown forth as the adorner of Chios in deeds and in teachings together, we honour thee in hymns and songs; for thou healest the sick and drivest out unclean spirits. Glory to Christ who glorified thee, glory to him who crowned thee, glory to him who made thy bones a fountain of wonders.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

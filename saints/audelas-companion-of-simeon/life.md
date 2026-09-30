@@ -1,0 +1,9 @@
+# Audelas, companion of Simeon of Persia
+
+saint.gr says there was a Christian community in Persia whose people were of blameless life and great self-denial, ready to be sacrificed for the name and the glory of Christ, and that the heart of it was their bishop [Simeon](/saints/simeon-of-persia), who was head of the churches of Ctesiphon and of Salik in Seleucia. The Persians looked on the Christians as a thorn in the eye, and slandered them to king Shapur II on the pretext that they had revolutionary designs. Simeon assured the king that the Christian religion makes law-abiding citizens and not foolish rebels, but the king was so prejudiced against him that he ordered him imprisoned.
+
+In the prison Simeon met [Gothazat](/saints/gothazat-companion-of-simeon), a Christian deserter who had changed his faith to save his head, and brought his heart back to Christ. When Shapur learnt of it he beheaded Simeon and Gothazat in his anger, and with them, the page says, another 1150 Christians of the church there, together with the presbyter Audelas. So they all gave themselves as an offering and a sacrifice to God for a sweet-smelling savour. At the last moment [Phousik](/saints/phousik-companion-of-simeon), the king's kouropalates and a secret Christian, was added to the martyrs' camp.
+
+That is the whole of what the page prints of Audelas, whom it names only in the list and in his own couplet: «Ἄρκτου τὸ δεινὸν Αὐδελλᾶς ἔδυ στόμα, Βδέλλης ἀπλήστου τοῦ Σατᾶν φυγὼν στόμα» — Audelas went down into the terrible mouth of a bear, having fled the mouth of Satan, the insatiable leech. His couplet is the only place the page says how he died, and it gives him no year and no country of his own.
+
+*After saint.gr's calendar for 17 Απριλίου — [the day](https://www.saint.gr/04/17/index.aspx) and [the life](https://www.saint.gr/291/saint.aspx); read 30 September 2026.*

@@ -115,6 +115,22 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ευθυμιοσ euthymius-kereselidze euthymius-of-dimitsana euthymius-of-karelia euthymius-of-novgorod euthymius-of-suzdal euthymius-of-syanzhema euthymius-of-tarnovo euthymius-of-zographou euthymius-the-man-of-god euthymius-the-wonderworker':
+    'Ten now, and **two of the new ones share 18 April** as two entries: Euthymius of Karelia and Euthymius the Wonderworker. The others are read in the el-04-11 entry for this name form.',
+  'κυριλλοσ cyril-bishop-in-africa cyril-companion-of-photius cyril-of-alexandria cyril-of-astrakhan cyril-of-heliopolis cyril-of-jerusalem cyril-of-kazan cyril-of-the-forty-martyrs cyril-of-the-white-lake cyril-of-zographou cyril-vi-of-constantinople':
+    'Eleven now. The new one is Cyril VI of Constantinople on 18 April; the others are read in the el-03-18 entry for this name form, where two stand on 18 March.',
+  'βασιλειοσ basil-companion-of-euphrasius basil-martyr-6-february basil-of-ancyra basil-of-mangazeya basil-of-mirozh basil-of-moldovita basil-of-novgorod basil-of-rostov basil-of-thessalonica basil-ratishvili basil-the-confessor basil-the-new-of-latros basil-uncle-of-eustratius':
+    'Thirteen now. The new one is Basil Ratishvili on 18 April; the others are read in the el-04-15 entry for this name form.',
+  'αντωνιοσ anthony-meskhi anthony-of-constantinople anthony-of-georgia anthony-of-krasnokholmsk anthony-of-novgorod anthony-of-tobolsk anthony-of-vologda anthony-of-zadonsk anthony-of-zographou anthony-the-great antonius-the-presbyter antony-companion-of-bassus antony-of-korel antony-of-novgorod antony-of-vilnius antony-son-of-john-of-syracuse antony-the-athenian antony-the-martyr-1-march':
+    'Eighteen now. The new one is Antony of Korel on 18 April; the others are read in the el-04-13 entry for this name form.',
+  'ζωσιμασ zosimas-24-january zosimas-of-carthage zosimas-of-palestine zosimas-of-solovki zosimas-of-vorbozom':
+    'Five men on five Greek days: 24 January, Carthage on 11 March, Palestine and Vorbozom both on 4 April as two entries, and Zosimas of Solovki on 17 April.',
+  'παισιοσ paisius-8-january paisius-fool-for-christ-of-kyiv':
+    'Two men: Paisius the fool for Christ of Kyiv on 17 April and the Paisius of the el-01-19 entry.',
+  'εφραιμ ephraim-of-antioch ephraim-of-atskuri ephraim-of-katounakia ephraim-of-rostov ephraim-of-the-kyiv-caves ephraim-of-tomis ephrem-of-kiev ephrem-of-novotorzhsk ephrem-the-syrian':
+    'Nine now. The new one is Ephraim of Atskuri on 17 April; the others are read in the el-04-01 entry for this name form.',
+  'αγαπητοσ agapitus-of-rome agapitus-of-synnada agapitus-the-blind':
+    'Three men: Agapitus of Synnada on 18 February, Agapitus the Blind of the Kyiv Caves on 7 April and Agapitus of Rome, the pope, on 17 April.',
   'μιχαηλ michael-companion-of-platon-of-reval michael-mavroeidis michael-of-cyprus-of-samothrace michael-of-klops michael-of-vourla michael-the-russian-1-april':
     'Six now. The new one is Michael of Vourla on 16 April; the others are read in the el-04-06 entry for this name form.',
   'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-kalita john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kazan john-of-lycopolis john-of-manglisi john-of-rouphinianai john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-well john-of-verkhoturye john-of-vilnius john-of-yuryevets john-philosopher-of-georgia john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-with-minas-and-david':

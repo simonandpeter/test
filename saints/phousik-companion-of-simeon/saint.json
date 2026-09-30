@@ -1,0 +1,56 @@
+{
+  "slug": "phousik-companion-of-simeon",
+  "display_name": "Phousik, companion of Simeon of Persia",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "office": "Kouropalates",
+  "names": [
+    {
+      "form": "Φουσίκ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Απριλίου, «Άγιος Συμεών επίσκοπος Περσίας και οι μαρτυρήσαντες μαζί μ' αυτόν Αύδελας ο πρεσβύτερος, Γοθαζάτ, Φουσίκ και άλλοι 1150»."
+    }
+  ],
+  "related": [
+    "simeon-of-persia",
+    "audelas-companion-of-simeon",
+    "gothazat-companion-of-simeon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Απριλίου — «Άγιος Συμεών επίσκοπος Περσίας και οι μαρτυρήσαντες μαζί μ' αυτόν Αύδελας ο πρεσβύτερος, Γοθαζάτ, Φουσίκ και άλλοι 1150»",
+        "url": "https://www.saint.gr/04/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Απριλίου εκάστου έτους», the same day as the listing. Four men are named in the line and each has a couplet of his own, so four folders; the other 1150 are named nowhere and have none. The page gives no year: it sets them only in the reign of the Persian king it calls Σαβώριος and Σαπώρ ο Β’, so there is no `dates` object. `office` is the page's own word for his place at court, «ο κουροπαλατής του βασιλιά». The corpus holds nobody of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

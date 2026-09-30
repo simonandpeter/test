@@ -1,0 +1,64 @@
+{
+  "slug": "zosimas-of-solovki",
+  "display_name": "Zosimas of Solovki",
+  "sex": "male",
+  "types": [
+    "abbot",
+    "ascetic"
+  ],
+  "office": "Abbot of Solovki",
+  "names": [
+    {
+      "form": "Ζωσιμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Απριλίου, «Όσιος Ζωσιμάς», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1478,
+      "latest": 1478,
+      "display": "1478",
+      "basis": "traditional",
+      "note": "saint.gr: «Λίγο πριν την κοίμησή του ο Όσιος Ζωσιμάς προετοίμασε τον τάφο του κάτω από το ιερό του ναού της Μεταμορφώσεως και κοιμήθηκε με ειρήνη το έτος 1478», and its heading has «Οσιος Ζωσιμας (; - 1478)»."
+    }
+  },
+  "related": [
+    "sabbatius-of-solovki"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Απριλίου — «Όσιος Ζωσιμάς»",
+        "url": "https://www.saint.gr/04/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1478)». The day's line is bare, «Όσιος Ζωσιμάς», and it is the page that identifies him: «ο μεγάλος ασκητής του Ρωσικού Βορρά», founder of the coenobitic life on Solovki. The corpus holds eight others of this name — among them Zosimas of Palestine, Zosimas of Cilicia and the Zosimas kept on 24 January — and none of them is of Solovki. The page names Germanus, whom it says is honoured on 30 July, and Sabbatius on 27 September; Sabbatius has a folder here and Germanus has none. The page prints no couplet and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "slug": "ephraim-of-atskuri",
+  "display_name": "Ephraim of Atskuri",
+  "sex": "male",
+  "types": [
+    "archbishop",
+    "hierarch"
+  ],
+  "office": "Archbishop of Atskuri",
+  "names": [
+    {
+      "form": "Εφραίμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Απριλίου, «Άγιος Εφραίμ ο Μεγάλος», with the rank word and the epithet left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 885,
+      "latest": null,
+      "display": "not before 885",
+      "basis": "inferred",
+      "note": "saint.gr gives no year of death — «κοιμήθηκε με ειρήνη» — and no year of birth. The one interval it states is his episcopate: «Διετέλεσε Αρχιεπίσκοπος Αζκουρίας (της ανατολικής Γεωργίας) κατά τα έτη 845 - 885 μ.Χ.», so he was alive in 885 and the upper bound is a real absence, not a number."
+    }
+  },
+  "related": [
+    "gregory-khandzteli"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Απριλίου — «Άγιος Εφραίμ ο Μεγάλος»",
+        "url": "https://www.saint.gr/04/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Απριλίου εκάστου έτους», the same day as the listing, and gives him no years of his own at all. Its two sentences are the whole of the notice, and it prints neither couplet nor hymn. The day's line calls him only «ο Μεγάλος», the Great, and it is the page that places him: son of the prince of the city of Kartli, disciple of Gregory of Khandzta, whom it says is honoured on 6 October, and archbishop of Atskuri in eastern Georgia from 845 to 885. The corpus holds five folders whose names fold onto this one — among them Ephraim of Russia, Ephraim of Tomis, Ephraim of Nea Makri and Ephraim of Katounakia — and none of them is a ninth-century Georgian hierarch."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
