@@ -1,0 +1,60 @@
+{
+  "slug": "artemius-the-sinaite",
+  "display_name": "Artemius the Sinaite",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Αρτέμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Φεβρουαρίου, «Άγιος Αρτέμιος ο Ιερομάρτυρας ο Σιναΐτης», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1822,
+      "latest": 1822,
+      "display": "1822",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος ήταν μέλος της συνοδείας του ιερομάρτυρα Νεοφύτου του Σιναΐτου … και μαρτύρησε το έτος 1822 μ.Χ.», with the page's own head «(; - 1822)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Φεβρουαρίου — «Άγιος Αρτέμιος ο Ιερομάρτυρας ο Σιναΐτης»",
+        "url": "https://www.saint.gr/02/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

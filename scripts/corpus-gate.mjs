@@ -115,6 +115,20 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοφιλοσ theophilus-martyr-6-february theophilus-the-deacon-of-libya theophilus-the-new':
+    'three men. The new one is the Theophilus of 6 Φεβρουαρίου, martyred between 249 and 251; the other two are read in the el-01-30 entry for this name form, the deacon of Libya and Theophilus the New of about 800.',
+  'σιλουανοσ silvanus-martyr-6-february silvanus-of-emesa':
+    'two men. The new one is the Silvanus of the 6 Φεβρουαρίου line with Faustus and Basil; the corpus keeps Silvanus of Emesa, dead 284, upgraded in this wave on 29 Ιανουαρίου. The same doubt the page raises over his companions is recorded in his life.',
+  'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-mauropous john-of-edessa john-of-irenopolis john-of-kazan john-of-lycopolis john-of-spetses john-of-syracuse john-son-of-xenophon john-the-hut-dweller john-the-prophet-of-gaza':
+    'twelve now, and two arrive on this 6 Φεβρουαρίου: John of Lycopolis of the fourth century, and John the Prophet of Gaza of the sixth, whom the Romanian calendar keeps on the day too. The other ten are read in the el-02-04 entry for this name form.',
+  'ιακωβοσ jacob-the-hermit james-of-cyrrhus james-of-nisibis james-of-samosata james-of-serbia james-of-zographou-the-first james-of-zographou-the-second':
+    'seven now. The new one is James of Cyrrhus, whose page gives no year, kept on 6 Φεβρουαρίου; the other six are read in the el-02-03 entry for this name form.',
+  'φαυστοσ faustus-disciple-of-dionysius-of-alexandria faustus-martyr-6-february':
+    'two men. The new one is the Faustus of the 6 Φεβρουαρίου line with Basil and Silvanus; the corpus keeps Faustus the disciple of Dionysius of Alexandria, dead 254 to 264, on the Greek 3 October. The 6 February page carries a doubt of its own — that the three may be the Faustus, Basil and Lucian of 25 Οκτωβρίου, because the couplet over them is the same — and that doubt is recorded in all three lives. The third name differs, the corpus holds no folder for the October company, and that page was not read, so nothing was merged.',
+  'δαμασκηνοσ damascene-of-gabrovo damascene-the-sinaite':
+    'two men, a century and a half apart, both new-martyrs under the Turks: Damascene the Sinaite, dead 1623, on 6 Φεβρουαρίου, and Damascene of Gabrovo, dead 1771, on 16 Ιανουαρίου, both written in this wave.',
+  'βασιλειοσ basil-martyr-6-february basil-of-thessalonica basil-uncle-of-eustratius':
+    'three men. The new one is the Basil whom saint.gr names on 6 Φεβρουαρίου with Faustus and Silvanus, three friends martyred by the sword and nothing else on the page — no homeland, no century, no persecutor. The corpus keeps Basil of Thessalonica, upgraded in this wave on 1 Φεβρουαρίου, and the ninth-century uncle of Eustratius on 9 Ιανουαρίου.',
   'θεοδοσιοσ theodosius-companion-of-paisius theodosius-of-antioch theodosius-of-chernigov theodosius-of-the-kyiv-caves theodosius-of-totma theodosius-of-trebizond theodosius-of-triglia theodosius-the-cenobiarch':
     'eight now, and two arrive on this 5 Φεβρουαρίου: Theodosius of Antioch, whose page gives no year, and Theodosius of Chernigov, dead 1696, whose Russian row is 9 September and whose Greek day is this one. The other six are read in the el-01-11 and el-01-12 entries for this name form.',
   'σαββασ sabbas-of-sicily sabbas-of-zographou sabbas-the-spiritual sava-of-serbia':

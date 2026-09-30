@@ -6,6 +6,11 @@
       "form": "Ioan din Gaza",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 februarie, «Sfântul Cuvios Ioan din Gaza». The life the site prints for him heads him «Ioan Profetul»."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Φεβρουαρίου, «Όσιοι Βαρσανούφιος και Ιωάννης ο μαθητής του ο επικαλούμενος Προφήτης», with the rank word and the epithets left off."
     }
   ],
   "sex": "male",
@@ -49,8 +54,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Φεβρουαρίου — «Όσιοι Βαρσανούφιος και Ιωάννης ο μαθητής του ο επικαλούμενος Προφήτης»",
+        "url": "https://www.saint.gr/02/06/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

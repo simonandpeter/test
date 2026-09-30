@@ -1,0 +1,60 @@
+{
+  "slug": "damascene-the-sinaite",
+  "display_name": "Damascene (Tzangares)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Δαμασκηνός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Φεβρουαρίου, «Άγιος Δαμασκηνός ο Ιερομάρτυρας ο Σιναΐτης», with the rank words and the epithet left off; the page's life gives the family name in brackets, «Ο Άγιος Δαμασκηνός (Τζαγκάρης)»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1623,
+      "latest": 1623,
+      "display": "1623",
+      "basis": "traditional",
+      "note": "saint.gr: «ήταν αδελφός στη μονή Σινά και μαρτύρησε από τους Μεζένιδες το 1623 μ.Χ. έξω από τη μάνδρα της μονής», with the page's own head «(; - 1623)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Φεβρουαρίου — «Άγιος Δαμασκηνός ο Ιερομάρτυρας ο Σιναΐτης»",
+        "url": "https://www.saint.gr/02/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

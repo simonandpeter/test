@@ -6,6 +6,11 @@
       "form": "Arsenie din Ikalto",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 februarie, «Sfântul Cuvios Arsenie din Ikalto, Georgia»."
+    },
+    {
+      "form": "Αρσένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Φεβρουαρίου, «Όσιος Αρσένιος ο εκ Γεωργίας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Φεβρουαρίου — «Όσιος Αρσένιος ο εκ Γεωργίας»",
+        "url": "https://www.saint.gr/02/06/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

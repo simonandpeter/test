@@ -6,6 +6,11 @@
       "form": "Fausta",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 februarie, «Sfânta Muceniță Fausta»."
+    },
+    {
+      "form": "Φαύστα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Φεβρουαρίου, «Άγιοι Φαύστα, Ευϊλάσιος και Μάξιμος», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -40,8 +45,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Φεβρουαρίου — «Άγιοι Φαύστα, Ευϊλάσιος και Μάξιμος»",
+        "url": "https://www.saint.gr/02/06/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -51,5 +65,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 299,
+      "latest": 299,
+      "display": "299",
+      "basis": "traditional",
+      "note": "saint.gr: «Κατά το έτος 299 μ.Χ., επί αυτοκράτορα Μαξιμιανού (285 - 305 μ.Χ.), η Αγία Φαύστα προσκλήθηκε από τον επιφανή Συγκλητικό Ευϊλάσιο … να αρνηθεί την πίστη της». The page gives no year of death; the three were put to death by order of Diocletian (284–305)."
+    }
   }
 }

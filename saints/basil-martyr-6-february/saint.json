@@ -1,0 +1,54 @@
+{
+  "slug": "basil-martyr-6-february",
+  "display_name": "Basil (6 February)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Φεβρουαρίου, «Άγιοι Φαύστος, Βασίλειος και Σιλουανός», with the rank word left off."
+    }
+  ],
+  "related": [
+    "faustus-martyr-6-february",
+    "silvanus-martyr-6-february"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "saint.gr's own page for the three adds a doubt about who they are: «Ίσως είναι οι ίδιοι με τους Άγιους Φαύστο, Βασίλειο και Λουκιανό που εορτάζουν στις 25 Οκτωβρίου αφού έχουν το ίδιο δίστιχο» (https://www.saint.gr/2810/saint.aspx, read 30 September 2026). The corpus holds no folder for that 25 October company, and the 25 October Greek day page was not read."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Φεβρουαρίου — «Άγιοι Φαύστος, Βασίλειος και Σιλουανός»",
+        "url": "https://www.saint.gr/02/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

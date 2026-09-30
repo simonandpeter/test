@@ -1,0 +1,62 @@
+{
+  "slug": "saturninus-martyr-6-february",
+  "display_name": "Saturninus (6 February)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Σατουρνίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Φεβρουαρίου, «Άγιοι Θεόφιλος, Σατουρνίνος και Ρεβοκάτος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "between 249 and 251",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Θεόφιλος, Σατουρνίνος και Ρεβοκάτος μαρτύρησαν στην Ισπανία επί αυτοκράτορα Δεκίου (249 - 251 μ.Χ.)» — the page dates them by the reign and gives no year."
+    }
+  },
+  "related": [
+    "theophilus-martyr-6-february",
+    "revocatus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Φεβρουαρίου — «Άγιοι Θεόφιλος, Σατουρνίνος και Ρεβοκάτος»",
+        "url": "https://www.saint.gr/02/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

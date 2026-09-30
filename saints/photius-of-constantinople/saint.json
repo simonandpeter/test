@@ -7,6 +7,11 @@
       "form": "Fotie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 februarie, «Sfântul Ierarh Fotie, patriarhul Constantinopolului». The life the site prints heads him «Sfântul Fotie cel Mare»."
+    },
+    {
+      "form": "Φώτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Φεβρουαρίου, «Άγιος Φώτιος ο Μέγας Πατριάρχης Κωνσταντινουπόλεως», with the rank words, the epithet and the see left off."
     }
   ],
   "sex": "male",
@@ -53,8 +58,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Φεβρουαρίου — «Άγιος Φώτιος ο Μέγας Πατριάρχης Κωνσταντινουπόλεως»",
+        "url": "https://www.saint.gr/02/06/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -64,5 +78,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Τῆς σοφίας ἐκφάντωρ λαμπρὸς γενόμενος, Ὀρθοδοξίας ἐδείχθης θεοπαγῆς προμαχών, τῶν Πατέρων καλλονὴ Φώτιε μέγιστε, οὐ γὰρ αἱρέσεων δεινῶν, στηλιτεύεις τὴν ὀφρύν, Ἐώας τὸ θεῖον σέλας, τῆς Ἐκκλησίας λαμπρότης, ἣν διατηρεῖ Πάτερ ἄσειστον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Φώτιος ο Μέγας Πατριάρχης Κωνσταντινουπόλεως, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3608/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having become a bright expounder of wisdom, you were shown a God-set champion of Orthodoxy, beauty of the Fathers, greatest Photius; for you brand the arrogance of dread heresies — divine radiance of the East, splendour of the Church, which, father, you keep unshaken.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ὡς τῶν ἀποστόλων ὁμότροπος καὶ τῆς οἰκουμένης διδάσκαλος, τῷ Δεσπότῃ τῶν ὅλων ἱκέτευε, Φώτιε, εἰρήνην τῇ οἰκουμένῃ δωρίσασθαι, καὶ ταῖς ψυχαῖς ἡμῶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Φώτιος ο Μέγας Πατριάρχης Κωνσταντινουπόλεως, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον. The page prints this one without a tone.",
+        "url": "https://www.saint.gr/3608/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As one whose way was that of the apostles and a teacher of the whole world, entreat the Master of all, Photius, to grant peace to the world and to our souls his great mercy.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

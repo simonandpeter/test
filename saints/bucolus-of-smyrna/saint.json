@@ -7,6 +7,11 @@
       "form": "Vucol",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 februarie, «Sfântul Ierarh Vucol, Episcopul Smirnei»."
+    },
+    {
+      "form": "Βουκόλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Φεβρουαρίου, «Όσιος Βουκόλος Επίσκοπος Σμύρνης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -31,6 +36,56 @@
       },
       "english": {
         "text": "The truth of things has revealed thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence. Therefore thou hast gained the heights by humility and riches by poverty. O father and hierarch Bucolus, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Ὡς διαλάμπων ἀρετῶν ταὶς ἀκτίσι, τοῦ ἐν τῷ στηθεῖ τοῦ Δεσπότου πεσόντος, ἐκ πόθου προσεπέλασας τῷ θείῳ φωτί, ὅθεν ὡς θεόπνευστος, Ἱεράρχης ἐμπρέψας, ἴθυνας τὴν ποίμνην σου, πρὸς νομὰς ἀληθείας. Καὶ νῦν δυσώπει πάντοτε Χριστόν, Πάτερ Βουκόλε, ὑπὲρ τῶν τιμώντων σε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Βουκόλος Επίσκοπος Σμύρνης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3611/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining out with the rays of the virtues of him who leaned on the Master's breast, you drew near out of longing to the divine light; whence, adorned as a God-inspired hierarch, you guided your flock to the pastures of truth. And now, father Bucolus, entreat Christ always for those who honour you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Κανόνα πίστεως, καὶ εἰκόνα πραότητος, ἐγκρατείας διδάσκαλον, ἀνέδειξε σε τῇ ποίμνῃ σου, ἡ τῶν πραγμάτων ἀλήθεια· διὰ τοῦτο ἐκτήσω τῇ ταπεινώσει τὰ ὑψηλά, τῇ πτωχείᾳ τὰ πλούσια. Πάτερ Ἱεράρχα Βουκόλε, πρέσβευε Χριστῷ τῷ θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Βουκόλος Επίσκοπος Σμύρνης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον. This is the common of a hierarch, printed under his name with his name in it, as his own service.",
+        "url": "https://www.saint.gr/3611/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown you to your flock as a rule of faith, an image of gentleness, a teacher of self-restraint; therefore you gained the heights by humility, and riches by poverty. Father and hierarch Bucolus, intercede with Christ our God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος πλ. δ'.",
+      "model": "Τη Υπερμάχω Στρατηγώ.",
+      "text": "Ως ιεράρχην Εκκλησίας ευφημούμεν σε, ως μαθητήν και μιμητήν, Βουκόλε πάνσοφε, μαθητών Χριστού προ πάντων ηγαπημένου` μεθ` ου πρέσβευε ρυσθήναι τους τιμώντας σε, εκ παντοίων ανάγκης και περιστάσεων, και βοώντας σοι: Χαίροις Πάτερ τρισόλβιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Βουκόλος Επίσκοπος Σμύρνης, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/3611/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "We praise you as a hierarch of the Church, all-wise Bucolus, as the disciple and imitator of the one loved before all the disciples of Christ; with whom intercede that those who honour you and cry to you be delivered from every necessity and circumstance: rejoice, thrice-blessed father.",
         "rendered": "site"
       }
     }
@@ -58,8 +113,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Φεβρουαρίου — «Όσιος Βουκόλος Επίσκοπος Σμύρνης»",
+        "url": "https://www.saint.gr/02/06/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

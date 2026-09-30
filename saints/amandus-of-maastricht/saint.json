@@ -1,0 +1,60 @@
+{
+  "slug": "amandus-of-maastricht",
+  "display_name": "Amandus of Maastricht",
+  "office": "Bishop of Maastricht",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Άμανδος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Φεβρουαρίου, «Άγιος Άμανδος Επίσκοπος Μάαστριχτ», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 680,
+      "latest": 680,
+      "display": "680",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε οσίως με ειρήνη στη μονή του Ελνόν, το έτος 680 μ.Χ.», with the page's own head «(; - 680)»; the same page puts his birth «κοντά στην Ακυϊτανία περί τα τέλη του 6ου αιώνα μ.Χ.»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Φεβρουαρίου — «Άγιος Άμανδος Επίσκοπος Μάαστριχτ»",
+        "url": "https://www.saint.gr/02/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
