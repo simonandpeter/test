@@ -1,0 +1,59 @@
+{
+  "slug": "pancratius-the-martyr-12-may",
+  "display_name": "Pancratius (12 May)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Παγκράτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαΐου, «Άγιος Παγκράτιος ο Μάρτυρας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε στη Ρώμη το 304 μ.Χ., κατά τους χρόνους του αυτοκράτορα Διοκλητιανού (284-305 μ.Χ.)», and its head line reads «Αγιος Παγκρατιος ο Μαρτυρας (; - 304)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαΐου — «Άγιος Παγκράτιος ο Μάρτυρας»",
+        "url": "https://www.saint.gr/05/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Μαΐου εκάστου έτους», the same day as the listing. **He is neither of the corpus's two Pancratii**, which the namesweep flagged and which were read: Pancratius of Tauromenium is a first-century bishop of Sicily sent out by the apostles, and Pancratius the Recluse is a monk of the Kyiv Caves — while this one is a layman of Syria or Phrygia martyred at Rome in 304 under Diocletian. **The display name carries the day** and not an epithet, because the page gives him none beyond «ο Μάρτυρας», and `types` carries the rank. **No `locations` object**: the page offers Syria or Phrygia in the alternative and Rome for the death, and does not choose."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "leo-of-methone",
+  "display_name": "Leo of Methone",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Λέων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαΐου, «Όσιος Λέων εν Μεθώνη», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαΐου — «Όσιος Λέων εν Μεθώνη»",
+        "url": "https://www.saint.gr/05/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Μαΐου εκάστου έτους», the same day as the listing, and adds where that day comes from: his honour lapsed about 1600 and after more than four hundred years the metropolitan of Messenia, Chrysostom III, restored his memory on 12 May. **No year of his own is printed** — the only dates on the page belong to Methone's role as a staging post from the fourth century, to the twelfth-century bishop Nicholas who took up his relics, and to the lapse about 1600 — so there is **no `dates` object**. **He is none of the corpus's twelve Leos**: none of them is a Calabrian pilgrim buried on the beach at Methone."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,13 +6,19 @@
       "form": "Gherman",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 mai, «Sfântul Ierarh Gherman, Patriarhul Constantinopolului»."
+    },
+    {
+      "form": "Γερμανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαΐου, «Άγιος Γερμανός Πατριάρχης Κωνσταντινούπολης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
   "types": [
     "hierarch",
     "patriarch",
-    "confessor"
+    "confessor",
+    "hymnographer"
   ],
   "office": "Patriarch of Constantinople",
   "attestations": [
@@ -37,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαΐου — «Άγιος Γερμανός Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/05/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on, and it is plainly the same man: the patriarch who would not obey Leo the Isaurian's iconoclast decrees, laid his omophorion on the holy table and resigned. **He is none of the corpus's four other Germani** — of Dobrogea, of Novgorod, of Sagmata — whom the namesweep flagged and which were read. **The Greek adds the years the corpus does not hold**: born at Constantinople in 640, son of the patrician Justinian whom Constantine Pogonatos put to death, made metropolitan of Cyzicus at thirty-seven, patriarch in 715, dead at Platania at the age of a hundred on 12 May 740 and buried in the monastery of Chora. **The existing `dates` object is not touched** and those years stand here and in the added paragraph instead. **The apolytikion taken is the joint hymn of the pair**, Ἦχος α’ Τοῦ λίθου σφραγισθέντα, which names Germanus first and Epiphanius second and is the service of the two hierarchs the day keeps together; it is their common and not a mis-hang, and it is copied whole with that said. The page also prints a second apolytikion of the pair and a kontakion of the pair. **`hymnographer` is added to `types`** on the page's own count of what survived Leo's burning of his books: 104 stichera and 22 canons."
     },
     {
       "church": "serbian",
@@ -62,9 +78,29 @@
         "text": "O God of our fathers, who ever dealest with us according to Thy gentleness: take not Thy mercy from us, but by their prayers guide our life in peace.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’",
+      "model": "Τοῦ λίθου σφραγισθέντα",
+      "text": "Ξυνωρίδα τῆς θείας Ἐκκλησίας τᾶς σάλπιγγας, Γερμανὸν σοφὸν Ἱεράρχην, καὶ κλεινὸν Ἐπιφάνιον, τιμήσωμεν προφρόνως οἱ πιστοί, τὸν μὲν ὡς ἐν φρονήματι στερρῶ ὑπὲρ τῆς Χριστοῦ εἰκόνος, τὸν θεομάχον Λέοντα ἐλέγξαντα, ὡς μάστιγα δὲ αἱρέσεων δεινήν, τὸν ἅγιον Ἐπιφάνιον, Οὗτοι γὰρ ἐκτενῶς ὑπὲρ ἠμῶν, ἀεὶ πρεσβεύουσι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τοῦ λίθου σφραγισθέντα, on the page of Άγιος Γερμανός Πατριάρχης Κωνσταντινούπολης — the joint hymn of the two hierarchs the day keeps",
+        "url": "https://www.saint.gr/1553/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful honour with a ready mind the pair of trumpets of the divine Church, Germanus the wise hierarch and renowned Epiphanius: the one for rebuking, in a mind unshaken for the icon of Christ, Leo the fighter against God; the other, holy Epiphanius, as a dread scourge of heresies. For these two intercede earnestly and always for us.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "epiphanius-of-cyprus"
+  ]
 }

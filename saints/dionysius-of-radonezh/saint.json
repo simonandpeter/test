@@ -1,0 +1,70 @@
+{
+  "slug": "dionysius-of-radonezh",
+  "display_name": "Dionysius of Radonezh",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Διονύσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαΐου, «Όσιος Διονύσιος του Ραντονέζ», with the rank word left off."
+    }
+  ],
+  "related": [
+    "hermogenes-of-moscow"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1568,
+      "latest": 1572,
+      "display": "about 1570",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε περί το 1570 μ.Χ. στην πόλη Ρζεβ», and its head line reads «Οσιος Διονυσιος Του Ραντονεζ (1570 - 1633)»."
+    },
+    "death": {
+      "earliest": 1633,
+      "latest": 1633,
+      "display": "1633",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Διονύσιος κοιμήθηκε με ειρήνη το 1633 μ.Χ. και ενταφιάσθηκε στην Τρόιιτσε - Σεργιέβσκαγια Λαύρα»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The saint is a Russian one and saint.gr is the source read here; the Russian calendar's own day for him was not looked at."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαΐου — «Όσιος Διονύσιος του Ραντονέζ»",
+        "url": "https://www.saint.gr/05/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Μαΐου εκάστου έτους», the same day as the listing. **He is none of the corpus's many Dionysii**: David Zobninovsky in the world, born at Rzhev about 1570, abbot of the Uspensky house at Staritsa and from 1610 archimandrite of the Troitse-Sergiev Lavra. **`abbot` is in `types`** on the page's «ηγούμενος» and the archimandrite's office that followed; the vocabulary has no word for archimandrite. **Hermogenes is linked** — the page calls him «ο πιο πιστός βοηθός του Επισκόπου Ερμογένους, Πατριάρχου Μόσχας», and the corpus keeps that patriarch, whose Greek page stands on this same 12 May day. **Abraham Palitsyn, Dmitry Pozharsky, Theophanes IV of Jerusalem and the patriarch Philaret have no folders** and are named without links. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

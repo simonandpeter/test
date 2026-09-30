@@ -1,0 +1,50 @@
+{
+  "slug": "nicetas-the-sinaite",
+  "display_name": "Nicetas the Sinaite",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Νικήτας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαΐου, «Όσιος Νικήτας ο Σιναΐτης», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαΐου — «Όσιος Νικήτας ο Σιναΐτης»",
+        "url": "https://www.saint.gr/05/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Μαΐου εκάστου έτους», the same day as the listing, and then says in one sentence that there is no information about his life. **No year, so no `dates` object.** **He is none of the corpus's fifteen Nicetases**: none of them is called ο Σιναΐτης and none is kept on 12 May. The page's glossary block about a seventh-century Byzantine general of the name is one of its standing name notes and is not a statement about this man."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "john-of-serres",
+  "display_name": "John of Serres",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαΐου, «Άγιος Ιωάννης ο Νεομάρτυρας εκ Σερρών», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1475,
+      "latest": 1485,
+      "display": "about 1480",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιωάννης ο Σερραίος μαρτύρησε για την πίστη του Χριστού περί το 1480 μ.Χ.», and the same page places his birth and life in the last half of the 15th century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαΐου — «Άγιος Ιωάννης ο Νεομάρτυρας εκ Σερρών»",
+        "url": "https://www.saint.gr/05/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Μαΐου εκάστου έτους» and closes «η μνήμη του γιορτάζεται στις 12 Μαΐου», twice the day of the listing. **He is not the day's other John**: [John the Wallachian](/saints/john-the-wallachian), whom the corpus already keeps on this same day, is a Wallachian of noble birth hanged at Constantinople in 1662, and this one is a rich man's son of Serres burnt there about 1480 — two men, two pages, two centuries, both on 12 May. **Nor is he any of the corpus's other Johns of the Turkish period.** **No hymn is printed**, although the page names the service's author, Manuel the Peloponnesian, Great Rhetor of the Great Church, who wrote it probably between 1491 and 1497. **No `locations` object**, although Serres is named throughout."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "euthymius-of-jerusalem",
+  "display_name": "Euthymius of Jerusalem",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "office": "Patriarch of Jerusalem",
+  "names": [
+    {
+      "form": "Ευθύμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαΐου, «Άγιος Ευθύμιος Πατριάρχης Ιεροσολύμων», with the rank word and the see left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαΐου — «Άγιος Ευθύμιος Πατριάρχης Ιεροσολύμων»",
+        "url": "https://www.saint.gr/05/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Μαΐου εκάστου έτους», the same day as the listing. **No year at all is printed**, so there is no `dates` object and nothing dates him. **He is none of the corpus's twenty-odd Euthymii**: the see is the only thing the page gives him, and no other Euthymius in the corpus is a patriarch of Jerusalem. The page says he is absent from the compilers of the synaxaria and from the Menaia, and that his memory is met in the Hierosolymitan Kanonarion."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

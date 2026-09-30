@@ -1,0 +1,67 @@
+{
+  "slug": "anthony-of-radonezh",
+  "display_name": "Anthony of Radonezh",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Αντώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαΐου, «Όσιος Αντώνιος του Ραντονέζ», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1792,
+      "latest": 1792,
+      "display": "6 October 1792",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στις 6 Οκτωβρίου 1792 μ.Χ. στην πόλη Λύσκοβο της επαρχίας Νόβγκοροντ»."
+    },
+    "death": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "1877",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Αντώνιος κοιμήθηκε με ειρήνη το 1877 μ.Χ.», and its head line reads «Οσιος Αντωνιος Του Ραντονεζ (1792 - 1877)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The saint is a Russian one and saint.gr is the source read here; the Russian calendar's own day for him was not looked at."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαΐου — «Όσιος Αντώνιος του Ραντονέζ»",
+        "url": "https://www.saint.gr/05/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Μαΐου εκάστου έτους», the same day as the listing. **He is none of the corpus's thirty-odd Anthonys**: the page gives him a secular name, Andrew Medvedev, a birth at Lyskovo in 1792, monastic entry at Sarov in 1818, ordination at the Vysokogorsky house of Arzamas in 1822, and a summons to the Lavra of Saint Sergius in 1831, none of which the corpus answers to. **`presbyter` is in `types`** on the page's «χειροτονήθηκε πρεσβύτερος» and nothing more; it does not say he was made abbot of the Lavra. **No `locations` object.** The page adds that his relics are in the Lavra of the Holy Trinity and Saint Sergius at Moscow, and that his canonisation was performed by Patriarch Alexy of Moscow in 1997."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

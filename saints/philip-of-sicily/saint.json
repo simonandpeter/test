@@ -1,0 +1,51 @@
+{
+  "slug": "philip-of-sicily",
+  "display_name": "Philip of Sicily",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Φίλιππος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαΐου, «Άγιος Φίλιππος ο Αργύριος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαΐου — «Άγιος Φίλιππος ο Αργύριος»",
+        "url": "https://www.saint.gr/05/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Μαΐου εκάστου έτους», the same day as the listing. **The epithet «ο Αργύριος» is left out of the display name** because the page does not say what it means, and Agyrion in Sicily is a guess this run will not make; the page says only that he came from Sicily, and the display name says that. **No year of any kind is printed**, so there is no `dates` object. **He is none of the corpus's ten Philips**: the page says outright that he is unknown to the synaxaria and the Menaia, and that his memory is found in Sinai Codex 647 and in Codex Δ. α. I.Χ. of the monastery of Cryptoferrata at Rome, where his service also stands."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

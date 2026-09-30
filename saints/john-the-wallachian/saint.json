@@ -6,6 +6,11 @@
       "form": "Ioan Valahul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 mai, «Sfântul Mucenic Ioan Valahul»."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαΐου, «Άγιος Ιωάννης ο Βλάχος», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -47,8 +52,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαΐου — «Άγιος Ιωάννης ο Βλάχος»",
+        "url": "https://www.saint.gr/05/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on, and it is plainly the same man: born in Wallachia, seized at fifteen by Tatars, hanged at Constantinople on 12 May 1662. **He is not the day's other John**: saint.gr keeps on this same 12 May a John the Neomartyr of Serres, a rich man's son burnt there about 1480, who is a new folder in batch `el-05-12`. **The Greek adds the manner and the circumstance the corpus may not hold**: the sultan Mehmed, the Tatar raid into Wallachia sent to put down the rising of the lord Michael the Voivode, the soldier he killed trying to escape, the widow of that soldier into whose hands he was given at Constantinople, the vizier's interrogation, the prefect's sentence, the hanging at Parmak Kapi, and the ransoming and burial of his body by Christians three days later. **The page names his passion's author**, John Karyophylles, and prints no hymn."
     },
     {
       "church": "serbian",

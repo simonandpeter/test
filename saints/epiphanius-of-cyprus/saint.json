@@ -6,17 +6,24 @@
       "form": "Epifanie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 mai, «Sfântul Ierarh Epifanie, Arhiepiscopul Ciprului»."
+    },
+    {
+      "form": "Επιφάνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαΐου, «Άγιος Επιφάνιος Επίσκοπος Κωνσταντίας και Αρχιεπίσκοπος Κύπρου», with the rank words and the sees left off."
     }
   ],
   "sex": "male",
   "types": [
     "hierarch",
     "archbishop",
-    "monk"
+    "monk",
+    "apologist"
   ],
   "office": "Archbishop",
   "related": [
-    "john-chrysostom"
+    "john-chrysostom",
+    "callitropos"
   ],
   "attestations": [
     {
@@ -40,8 +47,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαΐου — «Άγιος Επιφάνιος Επίσκοπος Κωνσταντίας και Αρχιεπίσκοπος Κύπρου»",
+        "url": "https://www.saint.gr/05/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on, and its synaxarion verse agrees: «Τῇ δυσκαιδεκάτῃ Ἐπιφάνιον μόρος εἷλε». It is plainly the same man — bishop of Constantia in Cyprus and archbishop of the island, the great opponent of Origen's teaching. **The Greek adds the years the corpus does not hold**: born 310 of a very poor family of Jewish farmers at the village of Vesandouke near Eleutheropolis in Palestine, bishop from 367, dead at sea on 12 May 403 after thirty-six years in the episcopate. **The existing `dates` object is not touched** and those years are recorded here and in the added paragraph instead, so that a later reader can lift them with this citation rather than inherit them silently. **It names his sister**, Callitropos, whom saint.gr keeps on this same day and who is drafted as a folder in batch `el-05-12`; she is linked. **Two apolytikia stand on the page and only one is taken**: the first, Ἦχος α’ Τῆς ἐρήμου πολίτης, is the joint hymn of Epiphanius with Germanus of Constantinople, whom the day also keeps, and the Έτερον, Ήχος α' Του λίθου σφραγισθέντος, names Epiphanius alone and is his own — that one is copied. Neither is a mis-hang. The page also prints a kontakion of the pair and a megalynarion. **`apologist` is added to `types`** on the page's own account of the Panarion, the Ankyrotos and the rest of his anti-heretical writing."
     },
     {
       "church": "serbian",
@@ -63,6 +80,23 @@
       },
       "english": {
         "text": "O God of our fathers, who ever dealest with us according to Thy gentleness: take not Thy mercy from us, but by their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος α'",
+      "model": "Του λίθου σφραγισθέντος",
+      "text": "Της Φοινίκης ο κλάδος και Κυπρίων το στήριγμα και Κωνστάντιας ανεδείχθης, Επιφάνιε, Πρόεδρος· δι' ο Ασσυρίων βασιλεύς πίπτει ποδών σου προσκυλινδούμενος· το πνεύμα διωκόμενον εξ αυτού δια της σης δεήσεως· δόξα τω σε θαυμαστώσαντι, δόξα τω δωρησαμένω σε ημίν, πρέσβυν ακοίμητον.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ήχος α', Του λίθου σφραγισθέντος, on the page of Άγιος Επιφάνιος Επίσκοπος Κωνσταντίας και Αρχιεπίσκοπος Κύπρου",
+        "url": "https://www.saint.gr/1552/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Branch of Phoenicia and prop of the Cypriots, you were shown forth as the president of Constantia, Epiphanius; and for this the king of the Assyrians falls rolling at your feet, the spirit driven out of him by your prayer. Glory to him who made you wonderful, glory to him who gave you to us as an unsleeping advocate.",
         "rendered": "site"
       }
     }

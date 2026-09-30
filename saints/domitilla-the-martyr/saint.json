@@ -1,0 +1,59 @@
+{
+  "slug": "domitilla-the-martyr",
+  "display_name": "Domitilla",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δομιτίλλα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαΐου, «Αγία Δομιτίλλα η Μάρτυρας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Μάρτυς Δομιτίλλα έζησε τον 1ο αιώνα μ.Χ. στη Ρώμη», and the same sentence makes her the niece of the emperor Domitian (81–96)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαΐου — «Αγία Δομιτίλλα η Μάρτυρας»",
+        "url": "https://www.saint.gr/05/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Μαΐου εκάστου έτους», the same day as the listing. **Nothing in the corpus reads as her** — the namesweep offered only Demetrius and Demetrianus rows, which are a different name. **Her husband and her uncle have no folders** and are named in the life without links: the page makes her the wife of the Roman official Titus Flavius Clemens and the daughter of the sister of the emperor Domitian (81–96). **No `locations` object**, although Rome is named. The page prints no hymn and no manner of death beyond the refusal to sacrifice."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

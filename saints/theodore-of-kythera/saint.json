@@ -1,0 +1,104 @@
+{
+  "slug": "theodore-of-kythera",
+  "display_name": "Theodore of Kythera",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "deacon",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαΐου, «Όσιος Θεόδωρος ο εν Κυθήροις ασκήσας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 870,
+      "latest": 890,
+      "display": "between 870 and 890",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Θεόδωρος γεννήθηκε στην Κορώνη μεταξύ των ετών 870 - 890 μ.Χ.»"
+    },
+    "death": {
+      "earliest": 922,
+      "latest": 922,
+      "display": "922",
+      "basis": "traditional",
+      "note": "saint.gr: «απεβίωσε ειρηνικά στις 12 Μαΐου του 922 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαΐου — «Όσιος Θεόδωρος ο εν Κυθήροις ασκήσας»",
+        "url": "https://www.saint.gr/05/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Μαΐου εκάστου έτους», the same day as the listing, and its synaxarion verse agrees: «Δυωδεκάτῃ Θεόδωρος ὕπερθεν ἀείρατο αἴης». **He is none of the corpus's other Theodores**: the page gives him a Peloponnesian birth at Korone, a wife and two children, ordination as deacon by the bishop of Argos, and a death on Kythera in 922, and nothing in the corpus answers to that. **No location object** although the page names Korone, Nauplion, Rome, Monemvasia and Kythera, because the run does not place a saint the page moves this often. The page adds that his skull is kept in the monastery of his name on Kythera."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ'",
+      "model": "Θείας πίστεως",
+      "text": "Πλοῦτον ἄσυλον, ἡ νῆσος ἔχει, τὴν κατάθεσιν τῶν σῶν λειψάνων, ἐξ ὧν καὶ χάριν θαυμάτων ἀῥύεται, ἐκλυτρουμένη παθῶν καὶ κακώσεων, διὸ καὶ χαίρει τιμῶσα τὴν μνήμην σου. Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἡμῖν τὸ μέγα ἐλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ', Θείας πίστεως, on the page of Όσιος Θεόδωρος ο εν Κυθήροις ασκήσας",
+        "url": "https://www.saint.gr/1556/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The island holds a wealth no thief can take, the laying up of your relics, and from them it draws the grace of wonders, ransomed from passions and from hurts; and so it rejoices as it honours your memory. Venerable father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β'",
+      "model": "Τά ἄνω ζητῶν",
+      "text": "Τοῦ βίου φυγὼν ἡδύτητας καὶ θόρυβον, καὶ τέκνα λιπὼν καὶ σύζυγον μακάριε, τὴν ἐρημον ᾤκησας, καὶ Ἄγγέλων γέγονας Ὅσιε, ζηλωτὴς ἀξιάγαστος, πρεσβεύων ἀπαύστως ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β', Τά ἄνω ζητῶν, on the page of Όσιος Θεόδωρος ο εν Κυθήροις ασκήσας",
+        "url": "https://www.saint.gr/1556/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Fleeing the sweetness and the din of this life, and leaving children and wife behind, blessed one, you made the wilderness your dwelling and became, venerable father, an emulator of the angels worthy of all wonder, interceding without ceasing for us all.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

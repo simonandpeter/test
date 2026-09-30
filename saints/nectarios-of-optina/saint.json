@@ -6,6 +6,11 @@
       "form": "Nectarie de la Optina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 aprilie, «Sfântul Nectarie de la Optina»."
+    },
+    {
+      "form": "Νεκτάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαΐου, «Όσιος Νεκτάριος της Όπτινα», with the rank word and the house left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαΐου — «Όσιος Νεκτάριος της Όπτινα»",
+        "url": "https://www.saint.gr/05/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Μαΐου εκάστου έτους», and it is plainly the same man: the elder of Optina, Nicholas Tikhonov in the world. **The two calendars keep him thirteen days apart and the row records the day of the page it quotes.** The corpus's Romanian row keeps him on 29 April from doxologia.ro, and saint.gr keeps him on 12 May; 29 April plus thirteen is 12 May, so the difference is the old and new style of one Russian day and not two commemorations — but both rows are `revised-julian` on their own sources' word, so **nothing is moved and neither row is altered**, and the reading is set down here for the writer. **He is none of the corpus's other men of the name** — Nectarios of Aegina, of Bitola, of Vryoula, the protopsaltes of Prodromou, the Nectarius of 17 May — whom the namesweep flagged and which were read; this is the folder the Romanian pass made for the Optina elder himself. **The Greek adds the years the corpus does not hold**, «(1853 - 1928)» in its head line, with a birth at Yelets in the province of Oryol; the existing folder carries no `dates` object and it is not given one here, the years standing in this note and in the added paragraph instead. **No hymn**: what the page prints below the life is a long block of his sayings and a letter of his own, signed «Ιερομόναχος Νεκτάριος», not a service."
     },
     {
       "church": "serbian",

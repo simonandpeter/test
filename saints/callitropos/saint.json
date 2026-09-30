@@ -1,0 +1,53 @@
+{
+  "slug": "callitropos",
+  "display_name": "Callitropos, sister of Epiphanius of Cyprus",
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Καλλίτροπος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαΐου, «Οσία Καλλίτροπος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "epiphanius-of-cyprus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαΐου — «Οσία Καλλίτροπος»",
+        "url": "https://www.saint.gr/05/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Μαΐου εκάστου έτους», the same day as the listing, and is one sentence long: she was the sister of saint Epiphanius, bishop of Constantia in Cyprus, and there are no further details of her life. **Her brother's page on the same day corroborates her from the other side** — «Οι γονείς του είχαν ακόμη ένα παιδί, την Καλλίτροπο», his parents had one other child, Callitropos — and adds that seven days after his own baptism Epiphanius settled his sister in a women's monastery. **No year, so no `dates` object**, although her brother's page dates him 310–403. **Nothing in the corpus reads as her**; the namesweep's Callinicus and Calliope rows are other people."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
