@@ -1,0 +1,60 @@
+{
+  "slug": "manuel-of-sphakia",
+  "display_name": "Manuel of Sphakia",
+  "names": [
+    {
+      "form": "Μανουήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαρτίου, «Άγιος Μανουήλ ο εκ Σφακίων», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαρτίου — «Άγιος Μανουήλ ο εκ Σφακίων»",
+        "url": "https://www.saint.gr/03/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1792)» and dates the martyrdom to the hour: «Όλα αυτά έγιναν στη Χίο, στις 15 Μαρτίου 1792 μ.Χ., ήμερα Δευτέρα και ώρα τέσσερις μ.μ.» — at Chios, on 15 March 1792, a Monday, at four in the afternoon, which is the day the calendar keeps him on. It says the Turks bound his body with boulders and threw it into the sea, and that a manuscript of his martyrdom is in the library of the monastery of Xenophon on the Holy Mountain. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1792,
+      "latest": 1792,
+      "display": "1792",
+      "basis": "traditional",
+      "note": "saint.gr: «Όλα αυτά έγιναν στη Χίο, στις 15 Μαρτίου 1792 μ.Χ., ήμερα Δευτέρα και ώρα τέσσερις μ.μ.», and the page heads him «(; - 1792)», leaving the year of his birth a question mark."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

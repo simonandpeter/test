@@ -1,0 +1,64 @@
+{
+  "slug": "dionysius-companion-of-agapius-second",
+  "display_name": "Dionysius, companion of Agapius (the second of the name)",
+  "names": [
+    {
+      "form": "Διονύσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαρτίου, «Άγιος Αγάπιος και των συν αυτώ μάρτυρες: Πλήσιος, Ρωμύλος, Τιμόλαος, Αλέξανδρος, Αλέξανδρος (έτερος), Διονύσιος καί Διονύσιος (έτερος)», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαρτίου — «Άγιος Αγάπιος και των συν αυτώ μάρτυρες: Πλήσιος, Ρωμύλος, Τιμόλαος, Αλέξανδρος, Αλέξανδρος (έτερος), Διονύσιος καί Διονύσιος (έτερος)»",
+        "url": "https://www.saint.gr/03/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The page enumerates the eight and gives each his country: «Ο Αγάπιος ήταν από τη Γάζα της Παλαιστίνης, ο Τιμόλαος από τη Μαύρη Θάλασσα, οι δύο Διονύσιοι από την Τρίπολη της Φοινίκης, ο Ρωμύλος -υποδιάκονος- από τη Λύδδα ή Διόσπολη, ο Πλήσιος και οι δύο Αλέξανδροι από την Αίγυπτο». It puts the martyrdom in the persecution of Diocletian «(284-304)» — the corpus's interval, 284–305, comes from doxologia and stands — before Urbanus, the eparch of Caesarea, and says they all died by beheading. It prints two distichs and an apolytikion that name them. The page's line prints him «Διονύσιος (έτερος)», the other Dionysius, both of them from Tripoli of Phoenicia."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 304,
+      "display": "under Diocletian (284–304)",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησαν και κέρδισαν τα αθάνατα βραβεία, κατά το διωγμό του Διοκλητιανού (284-304) εναντίον της Εκκλησίας». The page gives no year, so the interval is the reign as it prints it; the three folders the corpus already held carry doxologia's 284–305 and are left as they are."
+    }
+  },
+  "related": [
+    "agapius-of-caesarea-in-palestine",
+    "plesius",
+    "timolaus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "nicander-of-egypt-15-march",
+  "display_name": "Nicander of Egypt (15 March)",
+  "names": [
+    {
+      "form": "Νίκανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαρτίου, «Άγιος Νίκανδρος ο εν Αιγύπτου», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαρτίου — «Άγιος Νίκανδρος ο εν Αιγύπτου»",
+        "url": "https://www.saint.gr/03/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 305)», puts him under Diocletian, has him gather and bury the relics of martyrs and be arrested and tried in the year 305 at that work, and flayed and then burned with lighted torches by the tyrant's order. It prints no hymn. The corpus's Nicander of Egypt is one of ten martyrs whom the Romanian calendar keeps on 5 June, tormented with hunger, thirst and cold by the ruler of Egypt; that is another account and another day, and the two are kept apart."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 305,
+      "display": "305",
+      "basis": "traditional",
+      "note": "saint.gr: «Στην εκτέλεση του ιερού αυτού έργου, το έτος 305 μ.Χ., συνελήφθη και δικάστηκε», and the page heads him «(; - 305)» and puts his life «στα χρόνια του Διοκλητιανου (284 - 305 μ.Χ.)»."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

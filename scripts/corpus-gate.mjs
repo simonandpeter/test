@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ρωμυλοσ romylos-martyr-at-venice romylus-companion-of-agapius':
+    'Two men: the martyr at Venice on 17 February and the companion of Agapius on 15 March.',
+  'μανουηλ manuel-of-adrianople manuel-of-sphakia':
+    'Two men: Adrianople on 22 January and Sphakia on 15 March.',
+  'διονυσιοσ dionysius-companion-of-agapius dionysius-companion-of-agapius-second dionysius-companion-of-quadratus dionysius-of-alexandria dionysius-reader-of-alexandria':
+    'Five men, and the 15 March company of Agapius holds **two** Dionysii, as the page names them, so one folder carries `-second`. The others are the companion of Quadratus on 10 March, Dionysius of Alexandria on 3 October and the reader of Alexandria on 6 September.',
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-of-cartagena alexander-of-pydna alexander-of-the-forty-martyrs alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Eight now, and two of the new ones are in one company: the 15 March page names **two** Alexanders among the martyrs with Agapius, which is why one folder carries `-second`. The others are read in the el-03-14 entry for this name form.',
   'πετροσ peter-abesalamites peter-companion-of-aphrodisius peter-companion-of-leucius peter-companion-of-manuel peter-disciple-of-dionysius-of-alexandria peter-of-bulgaria peter-of-capitolias peter-of-damascus peter-of-galatia peter-of-monevata peter-of-sebaste peter-of-tobolsk peter-son-of-john-of-syracuse peter-the-egyptian peter-the-gaoler peter-the-peloponnesian peter-the-sign-bearer':
     'Seventeen now. The new one is the companion of Aphrodisius on 14 March; the others are read in the el-03-04 entry for this name form.',
   'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-kazan john-of-lycopolis john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-yuryevets john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-sinaite-venerable-martyr':
