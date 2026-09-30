@@ -1,0 +1,67 @@
+{
+  "slug": "nicholas-of-magnesia",
+  "display_name": "Nicholas of Magnesia",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Απριλίου, «Άγιος Νικόλαος που μαρτύρησε στη Μαγνησία», with the rank word left off; the place of his martyrdom is kept in the English form because it is the day's own way of telling him apart."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 1754,
+      "latest": 1754,
+      "display": "1754",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Νικολαος Που Μαρτυρησε Στη Μαγνησια (1754 - 1776)»; the body of the page gives no year of birth, only that he was twenty-two when he went to Magnesia."
+    },
+    "death": {
+      "earliest": 1769,
+      "latest": 1796,
+      "display": "1776, or 1769 or 1796 by other reckonings",
+      "basis": "traditional",
+      "note": "saint.gr: «παρέδωσε το πνεύμα του, το έτος 1776 μ.Χ. (κατ' άλλους 1769 μ.Χ ή 1796 μ.Χ)» — the page prints three years and settles none of them, so the interval carries all three; its own heading gives 1776."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Απριλίου — «Άγιος Νικόλαος που μαρτύρησε στη Μαγνησία»",
+        "url": "https://www.saint.gr/04/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Απριλίου εκάστου έτους», the same day as the listing. The page names his town Yaya Köy, his father Hadji-Kanelos, steward of the estates of the aga Kara Osumanoglou, and his age of twenty-two; it gives his answer to the judge of Magnesia and the four floggings he bore, and says he died in prison. **It prints three years for his death and settles none of them**, «το έτος 1776 μ.Χ. (κατ' άλλους 1769 μ.Χ ή 1796 μ.Χ)», so the interval here carries all three; its own heading gives 1754 to 1776. It names no relic and prints no hymn. The corpus keeps many saints named Nicholas; the epithet in the English form is the day's own way of telling this one apart."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

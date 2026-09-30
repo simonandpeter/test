@@ -6,6 +6,11 @@
       "form": "Sava Brancovici",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 aprilie, «Sfântul Ierarh Mărturisitor Sava Brancovici, Mitropolitul Transilvaniei»."
+    },
+    {
+      "form": "Σάββας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Απριλίου, «Άγιος Σάββας ο Ομολογητής εκ Ρουμανίας», with the rank word, the epithet and the country left off."
     }
   ],
   "sex": "male",
@@ -20,12 +25,19 @@
     "simeon-stefan-of-transylvania"
   ],
   "dates": {
+    "birth": {
+      "earliest": 1600,
+      "latest": 1600,
+      "display": "1600",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Σαββας ο Ομολογητης Εκ Ρουμανιας (1600 - 1683)»; the body of the page gives no year of birth, only that he lived in the seventeenth century."
+    },
     "death": {
       "earliest": 1683,
       "latest": 1683,
       "display": "1683",
       "basis": "attested",
-      "note": "doxologia.ro, Viața Sfântului Ierarh Sava Brancovici: «în anul 1683 a fost scos din temniță, dar fiind slăbit de chinuri, îndată și-a dat sfântul său suflet în brațele lui Hristos»."
+      "note": "doxologia.ro, Viața Sfântului Ierarh Sava Brancovici: «în anul 1683 a fost scos din temniță, dar fiind slăbit de chinuri, îndată și-a dat sufletul». saint.gr agrees: «Αποφυλακίσθηκε το έτος 1683 μ.Χ. και μετά από λίγο καιρό, λόγω των κακουχιών και των βασάνων, παρέδωσε την αγία του ψυχή στον Θεό.»"
     }
   },
   "attestations": [
@@ -50,8 +62,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Απριλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Απριλίου — «Άγιος Σάββας ο Ομολογητής εκ Ρουμανίας»",
+        "url": "https://www.saint.gr/04/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him, and it is plainly the same man: the Greek names him Σάββας ο Ομολογητής, Sabbas the Confessor of Romania, Simeon in the world, of seventeenth-century Transylvania, schooled at the monastery of Comana, appointed priest in the country of Arad, elected metropolitan of Transylvania in 1656, deposed and imprisoned in 1680, three years in prison, released in 1683 and dead soon after of his hardships. That is the career of Sava Brancovici, whom this folder holds off doxologia's 24 aprilie, and it agrees with the 1683 this folder already records; **the existing death year was left untouched and a year of birth was added** off the page's heading «(1600 - 1683)». The Greek's line calls him «εκ Ρουμανίας», of Romania, which is the modern country and not a see. It prints no hymn."
     },
     {
       "church": "serbian",

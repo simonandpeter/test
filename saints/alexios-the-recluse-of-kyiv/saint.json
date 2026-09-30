@@ -1,0 +1,54 @@
+{
+  "slug": "alexios-the-recluse-of-kyiv",
+  "display_name": "Alexios the Recluse of Kyiv",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Αλέξιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Απριλίου, «Όσιος Αλέξιος ο Έγκλειστος», with the rank word and the epithet left off; the Lavra in the English form is the one the page names."
+    }
+  ],
+  "related": [
+    "sabbas-of-the-kyiv-caves"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Απριλίου — «Όσιος Αλέξιος ο Έγκλειστος»",
+        "url": "https://www.saint.gr/04/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Απριλίου εκάστου έτους», the same day as the listing. The page puts him in Russia in the thirteenth century, a monk enclosed in the Great Lavra of Kyiv, dead in peace; says outright that «Ο βίος του Αγίου δεν καταγράφηκε», his life was never written down; and records that his relics were found again in 1675 thanks to a landslide following an earthquake that struck Kyiv that year, and were then laid beside those of Sabbas of the Lavra of the Caves of Kyiv. It adds that his memory is also kept on 28 Σεπτεμβρίου, in the common feast of the monks of the Lavra of the near caves, and in the second week of Lent, in the common commemoration of the wonderworking Fathers of the Caves of Kyiv — two further commemorations which this schema cannot hold as feasts and which are recorded here instead. It gives no year of birth or death, so no `dates` were taken, and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

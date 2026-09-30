@@ -1,0 +1,62 @@
+{
+  "slug": "mellitus-of-canterbury",
+  "display_name": "Mellitus of Canterbury",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "office": "Archbishop of Canterbury",
+  "names": [
+    {
+      "form": "Μελίτων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Απριλίου, «Άγιος Μελίτων Αρχιεπίσκοπος Καντουαρίας», with the rank word and the see left off. The page prints only this Greek form of the name; the English form here is the one an English reader looks him up under."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 624,
+      "latest": 624,
+      "display": "624",
+      "basis": "attested",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη το έτος 624 μ.Χ.», and the page heads him «(; - 624)»; no year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Απριλίου — «Άγιος Μελίτων Αρχιεπίσκοπος Καντουαρίας»",
+        "url": "https://www.saint.gr/04/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Απριλίου εκάστου έτους», the same day as the listing. The page makes him a member of the second band of monks whom Gregory the Dialogist, bishop of Rome — whom it cross-references to 12 Μαρτίου — sent to Britain to reinforce the archbishop Augustine; dates his consecration as bishop of the East Saxons with his seat at London to 604; says he drew king Saberht to the Orthodox faith and had much help from him in his missionary work; and dates his election to Canterbury to 619 and his peaceful death to 624. It gives no year of birth. The corpus already keeps Laurence, Theodore of Tarsus and Brithwald of Canterbury, and Alphege, drafted for 19 April; this is a fourth archbishop of that see and not one of them. It prints no hymn and names no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "seventy-soldiers",
+  "display_name": "The Seventy Soldiers",
+  "sex": "unknown",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Εβδομήκοντα Στρατιώτες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Απριλίου, «Άγιοι Εβδομήκοντα Στρατιώτες», with the rank word left off. The page names none of them, so there is no personal name to store."
+    }
+  ],
+  "related": [
+    "sabbas-stratelates"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Απριλίου — «Άγιοι Εβδομήκοντα Στρατιώτες»",
+        "url": "https://www.saint.gr/04/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Απριλίου εκάστου έτους», the same day as the listing. **The page enumerates nobody**, so this is one entry and not seventy folders: the whole body is «Οι Άγιοι Εβδομήκοντα Στρατιώτες πίστεψαν στον Χριστό δια του Άγιου Σάββα και μαρτύρησαν δια ξίφους» — the seventy soldiers believed in Christ through Sabbas and were martyred by the sword. The Sabbas meant is Sabbas Stratelates the Goth, whose own page on this day tells the occasion: when the martyr was thrown into a boiling cauldron of pitch and came out unharmed, seventy of the idolaters standing there believed and were beheaded on the spot. Sabbas's page dates his own death to 272 and theirs is the same occasion, but this page gives them no year of their own, so no `dates` were taken. It names no captain, no city and no judge, and prints no hymn and no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

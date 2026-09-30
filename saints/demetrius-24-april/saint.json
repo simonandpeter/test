@@ -1,0 +1,69 @@
+{
+  "slug": "demetrius-24-april",
+  "display_name": "Demetrius (24 April)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Απριλίου, «Άγιοι Δάναβος, Δημήτριος, Ευσέβιος, Λεόντιος, Λογγίνος, Νεστάβος, Νέων και Χριστόφορος», with the rank word left off; the life page heads him «Αγιος Δημήτριος (; - 303)»."
+    }
+  ],
+  "related": [
+    "george-the-trophy-bearer",
+    "danabos",
+    "eusebius-24-april",
+    "leontius-24-april",
+    "longinus-24-april",
+    "nestabus-24-april",
+    "neon-24-april",
+    "christopher-24-april"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "saint.gr heads each of the eight «(; - 303)» and says «Οι Άγιοι αυτοί μαρτύρησαν το έτος 303 μ.Χ.»; no year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Απριλίου — «Άγιοι Δάναβος, Δημήτριος, Ευσέβιος, Λεόντιος, Λογγίνος, Νεστάβος, Νέων και Χριστόφορος»",
+        "url": "https://www.saint.gr/04/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Απριλίου εκάστου έτους», the same day as the listing. Eight people are named and enumerated on the page, and this corpus makes one folder for each. The whole account is shared: «Οι Άγιοι αυτοί μαρτύρησαν το έτος 303 μ.Χ., όταν προσήλθαν στη χριστιανική πίστη από τα θαύματα τα οποία επιτέλεσε ο Άγιος Μεγαλομάρτυρας Γεώργιος. Ομολογήσαντες τον Χριστό, συνελήφθησαν και κρατήθηκαν στη φυλακή. Στην συνέχεια κρεμάσθηκαν διά προστάγματος Διοκλητιανού (284 - 305 μ.Χ.), εξέσθησαν και τέλος αποκεφαλίσθηκαν.» The page heads each of the eight «(; - 303)» and gives that year in the text as well, so the death year is taken and no year of birth. It gives them no country, no city and no judge but Diocletian, and prints no hymn and no relic. The day's line orders them Danabos, Demetrius, Eusebius, Leontius, Longinus, Nestabus, Neon, Christopher; the page's own headings order them Demetrius, Eusebius, Leontius, Christopher, Danabos, Neon, Longinus, Nestabus. The corpus's other bearers of these names are other men on other days."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

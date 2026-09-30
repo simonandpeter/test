@@ -5,6 +5,11 @@
     {
       "form": "Sfântul Cuvios Iosif de la Bisericani",
       "lang": "ro"
+    },
+    {
+      "form": "Ιωσήφ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Απριλίου, «Όσιος Ιωσήφ ο Ομολογητής εκ Ρουμανίας», with the rank word, the epithet and the country left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not on saint.gr’s list for 1 Οκτωβρίου (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Απριλίου — «Όσιος Ιωσήφ ο Ομολογητής εκ Ρουμανίας»",
+        "url": "https://www.saint.gr/04/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Απριλίου εκάστου έτους», the same day as the listing. **The Greek keeps him here and the Romanian keeps him on 1 octombrie**; the folder's Romanian row stands where it is and this row records the day page that was read. That the two are one man is not in doubt: saint.gr calls him the first hesychast of the mountain of Bisericani in Moldavia and the founder of the monastery there, born in a village of the Neamț country, tonsured at Bistrița, gone with the blessing of the abbot Dometian to the Holy Places and then into the wilderness of the Jordan, gathered a brotherhood of fifteen Romanians and two Greeks who kept the week alone and met on Sundays at the monastery of Gerasimos of the Jordan, driven back to Moldavia by Arab raids, and settled at last on the mountain of Bisericani with the disciples Simon, Methodius, Barnabas, Averkios, Germanos and Pyrrhos, whose names the local hill-names still carry — which is the Romanian life of Joseph of Bisericani almost sentence for sentence. **Two things on the page do not hold together, and no `dates` were taken because of them.** Its heading and its last sentence give «(; - 1711)» and «κοιμήθηκε με ειρήνη το έτος 1711 μ.Χ.», while its second sentence puts his birth in the fifteenth century — «Γεννήθηκε κατά τον 15ο αιώνα μ.Χ.» — and it says he lived on his mountain more than thirty years; the page reconciles none of this. Its rank word for him, «ο Ομολογητής», the Confessor, is one neither its own narrative nor doxologia's supports, and no rank was added to this folder's `types` on the strength of it. It prints no hymn."
     },
     {
       "church": "serbian",

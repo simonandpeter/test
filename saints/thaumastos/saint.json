@@ -1,0 +1,51 @@
+{
+  "slug": "thaumastos",
+  "display_name": "Thaumastos",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Θαυμαστός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Απριλίου, «Όσιος Θαυμαστός», with the rank word left off. The word means wonderful or admirable; the page treats it as his name and not as an epithet, and it is stored as the page has it."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Απριλίου — «Όσιος Θαυμαστός»",
+        "url": "https://www.saint.gr/04/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Απριλίου εκάστου έτους», the same day as the listing. The whole body of the page is one sentence: «Ο Όσιος Θαυμαστός έζησε κατά τον 6ο αιώνα μ.Χ. και κοιμήθηκε με ειρήνη» — he lived in the sixth century and fell asleep in peace. **No `dates` were taken**: a bare century with nothing else on the page is not an interval this corpus records without a reason for its bounds, and the page gives none. It names no country, no monastery, no elder, no wonder, no relic and no hymn, and no couplet. The corpus holds nobody else of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

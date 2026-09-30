@@ -6,6 +6,11 @@
       "form": "Sava Stratilat",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 aprilie, «Sfântul Mucenic Sava Stratilat»."
+    },
+    {
+      "form": "Σάββας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Απριλίου, «Άγιος Σάββας ο Στρατηλάτης, ο Γότθος», with the rank word and the two epithets left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Απριλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Απριλίου — «Άγιος Σάββας ο Στρατηλάτης, ο Γότθος»",
+        "url": "https://www.saint.gr/04/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him. **This folder had no `dates` and now has a death year** off the page's heading «(; - 272)» and its closing sentence. The Greek adds that he was a Goth by descent — the day's line calls him ο Γότθος — that he lived in the third century, in the years of the emperor Aurelian, whose reign it dates 270 to 275, and served at Rome; that the emperor did not know he was a Christian and that he took no care to hide it when the Christians were being persecuted and imprisoned, but carried food to the prisoners himself; that the prison officers denounced him; that his sides were torn and his wounds burned with lighted torches; that because his rank was high the news of his execution brought crowds; that he was thrown into a boiling cauldron of pitch and came out unharmed, at which seventy of the idolaters believed and were beheaded on the spot — the Seventy Soldiers the calendar keeps on this same day, who now have a folder; and that Sabbas was drowned in the Tiber with a great stone about his neck in 272. It prints no hymn and names no relic."
     },
     {
       "church": "serbian",
@@ -64,5 +79,18 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 272,
+      "latest": 272,
+      "display": "272",
+      "basis": "traditional",
+      "note": "saint.gr: «τον έριξαν στον ποταμό Τίβερη και έτσι πήρε το αμάραντο στεφάνι του μαρτυρίου το έτος 272 μ.Χ.», and the page heads him «(; - 272)»; no year of birth is printed."
+    }
+  },
+  "related": [
+    "seventy-soldiers",
+    "sabbas-of-the-kyiv-caves"
+  ]
 }

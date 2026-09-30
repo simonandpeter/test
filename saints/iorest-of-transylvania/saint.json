@@ -6,6 +6,11 @@
       "form": "Ilie Iorest",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 aprilie, «Sfântul Ierarh Mărturisitor Ilie Iorest, Mitropolitul Transilvaniei»."
+    },
+    {
+      "form": "Ηλίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Απριλίου, «Άγιος Ηλίας ο Ομολογητής εκ Ρουμανίας», with the rank word, the epithet and the country left off."
     }
   ],
   "sex": "male",
@@ -41,8 +46,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Απριλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Απριλίου — «Άγιος Ηλίας ο Ομολογητής εκ Ρουμανίας»",
+        "url": "https://www.saint.gr/04/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him, and it is plainly the same man: the Greek names him Ηλίας ο Ομολογητής, Elias the Confessor of Romania, born in Transylvania, a monk of Putna, elected bishop of Transylvania after the death of the metropolitan Gennadius — whose repose it dates 3 September 1640 — with the consent of the voivode Vasile Lupu of Moldavia, imprisoned nine months for defending the Orthodox faith and then freed and gone to Moldavia, and elected bishop at Huşi in 1656. That is the career of Ilie Iorest, whom this folder holds off doxologia's 24 aprilie, and the corpus keeps no second Transylvanian confessor Elias. **This folder had no `dates` and now has both years**, off the page's heading «(1600 - 1678)» and its two sentences. The Greek's line calls him «εκ Ρουμανίας», of Romania, which is the modern country and not a see. It prints no hymn."
     },
     {
       "church": "serbian",
@@ -70,5 +85,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1600,
+      "latest": 1600,
+      "display": "1600",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε το έτος 1600 μ.Χ. στην Τρανσυλβανία», and the page heads him «(1600 - 1678)»."
+    },
+    "death": {
+      "earliest": 1678,
+      "latest": 1678,
+      "display": "1678",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ηλίας κοιμήθηκε με ειρήνη το έτος 1678 μ.Χ.», and the page heads him «(1600 - 1678)»."
+    }
   }
 }

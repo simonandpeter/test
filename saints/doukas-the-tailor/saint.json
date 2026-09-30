@@ -1,0 +1,60 @@
+{
+  "slug": "doukas-the-tailor",
+  "display_name": "Doukas the Tailor",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Δούκας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Απριλίου, «Άγιος Δούκας ο ράπτης από τη Μυτιλήνη», with the rank word, the trade and the island left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1564,
+      "latest": 1564,
+      "display": "1564",
+      "basis": "attested",
+      "note": "saint.gr: «Το γεγονός αυτό έγινε στις 24 Απριλίου 1564 μ.Χ. στην Κωνσταντινούπολη», and the page heads him «(; - 1564)»; no year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Απριλίου — «Άγιος Δούκας ο ράπτης από τη Μυτιλήνη»",
+        "url": "https://www.saint.gr/04/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Απριλίου εκάστου έτους», the same day as the listing. The page makes him a Mytilenean working as a tailor in a shop at Constantinople, flayed alive there on 24 April 1564 — the same day the calendar keeps him — after the wife of a Turkish grandee slandered him to the vizier. It names no judge but the vizier and the eparch, and it prints no hymn and no relic. The corpus holds nobody else of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

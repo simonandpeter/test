@@ -6,6 +6,11 @@
       "form": "Elisabeta",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 aprilie, «Sfânta Cuvioasă Elisabeta»."
+    },
+    {
+      "form": "Ελισάβετ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Απριλίου, «Οσία Ελισάβετ η Θαυματουργή», with the rank word and the epithet left off."
     }
   ],
   "sex": "female",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Απριλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Απριλίου — «Οσία Ελισάβετ η Θαυματουργή»",
+        "url": "https://www.saint.gr/04/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps her. The Greek is the much fuller account, and it is where this folder's whole setting comes from: Heraclea in Thrace, the fifth century, her parents Eunomianos and Euphemia, rich and virtuous, living near Heraclea at the place once called Thrakokrene and later Abydenoi; their sixteen childless years and the week-long feast of the martyr Glyceria — whom it cross-references to 13 Μαΐου — at which Eunomianos saw her honoured skull smile and grieve by turns during the liturgy of bishop Leo, and in a dream heard Glyceria promise a daughter to be named Elizabeth, «γιατί θα αναδειχθεί όμοια στην ψυχή με την μητέρα του Ιωάννου του Προδρόμου»; her mother's death when she was twelve and her father's three years later; her giving of her property to the poor and freedom to her slaves; the monastery of the great martyr George called «Μικρός Λόφος» at Constantinople where her father's aunt was abbess and where she was tonsured; her going barefoot and never washing her body with water; her succession as abbess two years later, installed by the patriarch Gennadius I, whose patriarchate it dates 458 to 471; her vision of the Holy Spirit descending into the sanctuary after the Cherubic hymn; and her last journey home to Heraclea, the vision of the Mother of God in the church of the Theotokos, the recognition of that face in an icon in the church of the hieromartyr Romanos, and the voice calling her back to her monastery to die. **It gives her no year, only the fifth century, so no `dates` were taken.** Under «Ιερά Λείψανα» it puts portions of her relic at the monasteries of St Anna of Lygaria near Lamia and of Ntaou Pentelis. It prints two apolytikia, a kontakion, a megalynarion and a kathisma; the first apolytikion and the kontakion are proper to her and are stored here, the second apolytikion, «Ἐν σοί Μῆτερ ἀκριβῶς διεσώθη τό κατ᾽ εἰκόνα», is the common of a venerable mother, and the other two are neither of the kinds this corpus holds."
     },
     {
       "church": "serbian",
@@ -61,9 +76,46 @@
         "text": "In thee, O mother, that which is according to the image was saved with diligence; for taking up the cross thou didst follow Christ, and working, thou didst teach that the flesh is not to be regarded, since it passes away, but that care is to be taken for the soul, a thing immortal. Therefore thy spirit rejoices together with the angels, most venerable mother Elizabeth.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Μητρικῶν ἐκ λαγόνων Χριστὸν ἠγάπησας, ὥσπερ βλαστὸς Ἐλισάβετ δικαιοσύνης τερπνός, καὶ τοὶς ἴχνεσιν αὐτοῦ ἀκολουθήσασα, τῶν αἰωνίων ἀγαθῶν, γεωργεῖς τᾶς ἀπαρχᾶς, ἀμέμπτω σου πολιτεία, θαυματουργοῦσα θεόφρον, πρὸς σωτηρίαν τῶν ψυχῶν ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον, on the page of «Οσία Ελισάβετ η Θαυματουργή»",
+        "url": "https://www.saint.gr/1456/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy mother's womb thou didst love Christ, Elizabeth, like a delightful shoot of righteousness; and following in His steps thou dost cultivate the firstfruits of the eternal good things by thy blameless life, working wonders, O thou of godly mind, for the salvation of our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Ὡς ἀπαρχὰς τῆς φύσεως.",
+      "text": "Ὡς παρθενίας τέμενος, καὶ ἀρετῶν θησαύρισμα, τὴν τῶν θαυμάτων βλυσταίνεις χρηστότητα, ὥσπερ πηγὴ ἀκένωτος, καὶ ψυχῶν καὶ σωμάτων, Ἐλισάβετ καθαίρεις τὰ ἀρρωστήματα, τῶν εὐλαβῶς ψαλλόντων, τῷ Κτίσαντι· Ἀλληλούϊα.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Ὡς ἀπαρχὰς τῆς φύσεως, on the page of «Οσία Ελισάβετ η Θαυματουργή»",
+        "url": "https://www.saint.gr/1456/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a sanctuary of virginity and a treasury of the virtues, thou dost well up the goodness of wonders like an unemptying spring, and thou dost cleanse, Elizabeth, the sicknesses of soul and body of those who reverently sing to the Creator: Alleluia.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "george-the-trophy-bearer"
+  ]
 }

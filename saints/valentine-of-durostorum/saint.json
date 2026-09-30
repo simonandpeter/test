@@ -6,6 +6,11 @@
       "form": "Valentin din Durostorum",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 aprilie, «Sfântul Mucenic Valentin din Durostorum»."
+    },
+    {
+      "form": "Βαλεντίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Απριλίου, «Άγιοι Πασικράτης και Βαλεντίων», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Απριλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Απριλίου — «Άγιοι Πασικράτης και Βαλεντίων»",
+        "url": "https://www.saint.gr/04/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps them. The Greek makes them soldiers of Durostorum in Lower Moesia under a prefect Aulozanes, arrested for rebuking the worshippers of the idols and for confessing Christ true God, urged to sacrifice to Apollo, and beheaded in 297 — Passicrates at twenty-two, Valention at thirty; it adds the scene of Passicrates's brother coming to the prison and advising him to offer at least a little incense and save himself, and Passicrates driving him off. **This folder had no `dates` and now has both years**, taken from the page's headings «Αγιος Βαλεντιων (267 - 297)» and «Αγιος Πασικρατης (275 - 297)», which are the ages the text gives worked back from 297. The day's line spells the second name Βαλεντίων, and the corpus's English form is Valentine. It prints no hymn and names no relic."
     },
     {
       "church": "serbian",
@@ -49,5 +64,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 267,
+      "latest": 267,
+      "display": "267",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Βαλεντίων (267 - 297)», and its text gives his age at death as thirty in the year 297."
+    },
+    "death": {
+      "earliest": 297,
+      "latest": 297,
+      "display": "297",
+      "basis": "traditional",
+      "note": "saint.gr: «Τότε και οι δύο αποκεφαλίστηκαν, σε ηλικία, ο μεν Πασικράτης 22 ετών, ο δε Βαλεντίων 30, το έτος 297 μ.Χ.»"
+    }
   }
 }

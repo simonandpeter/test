@@ -6,6 +6,11 @@
       "form": "Xenofon Ctitorul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 aprilie, «Cuviosul Xenofon Ctitorul»."
+    },
+    {
+      "form": "Ξενοφών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Απριλίου, «Όσιος Ξενοφών κτήτορας της φερωνύμου μονής του Αγίου Όρους», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Απριλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Απριλίου — «Όσιος Ξενοφών κτήτορας της φερωνύμου μονής του Αγίου Όρους»",
+        "url": "https://www.saint.gr/04/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him. The Greek agrees with the year this folder holds and widens it: «ο Κύριος τον ανέπαυσε με ειρήνη μεταξύ των ετών 1018 - 1035 μ.Χ.», between 1018 and 1035, where doxologia.ro gives 1018 flat. **The existing precise year was left as it stood rather than widened**, and the Greek's range is recorded here. It adds the end of the tenth century for his life, a distinguished and wealthy family and a good education, and makes him a contemporary of Athanasius the Athonite, whose life witnesses that Athanasius healed Xenophon's brother Theodore of an incurable cancer; it tells how he found on the monastery's site a little church of Demetrius the Myrrh-streamer and the wonderworking icon of George — which had been thrown into the fire at Constantinople in the iconoclasm and come out whole, and which bled at the chin when a man struck it with a knife, and was then cast into the sea by a pious Christian and came ashore at the monastery; how Xenophon raised the new monastery at his own expense and dedicated it to George the Trophy-bearer; how he made peace in the boundary quarrels among certain Athonite houses at the beginning of the eleventh century, so that all the fathers called him «ο δίκαιος», the just; and how at the end of his life he resigned the abbacy in favour of his brother Theodore. It prints no hymn and names no relic."
     },
     {
       "church": "serbian",
@@ -55,5 +70,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "george-the-trophy-bearer"
+  ]
 }

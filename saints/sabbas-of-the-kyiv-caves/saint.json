@@ -1,0 +1,54 @@
+{
+  "slug": "sabbas-of-the-kyiv-caves",
+  "display_name": "Sabbas of the Kyiv Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Σάββας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Απριλίου, «Όσιος Σάββας ο εν τω Σπηλαίω», with the rank word and the epithet left off; the body of the page calls him «ο Όσιος Σάββας των Σπηλαίων του Κιέβου»."
+    }
+  ],
+  "related": [
+    "sabbas-stratelates"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Απριλίου — «Όσιος Σάββας ο εν τω Σπηλαίω»",
+        "url": "https://www.saint.gr/04/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Απριλίου εκάστου έτους», the same day as the listing. The whole body of the page is three sentences. It puts him in the near caves of the Lavra of Kyiv in the thirteenth century, says that in the manuscripts and in the canon of the service to the Fathers of the Caves of Kyiv he is called Wonderworker, and — the reason he stands on this day — «Ο Όσιος Σάββας κοιμήθηκε με ειρήνη και η μνήμη του εορτάζεται στις 24 Απριλίου, εξαιτίας του Αγίου Μάρτυρα Σάββα του Στρατηλάτου», his memory is kept on 24 April because of the martyr Sabbas Stratelates, whose day it is. It gives him no year, so no `dates` were taken, and it names no relic and prints no hymn. The corpus's Savva of Storozhevsk is another man on another day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
