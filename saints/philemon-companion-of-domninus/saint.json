@@ -1,0 +1,54 @@
+{
+  "slug": "philemon-companion-of-domninus",
+  "display_name": "Philemon, companion of Domninus",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "preacher"
+  ],
+  "names": [
+    {
+      "form": "Φιλήμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαρτίου, «Άγιοι Φιλήμων και Δομνίνος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "domninus-companion-of-philemon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαρτίου — «Άγιοι Φιλήμων και Δομνίνος»",
+        "url": "https://www.saint.gr/03/21/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαρτίου εκάστου έτους.» The two share one line and one page, and the page gives each of them a heading of his own, so they are two folders. It gives no emperor and no year — only «στα χρόνια της μεγάλης και σκληρής πάλης της ειδωλολατρίας κατά του χριστιανισμού», in the years of the great and hard struggle of idolatry against Christianity — so there is no dates object. He is none of the several Philemons the corpus already keeps: not the apostle, not Philemon of Karpathos, not the flute-player of Egypt, and not the companion of Fortunianus."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

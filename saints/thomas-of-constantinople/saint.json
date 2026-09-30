@@ -7,6 +7,11 @@
       "form": "Toma",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 martie, «Sfântul Ierarh Toma, Patriarhul Constantinopolului»."
+    },
+    {
+      "form": "Θωμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαρτίου, «Άγιος Θωμάς Πατριάρχης Κωνσταντινούπολης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -19,11 +24,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 602,
+      "earliest": 610,
       "latest": 610,
-      "display": "602–610",
+      "display": "610",
       "basis": "traditional",
-      "note": "doxologia.ro's life for the day: he was chosen patriarch «în vremea împărăției tiranului Foca(602-610)» and departed «în vremea împărăției aceluiași Foca», having shepherded the Church «trei ani și două luni». The reign is the interval the page prints; it gives no year of death."
+      "note": "saint.gr: «Κοιμήθηκε ειρηνικά στις 20 Μαρτίου του 610 μ.Χ. και κηδεύτηκε στις 22 του ιδίου μηνός» — he fell asleep on 20 March 610 and was buried on the 22nd of the same month. doxologia.ro gave only the reign of Phocas, «(602-610)», which is the interval the corpus first held; the Greek page states the year, and it falls inside that reign."
     }
   },
   "attestations": [
@@ -48,8 +53,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαρτίου — «Άγιος Θωμάς Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/03/21/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαρτίου εκάστου έτους.» This is the entry on which saint.gr itself says the day is unsettled: «Αρχαιότερα χειρόγραφα ορίζουν την μνήμη του στις 18 και 22 Φεβρουαρίου και στις 19, 20, 22 Μαρτίου» — older manuscripts put his memory on 18 and 22 February and on 19, 20 and 22 March — and it adds that the Paris Codex 1587 and the Petersburg Codex 227, at 19 and 20 March, also carry the feast of the translation of his relics. The row records the day page that listed him, which is 21 Μαρτίου, and the manuscript days are noted here rather than moved into rows of their own. The page also says «Η Σύναξη αυτού ετελείτο στην Μεγάλη Εκκλησία», his synaxis used to be held at the Great Church."
     },
     {
       "church": "serbian",

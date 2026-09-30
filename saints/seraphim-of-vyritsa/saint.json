@@ -6,6 +6,11 @@
       "form": "Serafim de Virița",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 martie."
+    },
+    {
+      "form": "Σεραφείμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαρτίου, «Όσιος Σεραφείμ», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -52,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαρτίου — «Όσιος Σεραφείμ»",
+        "url": "https://www.saint.gr/03/21/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαρτίου εκάστου έτους.» The page heads him «(1865 - 1949)» and agrees with the corpus's years, so nothing in the dates field has been changed; it places his birth more exactly, in the village of Vakhromeevo of the Arefinskaya district in the region of Yaroslavl, where doxologia had the town of Cheremovsky in the province of Yaroslavl. Its account is much the longest of the day's and is only summarised in the paragraph added to the life."
     },
     {
       "church": "serbian",

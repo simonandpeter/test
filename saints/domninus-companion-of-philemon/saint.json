@@ -1,0 +1,54 @@
+{
+  "slug": "domninus-companion-of-philemon",
+  "display_name": "Domninus, companion of Philemon",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "preacher"
+  ],
+  "names": [
+    {
+      "form": "Δομνίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαρτίου, «Άγιοι Φιλήμων και Δομνίνος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "philemon-companion-of-domninus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαρτίου — «Άγιοι Φιλήμων και Δομνίνος»",
+        "url": "https://www.saint.gr/03/21/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαρτίου εκάστου έτους.» The two share one line and one page, and the page gives each of them a heading of his own, so they are two folders. It gives no emperor and no year, so there is no dates object. The corpus keeps a Domninus of Thessalonica on 1 octombrie, arrested alone at Thessalonica while Maximian was building a palace there, and this page's parenthesis that some sources make Philemon and Domninus Thessalonians is the only thing joining the two: the day, the companion and the manner of death are all different, and no identification has been made here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,11 +6,17 @@
       "form": "Serapion",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 martie."
+    },
+    {
+      "form": "Σεραπίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαρτίου, «Όσιος Σεραπίων ο Σιδώνιος», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "ascetic"
   ],
   "attestations": [
     {
@@ -34,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαρτίου — «Όσιος Σεραπίων ο Σιδώνιος»",
+        "url": "https://www.saint.gr/03/21/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαρτίου εκάστου έτους.» Where doxologia gave one line and no life, the Greek calendar gives him an epithet, a country and a century: «καταγόταν από τη Σιδώνα και έζησε κυρίως στην Αίγυπτο τον 4ο αιώνα μ.Χ.», of Sidon, living mostly in Egypt in the fourth century. A stated century is a date the corpus could hold, and none has been written here because the page's «κυρίως», mostly, attaches the century to where he lived rather than to when he was born or died; the question is in the reader's report."
     },
     {
       "church": "serbian",

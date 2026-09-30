@@ -6,6 +6,11 @@
       "form": "Iacob Mărturisitorul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 martie."
+    },
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαρτίου, «Άγιος Ιάκωβος ο Ομολογητής ο Επίσκοπος», with the rank word, the epithet and the office left off."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαρτίου — «Άγιος Ιάκωβος ο Ομολογητής ο Επίσκοπος»",
+        "url": "https://www.saint.gr/03/21/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαρτίου εκάστου έτους.» The page does not name his see either, and gives no year — where doxologia at least named Constantine Copronymus, saint.gr says only «στα χρόνια των εικονομάχων», in the years of the iconoclasts. So the corpus's interval, which rests on the Romanian page's reign, stands unchanged."
     },
     {
       "church": "serbian",
@@ -69,6 +84,23 @@
       },
       "english": {
         "text": "The truth of things revealed thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence; therefore thou hast won the heights by humility and riches by poverty. Father and hierarch James, entreat Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Ἐγκράτειας ἐκλάμψας Πάτερ Ἰάκωβε, ὡς Ἱεράρχης τοῦ Λόγου καὶ ἀληθὴς λειτουργός, ὠρθοτόμησας πιστῶς λόγον τὸν ἔνθεον οὗπερ τὴν χάριν βέβαιων, δι' ἀγώνων εὐαγῶν, ἐδίδαξας προσκυνεῖσθε, τὴν τοῦ Σωτῆρος Εἰκόνα, ὦ καὶ πρεσβεύεις ὑπὲρ πάντων ἠμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον, on the page of Άγιος Ιάκωβος ο Ομολογητής ο Επίσκοπος. It names him and names the icon of the Saviour, so it is his own and not a common. The page prints a Κάθισμα after it, which is not taken here; its «ἐδίδαξας προσκυνεῖσθε» for προσκυνεῖσθαι and «βέβαιων» for βεβαιῶν are the page's own readings and are copied as printed.",
+        "url": "https://www.saint.gr/3332/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining with abstinence, O father James, as a hierarch of the Word and a true minister, thou didst faithfully divide aright the word of God, and confirming its grace by holy struggles thou didst teach that the icon of the Saviour be venerated; wherefore thou dost intercede for us all.",
         "rendered": "site"
       }
     }

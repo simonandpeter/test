@@ -1,0 +1,57 @@
+{
+  "slug": "beryllus-of-catania",
+  "display_name": "Beryllus of Catania",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "office": "Bishop of Catania in Sicily",
+  "names": [
+    {
+      "form": "Βήρυλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαρτίου, «Όσιος Βήρυλλος Επίσκοπος Κατάνης», with the rank word and the see left off."
+    }
+  ],
+  "related": [
+    "peter-the-apostle",
+    "joseph-the-hymnographer"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαρτίου — «Όσιος Βήρυλλος Επίσκοπος Κατάνης»",
+        "url": "https://www.saint.gr/03/21/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαρτίου εκάστου έτους.» The page gives no year at all: it makes him a disciple of the Apostle Peter and says he died in deep old age, and a date written from the apostle's lifetime would be inferred rather than read, so there is no dates object. It says a service for him was written by Theophanes and by Joseph the Hymnographer, and does not say which Theophanes, so only Joseph is linked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
