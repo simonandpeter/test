@@ -1,0 +1,63 @@
+{
+  "slug": "eulogius-of-cordoba",
+  "display_name": "Eulogius of Cordoba",
+  "names": [
+    {
+      "form": "Ευλόγιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαρτίου, «Άγιος Ευλόγιος ο Ιερομάρτυρας και οι Αγίες Λεωκρητία και οι δύο ανώνυμες παρθένες Μάρτυρες εν Κορδούη Ισπανίας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαρτίου — «Άγιος Ευλόγιος ο Ιερομάρτυρας και οι Αγίες Λεωκρητία και οι δύο ανώνυμες παρθένες Μάρτυρες εν Κορδούη Ισπανίας»",
+        "url": "https://www.saint.gr/03/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads Eulogius «(; - 859)» and Leocritia «(; - 859)», and heads the two anonymous virgins «(; - 859)» as well while its text puts their martyrdom in 851 and says they «πέρασαν στο Ορθόδοξο Μαρτυρολόγιο ανώνυμα» — they passed into the martyrology without names; on that double reading, and having no name, the two virgins are left undrafted. The page puts Eulogius's birth at Cordoba in the eighth century, the persecution of 850, his election to the episcopal office in 858, and his beheading in 859. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 859,
+      "latest": 859,
+      "display": "859",
+      "basis": "traditional",
+      "note": "saint.gr: «έσκυψε το κεφάλι του κάτω από το μαχαίρι του δημίου… Ήταν το έτος 859 μ.Χ.», and the page heads him «(; - 859)». It puts his birth «κατά τον 8ο αιώνα μ.Χ.» and gives no year for it."
+    }
+  },
+  "related": [
+    "leocritia-of-cordoba"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Pionie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 martie, «Sfântul Sfinţit Mucenic Pionie, preotul din Smirna»."
+    },
+    {
+      "form": "Πιόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαρτίου, «Άγιοι Πιόνιος ο Πρεσβύτερος και Σαβίνα», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαρτίου — «Άγιοι Πιόνιος ο Πρεσβύτερος και Σαβίνα»",
+        "url": "https://www.saint.gr/03/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The page puts him under Decius «(249 - 251 μ.Χ.)» and a presbyter of the Church of Smyrna; the corpus's interval is doxologia's «245-251» and is left as it stands. It names Polemon the priest of the idols, Elpidios the archon of the city and the proconsul Kontylianos, and says his synaxis was kept at the Lithostroton, where a church stood in his name. The line pairs him with a Sabina, of whom the same page says «Η μνήμη της Αγίας Σαβίνας είναι άγνωστη στους Συναξαριστές» and only that «φαίνεται» she suffered with him; she is left undrafted on that ground."
     },
     {
       "church": "serbian",

@@ -1,0 +1,68 @@
+{
+  "slug": "constantine-of-strathclyde",
+  "display_name": "Constantine of Strathclyde",
+  "names": [
+    {
+      "form": "Κωνσταντίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαρτίου, «Άγιος Κωνσταντίνος ο βασιλεύς του Στραθκλάϊντ», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "office": "King of Strathclyde",
+  "types": [
+    "king"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαρτίου — «Άγιος Κωνσταντίνος ο βασιλεύς του Στραθκλάϊντ»",
+        "url": "https://www.saint.gr/03/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(570 - ;)», gives 570 for his birth, names his parents the king Rhydderch Hael of Strathclyde and the queen Languoreth, says he was guided to Christianity by St Columba and contended for the Orthodox faith in England and in Ireland, and puts his peaceful repose «περί το έτος 640 μ.Χ.». It prints no hymn. The corpus's Constantine of Cornwall is the Greek 9 March, a martyr king of Dumnonia born about 520 and killed in 576; this is the other entry, on the other day, with other parents and other years."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 570,
+      "latest": 570,
+      "display": "570",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Κωνσταντίνος γεννήθηκε το έτος 570 μ.Χ. και ήταν υιός του βασιλέως Ρίντερχ Χέελ του Στραθ Κλάιντ και της βασιλίσσης Λανγκουορέφης», and the page heads him «(570 - ;)»."
+    },
+    "death": {
+      "earliest": 640,
+      "latest": 640,
+      "display": "about 640",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Κωνσταντίνος κοιμήθηκε με ειρήνη περί το έτος 640 μ.Χ.» — the page's «περί», about, is why the display says about 640, and its own heading leaves the year open."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

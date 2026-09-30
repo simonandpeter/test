@@ -6,6 +6,11 @@
       "form": "Alexie de la Goloseev",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 martie, «Sfântul Cuvios Alexie de la Goloseev»."
+    },
+    {
+      "form": "Αλέξιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαρτίου, «Όσιος Αλέξιος εκ Ρωσίας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαρτίου — «Όσιος Αλέξιος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/03/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(1840 - 1917)», gives his name in the world as Vladimir Ivanovich Shepelev, puts his birth on 14 April 1840 at Kyiv of a noble family, says he was born mute and was healed at twelve by Philaret, bishop of Kyiv, whom the same site keeps on 19 Νοεμβρίου, and that he was buried in the desert of Goloseevo. It prints no hymn."
     },
     {
       "church": "serbian",

@@ -1,0 +1,104 @@
+{
+  "slug": "theodora-of-arta",
+  "display_name": "Theodora of Arta",
+  "names": [
+    {
+      "form": "Θεοδώρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαρτίου, «Οσία Θεοδώρα η βασίλισσα Άρτας», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic",
+    "queen"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαρτίου — «Οσία Θεοδώρα η βασίλισσα Άρτας»",
+        "url": "https://www.saint.gr/03/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The page makes her the patron of Arta — «Πολιούχος: Άρτα» — and records a relic, «Απότμημα του Ιερού Λειψάνου της Αγίας βρίσκεται στη Μητρόπολη Άρτης». It puts her birth «περί το έτος 1210 μ.Χ. πιθανότατα στην Θεσσαλονίκη», names her biographer the monk Job, and says plainly of her death «Δεν γνωρίζουμε δυστυχώς τον χρόνο του θανάτου της Αγίας, τοποθετείται όμως στο χρονικό διάστημα από το 1281-1285 μ.Χ.» — the year is not known and is placed between 1281 and 1285."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1210,
+      "latest": 1210,
+      "display": "about 1210",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Οσία Θεοδώρα γεννήθηκε περί το έτος 1210 μ.Χ. πιθανότατα στην Θεσσαλονίκη» — the page's «περί», about, and its «πιθανότατα», most probably, are why the display says about 1210 and the place is left to the life."
+    },
+    "death": {
+      "earliest": 1281,
+      "latest": 1285,
+      "display": "between 1281 and 1285",
+      "basis": "traditional",
+      "note": "saint.gr: «Δεν γνωρίζουμε δυστυχώς τον χρόνο του θανάτου της Αγίας, τοποθετείται όμως στο χρονικό διάστημα από το 1281-1285 μ.Χ.» — the page says the year is not known and gives that span, and adds that she died at about seventy."
+    }
+  },
+  "related": [],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος γ΄.",
+      "text": "Των βασιλίδων το κλέος, ασκητριών τε αγλάϊσμα, της Ακαρνανίας το εύχος και ιαμάτων ρείθρον ακένωτον` των λυπουμένων και πτωχών την προστάτιν, την ακτίνος δίκην την Αιτωλίαν πάσαν καταφωτίζουσαν` επώνυμον την όντως δωρεών των του Θεού, την πάνσεπτον και οσίαν Θεοδώραν την Βασίλισσαν, δεύτε οι Αρταίοι πάντες πιστώς συνελθόντες ύμνοις τιμήσωμεν` αυτή γαρ αενάως υπέρ ημών ου παύει πρεσβεύουσα.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ήχος γ΄, on the page of Οσία Θεοδώρα η βασίλισσα Άρτας. The page prints a second apolytikion in Ἦχος α’ (Τῆς ἐρήμου πολίτης), this kontakion and a megalynarion beside it.",
+        "url": "https://www.saint.gr/3816/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The glory of queens and the adornment of women ascetics, the boast of Acarnania and an unfailing stream of healings, the protectress of the sorrowing and the poor, who lights up the whole of Aetolia like a ray, truly named after the gifts of God — the all-revered and venerable Theodora the queen: come, all you of Arta, gather in faith and honour her with hymns, for she never ceases to intercede for us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τοὺς ἀσφαλεῖς.",
+      "text": "Βασιλικὴν τιμὴν καὶ δόξαν καταλέλοιπας, καὶ ἐν ἀσκήσει τὴν ζωὴν διήνυσας, Θεοδώρα παμμακάριστε, γέρας τῆς Ἄρτης καὶ διάδημα· διό σου τῇ σεπτῇ θήκῃ προσπίπτοντες, ἁγιασμὸν ἐκ ταύτης κομιζόμεθα, ὑμνοῦντες Χριστὸν τὸν σὲ δοξάσαντα.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος β’, Τοὺς ἀσφαλεῖς, on the same page.",
+        "url": "https://www.saint.gr/3816/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You left behind a queen's honour and glory and passed your life in ascesis, all-blessed Theodora, the prize and the diadem of Arta; and so, falling down before your revered shrine, we take sanctification from it and hymn Christ who has glorified you.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

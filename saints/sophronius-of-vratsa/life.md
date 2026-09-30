@@ -6,4 +6,6 @@ Widowed, he took the monastic schema at Tarnovo under the name Seraphim, and in 
 
 The Bulgarian Church numbered him among the saints on 31 December 1964; his memory is kept on 22 September and on 11 March.
 
-*After doxologia.ro, [Sfântul Sofronie, episcopul Vratsei](https://doxologia.ro/viata-sfantului-sofronie-episcopul-vratsei) (Moise Aghioritul, Sfinții Sfântului Munte); read 30 August 2026; doxologia.ro's calendar keeps him on 11 martie as well — [that day](https://doxologia.ro/11-martie), read 19 September 2026.*
+The Greek calendar keeps him on 11 March, the second of the two days the Romanian calendar prints for him, and calls him ο Διδάσκαλος, the Teacher, and bishop of Vratsa in Bulgaria. saint.gr's page for him is two sentences long: it gives his years, 1739 to 1813, and records that the synodal act of his glorification was made by the Church of Bulgaria on 31 December 1964. It prints no hymn and names no relic.
+
+*After doxologia.ro, [Sfântul Sofronie, episcopul Vratsei](https://doxologia.ro/viata-sfantului-sofronie-episcopul-vratsei) (Moise Aghioritul, Sfinții Sfântului Munte); read 30 August 2026; doxologia.ro's calendar keeps him on 11 martie as well — [that day](https://doxologia.ro/11-martie), read 19 September 2026; and saint.gr's calendar for 11 Μαρτίου — [the day](https://www.saint.gr/03/11/index.aspx) and [the life](https://www.saint.gr/3818/saint.aspx), read 30 September 2026.*

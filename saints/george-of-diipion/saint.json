@@ -1,0 +1,61 @@
+{
+  "slug": "george-of-diipion",
+  "display_name": "George of Diipion",
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαρτίου, «Όσιος Γεώργιος ο Νεοφανής ο «ἐν Διϊπίῳ»», with the rank words left off. The page's epithets, ο Νεοφανής, the newly-revealed, and «ἐν Διϊπίῳ», in Diipion, are left off the stored form and kept in the English name and the life."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαρτίου — «Όσιος Γεώργιος ο Νεοφανής ο «ἐν Διϊπίῳ»»",
+        "url": "https://www.saint.gr/03/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The page puts him in the tenth century and gives two readings of the reign: «Κατά τον Παρισινό Κώδικα ήκμασε επί Ιωάννου Α' του Τσιμισκή (969 - 976 μ.Χ.), κατά δε τον Κώδικα της Βιέννης επί Ρωμανού και Κωνσταντίνου των Πορφυρογέννητων (956 - 963 μ.Χ.)», adding that his memory stands also in the Lavriotic Codex. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 956,
+      "latest": 976,
+      "display": "956–976",
+      "basis": "traditional",
+      "note": "saint.gr gives two readings and the interval is both of them: «Κατά τον Παρισινό Κώδικα ήκμασε επί Ιωάννου Α' του Τσιμισκή (969 - 976 μ.Χ.), κατά δε τον Κώδικα της Βιέννης επί Ρωμανού και Κωνσταντίνου των Πορφυρογέννητων (956 - 963 μ.Χ.)». The page also says only that he lived «κατά τον 10ο αιώνα μ.Χ.»."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

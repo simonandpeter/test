@@ -1,0 +1,64 @@
+{
+  "slug": "euthymius-of-novgorod",
+  "display_name": "Euthymius of Novgorod",
+  "names": [
+    {
+      "form": "Ευθύμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαρτίου, «Άγιος Ευθύμιος ο Θαυματουργός Αρχιεπίσκοπος Νόβγκοροντ», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Archbishop of Novgorod",
+  "types": [
+    "hierarch",
+    "archbishop",
+    "monk",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαρτίου — «Άγιος Ευθύμιος ο Θαυματουργός Αρχιεπίσκοπος Νόβγκοροντ»",
+        "url": "https://www.saint.gr/03/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1458)», gives his name in the world as John, son of a priest of Novgorod, Theodore, and of Anna, and says his glorification followed in 1547. It quotes the iconographic manual on how he is painted, «γκριζομάλλη, με γενειάδα σαν του Αγίου Ιωάννου του Θεολόγου, αλλά πιο αραιή, με τον σκούφο και την επισκοπική ενδυμασία, το ωμοφόριο και το Ευαγγέλιο». It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1458,
+      "latest": 1458,
+      "display": "1458",
+      "basis": "traditional",
+      "note": "saint.gr: «αποσύρθηκε στη μονή Βγιαζίσκι, όπου κοιμήθηκε με ειρήνη το έτος 1458 μ.Χ.», and the page heads him «(; - 1458)», leaving the year of his birth a question mark."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

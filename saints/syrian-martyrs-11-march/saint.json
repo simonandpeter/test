@@ -1,0 +1,60 @@
+{
+  "slug": "syrian-martyrs-11-march",
+  "display_name": "The Syrian Martyrs (11 March)",
+  "names": [
+    {
+      "form": "Μνήμη των Σύρων Αγίων Μαρτύρων",
+      "lang": "el",
+      "note": "saint.gr gives no name for any of them, so its line for 11 Μαρτίου is kept whole, as the corpus keeps «Άγιοι Έξι Μάρτυρες» for another nameless company."
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαρτίου — «Μνήμη των Σύρων Αγίων Μαρτύρων»",
+        "url": "https://www.saint.gr/03/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The page holds one sentence, «Οι Άγιοι αυτοί Μάρτυρες μαρτύρησαν κατά τον 4ο αιώνα μ.Χ.», and adds «Δεν έχουμε περισσότερες λεπτομέρειες για το μαρτύριο των Αγίων». It names nobody, enumerates nobody and prints no hymn, so the company is kept as one entry."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι αυτοί Μάρτυρες μαρτύρησαν κατά τον 4ο αιώνα μ.Χ.». The page gives no year, so the interval is the century it prints."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

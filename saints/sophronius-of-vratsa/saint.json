@@ -6,6 +6,11 @@
     {
       "form": "Sfântul Sofronie, Episcopul Vratsei",
       "lang": "ro"
+    },
+    {
+      "form": "Σωφρόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαρτίου, «Άγιος Σωφρόνιος ο Διδάσκαλος Επίσκοπος Βράτσης της Βουλγαρίας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαρτίου — «Άγιος Σωφρόνιος ο Διδάσκαλος Επίσκοπος Βράτσης της Βουλγαρίας»",
+        "url": "https://www.saint.gr/03/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(1739 - 1813)» and holds two sentences: the years, and that «Η Συνοδική πράξη της αγιοποιήσεώς του έγινε από την Εκκλησία της Βουλγαρίας στις 31 Δεκεμβρίου 1964 μ.Χ.» — the synodal act of his glorification was made by the Church of Bulgaria on 31 December 1964. It calls him ο Διδάσκαλος, the Teacher. The Greek calendar sets him on 11 March, which is the second of the two days doxologia keeps for him."
     },
     {
       "church": "serbian",

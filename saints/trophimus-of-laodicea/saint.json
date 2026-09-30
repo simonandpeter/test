@@ -6,6 +6,11 @@
       "form": "Trofim",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 martie, «Sfântul Mucenic Trofim»."
+    },
+    {
+      "form": "Τρόφιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαρτίου, «Άγιοι Τρόφιμος και Θαλλός που μαρτύρησαν στη Λαοδικεία», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαρτίου — «Άγιοι Τρόφιμος και Θαλλός που μαρτύρησαν στη Λαοδικεία»",
+        "url": "https://www.saint.gr/03/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The page puts them under Diocletian «(284 - 305 μ.Χ.)» and makes them natives of Stratonike or Stratonikeia in the province of Caria in Asia Minor, «και σήμερα τούρκικα ονομάζεται Αϊδενελλί»; the governor of Laodicea who first freed them and then had them crucified is named Asklepios, and the relics were carried home to Stratonike by two countrymen, Zosimos and Artemios, and laid a mile outside the city at a place called Latomeia. It prints no hymn."
     },
     {
       "church": "serbian",
@@ -48,5 +63,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian (284–305)",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι αυτοί μαρτύρησαν στα χρόνια του Διοκλητιανού (284 - 305 μ.Χ.)». The page gives no year, so the interval is the reign it prints."
+    }
   }
 }

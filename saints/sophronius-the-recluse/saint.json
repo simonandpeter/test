@@ -1,0 +1,62 @@
+{
+  "slug": "sophronius-the-recluse",
+  "display_name": "Sophronius the Recluse",
+  "names": [
+    {
+      "form": "Σωφρόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαρτίου, «Όσιος Σωφρόνιος ο Έγκλειστος», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαρτίου — «Όσιος Σωφρόνιος ο Έγκλειστος»",
+        "url": "https://www.saint.gr/03/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The page's own head reads «Ημερομηνία Εορτής: 11/03», the day this row records, and the page adds in brackets «(Η μνήμη του Οσίου Σωφρονίου επαναλαμβάνεται και στις 11 Μαΐου )» — his memory is repeated on 11 May. One row per church is the schema, so the second day is recorded here and is not rendered. The page puts him in Russia in the thirteenth century, in the Lavra of St Theodosius of Kyiv, and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1201,
+      "latest": 1300,
+      "display": "13th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Σωφρόνιος έζησε στην Ρωσία κατά τον 13ο αιώνα μ.Χ.». The page gives no year, so the interval is the century it prints."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -7,6 +7,11 @@
       "form": "Sofronie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 martie, «Sfântul Ierarh Sofronie, Patriarhul Ierusalimului»."
+    },
+    {
+      "form": "Σωφρόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαρτίου, «Άγιος Σωφρόνιος Πατριάρχης Ιεροσολύμων», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαρτίου — «Άγιος Σωφρόνιος Πατριάρχης Ιεροσολύμων»",
+        "url": "https://www.saint.gr/03/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 638)», puts his birth at Damascus «περί το έτος 580 μ.Χ.» of parents Plinthas and Myro, calls him also Damaskenos, and records a relic: «Η Κάρα του Αγίου βρίσκεται στη Μονή Φανερωμένης Χιλιομοδίου Κορινθίας» — his head at the monastery of the Phaneromeni at Chiliomodi in Corinthia."
     },
     {
       "church": "serbian",
@@ -81,9 +96,58 @@
         "text": "Moved by divine zeal, and opening wide your mouth upon the true commandments, you laid the foundations of the Church according to the Law; and giving most wise words to the monks who were there, you were shown to the world as most wise among the patriarchs of Jerusalem, holy hierarch Sophronius. Being set right by them, we cry to you: rejoice, bright praise of the faithful!",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Κανόνα πίστεως, καὶ εἰκόνα πραότητος, ἐγκρατείας διδάσκαλον, ἀνέδειξε σε τῇ ποίμνῃ σου, ἡ τῶν πραγμάτων ἀλήθεια· διὰ τοῦτο ἐκτήσω τῇ ταπεινώσει τὰ ὑψηλά, τῇ πτωχείᾳ τὰ πλούσια. Πάτερ Ἱεράρχα Σωφρόνιε, πρέσβευε Χριστῷ τῷ θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος δ’, on the page of Άγιος Σωφρόνιος Πατριάρχης Ιεροσολύμων. It is the common of a hierarch, with his own name in it — Πάτερ Ἱεράρχα Σωφρόνιε — and so is his service; the page prints a second apolytikion in Ἦχος πλ. α’, a kathisma and this kontakion beside it.",
+        "url": "https://www.saint.gr/3810/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown you to your flock as a rule of faith, an image of meekness and a teacher of abstinence; therefore you gained the heights by humility and riches by poverty. Father and hierarch Sophronius, intercede with Christ our God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Λαμπρυνθείς τοῦ Πνεύματος τῆ ἐπιπνοίᾳ, Ἱεράρχης ὅσιος, ὡς Ἀποστόλων μιμητής, ἐν τῇ Σιὼν ἐχρημάτισας, Πάτερ παμμάκαρ, Σωφρόνιε πάνσοφε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the same page.",
+        "url": "https://www.saint.gr/3810/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Made bright by the breathing of the Spirit, you served as a holy hierarch in Sion, an imitator of the Apostles, all-blessed father, all-wise Sophronius.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 580,
+      "latest": 580,
+      "display": "about 580",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Σωφρόνιος γεννήθηκε στην Δαμασκό της Συρίας περί το έτος 580 μ.Χ. και ήταν υιός ευσεβών και ενάρετων γονέων, του Πλινθά και της Μυρούς» — the page's «περί», about, is why the display says about 580."
+    },
+    "death": {
+      "earliest": 638,
+      "latest": 638,
+      "display": "638",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Σωφρονιος Πατριαρχης Ιεροσολυμων (; - 638)»."
+    }
   }
 }

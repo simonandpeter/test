@@ -115,6 +115,22 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ζωσιμασ zosimas-24-january zosimas-of-carthage':
+    'Two men: the Zosimas of 24 January and Zosimas of Carthage on 11 March.',
+  'θεοδωρα theodora-of-arta theodora-the-empress':
+    'Two women: Theodora of Arta on 11 March and Theodora the Empress on 11 February.',
+  'σωφρονιοσ sophronius-bishop-19-february sophronius-companion-of-sylvester sophronius-of-jerusalem sophronius-of-vratsa sophronius-the-recluse':
+    'Five men, and **three of them stand on the Greek 11 March**: Sophronius of Jerusalem, whom the Romanian calendar keeps there too; Sophronius of Vratsa, whom the Romanian keeps on 22 September and the Greek here, which is one row per church and two different days, not two men; and Sophronius the Recluse. The other two are the bishop of 19 February and the companion of Sylvester on 1 March.',
+  'παυλοσ paul-brother-of-pausirius paul-companion-of-quadratus paul-disciple-of-dionysius-of-alexandria paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-zographou paul-the-martyr-3-february paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
+    'Fifteen now. The new one is Paul of Russia on 11 March; the other fourteen are read in the el-03-10 entry for this name form.',
+  'γεωργιοσ george-konissky george-of-alikianos george-of-amastris george-of-develtos george-of-diipion george-of-kratovo george-of-megara george-of-rapsani george-of-vladimir george-paizanos-of-mytilene george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian george-the-sinaite':
+    'Fifteen now. The two new ones share 11 March as two lines of the page, George of Diipion and George the Sinaite; the other thirteen are read in the el-03-05 entry for this name form.',
+  'ευθυμιοσ euthymius-kereselidze euthymius-of-novgorod euthymius-of-tarnovo euthymius-of-zographou euthymius-the-man-of-god':
+    'Five men on five Greek days: Kereselidze on 2 February, Novgorod on 11 March, Tarnovo on 20 January, Zographou on 22 September and the man of God on 3 January.',
+  'ευλογιοσ eulogius-of-alexandria eulogius-of-cordoba eulogius-of-palestine':
+    'Three men: Alexandria on 13 February, Cordoba on 11 March and Palestine on 5 March.',
+  'κωνσταντινοσ constantine-of-cornwall constantine-of-strathclyde':
+    'Two men: Cornwall on 9 March and Strathclyde on 11 March.',
   'παυλοσ paul-brother-of-pausirius paul-companion-of-quadratus paul-disciple-of-dionysius-of-alexandria paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-simonov paul-of-zographou paul-the-martyr-3-february paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
     'Fourteen now. The new one is the companion of Quadratus on 10 March; the other thirteen are read in the el-03-01 entry for this name form.',
   'αναστασια anastasia-andreyevna anastasia-the-patrician':

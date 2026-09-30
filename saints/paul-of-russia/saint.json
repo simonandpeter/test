@@ -1,0 +1,68 @@
+{
+  "slug": "paul-of-russia",
+  "display_name": "Paul of Russia",
+  "names": [
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαρτίου, «Άγιος Παύλος τσάρος της Ρωσίας», with the rank words left off. The page's body gives him also his patronymic, «Ο Άγιος Παύλος (Πέτροβιτς), αυτοκράτορας της Ρωσίας»."
+    }
+  ],
+  "sex": "male",
+  "office": "Emperor of Russia",
+  "types": [
+    "king"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαρτίου — «Άγιος Παύλος τσάρος της Ρωσίας»",
+        "url": "https://www.saint.gr/03/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(1754 - 1801)» and prints a political life: son of the murdered tsar Peter III and of Catherine II, never acknowledged by the former as his son; his two marriages, in 1773 and 1776; his accession on 19 November 1796, the annulment of Peter the Great's ukase on the succession, his attempt at reforming the public finances; the conspiracy of count Pahlen, and his strangulation in his bedroom after refusing to sign an act of abdication. It says nothing of any act of glorification, of any relic, of any hymn or of any veneration paid him, and unlike its own entry for Sophronius of Vratsa on this same day it names no synodal act; what is recorded here is that the calendar prints him, and no more."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1754,
+      "latest": 1754,
+      "display": "1754",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Παύλος (Πέτροβιτς), αυτοκράτορας της Ρωσίας, γεννήθηκε το έτος 1754 μ.Χ.», and the page heads him «(1754 - 1801)»."
+    },
+    "death": {
+      "earliest": 1801,
+      "latest": 1801,
+      "display": "1801",
+      "basis": "traditional",
+      "note": "The page heads him «(1754 - 1801)» and closes «Ο αυτοκράτορας αρνήθηκε και στραγγαλίσθηκε» — he refused and was strangled; it gives no date within the year."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

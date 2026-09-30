@@ -1,0 +1,53 @@
+{
+  "slug": "heracles-of-carthage",
+  "display_name": "Heracles of Carthage",
+  "names": [
+    {
+      "form": "Ηρακλής",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαρτίου, «Άγιοι Ηρακλής και Ζωσιμάς», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαρτίου — «Άγιοι Ηρακλής και Ζωσιμάς»",
+        "url": "https://www.saint.gr/03/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The page says one sentence of the two of them, «Οι Άγιοι Μάρτυρες Ηρακλής και Ζωσιμάς μαρτύρησαν στην Καρθαγένη», and adds «Δεν έχουμε περισσότερες λεπτομέρειες για τον βίο και το Μαρτύριο των Αγίων» — we have no further details of their life and martyrdom. It gives no year and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "zosimas-of-carthage"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

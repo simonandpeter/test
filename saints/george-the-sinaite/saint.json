@@ -1,0 +1,62 @@
+{
+  "slug": "george-the-sinaite",
+  "display_name": "George the Sinaite",
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαρτίου, «Όσιος Γεώργιος ο Σιναΐτης», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαρτίου — «Όσιος Γεώργιος ο Σιναΐτης»",
+        "url": "https://www.saint.gr/03/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The page puts him under Justinian I «(527 - 565 μ.Χ.)» and while Peter I «(524 - 552 μ.Χ.)» was patriarch of Jerusalem, has him a monk of mount Sinai, and tells the miracle of his coming to the church of the Resurrection and back to his cell; it says he and the patriarch reposed peacefully together six months later, as he had foretold. It gives no year and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 527,
+      "latest": 552,
+      "display": "under Justinian I (527–552)",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Γεώργιος έζησε στα χρόνια του βασιλιά Ιουστινιανού του Α' (527 - 565 μ.Χ.) και όταν Πατριάρχης Ιεροσολύμων ήταν ο Πέτρος ο Α' (524 - 552 μ.Χ.)». The interval is where the two reigns the page prints overlap; it gives no year of its own."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}
