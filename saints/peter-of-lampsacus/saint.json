@@ -6,6 +6,11 @@
       "form": "Petru",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 mai, «Sfântul Mucenic Petru»; the epithet is not the calendar's but is taken from the life it links, which has him seized at Lampsacus."
+    },
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Μαΐου, «Άγιοι Πέτρος, Διονύσιος, Ανδρέας, Παύλος, Χριστίνα, Ηράκλειος, Παυλίνος και Βενέδιμος οι Μάρτυρες», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -13,7 +18,11 @@
     "martyr"
   ],
   "related": [
-    "dionysius-of-lampsacus"
+    "dionysius-of-lampsacus",
+    "andrew-companion-of-paul",
+    "paul-companion-of-andrew",
+    "heraclius-of-athens",
+    "benedimus-of-athens"
   ],
   "attestations": [
     {
@@ -37,8 +46,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Μαΐου — «Άγιοι Πέτρος, Διονύσιος, Ανδρέας, Παύλος, Χριστίνα, Ηράκλειος, Παυλίνος και Βενέδιμος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on, and its closing verse agrees: «Ὀγδοάς, Ἀθλοφόρων ἐκ γαίης εἰς πόλιν ἤρθη». **One page carries eight head names and the corpus keeps four of them**, so this company is four upgrades and four new folders in batch `el-05-18` — Andrew and Paul of Mesopotamia, Heraclius and Benedimus of Athens. **The Greek dates the whole company by one reign and no year**: «Όλοι αυτοί οι Άγιοι μαρτύρησαν στα χρόνια του αυτοκράτορα Δεκίου (249-251 μ.Χ.)», so no `dates` object is added or altered here. **Two hymns of the company are copied**, an apolytikion in Ἦχος δ’ that names all eight and a kontakion in the same tone; both are the company's own service and neither is a mis-hang. **Peter is the first of the eight and the only one the page gives a separate scene**: «Ο Πέτρος ήταν από τη Λάμψακο, και όταν τον έφεραν μπροστά στον άρχοντα να θυσιάσει στην Αφροδίτη, αυτός ομολόγησε με παρρησία το Χριστό. Τότε, συνέτριψαν όλο το σώμα του με αλυσίδες και ξύλα» — the goddess named, the chains and staves, and the city that the corpus's slug already carries. **Its couplet for him reads the wheels of torture against the wheels of an unstable life.** **He is none of the corpus's other men of the name**, this one being told by Lampsacus and by this company. **Dionysius of Lampsacus is linked**, the page putting him among those stoned with Paul, Andrew and Christina."
     },
     {
       "church": "serbian",
@@ -60,6 +79,40 @@
       },
       "english": {
         "text": "Thy martyrs, O Lord, in their contests received the crowns of incorruption from Thee our God; for having Thy strength, they cast down the tyrants and broke the feeble insolence of the demons. At their prayers, O Christ our God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "model": "Ὃ ὑψωθεῖς ἐν τῷ Σταυρῷ",
+      "text": "Τῶν ἀθλοφόρων τὸν ὀκτάριθμον δῆμον, μαρτυρικοὶς ἐγκωμιάσωμεν ὕμνοις, Παυλῖνον Διονύσιον καὶ Πέτρον ὁμοῦ, Ἀνδρέαν καὶ Βενέδιμον, τὸν θεόφρονα Παῦλον, Ἡράκλειον τὸν ἔνδοξον, καὶ Χριστίναν τὴν θείαν οὗτοι καὶ γὰρ πρεσβεύουσιν ἀεί, ὑπὲρ τοῦ κόσμου. Χριστῷ τῷ θεῷ ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ὃ ὑψωθεῖς ἐν τῷ Σταυρῷ, on the page of the eight martyrs of 18 Μαΐου",
+        "url": "https://www.saint.gr/515/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise with martyrs' hymns the eight-numbered company of the victors: Paulinus, Dionysius and Peter together, Andrew and Benedimus, God-minded Paul, glorious Heraclius and divine Christina; for these intercede always for the world with Christ our God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "model": "Ἐπεφάνης σήμερον",
+      "text": "Διαφόρων πόλεων ἐξωρμημένοι, οὐρανίου πόλεως, πολῖται ὢφθητε σεπτοί, χορόν λαμπρόν συγκροτήσαντες Μάρτυρες θεῖοι, Τριάδος ὑπέρμαχοι.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of the eight martyrs of 18 Μαΐου",
+        "url": "https://www.saint.gr/515/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Setting out from different cities, you were shown to be honoured citizens of the heavenly city, forming one bright choir, divine martyrs, champions of the Trinity.",
         "rendered": "site"
       }
     }

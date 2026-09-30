@@ -6,6 +6,11 @@
       "form": "Iulia",
       "lang": "ro",
       "note": "Read out of the list in doxologia.ro's life of Theodotus of Ancyra for 18 mai: «Tecusa, Alexandra, Claudia, Fainia, Eufrasia, Matrona și Iulia»."
+    },
+    {
+      "form": "Ιουλία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Μαΐου, «Αγίες Τεκούσα, Αλεξανδρία, Κλαυδία, Φαεινή, Ευφρασία, Ματρώνα, Ιουλία και Θεοδότη οι Παρθενομάρτυρες από την Άγκυρα της Γαλατίας και Θεόδοτος ο Μάρτυρας», with the rank words and the place left off."
     }
   ],
   "sex": "female",
@@ -20,7 +25,8 @@
     "claudia-of-ancyra",
     "phaina-of-ancyra",
     "euphrasia-of-ancyra",
-    "matrona-of-ancyra"
+    "matrona-of-ancyra",
+    "theodote-of-ancyra"
   ],
   "attestations": [
     {
@@ -45,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Μαΐου — «Αγίες Τεκούσα, Αλεξανδρία, Κλαυδία, Φαεινή, Ευφρασία, Ματρώνα, Ιουλία και Θεοδότη οι Παρθενομάρτυρες από την Άγκυρα της Γαλατίας και Θεόδοτος ο Μάρτυρας»",
+        "url": "https://www.saint.gr/05/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps her on, and it is plainly the same company: the virgin martyrs of Ancyra in Galatia, handed to the soldiers by the governor Theoteknos and drowned in the lake when they were kept pure. **The page disagrees with itself about how many they were, and that is recorded rather than resolved**: eight women are named in the calendar line and as head entries, and the verse over the narrative is headed «Εις τας επτά», for the seven, «Λίμνη γυναικών επτάς εμβεβλημένη». Nothing on the page reconciles the two counts and nothing here does either. **The eighth, Theodote, has no folder and is a new one in batch `el-05-18`.** **No year is printed for the women**, so no `dates` object is added; the Theodotus head entry on the same page carries «(; - 304)». **No hymn stands on this page**, only the synaxarion verses. **The page's name gloss under her entry is for Ιούλιος, the masculine**, which is one of saint.gr's standing name notes and not a statement about her. "
     },
     {
       "church": "serbian",

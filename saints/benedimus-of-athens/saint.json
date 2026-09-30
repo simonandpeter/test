@@ -1,0 +1,99 @@
+{
+  "slug": "benedimus-of-athens",
+  "display_name": "Benedimus of Athens",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Βενέδιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Μαΐου, «Άγιοι Πέτρος, Διονύσιος, Ανδρέας, Παύλος, Χριστίνα, Ηράκλειος, Παυλίνος και Βενέδιμος οι Μάρτυρες», with the rank word left off; the life page carries «Αγιος Βενεδιμος ο Μαρτυρας» as its own head name and spells him «Βενέδημος» in the body."
+    }
+  ],
+  "related": [
+    "heraclius-of-athens",
+    "paulinus-of-athens"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "between 249 and 251",
+      "basis": "traditional",
+      "note": "saint.gr: «Όλοι αυτοί οι Άγιοι μαρτύρησαν στα χρόνια του αυτοκράτορα Δεκίου (249-251 μ.Χ.)» — the page gives no year, only that reign, and the bracket is the reign."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Μαΐου — «Άγιοι Πέτρος, Διονύσιος, Ανδρέας, Παύλος, Χριστίνα, Ηράκλειος, Παυλίνος και Βενέδιμος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Μαΐου εκάστου έτους», the same day as the listing, and gives him as one of eight head names on one page. **Nothing in the corpus reads as him**: the name appears in no folder. **The page spells him two ways** — Βενέδιμος in the calendar line, the head name and the apolytikion, Βενέδημος in the body — and the `names` note records both; the display name follows the calendar line, which is the source the row cites. **The display name takes the city**, which the page gives him along with Heraclius and Paulinus. **The page's own note calls him patron of Herakleion**, which is recorded in the life and not as a feast. **The couplet for him and Paulinus is quoted in the life**: seeing me, Benedimus, your own Paulinus cut down, Paulinus says, be cut down with me. **The company's apolytikion names him and is copied whole**, with the kontakion beside it. **No `locations` object.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "model": "Ὃ ὑψωθεῖς ἐν τῷ Σταυρῷ",
+      "text": "Τῶν ἀθλοφόρων τὸν ὀκτάριθμον δῆμον, μαρτυρικοὶς ἐγκωμιάσωμεν ὕμνοις, Παυλῖνον Διονύσιον καὶ Πέτρον ὁμοῦ, Ἀνδρέαν καὶ Βενέδιμον, τὸν θεόφρονα Παῦλον, Ἡράκλειον τὸν ἔνδοξον, καὶ Χριστίναν τὴν θείαν οὗτοι καὶ γὰρ πρεσβεύουσιν ἀεί, ὑπὲρ τοῦ κόσμου. Χριστῷ τῷ θεῷ ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ὃ ὑψωθεῖς ἐν τῷ Σταυρῷ, on the page of the eight martyrs of 18 Μαΐου",
+        "url": "https://www.saint.gr/515/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise with martyrs' hymns the eight-numbered company of the victors: Paulinus, Dionysius and Peter together, Andrew and Benedimus, God-minded Paul, glorious Heraclius and divine Christina; for these intercede always for the world with Christ our God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "model": "Ἐπεφάνης σήμερον",
+      "text": "Διαφόρων πόλεων ἐξωρμημένοι, οὐρανίου πόλεως, πολῖται ὢφθητε σεπτοί, χορόν λαμπρόν συγκροτήσαντες Μάρτυρες θεῖοι, Τριάδος ὑπέρμαχοι.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of the eight martyrs of 18 Μαΐου",
+        "url": "https://www.saint.gr/515/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Setting out from different cities, you were shown to be honoured citizens of the heavenly city, forming one bright choir, divine martyrs, champions of the Trinity.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

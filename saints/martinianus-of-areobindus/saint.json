@@ -1,0 +1,51 @@
+{
+  "slug": "martinianus-of-areobindus",
+  "display_name": "Martinianus of the Areobindus church",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Μαρτινιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Μαΐου, «Όσιος Μαρτινιανός ο εν τοις Αρεοβίνθου», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Μαΐου — «Όσιος Μαρτινιανός ο εν τοις Αρεοβίνθου»",
+        "url": "https://www.saint.gr/05/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Μαΐου εκάστου έτους», the same day as the listing, and its body is one sentence: the time in which he lived is unknown, he practised asceticism in the church of the Mother of God of the Areobindus quarter, and he fell asleep in peace. **He is not the corpus's Martinianus of the Seven Sleepers or any other of the name**, none of which is kept on this day or attached to that church. **The display name keeps the church**, «ο εν τοις Αρεοβίνθου», which is all that distinguishes him. **The page says outright that his epoch is unknown**, so there is no `dates` object and none could be inferred. **No `locations` object.** No hymn, no relics, no parents and no wonder is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

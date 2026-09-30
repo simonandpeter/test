@@ -1,0 +1,62 @@
+{
+  "slug": "david-brother-of-tarichan",
+  "display_name": "David, brother of Tarichan",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δαβίδ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Μαΐου, «Άγιοι Δαβίδ και Ταριχάνι οι Μάρτυρες», with the rank word left off; the life page carries «Αγιος Δαβιδ ο Μαρτυρας» as its own head name."
+    }
+  ],
+  "related": [
+    "tarichan"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 693,
+      "latest": 693,
+      "display": "693",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησαν το 693 μ.Χ., κατά τους χρόνους του Πέρση βασιλέως Αμπντούλ», and its head lines read «Αγιος Δαβιδ ο Μαρτυρας (; - 693)» and the same for Tarichan."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Μαΐου — «Άγιοι Δαβίδ και Ταριχάνι οι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Μαΐου εκάστου έτους», the same day as the listing. **Two head names on one page, so two folders.** **He is none of the corpus's eleven Davids** — of Euboea, Gareji, Georgia, Hermopolis, Mytilene, Thessalonica, Wales, the Builder, the sons of prince Theodore and of Vukan — which were read; none of them is a martyr of 693 with a brother called Tarichan, and the brother is what tells him apart, which is why the display name carries it. **No country is given**: the page names only the Persian king Abdul in whose years they died, and does not say where they lived, so there is no `locations` object and the life does not supply one. **The manner of death is not printed either**, only the ground of it: they refused to change their faith and embrace Islam."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

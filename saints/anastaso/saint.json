@@ -1,0 +1,50 @@
+{
+  "slug": "anastaso",
+  "display_name": "Anastaso of Leukadion",
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Αναστασώ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Μαΐου, «Οσία Αναστασώ η εν τοις Λευκαδίου», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Μαΐου — «Οσία Αναστασώ η εν τοις Λευκαδίου»",
+        "url": "https://www.saint.gr/05/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Μαΐου εκάστου έτους», the same day as the listing, and says of her only that she fell asleep in holiness and in peace. **Nothing in the corpus reads as her**: the name appears in no folder, and it is not the common Anastasia — the page's form is Αναστασώ. **The display name keeps the place**, «η εν τοις Λευκαδίου», she of the Leukadion quarter, which is all that distinguishes her; the page explains it, and the explanation is what the rest of its body is: «Το Λευκάδιον ή Λαυκάτιον έκειτο κατά την βιθυνική παραλία, όχι μακριά από την περιοχή του Ακρίτα, πολύ πιθανώς κοντά στη Δακιβύζη» — it lay on the Bithynian shore, not far from the district of Akritas, very probably near Dakibyze. **No `locations` object** although that sentence names three places, because the page itself puts the last of them at «πολύ πιθανώς», very probably. **No year of any kind, so no `dates` object.** No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

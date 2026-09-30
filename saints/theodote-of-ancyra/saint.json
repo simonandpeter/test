@@ -1,0 +1,55 @@
+{
+  "slug": "theodote-of-ancyra",
+  "display_name": "Theodote of Ancyra",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Θεοδότη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Μαΐου, «Αγίες Τεκούσα, Αλεξανδρία, Κλαυδία, Φαεινή, Ευφρασία, Ματρώνα, Ιουλία και Θεοδότη οι Παρθενομάρτυρες από την Άγκυρα της Γαλατίας και Θεόδοτος ο Μάρτυρας», with the rank words and the place left off; the life page carries «Αγια Θεοδοτη η Παρθενομαρτυρας Απο Την Αγκυρα Της Γαλατιας» as a head name of its own."
+    }
+  ],
+  "related": [
+    "thecusa-of-ancyra",
+    "theodotus-of-ancyra"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Μαΐου — «Αγίες Τεκούσα, Αλεξανδρία, Κλαυδία, Φαεινή, Ευφρασία, Ματρώνα, Ιουλία και Θεοδότη οι Παρθενομάρτυρες από την Άγκυρα της Γαλατίας»",
+        "url": "https://www.saint.gr/05/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Μαΐου εκάστου έτους», the same day as the listing. **She is the eighth woman of a company of which the corpus already keeps seven**, so she is the only new folder out of that page: Thecusa, Alexandra, Claudia, Phaina, Euphrasia, Matrona and Julia of Ancyra all exist and are upgraded in `up-05-18.json`, and no folder carries a Theodote of Ancyra — the corpus's three Theodotes are of Nicaea, the mother of the Unmercenaries, and the daughter of Athanasia. **She is not the day's Theodotus**, the nephew of Thecusa who buried them, whom the corpus keeps as `theodotus-of-ancyra`; the Greek names both on the same page and this folder links him. **The page disagrees with itself about how many women there were, and that is recorded rather than resolved**: eight are named as head entries and in the calendar line, and the verse over the narrative is headed «Εις τας επτά», for the seven, «Λίμνη γυναικών επτάς εμβεβλημένη» — a sevenfold company of women cast into a lake. Nothing on the page reconciles the two counts, and nothing here does either. **No year, so no `dates` object**: the page gives none for the women, although the Theodotus head line on the same page reads «(; - 304)». **No `locations` object**, although Ancyra in Galatia is named. **The governor Theoteknos has no folder.** No hymn stands on this page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

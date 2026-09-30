@@ -1,0 +1,71 @@
+{
+  "slug": "stephen-patriarch-of-constantinople",
+  "display_name": "Stephen of Constantinople",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Μαΐου, «Άγιος Στέφανος Πατριάρχης Κωνσταντινούπολης», with the rank word and the see left off."
+    }
+  ],
+  "related": [
+    "photius-of-constantinople"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 867,
+      "latest": 867,
+      "display": "867",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε το 867 μ.Χ.», and its head line reads «Αγιος Στεφανος Πατριαρχης Κωνσταντινουπολης (867 - 893)»."
+    },
+    "death": {
+      "earliest": 893,
+      "latest": 893,
+      "display": "May 893",
+      "basis": "traditional",
+      "note": "saint.gr: «Πέθανε το Μάιο του 893 μ.Χ. σε ηλικία 26 ετών και ενταφιάσθηκε στη μονή του Αγίου Γεωργίου «εν τω Δευτέρω»»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Μαΐου — «Άγιος Στέφανος Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/05/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Μαΐου εκάστου έτους», the same day as the listing. **He is none of the corpus's Stephens**: a son of the emperor Basil the Macedonian and of Eudokia, born 867, pupil and synkellos of Photius the Great, patriarch from 886 under his brother Leo the Wise, dead in May 893 at twenty-six. **The display name drops the see**, which `office` carries, and keeps nothing else, the page giving him no epithet. **Photius has a folder and is linked.** **His parents, his brother Leo VI, and the monastery of Saint George «εν τω Δευτέρω», called the Sykiotes house, have none** and are named without links. **No `locations` object.** **The page's own supposition is recorded as one**: «Πιθανόν θεωρείται, ότι επί της πατριαρχείας του εκδόθηκε το πρώτο Σύνταγμα των επισκόπων του Οικουμενικού Θρόνου» — it is thought probable that the first register of the bishops of the Ecumenical Throne was issued in his patriarchate. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

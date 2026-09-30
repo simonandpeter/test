@@ -6,6 +6,11 @@
       "form": "Teodot din Ancira",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 mai, «Sfântul Mucenic Teodot din Ancira»."
+    },
+    {
+      "form": "Θεόδοτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Μαΐου, «Αγίες Τεκούσα, Αλεξανδρία, Κλαυδία, Φαεινή, Ευφρασία, Ματρώνα, Ιουλία και Θεοδότη οι Παρθενομάρτυρες από την Άγκυρα της Γαλατίας και Θεόδοτος ο Μάρτυρας», with the rank word and the place left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Μαΐου — «Αγίες Τεκούσα, Αλεξανδρία, Κλαυδία, Φαεινή, Ευφρασία, Ματρώνα, Ιουλία και Θεοδότη οι Παρθενομάρτυρες από την Άγκυρα της Γαλατίας και Θεόδοτος ο Μάρτυρας»",
+        "url": "https://www.saint.gr/05/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps her on, and it is plainly the same company: the virgin martyrs of Ancyra in Galatia, handed to the soldiers by the governor Theoteknos and drowned in the lake when they were kept pure. **The page disagrees with itself about how many they were, and that is recorded rather than resolved**: eight women are named in the calendar line and as head entries, and the verse over the narrative is headed «Εις τας επτά», for the seven, «Λίμνη γυναικών επτάς εμβεβλημένη». Nothing on the page reconciles the two counts and nothing here does either. **The eighth, Theodote, has no folder and is a new one in batch `el-05-18`.** **No year is printed for the women**, so no `dates` object is added; the Theodotus head entry on the same page carries «(; - 304)». **No hymn stands on this page**, only the synaxarion verses. **He is the ninth head name on that page and saint.gr lists him twice on this one day**: once there, «Αγιος Θεοδοτος ο Μαρτυρας (; - 304)», and again as a listing of its own at https://www.saint.gr/2260/saint.aspx, whose body says the same thing in other words — nephew of the holy martyr Thecusa, martyred at Ancyra in 304 under Maximian (285–305), who drew the women's relics out by night and buried them reverently, was seized by the tyrant Theoteknos, beheaded after many tortures, and whose own relics Theoteknos gave to the fire. **Two listings, one man, one row**: no second folder is made and the duplicate is recorded here. **The Greek supplies the year the corpus does not hold**, 304, and the emperor's reign; the existing folder carries no `dates` object and is not given one here. **It confirms the corpus's Romanian note about 7 June** with «βλέπε και 7 Ιουνίου». **It calls him neither innkeeper nor bishop**, where doxologia's page had both."
     },
     {
       "church": "serbian",
@@ -64,5 +79,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "theodote-of-ancyra",
+    "thecusa-of-ancyra"
+  ]
 }

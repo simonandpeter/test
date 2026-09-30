@@ -1,0 +1,50 @@
+{
+  "slug": "julian-the-martyr-18-may",
+  "display_name": "Julian (18 May)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιουλιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Μαΐου, «Άγιος Ιουλιανός ο Μάρτυρας», with the rank word left off; the body adds a second form, «ή Ιούλιος»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Μαΐου — «Άγιος Ιουλιανός ο Μάρτυρας»",
+        "url": "https://www.saint.gr/05/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Μαΐου εκάστου έτους», the same day as the listing, and its body is one sentence. **He is none of the corpus's fourteen Julians** — of Antinoopolis, Emesa, Kandavla, Samosata, Tarsus, the Euphrates, the Brazen Gate, the deacon of Aegina, the presbyter of Ancyra, the companions of Caesarius, Modestus and Pamphilus, the martyr of 2 September — which the namesweep flagged and which were read; none of them is kept on 18 May and none is dragged through a bramble. **The display name carries the day** because the page gives him no epithet, no country and no century. **No year at all, so no `dates` object.** **The alternative form is recorded and not stored**: the page says «Ο Άγιος Ιουλιανός (ή Ιούλιος)», Julian or Julius. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

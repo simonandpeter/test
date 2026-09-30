@@ -1,0 +1,65 @@
+{
+  "slug": "potamon-of-heraclea",
+  "display_name": "Potamon of Heraclea",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop",
+    "confessor"
+  ],
+  "office": "Bishop of Heraclea in Egypt",
+  "names": [
+    {
+      "form": "Ποταμών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Μαΐου, «Άγιος Ποταμών ο Ιερομάρτυρας Επίσκοπος Ηρακλείας», with the rank words and the see left off."
+    }
+  ],
+  "related": [
+    "athanasius-of-alexandria"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 340,
+      "latest": 340,
+      "display": "340",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησε το 340 μ.Χ., από τους αιρετικούς οπαδούς του Αρείου», and its head line reads «Αγιος Ποταμων ο Ιερομαρτυρας Επισκοπος Ηρακλειας (; - 340)»; the same page dates his arrest to 310 and the synod of Tyre to 335."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Μαΐου — «Άγιος Ποταμών ο Ιερομάρτυρας Επίσκοπος Ηρακλείας»",
+        "url": "https://www.saint.gr/05/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Μαΐου εκάστου έτους», the same day as the listing. **Nothing in the corpus reads as him**: the name appears in no folder. **The display name and `office` both keep Egypt out of the display and in the office**, because the page says «Επίσκοπος Ηρακλείας της Αιγύπτου» and the corpus keeps saints of other Heracleas. **`confessor` is in `types`** on the imprisonment in the mines in 310, which he survived, as well as the martyrdom of 340. **Athanasius the Great is linked**, the page making him a warm defender of Athanasius and of the Orthodox faith. **The First Ecumenical Council and the synod of Tyre of 335 are named as councils he sat at**, which the corpus's schema holds as neither feast nor relation, so they stand in the life only. **Arius is named without a link.** **No `locations` object.** No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "tarichan",
+  "display_name": "Tarichan, brother of David",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ταριχάνι",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Μαΐου, «Άγιοι Δαβίδ και Ταριχάνι οι Μάρτυρες», with the rank word left off; the life page carries «Αγιος Ταριχανι ο Μαρτυρας» as its own head name."
+    }
+  ],
+  "related": [
+    "david-brother-of-tarichan"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 693,
+      "latest": 693,
+      "display": "693",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησαν το 693 μ.Χ., κατά τους χρόνους του Πέρση βασιλέως Αμπντούλ», and its head line reads «Αγιος Ταριχανι ο Μαρτυρας (; - 693)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Μαΐου — «Άγιοι Δαβίδ και Ταριχάνι οι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Μαΐου εκάστου έτους», the same day as the listing, and gives him as one of two head names on one page — hence two folders. **Nothing in the corpus reads as him**: the name appears in no folder, and the namesweep printed no row for it. **The name is kept in the form the page prints**, Ταριχάνι, and is not regularised to a Georgian or Latin spelling the page never gives; the display name adds only the brother, who is what distinguishes him. **No country is given** and there is no `locations` object. No manner of death, no relics and no hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
