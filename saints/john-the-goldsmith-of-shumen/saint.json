@@ -1,0 +1,67 @@
+{
+  "slug": "john-the-goldsmith-of-shumen",
+  "display_name": "John the Goldsmith of Shumen",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαΐου, «Άγιος Ιωάννης ο Νεομάρτυρας ο Βούλγαρος ο χρυσοχόος», with the rank words and the epithets left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1784,
+      "latest": 1784,
+      "display": "1784",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Ιωαννης ο Νεομαρτυρας ο Βουλγαρος ο Χρυσοχοος (1784 - 1802)»; the body gives no birth year and calls him eighteen years old at his death."
+    },
+    "death": {
+      "earliest": 1802,
+      "latest": 1802,
+      "display": "14 May 1802",
+      "basis": "traditional",
+      "note": "saint.gr: «τελικά τον αποκεφάλισαν στις 14 Μαΐου 1802 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαΐου — «Άγιος Ιωάννης ο Νεομάρτυρας ο Βούλγαρος ο χρυσοχόος»",
+        "url": "https://www.saint.gr/05/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Μαΐου εκάστου έτους», the same day as the listing, and the body repeats it in the date of death. **He is none of the corpus's very many Johns**, which the namesweep flagged and which were read; the town, the trade, the year and the age settle it. **The display name keeps the trade and the town and drops «ο Βούλγαρος»**, the trade being how the calendar tells him from the day's other new martyrs and the town being what the page gives him: «καταγόταν από την πόλη Σούμνα της Βουλγαρίας», Shumen. **`dates` takes the birth year from the head line only** and its note says so; the body says only that he was eighteen. **The hieromonk Nikephoros of Chios, who wrote his martyrdom, has no folder** and is named without a link. **No `locations` object.** No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

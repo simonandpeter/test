@@ -6,6 +6,11 @@
       "form": "Terapont",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 mai, «Sfântul Sfințit Mucenic Terapont, Episcopul Ciprului»."
+    },
+    {
+      "form": "Θεράπων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαΐου, «Άγιος Θεράπων επίσκοπος Κύπρου», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαΐου — «Άγιος Θεράπων επίσκοπος Κύπρου»",
+        "url": "https://www.saint.gr/05/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on, and it is plainly the same man: the bishop in Cyprus cut down on the holy table while he was serving. **He is not `therapon-of-sardis`**, which the namesweep flagged and which was read. **The page will not date him and this folder does not either.** It says outright that his birth year is entirely unknown and that his country is uncertain — some make him «ἐκ τῆς Ἑῴας», out of the East, as Andrew of Crete notes, and others «ἐκ τῆς τῶν Ἀλαμάνων χώρας», from the land of the Alamanni, that is from present-day Germany — and it reasons him to the seventh or the beginning of the eighth century only from his acts against theopaschism and iconoclasm, with an upper bound of 740, when Andrew of Crete, who wrote his encomium, died. That is the page's inference and not a date it states, so no `dates` object is added and the reasoning is recorded here. **The see is given as Kition** — «έγινε επίσκοπος Κιτίου στην Κύπρο» — where the existing folder's `office` is the bare word Bishop. **It adds the relics and the myrrh**: the relic taken to Constantinople, first to the church of the Mother of God at Blachernae and then to a church of his own name, where a small shrine inside the walls still streams myrrh; and portions at Zographou on the Holy Mountain, at his church in Zografou of Athens and at his church in Mytilene. He is named patron of Zografou. **One apolytikion, in Ἦχος α´, naming him** — «τρυφᾶς Θεράπων μάρτυς» — is copied whole; it is not a mis-hang, and it is the service Nikodemos the Hagiorite wrote for him, corrected in 1785 by the archdeacon Agapios of Paros."
     },
     {
       "church": "serbian",
@@ -48,5 +63,23 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α´",
+      "text": "Ἀσκήσει μὲν τὸ πρῶτον λάμψας Ὅσιε, πάσας δαιμόνων φάλαγγας κατετρόπωσας, ἀθλήσει δὲ τὸ δεύτερον ἀριστεύσας τὰς τῶν τυράννων ἀπειλὰς κατεφρόνησας. Διὸ διπλοῦν παρὰ Θεοῦ στέφος λαβών, συγχαίρεις τῶν ἀγγέλων τοῖς χοροῖς, καὶ τρυφᾶς Θεράπων μάρτυς, σὺν τοῖς ὁσίοις καὶ ἱερομάρτυσι. Δόξα τῷ σὲ δοξάσαντι Χριστῷ, Δόξα τῷ σὲ στεφανώσαντι, Δόξα τῷ ἐνεργοῦντι διὰ σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α´, on the page of Άγιος Θεράπων επίσκοπος Κύπρου",
+        "url": "https://www.saint.gr/4018/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining first in ascetic labour, venerable father, you routed all the phalanxes of the demons; and excelling secondly in the martyr's contest, you despised the threats of the tyrants. And so, having received a double crown from God, you rejoice with the choirs of the angels and delight, Therapon the martyr, together with the venerable and the hieromartyrs. Glory to Christ who glorified you, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

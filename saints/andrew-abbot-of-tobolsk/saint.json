@@ -1,0 +1,59 @@
+{
+  "slug": "andrew-abbot-of-tobolsk",
+  "display_name": "Andrew of the Raphael monastery",
+  "sex": "male",
+  "types": [
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Ανδρέας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαΐου, «Άγιος Ανδρέας ηγούμενος της μονής Ραφαήλ (Τομπόλσκ)», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1820,
+      "latest": 1820,
+      "display": "1820",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Ανδρεας Ηγουμενος Της Μονης Ραφαηλ (τομπολσκ) (; - 1820)»; the body of the page gives no year and no life at all."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The saint is a Russian one and saint.gr is the source read here; the Russian calendar's own day for him was not looked at."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαΐου — «Άγιος Ανδρεας ηγούμενος της μονής Ραφαήλ (Τομπόλσκ)»",
+        "url": "https://www.saint.gr/05/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Μαΐου εκάστου έτους», the same day as the listing, and its whole body is one sentence: «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου» — we have no details of the Russian saint's life. **The only facts are in the calendar line and the head line**: the abbacy, the monastery, the place in brackets and the year 1820, and the `dates` note says the body gives none of it. **He is none of the corpus's Andrews**: nothing in it is an abbot in Siberia. **`abbot` is the only `types` entry** because the office is the only thing said of him; the page does not call him venerable. **The display name keeps the monastery** and not the bracketed Tobolsk, because the monastery is what the line gives him and the bracket is the page's locating gloss; the slug carries Tobolsk, a slug not being a name. It does **not** carry the word abbot, which `types` composes — `draft-saint.mjs` rejected «Andrew, abbot of the Raphael monastery» for exactly that. **No `locations` object.** The page's one link is to the synaxis of all the saints of Siberia, and it cites OCA's feasts and saints."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

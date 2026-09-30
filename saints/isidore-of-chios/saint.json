@@ -6,6 +6,11 @@
       "form": "Isidor din Chios",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 mai, «Sfântul Mucenic Isidor din Chios»."
+    },
+    {
+      "form": "Ισίδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαΐου, «Άγιος Ισίδωρος που μαρτύρησε στη Χίο», with the rank word and the place of martyrdom left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαΐου — «Άγιος Ισίδωρος που μαρτύρησε στη Χίο»",
+        "url": "https://www.saint.gr/05/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on, and its synaxarion verse agrees: «Ἐν δ' Ἰσίδωρον ἄορ δεκάτῃ τάμεν ἠδὲ τετάρτῃ». It is plainly the same man, the sailor of the imperial fleet beheaded on Chios under Decius. **He is not the day's other Isidore**: saint.gr keeps on this same 14 May an Isidore of Rostov, a fool for Christ dead in 1474, who is a new folder in batch `el-05-14`. **The Greek adds his birthplace**, Alexandria, and the names the corpus may not hold: the centurion Julius who denounced him and the admiral Noumerios who condemned him. **It adds the whole of the scene with his father**, who came to Chios to argue him out of the faith, cursed him and urged Noumerios to kill him quickly — «παραδώσει εἰς θάνατον πατὴρ τέκνον», the page quotes from Matthew 10. **Myrope is linked**: the Christian woman who took his body out of the ravine by night and then gave herself up so that the guards should not be executed for it, and whom the page sends to 2 Δεκεμβρίου, has a folder. **No year is printed**, only Decius's reign, so no `dates` object is added. **Two apolytikia stand on the page and only one is taken**: the first, Ἦχος δ’ «Ὁ Μάρτυς σου Κύριε», is the common of a martyr and is left; the Έτερον, Ἦχος δ’ Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ, names him — «παμμάκαρ Ἰσίδωρε» — and is copied. Neither is a mis-hang. The page adds that his skull and the greater part of his relics are in the chapel of his name in the Roman Catholic cathedral of Saint Mark at Venice, with portions at the Metropolis of Chios and at Philotheou on the Holy Mountain."
     },
     {
       "church": "serbian",
@@ -60,9 +75,29 @@
         "text": "Thy martyr Isidore, O Lord, in his contest received the crown of incorruption from Thee our God; for having Thy strength, he cast down the tyrants and broke the feeble insolence of the demons. At his prayers, O Christ our God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ",
+      "text": "Ὡς στρατευθεὶς τῷ Βασιλεῖ τῶν αἰώνων, τῶν ἐπιγείων τὴν στρατείαν ἀπώσω, καὶ εὐθαρςῶς ἐκήρυξας Χριστὸν τὸν Θεὸν· ὅθεν τὸν ἀγῶνά σου, τὸν καλὸν ἐκτελέσας, Μάρτυς θεοδόξαστος, τοῦ Σωτῆρος ἐδείχθης· ὃν ἐκδυσώπει σώζεσθαι ἡμᾶς, τοὺς σὲ τιμῶντας, παμμάκαρ Ἰσίδωρε.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ, on the page of Άγιος Ισίδωρος που μαρτύρησε στη Χίο",
+        "url": "https://www.saint.gr/4017/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enrolled as a soldier of the King of the ages, you thrust away the soldiering of earthly things and preached Christ our God with a good courage; and so, having finished your good contest, you were shown to be a martyr of the Saviour glorified by God. Entreat him that we who honour you may be saved, all-blessed Isidore.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "myrope"
+  ]
 }

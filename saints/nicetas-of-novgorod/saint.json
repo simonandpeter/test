@@ -1,0 +1,63 @@
+{
+  "slug": "nicetas-of-novgorod",
+  "display_name": "Nicetas of Novgorod",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "monastic",
+    "wonderworker"
+  ],
+  "office": "Bishop of Novgorod",
+  "names": [
+    {
+      "form": "Νικήτας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαΐου, «Όσιος Νικήτας εκ Κιέβου», with the rank word and the city left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1109,
+      "latest": 1109,
+      "display": "1109",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη το έτος 1109 μ.Χ.», and its head line reads «Οσιος Νικητας Εκ Κιεβου (; - 1109)»; the same page dates his election to Novgorod to 1096."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The saint is a Russian one and saint.gr is the source read here; the Russian calendar's own day for him was not looked at."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαΐου — «Όσιος Νικήτας εκ Κιέβου»",
+        "url": "https://www.saint.gr/05/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Μαΐου εκάστου έτους», the same day as the listing. **The display name takes the see and not the calendar line's city**: saint.gr lists him as «εκ Κιέβου», out of Kyiv, where he was a monk, and its own body says he was elected bishop of Novgorod in 1096 and is buried there, so the see is what distinguishes him. **He is none of the corpus's fifteen Nicetases**, which the namesweep flagged and which were read, and he is not this run's `nicetas-the-sinaite` or `nicephorus-13-may`. **His brother is named and has no folder**: the venerable Nikon, abbot of the Lavra of Kyiv, «τιμάται 23 Μαρτίου», whom the corpus does not keep — its `nikon-` folders are other men — so he is named in the life without a link. **The page's footer links a separate commemoration of the finding of his relics**, «Ανακομιδή Ιερών λειψάνων του Αγίου Νικήτα Αρχιεπισκόπου Νόβγκοροντ», which was not read and is not recorded as a feast here; that footer also calls him archbishop, while the body says bishop, and the body is followed. **No `locations` object.** No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

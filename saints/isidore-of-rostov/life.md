@@ -1,0 +1,9 @@
+# Isidore of Rostov
+
+Isidore, whom saint.gr calls Tverdislov — faithful to the Word — was born in Germany of rich parents and brought up in a Roman Catholic setting, and was later converted to the Orthodox faith. From his youth he lived an ascetic life and carried in his heart a great compassion for people. Desiring the Kingdom of God, he left his father's house, distributed his property to the poor, and began to live as a wanderer. At last he reached Russia and decided to live at Rostov.
+
+There he lived in the snow and the cold, bearing every insult, and settled in a rickety wooden hut he built himself. He chose a way of life unintelligible for the Name of Christ, the kind the Apostle Paul describes in his first letter to the Corinthians. He passed his time in unceasing prayer, allowing himself little sleep or rest, standing awake all night and glorifying God; by day he went the rounds of the city, acting as a fool. Like Job of old in his patience, the page says, he was while still alive both an earthly angel and a heavenly man — a compassionate soul, pure in thought, with a wakeful heart, a faith that knows no shame and a true love without hypocrisy — and in his lifetime God counted him worthy to work wonders.
+
+He fell asleep in peace in 1474, and the Christians learnt of his falling asleep only when, passing outside his hut, they smelt the fragrance his holy relic gave off. On the place of his burial the church of the Ascension of the Lord was built, and his relics are kept in it. He bears the name Tverdislov, the page explains, because he spoke continually of Jesus Christ. He is not the sailor [Isidore](/saints/isidore-of-chios) whom the same day keeps.
+
+*After saint.gr's calendar for 14 Μαΐου — [the day](https://www.saint.gr/05/14/index.aspx) and [the life](https://www.saint.gr/4023/saint.aspx); read 30 September 2026.*

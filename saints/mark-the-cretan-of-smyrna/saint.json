@@ -1,0 +1,60 @@
+{
+  "slug": "mark-the-cretan-of-smyrna",
+  "display_name": "Mark the Cretan",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μάρκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαΐου, «Άγιος Μάρκος ο Νεομάρτυρας ο Κρής που μαρτύρησε στη Σμύρνη», with the rank words and the place of martyrdom left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1643,
+      "latest": 1643,
+      "display": "1643",
+      "basis": "traditional",
+      "note": "saint.gr: «βασανίσθηκε σκληρά και τέλος αποκεφαλίσθηκε στη Σμύρνη το 1643 μ.Χ.», and its head line reads «Αγιος Μαρκος ο Νεομαρτυρας ο Κρης Που Μαρτυρησε Στη Σμυρνη (; - 1643)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαΐου — «Άγιος Μάρκος ο Νεομάρτυρας ο Κρής που μαρτύρησε στη Σμύρνη»",
+        "url": "https://www.saint.gr/05/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Μαΐου εκάστου έτους», the same day as the listing. **He is none of the corpus's Marks** — of Byblos, of Ephesus, the Deaf, the Shepherd and the rest — which the namesweep flagged and which were read; a Cretan of the seventeenth century who apostatised for four years and returned answers to none of them. **The display name keeps «ο Κρής» and drops the place of martyrdom**, the epithet being what the Greek calendar tells him by. **Three men are named and none has a folder**: his father Andreas of Zakynthos, his teacher at Constantinople Meletios Syrigos, and the Jesuit Isaac I who wrote his martyrdom. **No `locations` object**, although Crete, Zakynthos, Smyrna, the Toplou monastery of Sitia and Constantinople are all named. No hymn is printed; the page says he was buried at the church of Saint Photini in Smyrna and became a spring of healings."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

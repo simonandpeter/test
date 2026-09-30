@@ -1,0 +1,62 @@
+{
+  "slug": "carthage-of-lismore",
+  "display_name": "Carthage of Lismore",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "abbot"
+  ],
+  "office": "Bishop of Lismore",
+  "names": [
+    {
+      "form": "Καρτέγιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's own parenthesis on the life page, «Ο Άγιος Cartage (Καρτέγιος)»; the calendar line for 14 Μαΐου prints the name in Latin letters, «Άγιος Cartage Επίσκοπος Λίσμορ», so the Greek form is taken from the body and the rank word and the see are left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 637,
+      "latest": 637,
+      "display": "637",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη το 637 μ.Χ.», and its head line reads «Αγιος Cartage Επισκοπος Λισμορ (; - 637)»; the same sentence dates his leaving of Rahan to 635."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαΐου — «Άγιος Cartage Επίσκοπος Λίσμορ»",
+        "url": "https://www.saint.gr/05/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Μαΐου εκάστου έτους», the same day as the listing. **The calendar line prints the name in Latin letters**, «Cartage», which is unusual for saint.gr and is the reason the `names` form is taken from the body's parenthesis «(Καρτέγιος)» instead; the display name follows the page's Latin spelling. **The monastery's name is transliterated from the page and not from an English map**: it writes «του Ραθανόφφαλυ», with eight hundred and sixty monks, and this folder says that and does not identify the house further. **Nothing in the corpus reads as him**: the namesweep printed no row for the name, and the folders carrying «carthage» are the African city. **`abbot` is in `types`** on the page's «ιδρυτής» of that house. **No `locations` object**, although Ireland and Lismore are named. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "alexander-companion-of-barbarus",
+  "display_name": "Alexander, companion of Barbarus and Acoluthus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαΐου, «Άγιοι Αλέξανδρος, Βάρβαρος και Ακόλουθος», with the rank word left off; the life page gives the three as three separate head names, «Αγιος Αλεξανδρος», «Αγιος Βαρβαρος», «Αγιος Ακολουθος»."
+    }
+  ],
+  "related": [
+    "barbarus-companion-of-alexander",
+    "acoluthus-the-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαΐου — «Άγιοι Αλέξανδρος, Βάρβαρος και Ακόλουθος»",
+        "url": "https://www.saint.gr/05/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Μαΐου εκάστου έτους», the same day as the listing. **Three head names on one page, so three folders**, which is `docs/CORPUS.md` §10.1: the page carries «Αγιος Αλεξανδρος», «Αγιος Βαρβαρος» and «Αγιος Ακολουθος» as three separate head entries with one shared notice, and the notice's couplet counts them — «Tριών συνάθλων ταις τετμημέναις κάραις, Tρία Tριάς τίθησιν άξια στέφη», for the severed heads of three fellow contenders the Trinity sets three worthy crowns. **He is not the day's other Alexander**, the soldier of Tiberianus, who has his own page and his own folder in this batch. **No year, no country and no emperor**, so there is no `dates` object and no `locations`. **The page gives the place of their synaxis** — the church of Saint Irene near the sea — which is a commemoration's place and not a feast, and is recorded in the life. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

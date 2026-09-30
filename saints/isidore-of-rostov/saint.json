@@ -1,0 +1,63 @@
+{
+  "slug": "isidore-of-rostov",
+  "display_name": "Isidore of Rostov",
+  "sex": "male",
+  "types": [
+    "fool-for-christ",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ισίδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαΐου, «Άγιος Ισίδωρος ο Θαυματουργός ο διά Χριστόν σαλός», with the rank word and the two epithets left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1474,
+      "latest": 1474,
+      "display": "1474",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ισίδωρος κοιμήθηκε με ειρήνη το 1474 μ.Χ.», and its head line reads «Αγιος Ισιδωρος ο Θαυματουργος ο Δια Χριστον Σαλος (; - 1474)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The saint is a Russian one and saint.gr is the source read here; the Russian calendar's own day for him was not looked at."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαΐου — «Άγιος Ισίδωρος ο Θαυματουργός ο διά Χριστόν σαλός»",
+        "url": "https://www.saint.gr/05/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Μαΐου εκάστου έτους», the same day as the listing. **He is not the day's other Isidore**: the corpus's [Isidore of Chios](/saints/isidore-of-chios), whom saint.gr also keeps on this same 14 May with a page of his own, is a sailor of Decius's fleet beheaded on Chios, and this one is a German-born fool for Christ at Rostov who died in 1474. Nor is he `isidore-of-antioch`, `isidore-of-pelusium` or `isidore-8-january`, which the namesweep flagged and which were read. **The display name takes the city**, which the calendar line does not give but the body does. **The page's byname is recorded in the life and not in `names`**: «Τβερντίσλοβ (= πιστός του Λόγου)», Tverdislov, faithful to the Word, because he spoke continually of Jesus Christ — it is a Slavonic form written in Greek letters, so it is not copied as a name form. **`fool-for-christ` and `wonderworker` are both the page's own words.** **No `locations` object**, although Germany and Rostov are named."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "isidore-of-chios"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

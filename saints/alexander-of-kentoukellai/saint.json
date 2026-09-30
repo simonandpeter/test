@@ -1,0 +1,51 @@
+{
+  "slug": "alexander-of-kentoukellai",
+  "display_name": "Alexander, soldier of Tiberianus",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαΐου, «Άγιος Αλέξανδρος που μαρτύρησε στις Κεντουκέλλες», with the rank word and the place of martyrdom left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαΐου — «Άγιος Αλέξανδρος που μαρτύρησε στις Κεντουκέλλες»",
+        "url": "https://www.saint.gr/05/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Μαΐου εκάστου έτους», the same day as the listing. **He is the man the 13 May page argues about, and that is why he is drafted here and not there.** saint.gr's 13 May entry «Άγιος Αλέξανδρος ο Μάρτυρας επίσκοπος Τιβεριανών» says of itself: «Εδώ γίνεται κάποια σύγχυση… Στους Συναξαριστές είναι καταχωρημένος χωρίς υπόμνημα. Αλλά μάλλον πρόκειται περί του Αλεξάνδρου» of the Lavriotic Codex 1170, a soldier in the company of the count Tiberianus from the diocese of Kentoulles or Kentoulines or Kelles, whom later writers «τον μεταμόρφωσαν σε επίσκοπο» and gave the title of a see that never existed — «βλέπε 14 Μαΐου». So the 13 May line was refused as a page arguing against its own entry, and the man himself is taken from the 14 May page, which states his soldiering plainly. **The display name says soldier of Tiberianus and not bishop**, for that reason, and `types` carries `soldier`. **He is not the day's other Alexander**, who is one of the three beheaded with Barbarus and Acoluthus and has his own page. **No year, so no `dates` object**: the page gives only the reign of Galerius Maximian, 286–305. **His mother Poimenia is named and has no folder.** **No `locations` object**: the place of martyrdom is the day line's Kentoukelles and the 13 May page cannot decide its spelling. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "leontius-patriarch-of-jerusalem",
+  "display_name": "Leontius of Jerusalem",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch",
+    "abbot",
+    "monk"
+  ],
+  "office": "Patriarch of Jerusalem",
+  "names": [
+    {
+      "form": "Λεόντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαΐου, «Άγιος Λεόντιος Πατριάρχης Ιεροσολύμων», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1150,
+      "latest": 1200,
+      "display": "second half of the 12th century",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε από γονείς πλούσιους και ευσεβείς περί το β' ήμισυ του 12ου αιώνα μ.Χ.» — the page's own words, which sit oddly beside a death in 1190 and are copied as they stand."
+    },
+    "death": {
+      "earliest": 1190,
+      "latest": 1190,
+      "display": "14 May 1190",
+      "basis": "traditional",
+      "note": "saint.gr: «ο Λεόντιος εξορίστηκε και πέθανε σε βαθιά γεράματα στις 14 Μαΐου 1190 μ.Χ.», and its head line reads «Αγιος Λεοντιος Πατριαρχης Ιεροσολυμων (; - 1190)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαΐου — «Άγιος Λεόντιος Πατριάρχης Ιεροσολύμων»",
+        "url": "https://www.saint.gr/05/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Μαΐου εκάστου έτους» and closes «Η μνήμη του εορτάζεται στην Πάτμο και στα Ιεροσόλυμα στις 14 Μαΐου» — twice the day of the listing, with the two places that keep him named. **He is none of the corpus's eight other Leontii**, which the namesweep flagged and which were read; the see and the Patmos abbacy settle it. **The page's own two dates do not agree and both are copied**: it puts his birth in the second half of the twelfth century and his death, in deep old age, on 14 May 1190. That is the page's arithmetic and not this folder's, and the `dates` notes say so. **Four men are named and none has a folder**: the abbot Theoktistos whom he succeeded at Patmos, the metropolitan of Tiberias whose disciple he was, the emperor Manuel Komnenos who offered him Russia or Cyprus, and Andronikos Komnenos whose rebuke cost him his exile. **No `locations` object**, although Tiberioupolis in Phrygia, Ptelidion, Patmos, Crete's Aptera and Jerusalem are all named. No hymn is printed; the page says a sung service of his was published at Jerusalem in 1912."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "barbarus-companion-of-alexander",
+  "display_name": "Barbarus, companion of Alexander and Acoluthus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Βάρβαρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαΐου, «Άγιοι Αλέξανδρος, Βάρβαρος και Ακόλουθος», with the rank word left off; the life page carries «Αγιος Βαρβαρος» as its own head name."
+    }
+  ],
+  "related": [
+    "alexander-companion-of-barbarus",
+    "acoluthus-the-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαΐου — «Άγιοι Αλέξανδρος, Βάρβαρος και Ακόλουθος»",
+        "url": "https://www.saint.gr/05/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Μαΐου εκάστου έτους», the same day as the listing, and gives him as one of three head names on one page — hence three folders. **He is not the corpus's `barbarus-6-may`, and he is not the Barbarus of 15 May either, and both were read before this was drafted.** `barbarus-6-may` is doxologia.ro's bare «Sfântul Mucenic Varvar» of 6 mai, a martyr with no life at all; saint.gr's 15 Μαΐου Barbarus is an Όσιος, the Arab robber of Epirus and Aetolia under Michael II, myrrh-streaming, whom the 05-15 reader drafted as a separate man. This one is a martyr beheaded with two named companions and honoured at the church of Saint Irene by the sea, and the three-name page is what tells him from both. **If a later reading joins any two of these three Barbari, this is the folder to fold, because it is the one with the least in it.** **No year, no country, so no `dates` and no `locations`.** No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

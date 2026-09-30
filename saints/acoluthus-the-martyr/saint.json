@@ -1,0 +1,54 @@
+{
+  "slug": "acoluthus-the-martyr",
+  "display_name": "Acoluthus, companion of Alexander and Barbarus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ακόλουθος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαΐου, «Άγιοι Αλέξανδρος, Βάρβαρος και Ακόλουθος», with the rank word left off; the life page carries «Αγιος Ακολουθος» as its own head name."
+    }
+  ],
+  "related": [
+    "alexander-companion-of-barbarus",
+    "barbarus-companion-of-alexander"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαΐου — «Άγιοι Αλέξανδρος, Βάρβαρος και Ακόλουθος»",
+        "url": "https://www.saint.gr/05/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Μαΐου εκάστου έτους», the same day as the listing, and gives him as one of three head names on one page — hence three folders. **Nothing in the corpus reads as him**: the namesweep printed no row for the name, and no folder carries it. **The name is kept in the form the page prints**, Ακόλουθος, the follower or attendant, which is the page's own gloss; it is not turned into a description. **No year, no country, so no `dates` and no `locations`.** No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
