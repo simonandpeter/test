@@ -1,0 +1,99 @@
+{
+  "slug": "zeno-the-courier",
+  "display_name": "Zeno the Courier",
+  "names": [
+    {
+      "form": "Ζήνων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Όσιος Ζήνων ο Ταχυδρόμος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Φεβρουαρίου — «Όσιος Ζήνων ο Ταχυδρόμος»",
+        "url": "https://www.saint.gr/02/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The epithet ο Ταχυδρόμος, the courier, is the page's own; it explains it by saying he served as keeper of the emperor Valens's letters. The page prints an apolytikion, a kontakion and a megalynarion; the megalynarion has no place in this corpus's hymn kinds and is not copied."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 364,
+      "latest": 374,
+      "display": "under Valens (364–374)",
+      "basis": "traditional",
+      "note": "saint.gr: «Επί βασιλέως Ουάλη (364 - 374 μ.Χ.) έκανε χρέη διακοσμητή των γραμμάτων του». The page gives no year for his birth or his repose, only that he entered the tomb after Valens died and gave up his soul «σε βαθιά γεράματα», in deep old age, so the interval here is the reign the page names and not the whole of his life."
+    }
+  },
+  "related": [
+    "basil-the-great"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείου Πνεύματος, λαβὼν τὴν χάριν, δι’ ἀσκήσεως, ἀγίας Πάτερ, ζωῆς θείας ὑπεμφαίνεις τὰς χάριτας· καὶ τοῦ Σωτῆρος θεράπων γενόμενος, τῆς παρ’ αὐτοῦ ἠξιώθης λαμπρότητος. Ζήνων Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως, on the page of Όσιος Ζήνων ο Ταχυδρόμος",
+        "url": "https://www.saint.gr/1206/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the grace of the Divine Spirit through holy ascesis, O father, thou dost show forth the graces of the divine life; and having become a servant of the Saviour, thou wast counted worthy of the splendour that is from him. O venerable Zeno, entreat Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. β’.",
+      "model": "Τὴν ὑπὲρ ἡμῶν.",
+      "text": "Τοὺς ἐπὶ τῆς γῆς, ἀγῶνάς σου θεοφόρε, ἡ ἐν οὐρανοῖς, ἐδέξατο εὐφροσύνη, καὶ Ἀγγέλων συνήφθης, τοῖς στρατεύμασιν Ὅσιε, θείας δόξης ἀξιούμενος, καὶ πρεσβεύων τῷ Παντάνακτι, ὑπὲρ πάντων τῶν βοώντων σοι· χαίροις ὦ Ζήνων σοφέ, τῶν ἀσκητῶν καλλονή.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος πλ. β’, Τὴν ὑπὲρ ἡμῶν, on the page of Όσιος Ζήνων ο Ταχυδρόμος. A Μεγαλυνάριον follows it on the page and is not copied here.",
+        "url": "https://www.saint.gr/1206/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy struggles upon earth, O God-bearer, the gladness that is in the heavens received; and thou wast joined to the armies of the angels, O venerable one, counted worthy of divine glory and interceding with the King of all for all who cry to thee: rejoice, O wise Zeno, beauty of the ascetics.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

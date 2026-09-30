@@ -6,6 +6,11 @@
       "form": "Haralambie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 februarie."
+    },
+    {
+      "form": "Χαράλαμπος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Άγιος Χαράλαμπος ο Ιερομάρτυρας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Φεβρουαρίου — «Άγιος Χαράλαμπος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/02/10/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr heads him «(85 - 198)» and calls him ιερεύς, a priest, not a bishop, which this folder's types record. The same day keeps three companies converted at his martyrdom — Baptos and Porphyrius, the three women, and the deliverance of Zakynthos from plague in 1728 — all of which the page attaches to him."
     },
     {
       "church": "serbian",
@@ -47,5 +62,62 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 85,
+      "latest": 85,
+      "display": "85",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him, «Αγιος Χαραλαμπος ο Ιερομαρτυρας (85 - 198)», read back from the age it gives at his death: «έλαβε το αμαράντινο στέφανο της δόξας σε ηλικία 113 ετών»."
+    },
+    "death": {
+      "earliest": 198,
+      "latest": 198,
+      "display": "198",
+      "basis": "traditional",
+      "note": "saint.gr: «Όταν το έτος 198 μ.Χ. ο Σέβηρος εξαπέλυσε απηνή διωγμό κατά των Χριστιανών», and its heading «(85 - 198)». It places him under Septimius Severus (193–211) and gives his age at death as 113."
+    }
+  },
+  "related": [
+    "baptos-companion-of-porphyrius",
+    "porphyrius-companion-of-baptos",
+    "three-women-of-magnesia"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Ὡς στύλος ἀκλόνητος, τῆς Ἐκκλησίας Χριστοῦ, καί λύχνος ἀείφωτος τῆς οἰκουμένης σοφέ, ἐδείχθης Χαράλαμπες· ἔλαμψας ἐν τῷ κόσμῳ, διά τοῦ μαρτυρίου, ἔλυσας τῶν εἰδώλων, τήν σκοτόμαιναν μάκαρ, διό ἐν παρρησίᾳ Χριστῷ, πρέσβευε σωθῆναι ἡμᾶς.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχύ προκατάλαβε, on the page of Άγιος Χαράλαμπος ο Ιερομάρτυρας",
+        "url": "https://www.saint.gr/1212/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As an unshaken pillar of the Church of Christ and an ever-shining lamp of the whole world thou wast shown, O wise Charalampus; thou didst shine out in the world through thy martyrdom, and didst dissolve the moonless dark of the idols, O blessed one. Therefore intercede boldly with Christ that we may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ὡς φωστήρ ἀνέτειλας ἐκ τῆς ἑῴας, καί πιστούς ἐφώτισας, ταῖς τῶν θαυμάτων σου βολαῖς, Ἱερομάρτυς Χαράλαμπες· ὅθεν τιμῶμεν τὴν θείαν σου ἄθλησιν.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of Άγιος Χαράλαμπος ο Ιερομάρτυρας",
+        "url": "https://www.saint.gr/1212/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst rise like a light-giver out of the east, and didst enlighten the faithful with the beams of thy miracles, O hieromartyr Charalampus; wherefore we honour thy divine contest.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

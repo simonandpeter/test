@@ -1,0 +1,64 @@
+{
+  "slug": "basil-of-novgorod",
+  "display_name": "Basil of Novgorod",
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Άγιος Βασίλειος Αρχιεπίσκοπος Νόβγκοροντ της Ρωσίας», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "office": "Archbishop of Novgorod",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Φεβρουαρίου — «Άγιος Βασίλειος Αρχιεπίσκοπος Νόβγκοροντ της Ρωσίας»",
+        "url": "https://www.saint.gr/02/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line calls him archbishop and his own page says he was elected metropolitan — «εξελέγη Μητροπολίτης του Νόβγκοροντ της Ρωσίας το 1329 μ.Χ.» — and saint.gr does not reconcile the two; the office here follows the day's line. He is also the eighth of the twelve hierarchs of Novgorod whom the same day enumerates (https://www.saint.gr/1366/saint.aspx), which is one commemoration and not two."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1352,
+      "latest": 1352,
+      "display": "1352",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1352 μ.Χ.», and its heading for him, «(; - 1352)». The same year stands in its enumeration of the twelve hierarchs of Novgorod."
+    }
+  },
+  "related": [
+    "john-of-novgorod"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

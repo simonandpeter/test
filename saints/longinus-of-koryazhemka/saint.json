@@ -1,0 +1,60 @@
+{
+  "slug": "longinus-of-koryazhemka",
+  "display_name": "Longinus of Koryazhemka",
+  "names": [
+    {
+      "form": "Λογγίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Όσιος Λογγίνος ο Ερημίτης», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Φεβρουαρίου — «Όσιος Λογγίνος ο Ερημίτης»",
+        "url": "https://www.saint.gr/02/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line calls him only ο Ερημίτης, the hermit; his own page gives the place that tells him apart, «Ο Όσιος Λογγίνος του Κορυάζχεμσκ». The translation of his relics into the church sixteen years after his repose is recorded there and is not a second commemoration on this page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1540,
+      "latest": 1540,
+      "display": "1540",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Λογγίνος κοιμήθηκε με ειρήνη το έτος 1540 μ.Χ.», and its heading for him, «(; - 1540)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

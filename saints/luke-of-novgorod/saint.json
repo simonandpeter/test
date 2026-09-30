@@ -1,0 +1,62 @@
+{
+  "slug": "luke-of-novgorod",
+  "display_name": "Luke of Novgorod",
+  "names": [
+    {
+      "form": "Λουκάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's list of the twelve hierarchs of Novgorod on the page for 10 Φεβρουαρίου, «Λουκάς (κοιμήθηκε 1060 μ.Χ.)», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Φεβρουαρίου — «Άγιοι Πάντες Ιεράρχες εν Νόβγκοροντ της Ρωσίας»",
+        "url": "https://www.saint.gr/02/10/index.aspx",
+        "year": 2026
+      },
+      "note": "One of twelve hierarchs of Novgorod whom the page enumerates by name, each with the year of his repose; his is 1060. The page also keeps the same synaxis on 4 October and on the third Sunday after Pentecost, which are not this row's feast. saint.gr calls the twelve Ιεράρχες and gives no see-rank for him individually."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1060,
+      "latest": 1060,
+      "display": "1060",
+      "basis": "traditional",
+      "note": "saint.gr's enumeration of the twelve hierarchs of Novgorod, «Λουκάς (κοιμήθηκε 1060 μ.Χ.)», and its heading for him, «(; - 1060)»."
+    }
+  },
+  "related": [
+    "john-of-novgorod"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Valentina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 februarie."
+    },
+    {
+      "form": "Ουαλεντίνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Άγιοι Ενναθά, Ουαλεντίνα και Παύλος», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -40,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Φεβρουαρίου — «Άγιοι Ενναθά, Ουαλεντίνα και Παύλος»",
+        "url": "https://www.saint.gr/02/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The three share one page, with one distich for the two women and a second for Paul. The page gives no year; it names the governor Firmilian and the persecution in Palestine."
     },
     {
       "church": "serbian",

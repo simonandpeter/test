@@ -1,0 +1,53 @@
+{
+  "slug": "three-women-of-magnesia",
+  "display_name": "The Three Women of Magnesia",
+  "names": [
+    {
+      "form": "Τρεις Γυναίκες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Άγιες Τρεις Γυναίκες», with the rank word left off. The page gives them no personal names at all."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Φεβρουαρίου — «Άγιες Τρεις Γυναίκες»",
+        "url": "https://www.saint.gr/02/10/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr names none of the three, so this is one entry for the three of them and not three folders. The place, Magnesia, and the connection to Charalampus are the page's own; it gives no year."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "charalampus-of-magnesia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "john-the-philosopher-of-georgia",
+  "display_name": "John the Philosopher",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Άγιος Ιωάννης ο Φιλόσοφος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Φεβρουαρίου — «Άγιος Ιωάννης ο Φιλόσοφος»",
+        "url": "https://www.saint.gr/02/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line calls him Άγιος and the life says he fell asleep «οσίως με ειρήνη», in holiness and peace, which is not a martyr's end; nothing else in the page states a rank, so the folder takes none beyond venerable."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1051,
+      "latest": 1150,
+      "display": "late 11th and early 12th century",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησε κατά τα τέλη του 11ου και αρχές του 12ου αιώνα μ.Χ. στη Γεωργία». The page gives no year; the interval is the two half-centuries its words cover."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

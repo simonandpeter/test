@@ -115,6 +115,34 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ζηνων zeno-of-diospolis zeno-the-courier zeno-the-faster-of-kiev':
+    'three men. The new one is Zeno the Courier, whose page gives no year, kept on 10 Φεβρουαρίου; the other two are read in the el-01-30 entry for this name form, one of them an apostle of the seventy.',
+  'προχοροσ prochorus-of-vranski prochorus-the-lebednik':
+    'two men. saint.gr keeps Prochorus the Lebednik, dead 1107, on 10 Φεβρουαρίου; the corpus keeps Prochorus of Vranski, written in this wave on 15 Ιανουαρίου.',
+  'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-mauropous john-of-edessa john-of-irenopolis john-of-kazan john-of-lycopolis john-of-spetses john-of-syracuse john-son-of-xenophon john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza':
+    'thirteen now. The new one is John the Philosopher of Georgia, whose page gives no year, kept on 10 Φεβρουαρίου; the other twelve are read in the el-02-06 entry for this name form.',
+  'baptos companion porphyrius baptos-companion-of-porphyrius porphyrius-companion-of-baptos':
+    'one line folded onto itself, the seventh of its kind in this wave. saint.gr names Porphyrius and Baptos together on 10 Φεβρουαρίου and the synaxis ruling makes that two folders, each display name carrying the other, so the folded key holds both forenames whichever of the two it is read from.',
+  'αναστασιοσ anastasius-8-january anastasius-of-nauplion anastasius-patriarch-of-jerusalem':
+    'three men. The new one is Anastasius, patriarch of Jerusalem, whose page gives no year, kept on 10 Φεβρουαρίου; the other two are read in the el-02-01 entry for this name form.',
+  'συμεων simeon-of-tver simeon-the-elder symeon-of-novgorod symeon-the-god-receiver symeon-the-new-of-mytilene':
+    'five now. The new one is Symeon of Novgorod, dead 1421, from the enumerated synaxis of that see; the other four are read in the el-02-03 entry for this name form.',
+  'λουκασ luke-of-emesa luke-of-hellas luke-of-novgorod':
+    'three men. The new one is Luke of Novgorod, dead 1060, from the enumerated synaxis of that see; the corpus keeps Luke of Emesa among the three the Greek 29 Ιανουαρίου names and Luke of Hellas, upgraded in this wave on 7 Φεβρουαρίου.',
+  'ιωακειμ joachim-of-novgorod joachim-of-tarnovo joachim-the-righteous':
+    'three men. The new one is Joachim of Novgorod, dead 1030, from the enumerated synaxis of that see; the other two are read in the el-01-18 entry for this name form.',
+  'γρηγοριοσ gregory-of-akritas gregory-of-moesia gregory-of-novgorod gregory-of-nyssa gregory-the-elder gregory-the-recluse-of-the-caves gregory-the-wonderworker-of-the-caves gregory-uncle-of-eustratius':
+    'eight now. The new one is Gregory of Novgorod, dead 1193, from the enumerated synaxis of that see; the other seven are read in the el-01-08 entry for this name form.',
+  'γερμανοσ germanus-of-novgorod germanus-of-sagmata':
+    'two men. Germanus of Novgorod, dead 1096, comes from the enumerated synaxis of that see on 10 Φεβρουαρίου; Germanus of Sagmata was written in this wave on 26 Ιανουαρίου beside Clement of the same mountain.',
+  'γενναδιοσ gennadius-of-corfu gennadius-of-kostroma gennadius-of-novgorod gennadius-of-the-svir-desert':
+    'four now. The new one is Gennadius of Novgorod, dead 1505, from the enumerated synaxis of that see; the other three are read in the el-02-09 entry for this name form.',
+  'βασιλειοσ basil-martyr-6-february basil-of-novgorod basil-of-thessalonica basil-uncle-of-eustratius':
+    'four now. The new one is Basil, archbishop of Novgorod, dead 1352, from the enumerated synaxis of that see; the other three are read in the el-02-06 entry for this name form.',
+  'αρκαδιοσ arcadius-martyr-12-january arcadius-of-novgorod arcadius-of-vyazniki arcadius-son-of-xenophon':
+    'four now. The new one is Arcadius of Novgorod, dead 1162, from the enumerated synaxis of that see on 10 Φεβρουαρίου; the other three are read in the el-01-26 entry for this name form.',
+  'αντωνιοσ anthony-of-georgia anthony-of-krasnokholmsk anthony-of-novgorod anthony-of-vologda anthony-of-zadonsk anthony-of-zographou anthony-the-great antonius-the-presbyter antony-of-novgorod antony-son-of-john-of-syracuse antony-the-athenian':
+    'eleven now. The new one is Antony of Novgorod, dead 1231, one of the hierarchs of that see whom saint.gr enumerates on 10 Φεβρουαρίου; the other ten are read in the el-02-05 entry for this name form. The Novgorod synaxis is why this day raised nine folds at once: it names its bishops, so each is a folder, and nine of their forenames were already in the corpus.',
   'ρωμανοσ romanus-of-karpenisi romanus-of-lacedaemon romanus-of-samosata romanus-of-uglich romanus-the-cilician':
     'five now. The new one is Romanus the Cilician, whose page gives no year, kept on 9 Φεβρουαρίου; the other four are read in the el-02-03 entry for this name form.',
   'παγκρατιοσ pancratius-of-tauromenium pancratius-the-recluse-of-the-caves':

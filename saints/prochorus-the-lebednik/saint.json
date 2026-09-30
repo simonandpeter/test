@@ -1,0 +1,61 @@
+{
+  "slug": "prochorus-the-lebednik",
+  "display_name": "Prochorus the Lebednik",
+  "names": [
+    {
+      "form": "Πρόχορος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Όσιος Πρόχορος εκ Ρωσίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Φεβρουαρίου — «Όσιος Πρόχορος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/02/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The by-name «Λεμπεντιώτης» is the page's own and it explains it: the bitter plant λέμπεντα out of which he baked his bread. The day's line gives him only «εκ Ρωσίας», from Russia."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1107,
+      "latest": 1107,
+      "display": "1107",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Πρόχορος κοιμήθηκε ειρηνικά το έτος 1107 μ.Χ.», and its heading for him, «(; - 1107)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

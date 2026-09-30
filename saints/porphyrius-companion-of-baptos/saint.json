@@ -1,0 +1,55 @@
+{
+  "slug": "porphyrius-companion-of-baptos",
+  "display_name": "Porphyrius, companion of Baptos",
+  "names": [
+    {
+      "form": "Πορφύριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Άγιοι Βάπτος και Πορφύριος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Φεβρουαρίου — «Άγιοι Βάπτος και Πορφύριος»",
+        "url": "https://www.saint.gr/02/10/index.aspx",
+        "year": 2026
+      },
+      "note": "He and Baptos share one page and one distich. The page gives them no year; it attaches them to Charalampus of Magnesia, whose own page dates his martyrdom to 198."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "baptos-companion-of-porphyrius",
+    "charalampus-of-magnesia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

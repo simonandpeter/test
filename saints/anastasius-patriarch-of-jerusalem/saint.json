@@ -1,0 +1,62 @@
+{
+  "slug": "anastasius-patriarch-of-jerusalem",
+  "display_name": "Anastasius of Jerusalem",
+  "names": [
+    {
+      "form": "Αναστάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Άγιος Αναστάσιος Πατριάρχης Ιεροσολύμων», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch",
+    "confessor"
+  ],
+  "office": "Patriarch of Jerusalem",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Φεβρουαρίου — «Άγιος Αναστάσιος Πατριάρχης Ιεροσολύμων»",
+        "url": "https://www.saint.gr/02/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The page spends most of its length refusing the other Anastasius: various synaxaristes and the Menaia put the iconoclast patriarch of Constantinople on this day «από παραδρομή», by oversight, and saint.gr says that such a wretched hierarch «δεν έχει φυσικά καμιά θέση στην τάξη των Αγίων». The honour belongs instead to this Anastasius of Jerusalem, and the page credits the correction to the patriarch Constantius I."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 451,
+      "latest": 451,
+      "display": "451",
+      "basis": "traditional",
+      "note": "The one year the page attaches to him is the Fourth Ecumenical Council, whose decisions cost him his throne: «Έχασε μάλιστα και το θρόνο του υποστηρίζοντας τις αποφάσεις της Δ' Οικουμενικής Συνόδου (451 μ.Χ.), που έγινε στη Χαλκηδόνα». No year of birth or repose is printed."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

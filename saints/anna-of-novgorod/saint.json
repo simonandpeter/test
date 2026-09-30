@@ -6,6 +6,11 @@
       "form": "Ana din Novgorod",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 februarie."
+    },
+    {
+      "form": "Άννα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Οσία Άννα η Πριγκίπισσα», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Φεβρουαρίου — «Οσία Άννα η Πριγκίπισσα»",
+        "url": "https://www.saint.gr/02/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The page closes with a second day: «Η Εκκλησία τιμά την μνήμη της και στις 4 Οκτωβρίου» — the Church honours her memory also on 4 October. One attestation row is one feast, so the row records the day read and the second day stands here as a note. The page also warns that she is often confused with the mother of Vladimir, enlightener of the Russians, because she had a son of the same name."
     },
     {
       "church": "serbian",
