@@ -1,0 +1,62 @@
+{
+  "slug": "nepotian-the-presbyter",
+  "display_name": "Nepotian, nephew of Heliodorus",
+  "sex": "male",
+  "types": [
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Νεποτιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαΐου, «Άγιος Νεποτιανός ο πρεσβύτερος», with the rank word and the order left off."
+    }
+  ],
+  "related": [
+    "jerome-of-stridon"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 395,
+      "latest": 395,
+      "display": "395",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Νεποτιανός έζησε κατά τον 4ο αιώνα μ.Χ. και χειροτονήθηκε πρεσβύτερος από τον θείο του Άγιο Ηλιόδωρο, Επίσκοπο Αλτίνου της Ιταλίας. Κοιμήθηκε με ειρήνη το 395 μ.Χ.» No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαΐου — «Άγιος Νεποτιανός ο πρεσβύτερος»",
+        "url": "https://www.saint.gr/05/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Μαΐου εκάστου έτους», the same day as the listing, and the whole of its body is one sentence and a half: fourth century, ordained presbyter by his uncle Heliodorus, bishop of Altinum in Italy (its 3 Ιουλίου), dead in peace in 395, and «Ο Όσιος Ιερώνυμος (τιμάται 15 Ιουνίου) αφιέρωσε μία πραγματεία του στον ιερατικό βίο του Αγίου Νεποτιανού». **The corpus holds no Nepotian and the namesweep raises nothing at all for the name** — its output for this line is «and 85 weaker row(s)» and no `!!` or `!` row — so there is no namesake to be told from. **The display name keeps the kinship clause** rather than a see, because the page gives him no see of his own and the uncle is the one thing that places him. **`related` goes to Jerome alone**: the corpus holds `jerome-of-stridon`, whom the page names as having dedicated a treatise to his priestly life, and its three Heliodori — the companion of Mark the Shepherd, the martyr of 20 August, and Golovanitsky — are none of them a bishop of Altinum, so the uncle takes no row although he is named in the display name. No hymn, no relic, no year of birth, no place of his own."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

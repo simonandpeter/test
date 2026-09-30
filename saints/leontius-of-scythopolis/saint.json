@@ -1,0 +1,57 @@
+{
+  "slug": "leontius-of-scythopolis",
+  "display_name": "Leontius of Scythopolis",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Λεόντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαΐου, «Άγιοι Αφροδίσιος, Μίσδας, Μακρόβιος, Ουαλεριανός, Λεόντιος, Αντωνίνος οι Μάρτυρες και οι συν αυτοίς εν Σκυθουπόλει (Συρίας) μαρτυρησάντων», with the rank word left off."
+    }
+  ],
+  "related": [
+    "aphrodisius-of-scythopolis",
+    "misdas",
+    "macrobius-of-scythopolis",
+    "valerian-4-may",
+    "antoninus-of-scythopolis"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαΐου — «Άγιοι Αφροδίσιος, Μίσδας, Μακρόβιος, Ουαλεριανός, Λεόντιος, Αντωνίνος οι Μάρτυρες και οι συν αυτοίς εν Σκυθουπόλει (Συρίας) μαρτυρησάντων»",
+        "url": "https://www.saint.gr/05/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Μαΐου εκάστου έτους», the same day as the listing, and enumerates the company by name, so this is one of six folders. **He is none of the corpus's seven other Leontii** — of Tripoli, of the Brazen Gate, of Rădăuți, the disciple of Cronides, one of the Forty of Sebaste, the martyr of 16 October, and Karyagin of Kazan — and the place is what tells him from them. **His couplet is the one that names a seventh man**: it is headed «Eις τον Λεόντιον, Aντωνίνον και Mέλη» and reads «O Λεόντιος και συναθληταί δύω, / Λέοντες οίον έδραμον προς το ξίφος» — Leontius and two fellow-contenders ran to the sword like lions. Two fellow-contenders, and the heading names Antoninus and a Μέλης whom the listing and the six head lines do not know. **No folder was made for that name**, because nothing on the page establishes it as a person, and the discrepancy is recorded on every folder of this company. The couplet says sword and the story says stones and clubs; both are printed. No year, no emperor, no hymn, no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

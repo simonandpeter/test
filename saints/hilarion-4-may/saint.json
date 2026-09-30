@@ -6,6 +6,11 @@
       "form": "Ilarion",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 mai, «Sfântul Cuvios Ilarion»."
+    },
+    {
+      "form": "Ιλάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαΐου, «Όσιος Ιλάριος ο Θαυματουργός», with the rank word and the epithet left off. The page prints Ιλάριος, not Ιλαρίων."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαΐου — «Όσιος Ιλάριος ο Θαυματουργός»",
+        "url": "https://www.saint.gr/05/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and the rank matches: doxologia's «Sfântul Cuvios Ilarion» against saint.gr's Όσιος. **There is exactly one candidate of that name on this Greek day**, which is why this is drafted as an upgrade at all; the folder is bare on the Romanian side and the Greek is the first source to say anything about him. **But the name form is not the same word**: saint.gr prints Ιλάριος, Hilarius, and the Romanian form the folder holds is Ilarion, which answers to Ιλαρίων. Both are recorded — the Greek form as the page prints it — and **nothing is transliterated across**; if a later reader decides Ιλάριος and Ilarion are two men, this row is the one to undo, and no folder was created that would have to be merged. **The Greek adds what he was and what he did**: a worthy worker of the Gospel early, given the grace of wonders, healing paralytics and the lame, breaking a drought by his prayer and freeing many possessed in the name of Jesus Christ; a withdrawal to a desert place and a hut, where he studied and prayed; a return to society and, at the common demand, ordination as a priest, in which he discharged all the duties of a good presbyter. **It prints no year and no place**, so `dates` stays absent, and the epithet ο Θαυματουργός is not put in `types` as `wonderworker` because the folder's existing `types` is the Romanian reading and adding to it is a separate claim; the page's word is quoted in the life instead. Its couplet works on the name: «Ἔγνων τὸν Ἱλάριον ἱλαρὸν φύσει, / Ὃς θαυματουργεῖ ἐν τάφῳ τεθειμένος» — I knew Hilarius to be cheerful by nature, who works wonders laid in his grave. No hymn, no relic."
     },
     {
       "church": "serbian",

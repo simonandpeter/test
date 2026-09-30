@@ -1,0 +1,65 @@
+{
+  "slug": "nicephorus-alfanov",
+  "display_name": "Nicephorus Alfanov",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Νικηφόρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαΐου, «Όσιοι Ισαάκ, Κλήμης, Κύριλλος, Νικήτας και Νικηφόρος εκ Ρωσίας», with the rank word and the origin left off. The surname Αλφάνωφ is printed only in the body of the life page."
+    }
+  ],
+  "related": [
+    "isaac-alfanov",
+    "clement-alfanov",
+    "cyril-alfanov",
+    "nicetas-alfanov"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Όσιοι Ισαάκ, Κλήμης, Κύριλλος, Νικήτας και Νικηφόρος Αλφάνωφ ήσαν αδελφοί και έζησαν κατά τον 14ο αιώνα μ.Χ. στο Νόβγκοροντ. Το 1389 ίδρυσαν το μοναστήρι του Σοκολνίτσκι.» The page gives no year of birth or of death for any of the five."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαΐου — «Όσιοι Ισαάκ, Κλήμης, Κύριλλος, Νικήτας και Νικηφόρος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/05/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Μαΐου εκάστου έτους», the same day as the listing, and enumerates five brothers by name, so this is one of five folders. **He is not either of the two other Nikephoroi on this same Greek day** — the abbot of Medikion and the ascetic of Athos, both of whom were deliberately left undrafted because the corpus's bare `nicephorus-4-may` could be either of them and a reader cannot tell which; this man is unmistakable because he is one of five named brothers with a surname, a city and a dated foundation, and neither of the other two is. He is also none of the corpus's eight other Nicephori. **The surname in the display name is what makes this folder safe**, and it is stored there rather than as a `names` form because the page prints it in Greek letters alone. The page gives the five a **second fixed day**, «Η μνήμη τους τιμάται, επίσης, στις 17 Ιουνίου», recorded here and not given a row of its own. No year, no hymn, no separate word about him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Monica",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 mai, «Sfânta Cuvioasă Monica, mama Fericitului Augustin»."
+    },
+    {
+      "form": "Μόνικα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαΐου, «Αγία Μόνικα μητέρα του Αγίου Αυγουστίνου», with the rank word and the kinship clause left off."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαΐου — «Αγία Μόνικα μητέρα του Αγίου Αυγουστίνου»",
+        "url": "https://www.saint.gr/05/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps her, and names her by the same kinship, which makes her the same woman. **The Greek adds both years the folder did not have**: «γεννήθηκε το 332 μ.Χ. στην πόλη Ταγάστη της βόρειας Αφρικής», and the page heads her «(332 - 388)». It adds Tagaste, her Christian parents, her marriage to the pagan governor Patricius who was irritated by her unceasing prayer and thought her charity excessive and would not have his children baptised, his baptism after sixteen years and his death in peace in 371; Augustine's baptism by Ambrose on the night of Pascha, 25 April 387; the quotation it gives from Augustine on her tears; her return to Africa, her death after a short illness at Ostia, and the translation of her relics to Rome a few years later on 9 April. **`related` gains Augustine and Ambrose**, the two men the page names who have folders, and the life links both; Patricius, her other son and her daughter have none. It prints no hymn and gives no relic beyond the translation."
     },
     {
       "church": "serbian",
@@ -45,5 +60,25 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 332,
+      "latest": 332,
+      "display": "332",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Μόνικα, μητέρα του ιερού Αυγουστίνου, γεννήθηκε το 332 μ.Χ. στην πόλη Ταγάστη της βόρειας Αφρικής από γονείς Χριστιανούς, ευσεβείς και φιλόθεους», and the page heads her «(332 - 388)»."
+    },
+    "death": {
+      "earliest": 388,
+      "latest": 388,
+      "display": "388",
+      "basis": "traditional",
+      "note": "saint.gr heads her «(332 - 388)». Its body says she returned to Africa and «κοιμήθηκε με ειρήνη, μετά από σύντομη ασθένεια, στην πόλη Όστια» and was buried there, without repeating the year; Ostia is in Italy and not in Africa, which the page does not reconcile."
+    }
+  },
+  "related": [
+    "augustine-of-hippo",
+    "ambrose-of-milan"
+  ]
 }

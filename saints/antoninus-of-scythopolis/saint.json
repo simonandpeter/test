@@ -1,0 +1,57 @@
+{
+  "slug": "antoninus-of-scythopolis",
+  "display_name": "Antoninus of Scythopolis",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αντωνίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαΐου, «Άγιοι Αφροδίσιος, Μίσδας, Μακρόβιος, Ουαλεριανός, Λεόντιος, Αντωνίνος οι Μάρτυρες και οι συν αυτοίς εν Σκυθουπόλει (Συρίας) μαρτυρησάντων», with the rank word left off."
+    }
+  ],
+  "related": [
+    "aphrodisius-of-scythopolis",
+    "misdas",
+    "macrobius-of-scythopolis",
+    "valerian-4-may",
+    "leontius-of-scythopolis"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαΐου — «Άγιοι Αφροδίσιος, Μίσδας, Μακρόβιος, Ουαλεριανός, Λεόντιος, Αντωνίνος οι Μάρτυρες και οι συν αυτοίς εν Σκυθουπόλει (Συρίας) μαρτυρησάντων»",
+        "url": "https://www.saint.gr/05/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Μαΐου εκάστου έτους», the same day as the listing, and enumerates the company by name, so this is one of six folders. **He is not `antoninus-martyr-9-august` or `antoninus-of-ephesus`**, and the place and the day tell him from both. **The page's own head line for him glosses the wrong name**: it prints «Αγιος Αντωνινος ο Μαρτυρας» and then the etymology of ΑΝΤΩΝΙΟΣ, Antonius, not Antoninus; that is the site's slip and the stored name form is the one the listing prints, Αντωνίνος. He shares the seventh-name couplet with Leontius — «Eις τον Λεόντιον, Aντωνίνον και Mέλη ... O Λεόντιος και συναθληταί δύω» — whose Μέλης the listing and the head lines do not know, and for whom no folder was made. Nothing else is said of him apart from the company. No year, no emperor, no hymn, no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

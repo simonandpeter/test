@@ -1,0 +1,57 @@
+{
+  "slug": "macrobius-of-scythopolis",
+  "display_name": "Macrobius of Scythopolis",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μακρόβιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαΐου, «Άγιοι Αφροδίσιος, Μίσδας, Μακρόβιος, Ουαλεριανός, Λεόντιος, Αντωνίνος οι Μάρτυρες και οι συν αυτοίς εν Σκυθουπόλει (Συρίας) μαρτυρησάντων», with the rank word left off."
+    }
+  ],
+  "related": [
+    "aphrodisius-of-scythopolis",
+    "misdas",
+    "valerian-4-may",
+    "leontius-of-scythopolis",
+    "antoninus-of-scythopolis"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαΐου — «Άγιοι Αφροδίσιος, Μίσδας, Μακρόβιος, Ουαλεριανός, Λεόντιος, Αντωνίνος οι Μάρτυρες και οι συν αυτοίς εν Σκυθουπόλει (Συρίας) μαρτυρησάντων»",
+        "url": "https://www.saint.gr/05/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Μαΐου εκάστου έτους», the same day as the listing, and enumerates the company by name, so this is one of six folders. **He is not `macrobius-of-tomis`**, and the separation is clean: that folder is kept on **13 September** by all four calendars, and he is one of the martyrs of Tomis in Scythia Minor, whose company includes `valerian-of-tomis`. **This is a real trap and it goes further than the name**: the Tomis company and this one each contain a Valerian and a Macrobius, and Scythopolis and Scythia are one letter apart in English and nothing alike in Greek — Σκυθούπολις in Syria against Τόμις. The day settles it: 4 Μαΐου against 13 Σεπτεμβρίου. His only line of his own is the couplet he shares with Valerian, «Yπέρ κεφαλάς Mαρτύρων αρθέν δύω, / Aθλητικήν έπηξε πυρ αυτοίς στέγην» — fire, raised above the heads of two martyrs, fixed a contender's roof over them — which speaks of fire where the story has stones and clubs, and the page does not reconcile the two. No year, no emperor, no hymn, no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

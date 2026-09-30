@@ -6,6 +6,11 @@
       "form": "Valerian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 mai, «Sfântul Cuvios Valerian»."
+    },
+    {
+      "form": "Ουαλεριανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαΐου, «Άγιοι Αφροδίσιος, Μίσδας, Μακρόβιος, Ουαλεριανός, Λεόντιος, Αντωνίνος οι Μάρτυρες...», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαΐου — «Άγιοι Αφροδίσιος, Μίσδας, Μακρόβιος, Ουαλεριανός, Λεόντιος, Αντωνίνος οι Μάρτυρες και οι συν αυτοίς εν Σκυθουπόλει (Συρίας) μαρτυρησάντων»",
+        "url": "https://www.saint.gr/05/04/index.aspx",
+        "year": 2026
+      },
+      "note": "**This row is the one judgement call on 4 Μαΐου that a second reader should check.** The Romanian line the folder rests on is bare — «Sfântul Cuvios Valerian», Valerian the *venerable* — and the folder's own life says the rank is the whole of what doxologia states. saint.gr's 4 Μαΐου has exactly **one** Valerian, Ουαλεριανός, and he is a **martyr**, one of six named men stoned and clubbed to death with others at Scythopolis in Syria after reproaching their governor for his treatment of the Christians and smashing the altars of the idols. Same civil day, same menologion day, same name, one candidate on each side: by the corpus's settled reading that is one man, as a Romanian «Sfântul Mucenic Trofim» on the corpus's `trophimus-of-antioch` day is that man. **But the two sources give him different ranks**, and that is not reconciled here: `types` is left exactly as the Romanian reading made it and no `martyr` slug is added, because the rank is the Romanian source's one assertion about him and overwriting it is not a reader's to do. If the ranks cannot both be true, **this row is the thing to undo, and no duplicate folder has been made either way.** The corpus's other Valerians are elsewhere: `valerian-of-tomis` is kept on 13 September with `macrobius-of-tomis`, and neither is of Scythopolis. **The `related` rows are new** and name the five men saint.gr lists beside him, all five of whom are drafted as new folders in `05-04-1.json`; the page's «οι συν αυτοίς» names nobody further, so nothing is claimed for the rest of the company. The page prints no year, no emperor and no hymn, and it says the synaxis was kept «στο αποστολείο του Ιακώβου Αδελφοθέου, που βρίσκεται μέσα στον σεβάσμιο οίκο της υπεραγίας Θεοτόκου στους Χαλκοπρατείους»."
     },
     {
       "church": "serbian",
@@ -45,5 +60,12 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "aphrodisius-of-scythopolis",
+    "misdas",
+    "macrobius-of-scythopolis",
+    "leontius-of-scythopolis",
+    "antoninus-of-scythopolis"
+  ]
 }

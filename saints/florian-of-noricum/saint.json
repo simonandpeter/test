@@ -1,0 +1,60 @@
+{
+  "slug": "florian-of-noricum",
+  "display_name": "Florian of Noricum",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Φλωριανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαΐου, «Άγιος Φλωριανός ο Μάρτυρας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "saint.gr: «του έδεσαν μια πέτρα στον λαιμό και τον έριξαν στον ποταμό Εμς, όπου τελειώθηκε μαρτυρικά το 303 μ.Χ.» It places him in the reign of Diocletian, which it gives as 284–305. No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαΐου — «Άγιος Φλωριανός ο Μάρτυρας»",
+        "url": "https://www.saint.gr/05/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Μαΐου εκάστου έτους», the same day as the listing. **The corpus holds no Florian at all** and the namesweep raises nothing for the name, so there is no namesake to be told from. The page is specific: born in the city of Ems in Austria, a senior officer of the Roman army serving in Noricum, confessing Christ before the governor Aquilinus under Diocletian, tortured, and finally drowned in the river Ems with a stone tied to his neck, in 303; and it says he is one of the patron saints of Austria. **`types` has `soldier` because the page says «ήταν ανώτερος αξιωματούχος του Ρωμαϊκού στρατού»**, which is the rank the corpus's vocabulary holds for a soldier-martyr; there is no slug for an officer and none was added. **The display name takes Noricum, not Ems**, because the page uses Ems for both his birthplace and the river he was drowned in and «Νόρικουμ της Αυστρίας» for where he served, and Noricum is the one of the two that is not doing double duty. No hymn, no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

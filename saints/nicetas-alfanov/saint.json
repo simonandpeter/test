@@ -1,0 +1,65 @@
+{
+  "slug": "nicetas-alfanov",
+  "display_name": "Nicetas Alfanov",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Νικήτας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαΐου, «Όσιοι Ισαάκ, Κλήμης, Κύριλλος, Νικήτας και Νικηφόρος εκ Ρωσίας», with the rank word and the origin left off. The surname Αλφάνωφ is printed only in the body of the life page."
+    }
+  ],
+  "related": [
+    "isaac-alfanov",
+    "clement-alfanov",
+    "cyril-alfanov",
+    "nicephorus-alfanov"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Όσιοι Ισαάκ, Κλήμης, Κύριλλος, Νικήτας και Νικηφόρος Αλφάνωφ ήσαν αδελφοί και έζησαν κατά τον 14ο αιώνα μ.Χ. στο Νόβγκοροντ. Το 1389 ίδρυσαν το μοναστήρι του Σοκολνίτσκι.» The page gives no year of birth or of death for any of the five."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαΐου — «Όσιοι Ισαάκ, Κλήμης, Κύριλλος, Νικήτας και Νικηφόρος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/05/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Μαΐου εκάστου έτους», the same day as the listing, and enumerates five brothers by name, so this is one of five folders. **He is none of the corpus's ten Nicetases** — of Medikion, of Chalcedon, of Pythia, of Remesiana, of Apollonias, of Chytri, the Goth, the chartularius and the rest — and **he is not the «Όσιος Νικήτας εκ Ρωσίας» of 1 Μαΐου**, which was refused three days before this one because that page sets out three competing identifications of its man; this one is a brother of four named brothers who founded a dated monastery, and the two entries stand on different days with different content. The surname in the display name is what tells him from all of them. The page gives the five a **second fixed day**, «Η μνήμη τους τιμάται, επίσης, στις 17 Ιουνίου», recorded here and not given a row of its own. No year, no hymn, no separate word about him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

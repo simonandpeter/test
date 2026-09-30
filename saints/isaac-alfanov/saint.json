@@ -1,0 +1,65 @@
+{
+  "slug": "isaac-alfanov",
+  "display_name": "Isaac Alfanov",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Ισαάκ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαΐου, «Όσιοι Ισαάκ, Κλήμης, Κύριλλος, Νικήτας και Νικηφόρος εκ Ρωσίας», with the rank word and the origin left off. The surname Αλφάνωφ is printed only in the body of the life page."
+    }
+  ],
+  "related": [
+    "clement-alfanov",
+    "cyril-alfanov",
+    "nicetas-alfanov",
+    "nicephorus-alfanov"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Όσιοι Ισαάκ, Κλήμης, Κύριλλος, Νικήτας και Νικηφόρος Αλφάνωφ ήσαν αδελφοί και έζησαν κατά τον 14ο αιώνα μ.Χ. στο Νόβγκοροντ. Το 1389 ίδρυσαν το μοναστήρι του Σοκολνίτσκι.» The page gives no year of birth or of death for any of the five."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαΐου — «Όσιοι Ισαάκ, Κλήμης, Κύριλλος, Νικήτας και Νικηφόρος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/05/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Μαΐου εκάστου έτους», the same day as the listing. **This is a company the page enumerates by name — five head lines, five names — so it is five folders**, and the body gives them a surname the listing does not: «Οι Όσιοι Ισαάκ, Κλήμης, Κύριλλος, Νικήτας και Νικηφόρος Αλφάνωφ ήσαν αδελφοί». **The page also gives them a second day and it is a fixed one**: «Η μνήμη τους τιμάται, επίσης, στις 17 Ιουνίου.» One row per church is the schema, so 4 Μαΐου is what this row records and the 17 Ιουνίου is noted here; they do not render on it, and no second folder is made. **He is none of the corpus's nine other Isaacs** — the patriarch, the Syrian, of Constantinople, of Cyprus, of Theodosiopolis, the Persian of Metsovo, I of Optina, the martyr of 22 September — and the surname in the display name is what tells him from them, on the corpus's own habit for Russian names. **The surname is stored only in the display name and not as a `names` form**, because the page prints it in Greek letters alone and no Cyrillic form is given. The relics were moved to the Antoniev monastery in 1775 after a fire destroyed Sokolnitski. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

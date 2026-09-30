@@ -7,6 +7,11 @@
       "form": "Atanasie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 mai, «Sfântul Ierarh Atanasie, Episcopul Corintului»."
+    },
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαΐου, «Όσιος Αθανάσιος Επίσκοπος Κορίνθου», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαΐου — «Όσιος Αθανάσιος Επίσκοπος Κορίνθου»",
+        "url": "https://www.saint.gr/05/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and names the same see, which together make him the same man: doxologia's «Sfântul Ierarh Atanasie, Episcopul Corintului». He is not any of the corpus's twenty-odd other Athanasii, and in particular not `athanasius-of-alexandria`, whose relic translation the same site keeps on 2 Μαΐου. **The Greek adds the year the folder did not have**, and it adds it with a contradiction of its own that is recorded and not resolved: «απεβίωσε ειρηνικά στις ήμερες της βασιλείας Βασιλείου και Κωνσταντίνου το έτος 937 μ.Χ.», in the days of the reign of Basil and Constantine, in the year 937 — but the emperors Basil II and Constantine VIII reigned from 976, and the page heads him «(; - 937)». The year 937 is what is stored, with basis `traditional` and the reign quoted in the note, because 937 is what the page states twice and the reign is a gloss it does not date. The whole notice is one sentence and there is no hymn and no relic."
     },
     {
       "church": "serbian",
@@ -47,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 937,
+      "latest": 937,
+      "display": "937",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Αθανάσιος, αφού έζησε με ευσέβεια, απεβίωσε ειρηνικά στις ήμερες της βασιλείας Βασιλείου και Κωνσταντίνου το έτος 937 μ.Χ.», and the page heads him «(; - 937)». The reign the page names beside the year does not fit it — Basil II and Constantine VIII reigned from 976 — and the disagreement is the page's own and is not reconciled here. No year of birth is printed."
+    }
   }
 }

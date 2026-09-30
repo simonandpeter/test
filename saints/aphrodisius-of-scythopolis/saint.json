@@ -1,0 +1,57 @@
+{
+  "slug": "aphrodisius-of-scythopolis",
+  "display_name": "Aphrodisius of Scythopolis",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αφροδίσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαΐου, «Άγιοι Αφροδίσιος, Μίσδας, Μακρόβιος, Ουαλεριανός, Λεόντιος, Αντωνίνος οι Μάρτυρες και οι συν αυτοίς εν Σκυθουπόλει (Συρίας) μαρτυρησάντων», with the rank word left off."
+    }
+  ],
+  "related": [
+    "misdas",
+    "macrobius-of-scythopolis",
+    "valerian-4-may",
+    "leontius-of-scythopolis",
+    "antoninus-of-scythopolis"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαΐου — «Άγιοι Αφροδίσιος, Μίσδας, Μακρόβιος, Ουαλεριανός, Λεόντιος, Αντωνίνος οι Μάρτυρες και οι συν αυτοίς εν Σκυθουπόλει (Συρίας) μαρτυρησάντων»",
+        "url": "https://www.saint.gr/05/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Μαΐου εκάστου έτους», the same day as the listing. **This is a company the page enumerates by name — six head lines, six names — so it is six folders**, of which five are new here and the sixth, Valerian, is an upgrade on the corpus's existing `valerian-4-may`; «οι συν αυτοίς» names nobody further and nothing is claimed for the rest. **He is not the corpus's `aphrodisius`**, and the two are easy to separate: that folder is kept by the Romanian calendar on **21 June**, he is of **Cilicia**, he was tried by a ruler named **Dionysius**, and he was killed by a cut stone that fifty-five soldiers had lifted; this man is of **Scythopolis in Syria** on **4 May**, he came before his governor of his own accord, and he was stoned and clubbed with five named companions. Different day, different place, different story. **The page's couplets name a seventh man the listing does not**: one is headed «Eις τον Λεόντιον, Aντωνίνον και Mέλη» and reads «O Λεόντιος και συναθληταί δύω», Leontius and two fellow-contenders — so the verses know a Μέλης beside Leontius and Antoninus, and the listing and the head lines do not. **No folder was made for him**, because nothing on the page states that he is a person rather than a common noun, and the discrepancy is recorded here. No year, no emperor, no hymn, no relic; the synaxis was kept at the apostoleion of James the Brother of God inside the house of the Mother of God at the Chalkoprateia."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
