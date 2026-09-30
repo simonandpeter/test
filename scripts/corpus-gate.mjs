@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-koulakiotis john-mauropous john-of-edessa john-of-irenopolis john-of-kazan john-of-lycopolis john-of-spetses john-of-syracuse john-son-of-xenophon john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-sinaite-venerable-martyr':
+    'Fifteen men on fifteen Greek days: 6 October, 22 January, 15 February (Koulakiotis, the neomartyr saint.gr keeps there), 5 October, 31 January, 4 February, 24 January, 6 February, 3 February, 23 September, 26 January, 15 January, 10 February, 6 February and 12 February. The two 6 February entries are Lycopolis and the prophet of Gaza, two lines on one day page, so two commemorations and two men by the settled rule.',
   'ουαλεντινοσ valentine-of-interamna valentine-of-rome':
     'two men, and the second is a reader identity call the author should look at. saint.gr keeps Valentine of Rome on 14 Φεβρουαρίου, dated only «under the emperor Claudius» — which its own page gives as 41 to 54, recorded as the source printed it and not corrected. The other row went onto valentine-of-interamna, whose Romanian day is 30 iulie, on the reading that Terni is Interamna and the office matches; that identification is the readers and is flagged in ro-run/FINDINGS.md.',
   'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-of-corinth nicholas-of-japan nicholas-of-spetses nicholas-of-trebizond nicholas-of-valaam nicholas-the-studite':

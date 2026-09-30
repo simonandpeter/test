@@ -6,6 +6,11 @@
       "form": "Onisim",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 februarie."
+    },
+    {
+      "form": "Ονήσιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Φεβρουαρίου, «Άγιος Ονήσιμος ο Απόστολος», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -30,10 +35,46 @@
         "text": "O holy Apostles, entreat the merciful God to grant our souls forgiveness of sins.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς Ἐρήμου πολίτης.",
+      "text": "Ταὶς ἀκτίσι τοῦ Παύλου φωτισθεῖς τὴν διάνοιαν, ὤφθης ὑπηρέτης τοῦ Λόγου καὶ Ἀπόστολος ἔνθεος καὶ ὄνησιν ἐβράβευσας ζωῆς, Ὀνήσιμε θεράπων τοῦ Χριστοῦ, διὰ λόγων καὶ θαυμάτων θεοπρεπῶν, τοὶς πίστει ἐκβοώσι σοι, δόξα τῷ σὲ δοξάσαντι φαιδρῶς, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διὰ σοῦ, πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Τῆς Ἐρήμου πολίτης, on the page of Άγιος Ονήσιμος ο Απόστολος. It names him and plays on his name — ὄνησιν, profit — so it is his own. The page prints a second apolytikion in Ἦχος γ’, an oikos and a kathisma besides; the first apolytikion and the kontakion are taken here. The reading «τοὶς πίστει» is the page's own.",
+        "url": "https://www.saint.gr/3714/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened in mind by the rays of Paul, thou wast shown a servant of the Word and an apostle filled with God, and thou didst bestow the profit of life, O Onesimus, attendant of Christ, by words and by wonders befitting God, upon those who cry to thee with faith: glory to him who gloriously glorified thee, glory to him who crowned thee, glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ὡς ἀκτίς ἐξέλαμψας, τῇ οἰκουμένῃ, ταῖς βολαῖς λαμπόμενος, ἡλίου μάκαρ παμφαοῦς, Παύλου τοῦ κόσμον φωτίσαντος· διό σε πάντες, τιμῶμεν Ὀνήσιμε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of Άγιος Ονήσιμος ο Απόστολος.",
+        "url": "https://www.saint.gr/3714/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a ray thou didst shine out upon the world, lit by the beams of the all-radiant sun, blessed one — of Paul, who enlightened the world; and therefore we all honour thee, O Onesimus.",
+        "rendered": "site"
+      }
     }
   ],
   "related": [
-    "john-the-theologian"
+    "john-the-theologian",
+    "philemon-the-apostle",
+    "paul-the-apostle"
   ],
   "attestations": [
     {
@@ -58,8 +99,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Φεβρουαρίου — «Άγιος Ονήσιμος ο Απόστολος»",
+        "url": "https://www.saint.gr/02/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 109)» and closes with a second Greek day: «ο Aπόστολος Oνήσιμος εορτάζεται και στις 22 Νοεμβρίου» — Onesimus is kept also on 22 November. One attestation row is one feast, so the row records the day read and the second day stands here as a note. The page also says a church in his honour was raised at Constantinople in the tenth century."
     },
     {
       "church": "serbian",

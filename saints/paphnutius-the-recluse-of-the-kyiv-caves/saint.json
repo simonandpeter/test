@@ -1,0 +1,50 @@
+{
+  "slug": "paphnutius-the-recluse-of-the-kyiv-caves",
+  "display_name": "Paphnutius the Recluse of the Kyiv Caves",
+  "names": [
+    {
+      "form": "Παφνούτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Φεβρουαρίου, «Όσιος Παφνούτιος ο Έγκλειστος», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Φεβρουαρίου — «Όσιος Παφνούτιος ο Έγκλειστος»",
+        "url": "https://www.saint.gr/02/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of his page is one sentence: «Ο Όσιος Παφνούτιος έζησε στην Λαύρα των Σπηλαίων και είχε το χάρισμα των δακρύων» — he lived in the Lavra of the Caves and had the gift of tears. No year, no place of birth, no relic and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

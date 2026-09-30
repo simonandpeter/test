@@ -1,0 +1,67 @@
+{
+  "slug": "dalmatios-of-siberia",
+  "display_name": "Dalmatios of Siberia",
+  "names": [
+    {
+      "form": "Δαλμάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Φεβρουαρίου, «Όσιος Δαλμάτιος ο εκ Σιβηρίας», with the rank words left off. The page gives the name in the world separately, «κατά κόσμο Δημήτριος Ιβάνοβιτς Μοκρίνσκιϋ», which is a Greek rendering of a Russian name and is not taken as a name form here."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Φεβρουαρίου — «Όσιος Δαλμάτιος ο εκ Σιβηρίας»",
+        "url": "https://www.saint.gr/02/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1724)», puts his birth at Tobolsk «κατά τον 17ο αιώνα μ.Χ.», has him live as an ascetic at the monastery of Nevyansk in Siberia, and puts his relics at the monastery of the Ascension at Kurgan in Siberia."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1601,
+      "latest": 1700,
+      "display": "17th century",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην πόλη Τομπόλσκ της Ρωσίας κατά τον 17ο αιώνα μ.Χ.» — the page gives the century and no year, and the interval is that century."
+    },
+    "death": {
+      "earliest": 1724,
+      "latest": 1724,
+      "display": "1724",
+      "basis": "attested",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη το έτος 1724 μ.Χ.», and the page heads him «(; - 1724)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

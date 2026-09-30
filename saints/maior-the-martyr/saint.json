@@ -6,6 +6,11 @@
       "form": "Maior",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 februarie."
+    },
+    {
+      "form": "Μαΐωρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Φεβρουαρίου, «Άγιος Μαΐωρ», with the rank words left off. The page offers a second spelling in the body, «O Άγιος Μαΐωρ (ή Μαΐων)», which is not taken as a separate form here."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Φεβρουαρίου — «Άγιος Μαΐωρ»",
+        "url": "https://www.saint.gr/02/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives a second spelling of the name, «Μαΐωρ (ή Μαΐων)», makes him a soldier in the tagma of the Moors under Diocletian and Maximian, and puts him at Gaza when the persecution began in 302, denounced to the prefect there and tortured to death. It gives no year for the death itself and no hymn."
     },
     {
       "church": "serbian",
@@ -46,5 +61,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian and Maximian",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησε επί αυτοκρατόρων Διοκλητιανού (284 - 305 μ.Χ.) και Μαξιμιανού (285 - 305 μ.Χ.)», and it puts him at Gaza «όταν άρχισε ο διωγμός κατά των χριστιανών το 302 μ.Χ.» The interval is the reigns the page prints; the page gives no year for his death and none is inferred here."
+    }
   }
 }

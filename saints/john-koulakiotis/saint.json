@@ -1,0 +1,59 @@
+{
+  "slug": "john-koulakiotis",
+  "display_name": "John Koulakiotis",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Φεβρουαρίου, «Άγιος Ιωάννης Κουλακιώτης ο εν Θεσσαλονίκη», with the rank words left off. The by-name Κουλακιώτης stands in the same line and is kept here, from Koulakia, the town the page identifies with today's Chalastra."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Φεβρουαρίου — «Άγιος Ιωάννης Κουλακιώτης ο εν Θεσσαλονίκη»",
+        "url": "https://www.saint.gr/02/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1776)» and puts the hanging at Thessalonica «ημέρα Τρίτη, ώρα 4 π.μ., το έτος 1776 μ.Χ.» — on a Tuesday at four in the morning, in 1776, without a trial. It says services for him were composed by Gerasimos Mikragiannanites and by Archimandrite Joel Frangakos, metropolitan of Edessa."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1776,
+      "latest": 1776,
+      "display": "1776",
+      "basis": "attested",
+      "note": "saint.gr: «εκτελέσθηκε άνευ δίκης με απαγχονισμό, ημέρα Τρίτη, ώρα 4 π.μ., το έτος 1776 μ.Χ.», and the page heads him «(; - 1776)», leaving the year of his birth a question mark."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

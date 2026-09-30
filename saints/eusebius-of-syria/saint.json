@@ -6,6 +6,11 @@
       "form": "Eusebiu din Siria",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 februarie."
+    },
+    {
+      "form": "Ευσέβιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Φεβρουαρίου, «Όσιος Ευσέβιος», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Φεβρουαρίου — «Όσιος Ευσέβιος»",
+        "url": "https://www.saint.gr/02/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The Greek line gives him the bare name and no country; his page puts him in the fifth century, sets his ascesis on a mountain ridge near the city of Asicha, and ends him asleep in peace at ninety. It prints no hymn."
     },
     {
       "church": "serbian",
@@ -47,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ευσέβιος έζησε κατά τον 5ο αιώνα μ.Χ.» The page gives the century and no year; it adds that he fell asleep «σε ηλικία 90 ετών», at ninety, without saying when."
+    }
   }
 }
