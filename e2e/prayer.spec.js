@@ -372,15 +372,31 @@ const reaches = (card, query) => {
     .every((word) => text.includes(word));
 };
 
+const IN_HYMNAL = new Set(HYMNED.map((c) => c.slug));
+
 const HIDDEN_MENTION = (() => {
   for (const [at, card] of HYMNED.entries()) {
     for (const slug of card.mentionedIn ?? []) {
+      if (!IN_HYMNAL.has(slug)) continue;
       const target = CARDS.find((c) => c.slug === slug);
       if (target && !reaches(target, card.display_name)) return { at, slug };
     }
   }
   return null;
 })();
+
+/**
+ * A hymned saint whose margins name somebody the hymnal does **not** hold: the
+ * dim tile, which is drawn for company that has no page here to open. Read off
+ * the manifest for the reason every fixture on this page now is — the first
+ * eight saints of the hymnal have no such company since the Greek wave.
+ */
+const WITH_UNHYMNED_COMPANY = HYMNED.findIndex((card) =>
+  [...(card.related ?? []), ...(card.mentionedIn ?? [])].some((slug) => !IN_HYMNAL.has(slug)),
+);
+
+/** A hymned saint with an icon: the picture frame, the credit and the lede. */
+const WITH_PICTURE = HYMNED.findIndex((card) => card.image);
 
 /**
  * The feast index this year, built the same way the page builds it — one walk
@@ -898,6 +914,11 @@ test('a tile in the same-day column prints the day, not the lifespan', async ({ 
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
   const aside = page.locator('#hy-sameday');
+  // Stepped to: whom the hymnal opens on is not a saint with company on his day
+  // since the Greek wave, which the two tests above this one say as well.
+  for (let i = 0; i < 8 && !(await aside.locator('.day-tile').count()); i += 1) {
+    if (i > 0) await stepTo(page, 1);
+  }
   await expect(aside.locator('.day-tile').first()).toBeVisible();
   await expect.poll(() => aside.getAttribute('data-iso')).not.toBeNull();
 
@@ -944,13 +965,11 @@ test('a dimmed name is faded, not faint: it clears 4.5:1 in both themes', async 
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
 
-  let found = false;
-  for (let i = 0; i < 8 && !found; i += 1) {
-    if (i > 0) await stepTo(page, 1);
-    await expect.poll(() => page.locator(`.hy-body ${ROW}`).count()).toBeGreaterThanOrEqual(0);
-    found = (await page.locator('.hy-body .day-tile.is-dim').count()) > 0;
-  }
-  expect(found, 'some saint in the first eight has un-hymned company').toBe(true);
+  expect(WITH_UNHYMNED_COMPANY, 'the corpus holds a hymned saint with un-hymned company').toBeGreaterThanOrEqual(0);
+  await stepTo(page, WITH_UNHYMNED_COMPANY);
+  await expect
+    .poll(() => page.locator('.hy-body .day-tile.is-dim').count())
+    .toBeGreaterThan(0);
 
   for (const theme of ['day', 'vigil']) {
     await page.evaluate((t) => document.documentElement.classList.toggle('dark', t === 'vigil'), theme);
@@ -1015,7 +1034,14 @@ test('the saint in hand wears the mockup’s hymn, preview and credit', async ({
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
 
-  // A card with a picture, a life long enough to fill the preview, and a hymn.
+  /*
+   * A card with a picture, a life long enough to fill the preview, and a hymn —
+   * stepped to off the manifest rather than looked for in the first twelve,
+   * which since the Greek wave hold no icon between them. The walk searches on
+   * from there, because how long a life is is not in the manifest.
+   */
+  expect(WITH_PICTURE, 'the corpus holds a hymned saint with an icon').toBeGreaterThanOrEqual(0);
+  await stepTo(page, WITH_PICTURE);
   let found = false;
   for (let i = 0; i < 12 && !found; i += 1) {
     if (i > 0) await stepTo(page, 1);
@@ -1035,7 +1061,7 @@ test('the saint in hand wears the mockup’s hymn, preview and credit', async ({
       );
     }
   }
-  expect(found, 'no saint in the first twelve has a picture and a long life').toBe(true);
+  expect(found, 'no hymned saint from the first with an icon on has a long life too').toBe(true);
 
   const read = () =>
     page.evaluate(() => {
