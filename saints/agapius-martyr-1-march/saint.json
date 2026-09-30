@@ -1,0 +1,55 @@
+{
+  "slug": "agapius-martyr-1-march",
+  "display_name": "Agapius, with Charisius and Nicephorus",
+  "names": [
+    {
+      "form": "Αγάπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαρτίου, «Άγιοι Χαρίσιος, Νικηφόρος και Αγάπιος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Άγιοι Χαρίσιος, Νικηφόρος και Αγάπιος»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The three are named on one page which then says «Δεν έχουμε λεπτομέρειες για τον βίο των Αγίων» — we have no details of the saints' lives. Because the line enumerates all three by name, each is kept as a folder of his own. The same Greek day keeps the venerable Agapius of the skete of Colciu, who has a page and a life of his own and is a different man; this one is a martyr of whom nothing at all is told. The etymology block over the name adds «Αθηναίος πολυμαθής φιλόσοφος», an Athenian polymath philosopher, which is a note on other bearers of the word and not a statement about this martyr."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "agapius-of-colciu",
+    "charisius-martyr-1-march",
+    "nicephorus-martyr-1-march"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "gervasius-companion-of-leo",
+  "display_name": "Gervasius, companion of Leo",
+  "names": [
+    {
+      "form": "Γερβάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαρτίου, «Άγιοι Γερβάσιος και Λέων οι αυτάδελφοι», with the rank word and the epithet left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Άγιοι Γερβάσιος και Λέων οι αυτάδελφοι»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "One page holds the two of them and gives them two sentences: «Οι Άγιοι Γερβάσιος και Λέων μαρτύρησαν κατά τον 2ο αιώνα μ.Χ. Ο Άγιος Λέων ήταν Απόστολος των Βάσκων». The day's line calls them «οι αυτάδελφοι», own brothers. The corpus keeps a Gervasius of Milan, and he is not this man: saint.gr itself keeps that one on 14 Οκτωβρίου, in the company «Άγιοι Ναζάριος, Προτάσιος, Γερβάσιος και Κέλσιος» (https://www.saint.gr/10/14/index.aspx, read 30 September 2026), which is the same day the Romanian calendar keeps him on. Two entries on one calendar are two commemorations. No country, no judge, no manner of death, no relic, no distich and no hymn stand on this page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 101,
+      "latest": 200,
+      "display": "2nd century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Γερβάσιος και Λέων μαρτύρησαν κατά τον 2ο αιώνα μ.Χ.» — they were martyred in the second century after Christ. That is the only date the page gives, and it gives it for the pair."
+    }
+  },
+  "related": [
+    "leo-companion-of-gervasius"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

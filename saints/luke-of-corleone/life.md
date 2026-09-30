@@ -1,0 +1,11 @@
+# Luke of Corleone
+
+saint.gr puts this Luke's birth at Corleone in Sicily in the tenth century, of pious and God-loving parents, Leo and Theoktiste, who brought him up in the instruction and admonition of the Lord; his own name in the world was Leo. When his parents died he took refuge in the monastery of St Philip — «στην Άγκυρα», the page says — and left it again because of the Saracen raids, coming over to Calabria, to the monastery of Mount Mula near Cassino, where he was tonsured a monk and stayed six years.
+
+Afterwards he went with Christopher, the abbot of that house, to the region of Mercurion. There they found a new monastery and lived in it ascetically seven years, and then carried their spiritual struggle on in another monastic place for ten more. God gave him the gift of wonderworking, and crowds of the faithful came out to the ascetic for his blessing and for healing.
+
+A little later, after the death of the abbot Christopher, he took up the abbacy of the monastery on Mount Mula, and new labours began: he healed the sick, drove out demons, raised up the paralysed, guided the lost towards the road of salvation, prayed without ceasing, and to press his ascesis harder stayed outdoors in the cold twenty days together. In deep old age he called the monks to him and foretold his end; he gave the duties of superior of the house to the monk Theodore and named the presbyter Euthymius his helper, and having communed of the immaculate Mysteries he fell asleep in peace and was buried in the church of the Most Holy Theotokos.
+
+The corpus already keeps a [Luke of Sicily](/saints/luke-of-sicily), and he is another man. saint.gr keeps that one on the sixth of November, born at Tauromenium, ascetic in a place on Etna, traveller to Byzantium and dead near Corinth — which is exactly the life the Romanian calendar gives for the sixth of November. The two accounts share the name and the island and nothing else: not the city of birth, not the region of the ascesis, not the office, not the place of repose. The page gives this one no year for his death and no relic.
+
+*After saint.gr's calendar for 1 Μαρτίου — [the day](https://www.saint.gr/03/01/index.aspx) and [the life](https://www.saint.gr/3789/saint.aspx); read 30 September 2026.*

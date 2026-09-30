@@ -1,0 +1,50 @@
+{
+  "slug": "paul-venerable-martyr-1-march",
+  "display_name": "Paul (1 March)",
+  "names": [
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαρτίου, «Άγιος Παύλος ο Οσιομάρτυρας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Άγιος Παύλος ο Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The page is one sentence and it hedges its own dating: «Άγνωστο που και πότε μαρτύρησε, μάλλον όμως επί των εικονομάχων, αφού οι Συναξαριστές σημειώνουν ότι υπέρ των αγίων εικόνων δια του πυρός ετελειώθη» — unknown where and when he was martyred, but rather under the iconoclasts, since the synaxarists note that he was perfected by fire for the holy icons. Because «μάλλον» is the site's own word for it, no date is recorded in this folder. No country, no relic, no distich and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

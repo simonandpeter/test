@@ -6,6 +6,11 @@
       "form": "Antonie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 martie, «Sfântul Mucenic Antonie»."
+    },
+    {
+      "form": "Αντώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαρτίου, «Άγιοι Μάρκελλος και Αντώνιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Άγιοι Μάρκελλος και Αντώνιος»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "One page holds the two of them and gives them one sentence: «Οι Άγιοι Μάρκελλος και Αντώνιος μαρτύρησαν αφού τους έριξαν μέσα στη φωτιά» — they were martyred after being thrown into the fire. It prints the distich «Χώνη τις ἡ κάμινος Ἀθληταῖς δύο, / Οἳ χρυσίου λάμπουσιν ἐν ταύτῃ πλέον», and gives no year, no country, no judge, no relic and no hymn."
     },
     {
       "church": "serbian",

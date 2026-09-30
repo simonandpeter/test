@@ -1,0 +1,54 @@
+{
+  "slug": "sylvester-the-patriarch",
+  "display_name": "Sylvester (1 March)",
+  "names": [
+    {
+      "form": "Σίλβεστρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαρτίου, «Άγιος Σιλβέστρος Πατριάρχης», with the rank words left off. The page's own body prints the accented form «Σίλβεστρος», which is the one taken."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Άγιος Σιλβέστρος Πατριάρχης»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is a citation: «Η μνήμη του Αγίου Σιλβέστρου αναφέρεται στο Ιεροσολυμιτικό Κανονάριο σελ. 36 ως έξης: „Ἐν τὴ Ἀναστάσει, τοῦ ἁγίου πατριάρχου Σιλβέστρου“». It adds that his festival was held in the church of the Anastasis, and that of which city Sylvester was Patriarch — the one whose memory the church of Jerusalem keeps — is not known. The rank this folder carries is that manuscript's word and nothing more. The same Greek day keeps a martyr Sylvester on a page of his own; two entries on one calendar are two commemorations, and nothing on either page connects them."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "sylvester-companion-of-sophronius"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

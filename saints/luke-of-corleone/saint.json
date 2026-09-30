@@ -1,0 +1,64 @@
+{
+  "slug": "luke-of-corleone",
+  "display_name": "Luke of Corleone",
+  "names": [
+    {
+      "form": "Λουκάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαρτίου, «Όσιος Λουκάς ο εκ Σικελίας», with the rank word and the island left off. The body of the page gives his name in the world as Leo, «κατά κόσμο Λέων»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Όσιος Λουκάς ο εκ Σικελίας»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The page puts his birth at Corleone in Sicily «κατά τον 10ο αιώνα μ.Χ.», names his parents Leo and Theoktiste and his own name in the world as Leo, and takes him to the monastery of St Philip «στην Άγκυρα» — so the page, which the geography does not obviously bear out — then, driven by Saracen raids, to Calabria and the monastery of Mount Mula near Cassino where he was tonsured. The corpus already keeps a Luke of Sicily, and he is not this man: that one is saint.gr's «Όσιος Λουκάς» of 6 Νοεμβρίου (https://www.saint.gr/2924/saint.aspx, read 30 September 2026), born at Tauromenium, ascetic on Etna, and reposed near Corinth, which is the man the Romanian calendar keeps on 6 noiembrie. The two lives share nothing but the name and the island. No relic, no distich and no hymn stand on this page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 901,
+      "latest": 1000,
+      "display": "10th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Λουκάς, κατά κόσμο Λέων, γεννήθηκε στην Κορλεόνε της Σικελίας κατά τον 10ο αιώνα μ.Χ.» — he was born at Corleone in Sicily in the tenth century after Christ. That is the only date the page gives; it gives no year for his repose."
+    }
+  },
+  "related": [
+    "luke-of-sicily"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Antonina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 martie, «Sfânta Muceniță Antonina»."
+    },
+    {
+      "form": "Αντωνίνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαρτίου, «Αγία Αντωνίνα», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -43,8 +48,19 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian",
+        "note": "saint.gr's own life page for her closes «Η μνήμη της Αγίας επαναλαμβάνεται την 12η Ιουνίου» — her memory is kept again on 12 June (https://www.saint.gr/3775/saint.aspx, read 30 September 2026). The corpus keeps one feast to a church, so she renders on 1 March only."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Αγία Αντωνίνα»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads her «Αγια Αντωνινα (; - 304)» and puts her at Nicaea of Bithynia «κατά τους χρόνους του αυτοκράτορα Μαξιμιανού (286 - 305 μ.Χ.)». Its «(; - 304)» is a single year for her death which the corpus's own dates, read off doxologia as a persecution under Maximian, do not carry; the corpus's interval is left as it stands and saint.gr's year is recorded here. The page prints no hymn and names no relic."
     },
     {
       "church": "serbian",

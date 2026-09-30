@@ -1,0 +1,50 @@
+{
+  "slug": "synesius-of-lysi",
+  "display_name": "Synesius of Lysi",
+  "names": [
+    {
+      "form": "Συνέσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαρτίου, «Όσιος Συνέσιος ο εν Λύση της Κύπρου αθλήσας», with the rank word and the place left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Όσιος Συνέσιος ο εν Λύση της Κύπρου αθλήσας»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The page behind the line says «Δεν έχουμε λεπτομέρειες για τον βίο του Οσίου» — we have no details of the venerable one's life — so the whole of what is recorded is in the line itself: that he contended at Lysi in Cyprus. The etymology block over the name adds «Συγγραφέας από την Κυρήνη του 4ου μ.Χ. αιώνα», a writer from Cyrene of the fourth century, which is the site's note on other bearers of the word and is not attached to this man; no date is taken from it. No relic, no distich and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

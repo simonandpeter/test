@@ -115,6 +115,28 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'παυλοσ paul-brother-of-pausirius paul-disciple-of-dionysius-of-alexandria paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-simonov paul-of-zographou paul-the-martyr-3-february paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
+    'Ten men. The new one is the venerable martyr of 1 March; the other nine are read in the el-02-16 and el-01-10 entries for this name form.',
+  'λουκασ luke-of-corleone luke-of-emesa luke-of-hellas luke-of-novgorod':
+    'Four men on four Greek days: Corleone on 1 March, Emesa on 29 January, Hellas on 7 February and Novgorod on 10 February.',
+  'λεων leo-companion-of-gervasius leo-companion-of-manuel leo-of-catania leo-of-nicaea leo-of-patara leo-the-great':
+    'Six men. The new one is the companion of Gervasius on 1 March; the others are read in the el-02-20 and el-02-18 entries for this name form, where 18 February keeps Leo the Great and Leo of Patara as two lines and 22 January the companion of Manuel and the man of Nicaea.',
+  'companion gervasius leo gervasius-companion-of-leo leo-companion-of-gervasius':
+    'The pair the 1 March page names together, each named after the other, which is what folds them.',
+  'αντωνινα antonina-of-nicaea antonina-of-nicomedia antonina-venerable-martyr-1-march':
+    'Three women, and two of them are on the Greek 1 March as two entries: Antonina of Nicaea, whom the Romanian calendar keeps there too, and the venerable martyr of whom the page says only that she was martyred in 1924. Sixteen centuries apart. Nicomedia is 9 January.',
+  'σιλβεστροσ sylvester-companion-of-sophronius sylvester-of-rome sylvester-of-the-kyiv-caves sylvester-the-patriarch':
+    'Four men, and two of them are on the Greek 1 March as two entries: the companion of Sophronius, and the patriarch whose whole record is a citation of the Jerusalem Kanonarion at page 36. The other two share 2 January, the pope and the Kiev Caves ascetic, read in the el-01-02 entry for this name form.',
+  'companion sophronius sylvester sophronius-companion-of-sylvester sylvester-companion-of-sophronius':
+    'The pair the 1 March page names together, each named after the other, which is what folds them.',
+  'σωφρονιοσ sophronius-bishop-19-february sophronius-companion-of-sylvester':
+    'Two men: the bishop of 19 February, and the companion of Sylvester on 1 March.',
+  'νικηφοροσ nicephorus-martyr-1-march nicephorus-martyr-8-february nicephorus-of-antioch nicephorus-of-corinth nicephorus-of-crete nicephorus-of-the-svir-desert':
+    'Six men on six Greek days: 1 March (with Charisius and Agapius), 8 February, 9 February, 31 January, 11 January and the Svir desert on 9 February. The two 9 February men are Antioch, whom the Romanian calendar keeps there too, and the Russian of the Svir, two lines on one day page.',
+  'agapius charisius nicephorus agapius-martyr-1-march charisius-martyr-1-march nicephorus-martyr-1-march':
+    'The three the 1 March page names together and knows nothing else about, each named after the others in the display name, which is what folds them.',
+  'αγαπιοσ agapius-disciple-of-babylas agapius-martyr-1-march agapius-of-apamea agapius-of-colciu':
+    'Four men, and two of them are on the Greek 1 March as two entries: the martyr of whom the page says «Δεν έχουμε λεπτομέρειες», named with Charisius and Nicephorus, and Agapius of Colciu, the Romanian elder of Athos whom both calendars keep there. Twenty centuries apart and two lines. The others are 24 January and 11 January.',
   'θεοφιλοσ theophilus-martyr-6-february theophilus-of-rome theophilus-the-deacon-of-libya theophilus-the-new':
     'Four men on four Greek days: 6 February, 28 February (Rome), 8 January and 30 January.',
   'σεραπιων serapion-disciple-of-cronides serapion-of-alexandria':

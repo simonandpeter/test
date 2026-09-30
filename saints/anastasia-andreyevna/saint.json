@@ -1,0 +1,51 @@
+{
+  "slug": "anastasia-andreyevna",
+  "display_name": "Anastasia (Andreyevna)",
+  "names": [
+    {
+      "form": "Αναστασία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαρτίου, «Αγία Αναστασία η Νεομάρτυς», with the rank word left off. The body of the page adds a patronymic in brackets and in Greek letters, «της Ρωσίδας Αγίας Αναστασίας (Αντρέγιεβνα)»; that bracketed form is the site's own rendering of a Russian word and is kept in the display name rather than stored as a name form."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "new-martyr",
+    "fool-for-christ"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr calls her Russian, so that calendar is the one most likely to hold her, and it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Αγία Αναστασία η Νεομάρτυς»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The page is one sentence and it is a statement of what the site does not know: «Δεν έχουμε λεπτομέρειες για τον βίο και το Μαρτύριο της Ρωσίδας Αγίας Αναστασίας (Αντρέγιεβνα) παρά μόνο ότι ήταν διά Χριστόν σαλή» — we have no details of the life and martyrdom of the Russian saint Anastasia (Andreyevna) except that she was a fool for Christ. It gives no year at all, no place in Russia, no relic, no distich and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

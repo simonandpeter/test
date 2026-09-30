@@ -1,0 +1,54 @@
+{
+  "slug": "sylvester-companion-of-sophronius",
+  "display_name": "Sylvester, companion of Sophronius",
+  "names": [
+    {
+      "form": "Σιλβέστρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαρτίου, «Άγιοι Σιλβέστρος και Σωφρόνιος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Άγιοι Σιλβέστρος και Σωφρόνιος»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "One page holds the two of them and gives them one sentence: «Οι Άγιοι Σιλβέστρος και Σωφρόνιος μαρτύρησαν δια ξίφους» — they were martyred by the sword. Over them it prints the distich «Οὐ καρτερῶν Σίλβεστρε θρησκεύειν πλάνην, / Σὺν Σωφρονίῳ τὴν τομὴν ἐκαρτέρεις», which names both. No year, no country, no emperor, no judge, no relic and no hymn stand on the page. The same Greek day keeps a Patriarch Sylvester on a page of his own, and the two are not told in terms of one another."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "sophronius-companion-of-sylvester",
+    "sylvester-the-patriarch"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

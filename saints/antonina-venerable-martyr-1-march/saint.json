@@ -1,0 +1,62 @@
+{
+  "slug": "antonina-venerable-martyr-1-march",
+  "display_name": "Antonina (1 March)",
+  "names": [
+    {
+      "form": "Αντωνίνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαρτίου, «Αγία Αντωνίνα η Οσιομάρτυς», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Αγία Αντωνίνα η Οσιομάρτυς»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads her «(; - 1924)» and gives her one sentence: «Η Αγία Οσιομάρτυς Αντωνίνα μαρτύρησε το έτος 1924 μ.Χ. Δεν έχουμε άλλες λεπτομέρειες για τον βίο της Αγίας». The same Greek day keeps the martyr Antonina of Nicaea, who died under Maximian, on a page of her own; two entries on one calendar are two commemorations, and sixteen centuries stand between the two years the site prints for them. No country, no monastery, no relic, no distich and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1924,
+      "latest": 1924,
+      "display": "1924",
+      "basis": "attested",
+      "note": "saint.gr: «Η Αγία Οσιομάρτυς Αντωνίνα μαρτύρησε το έτος 1924 μ.Χ.», and the page heads her «(; - 1924)», leaving the year of her birth a question mark."
+    }
+  },
+  "related": [
+    "antonina-of-nicaea"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

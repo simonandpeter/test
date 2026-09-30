@@ -1,0 +1,59 @@
+{
+  "slug": "methodius-hieromartyr-1-march",
+  "display_name": "Methodius (1 March)",
+  "names": [
+    {
+      "form": "Μεθόδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαρτίου, «Άγιος Μεθόδιος ο Ιερομάρτυρας εκ Ρωσίας», with the rank words and the country left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr calls him «εκ Ρωσίας», out of Russia, so that calendar is the one most likely to hold him, and it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Άγιος Μεθόδιος ο Ιερομάρτυρας εκ Ρωσίας»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1920)» and gives him one sentence: «Ο Άγιος Ιερομάρτυς Μεθόδιος μαρτύρησε το έτος 1920 μ.Χ. Δεν έχουμε περισσότερες λεπτομέρειες για τον βίο του Αγίου». It gives no surname, no city, no diocese, no relic, no distich and no hymn. The corpus keeps a Methodius (Ivanov), a monk martyred in 1937, and he is a different man in a different year with a different rank."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1920,
+      "latest": 1920,
+      "display": "1920",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Ιερομάρτυς Μεθόδιος μαρτύρησε το έτος 1920 μ.Χ.», and the page heads him «(; - 1920)», leaving the year of his birth a question mark."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

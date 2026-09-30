@@ -1,0 +1,60 @@
+{
+  "slug": "paraskevas-of-trebizond",
+  "display_name": "Paraskevas of Trebizond",
+  "names": [
+    {
+      "form": "Παρασκευάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαρτίου, «Άγιος Παρασκευάς ο Τραπεζούντιος ο νεομάρτυρας», with the rank words and the city left off. The page's own etymology block over him is headed ΠΑΡΑΣΚΕΥΗ, the woman's form, which is a note on the name and not the form his line prints."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Άγιος Παρασκευάς ο Τραπεζούντιος ο νεομάρτυρας»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1659)», calls him one of the notables of Trebizond, and says he was martyred there by hanging. It puts the burial of his relic in the church of St Gregory of Nyssa and its translation from there to the monastery of Theoskepastos of Trebizond. Beside his name it links the synaxis of the new martyrs who suffered after the taking of Constantinople, which is a company and not a person and is not kept here. It prints no distich and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1659,
+      "latest": 1659,
+      "display": "1659",
+      "basis": "attested",
+      "note": "saint.gr: «Μαρτύρησε το έτος 1659 μ.Χ. στην Τραπεζούντα δι' απαγχονισμού», and the page heads him «(; - 1659)», leaving the year of his birth a question mark."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

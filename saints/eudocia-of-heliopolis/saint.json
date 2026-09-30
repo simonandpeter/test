@@ -6,6 +6,11 @@
       "form": "Evdochia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 martie, «Sfânta Cuvioasă Muceniță Evdochia»."
+    },
+    {
+      "form": "Ευδοκία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαρτίου, «Αγία Ευδοκία η από Σαμαρειτών η Οσιομάρτυς», with the rank words left off."
     }
   ],
   "sex": "female",
@@ -43,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Αγία Ευδοκία η από Σαμαρειτών η Οσιομάρτυς»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads her «Αγια Ευδοκια η Απο Σαμαρειτων η Οσιομαρτυς (; - 107)» and puts her birth «στη Ηλιούπολη της επαρχίας Λιβανησίας, της Φοινίκης, την εποχή του Τραϊανού (98 - 117 μ.Χ.)». It names the monk Germanus whose counsels brought her to repentance, the bishop Theodotus who baptised her after a vision, Aurelian before whom she was first tried, the governor Diogenes who released her, and Vincentius who beheaded her. It lists portions of her relics at the monasteries of Simonopetra on the Holy Mountain, Phaneromeni on Salamis, Agia Lavra of Kalavryta and Voulkanou in Messenia, and at the Lavra of St Alexander Nevsky in St Petersburg. Its «(; - 107)» is a death year the corpus's own dates, read off doxologia's reign of Trajan, do not carry; the corpus's reading is left as it stands and saint.gr's is recorded here."
     },
     {
       "church": "serbian",
@@ -66,6 +81,40 @@
       },
       "english": {
         "text": "Thy ewe-lamb, O Jesus, Eudocia, cries out with a loud voice: Thee, my Bridegroom, do I love, and seeking Thee I am in torment; with Thee I am crucified and with Thee buried in Thy baptism; I suffer for Thy sake that I may reign in Thee, and I die for Thee that I may live for Thee. Receive me, then, as an offering without blemish, sacrificed to Thee in love. At her prayers, since Thou art merciful, save Thou our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Φόβον ἔνθεον, ἀναλαβοῦσα, κόσμου ἔλιπες, τὴν εὐδοξίαν, καὶ τῷ Λόγῳ Εὐδοκία προέδραμες, οὐ τὸν ζυγὸν τὴ σαρκί σου βαστάσασα, ὑπερφυῶς ἠγωνίσω δι' αἵματος. Μάρτυς ἔνδοξε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως, on the page of Αγία Ευδοκία η από Σαμαρειτών η Οσιομάρτυς. It names her and turns on the name, εὐδοξία against Εὐδοκία. The page prints two other texts under her as well: an «Έτερον Ἀπολυτίκιον» in Ἦχος πλ. δ’, «Ἐν σοί Μῆτερ ἀκριβῶς διεσώθη τό κατ᾽ εἰκόνα», which is the common of a venerable woman with her name set into its last line, and a Κάθισμα in Ἦχος πλ. δ’ which the corpus's schema has no kind for. The first apolytikion and the kontakion are the two taken here.",
+        "url": "https://www.saint.gr/3773/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taking up a godly fear, thou didst leave behind the world's good repute, and didst run forward to the Word, O Eudocia, not bearing the yoke upon thy flesh; beyond nature thou didst contend through blood. Glorious martyr, entreat Christ our God, that he grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθείς.",
+      "text": "Ὁ εὐδοκήσας ἐκ βυθοῦ ἀπωλείας, πρός εὐσεβείας τόν ἀκρότατον ὅρον, ἀναγαγεῖν σε ἔνδοξε ὡς λίθον ἐκλεκτόν, οὗτος καί τόν βίον σου, τῇ ἀθλήσει λαμπρύνας, χάριν ἰαμάτων σοι, Εὐδοκία παρέχει· ὃν ἐκδυσώπει σῴζεσθαι ἡμᾶς, Ὁσιομάρτυς, Ἀγγέλων ἐφάμιλλε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Ὁ ὑψωθείς, on the page of Αγία Ευδοκία η από Σαμαρειτών η Οσιομάρτυς. It names her and plays εὐδοκήσας against Εὐδοκία as the apolytikion plays on εὐδοξία.",
+        "url": "https://www.saint.gr/3773/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "He who was well pleased to lead thee up, O glorious one, out of the depth of ruin to the utmost bound of godliness, as a chosen stone, hath made thy life shine by thy contest and granteth thee the grace of healings, O Eudocia. Beseech him that we be saved, O venerable martyr, rival of the angels.",
         "rendered": "site"
       }
     }

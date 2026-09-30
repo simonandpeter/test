@@ -6,6 +6,11 @@
       "form": "David",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 martie, «Sfântul David, ocrotitorul Țării Galilor»."
+    },
+    {
+      "form": "Δαβίδ",
+      "lang": "el",
+      "note": "saint.gr writes the name in Latin letters in its line for 1 Μαρτίου, «Άγιος David», and gives its own Greek rendering in brackets in the body, «Ο Άγιος David (Δαβίδ)». That bracketed form is the only Greek one the page prints and is the one taken."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Άγιος David»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The page prints his name in Latin letters and gives its own Greek rendering in brackets in the body, «Ο Άγιος David (Δαβίδ)». It heads him «(; - 601)» and then says in the body «Μετά την κοίμησή του γύρω στο 600 μ.Χ.», around the year 600, which is a shade looser than the head; the corpus's own date, read off doxologia as «în jurul anului 601», is left as it stands. The page puts his monastery at Mynyw, Menevia, today's St Davids in Pembrokeshire, has him elected bishop by the Patriarch of Jerusalem when he went there to venerate, has him at the synod of Brefi in 545 where he is said to have been chosen archbishop by common consent and his monastery declared the mother church of all Wales, credits him with twelve monastic foundations, and says his relics are kept to this day in his cathedral at St Davids. It prints no hymn."
     },
     {
       "church": "serbian",

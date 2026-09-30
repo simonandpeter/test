@@ -6,6 +6,11 @@
       "form": "Agapie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 martie, «Sfântul Cuvios Agapie de la Colciu»."
+    },
+    {
+      "form": "Αγάπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαρτίου, «Όσιος Αγάπιος από τη Σκήτη της Κολιτσούς και οι μετ’ αυτού τέσσερις όσιοι», with the rank word and the skete left off."
     }
   ],
   "sex": "male",
@@ -47,8 +52,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Όσιος Αγάπιος από τη Σκήτη της Κολιτσούς και οι μετ’ αυτού τέσσερις όσιοι»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line couples him with «οι μετ’ αυτού τέσσερις όσιοι», the four venerable ones with him, and the page behind it names none of the four, so they are not folders here. The page puts his skete under Vatopedi, reports from Gerasimos Smyrnakis that the place took its name from his elder, the hesychast Koletios, and says the service for him was composed by St Gerasimos Mikragiannanitis and by Charalampis Bousias. It notes that St Nicodemus the Hagiorite has the pirates Saracens whom Agapius turned and baptised, while others have them Agarenes who sold him as a slave, and it gives Magnesia as the place of his slavery and twelve years as its length. «Ο χρόνος της ασκήσεως τους είναι άγνωστος» — the time of their ascesis is unknown — so the page carries no year, and the corpus's own late-eighteenth-century reading, read off doxologia, is left as it stands. The page prints no hymn and names a portable icon of him at the monastery of Karakallou, of 1943."
     },
     {
       "church": "serbian",

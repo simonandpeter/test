@@ -6,6 +6,11 @@
       "form": "Domnina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 martie, «Sfânta Cuvioasă Domnina»."
+    },
+    {
+      "form": "Δομνίνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαρτίου, «Οσία Δομνίνα η Νέα», with the rank word and the epithet left off."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαρτίου — «Οσία Δομνίνα η Νέα»",
+        "url": "https://www.saint.gr/03/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The page calls her «η Νέα», the New, puts her at «την πόλη Κύρο της Συρίας» — the city of Cyrrhus in Syria — and says she lived «κατά το πρώτο μισό του 5ου αιώνα μ.Χ.». It names the bishop Theodoret, who esteemed her and held her up as an example to the rich young women of his flock, and adds that in the late afternoon she used to go to the church next to her and make her petitions in the silence of it. It gives no year of birth or of repose, no relic and no hymn."
     },
     {
       "church": "serbian",
@@ -46,5 +61,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 400,
+      "latest": 450,
+      "display": "first half of the 5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «H Οσία Δομνίνα καταγόταν από την πόλη Κύρο της Συρίας και έζησε κατά το πρώτο μισό του 5ου αιώνα μ.Χ.» — she came of the city of Cyrrhus in Syria and lived in the first half of the fifth century. doxologia.ro, from which this folder was first written, gives her no year at all."
+    }
   }
 }
