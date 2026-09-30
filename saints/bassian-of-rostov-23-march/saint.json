@@ -1,0 +1,62 @@
+{
+  "slug": "bassian-of-rostov-23-march",
+  "display_name": "Bassian of Rostov (23 March)",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop of Rostov",
+  "names": [
+    {
+      "form": "Βασσιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαρτίου, «Άγιος Βασσιανός Επίσκοπος Ροστώβ της Ρωσίας», with the rank word, the see and the country left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1481,
+      "latest": 1481,
+      "display": "1481",
+      "basis": "traditional",
+      "note": "saint.gr: «Εξελέγη Επίσκοπος της πόλεως Ροστώβ και κοιμήθηκε με ειρήνη το έτος 1481», and the page heads him «(; - 1481)», leaving the first date a question mark. It places his life «κατά τον 15ο αιώνα μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The Greek page makes him bishop of Rostov, so a Russian row is likely and has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαρτίου — «Άγιος Βασσιανός Επίσκοπος Ροστώβ της Ρωσίας»",
+        "url": "https://www.saint.gr/03/23/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαρτίου εκάστου έτους.» The entry is two sentences and carries no asterisk and no disclaimer. He is neither of the two men of the name the corpus keeps — not Bassian of Tiksna, the tailor of the Totma country tonsured by Theodosius of Totma and reposing in 1624, and not the Bassian doxologia names without a life on 10 octombrie. Nor is he the corpus's other Bassian of Rostov, whose greek row saint.gr already supports on 25 Ιανουαρίου: that one is an archbishop, a monk of the house of Paphnutius of Borovsk, elected in 1506 and reposing in 1516, and this one a bishop reposing in 1481. Two entries on one calendar are two commemorations, so the two stand as two folders and neither row has been moved."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "ephraim-of-the-kyiv-caves",
+  "display_name": "Ephraim of the Kyiv Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Εφραίμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαρτίου, «Όσιος Εφραίμ ο εν σπηλαίω (Ρώσος)», with the rank word, the epithet and the country left off."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The Greek page places him in the monastery of the Caves at Kyiv, so a Russian row is likely and has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαρτίου — «Όσιος Εφραίμ ο εν σπηλαίω (Ρώσος)»",
+        "url": "https://www.saint.gr/03/23/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαρτίου εκάστου έτους.» The entry is one sentence, carries no asterisk and no disclaimer, and gives only a century, so there is no dates object. He is not the corpus's Ephraim of Russia, whom saint.gr itself keeps on 26 Σεπτεμβρίου and heads «(1412 - 1492)» with no details at all: this one is «ο εν σπηλαίω», of the cave, and of the thirteenth century. Nor is he the eunuch Ephraim whom the same day's Nikon of the Kyiv Caves tonsured about 1062."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

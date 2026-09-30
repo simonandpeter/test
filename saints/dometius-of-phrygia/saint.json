@@ -1,0 +1,60 @@
+{
+  "slug": "dometius-of-phrygia",
+  "display_name": "Dometius of Phrygia",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δομέτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαρτίου, «Άγιος Δομέτιος», with the rank word left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 363,
+      "display": "361–363",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Μάρτυς του Χριστού Δομέτιος έζησε κατά τους χρόνους του Ιουλιανού του Παραβάτου (361-363 μ.Χ.) και καταγόταν από την χώρα της Φρυγίας» — the reign is the interval the page prints, and his death in it is the page's own account, that he was beheaded for cursing Julian at the hippodrome. It gives no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαρτίου — «Άγιος Δομέτιος»",
+        "url": "https://www.saint.gr/03/23/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαρτίου εκάστου έτους.» He is none of the several men of the name the corpus already keeps: not Dometius the Persian, whom doxologia puts under Constantine the Great on 7 august, not Dometius of Zographou, not the brother of Maximus, not the disciple of Dionysius, and not the Dometius of 16 October. This one is of Phrygia and dies under Julian the Apostate."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

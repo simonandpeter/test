@@ -1,0 +1,63 @@
+{
+  "slug": "pachomius-of-nerekhta",
+  "display_name": "Pachomius of Nerekhta",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "hermit",
+    "iconographer"
+  ],
+  "names": [
+    {
+      "form": "Παχώμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαρτίου, «Όσιος Παχώμιος ο Αναχωρητής», with the rank word and the epithet left off. Its life page adds the place and the name in the world: «Ο Όσιος Παχώμιος, της Νερέκτα, κατά κόσμον Ιάκωβος»."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1384,
+      "latest": 1384,
+      "display": "1384",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Παχώμιος κοιμήθηκε με ειρήνη σε βαθύ γήρας το 1384 μ.Χ., και ενταφιάσθηκε στο ναό της Αγίας Τριάδος, τον οποίο και έκτισε», and the page heads him «(; - 1384)», leaving the first date a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The Greek page makes him a Russian abbot near Kostroma, so a Russian row is likely and has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαρτίου — «Όσιος Παχώμιος ο Αναχωρητής»",
+        "url": "https://www.saint.gr/03/23/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαρτίου εκάστου έτους.» The page says «Τα Λείψανα του Αγίου φυλάσσονται στην ομώνυμη Μονή Κοστρόμας Ρωσίας», his relics are kept at the monastery of Kostroma that bears his name, and it adds «Η Εκκλησία τιμά, επίσης, την μνήμη του Οσίου Παχωμίου στις 15 Μαΐου» — that the Church honours him on 15 Μαΐου as well. One row per church is the schema, so that second Greek day is recorded here and he does not render on it."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,9 @@
+# Pachomius of Nerekhta
+
+saint.gr's calendar for 23 Μαρτίου keeps a Russian abbot it calls the Anchorite, Pachomius of Nerekhta, whose name in the world was James. He was born into a priestly family at Vladimir on the Klyazma; his father was the priest Ignatius, who served in the church of St Nicholas. His family sent him to school, and at seven years old, the page says, he had learned holy Scripture very well. Longing for the monastic life he took refuge in the monastery of the Dormition of the Theotokos at Vladimir and became a monk.
+
+For a greater asceticism he left that house and went to the outskirts of Nerekhta. There, on the river Gridenka, he found a place fit for a monastery — a raised piece of ground like an island in the middle of the thick forest. He asked the people to build a monastery in the district of Sypanovo, on the border of the town of Kostroma, and the inhabitants of Nerekhta agreed with joy and helped in the raising of it. Pachomius painted an icon of the Holy Trinity, and having sung the supplicatory canon he carried it to the place where he would build the church, which was dedicated to the Holy Trinity.
+
+When the building was finished he organised the new monastery, which soon began to draw monks. In it the monks had to till the ground themselves and feed themselves by the labour of their own hands, and he gave the brethren the first example by his own work. Pachomius fell asleep in peace in deep old age in the year 1384, and was buried in the church of the Holy Trinity which he had built himself; his relics, the page says, are kept at the monastery of Kostroma that bears his name.
+
+*After saint.gr's calendar for 23 Μαρτίου — [the day](https://www.saint.gr/03/23/index.aspx) and [the life](https://www.saint.gr/76/saint.aspx); read 30 September 2026.*

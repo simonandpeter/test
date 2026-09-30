@@ -1,0 +1,65 @@
+{
+  "slug": "nikon-of-the-kyiv-caves",
+  "display_name": "Nikon of the Kyiv Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "hieromonk"
+  ],
+  "names": [
+    {
+      "form": "Νίκων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαρτίου, «Όσιος Νίκων καθηγούμενος της Λαύρας των Σπηλαίων του Κιέβου», with the rank word and the office left off."
+    }
+  ],
+  "related": [
+    "anthony-of-the-caves",
+    "theodosius-of-the-kyiv-caves"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1088,
+      "latest": 1088,
+      "display": "1088",
+      "basis": "traditional",
+      "note": "saint.gr heads his page «Οσιος Νικων Καθηγουμενος Της Λαυρας Των Σπηλαιων Του Κιεβου (; - 1088)», leaving the first date a question mark. Its own account gives no year of death in the body, and places his life «στην Ρωσία κατά τον 11ο αιώνα μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The Greek page makes him abbot of the Kyiv Caves, so a Russian row is likely and has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαρτίου — «Όσιος Νίκων καθηγούμενος της Λαύρας των Σπηλαίων του Κιέβου»",
+        "url": "https://www.saint.gr/03/23/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαρτίου εκάστου έτους.» The page says «Το Λείψανο του Αγίου βρίσκεται αδιάφθορο στη Λαύρα των Σπηλαίων του Κιέβου», that his relic lies incorrupt in the Lavra of the Caves at Kyiv, and heads him «(; - 1088)». He is not the corpus's Nikon of Sicily, kept on the same 23 March, nor Nikon the disciple of Kuksha, nor Nikon of Optina."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

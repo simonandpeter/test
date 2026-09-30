@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'παχωμιοσ pachomius-companion-of-papyrinus pachomius-of-nerekhta':
+    'Two men: the companion of Papyrinus on 13 January and Pachomius of Nerekhta on 23 March.',
+  'νικων nikon-companion-of-mark-the-shepherd nikon-of-the-kyiv-caves':
+    'Two men: the companion of Mark the Shepherd on 28 September and Nikon of the Kyiv Caves on 23 March.',
+  'εφραιμ ephraim-of-antioch ephraim-of-katounakia ephraim-of-the-kyiv-caves ephraim-of-tomis ephrem-of-kiev ephrem-of-novotorzhsk ephrem-the-syrian':
+    'Seven now. The new one is Ephraim of the Kyiv Caves on 23 March; the others are read in the el-03-07 entry for this name form, where 7 March keeps the patriarch of Antioch and Ephraim of Tomis as two lines.',
+  'δομετιοσ dometius-8-march dometius-brother-of-maximus dometius-of-phrygia dometius-of-zographou':
+    'Four men on four Greek days: the Dometius of 8 March, the brother of Maximus on 19 January, Phrygia on 23 March and Zographou on 22 September.',
   'σοφια sophia-martyr-18-september sophia-of-kyiv':
     'Two women: the martyr of 18 September and Sophia of Kyiv on 22 March.',
   'δημητριοσ demetrius-ivanov demetrius-of-chios demetrius-of-constantinople demetrius-of-georgia demetrius-of-prilutsk demetrius-the-skeuophylax demetrius-tornaras':
