@@ -6,6 +6,11 @@
       "form": "Sofia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 iunie, «Sfânta Cuvioasă Sofia»."
+    },
+    {
+      "form": "Σοφία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουνίου, «Οσία Σοφία εξ Αίνου», with the rank words left off. The place-phrase «εξ Αίνου» is left off the stored form."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουνίου — «Οσία Σοφία εξ Αίνου»",
+        "url": "https://www.saint.gr/06/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουνίου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row, and it does not carry the «Δεν είναι διασταυρωμένη» sentence. It is plainly the same woman: the venerable Sophia of Aenus in Thrace. saint.gr adds what doxologia did not: that her parents were notable and rich; that she married and became the mother of six children and had the grievous misfortune to lose all of them; that she found her consolation in protecting orphans and widows, in ceaseless almsgiving, prayers and fasts; that at the end of her life she was tonsured a nun; and that she died peacefully at the age of fifty-three. That age is not a year and no `dates` object is added on the strength of it. Aenus of Thrace is where she came from and `locations` is left out. No hymn is printed."
     },
     {
       "church": "serbian",

@@ -1,0 +1,60 @@
+{
+  "slug": "eadfrith-of-lindisfarne",
+  "display_name": "Eadfrith of Lindisfarne",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Έντφριθος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουνίου, «Άγιος Έντφριθος Επίσκοπος Λιντισφέϊρν ο εξ Ιρλανδίας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 721,
+      "latest": 721,
+      "display": "721",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Εντφριθος Επισκοπος Λιντισφεϊρν ο Εξ Ιρλανδιας (; - 721)» and the entry says he fell asleep in peace in 721. The page gives no year of birth, dates his life to the seventh and eighth centuries, and dates his election to the see to 698."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουνίου — «Άγιος Έντφριθος Επίσκοπος Λιντισφέϊρν ο εξ Ιρλανδίας»",
+        "url": "https://www.saint.gr/06/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. saint.gr's head line dates him «(; - 721)» and the entry is two sentences: that he lived in the seventh and eighth centuries, was elected bishop of Lindisfarne in 698 and fell asleep in peace in 721. Lindisfarne is his see and `locations` is left out. The day's line calls him «ο εξ Ιρλανδίας», of Ireland, which the entry itself does not repeat, and neither is developed. The corpus keeps nobody of this name. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

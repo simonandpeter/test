@@ -1,0 +1,63 @@
+{
+  "slug": "breaca-of-ireland",
+  "display_name": "Breaca of Ireland",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Βρεάκη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουνίου, «Οσία Βρεάκη η εξ Ιρλανδίας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 460,
+      "latest": 460,
+      "display": "about 460",
+      "basis": "traditional",
+      "note": "saint.gr says «Περί το 460 μ.Χ. ακολούθησε στην ιεραποστολή τον Άγιο Πατρίκιο» — that about 460 she followed Saint Patrick on his mission. That is the only year the page gives, and it is neither her birth nor her death; it is recorded here as the year of the mission she joined."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουνίου — «Οσία Βρεάκη η εξ Ιρλανδίας»",
+        "url": "https://www.saint.gr/06/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The entry is three sentences and gives one year, about 460, for when she followed Patrick on his mission; there is no year of birth and none of death, so the `dates` entry holds that year as the one the page states, with its note saying what the year is of. Ireland, the mission and the parts of the river Hayle in Cornwall are named, and `locations` is left out. Patrick, «βλέπε 17 Μαρτίου», is the corpus's `patrick-of-ireland`, and that is the one `related` row. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "patrick-of-ireland"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

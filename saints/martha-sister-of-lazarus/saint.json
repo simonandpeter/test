@@ -6,6 +6,11 @@
       "form": "Marta",
       "lang": "ro",
       "note": "Her own name, read out of doxologia.ro's line for 4 iunie, «Sfintele Mironosițe Maria și Marta, surorile Dreptului Lazăr», which names two women."
+    },
+    {
+      "form": "Μάρθα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουνίου, «Αγίες Μάρθα και Μαρία οι αδελφές του Λαζάρου», with the rank words left off."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουνίου — «Αγίες Μάρθα και Μαρία οι αδελφές του Λαζάρου»",
+        "url": "https://www.saint.gr/06/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουνίου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row, and it carries both sisters on one page with a head line each. They are plainly the same two: the sisters of Lazarus at Bethany. Two hymns are taken and both stand in both folders, because both name both sisters. The page prints three further texts — a μεγαλυνάριον, an οἶκος and a κάθισμα — which are not taken, because the schema holds a troparion and a kontakion and nothing else; the κάθισμα is the one that distinguishes the sisters, saying that the one prepared food for him in faith while the other anointed him with myrrh and wiped the Lord's feet with the hair of her head. The page gives no year for either of them and no place but Bethany, so no `dates` object is added and `locations` is left out."
     },
     {
       "church": "serbian",
@@ -45,5 +60,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α´.",
+      "model": "Τὸν Συνάναρχον Λόγον.",
+      "text": "Τῷ Σωτῆρι ἀμέμπτως διακονήσασαι, αἱ τοῦ Ἁγίου Λαζάρου θεῖαι αὐτάδελφοι, σὺν τῇ Μάρθᾳ τῇ κλεινῇ, Μαρία πάνσεμνε, καὶ τὴν Ἀνάστασιν Αὐτοῦ, σὺν Μυροφόροις Γυναιξί, μαθοῦσαι ἐκ τοῦ Ἀγγέλου, φωτὸς ἐμπλήσθητε θείου, ἡμῖν αἰτοῦσαι τὰ σωτήρια.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α´, Τὸν Συνάναρχον Λόγον, on the page of the two sisters; it names them both, which is why it stands in both folders",
+        "url": "https://www.saint.gr/1798/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having served the Saviour blamelessly, O divine sisters of holy Lazarus — renowned Martha and all-revered Mary — and having learned of his Resurrection from the angel together with the myrrh-bearing women, you were filled with divine light. Ask for us the things that bring salvation.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β´.",
+      "model": "Τοῖς τῶν αἱμάτων σου.",
+      "text": "Τῶν ἀδελφῶν τὴν δυάδα τὴν πάντιμον, τὰς τοῦ Λαζάρου συγγόνους τιμήσωμεν, Μαρίαν καὶ Μάρθαν ἐν ᾄσμασιν, ὡς ἂν αὐτῶν ἱκεσίαις πρὸς Κύριον, πταισμάτων συγχώρησιν λάβωμεν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β´, Τοῖς τῶν αἱμάτων σου, on the page of the two sisters; it names them both",
+        "url": "https://www.saint.gr/1798/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour in song the all-honoured pair of sisters, the kinswomen of Lazarus, Mary and Martha, that by their entreaties to the Lord we may receive forgiveness of our offences.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

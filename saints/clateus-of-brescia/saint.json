@@ -1,0 +1,60 @@
+{
+  "slug": "clateus-of-brescia",
+  "display_name": "Clateus of Brescia",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Κλατέος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουνίου, «Άγιος Κλατέος ο Ιερομάρτυρας Επίσκοπος Βρεσκίας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 64,
+      "latest": 64,
+      "display": "64",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Κλατεος ο Ιερομαρτυρας Επισκοπος Βρεσκιας (; - 64)», and the entry says he suffered a martyr's death in 64 under the emperor Nero (54-68). The page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουνίου — «Άγιος Κλατέος ο Ιερομάρτυρας Επίσκοπος Βρεσκίας»",
+        "url": "https://www.saint.gr/06/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. saint.gr's head line dates him «(; - 64)» and the entry is one sentence, which hedges his place in the succession: first or second bishop of Brescia. Brescia in Lombardy is his see and `locations` is left out. The corpus keeps nobody of this name. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

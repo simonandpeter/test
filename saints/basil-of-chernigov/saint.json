@@ -6,6 +6,11 @@
     {
       "form": "Василий Черниговский",
       "lang": "ru"
+    },
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουνίου, «Άγιος Βασίλειος ο Ιερομάρτυρας Αρχιεπίσκοπος Τσέρνιγκωφ και οι συν αυτώ», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουνίου — «Άγιος Βασίλειος ο Ιερομάρτυρας Αρχιεπίσκοπος Τσέρνιγκωφ και οι συν αυτώ»",
+        "url": "https://www.saint.gr/06/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουνίου εκάστου έτους». The folder's Russian row keeps him on the Julian 14 August, from days.pravoslavie.ru, and the Greek keeps him on 4 June; one attestation row per church is the schema, so the Russian row stays where it is and the Greek day is the one recorded here. It is plainly the same man: Vasily Bogoyavlensky, born 1 February 1867 at Tambov of a priestly family, ordained deacon in 1888 and priest on 11 March 1890 for the village of Ovsyanki, widowed, tonsured at the Alexander Nevsky Lavra on 14 August 1908, made rector of the Chernigov theological school and archimandrite that October, elected bishop of Sumy in 1909, moved to Novgorod-Seversk in 1911, raised archbishop of Chernigov and Nezhin on 5 October 1916, retired in 1917 to the Zaikonospassky monastery in Moscow, sent by the Moscow church council to investigate the murder of Andronicus of Perm, and killed by Bolsheviks between Perm and Vyatka with his body thrown from the Kama bridge. The two sources disagree on the year: the Russian entry the folder was built from says 1918 and saint.gr's head line says «(1867 - 1919)» and its narrative 1919. The folder's `dates` are left as they were, and the disagreement is recorded here rather than resolved. The page's own line carries «και οι συν αυτώ», and those with him, and the page sets a heading over them that names nobody; the layman the corpus keeps as `alexius-martyr-1918` is «ένας λαϊκός» there, unnamed, so no Greek row is made for him and the reader's report says so. "
     },
     {
       "church": "serbian",

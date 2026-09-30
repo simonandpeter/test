@@ -1,0 +1,60 @@
+{
+  "slug": "ninnoca-of-brittany",
+  "display_name": "Ninnoca of Brittany",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "abbess"
+  ],
+  "names": [
+    {
+      "form": "Νιννοκία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουνίου, «Οσία Νιννοκία η εκ Βρετανίας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 467,
+      "latest": 467,
+      "display": "467",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Οσια Νιννοκια η Εκ Βρετανιας (; - 467)» and the entry says she fell asleep in peace in 467. The page gives no year of birth and dates her life to the fifth century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουνίου — «Οσία Νιννοκία η εκ Βρετανίας»",
+        "url": "https://www.saint.gr/06/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. saint.gr's head line dates her «(; - 467)». The entry attributes her parentage to tradition and not to a record — «από την παράδοση θεωρείται θυγατέρα», she is held by tradition to be the daughter of Saint Brenthacius of Brecknock — and that hedge is the page's own. Brittany, Armorica and the monastery of Quimper are named, and `locations` is left out. Neither her father nor Germanus of Auxerre, whom she is said to have followed, has a folder in this corpus, so the life names them without a link and there is no `related` row. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -5,6 +5,11 @@
     {
       "form": "Матфей",
       "lang": "ru"
+    },
+    {
+      "form": "Ματθαίος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουνίου, «Άγιος Ματθαίος ο Αρχιμανδρίτης Διευθυντής της Σχολής της Περμίας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -49,8 +54,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουνίου — «Άγιος Βασίλειος ο Ιερομάρτυρας Αρχιεπίσκοπος Τσέρνιγκωφ και οι συν αυτώ»",
+        "url": "https://www.saint.gr/06/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουνίου εκάστου έτους», and carries him with a head line of his own, «Αγιος Ματθαιος ο Αρχιμανδριτης Διευθυντης Της Σχολης Της Περμιας (; - 1919)». The folder's Russian row keeps him on the Julian 14 August with Basil of Chernigov and the layman Alexius, and the Greek keeps him on 4 June; one attestation row per church is the schema, so the Russian row stays and the Greek day is recorded here. It is plainly the same man: the archimandrite Matthew, director of the school of Perm, killed with the archbishop between Perm and Vyatka and thrown from the Kama bridge. The two sources disagree on the year, the Russian entry saying 1918 and saint.gr 1919, and the folder's `dates` are left as they were. saint.gr gives him no life of his own beyond his office and his death, so what this folder gains from it is the Greek day, the Greek form of his name and his office at Perm. No hymn is printed."
     },
     {
       "church": "serbian",

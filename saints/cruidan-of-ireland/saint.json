@@ -1,0 +1,65 @@
+{
+  "slug": "cruidan-of-ireland",
+  "display_name": "Cruidan of Ireland",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Κρουϊδανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουνίου, «Όσιοι Κρουϊδανός, Δαγανός και Μεδανός οι εξ Ιρλανδίας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "saint.gr says «Οι Όσιοι Πατέρες Κρουϊδανός, Δαγανός και Μεδανός κατάγονταν από την Ιρλανδία και έζησαν τον 6ο αιώνα μ.Χ.» and that they fell asleep in peace, with no year. The page dates their life to the sixth century and nothing here is a stated year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουνίου — «Όσιοι Κρουϊδανός, Δαγανός και Μεδανός οι εξ Ιρλανδίας»",
+        "url": "https://www.saint.gr/06/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The three are carried on one page with a head line each and no year against any of them, and the whole narrative is one sentence: that the venerable fathers Cruidan, Dagan and Medan came from Ireland, lived in the sixth century after Christ, were disciples of Saint Petroc, whom the same day keeps, and fell asleep in peace. The `dates` entry holds the century the page states and nothing more. Ireland is all the place there is, and `locations` is left out. The corpus keeps none of the three names. No hymn is printed and no verse. The other two have their own folders in the same batch and `related` rows here, and so does Petroc."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "dagan-of-ireland",
+    "medan-of-ireland",
+    "petroc-of-cornwall"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

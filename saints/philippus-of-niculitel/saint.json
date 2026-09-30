@@ -6,6 +6,11 @@
       "form": "Filip",
       "lang": "ro",
       "note": "His own name, read out of doxologia.ro's line for 4 iunie, «Sfinții Mucenici Zotic, Atal, Camasie și Filip de la Niculițel», which names four men."
+    },
+    {
+      "form": "Φίλιππος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουνίου, «Άγιοι Ατταλός, Ζωτικός, Κάμασις και Φίλιππος οι Μάρτυρες εκ Νικολιτσέλ της Ρουμανίας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -16,7 +21,8 @@
   "related": [
     "zoticus-of-niculitel",
     "attalus-of-niculitel",
-    "camasis-of-niculitel"
+    "camasis-of-niculitel",
+    "sava-of-buzau"
   ],
   "attestations": [
     {
@@ -40,8 +46,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουνίου — «Άγιοι Ατταλός, Ζωτικός, Κάμασις και Φίλιππος οι Μάρτυρες εκ Νικολιτσέλ της Ρουμανίας»",
+        "url": "https://www.saint.gr/06/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουνίου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row, and carries all four on one page with a head line each and no year against any of them. They are plainly the same four: the martyrs of Niculițel in Tulcea, whose relics were found in 1971 in the crypt of a basilica there and are now at the monastery of Cocoș. saint.gr is franker than doxologia about not knowing when they died: some researchers, it says, put their martyrdom under Diocletian (284-305); others say they contended between 319 and 324, when Licinius reigned; but the likeliest thing is that they were perfected north of the Danube, where the Goths then lived, to whom Sava of Buzău spread the Gospel, and that the persecution king Athanaric let loose against the Christians in 370-372 may have caused their martyrdom. Three incompatible datings are not a date, so no `dates` object is added. `locations` is left out. The page sends the reader to Sava of Buzău, «βλέπε 12 Απριλίου», whom this corpus keeps as `sava-of-buzau`, and that is the one `related` row added. No hymn is printed. The page states under «Ιερά Λείψανα» that this martyr's relics in particular are at the monastery of Cocoș in Tulcea, and it states the same of each of the other three."
     },
     {
       "church": "serbian",

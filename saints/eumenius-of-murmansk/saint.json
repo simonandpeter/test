@@ -1,0 +1,65 @@
+{
+  "slug": "eumenius-of-murmansk",
+  "display_name": "Eumenius of Murmansk",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ευμένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουνίου, «Όσιοι Ελεάζαρος, Ναζάριος και Ευμένιος οι εν Μουρμάνσκ της Ρωσίας οι Θαυματουργοί», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1401,
+      "latest": 1500,
+      "display": "15th century",
+      "basis": "traditional",
+      "note": "saint.gr says «Οι Όσιοι Ελεάζαρος, Ναζάριος και Ευμένιος έζησαν στη Ρωσία το 15ο αιώνα μ.Χ.» and that they fell asleep in peace, with no year. The page dates their life to the fifteenth century and nothing here is a stated year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουνίου — «Όσιοι Ελεάζαρος, Ναζάριος και Ευμένιος οι εν Μουρμάνσκ της Ρωσίας οι Θαυματουργοί»",
+        "url": "https://www.saint.gr/06/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The three are carried on one page with a head line each and no year against any of them, and the whole narrative is one sentence: that the venerable Eleazar, Nazarius and Eumenius lived in Russia in the fifteenth century after Christ and practised asceticism in a manner pleasing to God in the monastery of Saint John in the region of Murmansk, or Murom, near Olonets; that they were counted worthy of the gift of working wonders; and that they fell asleep in holiness and in peace. The `dates` entry holds the century the page states and nothing more. `locations` is left out: the page names a monastery and two readings of the region's name. The page adds that the Church honours their memory also on the feast of all the saints of Novgorod, on the fourth Sunday after Pentecost — a day reckoned from Pascha, which the schema cannot hold; it is recorded here in this note and the `feast` is the fixed 4 June the day page keeps them on. The corpus keeps an `eleazar-of-anzersky` and others of these names, none of them in this company. No hymn is printed and no verse. The other two have their own folders in the same batch and `related` rows here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "eleazar-of-murmansk",
+    "nazarius-of-murmansk"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

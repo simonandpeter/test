@@ -1,0 +1,53 @@
+{
+  "slug": "aretios-martyr-at-rome",
+  "display_name": "Aretios",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αρέτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουνίου, «Άγιοι Αρέτιος και Δακιανός οι Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουνίου — «Άγιοι Αρέτιος και Δακιανός οι Μάρτυρες»",
+        "url": "https://www.saint.gr/06/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The two are carried on one page with a head line each and no year against either, and the whole narrative is one sentence: that the holy martyrs Aretios and Dacianus bore witness at Rome. There is no year, no reign, no manner of death and no order between them, so there is no `dates` object; Rome is all the place there is and `locations` is left out. The corpus keeps neither name. No hymn is printed and no verse. His companion has his own folder in the same batch and a `related` row here; the slug carries the city because the day's line gives nothing else to tell either of them apart by."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "dacianus-martyr-at-rome"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

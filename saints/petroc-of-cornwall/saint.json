@@ -1,0 +1,72 @@
+{
+  "slug": "petroc-of-cornwall",
+  "display_name": "Petroc of Cornwall",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Πετρόκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουνίου, «Όσιος Πετρόκιος ο εξ Ουαλίας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 468,
+      "latest": 468,
+      "display": "468",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Οσιος Πετροκιος ο Εξ Ουαλιας (468 - 564)» and the entry says he was born in 468 in southern Wales."
+    },
+    "death": {
+      "earliest": 564,
+      "latest": 564,
+      "display": "564",
+      "basis": "traditional",
+      "note": "saint.gr says he fell asleep in peace in 564, that he was buried at Padstow and that his relics were moved to the church at Bodmin."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουνίου — «Όσιος Πετρόκιος ο εξ Ουαλίας»",
+        "url": "https://www.saint.gr/06/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. saint.gr's head line dates him «(468 - 564)» and the entry names many places: southern Wales, Ireland, Hailesmouth, Lanwethinoc — later Petrockstow and now Padstow — Rome, the Holy Land, an island in the Indian Ocean, Petherick and Bodmin. `locations` is left out for that reason and not for want of detail. The page hedges his parentage: younger son, or by others' account nephew, of Saint Claudius Kerniv, king of Glywysing, whom it dates to 3 May; it also names Saint Goran, 7 April. Neither day was opened for this draft, so the life names both men without a link and there is no `related` row. The day's line calls him the protector of Cornwall. The corpus keeps nobody of this name. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "cruidan-of-ireland",
+    "dagan-of-ireland",
+    "medan-of-ireland"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

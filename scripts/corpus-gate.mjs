@@ -115,6 +115,24 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδωροσ mstislav-of-kiev theodore-companion-of-pausolypius theodore-companion-of-stephen theodore-companion-of-terentius theodore-founder-of-chora theodore-of-kama-the-philosopher theodore-of-kandavla theodore-of-kythera theodore-of-moscow theodore-of-murom theodore-of-novgorod theodore-of-pavia theodore-of-pentapolis theodore-of-perga theodore-of-samothrace theodore-of-sykeon theodore-of-tamasos theodore-of-the-twelve-tribunes theodore-of-tomsk theodore-of-vrsac theodore-prince-of-yaroslavl theodore-stratelates theodore-the-byzantine theodore-the-envoy-of-nicomedia theodore-the-recruit theodore-the-silent theodore-trichinas theodore-yaroslavich':
+    'Twenty-eight now. The new one is Theodore Yaroslavich on 5 June, whose folder relates Alexander Nevsky because his own life names him as his younger brother — `tests/life-links.test.mjs` asked for the row. The others are read in the el-05-24 entry for this name form.',
+  'μαρκοσ mark-of-arethusa mark-of-byblos mark-of-chios mark-of-kantara mark-of-the-lavra-of-pskov mark-the-ascetic mark-the-cretan-of-smyrna mark-the-deaf mark-the-evangelist mark-the-hermit-20-may mark-the-shepherd':
+    'Eleven now. The new one is on 4 June; the others are read in the el-05-20 entry for this name form.',
+  'κονων conon-martyr-5-june conon-of-cyprus conon-of-isauria conon-of-kantara conon-of-penthucla conon-the-gardener':
+    'Five now. The new one is on 5 June; the others are read in the el-03-05 entry for this name form, where three stand on 5 March.',
+  'χριστοφοροσ christopher christopher-20-april christopher-24-april christopher-martyr-5-june christopher-of-adrianople christopher-of-antioch christopher-of-georgia christopher-of-saint-sabbas':
+    'Eight now. The new one is on 5 June; the others are read in the el-05-21 entry for this name form.',
+  'μεθοδιοσ methodius-hieromartyr-1-march methodius-of-moravia methodius-of-peshnosha':
+    'Three men. The new one is on 4 June; the others are read in the el-03-01 entry for this name form, where the hieromartyr of 1920 is parted from Methodius Ivanov.',
+  'γεωργιοσ george-bozic george-konissky george-of-alikianos george-of-amastris george-of-azkuri george-of-develtos george-of-diipion george-of-kratovo george-of-maleon george-of-megara george-of-mytilene george-of-nea-ephesus george-of-pisidian-antioch george-of-rapsani george-of-samothrace-a george-of-samothrace-b george-of-shenkursk george-of-sofia george-of-vladimir george-paizanos-of-mytilene george-the-chozebite george-the-cypriot george-the-hungarian george-the-iberian george-the-iberian-2-january george-the-new-martyr-of-sofia george-the-persian george-the-sinaite george-the-trophy-bearer':
+    'Twenty-nine now. The new one is on 4 June; the others are read in the el-05-26 entry for this name form.',
+  'ευμενιοσ eumenios-saridakis eumenius-of-murmansk':
+    'Two men: Eumenios Saridakis, upgraded on 23 May, and the Eumenios of 4 June.',
+  'ελεαζαροσ eleazar-of-anzersky eleazar-of-murmansk eleazar-of-vazhen':
+    'Three men: Eleazar of Vazhen on 17 May, the Eleazar of 4 June and the Eleazar of the el-08-01 entry.',
+  'ιωαννησ john-arnaoutogiannis john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-meletius john-companion-of-peter john-disciple-of-limnaeus john-fedorov-of-krasnokutsk john-feodorov-of-tambov john-iii-scholasticus john-kalfas john-kalita john-kaloktenes john-kononenko john-koulakiotis john-mauropous john-nannos-of-thessalonica john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kantara john-of-kazan john-of-lycopolis john-of-manglisi john-of-monagria john-of-nea-moni john-of-rouphinianai john-of-santa-cruz john-of-serres john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-old-lavra john-of-the-well john-of-ustyug john-of-verkhoturye john-of-vilnius john-of-yuryevets john-of-zedazeni john-philosopher-of-georgia john-psychaites john-son-of-xenophon john-the-bulgarian john-the-confessor-of-kathara john-the-goldsmith-of-shumen john-the-hut-dweller john-the-iberian john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-the-wallachian john-timonov john-with-minas-and-david':
+    'Fifty-six now. The new one is on 4 June; the others are read in the el-05-29 entry for this name form.',
   'ισαακ isaac-alfanov isaac-of-cordoba isaac-the-martyr-22-september':
     'Three men: Isaac Alfanov on 4 May, Isaac of Cordoba on 3 June and the Isaac of the el-04-21 entry.',
   'ιλαριοσ hilarion-4-may hilary-of-carcassonne hilary-of-poitiers':

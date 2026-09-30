@@ -1,0 +1,60 @@
+{
+  "slug": "methodius-of-peshnosha",
+  "display_name": "Methodius of Peshnosha",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Μεθόδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουνίου, «Όσιος Μεθόδιος ο εκ Ρωσίας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1392,
+      "latest": 1392,
+      "display": "1392",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Οσιος Μεθοδιος ο Εκ Ρωσιας (; - 1392)» and the entry says he fell asleep in peace in 1392. The page gives no year of birth and dates his life to the fourteenth century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουνίου — «Όσιος Μεθόδιος ο εκ Ρωσίας»",
+        "url": "https://www.saint.gr/06/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. saint.gr's head line dates him «(; - 1392)» and the entry is two sentences. The monastery of Peshnosha, near Dmitrov in the province of Moscow, is named, and `locations` is left out. He is a Russian saint and the Russian calendar was not opened for this draft, which is what the `russian` row's note says. The corpus keeps a `methodius-of-patara` and nobody of Peshnosha. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

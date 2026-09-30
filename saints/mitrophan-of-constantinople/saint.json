@@ -6,6 +6,11 @@
       "form": "Mitrofan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 iunie, «Sfântul Ierarh Mitrofan, Patriarhul Constantinopolului»."
+    },
+    {
+      "form": "Μητροφάνης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουνίου, «Άγιος Μητροφάνης Αρχιεπίσκοπος Κωνσταντινούπολης», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουνίου — «Άγιος Μητροφάνης Αρχιεπίσκοπος Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/06/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουνίου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row. It is plainly the same man: the first bishop of the Reigning City, whom saint.gr dates «(; - 327)» and whose episcopate it dates 313-327. The Greek page adds what doxologia did not: that he was the son of Dometios and the nephew of the emperor Probus; that in May 325, when the First Ecumenical Council met at Nicaea, he could not attend in person because he was very old and ill, and sent as his representative the protopresbyter Alexander, a willing and God-fearing man; that in his years as archbishop many of the great buildings of the Reigning City were founded, among them the famous churches of Holy Wisdom, of Saint Irene and of Holy Power; and that he died in 327, possibly at the age of a hundred and seventeen, leaving his worthy protopresbyter Alexander, honoured on 30 August, as his successor. Four hymns are taken from the page: two apolytikia and two kontakia. The first apolytikion is the common of a hierarch printed with his name. The page also links an entry for the synaxis of all the archbishops and patriarchs of Constantinople, which was not opened for this draft."
     },
     {
       "church": "serbian",
@@ -65,9 +80,85 @@
         "text": "A rule of faith and a likeness of meekness, a teacher of abstinence — so did the truth of things show thee to thy flock. Therefore thou hast gained the heights by humility, and riches by poverty. Father and hierarch Mitrophan, pray Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Κανόνα πίστεως, καὶ εἰκόνα πραότητος, ἐγκρατείας διδάσκαλον, ἀνέδειξε σε τῇ ποίμνῃ σου, ἡ τῶν πραγμάτων ἀλήθεια· διὰ τοῦτο ἐκτήσω τῇ ταπεινώσει τὰ ὑψηλά, τῇ πτωχείᾳ τὰ πλούσια. Πάτερ Ἱεράρχα Μητρόφανη, πρέσβευε Χριστῷ τῷ θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, the first of two apolytikia on the page. It is the common of a hierarch, sung to other bishops with their own names in the last line, and the page prints it with his; so it is taken as his service, as the brief's ruling on a common requires of «Άγιος Μητροφάνης Αρχιεπίσκοπος Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/1796/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown you to your flock as a rule of faith, an icon of gentleness and a teacher of temperance; and so by humility you gained the heights, and by poverty riches. Father and hierarch Metrophanes, intercede with Christ our God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος πλ. α'.",
+      "model": "Τον συνάναρχον Λόγον.",
+      "text": "Αρετών ταις ακτίσι καταλαμπόμενος, Πατριαρχών ανεδείχθης γέρας και θεία κρηπίς, ως Χριστού μυσταγωγός Πάτερ Μητρόφανες, από δε θρόνου υψηλού, τη Εκκλησία δαδουχείς, το φέγγος της ευσέβειας. Και νυν απαύστως δυσώπει, ελεηθήναι τας ψυχάς ημών.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον (Κατέβασμα), Ήχος πλ. α', Τον συνάναρχον Λόγον, the second of two apolytikia on the page, and the one that names him and his throne of «Άγιος Μητροφάνης Αρχιεπίσκοπος Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/1796/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Lit up with the rays of the virtues, you were shown to be the honour of patriarchs and a divine foundation, O father Metrophanes, initiator into the mysteries of Christ; and from a lofty throne you carry the torch of godliness before the Church. Entreat unceasingly now that our souls may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος δ'.",
+      "model": "Ο υψωθείς εν τω Σταυρώ.",
+      "text": "Τον Ιεράρχην του Χριστού Μητροφάνην, της Εκκλησίας τον φωσφόρον λαμπτήρα, τον ομοούσιον τον Λόγον τω Πατρί, εν μέσω κηρύξαντα, θεοφόρων Πατέρων, και θρόνον κοσμήσαντα, Βασιλίδος εν πρώτοις, και προφητείας χάριν εκ Θεού, σαφώς λαβόντα, συμφώνως υμνήσωμεν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ήχος δ', Ο υψωθείς εν τω Σταυρώ, the first of two kontakia on the page of «Άγιος Μητροφάνης Αρχιεπίσκοπος Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/1796/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us hymn with one voice Metrophanes, the hierarch of Christ, the light-bearing lamp of the Church, who proclaimed the Word of one essence with the Father in the midst of the God-bearing fathers, who was among the first to adorn the throne of the Reigning City, and who plainly received from God the grace of prophecy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν.",
+      "text": "Τὴν πίστιν Χριστοῦ, τρανῶς σὺ ἐδογμάτισας, καὶ ταύτην τηρῶν, εἰς πλῆθος ὄντως ηὔξησας, τὸ πιστόν σου ποίμνιον· σὺν Ἀγγέλοις ὅθεν Μητρόφανες, συναγάλλῃ νῦν καὶ Χριστῷ, πρεσβεύεις ἀπαύστως, ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν, the second of two kontakia on the page of «Άγιος Μητροφάνης Αρχιεπίσκοπος Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/1796/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You laid down the faith of Christ plainly as doctrine, and keeping it you truly increased your faithful flock into a multitude; and so, Metrophanes, you now rejoice with the angels and intercede unceasingly with Christ for us all.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 327,
+      "latest": 327,
+      "display": "327",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Μητροφανης Αρχιεπισκοπος Κωνσταντινουπολης (; - 327)» and the life says he died in 327, possibly at the age of a hundred and seventeen. The page gives no year of birth and dates his episcopate 313-327. doxologia.ro's life, which this folder was built from, printed no year."
+    }
   }
 }
