@@ -6,6 +6,11 @@
       "form": "Isidora",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 mai, «Sfânta Cuvioasă Isidora»."
+    },
+    {
+      "form": "Ισιδώρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Οσία Ισιδώρα η δια Χριστόν Σαλή», with the rank word and the epithet left off."
     }
   ],
   "sex": "female",
@@ -21,6 +26,13 @@
       "display": "4th century",
       "basis": "traditional",
       "note": "doxologia.ro, Viața Sfintei Cuvioase Isidora: «Această cuvioasă maică s-a nevoit în Mănăstirea Tabena sau Tabenisioților din Egipt în veacul al IV-lea»."
+    },
+    "death": {
+      "earliest": 365,
+      "latest": 365,
+      "display": "365",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Οσία Ισιδώρα, αφού ασκήτεψε θεοφιλώς σε μονή της Αιγύπτου, κοιμήθηκε με ειρήνη το έτος 365 μ.Χ.» The Romanian life on doxologia.ro gives no year and does not agree about her end, having her leave the monastery after her sanctity was disclosed with nobody knowing where she went or how she died."
     }
   },
   "attestations": [
@@ -45,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Μαΐου (24 September 2026). The Romanian life says the Greek Church keeps her on the same day, which is not verified here."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Οσία Ισιδώρα η δια Χριστόν Σαλή»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps her — which the folder's Romanian note already said the Greek Church was expected to do, and this is the verification of it. It is plainly the same woman: the fool for Christ's sake in an Egyptian convent whose sanctity was revealed to the elder Pityrion. **The Greek adds a year of death the folder did not have**, «κοιμήθηκε με ειρήνη το έτος 365 μ.Χ.», which is inside the folder's fourth-century floruit and is now in `dates`; but the two sources do not agree on her end — the Romanian life has her leave the monastery after the visit with nobody knowing where she went or how she died, and saint.gr has her fall asleep in peace in a monastery of Egypt, so the year is recorded as traditional with the disagreement said in its note. The Greek names the visitor Pityrion and gives his day, 29 Νοεμβρίου; the corpus holds no folder for him, so no `related` row is added. **It prints an apolytikion and a kontakion, both proper and naming her**, and they are stored here; two megalynaria and an oikos are also printed and were left, being kinds this corpus does not hold."
     },
     {
       "church": "serbian",
@@ -56,5 +78,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ'.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Τὴν ὡραιότητα Χριστοῦ ποθήσασα, Μῆτερ τρισόλβιε, ὁδὸν τὴν σύντομον, τὴν ὁδηγούσαν πρὸς Αὐτόν, προείλου τὴν ταπείνωσιν, ὅθεν σε ἀνέδειξε, μοναζόντων διδάσκαλον, ἄκρον τε ὑπόδειγμα, τῆς Αὐτοῦ ἐκμιμήσεως, διὸ χαρμονικῶς σοι βοῶμεν, χαῖρε, ὢ Ἰσιδώρα παμμακάριστε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ', Τὴν ὡραιότητα, on the page of «Οσία Ισιδώρα η δια Χριστόν Σαλή»",
+        "url": "https://www.saint.gr/1430/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having longed for the beauty of Christ, O thrice-blessed mother, thou didst choose humility, the short road that leads to Him; wherefore He showed thee forth a teacher of monastics and a highest example of the imitation of Himself. Therefore with joy we cry to thee: Rejoice, O all-blessed Isidora.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β'.",
+      "model": "Τὰ ἄνω ζητῶν.",
+      "text": "Ποθούσα τυχεῖν, τῆς ἄνω Μῆτερ στάσεως, ταχεῖαν ὁδόν, προείλου τὴν ταπείνωσιν, δι’ ἧς ἤχθης Χριστῷ ὡς καρπὸς εὐκλεὴς καὶ τερπνὸς Ἰσιδώρα παναοίδιμε, βραβεία λαμβάνουσα τὰ ἄφθαρτα.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β', Τὰ ἄνω ζητῶν, on the page of «Οσία Ισιδώρα η δια Χριστόν Σαλή»",
+        "url": "https://www.saint.gr/1430/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Longing to attain the state above, O mother, thou didst choose humility for the swift road, and by it wast brought to Christ as a fruit glorious and delightful, O all-renowned Isidora, receiving the incorruptible prizes.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

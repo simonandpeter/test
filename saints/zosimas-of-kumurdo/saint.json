@@ -1,0 +1,60 @@
+{
+  "slug": "zosimas-of-kumurdo",
+  "display_name": "Zosimas of Kumurdo",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "office": "Bishop of Kumurdo",
+  "names": [
+    {
+      "form": "Ζωσιμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Άγιος Ζωσιμάς εκ Γεωργίας», with the rank word and the origin left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1500,
+      "display": "14th–15th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ζωσιμάς έζησε κατά τον 14ο και 15ο αιώνα μ.Χ. στην Γεωργία και ήταν Επίσκοπος της πόλεως Κουμούρντο.» The page gives no year of birth or of death, and the two centuries are its own."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Άγιος Ζωσιμάς εκ Γεωργίας»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day as the listing, and the whole of it is one sentence: «Ο Άγιος Ζωσιμάς έζησε κατά τον 14ο και 15ο αιώνα μ.Χ. στην Γεωργία και ήταν Επίσκοπος της πόλεως Κουμούρντο. Κοιμήθηκε οσίως με ειρήνη.» The see, Kumurdo in Georgia, is what tells him from the corpus's seven other Zosimases — of Palestine, of Cilicia, the Phoenician, the hermit, of Syracuse, the brother of Alexander and Alphaeus, and the one of 24 January — none of whom is a Georgian bishop. The `floruit` spans two centuries because the page says two centuries and names no year; its `basis` is `traditional` for that reason. No hymn, no relic, no place of birth, and nothing of what he did."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

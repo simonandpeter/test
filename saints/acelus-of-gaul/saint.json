@@ -1,0 +1,63 @@
+{
+  "slug": "acelus-of-gaul",
+  "display_name": "Acelus",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Άκελος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Άγιος Άκελος ο Μάρτυρας», with the rank word left off."
+    }
+  ],
+  "related": [
+    "acacius-of-gaul"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε στη Γαλλία το 303 μ.Χ., επί αυτοκράτορα Διοκλητιανού (284-305 μ.Χ.)», and the page heads him «(; - 303)». No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Άγιος Άκελος ο Μάρτυρας»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day as the listing, and the whole of it is one sentence: «Ο Άγιος Μάρτυρας Άκελος ήταν υποδιάκονος και μαρτύρησε στη Γαλλία το 303 μ.Χ., επί αυτοκράτορα Διοκλητιανού (284-305 μ.Χ.), μαζί με τον Άγιο Ιερομάρτυρα Ακάκιο ή Άσιο.» That last clause is the whole warrant for the `related` row and for the companion's. **`types` records `deacon` for a subdeacon** because the corpus's closed vocabulary has no slug for the lesser order and none may be added here; the page's own word, υποδιάκονος, is in the life. The display name is the bare name: the corpus holds no other Acelus, and the page gives him no place, no epithet and no origin. No hymn, no relic, no city in Gaul named."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

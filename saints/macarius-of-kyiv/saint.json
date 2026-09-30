@@ -1,0 +1,62 @@
+{
+  "slug": "macarius-of-kyiv",
+  "display_name": "Macarius of Kyiv",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "metropolitan",
+    "abbot"
+  ],
+  "office": "Metropolitan of Kyiv",
+  "names": [
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Άγιος Μακάριος ο Ιερομάρτυρας Μητροπολίτης Κιέβου», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1497,
+      "latest": 1497,
+      "display": "1497",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησε το 1497 μ.Χ., στο χωριό Στριγκόλοβο, στον ποταμό Βζχιζά, όταν οι Τάταροι μπήκαν στη Ρωσία», and the page heads him «(; - 1497)». No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Άγιος Μακάριος ο Ιερομάρτυρας Μητροπολίτης Κιέβου»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day as the listing. The see and the year place him against the corpus's twenty-odd other Macarii, and none of them is this man: the nearest by name are `macarius-of-kanev`, an archimandrite of Ovruch martyred at Kanev in 1678 and kept by the Russian calendar on 7 September, and `macarius-of-kios`, neither of whom was metropolitan of Kyiv; `macarius-of-optina`, `macarius-notaras` and the rest are further off still. **The slugs `macarius-of-kyiv`, `macarius-of-kios` and `macarius-of-kanev` differ by two and three letters and are three men**; this is the near-slug case the duplicate scan is meant to raise, and it is raised here deliberately. The page gives his predecessor's name and dates — «μετά τον θάνατο του Μητροπολίτου Κιέβου, Ιωνά (1488 - 1494 μ.Χ.)» — and the house he came from, the Holy Trinity at Vilna, and it records the relics twice: «Το Λείψανο του Αγίου βρίσκεται αδιάφθορο στον Καθεδρικό Ιερό Ναό Αγίου Βλαδίμηρου», the cathedral of Saint Vladimir at Kyiv. The election year 1495 and the martyrdom 1497 are both the page's. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

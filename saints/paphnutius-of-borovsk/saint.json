@@ -6,6 +6,11 @@
       "form": "Pafnutie din Borovsk",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 mai, «Sfântul Cuvios Pafnutie din Borovsk»."
+    },
+    {
+      "form": "Παφνούτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Όσιος Παφνούτιος ο Θαυματουργός», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Όσιος Παφνούτιος ο Θαυματουργός»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and its first words name him outright, «Ο Όσιος Παφνούτιος του Μπορόβσκ, κατά κόσμον Παρθένιος» — the same man: Parthenios in the world, son of a John, tonsured Paphnutius at the Pokrovski Vysotski monastery of Borovsk in 1414, abbot after his predecessor's death, ordained presbyter in 1426 by Photius metropolitan of Kyiv, dead in 1477. **The page contradicts itself about his century**: its opening sentence says «έζησε κατά τον 13ο και 14ο αιώνα μ.Χ.» while every year it goes on to give is fifteenth-century — 1414, 1426, 1444, 1477. The folder's death year, 1477, is attested from doxologia and agrees with the page's own close, so `dates` is untouched and the contradiction is recorded here rather than resolved. **The Greek adds the relics**: «Τα Λείψανα του Αγίου φυλάσσονται στην ομώνυμη Μονή Καλούγας Ρωσίας.» It prints no hymn of his own."
     },
     {
       "church": "serbian",

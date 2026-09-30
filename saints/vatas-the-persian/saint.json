@@ -1,0 +1,60 @@
+{
+  "slug": "vatas-the-persian",
+  "display_name": "Vatas the Persian",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Βατάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Άγιος Βατάς ο Πέρσης ο Ιερομάρτυρας», with the rank words and the epithet left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιερομάρτυρας Βατάς καταγόταν από την Περσία και γεννήθηκε από γονείς Χριστιανούς κατά τον 4ο αιώνα μ.Χ.» The page gives no year for his martyrdom."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Άγιος Βατάς ο Πέρσης ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day as the listing. The whole notice is one paragraph: born in Persia of Christian parents in the fourth century, a monk from the age of thirty, arrested when his brethren fled the monastery in the persecution, handed to Iasdich the governor of Nisibis, brother of Barzabanas, ordered to worship the sun, refusing, and killed. **The page's rank word and its story do not quite agree**: the listing and the notice both call him Ιερομάρτυρας, while the narrative says only that he left wife and children and became a monk («απήλθε σε μοναστήρι και έγινε μοναχός») and never says he was ordained; `types` records the page's own word with `monk` beside it and the tension is left standing here. It prints no year for the martyrdom, no hymn and no relic. The corpus's other Persian martyrs — Abda, Anastasius, Marius, Simeon, Christina — are none of them this man, and it holds no other Vatas."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

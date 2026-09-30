@@ -1,0 +1,89 @@
+{
+  "slug": "panaretos-of-paphos",
+  "display_name": "Panaretos of Paphos",
+  "sex": "male",
+  "types": [
+    "archbishop",
+    "hierarch",
+    "ascetic",
+    "wonderworker"
+  ],
+  "office": "Archbishop of Paphos",
+  "names": [
+    {
+      "form": "Πανάρετος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Άγιος Πανάρετος Αρχιεπίσκοπος Πάφου», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1700,
+      "latest": 1725,
+      "display": "early 18th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Πανάρετος γεννήθηκε στις αρχές 18ου μ.Χ. αιώνα πιθανότατα στην Περιστερωνοπηγή Αµµοχώστου». The page gives no year, and both the century's beginning and the place are its own hedge."
+    },
+    "death": {
+      "earliest": 1790,
+      "latest": 1793,
+      "display": "1790 or 1793",
+      "basis": "traditional",
+      "note": "saint.gr contradicts itself. Its body says twice that he died in 1790 — «διετέλεσε ποιμενάρχης της μέχρι το 1790 μ.Χ. που κοιμήθηκε εν Κυρίω» and «Ο Άγιος Δεσπότης εξεδήµησε προς Κύριον το 1790 μ.Χ.» — while the head of the same page prints «(; - 1793)», which is also the year the day listing carries. Both are the source's, and the disagreement is recorded as the interval rather than resolved."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Άγιος Πανάρετος Αρχιεπίσκοπος Πάφου»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day as the listing. **Two things on the page do not agree with themselves and both are recorded rather than resolved**: the year of death, for which see `dates`, and the rank — the listing and the head call him Αρχιεπίσκοπος Πάφου while the body calls him Μητροπολίτης and επίσκοπος and says «Ανέβηκε στο θρόνο της Πάφου το 1767 μ.Χ.»; `office` and `types` follow the listing's word, which is what this row quotes. The page is otherwise full and specific: abbot of the Panagia Palouriotissa in 1764, on the throne of Paphos from 1767, a brass chain and an iron chain worn under his clothes and found in his flesh at his burial against his own instruction, the priest struck dumb and loosed at his repentance, his own grave dug beforehand where the sanctuary of the cathedral of Saint Theodore in Paphos now stands, the former bishop Parthenios of Karpathos brought up from the harbour to bury him, a poor paralytic healed as the body was carried out, the chains now at the monastery of Stavrovouni. It says his formal enrolment among the saints of the Church of Cyprus came under the Cypriot patriarch of Constantinople Gerasimos III (1794–1797). It also names «τον Άγιο Φίλιππο (βλέπε 14 Νοεμβρίου)», for whose skull he had a silver case made, now at Omodos; whether that is the corpus's `philip-the-apostle` was not established from this page, so no `related` row is added. **The one apolytikion, Ἦχος πλ. α’, is proper and names him** and is stored here. The churches and monasteries it lists him as having built or renewed are dedications and not relations."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Τὸν τῆς Πάφου Ποιμένα θεῖον Πανάρετον, ὡς Ἱεράρχην Κυρίου ἀνευφημήσωμεν, ὅτι ἐργάτης συνετὸς ὄντως καὶ ἄριστος, ποσῶν τῶν θείων ἀρετῶν, καὶ Ἁγίοις θαυμαστὸς ἐγένετο ἐπ' ἐσχάτων, καὶ πάντων προστάτης καὶ φύλαξ, τῶν ἀνυμνοῦν τῶν αὐτοῦ τὴν κοίμησιν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον, on the page of «Άγιος Πανάρετος Αρχιεπίσκοπος Πάφου»",
+        "url": "https://www.saint.gr/1437/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise the divine Panaretos, shepherd of Paphos, as a hierarch of the Lord, for he was indeed a prudent and excellent workman of all the divine virtues, and became wondrous among the saints in these last times, and the protector and guardian of all who hymn his falling asleep.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

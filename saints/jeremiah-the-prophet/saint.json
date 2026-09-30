@@ -6,6 +6,11 @@
       "form": "Ieremia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 mai, «Sfântul Proroc Ieremia»."
+    },
+    {
+      "form": "Ιερεμίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Προφήτης Ιερεμίας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Προφήτης Ιερεμίας»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and it is plainly the same prophet: son of the priest Chelkias, of Anathoth in Benjamin north-east of Jerusalem, called at twenty-three to twenty-five years old, stoned by his own countrymen at Taphnas in Egypt. **The Greek adds a year of birth the folder did not have**: «Ο Προφήτης Ιερεμίας γεννήθηκε πιθανώς κατά το 650 π.Χ.», and the page heads him «(-650 - ;)»; that year is now in `dates`, with the page's own «πιθανώς» kept in the note. It prints no year for his death and offers two ends in the alternative — stoned at Taphnas, «ή απήχθη μαζί με τον Βαρούχ αιχμάλωτος από τον βασιλέα Ναβουχοδονόσωρ σε κάποια εισβολή του στην Αίγυπτο το 568 π.Χ., ως λέγει κάποια Ραββινική παράδοση» — so no year of death is recorded from it. It divides his public work into four periods under Josiah, Jehoiakim and Zedekiah and after the fall of Jerusalem, and it records where his synaxis was kept: «Η Σύναξη αυτού ετελείτο στο ναό του Αποστόλου Πέτρου, που ήταν κοντά στην Μεγάλη Εκκλησία». **Of the page's two apolytikia one is stored and one is not**: the Ἦχος α’ «Ἐκ γαστρὸς ἠγιάσθης» is proper and names him, and is stored here; the short Ἦχος β’ «Τοῦ προφήτου σου Ἰερεμίου τὴν μνήμην, Κύριε, ἑορτάζοντες» is the common of a prophet with his name set into it and was left. The page also links a «Διήγησις εις τον θρήνον του Προφήτου Ιερεμίου», which is a narrative and not a folder. The folder already carries a Romanian troparion; the Greek apolytikion is a different text and not a translation of it."
     },
     {
       "church": "serbian",
@@ -62,9 +77,35 @@
         "text": "Keeping the memory of thy prophet Jeremiah, O Lord, we entreat thee through him: save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Ἐκ γαστρὸς ἠγιάσθης τὴ προγνώσει τοῦ Κτίσαντος, καὶ προφητικῆς ἐπληρώθης ἐκ σπαργάνων συνέσεως, ἐθρήνησας τὴν πτῶσιν Ἰσραήλ, σοφὲ Ἱερεμία ἐν στοργῇ, διὰ τοῦτο ὡς Προφήτην καὶ Ἀθλητήν, τιμῶμεν σὲ κραυγάζοντες, δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ χορηγούντι διὰ σοῦ, ἠμὶν τὰ κρείττονα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Τῆς ἐρήμου πολίτης, on the page of «Προφήτης Ιερεμίας»",
+        "url": "https://www.saint.gr/1427/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "From the womb wast thou sanctified by the foreknowledge of the Creator, and from thy swaddling clothes wast thou filled with prophetic understanding; thou didst lament the fall of Israel in love, O wise Jeremiah. Therefore we honour thee as prophet and contender, and cry: Glory to Christ who glorified thee, glory to Him who crowned thee, glory to Him who through thee bestows better things upon us.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": -650,
+      "latest": -650,
+      "display": "c. 650 BC",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Προφήτης Ιερεμίας γεννήθηκε πιθανώς κατά το 650 π.Χ., στην μικρή πόλη της φυλής Βενιαμίν Αναθώθ, βορειοανατολικά της Ιερουσαλήμ», and the page heads him «(-650 - ;)». The «πιθανώς» is the page's own. No year of death is printed: the page offers stoning at Taphnas or captivity with Baruch in 568 BC in the alternative."
+    }
   }
 }

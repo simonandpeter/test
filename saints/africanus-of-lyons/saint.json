@@ -1,0 +1,51 @@
+{
+  "slug": "africanus-of-lyons",
+  "display_name": "Africanus of Lyons",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "office": "Bishop of Lugdunum",
+  "names": [
+    {
+      "form": "Αφρικανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Άγιος Αφρικανός Επίσκοπος Λουγδούνου», with the rank word and the see left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Άγιος Αφρικανός Επίσκοπος Λουγδούνου»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day as the listing, and its whole body is one sentence: «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου» — we have no details of the saint's life. The see is all the page gives beyond the name, and it is what tells him from the corpus's only other Africanus, the companion of Terentius. No year, no place beyond Lugdunum, no hymn, no relic. The see is left in the Greek form the page prints it in, Λουγδούνου, rendered as Lugdunum in `office`, because the page names the ancient see and not the modern city."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

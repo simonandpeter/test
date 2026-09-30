@@ -6,6 +6,11 @@
       "form": "Tamara",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 mai, «Sfânta Tamara, regina Georgiei»."
+    },
+    {
+      "form": "Ταμάρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Αγία Ταμάρα η βασίλισσα», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -19,6 +24,13 @@
       "display": "1166",
       "basis": "traditional",
       "note": "doxologia.ro, Viața Sfintei Tamara, regina Georgiei: «Sfânta Tamara s-a născut în anul 1166 ca fiică a regelui George al III-lea și a reginei Burdukhan a Georgiei». The page gives no year for her death."
+    },
+    "death": {
+      "earliest": 1213,
+      "latest": 1213,
+      "display": "1213",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το 1213 μ.Χ. και συγκαταριθμήθηκε στη χορεία των Αγίων.» The same page puts her birth «περί το 1165» and heads her «(1165 - 1213)», which does not agree with doxologia's 1166; the year of birth above is left as doxologia prints it."
     }
   },
   "attestations": [
@@ -43,8 +55,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Αγία Ταμάρα η βασίλισσα»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps her, and it is plainly the same queen: of the old Georgian house of the Bagratids, co-regent with her father George III from 1178, her reign remembered as the Golden Age, the refusal of Rukn ad-Din's demand in 1204 and the victory near Basiani, the last years in the cave monastery of Vardzia with a window from her cell into the church. **The Greek adds a year of death the folder did not have**, «Κοιμήθηκε με ειρήνη το 1213 μ.Χ.», and it is now in `dates`. Its year of birth is «περί το 1165» and its head reads «(1165 - 1213)», which does not agree with doxologia's flat 1166; the folder's birth is left exactly as it was and the disagreement is said in the death note. **The page also gives her a Pascha-reckoned second commemoration and it is refused**: «Η μνήμη της Αγίας Ταμάρας τιμάται, επίσης, και την Κυριακή των Μυροφόρων» — the Sunday of the Myrrhbearers, which is neither a fixed day nor a folder, and this row records only the fixed 1 Μαΐου. It names her grandfather «Αγίου Δαβίδ (τιμάται 26 Ιανουαρίου)»; the corpus's `david-of-georgia` is a prince martyred in 740 and kept on 2 October, so that is a different man and no `related` row is added. It prints no hymn."
     },
     {
       "church": "serbian",

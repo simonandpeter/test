@@ -1,0 +1,96 @@
+{
+  "slug": "maria-methymopoula",
+  "display_name": "Maria the Methymopoula",
+  "sex": "female",
+  "types": [
+    "new-martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Μαρία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Αγία Μαρία η Μεθυμοπούλα», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1826,
+      "latest": 1826,
+      "display": "1826",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Νεομάρτυς Μαρία φέρεται ότι μαρτύρησε κατά το 1826 μ.Χ.», and the page heads her «(; - 1826)». The hedge «φέρεται ότι» is the page's own. No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Αγία Μαρία η Μεθυμοπούλα»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day as the listing. She is placed exactly: born at Kato Fourni of Merambello in Crete of devout parents, killed in the field where she was gathering leaves for the silkworms by a Turco-Albanian gendarme whose advances she had refused, about 1826. The epithet Μεθυμοπούλα is the page's and is kept in the display name because it is what distinguishes her from every other Maria the corpus holds — none of whom is of Crete or a new-martyr of the 1820s. **Of the page's four proper hymns two are stored and two are not**: the apolytikion in Ἦχος δ’ «Ταχὺ προκατάλαβε» and the kontakion in Ἦχος πλ. δ’ «Τῇ ὑπερμάχῳ», both of which name her, are here; the two Έτερα Ἀπολυτίκια in Ἦχος πλ. α’, the megalynarion and the oikos were left, the last two being kinds this corpus does not hold. No relic is named."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Χριστὸν καθικέτευε, ὑπὲρ ἡμῶν ἐκτενῶς, Φουρνῆς ἐγκαλλώπισμα, καὶ Νεοάθλων τερπνόν, Μαρία λευκάνθεμον· ἔρωτα γὰρ ἀπίστου, ἀρνηθεῖσα ἐδέχθης, βλῆμα θανατηφόρον, ἐξ αὐτοῦ ὡς στρουθίον, καὶ πτέρυγας πρὸς τὸν Κτίστην, ψυχῆς σου ἐπέτασας.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε, on the page of «Αγία Μαρία η Μεθυμοπούλα»",
+        "url": "https://www.saint.gr/1453/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Entreat Christ earnestly on our behalf, O adornment of Fourni and delightful daisy of the new contenders, Maria: for having refused the love of an unbeliever thou didst take from him a deadly blow, and like a small bird didst spread the wings of thy soul towards the Creator.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ.",
+      "text": "Στεῤῥῶν ἀμνάδων τοῦ Χριστοῦ τὴν καλλιπάρθενον, τὴν ἐκ Κρήτης ὥσπερ ἄνθος εὐωδέστατον, ἑξανθήσασαν Μαρίαν τὴν ἀθληφόρον, μελῳδίαις καταστέψωμεν καὶ ᾂσμασιν, ὡς παρθένων νεανίδων κῆπον ἥδιστον, ἀνακράζοντες· χαίροις Μάρτυς νεόαθλε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ, on the page of «Αγία Μαρία η Μεθυμοπούλα»",
+        "url": "https://www.saint.gr/1453/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us crown with melodies and songs the fair virgin of the steadfast lambs of Christ, Maria the prize-bearer, who blossomed out of Crete like a most fragrant flower, the sweetest garden of young maidens, crying aloud: Rejoice, O newly contending martyr.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

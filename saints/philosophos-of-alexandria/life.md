@@ -1,0 +1,9 @@
+# Philosophos of Alexandria
+
+Philosophos was of Alexandria and lived in the fourth century, and what is known of him, saint.gr says, was told by [Antony the Great](/saints/anthony-the-great). He was a herald of the truth of Christ, and he spread it with much eloquence and warmth, maintaining and unfolding it persuasively and unanswerably before pagans and Jews alike; and following the teaching of the Gospel he lived soberly and blamelessly, an entire stranger to the passions, with his flesh dead in him.
+
+Because the enemies of the Cross could not beat him in argument, they tried again and again to trap him with cunning nets. They offered him a great deal of money and he despised it; they promised him office and he held up the Gospel; they invited him to lavish banquets and he either did not come or kept to the measure of his abstinence. Then the governor of Alexandria and his enemies contrived something else, meaning to shame and stain a chaste man's life: they arrested him and, instead of any other punishment, tied him down upon a bed.
+
+They then sent in to him a woman of loose morals, who by every means enticed him and urged him to an unchaste coupling. Unable to move, the martyr shut his eyes, and making nothing of the sharpness of the pain he bit his own tongue through, to blood and to severing. The blood that ran out soaked the face and the clothes of the harlot, who was paralysed and shaken with fear. His enemies were astonished and did not repent; and having failed to drag him into licentiousness, they decided to kill him, and struck off his head, and the martyr received the unfading crown of glory.
+
+*After saint.gr's calendar for 1 Μαΐου — [the day](https://www.saint.gr/05/01/index.aspx) and [the life](https://www.saint.gr/1429/saint.aspx); read 30 September 2026.*

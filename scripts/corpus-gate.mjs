@@ -115,6 +115,36 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδουλοσ theodulus-companion-of-agapitus theodulus-companion-of-agathopodes theodulus-companion-of-eventius theodulus-companion-of-pamphilus theodulus-of-caesarea-17-february theodulus-of-myropolis theodulus-of-the-forty-martyrs theodulus-son-of-hesperus theodulus-son-of-nilus theodulus-the-executioner theodulus-the-sinaite':
+    'Ten now. The new one is on 2 May; the others are read in the el-03-17 entry for this name form.',
+  'σαββασ sabbas-companion-of-jonah sabbas-of-daphnousia sabbas-of-sicily sabbas-of-sourozh sabbas-of-the-kyiv-caves sabbas-of-tver sabbas-of-zographou sabbas-stratelates sabbas-the-spiritual sava-brancovici-of-transylvania sava-of-serbia sava-the-second':
+    'Twelve now. The new one is Sabbas of Daphnousia on 2 May; the others are read in the el-04-24 entry for this name form.',
+  'ιορδανησ jordan-the-martyr-2-february jordan-the-wonderworker':
+    'Two men: Jordan the Wonderworker on 2 May and the Jordan of the el-02-02 entry.',
+  'κυριακοσ cyriacus-attendant-of-faustus cyriacus-son-of-hesperus':
+    'Two men: Cyriacus the son of Hesperus on 2 May and the Cyriacus of the el-09-29 entry.',
+  'βασιλειοσ basil-companion-of-euphrasius basil-kadomsky basil-martyr-6-february basil-of-ancyra basil-of-mangazeya basil-of-mirozh basil-of-moldovita basil-of-novgorod basil-of-ostrog basil-of-poiana-marului basil-of-rostov basil-of-thessalonica basil-ratishvili basil-the-confessor basil-the-new-of-latros basil-uncle-of-eustratius':
+    'Sixteen now. The new one is Basil Kadomsky on 2 May; the others are read in the el-04-18 entry for this name form.',
+  'ζωσιμασ zosimas-24-january zosimas-of-carthage zosimas-of-kumurdo zosimas-of-palestine zosimas-of-solovki zosimas-of-vorbozom':
+    'Six now. The new one is Zosimas of Kumurdo on 1 May; the others are read in the el-04-17 entry for this name form.',
+  'συμεων simeon-of-persia simeon-of-tver simeon-the-elder simeon-the-myrrh-streaming symeon-kinsman-of-the-lord symeon-of-novgorod symeon-the-barefoot symeon-the-god-receiver symeon-the-new-of-mytilene symeon-the-pentaglot symeon-the-pious symeon-with-theonas-and-pherbinus':
+    'Twelve now. The new one is Symeon the Pentaglot on 1 May; the others are read in the el-04-19 entry for this name form.',
+  'μακαριοσ macarius-companion-of-eudoxius macarius-companion-of-terentius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-metropolitan-of-moscow macarius-new-hieromartyr-1944 macarius-notaras macarius-of-ierissos macarius-of-kalyazin macarius-of-kios macarius-of-kyiv macarius-of-paphos macarius-of-pelecete macarius-of-pisma macarius-of-rome macarius-of-valaam macarius-of-zhabyn macarius-the-confessor':
+    'Nineteen now. The new one is Macarius of Kyiv on 1 May; the others are read in the el-04-17 entry for this name form.',
+  'γερασιμοσ gerasimus-of-boltinsk gerasimus-of-great-perm gerasimus-of-the-jordan gerasimus-of-vologda gerasimus-the-byzantine':
+    'Five men: Great Perm on 29 January, the Jordan and Vologda on 4 March, the Byzantine on 7 April and Gerasimus of Boltinsk on 1 May.',
+  'αγαπητοσ agapitus-of-auxerre agapitus-of-rome agapitus-of-synnada agapitus-the-blind':
+    'Four men: Synnada on 18 February, the Blind of the Kyiv Caves on 7 April, Rome on 17 April and Agapitus of Auxerre on 1 May — the Agapitus a reader found missing from the corpus when Helen’s page sent him here.',
+  'νικηφοροσ nicephorus-martyr-1-march nicephorus-martyr-8-february nicephorus-of-antioch nicephorus-of-corinth nicephorus-of-crete nicephorus-of-the-svir-desert nikephoros-of-chios':
+    'Seven now. The new one is on 1 May; the others are read in the el-03-01 entry for this name form.',
+  'μαρια maria-6-january maria-methymopoula maria-of-olonets maria-of-vladimir mary-called-marinos mary-of-aza mary-sister-of-lykarion mary-wife-of-xenophon':
+    'Eight now. The new one is Maria Methymopoula on 1 May; the others are read in the el-03-19 entry for this name form.',
+  'μιχαηλ boris-michael-of-bulgaria macarius-notaras michael-companion-of-platon-of-reval michael-mavroeidis michael-of-cyprus-of-samothrace michael-of-klops michael-of-vourla michael-the-russian-1-april michael-the-wonderworker':
+    'Nine now. The new ones are Michael the Wonderworker on 1 May and Boris-Michael of Bulgaria on 2 May, whose baptismal name this is; the others are read in the el-04-16 entry for this name form.',
+  'αφρικανοσ africanus-companion-of-publius africanus-companion-of-terentius africanus-of-lyons':
+    'Three men: Africanus of Lyons on 1 May, the companion of Publius and Terentius on 13 March, and the Africanus of Terentius’s company on 10 April.',
+  'ακακιοσ acacius-of-amida acacius-of-gaul acacius-of-latros acacius-of-melitene acacius-of-the-forty-martyrs acacius-of-tver acacius-the-executioner acacius-the-kausokalyvite acacius-the-new-of-neochorion':
+    'Nine now, and **two of the new ones share 1 May** as two entries: Acacius the New of Neochorion, whom the Romanian keeps there too, and Acacius of Gaul. The others are read in the el-04-12 entry for this name form.',
   'σιμων simon-of-moscow simon-of-zographou simon-the-martyr-3-february':
     'Two men: the Simon of 30 April and the Simon of the el-01-04 reading, which is the day still to be written.',
   'παυλοσ paul-brother-of-pausirius paul-companion-of-quadratus paul-disciple-of-dionysius-of-alexandria paul-of-cordoba paul-of-corinth paul-of-crete paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-zographou paul-the-martyr-3-february paul-the-russian paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':

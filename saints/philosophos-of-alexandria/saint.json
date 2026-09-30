@@ -1,0 +1,62 @@
+{
+  "slug": "philosophos-of-alexandria",
+  "display_name": "Philosophos of Alexandria",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Φιλόσοφος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Άγιος Φιλόσοφος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "anthony-the-great"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Μάρτυς Φιλόσοφος έζησε κατά τον 4ο αιώνα μ.Χ. και καταγόταν από την Αλεξάνδρεια.» The page gives no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Άγιος Φιλόσοφος»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day as the listing. Philosophos is his name and not a description: the page glosses it as it glosses every other name it prints, «(φίλος + σοφία) = ο φίλος της σοφίας», and the couplet plays on it, «Φιλόσοφος κλήσει τε και έργω μάκαρ» — a philosopher by calling and by work. It says the things about his life were told by Antony the Great, «Τα σχετικά με τον βίο του αφηγήθηκε ο Μέγας Αντώνιος», which is the one `related` row. The corpus's other philosophers — Cyril, Heron, Justin, John of Georgia — carry the word as an epithet and none of them is this man; it holds no other Philosophos. It prints no year and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

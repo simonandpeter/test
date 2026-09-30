@@ -1,0 +1,68 @@
+{
+  "slug": "gerasimus-of-boltinsk",
+  "display_name": "Gerasimus of Boltinsk",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "office": "Abbot of the monastery of the Holy Trinity at Boltinsk",
+  "names": [
+    {
+      "form": "Γεράσιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Όσιος Γεράσιμος Ηγούμενος Ιεράς Μονής Αγίας Τριάδος εν Μπολτίνσκ», with the rank word and the office left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1490,
+      "latest": 1490,
+      "display": "1490",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Γεράσιμος του Μπολτίνσκ, κατά κόσμο Γρηγόριος, γεννήθηκε το 1490 μ.Χ. στο Πέρεσλαβ - Ζάλεσκ της Ρωσίας», and the page heads him «(1490 - 1554)»."
+    },
+    "death": {
+      "earliest": 1554,
+      "latest": 1554,
+      "display": "1554",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Γεράσιμος κοιμήθηκε με ειρήνη το 1554 μ.Χ.», and the page heads him «(1490 - 1554)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Όσιος Γεράσιμος Ηγούμενος Ιεράς Μονής Αγίας Τριάδος εν Μπολτίνσκ»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day as the listing, and the notice is long and specific: Gregory in the world, born 1490 at Pereslavl-Zalessky, twenty-six years under the guidance of Daniel of Pereyaslavl, then a hermit near Dorogobuzh in the land of Smolensk, beaten by the locals and gaoled by the governor for having no home, recognised by an imperial envoy who had seen him with Daniel before the tsar, the church of the Holy Trinity built in 1530, two further monasteries founded at Vyazma and on the Zhizdra, dead in 1554. **None of the men it names has a folder**: Daniel of Pereyaslavl (its 7 Απριλίου), Antony later bishop of Vologda (its 26 Οκτωβρίου), Arkady the hermit and the disciple Peter Korostelev, so there is no `related` row. The corpus's other Gerasimoi — of the Jordan, of Kefalonia, of Sourvia, of Great Perm, of Tismana, Palladas, of Little St Anne's — are none of them this man; Great Perm is the only other Russian and is a fourteenth-century bishop. No hymn, no relic named."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

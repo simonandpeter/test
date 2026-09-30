@@ -1,0 +1,64 @@
+{
+  "slug": "asaph-of-wales",
+  "display_name": "Asaph of Wales",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "wonderworker"
+  ],
+  "office": "Bishop in Wales",
+  "names": [
+    {
+      "form": "Ασάφιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Άγιος Ασάφιος Επίσκοπος Ουαλίας», with the rank word and the see left off."
+    }
+  ],
+  "related": [
+    "kentigern-of-glasgow"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 551,
+      "latest": 600,
+      "display": "second half of the 6th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ασάφιος (Asaph) έζησε κατά το δεύτερο ήμισυ του 6ου αιώνα μ.Χ. και ήταν Επίσκοπος Ουαλίας.» The page gives no year of birth or of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Άγιος Ασάφιος Επίσκοπος Ουαλίας»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day as the listing, and gives the Latin form of the name in brackets itself, «Ο Άγιος Ασάφιος (Asaph)», which is why the display name is Asaph and not a transliteration of the Greek. The one `related` row is the one man the page names: «μονή που βρισκόταν κοντά στις όχθες του ποταμού Έλγουι της βόρειας Ουαλίας, η οποία και είχε ιδρυθεί από τον Άγιο Κεντιγκέρνο, Επίσκοπο Γλασκώβης (τιμάται 13 Ιανουαρίου)», who is the corpus's `kentigern-of-glasgow`, kept on 13 January. The see is given only as Ουαλίας, Wales, with no city, so `office` says no more than the page does. The corpus holds no other Asaph; the namesweep's Joasaphs are a different name. No hymn, no relic, no year."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

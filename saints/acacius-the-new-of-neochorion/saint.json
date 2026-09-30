@@ -6,6 +6,11 @@
       "form": "Acachie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 mai, «Sfântul Cuvios Mucenic Acachie»."
+    },
+    {
+      "form": "Ακάκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Άγιοι Ακάκιος ο Οσιομάρτυρας από το Νεοχώρι Θεσσαλονίκης, Ευθύμιος ο Πελοποννήσιος και Ιγνάτιος ο νέος Οσιομάρτυρας», with the rank word and the place left off."
     }
   ],
   "sex": "male",
@@ -47,8 +52,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Άγιοι Ακάκιος ο Οσιομάρτυρας από το Νεοχώρι Θεσσαλονίκης, Ευθύμιος ο Πελοποννήσιος και Ιγνάτιος ο νέος Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and it is plainly the same man: Athanasius of Neochori, today Asvestochori of Thessalonica, born 1792, apprenticed to a shoemaker at Serres at nine, brought to deny the faith, restored on the Holy Mountain at the Skete of the Forerunner under the elder Acacius, beheaded at Constantinople in 1816 «εἰς τόπον καλούμενον Δακτυλόπορταν». It agrees with the folder's year, so `dates` is untouched. **The line is a joint commemoration of three men** — «Η μνήμη των τριών αυτών Νεομαρτύρων τελείται στη Σκήτη του Τιμίου Προδρόμου την 1η Μαΐου» — and the page sends the other two elsewhere for their own days: «Λεπτομέρειες για τον βίο του Οσιομάρτυρα Ευθυμίου βλέπε στις 22 Μαρτίου ενώ για τον Οσιομάρτυρα Ιγνάτιο τον Νέο βλέπε στις 8 Οκτωβρίου». Only Acacius's row is written from this day; the second Greek day of Euthymius of Dimitsana is already noted on his own 22 March row, and Ignatius of Stara Zagora belongs to the 8 October reading. **The one hymn on the page is the joint apolytikion of the three**, Ἦχος γ’ «Λυχνία τρίφωτος», which names Euthymius, Ignatius and Acacius together; it is their own service and not a mis-hang, and it is stored here with that said. The page names the relics: the head of Acacius at the monastery of Panteleimon on the Holy Mountain and part of them at the Skete of the Forerunner. It says Meletios of Caesarea wrote his martyrdom and Onouphrios the Iberite the common service of the three, published at Athens in 1862."
     },
     {
       "church": "serbian",
@@ -58,5 +73,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Λυχνία τρίφωτος, κόσμω ἐδείχθητε, Ὁσιομάρτυρες, Χριστοῦ τρισάριθμοι, τὴν Ἐκκλησίαν τοὶς αὐγαὶς πυρσεύοντες τῶν ἀγώνων, ἔνδοξε Εὐθύμιε, ἀφθαρσίας τὸ στέλεχος, ἱερὲ Ἰγνάτιε, ἐγκράτειας τὸ ἔσοπτρον, καὶ ρόδον ἀκακίας Ἀκάκιε, ὅθεν ὑμᾶς ὑμνολογοῦμεν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Τὴν ὡραιότητα, on the page of «Άγιοι Ακάκιος ο Οσιομάρτυρας από το Νεοχώρι Θεσσαλονίκης, Ευθύμιος ο Πελοποννήσιος και Ιγνάτιος ο νέος Οσιομάρτυρας» — the joint apolytikion of the three monk-martyrs, which names all three",
+        "url": "https://www.saint.gr/1438/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a lamp of three lights were ye shown to the world, O monk-martyrs of Christ, three in number, kindling the Church with the dawnings of your contests: glorious Euthymius, the stem of incorruption; holy Ignatius, the mirror of self-restraint; and Acacius, the rose of guilelessness. Wherefore we hymn you.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

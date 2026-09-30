@@ -1,0 +1,51 @@
+{
+  "slug": "michael-the-wonderworker",
+  "display_name": "Michael (1 May)",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Μιχαήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Όσιος Μιχαήλ ο Θαυματουργός», with the rank word and the epithet left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Όσιος Μιχαήλ ο Θαυματουργός»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day as the listing, and its whole body is one sentence: «Ο Όσιος Μιχαήλ είναι άγνωστος στους Συναξαριστές και στα Μηναία. Ακολουθία αφιερωμένη σε αυτόν υπάρχει, κατά την 1η Μαΐου, στον Παρισινό Κώδικα 1574 φ. 153α, όπου εξυμνούνται οι ασκητικές του αρετές και η θαυματουργική χάρη που ανέβλυζε από τον τάφο του.» That is thin, but it is positive: the page states what the man was — an ascetic whose tomb gave out wonders — and where his service stands. It does **not** cast doubt on his existence or on his date, and carries none of the site's own asterisk and none of its «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου» sentence. **The display name is `Michael (1 May)`** because `wonderworker` is one of this folder's `types` and `lib/honorific.js` composes the rank itself; the epithet the page gives him is that word. The corpus's other Michaels — of Kyiv, of Chernigov, Maleinos, Maximovitch and the rest — are all named men of known places, and the page here names no place at all. No year, no place, no hymn, no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

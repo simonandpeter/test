@@ -1,0 +1,107 @@
+{
+  "slug": "nikephoros-of-chios",
+  "display_name": "Nikephoros of Chios",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "abbot",
+    "hymnographer"
+  ],
+  "names": [
+    {
+      "form": "Νικηφόρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Όσιος Νικηφόρος ο Χίος», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [
+    "athanasius-of-paros",
+    "macarius-notaras"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1750,
+      "latest": 1750,
+      "display": "c. 1750",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Νικηφόρος, γεννήθηκε στο Καρδάμυλα της Χίου περί το 1750 μ.Χ. από ευσεβείς γονείς και το αρχικό του όνομα ήταν Γεώργιος.» The «περί» is the page's own."
+    },
+    "death": {
+      "earliest": 1821,
+      "latest": 1821,
+      "display": "1821",
+      "basis": "attested",
+      "note": "saint.gr: «Κάποτε όμως αρρώστησε στη Χώρα στο σπίτι της αδελφής του και πέθανε αφού έζησε όσια ζωή, το Καλοκαίρι του 1821 μ.Χ.», and the page heads him «(; - 1821)». His relics were found in 1845."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Όσιος Νικηφόρος ο Χίος»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day as the listing. He is placed closely: George in the world, born about 1750 at Kardamyla of Chios, dedicated to the Panagia Neamonitissa after being saved from the plague, tonsured Nikephoros at the Nea Moni, taught by Gabriel Astrakaris, Neophytos Kausokalyvites and Iakovos Mavros, deacon and then presbyter, teacher in the school of Chios under Athanasius of Paros until 1802, abbot of the Nea Moni from 1802, then at Resta, dead in the summer of 1821 and his relics found in 1845. **The two `related` rows are the two men the page names whom the corpus holds**: Athanasius of Paros, under whose headship he taught and who withdrew to Resta in 1812, and «του Αγίου Μακαρίου (βλέπε 17 Απριλίου)», who is the corpus's `macarius-notaras`, Macarius of Corinth, kept on 17 April. Of the other men it names — the monks Joseph of Agrapha and Nilos Kalognomos, the new-martyrs Demetrius the Peloponnesian, Mark the New and Angelis of Argos — the corpus holds no folder that this page identifies with any of them: its `angelis-the-neomartyr` is Angelis of Constantinople, beheaded in 1680 and kept on 1 September, and not the physician of Argos of 3 December, so no row is added for him. **Both apolytikia are proper and name him, and the second is stored as well as the first**, one in Ἦχος δ' calling him a most shining star of the Church and the other in the same tone naming Kardamyla, Resta and the Nea Moni; both are printed in the monotonic, unaccented form the page has them in, which is the source's and not the scrape's."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος δ'.",
+      "text": "Αστήρ φαεινότατος της Εκκλησίας Χριστού, λιμών δαψιλέστατος της αληθείας αυτού και σάλπιγξ μελίρρυτος, δέδειξαι Νικηφόρε, ουρανόθεν τοις θείοις, νάμασι καθηδύνων των πιστών τας καρδίας. Δι' ο πρέσβευε Χριστώ τω Θεώ, σωθήναι τας ψυχάς ημών.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος δ', on the page of «Όσιος Νικηφόρος ο Χίος»",
+        "url": "https://www.saint.gr/1439/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A most shining star of the Church of Christ, a most bountiful harbour of His truth and a honey-flowing trumpet wast thou shown to be, O Nikephoros, sweetening the hearts of the faithful from heaven with divine streams. Wherefore intercede with Christ our God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος δ'.",
+      "text": "Καρδαμύλων το κλέος και Ρεστών τον Διδάσκαλον της Νέας Μονής τε Ιερόν Καθηγούμενον Νικηφόρον υμνήσομεν πιστοί ως νίκην εργασαμένην λαμπρώς κατά δαιμόνων τοις θαύμασι και Αγγέλους κατεφραίνοντες και Οσίων τα Τάγματα. Δόξα τω σε δοξάσαντι Χριστόν Δόξα τω σε αναδείξαντι Μακαρίου του Κορίνθου μιμητήν μεθ' ου εν Χίω συμψύχως εβίωσας.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ήχος δ', on the page of «Όσιος Νικηφόρος ο Χίος»",
+        "url": "https://www.saint.gr/1439/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The glory of Kardamyla and the teacher of Resta, the holy abbot of the Nea Moni, Nikephoros, let us the faithful hymn, as one who wrought a bright victory over the demons by his wonders, gladdening the angels and the ranks of the venerable. Glory to Christ who glorified thee; glory to Him who showed thee forth an imitator of Macarius of Corinth, with whom thou didst live in Chios with one soul.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

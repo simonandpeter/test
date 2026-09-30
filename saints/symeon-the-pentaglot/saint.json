@@ -1,0 +1,63 @@
+{
+  "slug": "symeon-the-pentaglot",
+  "display_name": "Symeon the Pentaglot",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Συμεών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Όσιος Συμεών ο Πεντάγλωσσος ο Σιναΐτης», with the rank word and the two epithets left off."
+    }
+  ],
+  "related": [
+    "catherine-of-alexandria"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1035,
+      "latest": 1035,
+      "display": "1035",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το 1035 μ.Χ.», and the page heads him «(; - 1035)». No year of birth is printed; the page says he studied at Constantinople at the beginning of the eleventh century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Όσιος Συμεών ο Πεντάγλωσσος ο Σιναΐτης»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day as the listing. He is placed closely enough to tell him from the corpus's dozen other Symeons: a Greek of Sicily, a student at Constantinople at the start of the eleventh century, then a monk in various houses of Palestine, then an ascetic at Sinai, the man who carried relics of the Great Martyr Catherine about 1026 to Trier and to Rouen in Gaul, founding at Rouen a monastery dedicated to her, dead in 1035. **The display name keeps `Pentaglot` and drops `the Sinaite`**, both of which the page gives, because the first is the epithet that distinguishes him and neither is a rank word `types` carries. The one `related` row is Catherine of Alexandria, whose relics he moved and whose monastery he founded — the page names her and no one else. The monastery at Rouen is a dedication and not a relation. No hymn, no relic of his own named, no year of birth."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

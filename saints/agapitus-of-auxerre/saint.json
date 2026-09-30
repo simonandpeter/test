@@ -1,0 +1,61 @@
+{
+  "slug": "agapitus-of-auxerre",
+  "display_name": "Agapitus of Auxerre",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "wonderworker"
+  ],
+  "office": "Bishop of Auxerre",
+  "names": [
+    {
+      "form": "Αγαπητός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Άγιος Αγαπητός Επίσκοπος Ωξέρρης», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 418,
+      "latest": 418,
+      "display": "418",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Αγαπητός κοιμήθηκε με ειρήνη το 418 μ.Χ.», and the page heads him «(; - 418)». It gives no year of birth, only that he lived «μεταξύ του 4ου και 5ου αιώνα μ.Χ.» and was elected bishop in 388."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Άγιος Αγαπητός Επίσκοπος Ωξέρρης»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day as the listing. The see, Ωξέρρης, is Auxerre in Gaul, and it is what tells him from the corpus's three other Agapiti — of Synnada, of the Kyiv Caves and the deacon — none of whom is a Gaulish bishop of the fourth and fifth centuries. His wife Martha is named and became a nun; the corpus holds no folder the page identifies with her, so there is no `related` row. The page gives 388 for his election and 418 for his death, and no year of birth. No hymn, no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

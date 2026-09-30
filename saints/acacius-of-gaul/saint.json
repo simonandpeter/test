@@ -1,0 +1,68 @@
+{
+  "slug": "acacius-of-gaul",
+  "display_name": "Acacius (Asius)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Ακάκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Μαΐου, «Άγιος Ακάκιος ο Ιερομάρτυρας», with the rank word left off. Its life page gives «Ακάκιος ή Άσιος», Acacius or Asius, as two forms of the one name."
+    },
+    {
+      "form": "Άσιος",
+      "lang": "el",
+      "note": "The alternative form saint.gr prints on his life page: «Ο Άγιος Ιερομάρτυρας Ακάκιος ή Άσιος ήταν διάκονος»."
+    }
+  ],
+  "related": [
+    "acelus-of-gaul"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε στη Γαλλία το 303 μ.Χ., επί αυτοκράτορα Διοκλητιανού (284-305 μ.Χ.)», and the page heads him «(; - 303)». No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Μαΐου — «Άγιος Ακάκιος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/05/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Μαΐου εκάστου έτους», the same day as the listing, and the whole of it is one sentence: «Ο Άγιος Ιερομάρτυρας Ακάκιος ή Άσιος ήταν διάκονος και μαρτύρησε στη Γαλλία το 303 μ.Χ., επί αυτοκράτορα Διοκλητιανού (284-305 μ.Χ.).» **He is not the other Acacius of this day**: the same 1 Μαΐου listing carries «Άγιοι Ακάκιος ο Οσιομάρτυρας από το Νεοχώρι Θεσσαλονίκης...», who is the corpus's `acacius-the-new-of-neochorion`, beheaded at Constantinople in 1816 — two entries on one calendar day are two commemorations and these two are plainly two men, a deacon under Diocletian and a monk under the Ottomans. The corpus's other Acacii are of Melitene, of Latros, of Tver, the centurion, the obedient and one of the Forty, none of them a deacon in Gaul. **The display name keeps the page's alternative form** because the bare Acacius would not tell him from six others, and the see and the epithet he has none of; the rank is left to `types`. His companion Acelus is the one `related` row, on the strength of the other page's own words. No hymn, no relic, no place in Gaul named."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
