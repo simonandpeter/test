@@ -6,6 +6,11 @@
       "form": "Ioan Casian Romanul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 februarie, «Sfântul Cuvios Ioan Casian Romanul»."
+    },
+    {
+      "form": "Κασσιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Όσιος Κασσιανός ο Ρωμαίος», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -29,7 +34,8 @@
     }
   },
   "related": [
-    "germanus-of-dobrogea"
+    "germanus-of-dobrogea",
+    "john-of-the-ladder"
   ],
   "hymns": [
     {
@@ -45,6 +51,23 @@
       },
       "english": {
         "text": "In thee, father, that which is according to the image was saved with diligence; for taking up the cross thou didst follow Christ, and working thou didst teach us to overlook the flesh, since it passes away, and to care for the soul, a thing immortal. Therefore thy spirit, most venerable father John, rejoices together with the angels.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Τῆς σοφίας τὸν λόγοιν Πάτερ τοὶς ἔργοις σου, ἀσκητικῶς γεωργήσας ὡς οἰκονόμος πιστός, ἀρετῶν μυσταγωγεῖς τὰ κατορθώματα, σὺ γὰρ πράξας εὐσεβῶς, ἐκδιδάσκεις ἀκριβῶς, Κασσιανὲ θεοφόρε, καὶ τῷ Σωτήρι πρεσβεύεις, ἐλεηθήναι τᾶς ψυχᾶς ἠμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Κασσιανός ο Ρωμαίος, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1939/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having farmed the word of wisdom ascetically by your works, father, as a faithful steward, you initiate others into the achievements of the virtues; for having practised them piously you teach them exactly, God-bearing Cassian, and you intercede with the Saviour that our souls be shown mercy.",
         "rendered": "site"
       }
     }
@@ -71,8 +94,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Φεβρουαρίου — «Όσιος Κασσιανός ο Ρωμαίος»",
+        "url": "https://www.saint.gr/02/28/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

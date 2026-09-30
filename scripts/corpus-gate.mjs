@@ -115,6 +115,22 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοφιλοσ theophilus-martyr-6-february theophilus-of-rome theophilus-the-deacon-of-libya theophilus-the-new':
+    'Four men on four Greek days: 6 February, 28 February (Rome), 8 January and 30 January.',
+  'σεραπιων serapion-disciple-of-cronides serapion-of-alexandria':
+    'Two men: the disciple of Cronides on 13 September, and Serapion of Alexandria on 28 February.',
+  'μακαριοσ macarius-companion-of-eudoxius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-metropolitan-of-moscow macarius-of-ierissos macarius-of-kios macarius-of-paphos macarius-of-pisma macarius-of-rome macarius-of-valaam macarius-of-zhabyn macarius-the-confessor':
+    'Thirteen now. The new one is Macarius of Rome on 28 February; the other twelve are read in the el-02-20 entry for this name form.',
+  'γαιοσ gaius-disciple-of-dionysius-of-alexandria gaius-of-alexandria':
+    'Two men: the disciple of Dionysius on 3 October, and Gaius of Alexandria on 28 February.',
+  'αρσενιοσ arsenios-of-paros arsenius-companion-of-elias-speleotes arsenius-of-corfu arsenius-of-ikalto arsenius-of-rostov':
+    'Five men on five Greek days: 31 January, 11 September, 19 January, 6 February and 28 February (Rostov).',
+  'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-katopinos nicholas-of-corinth nicholas-of-japan nicholas-of-pskov nicholas-of-spetses nicholas-of-trebizond nicholas-of-valaam nicholas-patriarch-of-georgia nicholas-the-studite':
+    'Ten now. The new one is Nicholas of Pskov on 28 February; the other nine are read in the el-02-26 entry for this name form.',
+  'ιωνασ jonah-of-kyiv jonas-of-great-perm jonas-the-lerian':
+    'Three men on three Greek days: Kyiv on 9 January, Great Perm on 29 January and the Lerian on 28 February.',
+  'ευβουλοσ euboulos eubulus-of-caesarea':
+    'Two men: the Euboulos saint.gr keeps on 28 February, and Eubulus of Caesarea on 3 February.',
   'τιτοσ titus-27-january titus-of-the-kiev-caves titus-the-soldier':
     'Three men, and two of them share 27 February as two lines of that day: Titus of the Kiev Caves, the hieromonk, and Titus the soldier, whom the Caves keep beside him. The third is the Titus of 27 January.',
   'τιμοθεοσ timothy-1-february timothy-disciple-of-babylas timothy-of-caesarea timothy-of-ephesus timothy-of-symbola':

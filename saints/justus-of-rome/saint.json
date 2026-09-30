@@ -1,0 +1,63 @@
+{
+  "slug": "justus-of-rome",
+  "display_name": "Justus of Rome",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιούστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Άγιοι Μακάριος, Ρουφίνος, Ιούστος και Θεόφιλος οι Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "related": [
+    "macarius-of-rome",
+    "rufinus-of-rome",
+    "theophilus-of-rome"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Φεβρουαρίου — «Άγιοι Μακάριος, Ρουφίνος, Ιούστος και Θεόφιλος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/02/28/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
+      "basis": "attested",
+      "note": "saint.gr: «Οι Άγιοι αυτοί μαρτύρησαν στη Ρώμη το έτος 250 μ.Χ. επί αυτοκράτορα Δεκίου (249 - 251 μ.Χ)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

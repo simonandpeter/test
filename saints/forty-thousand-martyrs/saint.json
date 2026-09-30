@@ -1,0 +1,59 @@
+{
+  "slug": "forty-thousand-martyrs",
+  "display_name": "The Forty Thousand Martyrs",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Τεσσαράκοντα Χιλιάδες Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Άγιοι Τεσσαράκοντα Χιλιάδες Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Φεβρουαρίου — «Άγιοι Τεσσαράκοντα Χιλιάδες Μάρτυρες»",
+        "url": "https://www.saint.gr/02/28/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1201,
+      "latest": 1300,
+      "display": "13th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι αυτοί Μάρτυρες κάηκαν από τους Μαμελούκους Τούρκους τον 13ο αιώνα μ.Χ.». The page gives no year within the century."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

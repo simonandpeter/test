@@ -6,6 +6,11 @@
       "form": "Vasile",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 februarie, «Sfântul Cuvios Vasile Mărturisitorul»."
+    },
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Όσιος Βασίλειος ο Ομολογητής», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Φεβρουαρίου — «Όσιος Βασίλειος ο Ομολογητής»",
+        "url": "https://www.saint.gr/02/28/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -49,5 +63,67 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 750,
+      "latest": 750,
+      "display": "750",
+      "basis": "attested",
+      "note": "saint.gr's heading prints «(; - 750)»; its prose says only that he fell asleep in peace, and gives no year."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Βασίλειον δώρημα, τῆς Ἐκκλησίας Χριστοῦ, ἐδείχθης Βασίλειε, ὡς βασιλεύσας παθῶν, τοὶς θείοις σου σκάμμασι, σὺ γὰρ ὁμολογία, τὸν σὸν βίον φαιδρύνας, λάμπεις δι' ἀμφοτέρων, ὡς ἀστὴρ σελασφόρος, ἐντεῦθεν τῆς ἀσάλευτου βασιλείας ἠξίωσαι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Βασίλειος ο Ομολογητής, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1923/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A kingly gift to the Church of Christ you were shown to be, Basil, in that you reigned over the passions by your divine contests; for having made your life bright by confession, you shine by both together like a light-bearing star, and from here you were counted worthy of the kingdom that cannot be shaken.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τοῦ λίθου σφραγισθέντος.",
+      "text": "Τῆς ἐρήμου πολίτης καί ἐν σώματι ἄγγελος, καί θαυματουργός ἀνεδείχθης, θεοφόρε Πατήρ ἡμῶν Βασίλειε· νηστείᾳ ἀγρυπνίᾳ προσευχῇ, οὐράνια χαρίσματα λαβών, θεραπεύεις τούς νοσοῦντας, καί τάς ψυχάς τῶν πίστει προστρεχόντων σοι. Δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σέ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διά σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Βασίλειος ο Ομολογητής, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον. This is the common of a venerable father, printed under his name with his name in it, as his own service.",
+        "url": "https://www.saint.gr/1923/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A citizen of the desert and an angel in the body and a wonderworker you were shown to be, our God-bearing father Basil; for having received heavenly gifts by fasting, vigil and prayer, you heal the sick and the souls of those who run to you in faith. Glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν.",
+      "text": "Ἐξ ὕψους λαβών, τήν θείαν ἀποκάλυψιν, ἐξῆλθες σοφέ, ἐκ μέσου τῶν συγχύσεων, καί μονάσας ὅσιε, τῶν θαυμάτων εἴληφας τήν ἐνέργειαν, καί τάς νόσους ἰᾶσθαι τῇ χάριτι, Βασίλειε παμμάκαρ Ἱερώτατε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Βασίλειος ο Ομολογητής, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/1923/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the divine revelation from on high, you went out, wise one, from the midst of confusions; and taking up the monastic life, venerable father, you received the working of wonders and the healing of diseases by grace, all-blessed and most holy Basil.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

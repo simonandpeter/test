@@ -1,0 +1,53 @@
+{
+  "slug": "euboulos",
+  "display_name": "Euboulos",
+  "sex": "male",
+  "types": [
+    "apostle"
+  ],
+  "names": [
+    {
+      "form": "Εύβουλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Άγιοι Νυμφάς και Εύβουλος οι Απόστολοι», with the rank word and the title left off."
+    }
+  ],
+  "related": [
+    "nymphas",
+    "paul-the-apostle"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Φεβρουαρίου — «Άγιοι Νυμφάς και Εύβουλος οι Απόστολοι»",
+        "url": "https://www.saint.gr/02/28/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

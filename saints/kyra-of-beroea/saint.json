@@ -1,0 +1,62 @@
+{
+  "slug": "kyra-of-beroea",
+  "display_name": "Kyra of Beroea",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Κύρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Οσίες Μαράνα και Κύρα», with the rank word left off."
+    }
+  ],
+  "related": [
+    "marana"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Φεβρουαρίου — «Οσίες Μαράνα και Κύρα»",
+        "url": "https://www.saint.gr/02/28/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 425,
+      "display": "early 5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Οσίες Κύρα και Μαράνα κατάγονταν από τη Βέρροια (τωρινό Χαλέπιο) της Συρίας και έζησαν στις αρχές του 5ου αιώνα μ.Χ.». The page gives no year."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

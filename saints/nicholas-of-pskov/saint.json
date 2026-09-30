@@ -1,0 +1,59 @@
+{
+  "slug": "nicholas-of-pskov",
+  "display_name": "Nicholas of Pskov",
+  "sex": "male",
+  "types": [
+    "fool-for-christ"
+  ],
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Άγιος Νικόλαος του Πσκωφ», with the rank word and the city left off."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Φεβρουαρίου — «Άγιος Νικόλαος του Πσκωφ»",
+        "url": "https://www.saint.gr/02/28/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1576,
+      "latest": 1576,
+      "display": "1576",
+      "basis": "attested",
+      "note": "saint.gr: «Έζησε στην πόλη Πσκωφ κατά τους χρόνους της βασιλείας του τσάρου Ιβάν του Τρομερού και κοιμήθηκε με ειρήνη το έτος 1576 μ.Χ.», and its heading prints «(; - 1576)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

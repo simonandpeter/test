@@ -1,0 +1,60 @@
+{
+  "slug": "jonas-the-lerian",
+  "display_name": "Jonas the Lerian",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ιωνάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Άγιος Ιωνάς ο Λέριος», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Φεβρουαρίου — «Άγιος Ιωνάς ο Λέριος»",
+        "url": "https://www.saint.gr/02/28/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1561,
+      "latest": 1561,
+      "display": "1561",
+      "basis": "attested",
+      "note": "saint.gr quotes the Bravelon of the monastery of Patmos: «αφξα (1561) Φεβρουαρίου κη (28) εφονεύθη εις την Λειψόν ο δούλος του Θεού Ιωνάς μοναχός ο Λέριος», and its heading prints «(; - 1561)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

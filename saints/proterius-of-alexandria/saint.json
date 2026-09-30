@@ -7,6 +7,11 @@
       "form": "Proterie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 februarie, «Sfântul Sfințit Mucenic Proterie, patriarhul Alexandriei»."
+    },
+    {
+      "form": "Προτέριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Άγιος Προτέριος ο Ιερομάρτυρας Αρχιεπίσκοπος Αλεξανδρείας», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Φεβρουαρίου — «Άγιος Προτέριος ο Ιερομάρτυρας Αρχιεπίσκοπος Αλεξανδρείας»",
+        "url": "https://www.saint.gr/02/28/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -47,5 +61,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 457,
+      "latest": 457,
+      "display": "457",
+      "basis": "attested",
+      "note": "saint.gr's heading prints «(; - 457)», and its prose gives his patriarchate as «(452 - 457 μ.Χ.)» and puts his murder after the death of the emperor Marcian."
+    }
   }
 }

@@ -6,6 +6,11 @@
       "form": "Gherman din Dobrogea",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 februarie, «Sfântul Cuvios Gherman din Dobrogea»."
+    },
+    {
+      "form": "Γερμανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Όσιος Γερμανός εκ Ρουμανίας», with the rank word and the provenance left off."
     }
   ],
   "sex": "male",
@@ -74,8 +79,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Φεβρουαρίου — «Όσιος Γερμανός εκ Ρουμανίας»",
+        "url": "https://www.saint.gr/02/28/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

@@ -7,6 +7,11 @@
       "form": "Nestor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 februarie, «Sfântul Sfințit Mucenic Nestor, Episcop de Maghid»."
+    },
+    {
+      "form": "Νέστωρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Άγιος Νέστωρ ο Μάρτυρας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Φεβρουαρίου — «Άγιος Νέστωρ ο Μάρτυρας»",
+        "url": "https://www.saint.gr/02/28/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

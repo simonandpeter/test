@@ -1,0 +1,61 @@
+{
+  "slug": "arsenius-of-rostov",
+  "display_name": "Arsenius (Matsievich)",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "names": [
+    {
+      "form": "Αρσένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Άγιος Αρσένιος Μητροπολίτης Ροστώβ», with the rank word and the see left off."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Φεβρουαρίου — «Άγιος Αρσένιος Μητροπολίτης Ροστώβ»",
+        "url": "https://www.saint.gr/02/28/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "office": "Metropolitan of Rostov",
+  "dates": {
+    "death": {
+      "earliest": 1772,
+      "latest": 1772,
+      "display": "1772",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Όσιος Αρσένιος (Ματσίεβιτς) γεννήθηκε στη Ρωσία, εξελέγη Μητροπολίτης της πόλεως Ροστώβ και κοιμήθηκε με ειρήνη το έτος 1772 μ.Χ.», and its heading prints «(; - 1772)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

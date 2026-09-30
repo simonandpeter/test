@@ -12,4 +12,6 @@ His friend Cassian honoured him so much that in his book of *Conferences with th
 
 For the excellence of his life the Holy Synod of the Romanian Orthodox Church numbered him among the holy fathers on 20–21 June 1992, with 29 February as the day of his feast, and 28 February in the years that are not leap years.
 
-*After doxologia.ro's calendar for 29 februarie — [the day](https://doxologia.ro/29-februarie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-gherman-din-dobrogea); read 19 September 2026.*
+The Greek calendar keeps him on 28 February, where the Romanian keeps him on 29, and its whole entry is three sentences: that the venerable Germanus of Dobrudja was born about the year 358, that he became a monk and practised his asceticism in Romania in a manner pleasing to God, and that he fell asleep in peace between the years 405 and 415. Its heading prints «(358 - ;)». Those years sit a little earlier than the ones doxologia's life gives, and no date in this folder is changed on their account; what the Greek page adds is the name Dobrudja in its own voice, and the day the Greek church keeps him on.
+
+*After doxologia.ro's calendar for 29 februarie — [the day](https://doxologia.ro/29-februarie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-gherman-din-dobrogea); read 19 September 2026; and saint.gr's calendar for 28 Φεβρουαρίου — [the Greek day](https://www.saint.gr/02/28/index.aspx) and [the Greek life](https://www.saint.gr/1941/saint.aspx), read 30 September 2026.*
