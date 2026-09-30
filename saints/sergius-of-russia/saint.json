@@ -1,0 +1,59 @@
+{
+  "slug": "sergius-of-russia",
+  "display_name": "Sergius of Russia",
+  "names": [
+    {
+      "form": "Σέργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιανουαρίου, «Όσιος Σέργιος ο εκ Ρωσίας», with the rank word left off. The notice adds a surname in Greek letters only, «Σέργιος (Γιανόβσκυ)», which is not transliterated here."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1876,
+      "latest": 1876,
+      "display": "1876",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Σέργιος (Γιανόβσκυ) κοιμήθηκε με ειρήνη το έτος 1876 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 6 Ιανουαρίου — «Όσιος Σέργιος ο εκ Ρωσίας»",
+        "url": "https://www.saint.gr/01/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

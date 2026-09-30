@@ -1,0 +1,65 @@
+{
+  "slug": "evagrius-of-iberia",
+  "display_name": "Evagrius of Iberia",
+  "names": [
+    {
+      "form": "Ευάγριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιανουαρίου, «Όσιος Ευάγριος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "deacon"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 415,
+      "latest": 415,
+      "display": "about 415",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ευάγριος κοιμήθηκε με ειρήνη περί το 415 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 6 Ιανουαρίου — «Όσιος Ευάγριος»",
+        "url": "https://www.saint.gr/01/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "basil-the-great",
+    "gregory-of-nyssa",
+    "melania-the-roman"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

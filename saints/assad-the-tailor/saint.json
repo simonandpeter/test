@@ -1,0 +1,58 @@
+{
+  "slug": "assad-the-tailor",
+  "display_name": "Assad the Tailor",
+  "names": [
+    {
+      "form": "Ασσάντ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιανουαρίου, «Άγιος Ασσάντ ο Ράπτης», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1218,
+      "latest": 1218,
+      "display": "1218",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ασσάντ μαρτύρησε το έτος 1218 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 6 Ιανουαρίου — «Άγιος Ασσάντ ο Ράπτης»",
+        "url": "https://www.saint.gr/01/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σεργιοσ sergius-martyr-2-january sergius-of-russia sergius-of-zographou':
+    'three men. The new one is Sergius of Russia, a monk dead 1876, kept on 6 Ιανουαρίου; the corpus keeps the bare martyr Sergius of the Romanian and Greek 2 January, upgraded in this wave, and Sergius of Zographou among the Athonite martyrs of 1275 to 1282.',
+  'ρωμανοσ romanus-of-karpenisi romanus-of-lacedaemon':
+    'two new-martyrs, one day apart on one calendar and both of the Turkish centuries: Romanus of Karpenisi, written in this wave on 5 Ιανουαρίου, and Romanus of Lacedaemon, a hieromonk dead 1695, on the 6th. saint.gr keeps them as two entries and each page gives its man his own place and his own year.',
+  'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-of-valaam':
+    'two men. saint.gr keeps Nicholas of Valaam, an ascetic dead 1824, on 6 Ιανουαρίου; the Greek 1 Ιανουαρίου keeps a presbyter Nicholas martyred with Platon of Reval in 1919, of whom the page holds nothing but the name and the year. Neither page names the other and a monk of Valaam is not a martyr of the Soviet years.',
+  'μαρια maria-6-january mary-of-aza':
+    'two women, sixteen centuries apart. saint.gr keeps a new-martyr Maria of 1919 on 6 Ιανουαρίου; the corpus keeps Mary of Aza, the virgin martyr of about 330, on the Romanian 9 June and the Greek 26 September.',
+  'γεωργιοσ george-of-develtos george-the-iberian-2-january george-the-persian':
+    'three men. The new one is George the Persian, a venerable-martyr dead 615, kept on 6 Ιανουαρίου; the other two are read in the el-01-22 entry for this name form, the bishop of Develtos on 22 Ιανουαρίου and the new-martyr at Mytilene of 1770 or 1777 on the 2nd.',
+  'ευαγριοσ evagrius-companion-of-theodoula evagrius-of-iberia':
+    'two men. saint.gr keeps Evagrius of Iberia, a monk and deacon of about 415, on 6 Ιανουαρίου, and an Evagrius martyred with Theodoula on the 18th, whose page holds only the company and the year 298. Two entries on one calendar twelve days apart, one a Georgian monk and one a martyr of the persecutions.',
   'τατιανη tatiana-5-january tatiana-of-rome':
     'two women, and the states of life differ as much as the centuries. saint.gr keeps an ascetic Tatiana on 5 Ιανουαρίου with no year on her page; the corpus keeps Tatiana of Rome, the deaconess and virgin martyred between 222 and 235, on the Romanian and Greek 12 January, where this wave upgraded her. A monastic with no year is not the Roman deaconess.',
   'γρηγοριοσ gregory-of-akritas gregory-of-nyssa gregory-the-elder gregory-uncle-of-eustratius':
@@ -1223,7 +1235,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '296'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '306'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

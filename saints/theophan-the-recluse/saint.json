@@ -7,6 +7,11 @@
       "form": "Teofan Zăvorâtul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 ianuarie."
+    },
+    {
+      "form": "Θεοφάνης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιανουαρίου, «Όσιος Θεοφάνης ο Έγκλειστος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 6 Ιανουαρίου — «Όσιος Θεοφάνης ο Έγκλειστος»",
+        "url": "https://www.saint.gr/01/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The Greek day is his death day, not the 10 January his Romanian row keeps — his life page (https://www.saint.gr/1282/saint.aspx) heads «Ημερομηνία Εορτής: 06/01» and dates his falling asleep «στις 6 Ιανουαρίου του 1894 μ.Χ., σε ηλικία 79 ετών». The folder's existing death year, taken from doxologia.ro, is 1891; the two sources disagree and nothing here is changed."
     },
     {
       "church": "serbian",

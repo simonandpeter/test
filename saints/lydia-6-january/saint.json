@@ -1,0 +1,63 @@
+{
+  "slug": "lydia-6-january",
+  "display_name": "Lydia (6 January)",
+  "names": [
+    {
+      "form": "Λυδία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιανουαρίου, «Άγιος Ανδρέας, οι δυο θυγατέρες του, και οι νεομάρτυρες γυναίκες Λυδία, Δομνίκη και Μαρία», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1919,
+      "latest": 1919,
+      "display": "1919",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι αυτοί Μάρτυρες, μαρτύρησαν το έτος 1919.» The page's heading gives «Αγια Λυδια η Νεομαρτυς (; - 1919)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 6 Ιανουαρίου — «Άγιος Ανδρέας, οι δυο θυγατέρες του, και οι νεομάρτυρες γυναίκες Λυδία, Δομνίκη και Μαρία»",
+        "url": "https://www.saint.gr/01/06/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "andrew-6-january",
+    "domnica-6-january",
+    "maria-6-january"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
