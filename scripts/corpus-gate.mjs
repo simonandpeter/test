@@ -115,6 +115,46 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ζωτικοσ zoticus-20-april zoticus-companion-of-rogatus zoticus-of-tomis':
+    'Three men: the Zoticus of 20 April, the companion of Rogatus on 12 January and Zoticus of Tomis on 13 September.',
+  'ζηνων zeno-20-april zeno-companion-of-terentius zeno-companion-of-zoilus zeno-of-diospolis zeno-the-courier zeno-the-faster-of-kiev':
+    'Six now. The new one is the Zeno of 20 April; the others are read in the el-04-10 entry for this name form.',
+  'θεωνασ theonas-20-april theonas-called-synesius theonas-of-thessalonica theonas-with-symeon-and-pherbinus':
+    'Four men: the Theonas of 20 April, Theonas called Synesius on 5 January, and the two of 4 April read in the el-04-04 entry for this name form.',
+  'τρυφων tryphon-companion-of-trophimus tryphon-of-campsada tryphon-of-constantinople':
+    'Three men: the companion of Trophimus on 29 September, Tryphon of Campsada, whom the Greek keeps on 1 Φεβρουαρίου and the Romanian on 29 septembrie, and Tryphon of Constantinople on 19 April.',
+  'σεβηριανοσ severian-20-april severian-of-the-forty-martyrs':
+    'Two men: the Severian of 20 April and Severian of the Forty of Sebaste on 9 March.',
+  'γαβριηλ gabriel-companion-of-sionios gabriel-of-bialystok gabriel-of-georgia gabriel-of-lesnovo gabriel-of-novgorod-and-saint-petersburg gabriel-of-saint-stephens-jerusalem gabriel-the-martyr-2-february gabriel-the-small gabriel-vsevolod-of-novgorod':
+    'Nine now. The new one is Gabriel of Białystok on 20 April; the others are read in the el-03-17 entry for this name form.',
+  'χριστοφοροσ christopher christopher-20-april christopher-of-adrianople christopher-of-saint-sabbas':
+    'Four men: the Christopher all four calendars keep on 9 May, of the monastery of Saint Sabbas on 13 April, of Adrianople on 16 April, and the Christopher of 20 April.',
+  'καισαριοσ caesarius-20-april caesarius-brother-of-gregory-the-theologian':
+    'Two men: the Caesarius of 20 April and Caesarius the brother of Gregory the Theologian on 9 March.',
+  'αντωνινοσ antoninus-20-april antoninus-of-ramas':
+    'Two men: the Antoninus saint.gr keeps on 20 April and the Antoninus of the el-01-23 entry.',
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-companion-of-terentius alexander-martyr-1-april alexander-of-cartagena alexander-of-oshevensk alexander-of-pydna alexander-of-rome-pope alexander-of-the-forty-martyrs alexander-of-voskiy alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Thirteen now. The new one is Alexander of Oshevensk on 20 April; the others are read in the el-04-10 entry for this name form.',
+  'βικτωρ victor-20-april victor-26-february victor-of-glazov victor-of-thessalonica':
+    'Four men on four Greek days: the Victor of 26 February, Thessalonica on 30 March, Glazov on 19 April, and the Victor read in the el-04-20 entry.',
+  'σεβαστιανοσ sebastian-of-cartagena sebastian-of-karaganda sebastian-of-posesone':
+    'Three men: the duke of Cartagena and Sebastian of Posesone, two entries of 26 February, and Sebastian of Karaganda on 19 April.',
+  'ρουφοσ rufus-19-april rufus-apostle-of-thebes rufus-of-the-kyiv-caves rufus-son-of-paul-and-tatta rufus-the-martyr-8-september':
+    'Five now. The new one is the Rufus of 19 April; the others are read in the el-04-08 entry for this name form, where two stand on 8 April.',
+  'ερμογενησ hermogenes-19-april hermogenes-companion-of-mamas hermogenes-of-moscow hermogenes-of-nicomedia hermogenes-of-samos':
+    'Five now. The new one is the Hermogenes saint.gr keeps on 19 April; the others are read in the el-02-19 entry for this name form.',
+  'σωκρατησ socrates-companion-of-dionysius socrates-companion-of-terentius':
+    'Two men: the companion of Dionysius on 19 April and the Socrates of the el-04-21 reading, which is another day and another company.',
+  'συμεων simeon-of-persia simeon-of-tver simeon-the-elder simeon-the-myrrh-streaming symeon-of-novgorod symeon-the-barefoot symeon-the-god-receiver symeon-the-new-of-mytilene symeon-the-pious symeon-with-theonas-and-pherbinus':
+    'Ten now. The new one is Symeon the Barefoot on 19 April; the others are read in the el-04-04 entry for this name form.',
+  'φιλιππα philippa-confessor-of-thessalonica philippa-mother-of-theodore':
+    'Two women: Philippa the mother of Theodore on 19 April and the Philippa of the el-01-21 entry.',
+  'companion dionysius socrates dionysius-companion-of-socrates socrates-companion-of-dionysius':
+    'The pair the 19 April page names together, each named after the other, which is what folds them.',
+  'διονυσιοσ dionysius-companion-of-agapius dionysius-companion-of-agapius-second dionysius-companion-of-quadratus dionysius-companion-of-socrates dionysius-companion-of-terentius dionysius-martyr-1-april dionysius-of-alexandria dionysius-of-pereyaslavl dionysius-reader-of-alexandria dionysius-the-merciful':
+    'Ten now. The new one is the companion of Socrates on 19 April; the others are read in the el-04-15 entry for this name form.',
+  'αγαθαγγελοσ agathangelus agathangelus-of-esphigmenou agathangelus-of-florina':
+    'Three men: the martyr with Clement of Ancyra on 23 January, the neomartyr of Florina on 17 February and Agathangelus of Esphigmenou on 19 April.',
   'ευθυμιοσ euthymius-kereselidze euthymius-of-dimitsana euthymius-of-karelia euthymius-of-novgorod euthymius-of-suzdal euthymius-of-syanzhema euthymius-of-tarnovo euthymius-of-zographou euthymius-the-man-of-god euthymius-the-wonderworker':
     'Ten now, and **two of the new ones share 18 April** as two entries: Euthymius of Karelia and Euthymius the Wonderworker. The others are read in the el-04-11 entry for this name form.',
   'κυριλλοσ cyril-bishop-in-africa cyril-companion-of-photius cyril-of-alexandria cyril-of-astrakhan cyril-of-heliopolis cyril-of-jerusalem cyril-of-kazan cyril-of-the-forty-martyrs cyril-of-the-white-lake cyril-of-zographou cyril-vi-of-constantinople':

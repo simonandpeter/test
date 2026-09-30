@@ -6,6 +6,11 @@
       "form": "Teodor din Perga",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 aprilie, «Sfântul Mucenic Teodor din Perga»."
+    },
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Απριλίου, «Άγιος Θεόδωρος ο Μάρτυρας και οι συν αυτώ Φιλίππα, Διόσκορος, Σωκράτης και Διονύσιος», with the rank word left off; the life page heads him «Αγιος Θεοδωρος ο Μαρτυρας»."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Απριλίου — «Άγιος Θεόδωρος ο Μάρτυρας και οι συν αυτώ Φιλίππα, Διόσκορος, Σωκράτης και Διονύσιος»",
+        "url": "https://www.saint.gr/04/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Απριλίου εκάστου έτους», the same day as the listing. **The Greek keeps him two days before the Romanian**, which prints him on 21 aprilie and prints no life for him at all; the folder's Romanian row stands where it is and this row records the day page that was read. saint.gr's 21 Απριλίου does not list him. That the two are one man rests on the see: doxologia's only statement about him is the troparion's title «Teodor din Perga Pamfiliei», Theodore of Perga in Pamphylia, and saint.gr says «Καταγόταν από την Πέργη της Παμφυλίας», he came from Perge in Pamphylia; both make him a martyr and neither keeps a second Theodore of that see. The Romanian troparion's plural — it asks «pentru rugăciunile lor», for their prayers — is answered by the Greek page, which enumerates the company: his mother Philippa, Dioscorus the priest of the idols, and the two soldiers Socrates and Dionysius, each of whom now has a folder of his own. The Greek sets them in the reign of the emperor Antoninus, which it dates 138 to 161 in one sentence and 138 to 160 in the next, and names a governor Theodotus, so no `dates` were taken. It prints no hymn."
     },
     {
       "church": "serbian",
@@ -63,5 +78,11 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "philippa-mother-of-theodore",
+    "dioscorus-19-april",
+    "socrates-companion-of-dionysius",
+    "dionysius-companion-of-socrates"
+  ]
 }

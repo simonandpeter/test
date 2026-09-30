@@ -1,0 +1,68 @@
+{
+  "slug": "sebastian-of-karaganda",
+  "display_name": "Sebastian of Karaganda",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "names": [
+    {
+      "form": "Σεβαστιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Απριλίου, «Όσιος Σεβαστιανός του Καραγκάντα», with the rank word left off; the page gives his name in the world as Stephen Vasilevich Fomin, in Greek letters."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 1884,
+      "latest": 1884,
+      "display": "1884",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε το έτος 1884 μ.Χ. στην επαρχία Ορέλ της Ρωσίας», and the page heads him «(1884 - 1966)»."
+    },
+    "death": {
+      "earliest": 1966,
+      "latest": 1966,
+      "display": "1966",
+      "basis": "attested",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη το έτος 1966 μ.Χ.», and the page heads him «(1884 - 1966)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Απριλίου — «Όσιος Σεβαστιανός του Καραγκάντα»",
+        "url": "https://www.saint.gr/04/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Απριλίου εκάστου έτους», the same day as the listing. The whole body of the page is four sentences, and every fact in this folder is one of them: his name in the world, Stephen Vasilevich Fomin; his birth in 1884 in the province of Oryol; his entry into Optina in 1906 and his tonsure there with the name Sebastian; his ordination deacon in 1923 and presbyter in 1927; his ministry in the Karaganda region of Kazakhstan; and his peaceful repose in 1966. It names no elder of Optina, nothing of the years between 1927 and his coming to Karaganda, no relic, and no hymn. The corpus's other Sebastian is the Roman of the Diocletianic persecution and is not this man."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

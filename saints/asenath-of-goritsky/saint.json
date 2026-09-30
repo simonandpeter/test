@@ -1,0 +1,51 @@
+{
+  "slug": "asenath-of-goritsky",
+  "display_name": "Asenath of Goritsky",
+  "sex": "female",
+  "types": [
+    "fool-for-christ"
+  ],
+  "names": [
+    {
+      "form": "Ασινέθ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Απριλίου, «Αγία Ασινέθ του Γκορίτσκυ», with the rank word left off; the life page heads her «Αγια Ασινεθ Του Γκορίτσκυ»."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Απριλίου — «Αγία Ασινέθ του Γκορίτσκυ»",
+        "url": "https://www.saint.gr/04/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Απριλίου εκάστου έτους», the same day as the listing. The whole body of the page is one sentence: «Η Αγία Ασινέθ καταγόταν από την Ρωσία και ήταν δια Χριστόν σαλή». It gives no years, no city beyond the epithet του Γκορίτσκυ in the day's line, no relic and no hymn, and no couplet. The corpus holds nobody else of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

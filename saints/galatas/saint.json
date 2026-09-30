@@ -1,0 +1,56 @@
+{
+  "slug": "galatas",
+  "display_name": "Galatas",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Γαλατάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Απριλίου, «Άγιοι Ερμογένης, Εξπέδιτος, Αριστόνικος, Ρούφος και Γαλατάς οι Μάρτυρες», with the rank word left off; the life page heads him «Αγιος Γαλατάς ο Μαρτυρας»."
+    }
+  ],
+  "related": [
+    "hermogenes-19-april",
+    "expeditus",
+    "aristonicus-19-april",
+    "rufus-19-april"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Απριλίου — «Άγιοι Ερμογένης, Εξπέδιτος, Αριστόνικος, Ρούφος και Γαλατάς οι Μάρτυρες»",
+        "url": "https://www.saint.gr/04/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Απριλίου εκάστου έτους», the same day as the listing. The whole body of the page is one sentence: «Δεν έχουμε λεπτομέρειες για τον βίο και το μαρτύριο των Αγίων» — we have no details of the life and the martyrdom of the saints. It heads each of the five separately as ο Μάρτυρας, gives no century, no emperor, no city, no manner of death, no relic, no couplet and no hymn. What it does print under three of the names are classical glosses — an Athenian philosopher for Hermogenes, a pupil of the astronomer Aristarchus for Aristonicus — and those are the page's notes on the names, not on these men. Five people are named and enumerated, so this corpus makes one folder for each."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

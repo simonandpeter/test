@@ -1,0 +1,81 @@
+{
+  "slug": "symeon-the-barefoot",
+  "display_name": "Symeon the Barefoot",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "hieromonk"
+  ],
+  "office": "Abbot of Philotheou",
+  "names": [
+    {
+      "form": "Συμεών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Απριλίου, «Όσιος Συμεών ηγούμενος Ιεράς μονής Φιλοθέου Αγίου Όρους ο Μονοχίτων και Ανυπόδητος», with the rank word, the office and the two epithets left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1594,
+      "latest": 1594,
+      "display": "1594",
+      "basis": "traditional",
+      "note": "saint.gr: «Στις 19 Απριλίου του 1594 μ.Χ. σε ηλικία υπεράνω των 100 ετών επισκέπτεται την Πόλη κι εκεί ανεπαύθη εν Κυρίω»; the page gives no year of birth, only that he was over a hundred."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Απριλίου — «Όσιος Συμεών ηγούμενος Ιεράς μονής Φιλοθέου Αγίου Όρους ο Μονοχίτων και Ανυπόδητος»",
+        "url": "https://www.saint.gr/04/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Απριλίου εκάστου έτους», the same day as the listing. The page names his village Vathyrema of Agia, his father the priest Andreas and his mother Aikaterini, the monasteries Oikonomeion or Komnineion of Kissavos, the Great Lavra and Philotheou on Athos, and the Holy Trinity and Transfiguration of Flamouri on Pelion which he built. Its chronology does not hold together: it makes him die in 1594 aged over a hundred, has him heal the daughter of sultan Suleiman the Magnificent, who died in 1566, and dates the building of Flamouri to the patriarchate of Kallinikos III of Zagora — and it reconciles none of this, so only the death year it states was taken. Under «Ιερά Λείψανα» it puts his skull at the monastery of Flamouri in Magnesia and portions at Komnineion of Larissa and at St Gerasimos of Zagora. The apolytikion it prints is the common of a venerable father, under his name and naming him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ταῖς τῶν δακρύων σου ροαῖς, τῆς ἐρήμου τό ἄγονον ἐγεώργησας καί τοῖς ἐκ βάθους στεναγμοῖς, εἰς ἐκατόν τούς πόνους ἐκαρποφόρησας καί γέγονας φωστήρ, τῆ οἰκουμένη λάμπων τοῖς θαύμασι, Συμεών Πατήρ ἡμῶν Ὅσιε, πρεύσβευε Χριστῶ τῶ Θεῶ, σωθῆναι τᾶς ψυχᾶς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. δ’, on the page of «Όσιος Συμεών ηγούμενος Ιεράς μονής Φιλοθέου Αγίου Όρους ο Μονοχίτων και Ανυπόδητος». It is the common of a venerable father, printed under his name and naming him.",
+        "url": "https://www.saint.gr/302/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst make the barren desert fruitful, and with thy sighs from the depths thou didst bring thy labours to fruit a hundredfold, and thou becamest a luminary, shining upon the world with wonders, O Symeon our venerable father. Intercede with Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

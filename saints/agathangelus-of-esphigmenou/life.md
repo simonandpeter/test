@@ -1,0 +1,13 @@
+# Agathangelus of Esphigmenou
+
+Agathangelus, called Athanasius in the world, came from the city of Ainos in Thrace; his father was named Constantine and his mother Krystallia. He was left fatherless while small, and out of poverty went as a sailor aboard a Turkish ship, whose captain pressed him to accept Islam. One night, while the ship lay in the harbour of Smyrna, the captain pretended he had business in the city and ordered the boy to walk ahead with a lantern and light the way.
+
+So walking, the captain led him to the Turkish cemetery, where he drew his knife and threatened to cut his throat unless he became a Muslim. The boy was afraid and said that he accepted; and the captain took him that same night before the judge, where he made the confession and was circumcised at once. A few days later he fell gravely ill, and fearing to die in his denial, as soon as he recovered he asked the captain's leave and went home to his own country.
+
+After a while, being again in danger of being killed by the captain, he fled in repentance to the Holy Mountain and entered the monastery of Esphigmenou, where the abbot Euthymius received him; there he was tonsured and named Agathangelus. Not long after, he resolved to be martyred for Christ, and having prepared himself under the eye of the elder Germanos he left Athos for Smyrna, where he publicly renounced Islam.
+
+At the judge's order rough guards seized and beat him and shut him in prison, his feet in the stocks and a heavy chain on his neck; the Christians who were in the prison revered him as a martyr already. The metropolitan of Smyrna, at abbot Euthymius's request, charged all the priests and all the Christians of the city to pray fervently for him. On the Friday night they brought him before the tribunal again; he stood firm in his confession, and his death by beheading was ordered.
+
+With shouts and outcry the executioners led him to the place of execution, and there he was beheaded on 19 April 1818, a Saturday, at the fifth hour, at the age of nineteen — though the page adds that according to others he was martyred in 1819 at twenty-four. The people of Smyrna bought the new martyr's body and carried it with honours to the church of St George, where it was laid in the grave of the new martyr Demos, who had suffered at Smyrna in 1763. His head, his right hand, his right foot and one rib were given to Esphigmenou in 1844, at the monastery's request.
+
+*After saint.gr's calendar for 19 Απριλίου — [the day](https://www.saint.gr/04/19/index.aspx) and [the life](https://www.saint.gr/301/saint.aspx); read 30 September 2026.*

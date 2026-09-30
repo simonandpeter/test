@@ -1,0 +1,70 @@
+{
+  "slug": "victor-of-glazov",
+  "display_name": "Victor of Glazov",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop",
+    "confessor"
+  ],
+  "office": "Bishop of Glazov",
+  "names": [
+    {
+      "form": "Βίκτωρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Απριλίου, «Άγιος Βίκτωρ ο Ιερομάρτυρας Επίσκοπος Γκλαζώφ», with the rank words and the see left off; the page gives his name in the world as Constantine Alexandrovich Ostrovidov, in Greek letters."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 1875,
+      "latest": 1875,
+      "display": "1875",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε στις 20 Μαΐου του 1875 μ.Χ. στο χωριό Ζολοτόε της περιφέρειας Σαρατόβσκαγια»."
+    },
+    "death": {
+      "earliest": 1934,
+      "latest": 1934,
+      "display": "1934",
+      "basis": "attested",
+      "note": "saint.gr: «Κοιμήθηκε το έτος 1934 μ.Χ. από πνευμονία», and the page heads him «(1875 - 1934)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Απριλίου — «Άγιος Βίκτωρ ο Ιερομάρτυρας Επίσκοπος Γκλαζώφ»",
+        "url": "https://www.saint.gr/04/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Απριλίου εκάστου έτους», the same day as the listing. The page is a full life and a dated one: born 20 May 1875 at the village of Zolotoye in the Saratov region, a doctor of theology from the academy of Kazan in 1903, bishop of Urzhum and vicar of the Vyatka diocese in January 1920, bishop of Glazov from 1924, arrested in 1919, 1922, 1926 and 1928, in the camp on Solovki, exiled to the Komi country in 1932, and dead of pneumonia in 1934 in the village of Neritsa; his relics found incorrupt there on 18 June 1997 and translated to a convent at Vyatka on 2 December 1997. It calls him Ιερομάρτυρας although the death it records is by illness in exile, and that is the page's own word. It prints no hymn. The three folders the corpus already keeps for a new-martyr Victor are presbyters, not this bishop."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

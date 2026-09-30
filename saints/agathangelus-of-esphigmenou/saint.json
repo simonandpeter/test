@@ -1,0 +1,69 @@
+{
+  "slug": "agathangelus-of-esphigmenou",
+  "display_name": "Agathangelus of Esphigmenou",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Αγαθάγγελος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Απριλίου, «Άγιος Αγαθάγγελος ο Εσφιγμενίτης», with the rank word and the epithet left off; the life page heads him «Αγιος Αγαθαγγελος ο Εσφιγμενιτης (1799 - 1818)» and gives his name in the world as Athanasius."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 1799,
+      "latest": 1799,
+      "display": "1799",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Αγαθαγγελος ο Εσφιγμενιτης (1799 - 1818)» and says he was beheaded «σε ηλικία 19 χρονών», at nineteen; the alternative reading the same page reports, «κατά άλλους ο Άγιος μαρτύρησε το 1819 μ.Χ. σε ηλικία 24 χρονών», would put his birth earlier, and the page does not choose between them."
+    },
+    "death": {
+      "earliest": 1818,
+      "latest": 1819,
+      "display": "1818 or 1819",
+      "basis": "attested",
+      "note": "saint.gr: «αποκεφαλίστηκε στις 19 Απριλίου 1818 μ.Χ., ήμερα Σάββατο και ώρα πέμπτη, σε ηλικία 19 χρονών (κατά άλλους ο Άγιος μαρτύρησε το 1819 μ.Χ. σε ηλικία 24 χρονών)» — the page prints both years and settles neither, so the interval carries both."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Απριλίου — «Άγιος Αγαθάγγελος ο Εσφιγμενίτης»",
+        "url": "https://www.saint.gr/04/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Απριλίου εκάστου έτους», the same day as the listing. It names his parents Constantine and Krystallia, his home city Ainos in Thrace, the abbot Euthymius of Esphigmenou who received him and the elder Germanos who prepared him for martyrdom, and it reports two readings of the year of his death, 1818 at nineteen and 1819 at twenty-four, without choosing between them; the `dates` here carry both. Under «Ιερά Λείψανα» it puts his skull at the monastery of Esphigmenou on Athos and a portion at the monastery of Mega Spileo at Kalavryta, and in the body of the page it says the skull, the right hand, the right foot and one rib were given to Esphigmenou in 1844 at its own request. The page prints an apolytikion, a kontakion and a megalynarion; the first two are stored here and the megalynarion is neither of the two kinds this corpus holds."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

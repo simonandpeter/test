@@ -1,0 +1,63 @@
+{
+  "slug": "alphege-of-canterbury",
+  "display_name": "Alphege of Canterbury",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "archbishop",
+    "abbot"
+  ],
+  "office": "Archbishop of Canterbury",
+  "names": [
+    {
+      "form": "Αλπέγιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Απριλίου, «Άγιος Αλπέγιος», with the rank word left off; the body of the page glosses it «ο Άγιος Ιερομάρτυς Αλπέγιος (Alphege)», and the English form in that gloss is the page's own."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1012,
+      "latest": 1012,
+      "display": "1012",
+      "basis": "traditional",
+      "note": "saint.gr: «Υπέστη πολλά βασανιστήρια και τέλος αποκεφαλίσθηκε το έτος 1012 μ.Χ.», and the page heads him «(; - 1012)»; no year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Απριλίου — «Άγιος Αλπέγιος»",
+        "url": "https://www.saint.gr/04/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Απριλίου εκάστου έτους», the same day as the listing. The page prints the English form of his name itself, «ο Άγιος Ιερομάρτυς Αλπέγιος (Alphege)», so that form was not transliterated here but copied. It gives 984 as the year of his election to Winchester and twenty-two years as the length of that episcopate before Canterbury, and 1012 as the year of his beheading; only the death year was taken as a date. It names no relic and prints no hymn and no couplet. The corpus holds other archbishops of Canterbury — Laurence, Theodore of Tarsus and Brithwald — and this is not one of them."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

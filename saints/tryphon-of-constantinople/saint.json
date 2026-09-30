@@ -1,0 +1,61 @@
+{
+  "slug": "tryphon-of-constantinople",
+  "display_name": "Tryphon of Constantinople",
+  "sex": "male",
+  "types": [
+    "patriarch"
+  ],
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Τρύφων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Απριλίου, «Άγιος Τρύφων Πατριάρχης Κωνσταντινούπολης», with the rank words left off; the life page heads him «Αγιος Τρυφων Πατριαρχης Κωνσταντινουπολης (; - 931)»."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 931,
+      "latest": 931,
+      "display": "931",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Τρυφων Πατριαρχης Κωνσταντινουπολης (; - 931)»; its narrative has him elected in December 928, forced out in 931, and living three months more in a monastery, and gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Απριλίου — «Άγιος Τρύφων Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/04/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Απριλίου εκάστου έτους», the same day as the listing. The page gives his election as December 928, after the death of the patriarch Stephen II, and his removal as 931, when Romanos Lekapenos's son Theophylact was sixteen; it heads him «(; - 931)» and gives no year of birth, so only the death year was taken. It names the metropolitan of Caesarea, Theophanes, whom it says the people called «χοιρινό» for his shamelessness, as the man who obtained Tryphon's signature on a blank sheet. The page prints no hymn and no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

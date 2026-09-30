@@ -1,0 +1,56 @@
+{
+  "slug": "philippa-mother-of-theodore",
+  "display_name": "Philippa, mother of Theodore of Perga",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Φιλίππα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Απριλίου, «Άγιος Θεόδωρος ο Μάρτυρας και οι συν αυτώ Φιλίππα, Διόσκορος, Σωκράτης και Διονύσιος», with the rank word left off; the life page heads her «Αγια Φιλιππα»."
+    }
+  ],
+  "related": [
+    "theodore-of-perga",
+    "dioscorus-19-april",
+    "socrates-companion-of-dionysius",
+    "dionysius-companion-of-socrates"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Απριλίου — «Άγιος Θεόδωρος ο Μάρτυρας και οι συν αυτώ Φιλίππα, Διόσκορος, Σωκράτης και Διονύσιος»",
+        "url": "https://www.saint.gr/04/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Απριλίου εκάστου έτους», the same day as the listing. The page gives the company no years of its own: it sets Theodore and Dioscorus in the reign of the emperor Antoninus, which it dates 138 to 161 in one sentence and 138 to 160 in the next, and it names a governor Theodotus, so no `dates` were taken. Five people are named and enumerated on the page — Theodore, his mother Philippa, Dioscorus, and the two soldiers Socrates and Dionysius — and this corpus makes one folder for each. Theodore already had one: the corpus keeps him as theodore-of-perga, off the Romanian calendar's 21 aprilie, where doxologia.ro prints no life for him at all, so his Greek row is an upgrade on that folder and not a sixth arrival here. The corpus's four unnamed Martyrs of Perge, kept on 31 August, are a different entry and are not these. The page prints no hymn for the company."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

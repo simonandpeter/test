@@ -7,6 +7,11 @@
       "form": "Gheorghe",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 aprilie, «Sfântul Ierarh Gheorghe Mărturisitorul, Episcopul Antiohiei Pisidiei»."
+    },
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Απριλίου, «Όσιος Γεώργιος ο Ομολογητής Επίσκοπος Πισιδίας», with the rank word, the epithet and the see left off; the life page heads him «Οσιος Γεωργιος ο Ομολογητης, Επισκοπος Πισιδιας»."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Απριλίου — «Όσιος Γεώργιος ο Ομολογητής Επίσκοπος Πισιδίας»",
+        "url": "https://www.saint.gr/04/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him. Its account is plainly the same man's — a bishop in Pisidia who was summoned with the other bishops to Constantinople in the iconoclast years, stood against the abolition of the icons, was exiled and died in exile, and was called Confessor for it — and it adds three things the Romanian page withheld: that the council he was called to was that of 754, that the emperor who exiled him was Constantine V Copronymus, whose reign it dates 741 to 775, and that he was made bishop «Πισιδίας», of Pisidia, where doxologia.ro says «Antiohiei Pisidiei», of Antioch in Pisidia. It gives no year of his birth or death, so no `dates` were taken; the 754 of the council and the 741–775 of the reign are the page's dates for those events and not for him. The page prints no hymn and no relic."
     },
     {
       "church": "serbian",
