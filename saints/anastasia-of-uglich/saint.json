@@ -1,0 +1,61 @@
+{
+  "slug": "anastasia-of-uglich",
+  "display_name": "Anastasia of Uglich",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "abbess"
+  ],
+  "names": [
+    {
+      "form": "Αναστασία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Απριλίου, «Οσία Αναστασία ηγουμένη του Ούγκλιχ», with the rank word and the office left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "floruit": {
+      "earliest": 1601,
+      "latest": 1700,
+      "display": "17th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Οσία Αναστασία έζησε κατά τον 17ο αιώνα μ.Χ. στη Ρωσία. Έγινε μοναχή και αναδείχθηκε ηγουμένη της μονής του Ούγκλιχ. Κοιμήθηκε οσίως με ειρήνη». The page gives no year of birth or of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Απριλίου — «Οσία Αναστασία ηγουμένη του Ούγκλιχ»",
+        "url": "https://www.saint.gr/04/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Απριλίου εκάστου έτους», the same day as the listing, and gives her no years in its heading. Its whole body is three sentences. It glosses the name in the masculine, Αναστάσιος, and does not name the monastery at Uglich beyond the town. She is none of the five other Anastasias in the corpus, all of them of other centuries and other countries. The page prints no couplet, no relic and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

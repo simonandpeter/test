@@ -1,0 +1,66 @@
+{
+  "slug": "miltiades-of-rome",
+  "display_name": "Miltiades of Rome",
+  "sex": "male",
+  "office": "Bishop of Rome",
+  "types": [
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Μιλτιάδης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Απριλίου, «Άγιος Μιλτιάδης πάπας Ρώμης», with the rank word and the see left off."
+    },
+    {
+      "form": "Μελχιάδης",
+      "lang": "el",
+      "note": "The second form saint.gr prints in the body of its page for 10 Απριλίου: «Ο Άγιος Μιλτιάδης ή Μελχιάδης ήταν πάπας Ρώμης», and «είναι γνωστός ως Μελχιάδης ο Αφρικανός»."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "floruit": {
+      "earliest": 311,
+      "latest": 314,
+      "display": "311–314",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Μιλτιάδης ή Μελχιάδης ήταν πάπας Ρώμης (311 - 314 μ.Χ.)». The years are the pontificate's, which is the only thing the page dates for him apart from the Lateran synod of 313; it gives no birth year, and the death year it implies is at odds with the reign of the persecutor it names, so no death date was taken."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Απριλίου — «Άγιος Μιλτιάδης πάπας Ρώμης»",
+        "url": "https://www.saint.gr/04/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Απριλίου εκάστου έτους», the same day as the listing, and gives him no years in its heading. The page is at odds with itself about his end: it makes him pope «(311 - 314 μ.Χ.)» and the convoker of the Lateran synod of 313, and then says «μαρτύρησε, κατά το Ρωμαϊκό Μαρτυρολόγιο, επί αυτοκράτορα Μαξιμίνου (307 - 313 μ.Χ.)», martyred under an emperor whose reign it ends before the pontificate does. Because of that no rank of martyr was taken into the types and no death year was taken; both readings are in the life. The same 10 April page lists a second Miltiades, one of the company of Carthage, who is another man. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

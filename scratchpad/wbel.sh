@@ -7,7 +7,11 @@ day="$1"
 batch="el-$day"
 cd "$(dirname "$0")/.." || exit 1
 
-drafts=(.tmp/el-drafts/"$day".json .tmp/el-drafts/"$day"-1.json .tmp/el-drafts/"$day"-2.json .tmp/el-drafts/"$day"-3.json .tmp/el-drafts/"$day"-4.json)
+# Up to eight splits: 19 Μαΐου is five files and 10 Απριλίου was the day
+# this stopped at four, so a file went unwritten and its batch record was
+# missing rather than red.
+drafts=(.tmp/el-drafts/"$day".json)
+for n in 1 2 3 4 5 6 7 8; do drafts+=(.tmp/el-drafts/"$day"-$n.json); done
 found=()
 for f in "${drafts[@]}"; do [ -f "$f" ] && found+=("$f"); done
 if [ ${#found[@]} -eq 0 ] && [ ! -f .tmp/el-drafts/up-"$day".json ]; then echo "NO DRAFT for $day"; exit 1; fi

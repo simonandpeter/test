@@ -115,6 +115,40 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'μιλτιαδησ miltiades-companion-of-terentius miltiades-of-rome':
+    'Two men on one day, and the page itself divides them: Miltiades is one of the names in the company of Terentius, and Miltiades of Rome, the pope, stands on the same 10 April as an entry of his own.',
+  'ιακωβοσ jacob-of-nimouzan jacob-the-hermit james-companion-of-emilian james-of-cyrrhus james-of-nisibis james-of-pharatha james-of-samosata james-of-serbia james-of-zographou-the-first james-of-zographou-the-second james-the-confessor':
+    'Eleven now. The new one is James of Pharatha on 10 April; the others are read in the el-03-07 entry for this name form.',
+  'δημητριοσ demetrius-ivanov demetrius-of-chios demetrius-of-constantinople demetrius-of-georgia demetrius-of-prilutsk demetrius-the-skeuophylax demetrius-tornaras demos-the-fisherman':
+    'Eight now, and the new one folds by a Greek form rather than by the English: Demos the fisherman of 10 April. The others are read in the el-03-22 entry for this name form.',
+  'azas companion james pharatha azas-the-deacon james-of-pharatha':
+    'Two the 10 April page names together, each named after the other, which is what folds them.',
+  'αναστασια anastasia-andreyevna anastasia-of-uglich anastasia-the-patrician':
+    'Three women: Anastasia Andreyevna on 1 March, Anastasia of Uglich on 10 April and Anastasia the Patrician on 10 March.',
+  'τιτοσ titus-27-january titus-companion-of-terentius titus-of-the-kiev-caves titus-the-soldier titus-the-wonderworker':
+    'Five men, and the el-02-27 entry reads the two the Kiev Caves keep on 27 February; the new one is the companion of Terentius on 10 April, and the wonderworker is 2 April.',
+  'ξενοφων xenophon-companion-of-terentius xenophon-of-constantinople':
+    'Two men: the companion of Terentius on 10 April and Xenophon of Constantinople on 26 January.',
+  'τιμοθεοσ timothy-1-february timothy-companion-of-diogenes timothy-companion-of-terentius timothy-disciple-of-babylas timothy-of-caesarea timothy-of-ephesus timothy-of-symbola':
+    'The company of Terentius, whom the 10 April page names one by one, adds one of this name on 10 April; the rest of the fold is read in the el-04-06 entry for this name form.',
+  'θωμασ thomas-companion-of-terentius thomas-of-constantinople thomas-of-zographou thomas-the-apostle':
+    'The company of Terentius, whom the 10 April page names one by one, adds one of this name on 10 April; the rest of the fold is read in the el-01-12 entry for this name form.',
+  'λουκασ luke-companion-of-terentius luke-of-corleone luke-of-emesa luke-of-hellas luke-of-novgorod':
+    'Five men on five Greek days: the companion of Terentius on 10 April, Corleone on 1 March, Emesa on 29 January, Hellas on 7 February and Novgorod on 10 February.',
+  'ησαιασ isaiah-companion-of-terentius isaiah-of-valaam isaiah-the-egyptian':
+    'Three men: the companion of Terentius on 10 April, Valaam on 8 January and the Egyptian of the Pamphilus company on 16 February.',
+  'ηρακλησ heracles-companion-of-terentius heracles-of-carthage':
+    'Two men: the companion of Terentius on 10 April and Heracles of Carthage on 11 March.',
+  'ηλιασ elias-companion-of-jonah elias-companion-of-terentius elias-martyr-with-patermuthius elias-nikolayevich-hieromartyr elias-of-heliopolis elias-of-trebizond elias-the-cave-dweller-of-calabria elias-the-egyptian':
+    'The company of Terentius, whom the 10 April page names one by one, adds one of this name on 10 April; the rest of the fold is read in the el-03-29 entry for this name form.',
+  'ζηνων zeno-companion-of-terentius zeno-companion-of-zoilus zeno-of-diospolis zeno-the-courier zeno-the-faster-of-kiev':
+    'Five men on five Greek days: the companion of Terentius on 10 April, the companion of Zoilus on 3 March, Diospolis on 27 September, the courier on 10 February and the faster of Kiev on 30 January.',
+  'θεοδωροσ theodore-companion-of-stephen theodore-companion-of-terentius theodore-founder-of-chora theodore-of-kandavla theodore-of-moscow theodore-of-novgorod theodore-of-pentapolis theodore-of-samothrace theodore-of-tamasos theodore-of-tomsk theodore-prince-of-yaroslavl theodore-stratelates theodore-the-byzantine theodore-the-envoy-of-nicomedia theodore-the-recruit theodore-the-silent':
+    'The company of Terentius, whom the 10 April page names one by one, adds one of this name on 10 April; the rest of the fold is read in the el-04-06 entry for this name form.',
+  'διονυσιοσ dionysius-companion-of-agapius dionysius-companion-of-agapius-second dionysius-companion-of-quadratus dionysius-companion-of-terentius dionysius-martyr-1-april dionysius-of-alexandria dionysius-reader-of-alexandria dionysius-the-merciful':
+    'The company of Terentius, whom the 10 April page names one by one, adds one of this name on 10 April; the rest of the fold is read in the el-04-01 entry for this name form.',
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-companion-of-terentius alexander-martyr-1-april alexander-of-cartagena alexander-of-pydna alexander-of-rome-pope alexander-of-the-forty-martyrs alexander-of-voskiy alexander-the-sleepless alexander-with-thirty-martyrs':
+    'The company of Terentius, whom the 10 April page names one by one, adds one of this name on 10 April; the rest of the fold is read in the el-04-01 entry for this name form.',
   'ρουφοσ rufus-apostle-of-thebes rufus-of-the-kyiv-caves rufus-son-of-paul-and-tatta rufus-the-martyr-8-september':
     'Four men, and two of them are on the Greek 8 April as two entries: Rufus the Apostle of Thebes, whom the Romanian keeps there too, and Rufus of the Kyiv Caves. The others are the son of Paul and Tatta on 25 September and the martyr of 8 September.',
   'μαξιμη maxima-wife-of-montanus maxime-with-januarius-and-macaria':

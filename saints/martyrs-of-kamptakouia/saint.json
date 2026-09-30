@@ -1,0 +1,60 @@
+{
+  "slug": "martyrs-of-kamptakouia",
+  "display_name": "The Martyrs of Kamptakouia in Georgia",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μάρτυρες οι εν Καμπτακούια της Γεωργίας μαρτυρήσαντες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Απριλίου, «Άγιοι Μάρτυρες οι εν Καμπτακούια της Γεωργίας μαρτυρήσαντες», with the rank word Άγιοι left off. The rest is kept whole because the page names none of them and this clause is all that names the company."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1386,
+      "latest": 1386,
+      "display": "1386",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι αυτοί Μάρτυρες, μαρτύρησαν στη Γεωργία σε μία από τις εξολοθρευτικές επιδρομές της Μογγολικής ορδής, της οποία ηγείτο ο Ταμερλάνος, το έτος 1386 μ.Χ., στο μοναστήρι του Καμπτακούια»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Απριλίου — «Άγιοι Μάρτυρες οι εν Καμπτακούια της Γεωργίας μαρτυρήσαντες»",
+        "url": "https://www.saint.gr/04/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Απριλίου εκάστου έτους», the same day as the listing. It names not one of the company and gives no number for it, so this is one folder; the monks of the monastery and the captive Christians shut in its cathedral church died together, and the page does not say how many of either there were, or whether the women and children of the neighbouring villages who had taken refuge there are counted among them. The place is spelt Καμπτακούια throughout and the name is kept in that form rather than in any other the monastery is known by. The page prints no couplet and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

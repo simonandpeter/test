@@ -1,0 +1,66 @@
+{
+  "slug": "demos-the-fisherman",
+  "display_name": "Demos the Fisherman",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δήμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Απριλίου, «Άγιος Δήμος (ή Δημήτριος) ο αλιεύς», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "The alternative form saint.gr prints in the same line for 10 Απριλίου: «Άγιος Δήμος (ή Δημήτριος) ο αλιεύς»."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1763,
+      "latest": 1763,
+      "display": "1763",
+      "basis": "traditional",
+      "note": "saint.gr: «Τότε ο κριτής τον καταδίκασε σε θάνατο με αποκεφαλισμό, γεγονός που συνέβη στίς 10 Απριλίου 1763 μ.Χ., ημέρα Πέμπτη, στη Σμύρνη», and the page's heading has «Αγιος Δημος (ή Δημητριος) ο Αλιευς (; - 1763)». The page gives no birth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Απριλίου — «Άγιος Δήμος (ή Δημήτριος) ο αλιεύς»",
+        "url": "https://www.saint.gr/04/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1763)»; the day of the martyrdom and the feast are the same day in the page's own sentence, which adds that it was a Thursday. It names his village as Ozoun Kioupru, Long Bridge, in the province of Adrianople, and says his relic was buried with honours in the church of Saint George at Smyrna, where his grave became a place of pilgrimage that gave many healings. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

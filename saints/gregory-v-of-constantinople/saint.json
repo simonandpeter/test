@@ -7,6 +7,11 @@
       "form": "Grigorie al V-lea",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 aprilie, «Sfântul Grigorie al V-lea, Patriarhul Constantinopolului»."
+    },
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Απριλίου, «Άγιος Γρηγόριος Ε' Πατριάρχης Κωνσταντινουπόλεως», with the rank word, the numeral and the see left off."
     }
   ],
   "sex": "male",
@@ -53,8 +58,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Απριλίου — «Άγιος Γρηγόριος Ε' Πατριάρχης Κωνσταντινουπόλεως»",
+        "url": "https://www.saint.gr/04/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(1745 - 1821)», which agrees with the years the folder already holds; the corpus's `dates` are left as they stand. Its third couplet names the day: «Τῇ δεκάτῃ Πατριάρχης θῦμα γέγον' οὕνεκα Ἔθνους». Two of its hymns disagree about where his body lies — the oikos says the emperor buried him worthily «ἐν πόλει τῆς Ὀδέσσης», at Odessa, while the third apolytikion has the city of Athens delighting to hold «τὸ σεβάσμιον σκῆνός σου» in its bosom; both readings are the page's and neither is resolved on it. Beside the three apolytikia and the kontakion the page prints an Οἶκος and two Καθίσματα, which the schema's hymn kinds cannot hold, so they were not taken."
     },
     {
       "church": "serbian",
@@ -64,5 +79,74 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Δημητσάνης τὸν γόνον βυζαντίου τὸν πρόεδρον, καὶ τῆς Ἐκκλησίας ἁπάσης, γέρας θεῖον καὶ καύχημα. Γρηγόριον τιμήσωμεν πιστοί, ὡς Μάρτυρα Χριστοῦ πανευκλεῆ, ἶνα λάβωμεν πταισμάτων τὸν ἱλασμόν, παρὰ Θεοῦ κραυγάζοντες. Δόξα τῷ δεδωκότι σου ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐν εὐκλείᾳ οὐρανῶν, δοξασαντᾶ σε Ἅγιε.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Τῆς ἐρήμου πολίτης, on the page of Άγιος Γρηγόριος Ε' Πατριάρχης Κωνσταντινουπόλεως. It is his own and names him and Demetsana, where he was born.",
+        "url": "https://www.saint.gr/1301/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The child of Demetsana, the president of Byzantium, the divine honour and boast of the whole Church — Gregory let us the faithful honour, as a martyr of Christ of all renown, that we may receive from God the forgiveness of our offences, crying out: glory to him who gave thee strength, glory to him who crowned thee, glory to him who in the renown of heaven has glorified thee, O holy one.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ'.",
+      "text": "Εὐλογητὸς εἷ Χριστὲ ὁ Θεὸς ἡμῶν, ὁ τὸν θεῖον Πατριάρχην ἐνισχύσας, οὐρανόθεν ἐκπέμψας αὐτῶ βοήθειαν, καὶ δι’ αὐτοῦ Ἑλλήνων Ἔθνος ἀνυψώσας, πρὸς προγόνων τὴν εὔκλειαν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος πλ. δ', on the page of Άγιος Γρηγόριος Ε' Πατριάρχης Κωνσταντινουπόλεως. It is his own; it does not name him, but it names the patriarch it means and is printed under his name.",
+        "url": "https://www.saint.gr/1301/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Blessed art thou, O Christ our God, who didst strengthen the divine patriarch, sending him help from heaven, and through him didst raise up the nation of the Greeks to the renown of its forefathers.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ΄.",
+      "model": "Τὴν ὡραιότητα τῆς Παρθενίας Σου.",
+      "text": "Ἡ Πελοπόννησος ἡ πολυθαύμαστος, γεννησαμένη σε, Μάρτυς Γρηγόριε, καὶ θρεψαμένη καλλοναῖς, αὐγάζεται τῆς δόξης σου, μᾶλλον δ’ ἡ περίδοξος Ἀθηνῶν πόλις τέρπεται, ἐν τοῖς κόλποις ἔχουσα, τὸ σεβάσμιον σκῆνός σου. Διὸ καὶ γεγηθυῖαι κραυγάζουσι, δόξα Θεῷ τῷ Παντοκράτορι.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος γ΄, Τὴν ὡραιότητα τῆς Παρθενίας Σου, on the page of Άγιος Γρηγόριος Ε' Πατριάρχης Κωνσταντινουπόλεως. It is his own and names him; it puts his body at Athens, where the page's Οἶκος has him buried at Odessa.",
+        "url": "https://www.saint.gr/1301/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Peloponnese, marvellous in many things, which bore thee, O martyr Gregory, and nourished thee in its beauties, is lit up with thy glory; but still more does the far-famed city of Athens rejoice, holding thy venerable body in its bosom. Therefore they cry out with gladness: glory to God the Almighty.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ἀθροισθέντες ἅπαντες, γνήσιοι παῖδες, τῆς Ἑλλάδος σήμερον, ἐπὶ τὴν πόλιν Ἀθηνῶν, τὸν Πατριάρχην Γρηγόριον, ἄσμασι θείοις, λαμπρῶς ἑορτάσωμεν.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ', Ἐπεφάνης σήμερον, on the page of Άγιος Γρηγόριος Ε' Πατριάρχης Κωνσταντινουπόλεως. It is his own and names him.",
+        "url": "https://www.saint.gr/1301/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Gathered all together today, true children of Greece, in the city of Athens, let us keep the feast of the patriarch Gregory brightly with divine songs.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

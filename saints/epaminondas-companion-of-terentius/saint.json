@@ -1,0 +1,118 @@
+{
+  "slug": "epaminondas-companion-of-terentius",
+  "display_name": "Epaminondas, companion of Terentius",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Επαμεινώνδας",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for 10 Απριλίου, which heads him «Αγιος Επαμεινώνδας» and lists him among the company of «Άγιοι Αφρικανός, Θεόδωρος, Μάξιμος, Πομπήιος, Τερέντιος και άλλοι τεσσαράκοντα Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "related": [
+    "africanus-companion-of-terentius",
+    "maximus-companion-of-terentius",
+    "pompeius-companion-of-terentius",
+    "terentius-of-africa",
+    "theodore-companion-of-terentius"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Μάρτυρες Αφρικανός, Θεόδωρος, Μάξιμος, Πομπήιος και Τερέντιος μαρτύρησαν το έτος 250 μ.Χ., επί αυτοκράτορα Δεκίου (249-251 μ.Χ.) και ηγεμόνος Φουρτουνιανού, στην Καρθαγένη της Αφρικής». The year is given for the company and the page tells one martyrdom for all of them."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Απριλίου — «Άγιοι Αφρικανός, Θεόδωρος, Μάξιμος, Πομπήιος, Τερέντιος και άλλοι τεσσαράκοντα Μάρτυρες»",
+        "url": "https://www.saint.gr/04/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Απριλίου εκάστου έτους», the same day as the listing. It enumerates the company: five names in the day's line and forty more in the prose, so forty-five in all, and that is why there is one folder for each. Its three numbers do not agree — the day's line says «και άλλοι τεσσαράκοντα Μάρτυρες», forty other martyrs, the prose says «μαζί με άλλους τριάντα εννέα Χριστιανούς», another thirty-nine, and the list that follows the prose holds forty names. Both readings are the page's and it reconciles neither; nothing here rests on the count. The page tells one martyrdom for all of them and nothing at all of any one of them beyond the name and a gloss on the name. Μακάριος stands in the prose list but has no heading of his own on the page, and Δημᾶς, whom the corpus holds in this company from the Romanian calendar, is not in saint.gr's list at all."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Στρατὸς θεοσύλεκτος, πανευκλεῶν Ἀθλητῶν, στερρότητι πίστεως, ἐξ Ἀφρικῆς συνδρομῶν, γενναίως ἠγώνισται σύμφρονες γὰρ τὴ γνώμη, καὶ τοὶς τρόποις ὀφθέντες, σύναθλοι ἐν ἀγώσιν, ἀνεδείχθησαν πάντες. Καὶ νῦν καθικετεύουσι, σώζεσθαι ἀπαντᾷς.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε, on the page of the martyrs of 10 Απριλίου. It is the proper of this company and names no one of them, addressing them as an army gathered by God out of Africa.",
+        "url": "https://www.saint.gr/1306/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "An army gathered by God, contestants of all renown, running together out of Africa in the firmness of faith, contended nobly; for being of one mind and of one manner they were all shown to be fellow-strugglers in the contests. And now they entreat that all may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "text": "Τῶν ἁγίων Μαρτύρων τά κατορθώματα, οὐρανῶν αἱ δυνάμεις ὑπερεθαύμασαν, ὅτι ἐν σώματι θνητῷ, τόν ἀόρατον ἐχθρόν τῇ δυνάμει τοῦ Σταυροῦ, ἀγωνισάμενοι καλῶς, ἐνίκησαν ἀοράτως, καί νῦν πρεσβεύουσι τῷ Κυρίῳ ἐλεηθῆναι τάς ψυχάς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος πλ. α’, on the page of the martyrs of 10 Απριλίου. This is the common apolytikion of martyrs, naming nobody; the page prints it under their names, so it is copied whole as the page has it.",
+        "url": "https://www.saint.gr/1306/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The powers of heaven marvelled at the achievements of the holy martyrs, that in a mortal body they contended well against the invisible enemy by the power of the Cross and conquered invisibly; and now they intercede with the Lord that our souls may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ὡς Χριστοῦ ἀκόλουθοι οἱ Ἀθλοφόροι, ἐν σταδίῳ ἔλεγον, ἀγωνιζόμενοι στεῤῥῶς· Μη δειλιάσωμεν σύναθλοι· τρυφή γὰρ μένει ἡμᾶς ἀδιάδοχος.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ', Ἐπεφάνης σήμερον, on the page of the martyrs of 10 Απριλίου. It addresses the company together and names none of them.",
+        "url": "https://www.saint.gr/1306/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As followers of Christ the prize-bearers said in the arena, contending firmly: let us not be afraid, fellow-strugglers, for a delight that has no successor awaits us.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

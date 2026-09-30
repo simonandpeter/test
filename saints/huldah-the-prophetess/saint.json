@@ -1,0 +1,56 @@
+{
+  "slug": "huldah-the-prophetess",
+  "display_name": "Huldah, mother of Selim",
+  "sex": "female",
+  "types": [
+    "prophetess"
+  ],
+  "names": [
+    {
+      "form": "Ολδά",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Απριλίου, «Προφήτιδα Ολδά», with the rank word left off. The page's own body gives a second form: «Η Προφήτιδα Ολδά (ή Όλδα)»."
+    },
+    {
+      "form": "Όλδα",
+      "lang": "el",
+      "note": "The alternative accentuation saint.gr prints in the body of its page for 10 Απριλίου: «Η Προφήτιδα Ολδά (ή Όλδα)»."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Απριλίου — «Προφήτιδα Ολδά»",
+        "url": "https://www.saint.gr/04/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Απριλίου εκάστου έτους», the same day as the listing. It gives no years at all, setting her only «κατά τους χρόνους του βασιλέως Ιωσία», in the days of king Josiah, so there is no `dates` object. Its whole account is her parentage, her dwelling at Jerusalem, and the oracle it quotes at length from the fourth book of Kings. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

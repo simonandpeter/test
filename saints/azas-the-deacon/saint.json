@@ -1,0 +1,63 @@
+{
+  "slug": "azas-the-deacon",
+  "display_name": "Azas, companion of James of Pharatha",
+  "sex": "male",
+  "types": [
+    "deacon",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αζάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Απριλίου, «Άγιοι Ιάκωβος ο Πρεσβύτερος και Αζάς ο Διάκονος», with the rank word and the order left off."
+    }
+  ],
+  "related": [
+    "james-of-pharatha"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 332,
+      "latest": 332,
+      "display": "332",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Αζας ο Διακονος (; - 332)» and dates the denunciation in its prose: «Καταγγέλθηκαν (332 μ.Χ.) σαν χριστιανοί και ανακρίθηκαν μπροστά στον άρχιμάγο Αχοσχαργάν». The beheading follows in the same account; the page gives no birth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Απριλίου — «Άγιοι Ιάκωβος ο Πρεσβύτερος και Αζάς ο Διάκονος»",
+        "url": "https://www.saint.gr/04/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Απριλίου εκάστου έτους», the same day as the listing, and heads both men «(; - 332)». Two names in one line, so two folders. The page gives him the village of Bithykora — «ο διάκονος Αζάς από το χωριό Βιθυκορά» — and the corpus holds no other man of this name. Its couplet for him plays on Levi and Leviathan: the Levite of Christ, cut in the head, puts to shame Leviathan the enemy of Christ. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
