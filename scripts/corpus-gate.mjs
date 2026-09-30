@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'πετροσ peter-abesalamites peter-companion-of-leucius peter-companion-of-manuel peter-disciple-of-dionysius-of-alexandria peter-of-capitolias peter-of-sebaste peter-son-of-john-of-syracuse peter-the-gaoler peter-the-peloponnesian peter-the-sign-bearer':
+    'ten now. The new one is Peter the Gaoler, martyred 295, kept on 26 Ιανουαρίου; the other nine are read in the el-01-01, el-01-03, el-01-11, el-01-12 and el-01-22 entries for this name form. Ten men on ten Greek days, and the reading has been the same every time.',
+  'γαβριηλ gabriel-companion-of-sionios gabriel-of-georgia gabriel-of-lesnovo gabriel-of-novgorod-and-saint-petersburg gabriel-of-saint-stephens-jerusalem':
+    'five now, and two of them arrive on this 26 Ιανουαρίου: the metropolitan of Novgorod and Saint Petersburg, dead 1801, and the abbot of Saint Stephen in Jerusalem, whose page gives no year. The other three are read in the el-01-25 entry for this name form.',
+  'κυριλλοσ cyril-of-alexandria cyril-of-kazan cyril-of-zographou':
+    'three men. The new one is Cyril of Kazan, a metropolitan and hieromartyr shot in 1937, kept on 26 Ιανουαρίου; the corpus keeps Cyril of Alexandria, upgraded in this wave on 18 Ιανουαρίου, and Cyril of Zographou among the Athonite martyrs of 1275 to 1282.',
+  'κλημησ clement-of-ancyra clement-of-mount-sagmation':
+    'two men. saint.gr keeps Clement of Mount Sagmation, a wonderworker dead 1111, on 26 Ιανουαρίου; the corpus keeps Clement of Ancyra, upgraded in this wave on 23 Ιανουαρίου. A Byzantine wonderworker of the eleventh century is not the bishop of Ancyra.',
+  'αρκαδιοσ arcadius-martyr-12-january arcadius-of-vyazniki arcadius-son-of-xenophon':
+    'three men, and two of them are on this same 26 Ιανουαρίου: Arcadius the son of Xenophon, whom the Romanian calendar keeps on the day too, and Arcadius of Vyazniki, a monk dead 1592. The third is the bare martyr of 12 Ιανουαρίου, written earlier in this wave. One calendar, two entries on one day and a third elsewhere.',
   'θεοδοτοσ theodotus-1-january theodotus-of-marcianopolis theodotus-of-the-monastery-of-publius':
     'three men. The new one is Theodotus, abbot of the monastery of Publius, whose page gives no year, kept on 25 Ιανουαρίου; the other two are read in the el-01-13 entry for this name form — the bare 1 Ιανουαρίου martyr and Marcianopolis, dead 305 to 311.',
   'γαβριηλ gabriel-companion-of-sionios gabriel-of-georgia gabriel-of-lesnovo':
@@ -1275,7 +1285,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '363'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '375'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

@@ -7,6 +7,11 @@
       "form": "David",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 ianuarie, «Sfântul David Ziditorul, regele Georgiei»."
+    },
+    {
+      "form": "Δαυίδ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιανουαρίου, «Άγιος Δαυίδ βασιλεύς της Γεωργίας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -51,8 +56,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 26 Ιανουαρίου — «Άγιος Δαυίδ βασιλεύς της Γεωργίας»",
+        "url": "https://www.saint.gr/01/26/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

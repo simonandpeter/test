@@ -1,0 +1,98 @@
+{
+  "slug": "clement-of-mount-sagmation",
+  "display_name": "Clement of Mount Sagmation",
+  "names": [
+    {
+      "form": "Κλήμης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιανουαρίου, «Όσιος Κλήμης ο εν τω Όρει Σαγματίω άσκησας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "related": [
+    "meletius-the-new-of-myoupolis",
+    "germanus-of-sagmata"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1111,
+      "latest": 1111,
+      "display": "1111",
+      "basis": "traditional",
+      "note": "saint.gr: «ο Όσιος Κλήμης κοιμήθηκε το έτος 1111 μ.Χ. με ειρήνη»; the page's heading dates him «(; - 1111)». It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 26 Ιανουαρίου — «Όσιος Κλήμης ο εν τω Όρει Σαγματίω άσκησας»",
+        "url": "https://www.saint.gr/01/26/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Τόν πλοῦτον καί τήν δόξαν τοῦ ματαίου αἰῶνος ἐμίσησας θεόφρων, ὁσιώτατε Κλήμη, καί ὄρος κατέλαβες τραχύ, ἔν ᾧ προσομίλεις τῷ Θεῷ, διά τοῦτο συνελθόντες, ἐπαξίως εὐφημοῦμέν σε δόξα τῷ σέ δοξάσαντι Χριστῷ, δόξα τῷ σέ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διά σοῦ πᾶσι ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Όσιος Κλήμης ο εν τω Όρει Σαγματίω άσκησας — Ἀπολυτίκιον, Ἦχος α’.",
+        "url": "https://www.saint.gr/1168/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The wealth and the glory of this vain age you hated, O God-minded and most holy Clement, and you took hold of a rugged mountain, and there you conversed with God. Therefore, gathered together, we praise you as is fitting: glory to Christ who glorified you, glory to him who crowned you, glory to him who works through you healings for all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ.",
+      "text": "Τοὺς ἐν ἀσκήσει φαεινοὺς καὶ οὐρανόφρονας, καὶ τοῦ Χριστοῦ ὥς ἀληθῶς θείους θεράποντας, Κλήμεντα καὶ Γερμανὸν ανευφημήσωμεν, οὗτοι γὰρ ὡς ποταμοὺς ἰάματα βρύουσι, τοῖς θερμῶς τοῖς λειψάνοις αὐτῶν πελάζουσι, καὶ κραυγάζουσι, χαίροις ζεῦγος ἁγιόλεκτον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Όσιος Κλήμης ο εν τω Όρει Σαγματίω άσκησας — Κοντάκιον, Ἦχος πλ. δ’. «Τῇ ὑπερμάχῳ»; the kontakion is the joint one of Clement and Germanus of Sagmata, printed on Clement's page.",
+        "url": "https://www.saint.gr/1168/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise the two who shone in asceticism and were heavenly-minded, the truly divine servants of Christ, Clement and Germanus; for they pour out healings like rivers upon those who draw near with fervour to their relics, and who cry aloud: Rejoice, pair chosen among the saints.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

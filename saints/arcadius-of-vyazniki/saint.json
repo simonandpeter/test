@@ -1,0 +1,59 @@
+{
+  "slug": "arcadius-of-vyazniki",
+  "display_name": "Arcadius of Vyazniki",
+  "names": [
+    {
+      "form": "Αρκάδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιανουαρίου, «Όσιος Αρκάδιος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1592,
+      "latest": 1592,
+      "display": "1592",
+      "basis": "attested",
+      "note": "saint.gr: «Μόνασε στη μονή του Αγίου Γερασίμου της πόλεως Βγιαζνίκι της Ρωσίας και κοιμήθηκε με ειρήνη το έτος 1592 μ.Χ.»; the page's heading dates him «(; - 1592)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 26 Ιανουαρίου — «Όσιος Αρκάδιος»",
+        "url": "https://www.saint.gr/01/26/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

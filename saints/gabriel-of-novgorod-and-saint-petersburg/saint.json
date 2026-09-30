@@ -1,0 +1,60 @@
+{
+  "slug": "gabriel-of-novgorod-and-saint-petersburg",
+  "display_name": "Gabriel of Novgorod and Saint Petersburg",
+  "office": "Metropolitan of Novgorod and Saint Petersburg",
+  "names": [
+    {
+      "form": "Γαβριήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιανουαρίου, «Άγιος Γαβριήλ Μητροπολίτης Νόβγκοροντ και Αγίας Πετρούπολης», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1801,
+      "latest": 1801,
+      "display": "1801",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Γαβριήλ, κοιμήθηκε με ειρήνη το έτος 1801 μ.Χ.»; the page's heading dates him «(; - 1801)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 26 Ιανουαρίου — «Άγιος Γαβριήλ Μητροπολίτης Νόβγκοροντ και Αγίας Πετρούπολης»",
+        "url": "https://www.saint.gr/01/26/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

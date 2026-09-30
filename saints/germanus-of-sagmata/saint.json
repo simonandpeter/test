@@ -1,0 +1,80 @@
+{
+  "slug": "germanus-of-sagmata",
+  "display_name": "Germanus of Sagmata",
+  "names": [
+    {
+      "form": "Γερμανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιανουαρίου, «Όσιος Γερμανός ο εν Σαγματά», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "related": [
+    "clement-of-mount-sagmation"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1480,
+      "latest": 1540,
+      "display": "1480–1540",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Γερμανός ο εν Σαγματά που έζησε στους σκοτεινούς χρόνους της δουλείας (1480 - 1540 μ.Χ.)». The page gives no separate year of birth or of death; this is the span it prints."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 26 Ιανουαρίου — «Όσιος Γερμανός ο εν Σαγματά»",
+        "url": "https://www.saint.gr/01/26/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Χριστῷ ἠκολούθησας, καταλιπών τά τῆς γῆς καὶ βίου ἰσάγγελου, ἐπιπληθεῦσω σαφῶς, ὡς ἰσαρκος Ὅσιε σύ γάρ ἐν Σαγματίῳ προσχωρῶν Θείῳ πόθῳ, σμίλλη πικρᾶ τὴν πάλαι πικράν γεῦσιν ἄπώσω. Διό Γ ερμανέ’ Θεοφόρε, ἀξίως δεδόξασαι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Όσιος Γερμανός ο εν Σαγματά — Ἀπολυτίκιον, Ἦχος δ΄. «Ταχὺ προκατάλαβε». The page's text is printed with the misspellings kept here.",
+        "url": "https://www.saint.gr/4071/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You followed Christ, leaving behind the things of earth, and plainly took on a life like the angels', venerable one, as though without flesh; for coming to Sagmation with divine longing, you thrust away with a bitter chisel the old bitter taste. Therefore, God-bearing Germanus, you are worthily glorified.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

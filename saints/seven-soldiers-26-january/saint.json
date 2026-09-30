@@ -1,0 +1,63 @@
+{
+  "slug": "seven-soldiers-26-january",
+  "display_name": "The Seven Soldiers (26 January)",
+  "names": [
+    {
+      "form": "Επτά Στρατιώτες",
+      "lang": "el",
+      "note": "Read out of the heading «Αγιοι Επτα Στρατιωτες» on saint.gr's page for the martyrs of 26 Ιανουαρίου; the day's line calls them «οι επτά στρατιώτες μάρτυρες». The page names none of them."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "related": [
+    "ananias-26-january",
+    "peter-the-gaoler"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 295,
+      "latest": 295,
+      "display": "295",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι αυτοί έζησαν στα χρόνια του βασιλιά Διοκλητιανού και Μαξίμου ηγεμόνα της Φοινίκης (295 μ.Χ.).» The year is the one the page attaches to the governor."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 26 Ιανουαρίου — «Άγιοι Ανανίας ο Πρεσβύτερος, Πέτρος ο δεσμοφύλακας και οι επτά στρατιώτες μάρτυρες»",
+        "url": "https://www.saint.gr/01/26/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

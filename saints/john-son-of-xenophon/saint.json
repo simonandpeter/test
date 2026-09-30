@@ -6,6 +6,11 @@
       "form": "Ioan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 ianuarie, «Sfântul Cuvios Ioan»."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιανουαρίου, «Όσιος Ξενοφών μετά της συμβίου του Μαρίας και των τέκνων Αρκαδίου και Ιωάννη», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -50,6 +55,40 @@
         "text": "In the courts of the Master thou didst keep vigil together with thy wife and thy sons, dividing thy goods among the poor with gladness, O blessed one. Therefore ye inherit the divine delight.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος δ'.",
+      "model": "Ό υψωθείς εν τω Σταυρώ.",
+      "text": "Ως γενεά ευλογητή τω Κυρίω, της ουρανίου ηξιώθησαν δόξης, ασκητικώς δοξάσαντες Χριστόν επί της γης. Ξενοφών ο Όσιος, και η τούτου συμβία, συν τοις αριστεύσασιν, ιεροίς αυτών τέκνοις, ους ευφημούντες είπωμεν φαιδρώς χαίροις Οσίων χορεία τετράριθμε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Όσιος Ξενοφών μετά της συμβίου του Μαρίας και των τέκνων Αρκαδίου και Ιωάννη — Ἀπολυτίκιον, Ήχος δ'. «Ό υψωθείς εν τω Σταυρώ»; the hymn is the family's, and names him among Xenophon's holy children.",
+        "url": "https://www.saint.gr/1175/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a generation blessed by the Lord they were counted worthy of the glory of heaven, having glorified Christ upon the earth by their asceticism: the venerable Xenophon and his wife, together with their holy children who contended nobly. Praising them, let us say brightly: rejoice, choir of four venerable ones.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος δ’.",
+      "model": "Επεφάνης σήμερον",
+      "text": "Την του βίου θάλασσαν διεκφυγόντες, Ξενοφών ο δίκαιος, συν τη συζύγω τη σεπτή, εν ουρανοίς συνευφραίνονται, μετά των τέκνων, Χριστόν μεγαλύνοντες.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Όσιος Ξενοφών μετά της συμβίου του Μαρίας και των τέκνων Αρκαδίου και Ιωάννη — Κοντάκιον, Ήχος δ’. «Επεφάνης σήμερον»; the hymn is the family's.",
+        "url": "https://www.saint.gr/1175/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having escaped the sea of this life, the righteous Xenophon and his honoured wife rejoice together in the heavens with their children, magnifying Christ.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
@@ -74,8 +113,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 26 Ιανουαρίου — «Όσιος Ξενοφών μετά της συμβίου του Μαρίας και των τέκνων Αρκαδίου και Ιωάννη»",
+        "url": "https://www.saint.gr/01/26/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

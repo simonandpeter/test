@@ -6,4 +6,6 @@ The same page says he defeated the Turks at the battle of Didgori in 1122 and to
 
 Of his piety, his manner of life or his death the Romanian page says nothing, and nothing beyond what it prints is set down here.
 
-*After doxologia.ro's calendar for 26 ianuarie — [the day](https://doxologia.ro/26-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-david-ziditorul-regele-georgiei); read 19 September 2026.*
+The Greek calendar keeps him on the same twenty-sixth of January. saint.gr says that David came from the land of Georgia and reigned in the years 1089 to 1130; that he was the son of George II, king of Georgia; and that he was surnamed the Strong, or the Restorer. In his reign, the page says, his country had been overrun by the Seljuk Turks; taking advantage of their own quarrels and divisions he called the people to arms and, after many battles, took Tiflis. He contended for the Orthodox faith, raised many churches and renewed the old ones, and was marked out for his reverence toward God.
+
+*After doxologia.ro's calendar for 26 ianuarie — [the day](https://doxologia.ro/26-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-david-ziditorul-regele-georgiei); read 19 September 2026; and after saint.gr's calendar for 26 Ιανουαρίου — [the day](https://www.saint.gr/01/26/index.aspx) and [the life](https://www.saint.gr/1176/saint.aspx), read 30 September 2026.*

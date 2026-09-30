@@ -1,0 +1,13 @@
+# Clement of Mount Sagmation
+
+Clement was the child of devout Christians who came from Athens, and was brought up in the teaching and admonition of the Lord; from a small age he was in church and was schooled in the word of God and in the chants. At thirty he left the vanity of this world and took the road of the monastic state, practising asceticism at the monastery of the Bodiless Ones, or of the Symboulos, on Kithairon, beside the elder [Meletius](/saints/meletius-the-new-of-myoupolis), famous for his virtue and holiness, who tonsured him there a monk.
+
+There, saint.gr says, he shone in silence, obedience, asceticism and prayer. He said the prayer of the heart, «Κύριε Ἰησοῦ Χριστέ, ἐλέησόν με», and his heart filled with consolation and grace; in those few words he gathered the whole contemplation of the mystery of the divine economy, and when he came out of the services in the church he was transfigured.
+
+One brother of the monastery, the monk Jacob, saw him one evening at prayer, standing raised up in the air and wholly bathed in light; Jacob could not have his fill of the sight, and went back and told the other monks what he had seen. So Clement, to escape the glory and the praise of men, left that place and came to the mountain of Sagmata near the city of Thebes, and continued his asceticism in a sheer cave.
+
+As soon as he entered the cave he made the sign of the Cross and thanked God for giving him a cell made without hands. There he stayed many years and gathered a multitude of monks about him, whom he guided in the fear of God; his biographer says that he remained on high, on a very narrow pillar, bearing bravely the rush of winds and heat and rain in every hardship and affliction and distress, and conversing with God.
+
+The fame of his wonders reached the imperial city, and the emperor Alexios Komnenos, wishing to honour the monastery of Sagmata and its ascetic, gave it by a golden bull a piece of the Precious and Life-giving Wood, and with the same bull a great stretch of land by the lake of Oungria. So Clement fell asleep in peace in the year 1111. A little before he gave up his soul he called his fellow-monks and blessed them, asked their forgiveness for anything by which he had grieved them, and hoped to meet again his own elder Meletius and to give him the kiss of love. His honoured head is kept at the monastery of the Transfiguration of the Saviour at Sagmata in Boeotia, and the kontakion the page prints for him is the joint one of himself and [Germanus](/saints/germanus-of-sagmata).
+
+*After saint.gr's calendar for 26 Ιανουαρίου — [the day](https://www.saint.gr/01/26/index.aspx) and [the life](https://www.saint.gr/1168/saint.aspx); read 30 September 2026.*
