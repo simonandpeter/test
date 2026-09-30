@@ -1,0 +1,61 @@
+{
+  "slug": "theophanes-the-neomartyr",
+  "display_name": "Theophanes of Zapanti",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Θεοφάνης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιουνίου, «Άγιος Θεοφάνης ο Νεομάρτυρας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1588,
+      "latest": 1588,
+      "display": "1588",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Θεοφανης ο Νεομαρτυρας (; - 1588)». Its last paragraph says the martyrdom is placed on 8 June 1559 by all who follow Nikodemos the Hagiorite's New Martyrologion, but that by Professor P. V. Paschos's observation it belongs in 1588, on the strength of two codices, because the dates of Gabriel Severos of Philadelphia (1577-1616), who tonsured him at Venice, cannot be squared with 1559. The page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Ιουνίου — «Άγιος Θεοφάνης ο Νεομάρτυρας»",
+        "url": "https://www.saint.gr/06/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence — which one entry on this day does carry, and that one was refused. saint.gr's head line dates him «(; - 1588)» and the page then argues with the received year in its own voice: the martyrdom is placed on 8 June 1559 by everybody on the strength of Nikodemos the Hagiorite's New Martyrologion, but by the correct observation of the hagiologist Professor P. V. Paschos it is placed in 1588, on the strength of Codex 339 of the Metochion of the Holy Sepulchre at Constantinople and Codex 797 of the Great Monastery of Vatopedi, because the chronology of the metropolitan of Philadelphia Gabriel Severos (1577-1616), by whom Theophanes was tonsured at Venice, does not agree with a martyrdom in 1559. The head line's 1588 is the year recorded here and the dispute is in the `dates` note. The page names Zapanti, now Kalovryse, near Kalamata in Messenia; Constantinople, Venice, Athens, Euboea, Larissa and the Holy Mountain follow, and `locations` is left out for that reason. His biographer and hymnographer is named, the hierodeacon Synesios of Vatopedi, but no hymn is printed on the page. The corpus keeps nine men of this name and none of them this one."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

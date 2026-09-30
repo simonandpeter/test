@@ -1,0 +1,50 @@
+{
+  "slug": "athre",
+  "display_name": "Athre",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Αθρέ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιουνίου, «Όσιος Αθρέ», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Ιουνίου — «Όσιος Αθρέ»",
+        "url": "https://www.saint.gr/06/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence — which one entry on this day does carry, and that one was refused. The entry is one sentence and a couplet, and the sentence gives a second reading of the name in a parenthesis: «Ο Όσιος Αθρέ (ή Ατρέ) απεβίωσε ειρηνικά. Δεν έχουμε άλλες λεπτομέρειες για τον βίο του». Only the form the day's line prints is stored, and the variant is recorded in this note. There is no century, no country and no year, so there is no `dates` object and no `locations`, and no hymn is printed. The corpus keeps nobody of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

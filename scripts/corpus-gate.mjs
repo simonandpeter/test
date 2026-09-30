@@ -115,6 +115,20 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'κυροσ cyrus-of-alexandria cyrus-of-constantinople kyros-the-venerable':
+    'Two men: the Cyrus of 9 June and the Cyrus of the el-01-31 entry.',
+  'ανανιασ ananias-26-january ananias-martyr-9-june ananias-of-crete ananias-of-lacedaemonia':
+    'Three men: Ananias of Lacedaemonia on 15 April, the Ananias of 9 June and the Ananias of the el-01-26 entry.',
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-companion-of-barbarus alexander-companion-of-sisinnius alexander-companion-of-terentius alexander-companion-of-thalaleus alexander-martyr-1-april alexander-of-cartagena alexander-of-kentoukellai alexander-of-kharkov alexander-of-lyons alexander-of-oshevensk alexander-of-prusa alexander-of-pydna alexander-of-rome-pope alexander-of-the-forty-martyrs alexander-of-thessalonica alexander-of-voskiy alexander-the-dervish alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Twenty-two now. The new one is on 9 June; the others are read in the el-06-02 entry for this name form.',
+  'θεοφανησ theophan-the-recluse theophanes-of-peritheorion theophanes-of-sigriane theophanes-the-merciful-of-gaza theophanes-the-myrrh-streamer-of-cyprus theophanes-the-neomartyr theophanes-venerable-17-may':
+    'Seven now. The new one is on 8 June; the others are read in the el-05-17 entry for this name form, where the Cypriot myrrh-streamer and the Meteora brother are parted.',
+  'παυλοσ paul-brother-of-pausirius paul-companion-of-andrew paul-companion-of-lucillian paul-companion-of-quadratus paul-companion-of-reverianus paul-disciple-of-dionysius-of-alexandria paul-krasnokutsky paul-martyr-28-may paul-of-cordoba paul-of-corinth paul-of-crete paul-of-damascus paul-of-jamnia paul-of-kaiouma paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-vilnius paul-of-zographou paul-the-martyr-3-february paul-the-peloponnesian paul-the-russian paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
+    'Twenty-six now. The new one is on 8 June; the others are read in the el-06-01 entry for this name form.',
+  'θεοδωροσ mstislav-of-kiev theodore-companion-of-pausolypius theodore-companion-of-stephen theodore-companion-of-terentius theodore-founder-of-chora theodore-of-kama-the-philosopher theodore-of-kandavla theodore-of-kythera theodore-of-moscow theodore-of-murom theodore-of-novgorod theodore-of-pavia theodore-of-pentapolis theodore-of-perga theodore-of-rostov-and-suzdal theodore-of-samothrace theodore-of-sykeon theodore-of-tamasos theodore-of-the-twelve-tribunes theodore-of-tomsk theodore-of-vrsac theodore-prince-of-yaroslavl theodore-stratelates theodore-the-byzantine theodore-the-envoy-of-nicomedia theodore-the-recruit theodore-the-silent theodore-trichinas theodore-yaroslavich':
+    'Twenty-nine now. The new one is on 8 June; the others are read in the el-06-05 entry for this name form.',
+  'μαρκοσ mark-martyr-8-june mark-of-arethusa mark-of-byblos mark-of-chios mark-of-kantara mark-of-the-lavra-of-pskov mark-the-ascetic mark-the-cretan-of-smyrna mark-the-deaf mark-the-evangelist mark-the-hermit-20-may mark-the-shepherd':
+    'Twelve now. The new one is on 8 June; the others are read in the el-06-04 entry for this name form.',
   'ταρασιοσ tarasius-martyr-7-june tarasius-of-constantinople tarasius-of-lycaonia':
     'Three men: Tarasius of Constantinople on 25 February, Tarasius of Lycaonia on 7 May, and the Tarasius of 7 June.',
   'στεφανοσ stefan-brancoveanu stephen-27-february stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-khirsa stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-the-presbyter-7-june stephen-xylinites':

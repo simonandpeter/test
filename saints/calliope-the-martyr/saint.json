@@ -6,6 +6,11 @@
       "form": "Caliopia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 iunie, «Sfânta Muceniță Caliopia»."
+    },
+    {
+      "form": "Καλλιόπη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιουνίου, «Αγία Καλλιόπη», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Ιουνίου — «Αγία Καλλιόπη»",
+        "url": "https://www.saint.gr/06/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Ιουνίου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row. It is plainly the same woman: the virgin of Decius's persecution who refused marriage, was flattered and then tortured by the local governor, and was beheaded. saint.gr dates her to the middle of the third century, in the years of the emperor Decius, which agrees with the folder's existing dates; it names no city, so `locations` stays out. One apolytikion is taken. The page's heading glosses the masculine form «ΚΑΛΛΙΟΠΙΟΣ» rather than her own name, which is the page's own furniture."
     },
     {
       "church": "serbian",
@@ -55,5 +70,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος α΄.",
+      "model": "Της ερήμου πολίτης.",
+      "text": "Του Σωτήρος το κάλλος εκ ψυχής αγαπήσασα, καλλιπάρθενε κόρη, Καλλιόπη πανεύφημε, ηγώνισαι στερρώς υπέρ αυτού, και δόξης ηξιώθης θεϊκής, δια τούτο σου την μνήμην την ιεράν, τιμώμεν εκβοώντές σοι, δόξα τω δεδωκότι σοι ισχύν, δόξα τω σε στεφανώσαντι, δόξα τω χορηγούντι δια σού, ημίν πταισμάτων άφεσιν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ήχος α΄, Της ερήμου πολίτης, on the page of «Αγία Καλλιόπη»",
+        "url": "https://www.saint.gr/527/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved the beauty of the Saviour from your soul, O fair virgin maiden, all-praised Calliope, you contended steadfastly for him and were counted worthy of divine glory. And so we honour your sacred memory and cry out to you: glory to him who gave you strength, glory to him who crowned you, glory to him who through you grants us forgiveness of our offences.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

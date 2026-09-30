@@ -1,0 +1,60 @@
+{
+  "slug": "theodore-of-rostov-and-suzdal",
+  "display_name": "Theodore of Rostov and Suzdal",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιουνίου, «Όσιος Θεόδωρος Επίσκοπος Ροστώφ και Σούζνταλ Ρωσίας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1023,
+      "latest": 1023,
+      "display": "1023",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Οσιος Θεοδωρος Επισκοπος Ροστωφ Και Σουζνταλ Ρωσιας (; - 1023)» and the entry says he died in 1023. The page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Ιουνίου — «Όσιος Θεόδωρος Επίσκοπος Ροστώφ και Σούζνταλ Ρωσίας»",
+        "url": "https://www.saint.gr/06/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence — which one entry on this day does carry, and that one was refused. saint.gr's head line dates him «(; - 1023)» and the entry is three sentences, one of which says there are no other details of his life. Under «Ιερά Λείψανα» it says that parts of his incorrupt relic are in the church of the Panagia of Kazan at Suzdal in Russia and that an incorrupt finger of his is in the church of Saints Constantine and Helen at Suzdal. Rostov and Suzdal are his sees and `locations` is left out. He is a Russian saint and the Russian calendar was not opened for this draft, which is what the `russian` row's note says. The corpus keeps many men of this name and none of these sees. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

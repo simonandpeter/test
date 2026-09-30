@@ -1,0 +1,9 @@
+# Paul of Kaiouma
+
+saint.gr begins with what is not there. The venerable martyr Paul of Kaiouma, it says, is not mentioned by the known hagiologists of East or West — not by Nikodemos the Hagiorite and not by Hippolyte Delehaye. His memory is found in an Evangeliarion, and his life in a manuscript of the library of the Holy Sepulchre; for that the page cites Papadopoulos-Kerameus's catalogue of the Jerusalem library, volume A, page 70. Of the man himself it then says nothing at all: no country, no century, no monastery, no judge and no account of how he died.
+
+What the page has instead is the history of his body. The relic of the venerable martyr was found incorrupt, with the marks of his martyrdom plain on it — a cut-off nose, burns — in the days of Antony II Kauleas, patriarch of Constantinople from 893 to 901. Until the taking of the City by the crusaders in 1204 it lay in the monastery of Christ Pantepoptes, which in the division was given to the Benedictine monks of the monastery of San Giorgio Maggiore in Venice.
+
+In 1222 the relic was carried to Venice by the abbot Paul, in the days of the doge Pietro Ziani, who, astonished at the wonderful state of its preservation, is said to have taken off the ducal horn and set it on the martyr's skull; and because of that ornament the saint came in time to be called the Duke. In the days of Pope Clement VIII the relic was placed within the altar of the so-called Chapel of the Dead in that monastery, together with the relic of Saint Paul, patriarch of Constantinople, the Confessor, where it is kept to this day — incorrupt, the page says, in the Roman Catholic church of San Giorgio Maggiore in Venice.
+
+*After saint.gr's calendar for 8 Ιουνίου — [the day](https://www.saint.gr/06/08/index.aspx) and [the life](https://www.saint.gr/522/saint.aspx); read 1 October 2026.*

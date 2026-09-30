@@ -1,0 +1,51 @@
+{
+  "slug": "paul-of-kaiouma",
+  "display_name": "Paul of Kaiouma",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιουνίου, «Όσιος Παύλος ο Ομολογητής «ο εν Καϊουμά»», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Ιουνίου — «Όσιος Παύλος ο Ομολογητής «ο εν Καϊουμά»»",
+        "url": "https://www.saint.gr/06/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence — which one entry on this day does carry, and that one was refused. The page says in its own words that the venerable martyr Paul of Kaiouma is not mentioned by the known hagiologists of East or West — it names Nikodemos the Hagiorite and Hippolyte Delehaye — that his memory is found in an Evangeliarion and his life in a manuscript of the library of the Holy Sepulchre, and it cites Papadopoulos-Kerameus's catalogue, volume A, page 70, for it. That is a source naming exactly how thin its own authority is, and it is not the «Δεν είναι διασταυρωμένη» mark, which this page does not carry. The page gives no year for his life or his death — its years are all years of his relic — so there is no `dates` object; Constantinople and Venice are its places and `locations` is left out. He is not the Paul, patriarch of Constantinople, the Confessor, whose relic the page says lies beside his. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

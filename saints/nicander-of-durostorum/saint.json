@@ -6,6 +6,11 @@
       "form": "Nicandru",
       "lang": "ro",
       "note": "His own name, read out of doxologia.ro's line for 8 iunie, «Sfinții Mucenici Nicandru și Marcian», which names two men."
+    },
+    {
+      "form": "Νίκανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιουνίου, «Άγιοι Νίκανδρος και Μαρκιανός», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -47,8 +52,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Ιουνίου — «Άγιοι Νίκανδρος και Μαρκιανός»",
+        "url": "https://www.saint.gr/06/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Ιουνίου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row, and carries the two men on one page with a head line each and no year against either. It is plainly the same pair: the two soldiers who confessed Christ before the governor Maximus, were held twenty days in prison, torn with iron claws, hung head down over a fire, salted and vinegared, rubbed with rough tile, had their mouths and faces crushed with stones and their tongues cut out, and were beheaded. saint.gr names the governor Maximus and gives no city and no year, so the folder's existing `dates` are left as they are and `locations` stays out. No hymn is printed. Note that the same day's listing carries a second, separate «Άγιος Νίκανδρος», whose own page says it is unknown whether he is the same as this one; no folder and no row was made for that entry, and the reader's report says why. Of him the page says that his wife stood by the tortures and encouraged him to bear them willingly."
     },
     {
       "church": "serbian",
