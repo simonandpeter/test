@@ -1,0 +1,62 @@
+{
+  "slug": "cadoc-of-llancarfan",
+  "display_name": "Cadoc of Llancarfan",
+  "names": [
+    {
+      "form": "Κάντοκ",
+      "lang": "el",
+      "note": "The day's line prints the name in Latin letters, «Άγιος Cadoc»; the Greek form is the gloss his own page gives, «Ο Άγιος Cadoc (Κάντοκ)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιανουαρίου — «Άγιος Cadoc»",
+        "url": "https://www.saint.gr/01/24/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr gives him the bare title Άγιος and does not call him abbot, although it says he founded the monastery of Llancarfan; the one rank its words support is martyr."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 590,
+      "latest": 590,
+      "display": "590",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησε το έτος 590 μ.Χ. φονευθείς από Αγγλοσάξονες ειδωλολάτρες, ενώ τελούσε την Θεία Λειτουργία»."
+    }
+  },
+  "related": [
+    "david-of-wales"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "theodotion-brother-of-paul",
+  "display_name": "Theodotion, brother of Paul and Pausirius",
+  "names": [
+    {
+      "form": "Θεοδοτίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιανουαρίου, «Άγιοι Παύλος, Παυσίριος και Θεοδοτίων οι Αυτάδελφοι», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιανουαρίου — «Άγιοι Παύλος, Παυσίριος και Θεοδοτίων οι Αυτάδελφοι»",
+        "url": "https://www.saint.gr/01/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The three are brothers in the flesh and share one page; saint.gr prints a distich of his own for Theodotion, who died by a different death from his two brothers."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "between 284 and 305",
+      "basis": "traditional",
+      "note": "saint.gr gives no year, only the reigns: «έζησαν κατά τους χρόνους των αυτοκρατόρων Διοκλητιανού (284 - 305 μ.Χ.) και Μαξιμιανού (285 - 305 μ.Χ.)», and it is Diocletian's persecution that takes them. The interval is the reign the page prints."
+    }
+  },
+  "related": [
+    "paul-brother-of-pausirius",
+    "pausirius-brother-of-paul"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

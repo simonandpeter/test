@@ -115,6 +115,20 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'φιλημων philemon-companion-of-fortunianus philemon-of-karpathos':
+    'two bishops, neither with a year, and two days four months apart: saint.gr keeps Philemon of Karpathos on 24 Ιανουαρίου and the corpus keeps the Philemon who is named with Fortunianus on the Greek 27 September. Two entries on one calendar are two commemorations, and a see is the only thing either page gives to tell them by.',
+  'παυλοσ paul-brother-of-pausirius paul-disciple-of-dionysius-of-alexandria paul-of-damascus paul-of-obnora paul-of-zographou':
+    'five now. The new one is the Paul of the three brothers on 24 Ιανουαρίου; the other four are read in the el-01-10 entry for this name form.',
+  'brother paul pausirius theodotion paul-brother-of-pausirius pausirius-brother-of-paul theodotion-brother-of-paul':
+    'one line folded onto itself. saint.gr names Paul, Pausirius and Theodotion as brothers on 24 Ιανουαρίου and the synaxis ruling makes that three folders, each display name carrying the kinship, so the folded key holds all three forenames whichever of the three it is read from.',
+  'μακεδονιοσ macedonius-of-myropolis macedonius-the-barley-eater':
+    'two men. saint.gr keeps Macedonius the Barley-Eater, a hermit and wonderworker of the fourth century, on 24 Ιανουαρίου; the corpus keeps Macedonius of Myropolis, martyred between 360 and 363, on three calendars on 12 September. A hermit who lived on barley and a martyr under Julian, and only the name is shared.',
+  'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-mauropous john-of-kazan john-of-syracuse john-the-hut-dweller':
+    'six now. The new one is John of Kazan, a martyr and wonderworker dead 1529, kept on 24 Ιανουαρίου; the other five are read in the el-01-22 entry for this name form. The commonest forename in the calendar and six separate days hold these six.',
+  'ερμογενησ hermogenes-companion-of-mamas hermogenes-of-nicomedia hermogenes-of-samos':
+    'three men. The new one is the Hermogenes of the 24 Ιανουαρίου line with Mamas, whose page gives no year; the corpus keeps the martyr of Nicomedia dead 309 on the Russian and Greek 1 September and the bishop of Samos on the Greek 5 October. Three entries, three days, three men.',
+  'companion hermogenes mamas hermogenes-companion-of-mamas mamas-companion-of-hermogenes':
+    'one line folded onto itself, the sixth of its kind in this wave. saint.gr names Hermogenes and Mamas together on 24 Ιανουαρίου and the synaxis ruling makes that two folders, each display name carrying the other, so the folded key holds both forenames whichever of the two it is read from.',
   'γενναδιοσ gennadius-of-corfu gennadius-of-kostroma':
     'two men, three centuries apart. saint.gr keeps Gennadius of Kostroma, a monk and wonderworker dead 1565, on 23 Ιανουαρίου; the corpus keeps Gennadius of Corfu, a hieromonk and wonderworker dead 1859, on the Romanian and Greek 2 January, upgraded earlier in this wave. Both are called wonderworkers and that is the whole of the resemblance.',
   'θεοδωροσ theodore-companion-of-stephen theodore-founder-of-chora theodore-of-kandavla theodore-of-moscow theodore-of-novgorod theodore-of-tamasos theodore-of-tomsk theodore-prince-of-yaroslavl theodore-the-envoy-of-nicomedia':
@@ -1255,7 +1269,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '339'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '351'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

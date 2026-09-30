@@ -1,0 +1,61 @@
+{
+  "slug": "macedonius-the-barley-eater",
+  "display_name": "Macedonius the Barley-Eater",
+  "names": [
+    {
+      "form": "Μακεδόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιανουαρίου, «Όσιος Μακεδόνιος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιανουαρίου — «Όσιος Μακεδόνιος»",
+        "url": "https://www.saint.gr/01/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The day page gives him the bare name; the two by-names Γουβᾶς and Κριθοφάγος come from his own page, which attributes them to Theodoret."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «έλαβε από τον Θεό το χάρισμα της θαυματουργίας και κοιμήθηκε με ειρήνη τον 4ο αιώνα μ.Χ.» The page gives no year."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

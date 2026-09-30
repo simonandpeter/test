@@ -6,6 +6,11 @@
       "form": "Agapie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 ianuarie, «Sfântul Mucenic Agapie»."
+    },
+    {
+      "form": "Αγάπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιανουαρίου, «Άγιοι Βαβύλας ο εν Σικελία και Αγάπιος και Τιμόθεος οι μαθητές του», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιανουαρίου — «Άγιοι Βαβύλας ο εν Σικελία και Αγάπιος και Τιμόθεος οι μαθητές του»",
+        "url": "https://www.saint.gr/01/24/index.aspx",
+        "year": 2026
+      },
+      "note": "He shares one page with Babylas and Timothy; saint.gr prints one distich for the two disciples together and no hymn and no year."
     },
     {
       "church": "serbian",

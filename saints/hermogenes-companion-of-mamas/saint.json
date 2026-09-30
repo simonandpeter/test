@@ -1,0 +1,53 @@
+{
+  "slug": "hermogenes-companion-of-mamas",
+  "display_name": "Hermogenes, companion of Mamas",
+  "names": [
+    {
+      "form": "Ερμογένης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιανουαρίου, «Άγιοι Ερμογένης και Μάμας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιανουαρίου — «Άγιοι Ερμογένης και Μάμας»",
+        "url": "https://www.saint.gr/01/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The page prints no life: «Δεν έχουμε λεπτομέρειες για τον βίο των Αγίων». The pair is what distinguishes him — saint.gr names the two men only together, and on this day only."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "mamas-companion-of-hermogenes"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "zosimas-24-january",
+  "display_name": "Zosimas (24 January)",
+  "names": [
+    {
+      "form": "Ζωσιμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιανουαρίου, «Όσιος Ζωσιμάς», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιανουαρίου — «Όσιος Ζωσιμάς»",
+        "url": "https://www.saint.gr/01/24/index.aspx",
+        "year": 2026
+      },
+      "note": "His page opens by distinguishing him from the Abba Zosimas who found Mary of Egypt and is kept on 4 April: «άλλος από τον Αββά Ζωσιμά». It gives him no country, no monastery and no year, so the day is what tells him apart."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

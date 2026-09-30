@@ -6,6 +6,11 @@
       "form": "Filon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 ianuarie, «Sfântul Ierarh Filon, episcopul Carpasiei»."
+    },
+    {
+      "form": "Φίλων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιανουαρίου, «Όσιος Φίλων ο Θαυματουργός Επίσκοπος Καρπασίας της Κύπρου», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιανουαρίου — «Όσιος Φίλων ο Θαυματουργός Επίσκοπος Καρπασίας της Κύπρου»",
+        "url": "https://www.saint.gr/01/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The same day page separately names Philemon, bishop of Karpathos — a different see and a different man; the two are not joined anywhere on the page."
     },
     {
       "church": "serbian",
@@ -47,5 +62,42 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "epiphanius-of-cyprus"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Tὸν βυθόν της σοφίας ἐρευνησάμενος, καὶ τοῦ κόσμου τὴν δόξαν ἀπαρνησάμενος, τῷ Χριστῷ δὲ προσδραμῶν, Πάτερ ἠκολούθησας, θαυματουργῶν διδάσκων ὡς κήρυξ τῆς χάριτος καὶ τοῖς νοσοῦσι πᾶσι τὴν ρῶσιν δωρούμενος. Διὸ πρέσβευε Χριστῷ τῷ Θεῷ, Φίλων θεόσοφε, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος α’, the first of two the page prints, on the page of Όσιος Φίλων ο Θαυματουργός Επίσκοπος Καρπασίας της Κύπρου",
+        "url": "https://www.saint.gr/3520/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having searched out the deep of wisdom and renounced the glory of the world, thou didst run to Christ and follow him, O father, working wonders, teaching as a herald of grace, and granting health to all the sick. Therefore intercede with Christ God, O Philo wise in God, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Ἔργοις ἔλαμψας ὀρθοδοξίας πλάνην ἔσβεσας πολυθεΐας τῶν γὰρ εἰδώλων τὴν ἀπάτην κατέβαλες, καὶ τὴν σὴν ποίμνην μεγάλως ἐκόσμησας. Διὰ τοῦτο βοωμὲν σοῖ, πρέσβευε Χριστῷ τῷ Θεῷ, Φίλων μακάριε, σωθήναι τᾶς ψυχᾶς ἠμῶν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος γ’, the second of two the page prints, on the page of Όσιος Φίλων ο Θαυματουργός Επίσκοπος Καρπασίας της Κύπρου. The itacisms in its last clause are the page's own.",
+        "url": "https://www.saint.gr/3520/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "By thy works thou didst shine with orthodoxy and put out the error of polytheism; for thou didst throw down the deceit of the idols and greatly adorn thy flock. Therefore we cry to thee: intercede with Christ God, O blessed Philo, that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

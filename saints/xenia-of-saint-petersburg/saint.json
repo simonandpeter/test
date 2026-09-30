@@ -6,6 +6,11 @@
       "form": "Xenia din Sankt Petersburg",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 ianuarie, «Sfânta Cuvioasă Xenia din Sankt Petersburg»."
+    },
+    {
+      "form": "Ξένη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιανουαρίου, «Οσία Ξένη η Διά Χριστόν Σαλή», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -54,6 +59,38 @@
         "text": "Brightly does the city of Peter leap up today, for the multitude of the afflicted find their consolation, hoping in thy prayers, blessed Xenia; for thou art the praise and the strength of this city",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Σ’ ἐσένα, ὢ περιπλαμένη ξένη, Χριστὸς ὁ Κύριος μας ἔδωσε μιὰ διακαὴ μεσίτρια γιὰ ὅλους μας. Ἔχοντας λάβει στὴ ζωή σου βάσανα καὶ θλίψη , καὶ ὑπηρετώντας τὸ Θεὸ καὶ τοὺς ἀνθρώπους μὲ ἀγάπη, ἐσὺ ἀπέκτησες μεγάλη παρρησία στὸ Θεό. Δὶ’ αὐτό, σπεύδουμε θερμὰ σ’ ἐσένα στοὺς πειρασμοὺς καὶ τὴ θλίψη, κραυγάζοντας ἐκ βάθους ψυχῆς : Μὴν ἐγκαταλείψεις τὴν ἐλπίδα μας στὴν καταισχύνη, ὢ εὐλογημένη Ξένια.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος πλ. δ’, on the page of Οσία Ξένη η Διά Χριστόν Σαλή. The text is printed in modern Greek, not in the liturgical idiom, and reads as a rendering of the Russian service; it is copied here exactly as the page has it.",
+        "url": "https://www.saint.gr/3531/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O wandering stranger, Christ our Lord has given us a fervent intercessor for us all. Having received in thy life torment and affliction, and having served God and men with love, thou didst gain great boldness before God. Therefore we hasten warmly to thee in temptations and in affliction, crying from the depth of the soul: do not leave our hope to be put to shame, O blessed Xenia.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Περιπλανώμενη ξένη σὲ μιὰ ξένη γῆ, ἀναστενάζοντας πάντα γιὰ τὴ οὐράνια πατρίδα γνωστὴ ὡς σαλὴ καὶ ἄπιστη ἀλλὰ γιὰ τοὺς πιστοὺς πολὺ σοφὴ καὶ ἱερὴ , στεφανωμένη ἀπὸ τὸ Θεὸ μὲ δόξα καὶ τιμή. Ὢ Ξένια, γενναία στὸ μυαλὸ καὶ θεϊκὰ σοφή. Δι’αυτό, κραυγάζουμε σὲ σένα «Χαῖρε ἐσὺ ποὺ μετὰ τὴ γήινη περιπλάνησή σου ἦρθες καὶ κατοικεῖς στὸ οἶκο τοῦ Θεοῦ».",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος γ’, on the page of Οσία Ξένη η Διά Χριστόν Σαλή. Printed in modern Greek, like the apolytikion above it, and copied exactly as the page has it.",
+        "url": "https://www.saint.gr/3531/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A stranger wandering in a strange land, always sighing for the heavenly homeland, known as a fool and faithless, but to the faithful most wise and holy, crowned by God with glory and honour: O Xenia, brave in mind and divinely wise. Therefore we cry to thee: Rejoice, thou who after thy earthly wandering hast come to dwell in the house of God.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
@@ -78,8 +115,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιανουαρίου — «Οσία Ξένη η Διά Χριστόν Σαλή»",
+        "url": "https://www.saint.gr/01/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The same day page carries a second and separate line, «Οσίες Ξένη και οι δύο θεραπαινίδες της», which is the fifth-century Xenia of Rome on her own page; the two are not one woman and the calendar does not join them."
     },
     {
       "church": "serbian",

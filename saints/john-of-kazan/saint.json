@@ -1,0 +1,60 @@
+{
+  "slug": "john-of-kazan",
+  "display_name": "John of Kazan",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιανουαρίου, «Άγιος Ιωάννης ο Μάρτυρας εκ Καζάν», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιανουαρίου — «Άγιος Ιωάννης ο Μάρτυρας εκ Καζάν»",
+        "url": "https://www.saint.gr/01/24/index.aspx",
+        "year": 2026
+      },
+      "note": "His page heads him «Αγιος Ιωαννης ο Μαρτυρας Εκ Καζαν (; - 1529)» and says «Δεν έχουμε περισσότερες λεπτομέρειες για τον βίο του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1529,
+      "latest": 1529,
+      "display": "1529",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε στο Καζάν της Ρωσίας το έτος 1529 μ.Χ.», and its heading for him, «(; - 1529)», leaves the birth open."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

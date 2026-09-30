@@ -6,6 +6,11 @@
       "form": "Xenia din Roma",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 ianuarie, «Sfânta Cuvioasă Xenia din Roma»."
+    },
+    {
+      "form": "Ξένη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιανουαρίου, «Οσίες Ξένη και οι δύο θεραπαινίδες της», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -46,6 +51,56 @@
         "text": "Keeping thy wonderful memory, O most venerable Saint Xenia, we who honour thee with love praise Christ, who gave thee power to heal in all things; and him do thou pray always for us all.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ἐν σοί Μῆτερ ἀκριβῶς διεσώθη τό κατ᾽ εἰκόνα· λαβοῦσα γάρ τόν σταυρόν, ἠκολούθησας τῷ Χριστῷ, καί πράττουσα ἐδίδασκες, ὑπεροράν μέν σαρκός, παρέρχεται γάρ· ἐπιμελεῖσθαι δέ ψυχῆς, πράγματος ἀθανάτoυ, διό καί μετά Ἀγγέλων συναγάλλεται, Ὁσία Ξένη τό πνεῦμά σου.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος πλ. δ’, the first of two the page prints, on the page of Οσία Ξένη. It is the common of a woman ascetic, with her name in the last clause.",
+        "url": "https://www.saint.gr/3514/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O Mother, that which was according to the image was kept safe exactly; for taking up the cross thou didst follow Christ, and by thy doing thou didst teach us to look past the flesh, since it passes away, and to care for the soul, a thing immortal. Therefore thy spirit, O venerable Xenia, rejoices together with the angels.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Ξένην ἤνυσας, ζωὴν ἐν κόσμῳ, ξένην ἔσχηκας, προσηγορίαν, ὑπεμφαίνουσαν τὴ κλήσει τὸν τρόπον σου, σὺ γὰρ νυμφίον λιποῦσα τὸν πρόσκαιρον, τῷ ἀθανάτῳ ὁσίως νενύμφευσαι. Ξένη ἔνδοξε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως, the second of two the page prints, on the page of Οσία Ξένη",
+        "url": "https://www.saint.gr/3514/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A stranger's life thou didst accomplish in the world, and a stranger's name thou didst bear, which shows thy manner of life in its very calling; for thou didst leave the bridegroom of a moment, and wast wedded in holiness to the immortal one. Glorious Xenia, entreat Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τοῖς τῶν αἱμάτων σου.",
+      "text": "Τό σόν ξενότροπον Ξένη μνημόσυνον, ἐπιτελοῦντες οἱ πόθῳ τιμῶντές σε, ὑμνοῦμεν Χριστόν τόν ἐν ἅπασι, σοί παρέχοντα ἰσχύν τῶν ἰάσεων· ὅν πάντοτε δυσώπει, ὑπέρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος β’, Τοῖς τῶν αἱμάτων σου, on the page of Οσία Ξένη. The page prints the Οἶκος after it, which is not copied here.",
+        "url": "https://www.saint.gr/3514/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping thy strange-fashioned memorial, O Xenia, we who honour thee with longing hymn Christ, who in all things gives thee the strength of healings; entreat him without ceasing for us all.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
@@ -70,8 +125,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιανουαρίου — «Οσίες Ξένη και οι δύο θεραπαινίδες της»",
+        "url": "https://www.saint.gr/01/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The line commemorates her two maidservants with her. saint.gr heads them «Οσιες Δυο Θεραπαινιδες Της Οσιας Ξενης» and prints a distich for them, but never names either of them, so they have no folder of their own."
     },
     {
       "church": "serbian",
@@ -81,5 +146,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Οσία Ξένη έζησε τον 5ο μ.Χ. αιώνα». The page states the century she lived in and no year of birth or repose; doxologia.ro, cited on this folder's Romanian row, gave no year at all."
+    }
   }
 }

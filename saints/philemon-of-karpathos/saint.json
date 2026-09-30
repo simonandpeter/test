@@ -1,0 +1,52 @@
+{
+  "slug": "philemon-of-karpathos",
+  "display_name": "Philemon of Karpathos",
+  "names": [
+    {
+      "form": "Φιλήμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιανουαρίου, «Άγιος Φιλήμων επίσκοπος Καρπάθου», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop of Karpathos",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιανουαρίου — «Άγιος Φιλήμων επίσκοπος Καρπάθου»",
+        "url": "https://www.saint.gr/01/24/index.aspx",
+        "year": 2026
+      },
+      "note": "His page has no life: «Η μνήμη του Αγίου Φιλήμωνα αναφέρεται στον Πατμιακό Κώδικα 266, χωρίς βιογραφικό υπόμνημα». The see is what tells him apart, and it is not the Carpasia in Cyprus that the same day's Philo held."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
