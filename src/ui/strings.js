@@ -662,6 +662,7 @@ export const STRINGS = {
     byAnotherReckoning: '{when}, or {other} by another reckoning',
     byOtherReckonings: '{when}, or {others} by other reckonings',
     circaPhrase: 'about {when}',
+    centurySpan: '{a} to {b}',
     circa: 'c. {when}',
     bc: '{when} BC',
     probably: 'probably {when}',

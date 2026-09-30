@@ -273,6 +273,7 @@ export const ru = {
     byAnotherReckoning: '{when}, или {other} по другому счёту',
     byOtherReckonings: '{when}, или {others} по другим счётам',
     circaPhrase: 'примерно {when}',
+    centurySpan: '{a}–{b}',
     circa: 'ок. {when}',
     bc: '{when} до Р. Х.',
     probably: 'вероятно, {when}',

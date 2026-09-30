@@ -268,6 +268,7 @@ export const sr = {
     byAnotherReckoning: '{when}, или {other} по другом рачунању',
     byOtherReckonings: '{when}, или {others} по другим рачунањима',
     circaPhrase: 'приближно {when}',
+    centurySpan: '{a}–{b}',
     circa: 'око {when}',
     bc: '{when} пре Хр.',
     probably: 'вероватно {when}',

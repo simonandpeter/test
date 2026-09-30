@@ -137,6 +137,24 @@ function readOrdinal(text, which = 'century') {
   return { n: Number(m[2]), modifier: m[1] ? MODIFIER[m[1].trim() === 'mid-' ? 'mid-' : m[1].trim()] : which };
 }
 
+/**
+ * `late 13th to early 14th century`, `9th to mid 10th century`: a span whose
+ * two ends carry **their own** modifiers, which `centuryRange` cannot hold —
+ * that pattern has one numeral pair and no room for a `late` on one side and an
+ * `early` on the other. Each end is read as its own century phrase and the
+ * pack's `centurySpan` joins them.
+ */
+function readCenturySpan(text) {
+  const m = new RegExp(
+    `^(?:the )?(?:(${PHRASES}) )?(\\d+)(?:st|nd|rd|th) to (?:(${PHRASES}) )?(\\d+)(?:st|nd|rd|th) centur(?:y|ies)$`,
+  ).exec(text.replace(/mid-/g, 'mid '));
+  if (!m) return null;
+  return fill(STRINGS.dates.centurySpan, {
+    a: century(Number(m[2]), m[1] ? PHRASE[m[1]] : 'century'),
+    b: century(Number(m[4]), m[3] ? PHRASE[m[3]] : 'century'),
+  });
+}
+
 /** `12th–13th century`, and the same pair written out: `the 12th and 13th centuries`. */
 function readCenturyRange(text) {
   const m = /^(?:the )?(\d+)(?:st|nd|rd|th)\s*(?:[–-]|and)\s*(\d+)(?:st|nd|rd|th) centur(?:y|ies)$/.exec(text);
@@ -215,6 +233,7 @@ function readTerm(text, carry) {
   const ord = readOrdinal(text, carry);
   if (ord && carry) return century(ord.n, ord.modifier);
   return (
+    readCenturySpan(text) ??
     readCenturyRange(text) ??
     readCentury(text) ??
     readFullDate(text) ??

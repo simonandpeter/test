@@ -268,6 +268,7 @@ export const el = {
     byAnotherReckoning: '{when}, ή {other} κατά άλλον υπολογισμό',
     byOtherReckonings: '{when}, ή {others} κατά άλλους υπολογισμούς',
     circaPhrase: 'περίπου {when}',
+    centurySpan: 'από {a} έως {b}',
     circa: 'περ. {when}',
     bc: '{when} π.Χ.',
     probably: 'πιθανώς {when}',

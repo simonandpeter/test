@@ -268,6 +268,7 @@ export const ro = {
     byAnotherReckoning: '{when}, sau {other} după o altă socotire',
     byOtherReckonings: '{when}, sau {others} după alte socotiri',
     circaPhrase: 'aproximativ {when}',
+    centurySpan: 'de la {a} până la {b}',
     circa: 'cca. {when}',
     bc: '{when} î.Hr.',
     probably: 'probabil {when}',
