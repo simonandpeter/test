@@ -1,0 +1,50 @@
+{
+  "slug": "twenty-thousand-martyrs-2-june",
+  "display_name": "The Twenty Thousand Martyrs (2 June)",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Είκοσι Χιλιάδες Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουνίου, «Άγιοι Είκοσι Χιλιάδες Μάρτυρες», with the rank word left off. The page names none of them."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Ιουνίου — «Άγιοι Είκοσι Χιλιάδες Μάρτυρες»",
+        "url": "https://www.saint.gr/06/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Ιουνίου εκάστου έτους», the same day as the listing, and names nobody, so this is one entry. These are not the corpus's `twenty-thousand-martyrs-of-nicomedia`, whom the Romanian church keeps on 28 December and who were burnt in the church at Nicomedia: saint.gr's twenty thousand here died by the sword and came to the faith through the Erasmus whom the same day keeps, and the page links the two entries to each other. The page gives no year, no reign and no country, so there is no `dates` object and no `locations`; it says only that relics of them are kept at the monastery of the Theotokos at Arta. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

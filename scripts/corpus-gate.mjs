@@ -115,6 +115,38 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ισαακ isaac-alfanov isaac-of-cordoba isaac-the-martyr-22-september':
+    'Three men: Isaac Alfanov on 4 May, Isaac of Cordoba on 3 June and the Isaac of the el-04-21 entry.',
+  'ιλαριοσ hilarion-4-may hilary-of-carcassonne hilary-of-poitiers':
+    'Three men whose Greek forms fold together: Hilary of Carcassonne on 3 June, the Ἱλάριος the Greek keeps on 4 Μαΐου, and the Ἱλαρίων of 6 Μαΐου — the last pair settled in the el-05-06 entry as two men.',
+  'ιωσηφ joseph-of-alaverdi joseph-of-aleppo joseph-of-astrakhan joseph-of-bisericani joseph-of-kantara joseph-of-lythrodontas joseph-of-nea-moni joseph-of-optina joseph-of-thessalonica-1821 joseph-the-hymnographer':
+    'Ten now. The new one is Joseph of Thessalonica, martyred in 1821, on 3 June; the others are read in the el-05-11 entry for this name form.',
+  'γρηγοριοσ gregory-of-akritas gregory-of-assos gregory-of-constantia gregory-of-derkoi gregory-of-moesia gregory-of-nicomedia gregory-of-novgorod gregory-of-nyssa gregory-of-rostov gregory-of-sinai gregory-the-dialogist gregory-the-elder gregory-the-hesychast-of-athos gregory-the-recluse-of-the-caves gregory-the-wonderworker-of-the-caves gregory-uncle-of-eustratius gregory-v-of-constantinople':
+    'Seventeen now. The new one is Gregory of Derkoi on 3 June; the others are read in the el-05-03 entry for this name form.',
+  'δωροθεοσ dorotheos-of-adrianople dorotheus-companion-of-agapitus dorotheus-of-chiliokomion':
+    'Three men: the companion of Agapitus on 18 February, Chiliokomion on 5 January and Dorotheos of Adrianople on 3 June.',
+  'αθανασιοσ athanasius-martyr-13-january athanasius-of-alexandria athanasius-of-attaleia athanasius-of-christianoupolis athanasius-of-corinth athanasius-of-kargopol athanasius-of-meteora athanasius-of-murom athanasius-of-the-forty-martyrs athanasius-of-vologda athanasius-once-a-magician athanasius-the-confessor athanasius-the-wonderworker':
+    'Thirteen now. The new one is Athanasius the Wonderworker on 3 June; the others are read in the el-05-17 entry for this name form.',
+  'αχιλλασ achillas achillas-of-alexandria':
+    'Two men: Achillas of Alexandria on 3 June and the Achillas of the el-01-07 entry.',
+  'φωτεινοσ photinos-of-lyons photinos-son-of-photini photinus-of-the-twelve-tribunes':
+    'Three men: Photinus of Lyons among the twelve tribunes of 24 May, Photinos of Lyons on 2 June, and the Photinus the corpus keeps besides. **The two of Lyons are not obviously two**: the 24 May name is a tribune of Meletius’s company and this one is of the Gallic see, and neither page names the other — two entries on two days, so two folders, and the coincidence of place is worth an author’s eye.',
+  'ευγενιοσ eugene-of-cherson eugene-of-trebizond eugene-son-of-paul-and-tatta eugenius-father-of-mary-called-marinos eugenius-of-rome eugenius-the-confessor':
+    'Six now. The new one is Eugenius of Rome on 2 June; the others are read in the el-03-07 entry for this name form.',
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-companion-of-barbarus alexander-companion-of-sisinnius alexander-companion-of-terentius alexander-companion-of-thalaleus alexander-martyr-1-april alexander-of-cartagena alexander-of-kentoukellai alexander-of-kharkov alexander-of-lyons alexander-of-oshevensk alexander-of-pydna alexander-of-rome-pope alexander-of-the-forty-martyrs alexander-of-thessalonica alexander-of-voskiy alexander-the-dervish alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Twenty-one now. The new one is Alexander of Lyons on 2 June; the others are read in the el-05-29 entry for this name form.',
+  'πετροσ peter-abesalamites peter-companion-of-aphrodisius peter-companion-of-leucius peter-companion-of-manuel peter-companion-of-marcian peter-disciple-of-dionysius-of-alexandria peter-doroshenko peter-martyr-2-june peter-of-argos peter-of-bulgaria peter-of-capitolias peter-of-damascus peter-of-galatia peter-of-kazan peter-of-lampsacus peter-of-monevata peter-of-sebaste peter-of-tobolsk peter-son-of-john-of-syracuse peter-the-egyptian peter-the-gaoler peter-the-peloponnesian peter-the-sign-bearer':
+    'Twenty-one now. The new one is on 3 June; the others are read in the el-05-03 entry for this name form.',
+  'μαρινοσ marinos-vaanes marinus-martyr-17-march':
+    'Two men: Marinos Vaanes on 2 June and Marinus of 17 March.',
+  'λεανδροσ leander-of-seville leandros-of-epirus':
+    'Two men: Leandros of Epirus on 2 June and Leander of Seville, whom this wave upgraded on 27 February.',
+  'δημητριοσ demetrius-24-april demetrius-donskoi demetrius-ivanov demetrius-of-chios demetrius-of-constantinople demetrius-of-georgia demetrius-of-moscow demetrius-of-philadelphia demetrius-of-prilutsk demetrius-the-peloponnesian demetrius-the-skeuophylax demetrius-tornaras demos-the-fisherman':
+    'Thirteen now. The new one is Demetrius of Philadelphia on 2 June; the others are read in the el-05-15 entry for this name form.',
+  'κωνσταντινοσ constantine-brancoveanu constantine-of-cornwall constantine-of-murom constantine-of-novotorzhanin constantine-of-strathclyde constantine-of-the-scots constantine-the-great constantine-the-hagarene cyril-the-philosopher':
+    'Nine now. The new one is Constantine the Hagarene on 2 June; the others are read in the el-05-21 entry for this name form, where four stand on 21 May.',
+  'ανδρεασ andrew-6-january andrew-abbot-of-tobolsk andrew-argentis andrew-companion-of-paul andrew-mishenko andrew-of-monodendri andrew-of-mytilene andrew-of-raphailovo andrew-prince-of-suzdal andrew-the-fool-for-christ':
+    'Ten now. The new one is Andrew prince of Suzdal on 2 June; the others are read in the el-05-29 entry for this name form.',
   'σιοσ shio-of-mgvime sios-of-gareji':
     'Two men: Sios of Gareji on 1 June and `shio-of-mgvime`, whose `greek` row is already venerated on 4 Φεβρουαρίου and whom saint.gr lists again on 7 Μαΐου — a second Greek day a reader reported and did not draft, and §5 leaves that row alone.',
   'σεκουνδοσ secundus-brother-of-romylus secundus-companion-of-perpetua secundus-of-amelia':

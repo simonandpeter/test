@@ -1,0 +1,51 @@
+{
+  "slug": "marinos-vaanes",
+  "display_name": "Marinos Vaanes",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Μαρίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουνίου, «Όσιος Μαρίνος ο Βαάνης», with the rank word left off. The surname «ο Βαάνης» is kept in the slug and the display name and left off the stored form."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Ιουνίου — «Όσιος Μαρίνος ο Βαάνης»",
+        "url": "https://www.saint.gr/06/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Ιουνίου εκάστου έτους», the same day as the listing. The page says in its own words that the synaxarists do not know his memory and that it is recorded by Gedeon in the Byzantine Eortologion, page 110 — it names its source rather than doubting the man, and it does not carry the «Δεν είναι διασταυρωμένη» sentence. It gives no year at all, so there is no `dates` object; it names Constantinople, Bizye in Thrace, Kyminas and the monastery of the Theotokos of Korone, and `locations` is left out because a life spread over four places cannot be put on one point. He is not the corpus's `marinus-the-elder`, a martyr kept by the Romanian church on 18 October."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "leandros-of-epirus",
+  "display_name": "Leandros of Epirus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Λέανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουνίου, «Άγιος Λέανδρος ο μάρτυρας ο Ηπειρώτης», with the rank word left off. The epithet «ο Ηπειρώτης» is left off the stored form and kept in the slug."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Ιουνίου — «Άγιος Λέανδρος ο μάρτυρας ο Ηπειρώτης»",
+        "url": "https://www.saint.gr/06/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Ιουνίου εκάστου έτους», the same day as the listing, and then says in one sentence that there are no details of his life. The page does not carry the «Δεν είναι διασταυρωμένη» sentence: it simply has nothing to print. The epithet «ο Ηπειρώτης», of Epirus, is the whole of what is said about where he came from, and `locations` is left out on the strength of it. There is no year, so there is no `dates` object, and no hymn is printed. He is not the corpus's `leander-of-seville`, a Spanish hierarch."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

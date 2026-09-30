@@ -1,0 +1,59 @@
+{
+  "slug": "demetrius-of-philadelphia",
+  "display_name": "Demetrius of Philadelphia",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουνίου, «Άγιος Δημήτριος από τη Φιλαδέλφεια Νεομάρτυρας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1657,
+      "latest": 1657,
+      "display": "1657",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Δημητριος Απο Τη Φιλαδελφεια Νεομαρτυρας (; - 1657)» and the life says he gave up his spirit «την 2α Ιουνίου 1657 μ.Χ.» The page gives no year of birth, but says he was thirteen when he was made a Muslim and twenty-five when he confessed Christ."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Ιουνίου — «Άγιος Δημήτριος από τη Φιλαδέλφεια Νεομάρτυρας»",
+        "url": "https://www.saint.gr/06/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Ιουνίου εκάστου έτους», the same day as the listing. The page names Philadelphia of Asia Minor as his birthplace and the whole of his story happens there; `locations` is left out all the same, because the corpus does not place a saint the page has not placed to a town. The corpus keeps several men of this name, none of them of Philadelphia: the nearest by day is `demetrius-of-chios`, a different neomartyr. saint.gr prints no hymn for him and links him to the synaxis of the neomartyrs after the fall of Constantinople."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

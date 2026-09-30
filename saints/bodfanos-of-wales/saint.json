@@ -1,0 +1,59 @@
+{
+  "slug": "bodfanos-of-wales",
+  "display_name": "Bodfanos of Wales",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Βοδφανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουνίου, «Όσιος Βοδφανός εξ Ουαλίας», with the rank word left off. Only the Greek form is stored: the page prints no Welsh or Latin form of the name and none is invented here."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 601,
+      "latest": 700,
+      "display": "7th century",
+      "basis": "traditional",
+      "note": "saint.gr says «καταγόταν από την Ουαλία και έζησε τον 7ο αιώνα μ.Χ. Κοιμήθηκε με ειρήνη» — he came from Wales, lived in the seventh century after Christ and fell asleep in peace. The page gives no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Ιουνίου — «Όσιος Βοδφανός εξ Ουαλίας»",
+        "url": "https://www.saint.gr/06/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Ιουνίου εκάστου έτους», the same day as the listing, and the whole of the entry is two sentences. It does not carry the «Δεν είναι διασταυρωμένη» sentence. Wales is named as where he came from and no place in it; `locations` is left out. No hymn is printed, and the corpus keeps nobody of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

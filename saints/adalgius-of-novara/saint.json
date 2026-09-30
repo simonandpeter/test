@@ -1,0 +1,60 @@
+{
+  "slug": "adalgius-of-novara",
+  "display_name": "Adalgius of Novara",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Αδάλγιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουνίου, «Όσιος Αδάλγιος της Νοβάρα», with the rank word left off. Only the Greek form is stored; the page prints no Latin or Irish form."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 686,
+      "latest": 686,
+      "display": "686",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Οσιος Αδαλγιος Της Νοβαρα (; - 686)» and the life says he fell asleep in peace in 686. The page gives no year of birth and dates his life to the seventh century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Ιουνίου — «Όσιος Αδάλγιος της Νοβάρα»",
+        "url": "https://www.saint.gr/06/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Ιουνίου εκάστου έτους», the same day as the listing. It names Ireland as where he came from, Novara in the epithet, and his teacher Fursa, «Απόστολος της Πικαρδίας», whom it sends the reader to on 16 January; that entry was not opened for this draft, so no `related` row is made and the life carries no link for him. `locations` is left out: Ireland and Novara are two countries and the page settles neither as a residence. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

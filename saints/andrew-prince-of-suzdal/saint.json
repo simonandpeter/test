@@ -1,0 +1,60 @@
+{
+  "slug": "andrew-prince-of-suzdal",
+  "display_name": "Andrew of Suzdal",
+  "sex": "male",
+  "types": [
+    "prince",
+    "righteous"
+  ],
+  "names": [
+    {
+      "form": "Ανδρέας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουνίου, «Άγιος Ανδρέας πρίγκιπας της Σουζδαλίας», with the rank word left off. The Russian form of his name is not printed on the page and is not invented here."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1365,
+      "latest": 1365,
+      "display": "1365",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Ανδρεας Πριγκιπας Της Σουζδαλιας (; - 1365)» and the life says he fell asleep in peace in 1365. The page gives no year of birth; it dates his father's death to 1355, his accession to that year and his abdication to 1359."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). He is a Russian prince and the Russian calendar is the one that would know him, but no Russian source was opened for this draft."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Ιουνίου — «Άγιος Ανδρέας πρίγκιπας της Σουζδαλίας»",
+        "url": "https://www.saint.gr/06/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Ιουνίου εκάστου έτους», the same day as the listing. The page names Suzdal, Nizhny Novgorod and Gorodets as the principalities he was given and Russia as his country; `locations` is left out because three principalities are not one point. The corpus keeps no prince of Suzdal and no other Andrew of the fourteenth century. The date is the Greek calendar's; that a Russian prince stands in it on a revised-julian day is the Greek calendar's own reckoning and is recorded as read."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

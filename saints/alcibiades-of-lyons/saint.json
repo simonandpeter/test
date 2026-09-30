@@ -1,0 +1,59 @@
+{
+  "slug": "alcibiades-of-lyons",
+  "display_name": "Alcibiades of Lyons",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αλκιβιάδης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουνίου, «Άγιος Αλκιβιάδης ο εν Λουγδούνω», with the rank word left off. The place-phrase «ο εν Λουγδούνω» is left off the stored form."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 177,
+      "latest": 177,
+      "display": "177",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Αλκιβιαδης ο Εν Λουγδουνω (; - 177)», and the life says he was perfected in martyrdom in 177 under the emperor Marcus Aurelius (161-180). The page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Ιουνίου — «Άγιος Αλκιβιάδης ο εν Λουγδούνω»",
+        "url": "https://www.saint.gr/06/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Ιουνίου εκάστου έτους», the same day as the listing. The page itself raises a second day and does not settle it: «Ο Άγιος Αλκιβιάδης ο εν Λουγδούνω ίσως είναι ο ίδιος μ' αυτόν της 16ης Αυγούστου που μαρτύρησε δια πυρός» — that he is perhaps the same as the Alcibiades of 16 August who bore witness by fire. The row records the 2 June day page, which is the source quoted here, and the 16 August entry is left to whoever reads that day. The page gives Lyons in Gaul as the place of his martyrdom; `locations` is left out because the corpus does not place a martyr on the strength of one clause."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

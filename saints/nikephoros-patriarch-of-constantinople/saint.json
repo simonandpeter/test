@@ -7,6 +7,11 @@
       "form": "Nichifor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 iunie, «Sfântul Ierarh Nichifor, Patriarhul Constantinopolului»."
+    },
+    {
+      "form": "Νικηφόρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουνίου, «Άγιος Νικηφόρος ο Ομολογητής Πατριάρχης Κωνσταντινούπολης», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 2 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Ιουνίου — «Άγιος Νικηφόρος ο Ομολογητής Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/06/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Ιουνίου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row. It is plainly the same man: the patriarch of Constantinople who contended for the icons, was driven from his throne by Leo V the Armenian and died in exile. saint.gr dates him «(758 - 822)», which doxologia's life did not; the Greek page also links a separate entry for the translation of his relics and one for the synaxis of all the archbishops and patriarchs of Constantinople, and neither was opened for this draft. Three hymns are taken from the page. A fourth text, a μεγαλυνάριον, is printed there and is not taken: the schema holds a troparion and a kontakion and nothing else."
     },
     {
       "church": "serbian",
@@ -62,9 +77,75 @@
         "text": "A rule of faith and an image of meekness, a teacher of abstinence: so did the truth of things show thee to thy flock. Therefore thou hast gained by humility the things on high, and by poverty the things that are rich. Father and hierarch Nikephoros, pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Νίκην ἤνεγκε, τὴ Ἐκκλησία, ἡ σὴ ἔνθεος, ὁμολογία, Νικηφόρε Ἱεράρχα θεόληπτε• τὴν γὰρ Εἰκόνα τοῦ Λόγου σεβόμενος, ὑπερορία ἀδίκως ὠμίλησας. Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως, the first of two apolytikia on the page of «Άγιος Νικηφόρος ο Ομολογητής Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/460/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your godly confession brought victory to the Church, O God-inspired hierarch Nikephoros; for venerating the image of the Word you were unjustly made to dwell in banishment. Venerable father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Κανόνα πίστεως, καὶ εἰκόνα πραότητος, ἐγκρατείας διδάσκαλον, ἀνέδειξε σε τῇ ποίμνῃ σου, ἡ τῶν πραγμάτων ἀλήθεια· διὰ τοῦτο ἐκτήσω τῇ ταπεινώσει τὰ ὑψηλά, τῇ πτωχείᾳ τὰ πλούσια. Πάτερ Ἱεράρχα Νικηφόρε, πρέσβευε Χριστῷ τῷ θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ’, the second of two apolytikia on the page of «Άγιος Νικηφόρος ο Ομολογητής Πατριάρχης Κωνσταντινούπολης». It is the common of a hierarch, sung to other bishops with their own names in the last line, and the page prints it with his; so it is taken as his service, as the brief's ruling on a common requires.",
+        "url": "https://www.saint.gr/460/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown you to your flock as a rule of faith, an icon of gentleness and a teacher of temperance; and so by humility you gained the heights, and by poverty riches. Father and hierarch Nikephoros, intercede with Christ our God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Τὸν τῆς νίκης στέφανον, ὢ Νικηφόρε, οὐρανόθεν σήμερον, ὡς εἰληφῶς παρὰ Θεοῦ, σῷζε τοὺς πίστει τιμώντας σέ, ὡς Ἱεράρχην ὁμοὺ καὶ Διδάσκαλον.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of «Άγιος Νικηφόρος ο Ομολογητής Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/460/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received today from heaven the crown of victory from God, O Nikephoros, save those who honour you in faith as hierarch and teacher alike.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 758,
+      "latest": 758,
+      "display": "758",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Νικηφορος ο Ομολογητης Πατριαρχης Κωνσταντινουπολης (758 - 822)» and the life says he was born at Constantinople in 758. doxologia.ro's life, which this folder was built from, printed no year at all."
+    },
+    "death": {
+      "earliest": 822,
+      "latest": 822,
+      "display": "822",
+      "basis": "traditional",
+      "note": "saint.gr says he gave up his spirit «στις 2 Ιουνίου 822 μ.Χ.», on 2 June 822."
+    }
   }
 }

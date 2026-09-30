@@ -1,0 +1,61 @@
+{
+  "slug": "eugenius-of-rome",
+  "display_name": "Eugenius of Rome",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Ευγένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουνίου, «Άγιος Ευγένιος Επίσκοπος Ρώμης», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 657,
+      "latest": 657,
+      "display": "657",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Ευγενιος Επισκοπος Ρωμης (; - 657)» and the life says he fell asleep in peace in 657. The page gives no year of birth and dates his election to 10 August 654."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Ιουνίου — «Άγιος Ευγένιος Επίσκοπος Ρώμης»",
+        "url": "https://www.saint.gr/06/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Ιουνίου εκάστου έτους», the same day as the listing. The page dates his election by the clergy and people of Rome to 10 August 654 and his death to 657, and names his father Rouphinianos, his predecessor Martin I, the emperor Constans II (642-668) and Patriarch Pyrrhos of Constantinople. Rome is his see and `locations` is left out, as the corpus leaves it out for the other bishops of Rome it keeps from this calendar. He is not the corpus's `eugenius-the-confessor` and not `hyginus-of-rome`; the corpus keeps no other bishop of Rome of the seventh century. No hymn is printed. The other men the page names — Martin I, Constans II and Pyrrhos — have no folder checked for them here, so the life links nobody and there is no `related` row."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

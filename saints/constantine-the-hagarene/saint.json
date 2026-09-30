@@ -1,0 +1,95 @@
+{
+  "slug": "constantine-the-hagarene",
+  "display_name": "Constantine of Mytilene",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Κωνσταντίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουνίου, «Άγιος Κωνσταντίνος ο εξ Αγαρηνών», with the rank word and the phrase «ο εξ Αγαρηνών» left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1819,
+      "latest": 1819,
+      "display": "1819",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Κωνσταντινος ο Εξ Αγαρηνων (; - 1819)» and the life ends «τελικά τον απαγχόνισαν στις 2 Ιουνίου 1819 μ.Χ.» The page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Ιουνίου — «Άγιος Κωνσταντίνος ο εξ Αγαρηνών»",
+        "url": "https://www.saint.gr/06/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Ιουνίου εκάστου έτους», the same day as the listing. The page names Psilometopo of Mytilene as his village, Magnesia and Smyrna as where his family moved, Mount Athos and the Kavsokalyvia as where Patriarch Gregory V baptised him, Kydonies as where he was seized and Constantinople as where he was hanged; `locations` is left out because the life is a journey between six places and not a residence in one. This is not the corpus's `constantine-the-new-emperor`, an emperor kept on 3 September. The page adds that a manuscript service for him is kept at the Kalyve of Saint John the Theologian in Kavsokalyvia and at the monastery of Saint Panteleimon on Athos."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Πᾶσαν ηὔφρανας, πιστῶν χορείαν, καί κατήσχυνας, τούς Ἄγαρ γόνους, ἀνακηρύξας λαμπρῶς τήν εὐσέβειαν, καί ὑπομείνας ἀνύποιστα βάσανα, ὦ Κωνσταντῖνε Μαρτύρων ἀγλάϊσμα. Ὡς οὖν ἔτυχες, οὗπερ ἐπόθεις ἀοίδιμε, μνημόνευε ἡμῶν τῶν εὐφημούντων Σε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως, the first of two apolytikia on the page of «Άγιος Κωνσταντίνος ο εξ Αγαρηνών»",
+        "url": "https://www.saint.gr/451/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You gladdened every choir of the faithful and put the sons of Hagar to shame, proclaiming godliness with splendour and enduring torments past bearing, O Constantine, ornament of the martyrs. Since you have obtained, ever-memorable one, the very thing you longed for, remember us who sing your praise.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Φωσφόρος ἀνέτειλε, τῆ Ἐκκλησία Χριστοῦ, ἡ μνήμη τῶν ἄθλων σου, φωτός πληροῦσα αὐτήν, Μαρτύρων ἐκσφράγισμα, ἔνδοξε Κωνσταντῖνε, λύουσα τήν ἀπάτην, γόνων τῶν ἐκ τῆς Ἄγαρ, λάμπουσα δέ πλουσίως, τάς ψυχάς τῶν ἐν πίστει, τήν μνήμην σου τελούντων ἀειμακάριστε.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ΄, Ταχύ προκατάλαβε, the second of two apolytikia on the page of «Άγιος Κωνσταντίνος ο εξ Αγαρηνών»",
+        "url": "https://www.saint.gr/451/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The memory of your contests has risen like a morning star upon the Church of Christ and filled her with light, O glorious Constantine, seal of the martyrs: it undoes the deceit of the sons of Hagar, and shines richly upon the souls of those who keep your memory in faith, O ever-blessed one.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

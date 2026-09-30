@@ -1,0 +1,69 @@
+{
+  "slug": "vettius-of-lyons",
+  "display_name": "Vettius of Lyons",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Βέτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουνίου, «Άγιοι Φωτεινός ο Επίσκοπος, Σάνκτιος ο διάκονος, Βέτιος, Επάγαθος, Ποντικός, Βιβλίδης, Άτταλος, Αλέξανδρος, Μάτουρος και οι συν αυτώ Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 177,
+      "latest": 177,
+      "display": "177",
+      "basis": "traditional",
+      "note": "saint.gr's head line for him reads «(; - 177)», and the entry says the company was perfected in martyrdom in 177 under the emperor Marcus Aurelius (161-180). The page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Ιουνίου — «Άγιοι Φωτεινός ο Επίσκοπος, Σάνκτιος ο διάκονος, Βέτιος, Επάγαθος, Ποντικός, Βιβλίδης, Άτταλος, Αλέξανδρος, Μάτουρος και οι συν αυτώ Μάρτυρες»",
+        "url": "https://www.saint.gr/06/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Ιουνίου εκάστου έτους», the same day as the listing, and it does not carry the «Δεν είναι διασταυρωμένη» sentence. One page carries all nine, each with a head line of its own and the year «(; - 177)», and above them a heading for the unnamed companions; the enumeration is why there are nine folders here and not one. Lyons in Gaul is named as the place of the martyrdom and `locations` is left out all the same, because the corpus does not place a martyr on the strength of one clause in a one-sentence entry. No hymn is printed for any of them. Of Vettius the page says nothing but his name, his rank of martyr and the year. His name stands next to that of Epagathus in the day's line, and the page gives each of the two its own head line, so they are kept here as the page counts them, as two men."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "photinos-of-lyons",
+    "sanctius-of-lyons",
+    "epagathus-of-lyons",
+    "ponticus-of-lyons",
+    "biblis-of-lyons",
+    "attalus-of-lyons",
+    "alexander-of-lyons",
+    "maturus-of-lyons"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

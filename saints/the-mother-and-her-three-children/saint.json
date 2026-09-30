@@ -1,0 +1,50 @@
+{
+  "slug": "the-mother-and-her-three-children",
+  "display_name": "The Mother and her Three Children",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μητέρα και τα Τρία Παιδιά της",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουνίου, «Αγία Μητέρα και τα Άγια Τρία Παιδιά της», with the rank words left off. The page names neither the mother nor any of the three children."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Ιουνίου — «Αγία Μητέρα και τα Άγια Τρία Παιδιά της»",
+        "url": "https://www.saint.gr/06/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Ιουνίου εκάστου έτους», the same day as the listing. The entry is one line and one couplet and names nobody, so it is kept as one folder for the four of them, as the corpus already keeps `two-martyrs-mother-and-daughter` from the Greek 28 January. The page gives no year and no place, so there is no `dates` object and no `locations`. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

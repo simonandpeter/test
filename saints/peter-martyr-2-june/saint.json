@@ -1,0 +1,59 @@
+{
+  "slug": "peter-martyr-2-june",
+  "display_name": "Peter (2 June)",
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "names": [
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουνίου, «Άγιοι Μαρκελλίνος και Πέτρος οι ιερομάρτυρες», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Πετρος ο Ιερομαρτυρας (; - 304)» and the life says the two bore witness in 304, in the years of the emperor Diocletian (284-305). The page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Ιουνίου — «Άγιοι Μαρκελλίνος και Πέτρος οι ιερομάρτυρες»",
+        "url": "https://www.saint.gr/06/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Ιουνίου εκάστου έτους», the same day as the listing, and carries the two men on one page with a head line each. Only Peter is drafted: whether the Marcellinus of this pair is the corpus's `marcellinus-of-rome`, whom the Romanian church keeps as bishop of Rome on 7 June and who also died about 304, is an open question this reader could not settle, and the brief's rule is to make no folder where the identity is not settled. Rome is named as where their church was built and not as where they suffered, so `locations` is left out. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

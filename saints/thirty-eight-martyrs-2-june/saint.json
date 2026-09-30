@@ -1,0 +1,50 @@
+{
+  "slug": "thirty-eight-martyrs-2-june",
+  "display_name": "The Thirty-eight Martyrs (2 June)",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Τριάντα Οκτώ Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουνίου, «Άγιοι Τριάντα Οκτώ Μάρτυρες», with the rank word left off. The page names none of the thirty-eight."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Ιουνίου — «Άγιοι Τριάντα Οκτώ Μάρτυρες»",
+        "url": "https://www.saint.gr/06/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Ιουνίου εκάστου έτους», the same day as the listing, and enumerates nobody, so this is one entry and not thirty-eight. It is not the corpus's `thirty-eight-martyrs-of-thrace`, who are kept by the Greek church on 23 August and died by the sword; these thirty-eight were shut into a bath-house. The page gives no year, no reign and no place, so there is no `dates` object and no `locations`. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
