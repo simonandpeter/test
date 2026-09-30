@@ -1,0 +1,67 @@
+{
+  "slug": "isaiah-of-the-kyiv-caves",
+  "display_name": "Isaiah of the Kyiv Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ησαΐας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαΐου, «Όσιος Ησαΐας ο Θαυματουργός», with the rank word and the epithet left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1115,
+      "latest": 1115,
+      "display": "1115",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε οσίως με ειρήνη το 1115 μ.Χ.», and its head line reads «Οσιος Ησαϊας ο Θαυματουργος (; - 1115)»."
+    },
+    "floruit": {
+      "earliest": 901,
+      "latest": 1100,
+      "display": "10th–11th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ησαΐας έζησε κατά τον 10ο και 11ο αιώνα μ.Χ.» The interval is those two centuries as the page names them."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαΐου — «Όσιος Ησαΐας ο Θαυματουργός»",
+        "url": "https://www.saint.gr/05/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Μαΐου εκάστου έτους», the same day as the listing. **He is a separate entry from the other Isaiah of this day** and the page keeps them apart: this one is «Όσιος Ησαΐας ο Θαυματουργός (; - 1115)», an ascetic of the Lavra of the Caves at Kyiv, while `isaiah-of-rostov` is «Άγιος Ησαΐας ο Θαυματουργός Επίσκοπος Ροστώβ (; - 1090)», a bishop; two entries, two pages, two years, two men. **The whole of what saint.gr prints for him is three sentences** and they are the whole of the life here. **No hymn, no relics, no place of birth.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

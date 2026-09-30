@@ -1,0 +1,11 @@
+# Euphrosynus of Pskov
+
+saint.gr says that Euphrosynus, Eleazar in the world, was born about 1386 in the village of Videlebye near Pskov, the same village from which Saint [Nicander of Pskov](/saints/nicander-of-pskov) came, whom the page sends to 24 September. His parents wished to marry their son, but he left his father's house and took refuge in the monastery of Snetnogorsky, where he became a monk.
+
+About 1425, wishing to live apart so as to give himself to unceasing prayer, he settled with his abbot's blessing in an isolated cell on the river Tolva, not far from Pskov. There he saw in a vision the three ecumenical teachers of the Church, [Basil the Great](/saints/basil-the-great), [Gregory the Theologian](/saints/gregory-the-theologian) and [John Chrysostom](/saints/john-chrysostom), who showed him the place where he was to build a church in their honour. Soon afterwards a devout monk named Seraphim came to him, and other ascetics began to gather round him who wished to live the anchoretic life with him.
+
+In 1477, on the place that had been shown him, he built a church dedicated to the Three Hierarchs and to Saint Onuphrius, and cells for the brotherhood, and he began to receive all who needed spiritual guidance. To the monks who visited him he said they should live by the monastic rule he had himself composed; and that rule, the page says, was in truth a teaching on the real evangelical life a monk must live. Out of humility, and wanting to give himself to prayer, he never took the duties of abbot, but went on living as a hermit a little way off, on the shores of Lake Pskov.
+
+He fell asleep in 1481, at the age of ninety-five. On his tomb, the page says, were placed his icon, painted by his disciple Ignatius while Euphrosynus was still alive, and the testament he left to the brotherhood, written with his own hands on parchment and sealed with a leaden seal by Theophilus, bishop of Novgorod.
+
+*After saint.gr's calendar for 15 Μαΐου — [the day](https://www.saint.gr/05/15/index.aspx) and [the life](https://www.saint.gr/1605/saint.aspx); read 30 September 2026.*

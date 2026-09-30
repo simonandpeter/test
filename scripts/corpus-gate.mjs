@@ -115,6 +115,34 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδωροσ mstislav-of-kiev theodore-companion-of-pausolypius theodore-companion-of-stephen theodore-companion-of-terentius theodore-founder-of-chora theodore-of-kama-the-philosopher theodore-of-kandavla theodore-of-kythera theodore-of-moscow theodore-of-novgorod theodore-of-pentapolis theodore-of-perga theodore-of-samothrace theodore-of-sykeon theodore-of-tamasos theodore-of-tomsk theodore-of-vrsac theodore-prince-of-yaroslavl theodore-stratelates theodore-the-byzantine theodore-the-envoy-of-nicomedia theodore-the-recruit theodore-the-silent theodore-trichinas':
+    'Twenty-four now. The new one is Theodore of Vršac on 16 May; the others are read in the el-05-12 entry for this name form.',
+  'μακαριοσ macarius-companion-of-eudoxius macarius-companion-of-terentius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-metropolitan-of-moscow macarius-new-hieromartyr-1944 macarius-notaras macarius-of-ierissos macarius-of-kalyazin macarius-of-kios macarius-of-kyiv macarius-of-paphos macarius-of-pelecete macarius-of-pisma macarius-of-rome macarius-of-the-altai macarius-of-valaam macarius-of-zhabyn macarius-the-confessor':
+    'Twenty now, and the new one is **the pair a reader referred up**: Macarius of the Altai on 16 May, whose page gives «Δεν έχουμε λεπτομέρειες» and a head line of 1847, against saint.gr’s Μακάριος ο Ιεραπόστολος of 18 Μαΐου, headed 1792 and described in full as *ο Ιεραπόστολος των Αλταΐων*. Very probably one man on two of its days; 18 May is the next batch but one and the reading is banked in that reader’s report. The others are read in the el-05-01 entry for this name form.',
+  'λαυρεντιοσ laurence-martyr-9-january laurence-of-canterbury laurence-of-cyprus laurence-of-komel laurence-of-salamina laurence-of-turov laurence-venerable-10-may':
+    'Seven now. The new one is Laurence of Komel on 16 May; the others are read in the el-04-30 entry for this name form.',
+  'ονωρατοσ honoratus-of-amiens honoratus-of-arles':
+    'Two men: Honoratus of Amiens on 16 May and the Honoratus of the el-01-16 entry.',
+  'κασσιανοσ cassian-companion-of-peter cassian-of-axylou cassian-of-bosoi cassian-of-komel cassian-the-recluse-of-the-kyiv-caves john-cassian':
+    'Six now. The new one is Cassian of Komel on 16 May; the others are read in the el-05-08 entry for this name form.',
+  'παχωμιοσ pachomius-6-may pachomius-companion-of-papyrinus pachomius-kedrov pachomius-of-keno pachomius-of-nerekhta pachomius-the-great':
+    'Six now, and **three of them stand on 15 May** as three entries of the page: Pachomius the Great, whom the Romanian keeps there too, with Pachomius of Keno and Pachomius Kedrov. The others are the companion of Papyrinus on 13 January and Nerekhta on 23 March.',
+  'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-katopinos nicholas-kedrov nicholas-of-corinth nicholas-of-japan nicholas-of-magnesia nicholas-of-pskov nicholas-of-spetses nicholas-of-the-forty-martyrs nicholas-of-trebizond nicholas-of-valaam nicholas-of-vounena nicholas-patriarch-of-georgia nicholas-the-mystikos nicholas-the-studite nicholas-velimirovich':
+    'Sixteen now, and the two new ones are a day apart: Nicholas Kedrov on 15 May and Nicholas the Mystikos on 16 May. The others are read in the el-05-09 entry for this name form.',
+  'αρεθασ aretas-of-the-altai arethas-the-recluse':
+    'Two men: Arethas the Recluse of Tver on 2 March and Aretas of the Altai on 15 May — a folder whose page gives him only «Άγιος» and so carries no `types` at all.',
+  'σιλβανοσ silvanus-8-march silvanus-of-palestine silvanus-of-tabennisi':
+    'Three men: the Silvanus of 8 March, Palestine on 18 January and Silvanus of Tabennisi on 15 May.',
+  'ησαιασ isaiah-companion-of-terentius isaiah-of-rostov isaiah-of-the-kyiv-caves isaiah-of-valaam isaiah-the-egyptian isaiah-the-prophet':
+    'Six now, and **two of the new ones share 15 May** as two entries: Isaiah of Rostov and Isaiah of the Kyiv Caves. The others are read in the el-04-10 entry for this name form.',
+  'ευφροσυνοσ euphrosynus-of-pskov euphrosynus-of-sinozero euphrosynus-of-tver euphrosynus-the-martyr-6-march':
+    'Four men: Sinozero on 20 March, Tver on 2 March, the martyr of 6 March and Euphrosynus of Pskov on 15 May.',
+  'δημητριοσ demetrius-24-april demetrius-ivanov demetrius-of-chios demetrius-of-constantinople demetrius-of-georgia demetrius-of-moscow demetrius-of-prilutsk demetrius-the-peloponnesian demetrius-the-skeuophylax demetrius-tornaras demos-the-fisherman':
+    'Twelve now. The new one is Demetrius of Moscow on 15 May; the others are read in the el-04-23 entry for this name form.',
+  'βαρβαροσ barbarus-6-may barbarus-companion-of-alexander barbarus-the-myrrh-streamer':
+    'Three men, and the pair a reader referred up is here: Barbarus the Myrrh-streamer of 15 May against `barbarus-6-may`, whom this wave upgraded, and against the Pentapolite of 23 Ιουνίου, where saint.gr contradicts its own dating — 1562 in its heading against the 820 to 829 this draft reads. Three of saint.gr’s own days for what may be one man; the folders stand and the reconciliation is the author’s, in ro-run/FINDINGS.md.',
+  'ανδρεασ andrew-6-january andrew-abbot-of-tobolsk andrew-of-monodendri andrew-of-mytilene andrew-of-raphailovo':
+    'Five men. The new one is Andrew of Monodendri on 15 May; the others are read in the el-05-14 entry for this name form.',
   'νικητασ nicetas-alfanov nicetas-of-apollonias nicetas-of-epirus nicetas-of-medikion nicetas-of-novgorod nicetas-of-pythia nicetas-the-sinaite':
     'Seven now. The new one is on 14 May; the others are read in the el-05-12 entry for this name form.',
   'μαρκοσ mark-of-arethusa mark-of-byblos mark-of-the-lavra-of-pskov mark-the-ascetic mark-the-cretan-of-smyrna mark-the-deaf mark-the-evangelist mark-the-shepherd':

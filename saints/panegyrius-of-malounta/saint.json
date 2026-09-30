@@ -1,0 +1,70 @@
+{
+  "slug": "panegyrius-of-malounta",
+  "display_name": "Panegyrius of Malounta",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Πανηγύριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαΐου, «Όσιος Πανηγύριος ο θαυματουργός», with the rank word and the epithet left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαΐου — «Όσιος Πανηγύριος ο θαυματουργός»",
+        "url": "https://www.saint.gr/05/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Μαΐου εκάστου έτους», the same day as the listing. **The page says at the outset that no life of him survives and that he has no synaxarion** — «Ο βίος του Οσίου Πανηγύριου δεν διασώζεται και ούτε έχει συναξάρι» — and that what it prints is gathered from his service and from the description of his icon. That is why there is **no `dates` object**: the page says «Ο χρόνος που έζησε ο Όσιος είναι άγνωστος» and then guesses from the service that he lived in the time of the Arab raids on Cyprus, which is the page's own inference and is not made a date here. It is likewise why **`types` does not carry `hieromonk`**: the page twice says «φαίνεται» — it seems, it is most likely — and a probable rank is not a recorded one. **His apolytikion names him** and is copied whole. **No relics.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’",
+      "model": "Θείας πίστεως",
+      "text": "Τῶν Κυπρίων τὸ κλέος, Μαλουντίων τὸ καύχημα καὶ θαυματουργὸς ἀνεδείχθης, θεοφόρε Πατὴρ ἠμῶν Πανηγύριε, ἱερωσύνης ἐνεδύσω τὴν στολὴν καὶ θαυμάτων τὲ πηγὴ ἀνεδείχθης, τοὶς προστρέχουσιν ἐν πίστει ἐν τῷ πανσέπτῳ καὶ θείω τεμένει σου. Δόξα τῷ οὕτως εὐδοκήσαντι Θεῶ, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ δωρησαμένῳ σὲ ἠμὶν πρέσβυν ἀκοίμητον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Θείας πίστεως, on the page of Όσιος Πανηγύριος ο θαυματουργός",
+        "url": "https://www.saint.gr/1603/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Glory of the Cypriots, boast of the people of Malounta, you were shown to be a wonderworker, our God-bearing father Panegyrius; you put on the robe of the priesthood and were shown to be a fountain of wonders for those who run in faith to your all-venerable and holy shrine. Glory to God who was so well pleased, glory to him who crowned you, glory to him who gave you to us as an unsleeping intercessor.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

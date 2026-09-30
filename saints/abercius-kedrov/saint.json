@@ -1,0 +1,73 @@
+{
+  "slug": "abercius-kedrov",
+  "display_name": "Abercius (Kedrov)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop of Zhytomyr",
+  "names": [
+    {
+      "form": "Αβέρκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαΐου, «Άγιος Αβέρκιος ο Ιερομάρτυρας», with the rank word left off; the page's own body gives his name in the world as «Πολύκαρπος Κεδρώφ»."
+    }
+  ],
+  "related": [
+    "nicholas-kedrov",
+    "pachomius-kedrov",
+    "tikhon-of-moscow"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "2 March 1879",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στις 2 Μαρτίου 1879 μ.Χ. στην πόλη Γιαράνσκ της επαρχίας Βυάτκα»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "saint.gr: «συνελήφθη και καταδικάσθηκε, το 1937 μ.Χ., στον διά τυφεκισμού θάνατο», and its head line reads «Αγιος Αβερκιος ο Ιερομαρτυρας (1879 - 1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαΐου — «Άγιος Αβέρκιος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/05/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Μαΐου εκάστου έτους», the same day as the listing. **He is neither of the two Abercii the corpus holds**: `abercius-of-hierapolis` is the equal-to-the-apostles of the second century and `abercius-martyr-26-may` is a martyr kept on another day; this is Polycarp Kedrov of Yaransk, tonsured in 1910 and made a bishop in 1915. **The office in the corpus's English is the page's «Επίσκοπος της περιοχής»** after his rectorship of the church school of Zhytomyr, which is the only see the page names for him. **Patriarch Tikhon is linked** because the page places him at his funeral in 1925, which is an encounter and not a dedication. **Sergius Stragorodsky, archbishop of Finland, who tonsured him, is named without a link**, the corpus keeping no folder for him. **No hymn. The page does not say where he was shot.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

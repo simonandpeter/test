@@ -1,0 +1,73 @@
+{
+  "slug": "pachomius-kedrov",
+  "display_name": "Pachomius (Kedrov)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "archbishop"
+  ],
+  "office": "Archbishop of Chernigov",
+  "names": [
+    {
+      "form": "Παχώμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαΐου, «Άγιος Παχώμιος ο Ιερομάρτυρας Αρχιεπίσκοπος Τσέρνιγκωφ», with the rank word and the see left off; the page's own body gives his name in the world as «Πέτρος Κεδρώφ»."
+    }
+  ],
+  "related": [
+    "nicholas-kedrov",
+    "abercius-kedrov",
+    "theodosius-of-chernigov"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1876,
+      "latest": 1876,
+      "display": "30 July 1876",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στις 30 Ιουλίου 1876 μ.Χ. στην πόλη Γιαράνσκ της επαρχίας Βυάτκα»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "saint.gr: «Το μαρτυρικό τέλος του Αγίου Ιερομάρτυρα Παχωμίου συνέβη το 1937 μ.Χ.», and its head line reads «Αγιος Παχωμιος ο Ιερομαρτυρας Αρχιεπισκοπος Τσερνιγκωφ (1876 - 1937)». The page does not say how or where he died."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαΐου — «Άγιος Παχώμιος ο Ιερομάρτυρας Αρχιεπίσκοπος Τσέρνιγκωφ»",
+        "url": "https://www.saint.gr/05/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Μαΐου εκάστου έτους», the same day as the listing. **He is one of four Pachomii on this day and is none of the corpus's six**: the page gives his name in the world as Peter Kedrov, his birthplace as Yaransk in Vyatka, and makes him the eldest brother of the hieromartyr Abercius, whose page on the same day says the same of him from the other side. **Theodosius of Chernigov is linked** because the page puts him at the atheist commission's opening of that saint's relics, which is an encounter with the relics of a saint the corpus keeps and not a dedication. **Antony Khrapovitsky, rector of the Kazan academy, is named without a link**; the corpus keeps no folder for him. **The monastery of Saint Daniel in Moscow is a dedication and is no relation.** **No hymn. The page does not say how his martyric end came.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

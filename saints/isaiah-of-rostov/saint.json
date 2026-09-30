@@ -1,0 +1,65 @@
+{
+  "slug": "isaiah-of-rostov",
+  "display_name": "Isaiah of Rostov",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "office": "Bishop of Rostov",
+  "names": [
+    {
+      "form": "Ησαΐας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαΐου, «Άγιος Ησαΐας ο Θαυματουργός Επίσκοπος Ροστώβ», with the rank word, the epithet and the see left off."
+    }
+  ],
+  "related": [
+    "theodosius-of-the-kyiv-caves"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1090,
+      "latest": 1090,
+      "display": "1090",
+      "basis": "traditional",
+      "note": "saint.gr states the year and no more: «Ο Άγιος Ησαΐας κοιμήθηκε με ειρήνη το 1090 μ.Χ.», and its head line reads «Αγιος Ησαϊας ο Θαυματουργος Επισκοπος Ροστωβ (; - 1090)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαΐου — «Άγιος Ησαΐας ο Θαυματουργός Επίσκοπος Ροστώβ»",
+        "url": "https://www.saint.gr/05/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Μαΐου εκάστου έτους», the same day as the listing. **He is not the other Isaiah the same day keeps**: saint.gr prints «Όσιος Ησαΐας ο Θαυματουργός (; - 1115)» of the Kyiv Caves as a separate entry with its own page, and the two pages give different men, different years and different offices — one a bishop of Rostov dead in 1090, the other a Caves ascetic dead in 1115. **Varlaam, whose place at the monastery of Saint Demetrius he took, and Leontius of Rostov, whose see he received, are named by the page and the corpus keeps neither**, so they are named in the life without links. **No hymn, no relics list.** The page closes by linking the synaxis of all the saints of Rostov and Yaroslavl, which is a heading and no folder."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Ahile",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 mai, «Sfântul Ierarh Ahile, Episcopul Larisei»."
+    },
+    {
+      "form": "Αχίλλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαΐου, «Όσιος Αχίλλιος Επίσκοπος Λαρίσης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαΐου — «Όσιος Αχίλλιος Επίσκοπος Λαρίσης»",
+        "url": "https://www.saint.gr/05/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on, and it is plainly the same man: the Cappadocian who became bishop of Larissa in the days of Constantine the Great and was distinguished at the First Council against Arius. **The Greek adds the year of his death in its head line**, «Οσιος Αχιλλιος Επισκοπος Λαρισης (; - 330)», and the existing `dates` object is left untouched; the year is recorded here and in the added paragraph in the page's own terms. **It adds that he is the city's patron**, «Πολιούχος: Λάρισα», and **that his relics lie in the metropolitan church of Larissa named for him**, «Τα Λείψανα του Αγίου βρίσκονται στον ομώνυμο Μητροπολιτικό Ναό Λαρίσης». **It calls him Όσιος in the line and Ἱεράρχης in the hymn**, which is the same reading the corpus's `types` already carry. **Of the several hymns on the page the first apolytikion, Ἦχος δ', and the first kontakion, Ἦχος πλ. δ’, are copied**, both naming him; a second apolytikion in Ἦχος γ´ and a second kontakion, two kathismata, a megalynarion and an oikos also stand there and are not copied, the propers being fuller. **Nothing there is a mis-hang** and no hymn on the page names another saint."
     },
     {
       "church": "serbian",
@@ -47,5 +62,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'",
+      "model": "Ταχὺ προκατάλαβε",
+      "text": "Λαρίσης σὲ πρόεδρον, καὶ πολιοῦχον λαμπρόν, ἡ χάρις ἀνέδειξεν ὡς Ἱεράρχην σοφόν, παμμάκαρ Ἀχίλλιε, σὺ γὰρ τὸ τῆς Τριάδος, ὁμοούσιον κράτος, θαύμασι τε καὶ λόγοις, κατετράνωσας κόσμω. Ἣν πάτερ ἐξευμενίζου, τοὶς σὲ γεραίρουσι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ', Ταχὺ προκατάλαβε, on the page of Όσιος Αχίλλιος Επίσκοπος Λαρίσης",
+        "url": "https://www.saint.gr/1593/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Grace showed you forth as the president of Larissa and its shining patron, a wise hierarch, all-blessed Achillius; for by wonders and by words you made plain to the world the consubstantial sovereignty of the Trinity. Make it merciful, father, towards those who honour you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’",
+      "model": "Τῇ ὑπερμάχῳ",
+      "text": "Τῆς Θεσσαλίας τὸν ἀστέρα τὸν ὑπέρλαμπρον, τῶν Λαρισαίων τὸν Ποιμένα τὸν ἀνύστακτον, κατὰ χρέος εὐφημήσωμεν ἐκβοῶντες· Παῤῥησίαν κεκτημένος πρὸς τὸν Κύριον, ἐκ παντὸς ἡμᾶς κινδύνου ἐλευθέρωσον, ἵνα κράζωμεν Χαίροις Πάτερ Ἀχίλλιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ, on the page of Όσιος Αχίλλιος Επίσκοπος Λαρίσης",
+        "url": "https://www.saint.gr/1593/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise, as we are bound, the most radiant star of Thessaly, the unsleeping shepherd of the people of Larissa, crying out: you who have boldness before the Lord, set us free from every danger, that we may cry, Rejoice, father Achillius.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -6,6 +6,11 @@
       "form": "Pahomie cel Mare",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 mai, «Sfântul Cuvios Pahomie cel Mare»."
+    },
+    {
+      "form": "Παχώμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαΐου, «Όσιος Παχώμιος ο Μέγας», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαΐου — «Όσιος Παχώμιος ο Μέγας»",
+        "url": "https://www.saint.gr/05/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on, and it is plainly the same man: the Egyptian of the Lower Thebaid, soldier, disciple of Palamon, founder of the coenobium on Tabennisi. **The Greek adds the years the Romanian row did not carry** — «γεννήθηκε το 292 μ.Χ στην Κάτω Θηβαΐδα της Αίγυπτου από γονείς ειδωλολάτρες», the army at twenty, the head line «Οσιος Παχωμιος ο Μεγας (292 - 348)» — and the existing `dates` object is left untouched, the years being recorded here in the row's own words and in the added paragraph. **It adds a relics list the corpus did not hold**: «Αποτμήματα του Ιερού Λειψάνου του Αγίου φυλάσσονται στις Μονές Μεγ. Λαύρας Αγίου Όρους και Αγίας Τριάδος Εξαμιλίων Κορινθίας και στο Παρεκκλήσιο Οσίας Ξένης της Ρωσίδος Μάνδρας Αττικής». **It adds his brother John**, who took the habit and helped him raise the first small monastery on Tabenne, and whom the page gives no day, so he is named without a link and is no folder. **Palamon his spiritual father is linked**, the page sending him to 12 Αυγούστου and the corpus keeping him. **Two apolytikia and three kontakia-and-more stand on the page**: the first apolytikion, Ἦχος πλ. α’, and the first kontakion, Ἦχος β’, are copied here, both naming him. The second apolytikion, Ἦχος πλ. δ’, is the common of a venerable father, «Ταῖς τῶν δακρύων σου ῥοαῖς», with his name set into it, and is not copied only because the proper is fuller; nothing on the page is a mis-hang and no hymn there names another saint."
     },
     {
       "church": "serbian",
@@ -61,9 +76,46 @@
         "text": "Thou wast shown to be a chief of the flock of the great Shepherd, guiding the companies of hermits to the heavenly fold, father Pachomius; and having learned the habit of that place, O venerable one, thou didst teach it again to the solitaries; and now thou rejoicest and art glad together with them in the dwellings of heaven.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’",
+      "model": "Τὸν συνάναρχον Λόγον",
+      "text": "Ἀγελάρχης ἐδείχθης τοῦ Ἀρχιποιμένος, Μοναστῶν τᾶς ἀγέλας Πάτερ Παχώμιε, πρὸς τὴν μάνδραν ὁδηγῶν τὴν ἐπουράνιον, καὶ τὸ πρέπον ἀσκηταίς, ἐκεῖθεν σχῆμα μυηθεῖς, καὶ τοῦτο πάλιν μυήσας, νῦν δὲ σὺν τούτοις ἀγάλλη, καὶ συγχορεύεις ἐν οὐρανίαις σκηναίς.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον, on the page of Όσιος Παχώμιος ο Μέγας",
+        "url": "https://www.saint.gr/1592/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be a leader of the flocks under the Chief Shepherd, father Pachomius, guiding the flocks of monastics towards the heavenly fold; you were taught from there the habit that befits ascetics and taught it to them in turn, and now you rejoice with them and dance together in the dwellings of heaven.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’",
+      "model": "Τὰ ἄνω ζητῶν",
+      "text": "Φωστὴρ φαεινός, ἐδείχθης ἐν τοὶς πέρασι τὴν ἔρημον δέ, ἐπόλισας τοὶς πλήθεσι, σεαυτὸν ἐσταύρωσας, τὸν σταυρόν σου ἐπ’ ὤμων ἀράμενος, καὶ ἀσκήσει τὸ σῶμα, κατέτηξας, πρεσβεύων ἀπαύστως ὑπὲρ πάντων ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν, on the page of Όσιος Παχώμιος ο Μέγας",
+        "url": "https://www.saint.gr/1592/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A shining light you were shown to be to the ends of the earth; you made the desert a city with multitudes, you crucified yourself and took your cross upon your shoulders, and wasted your body with ascesis, interceding unceasingly for us all.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "palamon-the-hermit"
+  ]
 }

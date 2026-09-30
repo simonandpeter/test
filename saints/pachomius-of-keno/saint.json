@@ -1,0 +1,59 @@
+{
+  "slug": "pachomius-of-keno",
+  "display_name": "Pachomius of Keno",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Παχώμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαΐου, «Όσιος Παχώμιος του Κένο», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1401,
+      "latest": 1600,
+      "display": "15th–16th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Παχώμιος του Κένο έζησε τον 15ο και 16ο αιώνα μ.Χ. στη Ρωσία». The interval is those two centuries as the page names them; it gives no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαΐου — «Όσιος Παχώμιος του Κένο»",
+        "url": "https://www.saint.gr/05/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Μαΐου εκάστου έτους», the same day as the listing. **Four Pachomii stand on this one day page and they are four entries and four men.** Pachomius the Great is an upgrade of the folder the corpus already holds; Pachomius the Hieromartyr, archbishop of Chernigov, is a new folder in this same batch; Pachomius the Anchorite is sent by his own page to 23 Μαρτίου, his day of repose, and is left alone here; and this one is the ascetic of the Transfiguration monastery by Lake Keno in the province of Kargopol. **The corpus's six other Pachomii are none of them his**: of Chios, of Gledin, Ionov, the companion of Papyrinus, the one kept on 6 May, and the Great. **The whole of what saint.gr prints is two sentences**, which are the whole of the life here. **No hymn, no year, no relics, no parents.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

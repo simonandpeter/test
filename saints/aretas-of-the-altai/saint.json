@@ -1,0 +1,56 @@
+{
+  "slug": "aretas-of-the-altai",
+  "display_name": "Aretas of the Altai",
+  "sex": "male",
+  "names": [
+    {
+      "form": "Αρέθας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαΐου, «Άγιος Αρέθας των Αλταΐων», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1910,
+      "latest": 1910,
+      "display": "1910",
+      "basis": "traditional",
+      "note": "The only year on the page is in its head line, «Αγιος Αρεθας Των Αλταϊων (; - 1910)»; the body states no year at all and says «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαΐου — «Άγιος Αρέθας των Αλταΐων»",
+        "url": "https://www.saint.gr/05/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Μαΐου εκάστου έτους», the same day as the listing. **The entry carries no asterisk and none of saint.gr's own doubt formulae**: the page does not say his existence, his data or his date is uncorroborated — it says only «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου», that no details of the Russian saint's life are had, which is an absence of material and not a refusal to vouch, and so the entry is drafted rather than refused. **`types` is absent on purpose**: the line gives him only «Άγιος», the corpus's closed list has no slug for a bare saint, and a new type is a code commit and out of a reader's scope. **He is not `aretas-of-nagran`**, the great-martyr of Nagran whom the corpus keeps on 24 October; this one is a Russian of the Altai dead in 1910. **No hymn, no relics, no birthplace, no office, no manner of death.** The page's only outgoing links are to the synaxis of all the saints of Siberia, which is a heading and no folder, and to an OCA page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

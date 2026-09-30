@@ -1,0 +1,95 @@
+{
+  "slug": "barbarus-the-myrrh-streamer",
+  "display_name": "Barbarus the Myrrh-streamer",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Βάρβαρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαΐου, «Όσιος Βάρβαρος ο Μυροβλύτης», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 820,
+      "latest": 829,
+      "display": "820–829",
+      "basis": "traditional",
+      "note": "saint.gr dates the raid he took part in by a reign and gives no year of his own: «επέδραμε στη νότια Ήπειρο και την Αιτωλία επί των ημερών του αυτοκράτορα Μιχαήλ του Τραυλού (820 - 829 μ.Χ.)». The interval is that reign as the page prints it; the page says his ascesis ran on for years afterwards and gives it no end date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαΐου — «Όσιος Βάρβαρος ο Μυροβλύτης»",
+        "url": "https://www.saint.gr/05/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Μαΐου εκάστου έτους», the same day as the listing. **Two other days stand on the page and neither is taken as a feast here.** The page's own closing paragraph says that the local hagiology of the Metropolis of Aetolia and Akarnania and of Corfu calls him «Όσιος Βάρβαρος ο Πενταπολίτης» and keeps his memory «στις 23 Ιουνίου» — a local Greek second day, recorded here and not moved. And the second pair of synaxarion verses the page prints, «Ἦν Βάρβαρος μὲν δοῦλος ἐν γῇ σὺν πόνοις… Εἴκαδε ἠδὲ Τρίτη γε πέπαυται Βάρβαρος ἄθλων», sends the reader to the twenty-third and calls its Barbarus a slave, which this one was not: it is a verse for another man of the name and nothing on the page repeats it, so nobody is moved on it. **He is not the corpus's `barbarus-6-may`**, so far as either page can show: that folder holds doxologia.ro's «Sfântul Mucenic Varvar» of 6 mai, a martyr with no life, no country, no century and no hymn, while this is an Όσιος of Aetolia with a full life, a reign, a service and a myrrh-streaming tomb. The two are kept apart here and the question is left standing in the reader's report. **No relics list is printed** beyond the account of the 1571 translation."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ´",
+      "text": "Μαρτυρικὸν ἀγῶνα γενναίως ἠγώνισαι, ἀσκητικῷ δὲ πόνῳ τὸν βίον διήνυσας ὅσιε Βάρβαρε· διὸ τὴν χάριν ἐδέξω διπλῆν, διὰ μὲν τοῦ λειψάνου ἀσθενείας διώκων, τῇ ψυχῇ δὲ συγχαίρων τῷ Χριστῷ, ὃν δυσώπει, ὑπὲρ ἡμῶν τῶν αἰσίως τιμώντων σε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ´, on the page of Όσιος Βάρβαρος ο Μυροβλύτης",
+        "url": "https://www.saint.gr/1594/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Bravely you fought a martyr's contest, and in ascetic labour you finished your course, venerable Barbarus; and so you received a double grace, driving sicknesses away by your relics while your soul rejoices with Christ. Entreat him on behalf of us who honour you with gladness.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β´",
+      "model": "Τὰ ἄνω ζητῶν",
+      "text": "Τὸ σῶμα τὸ σὸν τῇ γῇ ὑποτίθεται, τὴν σὴν δὲ ψυχὴν ὁ κτίστης κομίζεται, καὶ τὸ μὲν ἀσθενέσιν ὑγείαν πᾶσι χαρίζεται, ἡ δὲ Χριστὸν ἱκετεύει λυτρώσασθαι, πυρὸς αἰωνίου τοὺς τιμῶντάς σε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β´, Τὰ ἄνω ζητῶν, on the page of Όσιος Βάρβαρος ο Μυροβλύτης",
+        "url": "https://www.saint.gr/1594/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your body is laid in the earth and your soul is taken up by its Maker; the one gives health to all the sick, and the other beseeches Christ to redeem from everlasting fire those who honour you.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

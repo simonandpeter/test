@@ -1,0 +1,62 @@
+{
+  "slug": "gerebernus-of-geel",
+  "display_name": "Gerebernus of Geel",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Γκέρεμπραν",
+      "lang": "el",
+      "note": "Read out of the body of saint.gr's page for the pair, «του Αγίου Γκέρεμπραν (Gerebernus ή Gerebran)», with the rank word left off; the day's own line prints his name in Latin letters, «Άγιοι Dymphna και Gerebernus»."
+    }
+  ],
+  "related": [
+    "dymphna-of-geel"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 620,
+      "latest": 640,
+      "display": "between 620 and 640",
+      "basis": "traditional",
+      "note": "saint.gr says the king «τους σκότωσε και τους δυο» — killed them both — and dates that killing «Ήταν 15 Μαΐου, κάπου μεταξύ 620 & 640 μ.Χ.» The bounds are the two years the page prints; it gives him no year of birth and no age."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαΐου — «Άγιοι Dymphna και Gerebernus»",
+        "url": "https://www.saint.gr/05/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Μαΐου εκάστου έτους», the same day as the listing, whose one line names two saints and whose page carries two head names, «Αγια Dymphna» and «Αγιος Gerebernus» — an enumerated pair, and so one folder each. **Everything the page says of him it says in passing**: he was Dymphna's spiritual father, he helped her flee, the king pursued them both and killed them both. **`types` carries only `martyr`**: «πνευματικός», spiritual father, is how the page names his part, and although that office is ordinarily a priest's the page does not call him a presbyter, so nothing is added on the strength of the word. **No hymn, no relics, no country of his own, no year of birth, no age.** The page gives no separate account of him at all and the whole of his life here is what it says of him inside hers."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

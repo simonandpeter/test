@@ -1,0 +1,73 @@
+{
+  "slug": "euphrosynus-of-pskov",
+  "display_name": "Euphrosynus of Pskov",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ευφρόσυνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαΐου, «Όσιος Ευφρόσυνος ο Θαυματουργός», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [
+    "nicander-of-pskov",
+    "basil-the-great",
+    "gregory-the-theologian",
+    "john-chrysostom"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1386,
+      "latest": 1386,
+      "display": "about 1386",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε περί το 1386 μ.Χ. στο χωριό Βιντελεμπιέ, κοντά στο Πσκωφ» — the page's own «περί», about, is kept in the display and the bounds are the one year it names."
+    },
+    "death": {
+      "earliest": 1481,
+      "latest": 1481,
+      "display": "1481",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ευφρόσυνος κοιμήθηκε σε ηλικία ενενήντα πέντε ετών, το 1481 μ.Χ.», and its head line reads «Οσιος Ευφροσυνος ο Θαυματουργος (1386 - 1481)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαΐου — «Όσιος Ευφρόσυνος ο Θαυματουργός»",
+        "url": "https://www.saint.gr/05/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Μαΐου εκάστου έτους», the same day as the listing. **He is neither of the two Euphrosyni the corpus holds**: `euphrosynus-the-cook` is the Egyptian cook of the paradise-apples and `euphrosynus-the-martyr-6-march` is a martyr; this is Eleazar of the village of Videlebye by Pskov, monk of Snetnogorsky, founder of the hermitage on the Tolva. **The name of his own kinsman-townsman is a link**: the page says Nicander of Pskov came from the same village and sends him to 24 Σεπτεμβρίου, and the corpus keeps him. **The three hierarchs of his vision are the three the corpus keeps** and are linked. **A fourth name, the monk Seraphim who joined him, and a fifth, his disciple Ignatius who painted his icon, are printed without a day**, and the corpus's Seraphims and Ignatiuses cannot be matched to them on the name alone, so neither is linked and neither gets a `related` row. **No hymn.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

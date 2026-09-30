@@ -1,0 +1,63 @@
+{
+  "slug": "dymphna-of-geel",
+  "display_name": "Dymphna of Geel",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Δάφνη",
+      "lang": "el",
+      "note": "Read out of the body of saint.gr's page for her, «Η Αγία Δάφνη (Dymphna ή Dympna ή Dimpna)», with the rank word left off; the day's own line prints her name in Latin letters, «Άγιοι Dymphna και Gerebernus»."
+    }
+  ],
+  "related": [
+    "gerebernus-of-geel"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 620,
+      "latest": 640,
+      "display": "between 620 and 640",
+      "basis": "traditional",
+      "note": "saint.gr: «Ήταν 15 Μαΐου, κάπου μεταξύ 620 & 640 μ.Χ., και η αγία ήταν 15 χρονών.» The bounds are the two years the page prints; it names no single year and no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαΐου — «Άγιοι Dymphna και Gerebernus»",
+        "url": "https://www.saint.gr/05/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Μαΐου εκάστου έτους», the same day as the listing, and the page's own narrative repeats it: «Ήταν 15 Μαΐου». **The one listed line carries two head names** — «Αγια Dymphna» and «Αγιος Gerebernus» — so it is an enumerated pair and therefore two folders, one each. **The page prints her name in two scripts**, Latin in the listing and «Δάφνη» in the body, where it is offered as her name and not as a translation; the Greek form is recorded with that said in its note, and no other language's form is invented from it. **The page grants that she is honoured chiefly in the Western Church** and argues that she is nonetheless an Orthodox saint of the West's Orthodox past; that is the page's own claim and is recorded as such. **Her biography was written in the thirteenth century**, the page says, six centuries after the killing. **No hymn, no relics, no father's name, no name for the kingdom in Ireland.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

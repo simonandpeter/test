@@ -1,0 +1,64 @@
+{
+  "slug": "nicholas-kedrov",
+  "display_name": "Nicholas (Kedrov)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαΐου, «Άγιος Νικόλαος ο Ιερομάρτυρας», with the rank word left off; the page's own body gives his surname as «Κεδρώφ»."
+    }
+  ],
+  "related": [
+    "abercius-kedrov",
+    "pachomius-kedrov"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1936,
+      "latest": 1936,
+      "display": "1936",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιερομάρτυς Νικόλαος μαρτύρησε το 1936 μ.Χ.», and its head line reads «Αγιος Νικολαος ο Ιερομαρτυρας (; - 1936)». The page does not say how he died or where."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαΐου — «Άγιος Νικόλαος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/05/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Μαΐου εκάστου έτους», the same day as the listing. **This day keeps a father and two of his sons as three separate entries**, and his own page is the one that joins them: it names his wife Elizabeth, his sons the hieromartyrs Pachomius and Abercius, his son Michael bishop of Braslav in Poland, and his daughter Vera. Pachomius and Abercius have entries and pages of their own on this day and are folders in this batch; **Michael and Vera are named and are given no day and no further word by the page**, so they are named in the life and are no folders. **He is none of the corpus's sixty-odd Nicholases**: the page gives his surname as Kedrov and his place as the town of Yaransk near the province of Vyatka, and nothing in the corpus answers to either. **No hymn, no birth year, no manner of death.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "slug": "andrew-of-monodendri",
+  "display_name": "Andrew of Monodendri",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ανδρέας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαΐου, «Όσιος Ανδρέας ο Ερημίτης και Θαυματουργός», with the rank word and the epithets left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1234,
+      "latest": 1271,
+      "display": "1234–1271",
+      "basis": "traditional",
+      "note": "saint.gr gives a reign and no year of his own: «έζησε στα χρόνια του βασιλιά Μιχαήλ Β' του Κομνηνού δεσπότη της Ηπείρου (1234 - 1271 μ.Χ.)». The interval is that reign as the page prints it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαΐου — «Όσιος Ανδρέας ο Ερημίτης και Θαυματουργός»",
+        "url": "https://www.saint.gr/05/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Μαΐου εκάστου έτους», the same day as the listing, and its synaxarion verse agrees: «Πέμπτη καὶ δεκάτη Ἀνδρέαν ἔνθεν ἀειραν». **The page says plainly that he is unknown to the synaxarists** — «είναι άγνωστος στους Συναξαριστές» — and that what it prints comes from material and a service written by Andreas Idromenos Hypargios, who died in 1847; that is recorded here rather than smoothed over. **It gives two birthplaces and does not choose between them**: Monodendri in Epirus, or, «κατά άλλους», the village of Sivista in Eurytania on Mount Kalana, now under the waters of the Kremasta reservoir. **The queen of Arta who buried him is sent by the page to 11 Μαρτίου** and the corpus keeps no folder for her yet, so she is named in the life without a link — but `theodora-of-arta` is a new folder in another reader's `.tmp/el-drafts/03-11.json`, so once that batch is written the sentence «Saint Theodora, queen of Arta» in this life can take `[Theodora of Arta](/saints/theodora-of-arta)` and a `related` row beside it. **No relics list** beyond the burial outside the cave and the church raised over it."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α΄",
+      "model": "Τῆς ἐρήμου πολίτης",
+      "text": "Τῆς Καλάνης οἰκήτωρ καὶ ἐν σώματι Ἄγγελος, καὶ Χαλκιοπούλου τὸ κλέος, δόξα Βάλτου καὶ καύχημα, ὑπάρχεις ὡς Ἀνδρέα ἀληθῶς, διὸ καὶ εὐφημοῦμεν σὲ πιστῶς· θεραπεύεις γὰρ νοσοῦντας, καὶ πειρασμῶν λυτρούσαι τοὺς βοῶντας σοι· δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σε θαυμαστώσαντι, δόξα τῷ ἐνεργοῦντι διά σου πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α΄, Τῆς ἐρήμου πολίτης, on the page of Όσιος Ανδρέας ο Ερημίτης και Θαυματουργός",
+        "url": "https://www.saint.gr/1595/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Dweller of Kalana and an angel in the body, glory of Chalkiopoulos and the boast and pride of Valtos: such you truly are, Andrew, and therefore we praise you in faith, for you heal the sick and deliver from temptations those who cry to you. Glory to him who gave you strength, glory to him who made you wondrous, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’",
+      "model": "Τὰ ἄνω ζητῶν",
+      "text": "᾿Εν τῷ κόσμῳ σωφρόνως θητεύσας καὶ τοῦ κόσμου ἀποταγείς, τὰ ἄνω προελόμενος καὶ ὑπὲρ τούτων θεοφιλῶς ἀσκησάμενος, ἐν Καλάνᾳ τέλος καταλεχθείς, πρέσβευε, πάτερ, καὶ ὑπὲρ ἡμῶν τῶν ἀνυμνούντων σε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν, on the page of Όσιος Ανδρέας ο Ερημίτης και Θαυματουργός",
+        "url": "https://www.saint.gr/1595/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having served soberly in the world and then renounced the world, you chose the things above and struggled for them in a way pleasing to God; and laid at last to rest in Kalana, intercede, father, for us also who sing your praise.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

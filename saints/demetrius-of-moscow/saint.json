@@ -1,0 +1,67 @@
+{
+  "slug": "demetrius-of-moscow",
+  "display_name": "Demetrius of Moscow",
+  "sex": "male",
+  "types": [
+    "prince",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Μαΐου, «Άγιος Δημήτριος ο Μοσχοβίτης, ο Θαυματουργός», with the rank word and the epithets left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1581,
+      "latest": 1581,
+      "display": "1581",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Δημήτριος (Ιβάνοβιτς) γεννήθηκε στη Μόσχα το 1581 μ.Χ.»"
+    },
+    "death": {
+      "earliest": 1591,
+      "latest": 1591,
+      "display": "1591",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο θάνατός του, το 1591 μ.Χ., παρέμεινε μυστηριώδης», and its head line reads «Αγιος Δημητριος ο Μοσχοβιτης, ο Θαυματουργος (1581 - 1591)». The page says historians disagree whether the death was an accident or a crime and does not settle it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Μαΐου — «Άγιος Δημήτριος ο Μοσχοβίτης, ο Θαυματουργός»",
+        "url": "https://www.saint.gr/05/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Μαΐου εκάστου έτους», the same day as the listing. **A second Greek day stands on the page and is not taken as a row**: it says «Η Εκκλησία εορτάζει την μετακομιδή των ιερών λειψάνων αυτού στις 3 Ιουνίου», and saint.gr carries a separate listing for that translation, which is a relic translation and no folder of its own. One attestation row per church is the schema, so the second day is this note. **`types` is short of what the page implies**: it calls him τσάρεβιτς, heir to the throne, and the corpus has no slug for that, so `prince` and `wonderworker` are used and nothing is invented. **The page does not call his death a martyrdom** and neither does this folder: it says the death stayed mysterious and that historians differ over whether it was accident or crime, while history has marked Godunov as the moral author of the killing. **No hymn.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
