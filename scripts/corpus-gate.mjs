@@ -115,6 +115,26 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοπεμπτοσ theopemptus-11-june theopemptus-2-january theopemptus-7-february theopemptus-of-nicomedia':
+    'Two men: the Theopemptus of 11 June and the Theopemptus of the el-01-05 entry.',
+  'τατιανη tatiana-5-january tatiana-of-peking tatiana-of-rome':
+    'Two women: the Tatiana of 11 June and the Tatiana of the el-01-12 entry.',
+  'μαρια maria-6-january maria-methymopoula maria-of-caesarea maria-of-olonets maria-of-peking maria-of-vladimir mary-called-marinos mary-of-aza mary-of-cleopas mary-sister-of-lazarus mary-sister-of-lykarion mary-wife-of-xenophon':
+    'Ten now. The new one is on 11 June; the others are read in the el-06-06 entry for this name form.',
+  'ησαιασ isaiah-companion-of-terentius isaiah-of-peking isaiah-of-rostov isaiah-of-the-kyiv-caves isaiah-of-valaam isaiah-the-egyptian isaiah-the-prophet':
+    'Seven now. The new one is on 11 June; the others are read in the el-05-15 entry for this name form.',
+  'βαρναβασ barnabas-of-gethsemane barnabas-of-kantara barnabas-of-the-vetluga barnabas-the-apostle':
+    'Three men: Barnabas of Kantara on 19 May, the Apostle on 11 June, and the Barnabas the corpus keeps besides.',
+  'σιλουανοσ silouan-of-the-kyiv-caves silvanus-martyr-6-february silvanus-of-emesa':
+    'Two men: the Silouanos of 10 June and Silvanus of Tabennisi on 15 May, whose Greek forms fold together.',
+  'σαββασ sabbas-companion-of-jonah sabbas-of-daphnousia sabbas-of-sicily sabbas-of-sourozh sabbas-of-stagira sabbas-of-the-kyiv-caves sabbas-of-tver sabbas-of-zographou sabbas-stratelates sabbas-the-spiritual sava-brancovici-of-transylvania sava-of-serbia sava-the-second':
+    'Thirteen now. The new one is on 10 June; the others are read in the el-05-02 entry for this name form.',
+  'ιωαννησ john-arnaoutogiannis john-companion-of-barouchius john-companion-of-basilides john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-meletius john-companion-of-peter john-companion-of-tarasius john-disciple-of-limnaeus john-fedorov-of-krasnokutsk john-feodorov-of-tambov john-iii-scholasticus john-kalfas john-kalita john-kaloktenes john-kononenko john-koulakiotis john-mauropous john-nannos-of-thessalonica john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kantara john-of-kazan john-of-lycopolis john-of-manglisi john-of-monagria john-of-nea-moni john-of-peking john-of-rouphinianai john-of-santa-cruz john-of-serres john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-old-lavra john-of-the-well john-of-tobolsk john-of-ustyug john-of-verkhoturye john-of-vilnius john-of-yuryevets john-of-zedazeni john-philosopher-of-georgia john-psychaites john-son-of-xenophon john-the-bulgarian john-the-confessor-of-kathara john-the-goldsmith-of-shumen john-the-hut-dweller john-the-iberian john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-the-wallachian john-timonov john-with-minas-and-david':
+    'Fifty-nine now. The new ones are on 10 and 11 June; the others are read in the el-06-07 entry for this name form.',
+  'απολλωσ apollos-bishop-10-june apollos-companion-of-alexandra apollos-under-julian':
+    'Three men: the companion of Alexandra on 21 April, Apollo of the ten Egyptians on 5 June, and the Apollos of 10 June.',
+  'αλεξιοσ alexios-the-recluse-of-kyiv alexis-of-goloseevo alexis-of-moscow alexis-of-voronezh alexis-tatarinov alexis-the-man-of-god alexis-toth alexius-of-bithynia':
+    'Six now. The new one is on 10 June; the others are read in the el-04-24 entry for this name form.',
   'κυροσ cyrus-of-alexandria cyrus-of-constantinople kyros-the-venerable':
     'Two men: the Cyrus of 9 June and the Cyrus of the el-01-31 entry.',
   'ανανιασ ananias-26-january ananias-martyr-9-june ananias-of-crete ananias-of-lacedaemonia':

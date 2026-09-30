@@ -6,6 +6,11 @@
       "form": "Alexandru",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 iunie, «Sfântul Mucenic Alexandru»."
+    },
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιουνίου, «Άγιοι Αλέξανδρος και Αντωνίνα», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιουνίου — «Άγιοι Αλέξανδρος και Αντωνίνα»",
+        "url": "https://www.saint.gr/06/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and dates both «(; - 313)». It is plainly the same man: the Christian named Alexander who went into the brothel where the eparch Phystus had thrown the virgin Antonina and got her out by lending her his own clothes, was arrested with her, mutilated, smeared with pitch and burnt. The page adds that their relics were later brought to Constantinople and laid in the monastery of Maximinus, where a synaxis of them was held. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -61,6 +76,40 @@
       },
       "english": {
         "text": "Thy martyrs, O Lord, in their struggles received from thee, our God, the crowns of incorruption; for having thy strength they overthrew the tormentors and broke the powerless insolence of the demons. By their prayers save our souls, O Christ God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Ξυνωρὶς ἡ ἁγία τῶν Μαρτύρων ὑμνείσθω μοί, σὺν τῷ εὐκλεεῖ Ἀλεξάνδρω, Ἀντωνίνα ἡ πάνσεμνος· ἀγάπη γὰρ καὶ πίστει εὐσεβεῖ, ἐκλάμψαντες ἐν ἄθλοις ἱεροίς, ἰαμάτων ἐφαπλούσι μαρμαρυγᾶς, τοὶς ποθῶ ἀνακράζουσα δόξα τῷ ἐνισχύσαντι ὑμᾶς, δόξα τῷ στεφανώσαντι, δόξα τῷ ἐνεργούντι δι' ὑμῶν, πάσιν ἰάματα",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Τῆς ἐρήμου πολίτης — the first of two apolytikia on the page of «Άγιοι Αλέξανδρος και Αντωνίνα», and the one that names them both; the second, «Οἱ Μάρτυρες σου Κύριε», is the common of martyrs",
+        "url": "https://www.saint.gr/545/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let the holy pair of the martyrs be hymned by me — the all-modest Antonina together with the renowned Alexander; for shining out in sacred contests by love and by devout faith, they spread abroad the radiance of healings upon those who cry to them with longing: Glory to him who gave you strength, glory to him who crowned you, glory to him who through you works healings for all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τοὺς ἀσφαλεῖς.",
+      "text": "Τοὺς ἐν Χριστῷ, πνευματικοὺς ὁμαίμονας, καὶ ἐν ὁδοῖς, τῆς εὐσεβείας σύμφρονας, τὸν θεόφρονα Ἀλέξανδρον, σὺν Ἀντωνίνῃ μακαρίσωμεν· τοὺς ἄθλους γὰρ ἐκείνων καὶ τὰ στίγματα, ὡς μύρον εὐωδίας προσεδέξατο, ὁ τούτους δοξάσας ὡς ηὐδόκησε.",
+      "source": {
+        "text": "saint.gr, Έτερον Κοντάκιον, Ἦχος β’, Τοὺς ἀσφαλεῖς — the second of two kontakia on the page of «Άγιοι Αλέξανδρος και Αντωνίνα», and the one that names them both; the first, «Τῶν Μαρτύρων ἔλαμψεν», is a common",
+        "url": "https://www.saint.gr/545/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us call blessed the godly-minded Alexander together with Antonina, kinsfolk in the spirit in Christ and of one mind upon the ways of piety; for he who glorified them as he saw fit received their contests and their wounds as myrrh of sweet fragrance.",
         "rendered": "site"
       }
     }

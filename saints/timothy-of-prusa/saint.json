@@ -6,6 +6,11 @@
       "form": "Timotei",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 iunie, «Sfântul Sfințit Mucenic Timotei, Episcopul Prusei»."
+    },
+    {
+      "form": "Τιμόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιουνίου, «Άγιος Τιμόθεος επίσκοπος Προύσας», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιουνίου — «Άγιος Τιμόθεος επίσκοπος Προύσας»",
+        "url": "https://www.saint.gr/06/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and dates him «(; - 361)». It is plainly the same man: the bishop of Prusa who killed the dragon that lay between Prusa and the hot springs and was beheaded under Julian the Apostate. saint.gr quotes Nikodemos the Hagiorite's synaxarion at length for the miracle and adds that a church of his stood inside the hospital «ἐν τῷ Δευτέρῳ» at Constantinople. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -48,5 +63,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α΄.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Τοῖς τῶν αἱμάτων ὄμβροις καταρδευόμενος, Ἱερομάρτυς Κυρίου ἐκαρποφόρησας ἐν τῇ γῇ τῇ ἀγαθῇ τῆς καρδίας σου, τὴν ἀδάπανον τρυφήν, ἣν ἐδέξω ἐκ Θεοῦ, Τιμόθεε δυσωποῦμεν, ἐκ τῶν κινδύνων ῥυσθῆναι, τοὺς ἐκτελοῦντας τὴν μνήμην σου.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α΄, Τὸν συνάναρχον Λόγον — the only hymn on the page of «Άγιος Τιμόθεος επίσκοπος Προύσας», and it names him",
+        "url": "https://www.saint.gr/543/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Watered by the showers of your own blood, O hieromartyr of the Lord, you bore fruit in the good ground of your heart — the delight that is never spent, which you received from God. Timothy, we entreat you: deliver from dangers those who keep your memory.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

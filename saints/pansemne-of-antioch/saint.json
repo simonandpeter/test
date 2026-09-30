@@ -6,6 +6,11 @@
       "form": "Pansemnia",
       "lang": "ro",
       "note": "Her own name, read out of doxologia.ro's line for 10 iunie, «Sfinții Cuvioși Teofan și Pansemnia din Antiohia», which names two people."
+    },
+    {
+      "form": "Πανσέμνη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιουνίου, «Όσιοι Θεοφάνης και Πανσέμνη», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιουνίου — «Όσιοι Θεοφάνης και Πανσέμνη»",
+        "url": "https://www.saint.gr/06/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and gives no years. It is plainly the same woman: the harlot of Antioch whom Theophanes won by asking her to be his wife on condition she became a Christian, who gave her goods to the poor, was baptised and lived in a cell beside his, was counted worthy of the grace of healing, and died in peace a few weeks before him. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -50,5 +65,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α΄.",
+      "model": "Τὸν Συνάναρχον Λόγον.",
+      "text": "Ἱλασμοῦ τῶν πταισμάτων τυχοῦσα πάνσεμνε, τῷ φέγγει τῆς μετανοίας καταυγασθεῖσα τὸν νοῦν, τῆς ἀσκήσεως ἐφάνης θεῖον σέμνωμα, ὅθεν θαυμάτων δωρεᾶς, σὲ ἠξίωσε Χριστός, Πανσέμνη Ὁσία Μῆτερ, Ὃν δυσώπει τοῦ οἰκτηρῆσαι, ἡμᾶς τοὺς πίστει εὐφημοῦντάς σε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α΄, Τὸν Συνάναρχον Λόγον — the first of two apolytikia on the page of «Όσιοι Θεοφάνης και Πανσέμνη», and the one proper to her",
+        "url": "https://www.saint.gr/541/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having obtained forgiveness of your offences, all-modest one, your mind made bright with the radiance of repentance, you appeared as the divine ornament of the ascetic life; wherefore Christ counted you worthy of the gift of wonders, O venerable mother Pansemne. Entreat him to have compassion on us who praise you in faith.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ΄.",
+      "model": "Τῇ Ὑπερμάχῳ.",
+      "text": "Τὴν τῶν Ὁσίων ξυνωρίδα εὐφημήσωμεν, τὸν Θεοφάνην, ἀσκητῶν τὸ ἐγκαλλώπισμα, καὶ Πανσέμνην μετανοίας εὔοσμον μῦρον, ἣν ὁ Ὅσιος τὸν Κύριον μιμούμενος, ἐκ βυθοῦ τῆς ἁμαρτίας ἀνελκύσατο, ἀνακράζοντες· Παμμακάριστοι χαίρετε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ΄, Τῇ Ὑπερμάχῳ — the one kontakion on the page of «Όσιοι Θεοφάνης και Πανσέμνη», and it names them both",
+        "url": "https://www.saint.gr/541/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise the pair of the venerable ones — Theophanes, the adornment of ascetics, and Pansemne, the sweet-scented myrrh of repentance, whom the venerable man, in imitation of the Lord, drew up out of the deep of sin — and let us cry aloud: Rejoice, all-blessed ones.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

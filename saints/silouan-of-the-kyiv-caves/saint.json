@@ -1,0 +1,60 @@
+{
+  "slug": "silouan-of-the-kyiv-caves",
+  "display_name": "Silouan of the Kyiv Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Σιλουανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιουνίου, «Όσιος Σιλουανός ο της Λαύρας Κιέβου», with the rank word and the house left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1276,
+      "latest": 1325,
+      "display": "late 13th to early 14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Σιλουανός ο της Λαύρας Κιέβου ήταν Ρώσος και έζησε στα τέλη του 13ου και αρχές του 14ου αιώνα μ.Χ.» The bracket is that stated span — the end of the thirteenth century and the beginning of the fourteenth — and the page gives no year of birth or death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr calls him a Russian of the Kyiv Caves Lavra, so a Russian row is very likely to exist; it was not looked for and nothing is claimed about it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιουνίου — «Όσιος Σιλουανός ο της Λαύρας Κιέβου»",
+        "url": "https://www.saint.gr/06/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Ιουνίου εκάστου έτους», the same day as the listing. The page has no asterisk and no «Δεν είναι διασταυρωμένη» sentence, and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
