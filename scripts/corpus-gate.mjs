@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'μαξιμοσ maximus-brother-of-dometius maximus-companion-of-asklepiodote maximus-companion-of-fausta maximus-of-kapsokalyvia maximus-of-marcianopolis maximus-of-totma maximus-of-ungrovlachia maximus-son-of-paul-and-tatta maximus-venerable-martyr-6-march':
+    'Nine now. The new one is the venerable martyr of 6 March; the other eight are read in the el-02-19 entry for this name form, where the 19 February and 17 September pair is the Marcianopolis question in ro-run/FINDINGS.md.',
+  'ιουλιανοσ julian-companion-of-euboulos julian-companion-of-modestus julian-companion-of-pamphilus julian-of-antinoopolis julian-of-emesa julian-of-kandavla julian-of-samosata julian-the-deacon-of-aegina':
+    'Eight men. The new one is the companion of Euboulos on 6 March; the other seven are read in the el-02-16 entry for this name form.',
+  'companion euboulos julian euboulos-the-physician julian-companion-of-euboulos':
+    'The pair the 6 March page names together, each named after the other, which is what folds them.',
+  'ευβουλοσ euboulos euboulos-the-physician eubulus-of-caesarea':
+    'Three men: the Euboulos of 28 February, the physician of 6 March and Eubulus of Caesarea on 3 February.',
+  'αρκαδιοσ arcadius-archbishop-of-cyprus arcadius-martyr-12-january arcadius-of-novgorod arcadius-of-vyazniki arcadius-son-of-xenophon arcadius-teacher-of-julian':
+    'Six men, and two of them are on the Greek 6 March as two entries: the archbishop of Cyprus, on a page of its own, and the teacher of Julian, one of the martyrs whom the day names with him. Both folders carry related rows to each other and to Arcadius of Arsinoe, the wonderworker whom the corpus already keeps and whom neither page names. The other four are 12 January, 10 February, 26 January and 26 January with Xenophon.',
   'θεοφιλοσ theophilus-martyr-6-february theophilus-of-caesarea theophilus-of-rome theophilus-the-deacon-of-libya theophilus-the-new':
     'Five men on five Greek days: 6 February, Caesarea on 5 March, Rome on 28 February, the deacon of Libya on 8 January and the New on 30 January.',
   'φωτιοσ photius-companion-of-cyril photius-of-constantinople photius-of-yuriev':

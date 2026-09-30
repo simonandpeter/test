@@ -1,0 +1,66 @@
+{
+  "slug": "arcadius-teacher-of-julian",
+  "display_name": "Arcadius, teacher of Julian and Euboulos",
+  "names": [
+    {
+      "form": "Αρκάδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαρτίου, «Όσιος Αρκάδιος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαρτίου — «Όσιος Αρκάδιος»",
+        "url": "https://www.saint.gr/03/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole notice is three sentences: «Ο Όσιος Αρκάδιος ασκήτεψε στην Κύπρο κατά τον 4ο αιώνα μ.Χ. και ήταν „ὀσφὺν νοητὴν ἀρεταὶς ἐζωσμένος“. Έκανε πολλούς αγώνες στα χρόνια της βασιλείας του Κωνσταντίνου του Μεγάλου και ωφελούσε πολλούς, όχι μόνο με τον βίο και την αρετή, αλλά και με τη διδασκαλία και τη συμβουλή. Κοιμήθηκε με ειρήνη.» Beside his name the site links the page of Julian and Euboulos, whose own notice calls them his disciples. It prints the distich «Ὀσφὺν νοητὴν ἀρεταῖς ἐζωσμένος, / Εὔζωνος, Ἀρκάδιε, πρὸς πόλον τρέχεις», and gives no city in Cyprus, no monastery, no relic and no hymn. Two other men of this name stand near him and are not him: the same Greek day keeps an Arcadius, archbishop of Cyprus, on a page of its own, and the corpus keeps Arcadius the Wonderworker, bishop of Arsinoe in Cyprus, whose Greek row saint.gr itself puts on 29 Αυγούστου. Two entries on one calendar are two commemorations, and the question of how these three Cypriot Arcadii stand to one another is recorded in the reader's report."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 306,
+      "latest": 337,
+      "display": "under Constantine the Great (306–337)",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Αρκάδιος ασκήτεψε στην Κύπρο κατά τον 4ο αιώνα μ.Χ. ... Έκανε πολλούς αγώνες στα χρόνια της βασιλείας του Κωνσταντίνου του Μεγάλου» — the fourth century and the reign of Constantine the Great are the page's own; it gives the reign no years of its own, and the bounds here are that emperor's reign. No year of birth or of repose is given."
+    }
+  },
+  "related": [
+    "julian-companion-of-euboulos",
+    "euboulos-the-physician",
+    "arcadius-archbishop-of-cyprus",
+    "arcadius-of-arsinoe"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

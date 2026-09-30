@@ -1,0 +1,50 @@
+{
+  "slug": "maximus-venerable-martyr-6-march",
+  "display_name": "Maximus (6 March)",
+  "names": [
+    {
+      "form": "Μάξιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαρτίου, «Όσιος Μάξιμος Οσιομάρτυρας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαρτίου — «Όσιος Μάξιμος Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/03/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives him one sentence, «Ο Όσιος Μάξιμος μαρτύρησε δια λιθοβολισμού» — he was martyred by stoning — and the distich «Ὅλῳ βλέπων νῷ Μάξιμος πρὸς τὰ στέφη, / Πρὸς τὰς βολὰς ὑπῆρχε τῶν λίθων λίθος». No year, no country, no emperor, no judge, no relic and no hymn. The corpus keeps many men of this name and none of them is on this day; the etymology block above his name lists two philosophers, which is a note on the word and not this man."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

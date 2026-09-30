@@ -1,0 +1,56 @@
+{
+  "slug": "arcadius-archbishop-of-cyprus",
+  "display_name": "Arcadius of Cyprus",
+  "office": "Archbishop of Cyprus",
+  "names": [
+    {
+      "form": "Αρκάδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαρτίου, «Άγιος Αρκάδιος Αρχιεπίσκοπος Κύπρου», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαρτίου — «Άγιος Αρκάδιος Αρχιεπίσκοπος Κύπρου»",
+        "url": "https://www.saint.gr/03/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole notice is two sentences and one of them is a citation: «Ο Άγιος Αρκάδιος συγκαταριθμείται υπό του Λεοντίου Μαχαιρά μεταξύ των Αγίων της Εκκλησίας της Κύπρου. Διετέλεσε Αρχιεπίσκοπος Κύπρου και κοιμήθηκε με ειρήνη.» — he is counted by Leontios Machairas among the saints of the Church of Cyprus; he served as Archbishop of Cyprus and fell asleep in peace. There is no century, no year, no city, no predecessor or successor, no deed, no relic, no distich and no hymn. The same Greek day keeps a venerable Arcadius of Cyprus, an ascetic under Constantine the Great, on a page of its own, and the corpus keeps Arcadius the Wonderworker, bishop of Arsinoe in Cyprus, on saint.gr's 29 Αυγούστου; two entries on one calendar are two commemorations, and the question of the three is recorded in the reader's report."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "arcadius-teacher-of-julian",
+    "arcadius-of-arsinoe"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

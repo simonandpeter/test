@@ -6,6 +6,11 @@
       "form": "42 de Mucenici din Amoreea",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 martie, «Sfinții 42 de Mucenici din Amoreea»."
+    },
+    {
+      "form": "Τεσσαράκοντα δύο Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαρτίου, «Άγιοι Τεσσαράκοντα δύο Μάρτυρες από το Αμόριο», with the rank word and the city left off. The site gives no single name for the company beyond its number."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαρτίου — «Άγιοι Τεσσαράκοντα δύο Μάρτυρες από το Αμόριο»",
+        "url": "https://www.saint.gr/03/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The page sets them «στα χρόνια της βασιλείας του Θεοφίλου του εικονομάχου (829 - 842 μ.Χ.)», which is the interval this folder already holds, and adds two years the Romanian page did not give: their capture at Amorion by the caliph Mutasim «το έτος 838 μ.Χ.» and their beheading «το έτος 842 μ.Χ.». The corpus's own reading is left as it stands and saint.gr's two years are recorded here. The page names ten of the forty-two, each with his rank: Theodore, general and protospatharios; Theophilus, general and patrician; Callistus, tourmarches; Constantine, droungarios; Bassoes, courier; Melissenos and Aetios, generals; Krateros, a eunuch, and another Krateros, a general; and Cyril, also a general. Ten named out of forty-two is not an enumeration of the company, so the corpus's single folder is right and is not split. The page says the Amir came out of Syria with a countless army against the eastern parts of the Roman dominion, that soldiers were sent by the emperor to protect Amorion, the capital of Phrygia, that seeing the endless multitude of the Saracens they withdrew fighting into the inner part of the castle, and that after their capture they were taken to Samarra in Mesopotamia and shut in prison, where the caliph promised to restore them to their offices if they would change their faith and become Muslims. It prints an apolytikion naming the forty-two and, beside it, the common of martyrs, «Οἱ Μάρτυρές σου Κύριε», which names nobody."
     },
     {
       "church": "serbian",
@@ -66,6 +81,21 @@
       },
       "english": {
         "text": "Thy martyrs, O Lord, in their contests received crowns of incorruption from Thee, our God; for having Thy strength they overcame their tormentors, and broke the strengthless daring of the demons. At their prayers, O Christ our God, save Thou our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τὴν θεοσύλλεκτον, τοῦ Λόγου φάλαγγα, τοὺς Τεσσαράκοντα καὶ δυὸ Μάρτυρας, τοὺς ἐν μίᾳ πάντας σπουδή, ἀθλήσαντας τιμήσωμεν οὗτοι γὰρ τῆς πίστεως, ἡνωμένοι τὴ χάριτι , δῆμον ἀκαθαίρετον, ἱερῶς συνεκρότησαν, καὶ ὤφθησαν Χριστοῦ κληρονόμοι, ξίφει τμηθέντες τοὺς αὐχένας.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον on the page of Άγιοι Τεσσαράκοντα δύο Μάρτυρες από το Αμόριο. It names the forty-two and the manner of their death, and the page prints no tone or automelon over it. Beside it stands a second text, «Οἱ Μάρτυρές σου Κύριε, ἐν τῇ ἀθλήσει αὐτῶν», which is the common of martyrs and names nobody; only the proper apolytikion is taken here, and the page prints no kontakion.",
+        "url": "https://www.saint.gr/3848/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour the God-gathered phalanx of the Word, the Forty-two Martyrs, who all contended in one endeavour; for united in the grace of the faith they holily formed a company that cannot be pulled down, and, their necks cut through by the sword, were shown to be heirs of Christ.",
         "rendered": "site"
       }
     }

@@ -6,6 +6,11 @@
       "form": "Eufrosin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 martie, «Sfântul Mucenic Eufrosin»."
+    },
+    {
+      "form": "Ευφρόσυνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαρτίου, «Άγιος Ευφρόσυνος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαρτίου — «Άγιος Ευφρόσυνος»",
+        "url": "https://www.saint.gr/03/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives him one sentence, «Ο Άγιος Ευφρόσυνος μαρτύρησε αφού τον περιέλουσαν με βραστό νερό» — he was martyred after being drenched with boiling water — and names a portion of his relic at the monastery of St Andrew of Kefalonia. It prints the distich «Ζέον πεπωκὼς φιάλῃ κοίλῃ πόμα, / Ὁ Μάρτυς Εὐφρόσυνος εὐφράνθη μάλα», which plays on his name, and gives no year, no country, no judge and no hymn. The etymology block over his name is headed ΕΥΦΡΟΣΥΝΗ, the woman's form, which is a note on the word and not the form his line prints."
     },
     {
       "church": "serbian",

@@ -1,0 +1,67 @@
+{
+  "slug": "job-the-hermit-6-march",
+  "display_name": "Job the Hermit",
+  "names": [
+    {
+      "form": "Ιώβ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαρτίου, «Όσιος Ιώβ ο Ερημίτης», with the rank word left off. The body of the page gives his name in the world as John, «κατά κόσμον Ιωάννης»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr puts him at Moscow and at the monastery it calls Solofski, so that calendar is the one most likely to hold him, and it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαρτίου — «Όσιος Ιώβ ο Ερημίτης»",
+        "url": "https://www.saint.gr/03/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1720)» and its whole notice is three sentences: «Ο Όσιος Ιώβ, κατά κόσμον Ιωάννης, γεννήθηκε στην Μόσχα το έτος 1635 μ.Χ. Στις 3 Απριλίου 1701 μ.Χ. εκάρη μοναχός με το όνομα Ιώβ στη μονή του Σολόφσκι και άρχισε τους πνευματικούς αγώνες υπό την καθοδήγηση του στάρετς Ιωνά. Κοιμήθηκε με ειρήνη το έτος 1720 μ.Χ.» The monastery is the page's «Σολόφσκι» and nothing further is said of it, of the desert his epithet points at, of his sixty-six years before the tonsure, of a relic, a distich or a hymn. The corpus keeps three other men of this name — of Pochaev, of Zographou, and the Long-suffering — and none of them is on this day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1635,
+      "latest": 1635,
+      "display": "1635",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Όσιος Ιώβ, κατά κόσμον Ιωάννης, γεννήθηκε στην Μόσχα το έτος 1635 μ.Χ.»"
+    },
+    "death": {
+      "earliest": 1720,
+      "latest": 1720,
+      "display": "1720",
+      "basis": "attested",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1720 μ.Χ.», and the page heads him «(; - 1720)» — the head leaves the birth a question mark although the body gives it."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

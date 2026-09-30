@@ -1,0 +1,63 @@
+{
+  "slug": "julian-companion-of-euboulos",
+  "display_name": "Julian, companion of Euboulos",
+  "names": [
+    {
+      "form": "Ιουλιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Μαρτίου, «Άγιοι Ιουλιανός και Εύβουλος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Μαρτίου — «Άγιοι Ιουλιανός και Εύβουλος»",
+        "url": "https://www.saint.gr/03/06/index.aspx",
+        "year": 2026
+      },
+      "note": "One page holds the two of them and makes them disciples of the venerable Arcadius whom the same day keeps: «Οι Άγιοι Μάρτυρες Ιουλιανός και Εύβουλος ο ιατρός, ήταν μαθητές του Οσίου Αρκαδίου (βλέπε ίδια ημέρα).» It says they were seized by the idolaters «κατά την βασιλεία του ασεβούς Ιουλιανού του Παραβάτου (361 - 363 μ.Χ.)», were tortured excessively and beheaded, and that Arcadius, learning of it, grieved but gave thanks to God who had arranged it so. It prints the distich «Δεῦρο, ξίφει θάνωμεν, Εὐβούλῳ λέγει, / Ἰουλιανός, εἰσφέρων εὐβουλίαν», which puts the words in Julian's mouth and plays on his companion's name. No country, no city, no judge, no relic and no hymn. The corpus keeps a good many men of this name and none of them is on this day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 363,
+      "display": "under Julian the Apostate (361–363)",
+      "basis": "traditional",
+      "note": "saint.gr: «Συνελήφθησαν από τους ειδωλολάτρες κατά την βασιλεία του ασεβούς Ιουλιανού του Παραβάτου (361 - 363 μ.Χ.) και αφού βασανίσθηκαν υπερβολικά, αποκεφαλίσθηκαν» — the reign is the page's own, given with those years, and it gives it for both men. No year of birth is given."
+    }
+  },
+  "related": [
+    "euboulos-the-physician",
+    "arcadius-teacher-of-julian"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
