@@ -1,0 +1,69 @@
+{
+  "slug": "george-of-nea-ephesus",
+  "display_name": "George of Nea Ephesus",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Απριλίου, «Άγιος Γεώργιος από την Έφεσο», with the rank word and the place left off."
+    }
+  ],
+  "related": [
+    "polydorus-the-neomartyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1756,
+      "latest": 1756,
+      "display": "1756",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Νεομάρτυς Γεώργιος εγεννήθηκε από Σάμιο πατέρα στη Νέα Έφεσο το 1756 μ.Χ.», and the page's heading has «(1756 - 1801)»."
+    },
+    "death": {
+      "earliest": 1801,
+      "latest": 1801,
+      "display": "1801",
+      "basis": "traditional",
+      "note": "saint.gr: «τον αποκεφάλισαν. Ήταν το έτος 1801 μ.Χ., ημέρα Παρασκευή» — they beheaded him; it was the year 1801, on a Friday. The page's heading has «(1756 - 1801)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Απριλίου — «Άγιος Γεώργιος από την Έφεσο»",
+        "url": "https://www.saint.gr/04/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Απριλίου εκάστου έτους», the same day as the listing. It names the relic: «Η Κάρα του Αγίου βρίσκεται στην Ιερά Μητρόπολη Σάμου, Ικαρίας και Κορσέων» — his head at the Metropolis of Samos, Ikaria and Korseai."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Arghira",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 aprilie, «Sfânta Muceniță Arghira»."
+    },
+    {
+      "form": "Αργυρή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Απριλίου, «Αγία Αργυρή η Νεομάρτυς», with the rank word and the epithet left off."
     }
   ],
   "sex": "female",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Απριλίου — «Αγία Αργυρή η Νεομάρτυς»",
+        "url": "https://www.saint.gr/04/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The Greek calendar keeps her on 5 April, where the Romanian keeps her on 30 April; the life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Απριλίου εκάστου έτους», and closes «Η Εκκλησία εορτάζει την ανακομιδή των λειψάνων της Αγίας Αργυρής στις 30 Απριλίου» — the Church keeps the translation of her relics on 30 April, which is the day doxologia.ro prints her on. The page's years differ from the ones this folder holds: it heads her «(1688 - 1721)», says she was born at Prusa in 1688 and gave up her spirit in 1721, against doxologia.ro's «în jurul anului 1692» and 1725. The corpus's dates are left as they stand and saint.gr's reading is recorded here. It names the relic: at the church of St Paraskeve in Constantinople."
     },
     {
       "church": "serbian",
@@ -62,5 +77,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος δ'.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Τυράννους κατήσχυνας εν τοις βασάνοις σεμνή, δειχθείσα πολύαθλε, ώσπερ αδάμας στερρός, Χριστού μάρτυς ένδοξε, έδειξας εναθλούσα προς Χριστόν τον Σωτήρα, έρωτά τε και ζήλον και ακόρεστον πόθον, δι' ο σε Αργυρή, αυτός αξίως εδόξασε.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ήχος δ', Ταχύ προκατάλαβε, on the page of Αγία Αργυρή η Νεομάρτυς. It names her; the page prints it without breathings, as it is copied here.",
+        "url": "https://www.saint.gr/3984/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst put tyrants to shame in thy torments, O modest one, shown in thy many contests to be hard as adamant, O glorious martyr of Christ; contending thou didst show towards Christ the Saviour love and zeal and a longing never satisfied, wherefore he himself, O Argyra, has worthily glorified thee.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

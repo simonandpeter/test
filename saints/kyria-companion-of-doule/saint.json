@@ -1,0 +1,53 @@
+{
+  "slug": "kyria-companion-of-doule",
+  "display_name": "Kyria, companion of Doule",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Κυρία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Απριλίου, «Αγίες Κυρία και Δούλη», with the rank word left off."
+    }
+  ],
+  "related": [
+    "doule-companion-of-kyria"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Απριλίου — «Αγίες Κυρία και Δούλη»",
+        "url": "https://www.saint.gr/04/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Απριλίου εκάστου έτους», the same day as the listing. Its whole account of the two is one clause, «Οι Αγίες Κυρία και Δούλη μαρτύρησαν διά ξίφους» — martyred by the sword — with no year, no place and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

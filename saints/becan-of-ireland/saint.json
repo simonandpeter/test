@@ -1,0 +1,63 @@
+{
+  "slug": "becan-of-ireland",
+  "display_name": "Becan of Ireland",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Becan",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Απριλίου, «Άγιος Becan», with the rank word left off. The page prints the name in Latin letters."
+    },
+    {
+      "form": "Μπέκαν",
+      "lang": "el",
+      "note": "Read out of the life page's gloss, «Ο Άγιος Becan (Μπέκαν) έζησε κατά τον 6ο αιώνα μ.Χ.», which is the only Greek-script form of the name the page prints."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Becan (Μπέκαν) έζησε κατά τον 6ο αιώνα μ.Χ. και ήταν γόνος της βασιλικής οικογένειας της Ιρλανδίας» — lived in the sixth century. The page gives no year, so the interval is the century it names."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Απριλίου — «Άγιος Becan»",
+        "url": "https://www.saint.gr/04/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Απριλίου εκάστου έτους», the same day as the listing. It gives him no rank word beyond Άγιος — not bishop, not abbot, not monk — so this folder carries no type."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -14,4 +14,8 @@ So it was that when a devout Christian named Manolis, a net-weaver, managed to h
 
 Three years after her death her holy body was found untouched, giving out a sweetness past compare that filled the Christians with unspeakable joy; and Paisius, patriarch of Constantinople, himself moved her wonderful relics to the church of Saint Paraskevi, where they are honoured by the faithful to this day.
 
-*After doxologia.ro's calendar for 30 aprilie — [the day](https://doxologia.ro/30-aprilie) and [the life](https://doxologia.ro/viata-sfintei-mucenite-arghira); read 20 September 2026.*
+The Greek calendar keeps her on 5 April and the translation of her relics on 30 April, which is the day the Romanian calendar prints her on. saint.gr tells the same story in fewer turns and with different years: born at Prusa in 1688, beautiful to look at and fearing God, still newly married when a Turk came to love her and, unable to get her to himself, bore false witness that she had wanted to embrace the Muslim religion. The judge of Prusa imprisoned her at once. Her Christian husband worked to have the trial moved to Constantinople, but the Turk came there too and bore the same false witness again.
+
+In her defence she confessed her faith in Christ with spiritual courage and boldness, and by the judge's order she was thrown into the prison of Hasköy, where after many years of hardship and torture she gave up her spirit to the Lord in the year 1721. The page adds where the relic is: the church of St Paraskeve in Constantinople.
+
+*After doxologia.ro's calendar for 30 aprilie — [the day](https://doxologia.ro/30-aprilie) and [the life](https://doxologia.ro/viata-sfintei-mucenite-arghira); read 20 September 2026; and saint.gr's calendar for 5 Απριλίου — [the day](https://www.saint.gr/04/05/index.aspx) and [the life](https://www.saint.gr/3984/saint.aspx), read 30 September 2026.*

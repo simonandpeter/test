@@ -1,0 +1,52 @@
+{
+  "slug": "five-maidens-of-lesbos",
+  "display_name": "The Five Maidens of Lesbos",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Πέντε Κόρες από την Λέσβο",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Απριλίου, «Αγίες Πέντε Κόρες από την Λέσβο», with the rank word left off. The page names not one of the five."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Απριλίου — «Αγίες Πέντε Κόρες από την Λέσβο»",
+        "url": "https://www.saint.gr/04/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Απριλίου εκάστου έτους», the same day as the listing. It says plainly «τα ονόματά τους και το έτος του μαρτυρίου του δεν μας είναι γνωστά» — their names and the year of their martyrdom are not known to us — so the company is kept here as one entry and not as five people."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

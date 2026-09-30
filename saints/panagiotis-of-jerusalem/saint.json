@@ -1,0 +1,60 @@
+{
+  "slug": "panagiotis-of-jerusalem",
+  "display_name": "Panagiotis, martyred at Jerusalem",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Παναγιώτης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Απριλίου, «Άγιος Παναγιώτης που μαρτύρησε στην Ιερουσαλήμ», with the rank word and the clause left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1820,
+      "latest": 1820,
+      "display": "1820",
+      "basis": "attested",
+      "note": "saint.gr: «Ο νεομάρτυρας Παναγιώτης ήταν από την Πελοπόννησο και μαρτύρησε στην Ιερουσαλήμ στις 5 Απριλίου 1820 μ.Χ.» The page's heading has «(; - 1820)», and it names its witness, the English missionary Joseph Wolff, who wrote his narrative on 2 April 1839 and had watched the martyrdom."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Απριλίου — «Άγιος Παναγιώτης που μαρτύρησε στην Ιερουσαλήμ»",
+        "url": "https://www.saint.gr/04/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Απριλίου εκάστου έτους», the same day as the listing, and the page dates the martyrdom itself to 5 April 1820. It names the relics: «Τα Ιερά Λείψανα του Αγίου βρίσκονται στη Μονή Τιμίου Προδρόμου Ιεροσολύμων» — at the monastery of the Forerunner in Jerusalem."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
