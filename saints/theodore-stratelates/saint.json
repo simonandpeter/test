@@ -6,6 +6,11 @@
       "form": "Teodor Stratilat",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 februarie."
+    },
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Φεβρουαρίου, «Άγιος Θεόδωρος ο Στρατηλάτης», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -27,6 +32,40 @@
       },
       "english": {
         "text": "A shining commander of the true army of the Heavenly King thou hast become, O blessed Theodore, bearer of victory; for thou didst fight wisely with the weapons of the faith, and didst overcome the multitudes of the demons, and wast shown a true victor. Therefore we ever call thee blessed with faith.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Στρατολογία ἀληθεῖ Ἀθλοφόρε, τοῦ οὐρανίου στρατηγὸς βασιλέως, περικαλλὴς γεγένησαι Θεόδωρε, ὄπλοις γὰρ τῆς πίστεως, παρετάξω ἐμφρόνως, καὶ κατεξωλόθρευσας, τῶν δαιμόνων τὰ στίφη, καὶ νικηφόρος ὤφθης Ἀθλητής, ὅθεν σὲ πίστει, ἀεὶ μακαρίζαμεν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Θεόδωρος ο Στρατηλάτης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/536/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "By a true enlistment, prize-bearer, you became the all-beautiful general of the heavenly king, Theodore; for you drew up your line prudently with the weapons of the faith, and utterly destroyed the throngs of the demons, and were shown a victorious contender — and therefore we call you blessed in faith for ever.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν.",
+      "text": "Ἀνδρεία ψυχῆς, τὴν πίστιν ὀπλισάμενος, καὶ ρῆμα Θεοῦ, ὡς λόγχην χειρισάμενος, τὸν ἐχθρὸν κατέτρωσας τῶν Μαρτύρων κλέος Θεόδωρε, σὺν αὐτοὶς Χριστῷ τῷ Θεῷ, πρεσβεύων μὴ παύση ὑπὲρ πάντων ἠμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Θεόδωρος ο Στρατηλάτης, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/536/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having armed the faith with courage of soul, and wielded the word of God as a spear, you wounded the enemy, Theodore, glory of the martyrs; with them do not cease to intercede with Christ our God for us all.",
         "rendered": "site"
       }
     }
@@ -53,8 +92,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "saint.gr's page for him adds a second Greek day, and names it as a translation and not as his memory: «Το σεπτό σκήνωμά του μετετέθη, στις 8 Ιουνίου, από την Ηρακλεία στο προγονικό κτήμα του Αγίου, στα Ευχάιτα… Η Εκκλησία μας εορτάζει στις 8 Ιουνίου την ανακομιδή των λειψάνων του» — his body was moved on 8 June from Herakleia to his ancestral estate at Euchaita, and the Church keeps the translation of his relics on 8 June (https://www.saint.gr/536/saint.aspx, read 30 September 2026). The 8 June Greek day page was not read, and the day recorded here is the day page that was."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Φεβρουαρίου — «Άγιος Θεόδωρος ο Στρατηλάτης»",
+        "url": "https://www.saint.gr/02/08/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -64,5 +113,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 320,
+      "latest": 320,
+      "display": "320",
+      "basis": "attested",
+      "note": "saint.gr heads his page «Άγιος Θεόδωρος ο Στρατηλάτης (; - 320)» and dates the arrest to that year: «Όταν το 320 μ.Χ. ο Λικίνιος διέτριβε στη Νικομήδεια, άκουσε περί του Θεοδώρου ότι είναι Χριστιανός»."
+    }
   }
 }

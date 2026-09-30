@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'στεφανοσ stephen-martyr-8-february stephen-of-chenolakkos stephen-of-placidianae':
+    'three men. The new one is the Stephen of 8 Φεβρουαρίου; the other two are read in the el-01-14 entry for this name form, the abbot of Chenolakkos and Stephen of Placidianae, whose houses are the only thing their pages give to tell them by.',
+  'σαββασ sabbas-of-sicily sabbas-of-zographou sabbas-the-spiritual sava-of-serbia sava-the-second':
+    'five now, and this is the one the wave was warned about: **Sava II of Serbia, dead 1271, is a new folder and not `sava-of-serbia`**, whose own greek row is venerated on 14 Ιανουαρίου. The reader who met the 8 Φεβρουαρίου line read it as the second Sava and said so; the other three are read in the el-02-05 entry for this name form.',
+  'νικηφοροσ nicephorus-martyr-8-february nicephorus-of-corinth nicephorus-of-crete':
+    'three men. The new one is the Nicephorus of 8 Φεβρουαρίου; the corpus keeps Nicephorus one of the seven martyrs of Corinth, upgraded in this wave on 31 Ιανουαρίου, and Nicephorus of Crete, written on 11 Ιανουαρίου. Three entries, three days.',
+  'μακαριοσ macarius-companion-of-eudoxius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-of-ierissos macarius-of-kios macarius-of-paphos macarius-of-pisma macarius-of-zhabyn':
+    'nine now. The new one is Macarius of Paphos, kept on 8 Φεβρουαρίου; the other eight are read in the el-01-08 entry for this name form.',
   'θεοπεμπτοσ theopemptus-2-january theopemptus-7-february theopemptus-of-nicomedia':
     'three men. The new one is the Theopemptus of 7 Φεβρουαρίου; the corpus keeps the Theopemptus of 2 Ιανουαρίου, whose page has him dying in peace, and Theopemptus of Nicomedia, the martyr bishop upgraded in this wave on 5 Ιανουαρίου. Three entries on three days of one calendar.',
   'πετροσ peter-abesalamites peter-companion-of-leucius peter-companion-of-manuel peter-disciple-of-dionysius-of-alexandria peter-of-bulgaria peter-of-capitolias peter-of-galatia peter-of-monevata peter-of-sebaste peter-son-of-john-of-syracuse peter-the-egyptian peter-the-gaoler peter-the-peloponnesian peter-the-sign-bearer':

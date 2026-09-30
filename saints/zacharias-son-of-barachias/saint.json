@@ -6,6 +6,11 @@
       "form": "Zaharia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 februarie."
+    },
+    {
+      "form": "Ζαχαρίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Φεβρουαρίου, «Προφήτης Ζαχαρίας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -26,6 +31,23 @@
       },
       "english": {
         "text": "Keeping the memorial of Thy prophet Zacharias, O Lord, through him we entreat Thee: save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Τὴν κλῆσιν κατάλληλον, δείξας τοὶς ἔργοις σοφέ, ταμεῖον ἐπάξιον, τῆς ἐπιπνοίας Θεοῦ, Ζαχαρία γεγένησαι, ἔχων γὰρ ἐν τῷ βίῳ, συλλαλούντας Ἀγγέλους, ὤφθης τῶν ἐσομένων, θεηγόρος Προφήτης. Καὶ νῦν ἠμῶν τᾶς αἰτήσεις, ἄνωθεν πλήρωσαν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Προφήτης Ζαχαρίας, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/535/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having shown your name to fit your works, wise Zacharias, you became a treasury worthy of the inbreathing of God; for having angels to talk with you in your life, you were shown a God-speaking prophet of the things to come. And now fulfil our askings from above.",
         "rendered": "site"
       }
     }
@@ -52,8 +74,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Φεβρουαρίου — «Προφήτης Ζαχαρίας»",
+        "url": "https://www.saint.gr/02/08/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -63,5 +94,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "haggai-the-prophet"
+  ]
 }

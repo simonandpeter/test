@@ -1,0 +1,63 @@
+{
+  "slug": "sava-the-second",
+  "display_name": "Sava II",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "names": [
+    {
+      "form": "Σάββας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Φεβρουαρίου, «Άγιος Σάββας Αρχιεπίσκοπος Σερβίας», with the rank word and the see left off. The life page numbers him «Σάββας Β'», the second of the name."
+    }
+  ],
+  "related": [
+    "sava-of-serbia",
+    "sava-the-third"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1271,
+      "latest": 1271,
+      "display": "1271",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Σάββας Β', Αρχιεπίσκοπος Σερβίας κοιμήθηκε με ειρήνη το έτος 1271.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Φεβρουαρίου — «Άγιος Σάββας Αρχιεπίσκοπος Σερβίας»",
+        "url": "https://www.saint.gr/02/08/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Marta",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 februarie."
+    },
+    {
+      "form": "Μάρθα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Φεβρουαρίου, «Άγιες Μάρθα, Μαρία και Λυκαρίων ο Οσιομάρτυρας», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -38,8 +43,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Φεβρουαρίου — «Άγιες Μάρθα, Μαρία και Λυκαρίων ο Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/02/08/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

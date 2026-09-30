@@ -1,0 +1,53 @@
+{
+  "slug": "nicephorus-martyr-8-february",
+  "display_name": "Nicephorus (8 February)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Νικηφόρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Φεβρουαρίου, «Άγιοι Νικηφόρος και Στέφανος οι Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "related": [
+    "stephen-martyr-8-february"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "saint.gr's page for the two adds «Η μνήμη τους επαναλαμβάνεται στις 25 Οκτωβρίου» — their memory is repeated on 25 October (https://www.saint.gr/533/saint.aspx, read 30 September 2026). The 25 October Greek day page was not read, and the day recorded here is the day page that was."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Φεβρουαρίου — «Άγιοι Νικηφόρος και Στέφανος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/02/08/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
