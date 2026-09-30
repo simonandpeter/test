@@ -1,0 +1,50 @@
+{
+  "slug": "seleucus-23-may",
+  "display_name": "Seleucus (23 May)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Σέλευκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαΐου, «Άγιος Σέλευκος», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Άγιος Σέλευκος»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», the same day as the listing. The page gives one sentence and a distich and nothing else. **He is neither of the two Seleucuses the corpus keeps**: `seleucus-of-cappadocia` and `seleucus-of-tomis`, the martyr with Gordian, are on other days and die other deaths; this one is sawn asunder. The page gives him no year, no place and no companions. No hymn, no relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

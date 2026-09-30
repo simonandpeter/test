@@ -1,0 +1,60 @@
+{
+  "slug": "simon-of-suzdal",
+  "display_name": "Simon of Suzdal",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Σίμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαΐου, «Άγιος Σίμων Επίσκοπος Σουζδαλίας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1101,
+      "latest": 1200,
+      "display": "12th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Σίμων, Επίσκοπος Σουζδαλίας, έζησε κατά τον 12ο αιώνα μ.Χ. και κοιμήθηκε με ειρήνη.» The page gives no year, so the interval is the century it prints and it is recorded as a floruit and not as a death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Άγιος Σίμων Επίσκοπος Σουζδαλίας»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», the same day as the listing. The page's whole account of him is one sentence and it gives no year: «Ο Άγιος Σίμων, Επίσκοπος Σουζδαλίας, έζησε κατά τον 12ο αιώνα μ.Χ. και κοιμήθηκε με ειρήνη.» **He is none of the four Simons the corpus keeps** — `simon-the-zealot`, `simon-of-simonopetra`, `simon-of-zographou` and `simon-the-martyr-3-february` — and none of the many Simeons either; the sweep proposed the Simeons on the shared consonants and each is another man on another day. No hymn, no relics, no birthplace."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

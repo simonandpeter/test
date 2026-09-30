@@ -1,0 +1,62 @@
+{
+  "slug": "donatian-of-nantes",
+  "display_name": "Donatian of Nantes",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δονατιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαΐου, «Άγιοι Δονατιανός και Ρογατιανός οι αυτάδελφοι οι Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "related": [
+    "rogatian-of-nantes"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "between 284 and 305",
+      "basis": "traditional",
+      "note": "saint.gr gives the reign and no year: «συνελήφθη, κατά τους χρόνους του αυτοκράτορα Διοκλητιανού (284 - 305 μ.Χ.)». The interval is that reign as the page prints it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Άγιοι Δονατιανός και Ρογατιανός οι αυτάδελφοι οι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», the same day as the listing. The life page carries both brothers under two head lines, so this is a company of two named men and therefore two folders. The corpus keeps no Donatian. The page dates the arrest by the reign — «κατά τους χρόνους του αυτοκράτορα Διοκλητιανού (284 - 305 μ.Χ.)» — and gives no year of death, so the interval recorded is that reign as the page prints it. Its closing dates are the relics' and not his: a church raised at the burial place towards the end of the fifth century and a translation to the cathedral of Nantes in 1145. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Evmenie Saridakis",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 mai, «Sfântul Evmenie Saridakis»."
+    },
+    {
+      "form": "Ευμένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαΐου, «Όσιος Ευμένιος ο νέος ο Θεοφόρος (Σαριδάκης)», with the rank words left off; the page gives his baptismal name as Κωνσταντίνος."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 23 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Όσιος Ευμένιος ο νέος ο Θεοφόρος (Σαριδάκης)»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps him, and the surname in the line settles the identification: «Όσιος Ευμένιος ο νέος ο Θεοφόρος (Σαριδάκης)», head line «(1931 - 1999)». The page is by far the longest on the day and is mostly photographs, recordings and recollections; what is taken from it here is only what it states in its own words — the village, the birth date, the parents' names, the baptismal name, the apparition in the village church and the place of the tomb. The rest of it is not summarised and nothing in the folder's existing `dates` is touched. No Ἀπολυτίκιον is printed; the page's distich calls him «λεπρῶν καὶ νοσούντων λοιμικῶς ἀκέστωρ», a healer of lepers and of those sick with pestilence, and that is quoted rather than taken as a hymn."
     },
     {
       "church": "serbian",

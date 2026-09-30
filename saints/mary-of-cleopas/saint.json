@@ -6,6 +6,11 @@
       "form": "Maria lui Cleopa",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 mai, «Sfânta Mironosiță Maria lui Cleopa»."
+    },
+    {
+      "form": "Μαρία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαΐου, «Αγία Μαρία του Κλωπά η μυροφόρος», with the rank word left off and the husband's name kept, as the page's own head line prints it."
     }
   ],
   "sex": "female",
@@ -31,8 +36,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 23 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Αγία Μαρία του Κλωπά η μυροφόρος»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps «Sfânta Maria lui Cleopa», and the identification is the same in both: the wife of Cleopas, one of the women who followed the Lord, and one of the myrrh-bearers. The page adds that she was the mother of Joses and of James the Less, that she stood by at the condemnation, the agony on the Cross and the burial, and that she was present at the descent of the Holy Spirit in the upper room and served the first Church in Jerusalem. It records a portion of her relics at the monastery of the Panagia Tourliani on Mykonos. No hymn is printed to her; she is named only in the general commemoration of the myrrh-bearing women, which is reckoned from Pascha and which the schema cannot hold."
     },
     {
       "church": "serbian",

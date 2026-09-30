@@ -1,0 +1,60 @@
+{
+  "slug": "patricius-of-bayeux",
+  "display_name": "Patricius of Bayeux",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Πατρίκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαΐου, «Άγιος Πατρίκιος ο Επίσκοπος», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 469,
+      "latest": 469,
+      "display": "469",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το 469 μ.Χ.», and its head line reads «(; - 469)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Άγιος Πατρίκιος ο Επίσκοπος»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», the same day as the listing. The page's head line reads «Αγιος Πατρικιος ο Επισκοπος (; - 469)» and its body gives two sentences. **He is neither of the two saints of this name the corpus keeps**: `patrick-of-ireland` is the enlightener of the Irish and `patrick-of-prusa` the hieromartyr bishop of Prusa with his three presbyters; this one is the fourth bishop of Bayeux in Normandy, who fell asleep in peace in 469. The English form is spelt `Patricius` rather than `Patrick` to keep the Latin bishop of Bayeux distinct from the enlightener of Ireland on sight. No hymn, no relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

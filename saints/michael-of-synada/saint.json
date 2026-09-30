@@ -6,6 +6,11 @@
       "form": "Mihail",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 mai, «Sfântul Ierarh Mihail Mărturisitorul, Episcopul Sinadei»."
+    },
+    {
+      "form": "Μιχαήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαΐου, «Όσιος Μιχαήλ επίσκοπος Συνάδων ο Ομολογητής», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 23 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Όσιος Μιχαήλ επίσκοπος Συνάδων ο Ομολογητής»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps him, and it is plainly the same man: bishop of Synada, confessor under Leo the Armenian for the sake of the icons, and companion of Theophylact of Nicomedia. Its head line reads «Οσιος Μιχαηλ Επισκοπος Συναδων ο Ομολογητης (; - 821)», a death year the folder's existing dates may now be read against; nothing in `dates` is touched by this upgrade. The page names [Theophylact](/saints/theophylact-of-nicomedia), whom it sends to 8 Μαρτίου, and the Patriarch [Tarasius](/saints/tarasius-of-constantinople), who founded the monastery on the Euxine where the two were tonsured and who ordained them presbyters; both are in the corpus on the days the page gives them, so both get a `related` row."
     },
     {
       "church": "serbian",
@@ -62,9 +77,47 @@
         "text": "A rule of faith and a model of meekness, a teacher of abstinence — so has the truth of things shown you to your flock. Therefore you gained the heights by humility and riches by poverty. Father and hierarch Michael, entreat Christ our God that our souls be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Θεῷ ἀναθεμένος, τὴν σὴν ζωὴν ἐκ παιδός, ποιμὴν ἀνηγόρευσαι, καὶ Ἱεράρχης σεπτός, Χριστοῦ ἱερώτατε· ὅθεν τὴν τοῦ Δεσπότου, ὡς τιμήσας Εἰκόνα, θλίψεις ἐν ἐξορίαις, Μιχαὴλ καθυπέστης· καὶ νῦν ἀναπηγάζεις ἡμῖν, ῥεῖθρα ἰάσεων.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε, on the page of «Όσιος Μιχαήλ επίσκοπος Συνάδων ο Ομολογητής»",
+        "url": "https://www.saint.gr/4049/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having dedicated thy life to God from childhood, thou wast proclaimed a shepherd and a revered hierarch, most holy one of Christ; and so, for honouring the image of the Master, O Michael, thou didst endure afflictions in exile, and now thou pourest out for us streams of healings.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ὥσπερ μέγας ἤλιος, ἐξανατείλας, καταυγάζεις ἅπαντας, τῶν ἀρετῶν σου τῷ φωτί, καὶ τῶν θαυμάτων ταῖς λάμψεσι, θαυματοφόρε, Ἀγγέλων ὁμώνυμε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of «Όσιος Μιχαήλ επίσκοπος Συνάδων ο Ομολογητής»",
+        "url": "https://www.saint.gr/4049/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Risen like a great sun, thou dost light all men with the light of thy virtues and with the flashing of thy wonders, O bearer of wonders, thou who sharest the name of the angels.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "theophylact-of-nicomedia",
+    "tarasius-of-constantinople"
+  ]
 }

@@ -1,0 +1,63 @@
+{
+  "slug": "quintianus-of-africa",
+  "display_name": "Quintianus the African",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Κουϊντιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαΐου, «Άγιοι Κουϊντιανός, Λούκιος και Ιουλιανός και οι συν αυτούς δέκα εννέα Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "related": [
+    "lucius-of-africa",
+    "julian-of-africa"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 430,
+      "latest": 430,
+      "display": "430",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησαν … στην Αφρική, το 430 μ.Χ., από τους αιρετικούς Αρειανούς», and its head lines read «(; - 430)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Άγιοι Κουϊντιανός, Λούκιος και Ιουλιανός και οι συν αυτούς δέκα εννέα Μάρτυρες»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», the same day as the listing. The life page carries four head lines — «Αγιος Ιουλιανος (; - 430)», «Αγιος Κουϊντιανος», «Αγιοι Δεκα Εννεα Μαρτυρες» and «Αγιος Λουκιος (; - 430)» — and one sentence: «Οι Άγιοι Μάρτυρες Κουϊντιανός, Λούκιος και Ιουλιανός μαρτύρησαν μαζί με άλλους δέκα εννέα Χριστιανούς, άνδρες και γυναίκες, στην Αφρική, το 430 μ.Χ., από τους αιρετικούς Αρειανούς.» **Three men are named and the nineteen are not**, so there are three folders and no folder for the nineteen, who are left out and reported. No hymn, no place beyond «στην Αφρική». The corpus keeps no Quintianus."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

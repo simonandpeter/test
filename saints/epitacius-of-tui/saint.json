@@ -1,0 +1,63 @@
+{
+  "slug": "epitacius-of-tui",
+  "display_name": "Epitacius of Tui",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Επιτάκιος",
+      "lang": "el",
+      "note": "Read out of the life page's own head line for him, «Αγιος Επιτακιος», with the rank word left off; the day's line names him with his fellow as «Άγιοι Επιτάκιος και Βασίλειος»."
+    }
+  ],
+  "related": [
+    "basil-of-braga"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Επιτάκιος και Βασίλειος έζησαν τον 1ο αιώνα μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Άγιοι Επιτάκιος και Βασίλειος»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», the same day as the listing. The life page carries two men under two head lines, «Αγιος Επιτακιος» and «Αγιος Βασιλειος», so this is a company of two named men and therefore two folders. The page says he is reckoned the first bishop of Tui in Spanish Galicia and that both fell asleep in peace; it gives no year for him beyond the century. The corpus keeps no Epitacius. No hymn, no relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

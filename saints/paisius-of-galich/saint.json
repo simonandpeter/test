@@ -1,0 +1,63 @@
+{
+  "slug": "paisius-of-galich",
+  "display_name": "Paisius of Galich",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Παΐσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαΐου, «Όσιος Παΐσιος του Γκαλίτς», with the rank words left off."
+    }
+  ],
+  "related": [
+    "cassian-the-greek"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1460,
+      "latest": 1463,
+      "display": "1460 or 1463",
+      "basis": "traditional",
+      "note": "saint.gr prints both and chooses neither: «Κοιμήθηκε με ειρήνη, το 1460 μ.Χ. ή το 1463 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Όσιος Παΐσιος του Γκαλίτς»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», the same day as the listing. The page's body gives two years for his repose and does not choose between them — «Κοιμήθηκε με ειρήνη, το 1460 μ.Χ. ή το 1463 μ.Χ.» — so the interval recorded is that disagreement as the page prints it. **He is none of the five saints of the name the corpus keeps**: `paisios-the-athonite`, `paisius-of-neamt`, `paisius-of-sihastria-putnei`, `paisius-the-great` and `paisius-8-january` are other men on other days; this one came to Galich in Russia from the south about 1385 and was buried at the Uspensky cathedral. The hermit Cassian whose cell he shared is the corpus's `cassian-the-greek`, whom the page sends to 2 Οκτωβρίου, which is that folder's own day; the monks Adrian and Gerasimus named beside him have no folders. The page says his relics are at the monastery of Uspenskaya Sloboda of Kostroma. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

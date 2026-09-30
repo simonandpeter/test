@@ -5,6 +5,11 @@
     {
       "form": "Флорентий",
       "lang": "ru"
+    },
+    {
+      "form": "Φλωρέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαΐου, «Όσιοι Ευτύχιος και Φλωρέντιος», with the rank word left off; the life page's own head line for him reads «Οσιος Φλωρεντιος»."
     }
   ],
   "sex": "male",
@@ -42,8 +47,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 23 August (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Όσιοι Ευτύχιος και Φλωρέντιος»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», and it is plainly the pair the corpus already keeps from days.pravoslavie.ru: «Οι Όσιοι Ευτύχιος και Φλωρέντιος έζησαν τον 6ο αιώνα μ.Χ. και ασκήτεψαν σε ένα μοναστήρι της περιοχής Βαλκαστορία, κοντά στη Νουρσία της Ιταλίας.» The Greek gives them both the one year 540, where the corpus's dates, off the Russian calendar, give this one 547; the existing `dates` are left as they are and the Greek's reading is recorded here rather than merged into them. The corpus's other Florentii — `florentius-of-thessalonica` — is another man on another day. The Gregory who praised their virtues and wonders is the corpus's `gregory-the-dialogist`, whom the page sends to 12 Μαρτίου. No hymn, no relics, no birthplace."
     },
     {
       "church": "serbian",
@@ -55,6 +70,7 @@
     "life": "life.md"
   },
   "related": [
-    "eutychius-of-nursia"
+    "eutychius-of-nursia",
+    "gregory-the-dialogist"
   ]
 }

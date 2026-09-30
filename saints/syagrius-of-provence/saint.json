@@ -1,0 +1,61 @@
+{
+  "slug": "syagrius-of-provence",
+  "display_name": "Syagrius of Provence",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Συάγριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαΐου, «Όσιος Συάγριος», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 787,
+      "latest": 787,
+      "display": "787",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το 787 μ.Χ., στην πόλη Νίκαια της Γαλλίας», and its head line reads «(; - 787)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Όσιος Συάγριος»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», the same day as the listing. The page's head line reads «Οσιος Συαγριος (; - 787)» and its body gives two sentences. The corpus keeps no Syagrius and the sweep found no folder that folds onto the name. `abbot` is used because the page says he founded a monastery — «ίδρυσε μονή στην περιοχή της Προβηγκίας» — and `Προβηγκία` is where the English form places him; the page names Nice as the place of his repose and not of his monastery. No hymn, no relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

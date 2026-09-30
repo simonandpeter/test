@@ -1,0 +1,63 @@
+{
+  "slug": "desiderius-of-vienne",
+  "display_name": "Desiderius of Vienne",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Δεσιδέριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαΐου, «Άγιος Δεσιδέριος ο Ιερομάρτυρας Επίσκοπος Βιέννης», with the rank words left off."
+    }
+  ],
+  "related": [
+    "gregory-the-dialogist"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 608,
+      "latest": 608,
+      "display": "608",
+      "basis": "traditional",
+      "note": "saint.gr: «δολοφονήθηκε το 608 μ.Χ., με διαταγή του βασιλέως», and its head line reads «(; - 608)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Άγιος Δεσιδέριος ο Ιερομάρτυρας Επίσκοπος Βιέννης»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», the same day as the listing. The page's head line reads «Αγιος Δεσιδεριος ο Ιερομαρτυρας Επισκοπος Βιεννης (; - 608)». **He is not the other Desiderius the same day carries**: «Άγιος Δεσιδέριος Επίσκοπος Λανγκρέ Γαλλίας» came from Genoa, preached at Langres and fell asleep in peace in 407, while this one was born at Autun, was bishop of Vienne and was murdered in 608 by order of the king. Two entries on one calendar day are two commemorations, and the two pages agree in nothing but the name, so they are two men and two folders. The Gregory who cleared him is the corpus's `gregory-the-dialogist`, whom the page sends to 12 Μαρτίου, which is that folder's own day. No hymn, no relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

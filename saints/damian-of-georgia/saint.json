@@ -1,0 +1,61 @@
+{
+  "slug": "damian-of-georgia",
+  "display_name": "Damian of Georgia",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "king"
+  ],
+  "names": [
+    {
+      "form": "Δαμιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαΐου, «Όσιος Δαμιανός εκ Γεωργίας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1156,
+      "latest": 1156,
+      "display": "1156",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το 1156 μ.Χ.», and its head line reads «(; - 1156)». The same page dates his kingship to 1125 and his father's reign to 1089-1124."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Όσιος Δαμιανός εκ Γεωργίας»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», the same day as the listing. The page's head line reads «Οσιος Δαμιανος Εκ Γεωργιας (; - 1156)». **He is not the corpus's `demetrius-of-georgia`**, although both were kings of Georgia called Demetrius and both are honoured: that folder is Demetre the Devoted, great-grandson of Queen Tamar, whose mother Gvantsa and father David V the Mongols killed and who was himself martyred, and the Romanian calendar keeps him on 16 martie; this one is the son of David II the Strong or Restorer, reigned from 1125, laid down his crown, became a monk under the name Damian and fell asleep in peace in 1156. `king` is kept in `types` beside `venerable` and `monk` because the page says outright that he was king of the Georgians. His father has no folder: the corpus's `david-of-georgia` is the martyr of 740. No hymn, no relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

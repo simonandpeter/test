@@ -1,0 +1,59 @@
+{
+  "slug": "manaen-the-prophet",
+  "display_name": "Manaen",
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "names": [
+    {
+      "form": "Μανήν",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαΐου, «Άγιος Μανήν ο Προφήτης», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Μανήν έζησε τον 1ο αιώνα μ.Χ. και αναφέρεται στις Πράξεις των Αποστόλων ως προφήτης και διδάσκαλος της Εκκλησίας της Αντιοχείας.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Άγιος Μανήν ο Προφήτης»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», the same day as the listing. The page's whole account of him is the quotation of Acts 13:1-3, where he is named «Μαναήν τε Ἡρώδου τοῦ τετράρχου σύντροφος», and one sentence saying he fell asleep in peace. The corpus keeps no Manaen, and the sweep found no folder that folds onto the name. The four men named beside him in the verse — Barnabas, Symeon called Niger, Lucius the Cyrenian and Saul — are named in the life in plain words and get no `related` row, because what the page gives is the verse and not an association it states in its own voice. No hymn, no relics, no place."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,9 @@
+# Paisius of Galich
+
+saint.gr says he lived in the fourteenth and fifteenth centuries and came to the city of Galich in Russia from the south about the year 1385. He was tonsured a monk at the monastery of Saint Nicholas of Galich and began the hard spiritual struggle at once. His life records that he was once in a cell on the river Uchma together with the hermit [Cassian](/saints/cassian-the-greek), called the Greek, and with the monks Adrian and Gerasimus.
+
+While they were singing the Akathist hymn a most radiant light appeared over the whole monastery, and the monks heard a voice calling them to come out of the cell. They came out in terror, and an angel of the Lord showed them a vision: the Mother of God seated on a throne and holding in her arms Jesus Christ as an infant. The monks fell to the ground, but the angel told them to rise and gave them the Mother of God's command to build on that spot a church in honour of the Protecting Mother of God. The church was built in 1482, and Adrian took part in the making of the stone church; and in 1489 he helped the venerable Paisius in the building of the monastery of Saint Nicholas, on the little river Grekov on the right bank of the Volga, which was a dependency of the monastery of the Protection of the Most Holy Mother of God.
+
+The venerable one strove for the unity of the Russian land and of the rulers of the region and set himself against the feudal wars, and for that reason he visited Moscow as well. After a life pleasing to God and unceasing prayer he foresaw his end, and so began to press his spiritual struggles harder and to prepare himself inwardly to meet his Lord and God. He fell asleep in peace in 1460, or in 1463, and was buried on the south side of the Uspensky cathedral.
+
+*After saint.gr's calendar for 23 Μαΐου — [the day](https://www.saint.gr/05/23/index.aspx) and [the life](https://www.saint.gr/4061/saint.aspx); read 30 September 2026.*

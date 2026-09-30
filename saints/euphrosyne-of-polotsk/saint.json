@@ -1,0 +1,67 @@
+{
+  "slug": "euphrosyne-of-polotsk",
+  "display_name": "Euphrosyne of Polotsk",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "names": [
+    {
+      "form": "Ευφροσύνη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Μαΐου, «Οσία Ευφροσύνη του Πολώκ», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1105,
+      "latest": 1105,
+      "display": "about 1105",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Οσία Ευφροσύνη, κατά κόσμον Πρεντισλάβα, γεννήθηκε περί το 1105 μ.Χ. στη Ρωσία.»"
+    },
+    "death": {
+      "earliest": 1173,
+      "latest": 1173,
+      "display": "1173",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Οσια Ευφροσυνη Του Πολωκ (1105 - 1173)»; the body gives no year of her repose."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Οσία Ευφροσύνη του Πολώκ»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», the same day as the listing. The page's head line reads «Οσια Ευφροσυνη Του Πολωκ (1105 - 1173)», and the body gives the birth year as approximate, «γεννήθηκε περί το 1105 μ.Χ.» The corpus keeps no Euphrosyne of Polotsk: `euphrosyne-of-alexandria` and `euphrosyne-of-mega-spileo` are other women. **`types` is `venerable` and `monastic` only**: the page calls her Οσία and has her living in and founding monasteries, but never names her abbess, and `princess` is not used although her father was prince of Polotsk, because the page gives her no such title of her own. The page's long closing section is the history of her relics — taken from Polotsk, laid in the monastery of the Saviour on the morning of 23 May, removed again under the Soviets to a museum of atheism, rescued in the evacuation of August 1941 to the church of the Protection at Vitebsk, and returned to the Polotsk monastery on 23 October 1943 — and none of that is a second feast. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

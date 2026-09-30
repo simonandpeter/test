@@ -1,0 +1,63 @@
+{
+  "slug": "basil-of-braga",
+  "display_name": "Basil of Braga",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of the life page's own head line for him, «Αγιος Βασιλειος», with the rank word left off; the day's line names him with his fellow as «Άγιοι Επιτάκιος και Βασίλειος»."
+    }
+  ],
+  "related": [
+    "epitacius-of-tui"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 60,
+      "latest": 60,
+      "display": "60",
+      "basis": "traditional",
+      "note": "saint.gr: «ο δε Άγιος Βασίλειος αναφέρεται πιο επισκοπικούς καταλόγους ως δεύτερος Επίσκοπος της πόλεως Μπράγα της Πορτογαλίας το 60 μ.Χ.» The same page dates both men to the first century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Μαΐου — «Άγιοι Επιτάκιος και Βασίλειος»",
+        "url": "https://www.saint.gr/05/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Μαΐου εκάστου έτους», the same day as the listing. The life page carries two men under two head lines, «Αγιος Επιτακιος» and «Αγιος Βασιλειος», so this is a company of two named men and therefore two folders. The page says he is named in episcopal lists as the second bishop of Braga in Portugal in the year 60, and that both fell asleep in peace. The corpus keeps many Basils and none of them is this one. No hymn, no relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
