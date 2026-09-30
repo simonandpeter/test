@@ -7,6 +7,11 @@
       "form": "Eutihie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 mai, «Sfântul Sfințit Mucenic Eutihie, Episcopul Melitinei»."
+    },
+    {
+      "form": "Ευτυχής",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Ευτυχής Επίσκοπος Μελιτηνής», with the rank word left off. The same page's body writes Ευτύχιος instead — «ο Άγιος Ιερομάρτυς Ευτύχιος» — and its second apolytikion addresses him as «Ἱερομάρτυς Εὐτύχιε», so both forms are the page's own; the day's line is the one copied here."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαΐου — «Άγιος Ευτυχής Επίσκοπος Μελιτηνής»",
+        "url": "https://www.saint.gr/05/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Μαΐου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row, and it is plainly the same man: bishop of Melitene, refusing to sacrifice, thrown into the water after many tortures. The page then argues against its own line — «Ο Σωφρόνιος Εὐστρατιάδης στο Αγιολόγιο του, ισχυρίζεται ότι εσφαλμένα γράφεται Ευτυχής και μάλιστα επίσκοπος Μελιτηνής και ότι το σωστό είναι Ευτύχιος μάρτυς και όχι επίσκοπος» — Sophronios Eustratiades holding that the form Eutyches and the see of Melitene are both mistaken and that the right reading is Eutychius, martyr and not bishop. That is a doubt about the name and the rank, not the asterisked doubt about the entry's existence, and the folder's own reading is left as it stands. saint.gr prints two apolytikia, a kontakion and a megalynarion; the first apolytikion is taken."
     },
     {
       "church": "serbian",
@@ -59,6 +74,23 @@
       },
       "english": {
         "text": "Thy martyr Eutychius, O Lord, in his contest received the crown of incorruption from Thee our God; for having Thy strength he overcame the tormentors and broke the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Ὡς εὐτυχήσας ἀρετῶν ταῖς ἰδέαις, τῆς τῶν Μαρτύρων εὐκληρίας μετέσχες, Ἱερομάρτυς ἔνδοξε παμμάκαρ Εὐτυχές· σὺ γὰρ τῷ Θεῷ ἡμῶν, καθαρῶς ὑπουργήσας, αἵμασιν ἐφοίνιξας, τὴν ἁγίαν στολήν σου· μεθ’ ἧς Χριστῷ καὶ νῦν ἱερουργῶν, ἀεὶ δυσώπει, ὑπὲρ τῶν ψυχῶν ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ, the first of two apolytikia on the page of «Άγιος Ευτυχής Επίσκοπος Μελιτηνής»",
+        "url": "https://www.saint.gr/1760/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having prospered in the forms of the virtues, you shared in the good portion of the martyrs, O glorious hieromartyr, all-blessed Eutyches; for having served our God in purity, you dyed your holy vesture red with your blood, and wearing it you offer the sacrifice to Christ even now, and entreat him without ceasing for our souls.",
         "rendered": "site"
       }
     }

@@ -1,0 +1,63 @@
+{
+  "slug": "paul-martyr-28-may",
+  "display_name": "Paul (28 May)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Παύλος», with the rank word left off. The day's line names the three together, «Άγιοι Κρήσκης, Παύλος και Διοσκορίδης», and the life page heads each of them separately."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 244,
+      "latest": 244,
+      "display": "244",
+      "basis": "traditional",
+      "note": "saint.gr's page for the three prints a head line for each man and dates all three the same way: «Αγιος Παυλος (; - 244)», «Αγιος Κρησκης (; - 244)», «Αγιος Διοσκοριδης (; - 244)». It gives no year of birth for any of them."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαΐου — «Άγιοι Κρήσκης, Παύλος και Διοσκορίδης»",
+        "url": "https://www.saint.gr/05/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Μαΐου εκάστου έτους», the same day as the listing, and carries all three men on the one page, each with his own head line. The corpus keeps no folder for any of the three on this menologion day in any calendar. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "crescens-martyr-28-may",
+    "dioscorides"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

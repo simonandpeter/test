@@ -1,0 +1,61 @@
+{
+  "slug": "senator-of-milan",
+  "display_name": "Senator of Milan",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop of Milan",
+  "names": [
+    {
+      "form": "Σενατόρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Σενατόρος Επίσκοπος Μιλάνου», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 480,
+      "latest": 480,
+      "display": "480",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Σενατορος Επισκοπος Μιλανου (; - 480)», and the body repeats it: «Εξελέγη Επίσκοπος του Μιλάνου και κοιμήθηκε με ειρήνη το 480 μ.Χ.» It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαΐου — «Άγιος Σενατόρος Επίσκοπος Μιλάνου»",
+        "url": "https://www.saint.gr/05/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Μαΐου εκάστου έτους», the same day as the listing. Its whole life is two sentences. The page prints no hymn and names no relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

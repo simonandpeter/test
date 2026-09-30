@@ -1,0 +1,51 @@
+{
+  "slug": "andrew-the-fool-for-christ",
+  "display_name": "Andrew the Fool for Christ",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "fool-for-christ"
+  ],
+  "names": [
+    {
+      "form": "Ανδρέας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Ανδρέας ο διά Χριστόν σαλός», with the rank word left off. The epithet «ο διά Χριστόν σαλός» is left off with the rank."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαΐου — «Άγιος Ανδρέας ο διά Χριστόν σαλός»",
+        "url": "https://www.saint.gr/05/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Μαΐου εκάστου έτους», the same day as the listing. The page places the vision of the Mother of God at the Blachernae in the same breath as the feast of the Protection — «είδε τη Θεοτόκο στον ουρανό προσευχόμενη και σκέπουσα το λαό με το τίμιο ωμοφόριό της ( 1 και 28 Οκτωβρίου)» — so it points at two October days as well, but those are the feast of the Protection and not a second commemoration of him, and no second row or folder is made on that account. The page gives no year of birth and no year of death, only the reign it sets him in, so there is no `dates` object here. It prints an apolytikion, two kontakia, a megalynarion, an oikos and a kathisma; the apolytikion is taken."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

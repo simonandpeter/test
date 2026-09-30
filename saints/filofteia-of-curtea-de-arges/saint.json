@@ -6,6 +6,11 @@
       "form": "Filofteia de la Curtea de Argeș",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 decembrie, «Sfânta Muceniță Filofteia de la Curtea de Argeș», with the rank word left off."
+    },
+    {
+      "form": "Φιλοθέα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαΐου, «Οσία Φιλοθέα η Παρθενομάρτυρας», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαΐου — «Οσία Φιλοθέα η Παρθενομάρτυρας»",
+        "url": "https://www.saint.gr/05/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Μαΐου εκάστου έτους», which is not the folder's Romanian day of 7 December, and the two calendars keep her on two days. It is plainly the same woman: the page follows her relics from Eastern Thrace to Tarnovo under Kaloyan, on to Vidin in 1395, and then says that after the fall of Vidin in 1396 their traces were lost for a long time and «τα ανακαλύπτουμε με βεβαιότητα στο δεύτερο ήμισυ του 16ου αιώνος μ.Χ. στην πόλη Άρτζες της Ουγγροβλαχίας» — we find them with certainty in the second half of the sixteenth century in the town of Argeș in Ungro-Wallachia, which is this folder's own place. One attestation row per church is the schema, so the Greek row records the 28 Μαΐου day page quoted here and the Romanian 7 December stays where it is. saint.gr places her birth at Molyvoto in Pamphylia in Asia Minor, names her parents as the patrician John and Irene, and gives her age at marriage as fourteen and her husband as Constantine — none of which is added to the folder's dates, since the page gives no year at all for her life. It prints no hymn."
     },
     {
       "church": "serbian",

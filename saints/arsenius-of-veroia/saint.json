@@ -1,0 +1,61 @@
+{
+  "slug": "arsenius-of-veroia",
+  "display_name": "Arsenius of Veroia",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop of Veroia",
+  "names": [
+    {
+      "form": "Αρσένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Αρσένιος Επίσκοπος Βεροίας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1301,
+      "latest": 1500,
+      "display": "14th–15th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος ιερομάρτυρας Αρσένιος Βεροίας έζησε τον 14ο προς 15ο αιώνα μ.Χ.» The page gives no year for the siege in which he was killed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαΐου — «Άγιος Αρσένιος Επίσκοπος Βεροίας»",
+        "url": "https://www.saint.gr/05/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Μαΐου εκάστου έτους», the same day as the listing, and adds where the day is kept: «Η μνήμη του τιμάται στο Μητροπολιτικό ναό Βεροίας στις 28 Μαΐου». The page prints an apolytikion, a kontakion and a megalynarion; the apolytikion is taken."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

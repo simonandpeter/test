@@ -1,0 +1,64 @@
+{
+  "slug": "alexander-of-thessalonica",
+  "display_name": "Alexander of Thessalonica",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "office": "Archbishop of Thessalonica",
+  "names": [
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Αλέξανδρος Επίσκοπος Θεσσαλονίκης», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 400,
+      "display": "3rd–4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Αλέξανδρος, Αρχιεπίσκοπος Θεσσαλονίκης, έζησε τον 3ο και 4ο αιώνα μ.Χ. και συμμετείχε στην Α' Οικουμενική Σύνοδο, η οποία συνήλθε το 325 μ.Χ.» The page dates his acts — the letter of 322, Nicaea in 325, Tyre in 335, the dedication at Jerusalem on 17 September 335 — but gives no year for his birth or his repose."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαΐου — «Άγιος Αλέξανδρος Επίσκοπος Θεσσαλονίκης»",
+        "url": "https://www.saint.gr/05/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Μαΐου εκάστου έτους», the same day as the listing; the day's line calls him bishop and the page's own body archbishop. It is the longest and the most heavily footnoted page read on this day, citing Gelasius of Cyzicus, Athanasius the Great's Apology against the Arians, Eusebius's Life of Constantine and the synaxarion of Matrona of Thessalonica. It sends the reader on to the synaxis of the 318 Fathers of the First Council, which is a synaxis heading and not a folder. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "matrona-of-thessalonica"
+  ]
+}

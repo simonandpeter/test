@@ -1,0 +1,63 @@
+{
+  "slug": "sophronius-of-bulgaria",
+  "display_name": "Sophronius of Bulgaria",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Σωφρόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Σωφρόνιος εκ Βουλγαρίας», with the rank word left off. The life page gives the name he was baptised with: «κατά κόσμον Στέφανος»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1401,
+      "latest": 1600,
+      "display": "15th–16th century",
+      "basis": "traditional",
+      "note": "saint.gr: «καταγόταν από την Βουλγαρία και έζησε τον 15ο και 16ο αιώνα μ.Χ.» The page gives no year of birth and no year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαΐου — «Άγιος Σωφρόνιος εκ Βουλγαρίας»",
+        "url": "https://www.saint.gr/05/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Μαΐου εκάστου έτους», the same day as the listing. This is not the corpus's `sophronius-of-vratsa`, who is the eighteenth-century bishop and writer: saint.gr's man is a presbyter of Penkyovtsi near Sofia in the fifteenth and sixteenth centuries who ended his days in an ascetic house near Ruschuk. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "joachim-of-tarnovo"
+  ]
+}

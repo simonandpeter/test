@@ -1,0 +1,62 @@
+{
+  "slug": "ignatius-of-rostov",
+  "display_name": "Ignatius of Rostov",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "office": "Bishop of Rostov",
+  "names": [
+    {
+      "form": "Ιγνάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Ιγνάτιος Επίσκοπος Ροστώβ», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1288,
+      "latest": 1288,
+      "display": "1288",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Ιγνατιος Επισκοπος Ροστωβ (; - 1288)», and the body repeats it: «Ποίμανε θεοφιλώς το ποίμνιό του για είκοσι έξι χρόνια και κοιμήθηκε με ειρήνη το 1288 μ.Χ.» It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαΐου — «Άγιος Ιγνάτιος Επίσκοπος Ροστώβ»",
+        "url": "https://www.saint.gr/05/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Μαΐου εκάστου έτους», the same day as the listing. It sends the reader on to the synaxis of all the saints who shone in Rostov and Yaroslavl, which is a synaxis heading and not a folder. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

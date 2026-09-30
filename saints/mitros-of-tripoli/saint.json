@@ -1,0 +1,60 @@
+{
+  "slug": "mitros-of-tripoli",
+  "display_name": "Mitros of Tripoli",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μήτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Μήτρος», with the rank word left off. The life page gives the two forms together and the name he bore as a Muslim: «Ο Άγιος Μήτρος (ή Δημήτριος)» and «όταν δε έγινε Μωαμεθανός ονομάστηκε Μουσταφάς»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1794,
+      "latest": 1794,
+      "display": "1794",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Μητρος (; - 1794)», and the body gives the day with the year: «τον αποκεφάλισαν στις 28 Μαΐου 1794 μ.Χ., Κυριακή της Πεντηκοστής, στην Τρίπολη». It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαΐου — «Άγιος Μήτρος»",
+        "url": "https://www.saint.gr/05/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Μαΐου εκάστου έτους», the same day as the listing, and names him patron of Tripoli — «Πολιούχος: Τρίπολη». The page for Paul the Peloponnesian, kept on 22 Μαΐου, says that some synaxaria put this man on that day too beside Paul, because both are honoured at Tripoli, «που η κυρίως μνήμη του είναι την 28η Μαΐου, όπου και η ήμερα του μαρτυρίου του» — his chief memory being 28 May, which is also the day of his martyrdom. So this day is the one the source itself calls his, and the 22 Μαΐου mention stays a note. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

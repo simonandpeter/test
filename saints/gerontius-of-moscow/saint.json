@@ -1,0 +1,61 @@
+{
+  "slug": "gerontius-of-moscow",
+  "display_name": "Gerontius of Moscow",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "office": "Metropolitan of Moscow",
+  "names": [
+    {
+      "form": "Γερόντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Γερόντιος της Μόσχας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1489,
+      "latest": 1489,
+      "display": "1489",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Γεροντιος Της Μοσχας (; - 1489)», and the body repeats it: «Κοιμήθηκε με ειρήνη το 1489 μ.Χ.» It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαΐου — «Άγιος Γερόντιος της Μόσχας»",
+        "url": "https://www.saint.gr/05/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Μαΐου εκάστου έτους», the same day as the listing. Its whole life is three sentences. The page prints no hymn and names no relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

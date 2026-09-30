@@ -6,6 +6,11 @@
       "form": "Eliconida",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 mai, «Sfânta Muceniță Eliconida»."
+    },
+    {
+      "form": "Ελικωνίδα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαΐου, «Αγία Ελικωνίδα», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαΐου — «Αγία Ελικωνίδα»",
+        "url": "https://www.saint.gr/05/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Μαΐου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row, and it is plainly the same woman: of Thessalonica, tried at Corinth, beheaded at the last. No hymn is printed."
     },
     {
       "church": "serbian",
@@ -45,5 +60,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 238,
+      "latest": 244,
+      "display": "mid 3rd century",
+      "basis": "traditional",
+      "note": "saint.gr puts her reign and its years itself: «Η Αγία Ελικωνίδα έζησε στα χρόνια του βασιλιά Γορδιανού του Γ', στα μέσα του 3ου μ.Χ. αιώνα (238 - 244 μ.Χ.)». The bracket is the page's own; it gives no year for her death."
+    }
   }
 }

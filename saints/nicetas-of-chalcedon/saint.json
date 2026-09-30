@@ -7,6 +7,11 @@
       "form": "Nichita",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 mai, «Sfântul Ierarh Nichita Mărturisitorul, Episcopul Calcedonului»."
+    },
+    {
+      "form": "Νικήτας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Νικήτας Αρχιεπίσκοπος Χαλκηδόνας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαΐου — «Άγιος Νικήτας Αρχιεπίσκοπος Χαλκηδόνας»",
+        "url": "https://www.saint.gr/05/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Μαΐου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row. The page says he is unknown to the synaxaria and the Menaia and that his name stands in four Lavra codices, Δ 39, Θ 87, Δ 36 and Ω 147, with a service to him — a statement about the sources, and not saint.gr's asterisked refusal to vouch for an entry, which the page does not carry. The only hymn printed is a Μεγαλυνάριον, which is not an apolytikion or a kontakion, so no hymn is taken here."
     },
     {
       "church": "serbian",

@@ -1,0 +1,64 @@
+{
+  "slug": "helen-of-diveyevo",
+  "display_name": "Helen of Diveyevo",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "names": [
+    {
+      "form": "Έλενα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαΐου, «Οσία Έλενα του Ντιβέεβο», with the rank word left off. The life page gives her full name in the world: «Η Έλενα Βασίλιεβνα Μαντούροβα»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1832,
+      "latest": 1832,
+      "display": "1832",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Οσια Ελενα Του Ντιβεεβο (; - 1832)», and the body gives the day with the year: «Εκοιμήθη εν Κυρίω στις 28 Μαΐου 1832 μ.Χ.» It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαΐου — «Οσία Έλενα του Ντιβέεβο»",
+        "url": "https://www.saint.gr/05/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Μαΐου εκάστου έτους», the same day as the listing, and records where her relics are: «Τα Ιερά Λείψανα της Οσίας Έλενας του Ντιβέεβο βρίσκονται στη Μονή Ντιβίγιεβο Ρωσίας». It marks Seraphim of Sarov as kept on 2 January and the nun Alexandra on 13 June. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "seraphim-of-sarov",
+    "alexandra-of-diveevo"
+  ]
+}
