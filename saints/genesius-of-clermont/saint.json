@@ -1,0 +1,60 @@
+{
+  "slug": "genesius-of-clermont",
+  "display_name": "Genesius of Clermont",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Γενέσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Άγιος Γενέσιος Επίσκοπος Κλερμόντ», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 662,
+      "latest": 662,
+      "display": "662",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Γενεσιος Επισκοπος Κλερμοντ (; - 662)» and the entry says he fell asleep in peace in 662. The page gives no year of birth and dates his life to the seventh century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Άγιος Γενέσιος Επίσκοπος Κλερμόντ»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. saint.gr's head line dates him «(; - 662)» and the entry is two sentences. Clermont is his see and `locations` is left out. The corpus keeps nobody of this name. No hymn is printed. The entry calls him Άγιος in its first sentence and Όσιος in its second, which is the page's own inconsistency and is left as read: `types` follow the see the page gives him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "slug": "clotilde-of-gaul",
+  "display_name": "Clotilde",
+  "sex": "female",
+  "types": [
+    "righteous",
+    "queen"
+  ],
+  "names": [
+    {
+      "form": "Γλοτίλδη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Αγία Γλοτίλδη η εκ Γαλλίας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 474,
+      "latest": 474,
+      "display": "474",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγια Γλοτιλδη η Εκ Γαλλιας (474 - 545)» and the entry says she was born in the city of Lyons in Gaul in 474."
+    },
+    "death": {
+      "earliest": 545,
+      "latest": 545,
+      "display": "545",
+      "basis": "traditional",
+      "note": "saint.gr says she fell asleep in peace in 545."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Αγία Γλοτίλδη η εκ Γαλλίας»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. saint.gr's head line dates her «(474 - 545)» and the entry is two sentences. It calls her husband a king and so she is a queen in `types`; the page does not name him, and no name is supplied here. Lyons is named as her birthplace and `locations` is left out, because the page places her birth and not her life. The corpus keeps nobody of this name. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

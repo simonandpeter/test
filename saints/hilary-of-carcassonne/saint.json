@@ -1,0 +1,60 @@
+{
+  "slug": "hilary-of-carcassonne",
+  "display_name": "Hilary of Carcassonne",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Ιλάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Άγιος Ιλάριος Επίσκοπος Καρκασσόν της Τουλούζης», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "saint.gr says «Ο Άγιος Ιλάριος έζησε κατά τον 4ο αιώνα μ.Χ. και διετέλεσε Επίσκοπος της πόλεως Καρκασσόν της Τουλούζης στη Γαλλία. Κοιμήθηκε με ειρήνη». The page dates his life to the fourth century and gives no year at all."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Άγιος Ιλάριος Επίσκοπος Καρκασσόν της Τουλούζης»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The entry is one sentence. The page dates his life to the fourth century and gives no year, so the `dates` entry holds the century the page states, and its note says that the page dates his life and not his death. Carcassonne, which the day's line puts in Toulouse, is his see and `locations` is left out. He is not the corpus's `hilary-of-poitiers`, who is kept on another day and has a life; nor `hilary-companion-of-proclus`. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

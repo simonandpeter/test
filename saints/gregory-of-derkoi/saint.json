@@ -1,0 +1,64 @@
+{
+  "slug": "gregory-of-derkoi",
+  "display_name": "Gregory of Derkoi",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "metropolitan"
+  ],
+  "names": [
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Άγιος Γρηγόριος Επίσκοπος Δέρκων», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1821,
+      "latest": 1821,
+      "display": "1821",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Γρηγοριος Επισκοπος Δερκων (; - 1821)», and the life says he ended his earthly life on 3 June 1821. The page gives no year of birth; it dates his consecration as metropolitan of Lacedaemonia to February 1777."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Άγιος Γρηγόριος Επίσκοπος Δέρκων»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. saint.gr's head line dates him «(; - 1821)»; the day's line calls him bishop of Derkoi and the life calls him metropolitan, of Lacedaemonia from 1777, of Vidin from 1791 to 1801 and then of Derkoi. The village of Zoubanta in Achaia, Dimitsana, Nafplio, Constantinople, Tripoli, Vidin and Therapeia are named, and `locations` is left out because no one of them is his place. The corpus keeps many men of this name and none on this day. No hymn is printed. The page also says he was among the first members of the Philiki Etaireia, which is a political fact about him and is recorded because the page records it. His life and the two other hierarchs' name one another, and the three accounts differ on where each was hanged: this page puts Joseph of Thessalonica, Ioannikios of Tirnovo and Dorotheos of Adrianople all at Arnavutköy, while Joseph's own page puts Ioannikios at Arnavutköy, Dorotheos at Mega Revma and Joseph at Neochori. Both agree that Gregory's gallows stood at Therapeia. The disagreement is the source's and is left standing."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "joseph-of-thessalonica-1821",
+    "dorotheos-of-adrianople"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "athanasius-the-wonderworker",
+  "display_name": "Athanasius the Wonderworker",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Όσιος Αθανάσιος ο θαυματουργός», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Όσιος Αθανάσιος ο θαυματουργός»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The page gives no century, no country and no year, so there is no `dates` object; it names the river Sagaris, beside which the monastery he was sent to correct stood, and the monastery of Trajan, where he ended his life, and `locations` is left out because neither is placed. The corpus keeps a dozen men of this name and none of them on this day: the nearest by kind is `athanasius-founder-of-vatopedi`, a different man of a named house. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "slug": "liphardus-of-orleans",
+  "display_name": "Liphardus of Orleans",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Λιφάρδος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Όσιος Λιφάρδος ο εν Ορλεάνη», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 550,
+      "latest": 550,
+      "display": "550",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Οσιος Λιφαρδος ο Εν Ορλεανη (; - 550)» and the entry says he fell asleep in peace in 550. The page gives no year of birth, dates his life to the sixth century and says he took the monastic life at the age of forty."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Όσιος Λιφάρδος ο εν Ορλεάνη»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. saint.gr's head line dates him «(; - 550)» and the entry names his fellow ascetic Urbicius, whom the same day keeps and who succeeded him as abbot, so there is a `related` row each way. Orleans is where he came from and Meung the monastery the two of them founded; `locations` is left out because the page settles neither as his residence. The corpus keeps nobody of this name. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "urbicius-of-meung"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

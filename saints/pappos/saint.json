@@ -1,0 +1,50 @@
+{
+  "slug": "pappos",
+  "display_name": "Pappos",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Πάππος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Όσιος Πάππος», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Όσιος Πάππος»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The entry is one sentence and a couplet; the page says in its own words that we have no other details of the venerable one's life. There is no year, no country and no monastery, so there is no `dates` object and no `locations`, and no hymn is printed. The corpus keeps nobody of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

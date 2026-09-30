@@ -1,0 +1,63 @@
+{
+  "slug": "cronan-of-ireland",
+  "display_name": "Cronan of Ireland",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Κρονανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Όσιος Κρονανός o εξ Ιρλανδίας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 617,
+      "latest": 617,
+      "display": "617",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Οσιος Κρονανος O Εξ Ιρλανδιας (; - 617)» and the entry says he fell asleep in peace in 617. The page gives no year of birth and dates his life to the seventh century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Όσιος Κρονανός o εξ Ιρλανδίας»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. saint.gr's head line dates him «(; - 617)» and the entry is one sentence. It says he belonged to the company of Saint Kevin, whom the same day keeps, so there is a `related` row each way; it gives no monastery and no place beyond Ireland, and `locations` is left out. The corpus keeps nobody of this name. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "kevin-of-ireland"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "slug": "kevin-of-ireland",
+  "display_name": "Kevin of Ireland",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Κέβιν",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Άγιος Κέβιν ο εξ Ιρλανδίας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 498,
+      "latest": 498,
+      "display": "498",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Κεβιν ο Εξ Ιρλανδιας (498 - 618)». The page gives no place of birth beyond Ireland."
+    },
+    "death": {
+      "earliest": 618,
+      "latest": 618,
+      "display": "618",
+      "basis": "traditional",
+      "note": "saint.gr says he fell asleep in peace in 618 «σε ηλικία εκατόν είκοσι ετών», at the age of a hundred and twenty."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Άγιος Κέβιν ο εξ Ιρλανδίας»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. saint.gr's head line dates him «(498 - 618)» and the life says he fell asleep in 618 at the age of a hundred and twenty. The page prints the Latin form «(Kevin)» beside the Greek in its own text, and both are the page's; only the Greek form is stored, because the Latin one is a parenthesis in a Greek sentence and not a name form the calendar keeps him under. Ireland and the region of the Two Lakes — Glendalough, which the page does not name in any other form — are all it gives of place, and `locations` is left out. The corpus keeps nobody of this name. No hymn is printed. The venerable Cronan, whom the same day keeps, is said on his own page to have belonged to Kevin's company, so there is a `related` row each way."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "cronan-of-ireland"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

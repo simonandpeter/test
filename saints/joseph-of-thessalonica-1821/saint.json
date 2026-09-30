@@ -1,0 +1,64 @@
+{
+  "slug": "joseph-of-thessalonica-1821",
+  "display_name": "Joseph of Dimitsana",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "metropolitan"
+  ],
+  "names": [
+    {
+      "form": "Ιωσήφ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Άγιος Ιωσήφ Ιερομάρτυς Αρχιεπίσκοπος Θεσσαλονίκης», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1821,
+      "latest": 1821,
+      "display": "1821",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Ιωσηφ Ιερομαρτυς Αρχιεπισκοπος Θεσσαλονικης (; - 1821)», and the life says he was hanged at Neochori on 3 June 1821. The page gives no year of birth and says only that he was probably of an age with Patriarch Gregory V, or a little younger."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Άγιος Ιωσήφ Ιερομάρτυς Αρχιεπίσκοπος Θεσσαλονίκης»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. saint.gr's head line dates him «(; - 1821)» and its long account is built, as the page says, out of scattered notices, because no full biography of him survives. The page states in its own words that there is no official act of the Ecumenical Patriarchate proclaiming his sanctity, since such a thing would have provoked the Turkish government, but that it was judged right to include the metropolitan Joseph in the hagiology of Thessalonica, as he has been established in the conscience of the Christian body both as a national martyr and as a hieromartyr. That is the page's own reservation and it is recorded here rather than resolved. The corpus already keeps a `joseph-archbishop-of-thessalonica` from the Romanian 15 July, «Sfântul Ierarh Iosif, Arhiepiscopul Tesalonicului», with no year and no life at all; that entry is a hierarch on another day and this one is a hieromartyr of 1821, so they are drafted as two men, and the question is named in the reader's report rather than answered in a folder. Dimitsana in the Peloponnese, Drama and Thessalonica are named, and `locations` is left out because no one of them is settled as his place. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "dorotheos-of-adrianople",
+    "gregory-of-derkoi"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

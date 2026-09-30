@@ -1,0 +1,62 @@
+{
+  "slug": "caecilius-of-carthage",
+  "display_name": "Caecilius of Carthage",
+  "sex": "male",
+  "types": [
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Καικίλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Άγιος Καικίλιος διδάσκαλος του Αγίου Κυπριανού», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "saint.gr says «Ο Άγιος Καικίλιος έζησε κατά τον 3ο αιώνα μ.Χ. και ήταν πρεσβύτερος στην Καρθαγένη της Αφρικής». The page dates his life to the third century and gives no year and no year of death; nothing here is a date of death, and none is stated by the source."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Άγιος Καικίλιος διδάσκαλος του Αγίου Κυπριανού»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The page dates him to the third century and gives no year, so the `dates` entry holds the century the page states and its note says the page dates his life and not his death. Carthage in Africa is where he was a presbyter and `locations` is left out for want of anything more. The page sends the reader to Cyprian, bishop of Carthage, «βλέπε 2 Οκτωβρίου» — a day on which this corpus keeps Cyprian of Antioch and not Cyprian of Carthage, whose own folder is on another day; the `related` row is made to `cyprian-of-carthage`, the man the page names in words, and not to the day it points at, and that mismatch is named in the reader's report. Baronius and other historians are said to reckon him a friend of the philosopher Octavius and of the jurist Marcus Minucius Felix; neither has a folder here. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "cyprian-of-carthage"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

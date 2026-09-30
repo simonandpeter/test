@@ -1,0 +1,67 @@
+{
+  "slug": "isaac-of-cordoba",
+  "display_name": "Isaac of Cordoba",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ισαάκ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Άγιος Ισαάκ ο εξ Ισπανίας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 825,
+      "latest": 825,
+      "display": "825",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Ισαακ ο Εξ Ισπανιας (825 - 852)» and the entry says he was born in the city of Cordoba in Spain in 825."
+    },
+    "death": {
+      "earliest": 852,
+      "latest": 852,
+      "display": "852",
+      "basis": "traditional",
+      "note": "saint.gr says he bore witness for the faith of Christ in 852 at the hands of the Mohammedans."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Άγιος Ισαάκ ο εξ Ισπανίας»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. saint.gr's head line dates him «(825 - 852)» and calls him Οσιομάρτυς, a venerable martyr, in the entry, where the day's line calls him only Άγιος. Cordoba is named as his birthplace and the monastery near it is not named, so `locations` is left out. The corpus keeps ten men of this name and none of them in Spain or on this day. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

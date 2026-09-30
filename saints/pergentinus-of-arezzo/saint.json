@@ -1,0 +1,62 @@
+{
+  "slug": "pergentinus-of-arezzo",
+  "display_name": "Pergentinus of Arezzo",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Περγεντίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Άγιοι Περγεντίνος και Λαυρεντίνος οι Μάρτυρες οι αυτάδελφοι», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 251,
+      "latest": 251,
+      "display": "251",
+      "basis": "traditional",
+      "note": "saint.gr's head line for him reads «(; - 251)» and the entry says the two bore witness in 251 under the emperor Decius (249-251). The page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Άγιοι Περγεντίνος και Λαυρεντίνος οι Μάρτυρες οι αυτάδελφοι»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The two are carried on one page with a head line each, «(; - 251)», and the whole narrative is one sentence: that the holy martyrs Pergentinus and Laurentinus bore witness in 251 at the city of Arezzo in Italy, under the emperor Decius, who reigned from 249 to 251. The day's line adds «οι αυτάδελφοι», that they were brothers of the same parents, which the life page does not repeat. Arezzo is named as the place of the martyrdom and `locations` is left out, because the corpus does not place a martyr on the strength of one clause. The corpus keeps neither name. No hymn is printed. His brother has his own folder in the same batch and a `related` row here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "laurentinus-of-arezzo"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

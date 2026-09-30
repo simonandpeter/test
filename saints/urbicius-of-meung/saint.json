@@ -1,0 +1,63 @@
+{
+  "slug": "urbicius-of-meung",
+  "display_name": "Urbicius of Meung",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Ουρβίκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Όσιος Ουρβίκιος», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "saint.gr says «Ο Όσιος Ουρβίκιος έζησε τον 6ο αιώνα μ.Χ.» and that he fell asleep in peace, with no year. The page dates his life to the sixth century and nothing here is a stated year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Όσιος Ουρβίκιος»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The entry is two sentences and gives no year, so the `dates` entry holds the century the page states, and its note says the page dates his life and gives no year of death. It says he practised asceticism with the venerable Liphardus, whom the same day keeps, and succeeded him in the abbacy of the monastery of Meung, so there is a `related` row each way; `locations` is left out, the monastery being all the place there is. The epithet in the slug is that monastery's name and is not on the day's line, which gives him no epithet at all. The corpus keeps nobody of this name. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "liphardus-of-orleans"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "slug": "dorotheos-of-adrianople",
+  "display_name": "Dorotheos Proios",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "metropolitan"
+  ],
+  "names": [
+    {
+      "form": "Δωρόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Άγιος Δωρόθεος Μητροπολίτης Αδριανουπόλεως, ο Πρώιος», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1821,
+      "latest": 1821,
+      "display": "1821",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Δωροθεος Μητροπολιτης Αδριανουπολεως, ο Πρωιος (; - 1821)», and the life says he was seized in April 1821 and hanged at Mega Revma. The page gives no year of birth; it dates his ordination as deacon to 1786."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Άγιος Δωρόθεος Μητροπολίτης Αδριανουπόλεως, ο Πρώιος»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. saint.gr's head line dates him «(; - 1821)» and calls him a national martyr and one of the most considerable learned hierarchs of the nineteenth century; it dates his two sees, Philadelphia 1805-1813 and Adrianople 1813-1821. Chios, Patmos, Italy, France, Constantinople, Wallachia, Philadelphia and Adrianople are all named, and `locations` is left out because no one of them is his place. The corpus keeps six men of this name and none on this day. No hymn is printed. He was hanged on the same day and in the same reprisal as the metropolitan of Thessalonica and the bishop of Derkoi, whom the same calendar keeps on this day, and the three lives name one another."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "joseph-of-thessalonica-1821",
+    "gregory-of-derkoi"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

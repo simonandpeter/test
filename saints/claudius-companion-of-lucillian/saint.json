@@ -6,6 +6,11 @@
       "form": "Claudie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 iunie, which names the four youths «Ipatie, Paul, Dionisie și Claudie»."
+    },
+    {
+      "form": "Κλαύδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Άγιος Λουκιλλιανός, Παύλη και τα νήπια Κλαύδιος, Υπάτιος, Παύλος και Διονύσιος», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Άγιος Λουκιλλιανός, Παύλη και τα νήπια Κλαύδιος, Υπάτιος, Παύλος και Διονύσιος»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row, and it does not carry the «Δεν είναι διασταυρωμένη» sentence. One page carries the whole company, with a head line for each of the six and the year «(; - 270)» against every one of them, and the story is the same story doxologia told: the aged pagan priest of Nicomedia who was converted, was denounced to the count, was thrown into a fire that rain put out, was sent to Byzantium and crucified; the four children he found already in prison, who were beheaded; and the virgin who buried him and was beheaded after him. It is plainly the same six. Nicomedia and Byzantium are named and `locations` is left out. Two apolytikia are taken and both stand in all six folders: the first names Lucillian, Paula and the four children together, and the second is the common of martyrs printed under the company's name. He is one of the four whom the page calls νήπια, infants, and whom it found in the prison before Lucillian came to it; its verse on them says that the sword, of children whose number is twice two, makes sons of God the Father."
     },
     {
       "church": "serbian",
@@ -62,9 +77,51 @@
         "text": "Thy martyrs, O Lord, in their contests received the crowns of incorruption from Thee our God; for having Thy strength they overcame the tormentors and broke the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Χορός Ἀγγελικός.",
+      "text": "Ὡς ἄστρον φαεινόν, ἐκ νυκτὸς τῆς ἀπάτης, ὦ Λουκιλλιανέ, εὐσεβῶς ἀναλάμψας νομίμως ἠγώνισαι καὶ τὸν δόλιον ἔκτεινας· ὅθεν πρέσβευε σὺν τῇ θεόφρονι Παύλῃ καὶ τοῖς τέσσαρσι παισὶ Χριστῷ, ἀθλοφόρε, ὑπὲρ τῶν ψυχῶν ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Χορός Ἀγγελικός, the first of two apolytikia on the page of «Άγιος Λουκιλλιανός, Παύλη και τα νήπια Κλαύδιος, Υπάτιος, Παύλος και Διονύσιος». It is the company's own hymn: it names Lucillian, Paula and the four children together, which is why it stands in each of the six folders.",
+        "url": "https://www.saint.gr/1751/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining out in piety like a bright star from the night of deceit, O Lucillian, you contended lawfully and slew the deceiver; and so, with the godly-minded Paula and the four children, intercede with Christ, O prize-winner, for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Τοὺς μάρτυρας Χριστοῦ, ἱκετεύσωμεν πάντες, αὐτοὶ γὰρ τὴν ἡμῶν, σωτηρίαν αἰτοῦνται, καὶ πόθῳ προσέλθωμεν, πρὸς αὐτοὺς μετὰ πίστεως, οὖτοι βρύουσι τῶν ἰαμάτων τὴν χάριν, οὖτοι φάλαγγας, ἀποσοβοῦσι δαιμόνων, ὡς φύλακες τῆς πίστεως.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ’, on the page of «Άγιος Λουκιλλιανός, Παύλη και τα νήπια Κλαύδιος, Υπάτιος, Παύλος και Διονύσιος». It names no saint and is the common of martyrs; printed under this company's name it is their service, and it is copied whole, as the brief's ruling on a common requires.",
+        "url": "https://www.saint.gr/1751/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us all entreat the martyrs of Christ, for they themselves ask for our salvation; and let us come to them with longing and with faith. They pour out the grace of healings, they drive off the phalanxes of demons, as guards of the faith.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 270,
+      "latest": 270,
+      "display": "270",
+      "basis": "traditional",
+      "note": "saint.gr's head line for each of the six reads «(; - 270)», and the life says Lucillian lived in the years of the emperor Aurelian, in 270. The page gives no year of birth. doxologia.ro's life, which this folder was built from, printed no year."
+    }
   }
 }

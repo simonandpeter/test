@@ -1,0 +1,90 @@
+{
+  "slug": "ieria",
+  "display_name": "Ieria",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "names": [
+    {
+      "form": "Ιέρεια",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Οσία Ιέρεια», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Οσία Ιέρεια»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The page says plainly that there is no synaxarion memoir of her, and that all the synaxaria from the tenth-century Synaxarion of the Church of Constantinople to the modern editions know only that she was perfected in peace and that her memory is appointed for 3 June; everything else it takes from the life of Febronia, kept on 25 Ιουνίου. That is a source naming its own thinness and not the «Δεν είναι διασταυρωμένη» mark, which this page does not carry. The page gives no year at all, so there is no `dates` object, and it names Nisibis of Mesopotamia and the convent of Bryaine, so `locations` is left out for want of a settled place. Of the women named in her story the corpus keeps only Bryaine, whom it has from the Greek 30 August, so hers is the one `related` row; Febronia, Thomais and Platonis have no folder here and are therefore named in the life without a link. Two hymns are taken, both composed by the monk Gerasimos Mikragiannanites; a third text on the page, a μεγαλυνάριον of his, is not taken, because the schema holds a troparion and a kontakion and nothing else."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "bryaine-the-venerable"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείου Πνεύματος τας ενεργείας, ως ζωήρρυτον πυρ δεξαμενή, Ιερεία τη λαμπρά πολιτεία σου, διαθερμαίνεις ημών την διάνοιαν, και διαλύεις κακίας τον σύνδεσμον· μήτερ ένδοξε, Χριστόν τον Θεόν Ικέτευε, δωρήσασθαι ημίν το μέγα έλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος γ’, Θείας πίστεως, on the page of «Οσία Ιέρεια»; the page adds «(Ποιηθέν υπό Γερασίμου Μοναχού Μικραγιαννανίτου)», that it was composed by the monk Gerasimos Mikragiannanites",
+        "url": "https://www.saint.gr/1753/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the energies of the divine Spirit as a fire welling up with life, O Ieria, by the splendour of your way of life you warm our understanding and undo the bond of wickedness. Glorious mother, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος β΄.",
+      "model": "Τοις των αιμάτων σου.",
+      "text": "Ταις επομβρίαις οσία των πόνων σου, κατασβεννύεις παθών υπεκαύματα και καταρδεύεις ημών την διάνοιαν, προς αληθή ευκαρπίαν· διό σε Ιερεία γεραίρομεν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ήχος β΄, Τοις των αιμάτων σου, on the page of «Οσία Ιέρεια»; the page adds that it too was composed by the monk Gerasimos Mikragiannanites",
+        "url": "https://www.saint.gr/1753/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the showers of your labours, venerable one, you quench the kindling of the passions and water our understanding to a true fruitfulness; and so we honour you, Ieria.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

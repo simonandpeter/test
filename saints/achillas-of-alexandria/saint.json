@@ -1,0 +1,51 @@
+{
+  "slug": "achillas-of-alexandria",
+  "display_name": "Achillas of Alexandria",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Αχιλλάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουνίου, «Άγιος Αχιλλάς Επίσκοπος Αλεξανδρείας», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουνίου — «Άγιος Αχιλλάς Επίσκοπος Αλεξανδρείας»",
+        "url": "https://www.saint.gr/06/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Ιουνίου εκάστου έτους», the same day as the listing, and does not carry the «Δεν είναι διασταυρωμένη» sentence. The entry is one sentence: «Ο Άγιος Αχιλλάς (311 - 312 μ.Χ.) ήταν Επίσκοπος Αλεξανδρείας και κοιμήθηκε με ειρήνη». The parenthesis is not said to be his lifespan and reads as the span of his episcopate, so it is quoted here and there is no `dates` object; Alexandria is his see and `locations` is left out as it is for the other bishops of Alexandria this corpus keeps from this calendar. The corpus already keeps an `achillas`, but that man is «Sfântul Cuvios Ahila» of the Romanian 17 January and the Greek of the same day, a venerable with no see and no century, and this one is a bishop of Alexandria on 3 June; they are drafted as two men and the question is named in the reader's report. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
