@@ -1596,20 +1596,30 @@ test('the row loads what is on screen before what is off it, a few at a time', a
    * yet and the premise guard below read as a defect. What the test needs is
    * that the queue has reached past the screen, so that is what it waits for.
    */
-  await expect
-    .poll(
-      () =>
-        page.evaluate(() => {
-          const track = document.querySelector('[data-carousel-track]');
-          const box = track.getBoundingClientRect();
-          return [...track.querySelectorAll('.cx-media img[data-cx-seq]')].filter((img) => {
-            const r = img.getBoundingClientRect();
-            return !(r.right > box.left && r.left < box.right);
-          }).length;
-        }),
-      { timeout: 15_000, message: 'the queue never reached a picture off screen' },
-    )
-    .toBeGreaterThan(0);
+  const offScreenWithSource = () =>
+    page.evaluate(() => {
+      const track = document.querySelector('[data-carousel-track]');
+      const box = track.getBoundingClientRect();
+      return [...track.querySelectorAll('.cx-media img[data-cx-seq]')].filter((img) => {
+        const r = img.getBoundingClientRect();
+        return !(r.right > box.left && r.left < box.right);
+      }).length;
+    });
+
+  /*
+   * **The row is walked until the band ahead of the screen holds a picture.**
+   * At 130 icons to 3,300 lives the columns are mostly names, and on the CI
+   * runner the band beyond the first screenful held no picture at all for
+   * fifteen seconds — nothing wrong with the queue, nothing for it to fetch.
+   * Each nudge is a wheel over the track, which is how a reader moves it, and
+   * the loop stops the moment there is an order to check.
+   */
+  for (let nudge = 0; nudge < 12 && !(await offScreenWithSource()); nudge += 1) {
+    await page.locator('[data-carousel-track]').hover();
+    await page.mouse.wheel(600, 0);
+    await page.waitForTimeout(400);
+  }
+  expect(await offScreenWithSource(), 'no band of this row holds a picture off screen').toBeGreaterThan(0);
 
   const seen = await page.evaluate(() => {
     const track = document.querySelector('[data-carousel-track]');
