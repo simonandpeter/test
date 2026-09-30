@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'κυριλλοσ cyril-bishop-in-africa cyril-companion-of-photius cyril-of-alexandria cyril-of-astrakhan cyril-of-jerusalem cyril-of-kazan cyril-of-the-forty-martyrs cyril-of-the-white-lake cyril-of-zographou':
+    'Nine now, and two of them are on the Greek 18 March as two entries: Cyril of Jerusalem, the patriarch, whom the Romanian calendar keeps there too, and Cyril of Astrakhan. The others are read in the el-03-08 entry for this name form.',
   'θεοδουλοσ theodulus-companion-of-agapitus theodulus-companion-of-eventius theodulus-companion-of-pamphilus theodulus-of-caesarea-17-february theodulus-of-myropolis theodulus-of-the-forty-martyrs theodulus-son-of-nilus theodulus-the-executioner theodulus-the-sinaite':
     'Nine now. The new one is Theodulus the Sinaite on 17 March; the others are read in the el-03-16 entry for this name form.',
   'παυλοσ paul-brother-of-pausirius paul-companion-of-quadratus paul-disciple-of-dionysius-of-alexandria paul-of-crete paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-zographou paul-the-martyr-3-february paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':

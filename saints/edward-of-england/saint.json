@@ -6,6 +6,11 @@
       "form": "Eduard",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 martie, «Sfântul Mucenic Eduard, regele Angliei»."
+    },
+    {
+      "form": "Εδουάρδος",
+      "lang": "el",
+      "note": "Read out of saint.gr's life page, «Ο Άγιος Edward (Εδουάρδος) ήταν υιός του βασιλέως της Αγγλίας Έντγκαρ» — the Greek form the page gives in its own parenthesis. Its calendar line and its heading spell him Edward, in Latin letters."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Μαρτίου — «Άγιος Edward βασιλέας της Αγγλίας»",
+        "url": "https://www.saint.gr/03/18/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Μαρτίου εκάστου έτους.» The page heads him «Αγιος Edward Βασιλεας Της Αγγλιας (; - 978)» and prints his name in Latin letters throughout, glossing it once as Εδουάρδος; it agrees with doxologia's account clause for clause, so the corpus's 978 stands unchanged. Beside him it sets «Ανακομιδή των ιερών λειψάνων του Αγίου Edward βασιλέα της Αγγλίας», the translation of his relics, which is a separate commemoration and no folder."
     },
     {
       "church": "serbian",

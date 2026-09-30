@@ -1,0 +1,61 @@
+{
+  "slug": "cyril-of-astrakhan",
+  "display_name": "Cyril of Astrakhan",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Κύριλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Μαρτίου, «Όσιος Κύριλλος του Αστραχάν», with the rank word left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1576,
+      "latest": 1576,
+      "display": "1576",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Κύριλλος κοιμήθηκε με ειρήνη το έτος 1576 μ.Χ.», and the page heads him «(; - 1576)», leaving the first date a question mark. It places his life «κατά τον 16ο αιώνα μ.Χ. στη Ρωσία»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The Greek page makes him a Russian abbot, so a Russian row is likely and has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Μαρτίου — «Όσιος Κύριλλος του Αστραχάν»",
+        "url": "https://www.saint.gr/03/18/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Μαρτίου εκάστου έτους.» The page heads him «(; - 1576)»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

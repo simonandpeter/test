@@ -6,6 +6,11 @@
       "form": "Trofim",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 martie."
+    },
+    {
+      "form": "Τρόφιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Μαρτίου, «Άγιοι Τρόφιμος και Ευκαρπίων», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Μαρτίου — «Άγιοι Τρόφιμος και Ευκαρπίων»",
+        "url": "https://www.saint.gr/03/18/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Μαρτίου εκάστου έτους.» The two are one line and one page on saint.gr, as they are one life on doxologia. The page gives a year for their lifetime rather than for the martyrdom — «ήταν στρατιώτες στη Νικομήδεια και έζησαν στα χρόνια του Mαξιμιανού (περί το 298 μ.Χ)» — and because it dates the life and not the death, no dates object has been written from it."
     },
     {
       "church": "serbian",
