@@ -687,7 +687,15 @@ test('every saint opens on a life from the synaxarion, with its source linked', 
   await expect(page.locator('.life a[data-prefetch="sixtus-ii-of-rome"]')).toHaveCount(1);
   await expect(page.locator('.life em a[href*="days.pravoslavie.ru"]')).toHaveCount(1);
   await expect(page.locator('.life em a[href*="pravoslavno.rs"]')).toHaveCount(1);
-  await expect(page.locator('.life em a[rel="noopener noreferrer"]')).toHaveCount(2);
+  /*
+   * **Every outward link in a source line is marked, and the count of them is
+   * not the claim.** It was two — the Russian life and the Serbian Prologue —
+   * until the Greek wave added a paragraph citing saint.gr's day and life, and
+   * a fifth source would move it again. What must not change is that none of
+   * them is unmarked.
+   */
+  const sourced = page.locator('.life em a');
+  await expect(page.locator('.life em a[rel="noopener noreferrer"]')).toHaveCount(await sourced.count());
 
   await page.goto('/saints/eleutherius-monk-martyr-1937', { waitUntil: 'networkidle' });
   await expect(page.locator('h1.saint-name')).toHaveText('Venerable Martyr Eleutherius');
@@ -1121,9 +1129,17 @@ test('a saint is named by rank, and what they held is on the line below', async 
 
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.locator('[data-query]').fill('John Chrysostom');
-  await expect(page.locator('.index-card', { hasText: 'John Chrysostom' }).locator('.index-dates')).toContainText(
-    'Archbishop of Constantinople',
-  );
+  /*
+   * His card and not his mother's: the query reaches «Anthousa, mother of John
+   * Chrysostom» too since the Greek wave gave her a folder, and a filter on the
+   * card's text then matched two. The name is read exactly.
+   */
+  await expect(
+    page
+      .locator('.index-card')
+      .filter({ has: page.locator('.index-name', { hasText: /^John Chrysostom$/ }) })
+      .locator('.index-dates'),
+  ).toContainText('Archbishop of Constantinople');
 
   // The office is printed on the facts line, and the type that says the same
   // word is not printed twice beside it.

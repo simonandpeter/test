@@ -1,6 +1,8 @@
 import { readFileSync } from 'node:fs';
 import { expect } from '@playwright/test';
 import { applyFilters } from '../src/lib/index-filters.js';
+import { monthsBySlugFor } from '../src/views/index/search.js';
+import { saintName } from '../src/lib/honorific.js';
 import { readCorpus, feastIndex, onCivilDay, CHURCH_IDS } from '../scripts/corpus-index.mjs';
 import { greatFeast } from '../src/lib/liturgy.js';
 
@@ -30,6 +32,30 @@ export const CORPUS = String(META.total);
  */
 export const countInRange = (from, to, rangeMode) =>
   String(applyFilters(CARDS, { from, to, rangeMode, sort: 'name' }).matched.length);
+/**
+ * How many lives the month facet matches, counted the way the page counts:
+ * `monthsBySlugFor` resolves every feast to its **civil** month, Julian ones
+ * included, and `applyFilters` reads that map. A literal here said 412 and the
+ * corpus said 413 on the first CI run of the Greek wave, and the gate's own
+ * arithmetic — any venerated feast whose recorded month is 1 — agreed with
+ * neither, because it is a different question from the one the page asks.
+ */
+/**
+ * Whom an order opens on, named as the index names them: the page's own
+ * `applyFilters` over the same manifest, and `saintName` for the rank in front.
+ * A typed name here was Sofian of Antim until the Romanian year reached
+ * Elizabeth of Pasărea, whose repose is later; the claim the test carries is
+ * that the two date orders are different questions, not who is at the end of
+ * the corpus this week.
+ */
+export const leaderBySort = (sort) => saintName(applyFilters(CARDS, { sort }).matched[0]);
+
+let monthsBySlug = null;
+export const countInMonth = (month) => {
+  monthsBySlug ??= monthsBySlugFor(CARDS);
+  return String(applyFilters(CARDS, { months: [month], sort: 'name' }, { monthsBySlug }).matched.length);
+};
+
 export const undatedCount = () => String(applyFilters(CARDS, { from: 1396, to: 1400, sort: 'name' }).undated.length);
 
 /**

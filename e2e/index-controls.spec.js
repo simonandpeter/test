@@ -8,6 +8,8 @@ import {
   chooseView,
   carryingWord,
   countInRange,
+  countInMonth,
+  leaderBySort,
   emptyRange,
   facet,
   leaders,
@@ -227,11 +229,13 @@ test('the feast-month filter reckons each tradition in its own calendar', async 
   // gate goes red on the batch that moves it and both are changed in that
   // batch's commit.
   //
-  // Seven more on 2026-09-30, the first batch of the Greek run: saint.gr's
-  // 1 Ιανουαρίου. The Greek church reckons in revised-julian, so its own
-  // January is the civil one, and every Greek January day will move this
-  // number the same way the Romanian ones did.
-  await expect(page.locator('[data-count]')).toHaveText('412');
+  // **The number is read off the manifest since 2026-09-30, not typed.** The
+  // Greek wave moves it every day it lands — the Greek church reckons in
+  // revised-julian, so its own January is the civil one — and a literal here
+  // was a day's work per batch and a red CI run when it was missed. What the
+  // facet matches is the page's own arithmetic, so `countInMonth` asks the
+  // page's own filter over the same map it reads.
+  await expect(page.locator('[data-count]')).toHaveText(countInMonth(1));
   await expect(page.locator('.index-name', { hasText: 'Anthony the Great' })).toHaveCount(1);
 });
 
@@ -530,7 +534,7 @@ test('latest runs the other way from earliest', async ({ page }) => {
   // this test's subject, so it chooses them explicitly — and reads the leader
   // off the screen, because a re-sort does not reorder the DOM.
   await chooseSort(page, 'earliest');
-  await expect.poll(() => leaders(page)).toBe('Prophet Moses the God-seer');
+  await expect.poll(() => leaders(page)).toBe(leaderBySort('earliest'));
   /*
    * **Not the confessor of 1972 any more** (2026-08-28). The Index opened on
    * the reader's own calendar until that morning, so "latest" meant the latest
@@ -542,9 +546,9 @@ test('latest runs the other way from earliest', async ({ page }) => {
   await chooseSort(page, 'latest');
   const latest = await leaders(page);
   expect(latest, 'latest opens where earliest does').not.toBe('Prophet Moses the God-seer');
-  await expect.poll(() => leaders(page)).toBe('Venerable Sofian of Antim');
+  await expect.poll(() => leaders(page)).toBe(leaderBySort('latest'));
   await chooseSort(page, 'earliest');
-  await expect.poll(() => leaders(page)).toBe('Prophet Moses the God-seer');
+  await expect.poll(() => leaders(page)).toBe(leaderBySort('earliest'));
 });
 
 
@@ -565,7 +569,7 @@ test('random deals an order, and holds it still under the reader', async ({ page
   // Random is the default now; stepping through Earliest first keeps this
   // test what it was — proof that choosing Random deals and then holds.
   await chooseSort(page, 'earliest');
-  await expect.poll(() => leaders(page)).toBe('Prophet Moses the God-seer');
+  await expect.poll(() => leaders(page)).toBe(leaderBySort('earliest'));
   const earliest = await leaders(page);
 
   await chooseSort(page, 'random');

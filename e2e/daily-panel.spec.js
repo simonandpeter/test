@@ -83,7 +83,10 @@ test('a populated day renders the hero, and each tradition in its own reckoning'
   // He is kept on this civil day and named on it; which saint of a full day
   // leads it is the hero rule's question, and the Greek 17 January now has
   // eight to choose from.
-  await expect(page.locator('.register a[href*="anthony-the-great"]').first()).toBeVisible();
+  // Counted, not read for visibility: the register virtualises, and on CI the
+  // only link to him in the mounted part was the row's own "Continue reading",
+  // which is hidden until its row is reached.
+  await expect(page.locator('.register a[href*="anthony-the-great"]')).not.toHaveCount(0);
   // Only the civil date is printed (author, 2026-08-24): the line that gave
   // the day in the church's own reckoning went with the "Change calendar"
   // control under the strip, because two dates for one day read as confusion

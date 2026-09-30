@@ -1576,14 +1576,23 @@ for (let i = 0; i < 460; i += 1) {
   } else if (++gap > 14 && reach) break;
 }
 
-const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '412'],
-];
+/*
+ * **Nothing here any more, and that is the point.** The one literal this
+ * watched -- the January feast count -- was replaced on 2026-09-30 by
+ * `countInMonth` in `e2e/helpers.js`, which asks the page's own filter. This
+ * arithmetic disagreed with the page by one in any case: it counts a venerated
+ * feast whose *recorded* month is January, and the facet counts a feast that
+ * falls in the *civil* January, which for a Julian calendar is a different
+ * question. The list stays because the next number hard-coded in a spec
+ * belongs in it.
+ */
+const EXPECTED = [];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;
   console.log(`  ${moved ? '!' : '·'} ${where.padEnd(52)} now ${String(now).padEnd(12)} spec says ${literal}`);
   if (moved) fail('e2e literals', `${where} — the spec still says ${literal}, the corpus now says ${now}`);
 }
+console.log(`  · feast in the recorded January (no spec holds it)    now ${januaryOwn}`);
 console.log(`  · corpus total (e2e reads META.total)                 now ${corpus.length}`);
 console.log(`  · 240–460 overlaps (e2e reads countInRange)          now ${overlapsRange(240, 460)}`);
 console.log(`  · 240–460 within   (e2e reads countInRange)          now ${withinRange(240, 460)}`);

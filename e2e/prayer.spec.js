@@ -340,6 +340,36 @@ test('the page fetches the saint it is showing and its neighbours, not the corpu
 const WITH_MENTIONS = HYMNED.findIndex((c) => (c.mentionedIn ?? []).length > 0);
 
 /**
+ * The same, and one more condition: the saint their margin names must be
+ * somebody a query of *their own* name does not reach. `revealSlug` clears the
+ * field only where the press widens the book, so a subject whose name carries
+ * their company's names — «Abachum, son of Marius and Martha», whose margin
+ * names Marius and Martha — leaves the query narrowing and nothing to clear.
+ * That saint became the first hymned one with a back-reference when the Greek
+ * wave landed, and it broke the test's premise rather than the page.
+ *
+ * The reach below is the prayer page's index in miniature (`views/prayer/find.js`):
+ * the name in every recorded form. The office-and-dates line it also indexes
+ * holds no personal names, so it is left out of the estimate, and the test
+ * asserts the narrowing itself in any case.
+ */
+const reaches = (card, query) =>
+  [card.display_name, ...Object.values(card.names ?? {}).map((n) => n.form ?? n)]
+    .join(' ')
+    .toLowerCase()
+    .includes(query.toLowerCase());
+
+const HIDDEN_MENTION = (() => {
+  for (const [at, card] of HYMNED.entries()) {
+    for (const slug of card.mentionedIn ?? []) {
+      const target = CARDS.find((c) => c.slug === slug);
+      if (target && !reaches(target, card.display_name)) return { at, slug };
+    }
+  }
+  return null;
+})();
+
+/**
  * The feast index this year, built the same way the page builds it — one walk
  * over the corpus, every church in it at once, keyed by civil day.
  */
@@ -612,16 +642,18 @@ test('a query that matches nobody says so, and the page holds no saint', async (
 test('a name pressed in an aside is reached even when the query is hiding it', async ({ page }) => {
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
-  await stepTo(page, WITH_MENTIONS);
-  await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', HYMNED[WITH_MENTIONS].slug);
+  expect(HIDDEN_MENTION, 'the corpus holds a hymned saint whose margin their own name hides').not.toBeNull();
+  const subject = HYMNED[HIDDEN_MENTION.at];
+  await stepTo(page, HIDDEN_MENTION.at);
+  await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', subject.slug);
 
-  const target = await page.evaluate(() => document.querySelector('[data-go]')?.dataset.go ?? null);
-  expect(target, 'this saint has reachable company to press').not.toBeNull();
+  const target = HIDDEN_MENTION.slug;
+  await expect(page.locator(`[data-go="${target}"]`)).toHaveCount(1);
 
   /* A query that narrows to the saint in hand and therefore excludes whoever
      their margin names. The relation is a fact about the saint and not about
      the search, so the press has to widen the book rather than refuse. */
-  await type(page, HYMNED[WITH_MENTIONS].display_name);
+  await type(page, subject.display_name);
   await expect
     .poll(() => page.locator('#hy-count').textContent())
     .not.toBe(fill(STRINGS.prayer.count, { n: HYMNED.length }));
