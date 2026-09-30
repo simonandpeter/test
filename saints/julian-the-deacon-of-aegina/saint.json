@@ -1,0 +1,70 @@
+{
+  "slug": "julian-the-deacon-of-aegina",
+  "display_name": "Julian of Aegina",
+  "names": [
+    {
+      "form": "Ιουλιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιανουαρίου, «Άγιος Ιουλιανός ο Διάκονος, ο εξ Αιγίνης», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "deacon",
+    "preacher",
+    "ascetic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 319,
+      "latest": 319,
+      "display": "319",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιουλιανός γεννήθηκε το 319 μ.Χ. στην Αίγινα»."
+    },
+    "death": {
+      "earliest": 391,
+      "latest": 391,
+      "display": "391",
+      "basis": "traditional",
+      "note": "saint.gr: «μετά από άσκηση και προσευχή, κοιμήθηκε με ειρήνη το έτος 391 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 7 Ιανουαρίου — «Άγιος Ιουλιανός ο Διάκονος, ο εξ Αιγίνης»",
+        "url": "https://www.saint.gr/01/07/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "basil-the-great"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "cedd-the-bishop",
+  "display_name": "Cedd",
+  "names": [
+    {
+      "form": "Cedd",
+      "lang": "en",
+      "note": "saint.gr prints his name in Latin letters and gives no Greek form of it: the line for 7 Ιανουαρίου reads «Άγιος Cedd επίσκοπος Σκωτίας» and the notice's heading «Αγιος Cedd (; - 664)»."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop",
+  "types": [
+    "hierarch",
+    "bishop",
+    "monk",
+    "ascetic"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 664,
+      "latest": 664,
+      "display": "664",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε κατά το έτος 664 μ.Χ., όταν η επιδημία της πανώλης θέρισε τον πληθυσμό»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 7 Ιανουαρίου — «Άγιος Cedd επίσκοπος Σκωτίας»",
+        "url": "https://www.saint.gr/01/07/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "aidan-of-lindisfarne"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

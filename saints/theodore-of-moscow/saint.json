@@ -1,0 +1,66 @@
+{
+  "slug": "theodore-of-moscow",
+  "display_name": "Theodore of Moscow",
+  "names": [
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιανουαρίου, «Άγιος Θεόδωρος ο Πρίγκιπας», with the rank words left off. The notice adds a patronymic in Greek letters only, «Θεόδωρος (Ιωάννοβιτς)», which is not transliterated here."
+    }
+  ],
+  "sex": "male",
+  "office": "Tsar of Russia",
+  "types": [
+    "king"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1557,
+      "latest": 1557,
+      "display": "1557",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στη Μόσχα το έτος 1557 μ.Χ.»"
+    },
+    "death": {
+      "earliest": 1598,
+      "latest": 1598,
+      "display": "1598",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Θεόδωρος κοιμήθηκε μετά από ασθένεια το έτος 1598 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 7 Ιανουαρίου — «Άγιος Θεόδωρος ο Πρίγκιπας»",
+        "url": "https://www.saint.gr/01/07/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

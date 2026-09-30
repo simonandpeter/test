@@ -1,0 +1,59 @@
+{
+  "slug": "athanasius-of-attaleia",
+  "display_name": "Athanasius of Attaleia",
+  "names": [
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιανουαρίου, «Άγιος Αθανάσιος εξ Ατταλείας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1700,
+      "latest": 1700,
+      "display": "1700",
+      "basis": "traditional",
+      "note": "saint.gr: «αποκεφαλίστηκε την 7η Ιανουαρίου 1700 μ.Χ. στη Σμύρνη»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 7 Ιανουαρίου — «Άγιος Αθανάσιος εξ Ατταλείας»",
+        "url": "https://www.saint.gr/01/07/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδωροσ theodore-companion-of-stephen theodore-of-kandavla theodore-of-moscow theodore-of-novgorod theodore-of-tamasos theodore-of-tomsk theodore-prince-of-yaroslavl theodore-the-envoy-of-nicomedia':
+    'eight now. The new one is Theodore of Moscow, the tsar dead 1598, kept on 7 Ιανουαρίου; the other seven are read in the el-01-11, el-01-19 and el-01-20 entries for this name form. Eight men on eight Greek days, and a Muscovite tsar is the furthest of them from the four martyrs.',
+  'ιουλιανοσ julian-of-kandavla julian-the-deacon-of-aegina':
+    'two men. saint.gr keeps Julian, deacon of Aegina, preacher and ascetic, dead 391, on 7 Ιανουαρίου; the corpus keeps Julian of Kandavla, martyred 288 to 311, on the Russian and Greek 4 September. A deacon who died in peace at the end of the fourth century is not a martyr of the persecutions.',
+  'αθανασιοσ athanasius-martyr-13-january athanasius-of-alexandria athanasius-of-attaleia athanasius-of-kargopol athanasius-of-vologda':
+    'five now. The new one is Athanasius of Attaleia, a new-martyr of 1700, kept on 7 Ιανουαρίου; the other four are read in the el-01-18 entry for this name form — the patriarch of Alexandria on the 18th, the fool for Christ of Kargopol and the monk of Vologda on the same day, and the bare martyr of the 13th.',
   'σεργιοσ sergius-martyr-2-january sergius-of-russia sergius-of-zographou':
     'three men. The new one is Sergius of Russia, a monk dead 1876, kept on 6 Ιανουαρίου; the corpus keeps the bare martyr Sergius of the Romanian and Greek 2 January, upgraded in this wave, and Sergius of Zographou among the Athonite martyrs of 1275 to 1282.',
   'ρωμανοσ romanus-of-karpenisi romanus-of-lacedaemon':
@@ -1235,7 +1241,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '306'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '310'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;
