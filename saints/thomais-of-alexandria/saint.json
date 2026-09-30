@@ -6,6 +6,11 @@
       "form": "Tomaida",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 aprilie, «Sfânta Muceniță Tomaida»."
+    },
+    {
+      "form": "Θωμαΐς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Απριλίου, «Αγία Θωμαΐς», with the rank word left off; the life page heads her «Αγια Θωμαϊς»."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Απριλίου — «Αγία Θωμαΐς»",
+        "url": "https://www.saint.gr/04/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps her, and it gives her no years. Its account agrees with the Romanian one in substance and differs in two details: it makes her husband absent on business rather than out fishing, and it names Daniel, the head of the sketis of Alexandria, as the monk who came down and took up her body. It adds the quotation it takes from Nicodemus the Hagiorite, «ἔλαβε στέφανον μάρτυρος διὰ τὴν σωφροσύνην», and the monk delivered from the passion of fornication by the oil of the lamp at her grave. Under «Ιερά Λείψανα» it puts part of her skull at the monastery of Dionysiou on Athos. The page prints no hymn."
     },
     {
       "church": "serbian",

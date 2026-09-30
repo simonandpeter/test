@@ -1,0 +1,60 @@
+{
+  "slug": "ardalion-the-mime",
+  "display_name": "Ardalion the Mime",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αρδαλίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Απριλίου, «Άγιος Αρδαλίων ο Μίμος», with the rank word and the epithet left off; the life page heads him «Αγιος Αρδαλιων ο Μιμος (; - 298)»."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 298,
+      "latest": 298,
+      "display": "298",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Αρδαλιων ο Μιμος (; - 298)» and sets him «στα χρόνια του Διοκλητιανού (298)»; no year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Απριλίου — «Άγιος Αρδαλίων ο Μίμος»",
+        "url": "https://www.saint.gr/04/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Απριλίου εκάστου έτους», the same day as the listing. It gives him no city and no judge by name, no relic, and no hymn. The corpus holds nobody else of this name; the only other mime it keeps is Porphyrius the Mime (15 September), a different man on a different day. The day's line calls him ο Μίμος and the body of the page glosses the word: «με τη σημερινή ορολογία ήταν ηθοποιός» — in today's wording, an actor."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

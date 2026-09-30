@@ -1,0 +1,63 @@
+{
+  "slug": "eustathius-of-vilnius",
+  "display_name": "Eustathius of Vilnius",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ευστάθιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Απριλίου, «Άγιοι Αντώνιος, Ιωάννης οι αυτάδελφοι και Ευστάθιος οι Μάρτυρες», with the rank words left off; the life page heads him «Αγιος Ευστάθιος (; - 1347)»."
+    }
+  ],
+  "related": [
+    "antony-of-vilnius",
+    "john-of-vilnius"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1347,
+      "latest": 1347,
+      "display": "1347",
+      "basis": "traditional",
+      "note": "saint.gr: «μαζί με τον Ευστάθιο μαρτύρησαν το έτος 1347 στη Βίλνα της Λιθουανίας», and the page heads each of the three «(; - 1347)»; no year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Απριλίου — «Άγιοι Αντώνιος, Ιωάννης οι αυτάδελφοι και Ευστάθιος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/04/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Απριλίου εκάστου έτους», the same day as the listing. The whole body of the page is two sentences: «Οι Άγιοι Μάρτυρες Αντώνιος και Ιωάννης ήταν αδέλφια και μαζί με τον Ευστάθιο μαρτύρησαν το έτος 1347 στη Βίλνα της Λιθουανίας. Τα ιερά λείψανα αυτών φυλάσσονται στην ιερά μονή Αγίας Τριάδος Βίλνας.» Under «Ιερά Λείψανα» it adds a line for each of the three separately, putting his relics in the church of the Holy Spirit at Vilnius in Lithuania — so the page names two resting places and does not reconcile them. It gives no parentage, no trade, no account of the trial, no judge and no hymn, and no couplet. The corpus holds no other saint of Vilna; the many folders named Anthony, John and Eustathius are other men on other days."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

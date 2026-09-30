@@ -6,6 +6,11 @@
       "form": "Pud",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 aprilie, «Sfântul Apostol Pud»."
+    },
+    {
+      "form": "Πούδης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Απριλίου, «Άγιοι Αρίσταρχος, Πούδης και Τρόφιμος Απόστολοι από τους εβδομήντα», with the rank words left off; the life page heads him «Αγιος Πουδης Αποστολος Απο Τους Εβδομηκοντα»."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Απριλίου — «Άγιοι Αρίσταρχος, Πούδης και Τρόφιμος Απόστολοι από τους εβδομήντα»",
+        "url": "https://www.saint.gr/04/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Απριλίου εκάστου έτους», the same day as the listing, and gives the three no years: it places their beheading only «Στο φοβερό διωγμό του Νέρωνα (54 - 68 μ.Χ.)», in Nero's persecution, whose reign it dates 54 to 68, so no `dates` were taken. **The Greek keeps the three a day before the Romanian**, which prints them together on 15 aprilie; both pages are the same company — the three of the Seventy who were Paul's fellow workers and were beheaded with him at Rome — and the Greek adds the scriptural references it reads them out of and, for Aristarchus alone, a note that «Η μνήμη του Αγίου Αρίσταρχου επαναλαμβάνεται στις 27 Σεπτεμβρίου». The page prints two apolytikia and a kontakion, all three of them proper to the company and naming all three men; the first apolytikion and the kontakion are stored here, and the second, «Ἀπόστολοι ἅγιοι, πρεσβεύσατε τῷ ἐλεήμονι Θεῷ», is the common of apostles and was left."
     },
     {
       "church": "serbian",
@@ -61,6 +76,40 @@
       },
       "english": {
         "text": "O holy apostles, entreat the merciful God to grant our souls forgiveness of sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Χορείαν τὴν τρίπλοκον, τῶν Ἀποστόλων Χριστοῦ, συμφώνως τιμήσωμεν, ὡς ποταμοὺς λογικούς, τῆς θείας χρηστότητας, Πούδην σὺν Ἀριστάρχω, καὶ Τροφίμω τῷ θείῳ λόγοις θεογνωσίας, καταρδεύσαντας κόσμον. Αὐτῶν Χριστὲ μεσιτείαις πάντας οἰκτείρησον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον for 14 Απριλίου under «Άγιοι Αρίσταρχος, Πούδης και Τρόφιμος Απόστολοι από τους εβδομήντα»",
+        "url": "https://www.saint.gr/266/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us with one voice honour the threefold choir of the apostles of Christ, as reasoning rivers of the divine goodness — Pudens with Aristarchus and with the godly Trophimus — who watered the world with the words of the knowledge of God. By their mediation, O Christ, have compassion upon us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Ὡς ἀπαρχάς τῆς φύσεως.",
+      "text": "Ὡς ἱεροί συνέκδημοι, Παύλου τοῦ θεοκήρυκος, τὴν οἰκουμένην σὺν τούτῳ διήλθετε, γνῶσιν τὴν θείαν σπείραντες, Ἀρίσταρχε θεόφρον, σὺν Τροφίμῳ τῷ Θείῳ καὶ Πούδη ἔνδοξε· διὸ καὶ ἠθληκότες, ἀξίως συνεδοξάσθητε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον for 14 Απριλίου under «Άγιοι Αρίσταρχος, Πούδης και Τρόφιμος Απόστολοι από τους εβδομήντα»",
+        "url": "https://www.saint.gr/266/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As holy fellow travellers of Paul the herald of God, you passed through the inhabited world with him, sowing the knowledge of God — Aristarchus of godly mind, with the divine Trophimus and Pudens the glorious. Therefore, having contended, you were worthily glorified together with him.",
         "rendered": "site"
       }
     }

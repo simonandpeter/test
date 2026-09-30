@@ -1,0 +1,60 @@
+{
+  "slug": "demetrius-the-peloponnesian",
+  "display_name": "Demetrius the Peloponnesian",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Απριλίου, «Άγιος Δημήτριος ο Πελοποννήσιος», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1803,
+      "latest": 1803,
+      "display": "1803",
+      "basis": "attested",
+      "note": "saint.gr: «στις 14 Απριλίου 1803 μ.Χ. τον αποκεφάλισαν στην Τρίπολη», and the page heads him «Αγιος Δημητριος ο Πελοποννησιος (; - 1803)»; no year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Απριλίου — «Άγιος Δημήτριος ο Πελοποννήσιος»",
+        "url": "https://www.saint.gr/04/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Απριλίου εκάστου έτους», the same day as the listing, and gives the day of his beheading as the same 14 April 1803. The page closes with a note of its own against that day: «Σημείωση: Ο Άγιος Νικόδημος ο Αγιορείτης αναφέρει την μνήμη του στις 13 Απριλίου» — Nicodemus the Hagiorite puts his memory on 13 April. saint.gr's own listing and its own feast line both say 14 April, and that is the day this row records. Two other new martyrs named Demetrius are in the corpus, of Chios (29 January, 1802) and of Constantinople (27 January, 1784); this is a third man, of Ligoudista in Arcadia, beheaded at Tripoli. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
