@@ -1845,7 +1845,7 @@ test('a feast hymn is English for an English reader, on every calendar that sing
     // which kind of claim it is — a book, or a rendering made here.
     await expect(page.locator('[data-hymns] .hymn-text:not([lang="en"])')).toHaveCount(0);
     for (const foot of await page.locator('[data-hymns] .hymn-source').allTextContents()) {
-      expect(foot.trim(), `${church} ${iso}: a hymn says where its English came from`).toMatch(/Rendered for this site|Text from \S/);
+      expect(foot.trim(), `${church} ${iso}: a hymn says where its English came from`).toMatch(/Translated for this site|Text from \S/);
     }
   }
   await ctx.close();

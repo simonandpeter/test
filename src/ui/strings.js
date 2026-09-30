@@ -496,7 +496,12 @@ export const STRINGS = {
        * the original was one press of the language control away — which is a
        * reason a reader can act on and not a citation they can check.
        */
-      renderedFrom: 'Rendered for this site from {source}',
+      /*
+       * **"Translated", not "Rendered"** (author, 1 October 2026). The four
+       * packs have always said translation in their own words — «Απόδοση»,
+       * «Tălmăcire», «Перевод», «Prevod» — and the English was the odd one out.
+       */
+      renderedFrom: 'Translated for this site from {source}',
       /*
        * The two ways a hymn column can be empty, and they are two because the
        * rule above them is conditional (author, 2026-09-12: "When English is

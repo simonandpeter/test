@@ -42,7 +42,7 @@ for (const dir of fs.readdirSync('saints')) {
 
 /*
  * What is under a hymn is either a source or an admission, never both and never
- * neither: `hymnMarkup` prints "Rendered for this site" for the first and
+ * neither: `hymnMarkup` prints "Translated for this site" for the first and
  * "Text from …" for the second, so an `english` carrying both would claim a
  * book it did not use, and one carrying neither would print an empty citation
  * — a gap where the reader should see which kind of claim this is.
@@ -95,7 +95,7 @@ test('an English reader is shown the English, and told which kind of claim it is
   assert.match(own, /lang="en"/);
   assert.match(own, /The English rendering\./);
   assert.doesNotMatch(own, /\[the Greek\]/, 'the original is not printed to a reader who chose English');
-  assert.match(own, /Rendered for this site/, 'a site rendering says so under every one of them');
+  assert.match(own, /Translated for this site/, 'a site rendering says so under every one of them');
   assert.match(own, /data-rendered="site"/);
   /*
    * **And it names the text it was made from** (author, 2026-09-24: the
@@ -110,7 +110,7 @@ test('an English reader is shown the English, and told which kind of claim it is
   const book = hymnMarkup(cited);
   assert.match(book, /A published rendering\./);
   assert.match(book, /Hapgood \(1906\)/, 'a rendering out of a book names the book instead');
-  assert.doesNotMatch(book, /Rendered for this site/);
+  assert.doesNotMatch(book, /Translated for this site/);
   assert.doesNotMatch(book, /data-rendered/);
 });
 
@@ -183,7 +183,7 @@ test('with English chosen, no part of a hymn a reader reads is in another tongue
 /*
  * **Every hymn on the page names a text, and no hymn names none.** The footer
  * is the one line that says what kind of claim the text above it is, so a site
- * rendering with nothing under "Rendered for this site from" would be worse
+ * rendering with nothing under "Translated for this site from" would be worse
  * than the four bare words it replaced. Asserted over the whole corpus rather
  * than a sample, because the citation it prints for a rendering comes from the
  * *original* and the one for a published English from the book, and only one
@@ -194,7 +194,7 @@ test('every hymn an English reader reads names the text it came from', () => {
   const bare = [];
   for (const { iso, church, hymn } of [...dayHymns, ...saintHymns]) {
     const foot = /<p class="hymn-source[^"]*">([\s\S]*?)<\/p>/.exec(hymnMarkup(hymn))?.[1] ?? '';
-    const named = foot.replace(/<[^>]*>/g, '').replace(/Rendered for this site from|Text from/, '').trim();
+    const named = foot.replace(/<[^>]*>/g, '').replace(/Translated for this site from|Text from/, '').trim();
     if (!named) bare.push(`${iso} ${church} ${hymn.kind}: ${foot}`);
   }
   assert.deepEqual(bare.slice(0, 12), [], `${bare.length} hymns print a footer naming no text at all`);
@@ -212,7 +212,7 @@ test('a merged site rendering cites every original it was made from', () => {
   const two = { ...sample, church: 'russian', lang: 'cu', source: { text: 'pravoslavie.ru', url: 'https://example.invalid/cu' } };
   const [merged] = mergeForReading([one, two], 'en');
   const out = hymnMarkup(merged, { withChurch: true });
-  assert.match(out, /Rendered for this site from/);
+  assert.match(out, /Translated for this site from/);
   assert.match(out, /saint\.gr/, "the Greek original it was made from");
   assert.match(out, /pravoslavie\.ru/, 'and the Slavonic one beside it');
   assert.match(out, /Greek · Russian/, 'over one text, named for both calendars');

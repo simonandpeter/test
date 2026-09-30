@@ -526,7 +526,7 @@ test('the hymns Orloff does not print are never lent his words', async ({ page }
   const hymns = page.locator('[data-hymns-box]');
   await expect(hymns).toContainText('Thy martyrs, O Lord');
   await expect(hymns).not.toContainText('Thy martyr, O Lord');
-  await expect(hymns.locator('.hymn-source').first()).toContainText('Rendered for this site');
+  await expect(hymns.locator('.hymn-source').first()).toContainText('Translated for this site');
   await expect(hymns.locator('.hymn-source').first()).not.toContainText('Orloff');
 
   // And a Russian reader still meets the Slavonic the corpus recorded.
@@ -1537,7 +1537,7 @@ test('a rendering made here says so, where a citation names its book', async ({ 
   // The English is there, in English, and it says who made it.
   await expect(own.first().locator('.hymn-text')).toHaveAttribute('lang', 'en');
   await expect(own.first().locator('.hymn-text')).toContainText('noetic stars');
-  await expect(own.first().locator('.hymn-source')).toContainText('Rendered for this site');
+  await expect(own.first().locator('.hymn-source')).toContainText('Translated for this site');
   /*
    * **And which text it was made from** (author, 2026-09-24: the rendering
    * "doesnt list the original thing it was translated from"). This asserted
@@ -1545,10 +1545,10 @@ test('a rendering made here says so, where a citation names its book', async ({ 
    * has no book and so nothing to cite. It has no *book*; it has an original,
    * and a translation nobody can put beside its source is a claim the reader
    * cannot check. The distinction the test exists for is unchanged and is
-   * carried by the words: `Rendered for this site from` against `Text from`,
+   * carried by the words: `Translated for this site from` against `Text from`,
    * and Mamas below still names Orloff.
    */
-  await expect(own.first().locator('.hymn-source')).toContainText('Rendered for this site from');
+  await expect(own.first().locator('.hymn-source')).toContainText('Translated for this site from');
   await expect(own.first().locator('.hymn-source a')).toHaveCount(1);
   await expect(own.first().locator('.hymn-source a')).toHaveAttribute('href', /pravoslavie\.ru/);
   await expect(own.first().locator('.hymn-source')).not.toContainText(/^Text from/);
