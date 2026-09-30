@@ -1,0 +1,50 @@
+{
+  "slug": "conon-martyr-5-june",
+  "display_name": "Conon (5 June)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Κόνων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Ιουνίου, «Άγιος Κόνων από τη Ρώμη», with the rank word left off. The place-phrase «από τη Ρώμη» is left off with the rank word."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Ιουνίου — «Άγιος Κόνων από τη Ρώμη»",
+        "url": "https://www.saint.gr/06/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Ιουνίου εκάστου έτους», the same day as the listing, and says outright that nothing more is known: «Δεν έχουμε άλλες λεπτομέρειες για τον βίο του Αγίου». That is a want of knowledge and not saint.gr's asterisked refusal to vouch for an entry; the page carries no asterisk and no «Δεν είναι διασταυρωμένη» sentence. He is none of the corpus's three other Conons — of Isauria and the Gardener, both on 5 March, and of Penthucla on 19 February: saint.gr keeps this man alone on 5 June, from Rome, and drowned in the sea. The page gives no year and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

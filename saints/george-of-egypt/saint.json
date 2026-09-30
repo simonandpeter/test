@@ -45,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Ιουνίου — «Άγιοι Δέκα Μάρτυρες εν Αιγύπτω»",
+        "url": "https://www.saint.gr/06/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Ιουνίου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row, and carries the whole company on one page under the day's line «Άγιοι Δέκα Μάρτυρες εν Αιγύπτω», with a head line for each of the ten: Μαρκιανός, Νίκανδρος, Απόλλων, Λεωνίδης, Γοργίας, Ειρήνη, Σελληνιάδα, Άρειος, Υπερέχιος, Παμβών. The account matches the folder's: they were denounced to the idolatrous eparch of Alexandria, confessed boldly, and were condemned to die of hunger and thirst, left naked days on end in the cold of winter while the soldiers ate and drank in front of them, and died unshaken. The Greek says in so many words that the company held women — the eparch hoped to frighten «τουλάχιστον τις γυναίκες» into sacrificing, and «άνδρες και γυναίκες, πέθαναν απαρασάλευτοι» — and it puts the feminine article on three of the ten names. The corpus reads all ten as men, after doxologia; that disagreement is recorded here and nothing is changed on it. No hymn is printed. **No Greek name form is stored on this folder.** The Greek list and the Romanian list each hold exactly ten names and eight of them answer to each other plainly, but the two that remain do not: saint.gr's «Γοργιας» and «Ειρηνη» stand where doxologia has Gheorghe and Irineu, and Ειρήνη is a woman's name with the feminine article on it. Pairing the remaining two by elimination would be deciding a name form, which is not a reader's to decide, so this folder takes the Greek day and no Greek name, and the question is left open in the report."
     },
     {
       "church": "serbian",

@@ -6,6 +6,11 @@
       "form": "Dorotei",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 iunie, «Sfântul Sfințit Mucenic Dorotei, Episcopul Tirului»."
+    },
+    {
+      "form": "Δωρόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Ιουνίου, «Άγιος Δωρόθεος Ιερομάρτυρας επίσκοπος Τύρου», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Ιουνίου — «Άγιος Δωρόθεος Ιερομάρτυρας επίσκοπος Τύρου»",
+        "url": "https://www.saint.gr/06/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Ιουνίου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row, and dates him «(255 - 362)». The same day's listing carries a second entry, «Όσιος Θεόδωρος επίσκοπος Τύρου» (`/1822/`), whose page carries saint.gr's asterisk and which says of itself that its life «μοιάζει αρκετά με τον βίο του Αγίου Δωροθέου επισκόπου Τύρου που εορτάζει και αυτός στις 5 Ιουνίου» — that it resembles this man's life closely. That entry is refused on the asterisk and no folder or row is made from it, and nothing of it is brought over here. saint.gr prints three apolytikia, three kontakia, two megalynaria and an oikos for Dorotheus; the first apolytikion is taken."
     },
     {
       "church": "serbian",
@@ -61,9 +76,42 @@
         "text": "A sharer of their ways and a successor to the thrones of the apostles, thou didst find in action, O God-inspired, a way to rise to the contemplation of things on high. Therefore, rightly teaching the word of truth and enduring in the faith unto blood, hieromartyr Dorotheus, pray Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὡς δώρημα τέλειον, ἐκ τοῦ τῶν φώτων Πατρός, σοφίας τὴν ἔλλαμψιν, ὡς Ἱεράρχης σοφός, ἐδέξω Δωρόθεε• ὅθεν καὶ πλεονάσας, τὸν σὸν τάλαντον μάκαρ, ἤθλησας ὑπὲρ φύσιν, βαθυτάτω ἐν γήρᾳ, πρεσβεύων Ἱερομάρτυς, ὑπὲρ τῶν ψυχῶν ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε, the first of three apolytikia on the page of «Άγιος Δωρόθεος Ιερομάρτυρας επίσκοπος Τύρου»",
+        "url": "https://www.saint.gr/1813/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a perfect gift from the Father of lights you received the shining of wisdom, O Dorotheus, being a wise hierarch; and so, having multiplied your talent, blessed one, you contended beyond nature in the deepest old age, interceding, O hieromartyr, for our souls.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 255,
+      "latest": 255,
+      "display": "255",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Δωροθεος Ιερομαρτυρας Επισκοπος Τυρου (255 - 362)», and the body gives his age at death: «τον σκότωσαν το 362 μ.Χ. ... Τότε ο Δωρόθεος ήταν 107 χρονών»."
+    },
+    "death": {
+      "earliest": 362,
+      "latest": 362,
+      "display": "362",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι ειδωλολάτρες, όμως, που ήταν προστατευόμενοι αυτού του αυτοκράτορα, έπιασαν το Δωρόθεο και αφού τον βασάνισαν ανελέητα τον σκότωσαν το 362 μ.Χ.»"
+    }
   }
 }

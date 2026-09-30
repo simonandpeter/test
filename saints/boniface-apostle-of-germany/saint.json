@@ -6,6 +6,11 @@
       "form": "Bonifatie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 iunie, «Sfântul Bonifatie, Apostolul Germaniei»."
+    },
+    {
+      "form": "Βονιφάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's life page for 5 Ιουνίου, which gives the Greek form beside the Latin one the day's line uses: «Ο Άγιος Boniface (Βονιφάτιος) γεννήθηκε στην Αγγλία, στο Κρέντιτον του Ντέβονσαϊρ το 672 μ.Χ. και το βαπτιστικό του όνομα ήταν Βινφρίδος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -53,8 +58,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Ιουνίου — «Άγιος Boniface»",
+        "url": "https://www.saint.gr/06/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Ιουνίου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row, and it is plainly the same man: born at Crediton in Devonshire in 672, baptised Winfrid, sent into Germany with the leave of Gregory II, archbishop and primate of the German Church, killed with his companions in eastern Frisia on 5 June. The Greek gives the year of his death as 755 rather than the folder's 754 or 755 — «Στις 5 Ιουνίου του 755 μ.Χ., παραμονή της Πεντηκοστής» — and the folder's `dates` already carry that pair, so they are left as they stand. The page also carries a repose in 755 at Vienne in France in the middle of its narrative, in the paragraph about Carloman the monk, which belongs to Carloman and not to Boniface; it is not brought over. It counts his company at fifty-two — the bishop Eoban, three priests, three deacons, four monks and forty laymen. The day's line and the page head both print the name in Latin letters, «Άγιος Boniface». No hymn is printed."
     },
     {
       "church": "serbian",

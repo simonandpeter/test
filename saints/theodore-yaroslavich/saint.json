@@ -1,0 +1,62 @@
+{
+  "slug": "theodore-yaroslavich",
+  "display_name": "Theodore Yaroslavich",
+  "sex": "male",
+  "types": [
+    "prince"
+  ],
+  "names": [
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Ιουνίου, «Άγιος Θεόδωρος Γιάροσλαβ ο Δούκας», with the rank word left off. The patronymic and the rank in the day's line, «Γιάροσλαβ ο Δούκας», are left off the stored form."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1218,
+      "latest": 1218,
+      "display": "1218",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Θεοδωρος Γιαροσλαβ ο Δουκας (1218 - ;)», and the body repeats it: «γεννήθηκε το 1218 μ.Χ.» The page gives no year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Ιουνίου — «Άγιος Θεόδωρος Γιάροσλαβ ο Δούκας»",
+        "url": "https://www.saint.gr/06/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Ιουνίου εκάστου έτους», the same day as the listing. Its whole life is one sentence. He is not the corpus's `theodore-prince-of-yaroslavl`, whose Greek row is already venerated on 19 Σεπτεμβρίου and who is the fourteenth-century prince of Yaroslavl with his two sons: saint.gr's man here is the elder brother of Alexander Nevsky, born 1218, and «Γιάροσλαβ» in the day's line is his father's name and not a city. The page gives no year of death, no place and no manner of death, and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "alexander-nevsky"
+  ]
+}

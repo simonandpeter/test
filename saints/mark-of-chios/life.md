@@ -1,0 +1,11 @@
+# Mark of Chios
+
+saint.gr says he was born at Smyrna; his father came of Thessalonica and was called Hadji Konstantis, his mother of Smyrna and was called Maria. He married in 1788, but at Ephesus he became entangled with another Christian woman, and one day the two were taken in the act. Before the judge the saint and the woman both denied their faith.
+
+Mark felt the pangs of conscience for his apostasy quickly. He went with tears and confessed to a spiritual father, who helped the two of them to get away to Smyrna; from there they took ship for Trieste and in 1792 landed at Venice, where they were anointed with holy chrism, communicated and were married. Afterwards Mark wandered through various places and resolved to be martyred for the Christian faith, and he went back to Chios and from there to Ephesus.
+
+In that city he met his spiritual father and confessed his longing to him, but the father turned him from it: the new church was being built, and after the recent martyrdom of the new-martyr George the Turks were much enraged and would pull the church down. So the martyr was obliged to return to Chios. There, having prayed and communicated of the immaculate mysteries, he went to the tribunal and preached his Christian faith with courage. In spite of the judge's flatteries he was not to be talked round, and they shut him in the prison, where he suffered hard and pitiless tortures.
+
+When he was brought before the judge a second time he confessed Christ again; the Turks in their rage threw him down the stairs and shut him up once more, and tortured him this time still more horribly. But Mark, instead of murmuring, sang contentedly. When the Christians of Chios learned of the martyr's patience they began to fast and pray to God to strengthen him in his contest. Having communicated again inside the prison, he confessed Christ a third time before the judge. At the last they led him to the place of execution and beheaded him, on 5 June 1801, a Wednesday, at two in the morning, in Chios, and all the Christians of the island sang hymns of thanksgiving to God for his bright witness.
+
+*After saint.gr's calendar for 5 Ιουνίου — [the day](https://www.saint.gr/06/05/index.aspx) and [the life](https://www.saint.gr/1820/saint.aspx); read 30 September 2026.*

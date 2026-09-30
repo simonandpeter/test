@@ -1,0 +1,60 @@
+{
+  "slug": "mark-of-chios",
+  "display_name": "Mark of Chios",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μάρκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Ιουνίου, «Άγιος Μάρκος ο νεομάρτυρας o «ἐν Χίῳ»», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1801,
+      "latest": 1801,
+      "display": "1801",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Μαρκος ο Νεομαρτυρας O «εν Χιω» (; - 1801)», and the body gives the day and the hour: «τον αποκεφάλισαν στις 5 Ιουνίου 1801 μ.Χ., ημέρα Τετάρτη και ώρα 02.00 το πρωί στη Χίο». It gives no year of birth; it dates his marriage to 1788 and his landing at Venice to 1792."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Ιουνίου — «Άγιος Μάρκος ο νεομάρτυρας o «ἐν Χίῳ»»",
+        "url": "https://www.saint.gr/06/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Ιουνίου εκάστου έτους», the same day as the listing, and records where a portion of his relic is: «Απότμημα του Ιερού Λειψάνου του Αγίου βρίσκεται στη Μητρόπολη Χίου». It prints an apolytikion, two kontakia, two megalynaria, an oikos and a kathisma; the apolytikion is taken."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
