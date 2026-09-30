@@ -1,0 +1,67 @@
+{
+  "slug": "niphon-of-novgorod",
+  "display_name": "Niphon of Novgorod",
+  "sex": "male",
+  "office": "Bishop of Novgorod",
+  "types": [
+    "hierarch",
+    "bishop",
+    "monk",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Νήφων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Απριλίου, «Όσιος Νήφων ο Ρώσος ο θαυματουργός», with the rank word and the two epithets left off."
+    }
+  ],
+  "related": [
+    "john-of-novgorod",
+    "theodosius-of-the-kyiv-caves"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1156,
+      "latest": 1156,
+      "display": "1156",
+      "basis": "traditional",
+      "note": "saint.gr: «Δεκατρείς ημέρες μετά, το Σάββατο της Διακαινησίμου του έτους 1156 μ.Χ., κοιμήθηκε με ειρήνη και ενταφιάσθηκε στη μονή των Σπηλαίων», and the page's heading has «Οσιος Νηφων ο Ρωσος ο Θαυματουργος (; - 1156)». The page gives no birth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Απριλίου — «Όσιος Νήφων ο Ρώσος ο θαυματουργός»",
+        "url": "https://www.saint.gr/04/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1156)». The day of his falling asleep the page gives is not 8 April but «το Σάββατο της Διακαινησίμου», Bright Saturday of that year, which is a moveable day and is recorded here rather than held. The day's line calls him ο Ρώσος and ο θαυματουργός and gives him no see; Novgorod comes from the page's own prose, which says he was elected to succeed bishop John there in 1130. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "pausilypus-of-heraclea",
+  "display_name": "Pausilypus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Παυσίλυπος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Απριλίου, «Άγιος Παυσίλυπος ο εν Ηρακλεία της Θράκης αθλήσας», with the rank word and the clause naming where he contended left off. The page's own body adds a second form of the name, «(ή Παυσολύπιος)»."
+    },
+    {
+      "form": "Παυσολύπιος",
+      "lang": "el",
+      "note": "The alternative form saint.gr prints in the body of his page for 8 Απριλίου: «Ο Άγιος Μάρτυς Παυσίλυπος (ή Παυσολύπιος)»."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Απριλίου — «Άγιος Παυσίλυπος ο εν Ηρακλεία της Θράκης αθλήσας»",
+        "url": "https://www.saint.gr/04/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Απριλίου εκάστου έτους», the same day as the listing. It gives no year, only «στα χρόνια του βασιλιά Αδριανού (117-138 μ.Χ.)», and no `dates` were taken from a reign. The day's line puts his contest at Heraclea in Thrace; the page's body names only Rome, where he was born, and the eparch of Europe, Practus, and never names Heraclea, so `locations` were left out. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

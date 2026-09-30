@@ -6,6 +6,11 @@
       "form": "Agav",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 aprilie, «Sfântul Apostol Agav»."
+    },
+    {
+      "form": "Άγαβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Απριλίου, «Άγιοι Άγαβος, Ρούφος, Φλέγων και Ασύγκριτος από τους 70 Αποστόλους», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Απριλίου — «Άγιοι Άγαβος, Ρούφος, Φλέγων και Ασύγκριτος από τους 70 Αποστόλους»",
+        "url": "https://www.saint.gr/04/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Απριλίου εκάστου έτους», the same day as the listing, and gives no years for any of the four. It carries a note of its own — «Σε αρκετά συναξάρια, μαζί με τους παραπάνω αποστόλους εορτάζονται και οι Απόστολοι από τους Εβδομήκοντα Ερμής και Ηρωδίων» — and its two proper hymns name six apostles, but saint.gr's own 8 April listing names only these four, and the page gives Hermes 5 Νοεμβρίου and 8 Μαρτίου and Herodion 10 Νοεμβρίου and 28 Μαρτίου; so no Greek row was drafted for those two from this day. The couplet over Agabus calls him ὁ Προφηταπόστολος, the prophet-apostle."
     },
     {
       "church": "serbian",
@@ -66,6 +81,56 @@
       },
       "english": {
         "text": "O holy apostles, pray the merciful God to grant our souls forgiveness of sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Ἀπόστολοι ἅγιοι, πρεσβεύσατε τῷ ἐλεήμονι Θεῷ ἵνα πταισμάτων ἄφεσιν, παράσχῃ ταῖς ψυχαῖς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος γ’, on the page of Άγιοι Άγαβος, Ρούφος, Φλέγων και Ασύγκριτος. This is the common apolytikion of apostles, naming nobody; the page prints it under their names, so it is copied whole as the page has it.",
+        "url": "https://www.saint.gr/207/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy apostles, intercede with the merciful God, that he grant our souls forgiveness of our offences.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Χορὸς Ἀγγελικός.",
+      "text": "Ἐξάριθμος χορός, τῶν σοφῶν Ἀποστόλων, ὑμνείσθω ἱερῶς, μελωδίαις ᾀσμάτων, Ἐρμᾶς καὶ Ἀσύγκριτος, Ἠρωδίων καὶ Ἄγαβος, σὺν τῷ Φλέγωντι, καὶ τῷ θεόφρονι Ρούφω, τὴν Τριάδα γάρ, διηνεκῶς δυσωπούσιν, ὑπὲρ τῶν ψυχῶν ἠμῶν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Χορὸς Ἀγγελικός, on the page of Άγιοι Άγαβος, Ρούφος, Φλέγων και Ασύγκριτος. It is the proper of the company and names six apostles, the four the day lists and Hermas and Herodion with them.",
+        "url": "https://www.saint.gr/207/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let the choir of six, the wise apostles, be hymned in holiness with melodies of song — Hermas and Asyncritus, Herodion and Agabus, with Phlegon and with godly-minded Rufus; for they entreat the Trinity unceasingly for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν.",
+      "text": "Ὡς μύσται Χριστοῦ, καὶ Ἀποστόλων σύσκηνοι, ἐν πάσῃ τῇ γῇ, τὴν τούτου συγκατάβασιν, Μαθηταί ἑξάριθμοι, ὡς λαμπάς ἑξάφωτος φάναντες, ἐλύσατε σκότος δεινόν, πυρσεύοντες πᾶσιν, ἀληθείας τὸ φῶς.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν, on the page of Άγιοι Άγαβος, Ρούφος, Φλέγων και Ασύγκριτος. It is the proper of the company and addresses six disciples together.",
+        "url": "https://www.saint.gr/207/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As those initiated into Christ and sharers of the apostles' tent, ye six disciples, shining in all the earth like a lamp of six lights, made known his condescension and broke up the dreadful darkness, kindling for all the light of truth.",
         "rendered": "site"
       }
     }

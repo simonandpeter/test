@@ -1,0 +1,61 @@
+{
+  "slug": "amandus-of-como",
+  "display_name": "Amandus of Como",
+  "sex": "male",
+  "office": "Bishop of Como",
+  "types": [
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Αμάνδος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Απριλίου, «Άγιος Αμάνδος», with the rank word left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 440,
+      "latest": 440,
+      "display": "440",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Αμάνδος ήταν Επίσκοπος της πόλεως Κόμο της Ιταλίας και κοιμήθηκε με ειρήνη το έτος 440 μ.Χ.», and the page's heading has «Αγιος Αμανδος (; - 440)». The page gives no birth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Απριλίου — «Άγιος Αμάνδος»",
+        "url": "https://www.saint.gr/04/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 440)». The whole body of the page is one sentence; it prints no Greek form of the city beyond «Κόμο», no couplet, no relic and no hymn, and the day's line gives him no see at all."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

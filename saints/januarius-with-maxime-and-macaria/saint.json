@@ -1,0 +1,54 @@
+{
+  "slug": "januarius-with-maxime-and-macaria",
+  "display_name": "Januarius, with Maxime and Macaria",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιανουάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Απριλίου, «Άγιοι Ιανουάριος, Μαξίμη και Μακαρία οι Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "related": [
+    "maxime-with-januarius-and-macaria",
+    "macaria-with-januarius-and-maxime"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Απριλίου — «Άγιοι Ιανουάριος, Μαξίμη και Μακαρία οι Μάρτυρες»",
+        "url": "https://www.saint.gr/04/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Απριλίου εκάστου έτους», the same day as the listing. Its whole body is one sentence and it gives no year, no city and no emperor, so there is no `dates` object and no `locations`. Three names in one line, so three folders. Not the Januarius the corpus already keeps with a Greek row on 30 Αυγούστου, who is the presbyter of the company of bishop Felix: saint.gr prints the two as separate entries on two days, and the settled rule is that two entries on one calendar are two commemorations."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "rufus-of-the-kyiv-caves",
+  "display_name": "Rufus of the Kyiv Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ρούφος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Απριλίου, «Όσιος Ρούφος εν τη Λαύρα του Κιέβου ασκήσαντος», with the rank word and the clause naming where he lived the ascetic life left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ρούφος έζησε τον 14ο αιώνα μ.Χ. Διακρίθηκε για την υπακοή του και δοξάστηκε σαν λάτρης της εργασίας και της νηστείας». The page gives no year of birth or of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Απριλίου — «Όσιος Ρούφος εν τη Λαύρα του Κιέβου ασκήσαντος»",
+        "url": "https://www.saint.gr/04/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Απριλίου εκάστου έτους», the same day as the listing. Its whole body is two sentences. He is not the Apostle Rufus of Thebes whom the same 8 April page keeps and whom the corpus already holds, nor any of the four other Rufuses in the corpus, all of them martyrs of the first centuries: this one is a fourteenth-century monk of the Lavra of the Caves at Kyiv, which is how the day's own line names him. The page prints no couplet, no relic and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

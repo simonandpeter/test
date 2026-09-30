@@ -1,0 +1,61 @@
+{
+  "slug": "perpetuus-of-tours",
+  "display_name": "Perpetuus of Tours",
+  "sex": "male",
+  "office": "Bishop of Tours",
+  "types": [
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Περπέτουος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Απριλίου, «Άγιος Περπέτουος», with the rank word left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 490,
+      "latest": 490,
+      "display": "490",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 490 μ.Χ.», and the page's heading has «Αγιος Περπετουος (; - 490)». The page gives no birth year; the only other year on it is 460, the year it says he was ordained bishop of Tours."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Απριλίου — «Άγιος Περπέτουος»",
+        "url": "https://www.saint.gr/04/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 490)». The day's line gives him no see; Tours comes from the page's own sentence, «χειροτονήθηκε Επίσκοπος της γαλλικής πόλεως της Τουρώνης το έτος 460 μ.Χ.». The page prints no couplet, no relic list and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

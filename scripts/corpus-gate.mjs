@@ -115,6 +115,20 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ρουφοσ rufus-apostle-of-thebes rufus-of-the-kyiv-caves rufus-son-of-paul-and-tatta rufus-the-martyr-8-september':
+    'Four men, and two of them are on the Greek 8 April as two entries: Rufus the Apostle of Thebes, whom the Romanian keeps there too, and Rufus of the Kyiv Caves. The others are the son of Paul and Tatta on 25 September and the martyr of 8 September.',
+  'μαξιμη maxima-wife-of-montanus maxime-with-januarius-and-macaria':
+    'Two women: Maxima the wife of Montanus on 26 March and the Maxime the 8 April page names with Januarius and Macaria.',
+  'ακακιοσ acacius-of-amida acacius-of-latros acacius-of-melitene acacius-of-the-forty-martyrs acacius-of-tver acacius-the-executioner':
+    'Six now. The new one is Acacius of Amida on 9 April; the others are read in the el-03-06 entry for this name form, where two stand on 6 March.',
+  'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-kalita john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kazan john-of-lycopolis john-of-manglisi john-of-rouphinianai john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-well john-of-yuryevets john-philosopher-of-georgia john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr':
+    'Thirty-two now. The new one is John the Shipmaster of Kos on 8 April; the others are read in the el-04-01 entry for this name form.',
+  'januarius macaria maxime januarius-with-maxime-and-macaria macaria-with-januarius-and-maxime maxime-with-januarius-and-macaria':
+    'The three the 8 April page names together, each named after the others, which is what folds them.',
+  'ιανουαριοσ januarius-the-presbyter januarius-with-maxime-and-macaria':
+    'Two men: the presbyter on 30 August and the Januarius the 8 April page names with Maxime and Macaria.',
+  'αμανδοσ amandus-of-como amandus-of-maastricht':
+    'Two men: Como on 8 April and Maastricht on 6 February.',
   'ρουφινοσ rufinus-of-rome rufinus-the-deacon':
     'Two men: Rufinus of Rome on 28 February and Rufinus the Deacon on 7 April.',
   'λευκιοσ leucius-companion-of-peter leucius-of-volokolamsk':

@@ -7,6 +7,11 @@
       "form": "Celestin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 aprilie, «Sfântul Ierarh Celestin, episcopul Romei»."
+    },
+    {
+      "form": "Κελεστίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Απριλίου, «Όσιος Κελεστίνος Πάπας Ρώμης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Απριλίου — «Όσιος Κελεστίνος Πάπας Ρώμης»",
+        "url": "https://www.saint.gr/04/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 432)». The day of his death it gives is not 8 April but «την 26η ή 27η Ιουλίου, κατά την πιο πιθανή γνώμη», 26 or 27 July by the most probable opinion — a reading recorded here, not a second feast. It gives his father's name as Priscus and his accession as 422, after the death of Pope Boniface. The page prints no hymn."
     },
     {
       "church": "serbian",
@@ -47,5 +62,20 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": null,
+      "latest": null,
+      "display": null,
+      "basis": "unknown"
+    },
+    "death": {
+      "earliest": 432,
+      "latest": 432,
+      "display": "432",
+      "basis": "traditional",
+      "note": "saint.gr: «Πέθανε, όταν αυτοκράτορας ήταν ο Θεοδόσιος ο Β' το 432 μ.Χ. την 26η ή 27η Ιουλίου, κατά την πιο πιθανή γνώμη», and the page's heading has «Οσιος Κελεστινος Παπας Ρωμης (; - 432)». The page gives no birth year."
+    }
   }
 }

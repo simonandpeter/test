@@ -1,0 +1,63 @@
+{
+  "slug": "john-the-shipmaster-of-kos",
+  "display_name": "John the Shipmaster of Kos",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Απριλίου, «Άγιος Ιωάννης ο Ναύκληρος», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [
+    "gerasimos-of-little-st-annes"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1669,
+      "latest": 1669,
+      "display": "1669",
+      "basis": "traditional",
+      "note": "saint.gr: «Έτσι, μ' αυτόν τον τρόπο, στις 8 Απριλίου 1669 μ.Χ., μαρτύρησε ο Άγιος αυτός νεομάρτυρας της Κω», and the page's heading has «Αγιος Ιωαννης ο Ναυκληρος (; - 1669)». The page gives no birth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Απριλίου — «Άγιος Ιωάννης ο Ναύκληρος»",
+        "url": "https://www.saint.gr/04/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1669)»; the day of the martyrdom and the feast are the same day in the page's own sentence. It says the service for him was composed by Gerasimos Mikragiannanitis, and that the historic chapel of John the Forerunner on Kos was renamed for him, as was the street leading to it. The page prints no hymn of its own."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

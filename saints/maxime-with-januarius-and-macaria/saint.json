@@ -1,0 +1,54 @@
+{
+  "slug": "maxime-with-januarius-and-macaria",
+  "display_name": "Maxime, with Januarius and Macaria",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μαξίμη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Απριλίου, «Άγιοι Ιανουάριος, Μαξίμη και Μακαρία οι Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "related": [
+    "januarius-with-maxime-and-macaria",
+    "macaria-with-januarius-and-maxime"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Απριλίου — «Άγιοι Ιανουάριος, Μαξίμη και Μακαρία οι Μάρτυρες»",
+        "url": "https://www.saint.gr/04/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Απριλίου εκάστου έτους», the same day as the listing. Its whole body is one sentence and it gives no year, no city and no emperor, so there is no `dates` object and no `locations`. The page heads her Μαξίμη and glosses the masculine Μάξιμος under it. Not the Maxima the corpus already keeps, who is the wife of the presbyter Montanus of Singidunum, drowned with him on the Romanian 26 March 304: that woman's place, day and companion are all different, and this company is in Africa."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
