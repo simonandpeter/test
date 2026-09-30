@@ -1,0 +1,54 @@
+{
+  "slug": "bassus-companion-of-antony",
+  "display_name": "Bassus, companion of Antony",
+  "names": [
+    {
+      "form": "Βάσσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Άγιοι Βάσσιος, Αντώνιος και Πρωτόλικος», with the rank word left off; the life page heads him «Αγιος Βάσσιος» alone."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Φεβρουαρίου — «Άγιοι Βάσσιος, Αντώνιος και Πρωτόλικος»",
+        "url": "https://www.saint.gr/02/14/index.aspx",
+        "year": 2026
+      },
+      "note": "One page for the three of them, which says only that they were martyred at Alexandria by being thrown into the sea. It prints no year and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "antony-companion-of-bassus",
+    "protolicus-companion-of-bassus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

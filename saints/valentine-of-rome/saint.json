@@ -1,0 +1,65 @@
+{
+  "slug": "valentine-of-rome",
+  "display_name": "Valentine of Rome",
+  "names": [
+    {
+      "form": "Ουαλεντίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Άγιος Ουαλεντίνος ο Ιερομάρτυρας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Φεβρουαρίου — «Άγιος Ουαλεντίνος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/02/14/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr keeps a second Valentine on the same day, the bishop of Terni, on a page of his own; this one is the presbyter. The page of Proclus, Apollonius and Ephebius points back to him — «βλέπε ίδια ημέρα», see the same day — as the man whose relic they were burying when they were taken."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 41,
+      "latest": 54,
+      "display": "under the emperor Claudius",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε στη Ρώμη επί αυτοκράτορα Κλαυδίου (41 - 54 μ.Χ.)». The interval is the reign the page itself prints; it is the page's reckoning of which Claudius, not a finding."
+    }
+  },
+  "related": [
+    "proclus-companion-of-apollonius",
+    "apollonius-companion-of-proclus",
+    "ephebius-companion-of-proclus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

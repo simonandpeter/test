@@ -1,0 +1,62 @@
+{
+  "slug": "auxentius-of-kartilio",
+  "display_name": "Auxentius of Kartilio",
+  "names": [
+    {
+      "form": "Αυξέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Όσιος Αυξέντιος ο εν Καρτιλίω ασκήσας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "deacon",
+    "ascetic",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Φεβρουαρίου — «Όσιος Αυξέντιος ο εν Καρτιλίω ασκήσας»",
+        "url": "https://www.saint.gr/02/14/index.aspx",
+        "year": 2026
+      },
+      "note": "His page makes him spiritual father to Patriarch Cyril V of Constantinople and the leader of the party that held for the rebaptism of converts, and says his memory is kept with splendour at Stavros in Chalkidiki, where a portion of his relic was carried in 1922 by refugees uprooted from Asia Minor."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1701,
+      "latest": 1725,
+      "display": "early 18th century",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην Άνδρο στις αρχές του 18ου αιώνα μ.Χ.» — the page gives the quarter-century and no year, and the interval is that and no more. It gives no year for his death."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

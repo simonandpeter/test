@@ -115,6 +115,24 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ουαλεντινοσ valentine-of-interamna valentine-of-rome':
+    'two men, and the second is a reader identity call the author should look at. saint.gr keeps Valentine of Rome on 14 Φεβρουαρίου, dated only «under the emperor Claudius» — which its own page gives as 41 to 54, recorded as the source printed it and not corrected. The other row went onto valentine-of-interamna, whose Romanian day is 30 iulie, on the reading that Terni is Interamna and the office matches; that identification is the readers and is flagged in ro-run/FINDINGS.md.',
+  'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-of-corinth nicholas-of-japan nicholas-of-spetses nicholas-of-trebizond nicholas-of-valaam nicholas-the-studite':
+    'seven now, and two arrive on this 14 Φεβρουαρίου: Nicholas of Corinth, dead 1554, whom the Romanian calendar keeps on the day too, and Nicholas of Trebizond, dead 1920. The other five are read in the el-02-04 entry for this name form.',
+  'γεωργιοσ george-konissky george-of-alikianos george-of-develtos george-of-kratovo george-of-megara george-of-vladimir george-paizanos-of-mytilene george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian':
+    'eleven now. The new one is George Paizanos of Mytilene, a new-martyr dead 1693, kept on 14 Φεβρουαρίου; the other ten are read in the el-02-13 entry for this name form. He is not george-the-iberian-2-january, the other new-martyr at Mytilene, whose death the page reads as 1770 or 1777 — a century apart on two days.',
+  'αυξεντιοσ auxentius-of-bithynia auxentius-of-kartilio auxentius-of-vella':
+    'three men, and two of them are on this 14 Φεβρουαρίου: Auxentius of Bithynia, dead between 470 and 472, whom the Romanian calendar keeps on the day too, and Auxentius of Kartilio, whose page gives no year. The third is Auxentius of Vella, written in this wave on 25 Ιανουαρίου.',
+  'απολλωνιοσ apollonius-companion-of-proclus apollonius-the-anchorite':
+    'two men. The new one is the Apollonius of the 14 Φεβρουαρίου line with Proclus; the corpus keeps Apollonius the Anchorite, written in this wave on 21 Ιανουαρίου. Neither page gives a year and neither names the other.',
+  'apollonius companion proclus apollonius-companion-of-proclus proclus-companion-of-apollonius':
+    'one line folded onto itself. saint.gr names Proclus and Apollonius together on 14 Φεβρουαρίου and the synaxis ruling makes that two folders, each display name carrying the other.',
+  'antony bassus companion antony-companion-of-bassus bassus-companion-of-antony':
+    'one line folded onto itself, the ninth of its kind in this wave. saint.gr names Bassus and Antony together on 14 Φεβρουαρίου and the synaxis ruling makes that two folders, each display name carrying the other.',
+  'αντωνιοσ anthony-of-constantinople anthony-of-georgia anthony-of-krasnokholmsk anthony-of-novgorod anthony-of-vologda anthony-of-zadonsk anthony-of-zographou anthony-the-great antonius-the-presbyter antony-companion-of-bassus antony-of-novgorod antony-son-of-john-of-syracuse antony-the-athenian':
+    'thirteen now. The new one is the Antony whom the 14 Φεβρουαρίου line names with Bassus; the other twelve are read in the el-02-10 entry for this name form, with anthony-of-constantinople, dead 901, upgraded in this wave on 12 Φεβρουαρίου — the one of the thirteen whose own page argues with itself about which Anthony the day belongs to, which is in ro-run/FINDINGS.md.',
+  'αγαθων agathon-of-alexandria agathon-of-the-desert':
+    'two men, neither with a year. saint.gr keeps Agathon of Alexandria on 14 Φεβρουαρίου and Agathon of the Desert on 8 Ιανουαρίου, both written in this wave; the cities are all either page gives to tell them by. A third Agathon, on 28 Φεβρουαρίου, carries the page own doubt-asterisk and was refused.',
   'γεωργιοσ george-konissky george-of-alikianos george-of-develtos george-of-kratovo george-of-megara george-of-vladimir george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian':
     'ten now. The new one is George Konissky, archbishop of Belorussia, kept on 13 Φεβρουαρίου; the other nine are read in the el-02-11 entry for this name form. Ten men on ten Greek days.',
   'βασιανοσ bassian-of-rostov vassian-of-uglich':

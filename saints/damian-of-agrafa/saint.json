@@ -6,6 +6,11 @@
       "form": "Damian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 februarie."
+    },
+    {
+      "form": "Δαμιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Άγιος Δαμιανός ο μοναχός», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Φεβρουαρίου — «Άγιος Δαμιανός ο μοναχός»",
+        "url": "https://www.saint.gr/02/14/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr agrees with the corpus's 1568 for the martyrdom and puts his birth at Myrichovo of Agrafa «περί το 1510 μ.Χ.» The page ends with a note against another authority's date: «Ο Άγιος Νικόδημος ο Αγιορείτης, μάλλον λαθεμένα, αναφέρει ως ημερομηνία του μαρτυρίου του, την 23η Φεβρουαρίου» — Nikodemos the Hagiorite gives 23 February, probably mistakenly. The dates already in this folder are left as they stand."
     },
     {
       "church": "serbian",
@@ -55,5 +70,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "῾Ιερεῖον προσοίσας σὲ Χριστῷ, ῞Αγιε, ἀγαλλόμενος πόθῳ, Δαμιανὲ ἱερέ, νεομαρτύρων τὸν χορὸν ἠγλάϊσας, θεοφόρε. Θρέμμα ᾿Αγράφων τὸ σεπτόν, τὴν πίστιν ἤρδευσας Χριστοῦ πυρί τε καὶ τοῖς βασάνοις. Καὶ νῦν τῷ θρόνῳ Κυρίου ὑπὲρ ἡμῶν πρεσβεύεις πάντοτε.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον, on the page of Άγιος Δαμιανός ο μοναχός. The page prints two further apolytikia, a second kontakion, a megalynarion, an oikos and a kathisma; the first apolytikion and the first kontakion are taken here.",
+        "url": "https://www.saint.gr/3701/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having offered thyself to Christ as a sacrifice, O holy one, exulting in longing, O priestly Damian, thou didst adorn the choir of the new martyrs, O God-bearer. Revered nursling of Agrafa, thou didst water the faith of Christ with fire and with torments; and now at the throne of the Lord thou dost intercede for us always.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ποθῶν ἐκ νεότητος τὴν τῶν ᾿Αγγέλων ζωήν, ἠσκήθης ἀθλούμενος τῇ Φιλοθέου μονῇ, Δαμιανὲ ὅσιε· ὅθεν τῇ ἐπινεύσει θείου Πνεύματος, πάτερ, ἤχθης τῇ Θεσσαλίᾳ, ἐκβοῶν παῤῥησίᾳ, εἰς Χριστοῦ βιοτὴν τὴν ἁγίαν προσκαλῶν τοὺς πιστοὺς καὶ εἰς θέωσιν.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, on the page of Άγιος Δαμιανός ο μοναχός. The page prints no ἦχος over this one.",
+        "url": "https://www.saint.gr/3701/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Longing from thy youth for the life of the angels, thou wast trained in contest at the monastery of Philotheou, O venerable Damian; whence at the nod of the divine Spirit, O father, thou wast led to Thessaly, crying out with boldness and calling the faithful to the holy life of Christ and to deification.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

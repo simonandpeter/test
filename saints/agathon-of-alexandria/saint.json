@@ -1,0 +1,51 @@
+{
+  "slug": "agathon-of-alexandria",
+  "display_name": "Agathon of Alexandria",
+  "names": [
+    {
+      "form": "Αγάθων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Άγιος Αγάθωνας ο Ιερομάρτυρας», with the rank words left off. The day's line spells the nominative «Αγάθωνας»; the life page heads him «Αγιος Αγαθωνας» and the body of it writes «Ο Άγιος Αγάθων», which is the form taken here."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Φεβρουαρίου — «Άγιος Αγάθωνας ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/02/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of his page is one sentence: he was a presbyter and was martyred with other Christians at Alexandria. It gives no year, no emperor, no names for the others and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

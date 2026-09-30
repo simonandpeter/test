@@ -6,6 +6,11 @@
       "form": "Maron",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 februarie."
+    },
+    {
+      "form": "Μάρων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Όσιος Μάρων», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Φεβρουαρίου — «Όσιος Μάρων»",
+        "url": "https://www.saint.gr/02/14/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr dates him only «έζησε πριν τον 5ο αιώνα μ.Χ.» — he lived before the fifth century — and puts his hermitage on a mountain top of the city of Cyrrhus of Antioch. The page prints no hymn for him."
     },
     {
       "church": "serbian",
@@ -47,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": null,
+      "latest": 400,
+      "display": "before the 5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Μάρων έζησε πριν τον 5ο αιώνα μ.Χ.» The page gives an upper bound and no lower one, so the lower bound is left open rather than guessed."
+    }
   }
 }

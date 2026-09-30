@@ -755,6 +755,7 @@ export const ro = {
     'Bishop in Heraclea': 'Episcop în Heracleea',
     'Bishop in Macedonia': 'Episcop în Macedonia',
     'Bishop in Persia': 'Episcop al Persiei',
+    'Bishop in the region of Amisos': 'Episcop în ținutul Amisosului',
     'Bishop of Aegae in Cilicia': 'Episcop de Egeea Ciliciei',
     'Bishop of Akhtala in Iberia': 'Episcop de Ahtala în Iberia',
     'Bishop of Akragas': 'Episcop de Akragas',

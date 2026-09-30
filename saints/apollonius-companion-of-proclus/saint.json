@@ -1,0 +1,55 @@
+{
+  "slug": "apollonius-companion-of-proclus",
+  "display_name": "Apollonius, companion of Proclus",
+  "names": [
+    {
+      "form": "Απολλώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Άγιοι Πρόκλος, Απολλώνιος και Εφήβιος», with the rank word left off; the life page heads him «Αγιος Απολλώνιος» alone."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Φεβρουαρίου — «Άγιοι Πρόκλος, Απολλώνιος και Εφήβιος»",
+        "url": "https://www.saint.gr/02/14/index.aspx",
+        "year": 2026
+      },
+      "note": "One page for the three of them, which says only that they were taken when they went to bury the relic of the hieromartyr Valentine, kept on the same day, and were martyred at Rome. It prints no year and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "proclus-companion-of-apollonius",
+    "ephebius-companion-of-proclus",
+    "valentine-of-rome"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

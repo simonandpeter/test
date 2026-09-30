@@ -6,6 +6,11 @@
       "form": "Nicolae din Corint",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 februarie."
+    },
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Άγιος Νικόλαος ο Νεομάρτυρας ο εξ Ιχθύος της Κορινθίας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Φεβρουαρίου — «Άγιος Νικόλαος ο Νεομάρτυρας ο εξ Ιχθύος της Κορινθίας»",
+        "url": "https://www.saint.gr/02/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line calls him «ο εξ Ιχθύος της Κορινθίας», of Ichthys in Corinthia; the life page says the village was Psari of Corinthia. It puts his head at the monastery of the Great Meteoron and says a service for him was written by the hieromonk Damaskenos, later bishop of Lite and Rendina."
     },
     {
       "church": "serbian",
@@ -45,5 +60,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1554,
+      "latest": 1554,
+      "display": "1554",
+      "basis": "attested",
+      "note": "saint.gr: «Έτσι τον έριξαν πρώτα στην πυρά και ύστερα τον αποκεφάλισαν. Ήταν το έτος 1554 μ.Χ.», and the page heads him «(; - 1554)». It sets the arrest under Suleiman I, «επί της βασιλείας του σουλτάνου Σουλεϊμάν Α' (1520 - 1566)», which contains that year."
+    }
   }
 }

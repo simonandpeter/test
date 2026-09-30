@@ -1,0 +1,54 @@
+{
+  "slug": "isaac-the-recluse-of-the-kyiv-caves",
+  "display_name": "Isaac the Recluse of the Kyiv Caves",
+  "names": [
+    {
+      "form": "Ισαάκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Όσιος Ισαάκιος ο Έγκλειστος ο εκ Ρωσίας», with the rank words left off. The page prints a by-name in brackets in the life, «ο Όσιος Ισαάκιος (Τοροπτσάνιν)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Φεβρουαρίου — «Όσιος Ισαάκιος ο Έγκλειστος ο εκ Ρωσίας»",
+        "url": "https://www.saint.gr/02/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line calls him «ο εκ Ρωσίας», the one out of Russia, and his page puts his relics in the Lavra of the Caves at Kyiv, with a part of them at the Kudin monastery of Toropets. It gives no year of any kind."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "anthony-of-the-caves"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

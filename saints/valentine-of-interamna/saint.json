@@ -7,6 +7,11 @@
       "form": "Valentin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 iulie, «Sfântul Mucenic Valentin, Episcopul Umbriei», with the rank words left off."
+    },
+    {
+      "form": "Ουαλεντίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Άγιος Ουαλεντίνος ο Ιερομάρτυρας Επίσκοπος Τέρνι», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Φεβρουαρίου — «Άγιος Ουαλεντίνος ο Ιερομάρτυρας Επίσκοπος Τέρνι»",
+        "url": "https://www.saint.gr/02/14/index.aspx",
+        "year": 2026
+      },
+      "note": "Terni is the Italian name of Interamna, and the whole of saint.gr's entry is that he was bishop of the city of Terni and was martyred at Rome — the same office as this folder's. The Greek day is 14 February and the Romanian row on this folder keeps him on 30 July; one row per church is the schema, so the two stand side by side. saint.gr keeps a second Valentine on the same 14 February, a presbyter of Rome, on a page of his own, and the two are two men."
     },
     {
       "church": "serbian",
@@ -65,5 +80,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "valentine-of-rome"
+  ]
 }

@@ -6,6 +6,11 @@
       "form": "Filimon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 februarie."
+    },
+    {
+      "form": "Φιλήμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Άγιος Φιλήμων ο Ιερομάρτυρας επίσκοπος Γάζας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Φεβρουαρίου — «Άγιος Φιλήμων ο Ιερομάρτυρας επίσκοπος Γάζας»",
+        "url": "https://www.saint.gr/02/14/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr has no life for him: «Η μνήμη του Αγίου Φιλήμωνα αναφέρεται μόνο στον Πατμιακό Κώδικα 266. Δεν έχουμε περισσότερες λεπτομέρειες για τον βίο του Αγίου» — his memory is mentioned only in Patmos Codex 266 and there are no further details. It gives no year and no hymn. This is the source saying it has nothing, not the site's asterisked doubt about the entry."
     },
     {
       "church": "serbian",

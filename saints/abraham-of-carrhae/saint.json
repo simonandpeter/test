@@ -6,6 +6,11 @@
       "form": "Avraam",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 februarie."
+    },
+    {
+      "form": "Αβραάμης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Όσιος Αβραάμης», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Φεβρουαρίου — «Όσιος Αβραάμης»",
+        "url": "https://www.saint.gr/02/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The Greek form is «Αβραάμης», which the page's distich sets against the patriarch's «Αβραάμ». It dates him «κατά τους χρόνους του αυτοκράτορα Θεοδοσίου του Μεγάλου (395 - 408 μ.Χ.)» — the years the page prints for Theodosius the Great are in fact those of Arcadius, and the disagreement is the page's own. It adds that Theodoret of Cyrrhus wrote his life."
     },
     {
       "church": "serbian",
@@ -47,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 395,
+      "latest": 408,
+      "display": "under the emperor the page calls Theodosius the Great",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Αβραάμης έζησε κατά τους χρόνους του αυτοκράτορα Θεοδοσίου του Μεγάλου (395 - 408 μ.Χ.)». The interval is the reign the page itself prints. Those years are Arcadius's and not Theodosius the Great's, who died in 395; the mismatch is recorded here and not corrected, because the source's reading is the fact."
+    }
   }
 }

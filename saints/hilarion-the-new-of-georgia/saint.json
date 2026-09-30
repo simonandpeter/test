@@ -6,6 +6,11 @@
       "form": "Ilarion cel Nou din Georgia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 februarie."
+    },
+    {
+      "form": "Ιλαρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Οσίος Ιλαρίων ο Ιβηρίτης», with the rank words left off. The page gives the name in the world separately, «το κατά κόσμον όνομά του ήταν Ιεσσαί (Ise Qanchaveli)», and Ιλαρίων as the name taken at the great habit in 1821."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Φεβρουαρίου — «Οσίος Ιλαρίων ο Ιβηρίτης»",
+        "url": "https://www.saint.gr/02/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The Greek line calls him «ο Ιβηρίτης», the Iberite, for the monastery of Iviron rather than for Georgia; the page adds that the Holy Synod of the Patriarchate of Georgia numbered him among the saints on 17 October 2002, that his name in the world was Iesse, Ise Qanchaveli, and that he died on 14 February 1864. The birth and death years already in this folder agree with it and are left as they stand."
     },
     {
       "church": "serbian",
@@ -62,5 +77,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Της ερήμου ο έρως, ισαγγέλων τα τάγματα, και της προσευχής η γλυκύτης, Ιλαρίων κατατιτρώσκει σήν ψυχήν νηστεία, αγρυπνία, προσευχή, εγγάμου βιοτήν καταλιπών, ανεδείχθης μοναζόντων, ερημιτών εγκλείστων ισοστάσιος. Δόξα τώ δεδωκότι σοι ισχύν δόξα τώ σε δυναμώσαντι δόξα τώ δωρουμένω σε ημίν πρότυπον ένθεον.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης, on the page of Οσίος Ιλαρίων ο Ιβηρίτης, signed on the page «(Ποίημα Αρχιμ. Νικόδημου Γ. Αεράκη, Ιεροκήρυκος)» — a modern composition for him, not a common. The page prints it unaccented apart from the model line, and that is how it stands here.",
+        "url": "https://www.saint.gr/3712/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The love of the desert, the ranks of those equal to the angels, and the sweetness of prayer pierce thy soul, O Hilarion: by fasting, by vigil, by prayer, having left the married life behind, thou wast shown the equal of monks, of hermits and of recluses. Glory to him who gave thee strength; glory to him who made thee strong; glory to him who bestowed thee on us as a divine pattern.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ.",
+      "text": "Της Γεωργίας τον βλαστόν τον θεοτίμητον, και τον του Αθω ερημίτην θεοφώτιστον, ευφημούμεν οι πιστοί θείοις εγκωμίοις. Αγαπήσας Ιλαρίων βίον ένθεον, ενεκλείσθης εν τώ Πύργω ευφραινόμενος όθεν κράζομεν χαίρε πάτερ ισάγγελε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ, on the page of Οσίος Ιλαρίων ο Ιβηρίτης, signed «(Ποίημα Αρχιμ. Νικόδημου Γ. Αεράκη, Ιεροκήρυκος)». The page also prints a megalynarion by the same hand, which is not taken here.",
+        "url": "https://www.saint.gr/3712/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The God-honoured shoot of Georgia, and the God-enlightened hermit of Athos, we the faithful praise with divine encomia. Having loved a life in God, O Hilarion, thou wast shut up in the Tower and didst rejoice; whence we cry: hail, father equal to the angels.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

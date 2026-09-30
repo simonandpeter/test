@@ -1,0 +1,78 @@
+{
+  "slug": "george-paizanos-of-mytilene",
+  "display_name": "George Paizanos of Mytilene",
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Άγιος Γεώργιος ο Παϊζάνος ο Νεομάρτυρας εκ Μυτιλήνης», with the rank words left off. The page keeps the by-name Παϊζάνος in the same line, «ο επικαλούμενος Παϊζάνος», the one called Paizanos."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Φεβρουαρίου — «Άγιος Γεώργιος ο Παϊζάνος ο Νεομάρτυρας εκ Μυτιλήνης»",
+        "url": "https://www.saint.gr/02/14/index.aspx",
+        "year": 2026
+      },
+      "note": "His own page adds that a portion of his relic is at the monastery of Leimonos on Lesbos, and that the birthplace is «κατά την κρατούσα παράδοση» — by the tradition that holds — rather than a documented fact."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1693,
+      "latest": 1693,
+      "display": "1693",
+      "basis": "attested",
+      "note": "saint.gr: «μαρτύρησε στην Κωνσταντινούπολη, το έτος 1693 μ.Χ.», and the page heads him «(; - 1693)» with the birth year left as a question mark."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α΄.",
+      "model": "Τον συνάναρχον Λόγον.",
+      "text": "Ἡ πληθύς τῶν Λεσβίων τέρπου καί χόρευε, καί τήν πάμφωτον μνήμην τοῦ Νεομάρτυρος Γεωργίου, τοῦ στερροῦ ὁπλίτου τίμησον, ὅτι ἐν χρόνοις χαλεποῖς ἐναθλήσας καρτερῶς ἐνίκησε τόν βελίαρ, καί νῦν ἐν πόλω πρεσβεύει ὑπέρ τῶν πίστει γεραιρόντων αὐτόν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος πλ. α΄, Τον συνάναρχον Λόγον, on the page of Άγιος Γεώργιος ο Παϊζάνος. It names him and the Lesbians, so it is his own and not a common.",
+        "url": "https://www.saint.gr/3702/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Rejoice and dance, O multitude of the Lesbians, and honour the all-radiant memory of the new martyr George, the steadfast man-at-arms; for contending stoutly in hard times he overcame Belial, and now in heaven he intercedes for those who honour him with faith.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

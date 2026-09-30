@@ -1,0 +1,68 @@
+{
+  "slug": "nicholas-of-trebizond",
+  "display_name": "Nicholas of Trebizond",
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Άγιος Νικόλαος ο Τραπεζούντιος», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop in the region of Amisos",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Φεβρουαρίου — «Άγιος Νικόλαος ο Τραπεζούντιος»",
+        "url": "https://www.saint.gr/02/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line gives him the bare epithet of Trebizond; his own page heads him «(1854 - 1920)» and makes him bishop in the region of Amisos, killed by the Turks in 1920 at sixty-six."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1854,
+      "latest": 1854,
+      "display": "1854",
+      "basis": "attested",
+      "note": "saint.gr heads his page «Αγιος Νικολαος ο Τραπεζουντιος (1854 - 1920)», and the life ends him «το έτος 1920 μ.Χ. σε ηλικία 66 ετών» — in 1920 at the age of sixty-six, which is the same reckoning."
+    },
+    "death": {
+      "earliest": 1920,
+      "latest": 1920,
+      "display": "1920",
+      "basis": "attested",
+      "note": "saint.gr: «παρέδωσε την αγία του ψυχή στον Θεό το έτος 1920 μ.Χ. σε ηλικία 66 ετών»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

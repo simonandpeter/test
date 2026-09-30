@@ -6,6 +6,11 @@
       "form": "Auxentie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 februarie."
+    },
+    {
+      "form": "Αυξέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Όσιος Αυξέντιος ὁ ἐν τῷ Ὄρει», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -34,6 +39,40 @@
         "text": "A dweller of the wilderness, an angel in the body and a worker of wonders thou wast shown to be, our God-bearing father Auxentius. By fasting, by vigil and by prayer thou didst receive heavenly gifts, and thou healest the sick and the souls of those who run to thee with faith. Glory to him who gave thee strength; glory to him who crowned thee; glory to him who works healings for all through thee.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Ὥσπερ φοῖνιξ ηὐξήνθης Πάτερ ὑψίκομος, δικαιοσύνης ἐκφέρων τοὺς ψυχοτρόφους καρπούς, σὺ γὰρ βίον ἱερὸν πολιτευσάμενος, τῆς Ἐκκλησίας στηριγμός, καὶ θαυμάτων αὐτουργός, Αὐξέντιε ἀνεδείχθης, διὰ παντὸς ἱκετεύων, ἐλεηθήναι τᾶς ψυχᾶς ἠμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον, on the page of Όσιος Αυξέντιος ὁ ἐν τῷ Ὄρει. It names him and plays on his name — ηὐξήνθης, thou didst grow — so it is his own and not a common. The readings «τᾶς ψυχᾶς ἠμῶν» are the page's own.",
+        "url": "https://www.saint.gr/3697/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a tall palm thou didst grow, O Father, bearing the soul-nourishing fruits of righteousness; for having lived a holy life thou wast shown to be a support of the Church and a worker of wonders, O Auxentius, ever entreating that our souls may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. β’.",
+      "model": "Τὴν ἐν πρεσβείαις.",
+      "text": "Κατατρυφήσας θεόφρον τῆς ἐγκρατείας, καί τάς ὀρέξεις τής σαρκός χαλινώσας, ὤφθης τῇ πίστει σου αὐξανόμενος, καί ὡς φυτόν ἐν μέσῳ τοῦ Παραδείσου ἐξήνθησας, Αὐξέντιε Πάτερ ἱερώτατε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος πλ. β’, Τὴν ἐν πρεσβείαις, on the page of Όσιος Αυξέντιος ὁ ἐν τῷ Ὄρει. The page also prints a second apolytikion, Ἦχος α’ Τοῦ λίθου σφαγισθέντος, an oikos and a kathisma; only the first apolytikion and this kontakion are taken here.",
+        "url": "https://www.saint.gr/3697/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having taken thy delight, O God-minded one, in abstinence, and having bridled the appetites of the flesh, thou wast seen to grow by thy faith, and like a plant in the midst of Paradise thou didst blossom, O Auxentius, most holy Father.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
@@ -58,8 +97,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Φεβρουαρίου — «Όσιος Αυξέντιος ὁ ἐν τῷ Ὄρει»",
+        "url": "https://www.saint.gr/02/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line calls him «ὁ ἐν τῷ Ὄρει», the one on the Mountain, which is the Oxeia Petra above Chalcedon that his page names. The page dates his repose «μεταξύ των ετών 470 - 472 μ.Χ.» and says the Synaxarion of Constantinople put his relic in the oratory of the women's monastery he founded, called Trichinaria, while his synaxis was held at the monastery of Kallistratos inside the City."
     },
     {
       "church": "serbian",
@@ -69,5 +118,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 408,
+      "latest": 451,
+      "display": "first half of the 5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησε στην Κωνσταντινούπολη επί αυτοκράτορα Θεοδοσίου Β' του Μικρού (408 - 450 μ.Χ.)», and it has him summoned to the Fourth Ecumenical Council «που συνεκλήθη το έτος 451 μ.Χ. στην Χαλκηδόνα». The interval is the reign the page prints, carried to the Council year it also prints."
+    },
+    "death": {
+      "earliest": 470,
+      "latest": 472,
+      "display": "between 470 and 472",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος κοιμήθηκε με ειρήνη μεταξύ των ετών 470 - 472 μ.Χ.» The page offers the three years as a range and the interval is that range."
+    }
   }
 }
