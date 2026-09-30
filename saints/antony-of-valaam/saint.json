@@ -1,0 +1,50 @@
+{
+  "slug": "antony-of-valaam",
+  "display_name": "Antony of Valaam",
+  "sex": "male",
+  "types": [
+    "fool-for-christ"
+  ],
+  "names": [
+    {
+      "form": "Αντώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιουνίου, «Άγιος Αντώνιος της Μονής Βαλαάμ», with the rank word left off. The monastery in the day's line, «της Μονής Βαλαάμ», is left off the stored form."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Ιουνίου — «Άγιος Αντώνιος της Μονής Βαλαάμ»",
+        "url": "https://www.saint.gr/06/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Ιουνίου εκάστου έτους», the same day as the listing. Its whole entry is two sentences, of which the second is the admission that there is no more: «Δεν έχουμε άλλες λεπτομέρειες για τον βίο του Αγίου». That is a want of knowledge and not saint.gr's asterisked refusal to vouch for an entry; the page carries no asterisk and no «Δεν είναι διασταυρωμένη» sentence. The one thing it does say of him is that he was a fool for Christ, which is what `types` holds; it gives no century, so there is no `dates` object. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

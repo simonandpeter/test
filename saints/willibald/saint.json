@@ -1,0 +1,48 @@
+{
+  "slug": "willibald",
+  "display_name": "Willibald",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Willibald",
+      "lang": "en",
+      "note": "Read out of saint.gr's line for 7 Ιουνίου, «Άγιος Willibald», which prints the name in Latin letters and gives no Greek rendering of it anywhere on the page."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Ιουνίου — «Άγιος Willibald»",
+        "url": "https://www.saint.gr/06/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Ιουνίου εκάστου έτους», the same day as the listing, and then consists of a single sentence saying that it has nothing: «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου». That is a want of knowledge and not saint.gr's asterisked refusal to vouch for an entry; the page carries no asterisk and no «Δεν είναι διασταυρωμένη» sentence. Because the page gives no rank word at all beyond «Άγιος», no `types` are set, and because it gives no century, there is no `dates` object. The same calendar's 5 Ιουνίου page, for Boniface, lists a Βιλλιβάλδος among the men Boniface called out of Britain to the German mission; **nothing here identifies the two**, that page is another day's page and this one says nothing of Germany, and the question is named in the report rather than settled in a draft. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

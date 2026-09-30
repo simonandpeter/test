@@ -1,0 +1,53 @@
+{
+  "slug": "john-companion-of-tarasius",
+  "display_name": "John, companion of Tarasius",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιουνίου, «Αγιος Ιωαννης», with the rank word left off. The day's line names the two together, «Άγιοι Ταράσιος και Ιωάννης», and the life page heads each of them separately."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Ιουνίου — «Άγιοι Ταράσιος και Ιωάννης»",
+        "url": "https://www.saint.gr/06/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Ιουνίου εκάστου έτους», the same day as the listing, and carries both men on one page with a head line for each, «Αγιος Ταρασιος» and «Αγιος Ιωαννης». Its whole life is one sentence. He is not the corpus's `tarasius-of-constantinople`, the patriarch kept on 25 February; saint.gr keeps this pair alone on 7 June. The day's listing carries a second pair of martyrs on the same day of whom one is also called John — «Άγιοι Βασιλείδης μάρτυρας Στρατιώτης και Ιωάννης ο οσιομάρτυρας» (`/494/`) — and the two Johns are two men on two pages with two different ranks, so the English forms here name each man's companion rather than the day. The page gives no year and no place, so there is no `dates` object, and it prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "tarasius-martyr-7-june"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

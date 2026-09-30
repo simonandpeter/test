@@ -1,0 +1,54 @@
+{
+  "slug": "aisia-disciple-of-pancratius",
+  "display_name": "Aisia, disciple of Pancratius",
+  "sex": "female",
+  "types": [
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Αισία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιουνίου, «Αγια Αισια», with the rank word left off. The day's line names the two together, «Αγίες Αισία και Σωσάννα», and the life page heads each of them separately. The life gives two further forms of the same name: «Αισία (ή Εσία ή Ευσέβεια)»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Ιουνίου — «Αγίες Αισία και Σωσάννα»",
+        "url": "https://www.saint.gr/06/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Ιουνίου εκάστου έτους», the same day as the listing, and carries both women on one page with a head line for each, «Αγια Αισια» and «Αγια Σωσαννα». Its whole entry is one sentence on the authority of Nikodemos the Hagiorite. The page gives no century, no manner of death and no year, so there is no `dates` object, and the rank it uses is only «Αγία». This Susanna is none of the corpus's others — of Rome, the deaconess, the mother of Nina, or the companion of Maximus, Claudius and Alexander: saint.gr keeps this pair alone on 7 June as disciples of Pancratius of Tauromenium. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "susanna-disciple-of-pancratius",
+    "pancratius-of-tauromenium"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

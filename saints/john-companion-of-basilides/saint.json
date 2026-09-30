@@ -1,0 +1,53 @@
+{
+  "slug": "john-companion-of-basilides",
+  "display_name": "John, companion of Basilides",
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιουνίου, «Αγιος Ιωαννης ο Οσιομαρτυρας», with the rank word left off. The day's line names the two together and the life page heads each of them separately."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Ιουνίου — «Άγιοι Βασιλείδης μάρτυρας Στρατιώτης και Ιωάννης ο οσιομάρτυρας»",
+        "url": "https://www.saint.gr/06/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Ιουνίου εκάστου έτους», the same day as the listing, and carries both men on one page with a head line for each, «Αγιος Βασιλειδης Μαρτυρας Στρατιωτης» and «Αγιος Ιωαννης ο Οσιομαρτυρας». Its whole entry is the sentence «Δεν έχουμε λεπτομέρειες για τον βίο των Αγίων» — we have no details of the saints' lives. That is a want of knowledge and not saint.gr's asterisked refusal to vouch for an entry; the page carries no asterisk and no «Δεν είναι διασταυρωμένη» sentence. The ranks are the only thing the day's line gives, and they differ between the two men: Basilides is «μάρτυρας Στρατιώτης» and John «ο οσιομάρτυρας». The day's listing carries a second pair on the same day of whom one is also called John — «Άγιοι Ταράσιος και Ιωάννης» (`/499/`) — and the two Johns are two men on two pages with two different ranks. Neither man is any of the corpus's existing Basilides — the companion of Bassus or the one of the ten of Crete. There is no year, so no `dates` object, and no hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "basilides-the-soldier"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

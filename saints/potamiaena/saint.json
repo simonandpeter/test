@@ -1,0 +1,60 @@
+{
+  "slug": "potamiaena",
+  "display_name": "Potamiaena of Alexandria",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Ποταμιαίνη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιουνίου, «Αγία Ποταμιαίνη», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 300,
+      "display": "late 3rd century",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Ποταμιαίνη έζησε στα τέλη του 3ου μ.Χ. αιώνα στην Αλεξάνδρεια κατά τους χρόνους του βασιλέως Mαξιμιανού». The century and its end are the page's own words; the bracket is Maximian's reign as the site dates it elsewhere on the same calendar, 285 to 305, cut at the century's end because the page says «στα τέλη του 3ου αιώνα». The page gives no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Ιουνίου — «Αγία Ποταμιαίνη»",
+        "url": "https://www.saint.gr/06/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Ιουνίου εκάστου έτους», the same day as the listing. It closes with a caution of its own, «Η αγιογραφία παρατίθεται με επιφύλαξη» — the icon is given with reservation — which is about the picture and not about the entry; the page carries no asterisk and no «Δεν είναι διασταυρωμένη» sentence. It names no judge and gives no year, and it prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

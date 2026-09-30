@@ -1,0 +1,68 @@
+{
+  "slug": "panagis-basias",
+  "display_name": "Panagis Basias",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter",
+    "fool-for-christ"
+  ],
+  "names": [
+    {
+      "form": "Παναγής",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιουνίου, «Όσιος Παναγής Μπασιάς (Παΐσιος)», with the rank word left off. The day's line gives the name he took at his ordination in brackets, «(Παΐσιος)», and the life page says it too: «χειροτονείται διάκονος και πρεσβύτερος, με το όνομα Παΐσιος». The surname Μπασιάς is printed in the same line and is kept in the English form."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1801,
+      "latest": 1801,
+      "display": "1801",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Οσιος Παναγης Μπασιας (παϊσιος) (1801 - 1888)», and the body repeats it: «γεννήθηκε στο Ληξούρι της Κεφαλληνίας, το 1801 μ.Χ.»"
+    },
+    "death": {
+      "earliest": 1888,
+      "latest": 1888,
+      "display": "1888",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Παναγής κοιμήθηκε το 1888 μ.Χ., και στην πάνδημη μετά τριήμερο κηδεία του εξεφώνησε περίφημο επικήδειο ο Μητροπολίτης Κεφαλληνίας Γερμανός Καλλιγάς.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Ιουνίου — «Όσιος Παναγής Μπασιάς (Παΐσιος)»",
+        "url": "https://www.saint.gr/06/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Ιουνίου εκάστου έτους», the same day as the listing, and names him patron of Lixouri — «Πολιούχος: Ληξούρι». It gives the two dates that belong to his relics and not to him: the translation on 6 June 1976 and the canonisation by the Ecumenical Patriarchate, by patriarchal and synodal decision, on 4 February 1986. His relics, it says, are kept in a silver case in the church of Saint Spyridon at Lixouri, where his tomb is. The page closes with a long account of one wonder, told by Gerasimos Drakopoulos on his father's authority, which is not retold here. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

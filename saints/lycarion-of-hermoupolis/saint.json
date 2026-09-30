@@ -1,0 +1,50 @@
+{
+  "slug": "lycarion-of-hermoupolis",
+  "display_name": "Lykarion of Hermoupolis",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Λυκαρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιουνίου, «Άγιος Λυκαρίων», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Ιουνίου — «Άγιος Λυκαρίων»",
+        "url": "https://www.saint.gr/06/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Ιουνίου εκάστου έτους», the same day as the listing. **There is an open identity question here and it is left open.** The corpus keeps `martha-sister-of-lykarion` and `mary-sister-of-lykarion` on 8 February, in both the Romanian and the Greek calendars, and their life says their brother was the child martyr Lykarion; the corpus keeps no folder for that brother. saint.gr's man on 7 June is from Hermoupolis in Egypt and is given a long series of tortures with no mention of sisters and no mention of his being a child, and the 8 February pair's page is a different page on a different day. Since nothing read here makes the two one man, this folder is made for the man saint.gr keeps on 7 June alone, no `related` row to the two sisters is written, and the question is named in the report. The page gives no year and no emperor, so there is no `dates` object, and it prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
