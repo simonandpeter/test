@@ -6,6 +6,11 @@
       "form": "Luca din Elada",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 februarie, «Sfântul Cuvios Luca din Elada»."
+    },
+    {
+      "form": "Λουκάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Φεβρουαρίου, «Όσιος Λουκάς ὁ ἐν Στειρίῳ ὄρει ἄσκησας», with the rank word and the relative clause left off."
     }
   ],
   "sex": "male",
@@ -28,6 +33,40 @@
       },
       "english": {
         "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou wast made a light to the world, shining with wonders, O Luke our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τῆς Ἑλλάδος τὸ κλέος, καὶ Ὁσίων τὸ καύχημα, καὶ τὸν τοῦ Στειρείου φωστῆρα, καὶ οἰκήτορα ὅσιον, τιμήσωμεν ᾀσμάτων ἐν ὠδαίς, Λουκᾶν τὸν θεοφόρον εὐσεβῶς, τῷ Χριστῷ γὰρ οἰκειούται διαπαντός, τοὺς πίστει ἀνακράζοντας, δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διὰ σοῦ, πάσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Λουκάς ὁ ἐν Στειρίῳ ὄρει ἄσκησας, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3624/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The glory of Greece, the boast of the venerable, the light-bearer of Steirion and its holy inhabitant — let us honour godly Luke the God-bearer in songs and odes; for he makes his own to Christ for ever those who cry out in faith: glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ'.",
+      "model": "Τὴ Ὑπερμάχω.",
+      "text": "Ὁ ἐκλεξάμενος Θεὸς πρὸ τοῦ πλασθήναι σε, εἰς εὐαρέστησιν αὐτοῦ, οἲς οἶδε κρίμασι, προσλαβόμενος ἐκ μήτρας καθαγιάζει, καὶ οἰκεῖον ἐαυτοῦ δοῦλον δεικνύει σέ, κατευθύνων σου Λουκᾶ τὰ διαβήματα, ὁ φιλάνθρωπος, ὢ νῦν χαίρων παρίστασαι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Λουκάς ὁ ἐν Στειρίῳ ὄρει ἄσκησας, Λειτουργικά κείμενα: Κοντάκιον. Its Oikos follows on the page and is not copied here, the corpus having no kind for it.",
+        "url": "https://www.saint.gr/3624/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "God, who chose you before you were fashioned for his own good pleasure, by the judgements he knows, took you from the womb and hallowed you, and showed you to be his own servant, directing your steps, Luke, in his love for mankind — he before whom you now stand rejoicing.",
         "rendered": "site"
       }
     }
@@ -55,8 +94,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Φεβρουαρίου — «Όσιος Λουκάς ὁ ἐν Στειρίῳ ὄρει ἄσκησας»",
+        "url": "https://www.saint.gr/02/07/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -66,5 +114,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 896,
+      "latest": 896,
+      "display": "896",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Όσιος Λουκάς γεννήθηκε το καλοκαίρι του 896 μ.Χ. από τον Στέφανο και την Ευφροσύνη.»"
+    },
+    "death": {
+      "earliest": 953,
+      "latest": 953,
+      "display": "953",
+      "basis": "attested",
+      "note": "saint.gr: «Πέθανε στις 7 Φεβρουαρίου του 953 μ.Χ.»"
+    }
   }
 }

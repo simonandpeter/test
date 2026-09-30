@@ -1,0 +1,50 @@
+{
+  "slug": "six-martyrs-of-phrygia",
+  "display_name": "The Six Martyrs of Phrygia",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "έξι Μάρτυρες καταγόμενοι από τη Φρυγία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Φεβρουαρίου, «Άγιοι έξι Μάρτυρες καταγόμενοι από τη Φρυγία», with the rank word Άγιοι left off. The line gives no name for any of the six."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Φεβρουαρίου — «Άγιοι έξι Μάρτυρες καταγόμενοι από τη Φρυγία»",
+        "url": "https://www.saint.gr/02/07/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

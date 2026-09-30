@@ -1,0 +1,50 @@
+{
+  "slug": "theopemptus-7-february",
+  "display_name": "Theopemptus (7 February)",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Θεόπεμπτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Φεβρουαρίου, «Άγιος Θεόπεμπτος και η συνοδεία του», with the rank word left off and the company not named because the page does not name them."
+    }
+  ],
+  "related": [
+    "theopemptus-2-january"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Φεβρουαρίου — «Άγιος Θεόπεμπτος και η συνοδεία του»",
+        "url": "https://www.saint.gr/02/07/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

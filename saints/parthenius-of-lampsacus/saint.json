@@ -7,6 +7,11 @@
       "form": "Partenie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 februarie, «Sfântul Ierarh Partenie, Episcopul Lampsacului»."
+    },
+    {
+      "form": "Παρθένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Φεβρουαρίου, «Όσιος Παρθένιος επίσκοπος Λαμψάκου», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Φεβρουαρίου — «Όσιος Παρθένιος επίσκοπος Λαμψάκου»",
+        "url": "https://www.saint.gr/02/07/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -49,5 +63,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Tῷ μύρῳ τοῦ Πνεύματος, ποιμὴν Λαμψάκου ὀφθείς, τὴν θείαν ἐνέργειαν παρὰ Θεοῦ δαψιλῶς θαυμάτων ἐπλούτησας, δαίμονας ἀπελαύνειν, ἀσθενοῦντας ἰᾶσθαι, νόσους ἀποδιώκειν καὶ πληρῶν τὰς αἰτήσεις, Παρθένιε ἱεράρχα, τῶν προσιόντων σοι.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Παρθένιος επίσκοπος Λαμψάκου, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3625/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shown forth by the myrrh of the Spirit as shepherd of Lampsakos, you were made rich from God in the divine working of wonders — to drive off demons, to heal the sick, to put sicknesses to flight, and to fulfil the askings of those who come to you, Parthenius the hierarch.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον.",
+      "text": "Τῶν θαυμάτων εἴληφας, τήν θείαν χάριν θεόφρον, ἱερέ Παρθένιε, θαυματουργέ θεοφόρε, ἅπαντα, πιστῶν τά πάθη ἀποκαθαίρων, πνεύματα, τῆς πονηρίας πάτερ ἐλαύνων· διά τοῦτο σέ ὑμνοῦμεν, ὡς μέγαν μύστην Θεοῦ τῆς χάριτος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Παρθένιος επίσκοπος Λαμψάκου, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/3625/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You have received the divine grace of wonders, God-minded and holy Parthenius, God-bearing worker of miracles, cleansing away all the sufferings of the faithful and driving off the spirits of wickedness, father; and therefore we sing of you as a great initiate of the grace of God.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

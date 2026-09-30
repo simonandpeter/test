@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοπεμπτοσ theopemptus-2-january theopemptus-7-february theopemptus-of-nicomedia':
+    'three men. The new one is the Theopemptus of 7 Φεβρουαρίου; the corpus keeps the Theopemptus of 2 Ιανουαρίου, whose page has him dying in peace, and Theopemptus of Nicomedia, the martyr bishop upgraded in this wave on 5 Ιανουαρίου. Three entries on three days of one calendar.',
+  'πετροσ peter-abesalamites peter-companion-of-leucius peter-companion-of-manuel peter-disciple-of-dionysius-of-alexandria peter-of-bulgaria peter-of-capitolias peter-of-galatia peter-of-monevata peter-of-sebaste peter-son-of-john-of-syracuse peter-the-egyptian peter-the-gaoler peter-the-peloponnesian peter-the-sign-bearer':
+    'fourteen now. The new one is Peter of Monevata, kept on 7 Φεβρουαρίου, beside Peter of Galatia whom this wave upgraded on the Greek 1 Φεβρουαρίου; the other twelve are read in the earlier entries for this name form, from el-01-01 to el-01-30. Fourteen men on fourteen Greek days, and the reading has never once changed.',
+  'γεωργιοσ george-of-alikianos george-of-develtos george-of-megara george-of-vladimir george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian':
+    'eight now. The new one is George of Alikianos, kept on 7 Φεβρουαρίου; the other seven are read in the el-02-04 entry for this name form. Eight men and eight Greek days.',
   'θεοφιλοσ theophilus-martyr-6-february theophilus-the-deacon-of-libya theophilus-the-new':
     'three men. The new one is the Theophilus of 6 Φεβρουαρίου, martyred between 249 and 251; the other two are read in the el-01-30 entry for this name form, the deacon of Libya and Theophilus the New of about 800.',
   'σιλουανοσ silvanus-martyr-6-february silvanus-of-emesa':

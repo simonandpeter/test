@@ -1,0 +1,55 @@
+{
+  "slug": "aprion-of-cyprus",
+  "display_name": "Aprion of Cyprus",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Απρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Φεβρουαρίου, «Άγιος Απρίων Επίσκοπος Κύπρου», with the rank word and the see left off. The life page adds the alternative form «Ευπρίων»."
+    },
+    {
+      "form": "Ευπρίων",
+      "lang": "el",
+      "note": "The second form saint.gr's life page prints for him: «Ο Όσιος Απρίων (ή Ευπρίων), Επίσκοπος Κύπρου»."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Φεβρουαρίου — «Άγιος Απρίων Επίσκοπος Κύπρου»",
+        "url": "https://www.saint.gr/02/07/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

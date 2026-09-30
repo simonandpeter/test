@@ -6,6 +6,11 @@
       "form": "Sfinții 4 Mucenici tribuni, împreună cu cei 1003 mucenici din Nicomidia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 februarie. The calendar's whole line is the only name it gives them; it names no member of the company."
+    },
+    {
+      "form": "Χίλιοι Τρεις Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Φεβρουαρίου, «Άγιοι Χίλιοι Τρεις Μάρτυρες που μαρτύρησαν στη Νικομήδεια», with the rank word and the relative clause left off. The Greek line counts the thousand and three and does not name the four tribunes the Romanian line names beside them."
     }
   ],
   "sex": "unknown",
@@ -35,8 +40,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Φεβρουαρίου — «Άγιοι Χίλιοι Τρεις Μάρτυρες που μαρτύρησαν στη Νικομήδεια»",
+        "url": "https://www.saint.gr/02/07/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -46,5 +60,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "peter-of-alexandria"
+  ]
 }

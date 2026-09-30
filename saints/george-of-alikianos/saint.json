@@ -1,0 +1,68 @@
+{
+  "slug": "george-of-alikianos",
+  "display_name": "George of Alikianos",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Φεβρουαρίου, «Άγιος Γεώργιος ο Νεομάρτυρας εξ Αλικιανού της Κυδωνίας Κρήτης», with the rank words and the birthplace left off."
+    }
+  ],
+  "related": [
+    "gerasimos-of-little-st-annes"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1846,
+      "latest": 1846,
+      "display": "1846",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Νεομάρτυς Γεώργιος γεννήθηκε στις 24 Μαΐου 1846 μ.Χ. στο χωριό Αλικιανό της επαρχίας Κυδωνίας της Κρήτης.»"
+    },
+    "death": {
+      "earliest": 1867,
+      "latest": 1867,
+      "display": "1867",
+      "basis": "attested",
+      "note": "saint.gr: «Έτσι, δέχθηκε το στεφάνι του μαρτυρίου, αφού απέκοψαν την τιμία αυτού κεφαλή, το έτος 1867 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Φεβρουαρίου — «Άγιος Γεώργιος ο Νεομάρτυρας εξ Αλικιανού της Κυδωνίας Κρήτης»",
+        "url": "https://www.saint.gr/02/07/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
