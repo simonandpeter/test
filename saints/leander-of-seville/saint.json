@@ -7,6 +7,11 @@
       "form": "Leandru",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 februarie, «Sfântul Leandru, Arhiepiscop al Sevillei»."
+    },
+    {
+      "form": "Λέανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Φεβρουαρίου, «Άγιος Λέανδρος Επίσκοπος Σεβίλλης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -52,8 +57,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Φεβρουαρίου — «Άγιος Λέανδρος Επίσκοπος Σεβίλλης»",
+        "url": "https://www.saint.gr/02/27/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

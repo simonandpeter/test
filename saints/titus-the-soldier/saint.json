@@ -1,0 +1,61 @@
+{
+  "slug": "titus-the-soldier",
+  "display_name": "Titus the Soldier",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Τίτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Φεβρουαρίου, «Όσιος Τίτος ο στρατιώτης», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "floruit": {
+      "earliest": 1001,
+      "latest": 1100,
+      "display": "11th century",
+      "basis": "traditional",
+      "note": "saint.gr: «αφού πέρασε την υπόλοιπη ζωή με προσευχές και μετάνoιες κοιμήθηκε με ειρήνη περί τον 11ο αιώνα μ.Χ.». The page gives no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "The row is the day page this folder was read from. Its life page adds «Η μνήμη του Οσίου Τίτου επαναλαμβάνετε στις 27 Ιανουαρίου» — his memory is repeated on 27 January as well. One attestation row per church is the schema, so the second day is recorded here. Read 30 September 2026."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Φεβρουαρίου — «Όσιος Τίτος ο στρατιώτης»",
+        "url": "https://www.saint.gr/02/27/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "slug": "nesios",
+  "display_name": "Nesios",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Νήσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Φεβρουαρίου, «Άγιος Νήσιος», with the rank word left off."
+    },
+    {
+      "form": "Νίσιος",
+      "lang": "el",
+      "note": "The variant the same page allows in its own sentence: «Ο Άγιος Μάρτυς Νήσιος (ή Νίσιος)»."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Φεβρουαρίου — «Άγιος Νήσιος»",
+        "url": "https://www.saint.gr/02/27/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

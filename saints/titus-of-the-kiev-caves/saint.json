@@ -1,0 +1,61 @@
+{
+  "slug": "titus-of-the-kiev-caves",
+  "display_name": "Titus of the Kiev Caves",
+  "sex": "male",
+  "office": "Presbyter of the Lavra of the Caves of Kiev",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "names": [
+    {
+      "form": "Τίτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Φεβρουαρίου, «Όσιος Τίτος ο Πρεσβύτερος της Λαύρας των Σπηλαίων του Κιέβου», with the rank word, the rank and the house left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1190,
+      "latest": 1190,
+      "display": "1190",
+      "basis": "attested",
+      "note": "saint.gr: «μέχρι την ημέρα που κοιμήθηκε ειρηνικά και παρέδωσε το πνεύμα του στον Θεό. Ήταν το έτος 1190 μ.Χ.», and its heading prints «(; - 1190)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Φεβρουαρίου — «Όσιος Τίτος ο Πρεσβύτερος της Λαύρας των Σπηλαίων του Κιέβου»",
+        "url": "https://www.saint.gr/02/27/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

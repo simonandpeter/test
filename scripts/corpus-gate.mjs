@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'τιτοσ titus-27-january titus-of-the-kiev-caves titus-the-soldier':
+    'Three men, and two of them share 27 February as two lines of that day: Titus of the Kiev Caves, the hieromonk, and Titus the soldier, whom the Caves keep beside him. The third is the Titus of 27 January.',
+  'τιμοθεοσ timothy-1-february timothy-disciple-of-babylas timothy-of-caesarea timothy-of-ephesus timothy-of-symbola':
+    'Five men on five Greek days: 1 February, 24 January, 27 February (Caesarea), 22 January and 21 February.',
+  'στεφανοσ stephen-27-february stephen-martyr-8-february stephen-of-chenolakkos stephen-of-placidianae':
+    'Four men on four Greek days: 27 February, 8 February, 14 January and 11 January.',
+  'φωτιοσ photius-of-constantinople photius-of-yuriev':
+    'Two men: the patriarch on 6 February, whom the Romanian calendar keeps there too, and Yuriev on 27 February.',
+  'ιακωβοσ jacob-of-nimouzan jacob-the-hermit james-of-cyrrhus james-of-nisibis james-of-samosata james-of-serbia james-of-zographou-the-first james-of-zographou-the-second':
+    'Eight men on seven Greek days: 27 February (Nimouzan), 28 January, 6 February, 13 January, 29 January, 3 February, and the two of Zographou, whom their own company page names as two and the Greek keeps together on 22 September.',
+  'ηλιασ elias-martyr-with-patermuthius elias-nikolayevich-hieromartyr elias-of-heliopolis elias-of-trebizond elias-the-cave-dweller-of-calabria elias-the-egyptian':
+    'Six now. The new one is Elias of Trebizond on 27 February; the other five are read in the el-02-16 entry for this name form, where the two 16 February men are the Egyptian of the Pamphilus company and the Moscow hieromartyr.',
   'σεβαστιανοσ sebastian-of-cartagena sebastian-of-posesone':
     'Two men on one day, printed as two lines of the 26 February calendar and answered by two different pages: «Άγιος Σεβαστιανός ο δούκας», the ruler of Cartagena whom Photini the Samaritan brought to the faith, and «Όσιος Σεβαστιανός του Ποσεσόνε», whose page holds no life at all but a referral. Two entries on one calendar are two commemorations.',
   'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-katopinos nicholas-of-corinth nicholas-of-japan nicholas-of-spetses nicholas-of-trebizond nicholas-of-valaam nicholas-patriarch-of-georgia nicholas-the-studite':

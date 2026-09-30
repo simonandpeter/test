@@ -6,6 +6,11 @@
       "form": "Procopie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 februarie, «Sfântul Cuvios Mărturisitor Procopie»."
+    },
+    {
+      "form": "Προκόπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Φεβρουαρίου, «Όσιος Προκόπιος ο Δεκαπολίτης ο Ομολογητής», with the rank word and both epithets left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Φεβρουαρίου — «Όσιος Προκόπιος ο Δεκαπολίτης ο Ομολογητής»",
+        "url": "https://www.saint.gr/02/27/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -49,5 +63,66 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 717,
+      "latest": 741,
+      "display": "in the reign of Leo the Isaurian (717–741)",
+      "basis": "attested",
+      "note": "saint.gr gives no year and prints the reign: «Ο Όσιος Προκόπιος ο Δεκαπολίτης έζησε στα χρόνια του εικονομάχου αυτοκράτορα Λέοντος του Ισαύρου (717 - 741 μ.Χ.)»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Φερωνύμως προκύπτων ἐν ἀσκήσει Προκόπιε, ἤρθης ἐκ δυνάμεως Πάτερ, πρὸς ἀθλήσεως ἔλλαμψιν Χρίστου γὰρ τὴν Εἰκόνα προσκυνῶν, Μαρτύρων ἀνεδείχθης κοινωνός, μεθ' ὧν πρέσβευε παμμάκαρ διαπαντός, ὑπὲρ τῶν ἐκβοώντων σοι, δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνερνούντι διὰ σοῦ, πασιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Προκόπιος ο Δεκαπολίτης ο Ομολογητής, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3589/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Making progress in asceticism as your name says, Procopius, you were raised from strength, father, to the radiance of the contest; for venerating the image of Christ you were shown a partner of the martyrs. With them intercede for ever, all-blessed one, for those who cry out to you: glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ταῖς τῶν δακρύων σου ῥοαῖς, τῆς ἐρήμου τό ἄγονον ἐγεώργησας· καί τοῖς ἐκ βάθους στεναγμοῖς, εἰς ἑκατόν τούς πόνους ἐκαρποφόρησας· καί γέγονας φωστήρ τῇ οἰκουμένῃ, λάμπων τοῖς θαύμασιν, Προκόπιε Πατήρ ἡμῶν ὅσιε, πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τάς ψυχάς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Προκόπιος ο Δεκαπολίτης ο Ομολογητής, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον. This is the common of a venerable father, printed under his name with his name in it, as his own service.",
+        "url": "https://www.saint.gr/3589/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of your tears you farmed the barrenness of the desert, and with your groanings from the depths you bore fruit a hundredfold in labours; and you became a luminary to the inhabited world, shining with wonders, Procopius our venerable father. Intercede with Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ἑωσφόρον σήμερον ἡ Ἐκκλησία, κεκτημένη ἅπασαν, κακοδοξίας τήν ἀχλύν, διασκεδάζει τιμῶσά σε, οὐρανομύστα Προκόπιε ἔνδοξε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Προκόπιος ο Δεκαπολίτης ο Ομολογητής, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/3589/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having you today for a morning star, the Church scatters the whole mist of false doctrine as she honours you, glorious Procopius, initiate of heaven.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
