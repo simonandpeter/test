@@ -1,0 +1,60 @@
+{
+  "slug": "agapitus-of-markushevo",
+  "display_name": "Agapitus of Markushevo",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Αγαπητός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαΐου, «Άγιος Αγαπητός ο Οσιομάρτυρας», with the rank word left off; the life page's own head calls him «Ο Άγιος Οσιομάρτυς Αγαπητός του Μαρκούσεφ»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1584,
+      "latest": 1584,
+      "display": "1584",
+      "basis": "traditional",
+      "note": "saint.gr: «επιτέθηκαν στον Όσιο Αγαπητό κοντά στον μύλο στις 21 Μαΐου 1584 μ.Χ., τον σκότωσαν», and the head line «(; - 1584)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαΐου — «Άγιος Αγαπητός ο Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/05/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαΐου εκάστου έτους», the same day as the listing, and the page puts his killing on that very day of 1584, which makes this the one saint of the day whose feast is plainly the day of his death. He is none of the corpus's men of this name: not `agapitus-of-the-kyiv-caves`, not `agapitus-of-synnada`, not `agapitus-the-deacon`. Nicholas the Wonderworker, whose Velikoretskaya icon appeared to him, and Procopius of Uglich, to whom he dedicated one of his two churches, are named in the life without links: the first is a saint named through his icon rather than in his own right here, and the second has no folder. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "christopher-of-antioch",
+  "display_name": "Christopher of Antioch",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "patriarch"
+  ],
+  "names": [
+    {
+      "form": "Χριστόφορος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαΐου, «Άγιος Χριστόφορος Α' Πατριάρχης Αντιοχείας», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 967,
+      "latest": 967,
+      "display": "967",
+      "basis": "traditional",
+      "note": "saint.gr: «Τη νύχτα της Δευτέρας προς την Τρίτη του 967 μ.Χ. φονεύθηκε από τους Άραβες», and the head line «(; - 967)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαΐου — «Άγιος Χριστόφορος Α' Πατριάρχης Αντιοχείας»",
+        "url": "https://www.saint.gr/05/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαΐου εκάστου έτους», the same day as the listing. He is not the corpus's `christopher`, the martyr of the passions kept on 9 Μαΐου under Decius, nor either of the two Christophers another reader met in April. The page rests its dating on a named authority, «ο Άραβας χρονογράφος Γιαχ-γιά», the Arab chronicler Yahya, who puts the election in 960, the fourteenth year of the caliph al-Muti. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

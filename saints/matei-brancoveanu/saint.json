@@ -6,6 +6,11 @@
       "form": "Matei",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 august."
+    },
+    {
+      "form": "Ματθαίος",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for 21 Μαΐου, «Άγιος Κωνσταντίνος ο Νεομάρτυρας και οι συν αυτώ μαρτυρήσαντες», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαΐου — «Άγιος Κωνσταντίνος ο Νεομάρτυρας και οι συν αυτώ μαρτυρήσαντες»",
+        "url": "https://www.saint.gr/05/21/index.aspx",
+        "year": 2026
+      },
+      "note": "**saint.gr keeps this company on 21 Μαΐου, not on the 16 August of the Romanian calendar, and the row records the day page that was read.** The identification is beyond doubt: the page's head line is «Αγιος Κωνσταντινος ο Νεομαρτυρας Και Οι Συν Αυτω Μαρτυρησαντες (1654 - 1715)», and its body gives Constantin Brâncoveanu's own life in detail — born 1654 at Brâncoveni in Romania, prince of Wallachia 1688 to 1714, orphaned of his father at a year old in the rising of February 1655, brought up by his mother and his grandparents Păuna and Constantin Cantacuzino at Bucharest, married to Marica the niece of Antonie Vodă of Popești, raised by his uncle Șerban Cantacuzino from 1678, founder of the Hurezi monastery, allied with Peter I of Russia in 1709 against the Turks and the sultan Ahmed III, arrested with his four children, his sons-in-law, his eldest daughter-in-law, his grandson Constantine and the treasurer Ianache Văcărescu by Mustafa Agha on 24 March 1714, and beheaded at Constantinople. Two dates inside the page do not agree and are left as it has them: it says he was beheaded «το 1715 μ.Χ.» and then that the company was condemned and put to death on 15 August 1714, the day of the Dormition, which is the 16 August the Romanian calendar keeps them on and one day off it. The page names the order of the killing — the treasurer first, then the eldest son, then «των άλλων τριών, του Στεφάνου, του Ράδου και του Ματθαίου» — and then the relics thrown into the Bosphorus, the heads set on poles and carried through the streets and left three days at the first gate of the Seraglio, the secret burial on Halki outside the church of the monastery of the Mother of God built by John V Palaiologos, and the secret translation to Romania by Marica in 1720, under Nicholas Mavrocordat, to the church of Saint George the New. No hymn is printed. **Note what this row does not claim:** the eldest son, the corpus's `constantin-son-of-brancoveanu`, is *not named* on this page — it calls him only «του μεγαλύτερου υιού του» — so he gets no `greek` row from here, and neither do `maria-brancoveanu` or `elizabeth-brancoveanu-of-varatec`, whom the page does not put among the killed. He is named in the page's own order of the beheading, last of the five it names: «των άλλων τριών, του Στεφάνου, του Ράδου και του Ματθαίου». The page gives his name in the Greek form Ματθαίος, Matthew, where the Romanian is Matei."
     },
     {
       "church": "serbian",

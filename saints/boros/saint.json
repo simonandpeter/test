@@ -1,0 +1,48 @@
+{
+  "slug": "boros",
+  "display_name": "Boros",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Βόρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαΐου, «Άγιος Βόρος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαΐου — «Άγιος Βόρος»",
+        "url": "https://www.saint.gr/05/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαΐου εκάστου έτους», the same day as the listing, and its whole entry is two sentences. **It carries no asterisk and not the «Δεν είναι διασταυρωμένη» sentence**, and it names a document: «Ο Άγιος Βόρος είναι άγνωστος στους Συναξαριστές. Η μνήμη του αναφέρεται με τον Ισίδωρο και τον Θεόδωρο στο Ιεροσολυμιτικόν Κανονάριον (εκδ. Καλλίστου Αρχιμανδρίτου σελ. 93)». So the page says the synaxarists do not know him and then cites where his memory is recorded — an absence of material with a source behind it, not a refusal to vouch, which is the distinction another reader drew for the Altai saints on 05-15 and 05-16. Drafted on that ground, and the ground is written here so that it can be reversed if the run decides otherwise. **The folder carries no `types` at all**: the page gives him only «Άγιος», and the closed list has no slug for a bare saint. Nothing in the corpus answers to the name — `varus-the-martyr` and `barses-of-edessa` are other names — and the Isidore and Theodore he is remembered with are not identified by the page, so neither is linked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

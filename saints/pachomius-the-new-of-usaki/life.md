@@ -1,0 +1,11 @@
+# Pachomius the New of Uşak
+
+Pachomius came from Asia Minor and was born of God-loving and pious parents. Serving as a soldier in the Russian army he was taken prisoner by the Tatars and sold to a Turkish tanner, who brought him to his own country, Uşak of Philadelphia. He stayed in that man's service twenty-seven years, bearing tortures and humiliations and pressed every day to change his faith; and because he stayed unshaken in it, his master at last gave up and set him free.
+
+While he was getting ready to leave he fell ill, and Turks who took advantage of it put it about that Pachomius had said he wished to become a Mohammedan before he died. So when he recovered they dressed him in Turkish clothes and let him go. He left at once, and by way of Smyrna came to the Holy Mountain, to the monastery of Saint Paul, and put himself under the protection of a virtuous hieromonk named Joseph. After twelve years in that house he moved to Kausokalyvia, and in imitating the wonderful way of life of Akakios of Kausokalyvia he became a pattern of a monk and was loved by all the brethren.
+
+Moved by a divine zeal, he said that he wished to be martyred for Christ. He was tried for a year with various canons and disciplines, and then, with the hieromonk Joseph beside him, he went to Uşak of Philadelphia and in the middle of the market-place declared his faith in Christ. He was seized at once and brought before the judge on the charge of apostasy; he answered his accusers with a spiritual courage and said that he had never denied Christ and would stay faithful to his fathers' religion to the end of his life. The judge had him shut in prison, and after three days, called again to deny Christ and refusing, he was condemned and handed to the executioner, and was beheaded in 1730, on the Thursday of the Ascension.
+
+Three days later pious Christians took his relic and buried it with reverence. Today it is at the monastery of Saint John the Theologian on Patmos, and a piece of it was granted to the monastery of Saint Paul on Athos and carried there from Patmos, with the approval and blessing of the Ecumenical Patriarchate, on 26 January 1953.
+
+*After saint.gr's calendar for 21 Μαΐου — [the day](https://www.saint.gr/05/21/index.aspx) and [the life](https://www.saint.gr/1687/saint.aspx); read 30 September 2026.*

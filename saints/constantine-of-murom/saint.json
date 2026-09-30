@@ -1,0 +1,63 @@
+{
+  "slug": "constantine-of-murom",
+  "display_name": "Constantine of Murom",
+  "sex": "male",
+  "types": [
+    "prince",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Κωνσταντίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαΐου, «Άγιος Κωνσταντίνος και οι υιοί αυτού Μιχαήλ και Θεόδωρος οι Πρίγκιπες και Θαυματουργοί», with the rank words left off; his own head line on the life page is «Αγιος Κωνσταντινος»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1129,
+      "latest": 1129,
+      "display": "1129",
+      "basis": "traditional",
+      "note": "saint.gr: «Το 1129 μ.Χ. ο πρίγκιπας Κωνσταντίνος κοιμήθηκε με ειρήνη», and his head line «(; - 1129)»."
+    }
+  },
+  "related": [
+    "vladimir-the-great"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαΐου — «Άγιος Κωνσταντίνος και οι υιοί αυτού Μιχαήλ και Θεόδωρος οι Πρίγκιπες και Θαυματουργοί»",
+        "url": "https://www.saint.gr/05/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαΐου εκάστου έτους», the same day as the listing, and carries three head names — «Αγιος Κωνσταντινος (; - 1129)», «Αγιος Μιχαηλ ο Πριγκιπας Και Θαυματουργος» and «Αγιος Θεοδωρος ο Πριγκιπας Και Θαυματουργος» — so it is three folders. Nothing in the corpus answers to them: `peter-of-murom` and `fevronia-of-murom` are the thirteenth-century pair of the same city and not these. The page gives a death year for the father only. **Michael is not given the type `martyr`**: the page says the idolaters killed him and never calls it a martyrdom, and the day's line calls all three «Πρίγκιπες και Θαυματουργοί». The icon of the Mother of God of Murom, which the page gives its own synaxis line elsewhere, is not a person and is only named in the life. His own head line gives the one year on the page, «(; - 1129)»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

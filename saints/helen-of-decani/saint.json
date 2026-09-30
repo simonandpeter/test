@@ -1,0 +1,54 @@
+{
+  "slug": "helen-of-decani",
+  "display_name": "Helen of Dečani",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "princess"
+  ],
+  "names": [
+    {
+      "form": "Ελένη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαΐου, «Αγία Ελένη η πριγκίπισσα», with the rank word left off."
+    }
+  ],
+  "related": [
+    "joasaph-of-meteora"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαΐου — «Αγία Ελένη η πριγκίπισσα»",
+        "url": "https://www.saint.gr/05/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαΐου εκάστου έτους», the same day as the listing, and its whole entry is three sentences. She is none of the corpus's women of this name: not `helen-the-empress`, who is kept on this same day and is the mother of Constantine, not `helen-of-sinope`, not `helen-martyr-26-may` and not `helen-martyr-1943`. The page gives her no year at all — only the reign of her brother, 1321 to 1331 — so there is no `dates` object. The display name carries the monastery where the page puts her relics, because that and her brother are the only two things it gives her. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

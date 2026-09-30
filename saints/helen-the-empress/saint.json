@@ -6,6 +6,11 @@
       "form": "Elena",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 mai, «Sfinții Împărați și întocmai cu Apostolii Constantin și mama sa, Elena»."
+    },
+    {
+      "form": "Ελένη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαΐου, «Άγιοι Κωνσταντίνος και Ελένη οι Ισαπόστολοι», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 21 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαΐου — «Άγιοι Κωνσταντίνος και Ελένη οι Ισαπόστολοι»",
+        "url": "https://www.saint.gr/05/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps the two of them on, and one page carries both head names, «Αγιος Κωνσταντινος ο Ισαποστολος (272 - 337)» and «Αγια Ελενη η Ισαποστολος (247 - 327)», with the same epithet Ισαπόστολος that this corpus already records as `equal-to-the-apostles`. **The folder's `dates` is left untouched**: the head lines give flat years that the page's own body then refuses — of Constantine it says «Το ακριβές έτος της γεννήσεώς του δεν είναι γνωστό, θεωρείται όμως ότι γεννήθηκε μεταξύ των ετών 272-288 μ.Χ.», and of Helen «κοιμήθηκε με ειρήνη μάλλον το 327 μ.Χ. σε ηλικία ογδόντα ετών» — so a year the page hedges is not written into the corpus and is recorded here instead. The page also gives three places for Constantine's birth (Tarsus of Cilicia, Drepanum of Bithynia, and Naissus of Upper Moesia, modern Niš, which it says is the view that prevails), which is why no `locations` object is proposed. Relics, as it lists them: a shoulder-blade of Constantine at Konstamonitou on Athos, and fragments at Kykkos in Cyprus and at the Trinity–Saint Sergius and Saint Alexander Nevsky lavras. It names Kastellorizo as their πολιούχος, patron city. Three hymns are added, two apolytikia and a kontakion, all three naming both of them; the megalynarion the page also prints cannot be held by the schema's `kind` enum and is not copied."
     },
     {
       "church": "serbian",
@@ -63,6 +78,56 @@
         "text": "Having seen the figure of Your Cross in the sky, and having received his calling, like Paul, not from men, Your apostle among kings, O Lord, laid the imperial city in Your hands. Keep it always in peace, at the prayers of the Mother of God, O only Lover of mankind.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Τοῦ Σταυροῦ σου τὸν τύπον ἐν οὐρανῷ θεασάμενος, καὶ ὡς ὁ Παῦλος τὴν κλῆσιν οὐκ ἐξ ἀνθρώπων δεξάμενος, ὁ ἐν βασιλεῦσιν, Ἀπόστολός σου Κύριε, Βασιλεύουσαν πόλιν τῇ χειρὶ σου παρέθετο· ἣν περίσωζε διὰ παντὸς ἐν εἰρήνη, πρεσβείαις τῆς Θεοτόκου, μόνε Φιλάνθρωπε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. δ’, on the page of «Άγιοι Κωνσταντίνος και Ελένη οι Ισαπόστολοι»",
+        "url": "https://www.saint.gr/1685/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having seen the figure of your Cross in heaven, and having received his calling not from men, as Paul did, your apostle among kings, O Lord, entrusted the reigning city to your hand. Keep it always in peace, at the intercessions of the Mother of God, O only Lover of mankind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Πρῶτος πέφηνας, ἐν Βασιλεῦσι, θεῖον ἕδρασμα, τῆς εὐσεβείας, ἀπ’ οὐρανοῦ δεδεγμένος τὸ χάρισμα· ὅθεν Χριστοῦ τὸν Σταυρὸν ἐφανέρωσας, καὶ τὴν Ὀρθόδοξον πίστιν ἐφήπλωσας. Κωνσταντῖνε Ἰσαπόστολε, σὺν Μητρὶ Ἑλένῃ τῇ θεόφρονι, πρεσβεύσατε ὑπὲρ τῶν ψυχῶν ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως, on the page of «Άγιοι Κωνσταντίνος και Ελένη οι Ισαπόστολοι»",
+        "url": "https://www.saint.gr/1685/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown the first among kings, a divine foundation of true religion, having received the gift from heaven; and so you made the Cross of Christ manifest and spread the Orthodox faith abroad. Constantine, equal to the apostles, with your God-minded mother Helen, intercede for our souls.",
+        "rendered": "site"
+      },
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Κωνσταντῖνος σήμερον, σὺν τῇ μητρὶ τῇ Ἑλένη, τὸν Σταυρὸν ἐμφαίνουσι, τὸ πανσεβάσμιον ξύλον, πάντων μὲν τῶν Ἰουδαίων αἰσχύνην ὄντα, ὅπλον δὲ πιστῶν, ἀνάκτων κατ᾽ ἐναντίων, δι᾽ ἡμᾶς γὰρ ἀνεδείχθη, σημεῖον μέγα, καὶ ἐν πολέμοις φρικτόν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον, on the page of «Άγιοι Κωνσταντίνος και Ελένη οι Ισαπόστολοι»",
+        "url": "https://www.saint.gr/1685/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today Constantine with his mother Helen show forth the Cross, the all-venerable wood — a shame to all the Jews, but a weapon of faithful rulers against their adversaries; for it was shown forth for our sake, a great sign, and terrible in war.",
+        "rendered": "site"
+      },
+      "model": "Ἡ Παρθένος σήμερον."
     }
   ],
   "text": {

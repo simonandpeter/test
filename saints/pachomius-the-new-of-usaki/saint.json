@@ -1,0 +1,61 @@
+{
+  "slug": "pachomius-the-new-of-usaki",
+  "display_name": "Pachomius the New of Uşak",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Παχώμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαΐου, «Όσιος Παχώμιος ο Νέος ο Οσιομάρτυρας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1730,
+      "latest": 1730,
+      "display": "1730",
+      "basis": "traditional",
+      "note": "saint.gr: «ο Οσιομάρτυς Παχώμιος μαρτύρησε δι' αποκεφαλισμού το 1730 μ.Χ., την Πέμπτη της Αναλήψεως», and the head line «(; - 1730)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαΐου — «Όσιος Παχώμιος ο Νέος ο Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/05/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαΐου εκάστου έτους», the same day as the listing — and the page says he died «την Πέμπτη της Αναλήψεως», the Thursday of the Ascension, which is a paschal reckoning and not 21 Μαΐου in most years. The fixed day is the day the calendar keeps him on and is what the row records; the moveable day is the day he died. None of the corpus's Pachomii is this man: `pachomius-the-great` is the Egyptian, `pachomius-of-chios` and the others are of other places, and the two 05-15 Pachomii another reader drafted are Russians. Relics, as the page lists them: the monastery of Saint John the Theologian on Patmos, the skete of Kausokalyvia and the monasteries of Saint Paul and Nea Thebais on Athos, and the monastery of Saint George Krimnon on Zakynthos. No hymn is printed. Akakios of Kausokalyvia, whose life he imitated and whom the page keeps on 12 Απριλίου, has no folder, so he is named without a link."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

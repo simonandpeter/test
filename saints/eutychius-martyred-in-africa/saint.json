@@ -1,0 +1,51 @@
+{
+  "slug": "eutychius-martyred-in-africa",
+  "display_name": "Eutychius, martyred in Africa",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Ευτύχιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαΐου, «Άγιοι Τιμόθεος, Πόλιος και Ευτύχιος οι Ιερομάρτυρες», with the rank word left off; his own head line on the life page is «Αγιος Ευτυχιος ο Ιερομαρτυρας»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαΐου — «Άγιοι Τιμόθεος, Πόλιος και Ευτύχιος οι Ιερομάρτυρες»",
+        "url": "https://www.saint.gr/05/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαΐου εκάστου έτους», the same day as the listing, and carries three head names, «Αγιος Τιμοθεος ο Ιερομαρτυρας», «Αγιος Ευτυχιος ο Ιερομαρτυρας» and «Αγιος Πολιος ο Ιερομαρτυρας», so it is three folders. The head lines call each of them Ιερομάρτυς and the body calls all three διάκονοι, which is why `types` carries both. The page says the time is unknown — «σε άγνωστο χρόνο» — so there is no `dates` object for any of them. None of the corpus's men of these names is a deacon martyred in Africa. None of the corpus's men of this name is a deacon of Africa."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

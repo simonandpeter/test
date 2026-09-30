@@ -1,0 +1,51 @@
+{
+  "slug": "hospitius-of-lerins",
+  "display_name": "Hospitius of Lérins",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Οσπίτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαΐου, «Όσιος Οσπίτιος ο Ερημίτης», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαΐου — «Όσιος Οσπίτιος ο Ερημίτης»",
+        "url": "https://www.saint.gr/05/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαΐου εκάστου έτους», the same day as the listing. **There is no `dates` object on purpose**: the page closes his life with «Κοιμήθηκε το 580 μ.Χ., ενώ κατ' άλλους το 681 μ.Χ.», two years a century and a hundred and one apart, and a year the source itself will not choose is not a recorded one. The entry carries no asterisk. Nothing in the corpus answers to the name. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

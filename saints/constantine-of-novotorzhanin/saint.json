@@ -1,0 +1,59 @@
+{
+  "slug": "constantine-of-novotorzhanin",
+  "display_name": "Constantine of Novotorzhanin",
+  "sex": "male",
+  "types": [
+    "fool-for-christ"
+  ],
+  "names": [
+    {
+      "form": "Κωνσταντίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Μαΐου, «Άγιος Κωνσταντίνος ο διά Χριστόν σαλός», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1501,
+      "latest": 1600,
+      "display": "16th century",
+      "basis": "traditional",
+      "note": "saint.gr: «ο οποίος έζησε στη Ρωσία, στην περιοχή του Νοβοτορζανίν, κατά τον 16ο αιώνα μ.Χ.» — the century the page states, and the only dating it gives him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Μαΐου — «Άγιος Κωνσταντίνος ο διά Χριστόν σαλός»",
+        "url": "https://www.saint.gr/05/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Μαΐου εκάστου έτους», the same day as the listing. The page says «Δεν υπάρχουν αρκετές αγιολογικές πληροφορίες» for him — not enough hagiological material — and then names where more is to be found: «Διάφορα αγιολογικά στοιχεία… μάς δίδει ο Αρχιεπίσκοπος Δημήτριος Σαμπίκιν στο Μηνολόγιο και Πατερικόν του Τβέρ». That is an absence of material with a source named, not the asterisked refusal to vouch, and the entry carries no asterisk. He is none of the four other men called Constantine whom saint.gr keeps on this same day. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
