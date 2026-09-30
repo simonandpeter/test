@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'λαυρεντιοσ laurence-martyr-9-january laurence-of-canterbury laurence-of-salamina laurence-of-turov':
+    'Four men on four Greek days: the martyr of 9 January, Canterbury on 3 February, Salamina on 7 March and Turov on 29 January.',
+  'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-kazan john-of-lycopolis john-of-spetses john-of-syracuse john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-sinaite-venerable-martyr':
+    'Twenty now. The new one is John of Beverley on 7 March; the other nineteen are read in the el-02-26 entry for this name form.',
+  'ιακωβοσ jacob-of-nimouzan jacob-the-hermit james-companion-of-emilian james-of-cyrrhus james-of-nisibis james-of-samosata james-of-serbia james-of-zographou-the-first james-of-zographou-the-second':
+    'Nine now. The new one is the companion of Emilian on 7 March; the other eight are read in the el-02-27 entry for this name form.',
+  'εφραιμ ephraim-of-antioch ephraim-of-katounakia ephraim-of-tomis ephrem-of-kiev ephrem-of-novotorzhsk ephrem-the-syrian':
+    'Six men, and two of them are on the Greek 7 March as two entries: Ephraim of Antioch, the patriarch, and Ephraim of Tomis, whom the Romanian calendar keeps there too. The other four are read in the el-01-28 entry for this name form.',
+  'αρκαδιοσ arcadius-archbishop-of-cyprus arcadius-martyr-12-january arcadius-of-novgorod arcadius-of-tremithus arcadius-of-vyazniki arcadius-son-of-xenophon arcadius-teacher-of-julian':
+    'Seven now. The new one is Arcadius of Tremithus on 7 March; the other six are read in the el-03-06 entry for this name form, where the two 6 March men are the archbishop of Cyprus and the teacher of Julian.',
   'μαξιμοσ maximus-brother-of-dometius maximus-companion-of-asklepiodote maximus-companion-of-fausta maximus-of-kapsokalyvia maximus-of-marcianopolis maximus-of-totma maximus-of-ungrovlachia maximus-son-of-paul-and-tatta maximus-venerable-martyr-6-march':
     'Nine now. The new one is the venerable martyr of 6 March; the other eight are read in the el-02-19 entry for this name form, where the 19 February and 17 September pair is the Marcianopolis question in ro-run/FINDINGS.md.',
   'ιουλιανοσ julian-companion-of-euboulos julian-companion-of-modestus julian-companion-of-pamphilus julian-of-antinoopolis julian-of-emesa julian-of-kandavla julian-of-samosata julian-the-deacon-of-aegina':

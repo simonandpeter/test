@@ -6,6 +6,11 @@
       "form": "Eterie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 martie, «Sfinții Sfinţiţi Mucenici Episcopi din Cherson: Vasilevs, Evghenie, Capiton, Agatodor, Elpidie și Eterie»."
+    },
+    {
+      "form": "Αιθέριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαρτίου, «Άγιοι Εφραίμ, Βασιλεύς, Ευγένιος, Αγαθόδωρος, Ελπίδιος, Καπίτων και Αιθέριος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαρτίου — «Άγιοι Εφραίμ, Βασιλεύς, Ευγένιος, Αγαθόδωρος, Ελπίδιος, Καπίτων και Αιθέριος»",
+        "url": "https://www.saint.gr/03/07/index.aspx",
+        "year": 2026
+      },
+      "note": "All seven share one page, https://www.saint.gr/3871/saint.aspx, whose own «Ημερομηνία Εορτής» is 7 Μαρτίου and whose «Τύπος εορτής» is «Σταθερή». It says he was sent next by the patriarch of Jerusalem; that seeing the heathen people enraged he took refuge with Constantine the Great and asked for the expulsion of the idolaters from Cherson, which was granted; that having raised a church there he went to the emperor to thank him; and that on the way back he was seized and drowned in the river Danube. His being sent to Constantine is why the reign of Diocletian, which the page names at the head of the notice, cannot be read as a date for the company: no year is printed for him and none is taken. His distich is «Ἐκ τοῦ ποταμοῦ πρὸς Θεὸν χωρεῖς Πάτερ, / Τὸν ἐν ποταμῷ σαρκικῶς λελουμένον»."
     },
     {
       "church": "serbian",
@@ -49,5 +64,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ἐπτάριθμος σύλλογος, Ἱεραρχῶν ἱερῶν, ἀγώσιν ἀθλήσεως, τὴν Ἐκκλησίαν Χριστοῦ, ἐνθέως ἐφαίδρυναν, Εὐγένιος Βασιλεὺς τε, σὺν Ἐφραὶμ Αἰθερίω, Ἐλπίδιος καὶ Καπίτων, Ἀγαθόδωρος ἅμα. Αὐτῶν Χριστὲ ἰκεσίαις, πάντας ἐλέησαν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε, on the shared page of the seven. It names all seven and is their proper. The page's first Ἀπολυτίκιον, Ἦχος πλ. α’, is the common of martyrs and names nobody.",
+        "url": "https://www.saint.gr/3871/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A company seven in number, of holy hierarchs, made glad the Church of Christ divinely by the contests of their striving — Eugene and Basileus, with Ephraim and Aetherius, Elpidius and Capito, and Agathodorus with them. At their entreaties, O Christ, have mercy upon us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Ὡς ἀπαρχάς τῆς φύσεως.",
+      "text": "Ὥσπερ ἀστέρες ἄδυτοι, τῆς νοητῆς ἐλλάμψεως, τούς ἐν νυκτί τῆς ἀπάτης καθεύδοντας, υἱούς φωτός ἐδείξατε, Εὐγένιε καί Καπίτων, Ἀγαθόδωρε Βασιλεῦ καί Αἰθέριε, Ἐφραίμ σύν Ἐλπιδίῳ, ἀθλήσαντες ὡς ἀήττητοι.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος πλ. δ’, Ὡς ἀπαρχάς τῆς φύσεως, on the shared page of the seven. It names all seven.",
+        "url": "https://www.saint.gr/3871/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like stars that never set, stars of the light the mind perceives, you showed those asleep in the night of deceit to be sons of light, O Eugene and Capito, Agathodorus, Basileus and Aetherius, Ephraim with Elpidius, having contended as men unconquered.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

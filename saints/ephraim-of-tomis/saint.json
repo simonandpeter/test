@@ -7,6 +7,11 @@
       "form": "Efrem",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 martie, «Sfântul Sfințit Mucenic Efrem, Episcopul Tomisului»."
+    },
+    {
+      "form": "Εφραίμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαρτίου, «Άγιοι Εφραίμ, Βασιλεύς, Ευγένιος, Αγαθόδωρος, Ελπίδιος, Καπίτων και Αιθέριος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -48,8 +53,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαρτίου — «Άγιοι Εφραίμ, Βασιλεύς, Ευγένιος, Αγαθόδωρος, Ελπίδιος, Καπίτων και Αιθέριος»",
+        "url": "https://www.saint.gr/03/07/index.aspx",
+        "year": 2026
+      },
+      "note": "All seven share one page, https://www.saint.gr/3871/saint.aspx, whose own «Ημερομηνία Εορτής» is 7 Μαρτίου and whose «Τύπος εορτής» is «Σταθερή». It sets the mission «Επί της βασιλείας του αυτοκράτορα Διοκλητιανού (284-305 μ.Χ.)» and says «ο Πατριάρχης Ιεροσολύμων Έρμων (300-314 μ.Χ.) απέστειλε στη Σκυθία τον Επίσκοπο Άγιο Εφραίμ και στη Χερσώνα τον Επίσκοπο Άγιο Βασιλέα, με σκοπό την διάδοση του Χριστιανισμού». Of Ephraim himself it says only «ενώ δίδασκε το Ευαγγέλιο, συνελήφθη από τους ειδωλολάτρες και αποκεφαλίσθηκε». No year is printed for any of the seven and none is taken here: the two parentheses are a reign and an episcopate, not a date of death, and Aetherius and Capito are sent later, to Constantine the Great, so the reign of Diocletian cannot bound the company. The page's distich for him is «Μὴ τὴν κεφαλὴν τοῖς ἀγάλμασι κλίνων, / Ἐφραὶμ ἀγάλλῃ, τῇ τομῇ ταύτην κλίνων», and it closes with the hexameter over all seven, «Ἑβδομάτῃ πατέρας μόρος ἥρπασεν ἑπτὰ ἀριθμῷ»."
     },
     {
       "church": "serbian",
@@ -71,6 +86,40 @@
       },
       "english": {
         "text": "O God of our fathers, who deal with us always according to thy gentleness: take not thy mercy away from us, but at their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ἐπτάριθμος σύλλογος, Ἱεραρχῶν ἱερῶν, ἀγώσιν ἀθλήσεως, τὴν Ἐκκλησίαν Χριστοῦ, ἐνθέως ἐφαίδρυναν, Εὐγένιος Βασιλεὺς τε, σὺν Ἐφραὶμ Αἰθερίω, Ἐλπίδιος καὶ Καπίτων, Ἀγαθόδωρος ἅμα. Αὐτῶν Χριστὲ ἰκεσίαις, πάντας ἐλέησαν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε, on the shared page of the seven. It names all seven and is their proper. The page prints above it a first Ἀπολυτίκιον, Ἦχος πλ. α’, «Τά θαύματα τῶν ἁγίων σου Μαρτύρων», which is the common of martyrs and names nobody, and below the kontakion a kathisma, Ἦχος γ’, Τὴν Ὡραιότητα; the proper apolytikion and the kontakion are the two taken here.",
+        "url": "https://www.saint.gr/3871/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A company seven in number, of holy hierarchs, made glad the Church of Christ divinely by the contests of their striving — Eugene and Basileus, with Ephraim and Aetherius, Elpidius and Capito, and Agathodorus with them. At their entreaties, O Christ, have mercy upon us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Ὡς ἀπαρχάς τῆς φύσεως.",
+      "text": "Ὥσπερ ἀστέρες ἄδυτοι, τῆς νοητῆς ἐλλάμψεως, τούς ἐν νυκτί τῆς ἀπάτης καθεύδοντας, υἱούς φωτός ἐδείξατε, Εὐγένιε καί Καπίτων, Ἀγαθόδωρε Βασιλεῦ καί Αἰθέριε, Ἐφραίμ σύν Ἐλπιδίῳ, ἀθλήσαντες ὡς ἀήττητοι.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος πλ. δ’, Ὡς ἀπαρχάς τῆς φύσεως, on the shared page of the seven. It names all seven.",
+        "url": "https://www.saint.gr/3871/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like stars that never set, stars of the light the mind perceives, you showed those asleep in the night of deceit to be sons of light, O Eugene and Capito, Agathodorus, Basileus and Aetherius, Ephraim with Elpidius, having contended as men unconquered.",
         "rendered": "site"
       }
     }

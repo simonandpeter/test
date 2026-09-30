@@ -6,6 +6,11 @@
       "form": "Pavel cel Simplu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 martie, «Sfântul Cuvios Pavel cel Simplu»."
+    },
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαρτίου, «Όσιος Παύλος ο απλός», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαρτίου — «Όσιος Παύλος ο απλός»",
+        "url": "https://www.saint.gr/03/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/3873/saint.aspx, has its own «Ημερομηνία Εορτής» of 7 Μαρτίου and «Τύπος εορτής: Σταθερή». It explains the epithet — he was called «απλός» because he was an unlettered farmer who knew nothing of the world's manners, yet was adorned with a guileless character, «τέλειος αγαθός ισραηλίτης, χωρίς καμμιά πονηριά και δόλο» — and says farming was his chief occupation until he was sixty. It tells of his wife, who had once been a servant in the city and played the noblewoman, mocked him as a fool and at last broke their marriage; that when he was sure of it he was filled with grief, groaned deeply, prayed, and decided to leave her and go far away; and that he went into the desert to Antony the Great, whose day the page gives as 17 Ιανουαρίου. It says he was given the gift of wonders and healed many possessed, and fell asleep in deep old age in the depths of the desert. It gives no year at all, and prints no hymn — only the distich «Γῆθεν μεταστὰς πρὸς Θεὸν Παῦλος Λόγον, / Τῆς ἁπλότητος πολλαπλᾶ στέφη λάβοι»."
     },
     {
       "church": "serbian",

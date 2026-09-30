@@ -1,0 +1,55 @@
+{
+  "slug": "nestor-of-tremithus",
+  "display_name": "Nestor of Tremithus",
+  "office": "Bishop of Tremithus in Cyprus",
+  "names": [
+    {
+      "form": "Νέστορας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαρτίου, «Άγιοι Αρκάδιος και Νέστορας Επίσκοποι Τριμυθούντος Κύπρου», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαρτίου — «Άγιοι Αρκάδιος και Νέστορας Επίσκοποι Τριμυθούντος Κύπρου»",
+        "url": "https://www.saint.gr/03/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/3872/saint.aspx, has its own «Ημερομηνία Εορτής» of 7 Μαρτίου and «Τύπος εορτής: Σταθερή», and carries both bishops. The whole notice is: «Σύμφωνα με τον Λαυρεωτικό Κώδικα Ι 70, οι Άγιοι Αρκάδιος και Νέστορας άκμασαν κατά τους πρώτους Χριστιανικούς αιώνες. Αγωνίσθηκαν κατά των ειδώλων και βάπτισαν Χριστιανούς πολλούς ειδωλολάτρες πριν απεβίωσαν ειρηνικά.» Nothing on the page is said of Nestor apart from Arcadius; the one extra line, about an encomium for the translation of the relics of St George, is about Arcadius only. No year is printed: «οι πρώτοι Χριστιανικοί αιώνες» is a phrase without bounds, so there is no dates object. The distich over the two is «Τῆς Τριμυθοῦντος Ποιμένες καλοὶ δύο, / Ἐν τῇ καλῇ σκιρτῶσι τῆς Ἐδὲμ πόᾳ», and there is no hymn and no relic. The name form recorded is the day line's modern «Νέστορας»; the page's own name-gloss heads the classical «ΝΕΣΤΩΡ», which is a lexicon entry about Homer's king of Pylos and not a form of this saint's name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "arcadius-of-tremithus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

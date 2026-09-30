@@ -1,0 +1,63 @@
+{
+  "slug": "james-companion-of-emilian",
+  "display_name": "James, companion of Emilian",
+  "names": [
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαρτίου, «Άγιοι Αιμιλιανός ο Ρωμαίος και οι συν αυτώ Ιάκωβος και Μαριανός», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 259,
+      "latest": 259,
+      "display": "259",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Ιακωβος (; - 259)» and its one sentence is «Οι Άγιοι Αιμιλιανός ο Ρωμαίος, Ιάκωβος και Μαριανός μαρτύρησαν στη Ρώμη το 259 μ.Χ.» No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαρτίου — «Άγιοι Αιμιλιανός ο Ρωμαίος και οι συν αυτώ Ιάκωβος και Μαριανός»",
+        "url": "https://www.saint.gr/03/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/3876/saint.aspx, has its own «Ημερομηνία Εορτής» of 7 Μαρτίου and «Τύπος εορτής: Σταθερή», and its whole notice is one sentence: «Οι Άγιοι Αιμιλιανός ο Ρωμαίος, Ιάκωβος και Μαριανός μαρτύρησαν στη Ρώμη το 259 μ.Χ.» The head repeats «(; - 259)» over each of the three, and lists him first. There is no manner of death, no persecutor, no rank, no relic, no hymn and no distich; the only other thing the page prints under his name is the gloss «ΙΑΚΩΒΟΣ (εβραϊκή λέξη) = ο νικητής», an etymology and not a fact about the man. He is kept here only because the day's line and this page name him with Emilian and Marianus at Rome in 259; nothing on the page tells him apart from the several other men of the name the corpus keeps on other days, and the identification rests on the company and the year alone."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "emilian-the-roman",
+    "marianus-companion-of-emilian"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

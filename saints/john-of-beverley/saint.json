@@ -1,0 +1,61 @@
+{
+  "slug": "john-of-beverley",
+  "display_name": "John of Beverley",
+  "office": "Archbishop of York",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαρτίου, «Άγιος Ιωάννης Επίσκοπος Υόρκης», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 721,
+      "latest": 721,
+      "display": "721",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Ιωαννης Επισκοπος Υορκης (; - 721)» and closes the notice «Ο Όσιος Ιωάννης κοιμήθηκε με ειρήνη το έτος 721 μ.Χ.» No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαρτίου — «Άγιος Ιωάννης Επίσκοπος Υόρκης»",
+        "url": "https://www.saint.gr/03/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/3877/saint.aspx, has its own «Ημερομηνία Εορτής» of 7 Μαρτίου and «Τύπος εορτής: Σταθερή». It gives his English name in Latin letters as «(John Beverley)»; says he was born in northern England and studied at the famous school of Augustine of Canterbury, was tonsured a monk at the monastery of St Hilda at Whitby, was elected bishop of the city it spells «Έξμαμ» — Hexham — and was distinguished for the holiness of his life; that he was forced after a while to resign and withdraw into the desert so that the local Church might be at peace, the bishop of the neighbouring region having claimed the canonical jurisdiction of his province; that a little later he was appointed archbishop of York and resigned again, to give himself to prayer and asceticism; and that he fell asleep in peace in 721. The day's own line calls him bishop of York and the body archbishop, and the office recorded here follows the body. There is no hymn, no distich and no relic. The display name is chosen: the page prints «John Beverley» and the corpus's English form of it is John of Beverley, which is what an English reader would look up."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
