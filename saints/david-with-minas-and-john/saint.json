@@ -1,0 +1,55 @@
+{
+  "slug": "david-with-minas-and-john",
+  "display_name": "David, with Minas and John",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Δαβίδ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Απριλίου, «Άγιοι Μηνάς, Δαβίδ και Ιωάννης οι Οσιομάρτυρες», with the rank words left off."
+    }
+  ],
+  "related": [
+    "minas-with-david-and-john",
+    "john-with-minas-and-david"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Απριλίου — «Άγιοι Μηνάς, Δαβίδ και Ιωάννης οι Οσιομάρτυρες»",
+        "url": "https://www.saint.gr/04/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Απριλίου εκάστου έτους», the same day as the listing, and gives the three no years at all, so there is no `dates` object. Three names in one line, so three folders, with companionship clauses in the display names because the page gives nothing else to tell them apart. The corpus holds eleven other Davids and none of them is a monk shot with arrows in the company of a Minas and a John; the company is the whole of what identifies this one, and the page says nothing more."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

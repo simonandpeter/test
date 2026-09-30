@@ -1,0 +1,53 @@
+{
+  "slug": "protion-companion-of-demes",
+  "display_name": "Protion, companion of Demes",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Πρωτίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Απριλίου, «Άγιοι Δήμης και Πρωτίων», with the rank word left off."
+    }
+  ],
+  "related": [
+    "demes-companion-of-protion"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Απριλίου — «Άγιοι Δήμης και Πρωτίων»",
+        "url": "https://www.saint.gr/04/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Απριλίου εκάστου έτους», the same day as the listing, and gives neither man a year: it sets them only «κατά τους χρόνους της βασιλείας του Μαξιμιανού (285 - 305 μ.Χ.)», so there is no `dates` object. Two names in one line, so two folders. The page's couplet makes him the first of the two to be beheaded, which is the only thing on the page that distinguishes them at all. The corpus holds nobody else of this name, and the page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "damian-of-pavia",
+  "display_name": "Damian of Pavia",
+  "sex": "male",
+  "office": "Bishop of Pavia",
+  "types": [
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Δαμιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Απριλίου, «Άγιος Δαμιανός Επίσκοπος Παβίας», with the rank word and the see left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 601,
+      "latest": 650,
+      "display": "first half of the 7th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Δαμιανός καταγόταν από επιφανείς γονείς και γεννήθηκε κατά το πρώτο ήμισυ του 7ου αιώνα μ.Χ.» — the page gives no year, only the half-century."
+    },
+    "death": {
+      "earliest": 710,
+      "latest": 710,
+      "display": "710",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Δαμιανός κοιμήθηκε με ειρήνη, το έτος 710 μ.Χ.», and the page's heading has «Αγιος Δαμιανος Επισκοπος Παβιας (; - 710)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Απριλίου — «Άγιος Δαμιανός Επίσκοπος Παβίας»",
+        "url": "https://www.saint.gr/04/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 710)». Its whole body is five sentences. He is none of the five other Damians in the corpus, none of whom is a bishop in Lombardy. The page prints no couplet, no relic and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

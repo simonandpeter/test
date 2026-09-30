@@ -1,0 +1,107 @@
+{
+  "slug": "acacius-the-kausokalyvite",
+  "display_name": "Acacius the Kausokalyvite",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "hermit",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ακάκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Απριλίου, «Όσιος Ακάκιος ο Νέος, ο Καυσοκαλυβίτης», with the rank word and the two epithets left off."
+    }
+  ],
+  "related": [
+    "dionysius-of-olympus"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1630,
+      "latest": 1640,
+      "display": "soon after 1630",
+      "basis": "traditional",
+      "note": "saint.gr: «Γεννήθηκε μάλλον λίγα χρόνια μετά το έτος 1630 μ.Χ., στο χωριό Γόλιτσα των Αγράφων» — probably a few years after 1630, the page's own «μάλλον» and «λίγα χρόνια μετά», so the interval is left open at the later end rather than fixed. The page's heading carries no birth year."
+    },
+    "death": {
+      "earliest": 1730,
+      "latest": 1730,
+      "display": "1730",
+      "basis": "traditional",
+      "note": "saint.gr: «Ευλόγησε έπειτα τα τέσσερα σημεία του ορίζοντα και κοιμήθηκε με ειρήνη την Κυριακή των Μυροφόρων, το έτος 1730 μ.Χ. και σε ηλικία εκατό περίπου ετών», and the page's heading has «Οσιος Ακακιος ο Νεος, ο Καυσοκαλυβιτης (; - 1730)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Απριλίου — «Όσιος Ακάκιος ο Νέος, ο Καυσοκαλυβίτης»",
+        "url": "https://www.saint.gr/04/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1730)». The day the page gives for his falling asleep is not 12 April but «την Κυριακή των Μυροφόρων», the Sunday of the Myrrhbearers, which is a moveable day and is recorded here rather than held. He is **not** `acacius-the-new-of-neochorion`, although both are called ο Νέος and the district of Neochorion is in this man's birthplace: that one is Acacius the Shoemaker, a new-martyr who died in 1816 and whom the Romanian calendar keeps on 1 May, while this one is an Athonite ascetic who died about a hundred years old in 1730. Its relic list puts the head in the Kyriakon of the skete of Kausokalyvia, the jaw in the kalyve of his name there, and a portion at Dionysiou."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Ἀκακίᾳ ἐμπρέπων Πάτερ Ἀκάκιε, καὶ λαμπρότητι βίου ἀστὴρ ὡς πάμφωτος, τῶν Ὁσίων μιμητὴς τῶν πάλαι γέγονας, καὶ χαρισμάτων θεϊκῶν, δαψιλῶς ἀξιωθείς, μὴ παύσῃ καθικετεύων, τὴν Παναγίαν Τριάδα, διδόναι πᾶσι τὸ θεῖον ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον, on the page of Όσιος Ακάκιος ο Νέος, ο Καυσοκαλυβίτης. It is his own and plays his name against ἀκακία, guilelessness.",
+        "url": "https://www.saint.gr/236/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with guilelessness, father Acacius, and a star all-radiant in the brightness of thy life, thou didst become an imitator of the venerable ones of old, and wast counted worthy of divine gifts in abundance. Cease not to entreat the All-holy Trinity to give the divine mercy to all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Θαβωρείου φωτὸς ἐκζητῶν τὴν λαμπρότητα, ἐν τῷ ῎Αθω βιώσας ἀνεπαύσω πληρώτατα· Ἀκάκιε, Ἀγράφων τέκνον τὸ σεπτόν, ἀγλάϊσμα ὁσίων τὸ φαιδρόν· ὅτι εὐχαῖς σου καὶ ἁγίαις διδαχαῖς Μάρτυρας νέους καὶ ὁσίους ἀθλητὰς ἀνέδειξας. Δόξα τῷ σὲ αὐγάσαντι Χριστῷ, δόξα τῷ μεγαλύναντι, δόξα τῷ δείξαντί σε ἐν παντὶ διδάχον ἔνθεον.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος α’, on the page of Όσιος Ακάκιος ο Νέος, ο Καυσοκαλυβίτης. It is his own, names him and Agrafa, and says he raised up new martyrs by his prayers and his teachings.",
+        "url": "https://www.saint.gr/236/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Seeking out the brightness of the light of Tabor, thou didst live on Athos and there most fully find thy rest, O Acacius, venerable child of Agrafa, bright adornment of the venerable; for by thy prayers and thy holy teachings thou didst raise up new martyrs and venerable contestants. Glory to Christ who lit thee up, glory to him who magnified thee, glory to him who showed thee in everything a godly teacher.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
