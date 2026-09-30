@@ -1,0 +1,60 @@
+{
+  "slug": "polycarp-of-alexandria",
+  "display_name": "Polycarp of Alexandria",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Πολύκαρπος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Απριλίου, «Άγιος Πολύκαρπος», with the rank word left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 305,
+      "display": "between 286 and 305",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Μάρτυς Πολύκαρπος έζησε κατά τους χρόνους της βασιλείας του ασεβούς Μαξιμιανού (286 - 305 μ.Χ.) και καταγόταν από την πόλη της Αλεξάνδρειας.» The page gives no year of its own; the interval is the reign it prints."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Απριλίου — «Άγιος Πολύκαρπος»",
+        "url": "https://www.saint.gr/04/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Απριλίου εκάστου έτους», a fixed feast on 2 April, the same day as the listing."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

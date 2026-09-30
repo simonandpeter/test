@@ -1,0 +1,61 @@
+{
+  "slug": "george-of-azkuri",
+  "display_name": "George of Azkuri",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "office": "Bishop of Azkuri",
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Απριλίου, «Άγιος Γεώργιος Επίσκοπος Αζκουρίας», with the rank words and the see left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 801,
+      "latest": 1000,
+      "display": "9th or 10th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Γεώργιος (Μαζκουερέλι) έζησε μεταξύ του 9ου και του 10ου αιώνα μ.Χ. στη Γεωργία» — between the ninth and the tenth century. The page gives no year, so the interval is the two centuries it names."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Απριλίου — «Άγιος Γεώργιος Επίσκοπος Αζκουρίας»",
+        "url": "https://www.saint.gr/04/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Απριλίου εκάστου έτους», the same day as the listing."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

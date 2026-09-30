@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'παυλοσ paul-brother-of-pausirius paul-companion-of-quadratus paul-disciple-of-dionysius-of-alexandria paul-of-corinth paul-of-crete paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-zographou paul-the-martyr-3-february paul-the-russian paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
+    'Eighteen now. The new one is Paul the Russian on 3 April; the others are read in the el-04-01 entry for this name form.',
+  'σαββασ sabbas-companion-of-jonah sabbas-of-sicily sabbas-of-sourozh sabbas-of-tver sabbas-of-zographou sabbas-the-spiritual sava-of-serbia sava-the-second':
+    'Eight now. The new one is Sabbas of Sourozh on 2 April; the others are read in the el-03-29 entry for this name form.',
+  'πολυκαρποσ polycarp-of-alexandria polycarp-of-bryansk polycarp-of-smyrna polycarp-venerable-8-february':
+    'Four men: Alexandria on 2 April, and the three read in the el-02-23 entry for this name form, where Smyrna and Bryansk share 23 February.',
+  'γρηγοριοσ gregory-of-akritas gregory-of-assos gregory-of-constantia gregory-of-moesia gregory-of-nicomedia gregory-of-novgorod gregory-of-nyssa gregory-of-sinai gregory-the-dialogist gregory-the-elder gregory-the-recluse-of-the-caves gregory-the-wonderworker-of-the-caves gregory-uncle-of-eustratius':
+    'Thirteen now. The new one is Gregory of Nicomedia on 2 April; the others are read in the el-03-04 entry for this name form, where two stand on 4 March.',
+  'γεωργιοσ george-konissky george-of-alikianos george-of-amastris george-of-azkuri george-of-develtos george-of-diipion george-of-kratovo george-of-megara george-of-rapsani george-of-sofia george-of-vladimir george-paizanos-of-mytilene george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian george-the-sinaite':
+    'Seventeen now. The new one is George of Azkuri on 2 April; the others are read in the el-03-26 entry for this name form.',
   'σατουρνινοσ saturninus-martyr-1-april saturninus-martyr-6-february saturninus-of-africa':
     'Three men: the martyr of 1 April, the martyr of 6 February and the African of 21 February.',
   'παρθενιοσ parthenius-martyr-1-april parthenius-of-kiev parthenius-of-lampsacus parthenius-of-zographou parthenius-the-third':

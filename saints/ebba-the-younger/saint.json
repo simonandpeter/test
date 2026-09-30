@@ -1,0 +1,65 @@
+{
+  "slug": "ebba-the-younger",
+  "display_name": "Ebba the Younger",
+  "sex": "female",
+  "types": [
+    "abbess",
+    "venerable-martyr",
+    "virgin"
+  ],
+  "office": "Abbess of Coldingham",
+  "names": [
+    {
+      "form": "Ebba",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Απριλίου, «Αγία Ebba η Οσιοπαρθενομάρτυρας η Νέα», with the rank words and the epithet left off. The page prints the name in Latin letters and not in Greek script."
+    }
+  ],
+  "related": [
+    "ebba-the-elder"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 870,
+      "latest": 870,
+      "display": "870",
+      "basis": "traditional",
+      "note": "saint.gr: «Το έτος 870 μ.Χ., κατά την διάρκεια εισβολής Δανών πειρατών στις ακτές της μονής…», and the page's heading has «(; - 870)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Απριλίου — «Αγία Ebba η Οσιοπαρθενομάρτυρας η Νέα»",
+        "url": "https://www.saint.gr/04/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Απριλίου εκάστου έτους», the same day as the listing."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

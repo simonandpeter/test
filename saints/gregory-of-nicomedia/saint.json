@@ -1,0 +1,68 @@
+{
+  "slug": "gregory-of-nicomedia",
+  "display_name": "Gregory of Nicomedia",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "names": [
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Απριλίου, «Όσιος Γρηγόριος ο εν Νικομηδεία ασκήσας», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 1190,
+      "latest": 1190,
+      "display": "1190",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Γρηγόριος γεννήθηκε το 1190 μ.Χ. και καταγόταν από τα μέρη Βιθυνίας.» The page's heading has «(1190 - 1240)»."
+    },
+    "death": {
+      "earliest": 1240,
+      "latest": 1240,
+      "display": "1240",
+      "basis": "traditional",
+      "note": "saint.gr: «Πέθανε σε ηλικία 50 χρονών την 2α Απριλίου 1240 μ.Χ.» The page's heading has «(1190 - 1240)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Απριλίου — «Όσιος Γρηγόριος ο εν Νικομηδεία ασκήσας»",
+        "url": "https://www.saint.gr/04/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Απριλίου εκάστου έτους», the same day as the listing, and the page's own narrative dates his death to 2 April 1240."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

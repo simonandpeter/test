@@ -1,0 +1,61 @@
+{
+  "slug": "sabbas-of-sourozh",
+  "display_name": "Sabbas of Sourozh",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "office": "Bishop of Sourozh",
+  "names": [
+    {
+      "form": "Σάββας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Απριλίου, «Άγιος Σάββας Αρχιεπίσκοπος Σουρώζ», with the rank words and the see left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1101,
+      "latest": 1200,
+      "display": "12th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Σάββας έζησε κατά τον 12ο αιώνα μ.Χ. στην Κριμαία και εξελέγη Επίσκοπος της πόλεως Σουρώζ, το σημερινό Σουδάκ.» The page gives no year, so the interval is the century it names."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Απριλίου — «Άγιος Σάββας Αρχιεπίσκοπος Σουρώζ»",
+        "url": "https://www.saint.gr/04/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Απριλίου εκάστου έτους», the same day as the listing. The day's line calls him Αρχιεπίσκοπος while the page's own text says he was elected Επίσκοπος; the office recorded here is the page's word."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

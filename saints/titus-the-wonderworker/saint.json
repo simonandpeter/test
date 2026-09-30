@@ -6,6 +6,11 @@
       "form": "Tit",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 aprilie, «Sfântul Cuvios Tit, făcătorul de minuni»."
+    },
+    {
+      "form": "Τίτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Απριλίου, «Όσιος Τίτος ο Θαυματουργός», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 2 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Απριλίου — «Όσιος Τίτος ο Θαυματουργός»",
+        "url": "https://www.saint.gr/04/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Απριλίου εκάστου έτους» — a fixed feast on 2 April every year, the same day as the listing. The page gives him no year, no country and no monastery, and says nothing of the iconoclast trouble doxologia.ro's life turns on. It prints a couplet, two apolytikia, a kontakion and two kathismata."
     },
     {
       "church": "serbian",
@@ -60,6 +75,56 @@
       },
       "english": {
         "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with miracles, O Titus our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ἐν σοί Πάτερ ἀκριβῶς διεσώθη τό κατ᾽ εἰκόνα· λαβών γάρ τόν σταυρόν, ἠκολούθησας τῷ Χριστῷ, καί πράττων ἐδίδασκες, ὑπερορᾷν μέν σαρκός, παρέρχεται γάρ· ἐπιμελεῖσθαι δέ ψυχῆς, πράγματος ἀθανάτoυ· διό καί μετά Ἀγγέλων συναγάλλεται, Ὅσιε Τίτε τό πνεῦμά σου.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος πλ. δ’, on the page of Όσιος Τίτος ο Θαυματουργός. This is the common apolytikion of a venerable father, with only his name set into its last clause; the page prints it first under his name, so it is copied whole as the page has it.",
+        "url": "https://www.saint.gr/3352/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O Father, that which was made according to the image was kept safe; for taking up the cross thou didst follow Christ, and by thy doing thou didst teach us to overlook the flesh, since it passes away, and to care for the soul, a thing immortal. Therefore, O venerable Titus, thy spirit rejoices together with the angels.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Ἀνατεθεῖς ἀπὸ παιδὸς τῷ Κυρίῳ, ἀγγελικῶς ἐπολιτεύσω ἐν κόσμῳ, καὶ τῶν θαυμάτων εἴληφας τὴν χάριν ἐκ Θεοῦ, ὅθεν ἐχρημάτισας, Μοναζόντων ἀλείπτης, Τίτε παμμακάριστε, καὶ σοφὸς οἰκονόμος. Ἄλλα μὴ παύση Πάτερ ἐκτενῶς, ὑπὲρ τοῦ κόσμου, Θεὸν ἰλεούμενος.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ, on the page of Όσιος Τίτος ο Θαυματουργός. It is his own, and names him: Τίτε παμμακάριστε.",
+        "url": "https://www.saint.gr/3352/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Dedicated to the Lord from childhood, thou didst live in the world as an angel lives, and thou didst take from God the grace of wonders; whence thou wast made a trainer of monastics, O all-blessed Titus, and a wise steward. But cease not, O Father, to entreat God earnestly for the world.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ἐγκρατείας ἄνθραξι, σαυτόν καθάρας, ἀρετῶν ἐξήστραψας, φωτοειδεῖς μαρμαρυγάς, καταφαιδρύνων τούς ψάλλοντας· Χαίροις ὦ Τίτε, Πατέρων ἀγλάϊσμα.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of Όσιος Τίτος ο Θαυματουργός.",
+        "url": "https://www.saint.gr/3352/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having cleansed thyself with the coals of abstinence, thou didst flash out the light-shaped rays of the virtues, gladdening those who sing: Rejoice, O Titus, adornment of the Fathers.",
         "rendered": "site"
       }
     }

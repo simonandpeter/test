@@ -6,6 +6,11 @@
       "form": "Amfian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 aprilie, «Sfântul Mucenic Amfian»."
+    },
+    {
+      "form": "Αμφιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Απριλίου, «Άγιοι Αιδέσιος και Αμφιανός οι αυτάδελφοι», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -13,7 +18,8 @@
     "martyr"
   ],
   "related": [
-    "aedesius-brother-of-amphianus"
+    "aedesius-brother-of-amphianus",
+    "pamphilus-of-caesarea"
   ],
   "attestations": [
     {
@@ -37,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 2 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Απριλίου — «Άγιοι Αιδέσιος και Αμφιανός οι αυτάδελφοι»",
+        "url": "https://www.saint.gr/04/02/index.aspx",
+        "year": 2026
+      },
+      "note": "One life page, https://www.saint.gr/3353/saint.aspx, carries both brothers; it heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Απριλίου εκάστου έτους». It names Eusebius of Caesarea as its source and dates the persecution «Το τρίτο έτος του δεύτερου διωγμού κατά των Χριστιανών, γύρω στο 305 μ.X.», the third year of the second persecution, about 305 — a year for the imperial letters and not a year the page gives for his death, so no date is recorded from it here."
     },
     {
       "church": "serbian",

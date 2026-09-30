@@ -10,4 +10,8 @@ After some time they brought him to Alexandria, the city of Egypt. There he saw 
 
 Those standing by seized him at once and tortured him as they had tortured his brother, and so he gained his end: after the cruel torments they drowned him in the sea, and he took the crown of victory from Christ together with Amphianus. The page gives no year for either of them, and prints no troparion.
 
-*After doxologia.ro's calendar for 2 aprilie — [the day](https://doxologia.ro/2-aprilie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-edesie-0); read 19 September 2026.*
+The Greek calendar keeps the two brothers on the same day and names its source, Eusebius of Caesarea. saint.gr makes Aedesius the better educated of the two and the one who had stayed longer with [Pamphilus](/saints/pamphilus-of-caesarea) at Caesarea in Palestine, whose memory the page puts on 5 November. He was seized in the same persecution and handed over to the copper mines of Palestine, and afterwards went to Alexandria, where the triumph of martyrdom waited for him.
+
+There the judge Hierocles, who was also governor of Egypt, was not content to carry out the imperial order that the inhabitants sacrifice to the idols, but handed Christian virgins over to brothel-keepers. Aedesius reproached him in words and then struck him with his own hands, wounded him and threw him down, to turn him from insulting the handmaids of God; the governor's soldiers seized him, tortured him, and at the last sank him in the sea, as they had his brother.
+
+*After doxologia.ro's calendar for 2 aprilie — [the day](https://doxologia.ro/2-aprilie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-edesie-0); read 19 September 2026; and saint.gr's calendar for 2 Απριλίου — [the day](https://www.saint.gr/04/02/index.aspx) and [the life of the two brothers](https://www.saint.gr/3353/saint.aspx), read 30 September 2026.*
