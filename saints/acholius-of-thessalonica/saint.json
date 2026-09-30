@@ -1,0 +1,59 @@
+{
+  "slug": "acholius-of-thessalonica",
+  "display_name": "Acholius of Thessalonica",
+  "names": [
+    {
+      "form": "Αχόλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιανουαρίου, «Άγιος Αχόλιος Επίσκοπος Θεσσαλονίκης», with the rank words left off; the page adds a variant, «ο Άγιος Αχόλιος (ή Ασχόλιος)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 383,
+      "latest": 384,
+      "display": "between 383 and 384",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Αχόλιος κοιμήθηκε με ειρήνη μεταξύ των ετών 383 και 384 μ.Χ.» The same page dates his life and activity to the years 360 to 383."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιανουαρίου — «Άγιος Αχόλιος Επίσκοπος Θεσσαλονίκης»",
+        "url": "https://www.saint.gr/01/23/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

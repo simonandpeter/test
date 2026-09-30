@@ -6,6 +6,11 @@
       "form": "Dionisie din Olimp",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 ianuarie, «Sfântul Cuvios Dionisie din Olimp»."
+    },
+    {
+      "form": "Διονύσιος ο εν Ολύμπω",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιανουαρίου, «Άγιος Διονύσιος ο εν Ολύμπω», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -50,8 +55,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 23 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιανουαρίου — «Άγιος Διονύσιος ο εν Ολύμπω»",
+        "url": "https://www.saint.gr/01/23/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -61,5 +75,23 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’. Τῆς ἐρήμου πολίτης.",
+      "text": "Τοῦ Ὀλύμπου οἰκήτωρ Πιερίας ἀγλάισμα, καὶ τῆς ἐπωνύμου Μονῆς σου ἱερὸν περιτείχισμα, ἐδείχθης Διονύσιε σοφέ, βιώσας ὥσπερ Ἄγγελος ἐν γῇ, καὶ παρέχεις τὴν ταχεῖαν σου ἀρωγήν, τοὶς εὐλαβῶς κραυγάζουσιν δόξα τῷ δεδωκότι σοὶ ἰσχύν, δόξα τῷ σὲ θαυμαστώσαντι, δόξα τῷ ἐνεργούντι διὰ σοῦ πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος α’, «Τῆς ἐρήμου πολίτης», on the page of Άγιος Διονύσιος ο εν Ολύμπω",
+        "url": "https://www.saint.gr/3370/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Dweller of Olympus, adornment of Pieria, and sacred wall of the monastery that bears thy name, thou wast shown forth, O wise Dionysius, having lived on earth as an angel; and thou grantest thy swift help to those who reverently cry: glory to him who gave thee strength, glory to him who made thee wonderful, glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

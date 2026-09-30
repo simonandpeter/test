@@ -1,0 +1,51 @@
+{
+  "slug": "maysimas-the-syrian",
+  "display_name": "Maysimas the Syrian",
+  "names": [
+    {
+      "form": "Μαϋσιμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιανουαρίου, «Όσιος Μαϋσιμάς ο Σύρος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιανουαρίου — «Όσιος Μαϋσιμάς ο Σύρος»",
+        "url": "https://www.saint.gr/01/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The same page closes with a second day: «Η μνήμη του επαναλαμβάνεται και στις 13 Φεβρουαρίου σαν Όσιος Μαϋουμάς ή Μαϊουμάς» — his memory is repeated on 13 February as Maÿoumas or Maïoumas (https://www.saint.gr/717/saint.aspx). One attestation row is one feast, so the row records the day read and the second day stands here as a note."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "anatolius-of-odessa",
+  "display_name": "Anatolius of Odessa",
+  "names": [
+    {
+      "form": "Ανατόλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιανουαρίου, «Άγιος Ανατόλιος ο Ιερομάρτυρας Επίσκοπος Οδησσού», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1880,
+      "latest": 1880,
+      "display": "1880",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιερομάρτυς Ανατόλιος γεννήθηκε το έτος 1880 μ.Χ. στην πόλη Κοβέλ της Βολυνίας»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "traditional",
+      "note": "saint.gr: «η καρδιά του δεν άντεξε και ο Άγιος Ανατόλιος κοιμήθηκε το έτος 1938 μ.Χ.», and the page's own heading, «Αγιος Ανατολιος ο Ιερομαρτυρας Επισκοπος Οδησσου (1880 - 1938)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιανουαρίου — «Άγιος Ανατόλιος ο Ιερομάρτυρας Επίσκοπος Οδησσού»",
+        "url": "https://www.saint.gr/01/23/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

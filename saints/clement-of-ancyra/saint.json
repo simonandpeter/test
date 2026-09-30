@@ -6,6 +6,11 @@
       "form": "Clement",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 ianuarie, «Sfântul Sfinţit Mucenic Clement, Episcopul Ancirei»."
+    },
+    {
+      "form": "Κλήμης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιανουαρίου, «Άγιοι Κλήμης Επίσκοπος Αγκύρας και Αγαθάγγελος», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -59,6 +64,22 @@
         "text": "Thou wast made an honoured shoot of the vine of Christ, O all-praised martyr Clement, victor in many contests. Therefore with him who suffered together with thee thou didst cry: Christ, thou art the joy of the martyrs.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Κλῆμα ὁσιότητος, καί στέλεχος ἀθλήσεως, ἄνθος ἱερώτατον, καί καρπός ὡς θεόσδοτος, τοῖς πιστοῖς πανίερε, ἡδύτατος ἐβλάστησας. Ἀλλ᾽ ὡς Μαρτύρων σύναθλος, καί ἱεραρχῶν σύνθρονος, πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τάς ψυχάς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος δ’, the first of two the page prints, on the page of Άγιοι Κλήμης Επίσκοπος Αγκύρας και Αγαθάγγελος",
+        "url": "https://www.saint.gr/3377/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A vine-branch of holiness and a stem of contest, a most sacred flower and a fruit as given by God, thou didst grow up most sweet for the faithful, O all-sacred one. But as a fellow contender of the martyrs and a sharer of the hierarchs' throne, intercede with Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
@@ -83,8 +104,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 23 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιανουαρίου — «Άγιοι Κλήμης Επίσκοπος Αγκύρας και Αγαθάγγελος»",
+        "url": "https://www.saint.gr/01/23/index.aspx",
+        "year": 2026
+      },
+      "note": "Commemorated with Agathangelus on one page, whose heading gives Agathangelus the year 312."
     },
     {
       "church": "serbian",

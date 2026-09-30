@@ -1,0 +1,63 @@
+{
+  "slug": "gennadius-of-kostroma",
+  "display_name": "Gennadius of Kostroma",
+  "names": [
+    {
+      "form": "Γεννάδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιανουαρίου, «Όσιος Γεννάδιος ο εν Κοστρόμα ο Λιθουανός», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1565,
+      "latest": 1565,
+      "display": "1565",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Γεννάδιος κοιμήθηκε με ειρήνη το έτος 1565 μ.Χ.», and the page's own heading, «Οσιος Γενναδιος ο Εν Κοστρομα ο Λιθουανος (; - 1565)»."
+    }
+  },
+  "related": [
+    "alexander-of-svir"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιανουαρίου — «Όσιος Γεννάδιος ο εν Κοστρόμα ο Λιθουανός»",
+        "url": "https://www.saint.gr/01/23/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -4,4 +4,6 @@ doxologia.ro keeps Dionysius on 23 ianuarie, and the life it prints for him is t
 
 That is the whole of it. The page gives no account of where he was tonsured, nothing of the Holy Mountain or of the mountain his name is bound to, nothing of his death, and no year at either end of his life — only the century for each. It prints no troparion and no kontakion for him.
 
-*After doxologia.ro's calendar for 23 ianuarie — [the day](https://doxologia.ro/23-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-dionisie-din-olimp); read 19 September 2026.*
+The Greek calendar keeps him on the same day and is more exact about his birthplace than the Romanian one. saint.gr says he was born shortly before 1500 in the mountain village of Sklataina of Karditsa, which is the Drakotrypa of today, and it names him patron of Litochoro. Its distich reads «Eν σαρκί ως άσαρκος έζησας πάτερ, Και τοις ασάρκοις νυν συνευφραίνη νόοις» — in the flesh thou didst live as one without flesh, father, and now thou rejoicest with the fleshless minds — and its apolytikion calls him dweller of Olympus, adornment of Pieria, and the sacred wall of the monastery that bears his name.
+
+*After doxologia.ro's calendar for 23 ianuarie — [the day](https://doxologia.ro/23-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-dionisie-din-olimp); read 19 September 2026; and saint.gr's calendar for 23 Ιανουαρίου — [the day](https://www.saint.gr/01/23/index.aspx) and [the life](https://www.saint.gr/3370/saint.aspx), read 30 September 2026.*

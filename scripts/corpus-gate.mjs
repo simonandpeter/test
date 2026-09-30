@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'γενναδιοσ gennadius-of-corfu gennadius-of-kostroma':
+    'two men, three centuries apart. saint.gr keeps Gennadius of Kostroma, a monk and wonderworker dead 1565, on 23 Ιανουαρίου; the corpus keeps Gennadius of Corfu, a hieromonk and wonderworker dead 1859, on the Romanian and Greek 2 January, upgraded earlier in this wave. Both are called wonderworkers and that is the whole of the resemblance.',
   'θεοδωροσ theodore-companion-of-stephen theodore-founder-of-chora theodore-of-kandavla theodore-of-moscow theodore-of-novgorod theodore-of-tamasos theodore-of-tomsk theodore-prince-of-yaroslavl theodore-the-envoy-of-nicomedia':
     'nine now. The new one is Theodore the founder of the Chora monastery, an abbot with no year on his page, kept on 8 Ιανουαρίου; the other eight are read in the el-01-11, el-01-19, el-01-20 and el-01-07 entries for this name form.',
   'μακαριοσ macarius-companion-of-eudoxius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-of-ierissos macarius-of-kios macarius-of-pisma macarius-of-zhabyn':
@@ -1253,7 +1255,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '333'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '339'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

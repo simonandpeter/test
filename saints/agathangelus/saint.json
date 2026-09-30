@@ -6,6 +6,11 @@
       "form": "Agatanghel",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 ianuarie, «Sfântul Mucenic Agatanghel»."
+    },
+    {
+      "form": "Αγαθάγγελος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιανουαρίου, «Άγιοι Κλήμης Επίσκοπος Αγκύρας και Αγαθάγγελος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -72,8 +77,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 23 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιανουαρίου — «Άγιοι Κλήμης Επίσκοπος Αγκύρας και Αγαθάγγελος»",
+        "url": "https://www.saint.gr/01/23/index.aspx",
+        "year": 2026
+      },
+      "note": "Commemorated with Clement, bishop of Ancyra, on one page and under one hymn."
     },
     {
       "church": "serbian",
@@ -83,5 +98,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 312,
+      "latest": 312,
+      "display": "312",
+      "basis": "traditional",
+      "note": "saint.gr's own heading for him on the joint page, «Αγιος Αγαθαγγελος (; - 312)». doxologia.ro, cited on this folder's Romanian row, gave no year at all."
+    }
   }
 }
