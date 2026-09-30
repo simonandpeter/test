@@ -1,0 +1,67 @@
+{
+  "slug": "dionysius-the-merciful",
+  "display_name": "Dionysius the Merciful",
+  "names": [
+    {
+      "form": "Διονύσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαρτίου, «Όσιος Διονύσιος ο Ελεήμων», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Metropolitan of Larissa",
+  "types": [
+    "metropolitan"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαρτίου — «Όσιος Διονύσιος ο Ελεήμων»",
+        "url": "https://www.saint.gr/03/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The page says at the outset what is missing: «δεν διασώζονται αγιολογικά κείμενα, ακολουθίες, συναξάρια ή βίος» — no hagiological texts, services, synaxaria or life survive for him. It then documents him from two things that do: a wall-painting of 1627 in the church of the Holy Unmercenaries at Trikala, whose inscription names him archbishop of Larissa among seven such archbishops painted in chronological order, and the «Σύγγραμμα Ἱστορικόν» or Chronicle of Meteora, written shortly after 1529. From the order of the seven it places his episcopate after 1489-1490 and before 1499 and calls it certainly short. It gives no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1510,
+      "latest": 1510,
+      "display": "1510",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Όσιος Διονύσιος κοιμήθηκε οσίως με ειρήνη, την Μεγάλη Πέμπτη του έτους 1510 μ.Χ.», and the page heads him «(; - 1510)», leaving the year of his birth a question mark."
+    },
+    "floruit": {
+      "earliest": 1489,
+      "latest": 1499,
+      "display": "1489–1499",
+      "basis": "inferred",
+      "note": "saint.gr reasons it out rather than citing it: «Με βάση την χρονολογική σειρά των παραπάνω επτά Αγίων Μητροπολιτών της Λάρισας, η αρχιερατεία του Αγίου Διονυσίου του Ελεήμονος, πρέπει να τοποθετηθεί μετά το 1489 - 1490 μ.Χ. και πριν το 1499 μ.Χ. και οπωσδήποτε θα ήταν μικρής διάρκειας» — so the interval is the page's own inference from the order of the seven archbishops in the wall-painting, and it is recorded as inferred because the page says so."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

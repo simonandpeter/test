@@ -7,6 +7,11 @@
       "form": "Irodion",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 aprilie, «Sfântul Apostol Irodion»."
+    },
+    {
+      "form": "Ηρωδίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαρτίου, «Άγιος Ηρωδίων ο Απόστολος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -20,7 +25,8 @@
     "rufus-apostle-of-thebes",
     "phlegon-of-marathon",
     "asyncritus-the-apostle",
-    "hermes-apostle-of-dalmatia"
+    "hermes-apostle-of-dalmatia",
+    "andrew-the-first-called"
   ],
   "attestations": [
     {
@@ -45,8 +51,19 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "revised-julian",
+        "note": "The Greek calendar keeps him on 28 March, which is one of the four days his own Romanian page names; the Romanian row on this folder holds 8 April, the day doxologia.ro prints him on. saint.gr's page adds «Η μνήμη του Αγίου Ηρωδίωνα επαναλαμβάνεται στις 10 Nοεμβρίου», his memory is repeated on 10 November. One row per church is the schema, so the Greek row records the Greek day page that was read and the November day is noted here."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαρτίου — «Άγιος Ηρωδίων ο Απόστολος»",
+        "url": "https://www.saint.gr/03/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The page makes him one of the Seventy, a fellow worker of the Twelve and of Peter especially, and bishop of Patras after the martyrdom of Andrew the First-called; it has him seized by Jews and idolaters, beaten savagely, stoned, and finally butchered in the crudest way. The apolytikion it prints under his name calls him instead the luminary and shepherd of Hypata — the Thessalian town whose three saints saint.gr keeps together — and not of Patras; the hymn names Herodion and no other saint, so it is taken as his and copied, and the disagreement with the page's own prose is recorded here rather than mended."
     },
     {
       "church": "serbian",
@@ -68,6 +85,21 @@
       },
       "english": {
         "text": "O holy apostles, pray the merciful God to grant our souls forgiveness of sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τῆς Ὑπάτης φωστῆρα καί ποιμένα θεόληπτον, τοῦ Παρακλήτου σέ χάρις, Ἠρῳδίων ἀνέδειξεν ἐν ταύτῃ γάρ Ἀπόστολε τό φῶς ἐκήρυξας τό θεῖον τοῦ Χριστοῦ, καί ὡδήγησας πρός πίστιν τήν ἀληθήν τούς εὐσεβῶς βοῶντάς σοι δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ στεφανώσαντι, δόξα τῷ χορηγοῦντι διά σοῦ, ἡμῖν τά κρείττονα.",
+      "source": {
+        "text": "saint.gr — Άγιος Ηρωδίων ο Απόστολος, Ἀπολυτίκιον. The page prints no tone for it. Its «Τῆς Ὑπάτης» does not agree with the same page's prose, which makes him bishop of Patras. Recorded with kind troparion, which is the schema's word for it.",
+        "url": "https://www.saint.gr/2634/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The grace of the Comforter showed you forth, Herodion, as the luminary of Hypata and its God-possessed shepherd; for in that place, O Apostle, you preached the divine light of Christ, and guided to the true faith those who devoutly cry to you: glory to him who gave you strength, glory to him who crowned you, glory to him who through you bestows on us the better things.",
         "rendered": "site"
       }
     }

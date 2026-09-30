@@ -115,6 +115,42 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σαββασ sabbas-companion-of-jonah sabbas-of-sicily sabbas-of-tver sabbas-of-zographou sabbas-the-spiritual sava-of-serbia sava-the-second':
+    'Seven now. The new one is the companion of Jonah on 29 March; the others are read in the el-03-02 entry for this name form.',
+  'μαρουθασ marouthas-companion-of-jonah marouthas-of-martyropolis':
+    'Two men: the companion of Jonah on 29 March and Marouthas of Martyropolis on 16 February.',
+  'ζαχαριασ zacharias-father-of-the-forerunner zacharias-of-arta zacharias-of-corinth zacharias-of-jerusalem zacharias-son-of-barachias zacharias-son-of-carion zacharias-the-faster':
+    'Seven now. The new one is Zacharias of Corinth on 30 March; the others are read in the el-02-21 entry for this name form.',
+  'βικτωρ victor-26-february victor-of-thessalonica':
+    'Two men: the Victor of 26 February and Victor of Thessalonica on 30 March.',
+  'σωφρονιοσ sophronius-bishop-19-february sophronius-companion-of-sylvester sophronius-of-irkutsk sophronius-of-jerusalem sophronius-of-vratsa sophronius-the-recluse':
+    'Six now. The new one is Sophronius of Irkutsk on 30 March; the others are read in the el-03-11 entry for this name form, where three stand on 11 March.',
+  'μαρκοσ mark-of-arethusa mark-of-byblos mark-of-the-lavra-of-pskov mark-the-ascetic mark-the-deaf mark-the-shepherd':
+    'Six now. The new one is on 29 March; the others are read in the el-01-27 entry for this name form.',
+  'ιωνασ jonah-martyr-29-march jonah-of-kyiv jonah-of-the-lavra-of-pskov jonas-of-great-perm jonas-the-lerian':
+    'Five men, and two of them are on the Greek 29 March as two entries: the martyr of Persia, whom the Romanian keeps there too and whose company this day is, and Jonah of the Lavra of Pskov. The others are Kyiv on 9 January, Great Perm on 29 January and the Lerian on 28 February.',
+  'βασσοσ bassos-of-the-lavra-of-pskov bassus-companion-of-eusebius':
+    'Two men: the monk of the Lavra of Pskov on 29 March and the companion of Eusebius on 20 January.',
+  'μαρησ mares-companion-of-jonah maris-of-cyrus':
+    'Two men: the companion of Jonah on 29 March and Maris of Cyrus on 25 January.',
+  'λαζαροσ lazarus-companion-of-jonah lazarus-of-murom lazarus-of-tripoli-in-the-peloponnese':
+    'Three men: the companion of Jonah on 29 March, Murom on 8 March and Tripoli in the Peloponnese on 23 February.',
+  'ευσταθιοσ eustathius-of-antioch eustathius-of-kios eustathius-the-roman':
+    'Three men: Antioch on 21 February, Kios on 29 March and the Roman on 28 September.',
+  'ηλιασ elias-companion-of-jonah elias-martyr-with-patermuthius elias-nikolayevich-hieromartyr elias-of-heliopolis elias-of-trebizond elias-the-cave-dweller-of-calabria elias-the-egyptian':
+    'Seven now. The new one is the companion of Jonah on 29 March; the others are read in the el-02-27 entry for this name form.',
+  'αβιβοσ abibus-companion-of-jonah abibus-of-hermoupolis abibus-of-samosata':
+    'Three men: the companion of Jonah on 29 March, Hermoupolis on 13 March and Samosata on 29 January.',
+  'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kazan john-of-lycopolis john-of-manglisi john-of-rouphinianai john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-well john-of-yuryevets john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-sinaite-venerable-martyr':
+    'Twenty-nine now. The new one is John of Manglisi on 28 March; the others are read in the el-03-26 entry for this name form.',
+  'ιλαριων hilarion-of-pokrovskoe hilarion-of-zographou hilarion-the-new-of-cyprus hilarion-the-new-of-georgia hilarion-the-new-of-pelecete':
+    'Five men, and two of them are on the Greek 28 March as two entries: Hilarion the New of Pelecete, whom the Romanian keeps there too, and Hilarion of Pokrovskoe. The others are Zographou on 22 September, the New of Cyprus on 6 October and the New of Georgia on 14 February. **A reader has flagged a sixth**, an Ιλαρίων on 6 Μαΐου whom the corpus may or may not already keep as `hilarion-4-may`; that pair is not this fold and is open in ro-run/FINDINGS.md.',
+  'ησυχιοσ hesychius-companion-of-asklepiodote hesychius-of-jerusalem hesychius-of-the-forty-martyrs hesychius-the-senator hesychius-the-sinaite':
+    'Five men on five Greek days: the companion of Asklepiodote on 19 February, Jerusalem on 28 March, one of the Forty on 9 March, the senator on 2 March and the Sinaite on 29 March.',
+  'ευστρατιοσ eustratius-of-mount-olympus eustratius-the-faster':
+    'Two men: Mount Olympus on 9 January and Eustratius the Faster on 28 March.',
+  'διονυσιοσ dionysius-companion-of-agapius dionysius-companion-of-agapius-second dionysius-companion-of-quadratus dionysius-of-alexandria dionysius-reader-of-alexandria dionysius-the-merciful':
+    'Six now. The new one is Dionysius the Merciful on 28 March; the others are read in the el-03-15 entry for this name form, where the company of Agapius holds two of the name.',
   'παυλοσ paul-brother-of-pausirius paul-companion-of-quadratus paul-disciple-of-dionysius-of-alexandria paul-of-corinth paul-of-crete paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-zographou paul-the-martyr-3-february paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
     'Seventeen now. The new one is Paul of Corinth on 27 March; the others are read in the el-03-17 entry for this name form.',
   'εφραιμ ephraim-of-antioch ephraim-of-katounakia ephraim-of-rostov ephraim-of-the-kyiv-caves ephraim-of-tomis ephrem-of-kiev ephrem-of-novotorzhsk ephrem-the-syrian':

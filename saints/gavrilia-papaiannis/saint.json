@@ -6,6 +6,11 @@
       "form": "Gavrilia Papaiannis",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 martie; the life spells the family name «Papaianni» and calls her Gherontissa Gavrilia."
+    },
+    {
+      "form": "Γαβριηλία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαρτίου, «Οσία Γαβριηλία (Παπαγιάννη), η Κωνσταντινουπολίτις, η εν Λέρω τελειωθείσα», with the rank word left off and the family name, the city and the place of her repose left in the line."
     }
   ],
   "sex": "female",
@@ -54,8 +59,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαρτίου — «Οσία Γαβριηλία (Παπαγιάννη), η Κωνσταντινουπολίτις, η εν Λέρω τελειωθείσα»",
+        "url": "https://www.saint.gr/03/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads her «(1897 - 1992)», gives her baptismal name as Aurelia, and reprints the communiqué of the Ecumenical Patriarchate in full: at the sessions of the Holy Synod of 3 and 4 October 2023, on the recommendation of the Canonical Committee, the monk Gavrilia «ἡ Κωνσταντινουπολίτις, ἡ ἐν Λέρῳ τελειωθεῖσα» was entered in the register of saints of the Eastern Orthodox Church, distinguished for the Christlike virtues of almsgiving, philanthropy and absolute devotion and trust in the Lord's will. That document is the ground of the Greek row. The page prints an apolytikion, a kontakion, a megalynarion and an oikos, and links a full service; the apolytikion and the kontakion are added to this folder and the rest is not, because it was not read line by line."
     },
     {
       "church": "serbian",
@@ -65,5 +80,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α΄. Τὸν συνάναρχον Λόγον.",
+      "text": "Ἐνεργοῦ νῦν ἀγάπης σεμνὴν ἀσκήτριαν, Γαβριηλίαν, τῶν ὄντων ἐν συμφοραῖς ἀρωγὸν καὶ βροτῶν ἐμπεριστάτων τὴν ἀντίληψιν, ἱεραπόστολον Χριστοῦ νηπτικὴν ὡς προσφορᾶς ὑμνήσωμεν ἐκμαγεῖον, ἱλεουμένην τὸν Κτίστην ἡμῖν αὐτὴν τοῖς μακαρίζουσι.",
+      "source": {
+        "text": "saint.gr — Οσία Γαβριηλία (Παπαγιάννη), Ἀπολυτίκιον. Recorded with kind troparion, which is the schema's word for it.",
+        "url": "https://www.saint.gr/4378/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us hymn Gavrilia, the modest ascetic of love in action, the helper of those in calamity and the succour of hard-pressed mortals, a watchful missionary of Christ and the very mould of self-offering, who makes the Creator merciful to us who call her blessed.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ΄. Τῇ Ὑπερμάχῳ.",
+      "text": "Θερμῆς ἀγάπης συνοδὸν καὶ ταπεινώσεως, τὴν ἐν τῷ κόσμῳ ἔξω κόσμου παραμένουσαν, εὐχομένην καὶ προσφέρουσαν ὡς θυσίαν ἑαυτὴν Χριστῷ ἐκθύμως ἀνυμνήσωμεν θεαυγῆ Γαβριηλίαν, τὴν ἀσκήτριαν, πόθῳ κράζοντες· Χαίροις, μῆτερ θεόληπτε.",
+      "source": {
+        "text": "saint.gr — Οσία Γαβριηλία (Παπαγιάννη), Κοντάκιον",
+        "url": "https://www.saint.gr/4378/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us eagerly hymn the companion of warm love and of humility, who stayed in the world and outside the world, praying and offering herself to Christ as a sacrifice — God-radiant Gavrilia the ascetic — crying to her with longing: hail, God-possessed mother.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

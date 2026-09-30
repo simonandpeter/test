@@ -1,0 +1,66 @@
+{
+  "slug": "hesychius-of-jerusalem",
+  "display_name": "Hesychius of Jerusalem",
+  "names": [
+    {
+      "form": "Ησύχιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαρτίου, «Όσιος Ησύχιος ο Ιεροσολυμίτης», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter",
+    "theologian"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαρτίου — «Όσιος Ησύχιος ο Ιεροσολυμίτης»",
+        "url": "https://www.saint.gr/03/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The page is unusually source-conscious: it separates what the Synaxarion says from what Theophanes adds in his Chronography — that the ordination fell just as Cyril became archbishop of Alexandria, in 412 — and from what Cyril of Scythopolis, who knows the matter from local tradition, gives, namely the titles «πρεσβύτερος και της Εκκλησίας διδάσκαλος», «πεφωτισμένος», «θεολόγος», «φωστήρ», and the report that Hesychius was in Patriarch Juvenal's company at the consecration of the church of Euthymius's monastery in 428 or 429. It cites the Acts of the Fifth Council of 553 for a fragment of his Ecclesiastical History, and reports his tomb still being shown about 570 at the eastern gate of Jerusalem. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ησύχιος έζησε και ασκήτεψε στην Παλαιστίνη κατά τον 5ο αιώνα μ.Χ.» The page gives no year of birth and none of death; the years it does give belong to other men's acts — Cyril's accession in 412, Juvenal's patriarchate from 422 to 458, the consecration in 428 or 429, the council of 553, the tomb still shown about 570."
+    }
+  },
+  "related": [
+    "cyril-of-alexandria",
+    "euthymius-the-great",
+    "juvenal-of-jerusalem"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "hilarion-of-pokrovskoe",
+  "display_name": "Hilarion of Pokrovskoe",
+  "names": [
+    {
+      "form": "Ιλαρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαρτίου, «Όσιος Ιλαρίων εκ Ρωσίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαρτίου — «Όσιος Ιλαρίων εκ Ρωσίας»",
+        "url": "https://www.saint.gr/03/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives one sentence: he practised ascesis in the monastery it calls «Ποκρόφσκοε Οζέρκσκοε» in Russia, was a disciple of the venerable Euphrosynus the Wonderworker, whose memory it puts on 15 May, and fell asleep in peace in 1476. It adds that his memory is repeated on 21 October; one row per church is the schema, so that second day is recorded here in the note and not as a second row. The monastery's name is known to this folder only in saint.gr's Greek spelling, and the English form of the epithet follows that spelling; no Russian source was read for it. The page prints no hymn, and the corpus holds no folder for his teacher, so the teacher is named without a link."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1476,
+      "latest": 1476,
+      "display": "1476",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1476 μ.Χ.» The page gives no year of birth."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

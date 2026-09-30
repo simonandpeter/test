@@ -1,0 +1,61 @@
+{
+  "slug": "john-of-manglisi",
+  "display_name": "John of Manglisi",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαρτίου, «Όσιος Ιωάννης εκ Γεωργίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Manglisi",
+  "types": [
+    "venerable",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαρτίου — «Όσιος Ιωάννης εκ Γεωργίας»",
+        "url": "https://www.saint.gr/03/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1751)» and gives one sentence: bishop of the city of Manglisi in eastern Georgia, fallen asleep in peace in 1751. The calendar line calls him only «εκ Γεωργίας», of Georgia; the see comes from the body of the page and is what distinguishes him from the other Johns, which is why the display name carries it. It prints no hymn. A Georgian saint recorded here only from a Greek source."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1751,
+      "latest": 1751,
+      "display": "1751",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη το έτος 1751 μ.Χ.», and the page heads him «(; - 1751)», leaving the year of his birth a question mark."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

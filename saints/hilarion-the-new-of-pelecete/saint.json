@@ -6,6 +6,11 @@
       "form": "Ilarion cel Nou",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 martie, «Sfântul Cuvios Ilarion cel Nou, egumenul Pelechitului»."
+    },
+    {
+      "form": "Ιλαρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαρτίου, «Όσιος Ιλαρίων ο Νέος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαρτίου — «Όσιος Ιλαρίων ο Νέος»",
+        "url": "https://www.saint.gr/03/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 754)» and says «Ο Όσιος κοιμήθηκε με ειρήνη το έτος 754 μ.Χ.» — which is a single year where this folder's `dates` record an unsettled disagreement between the reign of Leo the Armenian and that of Leo the Isaurian and his son, taken from the Romanian life. The Greek year falls inside that interval and does not settle the disagreement, so the interval is left as it stands and the reading is recorded here. The page puts the Pelekete monastery «στην Τριγλία», at Triglia, and gives him a foreknowing gift; it prints two apolytikia, both of which are added to this folder."
     },
     {
       "church": "serbian",
@@ -68,6 +83,38 @@
       },
       "english": {
         "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with miracles, O Hilarion our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’. Τὸν συνάναρχον Λόγον.",
+      "text": "Ἰλαρότητι τρόπων καλλωπιζόμενος, ὡς καθαρώτατον σκεῦος τῆς ἐπιπνοίας Χριστοῦ, τῆς ἐνθέου βιοτῆς ἐδείχθης ἔσοπτρον ὅθεν ἀστράπτεις νοητῶς, ἀρετῶν μαρμαρυγᾶς, Πατὴρ ἠμῶν Ἰλαρίων, πρὸς ἀπλανῆ ὁδηγίαν, καὶ σωτηρίαν τῶν ψυχῶν ἠμῶν.",
+      "source": {
+        "text": "saint.gr — Όσιος Ιλαρίων ο Νέος, Ἀπολυτίκιον. Recorded with kind troparion, which is the schema's word for it.",
+        "url": "https://www.saint.gr/2633/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with the cheerfulness of your ways, as a most pure vessel of the inspiration of Christ, you were shown to be a mirror of the life that is of God; and from there you flash out, to the mind's eye, the glittering of the virtues, our Father Hilarion, for the unerring guidance and the salvation of our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ἐν σοί Πάτερ ἀκριβῶς διεσώθη τό κατ᾽ εἰκόνα· λαβών γάρ τόν σταυρόν, ἠκολούθησας τῷ Χριστῷ, καί πράττων ἐδίδασκες, ὑπερορᾷν μέν σαρκός, παρέρχεται γάρ· ἐπιμελεῖσθαι δέ ψυχῆς, πράγματος ἀθανάτoυ· διό καί μετά Ἀγγέλων συναγάλλεται, Ὅσιε Ἱλαρίων τό πνεῦμά σου.",
+      "source": {
+        "text": "saint.gr — Όσιος Ιλαρίων ο Νέος, Έτερον Ἀπολυτίκιον. This is the common of a venerable father, printed under his name with his name in its last line. Recorded with kind troparion, which is the schema's word for it.",
+        "url": "https://www.saint.gr/2633/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "In you, Father, the likeness was kept exactly: for taking up the cross you followed Christ, and by your doing you taught us to overlook the flesh, since it passes away, and to take thought for the soul, a thing immortal. Therefore, venerable Hilarion, your spirit rejoices together with the angels.",
         "rendered": "site"
       }
     }

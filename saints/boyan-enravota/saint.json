@@ -1,0 +1,65 @@
+{
+  "slug": "boyan-enravota",
+  "display_name": "Boyan Enravota",
+  "names": [
+    {
+      "form": "Μποϋάν",
+      "lang": "el",
+      "note": "saint.gr writes the name in Latin letters in its line for 28 Μαρτίου, «Άγιος Boyan ο επονομαζόμενος Enravota πρίγκιπας των Βουλγάρων», and gives its own Greek renderings in brackets in the body, «ο Άγιος Boyan (Μποϋάν) ο επονομαζόμενος Enravota (Ενραβωτά)». Those bracketed forms are the only Greek ones the page prints."
+    },
+    {
+      "form": "Ενραβωτά",
+      "lang": "el",
+      "note": "The second of the two bracketed Greek forms on the same page; it renders the byname the page gives as Enravota."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "prince"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαρτίου — «Άγιος Boyan ο επονομαζόμενος Enravota πρίγκιπας των Βουλγάρων»",
+        "url": "https://www.saint.gr/03/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The page makes him the eldest son of Omurtag, king of Bulgaria from 816 to 831, passed over for the throne in favour of his younger brother Malamir; it puts the beheading «περί το έτος 833 μ.Χ.» and cites Theophylact, archbishop of Ochrid from 1090 to 1126, for the prophecy it quotes. It prints no hymn and names no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 833,
+      "latest": 833,
+      "display": "about 833",
+      "basis": "traditional",
+      "note": "saint.gr: «ο βασιλέας διέταξε τον διά αποκεφαλισμού θάνατό του. Ήταν περί το έτος 833 μ.Χ.» — the page's «περί», about, is why the display says about 833. It gives no year of birth."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

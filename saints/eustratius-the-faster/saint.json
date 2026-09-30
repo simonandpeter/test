@@ -1,0 +1,60 @@
+{
+  "slug": "eustratius-the-faster",
+  "display_name": "Eustratius the Faster",
+  "names": [
+    {
+      "form": "Ευστράτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Μαρτίου, «Άγιος Ευστράτιος ο Νηστευτής ο Οσιομάρτυρας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Μαρτίου — «Άγιος Ευστράτιος ο Νηστευτής ο Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/03/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The page records the relic — «Το Λείψανο του Αγίου βρίσκεται αδιάφθορο στη Λαύρα των Σπηλαίων του Κιέβου», incorrupt in the Lavra of the Caves of Kiev — and describes how he is painted on the icons: light hair, a thin beard, the monastic habit, and barefoot. It dates the Polovtsy raid «Στις 20 Ιουλίου του έτους 1096 μ.Χ.» and gives no year for the crucifixion itself. It prints no hymn. This is a Russian saint recorded here only from a Greek source."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1096,
+      "latest": 1096,
+      "display": "1096",
+      "basis": "attested",
+      "note": "saint.gr: «Στις 20 Ιουλίου του έτους 1096 μ.Χ., η Λαύρα των Σπηλαίων του Κιέβου, έγινε ξαφνικά στόχος επιθέσεως των Πολόφσκυ» — the year of the raid that carried him off. The page gives no year for his crucifixion, which its own narrative puts six years and some weeks later, and none is inferred here."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
