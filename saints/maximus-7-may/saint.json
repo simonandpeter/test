@@ -1,0 +1,50 @@
+{
+  "slug": "maximus-7-may",
+  "display_name": "Maximus (7 May)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μάξιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαΐου, «Άγιος Μάξιμος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαΐου — «Άγιος Μάξιμος»",
+        "url": "https://www.saint.gr/05/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Μαΐου εκάστου έτους», the same day as the listing, and its whole notice is four sentences with no proper name in them but his own. **He is distinguished from the corpus's other Maximi by the day alone**, which is why the slug and the display name carry it: the page gives no country, no century, no emperor, no city and no judge, only that he lived in the years of the persecutions, preached Christ everywhere, brought numerous idolaters to him, was hunted and harassed for it, passed his life in continual danger and battle, and fell at last stoned by fanatical idolaters. **No `dates`**: «τα σκληρά, αλλά ένδοξα χρόνια των διωγμών» is a period and not a date. The couplet adds only the stones — having mounted upon stones, great-minded Maximus went up rejoicing into the breadth of heaven. No relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

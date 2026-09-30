@@ -1,0 +1,51 @@
+{
+  "slug": "john-psychaites",
+  "display_name": "John Psychaites",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαΐου, «Όσιος Ιωάννης ο Ψυχαΐτης», with the rank word left off; the epithet ο Ψυχαΐτης is kept in the display name and not in this form."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαΐου — «Όσιος Ιωάννης ο Ψυχαΐτης»",
+        "url": "https://www.saint.gr/05/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Μαΐου εκάστου έτους», the same day as the listing. **The epithet is what tells him from every other John**, and the page's couplet makes it a play on the word: bearing the relation of the soul alone, father, you are justly called Psychaites — «Ψυχῆς μόνης σὺ τὴν σχέσιν φέρων Πάτερ, / Ψυχαΐτης κέκλησαι ἐνδίκως μάκαρ». The page does not say what the Psycha was, so nothing is claimed about a monastery of that name. **`confessor` is in `types` because the page says the iconoclast emperors persecuted him and he came back from each persecution**, not because it uses the word. **No year and no place**: the page dates him only by «τα χρόνια της σκληρής πάλης για τις άγιες εικόνες», the years of the hard struggle for the holy icons, which is a period and not a date, so `dates` is absent. It is also the same page that gives him no country, no monastery, no relics and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

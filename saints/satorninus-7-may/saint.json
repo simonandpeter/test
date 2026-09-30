@@ -1,0 +1,54 @@
+{
+  "slug": "satorninus-7-may",
+  "display_name": "Satorninus (7 May)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Σατορνίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαΐου, «Άγιοι Ρουφίνος και Σατορνίνος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "rufinus-7-may",
+    "codratus-of-nicomedia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαΐου — «Άγιοι Ρουφίνος και Σατορνίνος»",
+        "url": "https://www.saint.gr/05/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Μαΐου εκάστου έτους», the same day as the listing, and heads him second of the pair, «Αγιος Σατορνινος». A pair the page enumerates is two folders. **The spelling is the page's**: Σατορνίνος, which is kept as the display form rather than being normalised to the Saturninus the corpus uses elsewhere, because nothing on the page identifies him with any of them — `saturninus-companion-of-perpetua`, `saturninus-companion-of-plotinus`, `saturninus-martyr-6-february` and `saturninus-of-the-ten-of-crete` are all in other companies on other days. **No year is recorded**: the page dates the pair only by the journey of Codratus, whose own page names the reigns of Decius and Valerian, and that inference is not made here. No judge of their own, no relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

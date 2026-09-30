@@ -1,0 +1,51 @@
+{
+  "slug": "tarasius-of-lycaonia",
+  "display_name": "Tarasius of Lycaonia",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ταράσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαΐου, «Όσιος Ταράσιος ο θαυματουργός «ὁ ἐν Λυκαονίᾳ»», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαΐου — «Όσιος Ταράσιος ο θαυματουργός «ὁ ἐν Λυκαονίᾳ»»",
+        "url": "https://www.saint.gr/05/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Μαΐου εκάστου έτους», the same day as the listing. **The page names two days and prefers neither**: «Η μνήμη του αναφέρεται στον Συναξαριστή Delehaye στις 8 Μαΐου και οτον Λαυρωτικό Κώδικα Ι 70 φ. 217β στις 7 Μαΐου.» The row records the day page read, which is 7 Μαΐου and the codex's day; Delehaye's 8 May is recorded here and is not a second row and not a second folder, and it is put in the report. **He is not `tarasius-of-constantinople`, and the relics are the reason the two get confused.** The page says his relics were carried from Constantinople to Venice, probably in the reign of Basil II between 1018 and 1025, in the days of the Doge Otto Orseolo, **«ως Λείψανο του Αγίου Ταρασίου Πατριάρχου Κωνσταντινουπόλεως»** — as the relic of Saint Tarasius the Patriarch — and they lie today in a sarcophagus above the altar of the church of San Zaccaria in Venice, which the page calls Roman Catholic. That is the page's own statement that the attribution was to the Patriarch; it does not say the two are one man, and nothing is claimed either way here. **No year of his life is given**, so `dates` is absent: the only dates on the page belong to the translation of the relics. Its whole account of him is the Lavra codex's note, quoted in the life. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

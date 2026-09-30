@@ -1,0 +1,63 @@
+{
+  "slug": "codratus-of-nicomedia",
+  "display_name": "Codratus of Nicomedia",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Κοδράτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαΐου, «Άγιος Κοδράτος και οι μαζί μ' αυτόν μαρτυρήσαντες», with the rank word left off."
+    }
+  ],
+  "related": [
+    "rufinus-7-may",
+    "satorninus-7-may"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 259,
+      "display": "249–259",
+      "basis": "traditional",
+      "note": "saint.gr gives two reigns and no year: «Ο Άγιος Κοδράτος έζησε στα χρόνια των βασιλέων Δεκίου (249 - 251 μ.Χ.) και Ουαλεριανού (251 - 259 μ.Χ.) στη Νικομήδεια.» The interval is those two reigns end to end, as the page prints them."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαΐου — «Άγιος Κοδράτος και οι μαζί μ' αυτόν μαρτυρήσαντες»",
+        "url": "https://www.saint.gr/05/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Μαΐου εκάστου έτους», the same day as the listing. **The company is not enumerated**: «οι μαζί μ' αυτόν μαρτυρήσαντες» and, in the body, the many at Nicaea who believed through him and were killed «άλλοι με φωτιά και άλλοι με μαχαίρια» — not one is named, so they are no folders. **He is neither of the two Quadrati the corpus keeps**: `quadratus-the-apostle` is of the Seventy and `quadratus-of-corinth` is the martyr of Corinth with Cyprian and Dionysius; this one is of Nicomedia, tried by the proconsul Perinios, dragged through Nicaea, Apamea and Caesarea and beheaded near Hermoupolis. **`rufinus-7-may` and `satorninus-7-may` are joined to him by the page's own cross-reference**, which says they died at Caesarea of Cappadocia «την εποχή που ο ανθύπατος Νικομηδείας Περίνιος, οδηγούσε εκεί τον μάρτυρα Κοδράτο (βλέπε ίδια ημέρα)». No hymn, no relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "juvenalius-7-may",
+  "display_name": "Juvenalius (7 May)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιουβενάλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαΐου, «Άγιος Ιουβενάλιος ο Μάρτυρας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 132,
+      "latest": 132,
+      "display": "132",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Μάρτυς Ιουβενάλιος μαρτύρησε το 132 μ.Χ., επί αυτοκράτορα Αδριανού (117 - 138 μ.Χ.).» The page heads him «(; - 132)», with no year of birth. The year and the reign agree."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαΐου — «Άγιος Ιουβενάλιος ο Μάρτυρας»",
+        "url": "https://www.saint.gr/05/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Μαΐου εκάστου έτους», the same day as the listing, and its whole text is one sentence with a year in it. **He is neither of the two Juvenals the corpus keeps**: `juvenal-of-jerusalem` is the fifth-century patriarch and `juvenal-of-alaska` the missionary killed in 1796. This one is dated 132 under Hadrian and is nothing but a name, a rank, a year and a day. No place, no manner of death, no judge, no relics, no hymn, and no couplet."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,6 +115,36 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ζωσιμασ zosimas-24-january zosimas-of-carthage zosimas-of-kumurdo zosimas-of-palestine zosimas-of-solovki zosimas-of-volokolamsk zosimas-of-vorbozom':
+    'Seven now. The new one is on 8 May; the others are read in the el-05-01 entry for this name form.',
+  'ελλαδιοσ helladius-of-auxerre helladius-the-layman':
+    'Two men: Helladius of Auxerre on 8 May and the Helladius of the el-05-28 reading, which is another day.',
+  'διονυσιοσ dionysius-8-may dionysius-companion-of-agapius dionysius-companion-of-agapius-second dionysius-companion-of-quadratus dionysius-companion-of-socrates dionysius-companion-of-terentius dionysius-martyr-1-april dionysius-of-alexandria dionysius-of-pereyaslavl dionysius-reader-of-alexandria dionysius-the-merciful':
+    'Eleven now. The new one is the Dionysius of 8 May; the others are read in the el-04-19 entry for this name form.',
+  'κασσιανοσ cassian-companion-of-peter cassian-of-axylou cassian-of-bosoi cassian-the-recluse-of-the-kyiv-caves john-cassian':
+    'Five now. The new one is Cassian the Recluse of the Kyiv Caves on 8 May; the others are read in the el-03-26 entry for this name form.',
+  'αρσενιοσ arsenios-of-paros arsenius-bishop-of-tver arsenius-companion-of-elias-speleotes arsenius-of-corfu arsenius-of-elassona arsenius-of-georgia arsenius-of-ikalto arsenius-of-novgorod arsenius-of-rostov arsenius-of-the-kyiv-caves arsenius-of-varnakova arsenius-the-great':
+    'Twelve now, and **four of them stand on the Greek 8 May** as four entries of the page: Arsenius the Great, whom the Romanian keeps there too, with Novgorod, the Kyiv Caves and Varnakova. The others are read in the el-05-03 entry for this name form.',
+  'ταρασιοσ tarasius-of-constantinople tarasius-of-lycaonia':
+    'Two men: Tarasius of Constantinople, the patriarch, whom both calendars keep on 25 February, and Tarasius of Lycaonia, whom saint.gr keeps on 7 May and whose folder this batch makes. A later reader checked 8 Μαΐου for him, where Delehaye puts a Tarasius, and found none on that page.',
+  'σατορνινοσ satorninus-7-may saturninus-companion-of-plotinus saturninus-of-corfu':
+    'Three men of this Greek form: Corfu on 29 April, the Saturninus of 7 May, and the one read beside them there.',
+  'ρουφινοσ rufinus-7-may rufinus-of-rome rufinus-the-deacon':
+    'Three men: Rome on 28 February, the deacon on 7 April and the Rufinus of 7 May.',
+  'μαξιμοσ maximus-30-april maximus-7-may maximus-brother-of-dometius maximus-companion-of-asklepiodote maximus-companion-of-fausta maximus-companion-of-olympias maximus-companion-of-terentius maximus-of-kapsokalyvia maximus-of-marcianopolis maximus-of-ozovia maximus-of-totma maximus-of-ungrovlachia maximus-son-of-paul-and-tatta maximus-venerable-martyr-6-march':
+    'Fourteen now. The new one is on 7 May; the others are read in the el-04-30 entry for this name form.',
+  'ιουβεναλιοσ juvenal-of-narni juvenalius-7-may':
+    'Two men: the Juvenal of 7 May and the Juvenal of the el-07-02 entry.',
+  'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-kalita john-kaloktenes john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kazan john-of-lycopolis john-of-manglisi john-of-rouphinianai john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-old-lavra john-of-the-well john-of-verkhoturye john-of-vilnius john-of-yuryevets john-of-zedazeni john-philosopher-of-georgia john-psychaites john-son-of-xenophon john-the-bulgarian john-the-confessor-of-kathara john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-with-minas-and-david':
+    'Forty now, and **two of the new ones share 7 May** as two entries: John of Zedazeni, whom the Romanian keeps there too and whose thirteen Syrian disciples the corpus already holds, and John Psychaites. Three of those disciples — Anthony of Martkopi, David of Gareji, Joseph of Alaverdi — now relate their teacher, which `tests/life-links.test.mjs` asked for. The rest are read in the el-04-29 entry for this name form.',
+  'φλαβιοσ flavius-of-nicomedia flavius-of-the-forty-martyrs':
+    'Two men: Flavius of Nicomedia on 7 May and Flavius of the Forty of Sebaste on 9 March.',
+  'κοδρατοσ codratus-companion-of-alexandra codratus-of-nicomedia codratus-the-executioner quadratus-of-corinth quadratus-of-the-east':
+    'Five now. The new one is Codratus of Nicomedia on 7 May; the others are read in the el-04-21 entry for this name form.',
+  'augustinus augustus brother augustinus-brother-of-augustus augustus-brother-of-augustinus':
+    'The two brothers the 7 May page names together, each named after the other, which is what folds them.',
+  'αυγουστινοσ augustine-of-hippo augustinus-brother-of-augustus':
+    'Two men: Augustinus the brother of Augustus, one of the Nicomedian company of 7 May, and the Augustine the corpus keeps from the Romanian year.',
   'θερινοσ therinos therinus':
     'Two men, and the reading a reader proposed holds: Therinus of 23 April is beheaded with Donatus, and Therinos — or Therianos, both forms in one sentence of the page — is martyred on 6 May with Danax and Mesiros. Two days, two companies, two men.',
   'σεραφειμ seraphim-of-dombou seraphim-of-sarov seraphim-of-vyritsa':

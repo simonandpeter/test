@@ -6,6 +6,11 @@
       "form": "Acachie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 mai, «Sfântul Mucenic Acachie»."
+    },
+    {
+      "form": "Ακάκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαΐου, «Άγιος Ακάκιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαΐου — «Άγιος Ακάκιος»",
+        "url": "https://www.saint.gr/05/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and it is the same soldier martyr: a man in the ranks under Diocletian's colleague, tried by one official after another at Byzantium and beheaded. **The Greek adds everything the folder lacked**: Cappadocia as his country, the end of the third century and the persecution under Galerius Maximian, whose reign it prints as 286–305; the muster at which his commander examined the soldiers to find out how many and which of them were Christians; the names of the three who tried him — the centurion Φήρμος, the proconsul Βιβιανός, and then Φαλακιανός, also spelled Φυλακιανός on the page — the flogging and the darkest prison in Byzantium, the beheading, and his age of twenty-five; and the synaxis in the quarter of Heptaskalon, in a church raised by the emperor Justinian. **One thing on this page reads against the folder's own English name.** The folder is called Acacius the Centurion, and saint.gr makes the centurion somebody else: «Ο Άγιος Ακάκιος υπηρετούσε στις στρατιωτικές τάξεις, και είχε διοικητή τον εκατόνταρχο Φήρμο» — he served in the military ranks and had the centurion Firmus for his commander. The display name is not changed by this upgrade, and the reading is recorded here and in the report. **No `dates` are added**: the page gives a reign and a century and no year of his own, and his age at death is not a date. No hymn is printed for him."
     },
     {
       "church": "serbian",

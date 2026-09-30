@@ -6,6 +6,11 @@
       "form": "Nil Sorski",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 mai, «Sfântul Nil Sorski»."
+    },
+    {
+      "form": "Νείλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαΐου, «Όσιος Νείλος εκ Ρωσίας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -52,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαΐου — «Όσιος Νείλος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/05/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Μαΐου εκάστου έτους» and «(1433 - 1508)», and names him in its first words, «Ο Όσιος Νείλος του Σόρκιυ» — Nilus of Sora, of the noble family of the Maikovs. That is this folder's man. **`dates` are not touched**: the folder already holds 1433 and 1508 and the Greek agrees on both. **The Greek's own day for his repose is a moveable one**: «κοιμήθηκε με ειρήνη την Κυριακή των Μυροφόρων του 1508 μ.Χ.», the Sunday of the Myrrhbearers, which no fixed feast can hold; the calendar keeps him on this fixed 7 May and the moveable Sunday is recorded here and in the report, not forced into a day. **What the Greek adds**: the birth at Moscow of devout parents, the work as a shorthand writer in the service of the great prince of Moscow, the monastery of the White Lake founded by the ascetic Cyril, the journey to the Holy Mountain with his fellow monk Innocent and the ascetic life in the Skete of the Carpenter, the report that he stayed a long while at the monastery of Saint Dionysius, the return to Russia about 1480, the hermitage on the river Sora and the little church of the Meeting of the Lord he built there, his measure and discretion and his willingness to be taken for a fool in order to be useful to the brethren, his part against the Judaizers of Novgorod who set the end of the world at the year 7000 from the creation, that is 1492, the question of monastic property he raised at the Moscow council of 1503 which the council did not adopt, and the ascetic writings. No Greek hymn is printed."
     },
     {
       "church": "serbian",

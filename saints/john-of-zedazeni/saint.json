@@ -6,6 +6,11 @@
       "form": "Ioan Zedazneli",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 mai, «Sfântul Cuvios Ioan Zedazneli, dimpreună cu 12 ucenici din Georgia»."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαΐου, «Όσιος Ιωάννης και οι μαθητές αυτού», with the rank word left off; the page's own head line for him reads «Οσιος Ιωαννης»."
     }
   ],
   "sex": "male",
@@ -60,8 +65,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαΐου — «Όσιος Ιωάννης και οι μαθητές αυτού»",
+        "url": "https://www.saint.gr/05/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps the company, and it is plainly the same company: John out of Syria and the twelve chosen to go into Iberia, whose names the page prints as «Σίω, Δαβίδ, Αντώνιος, Θαδδαίος, Στέφανος, Ισήδωρος, Μιχαήλ, Πύρρος, Ζήνων, Ισέ, Ιωσήφ και Άβιβος». **Thirteen head lines, thirteen names, so thirteen folders**, and the corpus already holds every one of them, so the whole company is upgrades and no folder is created. **`shio-of-mgvime` is the one exception and is not touched**: its `greek` row is already `venerated`, on 4 Φεβρουαρίου, so a reader may not move it; that he is listed here too is a second Greek day and is left in the report. **The Greek adds the whole story of the mission and no years at all**: the flight deeper into the desert when the crowds broke his stillness, the Theotokos appearing in a dream and commanding him to choose twelve and go to Iberia, the names written on separate papers and laid on the holy table, the night of prayer, the twelve papers an angel took from the altar into his hands before them all, the monk Euthymius left as abbot of the skete, the angel warning Bishop Eulogius of the Georgian capital of their coming, the bishop going out with clergy and people to meet them, the wonder like Pentecost by which John spoke Georgian, and their preaching through all Georgia and their veneration of the blessed places Saint Nina had passed, whom the page sends to 14 Ιανουαρίου. **No year, no hymn**, and the page does not say where any of the twelve settled afterwards — the sees and monasteries in their corpus names come from the Romanian side and nothing here is added to them. **His own head line is «Οσιος Ιωαννης»**, and the page's account of him is the fullest of the thirteen: the Syrian birth, the studies at Antioch, the self-reproach that called him a worm and not a man, the dispassion and the gift of wonders, the flight into the desert, the dream, the lots, and his death after he had counselled and blessed his disciples and communicated. **It gives him no year**, and the folder's existing birth interval is not touched."
     },
     {
       "church": "serbian",

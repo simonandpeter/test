@@ -1,0 +1,65 @@
+{
+  "slug": "flavius-of-nicomedia",
+  "display_name": "Flavius of Nicomedia",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop of Nicomedia",
+  "names": [
+    {
+      "form": "Φλάβιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαΐου, «Άγιος Φλάβιος ο Ιερομάρτυρας και των συν αυτώ Αγίων Μαρτύρων Αυγούστου και Αυγουστίνου των αυταδέλφων», with the rank words left off."
+    }
+  ],
+  "related": [
+    "augustus-brother-of-augustinus",
+    "augustinus-brother-of-augustus"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "284–305",
+      "basis": "traditional",
+      "note": "saint.gr gives the reign and not a year: «μαρτύρησε επί αυτοκράτορα Διοκλητιανού (284 - 305 μ.Χ.) μαζί με τους αδελφούς Αυγούστο και Αυγουστίνο». The interval is that reign as the page prints it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαΐου — «Άγιος Φλάβιος ο Ιερομάρτυρας και των συν αυτώ Αγίων Μαρτύρων Αυγούστου και Αυγουστίνου των αυταδέλφων»",
+        "url": "https://www.saint.gr/05/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Μαΐου εκάστου έτους», the same day as the listing, and its whole text is one sentence. **The company is enumerated — three head lines, three names — so it is three folders.** He is not `flavian-of-constantinople`, the archbishop of the Council of Ephesus, and not `flavius-of-the-forty-martyrs`; this one is bishop of Nicomedia under Diocletian, and the day is his own. **The two who died with him are called «των αυταδέλφων», brothers by both parents**, which is why the two other folders carry that clause in their display names; the page does not say they were Flavius's own kin. No city of birth, no manner of death, no relics, no hymn, no couplet."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

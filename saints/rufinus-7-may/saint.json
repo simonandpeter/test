@@ -1,0 +1,54 @@
+{
+  "slug": "rufinus-7-may",
+  "display_name": "Rufinus (7 May)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ρουφίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαΐου, «Άγιοι Ρουφίνος και Σατορνίνος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "satorninus-7-may",
+    "codratus-of-nicomedia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαΐου — «Άγιοι Ρουφίνος και Σατορνίνος»",
+        "url": "https://www.saint.gr/05/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Μαΐου εκάστου έτους», the same day as the listing, and gives each of the two a head line. A pair the page enumerates is two folders. **The page dates them only by another man's journey**: they died at Caesarea of Cappadocia «την εποχή που ο ανθύπατος Νικομηδείας Περίνιος, οδηγούσε εκεί τον μάρτυρα Κοδράτο» — while the proconsul was bringing Codratus there — and it prints no year of its own for them, so `dates` stays absent even though Codratus's own page names the reigns of Decius and Valerian. That inference is not made here. **He is none of the corpus's Saturnini or Rufinas**, who are all in other companies on other days. No manner of trial, no judge of their own, no relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

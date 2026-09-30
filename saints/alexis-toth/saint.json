@@ -6,6 +6,11 @@
       "form": "Alexie Toth",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 mai, «Sfântul Preot Mărturisitor Alexie Toth»."
+    },
+    {
+      "form": "Αλέξιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαΐου, «Άγιος Αλέξιος Τοθ ο Υπερασπιστής της Ορθοδόξου Πίστεως στην Αμερική», with the rank word and the epithet left off; the page prints his surname as Τοθ."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαΐου — «Άγιος Αλέξιος Τοθ ο Υπερασπιστής της Ορθοδόξου Πίστεως στην Αμερική»",
+        "url": "https://www.saint.gr/05/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Μαΐου εκάστου έτους» and «(1854 - 1909)», and it is this folder's man: Alexis Toth, the Carpatho-Russian priest who brought his Minneapolis parish out of the Union. **`dates` are not touched**; the Greek agrees on 1854 and 1909 and adds the days — born 18 March 1854, ordained 18 April 1878, reposed Friday 7 May 1909 — which is the day the calendar keeps. **What the Greek adds**: the poor Carpatho-Russian family in Austria-Hungary, the father and brother who were Uniate priests and the uncle who was a Uniate bishop (the page puts all three words in quotation marks of its own), the languages he learned, the marriage to Rosalie Mihalich and the early deaths of wife and only child, the secretaryship to the bishop of Prešov in May 1897 with charge of the diocesan administration and of an orphanage, the church history and canon law he taught in the Prešov seminary, the Uniate parish in Minneapolis from October 1889, the appeal to the Russian Orthodox bishop Vladimir, and the 25 March 1891 on which he and 3,614 of his parishioners came into the Orthodox Church crying «Δόξα Σοι, ο Θεός, για το μεγάλο Του έλεος»; then the work in a bakery to live, the alms given nonetheless, the refusal of a nomination to the episcopate in 1907 in favour of a younger man, the hundreds of Carpatho-Russian and Galician Uniate communities that followed him, and the relics at the monastery of Saint Tikhon in South Canaan, Pennsylvania. **The two dates of his secretaryship and his Minneapolis parish do not run in order on the page** — May 1897 for the one and October 1889 for the other — and neither is corrected here. No Greek hymn is printed."
     },
     {
       "church": "serbian",

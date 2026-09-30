@@ -1,0 +1,63 @@
+{
+  "slug": "augustus-brother-of-augustinus",
+  "display_name": "Augustus, brother of Augustinus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αύγουστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Μαΐου, «Άγιος Φλάβιος ο Ιερομάρτυρας και των συν αυτώ Αγίων Μαρτύρων Αυγούστου και Αυγουστίνου των αυταδέλφων», with the rank words left off and the genitive resolved to the page's own head-line form, «Αγιος Αυγουστος»."
+    }
+  ],
+  "related": [
+    "augustinus-brother-of-augustus",
+    "flavius-of-nicomedia"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "284–305",
+      "basis": "traditional",
+      "note": "saint.gr gives the reign and not a year: «μαρτύρησε επί αυτοκράτορα Διοκλητιανού (284 - 305 μ.Χ.) μαζί με τους αδελφούς Αυγούστο και Αυγουστίνο». The interval is that reign as the page prints it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Μαΐου — «Άγιος Φλάβιος ο Ιερομάρτυρας και των συν αυτώ Αγίων Μαρτύρων Αυγούστου και Αυγουστίνου των αυταδέλφων»",
+        "url": "https://www.saint.gr/05/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Μαΐου εκάστου έτους», the same day as the listing, and gives him his own head line, «Αγιος Αυγουστος». A company the page enumerates is one folder per member. **The display name keeps the brotherhood** because it is the only thing that distinguishes him: «των αυταδέλφων», brothers by both parents, is the page's word, and the two names are a syllable apart. **He is not `augustine-of-hippo`**, whose Greek name is the same word as his brother's and who is neither a martyr nor on this day. No city, no manner of death, no relics, no hymn, no couplet."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
