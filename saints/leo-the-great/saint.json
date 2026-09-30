@@ -7,6 +7,11 @@
       "form": "Leon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 februarie, «Sfântul Ierarh Leon, Episcopul Romei»."
+    },
+    {
+      "form": "Λέων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Φεβρουαρίου, «Άγιος Λέων Πάπας Ρώμης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -16,7 +21,8 @@
   ],
   "related": [
     "flavian-of-constantinople",
-    "pulcheria-the-empress"
+    "pulcheria-the-empress",
+    "marcian-the-emperor"
   ],
   "attestations": [
     {
@@ -40,8 +46,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "saint.gr keeps him on 18 February and dates his falling asleep elsewhere: «Εκοιμήθη οσιακά σε βαθύτατο γήρας στις 10 Νοεμβρίου 460 μ.Χ. και η Σύναξή του ετελείτο στη Μεγάλη Εκκλησία» — he fell asleep on 10 November 460 and his synaxis used to be held in the Great Church (https://www.saint.gr/3734/saint.aspx, read 30 September 2026). That is a date of death, not a second feast the site keeps; no 10 November page was read."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Φεβρουαρίου — «Άγιος Λέων Πάπας Ρώμης»",
+        "url": "https://www.saint.gr/02/18/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -51,5 +67,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον.",
+      "text": "Ἐπί θρόνου Ἔνδοξε, ἱερωσύνης καθίσας, καί λεόντων στόματα, τῶν λογικῶν ἀποφράξας, δόγμασιν ἐν θεοπνεύστοις σεπτῆς Τριάδος, ηὔγασας φῶς τῇ σῇ ποίμνῃ θεογνωσίας· διά τοῦτο ἐδοξάσθης, ὡς θεῖος μύστης Θεοῦ τῆς χάριτος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Λέων Πάπας Ρώμης, Λειτουργικά κείμενα: Κοντάκιον. Its Oikos and a Kathisma follow it on the page and are not copied here, the corpus keeping no kind for either.",
+        "url": "https://www.saint.gr/3734/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having sat, glorious one, upon the throne of the priesthood, and stopped the mouths of the reasoning lions by God-inspired teachings of the venerable Trinity, you shone out upon your flock the light of the knowledge of God; and therefore you were glorified as a divine initiate of the grace of God.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

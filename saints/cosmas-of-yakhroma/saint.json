@@ -1,0 +1,61 @@
+{
+  "slug": "cosmas-of-yakhroma",
+  "display_name": "Cosmas of Yakhroma",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Κοσμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Φεβρουαρίου, «Όσιος Κοσμάς του Γιαχρόμ», with the rank word and the place left off. No Russian form is printed on the page, and none is invented here; the place is spelled «Γιαχρόμ» there."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1492,
+      "latest": 1492,
+      "display": "1492",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Όσιος Κοσμάς κοιμήθηκε με ειρήνη σε βαθύ γήρας το έτος 1492 μ.Χ. και ενταφιάσθηκε στη μονή την οποία είχε ιδρύσει.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Φεβρουαρίου — «Όσιος Κοσμάς του Γιαχρόμ»",
+        "url": "https://www.saint.gr/02/18/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

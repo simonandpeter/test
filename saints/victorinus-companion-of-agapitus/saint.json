@@ -1,0 +1,56 @@
+{
+  "slug": "victorinus-companion-of-agapitus",
+  "display_name": "Victorinus, companion of Agapitus",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Βικτωρίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Φεβρουαρίου, «Άγιοι Αγρίππας, Βικτωρίνος, Δωρόθεος και Θεόδουλος», with the rank word left off. The life of Agapitus, on the same site, spells the same man «Βικτώριος»; both forms are the source's and the day's line is the one taken here."
+    }
+  ],
+  "related": [
+    "agrippas-companion-of-agapitus",
+    "dorotheus-companion-of-agapitus",
+    "theodulus-companion-of-agapitus",
+    "agapitus-of-synnada"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Φεβρουαρίου — «Άγιοι Αγρίππας, Βικτωρίνος, Δωρόθεος και Θεόδουλος»",
+        "url": "https://www.saint.gr/02/18/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "nicholas-patriarch-of-georgia",
+  "display_name": "Nicholas of Georgia",
+  "sex": "male",
+  "types": [
+    "patriarch",
+    "hierarch"
+  ],
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Φεβρουαρίου, «Άγιος Νικόλαος Πατριάρχης Γεωργίας», with the rank word and the see left off. No Georgian form is printed on the page, and none is invented here."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Φεβρουαρίου — «Άγιος Νικόλαος Πατριάρχης Γεωργίας»",
+        "url": "https://www.saint.gr/02/18/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

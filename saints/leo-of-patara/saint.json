@@ -1,0 +1,52 @@
+{
+  "slug": "leo-of-patara",
+  "display_name": "Leo of Patara",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Λέων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Φεβρουαρίου, «Άγιοι Λέων και Παρηγόριος οι Μάρτυρες οι εν Πατάροις της Λυκίας Αθλήσαντες», with the rank word and the relative clause left off."
+    }
+  ],
+  "related": [
+    "paregorius-of-patara"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Φεβρουαρίου — «Άγιοι Λέων και Παρηγόριος οι Μάρτυρες οι εν Πατάροις της Λυκίας Αθλήσαντες»",
+        "url": "https://www.saint.gr/02/18/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

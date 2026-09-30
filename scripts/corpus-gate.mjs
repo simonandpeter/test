@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδουλοσ theodulus-companion-of-agapitus theodulus-companion-of-pamphilus theodulus-of-caesarea-17-february theodulus-of-myropolis theodulus-son-of-nilus theodulus-the-executioner':
+    'Six men on six Greek days: 18 February in the company of Agapitus, 16 February in the company of Pamphilus, 17 February at Caesarea under Maximinus, 12 September, 14 January and 4 September. The 16 and 17 February pair is read in the el-02-17 entry for this name form and is an open question in ro-run/FINDINGS.md for the city they share.',
+  'παρηγοριοσ paregorius-of-patara paregorius-of-samosata':
+    'Two men: Patara on 18 February, and Samosata on 29 January, which the Romanian calendar keeps too.',
+  'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-of-corinth nicholas-of-japan nicholas-of-spetses nicholas-of-trebizond nicholas-of-valaam nicholas-patriarch-of-georgia nicholas-the-studite':
+    'Eight men. The new one is the patriarch of Georgia on 18 February; the other seven are read in the el-02-14 entry for this name form, where the two 14 February men are Corinth and Trebizond and the two 3 February men are Japan and Spetses, each pair two lines on one day page.',
+  'λεων leo-companion-of-manuel leo-of-nicaea leo-of-patara leo-the-great':
+    'Four men, and two pairs share a day, each printed as its own line. On 18 February saint.gr keeps Leo the Great, bishop of Rome, whom the Romanian calendar keeps there too, and Leo of Patara, one of the martyrs of that city. On 22 January it keeps the companion of Manuel and the man of Nicaea. Two entries on one calendar are two commemorations.',
+  'δωροθεοσ dorotheus-companion-of-agapitus dorotheus-of-chiliokomion':
+    'Two men: the companion in the 18 February company of Agapitus, and Chiliokomion on 5 January.',
+  'κοσμασ cosmas-companion-of-thomas-of-zographou cosmas-i-of-constantinople cosmas-of-yakhroma':
+    'Three men: the Zographou companion on 22 September, the patriarch on 2 January, and Yakhroma on 18 February.',
   'θεοδουλοσ theodulus-companion-of-pamphilus theodulus-of-caesarea-17-february theodulus-of-myropolis theodulus-son-of-nilus theodulus-the-executioner':
     'Five men, and the close pair is read in the 17 February folder itself: the company of Pamphilus is crucified at Caesarea in Palestine under Diocletian on 16 February, while the 17 February Theodulus is martyred in the same city under Maximinus in 308. saint.gr keeps them on two of its own days and gives the reign as the ground of the distinction, so two folders stand and the shared city is recorded as an open question in ro-run/FINDINGS.md. The others are 12 September, 14 January and 4 September.',
   'ρωμανοσ romanus-of-karpenisi romanus-of-lacedaemon romanus-of-samosata romanus-of-tarnovo romanus-of-uglich romanus-the-cilician':

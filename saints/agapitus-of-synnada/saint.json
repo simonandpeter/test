@@ -7,12 +7,19 @@
       "form": "Agapit",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 februarie, «Sfântul Ierarh Agapit, Episcopul Sinadei»."
+    },
+    {
+      "form": "Αγαπητός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Φεβρουαρίου, «Όσιος Αγαπητός ο Ομολογητής και θαυματουργός Επίσκοπος Συναού», with the rank word, the two epithets and the see left off."
     }
   ],
   "sex": "male",
   "types": [
     "hierarch",
-    "bishop"
+    "bishop",
+    "confessor",
+    "wonderworker"
   ],
   "attestations": [
     {
@@ -36,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "saint.gr calls his see Συναός, Synaos, where this corpus's Romanian row and display name have Synnada: «Όσιος Αγαπητός ο Ομολογητής και θαυματουργός Επίσκοπος Συναού», and the life repeats «ο Επίσκοπος της πόλεως Σινάου» (https://www.saint.gr/3736/saint.aspx, read 30 September 2026). Both calendars keep him on 18 February; the difference is in the name of the city and is left standing here rather than resolved."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Φεβρουαρίου — «Όσιος Αγαπητός ο Ομολογητής και θαυματουργός Επίσκοπος Συναού»",
+        "url": "https://www.saint.gr/02/18/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -47,5 +64,11 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "agrippas-companion-of-agapitus",
+    "victorinus-companion-of-agapitus",
+    "dorotheus-companion-of-agapitus",
+    "theodulus-companion-of-agapitus"
+  ]
 }

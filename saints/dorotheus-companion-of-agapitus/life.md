@@ -1,0 +1,9 @@
+# Dorotheus, companion of Agapitus
+
+saint.gr's calendar for 18 February prints the four of them on one line, «Άγιοι Αγρίππας, Βικτωρίνος, Δωρόθεος και Θεόδουλος», and the page behind it says plainly where they come from and how little is known: they are known by their mention in the memoir of the venerable [Agapitus](/saints/agapitus-of-synnada), kept the same day — that is, that he saw their martyrdom and wished to become a partaker of it — and nothing else at all do we know about their life.
+
+Agapitus's own page is what tells the circumstance. Under the emperor Licinius, whose reign it gives as 308 to 323, Agapitus was taken into the army, and there he saw tormented for their faith in Christ the gloriously victorious martyrs it names — and it names them in a slightly different order and with one name in a different shape than the day's line does, «Βικτώριος, Δωρόθεος, Θεόδουλος, Αγρίππας», Victorios where the line has Βικτωρίνος, Victorinus — and many others besides. He wished at once to share their martyrdom; and while they were made perfect in Christ by the sword, he was kept whole and unhurt, though they struck him with a javelin, by God's dispensation, so that he might lead many to salvation.
+
+So the sword is their death and the army their place, and beyond that the page gives no homeland, no city, no age, no couplet and no hymn. The others of the company it does not name at all, and they are not kept here. His companions on the line are [Agrippas](/saints/agrippas-companion-of-agapitus), [Victorinus](/saints/victorinus-companion-of-agapitus) and [Theodulus](/saints/theodulus-companion-of-agapitus).
+
+*After saint.gr's calendar for 18 Φεβρουαρίου — [the day](https://www.saint.gr/02/18/index.aspx) and [the life](https://www.saint.gr/3737/saint.aspx), with the reign of Licinius and the company from [Agapitus’s own page](https://www.saint.gr/3736/saint.aspx); read 30 September 2026.*
