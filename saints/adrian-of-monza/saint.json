@@ -1,0 +1,63 @@
+{
+  "slug": "adrian-of-monza",
+  "display_name": "Adrian of Monza",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Αδριανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαΐου, «Όσιος Αδριανός εκ Ρωσίας», with the rank word left off; the page's own text calls him «ο Όσιος Αδριανός του Μονζένσκ»."
+    }
+  ],
+  "related": [
+    "paul-of-obnora"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1619,
+      "latest": 1619,
+      "display": "1619",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Αδριανός, αφού έζησε θεοφιλώς, κοιμήθηκε με ειρήνη το 1619 μ.Χ.»; the page's heading prints «(; - 1619)» and places his life «περί τα τέλη του 16ου και αρχές του 17ου αιώνος μ.Χ.», with no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). He is a Russian ascetic and the Russian calendar is very likely to keep him, but that page was not opened for this entry and nothing is claimed for it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαΐου — «Όσιος Αδριανός εκ Ρωσίας»",
+        "url": "https://www.saint.gr/05/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Μαΐου εκάστου έτους», the same day as the listing. **saint.gr prints the identical line, «Όσιος Αδριανός εκ Ρωσίας», on two days for two different men, and the corpus's `adrian-of-russia` is the other one.** That folder already carries a `venerated` Greek row on 26 Αυγούστου and it is not touched here: it is Adrian Ondrusovsky, dead in 1549, whose life is bound to Alexander of Svir. This man is «ο Όσιος Αδριανός του Μονζένσκ», born at Kostroma and baptised Amos, founder of the Annunciation monastery on the Monza river, dead in 1619 — seventy years later, a different region and a different story, and the page names neither Ondrusovo nor Alexander. Two entries on one calendar are two commemorations, so two men. **The page gives no hymn.** The elder Θεράπων it names is not the corpus's `therapon-of-cyprus` or `therapon-of-sardis`, and no folder is claimed for him or for the Abraham the chronicle names beside him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

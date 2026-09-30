@@ -8,4 +8,10 @@ For more than five hundred years nothing whatever was known of him. On 3 January
 
 So he is kept twice a year: on 3 January, the day his relics were found, and on 5 May, the day of his falling asleep. doxologia's troparion page for him is a Greek recording and prints no text.
 
-*After doxologia.ro's calendar for 5 mai — [the day](https://doxologia.ro/5-mai) and [the life](https://doxologia.ro/viata-sfantului-cuvios-mucenic-efrem-cel-nou); read 20 September 2026.*
+The Greek calendar keeps him on the same day and fills in the corners of the account. His name in the world was Konstantinos Morphis, saint.gr says, and he was born at Trikala on 14 September 1384, in a lovely place near the river Lithaios; at fourteen, to escape being made a Muslim and taken into the janissary corps, he entered the then flourishing stavropegic monastery of the Annunciation of the Most Holy Theotokos on the mountain of the Undefiled, also called the Pure, in Attica. He was counted worthy of the priesthood and served the altar, the page says, like an angel of God.
+
+In 1416 the Turks overran Attica and forced the Duke of Athens to declare his submission to the Sultan; in 1424 they broke into the monastery and cut down all its fathers, while Ephraim was away at his cave on the mountain at prayer, so that he came back to find the bodies, buried them, and wept aloud. The next year they returned and found him.
+
+His relics lie at the monastery of the Undefiled, the Annunciation, at Nea Makri in Attica, and within its wall, protected now by a building raised around it, stands the mulberry tree on which he gave up his last breath. At Trikala his feast is kept by the church of Saint Stephen, opposite which, by tradition, his family house stood. In 2011 the Ecumenical Patriarchate of Constantinople, by its patriarchal and synodal act numbered 217/2-3-2011, entered him in the official Orthodox calendar.
+
+*After doxologia.ro's calendar for 5 mai — [the day](https://doxologia.ro/5-mai) and [the life](https://doxologia.ro/viata-sfantului-cuvios-mucenic-efrem-cel-nou); read 20 September 2026; and saint.gr's calendar for 5 Μαΐου — [the day](https://www.saint.gr/05/05/index.aspx) and [the life](https://www.saint.gr/387/saint.aspx), read 30 September 2026.*

@@ -6,6 +6,11 @@
       "form": "Neofit",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 mai, «Sfântul Mucenic Neofit»."
+    },
+    {
+      "form": "Νεόφυτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαΐου, «Άγιοι Νεόφυτος, Γάιος και Γαϊανός οι Μάρτυρες», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαΐου — «Άγιοι Νεόφυτος, Γάιος και Γαϊανός οι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him. **The Greek joins the three men the Romanian left standing apart**: doxologia printed «Sfântul Mucenic Neofit», «Sfântul Mucenic Gaie» and «Sfântul Mucenic Gaian» as three bare lines with three empty pages, and this folder's own life says that nothing on any of them joins the three. saint.gr prints them under one line and one page, with one couplet that counts them — «Tρεις Mάρτυρες θάνατον ανδρικωτάτως, / Yπέρ Tριάδος λαμβάνουσιν Aγίας» — and one sentence of story for all three: they were perfected by the sword, and their synaxis used to be kept at the church of the Holy Unmercenaries Cosmas and Damian in the quarter of Dareios. That is a company the page enumerates by name, three head lines and three names, so it stays three folders and each takes its own row. **Still no year, no emperor, no place of martyrdom and no hymn.** He is not `neophytus-of-nicaea` or any of the eight other Neophytoi the corpus keeps: each of those has another day and a story of his own, and this one has only the sword, the three-fold couplet and the Dareios synaxis."
     },
     {
       "church": "serbian",
@@ -45,5 +60,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "gaius-5-may",
+    "gaianus-5-may"
+  ]
 }

@@ -6,6 +6,11 @@
       "form": "Gaian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 mai, «Sfântul Mucenic Gaian»."
+    },
+    {
+      "form": "Γαϊανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαΐου, «Άγιοι Νεόφυτος, Γάιος και Γαϊανός οι Μάρτυρες», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαΐου — «Άγιοι Νεόφυτος, Γάιος και Γαϊανός οι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and gives him his own head line, «Αγιος Γαϊανος ο Μαρτυρας». **The Greek confirms the reading this folder's life already made**: the form is masculine there too, Γαϊανός and not Γαϊανή, and he stands among «οι Μάρτυρες», so he is not the Armenian nun Gaiane other calendars keep. **And it joins the three** the Romanian pages left apart, under one line, one couplet counting three martyrs, and one sentence: perfected by the sword, with their synaxis at the church of the Holy Unmercenaries Cosmas and Damian in the quarter of Dareios. Three head lines and three names, so three folders stand. **No year, no emperor, no place of martyrdom, no hymn.**"
     },
     {
       "church": "serbian",
@@ -45,5 +60,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "neophytus-5-may",
+    "gaius-5-may"
+  ]
 }

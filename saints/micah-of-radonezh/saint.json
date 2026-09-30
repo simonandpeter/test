@@ -1,0 +1,62 @@
+{
+  "slug": "micah-of-radonezh",
+  "display_name": "Micah of Radonezh",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Μιχαίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαΐου, «Όσιος Μιχαίας του Ραντονέζ», with the rank word left off."
+    }
+  ],
+  "related": [
+    "sergius-of-radonezh"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1385,
+      "latest": 1385,
+      "display": "1385",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Μιχαίας κοιμήθηκε με ειρήνη το 1385 μ.Χ.»; the page's own heading prints «(; - 1385)», with no year of birth behind the question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). He is a Russian ascetic and the Russian calendar is very likely to keep him, but that page was not opened for this entry and nothing is claimed for it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαΐου — «Όσιος Μιχαίας του Ραντονέζ»",
+        "url": "https://www.saint.gr/05/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Μαΐου εκάστου έτους», the same day as the listing. The corpus's `michaeus-of-zographou` is a different man and the names are near neighbours: that one is Μιχαίος, one of the twenty-six burned at Zographou under the patriarch Bekkos, kept by the Greek on 22 Σεπτεμβρίου; this one is Μιχαίας, the cell-companion of Sergius of Radonezh, dead in his bed in 1385. `micah-the-prophet` is the prophet. No hymn is printed for him, and the page gives no place of birth."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

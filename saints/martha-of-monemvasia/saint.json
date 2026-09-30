@@ -1,0 +1,50 @@
+{
+  "slug": "martha-of-monemvasia",
+  "display_name": "Martha of Monemvasia",
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Μάρθα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαΐου, «Οσία Μάρθα Μονεμβασίας», with the rank word and the epithet left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαΐου — «Οσία Μάρθα Μονεμβασίας»",
+        "url": "https://www.saint.gr/05/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Μαΐου εκάστου έτους», the same day as the listing, and then says «Δεν έχουμε πληροφορίες για τον βίο της Οσίας» — we have no information about her life. **That is an absence of material, not the site's self-doubt marker**: her entry carries no asterisk and not a word of «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου», which on this day stands against the three Thessalonian martyrs of `/386/` and against nobody else. So the day, the name and the rank are vouched for and nothing else is. She is none of the seven Marthas the corpus keeps, all of whom have a story and another day. No year, no place beyond the see in her epithet, no relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

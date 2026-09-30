@@ -115,6 +115,22 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θερινοσ therinos therinus':
+    'Two men, and the reading a reader proposed holds: Therinus of 23 April is beheaded with Donatus, and Therinos — or Therianos, both forms in one sentence of the page — is martyred on 6 May with Danax and Mesiros. Two days, two companies, two men.',
+  'σεραφειμ seraphim-of-dombou seraphim-of-sarov seraphim-of-vyritsa':
+    'Three men: Seraphim of Dombou on 6 May and the two read in the el-03-21 entry for this name form.',
+  'ιλαριων hilarion-6-may hilarion-of-pokrovskoe hilarion-of-zographou hilarion-the-new-of-cyprus hilarion-the-new-of-georgia hilarion-the-new-of-pelecete':
+    'Six now, and **the pair a reader referred up is settled here**: saint.gr prints Ιλάριος on 4 Μαΐου, whom this wave upgraded on the folder the Romanian keeps there, and Ιλαρίων on 6 Μαΐου in the trio with Mamas and Pachomius, whom the corpus keeps on 6 mai. Two of its own days, and the 6 May man belongs to a company the other does not, so two folders stand. The rest are read in the el-03-28 entry for this name form.',
+  'ηλιοδωροσ heliodorus-companion-of-mark-the-shepherd heliodorus-of-africa':
+    'Two men: Heliodorus of Africa on 6 May and the Heliodorus of the el-07-06 entry.',
+  'δονατοσ donatus-23-april donatus-6-may donatus-martyr-at-venice donatus-of-euroea':
+    'Four men, and the close pair is read: the Donatus of 23 April is beheaded with Therinus, and the Donatus of 6 May is named with Heliodorus of Africa — two of saint.gr’s own days, two companies, and so two men, which is the reading a reader proposed and this writer confirms. The others are Donatus of Euroea on 30 April and the Donatus read in the el-02-17 entry.',
+  'μαρθα maria-of-vladimir martha-of-aza martha-of-monemvasia martha-sister-of-lykarion':
+    'Four women: Maria of Vladimir under her second name on 19 March, Aza on 26 September, the sister of Lykarion on 8 February, and Martha of Monemvasia on 5 May.',
+  'γεροντιοσ gerontius-of-milan gerontius-the-canonarch gerontius-the-martyr':
+    'Three men: the martyr of 1 April and the canonarch of the Kyiv Caves on the same day, two entries there, and Gerontius of Milan on 5 May.',
+  'αδριανοσ adrian-of-caesarea adrian-of-canterbury adrian-of-megara adrian-of-monza adrian-of-poshekhonye adrian-the-martyr-17-april adrianus-of-cyprus':
+    'Seven now. The new one is Adrian of Monza on 5 May; the others are read in the el-04-17 entry for this name form.',
   'νικητασ nicetas-alfanov nicetas-of-apollonias nicetas-of-epirus nicetas-of-medikion nicetas-of-pythia':
     'Five now. The new one is Nicetas Alfanov on 4 May; the others are read in the el-02-19 entry for this name form.',
   'νικηφοροσ nicephorus-alfanov nicephorus-martyr-1-march nicephorus-martyr-8-february nicephorus-of-antioch nicephorus-of-corinth nicephorus-of-crete nicephorus-of-the-svir-desert nikephoros-of-chios':

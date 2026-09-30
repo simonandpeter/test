@@ -6,6 +6,11 @@
       "form": "Gaie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 mai, «Sfântul Mucenic Gaie»."
+    },
+    {
+      "form": "Γάιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαΐου, «Άγιοι Νεόφυτος, Γάιος και Γαϊανός οι Μάρτυρες», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαΐου — «Άγιοι Νεόφυτος, Γάιος και Γαϊανός οι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and it gives him his own head line, «Αγιος Γαϊος ο Μαρτυρας», beside Neophytus and Gaianus. **This is the Greek answering the question this folder's own life left open** — it said that nothing on any of the three Romanian pages joins them; saint.gr joins them, under one line, one couplet counting three martyrs, and one sentence: perfected by the sword, with their synaxis at the church of the Holy Unmercenaries Cosmas and Damian in the quarter of Dareios. Three head lines and three names, so it remains three folders. **No year, no emperor, no place of martyrdom, no hymn.** He is not the apostle Gaius nor any of the other Gaii the corpus keeps on other days; nothing here but the name, the rank, the day and the company."
     },
     {
       "church": "serbian",
@@ -45,5 +60,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "neophytus-5-may",
+    "gaianus-5-may"
+  ]
 }

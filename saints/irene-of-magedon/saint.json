@@ -6,6 +6,11 @@
       "form": "Irina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 mai, «Sfânta Mare Muceniță Irina»."
+    },
+    {
+      "form": "Ειρήνη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαΐου, «Αγία Ειρήνη η Μεγαλομάρτυς», with the rank words left off."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαΐου — «Αγία Ειρήνη η Μεγαλομάρτυς»",
+        "url": "https://www.saint.gr/05/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps her, and it is plainly the same woman: daughter of Licinius and Licinia, from the city of Magedon, first named Penelope, shut in a tower at six under an elder Apellianos who wrote the acts of her contest, the dove and the eagle and the raven, the horse that killed her father and her raising him, the brazen oxen, the death and rising at Mesembria, the end at Ephesus and the empty coffin. **No `dates` object is added, and this is the reason:** saint.gr states «Η Αγία Μεγαλομάρτυς Ειρήνη άθλησε κατά τον 4ο αιώνα μ.Χ.» and «μέχρι την ημέρα της κοιμήσεως αυτής, το 315 μ.Χ.», while the folder's own life carries doxologia's argued note that her Licinius was a kinglet of Magedon and not the emperor, and that she therefore belongs to the first century, near the days of the apostles, the priest Timothy who baptised her having had his priesthood from the Apostle Paul. Two sources three centuries apart is not an interval worth recording, and neither year is weakened by the other here; the disagreement is written into the life instead. **What the Greek does add and the folder lacked**: the Persian kings Σεδεκίας and Σαπώριος Α΄ under whom she suffered, Kallipolis of the Hellespont under Noumerianos as the place of the brazen oxen, Ephesus as the place of her repose, the relics — «Απότμημα του Ιερού Λειψάνου της Αγίας βρίσκεται στη Μονή Κύκκου Κύπρου και στον Ιερό Ναό του Αγίου Γεωργίου των Ελλήνων Βενετίας» — and the hymns, of which the folder had none in Greek. **The page prints three apolytikia, two kontakia, a megalynarion, an oikos and four kathismata; only the first apolytikion and the first kontakion are stored, both of them proper and both naming her.** Its closing note reports two variant traditions against its own account — the western martyrologies making her suffer at Thessalonica by fire, the Menologion of Basil II making her beheaded — which is the page weighing witnesses, not doubting itself: her entry carries no asterisk."
     },
     {
       "church": "serbian",
@@ -58,6 +73,40 @@
       },
       "english": {
         "text": "Thy ewe-lamb, O Jesus, Irene, cries out with a great voice: Thee, my Bridegroom, I love, and seeking Thee I am in torment; I am crucified with Thee and buried with Thee in Thy baptism; I suffer for Thee that I may reign in Thee, and I die for Thee that I may live for Thee. Receive me as a sacrifice without spot, who offer myself to Thee in love. At her prayers, in Thy mercy, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Εἰρήνης τὸν ἄρχοντα, ἰχνηλατοῦσα σεμνή, εἰρήνης ἐπώνυμος, δι' ἐπιπνοίας Θεοῦ, ἐδείχθης πανεύφημε, σὺ γὰρ τοῦ πολέμου, τᾶς ἐνέδρας φυγοῦσα, ἤθλησας ὑπὲρ φύσιν, ὡς παρθένος φρονίμη, διὸ Μεγαλομάρτυς Εἰρήνη, εἰρήνην ἠμὶν αἴτησαι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε, the first of three on the page of «Αγία Ειρήνη η Μεγαλομάρτυς»",
+        "url": "https://www.saint.gr/393/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Tracking out the Prince of peace, O modest one, thou wast shown by the inspiration of God to bear the name of peace, O all-praised; for having fled the ambushes of the war, thou didst contend beyond nature as a prudent virgin. Wherefore, O great martyr Irene, ask peace for us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς.",
+      "text": "Τὴν καλλιπάρθενον ὑμνήσωμεν πάντες, νύμφην Χριστοῦ, ἐκ τῶν νεκρῶν ἀναστάσαν, ἧν ὁ Θεός ἐδόξασε σημείοις φρικτοῖς, Εἴλκυσε γὰρ πλῆθος ἄπειρον, ἀσεβῶν ἐν τῇ πίστει, καὶ θεόθεν ἔλαβε, τὴν Χριστώνυμον κλήσιν, ὁ τοῦ Θεοῦ γὰρ Ἄγγελος ἐλθών, ἐκ Πηνελόπης Εἰρήνην ἐκάλεσε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ὁ ὑψωθεῖς, the first of two on the page of «Αγία Ειρήνη η Μεγαλομάρτυς»",
+        "url": "https://www.saint.gr/393/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us all hymn the fair virgin, the bride of Christ, risen from the dead, whom God glorified with fearful signs; for she drew a countless multitude of the ungodly into the faith, and received from God her calling by Christ's name, since an angel of God came and from Penelope named her Irene.",
         "rendered": "site"
       }
     }

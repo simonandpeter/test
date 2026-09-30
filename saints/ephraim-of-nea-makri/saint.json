@@ -6,6 +6,11 @@
       "form": "Efrem",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 mai, «Sfântul Cuvios Mucenic Efrem cel Nou»."
+    },
+    {
+      "form": "Εφραίμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαΐου, «Άγιος Εφραίμ ο Μεγαλομάρτυρας και θαυματουργός», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -52,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαΐου — «Άγιος Εφραίμ ο Μεγαλομάρτυρας και θαυματουργός»",
+        "url": "https://www.saint.gr/05/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and its heading «(1384 - 1426)» matches the folder's years exactly; it is the same man, martyred on the mountain of the Undefiled above what is now Nea Makri. The page repeats the two days in its own words — «Ο Άγιος Εφραίμ γιορτάζεται δύο φορές το χρόνο, στις 3 Ιανουαρίου η εύρεση των τιμίων λειψάνων του, και στις 5 Μαΐου το μαρτυρικό του τέλος» — so the 3 January finding of the relics is a second commemoration on this calendar too, and it is recorded here and not rendered: one row is one feast, and a finding of relics is not a folder. **The Greek adds what the folder lacked**: his name in the world, Κωνσταντίνος Μόρφης; Trikala as his birthplace, by the river Lithaios; that he entered the monastery at fourteen to escape being made a Muslim and taken for the janissary corps; the ordination to the priesthood; the Turkish invasion of Attica in 1416 and the submission of the Duke of Athens; the relics at the monastery of the Annunciation at Nea Makri in Attica; the mulberry tree on which he died, still standing and now built around; the church of Saint Stephen at Trikala, opposite which his family house is said to have stood; and the Ecumenical Patriarchate's act 217/2-3-2011 entering him in the official calendar. **Two divergences from the account the folder already carries are left standing on both sides and corrected on neither.** The Greek says the Turks broke into the monastery in 1424 and slaughtered all the fathers while he was absent praying in his cave, and that they returned the next year, on 14 September 1425, and took him — the Romanian has the attack and his capture on the one day, 14 September 1425. And the Greek says he was orphaned «μαζί με τα άλλα εφτά αδέλφια του», with his seven other brothers and sisters, where the folder's life says six brothers. **The apolytikion is proper and names him**, and the folder had no hymn at all: doxologia's troparion page for him is a recording with no text."
     },
     {
       "church": "serbian",
@@ -63,5 +78,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α΄.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Ἐν ὄρει τῶν Ἀμώμων ὥσπερ ἥλιος ἔλαμψας, καί μαρτυρικῶς, θεοφόρε, πρός Θεόν ἐξεδήμησας, βαρβάρων ὑποστάς ἐπιδρομάς, Ἐφραίμ Μεγαλομάρτυς τοῦ Χριστοῦ· διά τοῦτο ἀναβλύζεις χάριν ἀεί, τοῖς εὐλαβῶς βοῶσι· δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σέ θαυμαστώσαντι, δόξα τῷ ἐνεργοῦντι διά σοῦ, πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος α΄, Τῆς ἐρήμου πολίτης, on the page of «Άγιος Εφραίμ ο Μεγαλομάρτυρας και θαυματουργός»",
+        "url": "https://www.saint.gr/387/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "On the mountain of the Undefiled thou didst shine like the sun, and by martyrdom, O God-bearer, thou didst depart unto God, having endured the inroads of the barbarians, O Ephraim, great martyr of Christ. Therefore thou pourest forth grace unceasingly upon those who cry to thee with reverence: Glory to him who gave thee strength, glory to him who made thee wondrous, glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

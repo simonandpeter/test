@@ -1,0 +1,61 @@
+{
+  "slug": "gerontius-of-milan",
+  "display_name": "Gerontius of Milan",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop of Milan",
+  "names": [
+    {
+      "form": "Γερόντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαΐου, «Άγιος Γερόντιος Επίσκοπος Μιλάνου», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 470,
+      "latest": 470,
+      "display": "470",
+      "basis": "traditional",
+      "note": "saint.gr: «Εξελέγη Επίσκοπος Μιλάνου και κοιμήθηκε με ειρήνη το 470 μ.Χ.»; the page's heading prints «(; - 470)», with no year of birth behind the question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαΐου — «Άγιος Γερόντιος Επίσκοπος Μιλάνου»",
+        "url": "https://www.saint.gr/05/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Μαΐου εκάστου έτους», the same day as the listing. The page is two sentences long. He is neither of the two Gerontii the corpus already keeps: `gerontius-the-martyr` is a martyr the Romanian calendar names on 1 aprilie, and `gerontius-the-athonite` is the venerable Gherontie the Romanian keeps on 26 iulie — different days, different ranks, and neither is a bishop in Italy. No hymn, no relics, no city of birth."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

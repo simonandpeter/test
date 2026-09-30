@@ -7,6 +7,11 @@
       "form": "Eftimie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 mai, «Sfântul Ierarh Eftimie, fratele Cuvioasei Parascheva de la Iași»."
+    },
+    {
+      "form": "Ευθύμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαΐου, «Άγιος Ευθύμιος ο Θαυματουργός Επίσκοπος Μαδύτου», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαΐου — «Άγιος Ευθύμιος ο Θαυματουργός Επίσκοπος Μαδύτου»",
+        "url": "https://www.saint.gr/05/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and it is the same man on both: bishop of Madytos of the Hellespont, brother of Paraskeva the Epibatene whom the Greek sends to 14 Οκτωβρίου, born at Epibatai in Thrace, myrrh-flowing after his death. **The Greek gives a synaxarion life where doxologia gave a study of the sources**, and adds what the folder lacked: his father's name Nicetas, the mother who brought him to a monastery of Constantinople when the father died, the thirty years he stayed there, his love of stillness and his flight to the desert, ordination to the deaconate by the bishop of Perinthos and to the presbyterate by another bishop, the gift of wonderworking, the cures of lepers and of the deaf and dumb, the visit of the emperor Basil II to Madytos, the prophecy there of the emperor's victory over Bardas Phokas in 989, the myrrh at the tomb and the name Μυροβλύτης, and the encomium written for him by George of Cyprus, later Patriarch of Constantinople, at the request of Meletios of Athens, who then presided over the church of Madytos and Koile — a text doxologia's study named but had not seen. **`dates` are added where the folder had none**: saint.gr states the birth «στους Επιβάτες της Θράκης στις αρχές του 10ου αιώνα μ.Χ.» and the repose «με ειρήνη μεταξύ των ετών 989 - 996 μ.Χ.». The bounds 900–925 are this reader's reading of «στις αρχές», and are said so in the note on the interval. This does not weaken anything the folder held — it held no year at all — and it sits with, not against, the discussion doxologia's page raised, which argued he and his sister may belong almost a century earlier than is usually said. **The apolytikion is proper and names both him and Madytos**, and the folder's Romanian troparion is a different text."
     },
     {
       "church": "serbian",
@@ -62,9 +77,45 @@
         "text": "Son of Epivates, first among the shepherds of Madytos and a hierarch of renown, grace showed you a follower of Christ, venerable Euthymius; for serving the Lord as a priest with a mind set on God, you became an interpreter of the right faith by your deeds. And now, Father, pray for those who honour you.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Μαδύτου σὲ πρόεδρον, καὶ Ἱεράρχην κλεινόν, ἡ χάρις ἀνέδειξεν, ὡς τοῦ Χριστοῦ μιμητήν, Εὐθύμιε Ὅσιε, ὅθεν ἱερατεύσας, θεοφρόνως Κυρίω, ὤφθης τῆς εὐσεβείας, πρακτικὸς ὑποφήτης καὶ νῦν Πάτερ Ἱκέτευε, ὑπὲρ τῶν τιμώντων σε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε, on the page of «Άγιος Ευθύμιος ο Θαυματουργός Επίσκοπος Μαδύτου»",
+        "url": "https://www.saint.gr/390/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Grace showed thee forth as the president of Madytos and a glorious hierarch, an imitator of Christ, O venerable Euthymius; wherefore, having served the Lord as a priest with a godly mind, thou wast seen to be a practised interpreter of true religion. And now, O father, make entreaty for those who honour thee.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 900,
+      "latest": 925,
+      "display": "the beginning of the 10th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ευθύμιος γεννήθηκε στους Επιβάτες της Θράκης στις αρχές του 10ου αιώνα μ.Χ.» The page gives no year; the bounds 900–925 are this reader's reading of «στις αρχές του 10ου αιώνα» and nothing narrower is claimed."
+    },
+    "death": {
+      "earliest": 989,
+      "latest": 996,
+      "display": "between 989 and 996",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ευθύμιος κοιμήθηκε με ειρήνη μεταξύ των ετών 989 - 996 μ.Χ.» The same page has him prophesy the victory of Basil II over Bardas Phokas in 989, which is the interval's lower bound. doxologia's study of his life states no year at all, and raises rather than settles the question of whether he and his sister belong a century earlier than is usually said."
+    }
+  },
+  "related": [
+    "parascheva-of-iasi"
+  ]
 }
