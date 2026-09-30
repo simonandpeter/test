@@ -1,0 +1,52 @@
+{
+  "slug": "mark-the-hermit-20-may",
+  "display_name": "Mark (20 May)",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Μάρκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαΐου, «Όσιος Μάρκος ο Ερημίτης», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαΐου — «Όσιος Μάρκος ο Ερημίτης»",
+        "url": "https://www.saint.gr/05/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαΐου εκάστου έτους», the same day as the listing, and says in as many words that it knows neither where he came from nor when he lived. None of the corpus's men of this name is an unplaced and undated hermit: `mark-the-shepherd`, `mark-the-deaf`, `mark-of-byblos` and `mark-of-ephesus` all have places and companies of their own. Because the page gives nothing at all to distinguish him by, the display name carries the day. No year, no place, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

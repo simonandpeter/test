@@ -6,6 +6,11 @@
       "form": "Lidia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 mai, «Sfânta Lidia din Filipi»."
+    },
+    {
+      "form": "Λυδία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαΐου, «Αγία Λυδία η Φιλιππησία», with the rank word left off and the epithet kept, as the page's own head line prints it."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 20 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαΐου — «Αγία Λυδία η Φιλιππησία»",
+        "url": "https://www.saint.gr/05/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps her on, with the same epithet, «η Φιλιππησία» for «Filipeanca». She is not the corpus's `lydia-6-january` or `lydia-wife-of-philetus`; this is the purple-seller of Thyatira of Acts 16, whom the Greek page calls «η πρώτη χριστιανή της Μακεδονίας», the first Christian woman of Macedonia. The page's account is built out of Acts and quotes Acts 16,9 and 16,14-15 in Greek; it gives her no year and no death, so the folder's empty `dates` is left empty. One apolytikion is added."
     },
     {
       "church": "serbian",
@@ -45,5 +60,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α'.",
+      "text": "Τὸν Θεὸν σεβόμενη διανοίας εὐθύτητι, τὸ τῆς χάριτος φέγγος διὰ Παύλου εἴσδέδεξαι, καὶ πρώτη ἐν Φιλίπποις τῷ Χριστῷ, ἔπίστευσας θεόφρον πανοικεῖ· διὰ τοῦτο σὲ τιμῶμεν ἀσματικῶς, Λυδία Φιλιππησία. Δόξα τῷ εὔδοκήσαντι ἐν σοῖ, δόξα τῷ σὲ καταυγάσαντι, δόξα τῷ χορηγούντι διὰ σοῦ, ἠμὶν τὰ κρείττονα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης, on the page of «Αγία Λυδία η Φιλιππησία»",
+        "url": "https://www.saint.gr/1671/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Reverencing God with an upright mind, you received the radiance of grace through Paul, and were the first at Philippi to believe in Christ, O God-minded one, with your whole household; therefore we honour you in song, Lydia of Philippi. Glory to him who was well pleased in you, glory to him who shone upon you, glory to him who through you bestows better things on us.",
+        "rendered": "site"
+      },
+      "model": "Τῆς ἐρήμου πολίτης."
+    }
+  ]
 }

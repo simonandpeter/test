@@ -1,0 +1,51 @@
+{
+  "slug": "asterius-companion-of-thalaleus",
+  "display_name": "Asterius, companion of Thalaleus",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Αστέριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαΐου, «Άγιοι Αλέξανδρος και Αστέριος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαΐου — «Άγιοι Αλέξανδρος και Αστέριος»",
+        "url": "https://www.saint.gr/05/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαΐου εκάστου έτους», the same day as the listing, and carries two head names, «Αγιος Αλεξανδρος» and «Αγιος Αστεριος», so it is two folders. Neither is in the corpus: none of the corpus's many men of either name is a soldier converted by Thalaleus, and `thalaleus-the-physician`'s own Romanian life already names «Alexander» and «Asterius» in prose without a folder to link to. The page gives them no year, so there is no `dates` object; the year 284 belongs to Thalaleus's page and is not carried over. No hymn is printed for either of them. The one distich on the page is set over his name: «Yπήρξε τμηθείς Aστέριος την κάραν, Aστήρ οδηγών Aλέξανδρον προς ξίφος» — Asterius was beheaded, a star leading Alexander to the sword, which is the page's play on his name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Talaleu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 mai, «Sfântul Mucenic Talaleu»."
+    },
+    {
+      "form": "Θαλλέλαιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαΐου, «Άγιος Θαλλέλαιος ο Ανάργυρος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 20 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαΐου — «Άγιος Θαλλέλαιος ο Ανάργυρος»",
+        "url": "https://www.saint.gr/05/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps «Sfântul Mucenic Talaleu» on, and both sources give him the same epithet, the Unmercenary physician. The Greek adds a great deal: Lebanon for a country, parents «Βερούκιος» and «Ρωμυλία» (κατ' άλλους Βερεκκόκιος and Ρομβυλιανή), the reign of Numerian 283–284, the arrest at Anazarbus in the second province of Cilicia, the governor Tiberian, and the beheading «στην Έδεσσα των Αιγαίων, το φθινόπωρο του 284 μ.Χ. (κατά άλλους τον Μάιο του 289 μ.Χ.)». **The folder's `dates` is left empty on purpose**: the page offers two years five apart and will not choose between them, and a year the source itself doubts is not a recorded one. The page also says that his synaxis was kept at his martyrium inside the church of Saint Agathonikos, that there was a church of his near the mountain of Auxentius, that Justinian «ἀνανεώσατο» a monastery of his name in Palestine on Procopius's testimony, and that **some monasteries kept his memory on 3 Σεπτεμβρίου and others on 23 Αυγούστου**, the day he was brought to examination — two further days, recorded here as notes and not as rows, since one row per church is the schema. Relics: «Αποτμήματα… βρίσκονται στις Μονές Διονυσίου και Κωνσταμονίτου Αγίου Όρους». Four hymns are added, the second of them the common of a martyr printed as «Έτερον Ἀπολυτίκιον»; the page's three megalynaria, oikos and kathisma are not copied because the schema's `kind` enum holds only troparion and kontakion. The two soldiers his patience converted, Alexander and Asterius, are new folders in `el-05-20` — this folder's own life already names them in prose."
     },
     {
       "church": "serbian",
@@ -60,6 +75,72 @@
         "text": "Your martyr Thalaleus, O Lord, in his contest received from You, our God, the crown of incorruption; for having Your power he overthrew his tormentors and broke the powerless insolence of the demons. At his prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Μαρτυρίου ἀνύσας τὸν ἀγῶνα Θαλλέλαιε, ἤσχυνας εἰδώλων τὴν πλάνην, τὴ γενναία ἀθλήσει σου· καὶ ὤφθης ἰαμάτων θησαυρός, παρέχων τᾶς ἰάσεις δωρεάν, τοὶς προστρέχουσιν ἐν πίστει τῷ σῷ ναῶ καὶ πόθω ἄνακραζουσι · δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σὲ θαυμαστώσαντι, δόξα τῷ ἐνεργούντι διὰ σοῦ, πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης, on the page of «Άγιος Θαλλέλαιος ο Ανάργυρος»",
+        "url": "https://www.saint.gr/1670/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having finished the contest of martyrdom, Thalaleus, you put the error of the idols to shame by your brave contending; and you were shown a treasury of healings, granting cures freely to those who run in faith to your church and cry out with longing: glory to him who gave you strength, glory to him who made you wonderful, glory to him who works healings for all through you.",
+        "rendered": "site"
+      },
+      "model": "Τῆς ἐρήμου πολίτης."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ὁ Μάρτυς σου Κύριε, ἐν τῇ ἀθλήσει αὐτοῦ, τὸ στέφος ἐκομίσατο τῆς ἀφθαρσίας, ἐκ σοῦ τοῦ Θεοῦ ἡμῶν· ἔχων γὰρ τὴν ἰσχύν σου, τοὺς τυράννους καθεῖλεν ἔθραυσε καὶ δαιμόνων τὰ ἀνίσχυρα θράση. Αὐτοῦ ταῖς ἱκεσίαις Χριστὲ ὁ Θεός, σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ’, on the page of «Άγιος Θαλλέλαιος ο Ανάργυρος» — the common of a martyr",
+        "url": "https://www.saint.gr/1670/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyr, O Lord, in his contest received the crown of incorruption from you, our God; for having your strength he brought the tyrants down and shattered the powerless insolence of the demons. At his entreaties, Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ'.",
+      "text": "Ἀθλοφόρε Ἅγιε καὶ ἰαματικὲ Θαλλέλαιε, πρέσβευε τῷ ἐλεήμονι Θεῷ, ἵνα πταισμάτων ἄφεσιν παράσχῃ ταῖς ψυχαῖς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος γ’, on the page of «Άγιος Θαλλέλαιος ο Ανάργυρος»",
+        "url": "https://www.saint.gr/1670/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy prize-winner and healer Thalaleus, intercede with the merciful God that he may grant our souls forgiveness of our offences.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Τῶν Μαρτύρων σύναθλος, ἀναδειχθεὶς καὶ ὁπλίτης, στρατιώτης ἄριστος, τοῦ Βασιλέως τῆς δόξης, γέγονας διὰ βασάνων καὶ τιμωρίας, ἔπαρσιν εἰδωλολατρῶν καταπατήσας, διὰ τοῦτο τὴν σεπτήν σου, ὑμνοῦμεν μνήμην σοφὲ Θαλλέλαιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον, on the page of «Άγιος Θαλλέλαιος ο Ανάργυρος»",
+        "url": "https://www.saint.gr/1670/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shown a fellow-contender of the martyrs and a man-at-arms, you became through tortures and punishments an excellent soldier of the King of glory, and trod down the arrogance of the idolaters; and therefore we sing your honoured memory, O wise Thalaleus.",
+        "rendered": "site"
+      },
+      "model": "Ἡ Παρθένος σήμερον."
     }
   ],
   "text": {

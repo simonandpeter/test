@@ -6,6 +6,11 @@
       "form": "Ioan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 mai, «Sfinții Cuvioși Nichita, Ioan și Iosif, ctitorii Mănăstirii Nea Moni din Chios»."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαΐου, «Όσιοι Νικήτας, Ιωάννης και Ιωσήφ οι κτήτορες της Νέας Μονής Χίου», with the rank word left off; his own head line on the life page is «Οσιος Ιωάννης Κτητορας Της Νεας Μονης Χιου»."
     }
   ],
   "sex": "male",
@@ -47,8 +52,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 20 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαΐου — «Όσιοι Νικήτας, Ιωάννης και Ιωσήφ οι κτήτορες της Νέας Μονής Χίου»",
+        "url": "https://www.saint.gr/05/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps the three of them on, and the identification is the founders' house itself: one page, three head names, each «Κτήτορας Της Νεας Μονης Χιου». The Greek adds the whole story the Romanian line does not carry — the cave of Mount Provateio, the icon of the Mother of God found hanging on a myrtle, the oratory they raised for it, the Nea Moni built with Constantine IX Monomachos and the empress Zoe, the estates he gave it on a promise made to these three, and a short exile on malicious slanders before they came back and died in peace. Two things the Greek says are set down and not resolved: it dates them «στα τέλη του 10ου αιώνα μ.Χ. και στις αρχές του 11ου», where the folder's `dates` carries doxologia's flat eleventh century — so the `dates` object is left untouched — and it calls Zoe «της αδελφής του», the emperor's sister, where she was his wife. The page also prints two megalynaria and an oikos, which the schema's `kind` enum cannot hold, so only the apolytikion and the kontakion are copied; both name all three men, so both go into all three folders."
     },
     {
       "church": "serbian",
@@ -58,5 +73,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α´.",
+      "text": "Τοὺς τρεῖς Ὁσίους Πατέρας, τοῦς ἐν ἀσκήσει ἐκλάμψαντας, καὶ τὴν Χίον πᾶσαν, ἐνθέου βίου ταῖς ἀκτῖσι φωτίσαντας, τοὺς θεοκινήτως Μονήν, τοῖς μονοτρόπων πλήθεσιν, ἀνεγείραντας ἀξιάγαστον, τὸν ἔνδοξον Νικήταν, καὶ Ἰωάννην τὸν χαριτώνυμον, σὺν Ἰωσὴφ τῷ γενναίῳ, καὶ τὸν νοῦν θεόφρονι. Πάντες οἱ τῶν τρόπων αὐτῶν ἐρασταὶ, ἀθροισθέντες ὕμνοις τιμήσωμεν, αὐτοὶ γὰρ τῇ Τριάδι, ὑπὲρ ἡμῶν ἀεὶ πρεσβεύουσι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α´, Τοὺς τρεῖς μεγίστους φωστῆρας, on the page of «Όσιοι Νικήτας, Ιωάννης και Ιωσήφ οι κτήτορες της Νέας Μονής Χίου»",
+        "url": "https://www.saint.gr/1674/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The three venerable fathers who shone in ascesis and lit the whole of Chios with the rays of a godly life, who by God's moving raised an admirable monastery for the multitudes of the solitary life — the glorious Nikitas, and John whose name is grace, with Joseph the brave and God-minded in thought — let all of us who love their manner of life gather and honour them with hymns, for they intercede unceasingly with the Trinity on our behalf.",
+        "rendered": "site"
+      },
+      "model": "Τοὺς τρεῖς μεγίστους φωστῆρας."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ´.",
+      "text": "Τοὺς τρεῖς Πατέρας τοὺς σεπτοὺς νῦν μακαρίσωμεν, ὡς τὰ τοῦ κόσμου ἅπαντα καταφρονήσαντας, σπηλαίοις τε καὶ ὄρεσι κατοικοῦντες, ἀλλ᾿ ὡς ἔχοντες τὴν χάριν τὴν οὐράνιον, ἐκ τοῦ ὕψους ἡμῖν, πᾶσον χάριν πέμψατε· ὅπως κράζομεν· Χαίρετε Πατέρες τίμιοι.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ´, Τῇ ὑπερμάχῳ, on the page of «Όσιοι Νικήτας, Ιωάννης και Ιωσήφ οι κτήτορες της Νέας Μονής Χίου»",
+        "url": "https://www.saint.gr/1674/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us now call the three honoured fathers blessed, who despised all the things of the world and made their dwelling in caves and on mountains; and since you have the grace of heaven, send down every grace upon us from on high, that we may cry: Rejoice, honoured fathers.",
+        "rendered": "site"
+      },
+      "model": "Τῇ ὑπερμάχῳ."
+    }
+  ]
 }

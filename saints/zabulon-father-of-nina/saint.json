@@ -6,6 +6,11 @@
       "form": "Zabulon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 mai, «Sfinții Zabulon și Suzana, părinții Sfintei Nina, luminătoarea Georgiei»."
+    },
+    {
+      "form": "Ζαβουλών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαΐου, «Άγιοι Ζαβουλών και Σωσσάνη», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 20 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαΐου — «Άγιοι Ζαβουλών και Σωσσάνη»",
+        "url": "https://www.saint.gr/05/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps the pair on, and the identification is the page's own: its whole account is «Οι Άγιοι Ζαβουλών και Σωσσάνη ήταν οι γονείς της Αγίας Νίνας της Ισαποστόλου (βλέπε 14 Ιανουαρίου)», the parents of Nina Equal-to-the-Apostles. One page, two head names, two folders, which is what the corpus already has. The Greek adds nothing but its spelling of the names and the cross-reference. No year, no place, no hymn. **For a later reader:** the corpus's `nina-of-georgia` carries her Greek feast on 14 Ιανουαρίου on this page's word, and the separate 19 Μαΐου entry «Μνήμη Εισόδου της Αγίας Νίνας… στην Γεωργία» is the commemoration of an event and not a second feast for her."
     },
     {
       "church": "serbian",

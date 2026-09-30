@@ -1,0 +1,63 @@
+{
+  "slug": "platilla-of-rome",
+  "display_name": "Platilla of Rome",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Πλατίλλα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαΐου, «Αγία Πλατίλλα η Ρωμαία», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 67,
+      "latest": 67,
+      "display": "67",
+      "basis": "traditional",
+      "note": "saint.gr: «Τελειώθηκε μαρτυρικά το 67 μ.Χ.», and the head line «(; - 67)»."
+    }
+  },
+  "related": [
+    "peter-the-apostle",
+    "paul-the-apostle"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαΐου — «Αγία Πλατίλλα η Ρωμαία»",
+        "url": "https://www.saint.gr/05/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαΐου εκάστου έτους», the same day as the listing. It carries no asterisk and no «Δεν είναι διασταυρωμένη» sentence, although what it reports of her it reports «Σύμφωνα με την παράδοση», according to tradition; the distinction between an unvouched entry and a traditional one is the site's and is kept here. Nothing in the corpus answers to the name. Her daughter Domitilla, whom the page keeps on 12 Μαΐου, has no folder, so she is named in the life without a link. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "asclas-of-the-thebaid",
+  "display_name": "Asclas of the Thebaid",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ασκλάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαΐου, «Άγιος Ασκλάς», with the rank word left off; the life page gives two further forms for the same man, «ο Άγιος Ασκλάς (ή Ακλάς ή Ασκαλάς)»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαΐου — «Άγιος Ασκλάς»",
+        "url": "https://www.saint.gr/05/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαΐου εκάστου έτους», the same day as the listing. Nothing in the corpus answers to the name in any of its three forms; the nearest the sweep offered were the Asclepiodotes, a different name. The page gives no year and no emperor, only the prefect Arrianus, so there is no `dates` object, and it names no place beyond the Thebaid and the Nile. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

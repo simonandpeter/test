@@ -1,0 +1,60 @@
+{
+  "slug": "ultrillus-of-bourges",
+  "display_name": "Ultrillus of Bourges",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ουλτρίλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαΐου, «Άγιος Ουλτρίλλος Επίσκοπος Μπουργκές», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 624,
+      "latest": 624,
+      "display": "624",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη το 624 μ.Χ.», and the head line «(; - 624)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαΐου — «Άγιος Ουλτρίλλος Επίσκοπος Μπουργκές»",
+        "url": "https://www.saint.gr/05/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαΐου εκάστου έτους», the same day as the listing, and carries no asterisk. Nothing in the corpus answers to the name; the monastery's patron, Nicetius of Lyon, whom the page keeps on 2 Απριλίου, has no folder either, so he is named in the life without a link. The page gives 612 for the election and 624 for the death, and the `dates` object carries the death alone. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

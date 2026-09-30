@@ -1,0 +1,60 @@
+{
+  "slug": "theodore-of-pavia",
+  "display_name": "Theodore of Pavia",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαΐου, «Άγιος Θεόδωρος Επίσκοπος Παβίας», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 778,
+      "latest": 778,
+      "display": "778",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το 778 μ.Χ.», and the head line «(; - 778)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαΐου — «Άγιος Θεόδωρος Επίσκοπος Παβίας»",
+        "url": "https://www.saint.gr/05/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαΐου εκάστου έτους», the same day as the listing, and carries no asterisk. None of the corpus's many Theodores is a bishop of Pavia. The page gives 743 for his election and 778 for his death, so the `dates` object carries the death alone; `confessor` is used because the page says he suffered much for the Orthodox faith and was exiled, and does not call his death a martyrdom. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

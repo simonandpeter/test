@@ -1,0 +1,64 @@
+{
+  "slug": "thalassius-of-libya",
+  "display_name": "Thalassius of Libya",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Θαλάσσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαΐου, «Όσιος Θαλάσσιος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 648,
+      "latest": 648,
+      "display": "648",
+      "basis": "traditional",
+      "note": "saint.gr: «Απεβίωσε ειρηνικά το 648 μ.Χ.», and the head line «(; - 648)»."
+    }
+  },
+  "related": [
+    "maximus-the-confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαΐου — «Όσιος Θαλάσσιος»",
+        "url": "https://www.saint.gr/05/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαΐου εκάστου έτους», the same day as the listing. **He is not the corpus's `thalassius`**, whose `greek` row is already `venerated` on 22 Φεβρουαρίου and who is the Syrian hermit of a hill near Cyrrhus, teacher of Limnaeus, out of Theodoret: that one has no writings, no office and no years. This one is a Libyan, a presbyter and then an abbot, an ascetical writer whose work stands in the Philokalia, a contemporary of Maximus the Confessor, dead in 648. Two men, and nothing on either page joins them. The page contradicts itself about when he lived: it says he was «στα χρόνια του βασιλιά Κωνσταντίνου Δ' του Πωγωνάτου (668 - 685 μ.Χ.)» and then that he died in 648, twenty years before that reign began. The stated death year is recorded and the contradiction is named rather than resolved. The page prints no hymn but does print a prayer of his in modern Greek."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

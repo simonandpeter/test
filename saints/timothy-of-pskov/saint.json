@@ -1,0 +1,60 @@
+{
+  "slug": "timothy-of-pskov",
+  "display_name": "Timothy of Pskov",
+  "sex": "male",
+  "types": [
+    "prince",
+    "righteous"
+  ],
+  "names": [
+    {
+      "form": "Τιμόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαΐου, «Άγιος Τιμόθεος του Πσκώφ», with the rank word left off; the life page adds that his name as a pagan was Ντόβμοντ."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1299,
+      "latest": 1299,
+      "display": "1299",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Τιμόθεος κοιμήθηκε με ειρήνη το 1299 μ.Χ.», and the head line «(; - 1299)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαΐου — «Άγιος Τιμόθεος του Πσκώφ»",
+        "url": "https://www.saint.gr/05/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαΐου εκάστου έτους», the same day as the listing. None of the corpus's men of this name is a Lithuanian prince of Nalshensk baptised at Pskov. The `types` are short of what the page implies: it calls him a prince and a brave warrior who governed thirty-three years in peace, and the closed list has no slug for a ruling prince who is not a martyr, so `prince` and `righteous` are used. The page gives 1265 for his flight, 1268 and 5 March 1299 for two battles and 1299 for his death, and no birth year at all. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

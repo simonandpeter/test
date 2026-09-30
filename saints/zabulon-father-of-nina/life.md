@@ -10,4 +10,6 @@ When Nina was twelve she went up with her parents to Jerusalem, and there Zabulo
 
 Then he went away and was lost to sight in the desert of the Jordan. The place of his struggles and of his death, the page says, remained unknown. It gives him no year, either for his birth or for his end, and names the book it is drawing on: the Georgian Paterikon.
 
-*After doxologia.ro's calendar for 20 mai — [the day](https://doxologia.ro/20-mai) and [the life](https://doxologia.ro/viata-sfintilor-zabulon-suzana-parintii-sfintei-nina-luminatoarea-georgiei); read 20 September 2026.*
+The Greek calendar keeps the pair on the same day and adds nothing to what is here. saint.gr's whole account of them is one sentence — «Οι Άγιοι Ζαβουλών και Σωσσάνη ήταν οι γονείς της Αγίας Νίνας της Ισαποστόλου», Zabulon and Susanna were the parents of Saint Nina Equal-to-the-Apostles — followed by a cross-reference to her own day, 14 Ιανουαρίου. It gives them no country, no years, no account of their lives and no death, and prints no hymn to either of them. The one thing it does add is a spelling: it writes her name Σωσσάνη.
+
+*After doxologia.ro's calendar for 20 mai — [the day](https://doxologia.ro/20-mai) and [the life](https://doxologia.ro/viata-sfintilor-zabulon-suzana-parintii-sfintei-nina-luminatoarea-georgiei); read 20 September 2026; and saint.gr's calendar for 20 Μαΐου — [the day](https://www.saint.gr/05/20/index.aspx) and [the life](https://www.saint.gr/1680/saint.aspx), read 30 September 2026.*

@@ -1,0 +1,60 @@
+{
+  "slug": "anastasius-of-brescia",
+  "display_name": "Anastasius of Brescia",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Αναστάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαΐου, «Άγιος Αναστάσιος Επίσκοπος Βρεσκίας», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 610,
+      "latest": 610,
+      "display": "610",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το 610 μ.Χ.», and the head line «(; - 610)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαΐου — «Άγιος Αναστάσιος Επίσκοπος Βρεσκίας»",
+        "url": "https://www.saint.gr/05/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαΐου εκάστου έτους», the same day as the listing, and carries no asterisk. None of the corpus's men of this name is a bishop of Brescia. `confessor` is used because the page says he contended stoutly against the Arian heretics and then that he fell asleep in peace; it does not call him a martyr. The page's whole entry is two sentences. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

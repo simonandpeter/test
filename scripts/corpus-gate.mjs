@@ -115,6 +115,36 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ευτυχιοσ eutychius-27-march eutychius-companion-of-bassus eutychius-companion-of-januarius eutychius-martyred-in-africa eutychius-of-constantinople eutychius-of-mesopotamia eutychius-of-the-forty-martyrs eutychius-the-subdeacon':
+    'Eight now. The new one is the Eutychius martyred in Africa on 21 May; the others are read in the el-05-08 entry for this name form.',
+  'παχωμιοσ pachomius-6-may pachomius-companion-of-papyrinus pachomius-kedrov pachomius-of-keno pachomius-of-nerekhta pachomius-the-great pachomius-the-new-of-usaki':
+    'Seven now. The new one is on 21 May; the others are read in the el-05-15 entry for this name form, where three stand on 15 May.',
+  'ελενη helen-of-decani helen-the-empress':
+    'Two women: Helen the Empress, whom both calendars keep with Constantine on 21 May, and the Helen of the el-05-26 reading.',
+  'κυριλλοσ cyril-alfanov cyril-bishop-in-africa cyril-companion-of-photius cyril-ii-of-rostov cyril-of-alexandria cyril-of-astrakhan cyril-of-heliopolis cyril-of-jerusalem cyril-of-kantara cyril-of-kazan cyril-of-the-forty-martyrs cyril-of-the-white-lake cyril-of-turov cyril-of-zographou cyril-the-philosopher cyril-vi-of-constantinople':
+    'Sixteen now. The new one is Cyril II of Rostov on 21 May; the others are read in the el-05-04 entry for this name form.',
+  'κωνσταντινοσ constantine-brancoveanu constantine-of-cornwall constantine-of-murom constantine-of-novotorzhanin constantine-of-strathclyde constantine-of-the-scots constantine-the-great cyril-the-philosopher':
+    'Eight now, and **four of them stand on the Greek 21 May**: Constantine the Great, whom the Romanian keeps there too; Constantine Brâncoveanu, whom the Russian and Romanian keep on 16 august and the Greek here — one row per church and two days, not two men; and Constantine of Murom and Constantine of Novotorzhanin. Four entries of the page, four commemorations.',
+  'χριστοφοροσ christopher christopher-20-april christopher-24-april christopher-of-adrianople christopher-of-antioch christopher-of-georgia christopher-of-saint-sabbas':
+    'Seven now. The new one is Christopher of Antioch on 21 May; the others are read in the el-05-11 entry for this name form.',
+  'μιχαηλ boris-michael-of-bulgaria macarius-notaras methodius-of-moravia michael-companion-of-platon-of-reval michael-mavroeidis michael-of-cyprus-of-samothrace michael-of-georgia michael-of-klops michael-of-murom michael-of-ulumbo michael-of-vourla michael-the-russian-1-april michael-the-wonderworker':
+    'Thirteen now. The new one is Michael of Murom on 21 May; the others are read in the el-05-11 entry for this name form.',
+  'αγαπητοσ agapitus-of-auxerre agapitus-of-markushevo agapitus-of-rome agapitus-of-synnada agapitus-the-blind':
+    'Five now. The new one is Agapitus of Markushevo on 21 May; the others are read in the el-05-01 entry for this name form.',
+  'τιμοθεοσ timothy-1-february timothy-companion-of-diogenes timothy-companion-of-terentius timothy-disciple-of-babylas timothy-husband-of-maura timothy-martyred-in-africa timothy-of-caesarea timothy-of-ephesus timothy-of-pskov timothy-of-symbola':
+    'Ten now. The new ones are Timothy of Pskov on 20 May and the Timothy martyred in Africa on 21 May; the others are read in the el-05-07 entry for this name form.',
+  'θαλασσιοσ thalassius thalassius-of-libya':
+    'Two men, and the second folder is a reader’s deliberate call rather than an upgrade: Thalassius, whom the Greek keeps on 22 Φεβρουαρίου, and Thalassius of Libya on 20 Μαΐου. Two of saint.gr’s own days; the reader argued it in the row and named it as the one to merge if the author disagrees.',
+  'στεφανοσ stefan-brancoveanu stephen-27-february stephen-andronov stephen-bekh stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-khirsa stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-xylinites':
+    'Fifteen now. The new one is Stephen of Montenegro on 20 May; the others are read in the el-05-18 entry for this name form.',
+  'θεοδωροσ mstislav-of-kiev theodore-companion-of-pausolypius theodore-companion-of-stephen theodore-companion-of-terentius theodore-founder-of-chora theodore-of-kama-the-philosopher theodore-of-kandavla theodore-of-kythera theodore-of-moscow theodore-of-murom theodore-of-novgorod theodore-of-pavia theodore-of-pentapolis theodore-of-perga theodore-of-samothrace theodore-of-sykeon theodore-of-tamasos theodore-of-tomsk theodore-of-vrsac theodore-prince-of-yaroslavl theodore-stratelates theodore-the-byzantine theodore-the-envoy-of-nicomedia theodore-the-recruit theodore-the-silent theodore-trichinas':
+    'Twenty-six now. The new ones are Theodore of Pavia on 20 May and the Theodore of 21 May; the others are read in the el-05-16 entry for this name form.',
+  'μαρκοσ mark-of-arethusa mark-of-byblos mark-of-kantara mark-of-the-lavra-of-pskov mark-the-ascetic mark-the-cretan-of-smyrna mark-the-deaf mark-the-evangelist mark-the-hermit-20-may mark-the-shepherd':
+    'Ten now. The new one is Mark the Hermit on 20 May; the others are read in the el-05-14 entry for this name form.',
+  'αναστασιοσ anastasius-8-january anastasius-of-antioch anastasius-of-brescia anastasius-of-nauplion anastasius-patriarch-of-jerusalem anastasius-the-sinaite':
+    'Six now. The new one is Anastasius of Brescia on 20 May; the others are read in the el-01-22 entry for this name form.',
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-companion-of-barbarus alexander-companion-of-terentius alexander-companion-of-thalaleus alexander-martyr-1-april alexander-of-cartagena alexander-of-kentoukellai alexander-of-kharkov alexander-of-oshevensk alexander-of-pydna alexander-of-rome-pope alexander-of-the-forty-martyrs alexander-of-voskiy alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Seventeen now. The new one is the companion of Thalaleus on 20 May; the others are read in the el-05-14 entry for this name form.',
   'σπυριδων spyridon-evtushenko spyridon-of-the-cave':
     'New on 19 May: spyridon-evtushenko, one of the twenty-seven new martyrs of Slobodskaya near Kharkov. The other 1 of this name form stand on other Greek days and are read in the entries recorded for it before this one.',
   'φιλιπποσ philip-of-moscow philip-of-sicily philip-of-worms philip-ordinets':

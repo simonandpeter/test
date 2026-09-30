@@ -1,0 +1,52 @@
+{
+  "slug": "stephen-of-montenegro",
+  "display_name": "Stephen of Montenegro",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαΐου, «Όσιος Στέφανος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαΐου — «Όσιος Στέφανος»",
+        "url": "https://www.saint.gr/05/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαΐου εκάστου έτους», the same day as the listing. None of the corpus's men of this name is a seventeenth-century Montenegrin cave-dweller of the Morača house; `stefan-the-first-crowned` is the Serbian king, `stephen-of-chenolakkos` and `stephen-of-placidianae` are Byzantines. The page gives him one year, 1660, for the beginning of the cave and thirty years in it, but no birth and no death year, so there is no `dates` object: a period that must be inferred from two durations is not a recorded one. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
