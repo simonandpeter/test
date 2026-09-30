@@ -1,0 +1,51 @@
+{
+  "slug": "parthenius-parthenniades",
+  "display_name": "Parthenius Parthenniades",
+  "names": [
+    {
+      "form": "Παρθένιος Παρθενιάδης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαρτίου, «Άγιος Παρθένιος Παρθενιάδης», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαρτίου — «Άγιος Παρθένιος Παρθενιάδης»",
+        "url": "https://www.saint.gr/03/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1805)» and dates the killing to «την 5η Μαρτίου 1805 μ.Χ.», the day the calendar keeps him on. It makes him a member of the Kollyvades movement, says that when they had to leave the Holy Mountain he went to the monastery of the Annunciation on Ikaria, that in 1798 he reached Patmos and with the help of builders from Samos built a small monastery in the place now known as «Λιβάδι Καλογήρων», and that he went to Thrace to raise the money the work still needed. There he worked as a priest, and having advised a young Christian woman to avoid a relationship with a Muslim Turk, was killed by that man. Beside his name the page links the synaxis of the saints of Patmos, which is a company and not a person and is not kept here. It gives no year of birth, no relic, no distich and no hymn. `presbyter` is left out of `types` because the page says only that he worked as a priest, «εργάστηκε ως ιερέας», without naming an ordination."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

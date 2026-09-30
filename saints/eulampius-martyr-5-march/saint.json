@@ -1,0 +1,50 @@
+{
+  "slug": "eulampius-martyr-5-march",
+  "display_name": "Eulampius (5 March)",
+  "names": [
+    {
+      "form": "Ευλάμπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαρτίου, «Άγιος Ευλάμπιος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαρτίου — «Άγιος Ευλάμπιος»",
+        "url": "https://www.saint.gr/03/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives him one sentence: «Ο Άγιος Ευλάμπιος μαρτύρησε στην Παλαιστίνη διά ξίφους» — he was martyred in Palestine by the sword. It prints the distich «Τράχηλον Εὐλάμπιος ἐκτμηθεὶς ξίφει, / Τραχηλιῶσαν δυσσέβειαν αἰσχύνει», and gives no year, no emperor, no judge, no relic and no hymn. The corpus keeps a Eulampius of Nicomedia, martyred with his sister Eulampia and kept on another day, and he is not this man."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "theophilus-of-caesarea",
+  "display_name": "Theophilus of Caesarea",
+  "office": "Bishop of Caesarea in Palestine",
+  "names": [
+    {
+      "form": "Θεόφιλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαρτίου, «Άγιος Θεόφιλος ο Ιερομάρτυρας Επίσκοπος Καισαρείας», with the rank word left off. The see and the country are the page's own: «Ο Άγιος Θεόφιλος ήταν Επίσκοπος Καισαρείας της Παλαιστίνης.»"
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαρτίου — «Άγιος Θεόφιλος ο Ιερομάρτυρας Επίσκοπος Καισαρείας»",
+        "url": "https://www.saint.gr/03/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole notice is three sentences: «Ο Άγιος Θεόφιλος ήταν Επίσκοπος Καισαρείας της Παλαιστίνης. Έλαβε μέρος σε Σύνοδο που συγκλήθηκε στην Παλαιστίνη για τον καθορισμό της ημέρας του εορτασμού του Πάσχα. Μαρτύρησε επί αυτοκράτορα Κομμόδου (180 - 192 μ.Χ.).» It gives no place or year of birth, no name for the synod beyond its business, no manner of death, no relic, no distich and no hymn. The corpus keeps eight other men of this name and none of them is on this day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

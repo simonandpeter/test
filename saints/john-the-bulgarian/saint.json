@@ -6,6 +6,11 @@
       "form": "Ioan Bulgarul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 martie, «Sfântul Nou-Mucenic Ioan Bulgarul»."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαρτίου, «Άγιος Ιωάννης ο Νεομάρτυρας εκ Βουλγαρίας», with the rank words and the country left off."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαρτίου — «Άγιος Ιωάννης ο Νεομάρτυρας εκ Βουλγαρίας»",
+        "url": "https://www.saint.gr/03/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(1775 - 1784)», which cannot be read with its own body: it has him leave the Holy Mountain «σε ηλικία 18 ετών» and be beheaded in 1784, so the birth year in the head is nine years too late and is not taken here. This folder's own birth year, 1765 off doxologia, sits with the body's eighteen years and is left as it stands; the head's reading is recorded here. The page says he was handsome and lettered, that he became entangled in some adventure and denied Christ, and that feeling remorse for the apostasy he left Bulgaria for the Holy Mountain and made obedience to a monk of the Lavra of St Athanasius who was crippled in one hand. It has him then go to Constantinople, put on Turkish clothes, enter the church of Holy Wisdom which had been turned into a mosque, cross himself before the Turks and venerate in the church as a Christian, and be beheaded in the courtyard of that church in 1784. Beside his name it links the synaxis of the new martyrs who suffered after the taking of Constantinople, which is a company and not a person and is not kept here. It gives no relic and no hymn."
     },
     {
       "church": "serbian",

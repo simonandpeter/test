@@ -6,6 +6,11 @@
       "form": "Marcu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 martie, «Sfântul Cuvios Marcu Pustnicul»."
+    },
+    {
+      "form": "Μάρκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαρτίου, «Όσιος Μάρκος ο ασκητής και Θαυματουργός», with the rank word and the epithets left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαρτίου — «Όσιος Μάρκος ο ασκητής και Θαυματουργός»",
+        "url": "https://www.saint.gr/03/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The page says he was an Athenian who lived in the fourth century, left Athens for Antioch and was a disciple of John Chrysostom, whose memory it puts on 13 November; it tells the hyena whose blind cub he healed and which brought him a ram's skin in return, which he would not take until the beast promised to stop harming the sheep of the poor; it says the presbyter of the monastery declared that he had never given him Holy Communion, but that an angel's hand supplied it; and it prints four of his sayings and the tag «Πάντα πώλησαν καὶ Μᾶρκον ἀγόρασαν». No date is written into this folder from it, because the same Greek day carries a second page, «Όσιος Μάρκος ο Αθηναίος», which says of that one «Ίσως να είναι το ίδιο πρόσωπο με τον όσιο Μάρκο τον Ασκητή» — perhaps he is the same person as Mark the Ascetic — and «Συγκεχυμένες και ασαφείς οι πληροφορίες», that the information is confused and unclear; so the Athenian birth and the century cannot be assigned with confidence to one of the two. No hymn is taken either: the whole hymn block on this page is the other Mark's service, word for word the same as the block on the Athenian's page, naming Athens and the abba Serapion who found him in the desert and buried him — neither of which belongs to the life this page tells."
     },
     {
       "church": "serbian",
@@ -64,5 +79,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "john-chrysostom"
+  ]
 }

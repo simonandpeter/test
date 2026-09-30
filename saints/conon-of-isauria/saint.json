@@ -6,6 +6,11 @@
       "form": "Conon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 martie, «Sfântul Mucenic Conon din Isauria»."
+    },
+    {
+      "form": "Κόνων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαρτίου, «Άγιος Κόνων ο Ίσαυρος», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαρτίου — «Άγιος Κόνων ο Ίσαυρος»",
+        "url": "https://www.saint.gr/03/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The page puts his birth «περί τα τέλη του 1ου αιώνα μ.Χ. στη Βαδινή, χωριό της Ισαυρίας της Μικράς Ασίας» and says he lived in the apostolic times. It names his parents Nestor and Nada, both idolaters at first, and says his father Nestor was martyred for Christ; the day's own list keeps that Nestor as an entry of his own. It reports from the synaxarion that the Archangel Michael himself guided him, baptised him, taught him the Name of the Holy Trinity, gave him the divine Mysteries to the end of his life and granted him the grace of strange wonders. It names the archon Magnus who arrested and tortured him after the idols of a temple broke in pieces at his prayer, and says he reposed in peace two years after being released. It adds, with its own «Ίσως», perhaps, that a church in his name may have stood beyond Constantinople and is mentioned as a monastery under Justinian I (527–565); that hedge is the site's and is not acted on. It says that in the years of the iconoclasm Christians carried his holy skull to Paphos, where it is kept to this day at the monastery of Chrysorrogiatissa in an elegant mother-of-pearl case."
     },
     {
       "church": "serbian",
@@ -59,9 +74,55 @@
         "text": "Thy martyr Conon, O Lord, in his contest received the crown of incorruption from Thee, our God; for having Thy strength he overcame his tormentors, and broke the strengthless daring of the demons. At his prayers, O Christ our God, save Thou our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Τὴν χάριν τοῦ Πνεύματος, ἐνδεδυμένος σοφέ, τὸ κράτος διέλυσας, τῆς ἀσεβείας στερρῶς. Ἐκλάμπων τοὶς θαύμασιν ὅθεν πεφοινιγμένος, ταὶς ροαὶς τῶν αἱμάτων. Κόνων Ὁσιομάρτυς, τὸν Δεσπότην δοξάζεις, τὸν παρέχοντα ἠμὶν διὰ σοῦ, χάριν καὶ ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε, on the page of Άγιος Κόνων ο Ίσαυρος. It names him and calls him Ὁσιομάρτυς, venerable martyr, which is the rank the page's hymns give him although its life has him die in peace. The page also prints a megalynarion and a kathisma, for which the corpus's schema has no kind; the apolytikion and the kontakion are the two taken here.",
+        "url": "https://www.saint.gr/3832/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Clothed in the grace of the Spirit, O wise one, thou didst break up steadfastly the dominion of impiety, shining out with wonders; whence, made crimson with the flowing of thy blood, O Conon, venerable martyr, thou glorifiest the Master, who through thee bestoweth grace and mercy upon us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθείς.",
+      "text": "Ἀγγελικῆς ἀξιωθείς ὀπτασίας, τήν ἐν Χριστῷ μεμυσταγώγησαι πίστιν, καί τῶν θαυμάτων εἴληφας τήν δύναμιν σοφέ· ὅθεν καθυπέταξας, τήν ὀφρύν τῶν δαιμόνων, καί τῆς πλάνης ἔσβεσας, ἐναθλήσας τήν φλόγα. Ὁσιομάρτυς Κόνων Ἀθλητά, ἐξευμενίζου ἡμῖν τόν Φιλάνθρωπον.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Ὁ ὑψωθείς, on the page of Άγιος Κόνων ο Ίσαυρος. It names him and names the angelic vision his life turns on, and the subduing of the demons.",
+        "url": "https://www.saint.gr/3832/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Counted worthy of an angelic vision, thou wast initiated into the faith in Christ and didst receive the power of wonders, O wise one; whence thou didst bring low the arrogance of the demons and, contending, didst quench the flame of error. O Conon, venerable martyr and contender, make the Lover of mankind merciful towards us.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 76,
+      "latest": 100,
+      "display": "about the end of the 1st century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Κόνων γεννήθηκε περί τα τέλη του 1ου αιώνα μ.Χ. στη Βαδινή, χωριό της Ισαυρίας της Μικράς Ασίας και έζησε στους Αποστολικούς χρόνους» — the page's «περί τα τέλη», about the end, is why the bounds are a quarter-century and not a year. doxologia.ro, from which this folder was first written, gives him no year at all, and saint.gr gives none for his repose."
+    }
+  },
+  "related": [
+    "nestor-father-of-conon"
+  ]
 }

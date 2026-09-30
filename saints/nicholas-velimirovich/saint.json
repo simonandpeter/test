@@ -7,6 +7,11 @@
       "form": "Nicolae Velimirovici",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 martie, «Sfântul Ierarh Nicolae Velimirovici, Episcop al Ohridei și Jicei»."
+    },
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαρτίου, «Άγιος Νικόλαος Επίσκοπος Αχρίδος και Ζίτσης», with the rank word and the two sees left off. The body of the page adds the surname in brackets and in Greek letters, «Ο Άγιος Νικόλαος (Βελιμίροβιτς)»."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαρτίου — «Άγιος Νικόλαος Επίσκοπος Αχρίδος και Ζίτσης»",
+        "url": "https://www.saint.gr/03/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The Greek calendar keeps him on 5 Μαρτίου, where doxologia keeps him on 18 martie; the two churches differ on the day and each row records the day page it was read from. The page heads him «(1880 - 1956)», which is the pair of years this folder already holds. It gives his birth as 23 December 1880 in the village of Lelić in central-western Serbia, the first of the nine children of the pious farmers Dragomir and Katherine; his doctorates at Bern in 1908, Oxford in 1909 and Halle in 1911; seven languages, Greek among them; his tonsure and ordination to the presbyterate at the monastery of Rakovica near Belgrade in December 1909, after a vow made in a grave dysentery; his mission to America and England in 1915–1919; his election as bishop of Žiča in 1919 and his move to Ohrid in 1920; his arrest by the German occupation authorities in 1941 and his deportation to Dachau in 1944; his release in May 1945 and his refusal to return to a country whose regime thought him undesirable; his teaching at the seminary of the monastery of St Sava at Libertyville, Illinois, and his settling from 1951 at the Russian monastery of St Tikhon in Pennsylvania; his repose while praying in his cell on a Sunday morning in 1956, as he prepared to serve; and the return of his relics to Serbia in 1991. It prints no hymn."
     },
     {
       "church": "serbian",

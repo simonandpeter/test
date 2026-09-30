@@ -1,0 +1,54 @@
+{
+  "slug": "archelaus-with-152-martyrs",
+  "display_name": "Archelaus, with a hundred and fifty-two martyrs",
+  "names": [
+    {
+      "form": "Αρχέλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαρτίου, «Άγιος Αρχέλαος και οι μαζί μ' αυτόν Εκατόν πενήντα δύο μάρτυρες», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαρτίου — «Άγιος Αρχέλαος και οι μαζί μ' αυτόν Εκατόν πενήντα δύο μάρτυρες»",
+        "url": "https://www.saint.gr/03/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives the whole company one sentence and a parenthesis: «Οι Άγιοι μαρτύρησαν δια ξίφους. (Στο Κουτλουμουσιανό Μηναίο οι μάρτυρες αριθμούνται Εκατόν σαράντα δύο).» — the saints were martyred by the sword; in the Koutloumousian Menaion the martyrs are numbered a hundred and forty-two. The day's line counts them a hundred and fifty-two, and the disagreement is the site's own and is recorded rather than settled. None of the hundred and fifty-two is named, so they are kept in this one entry with Archelaus and not as folders of their own. The page prints the distich «Θεὶς πρῶτος Ἀρχέλαος αὐχένα ξίφει, / Ἄρχει τομῆς σοι, λαὲ θεῖε Κυρίου», which makes him the first to lay his neck under the sword. It gives no year, no country, no emperor, no relic and no hymn. Beside it the site links a second page for Photius and Cyril, of whom it says only that they probably belonged to this company."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "photius-companion-of-cyril",
+    "cyril-companion-of-photius"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

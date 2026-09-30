@@ -1,0 +1,63 @@
+{
+  "slug": "leonidas-disciple-of-adrian",
+  "display_name": "Leonidas, disciple of Adrian",
+  "names": [
+    {
+      "form": "Λεωνίδας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαρτίου, «Όσιοι Αδριανός και Λεωνίδας οι Μάρτυρες εκ Ρωσίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαρτίου — «Όσιοι Αδριανός και Λεωνίδας οι Μάρτυρες εκ Ρωσίας»",
+        "url": "https://www.saint.gr/03/05/index.aspx",
+        "year": 2026
+      },
+      "note": "One page holds the two of them, and its headings and its body do not agree about which year belongs to which man: the headings read «Οσιος Αδριανος ο Μαρτυρας Εκ Ρωσιας (; - 1549)» and «Οσιος Λεωνιδας ο Μαρτυρας Εκ Ρωσιας (; - 1550)», while the body says «Ο Όσιος Λεωνίδας, αφού ασκήτεψε θεοφιλώς, κοιμήθηκε με ειρήνη το έτος 1549 μ.Χ.» and «Δέκα χρόνια μετά την ίδρυση της μονής, στις 5 Μαρτίου 1550 μ.Χ., μια συμμορία ληστών λεηλάτησε το μοναστήρι, βασάνισε και φόνευσε τον ηγούμενο Όσιο Αδριανό». The body's reading is the one taken, because it is internally consistent and because 5 March 1550 is the day the calendar keeps them on; the headings' transposition is recorded and not resolved. The page calls Adrian «του Ποσεσόνε», puts his first monastic life at the monastery of St Cornelius in the district of Komel, dates to 1540 his vision of an aged monk named Bestouz calling him to found a new house, and has the abbot send him out with an icon of the Dormition of the Theotokos; it tells the robbers who could not take the icon down from the tree and left bread and fish beneath it, which the monks took for the sign of the place; and it dates the finding of Adrian's relics to 1626 and their translation, at the order of the patriarch Philaret, to the monastery he founded in the town of Poshekhonye. Beside them the site links a second commemoration, the finding of the relics of the hieromartyr Adrian, and the synaxis of the saints of Rostov and Yaroslavl; neither is a person and neither is kept here. The corpus keeps an Adrian of Russia whose repose it dates to 1549 and whose Greek row saint.gr itself puts on 26 Αυγούστου — Andrei Zavalishin, the disciple of Alexander of Svir — and he is not this man. The day's line and the headings call him Μάρτυς, martyr, but the body says «κοιμήθηκε με ειρήνη», he fell asleep in peace; `martyr` is therefore left out of this folder's `types` and the calendar's word is recorded here instead. The corpus keeps four other bearers of this name and none of them is on this day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1549,
+      "latest": 1549,
+      "display": "1549",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Λεωνίδας, αφού ασκήτεψε θεοφιλώς, κοιμήθηκε με ειρήνη το έτος 1549 μ.Χ.» The heading of the same page gives him 1550 and his elder 1549, which is the reverse of what its own body says; the body is taken and the heading is recorded in the attestation. No year of birth is given."
+    }
+  },
+  "related": [
+    "adrian-of-poshekhonye"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

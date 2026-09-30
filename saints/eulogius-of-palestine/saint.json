@@ -6,6 +6,11 @@
       "form": "Evloghie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 martie, «Sfântul Mucenic Evloghie»."
+    },
+    {
+      "form": "Ευλόγιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαρτίου, «Άγιος Ευλόγιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαρτίου — «Άγιος Ευλόγιος»",
+        "url": "https://www.saint.gr/03/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The page puts him in Palestine, the son of rich idolatrous parents, and has him give away his wealth to the poor after their death and go about the whole city and country teaching the idolaters and baptising many of them in the name of the Father and the Son and the Holy Spirit; then denounced to the archon of the country, stripped, beaten with hard cords of oxen's sinews, and beheaded. It gives no year at all, no emperor, no name for the archon, no relic and no hymn, and it prints the distich «Τὸν Εὐλόγιον εὐλογεῖ πᾶσα κτίσις, / Κτίστου χάριν σοῦ τὴν κάραν τετμημένου», which plays on his name. Its etymology block names a Byzantine grammarian of the fifth century, which is a note on the word and not this man."
     },
     {
       "church": "serbian",

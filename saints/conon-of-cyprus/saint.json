@@ -1,0 +1,99 @@
+{
+  "slug": "conon-of-cyprus",
+  "display_name": "Conon of Cyprus",
+  "names": [
+    {
+      "form": "Κόνων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαρτίου, «Όσιος Κόνων ο εκ Κύπρου», with the rank word and the island left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαρτίου — «Όσιος Κόνων ο εκ Κύπρου»",
+        "url": "https://www.saint.gr/03/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The page puts him «περίπου τον 4ο αιώνα μ.Χ.», born in the region of Akamas in Cyprus a few years after the repose of Hilarion the Great, whose memory it puts on 21 Οκτωβρίου. It has him leave the world for a cave away from his village, gather a brotherhood, and found beside the monastery a hospital and a home for the aged, the known Ptocheion, and fall asleep in peace at a great age. It names a portion of his relic at the monastery of Kykkos in Cyprus and says his relics are kept at the monasteries of Kykkos and Machairas. It prints an apolytikion in Ήχος δ', a kontakion in Ήχος γ' and a megalynarion, for the last of which the corpus's schema has no kind. Two other men of this name stand on the same Greek day, the Isaurian and the Gardener, on pages of their own; all three are told in unrelated terms."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "about the 4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Κόνων έζησε περίπου τον 4ο αιώνα μ.Χ. Γεννήθηκε στην περιοχή του Ακάμα της Κύπρου, λίγα χρόνια μετά από την κοίμηση του Οσίου Ιλαρίωνος του Μεγάλου» — the page's «περίπου», about, is why the display keeps that word. No year of birth or of repose is given."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος δ'.",
+      "model": "Ταχύ προ κατάλαβε.",
+      "text": "Ιδρώσιν ασκήσεως Κόνων ηγίασας γήν, Ακόμα και έβαλες ως Θεοφόρον φυτόν, εν ώ κατασκήνωσαν, σμήνη των αρετών σου, κατευφραίνοντα πάντας, όσοι κατατρυφώσι, σων αγώνων τρισμάκαρ, διό και χάριν είληφας, την των ιάσεων.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ήχος δ', Ταχύ προκατάλαβε, on the page of Όσιος Κόνων ο εκ Κύπρου. It names him and names Akamas — the page prints that place-name in the hymn as «Ακόμα», which is the reading the site publishes and is copied unchanged. The page also prints a megalynarion, for which the corpus's schema has no kind.",
+        "url": "https://www.saint.gr/3834/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the sweat of thine ascesis, O Conon, thou didst hallow the land of Akamas, and didst plant thyself in it as a God-bearing tree, in which there settled the swarms of thy virtues, gladdening all who take delight in thy struggles, O thrice-blessed one; wherefore thou hast received the grace of healings.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος γ'.",
+      "model": "Η Παρθένος σήμερον.",
+      "text": "Θεϊκοίς αθλήμασι πάθη απέκτεινας, πάτερ, και φαιδρώς κεκόσμησαι, χαροποιώ απάθεια, έδραμες προς τον Δεσπότην σου ακαμάτως, ύδωρ ζών επιποθών και εύρων πλουσίως εξ ου δίδου, θείε Κόνων, τοις προσκυνούσι, την πάντιμον κάραν σου.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ήχος γ', Η Παρθένος σήμερον, on the page of Όσιος Κόνων ο εκ Κύπρου. It names him and turns ἀκαμάτως, untiringly, against the name of Akamas where the page puts his ascesis; and it speaks of the veneration of his head, which the page's own notice does not mention.",
+        "url": "https://www.saint.gr/3834/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "By godly contests thou didst put the passions to death, O father, and art brightly adorned with a dispassion that makes glad; untiringly thou didst run to thy Master, longing for the living water and finding it in abundance. Of that water give, O divine Conon, to those who venerate thy all-honoured head.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "related": [
+    "hilarion-the-great"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

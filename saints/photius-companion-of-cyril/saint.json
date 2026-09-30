@@ -1,0 +1,54 @@
+{
+  "slug": "photius-companion-of-cyril",
+  "display_name": "Photius, companion of Cyril",
+  "names": [
+    {
+      "form": "Φώτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαρτίου, «Άγιοι Φώτιος και Κύριλλος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαρτίου — «Άγιοι Φώτιος και Κύριλλος»",
+        "url": "https://www.saint.gr/03/05/index.aspx",
+        "year": 2026
+      },
+      "note": "One page holds the two of them and its whole notice is a single hedged sentence: «Οι Άγιοι Φώτιος και Κύριλλος μάλλον άνηκαν στους 152 Μάρτυρες, που μαρτύρησαν μαζί με τον Άγιο Αρχέλαο (βλέπε ίδια ημέρα)» — the holy Photius and Cyril probably belonged to the 152 martyrs who were martyred with St Archelaus. The «μάλλον», probably, is the site's own word about their company and is recorded here without being acted on; it is not a doubt about either man's existence, and the day's line names both of them plainly. The page gives no country, no year, no emperor, no manner of death, no relic, no distich and no hymn. The corpus keeps three other men of this name — of Constantinople, of Kyiv, of Nicomedia — and none of them is on this day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "cyril-companion-of-photius",
+    "archelaus-with-152-martyrs"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

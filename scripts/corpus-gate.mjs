@@ -115,6 +115,22 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοφιλοσ theophilus-martyr-6-february theophilus-of-caesarea theophilus-of-rome theophilus-the-deacon-of-libya theophilus-the-new':
+    'Five men on five Greek days: 6 February, Caesarea on 5 March, Rome on 28 February, the deacon of Libya on 8 January and the New on 30 January.',
+  'φωτιοσ photius-companion-of-cyril photius-of-constantinople photius-of-yuriev':
+    'Three men: the companion of Cyril on 5 March, the patriarch on 6 February and Yuriev on 27 February.',
+  'νεστωρ nestor-father-of-conon nestor-of-maghid nestor-the-martyr-2-march':
+    'Three men: the father of Conon of Isauria on 5 March, Maghid on 28 February and the martyr of 2 March.',
+  'γεωργιοσ george-konissky george-of-alikianos george-of-amastris george-of-develtos george-of-kratovo george-of-megara george-of-rapsani george-of-vladimir george-paizanos-of-mytilene george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian':
+    'Thirteen now. The new one is George of Rapsani on 5 March; the other twelve are read in the el-02-21 entry for this name form.',
+  'κυριλλοσ cyril-companion-of-photius cyril-of-alexandria cyril-of-kazan cyril-of-the-white-lake cyril-of-zographou':
+    'Five men on five Greek days: the companion of Photius on 5 March, Alexandria on 18 January, Kazan on 26 January, the White Lake on 4 February and Zographou on 22 September.',
+  'companion cyril photius cyril-companion-of-photius photius-companion-of-cyril':
+    'The pair the 5 March page names together, each named after the other, which is what folds them.',
+  'κονων conon-of-cyprus conon-of-isauria conon-of-penthucla conon-the-gardener':
+    'Four men, and **three of them share 5 March**, which both calendars already divide: Conon of Isauria and Conon the Gardener the Romanian keeps there too, and saint.gr prints Conon of Cyprus beside them as a third line. Three entries, three commemorations. Penthucla is 19 February.',
+  'αδριανοσ adrian-of-caesarea adrian-of-canterbury adrian-of-megara adrian-of-poshekhonye adrianus-of-cyprus':
+    'Five men. The new one is Poshekhonye on 5 March; the other four are read in the el-03-04 entry for this name form.',
   'στρατονικοσ stratonicus-companion-of-hermylus stratonicus-the-executioner':
     'Two men: the companion of Hermylus on 13 January, which the Romanian calendar keeps too, and the executioner of 4 March.',
   'πετροσ peter-abesalamites peter-companion-of-leucius peter-companion-of-manuel peter-disciple-of-dionysius-of-alexandria peter-of-bulgaria peter-of-capitolias peter-of-damascus peter-of-galatia peter-of-monevata peter-of-sebaste peter-of-tobolsk peter-son-of-john-of-syracuse peter-the-egyptian peter-the-gaoler peter-the-peloponnesian peter-the-sign-bearer':

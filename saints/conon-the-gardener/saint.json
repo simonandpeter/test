@@ -6,6 +6,11 @@
       "form": "Conon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 martie, «Sfântul Mucenic Conon Grădinarul»."
+    },
+    {
+      "form": "Κόνων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαρτίου, «Άγιος Κόνων ο Κηπουρός», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαρτίου — «Άγιος Κόνων ο Κηπουρός»",
+        "url": "https://www.saint.gr/03/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The page puts his birth at Nazareth of Galilee and his life «κατά τα χρόνια της βασιλείας του Δεκίου (249 - 251 μ.Χ.)», which is the reign this folder's own date already rests on. It has him come into the country of Pamphylia, pick out a small place and turn it into a garden of cabbages from which he fed himself and the poor strangers; it prints his two answers, to the soldiers and to the governor, and the tortures — his ankles bored through, iron nails driven in, and himself made to run in front of a chariot of horses. It gives no relic and no hymn, and prints the distich «Ἥλων τύπους φέροντι Κυρίῳ Κόνων, / Ἥλων τύπους πρόσεισιν εἰς πόδας φέρων». The same Greek day keeps two other men of this name, the Isaurian and the Cypriot, on pages of their own."
     },
     {
       "church": "serbian",

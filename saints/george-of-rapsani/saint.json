@@ -1,0 +1,77 @@
+{
+  "slug": "george-of-rapsani",
+  "display_name": "George of Rapsani",
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Μαρτίου, «Άγιος Γεώργιος ο Νεομάρτυρας εκ Ραψάνης», with the rank words and the town left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Μαρτίου — «Άγιος Γεώργιος ο Νεομάρτυρας εκ Ραψάνης»",
+        "url": "https://www.saint.gr/03/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1818)» and is the longest notice of the day; it reasons openly from documents and says where it cannot decide. It quotes in full the inscription on the conical lid of the old silver reliquary: «Ο ΕΝΔΟΞΟΣ ΝΕΟΜΑΡΤΥΣ ΓΕΩΡΓΙΟΣ ΑΘΛΗΣΑΣ ΕΝ ΤΥΡΝΑΒΩ ΚΑΤΑ ΤΟ ΕΤΟΣ 1818 ΕΠΙ ΒΑΛΗ ΠΑΣΙΑ ΥΙΟΥ ΑΛΗ ΠΑΣΙΑ ΗΤΟΝ ΥΙΟΣ ΧΑΤΖΗ ΛΑΣΚΑΡΕΩΣ ΥΙΟΥ ΑΝΑΣΤΑΣΕΙΟΥ ΨΑΛΤΟΥ ΚΑΙ ΜΗΤΡΟΣ ΣΜΑΡΑΓΔΑΣ ΘΥΓΑΤΡΟΣ ΘΕΟΔΩΡΟΥ ΣΑΚΕΛΛΑΡΙΔΟΥ». It says plainly that it does not know whether Ψάλτου is a surname or an office, whether or how many brothers and sisters he had (before a deed of sale of 1852 shows him a sister Maria), which of the two kinships with the priest Christodoulos Karazisis came first, whether the court that tried him was a single military judge, Veli Pasha himself, a mullah or a bench, and whether he was beheaded after the tortures or before they could kill him. It gives his age as at least twenty in 1818, dates the school of Rapsani to a foundation of 1767 by Dionysius, bishop of Platamon and Lykostomio, and his own graduation from it to 1815 or 1816. It names the executioners Aga Sevrani and one Frangos, the river Titarisios, the barracks and the long bridge as the place of his contest and burial, and says that his relics were taken up at Veli Pasha's own order after a column of light stood over the grave two nights running, and are kept to this day in a dedicated room of the Karazisis house at Rapsani, lit by an unsleeping lamp and open to any reverent pilgrim. It prints one apolytikion, in Ἦχος α’, and names no kontakion. Beside his name it links the synaxis of the new martyrs who suffered after the taking of Constantinople, which is a company and not a person and is not kept here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1818,
+      "latest": 1818,
+      "display": "1818",
+      "basis": "attested",
+      "note": "saint.gr: «Το έτος της αθλήσεως του Νεομάρτυρα Γεωργίου είναι το 1818 μ.Χ.», and the inscription it quotes from the reliquary reads «ΑΘΛΗΣΑΣ ΕΝ ΤΥΡΝΑΒΩ ΚΑΤΑ ΤΟ ΕΤΟΣ 1818». The page adds «Τότε ο Άγιος βρισκόταν στο εικοστό, τουλάχιστον, έτος της ηλικίας του» — he was then at least in his twentieth year — and gives no year of birth."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος α'.",
+      "text": "Της Ραψάνης τόν γόνον καί θερμόν αντιλήπτορα, και νεοφανή στρατιώτην, του των όλων δεσπόζοντος, Γεώργιον τον Νέον αθλητήν, τιμήσωμεν εν ύμνοις οι πιστοί· πάσαν χάριν γαρ παρέχει παρά Θεώ, τοις προς αυτόν κραυγάζουσι· δόξα τω δεδωκότι σοι ισχύν, δόξα τω σε στεφανώσαντι, δόξα τω ενεργούντι δια σου, πάσιν ιάματα.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ήχος α', on the page of Άγιος Γεώργιος ο Νεομάρτυρας εκ Ραψάνης. It names him and names Rapsani, and calls him a newly appeared soldier. The page prints no kontakion.",
+        "url": "https://www.saint.gr/3842/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful honour in hymns the offspring of Rapsani and our fervent helper, the newly appeared soldier of him who rules over all, George the new contender; for he obtains every grace from God for those who cry out to him: glory to him who gave thee strength, glory to him who crowned thee, glory to him who through thee works healings for all.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
