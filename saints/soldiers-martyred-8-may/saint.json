@@ -1,0 +1,51 @@
+{
+  "slug": "soldiers-martyred-8-may",
+  "display_name": "The Soldiers (8 May)",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Στρατιώτες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαΐου, «Άγιοι Στρατιώτες οι Μάρτυρες», with the rank words left off. It is the word for soldiers and not a personal name: the page names none of them."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαΐου — «Άγιοι Στρατιώτες οι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Μαΐου εκάστου έτους», the same day as the listing. **The company is not enumerated and it is not even numbered**: «Οι Άγιοι αυτοί Μάρτυρες - σπείρα (τάγμα) Στρατιωτών τελειώθηκαν διά αποκεφαλισμού.» — a σπείρα, a cohort, beheaded. Not one man is named, so this is one entry and not a folder each, on the rule that a heading which names nobody stays one entry. No year, no emperor, no judge, no place, no relics, no hymn. The distich is the only other line: «Xριστοφρονούσα σπείρα τέμνεται κάρας, / Xριστοκτονούσαν σπείραν ου μιμουμένη». **`seven-soldiers-26-january` and `soldiers-martyred-with-eudoxius` are other companies**, on other days and with sources of their own; nothing on this page joins them to these."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "helladius-of-auxerre",
+  "display_name": "Helladius of Auxerre",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop of Auxerre",
+  "names": [
+    {
+      "form": "Ελλάδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαΐου, «Άγιος Ελλάδιος Επίσκοπος Ωξέρρης», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 387,
+      "latest": 387,
+      "display": "387",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ελλάδιος ήταν Επίσκοπος της πόλεως Ωξέρρης και κοιμήθηκε με ειρήνη το 387 μ.Χ.», and the head line of the same page gives «(; - 387)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαΐου — «Άγιος Ελλάδιος Επίσκοπος Ωξέρρης»",
+        "url": "https://www.saint.gr/05/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Μαΐου εκάστου έτους», the same day as the listing. **He is none of the three Helladii the corpus keeps**: `helladius-27-may` is a hieromartyr, `helladius-the-commentaresios` a martyr under Maximian and `helladius-the-layman` a companion of Theophilus of Libya; this one is a bishop of Auxerre in Gaul who died in peace, and the name sweep raised the other three on the name alone. **`locations` are left out**: the see is recorded in `office` in the corpus's English, and the page gives no other place at all. The whole page is that one sentence plus the head line's «(; - 387)» — no country named beyond the city, no consecration, no relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

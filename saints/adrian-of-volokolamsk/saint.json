@@ -1,0 +1,63 @@
+{
+  "slug": "adrian-of-volokolamsk",
+  "display_name": "Adrian of Volokolamsk",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ανδριανός",
+      "lang": "el",
+      "note": "Read out of the head line «Οσιος Ανδριανος» on saint.gr's page for 8 Μαΐου, whose day line is «Όσιοι Ζωσιμάς και Ανδριανός», with the rank word left off. The page spells it Ανδριανός, with the nu, and the form is copied as printed."
+    }
+  ],
+  "related": [
+    "zosimas-of-volokolamsk"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1401,
+      "latest": 1600,
+      "display": "15th–16th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Όσιοι Ζωσιμάς και Ανδριανός του Βολοκολάμκ, ιδρυτές της μονής του Σέστριν στις εκβολές του ποταμού Σέστρα, έζησαν κατά τον 15ο και 16ο αιώνα μ.Χ.» The page names two centuries for the pair and no year for either, so the interval is those two centuries end to end as it prints them."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). He is a Russian saint and that calendar is the one that would settle his own day; it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαΐου — «Όσιοι Ζωσιμάς και Ανδριανός»",
+        "url": "https://www.saint.gr/05/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Μαΐου εκάστου έτους», the same day as the listing, and gives him his own head line «Οσιος Ανδριανος» beside Zosimas's, which is why the pair is two folders. **The English form is Adrian and the Greek form stored is Ανδριανός**, as the page prints it; the corpus's seven Adrians — of Caesarea, of Canterbury, of Megara, of Nicomedia, of Russia, and the two martyrs — are other men on other days, and `adrian-of-russia` is not this one: that folder is not of Volokolamsk and is not kept on 8 Μαΐου. No hymn, no year, no relics of his own apart from the pair's burial at Sestrin."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

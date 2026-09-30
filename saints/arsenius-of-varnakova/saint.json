@@ -1,0 +1,104 @@
+{
+  "slug": "arsenius-of-varnakova",
+  "display_name": "Arsenius of Varnakova",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Αρσένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαΐου, «Όσιος Αρσένιος Βαρνακοβίτης», with the rank word left off; the page's epithet Βαρνακοβίτης is left out of the stored form and kept in the slug."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1001,
+      "latest": 1050,
+      "display": "first half of the 11th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Αρσένιος ο Βαρνακοβίτης γεννήθηκε το πρώτο μισό του 11ου αιώνα μ.Χ., πιθανότατα στο χωριό Καρυά του Νομού Φωκίδας.» The page's «πιθανότατα» attaches to the village, not to the date."
+    },
+    "death": {
+      "earliest": 1111,
+      "latest": 1111,
+      "display": "1111",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Αρσένιος ο Βαρνακοβίτης εκοιμήθη το 1111 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαΐου — «Όσιος Αρσένιος Βαρνακοβίτης»",
+        "url": "https://www.saint.gr/05/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Μαΐου εκάστου έτους», the same day as the listing. **He is none of the other Arsenii the day keeps** — not the Great, not the fool-for-Christ of Novgorod, not the ascetic of the Kyiv Caves — and none of the eight Arsenii the corpus already holds: he is the founder, in 1077, of the monastery of the Panagia at Varnakova in Doris of Phokis, and part of his relics are there. **`locations` are left out deliberately** although the page names Karya in Phokis and Varnakova: his stated birth and death are a hundred and ten years apart, which `tests/map-span.test.mjs` refuses in a located saint, and the two places are anyway a birthplace the page itself qualifies with «πιθανότατα» and a foundation. **Two hymns are stored, both proper and both naming him and Varnakova**; the page also prints a Μεγαλυνάριον and an Οἶκος, which are left in the source."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α΄.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Ἐραστὴν ἡσυχίας Βαρνακόβης τὸν κτίτορα, τὸν λαμπρὸν φανὸν εὐσεβείας, καὶ ἀζύγων κοσμήτορα, Ἀρσένιον τιμήσωμεν πιστοί, μιμούμενοι αὐτοῦ τὴν ἀκραιφνῆ, πρὸς τὸν Κύριον ἀγάπην, καὶ μελιχροῖς τοῖς ὕμνοις ἐκβοήσωμεν· δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ σὲ ἀκέστορα θερμόν, πιστοῖς δωρήσαντι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α΄, Τῆς ἐρήμου πολίτης, on the page of «Όσιος Αρσένιος Βαρνακοβίτης»",
+        "url": "https://www.saint.gr/4084/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful honour Arsenius, the lover of stillness, the founder of Varnakova, the bright lamp of piety and the adornment of the unwedded, imitating his unalloyed love towards the Lord; and let us cry out to him with honeyed hymns: glory to Christ who glorified thee, glory to him who crowned thee, glory to him who gave thee to the faithful as a warm physician.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ΄.",
+      "model": "Τῇ Ὑπερμάχῳ.",
+      "text": "Ὡραιωθείς, ταῖς καλλοναῖς τῆς σῆς ἀσκήσεως, καὶ καθαρθείς, σεπτῶν δακρύων σου τοῖς χεύμασι, λύχνος ὤφθης μονοτρόπων καὶ κοσμιότης, καταυγάζων ἀρετῶν σου τοῖς πυρσεύμασιν, ἀσκητὰ τῆς Βαρνακόβης ἱερώτατε, τοὺς κραυγάζοντας· Χαίροις μάκαρ Ἀρσένιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. Δ΄, Τῇ Ὑπερμάχῳ, on the page of «Όσιος Αρσένιος Βαρνακοβίτης»",
+        "url": "https://www.saint.gr/4084/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Made beautiful by the comeliness of thine asceticism, and cleansed by the streams of thy reverend tears, thou wast seen to be a lamp and an ordering of the monastics, lighting up with the torches of thy virtues, O most holy ascetic of Varnakova, those who cry: rejoice, blessed Arsenius.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

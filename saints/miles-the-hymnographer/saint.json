@@ -1,0 +1,61 @@
+{
+  "slug": "miles-the-hymnographer",
+  "display_name": "Miles the Hymnographer",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hymnographer"
+  ],
+  "names": [
+    {
+      "form": "Μήλης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαΐου, «Όσιος Μήλης ο Υμνωδός», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Μήλος",
+      "lang": "el",
+      "note": "The first of two alternative forms saint.gr prints in its own parenthesis: «Ο Όσιος Μήλης (ή Μήλος ή Μαλλός) απεβίωσε ειρηνικά.» Copied, not transliterated."
+    },
+    {
+      "form": "Μαλλός",
+      "lang": "el",
+      "note": "The second alternative form in saint.gr's own parenthesis: «Ο Όσιος Μήλης (ή Μήλος ή Μαλλός) απεβίωσε ειρηνικά.» Copied, not transliterated."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαΐου — «Όσιος Μήλης ο Υμνωδός»",
+        "url": "https://www.saint.gr/05/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Μαΐου εκάστου έτους», the same day as the listing. **The whole account is one sentence** — «Ο Όσιος Μήλης (ή Μήλος ή Μαλλός) απεβίωσε ειρηνικά.» — over a distich that calls him a hymn-maker. **The three name forms are the page's own parenthesis** and all three are recorded as Greek forms for that reason; none is transliterated and none is preferred. No century, no country, no monastery, no see, no relics and no hymn of his own. `hymnographer` is taken from the listing's «ο Υμνωδός» and nothing else: the page names no hymn of his that survives. **The name sweep's `malachi` and `malachias-of-rhodes` are other men**, raised on the fold of the name alone, and neither is kept on this day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

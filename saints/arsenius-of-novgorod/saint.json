@@ -1,0 +1,61 @@
+{
+  "slug": "arsenius-of-novgorod",
+  "display_name": "Arsenius of Novgorod",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "fool-for-christ",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Αρσένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαΐου, «Όσιος Αρσένιος του Νόβγκοροντ, ο διά Χριστόν σαλός», with the rank word left off. No Russian form is recorded: saint.gr prints none, and inventing one is not this reader's to do."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1570,
+      "latest": 1570,
+      "display": "1570",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Αρσένιος του Νόβγκοροντ, ο διά Χριστόν σαλός, κοιμήθηκε με ειρήνη στις 12 Ιουλίου του 1570 μ.Χ.» The page gives the day of his repose as well as the year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). He is a Russian saint and that calendar is the one that would settle his own day; it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαΐου — «Όσιος Αρσένιος του Νόβγκοροντ, ο διά Χριστόν σαλός»",
+        "url": "https://www.saint.gr/05/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Μαΐου εκάστου έτους», the same day as the listing. **The page says outright why he is kept today and not on his own day**: «Ο εορτασμός της μνήμης του στις 8 Μαΐου καθιερώθηκε, λόγω της μετακομιδής των ιερών λειψάνων του το 1785 μ.Χ., και για τους άλλους Αγίους που έφεραν το ίδιο όνομα και οι οποίοι εορτάζονται σήμερα» — the 8 May keeping was established for the translation of his relics in 1785 and for the other saints of the same name kept the same day. **His repose is 12 July**, which is a date the page gives for his death and not a feast it claims for him; it is recorded in `dates` and not as a second day. The row records 8 Μαΐου because that is the day page read. **He is none of the corpus's other Arsenii**, and none of the sixteen Novgorod folders is a fool-for-Christ of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

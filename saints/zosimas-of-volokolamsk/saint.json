@@ -1,0 +1,63 @@
+{
+  "slug": "zosimas-of-volokolamsk",
+  "display_name": "Zosimas of Volokolamsk",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ζωσιμάς",
+      "lang": "el",
+      "note": "Read out of the head line «Οσιος Ζωσιμας» on saint.gr's page for 8 Μαΐου, whose day line is «Όσιοι Ζωσιμάς και Ανδριανός», with the rank word left off."
+    }
+  ],
+  "related": [
+    "adrian-of-volokolamsk"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1401,
+      "latest": 1600,
+      "display": "15th–16th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Όσιοι Ζωσιμάς και Ανδριανός του Βολοκολάμκ, ιδρυτές της μονής του Σέστριν στις εκβολές του ποταμού Σέστρα, έζησαν κατά τον 15ο και 16ο αιώνα μ.Χ.» The page names two centuries for the pair and no year for either, so the interval is those two centuries end to end as it prints them."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). He is a Russian saint and that calendar is the one that would settle his own day; it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαΐου — «Όσιοι Ζωσιμάς και Ανδριανός»",
+        "url": "https://www.saint.gr/05/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Μαΐου εκάστου έτους», the same day as the listing, **and it gives each of the two his own head line** — «Οσιος Ζωσιμας» and «Οσιος Ανδριανος» — so a pair the page enumerates is two folders. **He is none of the seven Zosimai the corpus keeps**, who are of Cilicia, of Palestine, of Syracuse, the Hermit, the Phoenician, the brother of Alexander and the one of 24 January; this one is a founder, with Adrian, of the monastery of Sestrin at the mouth of the river Sestra. **`joseph-the-wonderworker-of-volokolamsk` is the corpus's one Volokolamsk folder** and is another man. No hymn, and no year for either of the two."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

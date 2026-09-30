@@ -6,6 +6,11 @@
       "form": "Arsenie cel Mare",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 mai, «Sfântul Cuvios Arsenie cel Mare»."
+    },
+    {
+      "form": "Αρσένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαΐου, «Όσιος Αρσένιος ο Μέγας», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -22,6 +27,13 @@
       "display": "354",
       "basis": "traditional",
       "note": "doxologia.ro, Viața Sfântului Cuvios Arsenie cel Mare: «Cuviosul Arsenie s-a născut în Roma cea Veche, în anul 354, din părinți creștini și dreptcredincioși». The page gives no year for his death, only that he was «o sută de ani și mai bine»."
+    },
+    "death": {
+      "earliest": 445,
+      "latest": 445,
+      "display": "445",
+      "basis": "traditional",
+      "note": "saint.gr: «κατέφυγε στην Πέτρα, κοντά στη Μέμφιδα, και μετά στην Κανώπη εκεί όπου το 445 μ.Χ. κοιμήθηκε εν ειρήνη», and the head line of the same page gives «(; - 445)». doxologia.ro, which the birth interval comes from, gives no year of death at all."
     }
   },
   "attestations": [
@@ -46,8 +58,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαΐου — «Όσιος Αρσένιος ο Μέγας»",
+        "url": "https://www.saint.gr/05/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, so nothing about the existing feast changes. **He is the Arsenius the Greek page means**: born at Rome and a deacon of its Church, tutor to the sons of Theodosius, dead at Canopus — the same man doxologia's Arsenie cel Mare is. **Three other Arsenii and a Cassian stand on this same day** — `arsenius-of-varnakova`, `arsenius-of-novgorod`, `arsenius-of-the-kyiv-caves` — and saint.gr's own page for the Novgorod fool-for-Christ says the 8 May keeping was set «και για τους άλλους Αγίους που έφεραν το ίδιο όνομα και οι οποίοι εορτάζονται σήμερα», for the other saints of the same name kept today. **The Greek adds what the folder lacked**: rich and pious parents at Rome and the diaconate there; the emperor Gratian and Pope Innocent as those who put his name forward; the title of patrician and the honour of βασιλοπάτωρ; the unearthly voice that told him to leave the world, the disguise, the flight to Egypt and the tonsure in a Skete; Patriarch Theophilus of Alexandria coming to consult him; the saying «Όπου ακούετε ότι βρίσκεται ο Αρσένιος, μην πλησιάζετε σε αυτόν»; the disciples Alexander and Zoilus, the retreat to Petra near Memphis and then to Canopus; his answer about his burial; Nicodemus the Hagiorite's description of his appearance; two of his three apophthegms and Gregory Palamas's use of the third. **`dates` are replaced to add the year of death**, 445, which the folder did not have — its Romanian source gave only «o sută de ani și mai bine» — and the existing birth interval is copied back unchanged. **The page also gives what is not stored**: he is patron of Paros, and a fragment of his relics is at the monastery of Kykkos in Cyprus. **One hymn is added**, the apolytikion, which is proper and names him. `types` are not changed: the page's «διάκονος» is already there, and «παιδαγωγός» and «διδάσκαλος» are offices the page describes rather than ranks the corpus holds."
     },
     {
       "church": "serbian",
@@ -69,6 +91,23 @@
       },
       "english": {
         "text": "With the streams of thy tears thou didst work the barren desert, and with sighs from the depth thou didst make thy labours bear fruit a hundredfold; and thou wast made a light to the world, shining with wonders, Arsenius our father. Pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Τῶν τερπνῶν ἀπανέστης ἐμφρόνως Ὅσιε, χρηματισθεῖς οὐρανόθεν ὡς Ἀβραὰμ ὁ κλεινός, καὶ Ἀγγέλων μιμητής, ὤφθης τῷ βίῳ σου, λόγω ἐμπρέπων πρακτικῶ, καὶ σοφία ἀληθεῖ, Ἀρσένιε θεοφόρε. Καὶ νῦν ἀπαύστως δυσώπει, ἐλεηθήναι τᾶς ψυχᾶς ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον, on the page of «Όσιος Αρσένιος ο Μέγας»",
+        "url": "https://www.saint.gr/1528/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Prudently thou didst withdraw from delightful things, O venerable one, being warned from heaven like the renowned Abraham; and in thy life thou wast seen to be an imitator of the angels, adorned with the word of practice and with true wisdom, O God-bearing Arsenius. And now entreat without ceasing that our souls may find mercy.",
         "rendered": "site"
       }
     }

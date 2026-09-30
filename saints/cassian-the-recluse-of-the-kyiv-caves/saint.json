@@ -1,0 +1,61 @@
+{
+  "slug": "cassian-the-recluse-of-the-kyiv-caves",
+  "display_name": "Cassian the Recluse of the Kyiv Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Κασσιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαΐου, «Όσιος Κασσιανός ο Έγκλειστος», with the rank word left off. No Slavonic form is recorded: saint.gr prints none."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1201,
+      "latest": 1400,
+      "display": "13th–14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Κασσιανός έζησε κατά τον 13ο και 14ο αιώνα μ.Χ. και ασκήτεψε, ως έγκλειστος, στη Λαύρα των Σπηλαίων του Κιέβου.» The page names two centuries and no year, so the interval is those two centuries end to end as it prints them."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). He is a saint of the Kyiv Caves and that calendar is the one that would settle his own day; it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαΐου — «Όσιος Κασσιανός ο Έγκλειστος»",
+        "url": "https://www.saint.gr/05/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Μαΐου εκάστου έτους», the same day as the listing. **He is none of the four Cassiani the corpus keeps** — of Axylou, of Bosoi, of Glyphia in Cyprus, the Greek — nor `john-cassian`: the page puts this one as a recluse in the Lavra of the Caves of Kyiv in the thirteenth and fourteenth centuries. **`isaac-the-recluse-of-the-kyiv-caves`, `paphnutius-the-recluse-of-the-kyiv-caves` and `gregory-the-recluse-of-the-caves` are three other recluses of the same house** and bear other names. No relics, no hymn, no manner of enclosure beyond the word ἔγκλειστος itself. `ascetic` stands for that word: `hermit` would say he lived apart, and a recluse in a coenobium is not that."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

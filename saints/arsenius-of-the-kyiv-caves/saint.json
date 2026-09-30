@@ -1,0 +1,61 @@
+{
+  "slug": "arsenius-of-the-kyiv-caves",
+  "display_name": "Arsenius of the Kyiv Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Αρσένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαΐου, «Όσιος Αρσένιος ο εν τη Λαύρα του Κιέβου ασκήσας», with the rank word left off. No Slavonic form is recorded: saint.gr prints none."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Αρσένιος, λάτρης της εργασίας, έζησε κατά τον 14ο αιώνα μ.Χ.» The page gives no year of birth and no year of death, only that he fell asleep in peace."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). He is a saint of the Kyiv Caves and that calendar is the one that would settle his own day; it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαΐου — «Όσιος Αρσένιος ο εν τη Λαύρα του Κιέβου ασκήσας»",
+        "url": "https://www.saint.gr/05/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Μαΐου εκάστου έτους», the same day as the listing. **Three Arsenii and a Cassian stand on this one day** and they are distinguished by the page's own epithets, not by any reading of mine: the Great at Canopus in 445, the Varnakovite in Phokis in 1111, the fool-for-Christ of Novgorod in 1570, and this one in the Caves of Kyiv in the fourteenth century. **None of the corpus's nine Kyiv-Caves folders is an Arsenius.** `wonderworker` is the page's own: «ο Χριστός του έδωσε το χάρισμα να επιτελεί θαύματα». No relics, no hymn, no place of burial."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "dionysius-8-may",
+  "display_name": "Dionysius (8 May)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Διονύσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Μαΐου, «Άγιος Διονύσιος ο Ιερομάρτυρας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 193,
+      "latest": null,
+      "display": "after 193",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιερομάρτυρας Διονύσιος ήταν Επίσκοπος και μαρτύρησε στη Βιέννη μετά το 193 μ.Χ.» The page's own «μετά το 193» is a lower bound and nothing more, and the head line gives «(; - 193)»; the open upper bound is the finding, not a gap."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Μαΐου — «Άγιος Διονύσιος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/05/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Μαΐου εκάστου έτους», the same day as the listing. **The slug and the display name carry the day and not the city on purpose**: the page says he was a bishop and that he was martyred at Vienne — «ήταν Επίσκοπος και μαρτύρησε στη Βιέννη» — and it does *not* say he was bishop *of* Vienne, so no `office` is stored and «of Vienne» is kept out of the name. The name sweep raised more than a dozen Dionysii and **not one of them is this man**: none of the corpus's Dionysii is a bishop martyred at Vienne, and none is kept on 8 Μαΐου. No relics, no judge, no manner of death, no hymn. **`locations` are left out**, because a city of martyrdom is not a city the page places him in otherwise, and the date has an open upper bound."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
