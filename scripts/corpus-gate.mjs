@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοφιλοσ theophilus-martyr-6-february theophilus-of-caesarea theophilus-of-crete theophilus-of-rome theophilus-of-the-forty-martyrs theophilus-the-deacon-of-libya theophilus-the-new':
+    'Seven now. The new one is Theophilus of Crete on 31 March; the others are read in the el-03-05 entry for this name form.',
+  'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-kalita john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kazan john-of-lycopolis john-of-manglisi john-of-rouphinianai john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-well john-of-yuryevets john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-sinaite-venerable-martyr':
+    'Thirty now. The new one is John Kalita on 31 March; the others are read in the el-03-30 entry for this name form, where three stand on 30 March.',
+  'υπατιοσ hypatius-of-gangra hypatius-the-healer':
+    'Two men on one day, printed as two lines of the 31 March calendar: Hypatius of Gangra, the bishop whom the Romanian keeps there too, and Hypatius the Healer of the Kyiv Caves.',
   'σαββασ sabbas-companion-of-jonah sabbas-of-sicily sabbas-of-tver sabbas-of-zographou sabbas-the-spiritual sava-of-serbia sava-the-second':
     'Seven now. The new one is the companion of Jonah on 29 March; the others are read in the el-03-02 entry for this name form.',
   'μαρουθασ marouthas-companion-of-jonah marouthas-of-martyropolis':

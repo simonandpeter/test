@@ -1,0 +1,61 @@
+{
+  "slug": "nine-martyrs-with-abda",
+  "display_name": "The Nine Martyrs with Abda",
+  "names": [
+    {
+      "form": "Εννέα Μάρτυρες που μαρτύρησαν στην Περσία",
+      "lang": "el",
+      "note": "Read out of saint.gr's own heading for the entry on the life page for 31 Μαρτίου, «Αγιοι Εννεα Μαρτυρες Που Μαρτυρησαν Στην Περσια», with the rank word left off."
+    }
+  ],
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαρτίου — «Άγιος Αυδάς επίσκοπος Περσίας, Βενιαμίν ο Διάκονος και οι μαζί μ' αυτούς εννέα Μάρτυρες και άλλοι πολλοί Άγιοι, που μαρτύρησαν στην Περσία»",
+        "url": "https://www.saint.gr/03/31/index.aspx",
+        "year": 2026
+      },
+      "note": "They stand as an entry of their own in the page's list of those commemorated, «Αγιοι Εννεα Μαρτυρες Που Μαρτυρησαν Στην Περσια», with a distich of their own, and the page names not one of them: they are «άλλους εννιά προκρίτους χριστιανούς», nine other leading Christians, put to death with the bishop Abda when Yazdegerd had all the churches pulled down. One folder, because the source enumerates nobody. They are not the nine martyrs the same calendar keeps two days earlier with Jonah and Barachisius, whom saint.gr does name, one by one, and who died about 330 in another reign. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 412,
+      "latest": 412,
+      "display": "412",
+      "basis": "traditional",
+      "note": "saint.gr: «Το έτος 412 ο Ισδιγέρδης κίνησε σκληρό διωγμό κατά των Χριστιανών», and it is in that persecution that «Τότε ο Ισδιγέρδης γκρέμισε όλες τις εκκλησίες των χριστιανών και θανάτωσε τον Αυδά μαζί με άλλους εννιά προκρίτους χριστιανούς» — he put Abda to death together with nine other leading Christians. The year is the page's, for the persecution and the killing together."
+    }
+  },
+  "related": [
+    "abda-bishop-of-persia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "hypatius-the-healer",
+  "display_name": "Hypatius the Healer",
+  "names": [
+    {
+      "form": "Υπάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαρτίου, «Όσιος Υπάτιος ο θεραπευτής», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαρτίου — «Όσιος Υπάτιος ο θεραπευτής»",
+        "url": "https://www.saint.gr/03/31/index.aspx",
+        "year": 2026
+      },
+      "note": "Four short sentences about his rule of life and his gift, and nothing else: no century, no country, no monastery, no relic, no hymn and no wonder told. So this folder carries no `dates` and no `locations`. He shares the day with Hypatius, bishop of Gangra, whom the corpus already keeps and whose Greek row is recorded on his own folder; the two are kept apart by rank and by story — a bishop stoned by heretics in 326 and an ascetic who nursed the sick — and saint.gr gives them separate entries and separate pages."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

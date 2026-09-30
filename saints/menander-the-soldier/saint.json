@@ -1,0 +1,60 @@
+{
+  "slug": "menander-the-soldier",
+  "display_name": "Menander of Hermoupolis",
+  "names": [
+    {
+      "form": "Μένανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαρτίου, «Άγιος Μένανδρος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαρτίου — «Άγιος Μένανδρος»",
+        "url": "https://www.saint.gr/03/31/index.aspx",
+        "year": 2026
+      },
+      "note": "One sentence: born at Hermoupolis in Egypt, a soldier, martyred by being dragged naked over sharp stones in the years of the emperor Julian the Apostate, 361 to 363. The page adds that in the Lavriotic Codex 170 his memory is carried in common with that of St Sabinus on 16 March; one row per church is the schema, so that is noted here and not made into a second row or a second folder. The calendar line gives him no epithet, so the city he was born in is what the display name carries. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 363,
+      "display": "361–363",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησε αφού τον έσυραν γυμνό, πάνω σε αιχμηρές πέτρες κατά τους χρόνους του αυτοκράτορα Ιουλιανού του Παραβάτου (361 - 363 μ.Χ.)» — the interval is the reign the page names, which is all the date it gives."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

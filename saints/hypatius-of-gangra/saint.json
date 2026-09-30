@@ -7,6 +7,11 @@
       "form": "Ipatie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 31 martie, «Sfântul Sfințit Mucenic Ipatie, Episcopul Gangrei»."
+    },
+    {
+      "form": "Υπάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαρτίου, «Άγιος Υπάτιος επίσκοπος Γαγγρών», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 31 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαρτίου — «Άγιος Υπάτιος επίσκοπος Γαγγρών»",
+        "url": "https://www.saint.gr/03/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 326)» and names the year of the killing outright, where this folder's `dates` hold the broader interval between 337 and 361 that the Romanian life allowed; the two do not agree, the Greek year is not stronger than the reading already recorded, and the interval is therefore left as it stands with the Greek reading set down here. It names the heresy he fought as that of the Novatianists, whom it writes «Ναυτιανών», and has them pay idolaters who attacked him with sticks and stones in a precipitous place and left him half dead, after which one of the fanatical heretic women finished him with a stone. It names relics: portions at the monasteries of Iviron on the Holy Mountain, of Voulkanos in Messenia, of Jerusalem at Davleia in Boeotia, and of the Prophet Elijah at Zacholi in Corinthia. It prints two apolytikia, a kontakion, a megalynarion and a kathisma; the proper apolytikion and the kontakion are added to this folder, and the second apolytikion, «Καί τρόπων μέτοχος», is the common of a hieromartyr and is not."
     },
     {
       "church": "serbian",
@@ -69,6 +84,38 @@
       },
       "english": {
         "text": "Sharing in their ways and successor to the thrones of the Apostles, thou didst find in action, O God-inspired one, a way of ascent to the vision of the things on high. Therefore, rightly teaching the word of truth and enduring in the faith even unto blood, O hieromartyr Hypatius, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’. Ταχὺ προκατάλαβε.",
+      "text": "Ὁσίως ἱέρευσας, τῷ ἐπὶ πάντων Θεῶ, καὶ πρόεδρος ἔνθεος, τῆς Ἐκκλησίας Γαγγρῶν, ἐδείχθης Ὑπάτιε, Ὅθεν θαυματουργίαις, διαλάμπων ποικίλαις, σύνθρονον τῷ Τεκόντι, τὸν Υἷον ὠμολώγεις, δι' ὃν καὶ χαίρων ἤθλησας, Ἱερομάρτυς ἔνδοξε.",
+      "source": {
+        "text": "saint.gr — Άγιος Υπάτιος επίσκοπος Γαγγρών, Ἀπολυτίκιον. Recorded with kind troparion, which is the schema's word for it. The page prints a second apolytikion after it, the common of a hieromartyr, which is not taken.",
+        "url": "https://www.saint.gr/155/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You served in holiness the God who is over all, and were shown, O Hypatius, the God-filled president of the Church of Gangra; whence, shining out with manifold wonders, you confessed the Son to share the Father's throne, and for his sake contended rejoicing, glorious hieromartyr.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. β’. Τὴν ὑπὲρ ἡμῶν.",
+      "text": "Τὴν ζωοποιόν, τελέσας ἱερουργίαν, καὶ τῶν δωρεῶν, τὸ τάλαντον ἐπαύξησας, ὡς θυσία προσήχθης, καὶ κάρπωμα ἔνθεον, δι’ ἀθλήσεως Ὑπάτιε, τῷ δοξάσαντι τὸν βίον σου, τοῖς ἀρρήτοις Πάτερ θαύμασιν. Αὐτὸν δυσώπει ἀεί, ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Άγιος Υπάτιος επίσκοπος Γαγγρών, Κοντάκιον",
+        "url": "https://www.saint.gr/155/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having completed the life-giving priestly service, and having increased the talent of the gifts, you were brought as a sacrifice and a God-filled offering through your contending, O Hypatius, to him who glorified your life with unspeakable wonders, Father. Entreat him always on behalf of us all.",
         "rendered": "site"
       }
     }

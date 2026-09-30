@@ -1,0 +1,50 @@
+{
+  "slug": "theophilus-of-crete",
+  "display_name": "Theophilus of Crete",
+  "names": [
+    {
+      "form": "Θεόφιλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαρτίου, «Άγιος Θεόφιλος ο Μάρτυρας και οι συν αυτώ μαρτυρήσαντες εν Κρήτη», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαρτίου — «Άγιος Θεόφιλος ο Μάρτυρας και οι συν αυτώ μαρτυρήσαντες εν Κρήτη»",
+        "url": "https://www.saint.gr/03/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The page says outright that he is «Άγνωστος στους Συναξαριστές», unknown to the synaxaristae, and that his memory is found in the Paris Codex 1575 and in the Lavriotic codices H 76, D 25 and D 45, where there is also a complete service of his. It reasons from that service rather than from a life: the first sticheron of Vespers carries the information about his wife's martyrdom and the first troparion of the third Ode speaks of the martyrdom of his children, so this is evidently a case of family martyrdom like that of the Great Martyr Eustathius, whose day it puts at 20 September, and of St Hesperus, at 2 May. Of the date it says only «Πιθανότατα οι Άγιοι μαρτύρησαν κατά την εποχή των διωγμών της αρχαίας Εκκλησίας», most probably in the era of the ancient Church's persecutions, so no `dates` are recorded. It quotes the sticheron but prints no hymn as a hymn. The wife and children are named nowhere and counted nowhere, so they have no folder."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

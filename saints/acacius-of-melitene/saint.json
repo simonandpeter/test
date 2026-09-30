@@ -7,13 +7,19 @@
       "form": "Acachie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 aprilie, «Sfântul Ierarh Acachie, Episcopul Melitinei Armeniei»."
+    },
+    {
+      "form": "Ακάκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαρτίου, «Όσιος Ακάκιος ο Ομολογητής επίσκοπος Μελιτηνής», with the rank word and the see left off."
     }
   ],
   "sex": "male",
   "types": [
     "bishop",
     "hierarch",
-    "wonderworker"
+    "wonderworker",
+    "confessor"
   ],
   "related": [
     "gregory-the-theologian",
@@ -41,8 +47,19 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "revised-julian",
+        "note": "The Greek calendar keeps an Acacius the Confessor, bishop of Melitene, on 31 March, where the Romanian row on this folder holds 17 April. The same saint.gr page says that S. Eustratiades claims there was also an Acacius II, bishop of Melitene, and puts that one's feast on 18 April — so the site itself allows two bishops of this name and this see on two April days. The row records the day page that was read, and the identification with the man this folder already keeps rests on the see, the rank and the fifth-century anti-Nestorian work, which are the page's own; it is set down as a reading and not as a certainty, because a second folder for one man would be worse than an open question."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαρτίου — «Όσιος Ακάκιος ο Ομολογητής επίσκοπος Μελιτηνής»",
+        "url": "https://www.saint.gr/03/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(431 - ;)» and says «Ο Όσιος Ακάκιος έζησε τον πέμπτο αιώνα μ.Χ. (γεννήθηκε περί το 431 μ.Χ.)», born about 431 — and then has him distinguish himself when the heresy of Nestorius, patriarch of Constantinople, troubled the Church, write against Nestorius, and leave a surviving homily delivered at Ephesus. Those two statements cannot both stand: the Council of Ephesus met in 431. The year is the page's own and is recorded in `dates` with the contradiction named, and nothing is inferred to mend it. The page also credits him with virtue, learning and Orthodox zeal and calls him a most able speaker and teacher of the people. It prints no hymn; the one this folder carries is the Romanian troparion."
     },
     {
       "church": "serbian",
@@ -70,5 +87,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 431,
+      "latest": 431,
+      "display": "about 431",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ακάκιος έζησε τον πέμπτο αιώνα μ.Χ. (γεννήθηκε περί το 431 μ.Χ.)» — the page's «περί», about, is why the display says about 431. The same page has him write against Nestorius and preach a surviving homily at Ephesus, where the council met in 431, which the year as printed cannot be reconciled with; the page's figure is recorded because it is the page's, and the contradiction is recorded with it rather than resolved. This folder held no `dates` before."
+    }
   }
 }

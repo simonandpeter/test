@@ -1,0 +1,71 @@
+{
+  "slug": "john-kalita",
+  "display_name": "John Kalita",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαρτίου, «Άγιος Ιωάννης ο πρίγκιπας», with the rank word left off. The body of the page adds the patronymic and the byname in Greek letters, «Ο Άγιος Ιωάννης (Ντανίλοβιτς), ο αποκαλούμενος Καλιτά»."
+    }
+  ],
+  "sex": "male",
+  "office": "Grand Prince of Moscow",
+  "types": [
+    "prince",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαρτίου — «Άγιος Ιωάννης ο πρίγκιπας»",
+        "url": "https://www.saint.gr/03/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives him a full political life: son of St Daniel, prince of Moscow, whose day it puts at 4 March; first named in the liturgical Menaia of Novgorod between 1296 and 1297; back in Moscow probably by 1299; after his father's death in 1303 obliged to support his brother George, whom he later succeeded; retook Pereyaslavl in 1304 or 1305; allied with the princes of Rostov, Belozersk and Yaroslavl between 1320 and 1326; sent his army against Pskov in 1329; received the title of grand prince from the khan in 1331; accused Alexander of Tver before the Golden Horde in 1339 and carried the bells of the cathedral of the Saviour from Tver to Moscow; began the cathedral of the Dormition on 4 August 1326 on the advice of the aged Metropolitan Peter, and after Peter's death moved his canonisation by sending the Synod of Vladimir a letter of the wonders at his tomb in 1327. It gives the repose as «στις 31 Μαρτίου 1340 ή 1341 μ.Χ.», after he had already become a monk with the name Ananias, and the burial in the cathedral of the Archangel in the Kremlin. It prints no hymn. The corpus keeps two folders named for a Peter of Moscow and it is not certain from this page which is the metropolitan of the story, so he is named in the life without a link."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1290,
+      "latest": 1290,
+      "display": "about 1290",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε περί το έτος 1290 μ.Χ.» The page's «περί», about, is why the display says about 1290."
+    },
+    "death": {
+      "earliest": 1340,
+      "latest": 1341,
+      "display": "1340 or 1341",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιωάννης κοιμήθηκε με ειρήνη στις 31 Μαρτίου 1340 ή 1341 μ.Χ., αφού ήδη είχε γίνει μοναχός παίρνοντας το όνομα Ανανίας.» The page offers the two years and chooses neither, so the interval keeps both."
+    }
+  },
+  "related": [
+    "daniel-of-moscow"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

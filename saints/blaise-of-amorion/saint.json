@@ -6,6 +6,11 @@
       "form": "Vlasie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 31 martie, «Cuviosul Vlasie, cel din Amorio»; the life gives his lay name as Vasile."
+    },
+    {
+      "form": "Βλάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαρτίου, «Όσιος Βλάσιος ο εξ Αμορίου», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 31 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαρτίου — «Όσιος Βλάσιος ο εξ Αμορίου»",
+        "url": "https://www.saint.gr/03/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The page agrees with this folder's «909 or 912» and adds the shape of the life: the village of Aplatiane at Amorion in Asia Minor, the secular name Basil, a brother who was a priest at the same church, the diaconate of Hagia Sophia at the hands of the patriarch Ignatius whose day it puts at 23 October, an adventurous flight to Bulgaria and a wonderful rescue, about twelve years at Rome in the coenobium of St Caesarius where he was ordained priest and where the Theotokos visited him twice in a vision, four years at the monastery of Studios and ties with the emperor Leo VI the Wise and the patriarch Antony of 12 February, the coming to Athos about 896 with some disciples, the little monastery he founded there and left to one of them, the withdrawal into the most deserted parts of the Mountain, and the return to Studios after twelve years of struggle because men had begun to trouble him. It has him foresee his end, serve the Liturgy a last time, and be buried gloriously in the chapel of St George at Studios, and it says his life was written about 940 by a Studite monk who was the disciple of his disciple Luke. It prints no hymn."
     },
     {
       "church": "serbian",

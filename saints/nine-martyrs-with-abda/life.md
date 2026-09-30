@@ -1,0 +1,9 @@
+# The Nine Martyrs with Abda
+
+saint.gr's calendar for 31 Μαρτίου prints one line for a bishop, a deacon, nine martyrs and many more: «Άγιος Αυδάς επίσκοπος Περσίας, Βενιαμίν ο Διάκονος και οι μαζί μ' αυτούς εννέα Μάρτυρες και άλλοι πολλοί Άγιοι, που μαρτύρησαν στην Περσία». On the page behind the line the nine stand as an entry of their own, with a couplet of their own, and not one of them is named.
+
+What the page tells is the occasion. The holy hieromartyr [Abda](/saints/abda-bishop-of-persia), bishop of Persia, and the saints kept with him lived in the years of Theodosius the Younger, emperor of the Romans from 408 to 450, and of Yazdegerd, king of the Persians from 399 to 420. In the year 412 Yazdegerd began a hard persecution of the Christians, and the occasion was this: Abda, who was adorned with many kinds of virtue, in holy indignation pulled down the temple in which the Persians worshipped fire. When the king learned of it from the magi he sent and had Abda brought before him, blamed the act mildly at first, and ordered him to rebuild the temple; Abda refused. Then Yazdegerd pulled down all the churches of the Christians and put Abda to death together with nine other leading Christians. Those nine are this folder.
+
+The page enumerates none of them, and so this is one entry and not nine. Their couplet is on the writing of their own names: «Ἐν τοῖς ὄνυξι κάλαμον δεδεγμένοι, Σφᾶς Μάρτυρας γράφουσιν ἄνδρες ἐννέα» — having received the pen in their nails, nine men write themselves down as martyrs. They are not the nine martyrs the Greek calendar keeps two days before this one, with Jonah and Barachisius, whom saint.gr names one by one and who died about the year 330 under another Persian king.
+
+*After saint.gr's calendar for 31 Μαρτίου — [the day](https://www.saint.gr/03/31/index.aspx) and [the life](https://www.saint.gr/153/saint.aspx); read 30 September 2026.*

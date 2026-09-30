@@ -6,6 +6,11 @@
       "form": "Veniamin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 31 martie, «Sfântul Mucenic Veniamin, diaconul»."
+    },
+    {
+      "form": "Βενιαμίν",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαρτίου, «… Βενιαμίν ο Διάκονος …», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -14,7 +19,8 @@
     "deacon"
   ],
   "related": [
-    "abda-bishop-of-persia"
+    "abda-bishop-of-persia",
+    "nine-martyrs-with-abda"
   ],
   "attestations": [
     {
@@ -38,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 31 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαρτίου — «Άγιος Αυδάς επίσκοπος Περσίας, Βενιαμίν ο Διάκονος και οι μαζί μ' αυτούς εννέα Μάρτυρες και άλλοι πολλοί Άγιοι, που μαρτύρησαν στην Περσία»",
+        "url": "https://www.saint.gr/03/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 442)» and separates his persecution from the bishop Abda's by thirty years: after the persecution of 412 in which Abda and nine leading Christians died, «Μετά 30 χρόνια, κινήθηκε νέος διωγμός κατά των χριστιανών», and among those who were sacrificed in it were Hormisdas of noble birth and «ο διάκονος Βενιαμίν ο μεγαλομάρτυρας». It says the Church appointed the memory of all of them, known and unknown, together with the bishop Abda's, to show that the heroes of the faith have a common honour in heaven. Its couplet for him names the instrument: «Ἀθλητικῷ κλυστῆρι, τῷ πάλῳ λέγω, Πᾶν Βενιαμὶν ψυχικὸν κενοῖ βάρος» — with a contender's clyster, the stake I mean, Benjamin empties out every burden of the soul. It prints no hymn."
     },
     {
       "church": "serbian",
@@ -49,5 +65,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 442,
+      "latest": 442,
+      "display": "442",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Βενιαμιν ο Διακονος (; - 442)», and its narrative agrees with the year: the persecution in which he died is the one that began «Μετά 30 χρόνια» after the persecution of 412. This folder held no `dates` before."
+    }
   }
 }

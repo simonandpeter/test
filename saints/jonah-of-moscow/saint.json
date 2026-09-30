@@ -7,6 +7,11 @@
       "form": "Iona",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 31 martie, «Sfântul Ierarh Iona, Mitropolitul Moscovei și al Întregii Rusii»."
+    },
+    {
+      "form": "Ιωνάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαρτίου, «Όσιος Ιωνάς Μητροπολίτης πασών των Ρωσιών», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 31 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαρτίου — «Όσιος Ιωνάς Μητροπολίτης πασών των Ρωσιών»",
+        "url": "https://www.saint.gr/03/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1461)» and is honest about its own ignorance: «Γνωστός στη ρωσική Εκκλησία, άγνωστος στους Συναξαριστές» — known to the Russian Church, unknown to the synaxaristae. It offers one comparison in place of a life: he is for the Russians what Mark Eugenicus, 1375 to 1461, is for us. It says his service was composed by the hierodeacon Theophilus Paschalides and published at St Petersburg in 1897, and that his memory is repeated on 15 June; one row per church is the schema, so that second day is noted here and not made into a second row. It prints no hymn."
     },
     {
       "church": "serbian",
