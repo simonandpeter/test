@@ -6,6 +6,11 @@
       "form": "Domnica",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 ianuarie."
+    },
+    {
+      "form": "Δομνίκη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Οσία Δομνίκη», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -44,8 +49,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 8 Ιανουαρίου — «Οσία Δομνίκη»",
+        "url": "https://www.saint.gr/01/08/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -67,6 +81,23 @@
       },
       "english": {
         "text": "In thee, O Mother, that which was made after God's image was kept safe with care; for taking up the cross thou didst follow Christ, and by thy labour thou didst teach us to pay no heed to the flesh, since it passes away, but to take thought for the soul, a thing immortal. Therefore, O venerable Mother Domnica, thy spirit rejoices together with the angels.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος δ'",
+      "model": "Ταχύ προκατάλαβε",
+      "text": "Αγάπη τή κρείττονι, καταυγασθείσα τον νουν, ασκήσει εξέλαμψας, ώσπερ λαμπάς φαεινή, Δομνίκα πανεύφημε όθεν Μοναζουοών σε, όδηγόν φωτοφόρον, έδειξεν ο Δεσπότης, δια βίου και λόγου. Ω πρέσβευε θεοφόρε, σώζεσθαι άπαντας.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Οσία Δομνίκη — Ἀπολυτίκιον, Ήχος δ'. Ταχύ προκατάλαβε",
+        "url": "https://www.saint.gr/127/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your mind lit up by the better love, you shone out in ascetic labour like a bright lamp, Domnica of all praise; and so the Master showed you, by your life and by your word, to be a light-bearing guide of nuns. Intercede, God-bearer, that all may be saved.",
         "rendered": "site"
       }
     }

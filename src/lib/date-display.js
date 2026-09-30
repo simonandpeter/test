@@ -141,12 +141,16 @@ const MONTHS = [
 
 /** `under Diocletian (284-305)`, `at the Council of Ephesus`. */
 function readEra(text) {
-  // The parenthetical years are the source's own gloss on the reign and stay
-  // as digits; only the phrase in front of them is a translation.
-  const m = /^(.+) \((\d+[–-]\d+)\)$/.exec(text);
+  // The years after the reign are the source's own gloss on it and stay as
+  // digits; only the phrase in front of them is a translation. A reading takes
+  // them in parentheses or after a comma — «under Diocletian (284-305)» and
+  // «under Justin I, 518-527» are one shape to a reader — and both keep the
+  // punctuation they were written with.
+  const m = /^(.+?)(?: \((\d+[–-]\d+)\)|, (\d+[–-]\d+))$/.exec(text);
   if (m) {
     const said = era(m[1]);
-    return said === null ? null : `${said} (${m[2]})`;
+    if (said === null) return null;
+    return m[2] ? `${said} (${m[2]})` : `${said}, ${m[3]}`;
   }
   return era(text);
 }

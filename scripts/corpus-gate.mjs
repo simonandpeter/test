@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδωροσ theodore-companion-of-stephen theodore-founder-of-chora theodore-of-kandavla theodore-of-moscow theodore-of-novgorod theodore-of-tamasos theodore-of-tomsk theodore-prince-of-yaroslavl theodore-the-envoy-of-nicomedia':
+    'nine now. The new one is Theodore the founder of the Chora monastery, an abbot with no year on his page, kept on 8 Ιανουαρίου; the other eight are read in the el-01-11, el-01-19, el-01-20 and el-01-07 entries for this name form.',
+  'μακαριοσ macarius-companion-of-eudoxius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-of-ierissos macarius-of-kios macarius-of-pisma macarius-of-zhabyn':
+    'eight now. The new one is Macarius Makres, abbot and hieromonk dead 1431, kept on 8 Ιανουαρίου; the other seven are read in the el-01-10, el-01-18 and el-01-19 entries for this name form. The commonest monastic name in the Greek calendar and eight separate days hold these eight.',
+  'ισιδωροσ isidore-8-january isidore-of-antioch':
+    'two men, and eleven centuries. saint.gr keeps a hieromartyr Isidore, presbyter, dead 1472 on 8 Ιανουαρίου, and the corpus keeps Isidore, bishop of Antioch, killed by Arians in the fourth century, written in this wave on the Greek 2 Ιανουαρίου.',
+  'γρηγοριοσ gregory-of-akritas gregory-of-moesia gregory-of-nyssa gregory-the-elder gregory-the-recluse-of-the-caves gregory-the-wonderworker-of-the-caves gregory-uncle-of-eustratius':
+    'seven now, and three of them arrive on this one 8 Ιανουαρίου: a bishop of Moesia dead 1012, the recluse of the Kyiv Caves of the fourteenth century, and the wonderworker of the Caves dead 1094. saint.gr prints them as three entries with three centuries and three states of life, and the other four are read in the el-01-05 entry for this name form.',
+  'ιουλιανοσ julian-of-antinoopolis julian-of-kandavla julian-the-deacon-of-aegina':
+    'three men. The new one is Julian of Antinoopolis, martyred in the early fourth century, kept on 8 Ιανουαρίου; the other two are read in the el-01-07 entry for this name form, the deacon of Aegina dead 391 and the martyr of Kandavla on the Greek 4 September.',
+  'αντωνιοσ anthony-of-krasnokholmsk anthony-of-novgorod anthony-of-vologda anthony-of-zadonsk anthony-of-zographou anthony-the-great antonius-the-presbyter antony-son-of-john-of-syracuse':
+    'eight now. The new one is Antonius the presbyter, a hieromartyr of the early fourth century, kept on 8 Ιανουαρίου; the other seven are read in the el-01-17 entry for this name form, four of which stand together on the great Anthony own day.',
   'θεοδωροσ theodore-companion-of-stephen theodore-of-kandavla theodore-of-moscow theodore-of-novgorod theodore-of-tamasos theodore-of-tomsk theodore-prince-of-yaroslavl theodore-the-envoy-of-nicomedia':
     'eight now. The new one is Theodore of Moscow, the tsar dead 1598, kept on 7 Ιανουαρίου; the other seven are read in the el-01-11, el-01-19 and el-01-20 entries for this name form. Eight men on eight Greek days, and a Muscovite tsar is the furthest of them from the four martyrs.',
   'ιουλιανοσ julian-of-kandavla julian-the-deacon-of-aegina':
@@ -1241,7 +1253,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '310'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '333'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

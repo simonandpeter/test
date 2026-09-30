@@ -1,0 +1,60 @@
+{
+  "slug": "isaiah-of-valaam",
+  "display_name": "Isaiah of Valaam",
+  "names": [
+    {
+      "form": "Ησαΐας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Όσιος Ησαΐας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1914,
+      "latest": 1914,
+      "display": "1914",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε εν ειρήνη το έτος 1914»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 8 Ιανουαρίου — «Όσιος Ησαΐας»",
+        "url": "https://www.saint.gr/01/08/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

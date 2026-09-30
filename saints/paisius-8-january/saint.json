@@ -1,0 +1,60 @@
+{
+  "slug": "paisius-8-january",
+  "display_name": "Paisius (8 January)",
+  "names": [
+    {
+      "form": "Παΐσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Όσιος Παΐσιος του Ούγκλιχ», with the rank word left off. The epithet «του Ούγκλιχ» is printed in Greek letters only and is not transliterated here."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1504,
+      "latest": 1504,
+      "display": "1504",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Παΐσιος του Ούγκλιχ κοιμήθηκε το έτος 1504 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 8 Ιανουαρίου — «Όσιος Παΐσιος του Ούγκλιχ»",
+        "url": "https://www.saint.gr/01/08/index.aspx",
+        "year": 2026
+      },
+      "note": "His life page (https://www.saint.gr/113/saint.aspx) heads 08/01 and adds a second Greek day: «Η μνήμη του Οσίου Παΐσιου επαναλαμβάνεται στις 6 Ιουνίου». The row records the day page read."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "slug": "kyranna-of-ossa",
+  "display_name": "Kyranna of Ossa",
+  "names": [
+    {
+      "form": "Κυράννα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Αγία Κυράννα η Νεομάρτυς», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "new-martyr",
+    "virgin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1751,
+      "latest": 1751,
+      "display": "1751",
+      "basis": "traditional",
+      "note": "saint.gr's heading for her: «Αγια Κυραννα η Νεομαρτυς (; - 1751)». The page itself tells no life."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 8 Ιανουαρίου — «Αγία Κυράννα η Νεομάρτυς»",
+        "url": "https://www.saint.gr/01/08/index.aspx",
+        "year": 2026
+      },
+      "note": "Her life page (https://www.saint.gr/1932/saint.aspx) heads 08/01 and tells no life, sending the reader to another Greek day for it: «Για τον βίο της Αγίας Κυράννας βλέπε στις 28 Φεβρουαρίου». The row records the day page read; the 28 February page was not read."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος πλ. α'",
+      "model": "Τον συνάναρχον Λόγον",
+      "text": "Χαίρε Όσσης ο γόνος και θείον βλάστημα, Παρθενομάρτυς Κυράννα Νύμφη Χριστού του Θεού, η αθλήσασα στερρώς υστέροις έτεσι, και καθελούσα τον εχθρόν, καρτερία σταθε­ρά. Και νυν απαύστως δυσώπει, υπέρ των πίστει τιμώντων, την μακαρίαν σου άθλησιν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Αγία Κυράννα η Νεομάρτυς — Ἀπολυτίκιον, Ήχος πλ. α'. Τον συνάναρχον Λόγον",
+        "url": "https://www.saint.gr/1932/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Rejoice, offspring and divine shoot of Ossa, virgin-martyr Kyranna, bride of Christ our God, who contended steadfastly in these latter years and pulled down the enemy by your firm endurance. And now entreat without ceasing for those who honour your blessed contest in faith.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β΄",
+      "model": "Τοῖς τῶν αἱμάτων",
+      "text": "Παρθενομάρτυς Κυράννα, νύμφη Χριστοῦ ἀληθῶς καλλιπάρθενε, τοὺς τῇ θερμῇ σου πρεσβείᾳ προστρέχοντας, παντοίων νόσων καὶ θλίψεων λύτρωσαι, καὶ δίδου ἡμῖν χαρὰν ἄληκτον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Αγία Κυράννα η Νεομάρτυς — Κοντάκιον, Ἦχος β΄. Τοῖς τῶν αἱμάτων",
+        "url": "https://www.saint.gr/1932/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Virgin-martyr Kyranna, truly the fair virgin bride of Christ, deliver those who run to your fervent intercession from sicknesses and afflictions of every kind, and give us joy that does not end.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

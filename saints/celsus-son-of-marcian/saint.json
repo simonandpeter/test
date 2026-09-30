@@ -1,0 +1,66 @@
+{
+  "slug": "celsus-son-of-marcian",
+  "display_name": "Celsus, son of Marcian",
+  "names": [
+    {
+      "form": "Κέλσος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «… και οι μαζί μ' αυτόν μαρτυρήσαντες Βασίλισσα, Κέλσος, …», with the rank word left off. The notice's heading spells it «Κελσιος» and its verse «Κελσίου»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 310,
+      "display": "early 4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησαν στις αρχές του 4ου αιώνα επί Διοκλητισνού και Μαρκιανού διοικητή Αιγύπτου». The page gives no year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 8 Ιανουαρίου — «Άγιος Ιουλιανός ο Αιγύπτιος και οι μαζί μ' αυτόν μαρτυρήσαντες Βασίλισσα, Κέλσος, Αναστάσιος, Αντώνιος ο Πρεσβύτερος, είκοσι δεσμοφύλακες και επτά αδέλφια»",
+        "url": "https://www.saint.gr/01/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page (https://www.saint.gr/125/saint.aspx) adds a second Greek day for the whole company: «Η μνήμη όλων των πιο πάνω Αγίων, άγνωστο γιατί, επαναλαμβάνεται και την 21η Ιουνίου». The row records the day page read."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "julian-of-antinoopolis",
+    "basilissa-of-antinoopolis",
+    "anastasius-8-january",
+    "antonius-the-presbyter",
+    "the-mother-of-celsus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

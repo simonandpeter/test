@@ -1,0 +1,59 @@
+{
+  "slug": "gregory-the-wonderworker-of-the-caves",
+  "display_name": "Gregory the Wonderworker of the Caves",
+  "names": [
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Άγιος Γρηγόριος ο Οσιομάρτυρας και θαυματουργός», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1094,
+      "latest": 1094,
+      "display": "1094",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησε το έτος 1094 επί ηγεμόνος Ραστισλάβου»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 8 Ιανουαρίου — «Άγιος Γρηγόριος ο Οσιομάρτυρας και θαυματουργός»",
+        "url": "https://www.saint.gr/01/08/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

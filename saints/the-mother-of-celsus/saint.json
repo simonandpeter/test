@@ -1,0 +1,63 @@
+{
+  "slug": "the-mother-of-celsus",
+  "display_name": "The Mother of Celsus",
+  "names": [
+    {
+      "form": "Γυναίκα",
+      "lang": "el",
+      "note": "saint.gr gives her no name. Its line for 8 Ιανουαρίου is «Αγία Γυναίκα», the holy woman, and the form recorded here is that word, with the rank word left off; the notice identifies her only as the wife of the ruler who put Julian to death and the mother of Celsus."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 310,
+      "display": "early 4th century",
+      "basis": "traditional",
+      "note": "saint.gr dates the company she died with «στις αρχές του 4ου αιώνα επί Διοκλητισνού και Μαρκιανού διοικητή Αιγύπτου» and gives her no year of her own."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 8 Ιανουαρίου — «Αγία Γυναίκα»",
+        "url": "https://www.saint.gr/01/08/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "julian-of-antinoopolis",
+    "celsus-son-of-marcian",
+    "basilissa-of-antinoopolis"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

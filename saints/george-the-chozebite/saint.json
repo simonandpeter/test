@@ -6,6 +6,11 @@
       "form": "Gheorghe Hozevitul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 ianuarie."
+    },
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Όσιος Γεώργιος ο Χοζεβίτης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 8 Ιανουαρίου — «Όσιος Γεώργιος ο Χοζεβίτης»",
+        "url": "https://www.saint.gr/01/08/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -85,6 +99,23 @@
       },
       "english": {
         "text": "Thou wast shown to be a light most radiant, O holy Father George, shining with the divine rays upon those who call on thee in faith. Pray for us to Christ the Saviour, who was made manifest in the Jordan and gave light to those formed out of the earth.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος πλ. α'",
+      "model": "Τον συνάναρχον Λόγον",
+      "text": "Γεωργήσας τον λόγον Πάτερ της χάριτος, δικαιοσύνης έδρέψω καρποφορίαν λαμπράν, ως την ένθεον ζωήν αϊρετισάμενος, όθεν της δόξης κοινωνός, ανεδείχθης του Χριστού, Γεώργιε θεοφόρε' ώ και πρεσβεύεις άπαύστως, έλεηθήναι τάς ψυχάς ημών.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Όσιος Γεώργιος ο Χοζεβίτης — Ἀπολυτίκιον, Ήχος πλ. α'. Τον συνάναρχον Λόγον",
+        "url": "https://www.saint.gr/128/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having tilled the word of grace, father, you reaped a bright harvest of righteousness, since you had chosen the life that is filled with God; and so you were shown to be a sharer in the glory of Christ, God-bearing George, to whom you intercede without ceasing that our souls may be shown mercy.",
         "rendered": "site"
       }
     }

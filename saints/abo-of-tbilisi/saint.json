@@ -6,6 +6,11 @@
       "form": "Abo",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 ianuarie, «Sfântul Mucenic Abo, ocrotitorul orașului Tbilisi, Georgia»."
+    },
+    {
+      "form": "Αβώ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Άγιος Αβώ ο Μάρτυρας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 8 Ιανουαρίου — «Άγιος Αβώ ο Μάρτυρας»",
+        "url": "https://www.saint.gr/01/08/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr's notice (https://www.saint.gr/129/saint.aspx) dates his martyrdom to 786 and its heading gives «(; - 786)», while the folder's existing death year, taken from doxologia.ro, is 790; the two sources disagree and nothing here is changed."
     },
     {
       "church": "serbian",

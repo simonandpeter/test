@@ -1,0 +1,61 @@
+{
+  "slug": "severinus-of-noricum",
+  "display_name": "Severinus of Noricum",
+  "names": [
+    {
+      "form": "Σεβερίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Άγιος Σεβερίνος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic",
+    "preacher"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 454,
+      "latest": 454,
+      "display": "from about 454",
+      "basis": "traditional",
+      "note": "saint.gr: «Περί το 454 μ.Χ. ένας άγνωστος μοναχός που προερχόταν από την Μικρά Ασία εγκαταστάθηκε στις πύλες του ναού». The page gives no year of birth or of death, and says he and his disciples worked for thirty continuous years."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 8 Ιανουαρίου — «Άγιος Σεβερίνος»",
+        "url": "https://www.saint.gr/01/08/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

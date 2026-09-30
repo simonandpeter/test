@@ -1,0 +1,59 @@
+{
+  "slug": "isidore-8-january",
+  "display_name": "Isidore (8 January)",
+  "names": [
+    {
+      "form": "Ισίδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Άγιος Ισίδωρος ο Ιερομάρτυρας και οι συν αυτώ 72 Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1472,
+      "latest": 1472,
+      "display": "1472",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε από τους Λατίνους, στην πόλη Γιούρεβ της Εσθονίας, μαζί με άλλους 72 Χριστιανούς, το έτος 1472»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 8 Ιανουαρίου — «Άγιος Ισίδωρος ο Ιερομάρτυρας και οι συν αυτώ 72 Μάρτυρες»",
+        "url": "https://www.saint.gr/01/08/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

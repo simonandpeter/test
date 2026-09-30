@@ -1,0 +1,60 @@
+{
+  "slug": "gregory-of-moesia",
+  "display_name": "Gregory of Moesia",
+  "names": [
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Άγιος Γρηγόριος Επίσκοπος Μοισίας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Moesia",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1012,
+      "latest": 1012,
+      "display": "1012",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Γρηγόριος Επίσκοπος Μοισίας κοιμήθηκε εν ειρήνη το 1012 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 8 Ιανουαρίου — «Άγιος Γρηγόριος Επίσκοπος Μοισίας»",
+        "url": "https://www.saint.gr/01/08/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "slug": "macarius-makres",
+  "display_name": "Macarius Makres",
+  "names": [
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Όσιος Μακάριος ο Μακρής, ηγούμενος της Μονής Παντοκράτορα Κωνσταντινούπολης», with the rank word left off."
+    },
+    {
+      "form": "Μακάριος ο Μακρής",
+      "lang": "el",
+      "note": "The fuller form the same line prints, with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1383,
+      "latest": 1383,
+      "display": "about 1383",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε περί το 1383 μ.Χ. από ευσεβείς κι επιφανείς γονείς στη Θεσσαλονίκη (κατά άλλους ήταν Εβραίος και έγινε χριστιανός)»."
+    },
+    "death": {
+      "earliest": 1431,
+      "latest": 1431,
+      "display": "1431",
+      "basis": "traditional",
+      "note": "saint.gr dates his falling asleep, of the plague, to January 1431; the page's heading gives «(; - 1431)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 8 Ιανουαρίου — «Όσιος Μακάριος ο Μακρής, ηγούμενος της Μονής Παντοκράτορα Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/01/08/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

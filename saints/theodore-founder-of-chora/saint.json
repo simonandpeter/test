@@ -1,0 +1,60 @@
+{
+  "slug": "theodore-founder-of-chora",
+  "display_name": "Theodore, founder of Chora",
+  "names": [
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Όσιος Θεόδωρος κτήτορας και ηγούμενος της Μονής Χώρας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "monk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 477,
+      "latest": 477,
+      "display": "477",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Θεόδωρος γεννήθηκε το έτος 477 μ.Χ. στην Κωνσταντινούπολη». The page's heading gives «(477 - ;)» and no year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 8 Ιανουαρίου — «Όσιος Θεόδωρος κτήτορας και ηγούμενος της Μονής Χώρας»",
+        "url": "https://www.saint.gr/01/08/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
