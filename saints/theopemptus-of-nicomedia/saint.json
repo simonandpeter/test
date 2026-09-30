@@ -7,6 +7,11 @@
       "form": "Teopempt",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 ianuarie."
+    },
+    {
+      "form": "Θεόπεμπτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Ιανουαρίου, «Άγιοι Θεόπεμπτος και Θεωνάς», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -48,8 +53,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Ιανουαρίου — «Άγιοι Θεόπεμπτος και Θεωνάς»",
+        "url": "https://www.saint.gr/01/05/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -59,5 +73,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'",
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ",
+      "text": "Ἱερωσύνης τῇ στολῇ διαπρέπων, ἀθλητικῶς τὸν δυσμενῆ ἐτροπώσω, ὡς Ἱεράρχης ἔνθεος Θεόπεμπτε· ὅθεν πρὸς ἐπίγνωσιν, ἀληθείας προσάγεις, Θεωνᾶν τὸν ἔνδοξον, προσελθόντα Κυρίῳ· μεθ’ οὗ δυσώπει πάντοτε σοφέ, ὑπὲρ τῶν πίστει, τιμώντων τοὺς ἄθλους σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιοι Θεόπεμπτος και Θεωνάς — Ἀπολυτίκιον, Ἦχος δ'. Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ",
+        "url": "https://www.saint.gr/583/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Resplendent in the vesture of the priesthood, you routed the adversary like a contender, Theopemptus, a hierarch filled with God; and so you brought the glorious Theonas to the knowledge of the truth, and he came to the Lord. With him, wise one, entreat always for those who honour your contests in faith.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’",
+      "model": "Τοὺς ἀσφαλεῖς",
+      "text": "Ὡς ἱερεὺς, τῶν ἀπορρήτων ὅσιος, καὶ λειτουργὸς, θεοειδὴς τῆς χάριτος, μαρτυρίου τοῖς παλαίσμασι, μυσταγωγεῖς πρὶς πίστιν ἔνθεον, Θεόπεμπτε τὸν Θεωνᾶν τὸν ἔνδοξον, μεθ’ οὗ ἐν τῷ σταδίῳ ἀνεκραύγαζες· Χριστὸς τῶν Μαρτύρων τὸ ἑδραίωμα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιοι Θεόπεμπτος και Θεωνάς — Κοντάκιον, Ἦχος β’. Τοὺς ἀσφαλεῖς",
+        "url": "https://www.saint.gr/583/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a holy priest of the unutterable mysteries and a godlike minister of grace, by the wrestlings of your martyrdom you initiated the glorious Theonas into a faith filled with God, Theopemptus; and with him you cried aloud in the arena: Christ is the firm ground of the martyrs.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

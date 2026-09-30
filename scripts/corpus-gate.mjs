@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'τατιανη tatiana-5-january tatiana-of-rome':
+    'two women, and the states of life differ as much as the centuries. saint.gr keeps an ascetic Tatiana on 5 Ιανουαρίου with no year on her page; the corpus keeps Tatiana of Rome, the deaconess and virgin martyred between 222 and 235, on the Romanian and Greek 12 January, where this wave upgraded her. A monastic with no year is not the Roman deaconess.',
+  'γρηγοριοσ gregory-of-akritas gregory-of-nyssa gregory-the-elder gregory-uncle-of-eustratius':
+    'four men on four Greek days. The new one is Gregory of Akritas, a monk dead 820, kept on 5 Ιανουαρίου; the other three are the bishop of Nyssa on the Romanian and Greek 10 January, the bishop of Nazianzus and father of the Theologian on 1 Ιανουαρίου, and the ninth-century uncle of Eustratius of Mount Olympus on the 9th, both read in the el-01-09 entry for this name form.',
   'πετροσ peter-abesalamites peter-companion-of-leucius peter-companion-of-manuel peter-disciple-of-dionysius-of-alexandria peter-of-capitolias peter-of-sebaste peter-son-of-john-of-syracuse peter-the-peloponnesian peter-the-sign-bearer':
     'nine now. The new one is the Peter of Manuel of Adrianople company on 22 Ιανουαρίου; the other eight are read in the el-01-01, el-01-03, el-01-11 and el-01-12 entries for this name form. The reading has not changed and will not: separate entries on one calendar are separate men unless a page says otherwise.',
   'λεων leo-companion-of-manuel leo-of-nicaea':
@@ -1219,7 +1223,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '288'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '296'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

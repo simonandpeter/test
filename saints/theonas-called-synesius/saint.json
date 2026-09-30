@@ -6,6 +6,11 @@
       "form": "Teonas",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 ianuarie."
+    },
+    {
+      "form": "Θεωνάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Ιανουαρίου, «Άγιοι Θεόπεμπτος και Θεωνάς», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -46,8 +51,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Ιανουαρίου — «Άγιοι Θεόπεμπτος και Θεωνάς»",
+        "url": "https://www.saint.gr/01/05/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

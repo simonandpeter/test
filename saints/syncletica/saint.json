@@ -6,6 +6,11 @@
       "form": "Sinclitichia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 ianuarie."
+    },
+    {
+      "form": "Συγκλητική",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Ιανουαρίου, «Οσία Συγκλητική», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -35,8 +40,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for the corresponding day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Ιανουαρίου — «Οσία Συγκλητική»",
+        "url": "https://www.saint.gr/01/05/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -46,5 +60,53 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 270,
+      "latest": 270,
+      "display": "about 270",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Συγκλητική γεννήθηκε περί το 270 μ.Χ στη Μακεδονία». The page gives her age at death as eighty and no year of death, so none is recorded."
+    }
+  },
+  "related": [
+    "athanasius-of-alexandria"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'",
+      "model": "Ταχὺ προκατάλαβε",
+      "text": "Σοφίᾳ καὶ χάριτι, κεκοσμημένη σεμνή, ἀκλόνητος ἔμεινας, ὡς ὁ Ἰὼβ ὁ κλεινός, ἐχθροῦ ἐπίθεσιν· ὅθεν Συγκλητική σε, ἡ οὐράνιος δόξα, δέδεκται μετὰ τέλος, ὡς παρθένον φρονίμην· ἐν ᾗ τῶν μεμνημένων σου ἀεὶ μνημόνευε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Οσία Συγκλητική — Ἀπολυτίκιον, Ἦχος δ'. Ταχὺ προκατάλαβε",
+        "url": "https://www.saint.gr/582/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with wisdom and with grace, honoured one, you stayed unshaken under the enemy's assault, like the renowned Job; and so, Syncletica, the glory of heaven received you after your end as a prudent virgin. In that glory remember always those who remember you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’",
+      "model": "Ἡ Παρθένος σήμερον",
+      "text": "Ἀρετῶν ἐκλάμψασα, ταῖς οὐρανίαις ἀκτῖσιν, ὡς λαμπὰς ἀείφωτος, Συγκλιτικὴ θεοφόρε, ἤμβλυνας, τοῦ παλαμναίου ἐχθροῦ τὰ κέντρα, ἴθυνας πρὸς τὸν νυμφῶνα τῆς ἄνω δόξης, δῆμον ἅγιον παρθένων, μεθ’ ὧν δυσώπει, ἐλεηθῆναι ἡμᾶς.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Οσία Συγκλητική — Κοντάκιον, Ἦχος γ’. Ἡ Παρθένος σήμερον",
+        "url": "https://www.saint.gr/582/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining out with the virtues in the rays of heaven like a lamp that never goes dark, God-bearing Syncletica, you blunted the stings of the murderous enemy and led a holy company of virgins to the bridal chamber of the glory above; with them entreat that we be shown mercy.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

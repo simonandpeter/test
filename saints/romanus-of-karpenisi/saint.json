@@ -1,0 +1,97 @@
+{
+  "slug": "romanus-of-karpenisi",
+  "display_name": "Romanus of Karpenisi",
+  "names": [
+    {
+      "form": "Ρωμανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Ιανουαρίου, «Άγιος Ρωμανός ο νέος Οσιομάρτυρας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "venerable-martyr",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1694,
+      "latest": 1694,
+      "display": "1694",
+      "basis": "traditional",
+      "note": "saint.gr: «Τελικά τον αποκεφάλισαν στις 5 ή 6 Ιανουαρίου (κατά άλλους στις 16 Φεβρουαρίου) του 1694 μ.Χ.» — the year is the page's; the day it gives three ways."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Ιανουαρίου — «Άγιος Ρωμανός ο νέος Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/01/05/index.aspx",
+        "year": 2026
+      },
+      "note": "His life page (https://www.saint.gr/575/saint.aspx) heads 05/01 and adds a second Greek day: «Η Εκκλησία εορτάζει την μνήμη του Αγίου και στις 16 Φεβρουαρίου.» The row records the day page read."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’",
+      "model": "Μέγαν εὔρατο ὲν τοῖς κινδύνοις",
+      "text": "Σθένει Χάριτος τῆς Παναγίας ῥώμην ὤνησας τὴν πανολβίαν καὶ ῥωμαλέως ἠγωνίσω, Μακάριε· ὅθεν Χριστὸν ὡς Θεὸν ὡμολόγησας καὶ μαρτυρίῳ τὴν πίστιν ἐτράνωσας, ῾Ρωμανὲ ἔνδοξε, ᾿Ασπροπύργου τὸ σέμνωμα. Σωτῆρα Θεὸν ἱκέτευε δωρήσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Ρωμανός ο νέος Οσιομάρτυρας — Ἀπολυτίκιον, Ἦχος γ’. Μέγαν εὔρατο ὲν τοῖς κινδύνοις",
+        "url": "https://www.saint.gr/575/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the strength of the grace of the All-holy one you gained that all-blessed vigour, and you contended vigorously, blessed one; and so you confessed Christ as God and made the faith plain by your martyrdom, glorious Romanus, the honour of Aspropyrgos. Entreat God the Saviour to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’",
+      "model": "Τὸν συνάναρχον Λόγον",
+      "text": "᾿Αθλητῶν καὶ μαρτύρων νέων τὸ καύχημα, ἀσκητῶν καὶ ὁσίων Εὐρυτάνων ἀγλάϊσμα ἀνεδείχθης, ῾Ρωμανέ, τῷ μαρτυρίῳ σου ὅτι ἐδόξασας Χριστὸν ἐν κριτηρίοις ἀσεβῶν τῇ ῥώμῃ τοῦ Παρακλήτου. Καὶ νῦν ὡς μάρτυς πρεσβεύεις ὑπὲρ πιστῶν τῶν εὐφημούντων σε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Ρωμανός ο νέος Οσιομάρτυρας — Έτερον Ἀπολυτίκιον, Ἦχος πλ. α’. Τὸν συνάναρχον Λόγον",
+        "url": "https://www.saint.gr/575/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be the boast of the new contenders and martyrs and the adornment of the ascetics and venerable ones of Eurytania by your martyrdom, Romanus, for you glorified Christ before the tribunals of the impious in the vigour of the Comforter. And now, as a martyr, you intercede for the faithful who praise you.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

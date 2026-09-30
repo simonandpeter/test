@@ -1,0 +1,11 @@
+# Phosterius
+
+saint.gr says the venerable Phosterius came from the East. He climbed a high and quiet mountain, where he prayed to God inwardly and wore himself down with fasts, vigils, prostrations and hardship of every kind; and so he was shown to be in truth what his name says, a light-bearer giving light to the firmament of the Church. God had endowed him with the gift of wonderworking, and he healed every sickness of the faithful who came to him.
+
+He received loaves from heaven as well, the page says, as the prophet Elijah had done long before in the days of the Old Testament — but Elijah received his from a raven, and Phosterius from an angel of the Lord, who came daily to an appointed place and left a loaf there. When two or three brothers, or more, reached the place where he was living his ascetic life, there were loaves at the appointed place to the number of the visitors.
+
+Because no petition holds without the will of God, the page goes on, this way of providing the loaves did not last to the end of the venerable one's life, any more than it did for the prophet: for the prophet it held only some days, for Phosterius some years, for as long as he lived in stillness and kept his poverty. When he founded a monastery and gathered a great many monks into it he no longer received the loaves from above but worked to cover the needs of them all, and God did not cease to send him his grace and blessing richly.
+
+He taught his disciples in contemplation and in practice, with handiwork, prayer and the reading of the sacred books. When at one time a heresy appeared in the Church of God and many fathers gathered to examine the matter and decide it, Phosterius was invited to take part; and he not only answered the call but proved a brave contender for the Orthodox faith, for by his words many came back from the various heresies to the road of truth, and by his exhortations many became monks. He fell asleep in peace on the afternoon of the fifth of January, the day on which the Church appointed his memory. The page gives no year and none is supplied here.
+
+*After saint.gr's calendar for 5 Ιανουαρίου — [the day](https://www.saint.gr/01/05/index.aspx) and [the life](https://www.saint.gr/580/saint.aspx); read 30 September 2026.*

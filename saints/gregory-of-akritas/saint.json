@@ -1,0 +1,88 @@
+{
+  "slug": "gregory-of-akritas",
+  "display_name": "Gregory of Akritas",
+  "names": [
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Ιανουαρίου, «Όσιος Γρηγόριος ο εν Ακρίτα», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 755,
+      "latest": 755,
+      "display": "755",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Γρηγόριος γεννήθηκε στην Κρήτη το 755 μ.Χ.»"
+    },
+    "death": {
+      "earliest": 820,
+      "latest": 820,
+      "display": "820",
+      "basis": "traditional",
+      "note": "saint.gr: «τελείωσε τη ζωή του … το έτος 820 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Ιανουαρίου — «Όσιος Γρηγόριος ο εν Ακρίτα»",
+        "url": "https://www.saint.gr/01/05/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "michael-of-synada"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος γ'",
+      "model": "Την ωραιότητα",
+      "text": "Βίου λαμπρότητι καλλωπιζόμενος, σκεύος πολύτιμον της θείας Χάριτος και καί αρετών υπογραμμός εδείχθης δι' εγκρατείας, Όσιε Γρηγόριε, Κρήτης άγιον βλάστημα, της Ακρίτα Μάνδρας δε ιερόν εγκαλώπισμα. Και νυν μη διαλίπης πρεσβεύων, Πάτερ, υπέρ των σε τιμώντων",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Όσιος Γρηγόριος ο εν Ακρίτα — Ἀπολυτίκιον, Ήχος γ'. Την ωραιότητα",
+        "url": "https://www.saint.gr/581/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with the brightness of your life, you were shown by your self-restraint to be a precious vessel of the divine grace and a pattern of the virtues, venerable Gregory, holy offshoot of Crete and sacred ornament of the fold of Akritas. And now, father, do not cease to intercede for those who honour you.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
