@@ -1,0 +1,68 @@
+{
+  "slug": "zosimas-of-vorbozom",
+  "display_name": "Zosimas of Vorbozom",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ζωσιμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Απριλίου, «Όσιος Ζωσιμάς εκ Ρωσίας», with the rank word and the country left off. The life page calls him «Ζωσιμάς του Βορμποζόμ»."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 1475,
+      "latest": 1500,
+      "display": "late 15th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ζωσιμάς του Βορμποζόμ γεννήθηκε περί τα τέλη του 15ου αιώνα μ.Χ. στη Ρωσία» — about the end of the fifteenth century. The page gives no year."
+    },
+    "death": {
+      "earliest": 1550,
+      "latest": 1550,
+      "display": "1550",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1550 μ.Χ.», and the page's heading has «(; - 1550)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Απριλίου — «Όσιος Ζωσιμάς εκ Ρωσίας»",
+        "url": "https://www.saint.gr/04/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Απριλίου εκάστου έτους», the same day as the listing. This is a Russian saint on the Greek calendar; the Greek page is the only source read for him here, and the Russian calendar has not been checked. He is not the Zosimas of Palestine whom the same day page lists separately."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

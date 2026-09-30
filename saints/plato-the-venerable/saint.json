@@ -6,11 +6,19 @@
       "form": "Platon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 aprilie, «Sfântul Cuvios Platon»."
+    },
+    {
+      "form": "Πλάτων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Απριλίου, «Όσιος Πλάτων ηγούμενος της Μονής Στουδίου», with the rank word and the office left off."
     }
   ],
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "abbot",
+    "monk",
+    "confessor"
   ],
   "attestations": [
     {
@@ -34,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Απριλίου — «Όσιος Πλάτων ηγούμενος της Μονής Στουδίου»",
+        "url": "https://www.saint.gr/04/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(732 - 814)». It prints no hymn under his name."
     },
     {
       "church": "serbian",
@@ -45,5 +63,25 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 732,
+      "latest": 732,
+      "display": "732",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην Κωνσταντινούπολη το 732 από γονείς ευγενείς και πλούσιους, του Στεργίου και της Ευφημίας», and the page's heading has «(732 - 814)»."
+    },
+    "death": {
+      "earliest": 814,
+      "latest": 814,
+      "display": "814",
+      "basis": "traditional",
+      "note": "saint.gr: «υπέστη μαζί με τους ανιψιούς του Θεόδωρο και Ιωσήφ, συνεχείς εξορίες και κακουχίες μέχρι πού πέθανε στις 4 Απριλίου του 814», and the page's heading has «(732 - 814)»."
+    }
+  },
+  "related": [
+    "theodore-the-studite",
+    "joseph-archbishop-of-thessalonica"
+  ]
 }

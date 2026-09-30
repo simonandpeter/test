@@ -7,6 +7,11 @@
       "form": "Teona",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 aprilie, «Sfântul Ierarh Teona, Arhiepiscopul Tesalonicului»."
+    },
+    {
+      "form": "Θεωνάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Απριλίου, «Όσιος Θεωνάς Αρχιεπίσκοπος Θεσσαλονίκης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Απριλίου — «Όσιος Θεωνάς Αρχιεπίσκοπος Θεσσαλονίκης»",
+        "url": "https://www.saint.gr/04/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1541)». It closes with the same second commemoration doxologia.ro gives — «Η μνήμη του στη μονή της Αγίας Αναστασίας εορτάζεται την Δ' Κυριακή των Νηστειών», the fourth Sunday of the Fasts at the monastery of St Anastasia — which is neither a fixed day nor a Pascha offset the schema can hold, and is not held here. The page lists the relics: the body incorrupt at the monastery of St Anastasia at Vasilika near Thessalonica, and a portion at the monastery of Kykkos in Cyprus."
     },
     {
       "church": "serbian",
@@ -66,5 +81,57 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ'.",
+      "text": "Ορθοδοξίας οδηγέ, ευσεβείας διδάσκαλε και σεμνότητος, των μοναστών η καλλονή, αρχιερέων θεόπνευστον εγκαλλώπισμα, Θεωνά πατήρ ημών όσιε, Θεσσαλονίκης το καύχημα, λύρα του πνεύματος, ικέτευε δια παντός σωθήναι τας ψυχάς ημών.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος πλ. δ', on the page of Όσιος Θεωνάς Αρχιεπίσκοπος Θεσσαλονίκης. This is the common apolytikion of a hierarch and teacher, with his name and his see set into it; the page prints it first under his name, and prints it without breathings and accents, as it is copied here.",
+        "url": "https://www.saint.gr/176/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Guide of Orthodoxy, teacher of piety and of reverence, beauty of monastics, God-inspired adornment of hierarchs, O Theonas our venerable father, boast of Thessalonica, lyre of the Spirit, entreat without ceasing that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Ὁσιότητι βίου Πάτερ κοσμούμενος, Θεσσαλονίκης ἐδείχθης ἀρχιεράρχης σοφός, καὶ ποίμην ἀληθινὸς Ἁγίῳ Πνεύματι, θεοφόρε Θεωνᾶ, Ἐκκλησίας καλλονή, δοχεῖον τοῦ Παρακλήτου. Καὶ νῦν ἀπαύστως δυσώπει, ἐλεηθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον, on the page of Όσιος Θεωνάς Αρχιεπίσκοπος Θεσσαλονίκης. It is his own and names him and his see.",
+        "url": "https://www.saint.gr/176/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned, O Father, with holiness of life, thou wast shown a wise chief hierarch of Thessalonica and a true shepherd in the Holy Spirit, O God-bearing Theonas, beauty of the Church, vessel of the Comforter. And now entreat unceasingly that our souls may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τοῖς τῶν αἱμάτων σου.",
+      "text": "Θεσσαλονίκης ποιμὴν ἐνθεώτατε, καὶ πρεσβευτὰ πρὸς Θεὸν ἡμῶν μέγιστε, σοφὲ Θεωνᾶ ἀεὶ πρέσβευε, πάσης ἀνάγκης λυτροῦσθαι καὶ θλίψεως, τοὺς πόθῳ τιμῶντάς σε Ἅγιε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος β’, Τοῖς τῶν αἱμάτων σου, on the page of Όσιος Θεωνάς Αρχιεπίσκοπος Θεσσαλονίκης.",
+        "url": "https://www.saint.gr/176/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Most godly shepherd of Thessalonica and greatest intercessor with God for us, O wise Theonas, intercede always that those who honour thee with longing may be delivered from every necessity and affliction, O holy one.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

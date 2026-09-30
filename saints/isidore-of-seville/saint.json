@@ -1,0 +1,71 @@
+{
+  "slug": "isidore-of-seville",
+  "display_name": "Isidore of Seville",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop of Seville",
+  "names": [
+    {
+      "form": "Ισίδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Απριλίου, «Άγιος Ισίδωρος Επίσκοπος Σεβίλλης», with the rank word and the see left off."
+    }
+  ],
+  "related": [
+    "leander-of-seville"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 565,
+      "latest": 570,
+      "display": "between 565 and 570",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ισίδωρος γεννήθηκε μεταξύ των ετών 565 - 570 μ.Χ. στην Καρθαγένη της Ισπανίας» — born between the years 565 and 570 at Cartagena in Spain."
+    },
+    "death": {
+      "earliest": 636,
+      "latest": 636,
+      "display": "636",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ισίδωρος κοιμήθηκε με ειρήνη το έτος 636 μ.Χ.», and the page's heading has «(; - 636)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Απριλίου — «Άγιος Ισίδωρος Επίσκοπος Σεβίλλης»",
+        "url": "https://www.saint.gr/04/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Απριλίου εκάστου έτους», the same day as the listing. It prints no hymn under his name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

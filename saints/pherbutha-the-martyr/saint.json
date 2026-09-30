@@ -1,0 +1,60 @@
+{
+  "slug": "pherbutha-the-martyr",
+  "display_name": "Pherbutha, with her sister and her niece",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Φερφούθη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Απριλίου, «Αγία Φερφούθη μετά της αδελφής και ανιψιάς της», with the rank word left off. The life page's couplet spells the same name Φερβούθαν."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησαν τον 4ο αιώνα, στα χρόνια του βασιλιά Κωνσταντίνου, και όταν βασιλιάς στην Περσία ήταν ο Σαπώρ ο Β'» — in the fourth century, in the days of the emperor Constantine, when Shapur II was king in Persia. The page gives no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Απριλίου — «Αγία Φερφούθη μετά της αδελφής και ανιψιάς της»",
+        "url": "https://www.saint.gr/04/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Απριλίου εκάστου έτους», the same day as the listing. Her sister and her niece suffered with her and the page names neither of them, so neither has a folder here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,6 +115,26 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ζωσιμασ zosimas-24-january zosimas-of-carthage zosimas-of-palestine zosimas-of-vorbozom':
+    'Four men, and two of them are on the Greek 4 April as two entries: Zosimas of Palestine, who buried Mary of Egypt and whom the Romanian keeps there too, and Zosimas of Vorbozom, the Russian. The others are the Zosimas of 24 January and Carthage on 11 March.',
+  'θεοδωρα theodora-companion-of-didymus theodora-of-amisos theodora-of-arta theodora-sister-of-hermes theodora-the-empress':
+    'Five women on five Greek days: the companion of Didymus on 5 April, Amisos on 20 March, Arta on 11 March, the sister of Hermes on 1 April and the Empress on 11 February.',
+  'γεωργιοσ george-konissky george-of-alikianos george-of-amastris george-of-azkuri george-of-develtos george-of-diipion george-of-kratovo george-of-maleon george-of-megara george-of-nea-ephesus george-of-rapsani george-of-sofia george-of-vladimir george-paizanos-of-mytilene george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian george-the-sinaite':
+    'Nineteen now. The new one is George of Nea Ephesus on 5 April; the others are read in the el-04-02 entry for this name form.',
+  'companion doule kyria doule-companion-of-kyria kyria-companion-of-doule':
+    'The pair the 5 April page names together, each named after the other, which is what folds them.',
+  'διδυμοσ didymus-companion-of-theodora didymus-of-cyprus':
+    'Two men: the companion of Theodora on 5 April and Didymus of Cyprus on 20 February.',
+  'companion didymus theodora didymus-companion-of-theodora theodora-companion-of-didymus':
+    'The pair the 5 April page names together, each named after the other, which is what folds them.',
+  'θεωνασ theonas-called-synesius theonas-of-thessalonica theonas-with-symeon-and-pherbinus':
+    'Three men, and two of them are on the Greek 4 April as two entries: Theonas of Thessalonica, whom the Romanian keeps there too, and the Theonas the day names with Symeon and Pherbinus. The third is Theonas called Synesius on 5 January.',
+  'συμεων simeon-of-tver simeon-the-elder simeon-the-myrrh-streaming symeon-of-novgorod symeon-the-god-receiver symeon-the-new-of-mytilene symeon-the-pious symeon-with-theonas-and-pherbinus':
+    'Eight now. The new one is the companion of Theonas and Pherbinus on 4 April; the others are read in the el-03-12 entry for this name form.',
+  'pherbinus symeon theonas pherbinus-with-theonas-and-symeon symeon-with-theonas-and-pherbinus theonas-with-symeon-and-pherbinus':
+    'The three the 4 April page names together, each named after the others, which is what folds them.',
+  'ισιδωροσ isidore-8-january isidore-of-antioch isidore-of-pelusium isidore-of-seville':
+    'Four men on four Greek days: the Isidore of 8 January, Antioch on 2 January, Pelusium on 4 February and Seville on 4 April.',
   'παυλοσ paul-brother-of-pausirius paul-companion-of-quadratus paul-disciple-of-dionysius-of-alexandria paul-of-corinth paul-of-crete paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-zographou paul-the-martyr-3-february paul-the-russian paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
     'Eighteen now. The new one is Paul the Russian on 3 April; the others are read in the el-04-01 entry for this name form.',
   'σαββασ sabbas-companion-of-jonah sabbas-of-sicily sabbas-of-sourozh sabbas-of-tver sabbas-of-zographou sabbas-the-spiritual sava-of-serbia sava-the-second':

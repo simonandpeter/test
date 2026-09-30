@@ -1,0 +1,54 @@
+{
+  "slug": "theonas-with-symeon-and-pherbinus",
+  "display_name": "Theonas, with Symeon and Pherbinus",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Θεωνάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Απριλίου, «Όσιοι Θεωνάς. Συμεών και Φερβίνος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "symeon-with-theonas-and-pherbinus",
+    "pherbinus-with-theonas-and-symeon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Απριλίου — «Όσιοι Θεωνάς. Συμεών και Φερβίνος»",
+        "url": "https://www.saint.gr/04/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Απριλίου εκάστου έτους», the same day as the listing. The three are named together in one line and one page, so they are three folders and not one. This Theonas is not the archbishop of Thessalonica whom the same day page lists separately with a life of his own."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

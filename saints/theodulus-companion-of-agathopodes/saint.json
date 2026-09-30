@@ -6,6 +6,11 @@
       "form": "Teodul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 aprilie, «Sfântul Mucenic Teodul»."
+    },
+    {
+      "form": "Θεόδουλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Απριλίου, «Άγιοι Θεόδουλος και Αγαθάπους», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Απριλίου — «Άγιοι Θεόδουλος και Αγαθάπους»",
+        "url": "https://www.saint.gr/04/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The Greek calendar keeps the pair on 4 April, a day earlier than the Romanian 5 April this folder already records; the life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Απριλίου εκάστου έτους». The page puts them «στα πρώτα χρόνια των διωγμών», in the first years of the persecutions, and gives no year, so no dates are recorded from it. It spells the companion's name Αγαθάπους in the day's line and Ἀγαθόπους and Άγαθάποδας in the life, and prints no hymn."
     },
     {
       "church": "serbian",
