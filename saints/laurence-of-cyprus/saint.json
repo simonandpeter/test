@@ -1,0 +1,49 @@
+{
+  "slug": "laurence-of-cyprus",
+  "display_name": "Laurence of Cyprus",
+  "names": [
+    {
+      "form": "Λαυρέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαρτίου, «Άγιος Λαυρέντιος», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαρτίου — «Άγιος Λαυρέντιος»",
+        "url": "https://www.saint.gr/03/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The page holds one sentence, «Ο Άγιος Λαυρέντιος ανήκει στο χορό των 300 Μαρτύρων και Όσιων της Κύπρου, τους επονομαζόμενους Αλαμανούς», and adds «Δεν έχουμε άλλες λεπτομέρειες για τον βίο του Αγίου». Because that choir is one of martyrs and of venerables together and the page does not say which of the two he was, no rank is recorded for him here and `types` is left empty. The corpus's Laurence of the Greek 9 January is a martyr the same site calls unknown to the Synaxarists, on another day; this is the Cypriot of 12 March."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

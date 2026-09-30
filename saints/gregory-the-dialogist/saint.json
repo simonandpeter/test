@@ -7,6 +7,11 @@
       "form": "Grigorie Dialogul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 martie, «Sfântul Ierarh Grigorie Dialogul, Episcopul Romei»."
+    },
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαρτίου, «Όσιος Γρηγόριος ο Α' Διάλογος Πάπας Ρώμης», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαρτίου — «Όσιος Γρηγόριος ο Α' Διάλογος Πάπας Ρώμης»",
+        "url": "https://www.saint.gr/03/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 604)» and closes «Ο Όσιος Γρηγόριος κοιμήθηκε από αρθριτική νόσο, το έτος 604 μ.Χ.» — the corpus's interval is doxologia's 602–610 and is left as it stands, with saint.gr's year recorded here. It puts his birth «περί το έτος 540 μ.Χ.», explains the name Διάλογος by his writing in question and answer, names his parents Gordian and Silvia and his father's sisters Tarsilla and Aemiliana, and records a relic: «Απότμημα του Ιερού Λειψάνου του Αγίου βρίσκεται στη Μονή Μπούρα Μεγαλοπόλεως»."
     },
     {
       "church": "serbian",
@@ -57,5 +72,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας Πίστεως.",
+      "text": "Στόμα γρήγορον καταπλουτήσας, νομεὺς ἄριστος τοῦ θείου λόγου, ἀνεδείχθης Ἱεράρχα Γρηγόριε, τῶν ἀρετῶν γὰρ ἐκφάντωρ γενόμενος, δικαιοσύνης ἐκφαίνεις τὴν ἔλλαμψιν Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμιν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας Πίστεως, on the page of Όσιος Γρηγόριος ο Α' Διάλογος Πάπας Ρώμης. It names him and plays on the name, γρήγορος, wakeful. It is the only hymn the page prints for him.",
+        "url": "https://www.saint.gr/3826/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having grown rich in a wakeful mouth, you were shown to be the best shepherd of the divine word, hierarch Gregory; for becoming a revealer of the virtues you make plain the shining of righteousness, venerable father. Entreat Christ our God to grant us great mercy.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

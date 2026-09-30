@@ -1,0 +1,62 @@
+{
+  "slug": "symeon-the-pious",
+  "display_name": "Symeon the Pious",
+  "names": [
+    {
+      "form": "Συμεών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαρτίου, «Όσιος Συμεών ο Ευλαβής», with the rank words left off. The epithet ο Ευλαβής, the reverent or pious, is kept in the English name and in the life."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαρτίου — «Όσιος Συμεών ο Ευλαβής»",
+        "url": "https://www.saint.gr/03/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The page says of his commemoration «Η μνήμη του αποσιωπάται από τους Συναξαριστές. Μνημονεύεται στο Βυζαντινό Εορτολόγιο του Γεδεών σελ. 220» — the Synaxarists pass his memory over in silence and it stands in Gedeon's Byzantine Eortologion, page 220. It puts him in the middle of the tenth century and makes him the teacher of Symeon the New Theologian, whom the same site keeps on 12 Οκτωβρίου, not on this day; the corpus's Symeon the New Theologian is kept on the Romanian 12 March and is another man. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 901,
+      "latest": 1000,
+      "display": "middle of the 10th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησε στα μέσα του 10ου αιώνα μ.Χ. και έγινε δάσκαλος του Συμεών του νέου Θεολόγου». The page gives no year, so the bounds are kept to the century it names and no narrower, and the display says what the page says."
+    }
+  },
+  "related": [
+    "symeon-the-new-theologian"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

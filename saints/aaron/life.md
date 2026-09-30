@@ -1,0 +1,11 @@
+# Aaron
+
+Aaron is the first high priest of the Israelites, of the tribe of Levi, and the elder brother of the Prophet [Moses](/saints/moses-the-prophet), to whom he gave precious help in the freeing of the people of Israel from slavery in Egypt. Eloquent and bold, he was pointed out by God as a fellow-helper to Moses when Moses hesitated to take up the great work of leading Israel out of bondage, pleading among other things that he was slow of speech.
+
+When Aaron learned the divine command from Moses he gathered the elders of the sons of Israel and passed on to them the words the Lord had spoken to Moses; and when the people believed his words, Moses and Aaron went to Pharaoh and delivered God's order that he send the Hebrew people out to keep a feast in the wilderness. Before the king Aaron turned his rod into a serpent and then brought it back to what it had been. Pharaoh not only did not obey but made the slavery heavier, and his heart hardened; the Hebrews began to murmur and to complain against the two men.
+
+Again Aaron stood before Pharaoh as Moses's plenipotentiary and asked him to let the people of Israel depart from Egypt; and when Pharaoh asked the two messengers of God for miracles to convince him, Aaron performed them again. The plagues followed, and Pharaoh was compelled at last to let the Hebrews go. Through the whole of the exodus and the wandering in the wilderness Aaron was Moses's ready fellow worker in the hardest of works, the governing of a people that suffered countless privations and hardships.
+
+But the moment came when he could not hold back the people in their revolt. Moses had gone up mount Sinai to receive the commandments of God and was slow in coming down; the people then abandoned God and sought their salvation in false gods, and gathering round Aaron asked him to make them likenesses of gods — and the golden calf was made. Aaron fell asleep in peace, as Moses did, before entering the land of promise, at the age of a hundred and twenty-three, and was buried on mount Hor, near Petra, the capital of the Idumaeans. saint.gr adds that his memory is kept also on the Sunday of the Forefathers.
+
+*After saint.gr's calendar for 12 Μαρτίου — [the day](https://www.saint.gr/03/12/index.aspx) and [the life](https://www.saint.gr/3831/saint.aspx); read 30 September 2026.*

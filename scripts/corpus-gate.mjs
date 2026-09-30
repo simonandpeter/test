@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'συμεων simeon-of-tver simeon-the-elder simeon-the-myrrh-streaming symeon-of-novgorod symeon-the-god-receiver symeon-the-new-of-mytilene symeon-the-pious':
+    'Seven now. The new one is Symeon the Pious on 12 March; the other six are read in the el-02-03 entry for this name form.',
+  'λαυρεντιοσ laurence-martyr-9-january laurence-of-canterbury laurence-of-cyprus laurence-of-salamina laurence-of-turov':
+    'Five men on five Greek days. The new one is Laurence of Cyprus on 12 March; the other four are read in the el-03-07 entry for this name form.',
   'ζωσιμασ zosimas-24-january zosimas-of-carthage':
     'Two men: the Zosimas of 24 January and Zosimas of Carthage on 11 March.',
   'θεοδωρα theodora-of-arta theodora-the-empress':

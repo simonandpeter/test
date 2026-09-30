@@ -1,0 +1,53 @@
+{
+  "slug": "aaron",
+  "display_name": "Aaron",
+  "names": [
+    {
+      "form": "Ααρών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαρτίου, «Προφήτης Ααρών», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαρτίου — «Προφήτης Ααρών»",
+        "url": "https://www.saint.gr/03/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The page makes him the first high priest of the Israelites, of the tribe of Levi, elder brother of the Prophet Moses, has him die in peace before entering the land of promise at the age of 123 and be buried on mount Hor near Petra, the capital of the Idumaeans, and adds «Η μνήμη του Προφήτη Ααρών εορτάζεται, επίσης, την Κυριακή των Προπατόρων» — his memory is kept also on the Sunday of the Forefathers. That Sunday is a moveable day within a fixed window and the schema holds no such feast, so it is recorded here and not rendered. The page gives no year and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "moses-the-prophet"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

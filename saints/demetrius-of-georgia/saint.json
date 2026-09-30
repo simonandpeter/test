@@ -6,6 +6,11 @@
       "form": "Dimitrie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 martie, «Sfântul Dimitrie, regele Georgiei»."
+    },
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαρτίου, «Άγιος Δημήτριος βασιλεύς της Γεωργίας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαρτίου — «Άγιος Δημήτριος βασιλεύς της Γεωργίας»",
+        "url": "https://www.saint.gr/03/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1289)» and calls him Δημήτριος ο Β', ο Θυσιαζόμενος, Demetrius II the Self-sacrificed, son of David king of Georgia, who reposed in 1269, and of the Bagratid dynasty, martyred in 1289 by the Turks under the sultan Arghun. The Greek calendar sets him on 12 March while the Romanian, which this folder already carried, keeps him on 16 March; the two days are recorded and neither is moved."
     },
     {
       "church": "serbian",
@@ -47,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1289,
+      "latest": 1289,
+      "display": "1289",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησε το έτος 1289 μ.Χ. από τους Τούρκους, επί σουλτάνου Αργκούν», and the page heads him «(; - 1289)», leaving the year of his birth a question mark. The corpus held no year for him before this."
+    }
   }
 }

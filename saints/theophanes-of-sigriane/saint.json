@@ -6,6 +6,11 @@
       "form": "Teofan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 martie, «Sfântul Cuvios Teofan Mărturisitorul»; the hymn pages for the day print him «Teofan Mărturisitorul din Singriana»."
+    },
+    {
+      "form": "Θεοφάνης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Μαρτίου, «Όσιος Θεοφάνης ο Ομολογητής της Συγριανής», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Μαρτίου — «Όσιος Θεοφάνης ο Ομολογητής της Συγριανής»",
+        "url": "https://www.saint.gr/03/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(760 - 815)», names his parents Isaac and Theodotia, has him orphaned of his father at eight, married at his mother's entreaty to the devout and rich Megalo, and the marriage dissolved — she became a nun at the monastery of Prinkipos under the name Irene, and he withdrew in 781 to the monastery of Polichnion by the mountain of Sigriane. Of the place itself it says «Η Συγριανή βρισκόταν είτε στη Μήδεια είτε - το πιθανότερο - στην Μυτιλήνη [ακρωτήρι Σίγρι]», either in Media or, more probably, at Mytilene."
     },
     {
       "church": "serbian",
@@ -76,6 +91,22 @@
       },
       "english": {
         "text": "Receiving divine revelation from on high, you went out in haste from the midst of the tumult; and living the monastic life, venerable one, you received the working of wonders and the grace of prophecy, having given up wife and wealth.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ὀρθοδοξίας ὁδηγέ, εὐσεβείας Διδάσκαλε καί σεμνότητος, τῆς Οἰκουμένης ὁ φωστήρ, τῶν Μοναζόντων θεόπνευστον ἐγκαλλώπισμα, Θεοφάνη σοφέ, ταῖς διδαχαῖς σου πάντας ἐφώτισας, λύρα τοῦ Πνεύματος. Πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τάς ψυχάς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος πλ. δ’, on the page of Όσιος Θεοφάνης ο Ομολογητής της Συγριανής. It names him. The page prints a kontakion in Ἦχος β’ (Τά ἄνω ζητῶν), a second in Ἦχος πλ. β’, an oikos and a kathisma in Ἦχος γ’ beside it.",
+        "url": "https://www.saint.gr/3825/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Guide of Orthodoxy, teacher of piety and of gravity, luminary of the inhabited world, God-inspired adornment of monastics, wise Theophanes: by your teachings you enlightened all, lyre of the Spirit. Intercede with Christ our God that our souls be saved.",
         "rendered": "site"
       }
     }
