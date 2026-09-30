@@ -1,0 +1,63 @@
+{
+  "slug": "sebastian-of-cartagena",
+  "display_name": "Sebastian of Cartagena",
+  "sex": "male",
+  "office": "Duke of Cartagena",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Σεβαστιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Φεβρουαρίου, «Άγιος Σεβαστιανός ο δούκας», with the rank word and the title left off."
+    }
+  ],
+  "related": [
+    "photinos-son-of-photini",
+    "photini-the-samaritan"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 54,
+      "latest": 68,
+      "display": "in the reign of Nero (54–68)",
+      "basis": "attested",
+      "note": "saint.gr gives no year and prints the reign: «μαρτύρησε επί αυτοκράτορα Νέρωνος (54 - 68 μ.Χ.)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Φεβρουαρίου — «Άγιος Σεβαστιανός ο δούκας»",
+        "url": "https://www.saint.gr/02/26/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

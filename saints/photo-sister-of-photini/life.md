@@ -1,0 +1,7 @@
+# Photo, sister of Photini
+
+saint.gr's calendar for 26 Φεβρουαρίου prints «Αγία Φωτώ» as a line of its own, and the page standing under it gives one sentence: «Η Αγία Φωτώ ήταν η δεύτερη αδελφή της Αγίας Φωτεινής και μαρτύρησε δια ξίφους» — Photo was the second sister of St Photini, and she was martyred by the sword. The fuller story is on the page of [Photini the Samaritan](/saints/photini-the-samaritan), which says that her sons and her five sisters were martyred together with her: she had been baptised among the first women of Samaria after her meeting with Christ at Jacob's well, had preached the Gospel in Africa and at Rome, and was put to death at Rome by the emperor Nero.
+
+The rest of the household the calendar prints beside her on this day is [Anatole](/saints/anatole-sister-of-photini), [Photis](/saints/photis-sister-of-photini), [Paraskeve](/saints/paraskeve-sister-of-photini), [Kyriake](/saints/kyriake-sister-of-photini), [Photinos](/saints/photinos-son-of-photini) and [Joses](/saints/joses-son-of-photini). This page gives Photo no birthplace, no year, no relics and no hymn of her own — the second apolytikion on Photini's page names all eight of them together — and over the one sentence it prints a couplet, «Φερνὴν ταλάντων μυρίων ἀνταξίαν, Φωτὼ φέρει σοι τὴν κάραν φώτων Πάτερ»: Photo brings you her head, Father of lights, a dowry worth ten thousand talents.
+
+*After saint.gr's calendar for 26 Φεβρουαρίου — [the day](https://www.saint.gr/02/26/index.aspx) and [the life](https://www.saint.gr/3654/saint.aspx); read 30 September 2026.*

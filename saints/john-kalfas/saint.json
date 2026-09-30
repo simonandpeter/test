@@ -1,0 +1,59 @@
+{
+  "slug": "john-kalfas",
+  "display_name": "John Kalfas",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Φεβρουαρίου, «Άγιος Ιωάννης ο Κάλφας ο Νεομάρτυρας», with the rank word and the second epithet left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1575,
+      "latest": 1575,
+      "display": "1575",
+      "basis": "attested",
+      "note": "saint.gr: «τον αποκεφάλισε στις 26 Φεβρουαρίου 1575 μ.Χ., ήμερα Κυριακή», and its heading prints «(; - 1575)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Φεβρουαρίου — «Άγιος Ιωάννης ο Κάλφας ο Νεομάρτυρας»",
+        "url": "https://www.saint.gr/02/26/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

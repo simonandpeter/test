@@ -1,0 +1,67 @@
+{
+  "slug": "photo-sister-of-photini",
+  "display_name": "Photo, sister of Photini",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Φωτώ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Φεβρουαρίου, «Αγία Φωτώ», with the rank word left off."
+    }
+  ],
+  "related": [
+    "photini-the-samaritan",
+    "anatole-sister-of-photini",
+    "photis-sister-of-photini",
+    "paraskeve-sister-of-photini",
+    "kyriake-sister-of-photini",
+    "photinos-son-of-photini",
+    "joses-son-of-photini"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 54,
+      "latest": 68,
+      "display": "in the reign of Nero (54–68)",
+      "basis": "attested",
+      "note": "saint.gr gives no year on this saint's own page. Its page for Photini the Samaritan, which says «Μαζί με την Αγία Φωτεινή εμαρτύρησαν οι υιοί της και οι πέντε αδελφές της», puts her death at Rome under «τον αυτοκράτορα Νέρωνα (54 - 68)», and that reign is the interval recorded here."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Φεβρουαρίου — «Αγία Φωτώ»",
+        "url": "https://www.saint.gr/02/26/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

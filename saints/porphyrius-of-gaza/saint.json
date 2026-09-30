@@ -7,6 +7,11 @@
       "form": "Porfirie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 februarie, «Sfântul Ierarh Porfirie, Episcopul Gazei»."
+    },
+    {
+      "form": "Πορφύριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Φεβρουαρίου, «Όσιος Πορφύριος επίσκοπος Γάζης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Φεβρουαρίου — «Όσιος Πορφύριος επίσκοπος Γάζης»",
+        "url": "https://www.saint.gr/02/26/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -47,5 +61,77 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 348,
+      "latest": 348,
+      "display": "348",
+      "basis": "attested",
+      "note": "saint.gr's heading prints «(348 - 420)»; its life says he was born at Thessalonica of rich and devout parents and gives no year in the prose."
+    },
+    "death": {
+      "earliest": 420,
+      "latest": 420,
+      "display": "420",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος αναπαύθηκε το έτος 420 μ.Χ. μετά από σύντομη ασθένεια, σε ηλικία 72 ετών»."
+    }
+  },
+  "related": [
+    "john-chrysostom",
+    "augustine-of-hippo"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῳ.",
+      "text": "Πορφυραυγέσιν ἀρετῶν λαμπηδόσι, καταλαμπρύνας σεαυτὸν Ἱεράρχα, καθάπερ φῶς ἐξέλαμψας Πορφύριε σοφέ, λόγοις γὰρ καὶ θαύμασιν, ἀληθῶς διαπρέψας, πάσιν ἐβεβαίωσας, εὐσέβειας τὴν χάριν καὶ νῦν Χριστῷ ἀΰλως λειτουργῶν, ὑπὲρ τοῦ κόσμου, μὴ παύση δεόμενος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Πορφύριος επίσκοπος Γάζης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3661/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having made yourself bright with the purple-shining flashes of the virtues, hierarch, you shone out like light, wise Porphyrius; for excelling truly in words and in wonders you confirmed the grace of piety to all. And now, serving Christ immaterially, do not cease to pray for the world.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Κανόνα πίστεως, καὶ εἰκόνα πραότητος, ἐγκρατείας διδάσκαλον, ἀνέδειξε σε τῇ ποίμνῃ σου, ἡ τῶν πραγμάτων ἀλήθεια· διὰ τοῦτο ἐκτήσω τῇ ταπεινώσει τὰ ὑψηλά, τῇ πτωχείᾳ τὰ πλούσια. Πάτερ Ἱεράρχα Πορφύριε, πρέσβευε Χριστῷ τῷ θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Πορφύριος επίσκοπος Γάζης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον. This is the common of a hierarch, printed under his name with his name in it, as his own service.",
+        "url": "https://www.saint.gr/3661/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown you to your flock a rule of faith, an image of gentleness, a teacher of self-restraint; therefore you gained the heights by humility and riches by poverty. Father and hierarch Porphyrius, intercede with Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τοῖς τῶν αἱμάτων σου.",
+      "text": "Ἱερωτάτοις σου τρόποις κοσμούμενος, ἱερωσύνης στολῇ κατηγλάϊσαι, παμμάκαρ θεόφρον Πορφύριε, καί ἰαμάτων ἐμπρέπεις δυνάμεσι, πρεσβεύων ἀπαύστως ὑπέρ πάντων ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Πορφύριος επίσκοπος Γάζης, Λειτουργικά κείμενα: Κοντάκιον. Its Oikos and a Kathisma follow it on the page and are not copied here, the corpus keeping no kind for either.",
+        "url": "https://www.saint.gr/3661/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with your most holy ways, you were made splendid in the robe of the priesthood, all-blessed and godly-minded Porphyrius, and you are comely with powers of healing, interceding unceasingly for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

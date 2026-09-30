@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σεβαστιανοσ sebastian-of-cartagena sebastian-of-posesone':
+    'Two men on one day, printed as two lines of the 26 February calendar and answered by two different pages: «Άγιος Σεβαστιανός ο δούκας», the ruler of Cartagena whom Photini the Samaritan brought to the faith, and «Όσιος Σεβαστιανός του Ποσεσόνε», whose page holds no life at all but a referral. Two entries on one calendar are two commemorations.',
+  'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-katopinos nicholas-of-corinth nicholas-of-japan nicholas-of-spetses nicholas-of-trebizond nicholas-of-valaam nicholas-patriarch-of-georgia nicholas-the-studite':
+    'Nine now. The new one is Nicholas Katopinos on 26 February; the other eight are read in the el-02-18 entry for this name form.',
+  'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-koulakiotis john-mauropous john-of-edessa john-of-irenopolis john-of-kazan john-of-lycopolis john-of-spetses john-of-syracuse john-son-of-xenophon john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-sinaite-venerable-martyr':
+    'Eighteen now. The new one is John Kalfas on 26 February; the other seventeen are read in the el-02-23 entry for this name form.',
   'πολυκαρποσ polycarp-of-bryansk polycarp-of-smyrna polycarp-venerable-8-february':
     'Three men, and two share 23 February as two lines: Polycarp of Smyrna, whom the Romanian calendar keeps there too, and Polycarp of Bryansk, of whom the page says it has no details. The third is the venerable of 8 February.',
   'κλημησ clement-martyr-23-february clement-of-ancyra clement-of-mount-sagmation':

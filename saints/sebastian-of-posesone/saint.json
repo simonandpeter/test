@@ -1,0 +1,51 @@
+{
+  "slug": "sebastian-of-posesone",
+  "display_name": "Sebastian of Posesone",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Σεβαστιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Φεβρουαρίου, «Όσιος Σεβαστιανός του Ποσεσόνε», with the rank word left off."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "The row is the day page this folder was read from. The whole of the life page behind it is a referral to another Greek day: «Για τον Όσιο Σεβαστιανό του Ποσεσόνε βλέπε στις 18 Δεκεμβρίου». One attestation row per church is the schema, so the second day is recorded here, and the fuller account on saint.gr's 18 Δεκεμβρίου was not read. Read 30 September 2026."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Φεβρουαρίου — «Όσιος Σεβαστιανός του Ποσεσόνε»",
+        "url": "https://www.saint.gr/02/26/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
