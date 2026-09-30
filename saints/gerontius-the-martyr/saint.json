@@ -6,6 +6,11 @@
       "form": "Gherontie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 aprilie, «Sfântul Mucenic Gherontie»."
+    },
+    {
+      "form": "Γερόντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Απριλίου, «Άγιοι Γερόντιος και Βασιλείδης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Απριλίου — «Άγιοι Γερόντιος και Βασιλείδης»",
+        "url": "https://www.saint.gr/04/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/158/saint.aspx, has its own «Ημερομηνία Εορτής» of 1 Απριλίου and «Τύπος εορτής: Σταθερή», and carries both men. Its whole notice is one sentence: «Οι Άγιοι Γερόντιος και Βασιλείδης (ή κατ' άλλους Βασιλειάδης) μαρτύρησαν δια ξίφους.» — they were martyred by the sword, the variant Βασιλειάδης for the other man's name being the page's own. There is no year, no place, no persecutor, no relic and no hymn; the distich is «Σὺν Βασιλείδῃ Γερόντιος ἐκ ξίφους, / Γερῶν μετέσχε παμβασιλέως Λόγου». The Romanian calendar prints him on the same day and alone, which is why this folder existed before the companion did; the companion is drafted as a new folder on this same reading."
     },
     {
       "church": "serbian",
@@ -45,5 +60,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "basilides-companion-of-gerontius"
+  ]
 }

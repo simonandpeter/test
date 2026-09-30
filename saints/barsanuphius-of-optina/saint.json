@@ -6,6 +6,11 @@
       "form": "Varsanufie de la Optina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 aprilie, «Sfântul Cuvios Varsanufie de la Optina»."
+    },
+    {
+      "form": "Βαρσανούφιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Απριλίου, «Όσιος Βαρσανούφιος της Όπτινα», with the rank word and the monastery left off."
     }
   ],
   "sex": "male",
@@ -52,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Απριλίου — «Όσιος Βαρσανούφιος της Όπτινα»",
+        "url": "https://www.saint.gr/04/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/1807/saint.aspx, has its own «Ημερομηνία Εορτής» of 1 Απριλίου and «Τύπος εορτής: Σταθερή», and heads him «(1845 - 1913)». Its whole notice is two sentences: «Ο Όσιος Βαρσανούφιος γεννήθηκε στις 5 Ιουλίου 1845 μ.Χ. στη Ρωσία. Ασκήτεψε στην έρημο της Όπτινα και κοιμήθηκε με ειρήνη το έτος 1913 μ.Χ.» The day of birth, 5 July 1845, and the year of repose, 1913, are exactly what this folder already records from doxologia.ro, so the dates are untouched; saint.gr adds nothing to them and gives neither his name in the world nor his monastic office, both of which the folder already has. It prints no hymn and no distich."
     },
     {
       "church": "serbian",

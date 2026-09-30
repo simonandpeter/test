@@ -115,6 +115,30 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σατουρνινοσ saturninus-martyr-1-april saturninus-martyr-6-february saturninus-of-africa':
+    'Three men: the martyr of 1 April, the martyr of 6 February and the African of 21 February.',
+  'παρθενιοσ parthenius-martyr-1-april parthenius-of-kiev parthenius-of-lampsacus parthenius-of-zographou parthenius-the-third':
+    'Five men on five Greek days: the martyr of 1 April, Kiev on 25 March, Lampsacus on 7 February, Zographou on 22 September and Parthenius III on 24 March.',
+  'διονυσιοσ dionysius-companion-of-agapius dionysius-companion-of-agapius-second dionysius-companion-of-quadratus dionysius-martyr-1-april dionysius-of-alexandria dionysius-reader-of-alexandria dionysius-the-merciful':
+    'Seven now. The new one is the martyr of 1 April; the others are read in the el-03-28 entry for this name form.',
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-martyr-1-april alexander-of-cartagena alexander-of-pydna alexander-of-rome-pope alexander-of-the-forty-martyrs alexander-of-voskiy alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Eleven now. The new one is the martyr of 1 April, fifth in the company that day names; the others are read in the el-03-27 entry for this name form.',
+  'θεοδωρα theodora-of-amisos theodora-of-arta theodora-sister-of-hermes theodora-the-empress':
+    'Four women on four Greek days: Amisos on 20 March, Arta on 11 March, the sister of Hermes on 1 April and the Empress on 11 February.',
+  'μιχαηλ michael-companion-of-platon-of-reval michael-mavroeidis michael-of-klops michael-the-russian-1-april':
+    'Four men on four Greek days: the companion of Platon of Reval on 1 January, Mavroeidis on 17 February, Klops on 11 January and Michael the Russian on 1 April.',
+  'μακαριοσ macarius-companion-of-eudoxius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-metropolitan-of-moscow macarius-new-hieromartyr-1944 macarius-of-ierissos macarius-of-kalyazin macarius-of-kios macarius-of-paphos macarius-of-pelecete macarius-of-pisma macarius-of-rome macarius-of-valaam macarius-of-zhabyn macarius-the-confessor':
+    'Sixteen now, and two of them are on the Greek 1 April: Macarius of Pelecete, whom the Romanian keeps there too, and the new hieromartyr of 1944. The others are read in the el-03-17 entry for this name form.',
+  'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-kalita john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kazan john-of-lycopolis john-of-manglisi john-of-rouphinianai john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-well john-of-yuryevets john-philosopher-of-georgia john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-sinaite-venerable-martyr':
+    'Thirty-one now. The new one is John the Philosopher of Georgia on 1 April; the others are read in the el-03-31 entry for this name form.',
+  'ερμησ hermes-apostle-of-dalmatia hermes-brother-of-theodora':
+    'Two men: the Apostle of Dalmatia, whom the Greek keeps on 8 Μαρτίου and the Romanian on 8 aprilie, and Hermes the brother of Theodora on 1 April.',
+  'γεροντιοσ gerontius-the-canonarch gerontius-the-martyr':
+    'Two men on one day, printed as two lines of the 1 April calendar: Gerontius the martyr, whom the Romanian keeps there too, and Gerontius the canonarch of the Kyiv Caves. **A reader has flagged a near-slug** — `leontius-the-canonarch` on 17 Ιουνίου, a fourteenth-century canonarch of the same Lavra read by another reader — and answered it as another man with another name; the pair is named in ro-run/FINDINGS.md for an author.',
+  'ευθυμιοσ euthymius-kereselidze euthymius-of-dimitsana euthymius-of-novgorod euthymius-of-suzdal euthymius-of-tarnovo euthymius-of-zographou euthymius-the-man-of-god':
+    'Seven now. The new one is Euthymius of Suzdal on 1 April; the others are read in the el-03-11 entry for this name form.',
+  'ευλογιοσ eulogius-of-alexandria eulogius-of-cordoba eulogius-of-georgia eulogius-of-palestine':
+    'Four men on four Greek days: Alexandria on 13 February, Cordoba on 11 March, Georgia on 1 April and Palestine on 5 March.',
   'θεοφιλοσ theophilus-martyr-6-february theophilus-of-caesarea theophilus-of-crete theophilus-of-rome theophilus-of-the-forty-martyrs theophilus-the-deacon-of-libya theophilus-the-new':
     'Seven now. The new one is Theophilus of Crete on 31 March; the others are read in the el-03-05 entry for this name form.',
   'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-kalita john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kazan john-of-lycopolis john-of-manglisi john-of-rouphinianai john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-well john-of-yuryevets john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-sinaite-venerable-martyr':

@@ -1,0 +1,51 @@
+{
+  "slug": "michael-the-russian-1-april",
+  "display_name": "Michael the Russian (1 April)",
+  "names": [
+    {
+      "form": "Μιχαήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Απριλίου, «Άγιος Μιχαήλ ο νεομάρτυς, ο Ρώσος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "fool-for-christ",
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). He is Russian and a row there is likely; it has not been read, and it is the only thing that would give this folder a date and a place."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Απριλίου — «Άγιος Μιχαήλ ο νεομάρτυς, ο Ρώσος»",
+        "url": "https://www.saint.gr/04/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/162/saint.aspx, has its own «Ημερομηνία Εορτής» of 1 Απριλίου and «Τύπος εορτής: Σταθερή», and its whole notice is one sentence: «Ο Άγιος Μιχαήλ ήταν ένας Ρώσος δια Χριστόν σαλός νεομάρτυρας.» — he was a Russian fool for Christ and a new martyr. There is no year, no city, no manner of death, no relic, no hymn and no distich. This entry was not among those the earlier reader of this day listed, and it was read here from the page itself. The corpus keeps sixteen other saints named Michael, of whom exactly one is a fool for Christ — Michael of Klops, whom saint.gr itself keeps on 11 Ιανουαρίου and who is a monk and wonderworker rather than a martyr. Two entries on one calendar are two commemorations, so this is another man; but the whole of the distinction is his day, his rank and the word Russian, and that is recorded in the reader's report as the thinnest folder of this day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

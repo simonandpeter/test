@@ -1,0 +1,60 @@
+{
+  "slug": "abrahamios-of-bulgar",
+  "display_name": "Abrahamios of Bulgar",
+  "names": [
+    {
+      "form": "Αβραάμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Απριλίου, «Άγιος Αβραάμιος ο Νεομάρτυρας εκ Βουλγαρίας», with the rank words and the origin left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1229,
+      "latest": 1229,
+      "display": "1229",
+      "basis": "traditional",
+      "note": "saint.gr heads him «(; - 1229)» and says «το έτος 1229 μ.Χ., τεμάχισαν τον Άγιο και έπειτα απέκοψαν την τίμια κεφαλή του». No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). The saint is kept in Russia and a row there is likely; it has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Απριλίου — «Άγιος Αβραάμιος ο Νεομάρτυρας εκ Βουλγαρίας»",
+        "url": "https://www.saint.gr/04/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/1803/saint.aspx, has its own «Ημερομηνία Εορτής» of 1 Απριλίου and «Τύπος εορτής: Σταθερή». It says he came of Bulgaria and lived in Russia; that he was a Muslim at first and embraced the Orthodox faith on hearing the preaching of the Gospel; that he was generous and merciful to the poor; that in the city of Bolgar, on the lower reaches of the Volga, he began to teach his countrymen about the true God, and was seized and pressed to deny Christ, and stayed firm in the confession of the piety he had received; that in 1229 they cut him in pieces and then struck off his honourable head; and that the Russian Christians living in the city buried his holy relic in the Christian cemetery. It adds that the translation of his relics took place on 6 March 1230 by the grand prince of Vladimir George, «τιμάται 4 Φεβρουαρίου», who laid them in the church of the Dormition of the Mother of God of the Knyatzinin monastery; that prince has no folder in this corpus and is therefore not linked. There is no hymn and no distich. The corpus keeps several men whose name folds onto this one — Abramius of Arbela, Abraham of Smolensk, Abraham the Recluse and others — and none of them is a Bulgar convert from Islam killed at Bolgar in 1229, nor is any of them kept on this day in any calendar."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

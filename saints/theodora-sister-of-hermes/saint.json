@@ -1,0 +1,62 @@
+{
+  "slug": "theodora-sister-of-hermes",
+  "display_name": "Theodora, sister of Hermes",
+  "names": [
+    {
+      "form": "Θεοδώρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Απριλίου, «Άγιοι Ερμής και Θεοδώρα οι Μάρτυρες οι αυτάδελφοι», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 132,
+      "latest": 132,
+      "display": "132",
+      "basis": "traditional",
+      "note": "saint.gr heads her «Αγια Θεοδωρα η Μαρτυρας (; - 132)» and says «Υπέστησαν μαρτυρικό θάνατο το έτος 132 μ.Χ., επί αυτοκράτορα Αδριανού (117 - 138 μ.Χ.)» — the year is inside the reign the page names beside it. No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Απριλίου — «Άγιοι Ερμής και Θεοδώρα οι Μάρτυρες οι αυτάδελφοι»",
+        "url": "https://www.saint.gr/04/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/1802/saint.aspx, has its own «Ημερομηνία Εορτής» of 1 Απριλίου and «Τύπος εορτής: Σταθερή», and carries both. Its whole notice is two sentences: «Οι Άγιοι Μάρτυρες Ερμής και Θεοδώρα κατάγονταν από επιφανή οικογένεια της Ρώμης. Υπέστησαν μαρτυρικό θάνατο το έτος 132 μ.Χ., επί αυτοκράτορα Αδριανού (117 - 138 μ.Χ.)» The day's line calls them αυτάδελφοι, brother and sister of the same parents. There is no manner of death, no persecutor beside the emperor, no relic, no hymn and no distich. The name-gloss the site prints above the notice is for the masculine Θεόδωρος and lists an architect of Samos, a Neoplatonist, two ancient physicians and many rulers and hierarchs; it is a lexicon entry and says nothing about her. The corpus keeps a good many women of this name on their own days, and none of them is a Roman of a distinguished family killed in 132 with a brother."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "hermes-brother-of-theodora"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

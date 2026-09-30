@@ -1,0 +1,9 @@
+# Ingeniane
+
+saint.gr keeps six martyrs of Thessalonica together on this day, and it gives the six of them one sentence: [Alexander](/saints/alexander-martyr-1-april), [Dionysius](/saints/dionysius-martyr-1-april), Ingeniane, [Pakeros](/saints/pakeros), [Parthenius](/saints/parthenius-martyr-1-april) and [Saturninus](/saints/saturninus-martyr-1-april) were martyred at Thessalonica, most probably in the first Christian times, as it is written in the Hieronymian Martyrology. That is the whole of the notice. There is no persecutor, no manner of death, no place of burial, no relic, no hymn and not even the distich the site usually prints; the one place named is the city, and the one authority named is the martyrology.
+
+All six are named on the page, and a company whose members the calendar enumerates is one folder for each member, so six folders are drafted from this line. No date is recorded for any of them. The hedge «πιθανότατα», most probably, is the page's own, and it hangs on the whole of the dating rather than on some part of it: a source's ‘probably the first Christian times’ is not a year, and this corpus does not turn one into one. Five of the six are men and Ingeniane is a woman, which the page shows by giving her «Αγια» in its own heading where the others have «Αγιος».
+
+Of Ingeniane herself the page says nothing beyond her name, her rank as martyr, and her place third in this company; she is the one woman among the six, which the page shows by the feminine form of the rank in its own heading. The corpus keeps nobody else of this name, so nothing had to be told apart, and the English form here is simply the Greek one the page prints, set in Latin letters.
+
+*After saint.gr's calendar for 1 Απριλίου — [the day](https://www.saint.gr/04/01/index.aspx) and [the life](https://www.saint.gr/163/saint.aspx); read 30 September 2026.*

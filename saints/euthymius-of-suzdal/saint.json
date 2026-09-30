@@ -1,0 +1,69 @@
+{
+  "slug": "euthymius-of-suzdal",
+  "display_name": "Euthymius of Suzdal",
+  "office": "Archimandrite of the monastery of the Saviour at Suzdal",
+  "names": [
+    {
+      "form": "Ευθύμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Απριλίου, «Όσιος Ευθύμιος Σαυζδαλίας», with the rank word and the place left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "wonderworker"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1316,
+      "latest": 1316,
+      "display": "1316",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ευθύμιος ο Θαυματουργός γεννήθηκε το έτος 1316 μ.Χ. στην πόλη Νίζνιυ-Νόβγκοροντ της Ρωσίας», and the page's head gives «(1316 - 1404)»."
+    },
+    "death": {
+      "earliest": 1404,
+      "latest": 1404,
+      "display": "1404",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ευθύμιος κοιμήθηκε με ειρήνη το έτος 1404 μ.Χ., σε ηλικία ογδόντα οκτώ ετών» — eighty-eight years, which agrees with the birth year the same page gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). The saint is Russian and a row there is likely; it has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Απριλίου — «Όσιος Ευθύμιος Σαυζδαλίας»",
+        "url": "https://www.saint.gr/04/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/161/saint.aspx, has its own «Ημερομηνία Εορτής» of 1 Απριλίου and «Τύπος εορτής: Σταθερή», and heads him «(1316 - 1404)». Under «Ιερά Λείψανα» it says «Το μεγαλύτερο μέρος των Ιερών Λειψάνων του Αγίου βρίσκεται στο Ναο του Αγίου Κωνσταντίνου Σούζνταλ». The life names his spiritual guide, «ο Άγιος Διονύσιος, μοναχός στη μονή των Σπηλαίων του Νιζνέγκοροντ και μετέπειτα Αρχιεπίσκοπος Σουζδαλίας (15 Οκτωβρίου)», who has no folder in this corpus and is therefore not linked; the last prince of Suzdal, Boris, who resolved in 1351 to found a monastery in his own country and asked Dionysius for a monk to oversee it; the choosing of twelve of the strongest in faith among Dionysius's disciples, of whom Euthymius, then thirty-six, took Suzdal; the finishing of the church in 1352 and the prince's paying for its painting; his ordination deacon, then presbyter, then archimandrite; his almsgiving in secret so as not to stir complaint in the brotherhood, his buying out of debts and his exposing of unjust judges; his healing of the sick and driving out of demons by prayer; his blessing each monk by name at his end; his burial under the walls of the church of the Transfiguration, in the grave he had built with his own hands while the church was going up; and the finding of his relics incorrupt on 4 July 1507 when the church was rebuilt. No location is recorded in this folder although the page names several places, because a coordinate is a reading of its own and none was made."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "ahaz",
+  "display_name": "Ahaz",
+  "names": [
+    {
+      "form": "Αχάζ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Απριλίου, «Δίκαιος Αχάζ», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Απριλίου — «Δίκαιος Αχάζ»",
+        "url": "https://www.saint.gr/04/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/159/saint.aspx, has its own «Ημερομηνία Εορτής» of 1 Απριλίου and «Τύπος εορτής: Σταθερή». Its whole notice is one sentence: «Ο Δίκαιος Αχάζ απεβίωσε ειρηνικά.» — the righteous Ahaz died peacefully. What identifies him is the second line of the distich the page prints over him, «Ἄχαζ Θεοῦ πέφυκεν ἑστὼς πλησίον, / Ἄχαζ, ὃς εἶπεν· οὐ Θεόν μου πειράσω» — Ahaz, who said, I will not tempt my God, which is Isaiah 7:12. There is no year, no place, no kin, no relic and no hymn, and no dates object could be written. The corpus keeps nobody of this name; the rows the name sweep proposed matched on the fold of a short name and none of them is a person of this name at all."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

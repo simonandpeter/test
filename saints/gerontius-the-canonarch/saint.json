@@ -1,0 +1,60 @@
+{
+  "slug": "gerontius-the-canonarch",
+  "display_name": "Gerontius the Canonarch",
+  "names": [
+    {
+      "form": "Γερόντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Απριλίου, «Όσιος Γερόντιος ο Κανονάρχης», with the rank word and the obedience left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Γερόντιος έζησε κατά τον 14ο αιώνα μ.Χ. και ασκήτεψε στη Λαύρα των Σπηλαίων του Κιέβου». The page gives no year of birth or of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). He is a saint of the Kyiv Caves and a row there is likely; it has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Απριλίου — «Όσιος Γερόντιος ο Κανονάρχης»",
+        "url": "https://www.saint.gr/04/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/1804/saint.aspx, has its own «Ημερομηνία Εορτής» of 1 Απριλίου and «Τύπος εορτής: Σταθερή». Its whole notice is two sentences: «Ο Όσιος Γερόντιος έζησε κατά τον 14ο αιώνα μ.Χ. και ασκήτεψε στη Λαύρα των Σπηλαίων του Κιέβου, όπου του είχε ανατεθεί το διακόνημα του Κανονάρχου. Διακρίθηκε για τον ασκητικό του βίο και την υπακοή του. Ο Όσιος Γερόντιος κοιμήθηκε με ειρήνη και ενταφιάσθηκε στη Λαύρα του Κιέβου.» There is no hymn and no distich. The corpus has no `types` slug for a canonarch, so the obedience the page names him by is recorded in the display name and in the life and not in the types. The same Greek day keeps the martyr Gerontius, a folder this corpus already had from the Romanian calendar; that man is martyred by the sword with a companion and this one dies in peace at Kyiv, and two entries on one day of one calendar are two commemorations."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

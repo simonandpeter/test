@@ -1,0 +1,53 @@
+{
+  "slug": "basilides-companion-of-gerontius",
+  "display_name": "Basilides, companion of Gerontius",
+  "names": [
+    {
+      "form": "Βασιλείδης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Απριλίου, «Άγιοι Γερόντιος και Βασιλείδης», with the rank word left off. The same page gives a variant, «ή κατ' άλλους Βασιλειάδης», which is recorded in the attestation note rather than as a second form, because the page offers it as another reading of the same name and not as a form of its own."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026). The Romanian calendar prints his companion Gerontius on this day and not him, which is why this corpus held one of the two and not the other."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Απριλίου — «Άγιοι Γερόντιος και Βασιλείδης»",
+        "url": "https://www.saint.gr/04/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/158/saint.aspx, has its own «Ημερομηνία Εορτής» of 1 Απριλίου and «Τύπος εορτής: Σταθερή», and carries both men. Its whole notice is one sentence: «Οι Άγιοι Γερόντιος και Βασιλείδης (ή κατ' άλλους Βασιλειάδης) μαρτύρησαν δια ξίφους.» There is no year, no place, no persecutor, no relic and no hymn, and no dates object could be written. The distich is «Σὺν Βασιλείδῃ Γερόντιος ἐκ ξίφους, / Γερῶν μετέσχε παμβασιλέως Λόγου», which names him in the dative and says nothing further. The corpus keeps two other men of this name, Basilides the companion of Bassus and Basilides of the Ten of Crete; neither is kept on this day in any calendar and neither is the companion of a Gerontius, which is the only thing this page gives its Basilides besides the sword."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "gerontius-the-martyr"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

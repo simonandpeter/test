@@ -64,8 +64,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Απριλίου — «Οσία Μαρία η Αιγυπτία»",
+        "url": "https://www.saint.gr/04/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/156/saint.aspx, has its own «Ημερομηνία Εορτής» of 1 Απριλίου and «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Απριλίου εκάστου έτους», so this is her fixed day and not the moveable one. Its last line before the hymns is «Η Εκκλησία τιμά την μνήμη της Οσίας Μαρίας της Αιγυπτίας και την Ε' Κυριακή των Νηστειών» — the Church honours her also on the Fifth Sunday of Lent, which is reckoned from Pascha and which the schema cannot hold; it is recorded here and nowhere else. The page names Sophronius patriarch of Jerusalem (11 Μαρτίου) as the author of her life and quotes him throughout, and it puts her «κατά τους χρόνους του αυτοκράτορα Ιουστινιανού (527 - 565 μ.Χ.)». **That disagrees with this folder's recorded death of 522**, which was read off days.pravoslavie.ru; the reign saint.gr names begins five years after it. The existing date is left exactly as it stands — a reign is not a year and this reading does not overturn a source already cited — and the disagreement is recorded in the reader's report. The page also prints the distich «Ἀπῆρε πνεῦμα, σάρξ ἀπερρύη πάλαι. / Τὸν ὅστινον γῆ κρύπτε νεκρὸν Μαρίας» and the hexameter «Πρώτῃ Ἀπριλίου Μαρίη θάνεν εὖχος ἐρήμου», which names this day."
     },
     {
       "church": "serbian",
@@ -92,6 +102,27 @@
         "text": "In thee, O mother, that which was made after the image was kept safe with care; for taking up the cross thou didst follow Christ, and by thy labour thou didst teach men to overlook the flesh, since it passes away, and to take thought for the soul, a thing immortal. Therefore, O venerable Mary, thy spirit rejoices together with the angels.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Φωτισθεῖσα ἐνθέως Σταυροῦ τὴ χάριτι, τῆς μετανοίας ἐδείχθης φωτοφανῆς λαμπηδών, τῶν παθῶν τὸν σκοτασμὸν λιποῦσα πάνσεμνε, ὅθεν ὡς ἄγγελος Θεοῦ, Ζωσιμᾶ τῷ ἱερῷ, ὠράθης ἐν τὴ ἐρήμω, Μαρία «Ὅσιε Μῆτερ» μεθ' οὐ δυσώπει ὑπὲρ πάντων ἠμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον, on her own page. It names her and names Zosimas. The page prints besides it a second apolytikion, Ἦχος πλ. δ’, «Ἐν σοί Μῆτερ ἀκριβῶς διεσώθη τό κατ᾽ εἰκόνα», which is the common of a venerable woman with her name in its last line; and a heading «Κοντάκιον, Ἦχος γ'. Ἡ Παρθένος σήμερον» under which no text at all is printed, so no kontakion could be taken. The readings «τὴ χάριτι», «ἐν τὴ ἐρήμω» and «μεθ' οὐ» for τῇ, τῇ and μεθ' οὗ are the page's own and are left as printed.",
+        "url": "https://www.saint.gr/156/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by God through the grace of the Cross, thou wast shown to be a bright-shining lamp of repentance, O all-honoured one, having left behind the darkness of the passions; whence thou wast seen in the desert by the holy Zosimas as an angel of God. O Mary, venerable Mother, together with him entreat for us all.",
+        "rendered": "site"
+      }
     }
+  ],
+  "related": [
+    "sophronius-of-jerusalem",
+    "zosimas-of-palestine"
   ]
 }

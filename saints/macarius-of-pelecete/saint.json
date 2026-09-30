@@ -11,6 +11,11 @@
       "form": "Macarie Mărturisitorul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 aprilie, «Sfântul Cuvios Macarie Mărturisitorul»."
+    },
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Απριλίου, «Όσιος Μακάριος ο ομολογητής ηγούμενος ιεράς Μονής Πελεκητής», with the rank words and the office left off."
     }
   ],
   "sex": "male",
@@ -59,8 +64,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 18 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Απριλίου — «Όσιος Μακάριος ο ομολογητής ηγούμενος ιεράς Μονής Πελεκητής»",
+        "url": "https://www.saint.gr/04/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/157/saint.aspx, has its own «Ημερομηνία Εορτής» of 1 Απριλίου and «Τύπος εορτής: Σταθερή». It says he was Christopher in the world, born at Constantinople at the end of the 8th century «(πιθανότατα το 785 μ.Χ.)» — the hedge is the page's — orphaned of both parents young and brought up by a devout uncle; that he left the world for the monastery of St John the Theologian called Pelekete at Triglia of Prousa, was tonsured there and renamed Macarius, and was raised to be its abbot; that God gave him the gift of wonders, so that laymen as well as monks came to him; that his fame reached the patriarch Tarasius (784–806, 25 Φεβρουαρίου), who sent him the patrician Paul, healed by him earlier, to have his wife healed too, and then summoned him to Constantinople and ordained him presbyter; that when the iconoclast heresy broke out under Leo V the Armenian (813–820) he was shut in prison until that emperor's death; that Michael the Stammerer (820–829) released him and, failing to change his mind about the icons, exiled him to the island of Aphousia in the sea of Marmara, where he fell asleep in peace amid hardship and want; and that after his repose the monks of Pelekete raised the monk Sergius the Recluse to be abbot. **The page's «(περί το 820 μ.Χ.)» for his repose is earlier than this folder's recorded c. 830** and is also earlier than its own narrative allows, since the emperor who exiled him reigned from 820; the existing date, read off days.pravoslavie.ru, is left exactly as it stands and the disagreement is recorded in the reader's report."
     },
     {
       "church": "serbian",
@@ -70,5 +85,44 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "tarasius-of-constantinople"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄.",
+      "model": "Τὸν ζηλωτὴν Ἠλίαν.",
+      "text": "Ἠλιοῦ τοῦ Θεσβίτου, τὸν ζῆλον μιμούμενος, καὶ Βαπτιστοῦ τὰ ἤθη, καὶ λόγον τὸν ἔνθεον, Πάτερ Μακάριε, ἀσεβοῦντας ἤλεγχες βασιλεῖς, καὶ τῇ εὐσεβείᾳ, ἐστήριζες τοὺς πιστούς, διὸ θλίψεσιν ἐξετασθείς, πρὸς Θεὸν ἐνδόξως μεταβέβηκας.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος δ΄, Τὸν ζηλωτὴν Ἠλίαν, on his own page. It names him and names the reproof of impious emperors, which is his story. The page also prints an oikos, for which this corpus's schema has no kind.",
+        "url": "https://www.saint.gr/157/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Imitating the zeal of Elijah the Tishbite, and the ways of the Baptist, and his God-inspired word, O Father Macarius, thou didst reprove impious emperors and didst establish the faithful in piety; whence, tried by afflictions, thou hast passed over gloriously to God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ΄.",
+      "model": "Ἡ Παρθένος σήμερον.",
+      "text": "Μακαρίου σήμερον, τὴν πανσεβάσμιον μνήμην, ἑορτάζει χαίρουσα, ἡ τοῦ Χριστοῦ Ἐκκλησία, τούτου γάρ, πολλοῖς ἀγῶσι καὶ ἐξορίαις, βλέπεται, πεποικιλμένη σεπταῖς Εἰκόσι, διὰ τοῦτο ἀνακράζει· χαίροις θεόφρον, τῆς εὐσεβείας κρηπίς.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος γ΄, Ἡ Παρθένος σήμερον, on his own page. It names him and names the icons his exile was for.",
+        "url": "https://www.saint.gr/157/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today the Church of Christ keeps rejoicing the all-venerable memory of Macarius; for through his many struggles and banishments she is seen adorned with the holy Icons, and therefore cries aloud: rejoice, thou of godly mind, foundation of piety.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

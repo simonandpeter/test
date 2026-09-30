@@ -1,0 +1,57 @@
+{
+  "slug": "dionysius-martyr-1-april",
+  "display_name": "Dionysius (1 April)",
+  "names": [
+    {
+      "form": "Διονύσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Απριλίου, «Άγιοι Αλέξανδρος, Διονύσιος, Ινγενιανή, Πάκερος, Παρθένιος και Σατουρνίνος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Απριλίου — «Άγιοι Αλέξανδρος, Διονύσιος, Ινγενιανή, Πάκερος, Παρθένιος και Σατουρνίνος»",
+        "url": "https://www.saint.gr/04/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/163/saint.aspx, has its own «Ημερομηνία Εορτής» of 1 Απριλίου and «Τύπος εορτής: Σταθερή», and carries all six. Its whole notice is one sentence: «Οι Άγιοι Αλέξανδρος, Διονύσιος, Ινγενιανή, Πάκερος, Παρθένιος και Σατουρνίνος μαρτύρησαν στη Θεσσαλονίκη, πιθανότατα κατά τους πρώτους χριστιανικούς χρόνους, όπως αναγράφεται στο Ιερωνυμικό Μαρτυρολόγιο.» The hedge «πιθανότατα» is the page's own and covers the whole of the dating, so no dates object is written from «οι πρώτοι χριστιανικοί χρόνοι». There is no persecutor, no manner of death, no relic, no hymn and no distich. The site's name-gloss, «(εκ του Διόνυσος) = αυτός που έχει θεϊκή προέλευση», is an etymology and not a fact about the man. The corpus keeps more than a dozen saints of this name, none of them kept on this day in any calendar it reads."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "alexander-martyr-1-april",
+    "ingeniane",
+    "pakeros",
+    "parthenius-martyr-1-april",
+    "saturninus-martyr-1-april"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

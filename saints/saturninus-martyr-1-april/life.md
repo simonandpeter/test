@@ -1,0 +1,9 @@
+# Saturninus (1 April)
+
+saint.gr keeps six martyrs of Thessalonica together on this day, and it gives the six of them one sentence: [Alexander](/saints/alexander-martyr-1-april), [Dionysius](/saints/dionysius-martyr-1-april), [Ingeniane](/saints/ingeniane), [Pakeros](/saints/pakeros), [Parthenius](/saints/parthenius-martyr-1-april) and Saturninus were martyred at Thessalonica, most probably in the first Christian times, as it is written in the Hieronymian Martyrology. That is the whole of the notice. There is no persecutor, no manner of death, no place of burial, no relic, no hymn and not even the distich the site usually prints; the one place named is the city, and the one authority named is the martyrology.
+
+All six are named on the page, and a company whose members the calendar enumerates is one folder for each member, so six folders are drafted from this line. No date is recorded for any of them. The hedge «πιθανότατα», most probably, is the page's own, and it hangs on the whole of the dating rather than on some part of it: a source's ‘probably the first Christian times’ is not a year, and this corpus does not turn one into one. Five of the six are men and Ingeniane is a woman, which the page shows by giving her «Αγια» in its own heading where the others have «Αγιος».
+
+Of Saturninus himself the page says nothing beyond his name, his rank as martyr, and his place last in this company. The corpus keeps two others of the name — the companion of Perpetua, who died at Carthage, and one of the Ten of Crete — and neither of them is kept on this day, nor martyred at Thessalonica, nor named among six. That is the whole of the distinction this folder rests on.
+
+*After saint.gr's calendar for 1 Απριλίου — [the day](https://www.saint.gr/04/01/index.aspx) and [the life](https://www.saint.gr/163/saint.aspx); read 30 September 2026.*

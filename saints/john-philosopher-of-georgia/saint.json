@@ -1,0 +1,71 @@
+{
+  "slug": "john-philosopher-of-georgia",
+  "display_name": "John the Philosopher of Georgia",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Απριλίου, «Όσιος Ιωάννης ο Φιλόσοφος εκ Γεωργίας», with the rank word, the epithet and the origin left off."
+    },
+    {
+      "form": "Σκιαβτέλι",
+      "lang": "el",
+      "note": "The surname saint.gr prints in its own parenthesis on his page, «Ο Όσιος Ιωάννης (Σκιαβτέλι) έζησε μεταξύ του 12ου και 13ου αιώνα μ.Χ. στη Γεωργία», in Greek letters. His Georgian form is not printed anywhere on the page and is therefore not recorded."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "hymnographer"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1101,
+      "latest": 1300,
+      "display": "the 12th and 13th centuries",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ιωάννης (Σκιαβτέλι) έζησε μεταξύ του 12ου και 13ου αιώνα μ.Χ. στη Γεωργία». The page gives no year of birth or of death — it says he fell asleep in deep old age — but it dates his ode «κατά τα έτη 1210 - 1214 μ.Χ.», which falls inside these bounds."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Απριλίου — «Όσιος Ιωάννης ο Φιλόσοφος εκ Γεωργίας»",
+        "url": "https://www.saint.gr/04/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/1805/saint.aspx, has its own «Ημερομηνία Εορτής» of 1 Απριλίου and «Τύπος εορτής: Σταθερή». It says he studied theology, philosophy and history at the academy of Gelati in northern Georgia, became a monk and lived many years in a solitary cell at the famous monastery of Vardzia in southern Georgia; that he reached a high degree of spiritual perfection and received the gift of the word, which showed itself in his poetry; that at Vardzia, in the years 1210 to 1214, he wrote a notable ode called «Δούλος Χριστού», the Servant of Christ, in which the image of a Christian faithful to the Canons of the holy Orthodox Church is drawn, and in which the monk often calls himself a wanderer and a servant of Christ; that a great part of the ode is dedicated to the Georgian emperor St David III the Restorer (26 Ιανουαρίου) and to the Georgian empress Tamara the Great (1 Μαΐου and the Sunday of the Myrrh-bearers); that its theological weight is plainest where the poet offers prayers in the Name of the Holy Trinity, thanking the divine omnipotence and providence that gave men the mystery of the divine economy; that in speaking of the order of God's creation of the world he writes, in correspondence with the works of St Dionysius the Areopagite, about the divine and ecclesiastical hierarchies; and that he fell asleep in peace in deep old age. There is no hymn and no distich. The types include hymnographer on the strength of the ode the page describes and names; no work of his is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "david-the-builder",
+    "tamara-of-georgia",
+    "eulogius-of-georgia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

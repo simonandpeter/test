@@ -1,0 +1,60 @@
+{
+  "slug": "macarius-new-hieromartyr-1944",
+  "display_name": "Macarius (1 April)",
+  "names": [
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Απριλίου, «Άγιος Μακάριος ο Ιερομάρτυρας ο Νέος», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1944,
+      "latest": 1944,
+      "display": "1944",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Μακαριος ο Ιερομαρτυρας ο Νεος (; - 1944)» and its one sentence is «Ο Άγιος Ιερομάρτυς Μακάριος μαρτύρησε στην Ρωσία το έτος 1944 μ.Χ.» No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). He was martyred in Russia and a row there is likely; it has not been read, and reading it is the only thing that will give this folder a name in the world and a place."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Απριλίου — «Άγιος Μακάριος ο Ιερομάρτυρας ο Νέος»",
+        "url": "https://www.saint.gr/04/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/1808/saint.aspx, has its own «Ημερομηνία Εορτής» of 1 Απριλίου and «Τύπος εορτής: Σταθερή». Its whole notice is one sentence: «Ο Άγιος Ιερομάρτυς Μακάριος μαρτύρησε στην Ρωσία το έτος 1944 μ.Χ.» There is no name in the world, no see, no monastery, no city, no manner of death, no relic, no hymn and no distich. The same Greek day keeps the confessor Macarius, abbot of Pelekete, a folder this corpus already had; that man is of the ninth century and this one of the twentieth, and two entries on one day of one calendar are two commemorations in any case. What distinguishes this folder from the twenty-odd other Macarii the corpus keeps is the year 1944 and nothing else; the display name carries the day instead, because the draft writer refuses a year in a display name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

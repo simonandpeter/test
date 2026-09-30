@@ -1,0 +1,64 @@
+{
+  "slug": "eulogius-of-georgia",
+  "display_name": "Eulogius of Georgia",
+  "names": [
+    {
+      "form": "Ευλόγιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Απριλίου, «Όσιος Ευλόγιος ο διά Χριστόν σαλός», with the rank word and the epithet left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "fool-for-christ"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1184,
+      "latest": 1213,
+      "display": "in the reign of queen Tamara, 1184–1213",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ευλόγιος γεννήθηκε στην Γεωργία και έζησε κατά τους χρόνους της βασίλισσας Ταμάρα (1184 - 1213 μ.Χ.)». The bounds are the reign the page prints, not years of his own; the page gives him no year of birth or of death, and says only that he fell asleep in peace."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Απριλίου — «Όσιος Ευλόγιος ο διά Χριστόν σαλός»",
+        "url": "https://www.saint.gr/04/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page, https://www.saint.gr/1806/saint.aspx, has its own «Ημερομηνία Εορτής» of 1 Απριλίου and «Τύπος εορτής: Σταθερή». It says he was born in Georgia and lived in the years of queen Tamara (1184–1213); that loving God and the monastic life he became a monk, and that God blessed his spiritual effort and his folly and gave him the gift of foresight; that together with the venerable John the Philosopher he followed queen Tamara to the battle against the sultan Rukn ed-Din at Basiani in 1203; that the Georgian army under king David Soslan came to the monastery of Vardzia, where Eulogius and John prayed with the queen for the victory of the Christians; that the forces then moved to Basiani where the sultan lay with 400,000 soldiers, and that the queen, the two ascetics in her train, halted near the village of Kozrkhe and prayed without ceasing; that one day, while the two were with her, Eulogius looked up, moved from his place and went out of the tent crying «Ιδού η Χάρη του Κυρίου!» and climbed towards the top of a hill, whereupon John, who had stayed with the queen, said «Ο σαλός είχε ένα όραμα και νομίζω ότι ήταν καλό»; that recalling afterwards that day and hour it emerged that at exactly that moment the Georgian fighters had routed the sultan's army, ten times their size; and that Eulogius fell asleep in peace. There is no hymn and no distich. The corpus keeps three other men of this name — of Alexandria, of Edessa and of Palestine — and none of them is a Georgian fool for Christ of Tamara's reign, nor is any of them kept on this day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "tamara-of-georgia",
+    "john-philosopher-of-georgia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
