@@ -1,0 +1,60 @@
+{
+  "slug": "theoctistus-of-st-sabbas",
+  "display_name": "Theoctistus of St Sabbas",
+  "names": [
+    {
+      "form": "Θεόκτιστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαρτίου, «Άγιος Θεόκτιστος ο Οσιομάρτυρας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαρτίου — «Άγιος Θεόκτιστος ο Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/03/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 797)» and holds one sentence, «Ο Όσιος Θεόκτιστος έζησε τον 8ο αιώνα μ.Χ. και ασκήτεψε στη μονή του Αγίου Σάββα. Κοιμήθηκε με ειρήνη το έτος 797 μ.Χ.» — he lived in the eighth century, was an ascetic at the monastery of St Sabbas and fell asleep in peace in 797. The day line calls him Οσιομάρτυρας, a venerable-martyr, while the page has him die in peace; the rank in the line is not recorded in `types` for that reason, and the discrepancy is left as the page's. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 797,
+      "latest": 797,
+      "display": "797",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 797 μ.Χ.», and the page heads him «(; - 797)», leaving the year of his birth a question mark."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "publius-of-athens",
+  "display_name": "Publius of Athens",
+  "names": [
+    {
+      "form": "Πούπλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαρτίου, «Άγιος Πούπλιος, Ιερομάρτυρας Επίσκοπος Αθηνών», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Athens",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαρτίου — «Άγιος Πούπλιος, Ιερομάρτυρας Επίσκοπος Αθηνών»",
+        "url": "https://www.saint.gr/03/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The page makes him bishop of Athens after the holy Narcissus, in the second century, and puts his martyr's death in the persecution of Marcus Aurelius «(161-180 μ.Χ.)». It prints two lines of verse and no hymn. The Greek calendar keeps a second Publius on this same day, the martyr of the trio with Africanus and Terentius, who is another man."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 161,
+      "latest": 180,
+      "display": "under Marcus Aurelius (161–180)",
+      "basis": "traditional",
+      "note": "saint.gr: «τελείωσε αυτή με μαρτυρικό θάνατο κατά τον διωγμό του αυτοκράτορα Μάρκου Αυρηλίου (161-180 μ.Χ.)», and it puts him «κατά τον δεύτερο αιώνα μετά Χριστόν». The page gives no year, so the interval is the reign it prints."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

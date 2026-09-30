@@ -6,6 +6,11 @@
       "form": "Ipomoni",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 martie, «Sfânta Cuvioasă Ipomoni»."
+    },
+    {
+      "form": "Υπομονή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαρτίου, «Οσία Υπομονή», with the rank words left off."
     }
   ],
   "sex": "female",
@@ -53,8 +58,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαρτίου — «Οσία Υπομονή»",
+        "url": "https://www.saint.gr/03/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads her «(1371 - 1450)» — the corpus's c. 1372 for her birth comes from doxologia and is left as it stands — and for her life it says only «Για την Οσία Υπομονή, βλέπε βιογραφία της στις 29 Μαΐου», see her biography on 29 May, so the Greek calendar keeps her twice as the Romanian does. One row per church is the schema, so this row records the day page read here and the second day is noted. The page records her head at the monastery of the venerable Patapios."
     },
     {
       "church": "serbian",

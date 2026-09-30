@@ -1,0 +1,9 @@
+# Publius, companion of Africanus and Terentius
+
+Publius was one of three martyrs whom saint.gr keeps together on 13 Μαρτίου and names in its line, «Άγιοι Αφρικανός, Πούπλιος και Τερέντιος οι Μάρτυρες». The page says that the holy martyrs Africanus, Publius and Terentius were arrested because they were Christians and brought before the governor of their country; and when he ordered them to sacrifice to the idols they confessed their faith in Christ and reviled the idols.
+
+At that he was angered and put them to dreadful tortures and scourgings; he bound them with chains and shut them in a furnace for three days, and when the sealed furnace was opened they were seen with astonishment to be whole and unharmed. Many believed in Christ from that miracle and were beheaded. The governor then ordered the saints thrown on burning coals and beaten; and when he saw that more were becoming Christians he gave the order to behead them, and so their witness was finished and they received the crowns of heaven.
+
+Their synaxis, the page adds, was kept at the monastery of Paulopetreion, near Panteichion in Asia Minor; and as Theodore the Reader relates, the translation of the holy relics of these martyrs was made under Theodosius I the Great, on 21 September, and they were laid in St Euphemia of Petra. According to the Lavriotic codex, Sabinus and those with him are numbered with them. [Africanus](/saints/africanus-companion-of-publius) and [Terentius](/saints/terentius-companion-of-publius) are kept with him in the same line, and the two lines of verse the page prints call the three of them fellow martyrs whose end was by the sword.
+
+*After saint.gr's calendar for 13 Μαρτίου — [the day](https://www.saint.gr/03/13/index.aspx) and [the life](https://www.saint.gr/36/saint.aspx); read 30 September 2026.*

@@ -1,0 +1,54 @@
+{
+  "slug": "africanus-companion-of-publius",
+  "display_name": "Africanus, companion of Publius and Terentius",
+  "names": [
+    {
+      "form": "Αφρικανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαρτίου, «Άγιοι Αφρικανός, Πούπλιος και Τερέντιος οι Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαρτίου — «Άγιοι Αφρικανός, Πούπλιος και Τερέντιος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/03/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The page enumerates the three, has them arrested as Christians and brought before the governor of their country, sealed three days in a furnace and found unhurt, thrown on burning coals and at last beheaded; it says their synaxis was kept «στη μονή Παυλοπετρείου, κοντά στο Παντείχιον της Μ. Ασίας», that Theodore the Reader puts the translation of their relics under Theodosius I «(379-395 μ.Χ.), στις 21 Σεπτεμβρίου» into St Euphemia of Petra, and that «σύμφωνα με τον Λαυριωτικό κώδικα, μαζί με τους ανωτέρω Αγίους αριθμείται και ο Σαβίνος και οι συν αυτώ». It gives no year for the martyrdom and no hymn. The corpus's Africanus and Terentius of Africa are the Romanian 10 April, another company with other companions; these are the three of the Greek 13 March."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "publius-companion-of-africanus",
+    "terentius-companion-of-publius"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

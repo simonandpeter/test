@@ -1,0 +1,52 @@
+{
+  "slug": "marius-of-sebaste",
+  "display_name": "Marius of Sebaste",
+  "names": [
+    {
+      "form": "Μάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαρτίου, «Άγιος Μάριος επίσκοπος Σεβαστείας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Sebaste",
+  "types": [
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαρτίου — «Άγιος Μάριος επίσκοπος Σεβαστείας»",
+        "url": "https://www.saint.gr/03/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The page says where its own entry comes from and that there is nowhere else: «Η μνήμη του αναφέρεται επιγραμματικά στο «Μικρόν Ευχολόγιον ή Αγιασματάριον» έκδοση «Αποστολικής Διακονίας» 1956, χωρίς άλλες πληροφορίες. Πουθενά άλλου δεν αναφέρεται ή μνήμη του» — his memory is mentioned in one line in that book of 1956, with no further information, and is mentioned nowhere else. It gives no year and no hymn, and what is recorded here is the commemoration and its one source."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

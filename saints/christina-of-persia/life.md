@@ -4,4 +4,6 @@ doxologia.ro's calendar names Christina of Persia and prints almost nothing of h
 
 Nothing else is given — no city, no persecutor, no year, and no hymn. This folder records what the Romanian calendar keeps for 13 March and no more.
 
-*After doxologia.ro's calendar for 13 martie — [the day](https://doxologia.ro/13-martie) and [the life](https://doxologia.ro/viata-sfintei-mucenite-hristina-din-persia); read 19 September 2026.*
+The Greek calendar keeps her on the same day and says the same one thing. saint.gr's page for her holds a single sentence — that the holy Christina in Persia was martyred after they had whipped her to death — and two lines of verse which turn on the same fact: «Μάστιξ τὸ τύπτον· σάρξ τὸ πάσχον Χριστίνης. / Χριστοῦ χάριν χέουσα κρουνοὺς αἱμάτων» — the whip is what strikes, the flesh of Christina what suffers, as she pours out streams of blood for Christ's sake. It adds no year, no place in Persia, no persecutor and no hymn.
+
+*After doxologia.ro's calendar for 13 martie — [the day](https://doxologia.ro/13-martie) and [the life](https://doxologia.ro/viata-sfintei-mucenite-hristina-din-persia); read 19 September 2026; and saint.gr's calendar for 13 Μαρτίου — [the day](https://www.saint.gr/03/13/index.aspx) and [the life](https://www.saint.gr/38/saint.aspx), read 30 September 2026.*

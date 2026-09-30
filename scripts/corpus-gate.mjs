@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοκτιστοσ theoctistus-of-st-sabbas theoctistus-the-martyr':
+    'Two men: the monk of Saint Sabbas on 13 March and the martyr of 3 October.',
+  'πουπλιοσ publius-companion-of-africanus publius-of-athens publius-of-zeugma':
+    'Three men, and two of them are on the Greek 13 March as two entries: Publius the companion of Africanus and Terentius, and Publius of Athens, the bishop. Zeugma is 25 January.',
+  'ευφρασια euphrasia-of-nicomedia euphrasia-of-the-thebaid':
+    'Two women: Nicomedia on 19 January and the Thebaid on 13 March.',
+  'africanus companion publius terentius africanus-companion-of-publius publius-companion-of-africanus terentius-companion-of-publius':
+    'The three the 13 March page names together, each named after the others, which is what folds them.',
+  'αβιβοσ abibus-of-hermoupolis abibus-of-samosata':
+    'Two men: Hermoupolis on 13 March and Samosata on 29 January.',
   'συμεων simeon-of-tver simeon-the-elder simeon-the-myrrh-streaming symeon-of-novgorod symeon-the-god-receiver symeon-the-new-of-mytilene symeon-the-pious':
     'Seven now. The new one is Symeon the Pious on 12 March; the other six are read in the el-02-03 entry for this name form.',
   'λαυρεντιοσ laurence-martyr-9-january laurence-of-canterbury laurence-of-cyprus laurence-of-salamina laurence-of-turov':

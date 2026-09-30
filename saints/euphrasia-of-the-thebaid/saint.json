@@ -1,0 +1,52 @@
+{
+  "slug": "euphrasia-of-the-thebaid",
+  "display_name": "Euphrasia of the Thebaid",
+  "names": [
+    {
+      "form": "Ευφρασία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαρτίου, «Οσία Ευφρασία», with the rank words left off. The epithet of the English name is taken from the one thing the page says of her, that she lived as an ascetic in the Thebaid; the Greek line carries no epithet."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαρτίου — «Οσία Ευφρασία»",
+        "url": "https://www.saint.gr/03/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is one sentence, «Η Οσία Ευφρασία ασκήτεψε στη Θηβαΐδα και κοιμήθηκε με ειρήνη» — she lived as an ascetic in the Thebaid and fell asleep in peace. There is no year, no monastery, no relic and no hymn. The corpus's other women of the name, of Ancyra and of Nicomedia, are martyrs on other days."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

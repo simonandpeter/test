@@ -6,6 +6,11 @@
       "form": "Hristina din Persia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 martie, «Sfânta Muceniță Hristina din Persia»."
+    },
+    {
+      "form": "Χριστίνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαρτίου, «Αγία Χριστίνα η εν Περσία», with the rank words left off."
     }
   ],
   "sex": "female",
@@ -43,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαρτίου — «Αγία Χριστίνα η εν Περσία»",
+        "url": "https://www.saint.gr/03/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The page holds one sentence, «Η Αγία Χριστίνα η εν Περσία μαρτύρησε αφού την μαστίγωσαν μέχρι θανάτου», and two lines of verse; it gives no year, no persecutor and no hymn, and the corpus's fourth-century interval stands as it was."
     },
     {
       "church": "serbian",
