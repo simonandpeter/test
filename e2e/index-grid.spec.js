@@ -1137,7 +1137,7 @@ test('a saint is named by rank, and what they held is on the line below', async 
   await expect(
     page
       .locator('.index-card')
-      .filter({ has: page.locator('.index-name', { hasText: /^John Chrysostom$/ }) })
+      .filter({ has: page.locator('a[href="/saints/john-chrysostom"]') })
       .locator('.index-dates'),
   ).toContainText('Archbishop of Constantinople');
 

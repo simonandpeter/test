@@ -50,6 +50,10 @@ export const countInRange = (from, to, rangeMode) =>
  */
 export const leaderBySort = (sort) => saintName(applyFilters(CARDS, { sort }).matched[0]);
 
+/** The first `n` of an order, as a set: which cards belong at the top of the grid. */
+export const leadersBySort = (sort, n) =>
+  new Set(applyFilters(CARDS, { sort }).matched.slice(0, n).map((card) => saintName(card)));
+
 let monthsBySlug = null;
 export const countInMonth = (month) => {
   monthsBySlug ??= monthsBySlugFor(CARDS);

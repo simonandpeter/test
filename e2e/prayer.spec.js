@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { test, expect } from './fixtures.js';
 import { CHURCHES_BY_ID } from '../src/data/churches.js';
+import { formatSubtext } from '../src/lib/calendar-page.js';
 import { feastIndexFor } from '../src/lib/feasts.js';
 import { SAME_DAY_MAX } from '../src/lib/prayer-order.js';
 import { STRINGS, fill } from '../src/ui/strings.js';
@@ -341,23 +342,35 @@ const WITH_MENTIONS = HYMNED.findIndex((c) => (c.mentionedIn ?? []).length > 0);
 
 /**
  * The same, and one more condition: the saint their margin names must be
- * somebody a query of *their own* name does not reach. `revealSlug` clears the
- * field only where the press widens the book, so a subject whose name carries
- * their company's names — «Abachum, son of Marius and Martha», whose margin
- * names Marius and Martha — leaves the query narrowing and nothing to clear.
- * That saint became the first hymned one with a back-reference when the Greek
- * wave landed, and it broke the test's premise rather than the page.
+ * somebody a query of the subject's own name does not reach. `revealSlug`
+ * clears the field only where the press widens the book, so a subject whose
+ * query still holds the target leaves the query narrowing and nothing to clear.
  *
- * The reach below is the prayer page's index in miniature (`views/prayer/find.js`):
- * the name in every recorded form. The office-and-dates line it also indexes
- * holds no personal names, so it is left out of the estimate, and the test
- * asserts the narrowing itself in any case.
+ * **The index makes that harder than it looks** (`views/prayer/find.js`): a
+ * card is indexed on its name, its subtext *and* its companions' names, with
+ * MiniSearch combining the terms with AND and matching on prefixes. So where a
+ * relation is mutual the target carries the subject's own name in its
+ * `companions` field and the query reaches it however narrow it is — «Abachum,
+ * son of Marius and Martha», whose margin names Marius and Martha, was the
+ * first hymned saint with a back-reference when the Greek wave landed, and it
+ * broke the premise rather than the page. The reach below is that index in
+ * miniature, which is enough to pick a subject the press really does widen for.
  */
-const reaches = (card, query) =>
-  [card.display_name, ...Object.values(card.names ?? {}).map((n) => n.form ?? n)]
+const reaches = (card, query) => {
+  const text = [
+    card.display_name,
+    ...Object.values(card.names ?? {}).map((n) => n.form ?? n),
+    formatSubtext(card),
+    ...(card.mentionedIn ?? []).map((slug) => CARDS.find((c) => c.slug === slug)?.display_name ?? ''),
+  ]
     .join(' ')
+    .toLowerCase();
+  return query
     .toLowerCase()
-    .includes(query.toLowerCase());
+    .split(/[^\p{L}\p{N}]+/u)
+    .filter((word) => word.length > 2)
+    .every((word) => text.includes(word));
+};
 
 const HIDDEN_MENTION = (() => {
   for (const [at, card] of HYMNED.entries()) {
@@ -724,6 +737,13 @@ test('the two faces are two drawings, not two class names', async ({ page }) => 
 test('every name in a margin opens something past 1024 px', async ({ page }) => {
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
+  /*
+   * Stepped to rather than assumed, for the reason the next test states: whom
+   * the hymnal opens on is not a saint with company on his day any more.
+   */
+  for (let i = 0; i < 8 && !(await page.locator(`#hy-sameday ${ROW}`).count()); i += 1) {
+    if (i > 0) await stepTo(page, 1);
+  }
   await expect(page.locator(`#hy-sameday ${ROW}`).first()).toBeVisible();
 
   const hymned = new Set(HYMNED.map((c) => c.slug));
@@ -769,7 +789,21 @@ test('every name in a margin opens something past 1024 px', async ({ page }) => 
 test('a name the hymnal does not hold opens that saint’s own page', async ({ page }) => {
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
-  await expect(page.locator(`#hy-sameday ${ROW}`).first()).toBeVisible();
+  /*
+   * **Stepped to, not assumed.** Whether the saint the page opens on has
+   * company on his day is a fact about the corpus, and on 2026-09-30 it stopped
+   * being true: the hymnal's first saint is Abachum, son of Marius and Martha,
+   * and the Greek wave put him at the head of it. The walk below already treats
+   * the same fact that way; this is the same reading, one line earlier.
+   */
+  const sameDayRow = async () => {
+    for (let i = 0; i < 8; i += 1) {
+      if (i > 0) await stepTo(page, 1);
+      if (await page.locator(`#hy-sameday ${ROW}`).count()) return true;
+    }
+    return false;
+  };
+  expect(await sameDayRow(), 'one of the first eight has company on his day').toBe(true);
 
   /* The first dimmed row in either column, found by walking: which saints have
      un-hymned company is a fact about the corpus and not a literal. */
@@ -804,7 +838,21 @@ test('a name the hymnal does not hold opens that saint’s own page', async ({ p
 test('a tile with no icon has no box, and one with an icon has a 3:2 plate', async ({ page }) => {
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
-  await expect(page.locator('#hy-sameday .day-tile').first()).toBeVisible();
+  /*
+   * **Stepped to, not assumed.** Whether the saint the page opens on has
+   * company on his day is a fact about the corpus, and on 2026-09-30 it stopped
+   * being true: the hymnal's first saint is Abachum, son of Marius and Martha,
+   * and the Greek wave put him at the head of it. The walk below already treats
+   * the same fact that way; this is the same reading, one line earlier.
+   */
+  const sameDayRow = async () => {
+    for (let i = 0; i < 8; i += 1) {
+      if (i > 0) await stepTo(page, 1);
+      if (await page.locator('#hy-sameday .day-tile').count()) return true;
+    }
+    return false;
+  };
+  expect(await sameDayRow(), 'one of the first eight has company on his day').toBe(true);
 
   /* A walk, because whether the day in hand holds both a pictured and an
      unpictured saint is a fact about the corpus. */

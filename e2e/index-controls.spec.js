@@ -10,6 +10,7 @@ import {
   countInRange,
   countInMonth,
   leaderBySort,
+  leadersBySort,
   emptyRange,
   facet,
   leaders,
@@ -236,7 +237,14 @@ test('the feast-month filter reckons each tradition in its own calendar', async 
   // facet matches is the page's own arithmetic, so `countInMonth` asks the
   // page's own filter over the same map it reads.
   await expect(page.locator('[data-count]')).toHaveText(countInMonth(1));
-  await expect(page.locator('.index-name', { hasText: 'Anthony the Great' })).toHaveCount(1);
+  /*
+   * And he is in it once, not twice. **Asked through the query**, because the
+   * grid is virtualised: with four hundred matches in name order his card is
+   * nowhere near the mounted window, and this assertion had never actually run
+   * on CI — the literal above it failed first every time.
+   */
+  await page.locator('[data-query]').fill('Anthony the Great');
+  await expect(page.locator('.index-card').filter({ has: page.locator('a[href="/saints/anthony-the-great"]') })).toHaveCount(1);
 });
 
 
@@ -883,9 +891,18 @@ test('Sort and View are chips that print their own answer, and Detailed joins th
    * exactly this and says so in its own comment — "every assertion about
    * order reads geometry" — which I had read and then not used.
    */
+  /*
+   * **Which three, not in which order among themselves.** The grid's rows are
+   * not one height — a card with no icon is shorter than one with a tall
+   * Byzantine plate — so two cards of the same row differ in `top` by a few
+   * pixels and the geometric reading flips them. That flipped Abachum and Abda
+   * on 2026-09-30 with the page's order perfectly correct, which is a fact
+   * about masonry and not about sorting. What a sort that did nothing would
+   * break is *which* cards are up there, and that is what is read.
+   */
   const top3 = (await leaders(page, 3)).split('|').map((n) => n.trim());
   expect(top3).toHaveLength(3);
-  expect([...top3].sort((a, b) => a.localeCompare(b))).toEqual(top3);
+  expect(new Set(top3)).toEqual(leadersBySort('name', 3));
 
   await chooseView(page, 'rows');
   await expect(viewChip(page)).toHaveText('View: Rows');
