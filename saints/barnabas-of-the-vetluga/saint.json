@@ -1,0 +1,51 @@
+{
+  "slug": "barnabas-of-the-vetluga",
+  "display_name": "Barnabas of the Vetluga",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Βαρνάβας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιουνίου, «Όσιος Βαρνάβας του ποταμού Βετολούγκα», with the rank word and the river left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr calls him a Russian monk, so a Russian row is very likely to exist; it was not looked for and nothing is claimed about it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουνίου — «Όσιος Βαρνάβας του ποταμού Βετολούγκα»",
+        "url": "https://www.saint.gr/06/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουνίου εκάστου έτους», the same day as the listing, and carries no years. He is not the apostle Barnabas, whom the same day keeps, and he is not the «Όσιος Βαρνάβας ο θαυματουργός ο εν Λεμεσώ» of the same day, whose page carries the site's asterisk and its «Δεν είναι διασταυρωμένη» sentence and was therefore refused. This page has no asterisk and no such sentence, and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "slug": "metrophanes-of-peking",
+  "display_name": "Metrophanes Ji-Sung",
+  "sex": "male",
+  "office": "Priest of the Russian mission at Peking",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Μητροφάνης Τσί-Σούνγκ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιουνίου, «Άγιος Μητροφάνης Τσί-Σούνγκ και οι μαζί μ' αυτόν μαρτυρήσαντες», with the rank word left off. The page also writes the surname «Τσὶ-Σούνγκ» and «Τσί-Σοὺνγκ» in its hymns; the form above is the one the day's line prints."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1900,
+      "latest": 1900,
+      "display": "1900",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Μητροφανης Τσι-σουνγκ (; - 1900)», and the account places the killing on the night after 10 June 1900, when proclamations were posted in the streets of Peking. The page gives no year of birth."
+    }
+  },
+  "related": [
+    "nicholas-of-japan",
+    "tatiana-of-peking",
+    "isaiah-of-peking",
+    "john-of-peking",
+    "maria-of-peking",
+    "two-hundred-twenty-two-chinese-martyrs",
+    "ia-wen-of-peking"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr makes him a priest of the Russian mission at Peking, so a Russian row is very likely to exist; it was not looked for and nothing is claimed about it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουνίου — «Άγιος Μητροφάνης Τσί-Σούνγκ και οι μαζί μ' αυτόν μαρτυρήσαντες: Τατιανή η Πρεσβυτέρα του, Ησαΐας και Ιωάννης οι γιοι του, Μαρία η νύφη του, Αγία Ία (ή Ίγια) η διδασκάλισσα και άλλοι 222 Κινέζοι Μάρτυρες»",
+        "url": "https://www.saint.gr/06/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουνίου εκάστου έτους», the same day as the listing, and dates him «(; - 1900)». The entry enumerates its members, so each named person is a folder of his own; the unnamed remainder, «άλλοι 222 Κινέζοι Μάρτυρες», is one entry. The page has no asterisk and no «Δεν είναι διασταυρωμένη» sentence. It names its own further source, «Συναξάριον Ορθοδόξων Κινέζων Μαρτύρων», by Georgios E. Piperakis, Athens 1997."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Χορὸς Ἀγγελικός.",
+      "text": "Χριστῷ ἱερουργῶν, ἱερεὺς ὢν τῆς δόξῃς, θυσίαν λογικὴν καὶ τὸ ἄμωμον θῦμα, ἀθλήσεως στάδιον, σεαυτὸν προσενήνοχας σὺν ποιμνίῳ σοῦ, πάτερ Τσί-Σοὺνγκ ἐν Πεκίνω, ὅθεν πρεσβεῦε, ὑπὲρ τῶν πίστει ὑμνούντων τὴν παντιμον μνήμην σοῦ.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Χορὸς Ἀγγελικός — the first of three apolytikia on the page of the Chinese martyrs, and the one proper to him",
+        "url": "https://www.saint.gr/567/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ministering to Christ, a priest of glory, you offered up yourself together with your flock as a reasonable sacrifice and an unblemished victim in the arena of the contest, father Ji-Sung, in Peking; wherefore intercede for those who in faith hymn your all-honoured memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος β'.",
+      "text": "Καὶ τρόπων μέτοχος καὶ θρόνων διάδοχος, τῶν Ἀποστόλων γενόμενος τὴν πράξῃ εὗρες θεόπνευστε, εἰς θεωρίας ἐπίβασιν· δι' ο πίστει ἐνήθλησας ἐν Πεκίνω, μέχρις αἵματος, ἱερομάρτυς Τσὶ-Σούνγκ. Πρεσβεῦε Χριστῷ τῷ Θεῷ, σωθῆναι τάς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος β' — the second of three apolytikia on the page of the Chinese martyrs; it is the common of a hieromartyr with his name set into it, and the page prints it under his name",
+        "url": "https://www.saint.gr/567/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharer in their ways and successor to their thrones, having become one with the apostles, O God-inspired one, you found in action a stepping-stone to contemplation; wherefore you contended in faith in Peking, even unto blood, O hieromartyr Ji-Sung. Intercede with Christ our God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

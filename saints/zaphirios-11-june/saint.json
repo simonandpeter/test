@@ -1,0 +1,96 @@
+{
+  "slug": "zaphirios-11-june",
+  "display_name": "Zaphirios (11 June)",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ζαφείριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιουνίου, «Άγιος Ζαφείριος ο Νεομάρτυς», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1821,
+      "latest": 1821,
+      "display": "1821",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Ζαφειριος ο Νεομαρτυς (; - 1821)». The codex the page quotes speaks of the Holy Mountain «κατά 1821, 1822, 1823» without fixing the year of his death more closely, and gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουνίου — «Άγιος Ζαφείριος ο Νεομάρτυς»",
+        "url": "https://www.saint.gr/06/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουνίου εκάστου έτους», the same day as the listing, and its synaxarion verse agrees: «Πρώτη τε δεκάτη Ζαφείριος Χριστώ παρέστη». The page names its one source, codex 743 (6250) of the Russian monastery of Saint Panteleimon on Athos, and says the service was composed by the hieromonk Athanasios Simonopetritis, hymnographer of the Great Church. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος α΄.",
+      "model": "Της ερήμου πολίτης.",
+      "text": "Εν τη πίστεως πέτρα εδρασθείς γενναιότατα, πλάνην εμυκτήρισας Αγαρ, νεομάρτυς Ζαφείριε· νεότητος το άνθος παριδών, τό αίμά σου προσήνεγκας Θεώ· όθεν στέφει εκοσμήθης εν ουρανοίς, ως αθλητής χριστόψυχος. Δόξα τώ σε καλέσαντι Θεώ, δόξα τώ σε δυναμώσαντι, δόξα τώ δεδωκότι σε ημίν, μεσίτην ακαταίσχυντον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος α΄, Της ερήμου πολίτης, on the page of «Άγιος Ζαφείριος ο Νεομάρτυς»; the page says the service was composed by the hieromonk Athanasios Simonopetritis",
+        "url": "https://www.saint.gr/4329/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Set most bravely upon the rock of the faith, you mocked the error of Hagar, O new martyr Zaphirios; passing by the flower of your youth, you offered your blood to God, and so you were adorned with a crown in the heavens as a contestant whose soul was Christ's. Glory to God who called you, glory to him who gave you strength, glory to him who gave you to us as an intercessor who never fails.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος δ΄.",
+      "model": "Ο υψωθείς.",
+      "text": "Στερωθείς επί της πίστεως πέτραν, παραμονή σου εν τώ Όρει του Αθω, γενναίως εκαρτέρησας τυράννων απειλάς, καί Μωάμεθ ήλεγξας την σκοτώδη θρησκείαν, όθεν ώσπερ πρόβατον, καθαρόν του Δεσπότου, εθυσιάσθης και στεφανωθείς, εν Παραδείσω, ευφραίνη Ζαφείριε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ήχος δ΄, Ο υψωθείς, on the page of «Άγιος Ζαφείριος ο Νεομάρτυς»",
+        "url": "https://www.saint.gr/4329/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Made firm upon the rock of the faith by your sojourn on the Mountain of Athos, you bravely endured the threats of tyrants and refuted the dark religion of Mohammed; wherefore, sacrificed like a pure lamb of the Master and crowned, you rejoice in Paradise, O Zaphirios.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "slug": "maria-of-peking",
+  "display_name": "Maria, betrothed of Isaiah of Peking",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Μαρία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιουνίου, «Μαρία η νύφη του», with the rank word left off; the page's head calls her «Αγια Μαρια η Νυφη Του Μητροφανη»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1881,
+      "latest": 1881,
+      "display": "1881",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγια Μαρια η Νυφη Του Μητροφανη (1881 - 1900)»; the narrative says she was nineteen years old."
+    },
+    "death": {
+      "earliest": 1900,
+      "latest": 1900,
+      "display": "1900",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγια Μαρια η Νυφη Του Μητροφανη (1881 - 1900)», and the account places the killing on the night after 10 June 1900."
+    }
+  },
+  "related": [
+    "metrophanes-of-peking",
+    "isaiah-of-peking",
+    "two-hundred-twenty-two-chinese-martyrs"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr places her in the household of a priest of the Russian mission at Peking, so a Russian row is very likely to exist; it was not looked for and nothing is claimed about it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουνίου — «Άγιος Μητροφάνης Τσί-Σούνγκ και οι μαζί μ' αυτόν μαρτυρήσαντες: … Μαρία η νύφη του …»",
+        "url": "https://www.saint.gr/06/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουνίου εκάστου έτους», the same day as the listing, and dates her «(1881 - 1900)». The day's line and the page's head both call her «η νύφη του», Metrophanes's daughter-in-law or bride, while the narrative calls her «Η Μαρία, αρραβωνιαστικιά του Ησαϊα» — the betrothed of Isaiah, his son — and she is recorded here as that, on the page's own narrative. The entry enumerates its members, so she is a folder of her own. None of the page's hymns names her. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

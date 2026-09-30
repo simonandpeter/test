@@ -1,0 +1,53 @@
+{
+  "slug": "four-martyrs-with-theopemptus",
+  "display_name": "The Four Martyrs with Theopemptus",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Τέσσερις Μάρτυρες που μαρτύρησαν μαζί με τον Θεόπεμπτο",
+      "lang": "el",
+      "note": "Read out of saint.gr's head for 11 Ιουνίου, «Αγιοι Τεσσερις Μαρτυρες Που Μαρτυρησαν Μαζι Με Την Αγιο Θεοπεμπτο», with the rank words left off; the page's own casing and its «Την» for «Τον» are its own."
+    }
+  ],
+  "related": [
+    "theopemptus-11-june"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουνίου — «Άγιος Θεόπεμπτος, μαζί με άλλους τέσσερις μάρτυρες», whose page heads them separately as «Αγιοι Τεσσερις Μαρτυρες Που Μαρτυρησαν Μαζι Με Την Αγιο Θεοπεμπτο»",
+        "url": "https://www.saint.gr/06/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουνίου εκάστου έτους», the same day as the listing, and carries no years. The page names none of the four, so this is one entry and not four folders. It prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

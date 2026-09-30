@@ -1,0 +1,86 @@
+{
+  "slug": "two-hundred-twenty-two-chinese-martyrs",
+  "display_name": "The Two Hundred and Twenty-two Chinese Martyrs",
+  "sex": "unknown",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Διακόσιοι Είκοσι Δύο Κινέζοι Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's head for 11 Ιουνίου, «Αγιοι Διακοσιοι Εικοσι Δυο Κινεζοι Μαρτυρες», with the rank word Άγιοι left off; the day's line has «και άλλοι 222 Κινέζοι Μάρτυρες»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1900,
+      "latest": 1900,
+      "display": "1900",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιοι Διακοσιοι Εικοσι Δυο Κινεζοι Μαρτυρες (; - 1900)», and the account places the killings in the persecution that began on the night after 10 June 1900."
+    }
+  },
+  "related": [
+    "metrophanes-of-peking",
+    "tatiana-of-peking",
+    "isaiah-of-peking",
+    "john-of-peking",
+    "maria-of-peking",
+    "ia-wen-of-peking"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr counts them from the Russian mission at Peking, so a Russian row is very likely to exist; it was not looked for and nothing is claimed about it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουνίου — «Άγιος Μητροφάνης Τσί-Σούνγκ και οι μαζί μ' αυτόν μαρτυρήσαντες: … και άλλοι 222 Κινέζοι Μάρτυρες»",
+        "url": "https://www.saint.gr/06/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουνίου εκάστου έτους», the same day as the listing, and dates them «(; - 1900)». This is the unnamed remainder of an entry whose other members the page does enumerate; those six are folders of their own. The narrative names five more Christians — Paul Wan the catechist, Clement Kui Kin, Matthew Hai Chuan, his brother Vitus and Anna Sui — without enumerating the two hundred and twenty-two, so they stand within this entry and are named in its life. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ'.",
+      "text": "Θείας πίστεως Σίναι Μάρτυρες πατρώαν πλάνην καταστρέψαντες, ύψωσαν πίστιν των Ορθοδόξων και στερρώς ηγωνίσθησαν, την βουδδικήν γαρ θρησκείαν ελέγξαντες, εν παρρησία Χριστόν ωμολόγησαν Θεόν τέλειον. Αυτώ δ’ εκτενώς πρεσβεύουσιν Υπέρ των ψυχών ημών.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος γ' — the third of three apolytikia on the page of the Chinese martyrs, and the only one addressed to the company rather than to Metrophanes; it names no individual",
+        "url": "https://www.saint.gr/567/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The martyrs of China, overthrowing by divine faith the error of their fathers, exalted the faith of the Orthodox and contended steadfastly; for having refuted the Buddhist religion, they confessed Christ openly as perfect God. To him they make earnest intercession for our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

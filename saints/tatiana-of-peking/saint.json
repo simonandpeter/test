@@ -1,0 +1,66 @@
+{
+  "slug": "tatiana-of-peking",
+  "display_name": "Tatiana, wife of Metrophanes Ji-Sung",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Τατιανή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιουνίου, «Τατιανή η Πρεσβυτέρα του», with the rank word left off; the page's head calls her «Αγια Τατιανη η Πρεσβυτερα Του Μητροφανη»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1900,
+      "latest": 1900,
+      "display": "1900",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγια Τατιανη η Πρεσβυτερα Του Μητροφανη (; - 1900)». The page gives no year of birth."
+    }
+  },
+  "related": [
+    "metrophanes-of-peking",
+    "isaiah-of-peking",
+    "john-of-peking",
+    "two-hundred-twenty-two-chinese-martyrs"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr makes her the wife of a priest of the Russian mission at Peking, so a Russian row is very likely to exist; it was not looked for and nothing is claimed about it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουνίου — «Άγιος Μητροφάνης Τσί-Σούνγκ και οι μαζί μ' αυτόν μαρτυρήσαντες: Τατιανή η Πρεσβυτέρα του …»",
+        "url": "https://www.saint.gr/06/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουνίου εκάστου έτους», the same day as the listing, and dates her «(; - 1900)». The entry enumerates its members, so she is a folder of her own. The hymns on the shared page are the propers of Metrophanes and one collective hymn to the Chinese martyrs, which is taken on the company's folder; none of them names her, so this folder carries no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

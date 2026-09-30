@@ -1,0 +1,53 @@
+{
+  "slug": "theopemptus-11-june",
+  "display_name": "Theopemptus (11 June)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Θεόπεμπτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιουνίου, «Άγιος Θεόπεμπτος, μαζί με άλλους τέσσερις μάρτυρες», with the rank word and the companions left off."
+    }
+  ],
+  "related": [
+    "four-martyrs-with-theopemptus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουνίου — «Άγιος Θεόπεμπτος, μαζί με άλλους τέσσερις μάρτυρες»",
+        "url": "https://www.saint.gr/06/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουνίου εκάστου έτους», the same day as the listing, and carries no years. The corpus already keeps three other men of the name — `theopemptus-of-nicomedia` on 5 January, `theopemptus-2-january` and `theopemptus-7-february` — each on his own Greek day; on the settled rule, entries on separate days of one calendar are separate commemorations, so this is a fourth. The page gives him no place and no judge, and prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Barnaba",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 iunie, «Sfântul Apostol Barnaba»."
+    },
+    {
+      "form": "Βαρνάβας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιουνίου, «Άγιοι Βαρθολομαίος και Βαρνάβας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουνίου — «Άγιοι Βαρθολομαίος και Βαρνάβας»",
+        "url": "https://www.saint.gr/06/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and gives no years. It is plainly the same man: the Jewish Levite of Cyprus, also called Joses, chief co-worker of the apostle Paul, stoned and then burnt at Salamis in Cyprus, whose relics Mark gathered into a cave. The page keeps him on the same day as the apostle Bartholomew and prints one apolytikion naming them both. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -59,9 +74,31 @@
         "text": "Holy apostles, entreat the merciful God to grant our souls forgiveness of offences.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ'.",
+      "model": "Θείας πίστεως.",
+      "text": "Θεία ὄργανα, τοῦ Παρακλήτου, καὶ ἐκφάντορες, τοῦ Θεοῦ Λόγου, ἀνεδείχθητε θεόπται Ἀπόστολοι, Βαρθολομαῖε τῶν Δώδεκα σύσκηνε, καὶ Βαρνάβα ὡς υἱὸς παρακλήσεως. Ἀλλὰ αἰτήσασθε, Χριστὸν τὸν Θεὸν πανεύφημοι, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ', Θείας πίστεως — the first of two apolytikia on the page of «Άγιοι Βαρθολομαίος και Βαρνάβας», and the one that names them both; the second is a common of apostles, and the page's kontakion names Bartholomew alone",
+        "url": "https://www.saint.gr/571/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be divine instruments of the Paraclete and revealers of the Word of God, O apostles who beheld God — Bartholomew, tent-fellow of the Twelve, and Barnabas, as a son of consolation. All-praised ones, ask Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "bartholomew-the-apostle",
+    "paul-the-apostle",
+    "mark-the-evangelist"
+  ]
 }

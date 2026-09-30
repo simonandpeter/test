@@ -6,6 +6,11 @@
       "form": "Luca",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 iunie, «Sfântul Ierarh Luca, Arhiepiscopul Crimeei»."
+    },
+    {
+      "form": "Λουκάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιουνίου, «Άγιος Λουκάς Αρχιεπίσκοπος Συμφερουπόλεως και Κριμαίας», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουνίου — «Άγιος Λουκάς Αρχιεπίσκοπος Συμφερουπόλεως και Κριμαίας»",
+        "url": "https://www.saint.gr/06/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and dates him «(1877 - 1961)». It is plainly the same man: Valentin Feliksovich Voino-Yasenetsky, the surgeon who became archbishop of Simferopol and the Crimea, born at Kerch on 14/27 April 1877, repeatedly imprisoned and exiled under the Soviet power. The page says the day is the anniversary of his repose. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -66,5 +81,37 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Νέον ἅγιον τοῦ Παρακλήτου, σέ ἀνέδειξεν, Λουκᾶ ἡ Χάρις, ἐν καιροῖς διωγμῶν τε καί θλίψεων Νόσους μέν ὡς ἰατρός ἐθεράπευσας, καί τάς ψυχάς ὡς ποιμήν καθοδήγησας πάτερ τίμιε, ἐγγάμων τύπος καί μοναστῶν, πρέσβευε σωθῆναι τάς ψυχάς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον — the first of two apolytikia on the page of «Άγιος Λουκάς Αρχιεπίσκοπος Συμφερουπόλεως και Κριμαίας»; the page prints no ἦχος above this one",
+        "url": "https://www.saint.gr/1972/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Grace showed you forth, O Luke, as a new saint of the Paraclete in times of persecutions and afflictions: as a physician you healed diseases, and as a shepherd you guided souls, O honoured father, a pattern for the married and for monastics alike. Intercede that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ἀνεδείχθης ἥλιος, νυκτί βαθεῖα, διωγμοῦ, μακάριε, διό καί θάλπος νοητόν, τό ἐκ Θεοῦ σύ ἐξέχεας, χειμαζομένοις, Λουκᾶ πανσεβάσμιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον — the first of two kontakia on the page of «Άγιος Λουκάς Αρχιεπίσκοπος Συμφερουπόλεως και Κριμαίας»; the page prints no ἦχος above this one",
+        "url": "https://www.saint.gr/1972/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown forth as a sun in the deep night of persecution, O blessed one, and so you poured out upon the storm-tossed the spiritual warmth that comes from God, all-venerable Luke.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
