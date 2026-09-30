@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ζηνων zeno-companion-of-zoilus zeno-of-diospolis zeno-the-courier zeno-the-faster-of-kiev':
+    'Four men on four Greek days: the companion of Zoilus on 3 March, Diospolis on 27 September, the courier on 10 February and the faster of Kiev on 30 January.',
+  'companion zeno zoilus zeno-companion-of-zoilus zoilus-companion-of-zeno':
+    'The pair the 3 March page names together, each named after the other, which is what folds them.',
   'σαββατιοσ sabbatius-of-antioch sabbatius-of-tver':
     'Two men: Antioch on 19 September, which all four calendars keep, and Tver on 2 March.',
   'σαββασ sabbas-of-sicily sabbas-of-tver sabbas-of-zographou sabbas-the-spiritual sava-of-serbia sava-the-second':

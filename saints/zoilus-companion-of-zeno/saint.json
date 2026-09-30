@@ -1,0 +1,54 @@
+{
+  "slug": "zoilus-companion-of-zeno",
+  "display_name": "Zoilus, companion of Zeno",
+  "names": [
+    {
+      "form": "Ζωίλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαρτίου, «Όσιοι Ζήνων και Ζωίλος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαρτίου — «Όσιοι Ζήνων και Ζωίλος»",
+        "url": "https://www.saint.gr/03/03/index.aspx",
+        "year": 2026
+      },
+      "note": "One page holds the two of them and its whole notice is one sentence: «Είναι άγνωστο που και πότε τέλεσαν τον δρόμο της ασκήσεως οι Όσιοι Ζήνων και Ζωίλος, οι οποίοι κοιμήθηκαν με ειρήνη». Because the site says plainly that it has no place and no time, there is no `dates` object here. The page prints an etymology block over the name Ζήνων and none over his, names no relic and gives no hymn. No other bearer of this name stands anywhere in the corpus."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "zeno-companion-of-zoilus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

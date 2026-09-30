@@ -1,0 +1,58 @@
+{
+  "slug": "nine-martyrs-of-georgia",
+  "display_name": "The Nine Martyrs of Georgia",
+  "names": [
+    {
+      "form": "Εννέα Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαρτίου, «Άγιοι Εννέα Μάρτυρες οι εκ Γεωργίας», with the rank word and the country left off. The site gives no personal name for any of the nine."
+    }
+  ],
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαρτίου — «Άγιοι Εννέα Μάρτυρες οι εκ Γεωργίας»",
+        "url": "https://www.saint.gr/03/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole notice is one sentence: «Οι εννέα αυτοί Άγιοι Μάρτυρες μαρτύρησαν στο χωριό Μαραμπντά της ανατολικής Γεωργίας, στην περιοχή της Καχέτης, κατά το έτος 1625 μ.Χ.» — these nine holy martyrs were martyred in the village of Marabda in eastern Georgia, in the region of Kakheti, in the year 1625. The page names none of the nine, so they are kept as one entry and not as nine folders; a number is what the calendar prints and a number is what this folder holds. It gives no manner of death, no persecutor, no relic, no distich and no hymn, and carries no etymology block."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1625,
+      "latest": 1625,
+      "display": "1625",
+      "basis": "attested",
+      "note": "saint.gr: «Οι εννέα αυτοί Άγιοι Μάρτυρες μαρτύρησαν στο χωριό Μαραμπντά της ανατολικής Γεωργίας, στην περιοχή της Καχέτης, κατά το έτος 1625 μ.Χ.» — the year is the page's own and it is the only date it gives."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

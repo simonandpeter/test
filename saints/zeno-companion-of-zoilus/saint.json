@@ -1,0 +1,54 @@
+{
+  "slug": "zeno-companion-of-zoilus",
+  "display_name": "Zeno, companion of Zoilus",
+  "names": [
+    {
+      "form": "Ζήνων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαρτίου, «Όσιοι Ζήνων και Ζωίλος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαρτίου — «Όσιοι Ζήνων και Ζωίλος»",
+        "url": "https://www.saint.gr/03/03/index.aspx",
+        "year": 2026
+      },
+      "note": "One page holds the two of them and its whole notice is one sentence: «Είναι άγνωστο που και πότε τέλεσαν τον δρόμο της ασκήσεως οι Όσιοι Ζήνων και Ζωίλος, οι οποίοι κοιμήθηκαν με ειρήνη» — it is unknown where and when the venerable Zeno and Zoilus finished the road of the ascesis, who fell asleep in peace. Because the site says plainly that it has no place and no time, there is no `dates` object here. It prints the distich «Ζωῆς λύσις Ζήνωνι καὶ τῷ Ζωΐλω / Ζωῆς ὑπῆρξε κρείττονος παραιτία», names no relic and gives no hymn. The corpus keeps nine other men of this name and none of them is on this day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "zoilus-companion-of-zeno"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Eutropie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 martie, «Sfântul Mucenic Eutropie»."
+    },
+    {
+      "form": "Ευτρόπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαρτίου, «Άγιοι Ευτρόπιος, Κλεόνικος και Βασιλίσκος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -14,7 +19,8 @@
   ],
   "related": [
     "cleonicus-of-cappadocia",
-    "basiliscus-of-amasea"
+    "basiliscus-of-amasea",
+    "theodore-the-recruit"
   ],
   "dates": {
     "death": {
@@ -47,8 +53,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαρτίου — «Άγιοι Ευτρόπιος, Κλεόνικος και Βασιλίσκος»",
+        "url": "https://www.saint.gr/03/03/index.aspx",
+        "year": 2026
+      },
+      "note": "One page holds the three of them. It puts them at «την Αμάσεια του Πόντου» — Amasea of Pontus, where the corpus's own display names, taken from doxologia, say Cappadocia — makes them soldiers and kinsmen of St Theodore the Tiron, and sets them «κατά τους χρόνους του αυτοκράτορα Μαξιμιανού (286-305 μ.Χ.)» under the governor Asklepiodotos. It heads each of them «(; - 308)» and says «Στις 3 Μαρτίου του 308 μ.Χ., ο Ευτρόπιος και ο Κλεόνικος κοσμήθηκαν με τους στέφανους ... διά του σταυρικού τους θανάτου». That year lies outside the 286–305 interval this folder already holds from doxologia's reign of Maximian, and the two cannot both be right; the corpus's reading is left as it stands and saint.gr's year is recorded here. The page also has the Lord and the great-martyr Theodore appear to them twice, the idol of Artemis fall at Cleonicus's prayer, the boiling pitch burn the executioners instead of the martyrs, and the newly baptised onlookers beheaded. It prints four distichs, one for each man and one for the crucifixion, an apolytikion and a kontakion naming all three, and a second apolytikion which is the common of martyrs."
     },
     {
       "church": "serbian",
@@ -70,6 +86,40 @@
       },
       "english": {
         "text": "Thy martyrs, O Lord, in their contests received crowns of incorruption from Thee, our God; for having Thy strength they overcame their tormentors, and broke the strengthless daring of the demons. At their prayers, O Christ our God, save Thou our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Τὸ τρίστοιχον ἄθροισμα, τῶν Ἀθλητῶν τοῦ Χριστοῦ, Εὐτρόπιον μέλψωμεν, σὺν Βασιλίσκω ὁμού, τὸν θεῖον Κλεόνικον οὗτοι γὰρ τῆς Τριάδος, τὸ ὑπέρθεον κράτος, ἄθλοις ὑπερφυέσιν, ὠμολόγησαν πάσιν ἡ πάντοτε πρεσβεύουσι, σώζεσθαι ἅπαντας.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε, on the page the three of them share. It names all three and is one text for the company, not three. Beside it the page prints an «Έτερον Ἀπολυτίκιον» in the same tone, «Οἱ Μάρτυρές σου Κύριε», which is the common of martyrs and names nobody; the proper apolytikion and the kontakion are the two taken here.",
+        "url": "https://www.saint.gr/1728/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us sing the threefold company of the contenders of Christ — Eutropius, together with Basiliscus, and the divine Cleonicus; for by contests beyond nature they confessed before all the supremely divine sovereignty of the Trinity, and they intercede at all times that all may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ἁρμονίᾳ πίστεως συνδεδεμένοι, τοῦ ἐχθροῦ διέλυσαν, τάς παρατάξεις ἐμφανῶς, σύν Εὐτροπίῳ Κλεόνικος, καί Βασιλίσκος γενναίως ἀθλήσαντες.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page the three of them share. It names all three and is one text for the company.",
+        "url": "https://www.saint.gr/1728/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Bound together in the harmony of faith, Cleonicus with Eutropius and Basiliscus, contending nobly, broke up openly the battle lines of the enemy.",
         "rendered": "site"
       }
     }

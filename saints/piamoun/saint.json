@@ -1,0 +1,60 @@
+{
+  "slug": "piamoun",
+  "display_name": "Piamoun",
+  "names": [
+    {
+      "form": "Πιαμούν",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαρτίου, «Οσία Πιαμούν η Παρθένος», with the rank word and the epithet left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "virgin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαρτίου — «Οσία Πιαμούν η Παρθένος»",
+        "url": "https://www.saint.gr/03/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The page puts her in Egypt in the fourth century, orphaned of her father young and raised by her Christian mother, and gives no year, no city, no monastery, no relic and no hymn. It prints the distich «Κροσσωτὰ χρυσᾶ Πιαμοῦν μελαμφόρος, / Τὰς ἀρετὰς ἄπεισιν ἠμφιεσμένη», which sets her black habit against the golden fringes of the psalm. It does not name the enemies who besieged her birthplace, and carries no etymology block over her name. No other bearer of this name stands anywhere in the corpus."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Οσία Πιαμούν, καταγόταν από την Αίγυπτο όπου έζησε τον 4ο μ.Χ. αιώνα» — she came of Egypt, where she lived in the fourth century. The page gives no year of birth and none of repose."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

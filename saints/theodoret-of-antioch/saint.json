@@ -1,0 +1,61 @@
+{
+  "slug": "theodoret-of-antioch",
+  "display_name": "Theodoret of Antioch",
+  "office": "Presbyter of the church of Antioch",
+  "names": [
+    {
+      "form": "Θεοδώρητος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαρτίου, «Άγιος Θεοδώρητος ο Ιερομάρτυρας, πρεσβύτερος Αντιοχείας», with the rank words and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαρτίου — «Άγιος Θεοδώρητος ο Ιερομάρτυρας, πρεσβύτερος Αντιοχείας»",
+        "url": "https://www.saint.gr/03/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 361)» and puts him in the years of Julian the Apostate, whose reign it gives as 360 to 363. It names the eparch of the city who arrested him as another Julian, and adds the attribution «κατά τον Σ. Εύστρατιάδη ήταν θείος του Ιουλιανού του Παραβάτη και ήταν προηγουμένως Χριστιανός και αναγνώστης της Εκκλησίας της Αντιόχειας» — according to S. Eustratiades he was the Apostate's uncle, and had formerly been a Christian and a reader of the church of Antioch. It prints the distich «Χωρεῖν ἔχει που τῆς Ἐδὲμ τὸ χωρίον, / Καὶ τὸν Θεοδώρητον ἔνδον τὸν μέγαν», names no relic and gives no hymn. Its etymology block lists three other bearers of the name, among them the fifth-century church writer and the bishop of Vresthena of 1821, and none of them is this man. saint.gr keeps him a second time on 17 Μαΐου, on its own page (https://www.saint.gr/1621/saint.aspx, read 1 October 2026), whose whole body is one sentence — presbyter of the Church of Antioch, martyred in the years of Julian the Apostate, 361 to 363 — with a gloss parting him from the fifth-century writer, a general of Justinian and the bishop of Vresthena of 1821. One row per church is the schema, so the second day is recorded here and not as a row or a folder."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 361,
+      "display": "361",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Θεοδωρητος ο Ιερομαρτυρας, Πρεσβυτερος Αντιοχειας (; - 361)». The body gives no year of its own, only the reign: «στα δύσκολα χρόνια του αυτοκράτορα Ιουλιανού του Παραβάτη (360 - 363 μ.Χ.)», which the year sits inside. No year of birth is given."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
