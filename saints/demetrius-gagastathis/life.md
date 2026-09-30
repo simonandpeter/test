@@ -1,0 +1,13 @@
+# Demetrius (Gagastathis)
+
+Demetrius Gagastathis was born on 1 August 1903 in the village of Platanos, formerly Vania, in the district of Trikala, of poor parents. From a small child, saint.gr says, he was marked by an old-fashioned reverence and helped the priest at the services, and for games did whatever he saw the priest do; he loved reading the lives of the saints, and while pasturing his sheep he painted simple icons of them.
+
+He was called up for the Asia Minor campaign, and was more than once saved from certain death, the page says, by the wonderworking help of the Archangels he loved. Returning safe to his village in June 1924, he married in 1928 a devout woman of the place, Elisabeth, and had nine daughters by her, of whom the youngest became a nun and an abbess with the name Isidora.
+
+The metropolitan of Trikke, Polykarpos, made him a reader, ordained him deacon on 24 May 1931 and priest two days later. He studied at the priests' school of Tripolis and then served for forty-two years at the church of Saint Nicholas in his own village, with the oversight of its other chapels, above all that of his protectors the Archangels, where he would withdraw at night to keep vigil and pray.
+
+His whole life passed, the page says, in unceasing prayer, in hidden almsgiving and in pilgrimages, above all to the monasteries of Meteora, where he went up to confess to the elder Aimilianos. He formed close spiritual friendships with [Amphilochios of Patmos](/saints/amphilochius-makris-of-patmos), with [Athanasius Hamakiotis](/saints/athanasius-hamakiotis) and with [Justin Popović](/saints/justin-popovich), and a particular bond with the wonderworking protector of Trikala, [Bessarion of Larissa](/saints/bessarion-of-larissa), of whose bodily presence at a Liturgy he served at the monastery of Dousiko he would speak in ecstasy. He signed his letters as the last of all and a sinful little priest, rather the refuse of the earth.
+
+The law of corruption tried the man of God for three years with the very painful illness of cancer, which he bore without complaining, glorifying the Lord like another Job, and receiving his many visitors at his bed of pain to the last day. He fell asleep on 29 January 1975, and his funeral, attended by the whole countryside, was held the next day at the church of Saint Nicholas in Platanos. He had been held a saint of God while still alive, and on 9 July 2025 the Holy Synod of the Ecumenical Patriarchate under Patriarch Bartholomew resolved his canonisation and appointed his memory for 29 January, the day of his repose.
+
+*After saint.gr's calendar for 29 Ιανουαρίου — [the day](https://www.saint.gr/01/29/index.aspx) and [the life](https://www.saint.gr/4490/saint.aspx); read 30 September 2026.*

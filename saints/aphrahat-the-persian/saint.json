@@ -6,6 +6,11 @@
       "form": "Afraat",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 ianuarie, «Sfântul Afraat Persanul»."
+    },
+    {
+      "form": "Αφραάτης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Ιανουαρίου, «Όσιος Αφραάτης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -51,8 +56,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Ιανουαρίου — «Όσιος Αφραάτης»",
+        "url": "https://www.saint.gr/01/29/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

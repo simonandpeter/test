@@ -1,0 +1,86 @@
+{
+  "slug": "ignatius-the-sinaite",
+  "display_name": "Ignatius the Sinaite",
+  "names": [
+    {
+      "form": "Ιγνάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Ιανουαρίου, «Όσιος Ιγνάτιος ο Σιναΐτης εκ Ρεθύμνης», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Ιανουαρίου — «Όσιος Ιγνάτιος ο Σιναΐτης εκ Ρεθύμνης»",
+        "url": "https://www.saint.gr/01/29/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α΄.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Ἐκ Ῥεθύμνης ὡς ἄστρον τὸν ἀνατείλαντα, πνευματοφόρον πατέρα, τῆς ἀρετῆς ἐραστήν, ἀκτησίας καὶ εὐχῆς φωστῆρα μέλψωμεν, ὅτι ἐφώτισεν αὐγαῖς, ἀπαθείας Ἀσκητάς, Σιναίου βοῶντες· ζόφον, τῆς ἁμαρτιας εὐχαῖς σου, ἡμῶν ἐκδίωξον Ἰγνάτιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Όσιος Ιγνάτιος ο Σιναΐτης εκ Ρεθύμνης — Ἀπολυτίκιον, Ἦχος πλ. α΄. «Τὸν συνάναρχον Λόγον»",
+        "url": "https://www.saint.gr/3557/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us sing of the father who rose like a star out of Rethymno, the spirit-bearer, the lover of virtue, the luminary of poverty and of prayer; for he gave light with the rays of dispassion to the ascetics of Sinai. And let us cry: drive away from us by your prayers the gloom of sin, Ignatius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄.",
+      "model": "Τῇ Ὑπερμάχῳ.",
+      "text": "Τὸν ἐγκρατῆ πνευματοφόρον καὶ ἀκτήμονα, Σιναίου ὄρους ἀσκητὴν ἐγκωμιάσωμεν, ἐκ Ῥεθύμνης τὸν βλαστήσαντα νησου Κρήτης, ὡς ἀζύγων ποδηγέτην ἀπλανέστατον, πρὸς χαρὰν τὴν ἐν τῷ πόλῳ ἀτελεύτητον, ἀνακράζοντες· Χαίροις μάκαρ Ἰγνάτιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Όσιος Ιγνάτιος ο Σιναΐτης εκ Ρεθύμνης — Κοντάκιον, Ἦχος δ΄. «Τῇ Ὑπερμάχῳ»",
+        "url": "https://www.saint.gr/3557/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise the temperate, spirit-bearing and possessionless ascetic of Mount Sinai, who sprang from Rethymno on the island of Crete, as a most unerring guide of the unwedded toward the unending joy of heaven, crying out: Rejoice, blessed Ignatius.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

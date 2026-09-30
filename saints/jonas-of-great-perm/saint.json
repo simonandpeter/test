@@ -1,0 +1,64 @@
+{
+  "slug": "jonas-of-great-perm",
+  "display_name": "Jonas of Great Perm",
+  "office": "Bishop of Great Perm",
+  "names": [
+    {
+      "form": "Ιωνάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Ιανουαρίου, «Άγιοι Γεράσιμος, Ιωνάς και Πιτιρίμ εκ Ρωσίας», with the rank word left off; his own heading on the life page is «Αγιος Ιωνας Εκ Ρωσιας»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "related": [
+    "gerasimus-of-great-perm",
+    "pitirim-of-perm"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1471,
+      "latest": 1471,
+      "display": "1471",
+      "basis": "attested",
+      "note": "saint.gr: «Ιωνάς (κοιμήθηκε το 1471 μ.Χ.)»; his heading dates him «(; - 1471)». It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Ιανουαρίου — «Άγιοι Γεράσιμος, Ιωνάς και Πιτιρίμ εκ Ρωσίας»",
+        "url": "https://www.saint.gr/01/29/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

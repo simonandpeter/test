@@ -6,6 +6,11 @@
       "form": "Andrei Rubliov",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 iulie, «Sfântul Cuvios Andrei Rubliov, iconograful»."
+    },
+    {
+      "form": "Ανδρέας Ρουμπλιόβ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Ιανουαρίου, «Άγιος Ανδρέας Ρουμπλιόβ ο Εικονογράφος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Ιανουαρίου — «Άγιος Ανδρέας Ρουμπλιόβ ο Εικονογράφος»",
+        "url": "https://www.saint.gr/01/29/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr lists him on its 29 Ιανουαρίου page and its own page for him heads «Ημερομηνία Εορτής: 29/01» and calls the feast fixed on that day — but prints no life there, saying instead «Για τον Άγιο Αντρέα Ρουμπλιόβ τον Εικονογράφο βλέπε στις 4 Ιουλίου», which is the day the Romanian calendar keeps him on and the day his life is cited from. That second Greek day page was not read; this row records the day page that was."
     },
     {
       "church": "serbian",

@@ -6,6 +6,11 @@
     {
       "form": "Питирим Великопермский",
       "lang": "ru"
+    },
+    {
+      "form": "Πιτιρίμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Ιανουαρίου, «Άγιοι Γεράσιμος, Ιωνάς και Πιτιρίμ εκ Ρωσίας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 19 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Ιανουαρίου — «Άγιοι Γεράσιμος, Ιωνάς και Πιτιρίμ εκ Ρωσίας»",
+        "url": "https://www.saint.gr/01/29/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -96,5 +110,9 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "gerasimus-of-great-perm",
+    "jonas-of-great-perm"
   ]
 }

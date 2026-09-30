@@ -1,0 +1,101 @@
+{
+  "slug": "demetrius-of-chios",
+  "display_name": "Demetrius of Chios",
+  "names": [
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Ιανουαρίου, «Άγιος Δημήτριος ο Χιοπολίτης», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1780,
+      "latest": 1780,
+      "display": "1780",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Δημήτριος γεννήθηκε το 1780 μ.Χ. στο χωριό Παλιόκαστρο της Χίου»; the page's heading dates him «(1780 - 1802)»."
+    },
+    "death": {
+      "earliest": 1802,
+      "latest": 1802,
+      "display": "1802",
+      "basis": "attested",
+      "note": "saint.gr: «αποκεφαλίστηκε στις 29 Ιανουαρίου 1802 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Ιανουαρίου — «Άγιος Δημήτριος ο Χιοπολίτης»",
+        "url": "https://www.saint.gr/01/29/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος γ'.",
+      "model": "Θείας πίστεως.",
+      "text": "Χαίρε βλάστημα, τερπνόν της Χίου` χαίρε καύχημα, των ορθοδόξων, καρτερόψυχε, νέε Δημήτριε` την γαρ αντίχριστον πλάνην εφαύλισας, ένθα του κράτους υπάρχει το φρύαγμα, ως ανέκραζες, Θεόν τον Χριστόν επίσταμαι, δωρούμενον ημίν το μέγα έλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Δημήτριος ο Χιοπολίτης — Ἀπολυτίκιον, Ήχος γ'. «Θείας πίστεως»",
+        "url": "https://www.saint.gr/3553/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Rejoice, delightful offshoot of Chios; rejoice, boast of the Orthodox, stout-hearted new Demetrius; for you made nothing of the antichristian error in the very place where the arrogance of the empire sat, crying out: I know Christ to be God, who grants us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος γ'.",
+      "model": "Η Παρθένος σήμερον.",
+      "text": "Η λαμπρά του Βύζαντος, και μεγαλώνυμος Πόλις, μελωδείτω σήμερον, μεγαλοφώνως βοώσα, σκάμματα τα υπέρ φύσιν του Δημητρίου, νέου μεν, μετά τον πάλαι τον Μυρορροάν, διά σε Χριστόν σφαγέντος, όνπερ ανύμνει σε, ως φύσει Θεού Υιόν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Δημήτριος ο Χιοπολίτης — Κοντάκιον, Ήχος γ'. «Η Παρθένος σήμερον»",
+        "url": "https://www.saint.gr/3553/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let the bright and great-named City of Byzas sing today, crying aloud of the contests of Demetrius that were beyond nature — a new Demetrius after the ancient one who streams myrrh, slain for you, O Christ, whom he hymned as Son of God by nature.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

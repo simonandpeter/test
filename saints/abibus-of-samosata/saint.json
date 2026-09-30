@@ -6,6 +6,11 @@
       "form": "Aviv",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 ianuarie, «Sfântul Mucenic Aviv»."
+    },
+    {
+      "form": "Άβιβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's own heading for him on the page for the seven martyrs of 29 Ιανουαρίου, «Αγιος Άβιβος ο Εν Σαμοσατοις», with the rank word left off; the day's line keeps the seven together as «Αγίοι Επτά Μάρτυρες οι εν Σαμοσάτοις τελειωθέντες»."
     }
   ],
   "sex": "male",
@@ -42,8 +47,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Ιανουαρίου — «Αγίοι Επτά Μάρτυρες οι εν Σαμοσάτοις τελειωθέντες»",
+        "url": "https://www.saint.gr/01/29/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

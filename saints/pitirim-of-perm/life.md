@@ -40,6 +40,8 @@ common memory acknowledges their apostolic work in the eastern marches of
 Russia; the Russian calendar keeps Pitirim on 19 August (Julian) with a
 troparion and a kontakion.
 
+The Greek calendar keeps him on the twenty-ninth of January, and not alone: saint.gr's page sets him between two other bishops of Great Perm, [Gerasimus](/saints/gerasimus-of-great-perm), who fell asleep in 1441, and [Jonas](/saints/jonas-of-great-perm), who fell asleep in 1471, and gives Pitirim's own repose as 1455. All three, it says, came from Russia, lived in the fifteenth century, held the see of Great Perm, and fell asleep in holiness and in peace; and it puts the relics of all three in the church of the Annunciation of the Theotokos at Ust-Vym in the region of Vologda. The Greek page says nothing of the martyrdom the Russian calendar records for him, and prints for him no apolytikion and no kontakion.
+
 *After the life printed by the Sretensky calendar (days.pravoslavie.ru) —
 [the entry](https://days.pravoslavie.ru/Life/life332.htm), read 5 September 2026 — this
-time whole; the earlier reading had stopped partway.*
+time whole; the earlier reading had stopped partway; and after saint.gr's calendar for 29 Ιανουαρίου — [the day](https://www.saint.gr/01/29/index.aspx) and [the life](https://www.saint.gr/3556/saint.aspx), read 30 September 2026.*

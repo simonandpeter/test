@@ -1,0 +1,92 @@
+{
+  "slug": "demetrius-gagastathis",
+  "display_name": "Demetrius (Gagastathis)",
+  "names": [
+    {
+      "form": "Δημήτριος Γκαγκαστάθης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Ιανουαρίου, «Όσιος Δημήτριος Γκαγκαστάθης ο ιερεύς», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter"
+  ],
+  "related": [
+    "amphilochius-makris-of-patmos",
+    "athanasius-hamakiotis",
+    "justin-popovich",
+    "bessarion-of-larissa"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1903,
+      "latest": 1903,
+      "display": "1903",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε στο χωριό Πλάτανο (πρώην Βάνια) Τρικάλων, την 1η Αυγούστου 1903 μ.Χ., από γονείς πτωχούς»; the page's heading dates him «(1903 - 1975)»."
+    },
+    "death": {
+      "earliest": 1975,
+      "latest": 1975,
+      "display": "1975",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος αναπαύθηκε στις 29 Ιανουαρίου 1975 μ.Χ., η δε πάνδημος κηδεία του έγινε 30 Ιανουαρίου 1975 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Ιανουαρίου — «Όσιος Δημήτριος Γκαγκαστάθης ο ιερεύς»",
+        "url": "https://www.saint.gr/01/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The same page dates the canonisation: «στις 9 Ιουλίου 2025 μ.Χ. αποφάσισε την αγιοκατάταξή του και όρισε η μνήμη του να τελείται στις 29 Ιανουαρίου, ημέρα της κοιμήσεώς του» — the Holy Synod of the Ecumenical Patriarchate under Patriarch Bartholomew, 9 July 2025."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Ὡς σκεῦος σε χάριτος, καὶ λειτουργὸν ἱερόν, καὶ καύχημα ἔνθεον τῆς Τρίκκης, ὕμνοις λαμπρῶς τιμῶμεν, Δημήτριε· σὺ γὰρ ἐκ τοῦ Πλατάνου, ὡς ἀστήρ, θεοφόρε, ἔλαμψας ἀρετῶν σου λαμπηδὸσι· διόπερ, ἡμᾶς τοὺς σὲ ὑμνοῦντας πιστῶς, πρεσβείαις σου φώτισον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Όσιος Δημήτριος Γκαγκαστάθης ο ιερεύς — Ἀπολυτίκιον, Ἦχος δ΄. «Ταχύ προκατάλαβε»",
+        "url": "https://www.saint.gr/4490/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a vessel of grace, a sacred minister and a God-inspired boast of Trikke, we honour you brightly with hymns, Demetrius; for out of Platanos you shone, God-bearer, like a star, with the brilliance of your virtues. Therefore enlighten by your prayers us who hymn you in faith.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "barsimaeus-of-edessa",
+  "display_name": "Barsimaeus of Edessa",
+  "office": "Bishop of Edessa",
+  "names": [
+    {
+      "form": "Βαρσιμαίος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Ιανουαρίου, «Άγιος Βαρσιμαίος Επίσκοπος Εδέσσης ο Oμολογητής», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "confessor"
+  ],
+  "related": [
+    "sarbel-the-martyr",
+    "bebaia-the-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 114,
+      "latest": 114,
+      "display": "114",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Βαρσιμαίος, αφού έζησε θεοφιλώς το υπόλοιπο του βίου του, κοιμήθηκε με ειρήνη το έτος 114 μ.Χ.»; the page's heading dates him «(; - 114)». It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Ιανουαρίου — «Άγιος Βαρσιμαίος Επίσκοπος Εδέσσης ο Oμολογητής»",
+        "url": "https://www.saint.gr/01/29/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

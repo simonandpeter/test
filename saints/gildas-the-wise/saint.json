@@ -1,0 +1,65 @@
+{
+  "slug": "gildas-the-wise",
+  "display_name": "Gildas the Wise",
+  "names": [
+    {
+      "form": "Γκίλντας",
+      "lang": "el",
+      "note": "Read out of saint.gr's own gloss on its line for 29 Ιανουαρίου: the day prints the name in Latin letters, «Άγιος Gildas ο σοφός», and the life page gives «Ο Άγιος Gildas (Γκίλντας)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 495,
+      "latest": 505,
+      "display": "c. 500",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε περί το 500 μ.Χ. στην Ουαλία». The bounds are the corpus's reading of the page's «περί»."
+    },
+    "death": {
+      "earliest": 565,
+      "latest": 575,
+      "display": "c. 570",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε οσίως περί το 570 μ.Χ.» The bounds are the corpus's reading of the page's «περί»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Ιανουαρίου — «Άγιος Gildas ο σοφός»",
+        "url": "https://www.saint.gr/01/29/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

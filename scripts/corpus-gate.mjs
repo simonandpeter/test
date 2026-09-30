@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'λαυρεντιοσ laurence-martyr-9-january laurence-of-turov':
+    'two men, twenty days apart on one calendar. saint.gr keeps Laurence, bishop of Turov, dead 1194, on 29 Ιανουαρίου, and a bare martyr Laurence with no year on the 9th, both written in this wave. A twelfth-century Russian bishop is not a martyr of the persecutions.',
+  'ιωνασ jonah-of-kyiv jonas-of-great-perm':
+    'two men, four centuries apart. saint.gr keeps Jonas, bishop of Great Perm, dead 1471, on 29 Ιανουαρίου; the corpus keeps Jonah of Kyiv, dead 1902, on the Greek 9 January, written earlier in this wave.',
+  'δημητριοσ demetrius-of-chios demetrius-of-constantinople demetrius-the-skeuophylax':
+    'three men. The new one is Demetrius of Chios, a new-martyr of 1802, kept on 29 Ιανουαρίου; the other two are read in the el-01-27 entry for this name form — the Skeuophylax of the 25th and the new-martyr of Constantinople of 1784 on the 27th. Two new-martyrs eighteen years apart and two separate days, which is what the calendar says and all it says.',
   'γεωργιοσ george-of-develtos george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian':
     'five now. The new one is George the Hungarian, a martyr of 1015, kept on 28 Ιανουαρίου; the other four are the bishop of Develtos on the 22nd, the Chozebite whom the Romanian and Greek calendars keep on the 8th, the Iberian new-martyr at Mytilene on the 2nd and the Persian of 615 on the 6th, read in the el-01-06 and el-01-22 entries for this name form.',
   'εφραιμ ephrem-of-kiev ephrem-of-novotorzhsk ephrem-the-syrian':
@@ -1295,7 +1301,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '387'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '398'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;
