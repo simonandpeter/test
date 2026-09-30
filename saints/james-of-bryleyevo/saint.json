@@ -1,0 +1,64 @@
+{
+  "slug": "james-of-bryleyevo",
+  "display_name": "James of Bryleyevo",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Απριλίου, «Όσιος Ιάκωβος του Βρυλέεφ», with the rank word left off."
+    }
+  ],
+  "related": [
+    "james-of-zheleznyi-borok"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1401,
+      "latest": 1500,
+      "display": "15th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ιάκωβος του Βρυλέεφ έζησε στη Ρωσία κατά τον 15ο αιώνα μ.Χ.». The page gives no year of birth and none of death, and its heading carries no years."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Απριλίου — «Όσιος Ιάκωβος του Βρυλέεφ»",
+        "url": "https://www.saint.gr/04/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Απριλίου εκάστου έτους», the same day as the listing, and carries no years. The same 11 April page keeps his teacher as a separate entry, and the two are told apart by their houses and their dates: this man is of the Bryleyevo hermitage and of the fifteenth century, the other of Zheleznyi Borok and dead in 1442. The page spells his master's house two ways within one sentence, «μονή Ζέλεζνιυ-Μπορόκ» and «Αγίου Ιακώβου του Ζελενί-Μπορ», and his own hermitage «έρημο Βρυέεφ» where the day's line has «Βρυλέεφ»; all of those readings are the page's. It prints no couplet and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

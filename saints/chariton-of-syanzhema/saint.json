@@ -1,0 +1,64 @@
+{
+  "slug": "chariton-of-syanzhema",
+  "display_name": "Chariton of Syanzhema",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Χαρίτων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Απριλίου, «Όσιοι Ευθύμιος και Χαρίτων», with the rank word left off."
+    }
+  ],
+  "related": [
+    "euthymius-of-syanzhema"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1509,
+      "latest": 1509,
+      "display": "1509",
+      "basis": "traditional",
+      "note": "saint.gr: «ενώ ο Όσιος Χαρίτων, που τον διαδέχθηκε στην καθοδήγηση της μονής, κοιμήθηκε το έτος 1509 μ.Χ.», and the page's heading has «Οσιος Χαριτων (; - 1509)». The page gives no birth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Απριλίου — «Όσιοι Ευθύμιος και Χαρίτων»",
+        "url": "https://www.saint.gr/04/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Απριλίου εκάστου έτους», the same day as the listing, and heads the two men «(; - 1465)» and «(; - 1509)». Two names in one line, so two folders. Syanzhema is in the display name because the corpus holds four other Charitons: it is the page's own Σγιανζέμα, the river country where Euthymius met him. Under the name the page prints a gloss belonging to somebody else, «Αρχαίος Κύπριος ιστοριογράφος», an ancient Cypriot historian, from which nothing was taken. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

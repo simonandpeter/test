@@ -1,0 +1,70 @@
+{
+  "slug": "barsanuphius-of-tver-and-kazan",
+  "display_name": "Barsanuphius of Tver and Kazan",
+  "sex": "male",
+  "office": "Bishop of Tver and Kazan",
+  "types": [
+    "bishop",
+    "monk",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Βαρσανούφιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Απριλίου, «Όσιος Βαρσανούφιος επίσκοπος Τβερ και Καζάν», with the rank word and the see left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 1495,
+      "latest": 1495,
+      "display": "1495",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Βαρσανούφιος, κατά κόσμον Βασίλειος, γεννήθηκε το έτος 1495 μ.Χ. στο Σέρπουχωφ της Ρωσίας και καταγόταν από ιερατική οικογένεια», and the page's heading has «(1495 - 1576)»."
+    },
+    "death": {
+      "earliest": 1576,
+      "latest": 1576,
+      "display": "1576",
+      "basis": "traditional",
+      "note": "saint.gr: «Εκεί έλαβε το Μέγα Αγγελικό Σχήμα και κοιμήθηκε με ειρήνη, το έτος 1576 μ.Χ.», and the page's heading has «(1495 - 1576)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Απριλίου — «Όσιος Βαρσανούφιος επίσκοπος Τβερ και Καζάν»",
+        "url": "https://www.saint.gr/04/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(1495 - 1576)». It dates two later events that are not feasts and are recorded here rather than as rows: the finding of his relics with those of Gurias on 4 Οκτωβρίου 1596 under the direction of the patriarch Job, and their carrying from the monastery of the Transfiguration to the cathedral of the Annunciation on 20 Ιουνίου 1630. He is none of the four other Barsanuphiuses in the corpus — the Great of Gaza, the elder of Optina, the abbot of Kirillov and the Athonite of Zographou. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

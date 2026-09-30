@@ -7,6 +7,11 @@
       "form": "Antipa",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 aprilie, «Sfântul Sfințit Mucenic Antipa, Episcopul Pergamului Asiei»."
+    },
+    {
+      "form": "Αντίπας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Απριλίου, «Άγιος Αντίπας Επίσκοπος Περγάμου», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Απριλίου — «Άγιος Αντίπας Επίσκοπος Περγάμου»",
+        "url": "https://www.saint.gr/04/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 92)»; its third couplet names the day, «Χάλκεον ἑνδεκάτῃ βληθεὶς φλέγῃ, Ἀντίπα, εἰς βοῦν». It prints a long list of relics: the head at the monastery of Panachrantou on Andros, part of the head at the monastery of John the Theologian on Patmos, the right hand at Dionysiou on Athos, the jaw at the Great Lavra, and portions at Dionysiou, Karakallou and Zographou on Athos, at Prousos in Eurytania, at the Gerokomeio of Patras and at Chrysopigi of Divri in Elis, at the Patriarchate of Constantinople, at the metropolitan church of Mytilene and at the church of his name at the University of Athens. Both of its hymns make him the healer of toothache; the day's line gives him no epithet of that kind."
     },
     {
       "church": "serbian",
@@ -64,9 +79,58 @@
         "text": "Overthrowing the deceits of the idols, O hieromartyr Antipas, and treading down the power of the demons, you confessed Christ boldly before those who fought against God. Therefore, having become a citizen of the world above, offering praise to the Master of all together with the angelic choirs, you set forth prayer of thanksgiving for us also and grant us the gift of healings; and so we honour you, holy hieromartyr Antipas. Entreat Christ God to save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Μυροβλύτην τὸν θεῖον καὶ μαρτύρων τὸν σύναθλον, τὸν πανευκλεῆ ἱεράρχην καὶ Περγάμου τὸν πρόεδρον, τιμήσωμεν Ἀντίπαν οἱ πιστοί, ὡς τάχιστον καὶ μέγαν ἱατρόν, τῆς δεινῆς ὀδόντων νόσου, καὶ πρὸς αὐτὸν ἀπὸ ψυχῆς βοήσωμεν· Δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Τῆς ἐρήμου πολίτης, on the page of Άγιος Αντίπας Επίσκοπος Περγάμου. It is his own and names him and his see.",
+        "url": "https://www.saint.gr/231/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The divine myrrh-gusher, the fellow-contestant of the martyrs, the hierarch of all renown and the president of Pergamum — Antipas let us the faithful honour, as the swift and great physician of the dreadful sickness of the teeth, and let us cry to him from the soul: glory to Christ who glorified thee, glory to him who crowned thee, glory to him who through thee works healings for all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τὴ ὑπερμάχω.",
+      "text": "Τόν ἱεράρχην καὶ κλεινόν μεγαλομάρτυρα, τὸν πολιοῦχον τῆς Περγάμου τὀν πανάριστον, καὶ κοινοῦ ἐχθροῦ ἀντίπαλον τὸν Ἀντίπαν, κατὰ χρέος εὐφημήσωμεν ἐν ᾄσμασιν, ὡς τοὺς πάσχοντας ὀδόντας θεραπεύοντα, πόθῳ κράζοντες· Xαίροις, Πάτερ τρισόλβιε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος πλ. δ’, Τὴ ὑπερμάχω, on the page of Άγιος Αντίπας Επίσκοπος Περγάμου. It is his own, names him, and plays his name against ἀντίπαλος, the adversary of the common enemy.",
+        "url": "https://www.saint.gr/231/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The hierarch and renowned great-martyr, the most excellent guardian of the city of Pergamum, and the adversary of the common enemy — Antipas let us praise in songs as we are bound to do, as one who heals aching teeth, crying to him with longing: rejoice, thrice-blessed father.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": null,
+      "latest": null,
+      "display": null,
+      "basis": "unknown"
+    },
+    "death": {
+      "earliest": 92,
+      "latest": 92,
+      "display": "92",
+      "basis": "traditional",
+      "note": "saint.gr: «τότε έδωσε εντολή να τον ρίξουν σε ένα πυρωμένο χάλκινο ομοίωμα βοδιού, όπου τελειώθηκε ο βίος του, το έτος 92 μ.Χ.», and the page's heading has «Αγιος Αντιπας Επισκοπος Περγαμου (; - 92)». The page gives no birth year and sets him in the years of Domitian, «(81 - 96 μ.Χ.)»."
+    }
   }
 }

@@ -115,6 +115,28 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'μηνασ menas-of-zographou menas-the-martyr-31-august minas-with-david-and-john':
+    'Three men: Zographou on 22 September, the martyr of 31 August and the Minas the 12 April page names with David and John.',
+  'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-kalita john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kazan john-of-lycopolis john-of-manglisi john-of-rouphinianai john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-well john-of-yuryevets john-philosopher-of-georgia john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-with-minas-and-david':
+    'Thirty-three now. The new one is the John the 12 April page names with Minas and David; the others are read in the el-04-08 entry for this name form.',
+  'companion demes protion demes-companion-of-protion protion-companion-of-demes':
+    'The pair the 12 April page names together, each named after the other, which is what folds them.',
+  'david john minas david-with-minas-and-john john-with-minas-and-david minas-with-david-and-john':
+    'The three the 12 April page names together, each named after the others, which is what folds them.',
+  'δαβιδ david-of-mytilene david-of-wales david-son-of-prince-theodore david-with-minas-and-john':
+    'Four men: Mytilene on 1 February, Wales on 1 March, the son of Prince Theodore on 19 September and the David the 12 April page names with Minas and John.',
+  'δαμιανοσ damian-disciple-of-polychronius damian-of-agrafa damian-of-esphigmenou damian-of-pavia':
+    'Four men: the disciple of Polychronius and Esphigmenou both on 23 February as two entries, Agrafa on 14 February and Damian of Pavia on 12 April.',
+  'ακακιοσ acacius-of-amida acacius-of-latros acacius-of-melitene acacius-of-the-forty-martyrs acacius-of-tver acacius-the-executioner acacius-the-kausokalyvite':
+    'Seven now. The new one is Acacius the Kausokalyvite on 12 April; the others are read in the el-04-09 entry for this name form.',
+  'ματρωνα matrona-of-amisos matrona-of-cyzicus matrona-of-thessalonica':
+    'Three women: Amisos on 20 March, Cyzicus on 11 April and Thessalonica on 27 March.',
+  'ιακωβοσ jacob-of-nimouzan jacob-the-hermit james-companion-of-emilian james-of-bryleyevo james-of-cyrrhus james-of-nisibis james-of-pharatha james-of-samosata james-of-serbia james-of-zheleznyi-borok james-of-zographou-the-first james-of-zographou-the-second james-the-confessor':
+    'Thirteen now, and **two of the new ones share 11 April** as two entries: James of Bryleyevo and James of Zheleznyi Borok, the two Russians the day keeps. The others are read in the el-04-10 entry for this name form.',
+  'ευθυμιοσ euthymius-kereselidze euthymius-of-dimitsana euthymius-of-novgorod euthymius-of-suzdal euthymius-of-syanzhema euthymius-of-tarnovo euthymius-of-zographou euthymius-the-man-of-god':
+    'Eight now. The new one is Euthymius of Syanzhema on 11 April; the others are read in the el-04-01 entry for this name form.',
+  'βαρσανουφιοσ barsanuphius-of-optina barsanuphius-of-tver barsanuphius-of-tver-and-kazan barsanuphius-of-zographou barsanuphius-the-great':
+    'Five men on five Greek days: Optina on 1 April, Tver on 2 March, Tver and Kazan on 11 April, Zographou on 22 September and the Great on 6 February. The two of Tver are two men: the bishop of Tver and Kazan reposed in 1576, and the 2 March Barsanuphius is of the Tver company the Greek keeps that day.',
   'μιλτιαδησ miltiades-companion-of-terentius miltiades-of-rome':
     'Two men on one day, and the page itself divides them: Miltiades is one of the names in the company of Terentius, and Miltiades of Rome, the pope, stands on the same 10 April as an entry of his own.',
   'ιακωβοσ jacob-of-nimouzan jacob-the-hermit james-companion-of-emilian james-of-cyrrhus james-of-nisibis james-of-pharatha james-of-samosata james-of-serbia james-of-zographou-the-first james-of-zographou-the-second james-the-confessor':

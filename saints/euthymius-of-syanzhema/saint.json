@@ -1,0 +1,64 @@
+{
+  "slug": "euthymius-of-syanzhema",
+  "display_name": "Euthymius of Syanzhema",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Ευθύμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Απριλίου, «Όσιοι Ευθύμιος και Χαρίτων», with the rank word left off."
+    }
+  ],
+  "related": [
+    "chariton-of-syanzhema"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1465,
+      "latest": 1465,
+      "display": "about 1465",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ευθύμιος κοιμήθηκε με ειρήνη περί το έτος 1465 μ.Χ.» — about the year 1465, the page's own «περί» — and its heading has «Οσιος Ευθυμιος (; - 1465)». The page gives no birth year and sets him «μεταξύ του 15ου και 16ου αιώνα»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Απριλίου — «Όσιοι Ευθύμιος και Χαρίτων»",
+        "url": "https://www.saint.gr/04/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Απριλίου εκάστου έτους», the same day as the listing, and heads the two men «(; - 1465)» and «(; - 1509)». Two names in one line, so two folders. Syanzhema is in the display name because the corpus holds twenty-two other Euthymii: it is the page's own Σγιανζέμα, the river country he moved to, where he met Chariton. The page writes his birthplace and the place of their monastery alike as Μπολογκντά. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "james-of-zheleznyi-borok",
+  "display_name": "James of Zheleznyi Borok",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Απριλίου, «Όσιος Ιάκωβος του Ζελέζνιυ - Μπορόκ», with the rank word left off."
+    }
+  ],
+  "related": [
+    "james-of-bryleyevo"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1442,
+      "latest": 1442,
+      "display": "1442",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1442 μ.Χ.», and the page's heading has «Οσιος Ιακωβος Του Ζελεζνιυ - Μποροκ (; - 1442)». The page gives no birth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Απριλίου — «Όσιος Ιάκωβος του Ζελέζνιυ - Μπορόκ»",
+        "url": "https://www.saint.gr/04/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1442)». The same 11 April page keeps his disciple as a separate entry, and the two are told apart by their houses and their dates. Oddly, this page says nothing about the house he is named for: it has him tonsured in the Holy Trinity of Saint Sergius of Radonezh and afterwards ascetic in a monastery of Moscow, and Zheleznyi Borok appears only in his name and on the disciple's page. That gap is in the life. The page prints no couplet and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

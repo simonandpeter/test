@@ -1,0 +1,52 @@
+{
+  "slug": "pharmouthius-the-anchorite",
+  "display_name": "Pharmouthius the Anchorite",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Φαρμούθιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Απριλίου, «Όσιος Φαρμούθιος ο Αναχωρητής», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Απριλίου — «Όσιος Φαρμούθιος ο Αναχωρητής»",
+        "url": "https://www.saint.gr/04/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Απριλίου εκάστου έτους», the same day as the listing, and gives him no years. The whole body of the page is one sentence: «Ο Όσιος Φαρμούθιος απεβίωσε ειρηνικά». The corpus holds nobody else of this name, so there was no namesake to weigh. The page prints no relic and no hymn; its couplet plays the name against the Egyptian month Pharmouthi, which it glosses as April."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

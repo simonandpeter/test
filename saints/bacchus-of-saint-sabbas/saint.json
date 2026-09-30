@@ -1,0 +1,61 @@
+{
+  "slug": "bacchus-of-saint-sabbas",
+  "display_name": "Bacchus of the monastery of Saint Sabbas",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Βάκχος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Απριλίου, «Άγιος Βάκχος ο Οσιομάρτυρας», with the rank words left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "floruit": {
+      "earliest": 701,
+      "latest": 800,
+      "display": "8th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Οσιομάρτυς Βάκχος ασκήτεψε στη μονή του Αγίου Σάββα και τελειώθηκε μαρτυρικά κατά τον 8ο αιώνα μ.Χ.». The page gives no year of birth and none of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Απριλίου — «Άγιος Βάκχος ο Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/04/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Απριλίου εκάστου έτους», the same day as the listing, and gives him no years in its heading. The whole body is one sentence. He is not `bacchus-companion-of-sergius`, the soldier of the early fourth century whom the corpus keeps with Sergius: this man is a monk of the Lavra of Saint Sabbas martyred in the eighth century, and the page's own rank word for him is Οσιομάρτυς. The page prints no couplet, no relic and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

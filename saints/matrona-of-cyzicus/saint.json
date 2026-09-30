@@ -1,0 +1,54 @@
+{
+  "slug": "matrona-of-cyzicus",
+  "display_name": "Matrona, companion of Tryphaena of Cyzicus",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ματρώνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Απριλίου, «Οσίες Τρυφαίνη και Ματρώνα», with the rank word left off."
+    }
+  ],
+  "related": [
+    "tryphaena-of-cyzicus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Απριλίου — «Οσίες Τρυφαίνη και Ματρώνα»",
+        "url": "https://www.saint.gr/04/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Απριλίου εκάστου έτους», the same day as the listing, and gives neither woman a year. It names its own authority for her and says plainly what carries her: «Στους Συναξαριστές αναφέρεται μόνο η μνήμη της Τρυφαίνης της εν Κυζίκω. Στον Λαυριωτικό όμως κώδικα 170 μνημονεύονται και οι δύο» — the synaxaristes have only Tryphaena of Cyzicus, while Laura Codex 170 remembers both. That sentence is quoted in the life. Her companion Tryphaena is the `tryphaena-of-cyzicus` the corpus already keeps with a Greek row on 31 Ιανουαρίου; that row was left where it stands and no second one was made. The page prints no hymn, and its one couplet is for Tryphaena."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

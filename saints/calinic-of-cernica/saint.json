@@ -7,6 +7,11 @@
       "form": "Calinic de la Cernica",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 aprilie, «Sfântul Ierarh Calinic de la Cernica, Episcopul Râmnicului»."
+    },
+    {
+      "form": "Καλλίνικος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Απριλίου, «Όσιος Καλλίνικος ο εκ Ρουμανίας», with the rank word and the clause naming his country left off."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Απριλίου — «Όσιος Καλλίνικος ο εκ Ρουμανίας»",
+        "url": "https://www.saint.gr/04/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(1787 - 1868)», which agrees with the years the folder already holds from doxologia; the corpus's `dates` are left as they stand. The Greek calendar therefore keeps him on 11 April as his own Romanian life does, which is the day the folder already holds — and not on the 13 aprilie that doxologia's day page put him on because of that year's moveable feasts. The day's line calls him only ο εκ Ρουμανίας, from Romania, and gives him no see; the page's prose makes him bishop of Râmnic-Vâlcea, elected 15 Σεπτεμβρίου 1850, consecrated 26 Οκτωβρίου and enthroned 26 Νοεμβρίου at Craiova because the see at Râmnic had burnt. The page prints no hymn."
     },
     {
       "church": "serbian",
