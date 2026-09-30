@@ -1,0 +1,59 @@
+{
+  "slug": "ephrem-of-novotorzhsk",
+  "display_name": "Ephrem of Novotorzhsk",
+  "names": [
+    {
+      "form": "Εφραίμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιανουαρίου, «Όσιος Εφραίμ ο εκ Ρωσίας», with the rank word left off. His own page calls him «ο Όσιος Εφραίμ του Νοβοτόρζσκϊυ»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1053,
+      "latest": 1053,
+      "display": "1053",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Όσιος, αφού έζησε θεοφιλώς, κοιμήθηκε με ειρήνη το έτος 1053 μ.Χ.»; the page's heading dates him «(; - 1053)». It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Ιανουαρίου — «Όσιος Εφραίμ ο εκ Ρωσίας»",
+        "url": "https://www.saint.gr/01/28/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

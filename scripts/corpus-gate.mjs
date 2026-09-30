@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'γεωργιοσ george-of-develtos george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian':
+    'five now. The new one is George the Hungarian, a martyr of 1015, kept on 28 Ιανουαρίου; the other four are the bishop of Develtos on the 22nd, the Chozebite whom the Romanian and Greek calendars keep on the 8th, the Iberian new-martyr at Mytilene on the 2nd and the Persian of 615 on the 6th, read in the el-01-06 and el-01-22 entries for this name form.',
+  'εφραιμ ephrem-of-kiev ephrem-of-novotorzhsk ephrem-the-syrian':
+    'three men on one day, and saint.gr keeps them as three entries: Ephrem the Syrian, dead 373, whom the Romanian calendar keeps on 28 ianuarie too, and two eleventh-century Russians who bear his name — the bishop of Kiev dead 1098 and the monk of Novotorzhsk dead 1053. The corpus already reads three Efrems apart on three Romanian days for the same reason; this is the Greek calendar doing it on one.',
   'πετροσ peter-abesalamites peter-companion-of-leucius peter-companion-of-manuel peter-disciple-of-dionysius-of-alexandria peter-of-capitolias peter-of-sebaste peter-son-of-john-of-syracuse peter-the-egyptian peter-the-gaoler peter-the-peloponnesian peter-the-sign-bearer':
     'eleven now. The new one is Peter the Egyptian, a hermit whose page gives no year, kept on 27 Ιανουαρίου; the other ten are read in the el-01-01 through el-01-26 entries for this name form. Eleven men on eleven Greek days.',
   'δημητριοσ demetrius-of-constantinople demetrius-the-skeuophylax':
@@ -1291,7 +1295,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '382'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '387'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

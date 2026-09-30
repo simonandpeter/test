@@ -1,0 +1,60 @@
+{
+  "slug": "ephrem-of-kiev",
+  "display_name": "Ephrem of Kiev",
+  "office": "Bishop of Pereyaslavl",
+  "names": [
+    {
+      "form": "Εφραίμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιανουαρίου, «Όσιος Εφραίμ ο εκ Κιέβου», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1098,
+      "latest": 1098,
+      "display": "1098",
+      "basis": "attested",
+      "note": "saint.gr: «αφού έζησε θεοφιλώς, κοιμήθηκε με ειρήνη το έτος 1098 μ.Χ. και ενταφιάσθηκε στη Λαύρα του Αγίου Αντωνίου του Κιέβου»; the page's heading dates him «(; - 1098)». It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Ιανουαρίου — «Όσιος Εφραίμ ο εκ Κιέβου»",
+        "url": "https://www.saint.gr/01/28/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

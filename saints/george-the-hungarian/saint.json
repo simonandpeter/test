@@ -1,0 +1,58 @@
+{
+  "slug": "george-the-hungarian",
+  "display_name": "George the Hungarian",
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιανουαρίου, «Άγιος Γεώργιος ο Μάρτυρας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1015,
+      "latest": 1015,
+      "display": "1015",
+      "basis": "attested",
+      "note": "saint.gr: «Μαρτύρησε το έτος 1015 μ.Χ.»; the page's heading dates him «(; - 1015)». It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Ιανουαρίου — «Άγιος Γεώργιος ο Μάρτυρας»",
+        "url": "https://www.saint.gr/01/28/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

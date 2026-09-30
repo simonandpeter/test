@@ -1,0 +1,49 @@
+{
+  "slug": "two-martyrs-mother-and-daughter",
+  "display_name": "The Two Martyrs, mother and daughter",
+  "names": [
+    {
+      "form": "Δύο Μάρτυρες, Μητέρα και Θυγατέρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιανουαρίου, «Αγίες Δύο Μάρτυρες, Μητέρα και Θυγατέρα», with the rank word left off. The page names neither of them."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Ιανουαρίου — «Αγίες Δύο Μάρτυρες, Μητέρα και Θυγατέρα»",
+        "url": "https://www.saint.gr/01/28/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

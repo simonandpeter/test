@@ -6,6 +6,11 @@
       "form": "Haris",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 ianuarie, «Sfânta Muceniţă Haris»."
+    },
+    {
+      "form": "Χάρις",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιανουαρίου, «Αγία Χάρις», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -34,8 +39,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Ιανουαρίου — «Αγία Χάρις»",
+        "url": "https://www.saint.gr/01/28/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

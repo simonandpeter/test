@@ -6,6 +6,11 @@
       "form": "Efrem",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 ianuarie, «Sfântul Cuvios Efrem Sirul»."
+    },
+    {
+      "form": "Εφραίμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιανουαρίου, «Όσιος Εφραίμ ο Σύρος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -48,6 +53,56 @@
         "text": "Ever foreseeing the hour of judgement, thou didst weep bitterly, holy Father Ephrem, as a lover of stillness; and thou wast a ready teacher by thy deeds, O venerable one. Therefore, most blessed father, thou raisest up the slothful to repentance.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ταῖς τῶν δακρύων σου ῥοαῖς, τῆς ἐρήμου τό ἄγονον ἐγεώργησας· καί τοῖς ἐκ βάθους στεναγμοῖς, εἰς ἑκατόν τούς πόνους ἐκαρποφόρησας· καί γέγονας φωστήρ τῇ οἰκουμένῃ, λάμπων τοῖς θαύμασιν, Ἐφραίμ Πατήρ ἡμῶν ὅσιε, πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τάς ψυχάς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Όσιος Εφραίμ ο Σύρος — Ἀπολυτίκιον, Ἦχος πλ. δ’. It is the common of a venerable father, printed here under his name.",
+        "url": "https://www.saint.gr/3536/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of your tears you tilled the barrenness of the desert, and by your sighs from the depths you made your labours bear fruit a hundredfold; and you became a light to the whole world, shining with wonders. Ephrem, our venerable father, intercede with Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Ρεῖθρον ἄυλον, ἐν τὴ ψυχή σου, τὸν ζωήρρυτον, πλουτήσας φόβον, κατανύξεως κρατὴρ ἀναδέδειξαι, ὅθεν ἠμᾶς πρὸς ἠθῶν τελειότητα, τοὶς ἱεροίς σου ρυθμίζεις διδάγμασιν. Ἐφραὶμ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Όσιος Εφραίμ ο Σύρος — Ἕτερον Ἀπολυτίκιον, Ἦχος γ’. «Θείας πίστεως»",
+        "url": "https://www.saint.gr/3536/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having grown rich in the life-giving fear of God, an immaterial stream within your soul, you were shown forth as a mixing-bowl of compunction; and thence you order us toward perfection of manners by your holy teachings. Venerable Ephrem, entreat Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τά ἄνω ζητῶν.",
+      "text": "Τήν ὥραν ἀεί, προβλέπων τῆς ἐτάσεως, ἐθρήνεις πικρώς, Ἐφραίμ δάκρυα κατανύξεως· πρακτικός δέ γέγονας, ἐν τοῖς ἔργοις διδάσκαλος ὅσιε· ὅθεν Πάτερ παγκόσμιε, ῥαθύμους ἐγείρεις πρός μετάνοιαν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Όσιος Εφραίμ ο Σύρος — Κοντάκιον, Ἦχος β’. «Τά ἄνω ζητῶν»",
+        "url": "https://www.saint.gr/3536/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ever foreseeing the hour of the examination, you wept bitterly, Ephrem, with tears of compunction; and you became a teacher in deeds and not in words alone, venerable one. Whence, father of the whole world, you rouse the slothful to repentance.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
@@ -72,8 +127,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Ιανουαρίου — «Όσιος Εφραίμ ο Σύρος»",
+        "url": "https://www.saint.gr/01/28/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -83,5 +147,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": null,
+      "latest": 308,
+      "display": "308 or earlier",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην πόλη Νίσιβη της Μεσοποταμίας πιθανώς το 308 μ.Χ. ή και ενωρίτερα». The page's heading dates him «(308 - 373)», but its own sentence leaves the earlier bound open."
+    },
+    "death": {
+      "earliest": 373,
+      "latest": 373,
+      "display": "373",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Εφραίμ κοιμήθηκε με ειρήνη το έτος 373 μ.Χ.»"
+    }
   }
 }

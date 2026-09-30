@@ -6,6 +6,11 @@
     {
       "form": "Феодосий Тотемский",
       "lang": "ru"
+    },
+    {
+      "form": "Θεοδόσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιανουαρίου, «Όσιος Θεοδόσιος της Τότμα», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -52,8 +57,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 2 September (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Ιανουαρίου — «Όσιος Θεοδόσιος της Τότμα»",
+        "url": "https://www.saint.gr/01/28/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

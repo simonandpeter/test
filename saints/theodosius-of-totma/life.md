@@ -21,6 +21,8 @@ rebuilding of the Ascension church, his relics were found incorrupt, and
 they were glorified on 28 January 1798, the day of his death. The Russian
 calendar keeps on 2 September (Julian) the finding of his relics.
 
+The Greek calendar keeps him on the twenty-eighth of January, the day of his repose, rather than on the September finding of his relics that the Russian calendar keeps; and saint.gr's notice agrees with the Russian life on the two facts it gives, that he was born in the sixteenth century in the city of Vologda and that he fell asleep in peace in 1568. It adds the name of his father, Julian, says that he practised his asceticism at the monastery of Totma, and calls him one of the greatest of the holy figures of the Russian Church. Its heading gives no year of birth.
+
 *After the life printed by the Sretensky calendar (days.pravoslavie.ru) —
 [the entry](https://days.pravoslavie.ru/Life/life323.htm), read 5 September 2026 — this
-time whole; the earlier reading had stopped partway.*
+time whole; the earlier reading had stopped partway; and after saint.gr's calendar for 28 Ιανουαρίου — [the day](https://www.saint.gr/01/28/index.aspx) and [the life](https://www.saint.gr/3542/saint.aspx), read 30 September 2026.*
