@@ -1,0 +1,53 @@
+{
+  "slug": "basil-companion-of-euphrasius",
+  "display_name": "Basil, companion of Euphrasius",
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαρτίου, «Άγιοι Βασίλειος και Ευφράσιος οι Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαρτίου — «Άγιοι Βασίλειος και Ευφράσιος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/03/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is one sentence, «Οι Άγιοι Μάρτυρες Βασίλειος και Ευφράσιος μαρτύρησαν μαζί με άλλους Χριστιανούς στη Θεσσαλονίκη κατά τους πρώτους χριστιανικούς χρόνους» — they were martyred with other Christians at Thessalonica in the first Christian times. It gives no year, no persecutor, no manner of death and no hymn, and it does not name the others. Unlike the two pairs of Thessalonian martyrs the same site prints on 13 Μαρτίου, this entry carries no asterisk and no sentence of doubt."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "euphrasius-companion-of-basil"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

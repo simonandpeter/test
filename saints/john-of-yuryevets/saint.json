@@ -1,0 +1,51 @@
+{
+  "slug": "john-of-yuryevets",
+  "display_name": "John of Yuryevets",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαρτίου, «Άγιος Ιωάννης του Γιούρεβιτς», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "fool-for-christ"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαρτίου — «Άγιος Ιωάννης του Γιούρεβιτς»",
+        "url": "https://www.saint.gr/03/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is one sentence, «Ο Άγιος Ιωάννης του Γιούρεβιτς καταγόταν από την Ρωσία και ήταν δια Χριστόν σαλός» — he came from Russia and was a fool for Christ. There is no year, no monastery, no relic and no hymn, and the rest of the page is the calendar's usual note on the name John."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

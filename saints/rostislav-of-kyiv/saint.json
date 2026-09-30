@@ -1,0 +1,61 @@
+{
+  "slug": "rostislav-of-kyiv",
+  "display_name": "Rostislav of Kyiv and Smolensk",
+  "names": [
+    {
+      "form": "Ροστισλάβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαρτίου, «Άγιος Ροστισλάβος ο Πρίγκιπας Κιέβου και Σμολένσκ», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Prince of Kyiv and Smolensk",
+  "types": [
+    "prince"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαρτίου — «Άγιος Ροστισλάβος ο Πρίγκιπας Κιέβου και Σμολένσκ»",
+        "url": "https://www.saint.gr/03/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1176)» and holds one sentence, «Ο Άγιος Ροστισλάβος Μστισλάβοβιτς, πρίγκιπας του Κιέβου και του Σμολένσκ, έζησε το 12ο αιώνα μ.Χ. στη Ρωσία και κοιμήθηκε με ειρήνη το έτος 1176 μ.Χ.» — with his patronymic, Mstislavovich. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1176,
+      "latest": 1176,
+      "display": "1176",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησε το 12ο αιώνα μ.Χ. στη Ρωσία και κοιμήθηκε με ειρήνη το έτος 1176 μ.Χ.», and the page heads him «(; - 1176)», leaving the year of his birth a question mark."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

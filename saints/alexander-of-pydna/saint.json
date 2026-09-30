@@ -1,0 +1,51 @@
+{
+  "slug": "alexander-of-pydna",
+  "display_name": "Alexander of Pydna",
+  "names": [
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαρτίου, «Άγιος Αλέξανδρος, ο εν Πύδνη», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαρτίου — «Άγιος Αλέξανδρος, ο εν Πύδνη»",
+        "url": "https://www.saint.gr/03/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The page has him first in the darkness of error and then shining by a good confession, rebuking the error of the idolaters and beheaded when flatteries failed; it says God rewarded him with the gift of healing and records a relic, «Η Κάρα του Αγίου βρίσκεται στην Ιερά Μονή Μεγ. Λαύρας Αγίου Όρους». It gives no year, no emperor and no hymn. The corpus's Alexander of Side, whom the Romanian calendar keeps on this same day, is a presbyter of Side in Pamphylia under Aurelian in a different account; this entry is the Alexander the Greek calendar places at Pydna, and the two are kept apart."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "aphrodisius-companion-of-peter",
+  "display_name": "Aphrodisius, companion of Peter",
+  "names": [
+    {
+      "form": "Αφροδίσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαρτίου, «Άγιοι Πέτρος και Αφροδίσιος οι Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαρτίου — «Άγιοι Πέτρος και Αφροδίσιος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/03/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is one sentence, «Οι Άγιοι Μάρτυρες Πέτρος και Αφροδίσιος μαρτύρησαν στην Αφρική από τους βάνδαλους» — they were martyred in Africa by the Vandals. It gives no year, no place in Africa, no manner of death and no hymn. The corpus's Aphrodisius of the Romanian 21 June is a man of Cilicia tried before the ruler Dionysius, and is another man."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "peter-companion-of-aphrodisius"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

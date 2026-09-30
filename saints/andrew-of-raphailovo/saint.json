@@ -1,0 +1,69 @@
+{
+  "slug": "andrew-of-raphailovo",
+  "display_name": "Andrew of Raphailovo",
+  "names": [
+    {
+      "form": "Ανδρέας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαρτίου, «Όσιος Ανδρέας εκ Ρωσίας», with the rank words left off. The page's own epithet is «εκ Ρωσίας», out of Russia; the English name takes instead the monastery the page names, because the corpus keeps several men called Andrew of Russia's own calendars."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαρτίου — «Όσιος Ανδρέας εκ Ρωσίας»",
+        "url": "https://www.saint.gr/03/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(1746 - 1820)», puts his birth in Russia in 1746, has him live as an ascetic in the monastery of the Holy Trinity of Raphailovo near the diocese of Tobolsk and serve as its abbot, and continue his God-pleasing life afterwards in the monastery of St Symeon at Moscow, falling asleep in peace in 1820. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1746,
+      "latest": 1746,
+      "display": "1746",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ανδρέας γεννήθηκε το έτος 1746 μ.Χ. στη Ρωσία», and the page heads him «(1746 - 1820)»."
+    },
+    "death": {
+      "earliest": 1820,
+      "latest": 1820,
+      "display": "1820",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ανδρέας κοιμήθηκε με ειρήνη το έτος 1820 μ.Χ.»."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

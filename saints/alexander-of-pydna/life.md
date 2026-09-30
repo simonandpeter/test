@@ -1,0 +1,9 @@
+# Alexander of Pydna
+
+saint.gr's calendar for 14 Μαρτίου names him «Άγιος Αλέξανδρος, ο εν Πύδνη», Alexander in Pydna, and the page behind that line begins with where he began: at the first he was in the darkness of error, and afterwards he shone like a star of many lights by his good confession. For he made a most cutting refutation of the error of the idolaters and wounded the spiritual devil with his words.
+
+The deluded idolaters, unable to bear the courage and the strength of the saint, tried to overcome his greatness of soul in various ways and with flatteries; and when they could not, they beheaded him. God rewarded him with the gift of healing, the page says, for his holy relic heals every sickness of those who run to it with faith; and it records that his head is at the Great Lavra on the Holy Mountain. The two lines it keeps for him turn on the loss: rather than be docked of his crowns, Alexander bears the docking of his head.
+
+No year is given, no emperor and no governor, and no hymn. The corpus keeps another Alexander on this same day out of the Romanian calendar, the priest of Side in Pamphylia who was tried by the governor Antoninus under Aurelian; that man was a priest from the first and this one came out of idolatry, and the Greek calendar sets this one at Pydna, so the two are kept as two.
+
+*After saint.gr's calendar for 14 Μαρτίου — [the day](https://www.saint.gr/03/14/index.aspx) and [the life](https://www.saint.gr/49/saint.aspx); read 30 September 2026.*

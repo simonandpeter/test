@@ -1,0 +1,61 @@
+{
+  "slug": "boniface-of-ross",
+  "display_name": "Boniface of Ross",
+  "names": [
+    {
+      "form": "Βονιφάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαρτίου, «Άγιος Βονιφάτιος Επίσκοπος Ρος της Σκωτίας», with the rank words left off. The page gives the Latin form beside it, «Ο Άγιος Βονιφάτιος (Boniface)»."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Ross",
+  "types": [
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαρτίου — «Άγιος Βονιφάτιος Επίσκοπος Ρος της Σκωτίας»",
+        "url": "https://www.saint.gr/03/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 630)», has him born in Italy and gone over to Scotland for the spreading of the divine word, reforming the manners of the inhabitants of various Scottish provinces by his missionary work, elected by the Church bishop of the city of Ross, and reposing in holiness in 630. It prints no hymn. The corpus's other men of this name, the apostle of Germany and the martyr of Tarsus, are kept on other days."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 630,
+      "latest": 630,
+      "display": "630",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε οσίως το έτος 630 μ.Χ.», and the page heads him «(; - 630)», leaving the year of his birth a question mark."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

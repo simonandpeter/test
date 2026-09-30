@@ -115,6 +115,22 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'πετροσ peter-abesalamites peter-companion-of-aphrodisius peter-companion-of-leucius peter-companion-of-manuel peter-disciple-of-dionysius-of-alexandria peter-of-bulgaria peter-of-capitolias peter-of-damascus peter-of-galatia peter-of-monevata peter-of-sebaste peter-of-tobolsk peter-son-of-john-of-syracuse peter-the-egyptian peter-the-gaoler peter-the-peloponnesian peter-the-sign-bearer':
+    'Seventeen now. The new one is the companion of Aphrodisius on 14 March; the others are read in the el-03-04 entry for this name form.',
+  'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-kazan john-of-lycopolis john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-yuryevets john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-sinaite-venerable-martyr':
+    'Twenty-two now. The new one is John of Yuryevets on 14 March; the others are read in the el-03-07 entry for this name form.',
+  'ευτυχιοσ eutychius-companion-of-bassus eutychius-of-mesopotamia eutychius-of-the-forty-martyrs':
+    'Three men: the companion of Bassus on 20 January, Mesopotamia on 14 March and one of the Forty of Sebaste on 9 March.',
+  'βασιλειοσ basil-companion-of-euphrasius basil-martyr-6-february basil-of-mirozh basil-of-novgorod basil-of-rostov basil-of-thessalonica basil-the-confessor basil-uncle-of-eustratius':
+    'Eight now. The new one is the companion of Euphrasius on 14 March; the other seven are read in the el-03-04 entry for this name form.',
+  'basil companion euphrasius basil-companion-of-euphrasius euphrasius-companion-of-basil':
+    'The pair the 14 March page names together, each named after the other, which is what folds them.',
+  'aphrodisius companion peter aphrodisius-companion-of-peter peter-companion-of-aphrodisius':
+    'The pair the 14 March page names together, each named after the other, which is what folds them.',
+  'ανδρεασ andrew-6-january andrew-of-mytilene andrew-of-raphailovo':
+    'Three men: the Andrew of 6 January, Mytilene on 21 February and Raphailovo on 14 March.',
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-of-cartagena alexander-of-pydna alexander-of-the-forty-martyrs alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Six now. The new one is Alexander of Pydna on 14 March; the other five are read in the el-02-13 entry for this name form.',
   'θεοκτιστοσ theoctistus-of-st-sabbas theoctistus-the-martyr':
     'Two men: the monk of Saint Sabbas on 13 March and the martyr of 3 October.',
   'πουπλιοσ publius-companion-of-africanus publius-of-athens publius-of-zeugma':

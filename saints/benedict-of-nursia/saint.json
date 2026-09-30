@@ -6,6 +6,11 @@
       "form": "Benedict de Nursia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 martie, «Sfântul Cuvios Benedict de Nursia»."
+    },
+    {
+      "form": "Βενέδικτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαρτίου, «Όσιος Βενέδικτος ο εκ Νουρσίας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαρτίου — «Όσιος Βενέδικτος ο εκ Νουρσίας»",
+        "url": "https://www.saint.gr/03/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(481 - 543)», has him withdraw to a ravine in the Apennines, gather 164 monks in twenty years, found the monastery on mount Cassino in the year 540, and die peacefully in 543 at the age of sixty-two; it calls him the founder of the monastic order of the Benedictines, «που υπάρχει μέχρι και σήμερα στη δυτική Εκκλησία»."
     },
     {
       "church": "serbian",
@@ -62,9 +77,59 @@
         "text": "With the streams of your tears you tilled the barren desert, and with sighs from the depths you made your labours bear fruit a hundredfold; and you became a light to the world, shining with wonders, Benedict our father. Pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τὴν φερώνυμον κλῆσιν ἀληθεύουσαν ἔδειξας, τοῖς ἀσκητικοῖς σου ἀγῶσι, θεοφόρε Βενέδικτε· υἱός γὰρ εὐλογίας τεθηλώς, ἀρχέτυπον ἐγένου καὶ κανών, τοῖς ἐκ πόθου μιμουμένοις τὴν σὴν ζωήν, καὶ ὁμοφώνως κράζουσι· δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ, πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Τῆς ἐρήμου πολίτης, on the page of Όσιος Βενέδικτος ο εκ Νουρσίας. It names him and plays on the name, benedictus, the blessed one.",
+        "url": "https://www.saint.gr/48/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You showed the name you bear to be a true one by your ascetic struggles, God-bearing Benedict; for having flourished as a son of blessing you became a pattern and a rule to those who imitate your life with longing and cry with one voice: glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ.",
+      "text": "Ἀνατολῆς τῆς νοητῆς φωστὴρ γενόμενος τῶν ἐν τῇ Δύσει Μοναστῶν ὤφθης διδάσκαλος διά βίου τε καὶ λόγου τούτους παιδεύων. Ἀλλ᾽ ἱδρῶσι τῶν λαμπρῶν κατορθωμάτων σου τῶν παθῶν ἡμῶν τὸν ρύπον ἀποκάθαρον τῶν βοώντων σοι, χαίροις Πάτερ Βενέδικτε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ, on the same page.",
+        "url": "https://www.saint.gr/48/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having become a luminary of the noetic East, you were seen as the teacher of the monks of the West, instructing them by your life and by your word. By the sweat of your bright achievements cleanse away the filth of our passions as we cry to you: hail, father Benedict.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 481,
+      "latest": 481,
+      "display": "481",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Οσιος Βενεδικτος ο Εκ Νουρσιας (481 - 543)» and says he died in 543 at the age of sixty-two, which is the same reckoning. The corpus held no year for him before this."
+    },
+    "death": {
+      "earliest": 543,
+      "latest": 543,
+      "display": "543",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο όσιος Βενέδικτος πέθανε ειρηνικά το έτος 543, σε ηλικία 62 χρονών», and the page heads him «(481 - 543)»."
+    }
   }
 }

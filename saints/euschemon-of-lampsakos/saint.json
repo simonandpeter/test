@@ -1,0 +1,53 @@
+{
+  "slug": "euschemon-of-lampsakos",
+  "display_name": "Euschemon of Lampsakos",
+  "names": [
+    {
+      "form": "Εύσχημος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαρτίου, «Άγιος Εύσχημος ή Ευσχήμων ο Ομολογητής επίσκοπος Λαμψάκου», with the rank words left off. The line prints two forms, «Εύσχημος ή Ευσχήμων»; the head form is the one taken and the second is the one the English name follows."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Lampsakos",
+  "types": [
+    "confessor",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαρτίου — «Άγιος Εύσχημος ή Ευσχήμων ο Ομολογητής επίσκοπος Λαμψάκου»",
+        "url": "https://www.saint.gr/03/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The page dates him only by the persecution — «Έζησε στα χρόνια των εικονομάχων», he lived in the years of the iconoclasts — and gives no year, so this folder carries no dates. It has him denounced, exiled and imprisoned for defending the holy icons, spending on the poor even the money devout visitors brought him in exile, and says the Church justly numbered him among her holy confessors. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

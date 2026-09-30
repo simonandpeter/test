@@ -1,0 +1,65 @@
+{
+  "slug": "theognostus-of-kyiv",
+  "display_name": "Theognostus of Kyiv",
+  "names": [
+    {
+      "form": "Θεόγνωστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Μαρτίου, «Όσιος Θεόγνωστος ο Έλλην», with the rank words left off. The epithet ο Έλλην, the Greek, is the page's own and is kept in the life; the English name follows the see."
+    }
+  ],
+  "sex": "male",
+  "office": "Metropolitan of Kyiv",
+  "types": [
+    "hierarch",
+    "metropolitan",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Μαρτίου — «Όσιος Θεόγνωστος ο Έλλην»",
+        "url": "https://www.saint.gr/03/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1353)», makes him a Greek by descent and a monk at Constantinople, elected metropolitan of Kyiv in 1328 after the repose of Peter of Kyiv, whom the same site keeps on 21 Δεκεμβρίου, and records a relic: «Το Λείψανο του Αγίου βρίσκεται αδιάφθορο στο Ναό Κοιμ. Θεοτόκου Κρεμλίνου» — his relic lies incorrupt in the Dormition church of the Kremlin. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1353,
+      "latest": 1353,
+      "display": "1353",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Θεόγνωστος κοιμήθηκε με ειρήνη, το έτος 1353 μ.Χ., αφού προηγουμένως είχε επιλέξει ως διάδοχό του τον Επίσκοπο του Βλαδιμήρ, Αλέξιο», and the page heads him «(; - 1353)»."
+    }
+  },
+  "related": [
+    "alexis-of-moscow"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
