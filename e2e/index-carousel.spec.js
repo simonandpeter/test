@@ -1,5 +1,6 @@
 import { test, expect } from './fixtures.js';
 import {
+  ICONS,
   INDEX,
   carouselMode,
   facet,
@@ -1798,7 +1799,22 @@ test('a picture stands in every second column at least, and the names between th
 
   expect(packed.cells, 'the whole run is not in the track').toBeGreaterThan(100);
   expect(packed.misnamed, 'a column marked as names only has a picture in it').toBe(0);
-  expect(packed.longestTextRun, 'a stretch of columns with no picture in any of them').toBeLessThanOrEqual(2);
+  /*
+   * **The floor is the corpus's own share now, not two, and `carousel-cells.js`
+   * says why in "Where the rule stops being possible".** One icon carries at
+   * most `p + 2q` saints, both numbers set by the window; the corpus stands at
+   * 130 icons to 2,934 lives, twenty-one apiece, so no dealing keeps
+   * `MAX_NAME_RUN` and the packer degrades as documented — the groups grow
+   * evenly rather than the deficit landing at the run's end. Evenness is what
+   * is left to assert, and it is the claim that matters: the share the page
+   * measures, plus one column, plus one more for the loop's seam, where the
+   * tail's last run of names meets the head's first on screen.
+   */
+  const share = Math.ceil((packed.cells - packed.withPicture) / packed.withPicture);
+  expect(
+    packed.longestTextRun,
+    `a stretch of ${packed.longestTextRun} columns with no picture, against a share of ${share}`,
+  ).toBeLessThanOrEqual(share + 2);
   /*
    * **One column in three, the floor the run above already implies.** Every
    * icon stands in a column of its own, so the share of picture columns is the
@@ -1812,10 +1828,17 @@ test('a picture stands in every second column at least, and the names between th
    * dealing enormous columns. Relaxed on the author's two-rule instruction and
    * his to reverse — HANDOFF.md says so.
    */
+  /*
+   * And every icon the corpus holds stands in a column of its own, which is the
+   * claim the share floor was reaching for and the one a packer that dropped
+   * pictures would break. Counted off the manifest, so a batch of picture-less
+   * saints cannot move it; the track holds more than that, because its tail is
+   * cloned in front of its head.
+   */
   expect(
     packed.withPicture,
-    `${packed.withPicture} of ${packed.cells} columns carry a picture`,
-  ).toBeGreaterThanOrEqual(Math.ceil((packed.cells - 2) / 3));
+    `${packed.withPicture} of ${packed.cells} columns carry a picture, against ${ICONS} icons in the corpus`,
+  ).toBeGreaterThanOrEqual(ICONS);
 
   /*
    * And the names between them are narrower — **at a desk**. On a phone

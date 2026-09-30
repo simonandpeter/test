@@ -3,6 +3,8 @@ import { STRINGS } from '../src/ui/strings.js';
 import { test, expect } from './fixtures.js';
 import {
   EMPTY,
+  dayKeptOnlyElsewhere,
+  dayWithoutHymns,
   POPULATED,
   aDayThatIsNotToday,
   answered,
@@ -67,10 +69,21 @@ test('a populated day renders the hero, and each tradition in its own reckoning'
   await expect(page.locator('[data-slot="main"] .register li')).toHaveCount(0);
   await openChooser(page);
   await page.locator('#church-panel [data-church="greek"]').click();
-  await expect(page.locator('.hero')).toHaveCount(0);
-  await expect(page.locator('.empty-day')).toContainText('Nothing in the Greek calendar today');
+  /*
+   * The Greek calendar keeps its own saints on this civil day — the Greek wave
+   * gave 30 January eight of them — so what is read here is the claim that
+   * survives a filling corpus: **Anthony is not among them**, because the New
+   * Calendar keeps his 17 January on the 17th. Until 2026-09-30 this asserted
+   * an empty Greek day, which was a fact about how far the sourcing had got
+   * and not about the reckoning.
+   */
+  await expect(page.locator('.hero-name')).not.toHaveText('Venerable Anthony the Great');
+  await expect(page.locator('[data-slot="main"]')).not.toContainText('Anthony the Great');
   await page.goto('/calendar/2026-01-17', { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toHaveText('Venerable Anthony the Great');
+  // He is kept on this civil day and named on it; which saint of a full day
+  // leads it is the hero rule's question, and the Greek 17 January now has
+  // eight to choose from.
+  await expect(page.locator('.register a[href*="anthony-the-great"]').first()).toBeVisible();
   // Only the civil date is printed (author, 2026-08-24): the line that gave
   // the day in the church's own reckoning went with the "Change calendar"
   // control under the strip, because two dates for one day read as confusion
@@ -413,7 +426,7 @@ test('changing the calendar changes the day everywhere it is counted', async ({ 
   await expect(page.locator('.hero')).toHaveCount(0);
   await expect(page.locator('.empty-day')).toHaveCount(1);
   await expect(page.locator('.empty-day')).toContainText('Nothing in the Greek calendar today');
-  await expect(page.locator('.empty-day')).toContainText('another church');
+  await expect(page.locator('.empty-day')).toContainText('change calendar in the header');
   /*
    * The dots under that date went with the author's instruction of 2026-08-25
    * evening ("remove the dots under each date in the calendar"), so what is
@@ -452,17 +465,24 @@ test('an empty day says which of the two silences it is', async ({ page }) => {
   await page.goto(EMPTY, { waitUntil: 'networkidle' });
   await expect(page.locator('.empty-day')).toContainText('The corpus grows folder by folder');
 
-  // 15 June has Augustine in the Romanian and Greek calendars, by the New
-  // Calendar, and nothing in the Russian, which keeps him on the 28th.
-  await page.goto('/calendar/2026-06-15', { waitUntil: 'networkidle' });
+  /*
+   * The second silence needs a day the Russian calendar keeps nobody on while
+   * **exactly one** commemoration falls in another, because the count decides
+   * which of the two sentences the page writes. 15 June was that day — Augustine
+   * in the Romanian and Greek calendars, nothing in the Russian, which keeps him
+   * on the 28th — until the Greek wave put four commemorations there and the
+   * page rightly turned plural. `dayKeptOnlyElsewhere` finds the shape instead.
+   */
+  const onlyElsewhere = dayKeptOnlyElsewhere('russian');
+  await page.goto(onlyElsewhere, { waitUntil: 'networkidle' });
   await expect(page.locator('.empty-day')).toContainText('Nothing in the Russian calendar today');
   await expect(page.locator('.empty-day')).toContainText('another church’s calendar');
   await expect(page.locator('.empty-day')).not.toContainText('The corpus grows folder by folder');
 
-  // Change to one that keeps him and the day fills.
+  // Change to one that keeps somebody and the day fills.
   await openChooser(page);
   await page.locator('#church-panel [data-church="romanian"]').click();
-  await expect(page.locator('.hero-name')).toContainText('Augustine');
+  await expect(page.locator('.hero')).toHaveCount(1);
 
   // A day with nothing on it is still about the sourcing, whichever is kept.
   await page.goto(EMPTY, { waitUntil: 'networkidle' });
@@ -646,7 +666,7 @@ test('a calendar change repaints the day in place rather than rolling it', async
   await expect(page.locator('.hero-name')).toContainText('Augustine');
   await openChooser(page);
   await page.locator('#church-panel [data-church="greek"]').click();
-  await expect(page.locator('.empty-day')).toContainText('another church');
+  await expect(page.locator('.empty-day')).toContainText('change calendar in the header');
   await openChooser(page);
   await page.locator('#church-panel [data-church="russian"]').click();
   await expect(page.locator('.hero-name')).toContainText('Augustine');
@@ -663,8 +683,9 @@ test('a calendar change repaints the day in place rather than rolling it', async
   });
   expect(after).toEqual({ leaving: 0, entering: 0, panels: 1 });
   // The repaint itself still happened: Augustine is not in the Romanian
-  // calendar on this civil day.
-  await expect(page.locator('.empty-day')).toHaveCount(1);
+  // calendar on this civil day, which keeps Papias instead. It read the day as
+  // empty until 2026-09-30, when the Romanian year reached 28 June.
+  await expect(page.locator('[data-slot="main"]')).not.toContainText('Augustine');
 });
 
 
@@ -910,7 +931,15 @@ test('the hymns of the day are the chosen church own, in its language, and the h
   // Romanian records run to the end of 2026, so the empty day has to be one
   // past every source's horizon.
   await expect(page.locator('[data-hymns] .hymn-text[lang="el"]')).toHaveCount(0);
-  await page.goto('/calendar/2027-03-01', { waitUntil: 'networkidle' });
+  /*
+   * And nothing at all where nothing is recorded. That day used to be a typed
+   * one — 20 September, then 2027-03-01 — and each in turn stopped being bare:
+   * the Romanian year is complete, so every day it keeps has saints on it, and
+   * 1 March turned out to keep Agapius of Colciu with his tropar. What is bare
+   * is a day whose saints carry no hymn, in a year past every source's horizon,
+   * which is what `dayWithoutHymns` finds.
+   */
+  await page.goto(dayWithoutHymns('romanian'), { waitUntil: 'networkidle' });
   await expect(page.locator('[data-hymns]:not([hidden])')).toHaveCount(0);
   await expect(page.locator('[data-readings]')).toHaveCount(0);
 });

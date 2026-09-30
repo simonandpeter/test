@@ -103,8 +103,13 @@ test('a range that matches nobody is a designed state, not a hole', async ({ pag
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await facet(page, 'dates');
   // A gap inside the corpus, found in the manifest: a typed window had to move
-  // five times as dated lives closed it.
-  const [from, to] = emptyRange();
+  // five times as dated lives closed it, and since 2026-09-30 there is no gap
+  // left to find. `emptyRange` then hands back a window past the corpus and
+  // says it needs the stricter mode, because eight lives that die "after" a
+  // year are unbounded and overlap every window however far out.
+  const range = emptyRange();
+  const [from, to] = range;
+  if (range.needsWithin) await page.locator('input[name="rangeMode"][value="within"]').check();
   await page.locator('[data-from]').fill(String(from));
   await page.locator('[data-to]').fill(String(to));
   await expect(page.locator('[data-count]')).toHaveText('0');

@@ -1,6 +1,8 @@
 import { readFileSync } from 'node:fs';
 import { expect } from '@playwright/test';
 import { applyFilters } from '../src/lib/index-filters.js';
+import { readCorpus, feastIndex, onCivilDay, CHURCH_IDS } from '../scripts/corpus-index.mjs';
+import { greatFeast } from '../src/lib/liturgy.js';
 
 /**
  * The fixtures every browser spec shares: the routes the suite keeps returning
@@ -53,8 +55,17 @@ export const emptyRange = () => {
     start = null;
     seenDated = true;
   }
-  if (!best) throw new Error('emptyRange: every year between the first and last dated life is touched');
-  return best;
+  /*
+   * **No gap is left, and one past the corpus will not do either.** By
+   * 2026-09-30 every year from the first dated life to this one is touched, and
+   * eight lives are recorded as dying *after* a year — `death.latest` null — so
+   * in the default overlapping mode they meet every window there is, however
+   * far out. A window that matches nobody is therefore only reachable inside
+   * the stricter mode, and the caller is told which it got.
+   */
+  if (best) return best;
+  const past = last + 10;
+  return Object.assign([past, past + 10], { needsWithin: true });
 };
 
 /**
@@ -158,6 +169,9 @@ export const sharingPlace = (slug) => {
   }).map((s) => s.slug);
 };
 
+/** How many lives carry an icon: the carousel's picture columns, before cloning. */
+export const ICONS = CARDS.filter((s) => s.image).length;
+
 /** The slugs recorded with a hymn in any church — who can lead a day. */
 export const HYMNED = new Set(CARDS.filter((s) => (s.hymned ?? []).length > 0).map((s) => s.slug));
 
@@ -206,7 +220,77 @@ const aDayThatIsNotToday = (page) =>
     return `/calendar/${iso}`;
   });
 
-export const EMPTY = '/calendar/2026-08-20';
+/**
+ * **The days a Daily test needs, read off the corpus rather than typed.** The
+ * same reason `CORPUS` is read from the build: a typed date goes red when a
+ * batch fills it, without having found a defect. `2026-08-20` was empty in all
+ * four calendars until the Greek wave gave it four commemorations, and every
+ * day of the year is on its way to being filled, so the shapes below have to be
+ * found and not remembered.
+ *
+ * The index is the site's own: `feastIndex` over the same folders the build
+ * reads, so a day is counted here exactly as the page counts it.
+ */
+const FEASTS = feastIndex(readCorpus());
+const CIVIL_2026 = (() => {
+  const out = [];
+  for (const d = new Date('2026-01-01'); d.getFullYear() === 2026; d.setDate(d.getDate() + 1)) {
+    out.push(d.toISOString().slice(0, 10));
+  }
+  return out;
+})();
+const kept = (church, iso) => onCivilDay(FEASTS, church, iso).map((s) => s.slug ?? s);
+const HYMNED_ON = (church, iso) => kept(church, iso).filter((s) => HYMNED.has(s));
+
+/**
+ * A day of total silence — as against the silence of one calendar while another
+ * speaks. `panel.js`'s `emptyDayNote` writes that sentence only when three
+ * things are true at once: no church keeps a saint whose folder exists, the
+ * day is no great feast in the chosen calendar, and no day record carries its
+ * readings. So all three are cleared here.
+ *
+ * **The year is 2027**, because the readings are recorded to the end of 2026
+ * and the six remaining saintless days of 2026 all carry them; a 2027 date is
+ * past that horizon while its saints, which are kept by day and month, are the
+ * same absence. Throws rather than returning a date of the wrong shape: a test
+ * that has lost its premise must not pass.
+ */
+export const EMPTY = (() => {
+  const iso = CIVIL_2026.find(
+    (d) => CHURCH_IDS.every((c) => kept(c, d).length === 0)
+      && CHURCH_IDS.every((c) => !greatFeast(`2027${d.slice(4)}`, c)),
+  );
+  if (!iso) throw new Error('no day of the year is empty of saints and of feasts any more');
+  return `/calendar/2027${iso.slice(4)}`;
+})();
+
+/**
+ * A civil day `church` keeps nobody on while **exactly one** commemoration
+ * falls in another calendar — the singular of the empty-day prose, "One
+ * commemoration falls today in another church's calendar". The count decides
+ * which sentence the page writes, so the day has to hold one and not two.
+ */
+export const dayKeptOnlyElsewhere = (church) => {
+  const iso = CIVIL_2026.find(
+    (d) => kept(church, d).length === 0
+      && CHURCH_IDS.reduce((n, c) => n + kept(c, d).length, 0) === 1,
+  );
+  if (!iso) throw new Error(`no civil day of 2026 is empty for ${church} with exactly one elsewhere`);
+  return `/calendar/${iso}`;
+};
+
+/**
+ * A day of a year past the readings' horizon where `church` keeps saints and
+ * none of them carries a hymn: what the corpus not reaching a day looks like
+ * now that the Romanian year is complete and the Greek wave is filling the
+ * rest. The date is 2027 so the day's own readings are still past every
+ * source's end.
+ */
+export const dayWithoutHymns = (church) => {
+  const iso = CIVIL_2026.find((d) => kept(church, d).length > 0 && HYMNED_ON(church, d).length === 0);
+  if (!iso) throw new Error(`every day ${church} keeps has a hymn on it`);
+  return `/calendar/2027${iso.slice(4)}`;
+};
 
 export // Anthony carries an image, all three churches' attestations, Greek and Coptic
 // name forms, related saints and a life; Christopher is the awkward one —
