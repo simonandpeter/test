@@ -6,6 +6,11 @@
       "form": "Isidor Pelusiotul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 februarie, «Sfântul Cuvios Isidor Pelusiotul»."
+    },
+    {
+      "form": "Ισίδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Φεβρουαρίου, «Όσιος Ισίδωρος ο Πηλουσιώτης», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -41,8 +46,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Φεβρουαρίου — «Όσιος Ισίδωρος ο Πηλουσιώτης»",
+        "url": "https://www.saint.gr/02/04/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -52,5 +66,72 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 360,
+      "latest": 360,
+      "display": "about 360",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην Αίγυπτο περί το 360 μ.Χ. από γονείς θεοφιλείς», with the page's own head «(360 - 440)»."
+    },
+    "death": {
+      "earliest": 440,
+      "latest": 440,
+      "display": "440",
+      "basis": "traditional",
+      "note": "saint.gr: «Εκοιμήθη ειρηνικά το 440 μ.Χ.»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’",
+      "text": "Ἐν σοί Πάτερ ἀκριβῶς διεσώθη τό κατ᾽ εἰκόνα· λαβών γάρ τόν σταυρόν, ἠκολούθησας τῷ Χριστῷ, καί πράττων ἐδίδασκες, ὑπερορᾷν μέν σαρκός, παρέρχεται γάρ· ἐπιμελεῖσθαι δέ ψυχῆς, πράγματος ἀθανάτoυ· διό καί μετά Ἀγγέλων συναγάλλεται, Ὅσιε Ἰσίδωρε τό πνεῦμά σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ισίδωρος ο Πηλουσιώτης, Λειτουργικά κείμενα: Ἀπολυτίκιον. This is the common of a venerable father with his name in it, printed under his name as his own service.",
+        "url": "https://www.saint.gr/1378/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "In you, father, what was made according to the image was kept exactly; for taking up the cross you followed Christ, and by doing you taught: to overlook the flesh, since it passes away, and to care for the soul, a thing immortal. Therefore your spirit rejoices together with the angels, venerable Isidore.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος δ'.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Σοφία κοσμούμενος, παντοδαπεί ευκλεώς, τοις Λόγοις εκόσμησας, την Εκκλησίαν Χριστού, Ισίδωρε Όσιε, συ γαρ δι' εγκράτειας, σεαυτόν εκκαθάρας, πράξει και θεωρία, διαλάμπεις εν κοσμώ, δι' ων μυσταγωγούμεθα, Πάτερ τα κρείττονα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ισίδωρος ο Πηλουσιώτης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1378/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with wisdom of every kind, gloriously, you adorned the Church of Christ with your words, venerable Isidore; for having cleansed yourself through self-restraint, you shine out in the world by action and contemplation, and through them, father, we are initiated into the better things.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος α’",
+      "text": "Ἑωσφόρον ἄλλον σε ἡ Ἐκκλησία, εὑραμένη ἔνδοξε, ταῖς τῶν σῶν λόγων ἀστραπαῖς, λαμπρυνομένη κραυγάζει σοι· Χαίροις παμμάκαρ, Θεόφρον Ἰσίδωρε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Ισίδωρος ο Πηλουσιώτης, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/1378/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having found you, glorious one, as another morning star, the Church, made bright by the lightnings of your words, cries out to you: rejoice, all-blessed Isidore of the mind of God.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

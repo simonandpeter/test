@@ -1,0 +1,66 @@
+{
+  "slug": "george-of-vladimir",
+  "display_name": "George of Vladimir",
+  "sex": "male",
+  "types": [
+    "prince"
+  ],
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Φεβρουαρίου, «Άγιος Γεώργιος ο Πρίγκιπας», with the rank word left off; the page's life adds the family name in brackets, «Ο Άγιος Γεώργιος (Βσεβολόντοβιτς)»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1189,
+      "latest": 1189,
+      "display": "1189",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε το έτος 1189 μ.Χ. στην Ρωσία και ήταν υιός του μεγάλου πρίγκιπα Βσέβολοντ»."
+    },
+    "death": {
+      "earliest": 1238,
+      "latest": 1238,
+      "display": "1238",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Γεώργιος φονεύθηκε στη μάχη την οποία συνήψε με τους Μογγόλους στον ποταμό Σίτα στις 4 Μαρτίου 1238 μ.Χ.» — the page's narrative gives the day as 4 March while keeping him on 4 February; only the year is taken."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "saint.gr's own life for him says he was killed «στον ποταμό Σίτα στις 4 Μαρτίου 1238 μ.Χ.», 4 March, while both the day page and the page head keep him on 4 February; the day recorded is the day page read (https://www.saint.gr/1382/saint.aspx, read 30 September 2026)."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Φεβρουαρίου — «Άγιος Γεώργιος ο Πρίγκιπας»",
+        "url": "https://www.saint.gr/02/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

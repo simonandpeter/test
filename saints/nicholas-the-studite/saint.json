@@ -1,0 +1,103 @@
+{
+  "slug": "nicholas-the-studite",
+  "display_name": "Nicholas the Studite",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Φεβρουαρίου, «Όσιος Νικόλαος ο Ομολογητής ο Στουδίτης», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 792,
+      "latest": 792,
+      "display": "792",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στη Κυδωνία της Κρήτης το 792 μ.Χ.»."
+    },
+    "death": {
+      "earliest": 868,
+      "latest": 868,
+      "display": "868",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο όσιος Νικόλαος κοιμήθηκε με ειρήνη στις 4 Φεβρουαρίου του 868 μ.Χ.»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Φεβρουαρίου — «Όσιος Νικόλαος ο Ομολογητής ο Στουδίτης»",
+        "url": "https://www.saint.gr/02/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θεῖον βλάστημα, τῆς Κυδωνίας, καὶ ὑπόδειγμα, ὁσίου βίου, ἀνεδείχθης Στουδῖτα Νικόλαε· καὶ τοῦ Χριστοῦ τὴν Εἰκόνα σεβόμενος, ὀμολογίας ἀγῶσι διέπρεψας. Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθε ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Νικόλαος ο Ομολογητής ο Στουδίτης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1377/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A divine shoot of Kydonia and a pattern of holy life you were shown to be, Nicholas the Studite; and venerating the Icon of Christ you were distinguished in the contests of confession. Venerable father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ.",
+      "text": "Ἐκ Κυδωνίας ὡς φωστὴρ λαμπρὸς ἀνέτειλας Καὶ Ἐκκλησίας καταυγάζεις τὰ πληρώματα Τῇ στερρᾷ ὁμολογίᾳ σου Θεοφόρε. Τῆς Εἰκόνος τοῦ Χριστοῦ γὰρ τὴν προσκύνησιν Τοῖς ἀγῶσί σου καὶ πόνοις κατετράνωσας. Ὅθεν κράζομεν, χαίροις Πάτερ Νικόλε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Όσιος Νικόλαος ο Ομολογητής ο Στουδίτης, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/1377/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Out of Kydonia you rose like a bright luminary, and you light up the fullness of the Church by your steadfast confession, bearer of God; for by your contests and labours you made plain the veneration of the Icon of Christ. Therefore we cry: rejoice, father Nicholas.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

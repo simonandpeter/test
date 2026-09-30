@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-of-japan nicholas-of-spetses nicholas-of-valaam nicholas-the-studite':
+    'five now. The new one is Nicholas the Studite, dead 868, kept on 4 Φεβρουαρίου; the other four are read in the el-02-03 entry for this name form.',
+  'ιωσηφ joseph-of-aleppo joseph-of-lythrodontas':
+    'two men. saint.gr keeps Joseph of Aleppo, dead 1686, on 4 Φεβρουαρίου; the corpus keeps Joseph of Lythrodontas, with no year, on the Greek 6 October. A Syrian of the seventeenth century and a Cypriot, on two days.',
+  'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-mauropous john-of-edessa john-of-irenopolis john-of-kazan john-of-spetses john-of-syracuse john-son-of-xenophon john-the-hut-dweller':
+    'ten now. The new one is John of Irenopolis, dead 325, kept on 4 Φεβρουαρίου; the other nine are read in the el-02-03 entry for this name form. Ten men, ten Greek days, and no page naming another.',
+  'γεωργιοσ george-of-develtos george-of-megara george-of-vladimir george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian':
+    'seven now. The new one is George of Vladimir, the prince killed in 1238, kept on 4 Φεβρουαρίου; the other six are read in the el-02-01 entry for this name form.',
+  'ευαγριοσ evagrius-companion-of-theodoula evagrius-of-georgia evagrius-of-iberia':
+    'three men, and two of the three are Georgians. saint.gr keeps Evagrius of Georgia, whose page gives no year, on 4 Φεβρουαρίου, and Evagrius of Iberia, a monk and deacon of about 415, on 6 Ιανουαρίου; the third is the Evagrius martyred with Theodoula in 298, read in the el-01-06 entry for this name form. Two Georgians on two days is the calendar keeping two men, not one twice.',
+  'κυριλλοσ cyril-of-alexandria cyril-of-kazan cyril-of-the-white-lake cyril-of-zographou':
+    'four now. The new one is Cyril of the White Lake, dead 1532, kept on 4 Φεβρουαρίου; the other three are read in the el-01-26 entry for this name form.',
   'συμεων simeon-of-tver simeon-the-elder symeon-the-god-receiver symeon-the-new-of-mytilene':
     'four now. The new one is Simeon of Tver, dead 1289, kept on 3 Φεβρουαρίου — the day of Symeon the God-Receiver, whose own row the wave left alone. The other two are read in the el-02-01 entry for this name form, the Elder of 26 Ιανουαρίου and the New of Mytilene.',
   'σαββασ sabbas-of-zographou sabbas-the-spiritual sava-of-serbia':

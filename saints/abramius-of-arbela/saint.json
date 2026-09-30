@@ -7,6 +7,11 @@
       "form": "Avramie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 februarie, «Sfântul Sfințit Mucenic Avramie». The life adds «episcop de Arbilia»."
+    },
+    {
+      "form": "Αβράμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Φεβρουαρίου, «Άγιος Αβράμιος ο Ιερομάρτυρας Επίσκοπος Αρβήλ της Περσίας», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Φεβρουαρίου — «Άγιος Αβράμιος ο Ιερομάρτυρας Επίσκοπος Αρβήλ της Περσίας»",
+        "url": "https://www.saint.gr/02/04/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -48,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Αβράμιος έζησε τον 5ο αιώνα μ.Χ. και ήταν Επίσκοπος της Περσικής πόλεως Αρβήλ … επί βασιλέως Σαβωρίου» — the page gives no year."
+    }
   }
 }

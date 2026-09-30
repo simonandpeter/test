@@ -1,0 +1,58 @@
+{
+  "slug": "dositheia-of-russia",
+  "display_name": "Dositheia of Russia",
+  "sex": "female",
+  "types": [
+    "queen"
+  ],
+  "names": [
+    {
+      "form": "Δοσιθέα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Φεβρουαρίου, «Αγία Δοσιθέα Βασίλισσα της Ρωσίας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1810,
+      "latest": 1810,
+      "display": "1810",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Δοσιθέα κοιμήθηκε με ειρήνη το έτος 1810 μ.Χ.», with the page's own head «(; - 1810)». That sentence is the whole of the page."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Φεβρουαρίου — «Αγία Δοσιθέα Βασίλισσα της Ρωσίας»",
+        "url": "https://www.saint.gr/02/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

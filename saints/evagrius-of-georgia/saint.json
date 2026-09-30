@@ -1,0 +1,53 @@
+{
+  "slug": "evagrius-of-georgia",
+  "display_name": "Evagrius of Georgia",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Ευάγριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Φεβρουαρίου, «Όσιοι Ευάγριος και Σίος εκ Γεωργίας», with the rank word left off."
+    }
+  ],
+  "related": [
+    "shio-of-mgvime"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "The life page saint.gr gives for this line carries no life at all, only «Βλέπε 4 Ιανουαρίου» — see 4 January — so the Greek calendar appears to keep the pair on that day as well (https://www.saint.gr/1281/saint.aspx, read 30 September 2026). The day recorded is the day page read."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Φεβρουαρίου — «Όσιοι Ευάγριος και Σίος εκ Γεωργίας»",
+        "url": "https://www.saint.gr/02/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

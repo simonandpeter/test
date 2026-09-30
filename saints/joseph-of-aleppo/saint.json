@@ -1,0 +1,60 @@
+{
+  "slug": "joseph-of-aleppo",
+  "display_name": "Joseph of Aleppo",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιωσήφ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Φεβρουαρίου, «Άγιος Ιωσήφ ο Χαλεπλής», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1686,
+      "latest": 1686,
+      "display": "1686",
+      "basis": "attested",
+      "note": "saint.gr: «δέχτηκε το στεφάνι του μαρτυρίου με αποκεφαλισμό στις 4 Φεβρουαρίου 1686 μ.Χ.», with the page's own head «(; - 1686)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "saint.gr's own page for him adds that a manuscript gives another day: «Ο υπ' αριθ. 2142 (129) κώδικας του XVIII αιώνος της Μονής Εσφιγμένου του Αγίου Όρους, εδάφ. 23, αναφέρει το μαρτύριο του Αγίου στις 17 Φεβρουαρίου». The day page and the page head both keep him on 4 February, which is what is recorded (https://www.saint.gr/1370/saint.aspx, read 30 September 2026)."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Φεβρουαρίου — «Άγιος Ιωσήφ ο Χαλεπλής»",
+        "url": "https://www.saint.gr/02/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

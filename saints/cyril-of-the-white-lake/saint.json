@@ -1,0 +1,61 @@
+{
+  "slug": "cyril-of-the-white-lake",
+  "display_name": "Cyril of the White Lake",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Κύριλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Φεβρουαρίου, «Όσιος Κύριλλος ο Θαυματουργός», with the rank word and the epithet left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1532,
+      "latest": 1532,
+      "display": "1532",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Κύριλλος κοιμήθηκε με ειρήνη, αφού προαισθάνθηκε το τέλος του, το έτος 1532 μ.Χ.», with the page's own head «(; - 1532)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "saint.gr's own life for him ends «Η Εκκλησία εορτάζει τη μνήμη του στις 15 Ιουνίου και στις 7 Νοεμβρίου», naming two other days and not this one, while its day page and its page head both keep him on 4 February; the day recorded is the day page read (https://www.saint.gr/1379/saint.aspx, read 30 September 2026)."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Φεβρουαρίου — «Όσιος Κύριλλος ο Θαυματουργός»",
+        "url": "https://www.saint.gr/02/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

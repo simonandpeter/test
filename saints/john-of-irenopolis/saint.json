@@ -1,0 +1,59 @@
+{
+  "slug": "john-of-irenopolis",
+  "display_name": "John of Irenopolis",
+  "office": "Bishop of Irenopolis",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Φεβρουαρίου, «Όσιος Ιωάννης επίσκοπος Ειρηνουπόλεως», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 325,
+      "latest": 325,
+      "display": "325",
+      "basis": "attested",
+      "note": "saint.gr places him by the council alone: «ένας από τους τριακόσιους δέκα οκτώ (318) Αγίους Πατέρες της Α' Οικουμενικής Συνόδου, που συνήλθε στη Νίκαια της Βιθυνίας, το έτος 325 μ.Χ.». The page gives him no year of birth and none of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Φεβρουαρίου — «Όσιος Ιωάννης επίσκοπος Ειρηνουπόλεως»",
+        "url": "https://www.saint.gr/02/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
