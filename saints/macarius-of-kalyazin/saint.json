@@ -1,0 +1,68 @@
+{
+  "slug": "macarius-of-kalyazin",
+  "display_name": "Macarius of Kalyazin",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαρτίου, «Όσιος Μακάριος ηγούμενος της μονής Κολγιαζίν της Ρωσίας», with the rank word and the office left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 1402,
+      "latest": 1402,
+      "display": "1402",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Μακάριος, κατά κόσμο Ματθαίος, γεννήθηκε το έτος 1402 μ.Χ. στο χωριό Κοζίνο της Ρωσίας», and the page heads him «(1402 - 1483)»."
+    },
+    "death": {
+      "earliest": 1483,
+      "latest": 1483,
+      "display": "1483",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Μακάριος κοιμήθηκε με ειρήνη το έτος 1483 μ.Χ.», and the page heads him «(1402 - 1483)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The Greek page calls him a Russian abbot, so a Russian row is likely and has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαρτίου — «Όσιος Μακάριος ηγούμενος της μονής Κολγιαζίν της Ρωσίας»",
+        "url": "https://www.saint.gr/03/17/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαρτίου εκάστου έτους.» Beside him the page sets «Εύρεση των ιερών λειψάνων του Οσίου Μακαρίου», the finding of his relics, which is a separate commemoration and no folder."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

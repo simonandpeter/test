@@ -1,0 +1,60 @@
+{
+  "slug": "theodulus-the-sinaite",
+  "display_name": "Theodulus the Sinaite",
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "names": [
+    {
+      "form": "Θεόδουλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαρτίου, «Άγιος Θεόδουλος ο Ιερομάρτυρας ο Σιναΐτης», with the rank word left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1822,
+      "latest": 1822,
+      "display": "1822",
+      "basis": "traditional",
+      "note": "saint.gr: «Τελειώθηκε μαρτυρικά από τους Τούρκους το έτος 1822 μ.Χ.», and the page heads him «(; - 1822)», leaving the first date a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαρτίου — «Άγιος Θεόδουλος ο Ιερομάρτυρας ο Σιναΐτης»",
+        "url": "https://www.saint.gr/03/17/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαρτίου εκάστου έτους.» The page heads him «(; - 1822)». It calls him Ιερομάρτυρας and does not call him a new martyr, so no new-martyr type has been written from it."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

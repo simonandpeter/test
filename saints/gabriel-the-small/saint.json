@@ -1,0 +1,60 @@
+{
+  "slug": "gabriel-the-small",
+  "display_name": "Gabriel the Small",
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "names": [
+    {
+      "form": "Γαβριήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαρτίου, «Άγιος Γαβριήλ ο Μικρός ο Οσιομάρτυρας», with the rank words left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1802,
+      "latest": 1802,
+      "display": "1802",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησε το έτος 1802 μ.Χ. από τους Μουσουλμάνους», and the page heads him «(; - 1802)», leaving the first date a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαρτίου — «Άγιος Γαβριήλ ο Μικρός ο Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/03/17/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαρτίου εκάστου έτους.» The page heads him «(; - 1802)»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

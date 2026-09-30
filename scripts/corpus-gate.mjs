@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδουλοσ theodulus-companion-of-agapitus theodulus-companion-of-eventius theodulus-companion-of-pamphilus theodulus-of-caesarea-17-february theodulus-of-myropolis theodulus-of-the-forty-martyrs theodulus-son-of-nilus theodulus-the-executioner theodulus-the-sinaite':
+    'Nine now. The new one is Theodulus the Sinaite on 17 March; the others are read in the el-03-16 entry for this name form.',
+  'παυλοσ paul-brother-of-pausirius paul-companion-of-quadratus paul-disciple-of-dionysius-of-alexandria paul-of-crete paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-zographou paul-the-martyr-3-february paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
+    'Sixteen now. The new one is Paul of Crete on 17 March; the others are read in the el-03-11 entry for this name form.',
+  'μακαριοσ macarius-companion-of-eudoxius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-metropolitan-of-moscow macarius-of-ierissos macarius-of-kalyazin macarius-of-kios macarius-of-paphos macarius-of-pisma macarius-of-rome macarius-of-valaam macarius-of-zhabyn macarius-the-confessor':
+    'Fourteen now. The new one is Macarius of Kalyazin on 17 March; the others are read in the el-02-28 entry for this name form.',
+  'γαβριηλ gabriel-companion-of-sionios gabriel-of-georgia gabriel-of-lesnovo gabriel-of-novgorod-and-saint-petersburg gabriel-of-saint-stephens-jerusalem gabriel-the-martyr-2-february gabriel-the-small gabriel-vsevolod-of-novgorod':
+    'Eight now. The new one is Gabriel the Small on 17 March; the others are read in the el-01-21 entry for this name form.',
   'θεοδουλοσ theodulus-companion-of-agapitus theodulus-companion-of-eventius theodulus-companion-of-pamphilus theodulus-of-caesarea-17-february theodulus-of-myropolis theodulus-of-the-forty-martyrs theodulus-son-of-nilus theodulus-the-executioner':
     'Eight now. The new one is the companion of Eventius on 16 March; the others are read in the el-02-18 entry for this name form, where the 16 and 17 February pair is the open Caesarea question in ro-run/FINDINGS.md.',
   'ποιμην poimen-of-georgia poimen-of-novgorod':

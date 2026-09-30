@@ -6,6 +6,11 @@
       "form": "Marin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 martie."
+    },
+    {
+      "form": "Μαρίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαρτίου, «Άγιος Μαρίνος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαρτίου — «Άγιος Μαρίνος»",
+        "url": "https://www.saint.gr/03/17/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαρτίου εκάστου έτους.» The page gives him no year, no country and no persecutor: «Ο Άγιος Μαρίνος έζησε στα χρόνια των διωγμών της Εκκλησίας» — he lived in the years of the persecutions of the Church. It prints a couplet over him and no hymn, so no dates object is written from this reading."
     },
     {
       "church": "serbian",

@@ -1,0 +1,62 @@
+{
+  "slug": "paul-of-crete",
+  "display_name": "Paul of Crete",
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "names": [
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαρτίου, «Άγιος Παύλος ο Οσιομάρτυρας», with the rank word left off."
+    }
+  ],
+  "related": [
+    "stephen-the-new"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 765,
+      "latest": 766,
+      "display": "765 or 766",
+      "basis": "traditional",
+      "note": "saint.gr: «Το μαρτύριό του τοποθετείται περί το 765 ή το 766 μ.Χ.» — the page offers the two years and does not choose, so the interval is the finding."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαρτίου — «Άγιος Παύλος ο Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/03/17/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαρτίου εκάστου έτους.» The same day's listing carries a second, separate Παύλος ο Οσιομάρτυρας, «ο ἐν Κύπρῳ ἀθλήσας», also burned under the iconoclasts, whose entry saint.gr marks with an asterisk as uncorroborated; nothing has been taken from that page here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

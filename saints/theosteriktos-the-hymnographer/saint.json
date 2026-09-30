@@ -6,12 +6,19 @@
       "form": "Teostirict imnograful",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 martie."
+    },
+    {
+      "form": "Θεοστήρικτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαρτίου, «Όσιος Θεοστήρικτος ο Ομολογητής», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
   "types": [
     "venerable",
-    "hymnographer"
+    "hymnographer",
+    "confessor",
+    "abbot"
   ],
   "attestations": [
     {
@@ -35,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαρτίου — «Όσιος Θεοστήρικτος ο Ομολογητής»",
+        "url": "https://www.saint.gr/03/17/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαρτίου εκάστου έτους.» The Greek calendar titles him ο Ομολογητής, the Confessor, where doxologia had only «imnograful»; and it is this page that supplies the hymnography the corpus's folder name rests on — «Ο όσιος Θεοστήρικτος συνέθεσε και ‹Κανόνα Παρακλητικὸν εἰς τὴν Ὑπεραγίαν Θεοτόκον›». It gives no year: he was born at Trigleia in Bithynia «στις αρχές του 8ου μ.Χ. αιώνα», at the beginning of the eighth century, and «έζησε σε βαθιά γεράματα και απεβίωσε ειρηνικά», lived to a great age and died in peace. No dates object is written from that."
     },
     {
       "church": "serbian",
@@ -46,5 +63,44 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "nicetas-of-medikion"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Στηριγμὸς φερωνύμως τῶν πιστῶν ἐχρημάτισας, δι’ ὁμολογίας τῆς θείας, Θεοστήρικτε Ὅσιε· ὑπὲρ γὰς τῆς Εἰκόνος τοῦ Χριστοῦ, ὑπέμεινας κακώσεις καὶ δεσμά· διὰ τοῦτο καὶ Τριγλία ἡ σὴ πατρίς, τιμᾷ σε ἀνακράζουσα· δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ χορηγοῦντι διὰ σοῦ, χάριν ἡμῖν καὶ ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης, on the page of Όσιος Θεοστήρικτος ο Ομολογητής. It names him, plays on his name (στηριγμὸς φερωνύμως, the support that is rightly named) and names Trigleia his homeland. The page's «ὑπὲρ γὰς» for ὑπὲρ γὰρ is its own reading and is copied as printed; the page also prints a Μεγαλυνάριον, which is not taken here.",
+        "url": "https://www.saint.gr/3909/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Rightly named, thou wast made the support of the faithful by thy divine confession, O venerable Theosteriktos; for on behalf of the icon of Christ thou didst endure ill-usage and bonds. Therefore Trigleia thy homeland honours thee and cries aloud: glory to him who gave thee strength, glory to him who crowned thee, glory to him who through thee bestows grace and mercy upon us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ὀρθοδόξοις δόγμασι, λελαμπρυσμένος, ὡς ἀστὴρ πολύφωτος ὁμολογίας τῷ φωτί, καταπυρσεύεις ἑκάστοτε, τοὺς σὲ τιμῶντας, σοφὲ Θεοστήρικτε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of Όσιος Θεοστήρικτος ο Ομολογητής.",
+        "url": "https://www.saint.gr/3909/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Made radiant with the Orthodox doctrines, as a star of many lights thou dost ever set alight with the light of confession those who honour thee, O wise Theosteriktos.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

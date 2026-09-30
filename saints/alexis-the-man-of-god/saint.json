@@ -6,6 +6,11 @@
       "form": "Alexie, omul lui Dumnezeu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 martie."
+    },
+    {
+      "form": "Αλέξιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαρτίου, «Όσιος Αλέξιος ο άνθρωπος του Θεού», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαρτίου — «Όσιος Αλέξιος ο άνθρωπος του Θεού»",
+        "url": "https://www.saint.gr/03/17/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαρτίου εκάστου έτους.» The page gives no year of death — it places his birth at Rome «κατά τους χρόνους των αυτοκρατόρων Αρκαδίου (395 - 408 μ.Χ.) και Ονωρίου (395 - 423 μ.Χ.)» and nothing more, so the corpus's 411 from doxologia is left standing. It lists relics: the head at the monastery of Agia Lavra at Kalavryta, a portion of the head at the monastery of the Nativity of the Theotokos at Akraiphnio in Boeotia, and portions at Esphigmenou on the Holy Mountain, at Kykkos in Cyprus and at the Lavra of St Alexander Nevsky in St Petersburg."
     },
     {
       "church": "serbian",
@@ -67,6 +82,40 @@
       },
       "english": {
         "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with wonders, O Alexis our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ἐκ ῥίζης ἐβλάστησας, περιφανοῦς καί κλεινῆς, ἐκ πόλεως ἤνθησας, βασιλικῆς καί λαμπρᾶς, Ἀλέξιε πάνσοφε· πάντων δ᾽ ὑπερφρονήσας, ὡς φθαρτῶν καί ῥεόντων, ἔσπευσας συναφθῆναι, τῷ Χριστῷ καί Δεσπότῃ. Αὐτόν οὖν ἐκδυσώπει ἀεί, ὑπέρ τῶν ψυχῶν ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε, on the page of Όσιος Αλέξιος ο άνθρωπος του Θεού. It names him. The page prints a Μεγαλυνάριον, an Οἶκος and a Κάθισμα besides; only the apolytikion and the kontakion are taken here.",
+        "url": "https://www.saint.gr/3907/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst spring from a root renowned and famous, and didst blossom from a city royal and splendid, O all-wise Alexis; and having thought lightly of all things as corruptible and passing away, thou didst hasten to be joined to Christ the Master. Entreat him therefore without ceasing for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ἀλεξίου σήμερον τοῦ πανολβίου, ἑορτήν τήν πάνσεπτον, ἐπιτελοῦντες εὐσεβῶς, αὐτόν ὑμνήσωμεν λέγοντες· χαίροις Ὁσίων τερπνόν ἐγκαλλώπισμα.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of Όσιος Αλέξιος ο άνθρωπος του Θεού.",
+        "url": "https://www.saint.gr/3907/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping today with reverence the all-venerable feast of most blessed Alexis, let us hymn him and say: rejoice, thou delightful adornment of the venerable.",
         "rendered": "site"
       }
     }

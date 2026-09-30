@@ -6,6 +6,11 @@
       "form": "Patrick, Luminătorul Irlandei",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 martie."
+    },
+    {
+      "form": "Πατρίκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Μαρτίου, «Άγιος Πατρίκιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -53,8 +58,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Μαρτίου — «Άγιος Πατρίκιος»",
+        "url": "https://www.saint.gr/03/17/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Μαρτίου εκάστου έτους.» The page heads him «Αγιος Πατρικιος (; - 461)» and its years disagree with doxologia's, which the corpus's dates field carries: it puts his birth «περί το 380 μ.Χ.» at Glevum and his repose «το έτος 461 μ.Χ. (η κατ' άλλους το 493 μ.Χ.), στο Σάουτ της Ουαλίας», where doxologia gives about 381 and about 480. The disagreement is recorded here and the existing dates are left as they stand; no year has been changed on this reading."
     },
     {
       "church": "serbian",
@@ -76,6 +91,23 @@
       },
       "english": {
         "text": "O holy hierarch Patrick, wonderworker equal to the Apostles, enlightener of Ireland, entreat the merciful God to grant our souls forgiveness of offences.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος πλ. δ'.",
+      "model": "Τη Υπερμάχω.",
+      "text": "Της Ιρλανδίας τον φωστήρα τον υπέρλαμπρον και των αποστόλων μιμητήν και ισοστάσιον συνελθόντες ανυμνήσωμεν χαρμοσύνως· παρρησίαν γαρ ευράμενος προς Κύριον ικετεύει λυτρωθήναι πάσης θλίψεως τους κραυγάζοντας· Χαίροις, Πάτερ Πατρίκιε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ήχος πλ. δ', Τη Υπερμάχω, on the page of Άγιος Πατρίκιος. It names him and Ireland, and an Οἶκος follows it on the page, so it is the kontakion of an akathist to him; saint.gr prints no apolytikion under his name, and the oikos is not taken here.",
+        "url": "https://www.saint.gr/3914/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Come, let us gather and hymn with joy the most radiant luminary of Ireland, the imitator and equal of the apostles; for having found boldness before the Lord, he entreats that all who cry aloud be delivered from every affliction: rejoice, Father Patrick.",
         "rendered": "site"
       }
     }
