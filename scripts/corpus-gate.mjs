@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'φιλοθεοσ philotheus-of-antioch philotheus-of-meteora philotheus-of-samosata philotheus-of-tobolsk philotheus-the-presbyter':
+    'Five now. The new one is Philotheus of Tobolsk on 31 May; the others are read in the el-02-14 entry for this name form.',
+  'φιλοσοφοσ philosophos-of-alexandria philosophos-ornatsky':
+    'Two men of the name, which is a name here and not a rank: Philosophos Ornatsky, the Petrograd archpriest of 31 May, and Philosophos of Alexandria on 1 May.',
+  'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-efimov nicholas-katopinos nicholas-kedrov nicholas-migulin nicholas-of-corinth nicholas-of-japan nicholas-of-magnesia nicholas-of-metsovo nicholas-of-pskov nicholas-of-spetses nicholas-of-the-forty-martyrs nicholas-of-trebizond nicholas-of-valaam nicholas-of-vounena nicholas-patriarch-of-georgia nicholas-son-of-philosophos nicholas-the-bulgarian-17-may nicholas-the-mystikos nicholas-the-studite nicholas-velimirovich nicholas-zagorovsky':
+    'Twenty-two now. The new one is Nicholas the son of Philosophos on 31 May, of the Petrograd family the day keeps together; the others are read in the el-05-17 entry for this name form.',
+  'ιεροθεοσ hierotheus-of-athens hierotheus-of-nikolsk':
+    'Two men: Hierotheus of Nikolsk on 31 May and the Hierotheus of the el-10-04 entry.',
+  'κρησκησ crescens-companion-of-quadratus crescens-martyr-28-may crescens-of-myra crescens-of-sardinia':
+    'Four men: the companion of Quadratus on 10 March, the Crescens of 28 May, Crescens of Sardinia on 31 May, and the Crescens the el-04-10 company holds.',
   'ρωμανοσ romanus-30-may romanus-martyr-16-march romanus-of-karpenisi romanus-of-lacedaemon romanus-of-samosata romanus-of-tarnovo romanus-of-uglich romanus-the-cilician':
     'Eight now. The new one is the Romanus of 30 May; the others are read in the el-02-17 entry for this name form.',
   'κυπριανοσ cyprian-30-may cyprian-companion-of-quadratus cyprian-of-antioch cyprian-of-zographou cyprian-yankovsky':

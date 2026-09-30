@@ -6,6 +6,11 @@
       "form": "Eusebiu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 31 mai, «Sfântul Mucenic Eusebiu»."
+    },
+    {
+      "form": "Ευσέβιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαΐου, «Άγιοι Ευσέβιος και Χαράλαμπος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 31 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαΐου — «Άγιοι Ευσέβιος και Χαράλαμπος»",
+        "url": "https://www.saint.gr/05/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and it is the same bare pair the Romanian prints separately on the same day: «Οι Άγιοι Μάρτυρες Ευσέβιος και Χαράλαμπος κατάγονταν από τη Νικομήδεια και είναι άγνωστο πότε μαρτύρησαν.» **The Greek adds three things doxologia did not have**: Nicomedia for their origin, fire for the manner of their death, and the company they died in — «υπέστησαν μαζί με τους Αγίους Μάρτυρες Ρωμανό, Τελέτιο ή Μελέτιο και Χριστίνα (τιμούνται 30 Μαΐου), τον επί της πυράς μαρτυρικό θάνατο». It also states plainly that the year is unknown, «είναι άγνωστο πότε μαρτύρησαν», so the folder still has no `dates`. Those three companions are drafted from the 30 Μαΐου page in the batch `el-05-30`, and no `related` row is written here because their folders do not exist yet; the connection is named in the life without a link and is the writer's to complete once that batch has landed. No hymn is printed, only the distich «Zήλου πυρί φλεχθέντες αθληταί δύω, Ιλιγγιώσιν ουδαμώς προς πυρ φλέγον.»"
     },
     {
       "church": "serbian",

@@ -1,0 +1,60 @@
+{
+  "slug": "philotheus-of-tobolsk",
+  "display_name": "Philotheus of Tobolsk",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "names": [
+    {
+      "form": "Φιλόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαΐου, «Άγιος Φιλόθεος Μητροπολίτης Τομπόλσκ», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1727,
+      "latest": 1727,
+      "display": "1727",
+      "basis": "traditional",
+      "note": "The only year on the page is in its own heading, «Άγιος Φιλόθεος Μητροπολίτης Τομπόλσκ (; - 1727)»; the body says «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου», we have no details of the life of this Russian saint, and gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). saint.gr calls him a Russian saint and metropolitan of Tobolsk, so the Russian calendar is very likely to keep him and to have the life this page lacks; this row says what was read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαΐου — «Άγιος Φιλόθεος Μητροπολίτης Τομπόλσκ»",
+        "url": "https://www.saint.gr/05/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Μαΐου εκάστου έτους», the same day as the listing. **The page says outright that it has no life for him** — «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου» — and the folder says the same rather than filling the gap; that is an absence of detail and not the self-doubt about existence which refuses an entry, since the page names him, dates his death and gives his see. It files him under «Σύναξη πάντων των εν Σιβηρία Αγίων», the synaxis of all the saints of Siberia, and cites OCA's Feasts and Saints as where more would be found; neither was read. He is none of the corpus's eight other Philotheuses. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

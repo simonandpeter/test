@@ -1,0 +1,67 @@
+{
+  "slug": "hierotheus-of-nikolsk",
+  "display_name": "Hierotheus of Nikolsk",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Ιερόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαΐου, «Άγιος Ιερόθεος ο Νέος ο Ιερομάρτυρας», with the rank words and the epithet ο Νέος left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1891,
+      "latest": 1891,
+      "display": "about 1891",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε περί το 1891 μ.Χ.» — the page's own «περί», about, is why the basis is traditional and not attested, and the heading repeats the year, «(1891 - 1928)»."
+    },
+    "death": {
+      "earliest": 1928,
+      "latest": 1928,
+      "display": "1928",
+      "basis": "traditional",
+      "note": "saint.gr: «Επειδή ήταν ασθενής, τον οδήγησαν στο νοσοκομείο. Εκεί ο Άγιος Ιερόθεος κοιμήθηκε οσίως το 1928 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). saint.gr makes him a Russian bishop who died in 1928, so the Russian calendar may well keep him; this row says what was read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαΐου — «Άγιος Ιερόθεος ο Νέος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/05/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Μαΐου εκάστου έτους», the same day as the listing. **He is not the corpus's Hierotheus the New of Iviron**, although the calendar calls both ο Νέος: that folder is a venerable of Kalamata born in 1686 whose Greek and Romanian rows are both on 13 September, and this is a Russian bishop of Nikolsk born about 1891, so the display name takes the see rather than the epithet. `hieromartyr` is the page's own word for him in both the listing and the heading, although what it narrates is arrest, illness and a death in hospital rather than an execution; that tension is the page's and is quoted in the life. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

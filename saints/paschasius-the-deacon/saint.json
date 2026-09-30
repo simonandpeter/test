@@ -1,0 +1,62 @@
+{
+  "slug": "paschasius-the-deacon",
+  "display_name": "Paschasius",
+  "sex": "male",
+  "types": [
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Πασχάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαΐου, «Άγιος Πασχάσιος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 512,
+      "latest": 512,
+      "display": "512",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το 512 μ.Χ. και αναφέρεται από τον Άγιο Γρηγόριο τον Διάλογο, Επίσκοπο Ρώμης (τιμάται 12 Μαρτίου).» The page's heading is «Άγιος Πασχάσιος (; - 512)» and gives no year of birth; it says only that he lived in the fifth and sixth centuries."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαΐου — «Άγιος Πασχάσιος»",
+        "url": "https://www.saint.gr/05/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Μαΐου εκάστου έτους», the same day as the listing. `types` carries `deacon` alone, which is the only rank the page gives him — «ήταν διάκονος της Εκκλησίας της Ρώμης» — and it does not call him martyr, venerable or confessor. The Gregory it names is identified by the page's own gloss and cross-reference, «τον Άγιο Γρηγόριο τον Διάλογο, Επίσκοπο Ρώμης (τιμάται 12 Μαρτίου)», which is the corpus's Gregory the Dialogist, and the `related` row rests on that. The corpus keeps no other Paschasius. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "gregory-the-dialogist"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

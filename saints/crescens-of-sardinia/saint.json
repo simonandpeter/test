@@ -1,0 +1,59 @@
+{
+  "slug": "crescens-of-sardinia",
+  "display_name": "Crescens of Sardinia",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Κρήσκης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαΐου, «Άγιος Κρήσκης ο Μάρτυρας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 130,
+      "latest": 130,
+      "display": "130",
+      "basis": "traditional",
+      "note": "saint.gr: «καταγόταν από την πόλη Σάρραρι της Σαρδηνίας και μαρτύρησε το 130 μ.Χ., κατά τους χρόνους του αυτοκράτορα Αδριανού (117-138 μ.Χ.).» The page's heading is «Άγιος Κρήσκης ο Μάρτυρας (; - 130)» and gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαΐου — «Άγιος Κρήσκης ο Μάρτυρας»",
+        "url": "https://www.saint.gr/05/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Μαΐου εκάστου έτους», the same day as the listing. He is neither of the corpus's two men of this name: not Crescens the Apostle of the Seventy, and not Crescens of Myra; this one is a Sardinian martyred under Hadrian, and the display name takes the island for that reason. No `locations` are entered although the page names a city, «την πόλη Σάρραρι της Σαρδηνίας», because that spelling answers to no place the corpus can put a point on without guessing. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

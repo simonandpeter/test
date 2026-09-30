@@ -1,0 +1,65 @@
+{
+  "slug": "boris-son-of-philosophos",
+  "display_name": "Boris, son of Philosophos Ornatsky",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Boris",
+      "lang": "el",
+      "note": "saint.gr prints this name in Latin letters on its Greek page, both in the heading «Αγιος Boris ο Μαρτυρας (; - 1918)» and in the body, «ο υιός του Boris», and gives no Greek spelling of it; the calendar's own line for 31 Μαΐου spells it «Βόρις». The form recorded here is the life page's, exactly as it stands."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "saint.gr says he was arrested with his father on 9 August 1918 and shot with him: «Εκτελέσθηκαν διά τουφεκισμού». His own heading on the page is «Αγιος Boris ο Μαρτυρας (; - 1918)», with no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαΐου — «Άγιος Φιλόσοφος ο Ιερομάρτυρας και οι συν αυτώ Βόρις και Νικόλαος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Μαΐου εκάστου έτους», the same day as the listing, and gives him his own heading beside his father's and his brother's, so the enumerated company is one folder per man. `soldier` is on the page's own word: «ο υιός του Boris είχε διορισθεί ως αρχηγός της 23ης ταξιαρχίας πυροβολικού και πολέμησε ηρωικά στο αυστρο-ουγγρικό μέτωπο». **The one name form is in Latin letters** because that is how the life page prints it; the day listing's Greek «Βόρις» is quoted in the name note rather than entered as a second form, since it is the same name in the other script and not a second recorded form. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "philosophos-ornatsky",
+    "nicholas-son-of-philosophos"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

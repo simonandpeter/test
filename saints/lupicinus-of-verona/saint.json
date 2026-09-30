@@ -1,0 +1,60 @@
+{
+  "slug": "lupicinus-of-verona",
+  "display_name": "Lupicinus of Verona",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Λουπικίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαΐου, «Άγιος Λουπικίνος ο Επίσκοπος Βερόνας», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Λουπικίνος έζησε τον 5ο αιώνα μ.Χ. και ήταν Επίσκοπος Βερόνας. Κοιμήθηκε με ειρήνη.» The century is the whole of what the page dates, and it gives neither a year of birth nor a year of death, so it is recorded as a floruit."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαΐου — «Άγιος Λουπικίνος ο Επίσκοπος Βερόνας»",
+        "url": "https://www.saint.gr/05/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Μαΐου εκάστου έτους», the same day as the listing. The whole life is two sentences: the century, the see of Verona, and a death in peace. No `locations` are entered although the see is named, because the page says nothing about where he lived or died beyond the title. The corpus keeps no other Lupicinus. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

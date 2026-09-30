@@ -1,0 +1,60 @@
+{
+  "slug": "petronilla",
+  "display_name": "Petronilla",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Πετρονίλα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαΐου, «Αγία Πετρονίλα», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1,
+      "latest": 300,
+      "display": "1st or 3rd century",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Μάρτυς Πετρονίλα έζησε τον 1ο ή 3ο αιώνα μ.Χ.» The page offers the two centuries as alternatives and settles neither, so the interval is the disagreement itself and is recorded as a floruit; the only date it is firm about is a fourth-century fresco of her martyrdom in the cemetery of Domitilla at Rome."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαΐου — «Αγία Πετρονίλα»",
+        "url": "https://www.saint.gr/05/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Μαΐου εκάστου έτους», the same day as the listing. **No `related` row is made to the Apostle Peter, because the page argues against the tradition that would justify one**: «Η παράδοση θεωρεί, λόγω του ονόματός της, ότι ήταν θυγατέρα του Αποστόλου Πέτρου ή αφοσιωμένη μαθήτρια του Αποστόλου… Όμως η παράδοση αυτή αναφέρεται σε διάφορα βιβλία των Γνωστικών του 6ου αιώνος μ.Χ. και οι περισσότεροι μελετητές - αγιολόγοι δεν αποδέχονται την άποψη αυτή.» The doubt is about that relation and not about her, which is why she is drafted at all; the tradition and the rejection of it are both quoted in the life. No `locations` are entered: Rome is where the fresco is, not stated as where she lived or died. No hymn is printed for her."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

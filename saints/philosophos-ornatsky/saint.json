@@ -1,0 +1,65 @@
+{
+  "slug": "philosophos-ornatsky",
+  "display_name": "Philosophos Ornatsky",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Φιλόσοφος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαΐου, «Άγιος Φιλόσοφος ο Ιερομάρτυρας και οι συν αυτώ Βόρις και Νικόλαος οι Μάρτυρες», with the rank words left off. The body of the same page gives the rest of the name as the Greek spells it, «Φιλόσοφος (Νικολάγιεβιτς Ορνάτσκιυ)»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "saint.gr: «ο Άγιος Ιερομάρτυς Φιλόσοφος συνελήφθη, στις 9 Αυγούστου 1918 μ.Χ., μαζί με τους υιούς του από άνδρες της κρατικής ασφάλειας, που τους μετέφεραν στις φυλακές της Κροστάνδης. Εκτελέσθηκαν διά τουφεκισμού». The page's heading is «(; - 1918)» and gives no year of birth; it says only that he finished the theological academy of Saint Petersburg in 1885."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). saint.gr makes him a Russian new martyr of 1918, so the Russian calendar is very likely to keep him; this row says what was read and not that it does not."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαΐου — «Άγιος Φιλόσοφος ο Ιερομάρτυρας και οι συν αυτώ Βόρις και Νικόλαος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Μαΐου εκάστου έτους», the same day as the listing. **The company is enumerated** — the page prints a heading for each of the three, «Αγιος Φιλοσοφος ο Ιερομαρτυρας (; - 1918)», «Αγιος Νικολαος ο Μαρτυρας (; - 1918)», «Αγιος Boris ο Μαρτυρας (; - 1918)» — so it is one folder per man, and the two others are his own sons. The page also says he was spiritually joined to Patriarch Tikhon, whom it does not date and whom this folder does not link. No hymn is printed for any of the three. Note that the feast day is 31 May while the arrest and the shooting are dated 9 August 1918 on the same page; the page offers no reason for the difference and none is invented here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "nicholas-son-of-philosophos",
+    "boris-son-of-philosophos"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

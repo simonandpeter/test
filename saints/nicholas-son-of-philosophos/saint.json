@@ -1,0 +1,65 @@
+{
+  "slug": "nicholas-son-of-philosophos",
+  "display_name": "Nicholas, son of Philosophos Ornatsky",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Μαΐου, «Άγιος Φιλόσοφος ο Ιερομάρτυρας και οι συν αυτώ Βόρις και Νικόλαος οι Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "saint.gr says he was arrested with his father on 9 August 1918 and shot with him: «Εκτελέσθηκαν διά τουφεκισμού». His own heading on the page is «Αγιος Νικολαος ο Μαρτυρας (; - 1918)», with no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Μαΐου — «Άγιος Φιλόσοφος ο Ιερομάρτυρας και οι συν αυτώ Βόρις και Νικόλαος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Μαΐου εκάστου έτους», the same day as the listing, and gives him his own heading beside his father's and his brother's, so the enumerated company is one folder per man. `soldier` is on the page's own word: «Ο υιός του Νικόλαος υπηρετούσε με ανώτερο βαθμό στο 9ο τάγμα του Ρωσικού». He is none of the corpus's other Nicholases. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "philosophos-ornatsky",
+    "boris-son-of-philosophos"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
