@@ -115,6 +115,42 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σιμων simon-of-moscow simon-of-zographou simon-the-martyr-3-february':
+    'Two men: the Simon of 30 April and the Simon of the el-01-04 reading, which is the day still to be written.',
+  'παυλοσ paul-brother-of-pausirius paul-companion-of-quadratus paul-disciple-of-dionysius-of-alexandria paul-of-cordoba paul-of-corinth paul-of-crete paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-zographou paul-the-martyr-3-february paul-the-russian paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
+    'Nineteen now. The new one is Paul of Cordoba on 30 April; the others are read in the el-04-19 entry for this name form.',
+  'μαξιμοσ maximus-30-april maximus-brother-of-dometius maximus-companion-of-asklepiodote maximus-companion-of-fausta maximus-companion-of-olympias maximus-companion-of-terentius maximus-of-kapsokalyvia maximus-of-marcianopolis maximus-of-ozovia maximus-of-totma maximus-of-ungrovlachia maximus-son-of-paul-and-tatta maximus-venerable-martyr-6-march':
+    'Thirteen now. The new one is the Maximus of 30 April; the others are read in the el-04-15 entry for this name form.',
+  'ισιδωροσ isidore-8-january isidore-of-antioch isidore-of-cordoba isidore-of-pelusium isidore-of-seville':
+    'Five now. The new one is Isidore of Cordoba on 30 April; the others are read in the el-04-04 entry for this name form.',
+  'ηλιασ elias-companion-of-jonah elias-companion-of-terentius elias-martyr-with-patermuthius elias-nikolayevich-hieromartyr elias-of-cordoba elias-of-heliopolis elias-of-trebizond elias-the-cave-dweller-of-calabria elias-the-egyptian iorest-of-transylvania':
+    'Ten now. The new one is Elias of Cordoba on 30 April; the others are read in the el-04-10 entry for this name form.',
+  'κλημησ clement-martyr-23-february clement-of-ancyra clement-of-mount-sagmation clement-the-hymnographer':
+    'Four men: the martyr of 23 February, Ancyra on 23 January, Mount Sagmation on 26 January and Clement the Hymnographer on 30 April.',
+  'αφροδισιοσ aphrodisius-companion-of-peter aphrodisius-of-alexandria':
+    'Two men: the companion of Peter on 14 March and Aphrodisius of Alexandria on 30 April.',
+  'σατορνινοσ saturninus-companion-of-plotinus saturninus-of-corfu':
+    'Two men whose Greek forms differ by a letter from the Σατουρνῖνος fold: Saturninus of Corfu on 29 April and the Saturninus read there.',
+  'ιανουαριοσ januarius-of-benevento januarius-of-corfu januarius-the-presbyter januarius-with-maxime-and-macaria':
+    'Four men: the presbyter on 30 August, the Januarius of 8 April, Januarius of Benevento on 21 April and Januarius of Corfu on 29 April.',
+  'ευφρασιοσ euphrasius-companion-of-basil euphrasius-of-corfu':
+    'Two men: Euphrasius of Corfu on 29 April and Euphrasius the companion of Basil on 14 March.',
+  'ζηνων zeno-20-april zeno-companion-of-terentius zeno-companion-of-zoilus zeno-of-corfu zeno-of-diospolis zeno-the-courier zeno-the-faster-of-kiev':
+    'Seven now. The new one is on 29 April; the others are read in the el-04-20 entry for this name form.',
+  'βιταλιοσ vitalis vitalis-of-sicily vitalius-of-corfu':
+    'Three now. The new one is on 29 April; the others are read in the el-03-09 entry for this name form.',
+  'σεκουνδινοσ secundinus-of-africa secundinus-of-numidia':
+    'Two men: Secundinus of Numidia on 29 April and Secundinus of Africa on 21 February.',
+  'νεων neon-24-april neon-companion-of-mark-the-shepherd neon-of-corfu':
+    'Three men: the Neon of 24 April, Neon of Corfu on 29 April and the Neon of the el-01-16 entry.',
+  'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-kalita john-kaloktenes john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kazan john-of-lycopolis john-of-manglisi john-of-rouphinianai john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-old-lavra john-of-the-well john-of-verkhoturye john-of-vilnius john-of-yuryevets john-philosopher-of-georgia john-son-of-xenophon john-the-bulgarian john-the-confessor-of-kathara john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-with-minas-and-david':
+    'Thirty-eight now. The new one is John Kaloktenes on 29 April; the others are read in the el-04-27 entry for this name form.',
+  'ευσεβιοσ eusebius-24-april eusebius-companion-of-bassus eusebius-disciple-of-dionysius-of-alexandria eusebius-of-corfu eusebius-of-syria':
+    'Five now. The new one is Eusebius of Corfu on 29 April, one of the five that day; the others are read in the el-04-24 entry for this name form.',
+  'αττικοσ atticus-29-april atticus-of-constantinople':
+    'Two men: the Atticus of 29 April and the Atticus of the el-01-08 entry.',
+  'αγαπιοσ agapius-disciple-of-babylas agapius-martyr-1-march agapius-of-apamea agapius-of-colciu agapius-of-numidia':
+    'Five now. The new one is Agapius of Numidia on 29 April; the others are read in the el-03-15 entry for this name form, where 1 March keeps two.',
   'κυριλλοσ cyril-bishop-in-africa cyril-companion-of-photius cyril-of-alexandria cyril-of-astrakhan cyril-of-heliopolis cyril-of-jerusalem cyril-of-kazan cyril-of-the-forty-martyrs cyril-of-the-white-lake cyril-of-turov cyril-of-zographou cyril-vi-of-constantinople':
     'Twelve now. The new one is Cyril of Turov on 28 April; the others are read in the el-04-18 entry for this name form.',
   'αυξιβιοσ auxibius-28-april auxibius-of-soloi':

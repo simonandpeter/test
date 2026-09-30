@@ -11,6 +11,11 @@
       "form": "Stoian",
       "lang": "ro",
       "note": "His name at baptism, as doxologia.ro's life prints it: «La botez a primit numele Stoian»."
+    },
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Απριλίου, «Άγιος Βασίλειος ο Θαυματουργός εκ Σερβίας», with the rank word, the epithet and the country left off."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Απριλίου — «Άγιος Βασίλειος ο Θαυματουργός εκ Σερβίας»",
+        "url": "https://www.saint.gr/04/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him, and it is plainly the same man: born 1610 of devout parents, a monk of the Dormition monastery of Trebinje, bishop of Zahumlje, a wonderworker, dead in peace in 1671 and buried at Ostrog in Montenegro near the Herzegovinian border. **The Greek adds three things**: the district of his birth, «στην περιοχή του Πόποβ της Ερζεγοβίνης», Popovo in Herzegovina; that he left his father's house out of love for the monastic life; that his see was «Ζάκχολμσκ και Σκεντερίας», Zahumlje and Skenderija, and that he came to it as successor of the bishop Paul and predecessor of the bishop Nikodemos; and that he visited the Holy Mountain in order to learn the Byzantine monastic and hesychast tradition. **The page also contradicts itself about when he took the throne** — «Ανέλαβε τον Μητροπολιτικό θρόνο στο δεύτερο ήμισυ του 16ου αιώνα», the second half of the sixteenth century, which cannot stand with the 1610 birth it prints in the same paragraph and in its own head «(1610 - 1671)». The contradiction is recorded and not corrected, and **this folder's existing `dates`, 1610 and 1671 off doxologia, were left untouched**, because the Greek gives the same two years and nothing narrower. It prints no hymn and names no relic beyond the burial at Ostrog."
     },
     {
       "church": "serbian",

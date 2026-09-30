@@ -1,0 +1,57 @@
+{
+  "slug": "neon-of-corfu",
+  "display_name": "Neon of Corfu",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Νέων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Απριλίου, «Άγιοι Ευσέβιος, Ζήνων, Βιτάλιος και Νέων», with the rank word left off."
+    }
+  ],
+  "related": [
+    "eusebius-of-corfu",
+    "zeno-of-corfu",
+    "vitalius-of-corfu",
+    "jason-of-tarsus",
+    "sosipater-of-iconium"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Απριλίου — «Άγιοι Ευσέβιος, Ζήνων, Βιτάλιος και Νέων»",
+        "url": "https://www.saint.gr/04/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page is one entry for all four and heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Απριλίου εκάστου έτους», the same day as the listing. Its whole body is one paragraph: these saints were of the inhabitants of Corfu, the first drawn by the preaching of the apostles Jason and Sosipater and fervent fellow workers in their apostolic labour; the ruler Kerkyllinos hunted them down, stripped and scourged them hard, imprisoned them when they refused to sacrifice to the idols, and then lit a great fire and threw them into it. **The line names each of the four, so it is one folder per man** — no year, no kindred, no trade and nothing that tells them apart beyond the names, so there is no `dates` object and no `locations`. The `related` rows are the other three of the company and the two apostles through whom the page says they believed, all of whom the page itself names. It prints no hymn and names no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

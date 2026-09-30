@@ -1,0 +1,53 @@
+{
+  "slug": "quintianus",
+  "display_name": "Quintianus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Κυντιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Απριλίου, «Άγιοι Κυντιανός και Αττικός», with the rank word left off."
+    }
+  ],
+  "related": [
+    "atticus-29-april"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Απριλίου — «Άγιοι Κυντιανός και Αττικός»",
+        "url": "https://www.saint.gr/04/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page is one entry for the two and heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Απριλίου εκάστου έτους», the same day as the listing. Its whole body is the statement of attestation: «Άγνωστοι στον Συναξαριστή του Αγίου Νικόδημου. Μνημονεύονται στον Συναξαριστή Delehaye ως εξής: «Άθλησις των αγίων μαρτύρων Κυντιανού και Αττικού» (σελ. 640,6). Άλλες πληροφορίες για τη ζωή τους δεν αναφέρονται» — unknown to the synaxaristes of Saint Nikodemos, mentioned in Delehaye's at page 640 line 6, and no other information recorded. That is a statement about where the attestation lies and not a doubt about the men, so the folder stands; but no century, no place, no persecutor and no manner of death is printed, so there is no `dates` object and no `locations`. The line names both, so it is one folder each. It prints no couplet, no hymn and no relic. The corpus holds nobody of this name; its Quintilian of Ozovia is another man of another name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

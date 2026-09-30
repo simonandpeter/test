@@ -1,0 +1,60 @@
+{
+  "slug": "marsalios-of-corfu",
+  "display_name": "Marsalios of Corfu",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μαρσάλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Απριλίου, «Άγιοι Επτά Μάρτυρες Σατορνίνος, Ιακισχόλος, Φαυστιανός, Ιανουάριος, Μαρσάλιος, Ευφράσιος και Μάμμινος»; its own page heads him «Άγιος Μαρσάλιος ο Μάρτυρας», with the rank word left off."
+    }
+  ],
+  "related": [
+    "saturninus-of-corfu",
+    "iakischolos-of-corfu",
+    "faustianus-of-corfu",
+    "januarius-of-corfu",
+    "euphrasius-of-corfu",
+    "mamminos-of-corfu",
+    "jason-of-tarsus",
+    "sosipater-of-iconium"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Απριλίου — «Άγιοι Επτά Μάρτυρες Σατορνίνος, Ιακισχόλος, Φαυστιανός, Ιανουάριος, Μαρσάλιος, Ευφράσιος και Μάμμινος»",
+        "url": "https://www.saint.gr/04/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page is one entry for all seven and heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Απριλίου εκάστου έτους», the same day as the listing. Its whole body is two sentences: «Οι Άγιοι αυτοί Μάρτυρες, ήταν στον πρότερό τους βίο ληστές. Όταν ήταν φυλακισμένοι στην Κέρκυρα, πίστεψαν στον Χριστό διά των Αγίων Αποστόλων Ιάσονος και Σωσιπάτρου. Κατόπιν μαρτύρησαν μέσα σε βρασμένη πίσσα» — robbers in their former life, believers in Christ through the apostles Jason and Sosipater while they were imprisoned at Corfu, and martyred afterwards inside boiling pitch. **The line names each of the seven, so it is one folder per man.** No year, no country, no emperor and no judge are printed, so there is no `dates` object and no `locations`, and nothing tells one of the seven from another beyond his name. The apostles' own page for the same day tells it from the other side — «Στην φυλακή μετέστρεψαν επτά ληστές στον Χριστό, οι οποίοι αργότερα μαρτύρησαν για την πίστη τους και το δεσμοφύλακα Αντώνιο» — and adds a gaoler named Antonius, whom the day's own listing does not name and who is therefore not a folder here. It prints no hymn and names no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

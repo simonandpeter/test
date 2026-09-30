@@ -1,0 +1,53 @@
+{
+  "slug": "atticus-29-april",
+  "display_name": "Atticus (29 April)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αττικός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Απριλίου, «Άγιοι Κυντιανός και Αττικός», with the rank word left off."
+    }
+  ],
+  "related": [
+    "quintianus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Απριλίου — «Άγιοι Κυντιανός και Αττικός»",
+        "url": "https://www.saint.gr/04/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page is one entry for the two and heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Απριλίου εκάστου έτους», the same day as the listing. Its whole body is the statement of attestation: «Άγνωστοι στον Συναξαριστή του Αγίου Νικόδημου. Μνημονεύονται στον Συναξαριστή Delehaye ως εξής: «Άθλησις των αγίων μαρτύρων Κυντιανού και Αττικού» (σελ. 640,6). Άλλες πληροφορίες για τη ζωή τους δεν αναφέρονται» — unknown to the synaxaristes of Saint Nikodemos, mentioned in Delehaye's at page 640 line 6, and no other information recorded. That is a statement about where the attestation lies and not a doubt about the men, so the folder stands; but no century, no place, no persecutor and no manner of death is printed, so there is no `dates` object and no `locations`. The line names both, so it is one folder each. It prints no couplet, no hymn and no relic. **This is a name-only distinction and is flagged in the reader's report**: the corpus's `atticus-the-martyr` is already `venerated` on the Greek 26 August out of saint.gr's own line «Άγιοι Αττικός και Σισίνιος», and it has an `atticus-of-constantinople` besides. Two entries on one calendar are two commemorations, so this is a second man; but the only things that tell him from the August Atticus are the day and the name of the companion he is kept with, which is why the slug and the display name are dated rather than epithet-bearing."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

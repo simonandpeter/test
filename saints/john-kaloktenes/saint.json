@@ -1,0 +1,102 @@
+{
+  "slug": "john-kaloktenes",
+  "display_name": "John Kaloktenes",
+  "sex": "male",
+  "types": [
+    "metropolitan",
+    "hierarch"
+  ],
+  "office": "Metropolitan of Thebes and Exarch of all Boeotia",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Απριλίου, «Άγιος Ιωάννης ο Καλοκτένης Μητροπολίτης Θηβών», with the rank word and the see left off; the surname is kept because it is how the source tells him from the other Johns."
+    },
+    {
+      "form": "Καλοκτένης",
+      "lang": "el",
+      "note": "The surname as saint.gr prints it in the same line and in the synaxarion line it quotes, «τοῦ Καλοκτένους»."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1182,
+      "latest": 1193,
+      "display": "between 1182 and 1193",
+      "basis": "traditional",
+      "note": "saint.gr: «Μετά την ειρηνική κοίμηση του μεταξύ του 1182 και 1193 μ.Χ. και την αναγνώριση της αγιότητος του ανήγειραν μεγαλοπρεπή Ναό». For his birth the page says only «γεννήθηκε στα μέσα του 12ου αιώνα μ.Χ. στην Κωνσταντινούπολη», the middle of the twelfth century, which is not a year, so no birth interval is recorded."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Απριλίου — «Άγιος Ιωάννης ο Καλοκτένης Μητροπολίτης Θηβών»",
+        "url": "https://www.saint.gr/04/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Απριλίου εκάστου έτους», the same day as the listing, and marks him «Πολιούχος: Θήβα», patron of Thebes. It quotes the synaxarion line, «Τῇ 29η τοῦ μηνός Ἀπριλίου μνήμη του εν Ἁγίοις Πατρός ημών Ἰωάννου Μητροπολίτου Θηβῶν καί ἐξάρχου πάσης Βοιωτίας τοῦ Καλοκτένους καί νέου Ἐλεήμονος», and sets him in the twelfth century under Manuel I Komnenos, with the Norman sack of Thebes for a background. Born in the middle of the twelfth century at Constantinople to noble parents, Constantine Kaloktenes and his wife Maria, long childless; given at twelve to the Grand Domestic of the court for a military training and enrolled instead among the hieromonks; a student of sacred letters, rhetoric and philosophy; elected to the see of all Boeotia out of a monastery of Constantinople under pressure from the Thebans; builder of the church of the Theotokos out of his own patrimony; diverter of the river Ismenos, which afterwards took the name Agiannis, founder of aqueducts, water mills, bridges, an old people's home, poorhouses, hospitals, schools and a women's school called the Parthenon, and planter of mulberries for the silk; a member of the Synod of Constantinople of 1166, from whose acts it quotes his teaching at length; dead in peace between 1182 and 1193. **The `dates` carry only that interval**, because 'the middle of the twelfth century' is not a year and the page states no other. No `locations` was written. On relics the page is explicit that it is repeating hearsay: «Υπάρχουν φήμες πως τα Τίμια & Χαριτόβρυτα Λείψανα του βρίσκονται στην Ιταλία» — there are rumours that they are in Italy — and that the great church raised over them does not survive. It prints an apolytikion and a kontakion, both naming him and both proper to him, which are stored here; its megalynarion and its oikos are neither of the two kinds this corpus holds and were left. There are no `related` rows: the emperors, the Grand Domestic and his parents have no folders, and a church he built is a dedication and not a relation."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ'.",
+      "text": "Ἐκ μέσης τὸν Κύριον, ἐπιποθήσας ψυχῆς, τὰ ῥέοντα ἔφυγες, καὶ ἐπιπόνῳ ζωή, τὴν σάρκα ἐξέτηξας· ἔσπευσας Ἱεράρχα, Βοιωτὼν Ἰωάννη, φίλος Χριστοῦ γενέσθαι, διὰ οἶκτον πενήτων· διὸ καὶ νέος ἐλεήμων, ἐκλήθης μακάριε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. δ', on the page of «Άγιος Ιωάννης ο Καλοκτένης Μητροπολίτης Θηβών»",
+        "url": "https://www.saint.gr/366/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having longed for the Lord out of the midst of thy soul, thou didst flee the things that flow away, and by a laborious life thou didst waste the flesh away. Thou didst hasten, O hierarch John of the Boeotians, to become a friend of Christ through pity for the poor; wherefore thou wast called the new Almsgiver, O blessed one.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ'.",
+      "model": "Τῇ ὑπερμάχῳ.",
+      "text": "Τῆς Ἐκκλησίας τοῦ Θεοῦ σοφὲ τοὺς οἴακας, ἐπιστημόνως χειρισθεὶς ταύτην ἀκύμαντον, διεχήρησας μακάριε Ἰωάννη, τὰς ζαλώδεις καταιγίδας ἐκκρουσάμενος, καὶ βιαίας τρικυμίας τῶν αἱρέσεων· ὅθεν κράζω Σοι· Χαίροις, Πάτερ πανεύσπλαγχνε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ', Τῇ ὑπερμάχῳ, on the page of «Άγιος Ιωάννης ο Καλοκτένης Μητροπολίτης Θηβών»",
+        "url": "https://www.saint.gr/366/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having handled the rudders of the Church of God with knowledge, O wise one, thou didst steer her through unshaken, O blessed John, beating back the stormy squalls and the violent surges of the heresies. Wherefore I cry to thee: rejoice, O all-compassionate father.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

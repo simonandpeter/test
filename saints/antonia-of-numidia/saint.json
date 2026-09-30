@@ -1,0 +1,65 @@
+{
+  "slug": "antonia-of-numidia",
+  "display_name": "Antonia of Numidia",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Αντωνία",
+      "lang": "el",
+      "note": "Read out of saint.gr's heading on the page of the company, «Αγία Αντωνία η Παρθένα», with the rank word, the see and the epithet left off; the day's own line is «Άγιοι Αγάπιος και Σεκουνδίνος οι Ιερομάρτυρες και οι συν αυτοίς Τέρτουλα και Αντωνία οι Παρθένες, ανωνύμου Μάρτυρος μετά των δύο τέκνων αυτής»."
+    }
+  ],
+  "related": [
+    "agapius-of-numidia",
+    "secundinus-of-numidia",
+    "tertulla-of-numidia"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 259,
+      "latest": 259,
+      "display": "259",
+      "basis": "traditional",
+      "note": "saint.gr: «υπέστησαν μαρτυρικό θάνατο, το έτος 259 μ.Χ., επί αυτοκράτορα Βαλεριανού (253-259 μ.Χ.)», and the page heads this entry «(; - 259)». No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Απριλίου — «Άγιοι Αγάπιος και Σεκουνδίνος οι Ιερομάρτυρες και οι συν αυτοίς Τέρτουλα και Αντωνία οι Παρθένες, ανωνύμου Μάρτυρος μετά των δύο τέκνων αυτής»",
+        "url": "https://www.saint.gr/04/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page is one entry for the whole company and heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Απριλίου εκάστου έτους», the same day as the listing. Its whole body is one sentence: «Οι Άγιοι Ιερομάρτυρες Αγάπιος και Σεκουνδίνος γεννήθηκαν στην Ισπανία. Ήταν Επίσκοποι στην περιοχή της Νουμιδίας της Αφρικής και υπέστησαν μαρτυρικό θάνατο, το έτος 259 μ.Χ., επί αυτοκράτορα Βαλεριανού (253-259 μ.Χ.), μαζί με τις παρθένες Τέρτουλα και Αντωνία και μία ανώνυμη Μάρτυρα με τα δύο της τέκνα» — born in Spain, bishops in the region of Numidia in Africa, put to death in the year 259 under the emperor Valerian, whose reign it dates 253 to 259, together with the virgins Tertulla and Antonia and an anonymous woman martyr with her two children. **The line names four and leaves three unnamed**, so there are four folders and the woman and her two children are not kept: the corpus's rule is that a company is one folder per member the source names, and an unnamed member cannot be one. The page heads each entry «(; - 259)» with no year of birth, and gives no city in Numidia, no judge and no manner of death. No `locations` was written: Spain and Numidia are named as origin and province, not as a place of life or death. It prints no hymn and names no relic. The paragraph saint.gr prints under her name is its gloss on the masculine name Αντώνιος and is not about the martyr. The corpus holds nobody of her name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

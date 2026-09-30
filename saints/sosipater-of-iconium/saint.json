@@ -6,6 +6,11 @@
       "form": "Sosipatru",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 aprilie, «Sfântul Apostol Sosipatru»."
+    },
+    {
+      "form": "Σωσίπατρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Απριλίου, «Άγιοι Ιάσονας και Σωσίπατρος οι Απόστολοι», whose page heads him «Άγιος Σωσίπατρος ο Απόστολος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -15,7 +20,19 @@
     "bishop"
   ],
   "related": [
-    "jason-of-tarsus"
+    "jason-of-tarsus",
+    "kerkyra",
+    "eusebius-of-corfu",
+    "zeno-of-corfu",
+    "vitalius-of-corfu",
+    "neon-of-corfu",
+    "saturninus-of-corfu",
+    "iakischolos-of-corfu",
+    "faustianus-of-corfu",
+    "januarius-of-corfu",
+    "marsalios-of-corfu",
+    "euphrasius-of-corfu",
+    "mamminos-of-corfu"
   ],
   "attestations": [
     {
@@ -40,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Απριλίου — «Άγιοι Ιάσονας και Σωσίπατρος οι Απόστολοι»",
+        "url": "https://www.saint.gr/04/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page is one entry for the two and heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Απριλίου εκάστου έτους» — **a day later than the 28 April the Romanian row on this folder already carries**, which is the Greek calendar's own day for the same two apostles and not a correction of the Romanian. It is plainly the same pair: apostles of the Seventy, companions and fellow prisoners at Corfu under the ruler Kerkyllinos and the eparch Capreanus, through whom Kerkyra the ruler's daughter, seven imprisoned robbers and the gaoler Antonius came to the faith. **The Greek is much fuller than the Romanian on the questions of origin and of kindred.** It gives Jason as of Tarsus or, by an old manuscript that Nikodemos the Hagiorite notes, of Thessalonica, and Sosipater as of Achaia; rehearses the two New Testament mentions of Jason, in Acts and in the Epistle to the Romans; argues that the «συγγενεῖς» of that epistle most probably means that Paul and Jason were of the same trade rather than kin by blood, citing Chrysostom, Theophylact, Theodoret of Cyrus and Oecumenius for the identity of the Jason of Acts with the Jason of the Epistle; has Jason keep a small weaving workshop in which Paul found work; sets aside Dorotheus of Tyre's report that Jason was one of the Seventy; and reads the phrase of the ninth-century «Πράξεις τῶν Ἁγίων» about Tarsus as meaning that Paul entrusted his own homeland to Jason rather than that Jason came from it. It says that the two were thrown into an iron cauldron of pitch and resin, that Jason came out unharmed and Sosipater died, and that Kerkyllinos repented at it, was catechized, baptized and renamed Sebastianos; and that Jason lived to great old age serving the Church of Corfu and building churches, one of which is reckoned the oldest in the town. **On the relics the page contradicts itself and the contradiction is recorded, not resolved**: its «Ιερά Λείψανα» block puts Jason's skull at the Metropolis of Thebes and Sosipater's at the Metropolis of Thebes and Levadeia, with fragments of both at the Metropolis of Kerkyra and the monastery of Dionysiou on the Holy Mountain, of Jason also at Kykkos in Cyprus and of Sosipater also at the metropolitan church of Veroia; while its closing line says that both honourable heads are kept at the monastery of Hosios Loukas in Boeotia. It gives no year for either man, so this folder's empty `dates` were left empty. It prints an apolytikion and a kontakion that name both apostles and are proper to them, which are stored here; a second apolytikion, «Ἀπόστολοι ἅγιοι, πρεσβεύσατε τῷ ἐλεήμονι Θεῷ», is the common of apostles and was left, as were its megalynarion, oikos and kathisma, which are none of them a kind this corpus holds. saint.gr gives him as «από την Αχαΐα», from Achaia, where this folder's display name has him of Iconium out of doxologia's page for 10 noiembrie; the Greek origin is recorded here and the display name was not changed. The page also links the same calendar's «Άγιοι Ολυμπάς, Ηρωδίων, Έραστος, Σωσίπατρος και Κουάρτος οι Απόστολοι από τους Εβδομήκοντα», which is the second commemoration the existing Romanian feast note already records."
     },
     {
       "church": "serbian",
@@ -63,6 +90,40 @@
       },
       "english": {
         "text": "O holy apostles, entreat the merciful God to grant our souls forgiveness of sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Δυὰς ἡ ὁμότροπος, τῶν Ἀποστόλων Χριστοῦ, Ἰάσων ὁ ἔνδοξος, Σωσίπατρος ὁ κλεινός, συμφώνως τιμάσθωσαν οὗτοι γὰρ δεδειγμένοι, τὸν τῆς χάριτος λόγον, ηὔγασαν ἐν Κερκύρᾳ, εὐσεβείας τὸ φέγγος, πρεσβεύοντες τῷ Κυρίῳ, ὑπὲρ τῶν ψυχῶν ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε, on the page of «Άγιοι Ιάσονας και Σωσίπατρος οι Απόστολοι»",
+        "url": "https://www.saint.gr/371/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let the pair of like manners among the apostles of Christ, Jason the glorious and Sosipater the renowned, be honoured with one voice; for these, having been shown forth, made the word of grace and the radiance of piety to shine in Corfu, interceding with the Lord for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Χειρόγραφον εἰκόνα.",
+      "text": "Τοῖς δόγμασι τοῦ Παύλου καταυγασθέντες, γεγόνατε φωστῆρες τῆς οἰκουμένης, τρισμακάριοι· καταυγάζετε γὰρ ἀεί κόσμον θαύμασιν, Ἰάσον, ἡ πηγή τῶν ἱαμάτων, Σωσίπατρε, Χριστοῦ Μαρτύρων κλέος, Ἀπόστολοι θεοφόροι, προστάται τῶν ἐν ἀνάγκαις, καθικετεύσατε Θεῷ, τοῦ σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Χειρόγραφον εἰκόνα, on the page of «Άγιοι Ιάσονας και Σωσίπατρος οι Απόστολοι»",
+        "url": "https://www.saint.gr/371/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Illumined by the teachings of Paul, you became lights of the whole world, O thrice-blessed ones; for you shine upon the world for ever with wonders — Jason, the fount of healings, and Sosipater, the glory of the martyrs of Christ. O God-bearing apostles, protectors of those in straits, entreat God that our souls may be saved.",
         "rendered": "site"
       }
     }

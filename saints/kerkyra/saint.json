@@ -1,0 +1,63 @@
+{
+  "slug": "kerkyra",
+  "display_name": "Kerkyra",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Κέρκυρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Απριλίου, «Αγία Κέρκυρα η Μάρτυρας», with the rank word left off."
+    }
+  ],
+  "related": [
+    "jason-of-tarsus",
+    "sosipater-of-iconium"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Κέρκυρα έζησε τον 1ο αιώνα μ.Χ. και ήταν κόρη του Βασιλιά Κερκυλλίνου». No year of birth or of death is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Απριλίου — «Αγία Κέρκυρα η Μάρτυρας»",
+        "url": "https://www.saint.gr/04/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Απριλίου εκάστου έτους», the same day as the listing. It makes her a woman of the first century and the daughter of the king Kerkyllinos, brought to faith in Christ by the tortures of the apostles Jason and Sosipater; a confessor of Christ who sold all her jewellery and gave the money to the poor; handed over by her father, when he could not change her mind, to an Ethiopian to be corrupted, who instead came to believe in Christ through her and was put to death; tortured herself in many ways, and at the last hung up and killed with arrows. The apostles' own page for the same day tells the same from their side, calling her the daughter of the ηγεμών rather than of a king and saying that Kerkyllinos afterwards repented, was catechized, baptized and renamed Sebastianos. **The Ethiopian who believed through her is very probably the day's own «Άγιος Χριστόδουλος ο Αιθίοψ», which this reader refused** because that page doubts itself: «Πιθανόν να είναι ο ίδιος μ' αυτόν της 26ης Φεβρουαρίου». No `locations` was written: Corfu is the scene the two other pages give and hers names no place at all. It prints no hymn and names no relic, though the apostles' page names a church of theirs in the town as the oldest in it. The corpus holds nobody of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
