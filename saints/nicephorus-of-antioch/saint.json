@@ -6,6 +6,11 @@
       "form": "Nichifor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 februarie."
+    },
+    {
+      "form": "Νικηφόρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Φεβρουαρίου, «Άγιος Νικηφόρος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Φεβρουαρίου — «Άγιος Νικηφόρος»",
+        "url": "https://www.saint.gr/02/09/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr heads him «Αγιος Νικηφορος (; - 257)» and gives the day no place-name; it is the story of Sapricius that identifies him. It prints three apolytikia and a kontakion for him, and an oikos and a kathisma besides, which are not copied to this folder."
     },
     {
       "church": "serbian",
@@ -45,5 +60,84 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 257,
+      "latest": 257,
+      "display": "257",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him, «Αγιος Νικηφορος (; - 257)», with the persecution dated in the life: «Όταν το 257 μ.Χ. ξέσπασε μεγάλος διωγμός κατά των Χριστιανών». The page also places him under Valerian (253–259) and Gallienus (259–268)."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Ὁ Μάρτυς σου Κύριε, ἐν τῇ ἀθλήσει αὐτοῦ, τὸ στέφος ἐκομίσατο τῆς ἀφθαρσίας, ἐκ σοῦ τοῦ Θεοῦ ἡμῶν· ἔχων γὰρ τὴν ἰσχύν σου, τοὺς τυράννους καθεῖλεν ἔθραυσε καὶ δαιμόνων τὰ ἀνίσχυρα θράση. Αὐτοῦ ταῖς ἱκεσίαις Χριστέ ὁ Θεός, σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος δ’, Ταχύ προκατάλαβε, the first of three the page prints, on the page of Άγιος Νικηφόρος. It is the common of a single martyr and names no saint.",
+        "url": "https://www.saint.gr/3628/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr, O Lord, in his contest received the crown of incorruption from thee our God; for having thy strength he brought down the tyrants, and broke the powerless insolence of the demons. By his entreaties, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ἀγάπη τοῦ Κτίσαντος, καταυγασθεῖς τὴν ψυχήν, τοῦ νόμου τῆς χάριτος, ἐκπληρωτῆς ἀκριβής, ἐμφρόνως γεγένησαι, ὅθεν καὶ τὸν πλησίον, ὡς σαυτὸν ἀγαπήσας, ἤθλησας Νικηφόρε, καὶ τὸν ὄφιν καθεῖλες, ἐντεῦθεν ἐν ὁμονοίᾳ, ἠμᾶς διατήρησαν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε, the second of three the page prints, on the page of Άγιος Νικηφόρος",
+        "url": "https://www.saint.gr/3628/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy soul lit up by the love of the Creator, thou didst become in all good sense an exact fulfiller of the law of grace; whence, loving thy neighbour as thyself, thou didst contend, O Nicephorus, and bring down the serpent. From there, keep us in concord.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Χορός Ἀγγελικός.",
+      "text": "Ἀγάπης τῷ δεσμῷ, συνδεθείς Νικηφόρε, διέλυσας τρανῶς, τήν κακίαν τοῦ μίσους· καί ξίφει τήν κάραν σου, ἐκτμηθείς ἐχρημάτισας, Μάρτυς ἔνθεος, τοῦ σαρκωθέντος Σωτῆρος· ὃν ἱκέτευε, ὑπέρ ἡμῶν τῶν ὑμνούντων, τήν ἔνδοξον μνήμην σου.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος α’, Χορός Ἀγγελικός, the third of three the page prints, on the page of Άγιος Νικηφόρος",
+        "url": "https://www.saint.gr/3628/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Bound with the bond of love, O Nicephorus, thou didst plainly dissolve the malice of hatred; and having thy head cut off by the sword, thou wast shown to be a God-filled martyr of the Saviour who took flesh. Entreat him for us who hymn thy glorious memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ παρθένος σήμερον.",
+      "text": "Πτερωθεὶς Ἀοίδιμε, τῇ τοῦ Κυρίου ἀγάπῃ, καὶ τὸν τούτου ἔνδοξε, Σταυρὸν ἐπ' ὤμων βαστάσας, ᾔσχυνας τοῦ διαβόλου τὰς μεθοδείας, ἤθλησας μέχρι θανάτου καὶ ἀληθείας· διὰ τοῦτο ἀνεδείχθης, ὁπλίτης μύστης, Θεοῦ τῆς Χάριτος.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος γ’, Ἡ παρθένος σήμερον, on the page of Άγιος Νικηφόρος. The page prints the Οἶκος after it and a Κάθισμα below, neither of which is copied here.",
+        "url": "https://www.saint.gr/3628/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Given wings, O far-sung one, by the love of the Lord, and bearing his Cross upon thy shoulders, O glorious one, thou didst put to shame the devil's devices, and didst contend for the truth as far as death. Therefore thou wast shown to be a soldier and an initiate of the grace of God.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

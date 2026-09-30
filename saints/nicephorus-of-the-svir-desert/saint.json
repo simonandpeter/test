@@ -1,0 +1,63 @@
+{
+  "slug": "nicephorus-of-the-svir-desert",
+  "display_name": "Nicephorus of the Svir desert",
+  "names": [
+    {
+      "form": "Νικηφόρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Φεβρουαρίου, «Όσιοι Νικηφόρος και Γεννάδιος εν Βολογντά», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Φεβρουαρίου — «Όσιοι Νικηφόρος και Γεννάδιος εν Βολογντά»",
+        "url": "https://www.saint.gr/02/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line calls the pair «εν Βολογντά», in Vologda, but their own page puts their ascesis in the desert of the Svir monastery in the Olonets region: «ασκήτεψαν στην έρημο της μονής Σβίρ, στην περιοχή Όλονετς». The two places are not the same and saint.gr does not reconcile them; the epithet here follows the page that carries the life."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1501,
+      "latest": 1600,
+      "display": "16th century",
+      "basis": "traditional",
+      "note": "saint.gr: «έγιναν μοναχοί και ασκήτεψαν στην έρημο της μονής Σβίρ, στην περιοχή Όλονετς της Ρωσίας, κατά τον 16ο αιώνα μ.Χ.» No year is given."
+    }
+  },
+  "related": [
+    "gennadius-of-the-svir-desert"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

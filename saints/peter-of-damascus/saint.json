@@ -6,6 +6,11 @@
       "form": "Petru Damaschinul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 februarie."
+    },
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Φεβρουαρίου, «Άγιος Πέτρος ο Δαμασκηνός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Φεβρουαρίου — «Άγιος Πέτρος ο Δαμασκηνός»",
+        "url": "https://www.saint.gr/02/09/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr calls him a priest and does not call him bishop, which this folder's types do; it gives the year of his death as «περί το 775 μ.Χ.», about 775, and prints no hymn."
     },
     {
       "church": "serbian",
@@ -51,5 +66,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 775,
+      "latest": 775,
+      "display": "about 775",
+      "basis": "traditional",
+      "note": "saint.gr: «περί το 775 μ.Χ. στεφάνωσε τη ζωή του αφού πρόθυμα έδωσε το κεφάλι του στον θάνατο δια ξίφους». The page's own «περί», about, is the whole of its precision."
+    }
   }
 }

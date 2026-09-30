@@ -1,0 +1,51 @@
+{
+  "slug": "pancratius-the-recluse-of-the-caves",
+  "display_name": "Pancratius the Recluse of the Caves",
+  "names": [
+    {
+      "form": "Παγκράτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Φεβρουαρίου, «Όσιος Παγκράτιος ο Έγκλειστος «εν τω Σπηλαίω»», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Φεβρουαρίου — «Όσιος Παγκράτιος ο Έγκλειστος «εν τω Σπηλαίω»»",
+        "url": "https://www.saint.gr/02/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The page prints no life — «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Οσίου» — and gives him the bare title Όσιος. He is not the Pancratius of Tauromenium the same day keeps: that one is a first-century Sicilian bishop and this one a Russian recluse whose relics are in the Kiev Caves."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

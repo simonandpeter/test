@@ -1,47 +1,29 @@
 {
-  "slug": "marcellus-of-sicily",
-  "display_name": "Marcellus of Sicily",
+  "slug": "philagrius-of-cyprus",
+  "display_name": "Philagrius of Cyprus",
   "names": [
     {
-      "form": "Marcel",
-      "lang": "ro",
-      "note": "Read out of doxologia.ro's line for 9 februarie."
-    },
-    {
-      "form": "Μάρκελλος",
+      "form": "Φιλάγριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Φεβρουαρίου, «Άγιοι Μάρκελλος επίσκοπος Σικελίας, Φιλάγριος επίσκοπος Κύπρου και Παγκράτιος επίσκοπος Ταυρομενίου», with the rank word and the see left off."
     }
   ],
   "sex": "male",
   "types": [
-    "hieromartyr",
+    "hierarch",
     "bishop"
   ],
-  "office": "Bishop of Sicily",
-  "related": [
-    "pancratius-of-tauromenium",
-    "philagrius-of-cyprus"
-  ],
+  "office": "Bishop of Cyprus",
   "attestations": [
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
     },
     {
       "church": "romanian",
-      "status": "venerated",
-      "feast": {
-        "day": 9,
-        "month": 2,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "Calendarul zilei, Doxologia (doxologia.ro), 9 februarie — «Sfântul Sfințit Mucenic Marcel, Episcopul Siciliei»",
-        "url": "https://doxologia.ro/9-februarie",
-        "year": 2026
-      }
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
     },
     {
       "church": "greek",
@@ -56,17 +38,14 @@
         "url": "https://www.saint.gr/02/09/index.aspx",
         "year": 2026
       },
-      "note": "The Greek line adds a third bishop to the pair the Romanian calendar kept, Philagrius of Cyprus, and one distich covers all three. saint.gr has the three of them fall asleep rather than be martyred: «Και οι τρεις κοιμήθηκαν, αφού υπέστησαν πολλές δοκιμασίες... και ζωή καθημερινού μαρτυρίου» — a life of daily martyrdom, which is not the death this folder's types record."
+      "note": "The three bishops share one page and one distich. Marcellus and Pancratius are father and son on that page; of Philagrius it says only that he was distinguished as bishop of Cyprus, and it joins him to them by nothing but the day."
     },
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
   "dates": {
     "floruit": {
       "earliest": 1,
@@ -75,5 +54,12 @@
       "basis": "traditional",
       "note": "saint.gr, of the three bishops on the page together: «Έζησαν και οι τρεῖς κατά τον πρώτο μετά Χριστόν αιώνα». No year of birth or repose is given."
     }
+  },
+  "related": [
+    "marcellus-of-sicily",
+    "pancratius-of-tauromenium"
+  ],
+  "text": {
+    "life": "life.md"
   }
 }

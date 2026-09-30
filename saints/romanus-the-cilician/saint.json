@@ -1,0 +1,52 @@
+{
+  "slug": "romanus-the-cilician",
+  "display_name": "Romanus the Cilician",
+  "names": [
+    {
+      "form": "Ρωμανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Φεβρουαρίου, «Όσιος Ρωμανός ο Κίλικας ο θαυματουργός», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Φεβρουαρίου — «Όσιος Ρωμανός ο Κίλικας ο θαυματουργός»",
+        "url": "https://www.saint.gr/02/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives him a birthplace and the country of his ascesis but no year at all, and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

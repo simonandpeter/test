@@ -6,6 +6,11 @@
       "form": "Pangratie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 februarie."
+    },
+    {
+      "form": "Παγκράτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Φεβρουαρίου, «Άγιοι Μάρκελλος επίσκοπος Σικελίας, Φιλάγριος επίσκοπος Κύπρου και Παγκράτιος επίσκοπος Ταυρομενίου», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -15,7 +20,8 @@
   ],
   "office": "Bishop of Tauromenium",
   "related": [
-    "marcellus-of-sicily"
+    "marcellus-of-sicily",
+    "philagrius-of-cyprus"
   ],
   "hymns": [
     {
@@ -58,8 +64,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Φεβρουαρίου — «Άγιοι Μάρκελλος επίσκοπος Σικελίας, Φιλάγριος επίσκοπος Κύπρου και Παγκράτιος επίσκοπος Ταυρομενίου»",
+        "url": "https://www.saint.gr/02/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The page closes with a second day: «Η μνήμη του Αγίου Παγκρατίου, επαναλαμβάνεται και την 9η Ιουλίου» — his memory is repeated on 9 July. One attestation row is one feast, so the row records the day read and the second day stands here as a note. The same day's calendar separately keeps a Russian Pancratius the recluse of the Kiev Caves, who is another man."
     },
     {
       "church": "serbian",
@@ -69,5 +85,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "saint.gr, of the three bishops on the page together: «Έζησαν και οι τρεῖς κατά τον πρώτο μετά Χριστόν αιώνα». No year of birth or repose is given."
+    }
   }
 }

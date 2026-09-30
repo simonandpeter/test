@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ρωμανοσ romanus-of-karpenisi romanus-of-lacedaemon romanus-of-samosata romanus-of-uglich romanus-the-cilician':
+    'five now. The new one is Romanus the Cilician, whose page gives no year, kept on 9 Φεβρουαρίου; the other four are read in the el-02-03 entry for this name form.',
+  'παγκρατιοσ pancratius-of-tauromenium pancratius-the-recluse-of-the-caves':
+    'two men on one day, thirteen centuries apart, and the Greek calendar keeps them as two entries: Pancratius of Tauromenium, the first-century bishop whom the Romanian calendar also keeps on 9 Φεβρουαρίου, and Pancratius the Recluse of the Kyiv Caves, whose page gives no year.',
+  'νικηφοροσ nicephorus-martyr-8-february nicephorus-of-antioch nicephorus-of-corinth nicephorus-of-crete nicephorus-of-the-svir-desert':
+    'five now, and two are on this 9 Φεβρουαρίου: Nicephorus of Antioch, martyred 257, whom the Romanian calendar keeps on the day too, and Nicephorus of the Svir desert of the sixteenth century. The other three are read in the el-02-08 entry for this name form.',
+  'γενναδιοσ gennadius-of-corfu gennadius-of-kostroma gennadius-of-the-svir-desert':
+    'three men. The new one is Gennadius of the Svir desert, of the sixteenth century, kept on 9 Φεβρουαρίου beside Nicephorus of the same desert; the other two are read in the el-01-23 entry for this name form.',
   'στεφανοσ stephen-martyr-8-february stephen-of-chenolakkos stephen-of-placidianae':
     'three men. The new one is the Stephen of 8 Φεβρουαρίου; the other two are read in the el-01-14 entry for this name form, the abbot of Chenolakkos and Stephen of Placidianae, whose houses are the only thing their pages give to tell them by.',
   'σαββασ sabbas-of-sicily sabbas-of-zographou sabbas-the-spiritual sava-of-serbia sava-the-second':
