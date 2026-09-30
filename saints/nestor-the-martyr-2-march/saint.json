@@ -6,6 +6,11 @@
       "form": "Nestor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 martie, «Sfântul Mucenic Nestor»."
+    },
+    {
+      "form": "Νέστωρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαρτίου, «Άγιοι Νέστωρ και Τριβιμίος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 2 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Μαρτίου — «Άγιοι Νέστωρ και Τριβιμίος»",
+        "url": "https://www.saint.gr/03/02/index.aspx",
+        "year": 2026
+      },
+      "note": "One page holds him with Trivimios and puts them both at Perge of Pamphylia, in the country of the Kibyrrhaiotai, «κατά τους χρόνους του ασεβούς βασιλιά Δεκίου (249 - 251 μ.Χ.)». It closes with a hedge of its own: «Πολύ πιθανό, ο Άγιος Νέστορας, να είναι ο ίδιος με αυτόν της 28ης Φεβρουαρίου, διότι οι βιογραφίες τους συμπίπτουν» — very probably the holy Nestor is the same as the one of 28 February, because their biographies coincide. That is the site's own guess about an entry on another day and is recorded here without being acted on; the corpus keeps no Nestor on 28 February, and this row records the day page that was read. The page prints the distich «Ὁ τράχηλον Νέστορος πλήξας τῷ ξίφει, / Πληγὴν ὁμοίαν ἐντρίβει Τριβιμίῳ» and gives no relic and no hymn."
     },
     {
       "church": "serbian",
@@ -45,5 +60,17 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "under Decius (249–251)",
+      "basis": "traditional",
+      "note": "saint.gr: «κατάγονταν από την πόλη Πέργη της Παμφυλίας ... και έζησαν κατά τους χρόνους του ασεβούς βασιλιά Δεκίου (249 - 251 μ.Χ.)» — the reign is the page's own, given with those years. doxologia.ro, from which this folder was first written, gives him no year."
+    }
+  },
+  "related": [
+    "trivimios"
+  ]
 }

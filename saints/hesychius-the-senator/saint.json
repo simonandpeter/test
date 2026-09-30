@@ -6,6 +6,11 @@
       "form": "Isihie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 martie, «Sfântul Mucenic Isihie»."
+    },
+    {
+      "form": "Ησύχιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαρτίου, «Άγιος Ησύχιος ο Συγκλητικός», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 2 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Μαρτίου — «Άγιος Ησύχιος ο Συγκλητικός»",
+        "url": "https://www.saint.gr/03/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 302)» and puts him «στο χρόνια του Γαλερίου Μαξιμιανού, στις αρχές του 4ου αιώνα μ.Χ.», holding the dignity of Senator. It names the river Orontes as the place of his drowning, a stone tied to his neck and the deepest part of the stream. It prints an apolytikion and a kontakion proper to him, a second apolytikion which is the common of a martyr, and a megalynarion and a kathisma for which the corpus's schema has no kind."
     },
     {
       "church": "serbian",
@@ -59,9 +74,52 @@
         "text": "Thy martyr Hesychius, O Lord, in his contest received the crown of incorruption from Thee, our God; for having Thy strength he overcame his tormentors, and broke the strengthless daring of the demons. At his prayers, O Christ our God, save Thou our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τὸν τάφον σου Σωτήρ.",
+      "text": "Ἄξιας κοσμικῆς, ἀπορρίψας τὸ κλέος, τὴν δόξαν τοῦ Χριστοῦ, ὠμολόγησας χαίρων, Ἠσύχιε πανένδοξε, Ἀθλητῶν ἐγκαλλώπισμα, ὅθεν ἔφερες, ὥσπερ τιμὴν τὴν αἰσχύνην, καὶ τὸν θάνατον, ἐν πνιγμονῇ τῶν ὑδάτων, δυνάμει τοῦ Πνεύματος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Τὸν τάφον σου Σωτήρ, on the page of Άγιος Ησύχιος ο Συγκλητικός. It names him and names both the rank he threw away and the drowning. The page prints beside it an «Έτερον Ἀπολυτίκιον» in Ἦχος δ’, «Ὁ Μάρτυς σου, Κύριε», which is the common of a martyr and names nobody, and a megalynarion and a kathisma which the corpus's schema has no kind for; the proper apolytikion and the kontakion are the two taken here.",
+        "url": "https://www.saint.gr/3880/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having cast away the renown of a worldly dignity, thou didst confess with joy the glory of Christ, O all-glorious Hesychius, adornment of the contenders; whence thou didst bear shame as an honour, and death by the choking of the waters, in the power of the Spirit.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. β’.",
+      "model": "Τήν ὑπέρ ἡμῶν.",
+      "text": "Τούς ἀθλητικούς ἀγῶνας ἰχνηλατήσας, πρός θεουργικήν, ἀγάπην ἀνεπτερώθης, καί τῆς ἄνω Συγκλήτου, ἐδείχθης ὁμότιμος, ἀρνησάμενος τήν πρόσκαιρον, καί ζωῆς πρός ὕδωρ ἔφθασας, ποταμοῦ ῥιφείς τοῖς ῥεύμασιν, Ἡσύχιε Ἀθλητά, εὐσεβῶν πρεσβευτά.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος πλ. β’, Τήν ὑπέρ ἡμῶν, on the page of Άγιος Ησύχιος ο Συγκλητικός. It names him and turns his office against itself, setting the senate above against the senate he renounced, and the water of life against the river he was thrown into.",
+        "url": "https://www.saint.gr/3880/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Tracking out the contests of the contenders, thou wast lifted up towards a love that makes men gods, and wast shown a fellow of equal honour with the senate on high, having renounced the senate of the moment; and cast into the streams of a river, thou didst come to the water of life, O Hesychius the contender, ambassador of the faithful.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 302,
+      "latest": 302,
+      "display": "302",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Ησυχιος ο Συγκλητικος (; - 302)» and the body of the page says «O Άγιος Ησύχιος έζησε στο χρόνια του Γαλερίου Μαξιμιανού, στις αρχές του 4ου αιώνα μ.Χ.» — in the years of Galerius Maximian, at the beginning of the fourth century. doxologia.ro, from which this folder was first written, gives him no year."
+    }
   }
 }

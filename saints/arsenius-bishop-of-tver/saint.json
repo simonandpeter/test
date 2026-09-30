@@ -1,0 +1,64 @@
+{
+  "slug": "arsenius-bishop-of-tver",
+  "display_name": "Arsenius of Tver",
+  "office": "Bishop of Tver",
+  "names": [
+    {
+      "form": "Αρσένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαρτίου, «Άγιος Αρσένιος Επίσκοπος Τβερ της Ρωσίας», with the rank word, the see and the country left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr calls him «της Ρωσίας», so that calendar is the one most likely to hold him, and it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Μαρτίου — «Άγιος Αρσένιος Επίσκοπος Τβερ της Ρωσίας»",
+        "url": "https://www.saint.gr/03/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1409)» and gives him three sentences: he lived in Russia at the end of the fourteenth and the beginning of the fifteenth century, entered the monastic polity of the Lavra of Kyiv early, was elected bishop of the city of Tver, and fell asleep in peace. It names a portion of his relic at the Lavra of St Alexander Nevsky in St Petersburg, prints no distich and gives no hymn. The same Greek day carries two further entries whose particulars overlap his almost entirely — «Όσιος Αρέθας ο Έγκλειστος (; - 1409)», of Tver and the Lavra of Kyiv, elected bishop and withdrawn into reclusion, and «Όσιος Αρσένιος εκ Ρωσίας», born at Tver, ascetic of the Lavra of Kyiv and of the Zheltikovo monastery. The second of those bears the same name as this one and was not drafted; the question is recorded in the reader's report."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1409,
+      "latest": 1409,
+      "display": "1409",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Αρσενιος Επισκοπος Τβερ της Ρωσιας (; - 1409)», and the body says «Ο Άγιος Αρσένιος έζησε στην Ρωσία κατά τα τέλη του 14ου και τις αρχές του 15ου αιώνα μ.Χ.». The year is the head's; the body gives no year of its own and none for his birth."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "arethas-the-recluse"
+  ]
+}

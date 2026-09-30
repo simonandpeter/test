@@ -1,0 +1,60 @@
+{
+  "slug": "abramius-of-spassk",
+  "display_name": "Abramius of Spassk",
+  "names": [
+    {
+      "form": "Αβράμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαρτίου, «Όσιος Αβράμιος εκ Ρωσίας», with the rank word and the country left off. The body of the page gives the epithet the display name carries, «Ο Όσιος Αβράμιος του Σπασκ»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr calls him «εκ Ρωσίας», so that calendar is the one most likely to hold him, and it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Μαρτίου — «Όσιος Αβράμιος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/03/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole notice is one sentence and a half: «Ο Όσιος Αβράμιος του Σπασκ έζησε και ασκήτεψε στη Ρωσία κατά τον 16ο αιώνα μ.Χ. στη μονή του Σωτήρος Χριστού Κοργιαζέμ. Κοιμήθηκε οσίως με ειρήνη.» The page carries no etymology block over the name, no relic, no distich and no hymn. The corpus keeps an Abramius of Arbela, who is not on this day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1501,
+      "latest": 1600,
+      "display": "16th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Αβράμιος του Σπασκ έζησε και ασκήτεψε στη Ρωσία κατά τον 16ο αιώνα μ.Χ. στη μονή του Σωτήρος Χριστού Κοργιαζέμ» — the century is the page's, and it gives no year for his birth or his repose."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

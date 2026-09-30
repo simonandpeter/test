@@ -1,0 +1,62 @@
+{
+  "slug": "trivimios",
+  "display_name": "Trivimios, companion of Nestor",
+  "names": [
+    {
+      "form": "Τριβιμίος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαρτίου, «Άγιοι Νέστωρ και Τριβιμίος», with the rank word left off. The body of the page offers a second form in brackets, «Τριβιμίος (ή Τριβίμινος)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Μαρτίου — «Άγιοι Νέστωρ και Τριβιμίος»",
+        "url": "https://www.saint.gr/03/02/index.aspx",
+        "year": 2026
+      },
+      "note": "One page holds him with Nestor, whom the corpus already keeps on this day, and puts them both at Perge of Pamphylia in the country of the Kibyrrhaiotai, under Decius. The page hedges over Nestor — «Πολύ πιθανό, ο Άγιος Νέστορας, να είναι ο ίδιος με αυτόν της 28ης Φεβρουαρίου» — and says nothing of the kind about Trivimios. It offers his name in two forms, «Τριβιμίος (ή Τριβίμινος)», gives no relic and no hymn, and prints the distich «Ὁ τράχηλον Νέστορος πλήξας τῷ ξίφει, / Πληγὴν ὁμοίαν ἐντρίβει Τριβιμίῳ», which names both and plays ἐντρίβει against his name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "under Decius (249–251)",
+      "basis": "traditional",
+      "note": "saint.gr: «κατάγονταν από την πόλη Πέργη της Παμφυλίας, χώρα των Κιβυρραιωτών (ή Kυραιωτών) και έζησαν κατά τους χρόνους του ασεβούς βασιλιά Δεκίου (249 - 251 μ.Χ.)» — the reign is the page's own, given with those years, and it gives it for both men."
+    }
+  },
+  "related": [
+    "nestor-the-martyr-2-march"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "ambrose-of-georgia",
+  "display_name": "Ambrose (Tselaia)",
+  "office": "Catholicos-Patriarch of Georgia",
+  "names": [
+    {
+      "form": "Αμβρόσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαρτίου, «Άγιος Αμβρόσιος Πατριάρχης Γεωργίας», with the rank word and the see left off. The body of the page adds the surname in brackets and in Greek letters, «Ο Άγιος Αμβρόσιος (Τσελάια)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian",
+        "note": "The page puts his repose on «27 Μαρτίου 1927», which is not the day the calendar keeps him on; the site gives no reason for the difference and none is supplied here. This row records the day page that was read."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Μαρτίου — «Άγιος Αμβρόσιος Πατριάρχης Γεωργίας»",
+        "url": "https://www.saint.gr/03/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(1861 - 1927)», gives his birth in the village of Martvili in the province of Samegrelo in Georgia, his studies at the ecclesiastical seminary of Tiflis and the ecclesiastical academy of Kazan, his monastic life at the monastery of Shemokmedi — «τη μονή του Σελίσκι», as the page writes it — his abbacy of the monastery of St John the Baptist from 1906, his election as Catholicos-Patriarch of Georgia on 14 October 1921, and his repose on 27 March 1927. It names no relic, prints no distich and gives no hymn, and it says nothing of the trial and imprisonment his years as patriarch are otherwise known for; nothing beyond the page is written here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1861,
+      "latest": 1861,
+      "display": "1861",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Αμβρόσιος (Τσελάια) γεννήθηκε το έτος 1861 μ.Χ. στο χωριό Μαρτβίλι της επαρχίας Σαμαγκρέλο της Γεωργίας», and the page heads him «(1861 - 1927)»."
+    },
+    "death": {
+      "earliest": 1927,
+      "latest": 1927,
+      "display": "1927",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Αμβρόσιος κοιμήθηκε με ειρήνη στις 27 Μαρτίου 1927», and the page heads him «(1861 - 1927)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

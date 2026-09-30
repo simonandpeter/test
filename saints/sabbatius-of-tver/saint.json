@@ -1,0 +1,65 @@
+{
+  "slug": "sabbatius-of-tver",
+  "display_name": "Sabbatius of Tver",
+  "names": [
+    {
+      "form": "Σαββάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαρτίου, «Όσιοι Βαρσανούφιος, Σάββας, Σαββάτιος και Ευφρόσυνος εκ Ρωσίας», with the rank word and the country left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr calls the four of them «εκ Ρωσίας», so that calendar is the one most likely to hold them, and it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Μαρτίου — «Όσιοι Βαρσανούφιος, Σάββας, Σαββάτιος και Ευφρόσυνος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/03/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The line enumerates all four by name, so each is kept as a folder of his own. The whole notice is two sentences, which give the century, the country, the district of Tver and a peaceful repose, and nothing else; the one image on the page is labelled with his name, «Όσιος Σαββάτιος». The corpus keeps a Sabbatius of Solovki and a Sabbatius of Antioch, and neither is on this day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1401,
+      "latest": 1500,
+      "display": "15th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Όσιοι Βαρσανούφιος, Σάββας, Σαββάτιος και Ευφρόσυνος έζησαν στη Ρωσία κατά τον 15ο αιώνα μ.Χ. και ασκήτεψαν στην περιοχή Τβερ» — the century is the page's and it gives it for all four."
+    }
+  },
+  "related": [
+    "barsanuphius-of-tver",
+    "sabbas-of-tver",
+    "euphrosynus-of-tver"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

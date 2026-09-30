@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σαββατιοσ sabbatius-of-antioch sabbatius-of-tver':
+    'Two men: Antioch on 19 September, which all four calendars keep, and Tver on 2 March.',
+  'σαββασ sabbas-of-sicily sabbas-of-tver sabbas-of-zographou sabbas-the-spiritual sava-of-serbia sava-the-second':
+    'Six men on six Greek days: Sicily on 5 February, Tver on 2 March, Zographou on 22 September, the Spiritual on 3 February, Serbia on 14 January and Sava the Second on 8 February.',
+  'βαρσανουφιοσ barsanuphius-of-tver barsanuphius-of-zographou barsanuphius-the-great':
+    'Three men: Tver on 2 March, Zographou on 22 September and the Great on 6 February.',
+  'αρσενιοσ arsenios-of-paros arsenius-bishop-of-tver arsenius-companion-of-elias-speleotes arsenius-of-corfu arsenius-of-ikalto arsenius-of-rostov':
+    'Six men. The new one is the bishop of Tver on 2 March, and his folder reads the close pair itself: the same Greek day keeps Arethas the Recluse, also of Tver and of the Lavra of Kyiv, also elected bishop and withdrawn into reclusion, whose repose the site also puts in 1409 — another name and another man, and now a related row on this folder. The day also carries a bare «Όσιος Αρσένιος εκ Ρωσίας» of the same name, which was refused because nothing on either page tells them apart. The other five are read in the el-02-28 entry for this name form.',
+  'αβραμιοσ abramius-of-arbela abramius-of-spassk':
+    'Two men: Arbela on 4 February, which the Romanian calendar keeps too, and Spassk on 2 March.',
   'παυλοσ paul-brother-of-pausirius paul-disciple-of-dionysius-of-alexandria paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-simonov paul-of-zographou paul-the-martyr-3-february paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
     'Ten men. The new one is the venerable martyr of 1 March; the other nine are read in the el-02-16 and el-01-10 entries for this name form.',
   'λουκασ luke-of-corleone luke-of-emesa luke-of-hellas luke-of-novgorod':

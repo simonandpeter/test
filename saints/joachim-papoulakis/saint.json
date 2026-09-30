@@ -6,6 +6,11 @@
       "form": "Ioachim Papoulakis",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 martie, «Sfântul Cuvios Ioachim Papoulakis din Ithaca»."
+    },
+    {
+      "form": "Ιωακείμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαρτίου, «Όσιος Ιωακείμ ο Ιθακήσιος», with the rank word and the island left off. The body of the page gives his name in the world as «Ιωάννης Πατρίκιος»."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 2 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Μαρτίου — «Όσιος Ιωακείμ ο Ιθακήσιος»",
+        "url": "https://www.saint.gr/03/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(1786 - 1868)», which is the pair of years this folder already holds. It gives his name in the world as John Patrikios, his parents as Angelos and Agni, the hamlet of Kalyvia on Ithaca as his birthplace, and says a stepmother ill-used him after his mother's death. It has him a sailor on his father's boat, tonsured at the great monastery of Vatopedi under the name Joachim, sent by his abbot as a preacher into the Peloponnese at the outbreak of the Greek revolution, and carrying old men, women and children out of the Peloponnese to the Ionian islands in the boat of the Kephallonian papa-Yannis Makris, out of Ibrahim's raids. It puts his arrival back on Ithaca about 1827 and gives him forty-nine years of service there. It names his relics: the skull at the monastery of Vatopedi on the Holy Mountain, the rest at the church of St Barbara on Ithaca. It dates his formal recognition as a saint to March 1998 and prints no hymn."
     },
     {
       "church": "serbian",

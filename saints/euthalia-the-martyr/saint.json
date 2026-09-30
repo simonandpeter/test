@@ -5,6 +5,11 @@
     {
       "form": "Sfânta Muceniță Eutalia",
       "lang": "ro"
+    },
+    {
+      "form": "Ευθαλία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαρτίου, «Αγία Ευθαλία η παρθενομάρτυς», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -33,8 +38,19 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 27 August (saint.gr, checked 2026-08-22); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian",
+        "note": "saint.gr's own life page for her closes «Σε κάποιον κώδικα Νο 73 της Μονής Παναγίας στη Χάλκη, η μνήμη της Αγίας φέρεται κατά την 27η Αυγούστου» — a codex numbered 73 of the monastery of the Panagia on Halki carries her memory on 27 August (https://www.saint.gr/3883/saint.aspx, read 30 September 2026). 27 august is the day doxologia.ro keeps her on and the day this folder's Romanian row already holds. The corpus keeps one feast to a church, so her Greek row is the day page that was read, the second of March."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Μαρτίου — «Αγία Ευθαλία η παρθενομάρτυς»",
+        "url": "https://www.saint.gr/03/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The page tells the same life this folder already carries from doxologia, in the same order and with the same names — the mother Euthalia with the flow of blood, the dream of Alphaeus, Philadelphus and Cyprinus whose memory it puts on 10 May, the brother Sermilianus, the servant struck blind, the beheading. It gives no year, no relic and no hymn, and it prints the distich «Υἱὸν φιλοῦσα Μητροπαρθένου Κόρης, / Τομὴν ὑπέστη καλλιπάρθενος Κόρη». The one thing it adds is the reading of the Halki codex, which is what identifies this entry with the 27 august one."
     },
     {
       "church": "serbian",

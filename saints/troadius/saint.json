@@ -1,0 +1,59 @@
+{
+  "slug": "troadius",
+  "display_name": "Troadius",
+  "names": [
+    {
+      "form": "Τρωάδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαρτίου, «Άγιος Τρωάδιος και οι συν αυτώ», with the rank word and the company left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Μαρτίου — «Άγιος Τρωάδιος και οι συν αυτώ»",
+        "url": "https://www.saint.gr/03/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line couples him with «οι συν αυτώ», those with him, and the page behind it names none of them, so they are not folders here. The whole notice is one sentence and it gives two datings without choosing: «επί αυτοκράτορα Δεκίου (249 - 251 μ.Χ.) ή σύμφωνα με τον Άγιο Νικόδημο τον Αγιορείτη επί Aκακίου του βασιλέως το έτος 253 μ.Χ.». The disagreement is recorded as the interval in `dates`. The page gives no country, no city, no relic and no hymn, and prints the distich «Μὴ μέλλε, Τρῳὰδιε, θνῄσκειν ἐκ ξίφους, / Μὴ μέλλε, καὶ μέλλησιν οὐχ ἕξει στέφος»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 253,
+      "display": "between 249 and 253",
+      "basis": "traditional",
+      "note": "saint.gr gives two readings in one sentence and chooses neither: «Ο Άγιος Τρωάδιος τελειώθηκε διά ξίφους μαζί με άλλους Χριστιανούς επί αυτοκράτορα Δεκίου (249 - 251 μ.Χ.) ή σύμφωνα με τον Άγιο Νικόδημο τον Αγιορείτη επί Aκακίου του βασιλέως το έτος 253 μ.Χ.» — under the emperor Decius, whose reign the page gives as 249 to 251, or, according to St Nicodemus the Hagiorite, under Akakios the emperor in the year 253. The interval spans both readings and the disagreement is the finding."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

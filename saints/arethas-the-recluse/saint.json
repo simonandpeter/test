@@ -1,0 +1,64 @@
+{
+  "slug": "arethas-the-recluse",
+  "display_name": "Arethas the Recluse",
+  "names": [
+    {
+      "form": "Αρέθας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαρτίου, «Όσιος Αρέθας ο Έγκλειστος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr puts him at Tver and in the Lavra of Kyiv, so that calendar is the one most likely to hold him, and it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Μαρτίου — «Όσιος Αρέθας ο Έγκλειστος»",
+        "url": "https://www.saint.gr/03/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1409)» and says he came of the city of Tver in Russia, became a monk in the Lavra of Kyiv, was elected bishop and a little later withdrew to follow the hesychast road of the enclosed monastic life, reposed in 1409 and had his relics translated in 1483. The corpus has no `types` slug for Έγκλειστος, the enclosed one, so the epithet is carried in the display name only; and `bishop` is left out of `types` because the see he was elected to he laid down, and the calendar's own word for him is Όσιος. The page names no diocese, no relic's resting place, no distich and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1409,
+      "latest": 1409,
+      "display": "1409",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Αρέθας κοιμήθηκε με ειρήνη το έτος 1409 μ.Χ. και η ανακομιδή των ιερών λειψάνων αυτού έγινε το 1483 μ.Χ.», and the page heads him «(; - 1409)». It says he lived «κατά τα τέλη του 14ου και τις αρχές του 15ου αιώνα μ.Χ.» and gives no year for his birth."
+    }
+  },
+  "related": [
+    "arsenius-bishop-of-tver"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

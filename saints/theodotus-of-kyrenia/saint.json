@@ -7,6 +7,11 @@
       "form": "Teodot",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 martie, «Sfântul Sfințit Mucenic Teodot, Episcopul Chiriniei»."
+    },
+    {
+      "form": "Θεόδοτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαρτίου, «Άγιος Θεόδοτος επίσκοπος Κυρήνειας Κύπρου Ομολογητής και Ιερομάρτυρας», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 2 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Μαρτίου — «Άγιος Θεόδοτος επίσκοπος Κυρήνειας Κύπρου Ομολογητής και Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/03/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 315)» and says «Μετά δύο χρόνια όμως, το 315 μ.Χ., πέθανε» — two years after his release under Constantine the Great he died, in 315. That is a single year where the corpus's own dates, read off doxologia as the persecution under Licinius, give an interval; the corpus's reading is left as it stands and saint.gr's year is recorded here. The page names the governor Sabinus who arrested and tortured him, has him make a small flock inside the prison, and prints the distich «Ἄθλου πέπλησαι, Θεόδοτε, στιγμάτων, / Εἰ καὶ μὲτ εἰρήνης σε Χριστὸς λαμβάνει». Beside him it links Triphyllius, bishop of Ledra, who is not named in the notice itself."
     },
     {
       "church": "serbian",

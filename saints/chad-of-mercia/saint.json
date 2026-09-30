@@ -1,0 +1,64 @@
+{
+  "slug": "chad-of-mercia",
+  "display_name": "Chad of Mercia",
+  "names": [
+    {
+      "form": "Τσαντ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαρτίου, «Άγιος Τσαντ», with the rank word left off. The body of the page writes the name in Latin letters and gives two Greek renderings in brackets, «Ο Άγιος Chad (Τσαντ ή Τσάδ)»; the day's line prints the first of them and that is the one taken."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Μαρτίου — «Άγιος Τσαντ»",
+        "url": "https://www.saint.gr/03/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 673)», makes him the brother of St Cedd whom it keeps on 7 Ιανουαρίου, and names Lindisfarne under Aidan as his schooling, Lastingham near the hills of Yorkshire as the house his brother called him to help found, the king Alchfrith who called him to the episcopal seat of his kingdom, and the archbishop Theodore of Canterbury who refused the ordination as uncanonical and then, impressed by his humility, installed him as bishop of the local church of Mercia. It says he fell asleep in 673 during a great epidemic and was buried in the church of the Panagia of Lichfield, where many wonders happened at his tomb, and that his relics are now in the cathedral of Birmingham in Britain. It prints no distich and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 673,
+      "latest": 673,
+      "display": "673",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Τσαντ κοιμήθηκε οσίως με ειρήνη, το έτος 673 μ.Χ. κατά την διάρκεια μεγάλης επιδημίας», and the page heads him «(; - 673)», leaving the year of his birth a question mark."
+    }
+  },
+  "related": [
+    "cedd-the-bishop"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
