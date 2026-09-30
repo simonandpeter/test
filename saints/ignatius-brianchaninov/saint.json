@@ -11,6 +11,16 @@
       "form": "Dimitrie",
       "lang": "ro",
       "note": "His name at baptism, as doxologia.ro's life prints it: «Din botez s-a numit Dimitrie»."
+    },
+    {
+      "form": "Ιγνάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Απριλίου, «Άγιος Ιγνάτιος Επίσκοπος Σταυρουπόλεως», with the rank word and the see left off; the life page gives the surname in Greek letters as «Μπριαντσιανίνωφ»."
+    },
+    {
+      "form": "Μπριαντσιανίνωφ",
+      "lang": "el",
+      "note": "The surname as saint.gr transliterates it: «Ο Άγιος Ιγνάτιος (Μπριαντσιανίνωφ) γεννήθηκε το έτος 1807 μ.Χ. στην κωμόπολη Ποκρόφσκ»."
     }
   ],
   "sex": "male",
@@ -57,8 +67,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Απριλίου — «Άγιος Ιγνάτιος Επίσκοπος Σταυρουπόλεως»",
+        "url": "https://www.saint.gr/04/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him, names him outright «Ο Άγιος Ιγνάτιος (Μπριαντσιανίνωφ)», heads him «(1807 - 1867)» and gives his secular name as Demetrius — so it is plainly the same man, and this folder's existing `dates`, 1807 and 1867 off doxologia, were left untouched. **The Greek adds a good deal of the route of his life**: born in the small town of Pokrovsk in the province of Vologda into a family of nobles, in a country so full of monasteries and skete that it was called the Thebaid of Russia; entered by his father in the imperial war school at Saint Petersburg and made to resign it after a grave illness in 1827, at twenty, against the objections of the officers; settled first at the monastery of Saint Alexander of Svir, where he was joined spiritually to the starets Leonid of Optina, then at the monastery of Saint Cyril, where he came to know the starets Theophanes, and after four years more with his elder Leonid at Optina; tonsured in 1831 with the name Ignatius and soon ordained deacon and presbyter; called to Saint Petersburg by order of the tsar Nicholas as abbot of the monastery of Saint Sergius; bishop of Stavropol, of the Caucasus and of the Euxine Pontus, and in that time the author of «Προσφορά εις τον σύγχρονον μοναχισμόν», an offering to contemporary monasticism; forced by illness to resign the episcopal throne and withdrawn to the monastery of Saint Nicholas at Babaevo, where he lived as a simple monk and fell asleep in peace in 1867 at the age of sixty. It quotes the elder Sophrony at length on Christian perfection. **No `related` rows were added**: the corpus has a `leo-of-optina` who may or may not be this starets Leonid, and the reading was not made. It prints no hymn and names no relic."
     },
     {
       "church": "serbian",

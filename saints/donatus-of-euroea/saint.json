@@ -6,6 +6,11 @@
       "form": "Donat",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 aprilie, «Sfântul Ierarh Donat, Episcopul Evriei»."
+    },
+    {
+      "form": "Δονάτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Απριλίου, «Άγιος Δονάτος επίσκοπος Ευροίας Ηπείρου», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Απριλίου — «Άγιος Δονάτος επίσκοπος Ευροίας Ηπείρου»",
+        "url": "https://www.saint.gr/04/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him, marks him «Πολιούχος: Παραμυθιά Θεσπρωτίας», and it is plainly the same man: bishop of Euroea in Epirus, a wonderworker, the slayer of the dragon at the spring of Soreia and the healer of the daughter of Theodosius the Great. **The Greek adds two years the folder did not have** — «Γεννήθηκε περί το 330 μ.Χ. στην Εύροια και μορφώθηκε στο Βουθρωτό της Ηπείρου», born about 330 at Euroea and educated at Bouthroton, and «εἰς μακρὸν γῆρας ἐλάσας, ἀπῆλθε», μάλλον το 388 μ.Χ., dead probably in 388 — and both hedges, «περί» and «μάλλον», are the page's own and are kept in the display. It also says he was ordained bishop at thirty and held the see for sixty years, which does not square with those two dates, and that arithmetic is recorded and not reconciled. **It warns of a confusion in the Latin sources** between this Donatus and his namesake the bishop of Arezzo in Tyrrhenia, who was martyred under Julian the Apostate, the see of Euroea having been ecclesiastically under the West though politically Byzantine; and it says other sources hold him to have come from the West, the name being common there. It traces the relics: carried to Kassiope in Corfu in 604 by the bishop John of Euroea in flight from barbarian raids, taken in 1125 by the Venetian doge Domenico Michelli to the church of the Panagia and Donatus at Murano in Venice, and a part of them brought back on 29 September 2000 to Paramythia. **And it records a second day**: «Στην Λευκάδα, η μνήμη του Αγίου Δονάτου τιμάται στις 7 Αυγούστου», at Lefkada his memory is kept on 7 August, with which a manuscript of the Great Lavra on Athos agrees. 30 April is the day both the listing and the page head give and is what this row records; the 7 August is noted here as a local usage and is not a second row. It prints one apolytikion, proper to him, which is stored here."
     },
     {
       "church": "serbian",
@@ -48,5 +63,40 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 330,
+      "latest": 330,
+      "display": "about 330",
+      "basis": "traditional",
+      "note": "saint.gr: «Γεννήθηκε περί το 330 μ.Χ. στην Εύροια και μορφώθηκε στο Βουθρωτό της Ηπείρου». The hedge «περί» is the page's and is kept in the display."
+    },
+    "death": {
+      "earliest": 388,
+      "latest": 388,
+      "display": "probably 388",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Δονάτος «εἰς μακρὸν γῆρας ἐλάσας, ἀπῆλθε», μάλλον το 388 μ.Χ. και ενταφιάσθηκε πλησίον του ανωτέρου ναού σε μνημείο, το οποίο κατά την παράδοση είχε ο ίδιος ετοιμάσει». The «μάλλον» is the page's. The same page says he was ordained bishop at thirty and was hierarch for sixty years, which does not square with 330 and 388; the disagreement is the source's and is not reconciled here."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Εὐροίας ποιμένα σε, καὶ τῆς Ἠπείρου πυρσόν, ἡ χάρις ἀνέδειξεν, ὡς Ἱεράρχην σοφόν, Δονᾶτε μακάριε· θαύμασι γὰρ ἐκλάμψας, καὶ λαμπρότητι βίου, νέμεις τοῖς σὲ τιμῶσι, πᾶσαν ἔνθεον δόσιν· διὸ τῇ προστασίᾳ σου, Πάτερ προστρέχομεν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε, on the page of «Άγιος Δονάτος επίσκοπος Ευροίας Ηπείρου»",
+        "url": "https://www.saint.gr/3993/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Grace showed thee forth as the shepherd of Euroea and the beacon of Epirus, a wise hierarch, O blessed Donatus; for having shone with wonders and with the brightness of thy life, thou dost deal out to those who honour thee every godly gift. Therefore we run to thy protection, O father.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

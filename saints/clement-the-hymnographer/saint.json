@@ -1,0 +1,66 @@
+{
+  "slug": "clement-the-hymnographer",
+  "display_name": "Clement the Studite",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "confessor",
+    "hymnographer"
+  ],
+  "office": "Abbot of the monastery of Studios",
+  "names": [
+    {
+      "form": "Κλήμης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Απριλίου, «Όσιος Κλήμης ο υμνογράφος», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [
+    "theodore-the-studite"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Φυσικά είναι γνωστό, ότι υπήρξε Βυζαντινός Υμνογράφος του 9ου αιώνα μ.Χ. (ποιητής των Κανόνων)». No year of birth or of death is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Απριλίου — «Όσιος Κλήμης ο υμνογράφος»",
+        "url": "https://www.saint.gr/04/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Απριλίου εκάστου έτους», the same day as the listing. Its whole body is three sentences: he was a Studite monk and a disciple of Theodore the Studite, whose feast it gives parenthetically as 11 November, and after Theodore's death he took his teacher's place in the abbacy of the monastery; he was a fervent adherent of the veneration of the holy icons and died of hardships in exile as a confessor of the faith; and he was a Byzantine hymnographer of the ninth century, a poet of canons. **The display name is `Clement the Studite` and not `the Hymnographer`** because `hymnographer` is one of this folder's `types` and `lib/honorific.js` composes the rank itself; the page states both things. The `related` row is Theodore, the one man the page names and the one the corpus holds. It prints no hymn of his own and names no relic. The corpus's other Clements are of Rome, Ancyra, Ohrid, Sardis and Mount Sagmation."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

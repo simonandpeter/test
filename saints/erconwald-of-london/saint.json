@@ -1,0 +1,61 @@
+{
+  "slug": "erconwald-of-london",
+  "display_name": "Erconwald of London",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "office": "Bishop of London",
+  "names": [
+    {
+      "form": "Ερκονγουάλδος",
+      "lang": "el",
+      "note": "The Greek form saint.gr prints in brackets after the Latin spelling: «Ο Άγιος Erconwald (Ερκονγουάλδος) κοιμήθηκε το έτος 693 μ.Χ.» The day's own line spells the name in Latin letters, «Άγιος Erconwald επίσκοπος Λονδίνου»."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 693,
+      "latest": 693,
+      "display": "693",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Erconwald (Ερκονγουάλδος) κοιμήθηκε το έτος 693 μ.Χ.», and the page heads him «(; - 693)» with the year of birth left as a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Απριλίου — «Άγιος Erconwald επίσκοπος Λονδίνου»",
+        "url": "https://www.saint.gr/04/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Απριλίου εκάστου έτους», the same day as the listing. Its whole body is two sentences: «Ο Άγιος Erconwald (Ερκονγουάλδος) κοιμήθηκε το έτος 693 μ.Χ. Δεν έχουμε άλλες λεπτομέρειες για τον βίο του» — he fell asleep in the year 693, and we have no other details of his life. The page credits the Archdiocese of Thyateira and Great Britain as its source for the entry. **saint.gr spells the name in Latin letters in the day's line** and gives a Greek form only in brackets on the life page, which is the form recorded in `names`; no English form is on the page, so the display name is this corpus's own choice of the usual English spelling of that name. No `locations` was written: the see is named and nothing else is. It prints no hymn and names no relic, and the corpus holds nobody of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

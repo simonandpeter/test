@@ -1,0 +1,62 @@
+{
+  "slug": "simon-of-moscow",
+  "display_name": "Simon of Moscow",
+  "sex": "male",
+  "types": [
+    "monk",
+    "metropolitan"
+  ],
+  "office": "Metropolitan of Moscow",
+  "names": [
+    {
+      "form": "Σίμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Απριλίου, «Άγιος Σίμων Μητροπολίτης Μόσχας», with the rank word and the see left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1511,
+      "latest": 1511,
+      "display": "1511",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1511 μ.Χ. και ενταφιάσθηκε στο ναό της Κοιμήσεως της Θεοτόκου του Κρεμλίνου», and the page heads him «(; - 1511)» with the year of birth left as a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Απριλίου — «Άγιος Σίμων Μητροπολίτης Μόσχας»",
+        "url": "https://www.saint.gr/04/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Απριλίου εκάστου έτους», the same day as the listing. Its whole body is two sentences: he was a monk in the monastery of the Holy Trinity of Saint Sergius, in September of the year 1495 he was elected metropolitan of Moscow, and he fell asleep in peace in 1511 and was buried in the church of the Dormition of the Mother of God in the Kremlin. The September 1495 is an election and not a date of life, so it is recorded here and not in `dates`. The monastery of Saint Sergius is a dedication and not a relation, so there are no `related` rows. No year of birth, no kindred and no act of his metropolitanate are printed. The corpus's Maximus of Moscow is another man, and its Stephen of Perm and Stephen of Vladimir, both kept by the same calendar in this same week, are others again. It prints no hymn; the burial place is the only relic notice it gives."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

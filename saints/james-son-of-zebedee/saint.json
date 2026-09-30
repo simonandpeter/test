@@ -6,6 +6,11 @@
       "form": "Iacob",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 aprilie, «Sfântul Apostol Iacob, fratele Sfântului Apostol Ioan Evanghelistul»."
+    },
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Απριλίου, «Άγιος Ιάκωβος ο Απόστολος αδελφός Ιωάννου του Θεολόγου», with the rank word and the kinship clause left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Απριλίου — «Άγιος Ιάκωβος ο Απόστολος αδελφός Ιωάννου του Θεολόγου»",
+        "url": "https://www.saint.gr/04/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him, and it is plainly the same apostle: son of Zebedee and Salome, elder brother of John the Evangelist, of Bethsaida in Galilee, a fisherman with his brother and his father and many hired men, with their own boat and Peter for a partner. **The Greek adds a year the folder did not have**: «οι άρχοντες των Ιουδαίων, οι οποίοι, το έτος 44 μ.Χ. τον συνέλαβαν και τον αποκεφάλισαν, ως αμνόν, με διαταγή του Ηρώδου του Αγρίππα», beheaded in the year 44 by order of Herod Agrippa, and the page heads him «(; - 44)»; that year is now in `dates` and no year of birth is printed. The Greek also sets out what the two sons of thunder alone witnessed — the Transfiguration, the raising of the daughter of Jairus, the hours of prayer and agony in Gethsemane — and reads the request made through their mother as a misunderstanding of the Messiah's mission which Christ corrected with «Οὐκ οἴδατε τί αἰτεῖσθε». **Three of the page's four hymns are stored and one is not**: the apolytikion in Ἦχος γ’ and the kontakion in Ἦχος β’ are proper and name him, and the short «Ἀπόστολε ἅγιε Ἰάκωβε, πρέσβευε τῷ ἐλεήμονι Θεῷ» in Ἦχος πλ. δ’ is the common of an apostle with his name set into it and was left, as were the megalynarion, the oikos and the kathisma, which are none of them a kind this corpus holds. The existing Romanian feast note already records doxologia's second day for him, 30 iunie, the Synaxis of the Twelve; saint.gr links the same synaxis from this page and that is not a second row either."
     },
     {
       "church": "serbian",
@@ -50,5 +65,50 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 44,
+      "latest": 44,
+      "display": "44",
+      "basis": "traditional",
+      "note": "saint.gr: «οι άρχοντες των Ιουδαίων, οι οποίοι, το έτος 44 μ.Χ. τον συνέλαβαν και τον αποκεφάλισαν, ως αμνόν, με διαταγή του Ηρώδου του Αγρίππα», and the page heads him «(; - 44)». No year of birth is printed."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Γόνος ἅγιος, βροντῆς ὑπάρχων, κατεβρόντησας, τὴ οἰκουμένη, τὴν τοῦ Σωτῆρος Ἰάκωβε κένωσιν, καὶ τὸ ποτήριον τούτου ἐξέπιες, μαρτυρικῶς ἐναθλήσας Ἀπόστολε, ὅθεν πάντοτε, ἐξαίτει τοὶς σὲ γεραίρουσι, πταισμάτων ἱλασμὸν καὶ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως, on the page of «Άγιος Ιάκωβος ο Απόστολος αδελφός Ιωάννου του Θεολόγου»",
+        "url": "https://www.saint.gr/3989/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being a holy child of thunder, thou didst thunder out to the whole world the self-emptying of the Saviour, O James, and thou didst drink His cup, contending as a martyr, O apostle. Wherefore ask always for those who honour thee the pardon of their sins and great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τά ἄνω ζητῶν.",
+      "text": "Φωνῆς θεϊκῆς, ἀκούσας προσκαλούσης σε, ἀγάπην πατρός, παρεῖδες καὶ προσέδραμες, τῷ Χριστῷ Ἰάκωβε, μετά καί τοῦ συγγόνου σου ἔνδοξε, μεθ᾽ οὗ καὶ ἠξιώθης ἰδεῖν, Κυρίου τήν θείαν Μεταμόρφωσιν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τά ἄνω ζητῶν, on the page of «Άγιος Ιάκωβος ο Απόστολος αδελφός Ιωάννου του Θεολόγου»",
+        "url": "https://www.saint.gr/3989/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Hearing the divine voice that called thee, thou didst overlook a father's love and run to Christ, O James, together with thy brother, O glorious one, with whom thou wast counted worthy to see the divine Transfiguration of the Lord.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

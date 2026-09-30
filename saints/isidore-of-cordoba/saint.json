@@ -1,0 +1,54 @@
+{
+  "slug": "isidore-of-cordoba",
+  "display_name": "Isidore of Cordoba",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ισίδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Απριλίου, «Άγιοι Ισίδωρος, Ηλίας και Παύλος οι Μάρτυρες», whose page heads him «Άγιος Ισίδωρος ο Μάρτυρας», with the rank word left off."
+    }
+  ],
+  "related": [
+    "elias-of-cordoba",
+    "paul-of-cordoba"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Απριλίου — «Άγιοι Ισίδωρος, Ηλίας και Παύλος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/04/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Απριλίου εκάστου έτους», the same day as the listing. It is one entry for all three and its whole body is one sentence: «Οι Άγιοι Μάρτυρες Ισίδωρος, Ηλίας και Παύλος μαρτύρησαν στην Κορδούη της Ισπανίας» — they were martyred at Cordoba in Spain. **The line names each of the three, so it is one folder per man.** No century, no emperor, no judge and no manner of death are printed, so there is no `dates` object; and no `locations` was written either, because a martyrdom at a named city with no century at all would put a located and undated saint on `map-span.test.mjs`'s UNDATED list for nothing. The paragraphs under the three name headings are saint.gr's glosses on the names Ισίδωρος, Ηλίας and Παύλος and are not about these men. It prints no couplet, no hymn and no relic. The corpus's other Isidores are of Chios, Pelusium, Antioch, Samtavisi and the 8 January, and none of them is of Spain."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "maximus-30-april",
+  "display_name": "Maximus (30 April)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μάξιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Απριλίου, «Άγιος Μάξιμος», with the rank word left off; the line gives him no epithet at all."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Απριλίου — «Άγιος Μάξιμος»",
+        "url": "https://www.saint.gr/04/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Απριλίου εκάστου έτους», the same day as the listing. Its whole body is one sentence: «Ο Άγιος Μάξιμος μαρτύρησε αφού του διαπέρασαν την κοιλιά με ξίφος» — he was martyred after they ran a sword through his belly. No century, no place, no persecutor, so there is no `dates` object and no `locations`. The paragraph under the name heading, about a philosopher of Tyre of the second century after Christ and a philosopher of the fourth before, is saint.gr's gloss on the name Μάξιμος and is not about the martyr. **The display name is dated because the line gives nothing else to tell him by**: the corpus holds sixteen other men of this name — of Ozovia, of Moscow, of Totma, the Confessor, the Greek, the Soldier and the rest — and none of them is a bare Maximus killed by a sword through the belly on 30 April. It prints no hymn and names no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

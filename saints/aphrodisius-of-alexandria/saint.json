@@ -1,0 +1,52 @@
+{
+  "slug": "aphrodisius-of-alexandria",
+  "display_name": "Aphrodisius of Alexandria",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Αφροδίσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Απριλίου, «Άγιος Αφροδίσιος ο Ιερομάρτυρας και οι συν αυτώ τριάντα Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Απριλίου — «Άγιος Αφροδίσιος ο Ιερομάρτυρας και οι συν αυτώ τριάντα Μάρτυρες»",
+        "url": "https://www.saint.gr/04/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Απριλίου εκάστου έτους», the same day as the listing. Its whole body is one sentence: «Ο Άγιος Ιερομάρτυρας Αφροδίσιος ήταν πρεσβύτερος της Εκκλησίας και μαρτύρησε στην Αλεξάνδρεια μαζί με άλλους τριάντα Χριστιανούς» — he was a presbyter of the Church and was martyred at Alexandria along with thirty other Christians. **The thirty are neither counted by name nor named at all**, so they are not folders; the page gives them a heading of their own, «Άγιοι Τριάντα Μάρτυρες Που Μαρτύρησαν Μαζί Με Τον Άγιος Αφροδίσιο», and no list. No century, no emperor and no manner of death are printed, so there is no `dates` object, and no `locations` was written for an undated saint. The paragraph under the name heading is saint.gr's gloss on Ἀφροδίτη, the goddess, and is not about the martyr. **This is not the corpus's `aphrodisius`**, whom doxologia keeps on 21 iunie as a man of Cilicia tried before the ruler Dionysius and killed with boiling lead; this one is a presbyter martyred at Alexandria with thirty others, and two entries on one calendar are two commemorations. The distinction rests on the office and the city and is flagged in the reader's report. It prints no hymn and names no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
