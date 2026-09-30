@@ -1,0 +1,63 @@
+{
+  "slug": "euphrosyne-of-lesvos",
+  "display_name": "Euphrosyne of Lesvos",
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "nun"
+  ],
+  "names": [
+    {
+      "form": "Ευφροσύνη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαΐου, «Αγίες Ολυμπία και Ευφροσύνη οι Οσιομάρτυρες», with the rank word left off; the page's own head line for her is «Αγια Ευφροσυνη η Οσιομαρτυρας (; - 1235)»."
+    }
+  ],
+  "related": [
+    "olympia-of-lesvos"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1235,
+      "latest": 1235,
+      "display": "1235",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Οσία Ολυμπία και η οσία Ευφροσύνη έζησαν τον 13ο αιώνα μ.Χ. και παρέδωσαν την ψυχή τους με μαρτυρικό θάνατο στις 11 Μαΐου του 1235 μ.Χ.», and the head line over her name gives «(; - 1235)». The page gives no year for her birth and calls her only a γερόντισσα, an old nun."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαΐου — «Αγίες Ολυμπία και Ευφροσύνη οι Οσιομάρτυρες»",
+        "url": "https://www.saint.gr/05/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Μαΐου εκάστου έτους», the same day as the listing, **and gives each of the two her own head line**, so the pair is two folders; her companion is the corpus's `olympia-of-lesvos`, which gets a Greek row of its own from this same page. **She is none of the corpus's other Euphrosynes** — of Alexandria, of Mega Spileo — and the name sweep's strong rows for this line were all raised off Olympia's name, not hers. **The thirty nuns of the house are not named** — «διασκόρπισαν τις τριάντα μοναχές και όσες δεν πρόλαβαν να φύγουν, τις κακοποίησαν» — so they are no folders. **`locations` are left out** although Thermi and Mytilene on Lesvos are named: the monastery of Karyai, now the monastery of Saint Raphael, is where she died, and the page locates her nowhere else. **The relics named on the page are Olympia's, not hers**: part at the monastery of Saint Raphael at Thermi and a fragment at Mega Spilaio of Kalavryta. **The two apolytikia on the page name Olympia only** and are taken there, not here: they are not this saint's hymns, and no hymn is stored for her."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Olimpia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 mai, «Sfânta Muceniță Olimpia din Insula Lesvos»."
+    },
+    {
+      "form": "Ολυμπία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαΐου, «Αγίες Ολυμπία και Ευφροσύνη οι Οσιομάρτυρες», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -14,12 +19,19 @@
     "martyr"
   ],
   "dates": {
+    "birth": {
+      "earliest": 1200,
+      "latest": 1200,
+      "display": "1200",
+      "basis": "traditional",
+      "note": "The year stands in the head line over her name on saint.gr's page, «Αγια Ολυμπια η Οσιομαρτυρας (1200 - 1235)». The body of the page gives no year of birth and dates her only by ages — orphaned at ten, a nun at nineteen, abbess at twenty-five, killed ten years after that — which agree with the head line."
+    },
     "death": {
       "earliest": 1235,
       "latest": 1235,
       "display": "1235",
       "basis": "attested",
-      "note": "doxologia.ro: «Pe 11 mai, în anul 1235, pirații au atacat mănăstirea și au încercat la început să pângărească călugărițele.»"
+      "note": "Kept from the folder's own existing interval, which saint.gr confirms twice: «παρέδωσαν την ψυχή τους με μαρτυρικό θάνατο στις 11 Μαΐου του 1235 μ.Χ.» and again «Έπειτα από δέκα χρόνια, στις 11 Μαΐου του 1235 μ.Χ., πειρατές ήλθαν στη Μυτιλήνη»."
     }
   },
   "attestations": [
@@ -44,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαΐου — «Αγίες Ολυμπία και Ευφροσύνη οι Οσιομάρτυρες»",
+        "url": "https://www.saint.gr/05/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps her, and the day is the day of her killing, which the page states twice. **`dates` are extended, not replaced in substance**: the folder already had 1235 for her death, `attested`, and the Greek head line «(1200 - 1235)» adds a birth, which is stored as `traditional` because it is a head line and not a statement in the body. **Her companion gets a folder from this same page**, `euphrosyne-of-lesvos`, and a `related` row is added for her. **The Greek adds what the folder lacked**: parents from Constantinople, her father a priest and her mother a priest's daughter; their leaving Constantinople for the Peloponnese, «άγνωστο για ποιο λόγο»; the loss of both parents when she was ten and her relatives' sending her to the monastery of Karyai at Thermi, now the monastery of Saint Raphael, where the then abbess Dorothea was her aunt; her tonsure at nineteen and her becoming abbess at twenty-five on her aunt's death; the pirates who came to Mytilene ten years later, on 11 May 1235, scattered the thirty nuns and abused those who could not get away; the burning of her whole body; and the twenty nails found in her grave when the relics of the saints of Thermi were found and their story made known by divine revelations. **The thirty nuns are not named and are no folders.** **Two hymns are added**, both apolytikia, both proper and both naming her and the monastery of Karyai. **The relics are in the note and not in `locations`**: part at the monastery of Saint Raphael at Thermi on Lesvos, and a fragment at the monastery of Mega Spilaio of Kalavryta."
     },
     {
       "church": "serbian",
@@ -55,5 +77,44 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "euphrosyne-of-lesvos"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὁσίως μονάσασα τῶν Καρυῶν τὴ Μονὴ ἐν ταύτῃ ἐνήθλησας, τῶν πειρατῶν τὴ χειρὶ κτανθεῖσα, θεόληπτε ὅθεν ἄρτι γνωσθεῖσα, ἐπινεύσει τὴ θεία, ἔδειξας Ὀλυμπία, τὴν σὴν ἄθλησιν πάσι, διὸ σὲ ὁσιομάρτυς Χριστοῦ μακαρίζομεν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε, the first of two on the page of «Αγίες Ολυμπία και Ευφροσύνη οι Οσιομάρτυρες»; both name Olympia only",
+        "url": "https://www.saint.gr/400/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lived as a nun in holiness in the monastery of Karyai, in that same place thou didst contend, being slain by the hand of the pirates, O thou possessed of God; wherefore, being now made known by a divine prompting, thou didst show thy contest to all, O Olympia, and therefore we call thee blessed, venerable martyr of Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Θεῶ ἀνατεθεῖσα ἐκ νεότητος πάνσεμνε, ἐμόνασας ὁσίως, καί ἀνδρείως ἐνήθλησας, διό ἐπιφανεῖσα μυστικῶς, ἐδήλωσας τήν ἄθλησιν τήν σήν, ἥν ὑμνοῦμεν Ὀλυμπία ἀσματικῶς βοῶντες Ὁσιομάρτυς, δόξα τῶ δεδωκότι σοι ἰσχύν δόξα τῶ σέ στεφανώσαντι, δόξα τῶ τοῖς Ἁγίοις Ἀθληταῖς, λαμπρῶς σέ ἀριθμήσαντι.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης, the second of two on the page of «Αγίες Ολυμπία και Ευφροσύνη οι Οσιομάρτυρες»",
+        "url": "https://www.saint.gr/400/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Dedicated to God from thy youth, O all-modest one, thou didst live as a nun in holiness and didst contend manfully; wherefore, appearing mystically, thou madest thy contest known, which we hymn, O Olympia, crying out in song: O venerable martyr, glory to him who gave thee strength, glory to him who crowned thee, glory to him who has numbered thee brightly among the holy contenders.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

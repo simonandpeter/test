@@ -1,0 +1,66 @@
+{
+  "slug": "angelarius-of-bohemia",
+  "display_name": "Angelarius of Bohemia",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "archbishop",
+    "hierarch"
+  ],
+  "office": "Archbishop of Bohemia",
+  "names": [
+    {
+      "form": "Αγγελάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαΐου, «Όσιος Αγγελάριος Αρχιεπίσκοπος και φωτιστής Βοημίας», with the rank word and the see left off."
+    }
+  ],
+  "related": [
+    "cyril-the-philosopher",
+    "methodius-of-moravia"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησε και έδρασε κατά τον 9ο αιώνα μ.Χ.» The page gives no year for his birth and none for his death, only that he fell asleep in Bulgaria."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαΐου — «Όσιος Αγγελάριος Αρχιεπίσκοπος και φωτιστής Βοημίας»",
+        "url": "https://www.saint.gr/05/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Μαΐου εκάστου έτους», the same day as the listing. **The corpus keeps no Angelarius**, so this is a new folder and not an upgrade. **The page gives a second day for the company and it is recorded here as a note**: it cites a service printed at Moschopolis in Macedonia in 1742, «Ακολουθία των αγίων επταρίθμων, ποιηθείσα παρά του εν ιερομονάχοις Γρηγορίου Μοσχοπολίτου», in which the memory of Cyril and Methodius «και των συν αυτοίς» is kept on 17 Ιουλίου. One attestation row per church is the schema, and the row records the day page read. **The «επτάριθμοι» of that service title — the Seven — are not enumerated on this page**, which names only Cyril and Methodius and him; no company is drafted, and whether this corpus's folders make up those Seven is not decided here. **`cyril-the-philosopher` and `methodius-of-moravia` are joined to him by the page's own first sentence**, «ήταν συνεργάτης και βοηθός των Αγίων Ισαποστόλων Κυρίλλου και Μεθοδίου». **`locations` are left out**: Bohemia is in the epithet, Bulgaria is where he died, and the page locates him at neither precisely. No relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

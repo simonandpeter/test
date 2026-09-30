@@ -115,6 +115,34 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'φιλιπποσ philip-of-moscow philip-of-sicily philip-of-worms':
+    'Three men: Worms on 3 May, Philip of Sicily on 12 May and the Philip of the el-10-11 entry.',
+  'παγκρατιοσ pancratius-of-tauromenium pancratius-the-martyr-12-may pancratius-the-recluse-of-the-caves':
+    'Three men: the martyr of 12 May, Pancharius of 19 March, and the Pancratius of the el-07-09 entry.',
+  'νικητασ nicetas-alfanov nicetas-of-apollonias nicetas-of-epirus nicetas-of-medikion nicetas-of-pythia nicetas-the-sinaite':
+    'Six now. The new one is Nicetas the Sinaite on 12 May; the others are read in the el-05-04 entry for this name form.',
+  'θεοδωροσ mstislav-of-kiev theodore-companion-of-pausolypius theodore-companion-of-stephen theodore-companion-of-terentius theodore-founder-of-chora theodore-of-kama-the-philosopher theodore-of-kandavla theodore-of-kythera theodore-of-moscow theodore-of-novgorod theodore-of-pentapolis theodore-of-perga theodore-of-samothrace theodore-of-sykeon theodore-of-tamasos theodore-of-tomsk theodore-prince-of-yaroslavl theodore-stratelates theodore-the-byzantine theodore-the-envoy-of-nicomedia theodore-the-recruit theodore-the-silent theodore-trichinas':
+    'Twenty-three now. The new one is Theodore of Kythera on 12 May; the others are read in the el-04-21 entry for this name form.',
+  'λεων leo-companion-of-gervasius leo-companion-of-manuel leo-of-catania leo-of-methone leo-of-nicaea leo-of-patara leo-of-samos leo-the-great':
+    'Eight now. The new one is Leo of Methone on 12 May; the others are read in the el-04-26 entry for this name form.',
+  'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-kalita john-kaloktenes john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kazan john-of-lycopolis john-of-manglisi john-of-rouphinianai john-of-serres john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-old-lavra john-of-the-well john-of-verkhoturye john-of-vilnius john-of-yuryevets john-of-zedazeni john-philosopher-of-georgia john-psychaites john-son-of-xenophon john-the-bulgarian john-the-confessor-of-kathara john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-the-wallachian john-with-minas-and-david':
+    'Forty-two now, and **two of the new ones share 12 May** as two entries: John the Wallachian, whom the Romanian keeps there too, and John of Serres. The rest are read in the el-05-07 entry for this name form.',
+  'ευθυμιοσ euthymius-kereselidze euthymius-of-dimitsana euthymius-of-jerusalem euthymius-of-karelia euthymius-of-madytos euthymius-of-novgorod euthymius-of-suzdal euthymius-of-syanzhema euthymius-of-tarnovo euthymius-of-zographou euthymius-the-man-of-god euthymius-the-wonderworker':
+    'Twelve now. The new one is Euthymius of Jerusalem on 12 May; the others are read in the el-04-18 entry for this name form.',
+  'διονυσιοσ dionysius-8-may dionysius-companion-of-agapius dionysius-companion-of-agapius-second dionysius-companion-of-quadratus dionysius-companion-of-socrates dionysius-companion-of-terentius dionysius-martyr-1-april dionysius-of-alexandria dionysius-of-pereyaslavl dionysius-of-radonezh dionysius-reader-of-alexandria dionysius-the-merciful':
+    'Twelve now. The new one is Dionysius of Radonezh on 12 May; the others are read in the el-05-08 entry for this name form.',
+  'αντωνιοσ anthony-meskhi anthony-of-constantinople anthony-of-georgia anthony-of-krasnokholmsk anthony-of-martkopi anthony-of-novgorod anthony-of-radonezh anthony-of-tobolsk anthony-of-vologda anthony-of-zadonsk anthony-of-zographou anthony-the-great antonius-the-presbyter antony-companion-of-bassus antony-of-korel antony-of-novgorod antony-of-vilnius antony-son-of-john-of-syracuse antony-the-athenian antony-the-martyr-1-march':
+    'Twenty now. The new one is Anthony of Radonezh on 12 May; the others are read in the el-04-18 entry for this name form.',
+  'θεοφυλακτοσ theophylact-of-nicomedia theophylact-of-stavropol':
+    'Two men: Theophylact of Nicomedia on 8 March and Theophylact of Stavropol on 11 May.',
+  'νικοδημοσ nicodemus-of-serbia nicodemus-of-the-cave':
+    'Two men: Nicodemus of Serbia on 11 May and the Nicodemus of the Cave the corpus keeps from the Russian year — the pair whose identical line on 28 September and 15 February is an open question in ro-run/FINDINGS.md.',
+  'ιωσηφ joseph-of-alaverdi joseph-of-aleppo joseph-of-astrakhan joseph-of-bisericani joseph-of-lythrodontas joseph-of-optina joseph-the-hymnographer':
+    'Seven now. The new one is Joseph of Astrakhan on 11 May; the others are read in the el-01-26 entry for this name form.',
+  'χριστοφοροσ christopher christopher-20-april christopher-24-april christopher-of-adrianople christopher-of-georgia christopher-of-saint-sabbas':
+    'Six now. The new one is Christopher of Georgia on 11 May; the others are read in the el-04-23 entry for this name form.',
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-companion-of-terentius alexander-martyr-1-april alexander-of-cartagena alexander-of-kharkov alexander-of-oshevensk alexander-of-pydna alexander-of-rome-pope alexander-of-the-forty-martyrs alexander-of-voskiy alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Fourteen now. The new one is Alexander of Kharkov on 11 May; the others are read in the el-04-20 entry for this name form.',
   'συνεσιοσ synesius-of-irkutsk synesius-of-lysi':
     'Two men: the Synesius of 10 May and Synesius of Lysi on 1 March.',
   'σιμων simon-of-moscow simon-of-vladimir simon-of-zographou simon-the-martyr-3-february simon-the-zealot':

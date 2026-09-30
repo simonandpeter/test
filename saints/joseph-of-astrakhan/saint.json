@@ -1,0 +1,70 @@
+{
+  "slug": "joseph-of-astrakhan",
+  "display_name": "Joseph of Astrakhan",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "metropolitan",
+    "hierarch",
+    "abbot"
+  ],
+  "office": "Metropolitan of Astrakhan",
+  "names": [
+    {
+      "form": "Ιωσήφ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαΐου, «Άγιος Ιωσήφ ο Ιερομάρτυρας», with the rank words left off. No Russian form is recorded: saint.gr prints none."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1579,
+      "latest": 1579,
+      "display": "1579",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στο Αστραχάν το 1579 μ.Χ.», and the head line of the same page gives «(1579 - 1672)»."
+    },
+    "death": {
+      "earliest": 1672,
+      "latest": 1672,
+      "display": "1672",
+      "basis": "traditional",
+      "note": "saint.gr: «Στις 11 Μαΐου του 1672 μ.Χ. και κατά την διάρκεια μια επαναστάσεως των κατοίκων της πόλεως, ο Άγιος Ιωσήφ τελειώθηκε μαρτυρικά», and the head line of the same page gives «(1579 - 1672)». The day of his death is the day the calendar keeps him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). He is a Russian saint, canonised by the Russian Synod in April 1918 according to this page, and that calendar is the one that would settle his own day; it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαΐου — «Άγιος Ιωσήφ ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/05/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Μαΐου εκάστου έτους», the same day as the listing, and the day is the day of his death. **The day's line gives him no see and the life page does**, «πρώτος Μητροπολίτης Αστραχάν», first Metropolitan of Astrakhan, which is why the display name and `office` carry it and the stored Greek form does not. **He is none of the Josephs the name sweep raised**, all of them on the fold of the name, and he is not `joseph-of-optina`, whose Greek row comes off 9 Μαΐου two days earlier in this same wave. **The eyewitnesses are named on the page and are not `related` rows**: his martyrdom was recorded in detail by two eyewitnesses, priests of the cathedral of Astrakhan, Fr Cyril and Fr Peter, who have no folders in this corpus. **The page does not say how he was killed** — only «τελειώθηκε μαρτυρικά» during a rising of the townspeople — and nothing is supplied here. **`locations` are left out**: Astrakhan is his birthplace, his monastery, his see and his resting place all at once, and the page locates it no further. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

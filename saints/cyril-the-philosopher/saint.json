@@ -11,6 +11,16 @@
       "form": "Constantin",
       "lang": "ro",
       "note": "His name before the schema, read out of doxologia.ro's life: «pe Metodie și Constantin, care, mai pe urmă, s-a numit în sfânta schimă Chiril»."
+    },
+    {
+      "form": "Κύριλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαΐου, «Άγιοι Κύριλλος και Μεθόδιος Φωτιστές των Σλάβων», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Κωνσταντίνος",
+      "lang": "el",
+      "note": "His name in the world, as saint.gr prints it on the same page: «Οι Άγιοι Κύριλλος και Μεθόδιος, κατά κόσμον Κωνσταντίνος και Μιχαήλ». The folder already keeps the Romanian «Constantin» for the same name."
     }
   ],
   "sex": "male",
@@ -21,7 +31,8 @@
   ],
   "related": [
     "methodius-of-moravia",
-    "gregory-the-theologian"
+    "gregory-the-theologian",
+    "angelarius-of-bohemia"
   ],
   "attestations": [
     {
@@ -45,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαΐου — «Άγιοι Κύριλλος και Μεθόδιος Φωτιστές των Σλάβων»",
+        "url": "https://www.saint.gr/05/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, **and gives each of the two brothers his own head line with his own years** — «Αγιος Κυριλλος Φωτιστης Των Σλαβων (827 - 869)» and «Αγιος Μεθοδιος Φωτιστης Των Σλαβων (815 - 884)» — so the pair stays two folders. **`dates` are added where the folder had none**: 827 for his birth, which the page gives as «περί το 827», and 869 for his death, which stands in the head line only. **The Greek confirms the folder's second `ro` name form**: «κατά κόσμον Κωνσταντίνος και Μιχαήλ», so the corpus's «Constantin» for Cyril is the same tradition. **`gregory-the-theologian`, already a `related` row on this folder, is corroborated**: the page says that while still a child he had read the works of Gregory the Theologian and had written a hymn in his honour. **A third man of the company gets a folder from this same day**, `angelarius-of-bohemia`, whose page calls him «συνεργάτης και βοηθός των Αγίων Ισαποστόλων Κυρίλλου και Μεθοδίου», and a `related` row is added for him. **That page also gives a second day for the company**, 17 Ιουλίου, out of a service printed at Moschopolis in 1742; it is noted here and is not a second row. **This reader did not read the whole page.** `elbody.mjs` cut about 9,444 characters out of its middle, so the mission to the Slavs itself — the alphabet, Moravia, Rome — is not recorded here from the Greek; nothing is claimed about it, and a later reader should open the page whole. **One hymn is added**, the kontakion, which is the pair's joint one and names them both; it is stored on each folder with that said in its source line."
     },
     {
       "church": "serbian",
@@ -56,5 +77,40 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 827,
+      "latest": 827,
+      "display": "about 827",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Κωνσταντίνος γεννήθηκε περί το 827, ενώ ο μεγαλύτερος αδελφός του Μιχαήλ το 815», and the head line over his name gives «(827 - 869)». The page's own «περί» is kept in the display."
+    },
+    "death": {
+      "earliest": 869,
+      "latest": 869,
+      "display": "869",
+      "basis": "traditional",
+      "note": "The year stands in the head line over his name on saint.gr's page, «Αγιος Κυριλλος Φωτιστης Των Σλαβων (827 - 869)». The middle of that page, where the death is presumably narrated, was cut by the extractor and was not read by this reader, so no place and no circumstance is recorded with it."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ'.",
+      "model": "Τὴ ὑπερμάχω.",
+      "text": "Τῶν Ἀποστόλων εἰσδεξάμενοι τὴν ἔλλαμψιν, τῶν Σλάβων ὤφθητε φωστῆρες καὶ διδάσκαλοι, τὸν τῆς χάριτος κηρύξαντες πάσι λόγον. Ἀλλὰ ὢ Κύριλλε παμμάκαρ καὶ Μεθόδιε πάσης βλάβης ἐκλυτρώσασθε καὶ θλίψεως τοὺς κραυγάζοντας, χαίροις ζεῦγος μακάριον.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ', Τὴ ὑπερμάχω, the only hymn on the joint page of «Άγιοι Κύριλλος και Μεθόδιος Φωτιστές των Σλάβων»; it is the pair's joint hymn and names them both, and it is stored on both folders",
+        "url": "https://www.saint.gr/405/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the radiance of the Apostles, ye were seen to be lights and teachers of the Slavs, preaching to all the word of grace. But, O all-blessed Cyril and Methodius, deliver from all harm and affliction those who cry: rejoice, blessed pair.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

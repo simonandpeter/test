@@ -6,6 +6,11 @@
       "form": "Mochie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 mai, «Sfântul Sfințit Mucenic Mochie»."
+    },
+    {
+      "form": "Μώκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαΐου, «Άγιος Μώκιος ο Ιερομάρτυρας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαΐου — «Άγιος Μώκιος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/05/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and the page for the dedication of Constantinople on this same day says why the day matters twice over: «Η συγκεκριμένη ημέρα της τελέσεως των εγκαινίων της Κωνσταντινουπόλεως επιλέχθηκε σκόπιμα, γιατί συνέπιπτε με την ημέρα της μνήμης του μαρτυρίου του Αγίου Μωκίου, ο οποίος ήταν και ο πολιούχος του Βυζαντίου» — the day of the dedication was chosen on purpose because it fell on the day of Mocius's martyrdom, he being the patron of Byzantium. **He is not `mocius-of-emesa`** or `michaeus-of-zographou`, the name sweep's other two rows. **`dates` are added where the folder had none**, as a death in 288. **The Greek adds what the folder lacked**: his parents Euphratius and Eustathia at Rome under Diocletian; his schooling in the sacred letters and his ordination; the see of Amphipolis in Thrace, which is the epithet the corpus's slug already carries; the prefect Laodicius who tortured him and the prefect Maximus who flayed him and threw him to the beasts and saw him come out alive; the sending bound to Byzantium in 288 and the beheading there; Constantine the Great's building of a magnificent church in his honour and the laying of his relics in it; the imperial procession to that church at Mid-Pentecost; and that the relic of Samson the Hospitable was kept there too. **`related` is not extended to `samson-the-hospitable`**: a relic kept in the same church is not an association between two men, on the rule that a dedication is not a relation. **One hymn is added**, the apolytikion, which is proper and names him. **The relics are in the note and not in `locations`**: fragments at the monasteries of Saint Dionysius and of Panteleimon on the Holy Mountain."
     },
     {
       "church": "serbian",
@@ -60,9 +75,35 @@
         "text": "Sharing in the ways of the apostles and successor to their thrones, thou didst find in action, O God-inspired one, a path to the contemplation of things on high. Therefore, rightly teaching the word of truth and keeping the faith even unto blood, O hieromartyr Mocius, entreat Christ God to save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Χορὸς Ἀγγελικός.",
+      "text": "Χριστῷ ἱερουργῶν, ἱερεὺς ὢν τῆς δόξης, θυσίαν λογικήν, καὶ ὁλόκληρον θῦμα, ἀθλήσεως ἄνθραξι, σεαυτὸν προαενήνοχας, ὅθεν Μώκιε, διπλῶ στεφάνω σὲ στέφει, ὁ δοξάσας σε, ὡς δοξασθεῖς σοῦ τοὶς ἄθλοις, Χριστὸς ὁ φιλάνθρωπος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Χορὸς Ἀγγελικός, the only hymn on the page of «Άγιος Μώκιος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/406/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ministering as a priest to Christ, being a priest of the glory, thou didst offer thyself as a reasonable sacrifice and a whole burnt offering upon the coals of thy contest; wherefore, O Mocius, he who glorified thee crowns thee with a double crown, being himself glorified in thy contests — Christ the lover of mankind.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 288,
+      "latest": 288,
+      "display": "288",
+      "basis": "traditional",
+      "note": "saint.gr: «Τότε, το έτος 288 μ.Χ. τον έστειλε δέσμιο στο Βυζάντιο, όπου τον αποκεφάλισαν», and the head line of the same page gives «(; - 288)». The page gives no year for his birth, only that his parents were at Rome under Diocletian, «(επί Διοκλητιανού 284 - 304 μ.Χ.)»."
+    }
   }
 }

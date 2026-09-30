@@ -6,6 +6,16 @@
       "form": "Dioscor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 mai, «Sfântul Mucenic Dioscor»."
+    },
+    {
+      "form": "Διόσκορος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαΐου, «Άγιος Διόσκορος ο Νέος», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Διοσκορίδης",
+      "lang": "el",
+      "note": "The alternative form saint.gr prints in its own parenthesis on the same page: «Ο Άγιος Μάρτυς Διόσκορος (ή Διοσκορίδης) ο Νέος καταγόταν από τη Σμύρνη». Copied, not transliterated."
     }
   ],
   "sex": "male",
@@ -34,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαΐου — «Άγιος Διόσκορος ο Νέος»",
+        "url": "https://www.saint.gr/05/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and the epithet ο Νέος is the day line's. **`dates` stay absent**: the page gives no year at all, no emperor and no governor, and its head line carries none either, so nothing is inferred from the fact of a persecution. **The Greek adds what the folder lacked**: Smyrna as his birthplace and the place of his martyrdom; the rage of the idolaters against the Christians, which only kindled his zeal the more; his being denounced as a Christian; his confession that he was one and would stay unmoved in it; the throwing of him into the most wretched and dark prison in the hope that heavy imprisonment would tame his spirit; his going on declaring that to his last breath he would stay faithful to his Jesus; and his death by beheading. **A second form of the name is added**, «(ή Διοσκορίδης)», as the page's own parenthesis gives it. No relics, no hymn."
     },
     {
       "church": "serbian",

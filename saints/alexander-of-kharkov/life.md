@@ -1,0 +1,9 @@
+# Alexander of Kharkov
+
+The holy hieromartyr Alexander, in the world Theophanevich Petrovsky, was born in the town of Lutsk in the region of Volynia in the year 1851, saint.gr says. Having finished his studies in the faculty of law, he gave himself after his mother's death to a dissolute life. One day his dead mother, whom the young man had loved very much, appeared to him in his sleep and asked him to change his life and to enter a monastery. Alexander obeyed her request, left the world and became a monk.
+
+After the revolution of 1917 the archimandrite Alexander, together with other clergy whose churches had been closed, found refuge in the women's monastery of Kozelshchyna in the province of Poltava; on account of the persecutions fifty nuns had left that house. On the seventeenth of June 1939 he was sentenced by a military court to ten years' imprisonment on the charge of counter-revolutionary propaganda. On the fifth of January 1940 that sentence was withdrawn and his case was put to a further investigation. But the archbishop did not endure the length of his detention, and died in May of 1940 in the infirmary of the prison.
+
+Through great difficulties and dangers the faithful managed to get the saint's relic out of the prison and to bury it secretly in the Zaliutyne cemetery of Kharkov. From then on his grave became a place of holy pilgrimage, and for many years the faithful of Kharkov went on laying flowers there. In 1993 the Synod of the Orthodox Church of Ukraine, of the Patriarchate of Moscow, confirmed the local veneration of Saint Alexander within the bounds of Ukraine. The middle of the page was not read by the reader who wrote this, and what stood there is not recorded.
+
+*After saint.gr's calendar for 11 Μαΐου — [the day](https://www.saint.gr/05/11/index.aspx) and [the life](https://www.saint.gr/2246/saint.aspx); read 30 September 2026.*

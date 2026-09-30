@@ -1,0 +1,66 @@
+{
+  "slug": "nicodemus-of-serbia",
+  "display_name": "Nicodemus of Serbia",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "archbishop",
+    "hierarch",
+    "abbot"
+  ],
+  "office": "Archbishop of Serbia",
+  "names": [
+    {
+      "form": "Νικόδημος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαΐου, «Όσιος Νικόδημος Αρχιεπίσκοπος Σερβίας», with the rank word and the see left off. No Serbian form is recorded: saint.gr prints none."
+    }
+  ],
+  "related": [
+    "sabbas-the-sanctified"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1325,
+      "latest": 1325,
+      "display": "1325",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Νικόδημος κοιμήθηκε με ειρήνη το 1325», and the head line of the same page gives «(; - 1325)». The page gives no year for his birth, only that he was consecrated bishop in 1316."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαΐου — «Όσιος Νικόδημος Αρχιεπίσκοπος Σερβίας»",
+        "url": "https://www.saint.gr/05/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Μαΐου εκάστου έτους», the same day as the listing. **He is none of the four Nicodemi the corpus keeps** — of the Cave, of Tismana, the Hagiorite, Shchapkov — this one was abbot of Chilandar on Athos and then Archbishop of Serbia. **The `serbian` row is left `undocumented` although he is a Serbian saint**, because the Ohrid Prologue was not read: a Serbian saint's own calendar is exactly the source a later reader will want and claiming it unread is the honest state. **`sabbas-the-sanctified` is joined to him by the page's own sentence** — the Typikon he translated in 1319 is «το Τυπικό του Αγίου Σάββα του Ηγιασμένου της Ιερουσαλήμ» — and a Typikon translated is a work and not a dedication. **The relics are in the note and not in `locations`**: «Τα Λείψανα του Αγίου βρίσκονται στο Πατριαρχείο Πεκκίου Κοσσυφοπεδίου», the Patriarchate of Peć in Kosovo, which is a resting place and not a place the page puts his life in. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026). He is a Serbian saint and that calendar is the one that would settle his own day and rank; it was not read."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

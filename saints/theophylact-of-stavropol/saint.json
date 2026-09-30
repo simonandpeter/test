@@ -1,0 +1,63 @@
+{
+  "slug": "theophylact-of-stavropol",
+  "display_name": "Theophylact of Stavropol",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "monk",
+    "ascetic"
+  ],
+  "office": "Bishop of Stavropol",
+  "names": [
+    {
+      "form": "Θεοφύλακτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαΐου, «Άγιος Θεοφύλακτος Επίσκοπος Σταυρουπόλεως», with the rank word and the see left off. No Russian form is recorded: saint.gr prints his worldly name only in Greek letters, «Θεόδωρος Γκουμπίν»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1872,
+      "latest": 1872,
+      "display": "1872",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Θεοφύλακτος κοιμήθηκε με ειρήνη το 1872 μ.Χ.», and the head line of the same page gives «(; - 1872)». The page gives no year for his birth, only that he studied at the seminary of Kaluga in 1838."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). He is a Russian saint and that calendar is the one that would settle his own day; it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαΐου — «Άγιος Θεοφύλακτος Επίσκοπος Σταυρουπόλεως»",
+        "url": "https://www.saint.gr/05/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Μαΐου εκάστου έτους», the same day as the listing. **He is not `theophylact-of-nicomedia`**, the corpus's only other Theophylact, who is the ninth-century confessor of another day. **Σταυρούπολις is the Greek for Stavropol in the Caucasus**, and the page settles it by placing everything else about him in Russia — Kaluga, Tarussa, Moscow — so the see is recorded in `office` as Stavropol and not as one of the other cities of that Greek name. **The page gives four exact dates in 1842 and 1863 and none for his birth**: tonsured 8 March 1842, ordained deacon 15 March and presbyter 28 June of the same year, elected Bishop of Stavropol 10 February 1863. **`ascetic` is the page's own**, «διέπρεψε στον ασκητικό του βίο». **`locations` are left out**: the village of Makovets near Tarussa in the province of Kaluga is named as his birthplace and the page locates it no further. No relics, no hymn, no manner of repose beyond «με ειρήνη»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

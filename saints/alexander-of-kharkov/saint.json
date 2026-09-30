@@ -1,0 +1,71 @@
+{
+  "slug": "alexander-of-kharkov",
+  "display_name": "Alexander of Kharkov",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "archbishop",
+    "hierarch",
+    "new-martyr",
+    "monk"
+  ],
+  "office": "Archbishop of Kharkov",
+  "names": [
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαΐου, «Άγιος Αλέξανδρος ο Ιερομάρτυρας Αρχιεπίσκοπος Χάρκωβ», with the rank words and the see left off. No Russian form is recorded: saint.gr prints his worldly name only in Greek letters, «Θεοφάνεβιτς Πετρόφσκιυ»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1851,
+      "latest": 1851,
+      "display": "1851",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην πόλη Λουκ της περιοχής της Βολυνίας το 1851 μ.Χ.», and the head line of the same page gives «(1851 - 1940)»."
+    },
+    "death": {
+      "earliest": 1940,
+      "latest": 1940,
+      "display": "1940",
+      "basis": "traditional",
+      "note": "saint.gr: «ο Αρχιεπίσκοπος δεν άντεξε την διάρκεια της προφυλακίσεώς του και πέθανε τον Μάιο του 1940 μ.Χ. στο αναρρωτήριο της φυλακής», and the head line of the same page gives «(1851 - 1940)». The page gives the month and not the day."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). His veneration was confirmed within Ukraine by the Synod of the Orthodox Church of Ukraine (Moscow Patriarchate) in 1993 according to this page, so the Russian calendar is exactly the source a later reader will want; it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαΐου — «Άγιος Αλέξανδρος ο Ιερομάρτυρας Αρχιεπίσκοπος Χάρκωβ»",
+        "url": "https://www.saint.gr/05/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Μαΐου εκάστου έτους», the same day as the listing. **He is none of the many Alexanders the corpus keeps**, all raised by the name sweep on the name alone. **This reader did not read the whole page.** `elbody.mjs` cut about 1,880 characters out of its middle, so the years between his taking refuge at the Kozelshchyna convent after 1917 and his sentence of 1939 are not recorded here; nothing is claimed about them, and a later reader should open the page whole. **The page gives the month of his death and not the day**, and the calendar's 11 Μαΐου is not said by it to be that day. **The dates as the page has them are strange and are left as the page's**: a man born in 1851 who finished a law degree, was tonsured after his mother's death and died in 1940 would be eighty-nine at his death, and the page neither remarks on it nor gives a year for the tonsure. `new-martyr` and `hieromartyr` both stand because the page calls him Ἱερομάρτυρας and places his death in a Soviet prison infirmary. **`locations` are left out**: Lutsk in Volynia, Kozelshchyna in Poltava, Kharkov and the Zaliutyne cemetery are all named and the page locates none of them further. No relics recovered to a shrine — the faithful buried him secretly — and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

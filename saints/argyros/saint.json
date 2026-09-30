@@ -11,6 +11,11 @@
       "form": "Arghiros",
       "lang": "ro",
       "note": "Read out of the caption of the icon on doxologia.ro's page for him, «Sfântul Sfințit Mucenic Mochie și Sfântul Nou Mucenic Arghiros»."
+    },
+    {
+      "form": "Αργύριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαΐου, «Άγιος Αργύριος ο Επανομίτης ο Νεομάρτυρας», with the rank words and the epithet left off. The corpus's folder is slugged `argyros` and keeps the Romanian forms «Arghir» and «Arghiros»; the Greek prints Αργύριος."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαΐου — «Άγιος Αργύριος ο Επανομίτης ο Νεομάρτυρας»",
+        "url": "https://www.saint.gr/05/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and the head line «(1788 - 1806)» makes him eighteen at his death. **`dates` are added where the folder had none.** **The Greek adds what the folder lacked**: Epanomi of Thessalonica as his birthplace, his parents Asterios and Vasiliki of the Ntougioudis family, his going to Thessalonica young and being taken on as a servant by a tailor; the Christian of Sochos shut in the pasha's prison for a crime, who could not pay what the pasha asked and, threatened with hanging, decided to change his religion; the Agarenes' joy at it, their taking him out of prison and leading him to a coffee-house at Tachtakala to initiate him into the Muslim religion; and Argyros going in after them, reproving the man for his fault and urging him to come back to the Orthodox faith, at which the Janissaries fell on him and beat him so savagely that they would have killed him. **The manner of his death is taken from the page's own hymns and its distich, not from its narrative, whose middle this reader did not read**: the third line over him says «Ἑνδεκάτῃ Ἀργύριος τέτληκε βρόχον στεῤῥοψύχως», on the eleventh Argyros endured the noose with a steadfast soul, and the hymn read says «τῷ δι’ ἀγχόνης θανάτῳ, ταῖς οὐρανίαις συνήφθης τάξεσι». About 2,229 characters were cut out of the middle of the page and are not recorded here. **No hymn is stored** for that reason: what the extractor showed was the tail of one long hymn whose heading was cut away, and a Κάθισμα, and a Κάθισμα is neither an apolytikion nor a kontakion; a later reader should open the page whole and take the apolytikion properly. **The relic is in the note and not in `locations`**: «Η Κάρα του Αγίου βρίσκεται στην Ιερά Μονή Αγίου Μηνά Ανθούσας Αττικής»."
     },
     {
       "church": "serbian",
@@ -51,5 +66,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1788,
+      "latest": 1788,
+      "display": "1788",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Νεομάρτυς Αργύριος γεννήθηκε το 1788 στην Επανωμή της Θεσσαλονίκης από τον Αστέριο και τη Βασιλική, το γένος Ντουγιούδη», and the head line of the same page gives «(1788 - 1806)»."
+    },
+    "death": {
+      "earliest": 1806,
+      "latest": 1806,
+      "display": "1806",
+      "basis": "traditional",
+      "note": "The year stands in the head line over his name on saint.gr's page, «Αγιος Αργυριος ο Επανομιτης ο Νεομαρτυρας (1788 - 1806)». The narrative in the middle of that page was cut by the extractor and was not read by this reader; the day and the manner come from the page's own distich, «Ἑνδεκάτῃ Ἀργύριος τέτληκε βρόχον στεῤῥοψύχως»."
+    }
   }
 }

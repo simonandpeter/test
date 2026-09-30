@@ -1,0 +1,61 @@
+{
+  "slug": "christopher-of-georgia",
+  "display_name": "Christopher of Georgia",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Χριστόφορος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Μαΐου, «Όσιος Χριστόφορος εκ Γεωργίας», with the rank word left off. No Georgian form is recorded: saint.gr prints none."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1771,
+      "latest": 1771,
+      "display": "1771",
+      "basis": "traditional",
+      "note": "saint.gr: «Αφού ασκήτεψε θεοφιλώς, κοιμήθηκε με ειρήνη το 1771 μ.Χ.», and the head line of the same page gives «(; - 1771)». The page gives no year for his birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Μαΐου — «Όσιος Χριστόφορος εκ Γεωργίας»",
+        "url": "https://www.saint.gr/05/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Μαΐου εκάστου έτους», the same day as the listing. **He is not `christopher`**, the great-martyr of 9 Μαΐου whose Greek row this wave found two days earlier, and the name sweep raised that folder on the name alone: this one is an eighteenth-century Georgian monk. **The whole page is two sentences.** `ascetic` is the page's own word, «ασκήτεψε θεοφιλώς». **`locations` are left out** although the page names his house precisely: the monastery of Saint John the Baptist in the desert of David-Gareji, which it calls «τη «Θηβαΐδα της Γεωργίας»», the Thebaid of Georgia. The desert is a region and the page gives no coordinate sense for it, and a point would be a guess. No relics, no hymn, no name in the world, no abbot, no disciples."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
