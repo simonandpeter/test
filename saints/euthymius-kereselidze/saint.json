@@ -1,0 +1,59 @@
+{
+  "slug": "euthymius-kereselidze",
+  "display_name": "Euthymius (Kereselidze)",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ευθύμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Φεβρουαρίου, «Όσιος Ευθύμιος εκ Γεωργίας», with the rank word left off; the page's life adds the family name in brackets, «Ευθύμιος (Κερεσελίντζε)»."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1801,
+      "latest": 2000,
+      "display": "19th–20th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ευθύμιος (Κερεσελίντζε) καταγόταν από την Γεωργία και έζησε μεταξύ του 19ου και του 20ου αιώνα μ.Χ.» — the page gives no year of birth and no year of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Φεβρουαρίου — «Όσιος Ευθύμιος εκ Γεωργίας»",
+        "url": "https://www.saint.gr/02/02/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

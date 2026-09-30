@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ευθυμιοσ euthymius-kereselidze euthymius-of-tarnovo euthymius-of-zographou euthymius-the-man-of-god':
+    'four now. The new one is Euthymius Kereselidze, the Georgian hymnographer, kept on 2 Φεβρουαρίου; the other three are read in the el-01-20 entry for this name form — the patriarch of Tarnovo dead 1402, the Athonite martyr of the 1270s, and the Georgian professor of 1863 to 1953. Two Georgians among the four and two different centuries, and saint.gr keeps them on two days.',
   'τιμοθεοσ timothy-1-february timothy-disciple-of-babylas timothy-of-ephesus':
     'three men, none of them with a year on his page, on three days of one calendar: the bare Timothy of 1 Φεβρουαρίου, the disciple of Babylas of Sicily on the 24th, and Timothy of Ephesus the apostle on the 22nd, the last two upgraded earlier in this wave. Three entries, three commemorations.',
   'πολυευκτοσ polyeuctus-of-megara polyeuctus-of-melitene':
