@@ -1,0 +1,9 @@
+# Nicholas the Mystikos
+
+saint.gr says Nicholas was born in 852 and came of southern Italy. He received the rank of senator and became privy counsellor to Leo VI the Wise; but out of love for the monastic life he became a monk at the monastery of Galakrenai, and later, for his many virtues and his learning, he was elected patriarch of Constantinople and consecrated on the Sunday of Orthodoxy in 895, succeeding the dead patriarch Antony II Kauleas. His first patriarchate, and he was surnamed the Mystikos, lasted until 906.
+
+The cause of his fall, the page says, shows his devout and truly episcopal will. The emperor Leo the Wise had made a fourth marriage, with Zoe Karbonopsina, against the patriarch's prohibition; and Nicholas not only refused to recognise the emperor's marriage but deposed the priest Thomas who had performed it, and excommunicated the emperor. To take his revenge on Nicholas, Leo contrived to have him thrown from the patriarchal throne and appointed Euthymius I in his place. But a great tumult arose in the Church of Constantinople, and in 911 Leo's brother Alexander took Euthymius down from the throne and raised Nicholas again.
+
+In 913, with four others, he became a guardian of the child emperor Constantine VII. Under his patriarchate a fourth marriage was finally forbidden by the so-called Tome of Union, and the first ordering of the Menologion of the saints of the Eastern Church was made by [Simeon the Metaphrast](/saints/simeon-metaphrastes). He died in the May of 925 and was buried in the monastery of Galakrenai. The page's synaxarion verses say only that Nicholas, leaving the shadow of this life, passed to the shadowless country of light.
+
+*After saint.gr's calendar for 16 Μαΐου — [the day](https://www.saint.gr/05/16/index.aspx) and [the life](https://www.saint.gr/410/saint.aspx); read 30 September 2026.*

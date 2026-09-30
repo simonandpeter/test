@@ -1,0 +1,72 @@
+{
+  "slug": "nicholas-the-mystikos",
+  "display_name": "Nicholas the Mystikos",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch",
+    "confessor"
+  ],
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαΐου, «Άγιος Νικόλαος ο Α' ο Μυστικός Πατριάρχης Κωνσταντινούπολης», with the rank word, the regnal number and the see left off."
+    }
+  ],
+  "related": [
+    "simeon-metaphrastes"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 852,
+      "latest": 852,
+      "display": "852",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Νικόλαος γεννήθηκε το 852 και η καταγογή του ήταν από την Κάτω Ιταλία.»"
+    },
+    "death": {
+      "earliest": 925,
+      "latest": 925,
+      "display": "May 925",
+      "basis": "traditional",
+      "note": "saint.gr: «Πέθανε τον Μάιο του 925 και ενταφιάσθηκε στη μονή των Γαλακρηνών», and its head line reads «Αγιος Νικολαος ο Α' ο Μυστικος Πατριαρχης Κωνσταντινουπολης (852 - 925)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαΐου — «Άγιος Νικόλαος ο Α' ο Μυστικός Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/05/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Μαΐου εκάστου έτους», the same day as the listing. **He is none of the sixty-odd Nicholases the corpus keeps**: the page gives his origin as southern Italy, his lay office as senator and privy counsellor to Leo VI the Wise, and two patriarchates, 895–906 and 911 onwards, which nothing in the corpus answers to. **The epithet is kept in the display name and the regnal number is not**, the corpus's other patriarchs of the name being told apart the same way. **Four other men are named by the page and only one has a folder**: Simeon the Metaphrast, who under this patriarchate made the first ordering of the Menologion of the Eastern Church's saints, is linked; Antony II Kauleas whom he succeeded, Euthymius I who replaced him, and the priest Thomas whom he deposed have no folders and are named without links. **`confessor` is in `types`** because the page's own account of his fall is that he refused to recognise the emperor's fourth marriage, deposed the priest who blessed it and excommunicated the emperor, and was thrown off the throne for it. **No hymn, no relics beyond the burial at Galakrenai.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

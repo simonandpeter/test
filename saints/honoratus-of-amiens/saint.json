@@ -1,0 +1,52 @@
+{
+  "slug": "honoratus-of-amiens",
+  "display_name": "Honoratus of Amiens",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop of Amiens",
+  "names": [
+    {
+      "form": "Ονωράτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαΐου, «Άγιος Ονωράτος Επίσκοπος Αμιένης», with the rank word and the see left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαΐου — «Άγιος Ονωράτος Επίσκοπος Αμιένης»",
+        "url": "https://www.saint.gr/05/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Μαΐου εκάστου έτους», the same day as the listing. **He is the one Western entry of this day that saint.gr does not mark**: seven of the day's other entries carry the asterisk and the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου, ή τα βιογραφικά στοιχεία του ή η ημερομηνία εορτής του», and they are refused; this page carries neither, and it cites the Apostoliki Diakonia of the Church of Greece under it, so it is drafted. **He is not `honoratus-of-arles`**, whom the corpus already keeps: that is the founder of Lérins and bishop of Arles, this the bishop of Amiens born at Port-le-Grand nearby, and the two sees are named on the page. **No `dates` object**: the page gives no year and no century at all. **No hymn, no relics, no parents, no manner of death beyond falling asleep in peace.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

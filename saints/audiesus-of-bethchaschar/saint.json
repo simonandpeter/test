@@ -1,0 +1,61 @@
+{
+  "slug": "audiesus-of-bethchaschar",
+  "display_name": "Audiesus of Bethchaschar",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop of Bethchaschar",
+  "names": [
+    {
+      "form": "Αυδιησούς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαΐου, «Άγιοι Αυδάς, Αυδιησούς οι Επίσκοποι, Βενιαμίν ο διάκονος και άλλοι τριάντα οκτώ μάρτυρες», with the rank word left off; the page's own head line for him reads «Αγιος Αυδιησους»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 375,
+      "latest": 375,
+      "display": "375",
+      "basis": "traditional",
+      "note": "saint.gr: «Τότε διατάχθηκε ο αποκεφαλισμός τους και έτσι όλοι έλαβαν το αμάραντο στεφάνι της αιώνιας δόξας το 375 μ.Χ.» The page also frames the company by two reigns that do not reach that year together — «κατά τους χρόνους του αυτοκράτορα Κωνσταντίνου του Μεγάλου (306-337 μ.Χ.) και του Πέρσου Βασιλέως Σαπώρ Β' (309-379 μ.Χ.)» — so the stated year, which is inside only the second of them, is what is recorded and the discrepancy is said here rather than resolved."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαΐου — «Άγιοι Αυδάς, Αυδιησούς οι Επίσκοποι, Βενιαμίν ο διάκονος και άλλοι τριάντα οκτώ μάρτυρες»",
+        "url": "https://www.saint.gr/05/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Μαΐου εκάστου έτους», the same day as the listing. **He is the only member of this company that becomes a folder, and the reason is set down plainly.** The listing names three men and thirty-eight others; the page's head carries three names, «Αγιος Αυδας», «Αγιος Αυδιησους», «Αγιος Βενιαμιν». Of those three, **Abdas and Benjamin are left undrafted as an open identity question**: the corpus already keeps `abda-bishop-of-persia` and `benjamin-the-deacon` as one company from the Romanian 31 martie, and the two accounts do not agree — the Romanian has Abda and Benjamin under Yazdegerd in the reign of Theodosius the Younger, destroying a fire temple and eaten by mice and cats in prison, while this Greek page has Abdas bishop of Chaschar with Audiesus under Shapur II, denounced by Audiesus's own nephew and beheaded in 375. Abda's `greek` row is in any case already `venerated`, on 5 Σεπτεμβρίου, which a reader may not move. **Audiesus answers to nothing in the corpus at all** and his see is named, so he is drafted alone. **The thirty-eight are counted and not one is named** — sixteen presbyters, nine deacons, six monks and seven virgins, counted again in the synaxarion verses — so they are no folders. **No hymn.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

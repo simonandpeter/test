@@ -1,0 +1,56 @@
+{
+  "slug": "macarius-of-the-altai",
+  "display_name": "Macarius of the Altai",
+  "sex": "male",
+  "names": [
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαΐου, «Άγιος Μακάριος των Αλταΐων», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1847,
+      "latest": 1847,
+      "display": "1847",
+      "basis": "traditional",
+      "note": "The only year on the page is in its head line, «Αγιος Μακαριος Των Αλταϊων (; - 1847)»; the body states no year at all and says «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαΐου — «Άγιος Μακάριος των Αλταΐων»",
+        "url": "https://www.saint.gr/05/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Μαΐου εκάστου έτους», the same day as the listing. **The entry carries no asterisk and none of saint.gr's doubt formulae**: it says only «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου», that no details of the Russian saint's life are had, which is an absence of material and not a refusal to vouch, so the entry is drafted rather than refused. **It is the same shape of entry as «Άγιος Αρέθας των Αλταΐων» on 15 Μαΐου**, one day earlier and drafted on the same reading, and both pages send the reader on to the synaxis of all the saints of Siberia, which names nobody and is no folder. **`types` is absent on purpose**: the line gives him only «Άγιος», the corpus's closed list has no slug for a bare saint, and a new type is a code commit and out of a reader's scope. **He is not `macarius-notaras`**, whom the same day also keeps and whose own page there says the Church honours him on 17 Απριλίου. **No hymn, no relics, no birthplace, no office, no manner of death.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

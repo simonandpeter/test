@@ -1,0 +1,63 @@
+{
+  "slug": "laurence-of-komel",
+  "display_name": "Laurence of Komel",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Λαυρέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαΐου, «Όσιοι Κασσιανός και Λαυρέντιος», with the rank word left off; the page's own head line for him reads «Οσιος Λαυρεντιος (; - 1548)»."
+    }
+  ],
+  "related": [
+    "cassian-of-komel"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1548,
+      "latest": 1548,
+      "display": "1548",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Λαυρέντιος κοιμήθηκε με ειρήνη το 1548», and its head line reads «Οσιος Λαυρεντιος (; - 1548)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαΐου — «Όσιοι Κασσιανός και Λαυρέντιος»",
+        "url": "https://www.saint.gr/05/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Μαΐου εκάστου έτους», the same day as the listing, whose one line names two venerable men and whose page carries two head names and two dates — an enumerated pair, and so one folder each. **He is none of the corpus's nine Laurences**: the page makes him a disciple of Cornelius of Komel, elected abbot of that monastery in 1538 on Cornelius's own recommendation, and a copier of church books, and nothing in the corpus answers to that. **`abbot` is in `types` on the page's own word**, «ομοφώνως εξελέγη ηγούμενος από τους αδελφούς της μονής». **Cornelius of Komel has no folder** and is named without a link. **No hymn, no birthplace, no parents, no relics.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

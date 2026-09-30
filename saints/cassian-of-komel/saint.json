@@ -1,0 +1,62 @@
+{
+  "slug": "cassian-of-komel",
+  "display_name": "Cassian of Komel",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Κασσιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαΐου, «Όσιοι Κασσιανός και Λαυρέντιος», with the rank word left off; the page's own head line for him reads «Οσιος Κασσιανος (; - 1537)»."
+    }
+  ],
+  "related": [
+    "laurence-of-komel"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1537,
+      "latest": 1537,
+      "display": "1537",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Κασσιανός κοιμήθηκε με ειρήνη το 1537», and its head line reads «Οσιος Κασσιανος (; - 1537)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαΐου — «Όσιοι Κασσιανός και Λαυρέντιος»",
+        "url": "https://www.saint.gr/05/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Μαΐου εκάστου έτους», the same day as the listing. **One listed line, two head names and two dates** — «Οσιος Κασσιανος (; - 1537)» and «Οσιος Λαυρεντιος (; - 1548)» — and two paragraphs, one for each; so it is an enumerated pair and therefore two folders, one each. **He is none of the corpus's five Cassians**: not of Axylou, of Bosoi, of Glyphia in Cyprus, the Greek, nor John Cassian; this is the disciple of Cornelius of Komel who kept his ascesis in the monastery of Komel. **Cornelius of Komel is named by the page and the corpus keeps no folder for him**, so he is named in the life without a link; `arsenius-of-komel` is a different man of the same monastery and is not brought in on the strength of the place. **No hymn, no birthplace, no parents, no relics.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

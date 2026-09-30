@@ -1,0 +1,52 @@
+{
+  "slug": "neadius",
+  "display_name": "Neadius",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Νεάδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαΐου, «Όσιος Νεάδιος ο Θαυματουργός», with the rank word and the epithet left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαΐου — «Όσιος Νεάδιος ο Θαυματουργός»",
+        "url": "https://www.saint.gr/05/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Μαΐου εκάστου έτους», the same day as the listing. **The page says at the outset that Nicodemus does not have him in his Synaxaristes**, and that what it knows comes from a complete service preserved in Paris Codex 1575 folio 846, a poem of Joseph the Hymnographer; the source of the source is named here because it is all there is. **The page says his see is unknown** — «ήταν επίσκοπος (άγνωστο που)» — so there is no `office` field, and `bishop` stands in `types` without one. **No `dates` object**: the page names no century and no year, and the only date on it is that of the manuscript. **Joseph the Hymnographer is named as the author of the service and not as a person in his life**, so he takes no link and no `related` row. **No hymn is printed** — the page reports that a service survives; it does not print any of it. **Nothing in the corpus reads like the name.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

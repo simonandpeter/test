@@ -1,0 +1,50 @@
+{
+  "slug": "papylinus",
+  "display_name": "Papylinus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Παπυλίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαΐου, «Άγιος Παπυλίνος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαΐου — «Άγιος Παπυλίνος»",
+        "url": "https://www.saint.gr/05/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Μαΐου εκάστου έτους», the same day as the listing. **The page's whole account of him is one sentence**, «Ο Άγιος Παπυλίνος τελειώθηκε διά ξίφους», and one synaxarion couplet playing on his name — that Papylinus, finding his own breaking by the sword, broke the gates of delusion and its gods with it. **Nothing in the corpus reads like the name**: the sweep returned no `!!` row for this line at all, and the nearest thing in it is `papylas-the-deacon`, which is a different name. **No `dates` object, no `types` beyond `martyr`, no see, no city, no emperor, no hymn, no relics** — the page prints none of them and none is set down. The entry carries no asterisk and none of saint.gr's «Δεν είναι διασταυρωμένη» sentence, so it is a thin entry and not a refused one."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

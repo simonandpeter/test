@@ -1,0 +1,54 @@
+{
+  "slug": "bachthisoes",
+  "display_name": "Bachthisoes",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Βαχθισόης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαΐου, «Άγιοι Ισαάκιος, Συμεών και Βαχθισόης», with the rank word left off; the page's own head line for him reads «Αγιος Βαχθισοης»."
+    }
+  ],
+  "related": [
+    "isaac-the-persian-of-metsovo",
+    "simeon-martyr-16-may"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαΐου — «Άγιοι Ισαάκιος, Συμεών και Βαχθισόης»",
+        "url": "https://www.saint.gr/05/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Μαΐου εκάστου έτους», the same day as the listing. **Three head names, three folders**, and this is the only one of the three that becomes a folder: Isaacius and Simeon are both upgrades of folders the corpus already keeps on this same menologion day from the Romanian side, `isaac-the-persian-of-metsovo` and `simeon-martyr-16-may`. **Nothing in the corpus reads like this name at all** — the name sweep for the line returned no `!!` row that touches it — so there is no identity question to leave open. **The display name carries no epithet** because the page gives him none: no see, no city, no country of his own beyond the Persian king before whom the three were brought, and no rank but Άγιος and the fire. **No `dates` object**: the page gives two reigns spanning more than a century and no year. **No hymn.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

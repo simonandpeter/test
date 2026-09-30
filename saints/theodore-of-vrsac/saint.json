@@ -1,0 +1,61 @@
+{
+  "slug": "theodore-of-vrsac",
+  "display_name": "Theodore of Vršac",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop of Vršac",
+  "names": [
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαΐου, «Άγιος Θεόδωρος ο Ιερομάρτυρας Επίσκοπος Βρσακ», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1501,
+      "latest": 1600,
+      "display": "16th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησε τον 16ο αιώνα μ.Χ. και το 1593 αναφέρεται ως Επίσκοπος και πνευματικός ηγέτης του λαού του». The interval is the century the page names; the one year it gives, 1593, is the year he is recorded as bishop and not a year of birth or death, and the page gives neither of those."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαΐου — «Άγιος Θεόδωρος ο Ιερομάρτυρας Επίσκοπος Βρσακ»",
+        "url": "https://www.saint.gr/05/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Μαΐου εκάστου έτους», the same day as the listing. **He is a second Theodore on this one day and is not the first**: «Όσιος Θεόδωρος ο Ηγιασμένος», Pachomius's disciple dead in 367, is a separate entry with a separate page and is an upgrade in this same batch. **He is none of the corpus's twelve Theodores either**: the page names his see as Vršac in northern Serbia and dates him to the sixteenth century, and nothing in the corpus answers to that. **The page says in its own words that the hagiological material is not sufficient** — «Δεν υπάρχουν επαρκείς αγιολογικές πληροφορίες» — which is the same formula it uses for Vukašin of Klepci on this day, and is an admission of thin sources and not one of its asterisked refusals to vouch; no asterisk and no «Δεν είναι διασταυρωμένη» sentence stands on the page, so the entry is drafted. **No `dates.death`**: the page gives the century, and 1593 as the year he is recorded as bishop, and no year of death. **No hymn, no relics, no birthplace.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
