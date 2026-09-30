@@ -1,0 +1,60 @@
+{
+  "slug": "baradatus",
+  "display_name": "Baradatus",
+  "names": [
+    {
+      "form": "Βαραδάτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Φεβρουαρίου, «Όσιος Βαραδάτος», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Φεβρουαρίου — «Όσιος Βαραδάτος»",
+        "url": "https://www.saint.gr/02/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The page has him of Alexandria and drawn out of the desert by Theodotus, patriarch of Antioch, whose years it gives as 418 to 427, for the church's charitable work; it ends him asleep on one of his tours and gives no year for his death and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 418,
+      "latest": 427,
+      "display": "under Theodotus of Antioch",
+      "basis": "traditional",
+      "note": "saint.gr: «όταν ο Πατριάρχης Αντιοχείας Θεόδοτος (418 - 427 μ.Χ.), πληροφορήθηκε για τις σπάνιες αρετές του Βαραδάτη». The interval is the patriarchate the page prints; the page gives no year of birth or of death."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

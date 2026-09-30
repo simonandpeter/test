@@ -1,0 +1,65 @@
+{
+  "slug": "ariston-of-arsinoe",
+  "display_name": "Ariston of Arsinoe",
+  "names": [
+    {
+      "form": "Αρίστων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Φεβρουαρίου, «Άγιος Αρίστων ο θαυματουργός, επίσκοπος Αρσινόης Κύπρου», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "office": "Bishop of Arsinoe in Cyprus",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Φεβρουαρίου — «Άγιος Αρίστων ο θαυματουργός, επίσκοπος Αρσινόης Κύπρου»",
+        "url": "https://www.saint.gr/02/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The page rests him on Neophytus the Recluse, whose memory it puts on 12 April: by that account Ariston is the second bishop of Arsinoe in order, after one Nicholas, and is followed by Nikon and Arcadius, whom the site keeps on 29 August. It ends him asleep in peace and gives no year for it."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 376,
+      "latest": 425,
+      "display": "late 4th and early 5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Αρίστων έζησε στην Κύπρο κατά τα τέλη του 4ου και αρχές του 5ου αιώνα μ.Χ.» The interval is the page's own straddle of the two centuries and no more."
+    }
+  },
+  "related": [
+    "arcadius-of-arsinoe"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

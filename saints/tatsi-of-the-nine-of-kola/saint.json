@@ -1,0 +1,69 @@
+{
+  "slug": "tatsi-of-the-nine-of-kola",
+  "display_name": "Tatsi, one of the Nine of Kola",
+  "names": [
+    {
+      "form": "Τάτσι",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for 22 Φεβρουαρίου, which heads him «Αγιος Τάτσι Της Κολα Εν Γεωργια» and names him again in the narrative; the Greek form is the site's own rendering of the Georgian name and is copied, not transliterated back."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Φεβρουαρίου — «Άγιοι Εννέα Μάρτυρες της Κολά εν Γεωργία»",
+        "url": "https://www.saint.gr/02/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The page enumerates all nine by name in its heading and again in the narrative, in the order Guaram, Atarnerse, Bakar, Vache, Bajimi, Tatsi, Juansheri, Ramazi, Parsman, so the company is nine folders and not one. It dates the martyrdom «τον 6ο αιώνα μ.Χ.» and says they were all between seven and nine years old. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Το μαρτύριο των εννέα παιδομαρτύρων έγινε τον 6ο αιώνα μ.Χ. στη Γεωργία.» The page gives the century and no year. It adds «Ήσαν όλοι από επτά μέχρι εννέα χρόνων» — they were all between seven and nine years old — which is an age and not a date."
+    }
+  },
+  "related": [
+    "guaram-of-the-nine-of-kola",
+    "atarnerse-of-the-nine-of-kola",
+    "bakar-of-the-nine-of-kola",
+    "vache-of-the-nine-of-kola",
+    "bajimi-of-the-nine-of-kola",
+    "juansheri-of-the-nine-of-kola",
+    "ramazi-of-the-nine-of-kola",
+    "parsman-of-the-nine-of-kola"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

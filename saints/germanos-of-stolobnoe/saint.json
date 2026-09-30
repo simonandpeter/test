@@ -1,0 +1,60 @@
+{
+  "slug": "germanos-of-stolobnoe",
+  "display_name": "Germanos of Stolobnoe",
+  "names": [
+    {
+      "form": "Γερμανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Φεβρουαρίου, «Όσιος Γερμανός του Στολομπέν», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Φεβρουαρίου — «Όσιος Γερμανός του Στολομπέν»",
+        "url": "https://www.saint.gr/02/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is two sentences: he was born in Russia, became a monk and lived as an ascetic in the desert of St Nilus at Stolobnoe, and fell asleep in peace in 1614. The page heads him «(; - 1614)» and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1614,
+      "latest": 1614,
+      "display": "1614",
+      "basis": "attested",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1614 μ.Χ.», and the page heads him «(; - 1614)», leaving the year of his birth a question mark."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

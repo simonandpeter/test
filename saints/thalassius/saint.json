@@ -6,6 +6,11 @@
       "form": "Talasie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 februarie."
+    },
+    {
+      "form": "Θαλάσσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Φεβρουαρίου, «Όσιοι Θαλάσσιος και Λιμναίος», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -14,7 +19,8 @@
     "hermit"
   ],
   "related": [
-    "limnaeus"
+    "limnaeus",
+    "maron-the-hermit"
   ],
   "attestations": [
     {
@@ -38,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Φεβρουαρίου — «Όσιοι Θαλάσσιος και Λιμναίος»",
+        "url": "https://www.saint.gr/02/22/index.aspx",
+        "year": 2026
+      },
+      "note": "One page for the two of them, which rests them on Theodoret of Cyrrhus and the Synaxarion of Constantinople. It gives no year for either and prints no hymn. Thalassius's hermitage is put on a small mountain of a village of Cyrrhus called Tillimas."
     },
     {
       "church": "serbian",

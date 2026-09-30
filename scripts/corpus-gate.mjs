@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοκτιστη theoctiste-daughter-of-athanasia theoktiste-of-voronezh':
+    'Two women: the daughter of Athanasia on 31 January, and Voronezh on 22 February.',
+  'γερμανοσ germanos-of-stolobnoe germanus-of-novgorod germanus-of-sagmata':
+    'Three men on three Greek days: Stolobnoe on 22 February, Novgorod on 10 February and Sagmata on 26 January.',
+  'βλασιοσ blaise-of-sebaste blaise-the-cowherd blasius-22-february':
+    'Three men on three Greek days: the bishop of Sebaste on 11 February, which the Romanian calendar keeps too, the cowherd on 3 February, and the Blasius saint.gr keeps alone on 22 February.',
   'σατουρνινοσ saturninus-martyr-6-february saturninus-of-africa':
     'Two men: the martyr saint.gr keeps on 6 February, and the African on 21 February.',
   'ζαχαριασ zacharias-father-of-the-forerunner zacharias-of-arta zacharias-of-jerusalem zacharias-son-of-barachias':

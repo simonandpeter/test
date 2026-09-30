@@ -6,6 +6,11 @@
       "form": "Atanasie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 februarie."
+    },
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Φεβρουαρίου, «Όσιος Αθανάσιος ο Ομολογητής της Μονής Παυλοπετρίου», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Φεβρουαρίου — «Όσιος Αθανάσιος ο Ομολογητής της Μονής Παυλοπετρίου»",
+        "url": "https://www.saint.gr/02/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The Greek line gives him the monastery the Romanian line did not: Paulopetrion, which the page puts in the gulf of Nicomedia between the villages of Panteichion and Touzla. It ties him to Theodore the Studite and to John abbot of the monastery of Kathara, and has him exiled in the iconoclast persecution «Επί αυτοκράτορα Λέοντος του Ισαύρου (813 - 820 μ.Χ.)» — the years are Leo V the Armenian's, whom the page calls the Isaurian; the mismatch is the page's own."
     },
     {
       "church": "serbian",
@@ -46,5 +61,17 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 813,
+      "latest": 820,
+      "display": "under the emperor the page calls Leo the Isaurian",
+      "basis": "traditional",
+      "note": "saint.gr: «Επί αυτοκράτορα Λέοντος του Ισαύρου (813 - 820 μ.Χ.) καταδιώχθηκε και αυτός μαζί με άλλους Ομολογητές της πίστεως υπέρ των αγίων εικόνων και εξορίσθηκε.» The interval is the reign the page prints. Those years are Leo V the Armenian's and not Leo III the Isaurian's; the mismatch is recorded and not corrected, because the source's reading is the fact. The page gives no year for his repose."
+    }
+  },
+  "related": [
+    "theodore-the-studite"
+  ]
 }

@@ -6,6 +6,11 @@
       "form": "Limneu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 februarie."
+    },
+    {
+      "form": "Λιμναίος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Φεβρουαρίου, «Όσιοι Θαλάσσιος και Λιμναίος», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -14,7 +19,8 @@
     "hermit"
   ],
   "related": [
-    "thalassius"
+    "thalassius",
+    "maron-the-hermit"
   ],
   "attestations": [
     {
@@ -38,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Φεβρουαρίου — «Όσιοι Θαλάσσιος και Λιμναίος»",
+        "url": "https://www.saint.gr/02/22/index.aspx",
+        "year": 2026
+      },
+      "note": "One page for the two of them, which rests them on Theodoret of Cyrrhus and the Synaxarion of Constantinople. It gives no year for either and prints no hymn. Limnaeus is put on the mountain top near the city of Targala, thirty-eight years without a roof, and the page makes his shelters for the blind the greatest of his glories."
     },
     {
       "church": "serbian",

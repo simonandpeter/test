@@ -1,0 +1,61 @@
+{
+  "slug": "telesphorus-of-rome",
+  "display_name": "Telesphorus of Rome",
+  "names": [
+    {
+      "form": "Τελεσφόρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Φεβρουαρίου, «Άγιος Τελεσφόρος Επίσκοπος Ρώμης», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop of Rome",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Φεβρουαρίου — «Άγιος Τελεσφόρος Επίσκοπος Ρώμης»",
+        "url": "https://www.saint.gr/02/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 136)», has him come out of Greece to Rome at the beginning of the second century, elected bishop of Rome in 125 in succession to Sixtus I, and martyred in 136. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 136,
+      "latest": 136,
+      "display": "136",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Τελεσφόρος μαρτύρησε το έτος 136 μ.Χ.», and the page heads him «(; - 136)». It also gives 125 for his election, «Εξελέγη Επίσκοπος Ρώμης το 125 μ.Χ.»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

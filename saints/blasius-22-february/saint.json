@@ -1,0 +1,50 @@
+{
+  "slug": "blasius-22-february",
+  "display_name": "Blasius (22 February)",
+  "names": [
+    {
+      "form": "Βλάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Φεβρουαρίου, «Άγιος Βλάσιος ο Επίσκοπος», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Φεβρουαρίου — «Άγιος Βλάσιος ο Επίσκοπος»",
+        "url": "https://www.saint.gr/02/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives him no see and argues against the one received for him: «Μερικοί τον θεωρούν Επίσκοπο Ρώμης (όπως ο Άγιος Νικόδημος ο Αγιορείτης), αλλά δεν υπάρχει σχετική αναφορά στους επισκοπικούς καταλόγους περί της αρχιερατείας αυτού στη Ρώμη» — some reckon him bishop of Rome, as Nikodemos the Hagiorite does, but there is no mention of such an episcopate of his in the bishops' lists. The corpus's other Blasii are the hieromartyr of Sebaste on 11 February and the venerable one of Amorion on 31 March, and this one neither was martyred nor was a monk."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

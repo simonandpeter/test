@@ -1,0 +1,50 @@
+{
+  "slug": "anthousa-with-twelve-servants",
+  "display_name": "Anthousa, with twelve servants",
+  "names": [
+    {
+      "form": "Ανθούσα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Φεβρουαρίου, «Αγία Ανθούσα και οι δώδεκα υπηρέτες της», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Φεβρουαρίου — «Αγία Ανθούσα και οι δώδεκα υπηρέτες της»",
+        "url": "https://www.saint.gr/02/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is one sentence — «Η Αγία Ανθούσα και οι δώδεκα υπηρέτες της μαρτύρησαν διά ξίφους. Δεν έχουμε περισσότερες λεπτομέρειες για τον βίο τους» — they were martyred by the sword and there are no further details. The twelve are not named anywhere on the page, so they stand in this folder's name and have none of their own. This is not the Anthousa of Seleucia whom the corpus keeps on 22 August: that one had two servants, Charisimus and Neophytus, and died in peace."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

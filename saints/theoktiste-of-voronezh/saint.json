@@ -1,0 +1,60 @@
+{
+  "slug": "theoktiste-of-voronezh",
+  "display_name": "Theoktiste of Voronezh",
+  "names": [
+    {
+      "form": "Θεοκτίστη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Φεβρουαρίου, «Αγία Θεοκτίστη του Βορονέζ η Νεομάρτυς», with the rank words left off. The page gives a patronymic in brackets in the body, «Η Αγία Θεοκτίστη (Μιχαήλοβνα)», which is a Greek rendering of a Russian form and is not taken as a name form here."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "new-martyr",
+    "fool-for-christ"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Φεβρουαρίου — «Αγία Θεοκτίστη του Βορονέζ η Νεομάρτυς»",
+        "url": "https://www.saint.gr/02/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is one sentence — «Η Αγία Θεοκτίστη (Μιχαήλοβνα) καταγόταν από τη Ρωσία και ήταν διά Χριστόν σαλή. Μαρτύρησε το έτος 1936 μ.Χ.» — and the heading «(; - 1936)». It names no place in Russia beyond the Voronezh of the day's line, no charge, no manner of death and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1936,
+      "latest": 1936,
+      "display": "1936",
+      "basis": "attested",
+      "note": "saint.gr: «Μαρτύρησε το έτος 1936 μ.Χ.», and the page heads her «(; - 1936)», leaving the year of her birth a question mark."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,9 @@
+# Ariston of Arsinoe
+
+The holy Ariston lived in Cyprus at the end of the fourth century and the beginning of the fifth. In that age, saint.gr explains, the province of Paphos had two bishops — one for the region of Paphos with his seat at New Paphos, the other for the region of Arsinoe with his seat at Arsinoe, where the town of Chrysochous now stands. By the account of Neophytus the Recluse, whom the site keeps on 12 April, Ariston is the second bishop of Arsinoe in order; a certain Nicholas is named first, then Ariston, and after him [Arcadius the Wonderworker](/saints/arcadius-of-arsinoe) and Nikon. Neophytus held all three of them — Ariston, Nikon and Arcadius — the equals of the three great Fathers and Hierarchs, Basil the Great, Gregory the Theologian and John Chrysostom.
+
+He came of pious parents who saw to their son's upbringing and schooling in God. Virtue and a life lived according to Christ were the whole purpose of his life, and his entire surrender to the Lord helped him to gain the virtue of gentleness and the queen of the virtues, humility, and out of that, holiness. In deed and in word he became a burning teacher of reverence and of the Orthodox faith, a protector of orphans, a consoling angel to the poor and the sick, and a tender father to everyone.
+
+The word of the Old Testament — the greater thou art, the more humble thyself, and thou shalt find grace before the Lord — found its application in him. God counted him worthy of the gift of wonderworking as well, and the pen of Neophytus writes of him that he was «κατά δαιμόνων ἄριστος ἀριστεύς», the best of champions against the demons, a play on his name. He fell asleep in peace.
+
+*After saint.gr's calendar for 22 Φεβρουαρίου — [the day](https://www.saint.gr/02/22/index.aspx) and [the life](https://www.saint.gr/3673/saint.aspx); read 30 September 2026.*
