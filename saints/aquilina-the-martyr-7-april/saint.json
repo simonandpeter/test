@@ -6,6 +6,11 @@
       "form": "Achilina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 aprilie, «Sfânta Muceniță Achilina»."
+    },
+    {
+      "form": "Ακυλίνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Απριλίου, «Αγία Ακυλίνα», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Απριλίου — «Αγία Ακυλίνα»",
+        "url": "https://www.saint.gr/04/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Απριλίου εκάστου έτους», the same day as the listing, and prints no years for her: the only date anywhere on it is the reign of «τοῦ παρανόμου Δεκίου (249 - 251)» inside the notice it quotes from Laura Codex 170, and no `dates` were taken from a reign. The page prints no hymn for her. Unlike doxologia, saint.gr joins her to Rufinus the deacon and to two hundred martyrs, all three on 7 April and all three carrying the same notice; it says nothing of a mother of Calliopius."
     },
     {
       "church": "serbian",
@@ -45,5 +60,10 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "rufinus-the-deacon",
+    "two-hundred-martyrs-of-sinope",
+    "christopher"
+  ]
 }

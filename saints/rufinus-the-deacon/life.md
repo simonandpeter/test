@@ -1,0 +1,11 @@
+# Rufinus
+
+saint.gr's whole account of him in its own voice is one sentence: «Ο Άγιος Ρουφίνος ο Διάκονος μαρτύρησε επί της βασιλείας του Δεκίου (249 - 251 μ.Χ.) αφού τον έσφαξαν με μαχαίρι» — Rufinus the Deacon was martyred in the reign of Decius, having been slain with a knife. The day's line adds only his order, ο Διάκονος. The couplet over the entry says that Rufinus, reckoned as a sheep for the slaughter, himself slays the old wolf, the devil.
+
+In place of a life the page prints the notice it says stands in Laura Codex 170 for Rufinus, [Aquilina](/saints/aquilina-the-martyr-7-april) and the two hundred martyrs. These holy ones, it says, lived under the lawless Decius, and being gathered together they agreed with one another to hold fast to the faith in Christ. At that time the emperor sent soldiers to arrest [Christopher](/saints/christopher) and bring him before him for his confession of Christ our God; and they, seeing the wonders the saint did and the fearful prodigies worked at the invocation of Christ, all cried out: «μέγας ὁ Θεὸς τῶν Χριστιανῶν καὶ αὔτώ μόνῳ λατρεύομεν», great is the God of the Christians, and him alone do we worship.
+
+The emperor then shut Christopher up in a dark prison and ordered these others brought to the tribunal. He asked them who had compelled them, unholy men, to say such things before him and to preach a crucified God; and they answered him, Rufinus above all, that for the kingdom laid up and prepared by our Lord Jesus Christ for his chosen servants, and for that unspeakable joy, they believed in Christ and confessed him. At that the emperor, boiling over with rage, ordered their flesh cut in pieces limb from limb with the sword before his eyes, as in a shambles, and so their martyrdom was finished.
+
+[The two hundred](/saints/two-hundred-martyrs-of-sinope) are kept as a separate entry on the same day, and their own page says they were made Christians by Rufinus and Aquilina. The page gives Rufinus no city of his own, no year beyond the reign of Decius, no relic, and no hymn.
+
+*After saint.gr's calendar for 7 Απριλίου — [the day](https://www.saint.gr/04/07/index.aspx) and [the life](https://www.saint.gr/201/saint.aspx); read 30 September 2026.*

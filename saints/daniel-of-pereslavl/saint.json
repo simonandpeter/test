@@ -1,0 +1,71 @@
+{
+  "slug": "daniel-of-pereslavl",
+  "display_name": "Daniel of Pereslavl",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Δανιήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Απριλίου, «Όσιος Δανιήλ ο θαυματουργός», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [
+    "leucius-of-volokolamsk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1459,
+      "latest": 1460,
+      "display": "1459 or 1460",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Δανιήλ, κατά κόσμον Δημήτριος, γεννήθηκε μεταξύ των ετών 1459 - 1460 μ.Χ. στο Περεγιασλάβλ - Ζελέσκιυ της Ρωσίας» — the page gives the birth as falling between the two years and does not choose."
+    },
+    "death": {
+      "earliest": 1540,
+      "latest": 1540,
+      "display": "1540",
+      "basis": "traditional",
+      "note": "saint.gr: «Στη συνέχεια ίδρυσε μονή κοντά στο κοιμητήριο της πόλεως και κοιμήθηκε με ειρήνη το έτος 1540 μ.Χ.», and the page's heading has «Οσιος Δανιηλ ο Θαυματουργος (; - 1540)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Απριλίου — «Όσιος Δανιήλ ο θαυματουργός»",
+        "url": "https://www.saint.gr/04/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1540)». It adds two further days — «Η Εκκλησία τιμά, επίσης, την μνήμη του στις 28 Ιουλίου και στις 30 Δεκεμβρίου» — which one attestation row per church cannot hold, so they are recorded here and not as rows. Its relic list says a portion is in «Λαύρα Αγίου Αλεξάνδρου Νέβσκι Αγίας Πετρουπόλεως»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

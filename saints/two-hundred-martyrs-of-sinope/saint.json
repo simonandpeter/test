@@ -1,0 +1,55 @@
+{
+  "slug": "two-hundred-martyrs-of-sinope",
+  "display_name": "The Two Hundred Martyrs of Sinope",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Διακόσιοι Μάρτυρες οι εν Σινώπη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Απριλίου, «Άγιοι Διακόσιοι Μάρτυρες οι εν Σινώπη», with the rank word Άγιοι left off. The number and the word Μάρτυρες are kept because they are what names the company; the page names none of the two hundred."
+    }
+  ],
+  "related": [
+    "rufinus-the-deacon",
+    "aquilina-the-martyr-7-april",
+    "christopher"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Απριλίου — «Άγιοι Διακόσιοι Μάρτυρες οι εν Σινώπη»",
+        "url": "https://www.saint.gr/04/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Απριλίου εκάστου έτους», the same day as the listing. It names none of the two hundred, so this is one folder and not two hundred. It gives no year of death, only the reign of «τοῦ παρανόμου Δεκίου (249 - 251)» in the notice it quotes from Laura Codex 170, and no `dates` were taken from a reign. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -7,6 +7,11 @@
       "form": "Gheorghe Mărturisitorul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 aprilie, «Sfântul Ierarh Gheorghe Mărturisitorul, Episcopul Mitilenei»."
+    },
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Απριλίου, «Όσιος Γεώργιος επίσκοπος Μυτιλήνης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Απριλίου — «Όσιος Γεώργιος επίσκοπος Μυτιλήνης»",
+        "url": "https://www.saint.gr/04/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 821)». It adds a second day — «Η μνήμη του επαναλαμβάνεται και την 1η Φεβρουαρίου, μαζί μ' αυτή των αδελφών του, του Συμεών του νέου στυλίτη και του Δαβίδ του μοναχού» — which one attestation row per church cannot hold, so it is recorded here and not as a row. The day's line and the page call him Επίσκοπος Μυτιλήνης, while the page's own list of links heads him «Άγιοι Γεώργιος Αρχιεπίσκοπος Μυτιλήνης, Συμεών ο Νέος Στυλίτης και Δαβίδ ο Μοναχός»; the folder's existing office follows the prose."
     },
     {
       "church": "serbian",
@@ -63,9 +78,62 @@
         "text": "The truth of things showed thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence. Therefore thou hast gained by humility the things on high, and by poverty the things that are rich. O father and hierarch George, pray Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείου Πνεύματος, καρποφορήσας, ὡς θεόφυτος λειμὼν τὴν χάριν, Ἱεράρχα τῶν ἀρρήτων Γεώργιε, τᾶς τῶν ψυχῶν ἐγεώργησας αὔλακας, ὡς ἐπιπνοίας ἄθλου γεώργιον. Πάτερ Ὅσιε Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως, on the page of Όσιος Γεώργιος επίσκοπος Μυτιλήνης. It is his own and names him; it plays on his name, the tiller of the earth, and the furrows of souls he tilled.",
+        "url": "https://www.saint.gr/200/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having borne the fruit of the divine Spirit as a meadow God himself had planted with grace, O George, hierarch of things unspeakable, thou didst till the furrows of souls as a tillage of inspired contest. Venerable father, entreat Christ God that great mercy be given to us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Κανόνα πίστεως, καὶ εἰκόνα πραότητος, ἐγκρατείας διδάσκαλον, ἀνέδειξε σε τῇ ποίμνῃ σου, ἡ τῶν πραγμάτων ἀλήθεια· διὰ τοῦτο ἐκτήσω τῇ ταπεινώσει τὰ ὑψηλά, τῇ πτωχείᾳ τὰ πλούσια. Πάτερ Ἱεράρχα Γεώργιε, πρέσβευε Χριστῷ τῷ θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος δ’, on the page of Όσιος Γεώργιος επίσκοπος Μυτιλήνης. This is the common apolytikion of a hierarch, with his name set into its last clause; the page prints it under his name, so it is copied whole as the page has it.",
+        "url": "https://www.saint.gr/200/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence; therefore thou hast gained the heights by humility and riches by poverty. Father and hierarch George, intercede with Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": null,
+      "latest": null,
+      "display": null,
+      "basis": "unknown"
+    },
+    "death": {
+      "earliest": 821,
+      "latest": 821,
+      "display": "821",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι αγώνες του στέφθηκαν από επιτυχία και όταν πέθανε το 821 μ.Χ., το ποίμνιο του τον τίμησε μέσα σε βαθύ πένθος», and the page's heading has «Οσιος Γεωργιος Επισκοπος Μυτιληνης (; - 821)». The page gives no birth year."
+    }
+  },
+  "related": [
+    "methodius-of-constantinople",
+    "theophylact-of-nicomedia",
+    "theodore-the-studite"
+  ]
 }

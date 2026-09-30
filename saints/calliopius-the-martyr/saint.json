@@ -6,6 +6,11 @@
       "form": "Caliopie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 aprilie, «Sfântul Mucenic Caliopie»."
+    },
+    {
+      "form": "Καλλιόπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Απριλίου, «Άγιος Καλλιόπιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Απριλίου — «Άγιος Καλλιόπιος»",
+        "url": "https://www.saint.gr/04/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Απριλίου εκάστου έτους», the same day as the listing, and prints no years for him at all: it places him only «στο χρόνια του μεγάλου διώκτου της Ορθοδοξίας Διοκλητιανού», so no `dates` were taken. It glosses the name as κάλλος with ὤψ, he who has beautiful eyes, and gives Perge in Pamphylia as his home, the eparch Maximus as his judge, and Great Friday as the day of his crucifixion."
     },
     {
       "church": "serbian",
@@ -57,6 +72,23 @@
       },
       "english": {
         "text": "Thy martyr Calliopius, O Lord, in his contest received the incorruptible crown from thee, our God; for having thy power he overcame the tormentors, and he broke also the feeble insolence of the demons. By his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Ἐκβλαστήσας ὡς ρόδον Μάρτυς ἀμάραντον, ἀθλητικῶς κατευφραίνεις τὴν Ἐκκλησίαν Χριστοῦ, τὴ εὐπνοία τῶν λαμπρῶν κατορθωμάτων σου, οὐ γὰρ παθῶν ζωοποιῶν, ἀνεδείχθης κοινωνός, νομίμως ἀνδραγαθήσας, ὦ Καλλιόπιε μάκαρ, ὑπὲρ τῆς δόξης τοῦ Σωτῆρος ἠμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον, on the page of Άγιος Καλλιόπιος. It is his own and names him.",
+        "url": "https://www.saint.gr/199/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having sprung up as a rose that does not fade, O martyr, thou gladdenest the Church of Christ by thy contest, with the sweet breath of thy shining achievements; for thou wast shown to be a partaker of the life-giving Passion, doing valiantly according to the law, O blessed Calliopius, for the glory of our Saviour.",
         "rendered": "site"
       }
     }

@@ -1,0 +1,61 @@
+{
+  "slug": "agapitus-the-blind",
+  "display_name": "Agapitus the Blind",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Αγαπητός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Απριλίου, «Όσιος Αγαπητός ο Τυφλός», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1905,
+      "latest": 1905,
+      "display": "1905",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Αγαπητός ασκήτεψε θεοφιλώς στη μονή Βάλαμο της Φιλανδίας και κοιμήθηκε με ειρήνη το έτος 1905 μ.Χ.», and the page's heading has «Οσιος Αγαπητος ο Τυφλος (; - 1905)». The page gives no birth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Απριλίου — «Όσιος Αγαπητός ο Τυφλός»",
+        "url": "https://www.saint.gr/04/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1905)». The whole body of the page is one sentence; it prints no couplet, no relic and no hymn, and says nothing of his blindness beyond the epithet in the day's line."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

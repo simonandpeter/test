@@ -1,0 +1,11 @@
+# Gerasimus the Byzantine
+
+saint.gr heads him «Οσιος Γερασιμος ο Βυζαντιος (; - 1770)» and calls him ο διδάσκαλος, the teacher. He came of a devout family and was born at Constantinople, in the quarter the page writes Υψωμάθεια, of pious parents. In his own city he kept company with learned men, and then came to Patmos, where he was the pupil of [Macarius Kalogeras](/saints/macarius-kalogeras), whom the page calls the wisest teacher of the Greek nation, in the famous school of Patmos; and when Macarius fell asleep he took over its direction himself.
+
+Having put the cares of this life away from him he became a monk in the royal and patriarchal monastery of the Evangelist and Theologian John on Patmos, and was ordained priest there. He lived, the page says, in a holy and good manner, was an excellent teacher of the young, and gave light to all. When he fell ill of the stone he went to Smyrna to be treated, and when that came to nothing he went on to Crete, where he fell asleep in the year 1770 and was buried in the monastery of the Holy Trinity called of the Tzangarolon.
+
+As soon as the monks on Patmos heard of his falling asleep they came by ship to Crete and asked for his body; and when the fathers of the Holy Trinity refused to give up the precious treasure «ὃν ἀπέστειλεν αὐτοὶς ὁ Θεός», which God had sent them, a vigil was kept, and during the Cherubic Hymn the saint's right hand parted of itself. The monks took it to Patmos, where the page says it is to this day, pouring out the gifts of grace on those who come to it in faith.
+
+The prose then says that the relic kept under the holy table of the katholikon of the Tzangarolon, together with that of the venerable father Acacius who had lived and ended his life in the same monastery, was given to the fire by raiders who fell upon it and burnt it in the year 1821, and that this treasure was lost. The page's own list of relics nevertheless puts his head at the Tzangarolon at Chania and his right hand at the monastery of John the Theologian on Patmos. Both readings are the page's and it does not reconcile them.
+
+*After saint.gr's calendar for 7 Απριλίου — [the day](https://www.saint.gr/04/07/index.aspx) and [the life](https://www.saint.gr/205/saint.aspx); read 30 September 2026.*

@@ -7,6 +7,11 @@
       "form": "Tihon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 aprilie, «Sfântul Ierarh Tihon, Patriarhul Moscovei și al Întregii Rusii»."
+    },
+    {
+      "form": "Τύχων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Απριλίου, «Άγιος Τύχων Πατριάρχης Μόσχας», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Απριλίου — «Άγιος Τύχων Πατριάρχης Μόσχας»",
+        "url": "https://www.saint.gr/04/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(1865 - 1925)», which agrees with the years the folder already holds from doxologia; the corpus's `dates` are left as they stand. It adds one further day — «Η μνήμη του Αγίου Τύχωνα επαναλαμβάνεται στις 9 Οκτωβρίου» — one of the five the Romanian row's note already lists, and one attestation row per church cannot hold it, so it is recorded here. Its relic list says the body lies incorrupt in the Donskoy monastery of Moscow. The page prints no hymn."
     },
     {
       "church": "serbian",
@@ -65,5 +80,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "tikhon-of-zadonsk"
+  ]
 }

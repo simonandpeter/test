@@ -1,0 +1,100 @@
+{
+  "slug": "gerasimus-the-byzantine",
+  "display_name": "Gerasimus the Byzantine",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Γεράσιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Απριλίου, «Όσιος Γεράσιμος ο Βυζάντιος», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [
+    "macarius-kalogeras"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1770,
+      "latest": 1770,
+      "display": "1770",
+      "basis": "traditional",
+      "note": "saint.gr: «πήγε στην Κρήτη, όπου κοιμήθηκε οσιακώς το έτος 1770 μ.Χ. και τάφηκε στην Ιερά Μονή της Παναγίας Τριάδος, την επονομαζόμενη των Τζαγκαρόλων», and the page's heading has «Οσιος Γερασιμος ο Βυζαντιος (; - 1770)». The page gives no birth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Απριλίου — «Όσιος Γεράσιμος ο Βυζάντιος»",
+        "url": "https://www.saint.gr/04/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1770)». Its relic list says the head is at the Tzangarolon monastery of Chania and the right hand at the monastery of John the Theologian on Patmos, while its own prose says the relic kept under the altar of the Tzangarolon was burnt with the monastery in 1821; the page does not reconcile the two readings and both are in the life. Beside the apolytikion and the kontakion the page prints an Οἶκος, which the schema's hymn kinds cannot hold, so it was not taken."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ.",
+      "text": "Ἀσκητικῶν διατελῶν ἐν τῷ κόσμῳ, καὶ διαλάμψας ἐν σοφίᾳ τῶν λόγων, πρὸς ἀπαθείας ἔφθασας ἀκρώρειαν, φαίνων ὥσπερ ἥλιος ἐν τοῖς πέρασι μάκαρ, πάντας τοὺς τιμῶντάς σε καταυγάζων θεόφρον, τῆς οὐρανίου δεῖξον χαρμονῆς, μετόχους Πάτερ Γεράσιμε Ὅσιε.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος δ'. Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ, on the page of Όσιος Γεράσιμος ο Βυζάντιος. It is his own and names him.",
+        "url": "https://www.saint.gr/205/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Living the ascetic life while in the world, and shining out in the wisdom of thy words, thou didst come to the summit of dispassion, appearing as a sun to the ends of the earth, O blessed one, and giving light to all who honour thee, O godly-minded father. Show us also, venerable Gerasimus, sharers in the gladness of heaven.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Γερασίμου σήμερον, τὴν θείαν μνήμην, ἐκτελοῦντες ἄσμασιν, ἀναβοήσωμεν πιστοί, Χριστὲ ὁ μόνος Θεὸς ἡμῶν, τοῦ Σοῦ Ὁσίου λιταῖς ἡμᾶς οἴκτειρον.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ'. Ἐπεφάνης σήμερον, on the page of Όσιος Γεράσιμος ο Βυζάντιος. The page prints an Οἶκος under it as well, which the schema's hymn kinds do not hold.",
+        "url": "https://www.saint.gr/205/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping today with songs the holy memory of Gerasimus, let us the faithful cry aloud: O Christ, our only God, have compassion on us at the prayers of thy venerable one.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "rufinus-the-deacon",
+  "display_name": "Rufinus",
+  "sex": "male",
+  "types": [
+    "deacon",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ρουφίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Απριλίου, «Άγιος Ρουφίνος ο Διάκονος», with the rank word and the order left off."
+    }
+  ],
+  "related": [
+    "christopher",
+    "aquilina-the-martyr-7-april",
+    "two-hundred-martyrs-of-sinope"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Απριλίου — «Άγιος Ρουφίνος ο Διάκονος»",
+        "url": "https://www.saint.gr/04/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Απριλίου εκάστου έτους», the same day as the listing. It gives no year of death, only «επί της βασιλείας του Δεκίου (249 - 251 μ.Χ.)», and no `dates` were taken from a reign. The same notice from Laura Codex 170 stands on his page, on Aquilina's and on that of the two hundred martyrs of Sinope, all three listed on 7 April; the page prints no hymn for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

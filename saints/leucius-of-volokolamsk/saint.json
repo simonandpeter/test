@@ -1,0 +1,64 @@
+{
+  "slug": "leucius-of-volokolamsk",
+  "display_name": "Leucius of Volokolamsk",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Λεύκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Απριλίου, «Όσιος Λεύκιος εκ Ρωσίας», with the rank word and the phrase εκ Ρωσίας left off."
+    }
+  ],
+  "related": [
+    "daniel-of-pereslavl"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1492,
+      "latest": 1492,
+      "display": "1492",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε οσίως με ειρήνη το έτος 1492 μ.Χ.», and the page's heading has «Οσιος Λευκιος Εκ Ρωσιας (; - 1492)». The page gives no birth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Απριλίου — «Όσιος Λεύκιος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/04/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1492)». The day's line says only εκ Ρωσίας; Volokolamsk and the Dormition monastery near the river Ruza come from the page's own sentence, and the page of Δανιήλ ο θαυματουργός on the same day calls him «ο Άγιος Λεύκιος του Βολοκολάμσκ που τιμάται την ίδια ημέρα». The page prints no relic and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
