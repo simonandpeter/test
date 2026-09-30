@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ζηνων zeno-of-diospolis zeno-the-faster-of-kiev':
+    'two men, and one is an apostle. saint.gr keeps Zeno the Faster of the Kyiv Caves, of the fourteenth century, on 30 Ιανουαρίου; the corpus keeps Zeno of Diospolis, one of the seventy, on the Romanian 27 April and the Greek 27 September. A late-medieval Russian monk is not an apostle of the seventy.',
+  'θεοφιλοσ theophilus-the-deacon-of-libya theophilus-the-new':
+    'two men. saint.gr keeps Theophilus the New, a soldier martyred about 800, on 30 Ιανουαρίου, and Theophilus the deacon of Libya, whose page gives no year, on the 8th; both were written in this wave. The epithet «the New» is the calendar own way of keeping them apart.',
+  'πετροσ peter-abesalamites peter-companion-of-leucius peter-companion-of-manuel peter-disciple-of-dionysius-of-alexandria peter-of-bulgaria peter-of-capitolias peter-of-sebaste peter-son-of-john-of-syracuse peter-the-egyptian peter-the-gaoler peter-the-peloponnesian peter-the-sign-bearer':
+    'twelve now. The new one is Peter, king of Bulgaria, dead 967, kept on 30 Ιανουαρίου; the other eleven are read in the earlier entries for this name form in this wave, from el-01-01 to el-01-27. Twelve men on twelve Greek days, and no page names another.',
   'λαυρεντιοσ laurence-martyr-9-january laurence-of-turov':
     'two men, twenty days apart on one calendar. saint.gr keeps Laurence, bishop of Turov, dead 1194, on 29 Ιανουαρίου, and a bare martyr Laurence with no year on the 9th, both written in this wave. A twelfth-century Russian bishop is not a martyr of the persecutions.',
   'ιωνασ jonah-of-kyiv jonas-of-great-perm':
@@ -1301,7 +1307,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '398'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '405'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;

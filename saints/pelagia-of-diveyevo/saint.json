@@ -1,0 +1,69 @@
+{
+  "slug": "pelagia-of-diveyevo",
+  "display_name": "Pelagia of Diveyevo",
+  "names": [
+    {
+      "form": "Πελαγία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Ιανουαρίου, «Οσία Πελαγία του Ντιβέεβο», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "fool-for-christ"
+  ],
+  "related": [
+    "seraphim-of-sarov"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1809,
+      "latest": 1809,
+      "display": "1809",
+      "basis": "attested",
+      "note": "saint.gr: «Η Πελαγία Ιβάνοβνα Σερεμπρενίκοβα γεννήθηκε τον Οκτώβριο του 1809 μ.Χ. στο Αρζαμά της Ρωσίας»; the page's heading dates her «(1809 - 1884)»."
+    },
+    "death": {
+      "earliest": 1884,
+      "latest": 1884,
+      "display": "1884",
+      "basis": "attested",
+      "note": "saint.gr: «Στις 1.45 το πρωί της Δευτέρας 30 Ιανουαρίου [1884], η Πελαγία Ιβάνοβνα, άφησε την τελευταία της πνοή»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 30 Ιανουαρίου — «Οσία Πελαγία του Ντιβέεβο»",
+        "url": "https://www.saint.gr/01/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

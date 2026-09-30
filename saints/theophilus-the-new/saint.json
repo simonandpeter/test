@@ -1,0 +1,95 @@
+{
+  "slug": "theophilus-the-new",
+  "display_name": "Theophilus the New",
+  "names": [
+    {
+      "form": "Θεόφιλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Ιανουαρίου, «Άγιος Θεόφιλος ο Νέος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 795,
+      "latest": 805,
+      "display": "c. 800",
+      "basis": "traditional",
+      "note": "saint.gr sets his capture at «μια ναυμαχία με τους Σαρακηνούς κοντά στην Κύπρο περί το 800 μ.Χ.» and his beheading after it, and sets his life «στα χρόνια των αυτοκρατόρων Κωνσταντίνου και Ειρήνης (780 - 795 μ.Χ.)». The bounds are the corpus's reading of the page's «περί»; the page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 30 Ιανουαρίου — «Άγιος Θεόφιλος ο Νέος»",
+        "url": "https://www.saint.gr/01/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Τὴν φιλότητα πρὸς τὸν Δεσπότην, καθυπέγραψας, τῷ αἵματί σου, καὶ τὴν πλάνην ἐναπέπνιξας, ἅγιε, ἡμισελήνου γενναίω φρονήματι, ἀνακηρύξας Χριστοῦ τὴν θεότητα, ὅθεν εἴληφας, Θεόφιλε παμμακάριστε, τὸ στέφος τῶν μαρτύρων ἐκ Κυρίου σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Θεόφιλος ο Νέος — Ἀπολυτίκιον, Ἦχος γ’. «Θείας πίστεως»",
+        "url": "https://www.saint.gr/3564/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You signed your love toward the Master with your own blood, and by your brave resolve you smothered the error of the crescent, proclaiming the Godhead of Christ, O holy one; whence you received from your Lord, all-blessed Theophilus, the crown of the martyrs.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τὸν τάφον σου Σωτήρ.",
+      "text": "Θαλάσσης νοητῆς, διαπλεύσας τὸ κύτος, λιμένα οὐρανοῦ, εἰς κατάπαυσιν εὖρες, Θεόφιλε ἔνδοξε, ὡς πὲρ ναῦς χριστοσφράγιστος, πλάνην Ἄγαρ δέ, ἐκμυκτηρίσας ἐμφρόνως, ὠμολόγησας, τὴν τοῦ Δεσπότου σου πίστιν, μαρτύρων ἀγλάισμα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Θεόφιλος ο Νέος — Κοντάκιον, Ἦχος α’. «Τὸν τάφον σου Σωτήρ»",
+        "url": "https://www.saint.gr/3564/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having sailed across the hollow of the spiritual sea, you found the harbour of heaven for your rest, glorious Theophilus, like a ship sealed with Christ; and having wisely made a mockery of the error of Hagar, you confessed the faith of your Master, O ornament of the martyrs.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

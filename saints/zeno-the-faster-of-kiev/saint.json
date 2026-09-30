@@ -1,0 +1,59 @@
+{
+  "slug": "zeno-the-faster-of-kiev",
+  "display_name": "Zeno the Faster of Kiev",
+  "names": [
+    {
+      "form": "Ζήνων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Ιανουαρίου, «Όσιος Ζήνων ο Νηστευτής εκ Κιέβου», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ζήνων έζησε τον 14ο αιώνα μ.Χ. και ασκήτεψε στα σπήλαια της Μεγάλης Λαύρας του Κιέβου της Ρωσίας.» The page gives no year of birth and none of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 30 Ιανουαρίου — «Όσιος Ζήνων ο Νηστευτής εκ Κιέβου»",
+        "url": "https://www.saint.gr/01/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "peter-of-bulgaria",
+  "display_name": "Peter of Bulgaria",
+  "names": [
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Ιανουαρίου, «Άγιος Πέτρος Βασιλέας των Βουλγάρων», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "king"
+  ],
+  "related": [
+    "john-of-rila"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 967,
+      "latest": 967,
+      "display": "967",
+      "basis": "attested",
+      "note": "saint.gr: «Μετά από έναν ανεπιτυχή πόλεμο με την Ουγγαρία και τη Ρωσία, κοιμήθηκε το έτος 967 μ.Χ.»; the page's heading dates him «(; - 967)» and gives his reign as «927 - 967 μ.Χ.». It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 30 Ιανουαρίου — «Άγιος Πέτρος Βασιλέας των Βουλγάρων»",
+        "url": "https://www.saint.gr/01/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

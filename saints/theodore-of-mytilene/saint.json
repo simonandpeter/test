@@ -6,6 +6,11 @@
       "form": "Theodor Hagiul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 ianuarie, «Sfântul Theodor Hagiul Noul Mucenic din Mitilini»."
+    },
+    {
+      "form": "Θεόδωρος Χατζής",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Ιανουαρίου, «Άγιος Θεόδωρος ο Χατζής ο Μυτιληναίος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 30 Ιανουαρίου — «Άγιος Θεόδωρος ο Χατζής ο Μυτιληναίος»",
+        "url": "https://www.saint.gr/01/30/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -55,5 +69,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ἐκ Πύργων ἐβλάστησας και ἐν Μυτιλήνη σαφῶς ἀθλήσας Θεόδωρε, ὑπέρ Χριστοῦ τοῦ Θεοῦ ἀξίως δεδόξασαι. Ὄθεν τά λείψανά σου, Νεομάρτυς εὐρόντες χάριν ἐκ τούτων θείαν κομιζόμεθα πίστει, δοξάζοντες τόν Κύριον, τόν Σέ στεφανώσαντα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Θεόδωρος ο Χατζής ο Μυτιληναίος — Ἀπολυτίκιον, Ἦχος δ’. «Ταχὺ προκατάλαβε»",
+        "url": "https://www.saint.gr/3563/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You sprang from Pyrgoi and contended plainly in Mytilene, Theodore, and are worthily glorified for Christ our God. Whence, new martyr, having found your relics, we draw divine grace from them in faith, glorifying the Lord who crowned you.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

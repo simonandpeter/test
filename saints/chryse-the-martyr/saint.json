@@ -1,0 +1,61 @@
+{
+  "slug": "chryse-the-martyr",
+  "display_name": "Chryse",
+  "names": [
+    {
+      "form": "Χρυσή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Ιανουαρίου, «Αγία Χρυσή», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "sabainos-the-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 264,
+      "latest": 274,
+      "display": "c. 269",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε στα χρόνια του αυτοκράτορα Κλαυδίου (περί το 269 μ.Χ.)». The bounds are the corpus's reading of the page's «περί»; the page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 30 Ιανουαρίου — «Αγία Χρυσή»",
+        "url": "https://www.saint.gr/01/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
