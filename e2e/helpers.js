@@ -261,6 +261,41 @@ const aDayThatIsNotToday = (page) =>
  * The index is the site's own: `feastIndex` over the same folders the build
  * reads, so a day is counted here exactly as the page counts it.
  */
+/**
+ * The folders themselves, which carry what the manifest drops: an
+ * `undocumented` attestation and its note. `data/manifest.json` keeps only the
+ * venerated rows, so a test about a row that says "not kept here" cannot be
+ * asked of it.
+ */
+const FOLDERS = readCorpus().map((entry) => ({ slug: entry.slug, ...entry.saint }));
+
+/**
+ * A saint `church` does not keep, whose row says so with the check that was
+ * made, and whom exactly one other church does keep — so the page's reveal
+ * reads "See the other churches (3)". Typed as `moses-the-hungarian` until the
+ * Romanian year reached 26 July and gave him a Romanian feast.
+ */
+export const notKeptBy = (church) => {
+  const found = FOLDERS.find((card) => {
+    const row = (card.attestations ?? []).find((a) => a.church === church);
+    return (
+      row
+      && row.status === 'undocumented'
+      && /checked/i.test(row.note ?? '')
+      && (card.attestations ?? []).filter((a) => a.status === 'venerated').length === 1
+    );
+  });
+  if (!found) throw new Error(`every saint ${church} does not keep is kept by two churches or has no check note`);
+  return found.slug;
+};
+
+/** A saint the corpus records no hymn for: no heading over nothing. */
+export const WITHOUT_HYMNS = (() => {
+  const found = FOLDERS.find((card) => !(card.hymns ?? []).length && (card.attestations ?? []).some((a) => a.status === 'venerated'));
+  if (!found) throw new Error('every saint in the corpus has a hymn');
+  return found.slug;
+})();
+
 const FEASTS = feastIndex(readCorpus());
 const CIVIL_2026 = (() => {
   const out = [];

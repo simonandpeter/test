@@ -1,6 +1,8 @@
 import { readFileSync } from 'node:fs';
 import { test, expect } from './fixtures.js';
 import {
+  notKeptBy,
+  WITHOUT_HYMNS,
   DETAIL,
   INDEX,
   NO_RU_NAME,
@@ -305,11 +307,16 @@ test('the saint page reads the reader church first and reveals the others for th
   await expect(page.locator('[data-reveal]')).toHaveText('Hide the other churches');
   expect(await page.evaluate(() => document.activeElement?.hasAttribute('data-reveal'))).toBe(true);
 
-  // A saint the Romanian calendar does not keep: the row says undocumented,
-  // with the check that was made, and the reveal has reset.
-  await page.goto('/saints/moses-the-hungarian', { waitUntil: 'networkidle' });
+  /*
+   * A saint the Romanian calendar does not keep: the row says undocumented,
+   * with the check that was made, and the reveal has reset. **Found, not
+   * typed** — this was Moses the Hungarian until the Romanian year reached 26
+   * July and gave him a feast, and the row the test wants is not in
+   * `data/manifest.json` at all, which keeps only venerated rows.
+   */
+  await page.goto(`/saints/${notKeptBy('romanian')}`, { waitUntil: 'networkidle' });
   await expect(page.locator('[data-veneration] > .attestations .att')).toHaveClass(/att-undocumented/);
-  await expect(page.locator('[data-veneration] > .attestations .att-note')).toContainText('checked 2026-08-22');
+  await expect(page.locator('[data-veneration] > .attestations .att-note')).toContainText('checked');
   await expect(page.locator('[data-reveal]')).toHaveText('See the other churches (3)');
   await expect(page.locator('.attestations-other .att')).toHaveCount(0);
 });
@@ -375,7 +382,9 @@ test('a saint page carries the saint own hymns, the reader church first', async 
   await expect(page.locator('.saint-hymns .hymn').first().locator('.hymn-text')).toHaveAttribute('lang', 'el');
 
   // And a saint the corpus has no hymns for prints no heading over nothing.
-  await page.goto(DETAIL, { waitUntil: 'networkidle' });
+  // Anthony the Great was that saint until the Greek wave gave him one, so the
+  // page is found off the folders now.
+  await page.goto(`/saints/${WITHOUT_HYMNS}`, { waitUntil: 'networkidle' });
   await expect(page.locator('.saint-hymns')).toHaveCount(0);
 });
 
@@ -553,7 +562,13 @@ test('the saints dated this batch print their dates rather than Undated', async 
      * corpus really is undated — so asking `main` for the absence of that word
      * asks about 862 other people as well as this one.
      */
-    const subject = page.locator('.saint-col-main');
+    /*
+     * **The facts line, since 2026-10-01**, and for the same reason the column
+     * replaced `main`: the register of the day's other saints now draws inside
+     * `.saint-col-main`, and plenty of them are undated, so asking the column
+     * for the absence of that word asked about them too.
+     */
+    const subject = page.locator('.saint-facts');
     await expect(subject).toContainText(shown);
     await expect(subject).not.toContainText('Undated');
   }
