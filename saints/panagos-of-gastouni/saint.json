@@ -1,0 +1,62 @@
+{
+  "slug": "panagos-of-gastouni",
+  "display_name": "Panagos of Gastouni",
+  "names": [
+    {
+      "form": "Πανάγος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαρτίου, «Άγιοι Χρίστος ο Ιερέας και Πανάγος οι Νεομάρτυρες», with the rank words left off. The body of the page writes «ο μεν άγιος και ιερός Πανάγιος (Πανάγος)», giving the same two forms."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαρτίου — «Άγιοι Χρίστος ο Ιερέας και Πανάγος οι Νεομάρτυρες»",
+        "url": "https://www.saint.gr/03/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The page keeps the two new martyrs of Elis together and says «Οι άγιοι τιμώνται στις 9 Μαρτίου και η ακολουθία τους συμψάλλεται με την ακολουθία των τεσσαράκοντα μαρτύρων» — their service is sung together with that of the forty martyrs of the same day. It quotes an older account throughout and prints no hymn of their own. It heads Panagos «(; - 1716)» and dates his beheading «την πρώτην του Μαρτίου μηνός κατά το 1716», the first of March, while keeping his memory with his companion's on 9 March. That is the day the row records, because the day page is the source quoted."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1716,
+      "latest": 1716,
+      "display": "1716",
+      "basis": "traditional",
+      "note": "saint.gr: «Απετμήθη την πρώτην του Μαρτίου μηνός κατά το 1716», and the page heads him «(; - 1716)», leaving the year of his birth a question mark."
+    }
+  },
+  "related": [
+    "christos-of-andravida"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

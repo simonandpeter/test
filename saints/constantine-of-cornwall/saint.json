@@ -1,0 +1,68 @@
+{
+  "slug": "constantine-of-cornwall",
+  "display_name": "Constantine of Cornwall",
+  "names": [
+    {
+      "form": "Κωνσταντίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαρτίου, «Άγιος Κωνσταντίνος της Κορνουάλλης ο Μάρτυρας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "king"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαρτίου — «Άγιος Κωνσταντίνος της Κορνουάλλης ο Μάρτυρας»",
+        "url": "https://www.saint.gr/03/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(520 - 576)» and says two things about him: that he was born «περί το 520 μ.Χ.» and was king of Dumnonia in England, and that he was martyred in 576. It gives no account of the martyrdom and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 520,
+      "latest": 520,
+      "display": "about 520",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Μάρτυς Κωνσταντίνος γεννήθηκε περί το 520 μ.Χ.» — the page's «περί», about, is why the display says about 520."
+    },
+    "death": {
+      "earliest": 576,
+      "latest": 576,
+      "display": "576",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησε το έτος 576 μ.Χ.», and the page heads him «(520 - 576)»."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

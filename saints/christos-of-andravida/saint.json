@@ -1,0 +1,63 @@
+{
+  "slug": "christos-of-andravida",
+  "display_name": "Christos of Andravida",
+  "names": [
+    {
+      "form": "Χρίστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαρτίου, «Άγιοι Χρίστος ο Ιερέας και Πανάγος οι Νεομάρτυρες», with the rank words left off. The body of the page writes «ο δε θαυμάσιος Χριστός (Χρίστος)», giving the same two spellings."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαρτίου — «Άγιοι Χρίστος ο Ιερέας και Πανάγος οι Νεομάρτυρες»",
+        "url": "https://www.saint.gr/03/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The page keeps the two new martyrs of Elis together and says «Οι άγιοι τιμώνται στις 9 Μαρτίου και η ακολουθία τους συμψάλλεται με την ακολουθία των τεσσαράκοντα μαρτύρων» — their service is sung together with that of the forty martyrs of the same day. It quotes an older account throughout and prints no hymn of their own. It heads Christos «(; - 1716)» and dates his beheading «εις τας εννέα του Μαρτίου μηνός» of that year, the day the calendar keeps him on."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1716,
+      "latest": 1716,
+      "display": "1716",
+      "basis": "traditional",
+      "note": "saint.gr: «Ετελειώθη δε ο θαυμάσιος Χρίστος εις τας εννέα του Μαρτίου μηνός, τον ίδιον χρόνον όπου εμαρτύρησεν και ο ιερός Πανάγιος (1716)», and the page heads him «(; - 1716)»."
+    }
+  },
+  "related": [
+    "panagos-of-gastouni"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

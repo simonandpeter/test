@@ -6,6 +6,11 @@
       "form": "Leontie",
       "lang": "ro",
       "note": "Read out of the list of the forty names in doxologia.ro's life for 9 martie: «Iar numele acestor patruzeci de Sfinți Mucenici sunt acestea: „Chirion, Candid, Domnos, … Meliton și Aglaie”»."
+    },
+    {
+      "form": "Λεόντιος",
+      "lang": "el",
+      "note": "Read out of the list of the forty names on saint.gr's page for the company, «Κατά τους Παρισινούς Κώδικες 1575 και 1476 τα ονόματα τους ήταν: … Λεόντιος …», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαρτίου — «Άγιοι Σαράντα Μάρτυρες που μαρτύρησαν στη Σεβάστεια»",
+        "url": "https://www.saint.gr/03/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The page for the company enumerates the forty and gives the names «Κατά τους Παρισινούς Κώδικες 1575 και 1476», after the Paris codices 1575 and 1476; that list prints «δυο Γοργόνιοι», two Gorgonii, and adds that some codices carry names beyond the forty, «όπως αυτά των Αγίων Αειθάλα, άλλου Γοργονίου». It puts the arrest at Sebaste under the eparch Agricolas in the reign of Licinius, gives no year, and says the empress Pulcheria found the relics in 438 in the church of St Thyrsus. Their synaxis «ετελείτο στο αγιότατο Μαρτύριό τους πλησίον του Χαλκού Τετραπύλου»."
     },
     {
       "church": "serbian",
@@ -87,9 +102,48 @@
         "text": "Leaving behind the whole army of the world, you clung to the Master who is in heaven, victory-bearers of the Lord, holy forty martyrs. For having passed through fire and through water, blessed ones, you worthily received glory out of heaven and a multitude of crowns.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείω Πνεύματι, συγκροτηθέντες, δῆμος ὤφθητε, τροπαιοφόρος, Ἀθλοφόροι Χριστοῦ Τεσσαράκοντα, διὰ πυρὸς γὰρ καὶ ὕδατος ἔνδοξοι, δοκιμασθέντες λαμπρῶς ἐδοξάσθητε. Ἀλλ' αἰτήσασθε, Τριάδα τὴν ὑπερούσιον, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως, on the page of Άγιοι Σαράντα Μάρτυρες που μαρτύρησαν στη Σεβάστεια. The page prints two further apolytikia, a second kontakion, a megalynarion, an oikos and a kathisma for the company; the first apolytikion and the first kontakion are the ones taken, and all of them name the Τεσσαράκοντα and are the company's own service.",
+        "url": "https://www.saint.gr/33/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Drawn up together by the divine Spirit, you were shown to be a trophy-bearing company, forty victory-bearers of Christ; for having been tried by fire and by water, glorious ones, you were brightly glorified. Ask therefore of the Trinity beyond being that great mercy be granted to us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ.",
+      "text": "Συντεταγμένοι εὐσεβείᾳ καὶ στερρότητι μαρτυρικῶς τὸν δυσμενῆ ἐθριαμβεύσατε, Τεσσαράκοντα γενναῖοι Χριστοῦ ὁπλῖται· Ἀλλ’ ὡς σύμμορφοι ἐν ἄθλοις καὶ ἐν χάριτι, Ἐν ἀγάπῃ καὶ εἰρήνῃ συντηρήσατε τοὺς κραυγάζοντας, χαίροις ἅγιον σύνταγμα.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ, on the same page, which prints a second kontakion in Ἦχος πλ. β’ as well.",
+        "url": "https://www.saint.gr/33/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ranged together in piety and in steadfastness, you triumphed over the enemy as martyrs, brave forty soldiers of Christ. As you are of one form in your contests and in grace, keep in love and in peace those who cry to you: hail, holy regiment.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "candidus-of-the-forty-martyrs",
+    "aglaius-of-the-forty-martyrs",
+    "pulcheria-the-empress"
+  ]
 }

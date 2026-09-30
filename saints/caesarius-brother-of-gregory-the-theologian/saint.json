@@ -1,0 +1,72 @@
+{
+  "slug": "caesarius-brother-of-gregory-the-theologian",
+  "display_name": "Caesarius, brother of Gregory the Theologian",
+  "names": [
+    {
+      "form": "Καισάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαρτίου, «Άγιος Καισάριος αδελφός Γρηγορίου Θεολόγου», with the rank word and the kinship clause left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "physician"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαρτίου — «Άγιος Καισάριος αδελφός Γρηγορίου Θεολόγου»",
+        "url": "https://www.saint.gr/03/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(330 - 368)» and dates his death to 9 March 368, the day the calendar keeps him on. It names his father, his mother and his sister and gives each of them another day — the Theologian on 25 Ιανουαρίου, his father on 1 Ιανουαρίου, Nonna on 5 Αυγούστου, Gorgonia on 23 Φεβρουαρίου — and prints no hymn for Caesarius."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 330,
+      "latest": 330,
+      "display": "330",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στη Ναζιανζό της Καππαδοκίας το έτος 330 μ.Χ.», and the page heads him «(330 - 368)»."
+    },
+    "death": {
+      "earliest": 368,
+      "latest": 368,
+      "display": "368",
+      "basis": "traditional",
+      "note": "saint.gr: «Αρρώστησε βαριά και στις 9 Μαρτίου 368 μ.Χ. πέθανε» — he fell gravely ill and died on 9 March 368."
+    }
+  },
+  "related": [
+    "gregory-the-theologian",
+    "gregory-the-elder",
+    "nonna-mother-of-gregory-the-theologian",
+    "gorgonia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

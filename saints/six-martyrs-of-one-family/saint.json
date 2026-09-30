@@ -1,0 +1,51 @@
+{
+  "slug": "six-martyrs-of-one-family",
+  "display_name": "The Six Martyrs of One Family (9 March)",
+  "names": [
+    {
+      "form": "Άγιοι Παππούς, Γιαγιά, Πατέρας, Μητέρα και τα Δύο Παιδιά τους",
+      "lang": "el",
+      "note": "saint.gr prints no personal name for any of the six, so its descriptive line for 9 Μαρτίου is kept whole, as the corpus keeps «Άγιοι Έξι Μάρτυρες» for another nameless company."
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαρτίου — «Άγιοι Παππούς, Γιαγιά, Πατέρας, Μητέρα και τα Δύο Παιδιά τους»",
+        "url": "https://www.saint.gr/03/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The page names none of the six, gives no place, no year and no persecutor, and says of them one sentence, «Μαρτύρησαν δια ξίφους», beside two iambic lines. It enumerates nobody, so the six are kept as one entry."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

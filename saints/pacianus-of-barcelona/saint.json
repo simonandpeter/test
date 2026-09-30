@@ -1,0 +1,62 @@
+{
+  "slug": "pacianus-of-barcelona",
+  "display_name": "Pacianus of Barcelona",
+  "names": [
+    {
+      "form": "Πασιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαρτίου, «Άγιος Πασιανός Επίσκοπος Βαρκελώνης της Ισπανίας», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Barcelona",
+  "types": [
+    "bishop",
+    "apologist"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαρτίου — «Άγιος Πασιανός Επίσκοπος Βαρκελώνης της Ισπανίας»",
+        "url": "https://www.saint.gr/03/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 390)», puts him in the fourth century at Barcelona in Catalonia, says he had been married and that God took his wife to himself, puts his consecration as bishop «περί το 363 μ.Χ.», and names the Arians and the Novatianists as the heresies he wrote against. It gives no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 390,
+      "latest": 390,
+      "display": "390",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Πασιανός κοιμήθηκε με ειρήνη το έτος 390 μ.Χ.», and the page heads him «(; - 390)», leaving the year of his birth a question mark."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

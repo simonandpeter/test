@@ -1,0 +1,62 @@
+{
+  "slug": "cleopas-of-russia",
+  "display_name": "Cleopas of Russia",
+  "names": [
+    {
+      "form": "Κλεόπας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαρτίου, «Όσιος Κλεόπας εκ Ρωσίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαρτίου — «Όσιος Κλεόπας εκ Ρωσίας»",
+        "url": "https://www.saint.gr/03/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1778)» and holds one sentence about him, that he was a disciple of Paisius Velichkovsky, whom the same site keeps on 15 Νοεμβρίου, and that he fell asleep in peace in 1778. It gives him no place in Russia, no monastery and no hymn. The corpus's other Cleopas is the apostle of the Romanian 30 October."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1778,
+      "latest": 1778,
+      "display": "1778",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Κλεόπας ήταν μαθητής του Οσίου Παϊσίου Βελιτσκόφσκυ (τιμάται 15 Νοεμβρίου ) και κοιμήθηκε με ειρήνη το έτος 1778 μ.Χ.», and the page heads him «(; - 1778)», leaving the year of his birth a question mark."
+    }
+  },
+  "related": [
+    "paisius-of-neamt"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

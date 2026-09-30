@@ -12,4 +12,8 @@ The cage covered his whole body, and the tyrant ordered torches lit and the cage
 
 All this happened in the city of Nicomedia. doxologia names Maximian but gives no year, and prints no hymn for him.
 
-*After doxologia.ro's calendar for 9 martie — [the day](https://doxologia.ro/9-martie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-urpasian); read 19 September 2026.*
+The Greek calendar keeps him on the same day, and saint.gr says more of him than the Romanian line does. He belonged to the order of the senators and lived at the beginning of the fourth century. When Diocletian published his edict against the Christians he first called the senators together and declared that any one of them who was a Christian would be pardoned if he said so at once and renounced Christ. Urpasian heard the emperor out and, instead of any other answer, took off the insignia of his own rank with his own hands and handed them over to him.
+
+Diocletian was angered and ordered him tortured. He was scourged with ox sinews and thrown half dead into prison, and afterwards various of his friends among the senators came and tried to persuade him to sacrifice to the idols and keep his office; he stayed by his decision, and his death was then decreed. They opened his sides with iron instruments and set lighted lamps in the wounds, and the burns together with the smoke brought his martyr's end. The page prints two distichs for him, one of which calls the cage a chariot of fire and the torches his four-horse team of ascent, and gives no year.
+
+*After doxologia.ro's calendar for 9 martie — [the day](https://doxologia.ro/9-martie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-urpasian); read 19 September 2026; and saint.gr's calendar for 9 Μαρτίου — [the day](https://www.saint.gr/03/09/index.aspx) and [the life](https://www.saint.gr/30/saint.aspx), read 30 September 2026.*

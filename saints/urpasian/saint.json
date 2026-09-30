@@ -6,6 +6,11 @@
       "form": "Urpasian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 martie, «Sfântul Mucenic Urpasian»."
+    },
+    {
+      "form": "Ουρπασιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαρτίου, «Άγιος Ουρπασιανός», with the rank word left off. The body of the page writes it «O Ούρπασιανός», with the article."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαρτίου — «Άγιος Ουρπασιανός»",
+        "url": "https://www.saint.gr/03/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The page puts him in the order of the senators and at the beginning of the fourth century, «Άνηκε στην τάξη των συγκλητικών, και έζησε στις αρχές του 4ου αιώνα», names Diocletian's edict as the occasion, prints two distichs for him and gives no year."
     },
     {
       "church": "serbian",
@@ -45,5 +60,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "early 4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Άνηκε στην τάξη των συγκλητικών, και έζησε στις αρχές του 4ου αιώνα» — he belonged to the order of the senators and lived at the beginning of the fourth century. The page gives no year, so the bounds are kept to the century it names and no narrower, and the display says what the page says."
+    }
   }
 }

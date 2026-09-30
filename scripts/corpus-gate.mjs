@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'βιταλιοσ vitalis vitalis-of-sicily':
+    'Two men: the Vitalis of 11 January, whom the Romanian calendar keeps too, and Vitalis of Sicily on 9 March.',
   'σιλβανοσ silvanus-8-march silvanus-of-palestine':
     'Two men: the Silvanus of 8 March and Silvanus of Palestine on 18 January.',
   'λαζαροσ lazarus-of-murom lazarus-of-tripoli-in-the-peloponnese':

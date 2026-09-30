@@ -1,0 +1,13 @@
+# Panagos of Gastouni
+
+Panagos was one of the two new martyrs of Elis whom saint.gr keeps together on 9 Μαρτίου. The page names him «ο μεν άγιος και ιερός Πανάγιος (Πανάγος)» and puts his birth in a place of the ancient Elis which bore its own old name and was called «κατά δε την βαρβαρικήν συνήθειαν Γαστούνην», Gastouni. His parents had gone over to Islam under the pressure and the persecutions of the conquerors; he himself advanced in virtue, was esteemed among his countrymen, and under the Venetians was repeatedly elected a synodikos of Gastouni.
+
+In 1715 the Peloponnese passed back under the Turks, and those who would not bow to Allah were plundered and killed. Panagos was called by Osman, the Turkish governor of the district, «να αρνηθή την ευσέβειαν», to deny his piety, and answered him without fear, saying that he had been reared a Christian and that Christ was his breath, his boast and his gladness, so that what was asked of him was impossible. The pasha did not press him further, and advised him, as one he was fond of, to withdraw elsewhere until the persecution ceased, or else to follow him to Corfu out of danger.
+
+Panagos had it in mind to go to Corfu, but fell gravely ill. When he had his strength again he was summoned once more to present himself and answer, or renounce his piety and accept Mohammedanism, on pain of deprivation, torments, the confiscation of his property and death by the sword. Going under escort he prayed inwardly, and coming before Murat Aga he confessed his faith in Christ plainly and with strength of soul, laughing at what the page calls the babblings of Mohammed. The judge sentenced him to be beheaded, and he followed the executioner of his own will and with much joy.
+
+The page dates the beheading «την πρώτην του Μαρτίου μηνός κατά το 1716» and says his holy relic was left lying two days in that same place for the dogs and the birds to eat, so that the faithful might not take it and bury it; the body took no harm, and the animals respected it. His killers then cut off the head, roasted it and threw it down nearby for the dogs, and they would not touch that either, so that even his adversaries wondered and allowed the Christians on the fourth day to take the relic and bury it in the church of St Nicholas of the same town.
+
+His memory is kept on 9 Μαρτίου, the day on which [Christos](/saints/christos-of-andravida), the priest of Andravida, was killed in the same year and buried afterwards in the same tomb; and the service of the two of them, saint.gr says, is sung together with that of the forty martyrs of that day.
+
+*After saint.gr's calendar for 9 Μαρτίου — [the day](https://www.saint.gr/03/09/index.aspx) and [the life](https://www.saint.gr/4068/saint.aspx); read 30 September 2026.*

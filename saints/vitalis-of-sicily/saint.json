@@ -1,0 +1,62 @@
+{
+  "slug": "vitalis-of-sicily",
+  "display_name": "Vitalis of Sicily",
+  "names": [
+    {
+      "form": "Βιτάλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαρτίου, «Όσιος Βιτάλιος εκ Σικελίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαρτίου — «Όσιος Βιτάλιος εκ Σικελίας»",
+        "url": "https://www.saint.gr/03/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 994)», names his birthplace Castronovo in Sicily and his parents Sergios and Chrysonike, and follows him to Agkyra, Rome, Calabria, the mountains of Tourri and Armento, Bari and Rapolla. The corpus keeps another Vitalis, a bare name on the Greek 11 January; this is the man of the Greek 9 March, with his own life and his own year."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 994,
+      "latest": 994,
+      "display": "994",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Βιτάλιος κοιμήθηκε με ειρήνη το έτος 994 μ.Χ.», and the page heads him «(; - 994)». It puts his birth «κατά τον 10ο αιώνα μ.Χ.» and gives no year for it."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}
