@@ -1,0 +1,69 @@
+{
+  "slug": "basil-of-rostov",
+  "display_name": "Basil of Rostov",
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαρτίου, «Άγιος Βασίλειος βασιλεύς Ροστώβ της Ρωσίας», with the rank word, the title and the country left off. The day's line calls him βασιλεύς, king; the body of the page calls him πρίγκιπας, prince, throughout, and that is the word this folder's `types` carries."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prince"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr puts him in Russia, so that calendar is the one most likely to hold him, and it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαρτίου — «Άγιος Βασίλειος βασιλεύς Ροστώβ της Ρωσίας»",
+        "url": "https://www.saint.gr/03/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(1209 - 1238)» and dates the day it keeps him on to the battle he was taken in: «Στις 4 Μαρτίου 1238 μ.Χ. οι Ρώσοι, με επικεφαλής τους Αγίους Βασίλειο και Γεώργιο, έδωσαν την τελική μάχη». It names his father Constantine Vsevolodovich, great prince of Rostov and from 1216 of Vladimir, his mother the princess Agatha-Anna Mstislavovna who became a nun and died on 24 January 1221, his uncle and guardian St George prince of Vladimir whose memory it puts on 4 February, his wife Maria daughter of St Michael of Chernigov whose memory it puts on 20 September, and his first son Boris. It dates his father's death to 2 February 1218, the battle against the Bulgars to 1219, the defeat on the river Kalka to 16 June 1223, the Tatar conquest of much of the Russian land to 1236, the encirclement of Vladimir to 3 February 1238 and its fall to the seventh, when the bishop Mitrophanes died with thousands of women and children. It has the barbarians hang him in the forest of Shernsk after he answered them «Δεν μπορείτε να μου πάρετε την πίστη στον Χριστό», and the bishop Cyril gather the relics and bury them in the cathedral of Rostov. It prints no distich and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1209,
+      "latest": 1209,
+      "display": "1209",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Βασίλειος γεννήθηκε στις 7 Δεκεμβρίου 1209 μ.Χ.», and the page heads him «(1209 - 1238)»."
+    },
+    "death": {
+      "earliest": 1238,
+      "latest": 1238,
+      "display": "1238",
+      "basis": "attested",
+      "note": "saint.gr puts the final battle on «Στις 4 Μαρτίου 1238 μ.Χ.» and has him taken and hanged after it; the page heads him «(1209 - 1238)»."
+    }
+  },
+  "related": [
+    "michael-of-chernigov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

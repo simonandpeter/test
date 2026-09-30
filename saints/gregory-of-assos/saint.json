@@ -1,0 +1,63 @@
+{
+  "slug": "gregory-of-assos",
+  "display_name": "Gregory of Assos",
+  "office": "Bishop of Assos in Mysia",
+  "names": [
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαρτίου, «Άγιος Γρηγόριος Επίσκοπος Άσσου», with the rank word and the see left off. The body of the page gives his name in the world as George, «τον ονόμασαν Γεώργιο», and says the name Gregory was given him at his tonsure."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "revised-julian",
+        "note": "The page's own closing sentence puts his memory elsewhere: «Η Ορθόδοξη Εκκλησία μας τιμά την ιερά μνήμη του στις 10 Ιουλίου, στην παλαιά μονή και το γεγονός της μετακομιδής των ιερών λειψάνων αυτού την πρώτη Κυριακή μετά τις 10 Νοεμβρίου» — the Church honours his memory on 10 July, at the old monastery, and the translation of his relics on the first Sunday after 10 November (https://www.saint.gr/3794/saint.aspx, read 30 September 2026). The corpus keeps one feast to a church, so this row records the day page that was read, the fourth of March. The translation's day — a Sunday inside a fixed window — is neither a fixed day nor a Pascha offset and the schema cannot hold it; it is a translation of relics in any case, and not a person."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαρτίου — «Άγιος Γρηγόριος Επίσκοπος Άσσου»",
+        "url": "https://www.saint.gr/03/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1150)» and then offers two years for his death in the body, «το έτος 1150 μ.Χ. (ή το 1185 μ.Χ.)», choosing neither; the disagreement is recorded as the interval in `dates`. It names the village of Akorni on Lesbos as his birthplace and his parents as George and Maria, the hieromonk Agathon whom he followed to a monastery of the East for three years and on whose recommendation he was elected bishop of Assos in Mysia, a hesychasterion of the Jordan where he was tonsured and ordained presbyter, and Mount Priantos, or Priyami, on Lesbos where he founded the monastery he died in. It dates the excavations of the old monastery by Jacob (Kleombrotos), metropolitan of Mytilene, to 1935, and the translation of the relics to the church of St George of Skopelos on Lesbos to 16 November 1935. It prints the distich «Eκ του τάφου σου Γρηγόριε εκρέει, / Ύδωρ γλύκιστον δόξαν εις Θεού μάκαρ», and gives no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1150,
+      "latest": 1185,
+      "display": "1150 or 1185",
+      "basis": "traditional",
+      "note": "saint.gr gives two years in one clause and chooses neither: «Ο Άγιος πέθανε σε μεγάλη ηλικία το έτος 1150 μ.Χ. (ή το 1185 μ.Χ.)» — he died at a great age in the year 1150, or in 1185. The head of the page carries only the first of them, «(; - 1150)». The interval spans both readings and the disagreement is the finding; no year of birth is given."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

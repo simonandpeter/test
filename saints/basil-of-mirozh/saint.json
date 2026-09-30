@@ -1,0 +1,63 @@
+{
+  "slug": "basil-of-mirozh",
+  "display_name": "Basil of Mirozh",
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαρτίου, «Άγιοι Βασίλειος του Μιρώζ και Ιωάσαφ του Σνετνογκόρσκ οι Οσιομάρτυρες», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr puts him at Pskov, so that calendar is the one most likely to hold him, and it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαρτίου — «Άγιοι Βασίλειος του Μιρώζ και Ιωάσαφ του Σνετνογκόρσκ οι Οσιομάρτυρες»",
+        "url": "https://www.saint.gr/03/04/index.aspx",
+        "year": 2026
+      },
+      "note": "One page holds the two of them and heads each «(; - 1299)». Its whole notice is three sentences: they lived in the thirteenth century in the region of Pskov in Russia; Basil was abbot of the monastery of the Transfiguration of the Saviour of Mirozh and Joasaph abbot of the monastery of the Nativity of the Theotokos of Mount Snatna; and they were martyred in the year 1299, when the Germans attacked Pskov and the monasteries of the region. Because the line names both, each is kept as a folder of his own. The page gives no place of birth, no year for it, no manner of death, no relic, no distich and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1299,
+      "latest": 1299,
+      "display": "1299",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι μαρτύρησαν κατά το έτος 1299 μ.Χ., όταν οι Γερμανοί επιτέθηκαν εναντίων του Πσκωφ και των μοναστηριών της περιοχής», and the page heads him «(; - 1299)». It gives no year of birth, only the thirteenth century for the two of them."
+    }
+  },
+  "related": [
+    "joasaph-of-snetogorsk"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Gherasim",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 martie, «Sfântul Cuvios Gherasim de la Iordan»."
+    },
+    {
+      "form": "Γεράσιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαρτίου, «Όσιος Γεράσιμος ο Ιορδανίτης», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -14,7 +19,8 @@
     "abbot"
   ],
   "related": [
-    "cyriacus-the-anchorite"
+    "cyriacus-the-anchorite",
+    "euthymius-the-great"
   ],
   "dates": {
     "death": {
@@ -47,8 +53,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαρτίου — «Όσιος Γεράσιμος ο Ιορδανίτης»",
+        "url": "https://www.saint.gr/03/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 475)», gives Lycia as his birthplace and the fifth century as his time, and tells at length the episode this folder's Romanian life passes over: that as a young man he was drawn into the Monophysite heresy by the followers of the pseudo-patriarch Theodosius, who held the throne of Jerusalem for twenty months in 451–453 in the absence of the patriarch Juvenal and with the help of the empress Eudocia before her return to orthodoxy; and that an ascetic named Euthymius, in the desert of Rouva, taught him the truth of the two natures and brought him back to the Church. It puts his tonsure in 451, his cenobium near the city of Baithagla, his vision of Euthymius the Great's end (which it reports from the narrative of Cyriacus the Anchorite) on 19 January 473, and his own repose in 475 under the patriarch Anastasius I, leaving the Lavra to his fellow ascetics Stephen and Basil. It names a portion of his relic at the monastery of Prousos in Eurytania. It closes with a note of its own: «Όπως μας πληροφορεί ο συναξαριστής του Αγίου Νικοδήμου, ο Όσιος Γεράσιμος έζησε την εποχή του Κωνσταντίνου του Πωγωνάτου τον 7ο μ.Χ. κάτι όμως που δεν φαίνεται πιθανό» — the synaxarist of St Nicodemus has him in the seventh century under Constantine Pogonatus, which the site says does not seem likely. Both the year already in this folder and the site's own preference stand at 475, so the corpus's date is unchanged and the rival reading is recorded here."
     },
     {
       "church": "serbian",
@@ -70,6 +86,40 @@
       },
       "english": {
         "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou wast made a light to the world, shining with wonders, Gerasimus our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Χριστώ εκ νεότητος, ακολούθησας πιστώς, ζωήν την ισάγγελον, επολιτεύσω σαφώς. Γεράσιμε Όσιε. συ γαρ εν Ιορδάνου, διέλαμψας τη χώρα, θήρα καθυποτάσσεις, τη στερρά σου ασκήσει. Χριστός γαρ ον εδόξασας, λαμπρος σε εθαυμάστωσε.",
+      "source": {
+        "text": "saint.gr — «Έτερον Ἀπολυτίκιον (Κατέβασμα)», Ἦχος δ', Ταχὺ προκατάλαβε, on the page of Όσιος Γεράσιμος ο Ιορδανίτης. Of the three apolytikia the page prints this is the one proper to him: it names the Jordan and the taming of the beast. The first two, in Ἦχος α’, are the common of a venerable — «Τῆς ἐρήμου πολίτης καί ἐν σώματι ἄγγελος» and «Τῆς ἐρήμου οἰκήτωρ, Ἀσκητῶν ἀκροθίνιον» — with his name set into each; the page also prints a kathisma, for which the corpus's schema has no kind. The proper apolytikion and the kontakion are the two taken here.",
+        "url": "https://www.saint.gr/3791/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Following Christ faithfully from thy youth, thou didst plainly live the life of the angels, O venerable Gerasimus; for thou didst shine out in the country of the Jordan, and by thy steadfast ascesis thou dost subdue the wild beast. For Christ, whom thou didst glorify, hath made thee brightly wonderful.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ὡς ἀστήρ οὐράνιος ἐξανατείλας, ἱερῶς ἐφαίδρυνας, τῶν ἀρετῶν σου τῷ φωτί, τοῦ Ἰορδάνου τήν ἔρημον, Ὅσιε Πάτερ, θεόφρον Γεράσιμε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of Όσιος Γεράσιμος ο Ιορδανίτης. It names him and names the desert of the Jordan.",
+        "url": "https://www.saint.gr/3791/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Rising like a heavenly star, thou didst make bright in a holy manner, with the light of thy virtues, the desert of the Jordan, O venerable and God-minded father Gerasimus.",
         "rendered": "site"
       }
     }

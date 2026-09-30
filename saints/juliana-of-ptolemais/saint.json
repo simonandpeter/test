@@ -10,6 +10,11 @@
       "form": "Iuliana",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 martie, «Sfânta Muceniţă Iuliana»."
+    },
+    {
+      "form": "Ιουλιανή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαρτίου, «Άγιοι Παύλος και Ιουλιανή και οι μαζί μ' αυτούς μαρτυρήσαντες Στρατόνικος, Κοδράτος και Ακάκιος οι δήμιοι», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -56,8 +61,19 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 17 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "revised-julian",
+        "note": "saint.gr's own page for them closes «Η μνήμη των Αγίων επαναλαμβάνεται και στις 17 Αυγούστου» — their memory is kept again on 17 August (https://www.saint.gr/3792/saint.aspx, read 30 September 2026). That is the day this folder's Russian row already holds, in the Julian reckoning. The corpus keeps one feast to a church, so her Greek row is the day page that was read."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαρτίου — «Άγιοι Παύλος και Ιουλιανή και οι μαζί μ' αυτούς μαρτυρήσαντες Στρατόνικος, Κοδράτος και Ακάκιος οι δήμιοι»",
+        "url": "https://www.saint.gr/03/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The page makes Paul and Juliana brother and sister and sets them «στα χρόνια του αυτοκράτορα Αυρηλιανού (270 - 275 μ.Χ.)», which is the reign this folder's own date already rests on. It puts them at Ptolemais, has them denounced to Aurelian as he passed through their city, and names the three executioners — Stratonicus, Codratus and Acacius — who marvelled at their courage under torture, confessed Christ and were beheaded on the spot; the two were then burnt with lighted torches and beheaded. The day's line names all three executioners, so each is kept as a folder of his own. The etymology block the page prints over her name is headed ΙΟΥΛΙΑΝΟΣ, the masculine form, which is a note on the word and not the form her line prints. The page names no relic and gives no hymn."
     },
     {
       "church": "serbian",
@@ -69,7 +85,10 @@
     "life": "life.md"
   },
   "related": [
-    "paul-of-ptolemais"
+    "paul-of-ptolemais",
+    "stratonicus-the-executioner",
+    "codratus-the-executioner",
+    "acacius-the-executioner"
   ],
   "hymns": [
     {

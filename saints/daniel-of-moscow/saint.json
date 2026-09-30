@@ -6,6 +6,11 @@
     {
       "form": "Даниил Московский",
       "lang": "ru"
+    },
+    {
+      "form": "Δανιήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαρτίου, «Άγιος Δανιήλ ο Πρίγκιπας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -52,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 30 August (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαρτίου — «Άγιος Δανιήλ ο Πρίγκιπας»",
+        "url": "https://www.saint.gr/03/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(1261 - 1303)» and gives the same particulars this folder already holds from the Russian calendar: born at Vladimir in 1261, fourth son of St Alexander Nevsky, whose memory it puts on 23 November, and of Vassa; his father dead two years after his birth; his mother buried in the church of the Nativity of Christ at the monastery of the Nativity of the Theotokos in Vladimir and called «δίκαιη», the righteous, by the faithful. It puts his arrival at Moscow in 1272 and the church and monastery he built at once there in honour of his patron St Daniel the Stylite, whose memory it puts on 11 December; and after wars against the Tatars and internal conflicts it has him, by then ill, tonsured and given the angelic habit in the monastery of Daniel, and reposing in 1303. Its day is the day of his repose, which this folder's Russian row already names as 4 March Julian while carrying the finding of his relics on 30 August; the Greek row here records the day page that was read. The page names no relic and gives no hymn."
     },
     {
       "church": "serbian",
@@ -153,6 +168,7 @@
     }
   ],
   "related": [
-    "alexander-nevsky"
+    "alexander-nevsky",
+    "daniel-the-stylite"
   ]
 }

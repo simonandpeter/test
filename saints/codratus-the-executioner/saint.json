@@ -1,0 +1,56 @@
+{
+  "slug": "codratus-the-executioner",
+  "display_name": "Codratus, executioner of Paul and Juliana",
+  "names": [
+    {
+      "form": "Κοδράτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαρτίου, «Άγιοι Παύλος και Ιουλιανή και οι μαζί μ' αυτούς μαρτυρήσαντες Στρατόνικος, Κοδράτος και Ακάκιος οι δήμιοι», with the rank word and the office «ο δήμιος» left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαρτίου — «Άγιοι Παύλος και Ιουλιανή και οι μαζί μ' αυτούς μαρτυρήσαντες Στρατόνικος, Κοδράτος και Ακάκιος οι δήμιοι»",
+        "url": "https://www.saint.gr/03/04/index.aspx",
+        "year": 2026
+      },
+      "note": "One page holds the five of them. It sets Paul and Juliana at Ptolemais «στα χρόνια του αυτοκράτορα Αυρηλιανού (270 - 275 μ.Χ.)», and says of the three executioners: «Και ενώ οι δήμιοι, Στρατόνικος, Κοδράτος και Ακάκιος, τους βασάνιζαν, θαύμασαν την ψυχική τους ανδρεία, ομολόγησαν τον Χριστό και αποκεφαλίστηκαν επί τόπου» — while the executioners were torturing them they marvelled at the courage of their souls, confessed Christ and were beheaded on the spot. The day's line names all three, so each is kept as a folder of his own. Over the three the page prints one distich, «Τρεῖς ἐκχέαντες αἷμα πολλῶν ὡς ὕδωρ, / Σοφῶν αἷμα, Χριστὲ σοὶ χέουσιν ἐκ ξίφους». It gives none of the three a year of birth, a country, a relic or a hymn, and the only year on the page is the reign it gives Aurelian. It adds that the memory of these saints is kept again on 17 August. The corpus keeps two saints whose name is the same word in its commoner Greek spelling, the apostle Quadratus and Quadratus of Corinth, and neither stands on this day or is named on this page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "paul-of-ptolemais",
+    "juliana-of-ptolemais",
+    "stratonicus-the-executioner",
+    "acacius-the-executioner"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

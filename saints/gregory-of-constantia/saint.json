@@ -1,0 +1,55 @@
+{
+  "slug": "gregory-of-constantia",
+  "display_name": "Gregory of Constantia",
+  "office": "Bishop of Constantia in Cyprus",
+  "names": [
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαρτίου, «Άγιοι Γρηγόριος Επίσκοπος Κωνσταντίας της Κύπρου και Αδριανός», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαρτίου — «Άγιοι Γρηγόριος Επίσκοπος Κωνσταντίας της Κύπρου και Αδριανός»",
+        "url": "https://www.saint.gr/03/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole notice is a citation and a guess: «Η μνήμη του Αγίου Γρηγορίου αναφέρεται στον Πατμιακό Κώδικα 266 ως εξής: „Τῶν Ὁσίων Πατέρων ἠμῶν Γρηγορίου Κωνσταντίας τῆς Κύπρου [καί] Ἀδριανοῦ“. Ίσως ο Άγιος Αδριανός να ήταν και αυτός Επίσκοπος στην Κύπρο.» — the memory of St Gregory is mentioned in the Patmos Codex 266 in these words, of our venerable fathers Gregory of Constantia in Cyprus and Adrianus; perhaps St Adrianus too was a bishop in Cyprus. So the only source is a manuscript entry, there is no century and no life, and the «Ίσως», perhaps, is the site's own and is not acted on. The page prints one distich, over Gregory only: «Ἐλαφος ὥσπερ ἐκ βρόχου ῥυσθεὶς βίου, / Ἄνεισι Γρηγόριος, ἔνθα ζῶν ὕδωρ». No relic and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "adrianus-of-cyprus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

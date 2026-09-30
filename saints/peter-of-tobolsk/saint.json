@@ -1,0 +1,61 @@
+{
+  "slug": "peter-of-tobolsk",
+  "display_name": "Peter of Tobolsk",
+  "office": "Metropolitan of Tobolsk",
+  "names": [
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαρτίου, «Άγιος Πέτρος Μητροπολίτης Τομπόλσκ», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr calls him a Russian saint, so that calendar is the one most likely to hold him, and it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαρτίου — «Άγιος Πέτρος Μητροπολίτης Τομπόλσκ»",
+        "url": "https://www.saint.gr/03/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1820)» and its whole notice is one sentence: «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου» — we have no details of the Russian saint's life. The year in the head is the only date it gives and the body corroborates none of it, so the basis here is the head alone. Beside his name the page links the synaxis of all the saints of Siberia, which is a company and not a person and is not kept here, and an OCA page; it prints no distich and gives no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1820,
+      "latest": 1820,
+      "display": "1820",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Πετρος Μητροπολιτης Τομπολσκ (; - 1820)». The body of the page says only «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου» and repeats no year, so this rests on the head alone and no year of birth is given."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

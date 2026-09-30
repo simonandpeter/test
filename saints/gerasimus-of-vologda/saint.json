@@ -1,0 +1,63 @@
+{
+  "slug": "gerasimus-of-vologda",
+  "display_name": "Gerasimus of Vologda",
+  "names": [
+    {
+      "form": "Γεράσιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Μαρτίου, «Όσιος Γεράσιμος της Βολογκντά», with the rank word and the place left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr puts him in Russia, so that calendar is the one most likely to hold him, and it was not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Μαρτίου — «Όσιος Γεράσιμος της Βολογκντά»",
+        "url": "https://www.saint.gr/03/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1178)» and gives him four sentences: born in Russia in the twelfth century, an ascetic first at the monastery of Glushen and afterwards at the monastery of Glinek near Kyiv, arrived in the region of Vologda on 19 August 1147, and reposed in peace in 1178. It gives no place of birth, no elder, no foundation of his own, no relic, no distich and no hymn. The same Greek day keeps Gerasimus of the Jordan, whom the corpus already holds; the two are told in wholly different terms and the corpus keeps four other men of the name besides."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1178,
+      "latest": 1178,
+      "display": "1178",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Γεράσιμος, κοιμήθηκε με ειρήνη το έτος 1178 μ.Χ.», and the page heads him «(; - 1178)». Of his birth it says only «γεννήθηκε στην Ρωσία τον 12ο αιώνα μ.Χ.», in Russia in the twelfth century, with no year."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "gerasimus-of-the-jordan"
+  ]
+}

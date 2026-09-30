@@ -115,6 +115,22 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'στρατονικοσ stratonicus-companion-of-hermylus stratonicus-the-executioner':
+    'Two men: the companion of Hermylus on 13 January, which the Romanian calendar keeps too, and the executioner of 4 March.',
+  'πετροσ peter-abesalamites peter-companion-of-leucius peter-companion-of-manuel peter-disciple-of-dionysius-of-alexandria peter-of-bulgaria peter-of-capitolias peter-of-damascus peter-of-galatia peter-of-monevata peter-of-sebaste peter-of-tobolsk peter-son-of-john-of-syracuse peter-the-egyptian peter-the-gaoler peter-the-peloponnesian peter-the-sign-bearer':
+    'Sixteen now. The new one is Peter of Tobolsk on 4 March; the other fifteen are read in the el-01-12 and el-02-07 entries for this name form.',
+  'ιωασαφ joasaph-of-alaska joasaph-of-snetogorsk joasaph-of-zographou':
+    'Three men: Alaska on 22 January, Snetogorsk on 4 March and Zographou on 22 September.',
+  'γρηγοριοσ gregory-of-akritas gregory-of-assos gregory-of-constantia gregory-of-moesia gregory-of-novgorod gregory-of-nyssa gregory-of-sinai gregory-the-elder gregory-the-recluse-of-the-caves gregory-the-wonderworker-of-the-caves gregory-uncle-of-eustratius':
+    'Eleven men. The two new ones share 4 March as two lines of the page, Gregory of Assos and Gregory of Constantia; the other nine are read in the el-01-10 entry for this name form.',
+  'γερασιμοσ gerasimus-of-great-perm gerasimus-of-the-jordan gerasimus-of-vologda':
+    'Three men, and two of them share 4 March as two lines of the page: Gerasimus of the Jordan, the fifth-century ascetic of Palestine whom the Romanian calendar keeps there too, and Gerasimus of Vologda. The Vologda folder parts them in its own words and carries the related row for the pair. Great Perm is 29 January.',
+  'βασιλειοσ basil-martyr-6-february basil-of-mirozh basil-of-novgorod basil-of-rostov basil-of-thessalonica basil-the-confessor basil-uncle-of-eustratius':
+    'Seven men. The new one is Basil of Mirozh on 4 March; the other six are read in the el-01-01 and el-02-28 entries for this name form.',
+  'αδριανοσ adrian-of-caesarea adrian-of-canterbury adrian-of-megara adrianus-of-cyprus':
+    'Four men on four Greek days: Caesarea on 3 February, Canterbury on 9 January, Megara on 1 February and Cyprus on 4 March.',
+  'ακακιοσ acacius-of-latros acacius-of-tver acacius-the-executioner':
+    'Three men on three Greek days: Latros on 3 January, Tver on 14 January and the executioner on 4 March.',
   'ζηνων zeno-companion-of-zoilus zeno-of-diospolis zeno-the-courier zeno-the-faster-of-kiev':
     'Four men on four Greek days: the companion of Zoilus on 3 March, Diospolis on 27 September, the courier on 10 February and the faster of Kiev on 30 January.',
   'companion zeno zoilus zeno-companion-of-zoilus zoilus-companion-of-zeno':

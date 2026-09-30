@@ -1,0 +1,11 @@
+# Gregory of Assos
+
+saint.gr says Gregory was born in the village of Akorni on Lesbos, of pious and believing parents, George and Maria, who had prayed warmly for years that God would give them a child; God heard them and gave them a son, whom they named George and brought up on the waters of the orthodox faith and truth. When George went to the Reigning City to finish his studies he came to know the hieromonk Agathon, whom he followed to a monastery of the East where Agathon was abbot, and stayed there three years. Later he went on pilgrimage to Jerusalem, and at a hesychasterion by the river Jordan he was tonsured a monk and ordained presbyter under the name Gregory.
+
+On Agathon's recommendation he was elected bishop of Assos in Mysia. He took up the duties of a bishop with much zeal and did important work, the page says, as a citizen of the Sion above. He ended on Mount Priantos, which the site also calls Priyami, on Lesbos, where he founded a monastery and fell asleep in it in a holy manner, at a great age — in the year 1150, the page says, or in 1185; it prints both and chooses neither.
+
+In 1935 the metropolitan of Mytilene, Jacob Kleombrotos, had the site of the old monastery excavated, and the two-columned Byzantine church with its wide narthex was uncovered, together with the refectory of the monastery and the foundations of other buildings. The finding of the saint's relics and of his tomb, the page says, gave his honour a fresh impulse; on the sixteenth of November 1935 the relics were translated and laid in the church of St George of Skopelos on Lesbos.
+
+The site closes by putting his memory on the tenth of July, at the old monastery, and the translation of his relics on the first Sunday after the tenth of November. The corpus keeps one feast to a church, so those stand as a note on the attestation, and the row records the fourth of March, which is the day page these words were read from. The distich the page prints says that out of his tomb flows the sweetest water, to the glory of God.
+
+*After saint.gr's calendar for 4 Μαρτίου — [the day](https://www.saint.gr/03/04/index.aspx) and [the life](https://www.saint.gr/3794/saint.aspx); read 30 September 2026.*
