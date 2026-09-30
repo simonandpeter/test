@@ -1,0 +1,104 @@
+{
+  "slug": "demetrianus-of-tamassos",
+  "display_name": "Demetrianus of Tamassos",
+  "office": "Bishop of Tamassos in Cyprus",
+  "names": [
+    {
+      "form": "Δημητριανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Ιανουαρίου, «Άγιος Δημητριανός της Ταμασού, ο θαυματουργός», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 27 Ιανουαρίου — «Άγιος Δημητριανός της Ταμασού, ο θαυματουργός»",
+        "url": "https://www.saint.gr/01/27/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Τῶν Κυπρίων τὸ κλέος, Ταμασέων ὁ Πρόεδρος, φύλαξ καὶ φρουρὸς τῶν Περάτων, Δημητριανὲ Πατὴρ ἠμῶν, ἀναδειχθεῖς, διὸ τυφλὸν ἐφώτισας ποτέ, τὸ φῶς ἐνεδίδου τηλαυγῶς, καὶ ἀνέκραξε δὲ οὕτως, τῷ διὰ σοῦ μὲ φωτίσαντι Δόξα σοι. Δόξα τῷ οὕτως εὐδοκήσαντι Θεῶ, δόξα τῷ σὲ θαυμαστώσαντι, δόξα τῷ ἐνεργούντι διὰ σοῦ τοιαῦτα τέρατα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Δημητριανός της Ταμασού, ο θαυματουργός — Ἀπολυτίκιον, Ἦχος α’.",
+        "url": "https://www.saint.gr/3348/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Glory of the Cypriots, president of the people of Tamassos, guard and watchman of Perata, you were shown forth, Demetrianus our father; therefore you once gave light to a blind man, and the light was granted him far-shining, and he cried out thus to the one who enlightened him through you: Glory to you. Glory to God who was so well pleased, glory to him who made you wonderful, glory to him who works such marvels through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Ἀπὸ βρέφους Κυρίω ἐκολλήθης, μακάριε Δημητριανὲ Ταμασέων, ποιμενάρχα πανάριστε, συγκλείσας ἐν ψυχῇ σου θησαυρόν, τῆς πίστεως Δεσπότου ἀληθοῦς, καὶ ὠδήγησας τὰ τέκνα σου θαυμαστός, πρὸς γνῶσιν τῆς θεότητας, δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ ἁγιάσαντι, δόξα τῷ δεδωκότι σοι ἠμίν, προστάτην ἀκαταίσχυντον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Δημητριανός της Ταμασού, ο θαυματουργός — Ἕτερον Ἀπολυτίκιον, Ἦχος α’. «Τῆς ἐρήμου πολίτης»",
+        "url": "https://www.saint.gr/3348/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "From infancy you were joined to the Lord, blessed Demetrianus, most excellent chief shepherd of the people of Tamassos, having shut up in your soul the treasure of the Master's true faith; and you led your children wonderfully to the knowledge of the Godhead. Glory to Christ who glorified you, glory to him who sanctified you, glory to him who gave you to us as a protector who does not put us to shame.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς.",
+      "text": "Ἠρακλειδίου διεδέξω τὸν θρόνον, καὶ τῶν θαυμάτων εἰλη φῶς θείαν χάριν, τὴν Κύπρον κατεφώτισας, ὢ Δημητριανέ, θεσπεσίω βίω σου καὶ γλυκύτητι λόγων, ὅθεν πλάνην ἔτρεψας, τῶν εἰδώλων γενναίως, καὶ τὸν Χριστὸν ἐνώκησας ψυχαίς, ὡς ἱεράρχης φωτὶ αὐγαζόμενος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), Άγιος Δημητριανός της Ταμασού, ο θαυματουργός — Κοντάκιον, Ἦχος δ’. «Ὁ ὑψωθεῖς»",
+        "url": "https://www.saint.gr/3348/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You succeeded to the throne of Heracleides and received the divine grace of wonders; you gave light to the whole of Cyprus, O Demetrianus, by your godly life and the sweetness of your words; whence you bravely turned back the error of the idols and settled Christ in souls, shining as a hierarch with light.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

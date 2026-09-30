@@ -226,7 +226,7 @@ test('the feast-month filter reckons each tradition in its own calendar', async 
   // 1 Ιανουαρίου. The Greek church reckons in revised-julian, so its own
   // January is the civil one, and every Greek January day will move this
   // number the same way the Romanian ones did.
-  await expect(page.locator('[data-count]')).toHaveText('375');
+  await expect(page.locator('[data-count]')).toHaveText('382');
   await expect(page.locator('.index-name', { hasText: 'Anthony the Great' })).toHaveCount(1);
 });
 

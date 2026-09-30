@@ -1,0 +1,58 @@
+{
+  "slug": "demetrius-of-constantinople",
+  "display_name": "Demetrius of Constantinople",
+  "names": [
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Ιανουαρίου, «Άγιος Δημήτριος ο εν Κωνσταντινοπόλει», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1784,
+      "latest": 1784,
+      "display": "1784",
+      "basis": "attested",
+      "note": "saint.gr: «Έτσι ο Δημήτριος, στις 27 Ιανουαρίου 1784 μ.Χ., αποκεφαλίστηκε μπροστά στο οινοπωλείο που εργαζόταν.»; the page's heading dates him «(; - 1784)». It gives no year of birth, but says he was twenty-five when he worked at the wine shop."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 27 Ιανουαρίου — «Άγιος Δημήτριος ο εν Κωνσταντινοπόλει»",
+        "url": "https://www.saint.gr/01/27/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

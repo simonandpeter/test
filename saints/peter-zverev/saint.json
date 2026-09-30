@@ -1,0 +1,58 @@
+{
+  "slug": "peter-zverev",
+  "display_name": "Peter (Zverev)",
+  "names": [
+    {
+      "form": "Πέτρος Ζβέρεφ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Ιανουαρίου, «Άγιος Πέτρος Ζβέρεφ ο Ιερομάρτυρας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1929,
+      "latest": 1929,
+      "display": "1929",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Ιερομάρτυς Πέτρος, μαρτύρησε το έτος 1929 μ.Χ.»; the page's heading dates him «(; - 1929)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 27 Ιανουαρίου — «Άγιος Πέτρος Ζβέρεφ ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/01/27/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -7,6 +7,11 @@
       "form": "Marciana",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 ianuarie, «Sfânta Marciana, împărăteasa»."
+    },
+    {
+      "form": "Μαρκιανή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Ιανουαρίου, «Αγία Μαρκιανή η Βασίλισσα», with the rank words left off."
     }
   ],
   "sex": "female",
@@ -36,8 +41,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 27 Ιανουαρίου — «Αγία Μαρκιανή η Βασίλισσα»",
+        "url": "https://www.saint.gr/01/27/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -47,5 +61,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 518,
+      "latest": 527,
+      "display": "under Justin I, 518–527",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Μαρκιανή ήταν σύζυγος του Ιουστίνου Α' του Γέροντος (518 - 527 μ.Χ.)». The page gives no year of birth and none of death; this is the reign it prints for her husband."
+    }
   }
 }

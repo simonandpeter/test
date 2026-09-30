@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'πετροσ peter-abesalamites peter-companion-of-leucius peter-companion-of-manuel peter-disciple-of-dionysius-of-alexandria peter-of-capitolias peter-of-sebaste peter-son-of-john-of-syracuse peter-the-egyptian peter-the-gaoler peter-the-peloponnesian peter-the-sign-bearer':
+    'eleven now. The new one is Peter the Egyptian, a hermit whose page gives no year, kept on 27 Ιανουαρίου; the other ten are read in the el-01-01 through el-01-26 entries for this name form. Eleven men on eleven Greek days.',
+  'δημητριοσ demetrius-of-constantinople demetrius-the-skeuophylax':
+    'two men, two days apart on one calendar. saint.gr keeps Demetrius the Skeuophylax on 25 Ιανουαρίου, written earlier in this wave, and Demetrius of Constantinople, a new-martyr of 1784, on the 27th. A keeper of the vessels and a new-martyr under the Turks.',
+  'δημητριανοσ demetrianus-of-tamassos demetrianus-son-of-demetrius':
+    'two men. saint.gr keeps Demetrianus, bishop of Tamassos in Cyprus and wonderworker, on 27 Ιανουαρίου; the corpus keeps Demetrianus the son of Demetrius, a first-century martyr, on the Russian and Greek 11 September. A Cypriot bishop is not an apostolic-age martyr.',
   'πετροσ peter-abesalamites peter-companion-of-leucius peter-companion-of-manuel peter-disciple-of-dionysius-of-alexandria peter-of-capitolias peter-of-sebaste peter-son-of-john-of-syracuse peter-the-gaoler peter-the-peloponnesian peter-the-sign-bearer':
     'ten now. The new one is Peter the Gaoler, martyred 295, kept on 26 Ιανουαρίου; the other nine are read in the el-01-01, el-01-03, el-01-11, el-01-12 and el-01-22 entries for this name form. Ten men on ten Greek days, and the reading has been the same every time.',
   'γαβριηλ gabriel-companion-of-sionios gabriel-of-georgia gabriel-of-lesnovo gabriel-of-novgorod-and-saint-petersburg gabriel-of-saint-stephens-jerusalem':
@@ -1285,7 +1291,7 @@ for (let i = 0; i < 460; i += 1) {
 }
 
 const EXPECTED = [
-  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '375'],
+  ['e2e/index-controls.spec.js:317     a feast in the church\'s own January', januaryOwn, '382'],
 ];
 for (const [where, now, literal] of EXPECTED) {
   const moved = String(now) !== literal;
