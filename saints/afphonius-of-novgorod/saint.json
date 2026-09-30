@@ -27,16 +27,16 @@
       "church": "greek",
       "status": "venerated",
       "feast": {
-        "day": 10,
-        "month": 2,
+        "day": 6,
+        "month": 4,
         "calendar": "revised-julian"
       },
       "source": {
-        "text": "saint.gr, το εορτολόγιο της 10ης Φεβρουαρίου — «Άγιοι Πάντες Ιεράρχες εν Νόβγκοροντ της Ρωσίας»",
-        "url": "https://www.saint.gr/02/10/index.aspx",
+        "text": "saint.gr, το εορτολόγιο της 6ης Απριλίου — «Άγιος Αφφίωνος Επίσκοπος Νόβγκοροντ»",
+        "url": "https://www.saint.gr/04/06/index.aspx",
         "year": 2026
       },
-      "note": "One of twelve hierarchs of Novgorod whom the page enumerates by name, each with the year of his repose; his is 1652. The page also keeps the same synaxis on 4 October and on the third Sunday after Pentecost, which are not this row's feast. saint.gr calls the twelve Ιεράρχες and gives no see-rank for him individually."
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1652)». The day's line calls him Επίσκοπος while the page's prose says he was elected Μητροπολίτης Νόβγκοροντ in 1635; the page's own word is what is recorded in the office. This is a Russian saint on the Greek calendar, and the Greek page is the only source read for him here. His own day is this one; saint.gr also names him among the twelve hierarchs the synaxis of 10 Φεβρουαρίου enumerates, «Άγιοι Πάντες Ιεράρχες εν Νόβγκοροντ της Ρωσίας», and again on 4 October and the third Sunday after Pentecost. This folder was made from that synaxis, under the spelling Afphonius; the 6 April page spells him Αφφίωνος, which is the same man and the same year of repose, 1652."
     },
     {
       "church": "serbian",

@@ -1,0 +1,65 @@
+{
+  "slug": "manuel-of-samothrace",
+  "display_name": "Manuel of Samothrace",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Μανουήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Απριλίου, «Άγιοι Γεώργιος, Μανουήλ, Θεόδωρος, Γεώργιος και Μιχαήλ από τη Σαμοθράκη», with the rank word and the place left off."
+    }
+  ],
+  "related": [
+    "george-of-samothrace-a",
+    "theodore-of-samothrace",
+    "george-of-samothrace-b",
+    "michael-of-cyprus-of-samothrace"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1835,
+      "latest": 1835,
+      "display": "1835",
+      "basis": "traditional",
+      "note": "saint.gr heads each of the five «(; - 1835)»; its 6 Απριλίου page gives no month or day of the martyrdom and refers the life itself to Thomas Sunday."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Απριλίου — «Άγιοι Γεώργιος, Μανουήλ, Θεόδωρος, Γεώργιος και Μιχαήλ από τη Σαμοθράκη»",
+        "url": "https://www.saint.gr/04/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Απριλίου εκάστου έτους», the same day as the listing, but for the life itself says «Βλέπε βιογραφικό τους σημείωμα την Κυριακή του Θωμά», a moveable day which is not recorded here. The hymns name him first of the five."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "slug": "tervillius-the-prince",
+  "display_name": "Tervillius, son of Joel of Wales",
+  "sex": "male",
+  "types": [
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Τερβίλλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Απριλίου, «Άγιος Τερβίλλιος ο πρίγκιπας», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 566,
+      "latest": 566,
+      "display": "566",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Τερβίλλιος γεννήθηκε το έτος 566 μ.Χ. στην Ουαλία και ήταν υιός του βασιλέως Ιωήλ του Β'», and the page's heading has «(566 - 660)»."
+    },
+    "death": {
+      "earliest": 660,
+      "latest": 660,
+      "display": "660",
+      "basis": "traditional",
+      "note": "saint.gr: «Ακολούθησε τον ερημικό βίο στην περιοχή του Λάντερφελ και κοιμήθηκε με ειρήνη το έτος 660 μ.Χ.», and the page's heading has «(566 - 660)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Απριλίου — «Άγιος Τερβίλλιος ο πρίγκιπας»",
+        "url": "https://www.saint.gr/04/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(566 - 660)». The day's line calls him ο πρίγκιπας, the prince; the page says he was the son of king Joel II of Wales, and the corpus's type list has no word for a king's son who was not himself a ruler, so only the hermit's life the page describes is recorded in the types."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

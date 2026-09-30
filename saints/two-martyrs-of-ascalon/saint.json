@@ -1,0 +1,51 @@
+{
+  "slug": "two-martyrs-of-ascalon",
+  "display_name": "The Two Martyrs of Ascalon",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δύο μάρτυρες οι εν Ασκάλωνι",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Απριλίου, «Άγιοι Δύο μάρτυρες οι εν Ασκάλωνι», with the rank word left off. The page names neither of the two."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Απριλίου — «Άγιοι Δύο μάρτυρες οι εν Ασκάλωνι»",
+        "url": "https://www.saint.gr/04/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Απριλίου εκάστου έτους», the same day as the listing. Because the page names neither of the two, they are kept here as one entry and not as two people. The same day page's entry for Platonis closes «Κατα άλλους, η Οσία Πλατωνίς μαρτύρησε μαζί με δυο άλλους Χριστιανούς στον Ασκάλωνα της Παλαιστίνης» — according to others she was martyred with two other Christians at Ascalon — and does not say that those two are these; nothing is decided here either way."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,6 +115,32 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ρουφινοσ rufinus-of-rome rufinus-the-deacon':
+    'Two men: Rufinus of Rome on 28 February and Rufinus the Deacon on 7 April.',
+  'λευκιοσ leucius-companion-of-peter leucius-of-volokolamsk':
+    'Two men: the companion of Peter on 11 January and Leucius of Volokolamsk on 7 April.',
+  'θεοδωροσ theodore-companion-of-stephen theodore-founder-of-chora theodore-of-kandavla theodore-of-moscow theodore-of-novgorod theodore-of-pentapolis theodore-of-samothrace theodore-of-tamasos theodore-of-tomsk theodore-prince-of-yaroslavl theodore-stratelates theodore-the-byzantine theodore-the-envoy-of-nicomedia theodore-the-recruit theodore-the-silent':
+    'Fifteen now. The new one is Theodore of Samothrace on 6 April, one of the five that day; the others are read in the el-03-26 entry for this name form.',
+  'μιχαηλ michael-companion-of-platon-of-reval michael-mavroeidis michael-of-cyprus-of-samothrace michael-of-klops michael-the-russian-1-april':
+    'Five men on five Greek days. The new one is Michael of Cyprus, one of the five of Samothrace, on 6 April; the others are read in the el-04-01 entry for this name form.',
+  'γερασιμοσ gerasimus-of-great-perm gerasimus-of-the-jordan gerasimus-of-vologda gerasimus-the-byzantine':
+    'Four men: Great Perm on 29 January, the Jordan and Vologda both on 4 March as two entries, and Gerasimus the Byzantine on 7 April.',
+  'δανιηλ daniel-of-moscow daniel-of-pereslavl daniel-the-egyptian':
+    'Three men: Daniel of Moscow, whom the Greek keeps on 4 Μαρτίου and the Russian on 30 August; Daniel of Pereslavl on 7 April; and Daniel the Egyptian of the Pamphilus company on 16 February.',
+  'αγαπητοσ agapitus-of-synnada agapitus-the-blind':
+    'Two men: Agapitus of Synnada on 18 February, whom the Romanian keeps there too, and Agapitus the Blind of the Kyiv Caves on 7 April.',
+  'τιμοθεοσ timothy-1-february timothy-companion-of-diogenes timothy-disciple-of-babylas timothy-of-caesarea timothy-of-ephesus timothy-of-symbola':
+    'Six now. The new one is the companion of Diogenes on 6 April; the others are read in the el-02-27 entry for this name form.',
+  'γρηγοριοσ gregory-of-akritas gregory-of-assos gregory-of-constantia gregory-of-moesia gregory-of-nicomedia gregory-of-novgorod gregory-of-nyssa gregory-of-sinai gregory-the-dialogist gregory-the-elder gregory-the-hesychast-of-athos gregory-the-recluse-of-the-caves gregory-the-wonderworker-of-the-caves gregory-uncle-of-eustratius':
+    'Fourteen now. The new one is Gregory the Hesychast of Athos on 6 April; Gregory of Sinai, whom the Romanian keeps on 6 aprilie, has his Greek row on 11 Φεβρουαρίου — one row per church and two days, not two men. The others are read in the el-04-02 entry for this name form.',
+  'companion diogenes timothy diogenes-companion-of-timothy timothy-companion-of-diogenes':
+    'The pair the 6 April page names together, each named after the other, which is what folds them.',
+  'μανουηλ manuel-of-adrianople manuel-of-samothrace manuel-of-sphakia manuel-of-the-east':
+    'Four men: Adrianople on 22 January, Sphakia on 15 March, Manuel of the East on 26 March and Manuel of Samothrace on 6 April, one of the five that day.',
+  'γεωργιοσ george-konissky george-of-alikianos george-of-amastris george-of-azkuri george-of-develtos george-of-diipion george-of-kratovo george-of-maleon george-of-megara george-of-mytilene george-of-nea-ephesus george-of-rapsani george-of-samothrace-a george-of-samothrace-b george-of-sofia george-of-vladimir george-paizanos-of-mytilene george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian george-the-sinaite':
+    'Twenty-two now, and **two of the new ones share 6 April within one company**: the five of Samothrace include two Georges, which the page names as two, so their slugs carry `-a` and `-b`. The others are read in the el-04-05 entry for this name form.',
+  'γενναδιοσ gennadius-of-corfu gennadius-of-kostroma gennadius-of-novgorod gennadius-of-the-svir-desert gennadius-the-dionysiate':
+    'Five men on five Greek days: Corfu on 2 January, Kostroma on 23 January, Novgorod on 10 February, the Svir desert on 9 February and the Dionysiate on 6 April.',
   'ζωσιμασ zosimas-24-january zosimas-of-carthage zosimas-of-palestine zosimas-of-vorbozom':
     'Four men, and two of them are on the Greek 4 April as two entries: Zosimas of Palestine, who buried Mary of Egypt and whom the Romanian keeps there too, and Zosimas of Vorbozom, the Russian. The others are the Zosimas of 24 January and Carthage on 11 March.',
   'θεοδωρα theodora-companion-of-didymus theodora-of-amisos theodora-of-arta theodora-sister-of-hermes theodora-the-empress':

@@ -1,0 +1,64 @@
+{
+  "slug": "gregory-the-hesychast-of-athos",
+  "display_name": "Gregory the Hesychast of Athos",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Απριλίου, «Όσιος Γρηγόριος ο εν Άθω», with the rank word and the place left off."
+    }
+  ],
+  "related": [
+    "gregory-palamas"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1310,
+      "latest": 1310,
+      "display": "1310",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο θάνατος τον βρήκε ν' ασχολείται μ' αυτά τα θεάρεστα έργα το 1310 μ.Χ.», and the page's heading has «(; - 1310)». It puts his life «στίς αρχές του 14ου αιώνα», at the beginning of the fourteenth century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Απριλίου — «Όσιος Γρηγόριος ο εν Άθω»",
+        "url": "https://www.saint.gr/04/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Απριλίου εκάστου έτους», the same day as the listing. It adds a second, moveable commemoration — «Συνεορτάζει μετά των λοιπών Αγιορειτών Πατέρων την Β' Κυριακή του Ματθαίου» — with the rest of the Athonite Fathers on the second Sunday of Matthew, which is neither a fixed day nor a Pascha offset the schema can hold and is not held here. The same day page lists Gregory of Sinai as a separate entry with a life of his own, so the two are two men."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Platonida",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 aprilie, «Sfânta Cuvioasă Platonida»."
+    },
+    {
+      "form": "Πλατωνίς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Απριλίου, «Οσία Πλατωνίς», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Απριλίου — «Οσία Πλατωνίς»",
+        "url": "https://www.saint.gr/04/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Απριλίου εκάστου έτους», the same day as the listing, and heads her «(; - 308)». It closes with an alternative account of her end which it does not decide between: «Κατα άλλους, η Οσία Πλατωνίς μαρτύρησε μαζί με δυο άλλους Χριστιανούς στον Ασκάλωνα της Παλαιστίνης» — according to others she was martyred with two other Christians at Ascalon in Palestine. The same day page lists two unnamed martyrs of Ascalon as a separate entry, and the page does not say the three are one company. No dates are recorded from the 308 in the heading, which the page's own prose does not repeat."
     },
     {
       "church": "serbian",

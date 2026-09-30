@@ -7,6 +7,11 @@
       "form": "Eutihie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 aprilie, «Sfântul Ierarh Eutihie, Patriarhul Constantinopolului»."
+    },
+    {
+      "form": "Ευτύχιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Απριλίου, «Άγιος Ευτύχιος πατριάρχης Κωνσταντινούπολης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Απριλίου — «Άγιος Ευτύχιος πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/04/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(512 - 582)». It lists the relics: part of the head and of the relics at the Roman Catholic church of San Giorgio Maggiore in Venice, where they were taken from the church of the Holy Apostles at Constantinople in 1246 under the abbot Pietro Querini, and part of the head at the monastery of Chilandari on Athos. It names the writer of his life, his disciple Eustratius."
     },
     {
       "church": "serbian",
@@ -63,9 +78,75 @@
         "text": "The truth of things showed thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence. Therefore thou hast gained by humility the things on high, and by poverty the things that are rich. O father and hierarch Eutychius, pray Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ'.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Βίον οὐράνιον, Πάτερ κτησάμενος, σκεῦος ἐπάξιον, ὤφθης τῆς χάριτος, λόγω καὶ πράξει βέβαιων, τὴν θείαν σοὶ χορηγίαν ὅθεν ἱεράτευσας, ἰσαγγέλως τῷ Κτίσαντι, ἔνδοξε Εὐτύχιε, Ἐκκλησίας ὡράισμα, ἣν φύλαττε ταὶς σαὶς προστασίαις, πάσης ἀνάγκης ἀνωτέραν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ', Τὴν ὡραιότητα, on the page of Άγιος Ευτύχιος πατριάρχης Κωνσταντινούπολης. It is his own and names him.",
+        "url": "https://www.saint.gr/198/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having gained a heavenly life, O Father, thou wast seen to be a vessel worthy of grace, confirming by word and by deed the divine gift given thee; whence thou didst serve as a priest to the Creator as the angels do, O glorious Eutychius, adornment of the Church. Keep her by thy protection above every necessity.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Κανόνα πίστεως, καὶ εἰκόνα πραότητος, ἐγκρατείας διδάσκαλον, ἀνέδειξε σε τῇ ποίμνῃ σου, ἡ τῶν πραγμάτων ἀλήθεια· διὰ τοῦτο ἐκτήσω τῇ ταπεινώσει τὰ ὑψηλά, τῇ πτωχείᾳ τὰ πλούσια. Πάτερ Ἱεράρχα Εὐτύχιε, πρέσβευε Χριστῷ τῷ θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος δ’, on the page of Άγιος Ευτύχιος πατριάρχης Κωνσταντινούπολης. This is the common apolytikion of a hierarch, with his name set into its last clause; the page prints it under his name, so it is copied whole as the page has it.",
+        "url": "https://www.saint.gr/198/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence; therefore thou hast gained the heights by humility and riches by poverty. Father and hierarch Eutychius, intercede with Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Εὐκληρίας χάριτας Θεοδωρήτου, ἱερέ Εὐτύχιε, ἀναβλυστάνεις δαψιλῶς, τοῖς ἐν αἰνέσει κραυγάζουσι· Χαίροις Πατέρων φαιδρόν ἀγαλλίαμα.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of Άγιος Ευτύχιος πατριάρχης Κωνσταντινούπολης.",
+        "url": "https://www.saint.gr/198/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Richly dost thou pour out the graces of a God-given portion, O holy Eutychius, upon those who cry to thee in praise: Rejoice, bright gladness of the Fathers.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 512,
+      "latest": 512,
+      "display": "512",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ευτύχιος γεννήθηκε το έτος 512 μ.Χ. και έζησε κατά την εποχή του αυτοκράτορα Ιουστινιανού Α' του Μεγάλου», and the page's heading has «(512 - 582)»."
+    },
+    "death": {
+      "earliest": 582,
+      "latest": 582,
+      "display": "582",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Ευτυχιος Πατριαρχης Κωνσταντινουπολης (512 - 582)». The page gives the year only in that heading."
+    }
   }
 }

@@ -1,0 +1,62 @@
+{
+  "slug": "gennadius-the-dionysiate",
+  "display_name": "Gennadius the Dionysiate",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Γεννάδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Απριλίου, «Άγιος Γεννάδιος ο Διονυσιάτης ο Νεομάρτυς και Οσιομάρτυς», with the rank words left off and the epithet of his monastery kept."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1818,
+      "latest": 1818,
+      "display": "1818",
+      "basis": "attested",
+      "note": "saint.gr: «έμεινε σταθερός στην πίστη του και αποκεφαλίστηκε στίς 6 Απριλίου 1818 μ.Χ.» — beheaded on 6 April 1818. The page's heading has «(; - 1818)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Απριλίου — «Άγιος Γεννάδιος ο Διονυσιάτης ο Νεομάρτυς και Οσιομάρτυς»",
+        "url": "https://www.saint.gr/04/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Απριλίου εκάστου έτους», the same day as the listing, and the page dates the beheading itself to 6 April 1818. It names the relics: «Μέρος των Λειψάνων του Αγίου βρίσκονται στην Ιερά Μονή Διονυσίου Αγίου Όρους» — part of them at the monastery of Dionysiou on the Holy Mountain, where he had lived."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
