@@ -1,0 +1,59 @@
+{
+  "slug": "suquias-of-georgia",
+  "display_name": "Suquias, with nineteen martyrs",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Σούκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Απριλίου, «Άγιος Σούκιος ο Μάρτυρας και οι συν αυτώ δέκα εννέα Μάρτυρες», with the rank word and the companions' clause left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 101,
+      "latest": 200,
+      "display": "2nd century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Μάρτυς Σούκιος και οι Χριστιανοί που μαρτύρησαν μαζί του, άθλησαν κατά τον 2ο αιώνα μ.Χ. στη Γεωργία»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Απριλίου — «Άγιος Σούκιος ο Μάρτυρας και οι συν αυτώ δέκα εννέα Μάρτυρες»",
+        "url": "https://www.saint.gr/04/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Απριλίου εκάστου έτους», the same day as the listing. It numbers his companions in its own heading, «Αγιοι Δεκα Εννεα Μαρτυρες», and names not one of them, so the nineteen are a company that enumerates nobody and have no folder; they stand in this folder's name as the page's own clause. The corpus holds nobody of this name. The page prints no couplet and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "dionysius-of-pereyaslavl",
+  "display_name": "Dionysius of Pereyaslavl",
+  "sex": "male",
+  "types": [
+    "monk",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Διονύσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Απριλίου, «Όσιος Διονύσιος του Περεγιασλάβλ», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1645,
+      "latest": 1645,
+      "display": "1645",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1645 μ.Χ.», and its heading has «Οσιος Διονυσιος Του Περεγιασλαβλ (; - 1645)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Απριλίου — «Όσιος Διονύσιος του Περεγιασλάβλ»",
+        "url": "https://www.saint.gr/04/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1645)». Its one sentence is the whole of the notice, and it prints no hymn. The corpus holds a dozen others of this name and none of them is a recluse of Pereyaslavl-Zalessky or is kept on this day; the only folder that touches the place is Ephrem of Kiev, bishop of Pereyaslavl, of the eleventh century."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

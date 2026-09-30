@@ -1,0 +1,56 @@
+{
+  "slug": "daniel-of-achinsk",
+  "display_name": "Daniel of Achinsk",
+  "sex": "male",
+  "names": [
+    {
+      "form": "Δανιήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Απριλίου, «Άγιος Δανιήλ του Ασίνσκ», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1843,
+      "latest": 1843,
+      "display": "1843",
+      "basis": "traditional",
+      "note": "saint.gr's heading has «Αγιος Δανιηλ Του Ασινσκ (; - 1843)». Its prose gives no year at all: «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Απριλίου — «Άγιος Δανιήλ του Ασίνσκ»",
+        "url": "https://www.saint.gr/04/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1843)». It prints no life, no couplet and no hymn, and no rank beyond «Άγιος», so this folder carries no `types`: nothing on the page says whether he was a monk, a priest or a layman. It links to «Σύναξη πάντων των εν Σιβηρία Αγίων», the synaxis of all the saints of Siberia, which is the only thing that places him. The corpus holds eight others of this name and none of them is Russian and of the nineteenth century."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "slug": "leonides-of-athens",
+  "display_name": "Leonides of Athens",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "office": "Bishop of Athens",
+  "names": [
+    {
+      "form": "Λεωνίδης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Απριλίου, «Άγιος Λεωνίδης Επίσκοπος Αθηνών», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
+      "basis": "traditional",
+      "note": "saint.gr: «Στους Συναξαριστές αναφέρεται ότι ο Άγιος Λεωνίδης, Επίσκοπος Αθηνών, κοιμήθηκε με ειρήνη το έτος 250 μ.Χ.», and its heading has «Αγιος Λεωνιδης Επισκοπος Αθηνων (; - 250)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Απριλίου — «Άγιος Λεωνίδης Επίσκοπος Αθηνών»",
+        "url": "https://www.saint.gr/04/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Απριλίου εκάστου έτους», the same day as the listing. The page doubts one thing about him and it is his rank, not his existence or his date: «Σε κάποιους από τους Κώδικες αναφέρεται ως Μάρτυς, γεγονός όμως που δεν αποδεικνύεται» — some of the codices call him a martyr, a thing which is not proved — so `types` follows the prose, which has him fall asleep in peace, and not the apolytikion's «ἤθλησας». The corpus holds three others who fold onto this name — Leonides kept on 2 September, Leonidas of Egypt and Leonides the father of Origen — and none of them is a bishop of Athens or is kept on this day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ποιμὴν ἱερώτατος, καὶ Ἱεράρχης σοφός, τῆς πόλεως γεγονός, τῶν Ἀθηνῶν τῆς κλεινῆς, Λεωνίδα μακάριε, ὅθεν ἱερατεύσας, τῷ Σωτῆρι ὁσίως, ἤθλησας ὑπὲρ φύσιν, καὶ τὴν πλάνην καθεῖλες. Καὶ νῦν Πάτερ ἱκέτευε, ὑπὲρ τῶν τιμώντων σε.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ', Ταχὺ προκατάλαβε, on the page of Άγιος Λεωνίδης Επίσκοπος Αθηνών. It is his own and names him and his see.",
+        "url": "https://www.saint.gr/1318/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A most holy shepherd and a wise hierarch of the renowned city of the Athenians wast thou, blessed Leonides; wherefore, having served the Saviour in holiness, thou didst contend beyond nature and didst pull down error. And now, O Father, intercede for those who honour thee.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

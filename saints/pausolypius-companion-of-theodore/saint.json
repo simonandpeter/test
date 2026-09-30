@@ -1,0 +1,53 @@
+{
+  "slug": "pausolypius-companion-of-theodore",
+  "display_name": "Pausolypius, companion of Theodore",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Παυσολύπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Απριλίου, «Άγιοι Θεόδωρος ο Πρεσβύτερος και Παυσολύπιος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "theodore-companion-of-pausolypius"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Απριλίου — «Άγιοι Θεόδωρος ο Πρεσβύτερος και Παυσολύπιος»",
+        "url": "https://www.saint.gr/04/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Απριλίου εκάστου έτους», the same day as the listing. Two names in one line, so two folders. The page gives neither man a year: it sets them only «κατά τους χρόνους του αυτοκράτορα Αδριανού (117 - 138 μ.Χ.)», a reign and not a date, so there is no `dates` object. The corpus holds nobody else of this name. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

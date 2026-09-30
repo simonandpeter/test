@@ -1,0 +1,67 @@
+{
+  "slug": "paternus-of-vannes",
+  "display_name": "Paternus of Vannes",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "office": "Bishop of Vannes",
+  "names": [
+    {
+      "form": "Πάτερνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Απριλίου, «Άγιος Πατέρνος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 500,
+      "latest": 500,
+      "display": "500",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Πάτερνος γεννήθηκε στη Βρεττάνη το έτος 500 μ.Χ.», and its heading has «Αγιος Πατερνος (500 - 565)»."
+    },
+    "death": {
+      "earliest": 565,
+      "latest": 565,
+      "display": "565",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 565 μ.Χ.», and its heading has «Αγιος Πατερνος (500 - 565)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Απριλίου — «Άγιος Πατέρνος»",
+        "url": "https://www.saint.gr/04/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Απριλίου εκάστου έτους», the same day as the listing, and it heads him «(500 - 565)». Its three sentences are the whole of the notice; it prints no couplet and no hymn. The day's line is bare, «Άγιος Πατέρνος», and the page is what identifies him as the bishop of Vannes in Brittany. The corpus holds nobody of this name, and no folder mentions Vannes."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "olympias-companion-of-maximus",
+  "display_name": "Olympias, companion of Maximus",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ολυμπιάδα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Απριλίου, «Άγιοι Μάξιμος και Ολυμπιάδα οι Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "related": [
+    "maximus-companion-of-olympias"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Απριλίου — «Άγιοι Μάξιμος και Ολυμπιάδα οι Μάρτυρες»",
+        "url": "https://www.saint.gr/04/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Απριλίου εκάστου έτους», the same day as the listing, and is one sentence long. Two names in one line, so two folders. It gives neither of them a year: it sets them only «κατά τους χρόνους του αυτοκράτορα Δεκίου (249-251 μ.Χ.)», a reign and not a date, so there is no `dates` object. The corpus holds four others of this name — Olympias of Constantinople, Olympia of Lesvos, Olympias of Fărcașa and Olympias of Văratec — and none of them is a martyr in Persia or is kept on this day. The page prints no hymn and no couplet."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

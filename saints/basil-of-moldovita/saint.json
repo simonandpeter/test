@@ -1,0 +1,61 @@
+{
+  "slug": "basil-of-moldovita",
+  "display_name": "Basil of Moldovița",
+  "sex": "male",
+  "types": [
+    "abbot",
+    "wonderworker"
+  ],
+  "office": "Abbot of Moldovița",
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Απριλίου, «Όσιος Βασίλειος ο Θαυματουργός», with the rank word and the epithet left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1301,
+      "latest": 1500,
+      "display": "14th–15th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Βασίλειος, ο Θαυματουργός, έζησε μεταξύ του 14ου και 15ου αιώνα μ.Χ. στη Μολδαβία της Ρουμανίας», with «Το έτος 1451 μ.Χ. ο Όσιος αναφέρεται ως ηγούμενος της μονής Μολδοβίτα» the one fixed point it gives; the page states no year of death, only «Κοιμήθηκε με ειρήνη»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026). The Romanian pass over doxologia.ro's whole year made no folder for him, and this row is therefore not an assertion that the Romanian church does not keep him."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Απριλίου — «Όσιος Βασίλειος ο Θαυματουργός»",
+        "url": "https://www.saint.gr/04/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Απριλίου εκάστου έτους», the same day as the listing. Its two sentences are the whole of the notice, and it prints no hymn. The day's line is bare, «Όσιος Βασίλειος ο Θαυματουργός», and it is the page that places him in Moldavia and at Moldovița. The corpus holds some thirty folders of this name, none of them an abbot of Moldovița and none of them kept on this day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

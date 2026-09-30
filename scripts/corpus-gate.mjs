@@ -115,6 +115,42 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'μιχαηλ michael-companion-of-platon-of-reval michael-mavroeidis michael-of-cyprus-of-samothrace michael-of-klops michael-of-vourla michael-the-russian-1-april':
+    'Six now. The new one is Michael of Vourla on 16 April; the others are read in the el-04-06 entry for this name form.',
+  'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-kalita john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kazan john-of-lycopolis john-of-manglisi john-of-rouphinianai john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-well john-of-verkhoturye john-of-vilnius john-of-yuryevets john-philosopher-of-georgia john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-with-minas-and-david':
+    'Thirty-five now. The new one is John of Verkhoturye on 16 April; the others are read in the el-04-14 entry for this name form.',
+  'ειρηνη irene-martyr-16-april irene-of-aquileia':
+    'Two women on one day, printed as two entries of the 16 April page: Irene of Aquileia, whom the Romanian keeps there too and whose company that day is, and the martyr Irene the page names alone.',
+  'χριστοφοροσ christopher christopher-of-adrianople christopher-of-saint-sabbas':
+    'Three men: the Christopher all four calendars keep on 9 May, Christopher of the monastery of Saint Sabbas on 13 April, and Christopher of Adrianople on 16 April, who is also in the Χριστόδουλος fold for his second recorded name.',
+  'χριστοδουλοσ christodoulos-26-february christodoulos-of-patmos christopher-of-adrianople':
+    'Three men, and Christopher of Adrianople stands in this fold as well as under Χριστόφορος because the corpus records both forms of his name. The others are read in the el-02-26 entry for this name form.',
+  'αγαθων agathon-confessor-of-thessalonica agathon-of-aleppo agathon-of-alexandria agathon-of-rome agathon-of-the-desert agathon-of-the-kiev-caves':
+    'Six now. The new one is Agathon the Confessor of Thessalonica on 16 April; the others are read in the el-03-10 entry for this name form.',
+  'θεοδωρα theodora-companion-of-didymus theodora-companion-of-leonides theodora-of-amisos theodora-of-arta theodora-of-nizhny-novgorod theodora-sister-of-hermes theodora-the-empress':
+    'Seven now, and **two of the new ones share 16 April** as two entries: Theodora the companion of Leonides, one of the women of Epidaurus, and Theodora of Nizhny Novgorod. The others are read in the el-04-05 entry for this name form.',
+  'βασιλισσα basilissa-companion-of-leonides basilissa-of-antinoopolis basilissa-of-galatia basilissa-of-rome':
+    'Four now. The new one is the companion of Leonides on 16 April; the others are read in the el-03-22 entry for this name form.',
+  'διονυσιοσ dionysius-companion-of-agapius dionysius-companion-of-agapius-second dionysius-companion-of-quadratus dionysius-companion-of-terentius dionysius-martyr-1-april dionysius-of-alexandria dionysius-of-pereyaslavl dionysius-reader-of-alexandria dionysius-the-merciful':
+    'Nine now. The new one is Dionysius of Pereyaslavl on 15 April; the others are read in the el-04-10 entry for this name form.',
+  'δανιηλ daniel-of-achinsk daniel-of-moscow daniel-of-pereslavl daniel-the-egyptian':
+    'Four men: Moscow on 4 March, Pereslavl on 7 April, the Egyptian of the Pamphilus company on 16 February, and Daniel of Achinsk on 15 April.',
+  'βασιλειοσ basil-companion-of-euphrasius basil-martyr-6-february basil-of-ancyra basil-of-mangazeya basil-of-mirozh basil-of-moldovita basil-of-novgorod basil-of-rostov basil-of-thessalonica basil-the-confessor basil-the-new-of-latros basil-uncle-of-eustratius':
+    'Twelve now. The new one is Basil of Moldovița on 15 April; the others are read in the el-04-04 entry for this name form.',
+  'companion pausolypius theodore pausolypius-companion-of-theodore theodore-companion-of-pausolypius':
+    'The pair the 15 April page names together, each named after the other, which is what folds them.',
+  'παυσολυπιοσ pausilypus-of-heraclea pausolypius-companion-of-theodore':
+    'Two men of the name the corpus now keeps: the companion of Theodore on 15 April, and the Pausolypius of the el-04-08 entry.',
+  'θεοδωροσ mstislav-of-kiev theodore-companion-of-pausolypius theodore-companion-of-stephen theodore-companion-of-terentius theodore-founder-of-chora theodore-of-kandavla theodore-of-moscow theodore-of-novgorod theodore-of-pentapolis theodore-of-samothrace theodore-of-tamasos theodore-of-tomsk theodore-prince-of-yaroslavl theodore-stratelates theodore-the-byzantine theodore-the-envoy-of-nicomedia theodore-the-recruit theodore-the-silent':
+    'Eighteen now. The new ones are the companion of Pausolypius on 15 April and Mstislav of Kiev, whose baptismal name is Theodore; the others are read in the el-04-10 entry for this name form.',
+  'companion maximus olympias maximus-companion-of-olympias olympias-companion-of-maximus':
+    'The pair the 15 April page names together, each named after the other, which is what folds them.',
+  'μαξιμοσ maximus-brother-of-dometius maximus-companion-of-asklepiodote maximus-companion-of-fausta maximus-companion-of-olympias maximus-companion-of-terentius maximus-of-kapsokalyvia maximus-of-marcianopolis maximus-of-ozovia maximus-of-totma maximus-of-ungrovlachia maximus-son-of-paul-and-tatta maximus-venerable-martyr-6-march':
+    'Twelve now. The new one is the companion of Olympias on 15 April; the others are read in the el-03-06 entry for this name form.',
+  'λεωνιδησ leonides-of-athens leonides-of-epidaurus':
+    'Two men on two Greek days, and they are next to each other: Leonides of Athens on 15 April and Leonides of Epidaurus on 16 April, whom the page keeps with the women of that day. Two entries, two commemorations.',
+  'ανανιασ ananias-26-january ananias-of-lacedaemonia':
+    'Two men: Ananias of Lacedaemonia on 15 April and the Ananias read in the el-01-26 entry for this name form.',
   'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-kalita john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kazan john-of-lycopolis john-of-manglisi john-of-rouphinianai john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-well john-of-vilnius john-of-yuryevets john-philosopher-of-georgia john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-with-minas-and-david':
     'Thirty-four now. The new one is John of Vilnius on 14 April; the others are read in the el-04-12 entry for this name form.',
   'ευσταθιοσ eustathius-of-antioch eustathius-of-kios eustathius-of-vilnius eustathius-the-roman':

@@ -6,6 +6,11 @@
       "form": "Crescent",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 aprilie, «Sfântul Mucenic Crescent»."
+    },
+    {
+      "form": "Κρήσκης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Απριλίου, «Άγιος Κρήσκης ο Μάρτυρας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Απριλίου — «Άγιος Κρήσκης ο Μάρτυρας»",
+        "url": "https://www.saint.gr/04/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him on. The identification is the page's own: «Ο Άγιος Κρήσκης καταγόταν από τα Μύρα της Λυκίας», of Myra in Lycia, a disciple of the Apostle Paul and already old — the same man, on the same day, as doxologia's Sfântul Mucenic Crescent. The page gives him no year: it sets him only «την εποχή της παντοδυναμίας της ειδωλολατρίας», so no `dates` were taken."
     },
     {
       "church": "serbian",
@@ -57,6 +72,57 @@
       },
       "english": {
         "text": "Thy martyr Crescens, O Lord, in his struggle has won from Thee, our God, the crown of incorruption; for having Thy strength, he overthrew his tormentors and broke the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τῷ τῆς πίστεως ζήλω πτερωθεῖς τὴν διάνοιαν, πρὸς ἀθλητικὸς ἀριστείας ἀνδρικῶς προσεχώρησας, καὶ ὤφθης τοῦ Σωτῆρος κοινωνός, βασάνους ὑπὲρ φύσιν ἐνεγκῶν διὰ τοῦτο ἐδοξάσθης παρὰ Θεοῦ, Κρήσκη Θεομακάριστε. Δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διὰ σοῦ, πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης, on the page of Άγιος Κρήσκης ο Μάρτυρας. It is his own and names him.",
+        "url": "https://www.saint.gr/1319/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Winged in mind by the zeal of the faith, thou didst go forward manfully to the prizes of the contest, and wast shown to be a partaker with the Saviour, having borne torments beyond nature. Therefore thou wast glorified by God, Crescens blessed of God. Glory to him who gave thee strength, glory to him who crowned thee, glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Ὁ Μάρτυς σου Κύριε, ἐν τῇ ἀθλήσει αὐτοῦ, τὸ στέφος ἐκομίσατο τῆς ἀφθαρσίας, ἐκ σοῦ τοῦ Θεοῦ ἡμῶν· ἔχων γὰρ τὴν ἰσχύν σου, τοὺς τυράννους καθεῖλεν ἔθραυσε καὶ δαιμόνων τὰ ἀνίσχυρα θράση. Αὐτοῦ ταῖς ἱκεσίαις Χριστέ ὁ Θεός, σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος δ’, Ταχύ προκατάλαβε, on the page of Άγιος Κρήσκης ο Μάρτυρας. This is the common apolytikion of a single martyr and names nobody; the page prints it under his name, so it is copied whole as the page has it.",
+        "url": "https://www.saint.gr/1319/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr, O Lord, in his contest received the crown of incorruption from thee our God; for having thy strength he cast down the tyrants and broke the powerless insolence of the demons. By his supplications, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Εἰ καὶ ἐν τάφῳ.",
+      "text": "Εἰ καὶ ἐν γήρᾳ ἐδέξω τὴν ἄθλησιν, ἀλλά νεάζον ἐκτήσω τὸ φρόνημα, καὶ τὴν ἔπαρσιν τοῦ ἐχθροῦ, καθεῖλες στεῤῥῶς, συνεργόν ἐν ἀγῶσι τὸν Λόγον κτησάμενος· οὗ τὸ πάθος δοξάσας, τῆς τούτου ἐγέρσεως, μέτοχος ὤφθης, ὦ Κρήσκη πολύαθλε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος πλ. δ’, Εἰ καὶ ἐν τάφῳ, on the page of Άγιος Κρήσκης ο Μάρτυρας. It is his own, names him, and turns on his old age, which both calendars make much of.",
+        "url": "https://www.saint.gr/1319/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Though thou didst receive the contest in old age, yet thou hadst gained a young man's mind, and didst firmly cast down the arrogance of the enemy, having taken the Word as thy fellow-worker in the struggles; and having glorified his passion, thou wast shown a partaker of his rising, O Crescens of many contests.",
         "rendered": "site"
       }
     }

@@ -1,0 +1,61 @@
+{
+  "slug": "ananias-of-lacedaemonia",
+  "display_name": "Ananias of Lacedaemonia",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "metropolitan"
+  ],
+  "office": "Metropolitan of Lacedaemonia",
+  "names": [
+    {
+      "form": "Ανανίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Απριλίου, «Άγιος Ανανίας ο Ιερομάρτυρας Μητροπολίτης Λακεδαιμονίας», with the rank words and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1767,
+      "latest": 1767,
+      "display": "1767",
+      "basis": "traditional",
+      "note": "saint.gr's heading has «Αγιος Ανανιας ο Ιερομαρτυρας Μητροπολιτης Λακεδαιμονιας (; - 1767)». Its prose gives no year for the martyrdom itself, only that he was born «κατά τις αρχές του 18ου αιώνα μ.Χ.» and that the betrayal followed the assembly at Kalamata of 1766."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Απριλίου — «Άγιος Ανανίας ο Ιερομάρτυρας Μητροπολίτης Λακεδαιμονίας»",
+        "url": "https://www.saint.gr/04/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Απριλίου εκάστου έτους», the same day as the listing. The page quotes the communiqué of the Ecumenical Patriarchate of 14 June 2022 which «κατέταξεν εἰς τό Ἁγιολόγιον τῆς κατ᾿ Ἀνατολάς Ὀρθοδόξου Ἐκκλησίας τόν νέον Ἱερομάρτυρα Ἀνανίαν, Ἀρχιεπίσκοπον Λακεδαιμονίας» — the canonisation is of 2022, and the communiqué calls him archbishop where the rest of the page calls him metropolitan. The corpus holds four others of this name — Ananias the Apostle, Ananias of the Three Youths, Ananias of Crete and the Ananias kept on 26 January — and none of them is an eighteenth-century metropolitan of Sparta. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

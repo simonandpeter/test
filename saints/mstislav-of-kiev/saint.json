@@ -1,0 +1,72 @@
+{
+  "slug": "mstislav-of-kiev",
+  "display_name": "Mstislav of Kiev",
+  "sex": "male",
+  "types": [
+    "prince"
+  ],
+  "office": "Prince of Kiev",
+  "names": [
+    {
+      "form": "Μστισλάβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Απριλίου, «Άγιος Μστισλάβος - Θεόδωρος πρίγκιπας Κιέβου», with the rank word and the office left off."
+    },
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "The second form saint.gr prints in the same line for 15 Απριλίου; its page explains it, «Ο Άγιος Μστισλάβος Βλαντιμίροβοτς, ο μετονομασθείς Θεόδωρος» — Mstislav Vladimirovich, who was renamed Theodore."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1076,
+      "latest": 1076,
+      "display": "1 June 1076",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε την 1η Ιουνίου του έτους 1076 μ.Χ.», and its heading has «(1076 - 1134)»."
+    },
+    "death": {
+      "earliest": 1134,
+      "latest": 1134,
+      "display": "1134",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη το έτος 1134 μ.Χ., κατά την εβδομάδα της Διακαινησίμου», and its heading has «(1076 - 1134)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Απριλίου — «Άγιος Μστισλάβος - Θεόδωρος πρίγκιπας Κιέβου»",
+        "url": "https://www.saint.gr/04/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(1076 - 1134)». The page prints no hymn. The corpus holds nobody of this name, and the Russian calendar was not read for him. His death is dated to Bright Week and his feast on this page is a fixed 15 April; the page does not reconcile the two and neither does this row."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,15 @@
+# Mstislav of Kiev
+
+saint.gr prints a long life for him. Mstislav Vladimirovich, who was renamed Theodore, was born on the first of June 1076, and when he was twelve he was sent by his grandfather Vsevolod, the great prince of Kiev, to be prince of Novgorod. The people of Novgorod came to love the young prince, and in 1095 they drove out prince David, who took refuge in Smolensk, and turned to Mstislav instead. After his grandfather's death he took the throne of Rostov.
+
+At nineteen he won a great victory over his uncle Oleg, prince of Chernigov, who had killed his brother Izyaslav and had attacked Rostov and Suzdalia. The saint did not want innocent blood shed, and begged his uncle to be content with his rights in the city of Ryazan; but Oleg had already set out with an army against Novgorod. Mstislav beat him in the field in 1096, and Oleg, having lost Suzdalia and Rostov, barely kept Murom.
+
+Mstislav offered peace again and asked only for the prisoners back. Oleg pretended to agree, and the prince scattered his army; then on the first Saturday of Lent, at the feast of the great martyr Theodore the Tiron, word came to him in Suzdalia that Oleg was on the Klyazma with an army. In one day he called his troops back, Oleg fled to Ryazan and the captives were freed; and afterwards he reconciled Oleg with the great prince Svyatopolk and with Vladimir Monomakh.
+
+He built as much as he fought. In 1099, in thanksgiving for God's mercy, he bound himself to raise a church of the Annunciation at Gorodishche near Novgorod, and the famous Mstislav Gospel was written for it, its costly ornament made at Constantinople. In 1114 he raised a church of Saint Nicholas at Novgorod: during a grave illness he had asked the saint's help, and Nicholas appeared to him in a vision and bade him send to Kiev for an icon of himself, setting down its shape and its measurements.
+
+The men sent for the icon were held up by the storm on Lake Ilmen at the island of Lipna, and on the fourth day they found the icon floating on the water; the sick prince kissed it and was healed, and a monastery with a stone church of Saint Nicholas was built afterwards on Lipna where it had appeared. In 1116 he campaigned against the people of Chud and extended the jurisdiction of the princes of Novgorod, and at his orders the mayor Paul built a fort on Lake Ladoga with a stone church of the great martyr George.
+
+When Vladimir Monomakh died in 1125 Mstislav came to the throne of Kiev, and there he beat the Polovtsy, the old enemies of Russia, and drove them beyond the Volga. In 1128 he laid the foundation stone of a church of the great martyr Theodore the Tiron in memory of the victory over Oleg of Chernigov, and in 1131, after a successful campaign against Lithuania, of a church of the icon of the Mother of God of Pirogoshcha. He fell asleep in peace in 1134, in Bright Week, and was buried in the church of the great martyr Theodore that he had built.
+
+*After saint.gr's calendar for 15 Απριλίου — [the day](https://www.saint.gr/04/15/index.aspx) and [the life](https://www.saint.gr/1324/saint.aspx); read 30 September 2026.*

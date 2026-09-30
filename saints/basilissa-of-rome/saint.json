@@ -6,6 +6,11 @@
       "form": "Vasilisa",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 aprilie, «Sfânta Muceniță Vasilisa»."
+    },
+    {
+      "form": "Βασιλίσσα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Απριλίου, «Αγίες Αναστασία και Βασιλίσσα», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Απριλίου — «Αγίες Αναστασία και Βασιλίσσα»",
+        "url": "https://www.saint.gr/04/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps her on, and it names the same pair of Roman women who buried the Apostles Peter and Paul under Nero. The page gives her no year: it sets the pair only «επί Νέρωνος 54 - 68 μ.Χ.», a reign and not a date, so no `dates` were taken. It says their relics lie in the Roman Catholic basilica of Santa Maria della Pace at Rome. The page prints no hymn, and it is not either of the other two Basilissas this corpus keeps."
     },
     {
       "church": "serbian",
