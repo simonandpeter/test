@@ -1,0 +1,67 @@
+{
+  "slug": "nicholas-zagorovsky",
+  "display_name": "Nicholas (Zagorovsky)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for 19 Μαΐου, whose head line for him is «Αγιος Νικολαος ο Ιερομαρτυς, ο Πρωτοπρεσβυτερος (1872 - 1941)» and whose list names him «Νικόλαος Μιχαήλοβιτς Ζαγκορόφασκιυ», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Άγιοι Νεομάρτυρες εν Σλομπόντσκαγια Ουκρανίας»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same day as the listing. The company is enumerated — twenty-seven men named one by one, with patronymics, birthplaces and the months of their deaths — so it is twenty-seven folders and not one, by docs/CORPUS.md §10.1. Nothing in the corpus answers to any of these surnames: a grep of `saints/` for all twenty-seven returned nothing, and no folder mentions Kharkov except `meletius-of-kharkov`, a bishop of the eighteen-hundreds. His own head line reads «Αγιος Νικολαος ο Ιερομαρτυς, ο Πρωτοπρεσβυτερος (1872 - 1941)», and his sentence in the page's list is quoted whole in the life. The page contradicts itself about the year of his death: its head line gives «(1872 - 1941)» and the body sentence «μαρτύρησε το 1841», which is four centuries before his own birth and cannot stand. The head line's 1941 is recorded and the body's 1841 is named here rather than repaired silently."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1872,
+      "latest": 1872,
+      "display": "1872",
+      "basis": "traditional",
+      "note": "saint.gr's head line and list for him: «Αγιος Νικολαος ο Ιερομαρτυς, ο Πρωτοπρεσβυτερος (1872 - 1941)»."
+    },
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιερομάρτυς Νικόλαος Μιχαήλοβιτς Ζαγκορόφασκιυ, πρωτοπρεσβύτερος, ο οποίος γεννήθηκε το 1872 στην πόλη Αχτύρκα, στην Επισκοπή του Χάρκωβ και μαρτύρησε το 1841.»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

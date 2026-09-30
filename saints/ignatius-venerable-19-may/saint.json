@@ -1,0 +1,67 @@
+{
+  "slug": "ignatius-venerable-19-may",
+  "display_name": "Ignatius (19 May)",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ιγνάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαΐου, «Όσιος Ιγνάτιος», with the rank word left off; the life page adds that his name in the world was Ιωάννης."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1477,
+      "latest": 1477,
+      "display": "1477",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στη Ρωσία το 1477 μ.Χ.»."
+    },
+    "death": {
+      "earliest": 1522,
+      "latest": 1522,
+      "display": "1522",
+      "basis": "traditional",
+      "note": "saint.gr's head line for him, «Οσιος Ιγνατιος (1477 - 1522)»; the body gives no death year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Όσιος Ιγνάτιος»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same day as the listing, and gives him two sentences. He is none of the corpus's eleven men of this name: it keeps no Ignatius who was a Russian prince's son of the late fifteenth century, and the nearest by date, `ignatius-of-mariupol` and the twentieth-century monk-martyrs, are other men. The page gives him no monastery, no place and no hymn, and the display name carries the day because the page gives nothing else to distinguish him by."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

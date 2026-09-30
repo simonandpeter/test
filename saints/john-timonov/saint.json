@@ -1,0 +1,60 @@
+{
+  "slug": "john-timonov",
+  "display_name": "John (Timonov)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for 19 Μαΐου, whose head line for him is «Αγιος Ιωαννης ο Ιερομαρτυς, ο Διακονος (; - 1937)» and whose list names him «Ιωάννης Βασίλεβιτς Τίμονωφ», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Άγιοι Νεομάρτυρες εν Σλομπόντσκαγια Ουκρανίας»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same day as the listing. The company is enumerated — twenty-seven men named one by one, with patronymics, birthplaces and the months of their deaths — so it is twenty-seven folders and not one, by docs/CORPUS.md §10.1. Nothing in the corpus answers to any of these surnames: a grep of `saints/` for all twenty-seven returned nothing, and no folder mentions Kharkov except `meletius-of-kharkov`, a bishop of the eighteen-hundreds. His own head line reads «Αγιος Ιωαννης ο Ιερομαρτυς, ο Διακονος (; - 1937)», and his sentence in the page's list is quoted whole in the life. He is one of four men called Ιωάννης in this one list and the second of its two deacons of that name; the others are `john-fedorov-of-krasnokutsk`, `john-feodorov-of-tambov` and `john-kononenko`."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιερομάρτυς Ιωάννης Βασίλεβιτς Τίμονωφ, διάκονος, ο οποίος γεννήθηκε στο χωριό Κερνγιάνσκ της επισκοπής του Κούρσκ και μαρτύρησε τον Οκτώβριο του 1937.»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

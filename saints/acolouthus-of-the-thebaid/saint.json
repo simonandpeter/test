@@ -1,0 +1,59 @@
+{
+  "slug": "acolouthus-of-the-thebaid",
+  "display_name": "Acolouthus of the Thebaid",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ακόλουθος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαΐου, «Άγιος Ακόλουθος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε το 303 μ.Χ., κατά τους χρόνους του αυτοκράτορα Γαλερίου Μαξιμιανού (286 - 305 μ.Χ.)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Άγιος Ακόλουθος»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same day as the listing, and gives him one paragraph and one couplet. The page names his country — the Thebaid in Egypt — but no city, so no `locations` object is proposed. Nothing in the corpus answers to this name. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

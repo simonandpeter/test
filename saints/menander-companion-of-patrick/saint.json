@@ -1,0 +1,86 @@
+{
+  "slug": "menander-companion-of-patrick",
+  "display_name": "Menander, companion of Patrick of Prusa",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μένανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαΐου, «Άγιοι Πατρίκιος επίσκοπος Προύσας, Ακάκιος, Μένανδρος και Πολύαινος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Άγιοι Πατρίκιος επίσκοπος Προύσας, Ακάκιος, Μένανδρος και Πολύαινος»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same day as the listing, and gives the four of them one narrative under Patrick's name. The corpus already keeps `patrick-of-prusa` from doxologia.ro's 19 mai and its Romanian line names him alone; these three fellow-workers are not in the corpus under any name, and none of its men called Acacius, Menander or Polyaenus is a companion of Patrick — `polyaenus-of-rome` is the martyr kept with Hermas and Serapion at Rome. The page gives the four no year and no emperor, only the governor Julian the Consular, so there is no `dates` object. The apolytikion calls all four «Ἱεραρχῶν ἱερῶν», holy hierarchs, which the prose does not: the prose calls the three συνεργάται, fellow-workers, and no rank beyond martyr is recorded here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "text": "Τετράς θεοφόρητος, Ἱεραρχῶν ἱερῶν, Τριάδα τὴν ἂκτιστον, κατ’ ἐναντίον ἐχθρῶν, πανσόφως ἐκήρυξε, Πατρίκιος ὁ τῆς Προύσης, θεηγόρος ποιμάντωρ, Ἀκάκιος σὺν Μενάνδρῳ, καὶ Πολύαινος ἃμα· διὸ καὶ ὡς ἀθλήσαντες, δόξης ἠξιώθησαν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχύ προκατάλαβε, on the page of «Άγιος Πατρίκιος επίσκοπος Προύσας»",
+        "url": "https://www.saint.gr/1631/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A God-bearing four of holy hierarchs preached the uncreated Trinity in all wisdom in the face of their enemies: Patrick, the God-speaking shepherd of Prusa, Acacius together with Menander, and Polyaenus with them; and so, having contended, they were counted worthy of glory.",
+        "rendered": "site"
+      },
+      "model": "Ταχύ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "text": "Οἱ Μάρτυρες σου Κύριε, ἐν τῇ ἀθλήσει αὐτῶν, τὸ στέφος ἐκομίσαντο τῆς ἀφθαρσίας, ἐκ σοῦ τοῦ Θεοῦ ἡμῶν· σχόντες γὰρ τὴν ἰσχύν σου, τοὺς τυράννους καθεῖλον· ἔθραυσαν καὶ δαιμόνων τὰ ἀνίσχυρα θράση. Αὐτῶν ταῖς ἱκεσίαις Χριστὲ ὁ Θεός, σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ’, Ταχύ προκατάλαβε, on the page of «Άγιος Πατρίκιος επίσκοπος Προύσας» — the common of martyrs",
+        "url": "https://www.saint.gr/1631/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, in their contest received the crown of incorruption from you, our God; for having your strength they brought the tyrants down, and shattered the powerless insolence of the demons. At their entreaties, Christ God, save our souls.",
+        "rendered": "site"
+      },
+      "model": "Ταχύ προκατάλαβε."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

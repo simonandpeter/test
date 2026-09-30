@@ -1,0 +1,95 @@
+{
+  "slug": "john-arnaoutogiannis",
+  "display_name": "John Arnaoutogiannis",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαΐου, «Άγιος Ιωάννης «Αρναουτογιάννης» ο Δραγάτης ο Νεομάρτυρας», with the rank words left off; the page explains the by-name, «οι Αλβανοί στα Τούρκικα, ονομάζονται Αρναούτ»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1845,
+      "latest": 1845,
+      "display": "1845",
+      "basis": "traditional",
+      "note": "saint.gr: «Το ημερολόγιο έδειχνε ημέρα Σάββατο 5 Μαΐου 1845 μ.Χ.», and the head line «(; - 1845)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Άγιος Ιωάννης «Αρναουτογιάννης» ο Δραγάτης ο Νεομάρτυρας»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same day as the listing — but the page also says he died on Saturday 5 Μαΐου 1845, so the day he is kept on is not the day he died, and the page offers no explanation of the difference. The row records the day page that was read. Nothing in the corpus answers to this man. His service was written by the hymnographer Charalampis Bousias, and the page prints two apolytikia, both copied here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α´.",
+      "text": "Εὐθαρσῶς ἀποῤῥίψας πατρῴαν πλάνην σου εὐθύς ὡς ἔγνως τήν πίστιν ἐν Μεσαρᾷ τοῦ Χριστοῦ ἀθλητῶν χοροῖς ἐνδόξοις συνηρίθμησαι˙ φύλαξ ἀγρῶν θεοφιλές, νεομάρτυς πεφηνώς γενναῖος τής εὐσεβείας πρεσβεύειν εἴληφας χάριν ὑπέρ ἡμῶν τῶν εὐφημούντων σε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α´, Τὸν συνάναρχον Λόγον, on the page of «Άγιος Ιωάννης «Αρναουτογιάννης» ο Δραγάτης ο Νεομάρτυρας»",
+        "url": "https://www.saint.gr/4377/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having thrown off your fathers' error with a good courage as soon as you came to know the faith of Christ in Mesara, you were numbered with the glorious choirs of the contestants; God-loving guardian of the fields, shown a brave new martyr of true religion, you have received grace to intercede for us who praise you.",
+        "rendered": "site"
+      },
+      "model": "Τὸν συνάναρχον Λόγον."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Μετανοίας εδείχθης ιερόν ακροθίνιον, την μεταστροφήν θείου Παύλου, Ιωάννη μιμούμενος. Και πίστιν αποπτύσας μιαράν, εδέξω χάριν άνωθεν σοφέ. Και Χριστόν ομολογήσας, κατηξιώθης στέφους εναθλήσεως. Δόξα τω δωρησαμένω σοι το φως, δόξα τω σε ενισχύσαντι, Δόξα τω αναδείξαντί σε, εν παντί μάρτυρα νεόαθλον.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης, on the page of «Άγιος Ιωάννης «Αρναουτογιάννης» ο Δραγάτης ο Νεομάρτυρας»",
+        "url": "https://www.saint.gr/4377/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown the sacred first-fruits of repentance, John, imitating the turning of the divine Paul; and having spat out a defiled faith you received grace from above, O wise one, and confessing Christ you were counted worthy of the crown of contest. Glory to him who gave you the light, glory to him who strengthened you, glory to him who showed you forth in all things a newly-contending martyr.",
+        "rendered": "site"
+      },
+      "model": "Τῆς ἐρήμου πολίτης."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

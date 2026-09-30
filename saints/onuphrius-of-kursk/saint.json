@@ -1,0 +1,67 @@
+{
+  "slug": "onuphrius-of-kursk",
+  "display_name": "Onuphrius (Maksimovich)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Ονούφριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαΐου, «Άγιος Ονούφριος ο Ιερομάρτυρας», with the rank word left off; the life page adds that his name in the world was Αντώνιος Μαξίμοβιτς."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1889,
+      "latest": 1889,
+      "display": "1889",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στις 2 Απριλίου 1889 μ.Χ. στην επαρχία του Χόλμ»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "traditional",
+      "note": "saint.gr: «Το 1938 μ.Χ. δολοφονείται για τη δράση του από ανθρώπους του καθεστώτος»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Άγιος Ονούφριος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same day as the listing. He is neither of the corpus's two Onuphrii, `onuphrius-the-great` of the Egyptian desert nor `onuphrius-of-vorona`. The page prints «το 1915 μ.Χ.» twice, for the finishing of the academy and for the ordination, and that repetition is left as the page has it rather than resolved. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

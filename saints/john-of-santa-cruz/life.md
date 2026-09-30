@@ -1,0 +1,13 @@
+# John of Santa Cruz
+
+John of Santa Cruz was born in 1937 in the village of Apoikia on the island of Andros, and was called Karastamatis. At twenty he went to America and made a family there. He was ordained priest, and for ten years worked with a missionary's zeal in Alaska; and after serving the Church in many parishes he went in 1981 to Santa Cruz, to the church of the Prophet Elias, which he finished and opened as a centre of Orthodox confession for a whole district where the people were far from God and from the Church.
+
+saint.gr describes him as simple in his manner, loving his parishioners, with the door of his house open day and night; his preaching was fiery, and he went out into the parks to talk with young people who knew nothing of God or belonged to other confessions. He carried the miracle of his island with him: the dry lily stalks left on the icon of the Mother of God at Andros, which blossom again at her feast. He asked the elder Dorotheos at the monastery of Saint Nicholas for some, took the dry stalks to America and set them on the icon of the Mother of God there, and they blossomed.
+
+His missionary work displeased somebody. Threatening telephone calls and letters began, telling him to stop preaching, and he answered, «Όσο τα μάτια μου έχουν νερό εγώ θα κηρύττω τον Χριστό και την Ορθοδοξία» — as long as my eyes have water in them I shall preach Christ and Orthodoxy. When he told the Christians to guard themselves against the traps of the antichrist and not to take the mark, the calls grew worse.
+
+On the evening of 17 May 1985 he telephoned the elder Dorotheos at Andros for material about the miracles of the Mother of God, because he wanted to preach on the Sunday. The next day, 18 May, he went to the church to prepare it and to write the sermon. His son Photios, coming home and finding him gone, went to look for him there, and found him butchered and unrecognisable. They had struck his head with a hammer and cut his body with a knife, and because he still moved they took his cross and its chain and strangled him with it; his blood was used to write their own slogans and the number 666 on the walls of the sanctuary. They were satanists.
+
+Because the face of the body could not be looked at, they vested him in his good gold-embroidered vestment and sealed the coffin for the funeral. The police found three people, a married couple and the man's son by another woman; they were priests of Satan, and when they were arrested two of them killed themselves and the third lost his reason.
+
+*After saint.gr's calendar for 19 Μαΐου — [the day](https://www.saint.gr/05/19/index.aspx) and [the life](https://www.saint.gr/4111/saint.aspx); read 30 September 2026.*

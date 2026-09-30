@@ -1,0 +1,66 @@
+{
+  "slug": "gabriel-protopopov",
+  "display_name": "Gabriel (Protopopov)",
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "names": [
+    {
+      "form": "Γαβριήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for 19 Μαΐου, whose head line for him is «Αγιος Γαβριηλ ο Ιερομαρτυς (1880 - 1938)» and whose list names him «Γαβριήλ Αλεξάντροβιτς Προτόποπωφ», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Άγιοι Νεομάρτυρες εν Σλομπόντσκαγια Ουκρανίας»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same day as the listing. The company is enumerated — twenty-seven men named one by one, with patronymics, birthplaces and the months of their deaths — so it is twenty-seven folders and not one, by docs/CORPUS.md §10.1. Nothing in the corpus answers to any of these surnames: a grep of `saints/` for all twenty-seven returned nothing, and no folder mentions Kharkov except `meletius-of-kharkov`, a bishop of the eighteen-hundreds. His own head line reads «Αγιος Γαβριηλ ο Ιερομαρτυς (1880 - 1938)», and his sentence in the page's list is quoted whole in the life. His is the one sentence in the list that does not call him Ιερομάρτυς — it reads «Ο Άγιος Γαβριήλ» — while his head line does, «Αγιος Γαβριηλ ο Ιερομαρτυς». The head line is followed for the type and the difference is said here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1880,
+      "latest": 1880,
+      "display": "1880",
+      "basis": "traditional",
+      "note": "saint.gr's head line and list for him: «Αγιος Γαβριηλ ο Ιερομαρτυς (1880 - 1938)»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Γαβριήλ Αλεξάντροβιτς Προτόποπωφ, ο οποίος γεννήθηκε στις 26 Μαρτίου 1880 στο χωριό Πετσενέγκι και μαρτύρησε τον Μάρτιο του 1938.»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

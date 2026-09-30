@@ -1,0 +1,60 @@
+{
+  "slug": "cornelius-of-paleostrov",
+  "display_name": "Cornelius of Paleostrov",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Κορνήλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαΐου, «Όσιος Κορνήλιος», with the rank word left off; the life page's own head calls him «Ο Όσιος Κορνήλιος του Παλεοστρόβ»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1420,
+      "latest": 1420,
+      "display": "1420",
+      "basis": "traditional",
+      "note": "saint.gr: «Εκεί κοιμήθηκε με ειρήνη το 1420 μ.Χ.»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Όσιος Κορνήλιος»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same day as the listing. saint.gr prints two men called Κορνήλιος on 19 Μαΐου, on two separate pages with two separate lives and two different centuries — this one of Paleostrov, born at Pskov and dead in 1420, and `cornelius-of-komel` of Rostov, 1455 to 1537 — and they are two folders. He is also not the corpus's `cornelius-of-pskov`, who shares the city with him and nothing else: that one was born in 1501, was abbot of the Caves monastery of Pskov, and is a hieromartyr kept on the Greek 20 Φεβρουαρίου. The page gives his years only as the 14th and 15th centuries and one stated death year, so the `dates` object carries the death alone. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

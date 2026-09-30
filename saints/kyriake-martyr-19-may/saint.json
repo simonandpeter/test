@@ -6,6 +6,11 @@
       "form": "Chiriachi",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 mai, «Sfânta Muceniță Chiriachi»."
+    },
+    {
+      "form": "Κυριακή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαΐου, «Αγία Κυριακή η Μάρτυρας», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -43,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 19 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Αγία Κυριακή η Μάρτυρας»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps «Sfânta Muceniță Chiriachi» on, and the two lines carry the same three particulars: the year 307, Nicomedia, and six other young Christian women suffering with her. saint.gr adds how they died — «αφού τις έκαψαν ζωντανές», after they had been burned alive — and names the emperor, Maximian Galerius. She is not the corpus's `kyriake-daughter-of-dorotheus`, who is kept on another day with a full life of her own. The six companions are not named on the Greek page either, so the folder stays one and not seven. No hymn is printed for her here."
     },
     {
       "church": "serbian",

@@ -1,0 +1,71 @@
+{
+  "slug": "cornelius-of-komel",
+  "display_name": "Cornelius of Komel",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "names": [
+    {
+      "form": "Κορνήλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαΐου, «Όσιος Κορνήλιος ο Θαυματουργός», with the rank word left off; the life page's own head calls him «Ο Όσιος Κορνήλιος του Κόμελ»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1455,
+      "latest": 1455,
+      "display": "1455",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην πόλη Ροστώβ της Ρωσίας το 1455 μ.Χ.»."
+    },
+    "death": {
+      "earliest": 1537,
+      "latest": 1537,
+      "display": "1537",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη το 1537 μ.Χ.»."
+    }
+  },
+  "related": [
+    "nilus-of-sora",
+    "anthony-the-great"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Όσιος Κορνήλιος ο Θαυματουργός»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same day as the listing. He is the teacher of the two Komel ascetics saint.gr keeps on 16 Μαΐου, «Όσιοι Κασσιανός και Λαυρέντιος», whose pages another reader read on that day and who have no folders yet; he is not the corpus's `arsenius-of-komel`, a different man of the same forest, and not `cornelius-the-centurion`. The page calls him ιερομόναχος of his own monastery, appointed by Metropolitan Simon, and gives no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

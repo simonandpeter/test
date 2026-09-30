@@ -1,0 +1,68 @@
+{
+  "slug": "john-of-santa-cruz",
+  "display_name": "John of Santa Cruz",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαΐου, «Άγιος Ιωάννης της Σάντα Κρουζ ο Ιερομάρτυρας», with the rank words left off; the life page adds that his family name was Καρασταμάτης."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε το 1937 μ.Χ. στο χωριό Αποίκια της νήσου Άνδρου»."
+    },
+    "death": {
+      "earliest": 1985,
+      "latest": 1985,
+      "display": "1985",
+      "basis": "traditional",
+      "note": "saint.gr: killed «στις 18 Μαΐου» 1985, and the head line «(1937 - 1985)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Άγιος Ιωάννης της Σάντα Κρουζ ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same day as the listing, while the page itself puts his death on 18 Μαΐου 1985; the row records the day page that was read and the difference is the page's own. Nothing in the corpus answers to him. The page prints no hymn. He is the most recent saint on this day's listing by three and a half centuries."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

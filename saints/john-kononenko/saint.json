@@ -1,0 +1,66 @@
+{
+  "slug": "john-kononenko",
+  "display_name": "John (Kononenko)",
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for 19 Μαΐου, whose head line for him is «Αγιος Ιωαννης ο Ιερομαρτυς (1880 - 1938)» and whose list names him «Ιωάννης Αντρέεβιτς Κονονένκο», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Άγιοι Νεομάρτυρες εν Σλομπόντσκαγια Ουκρανίας»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same day as the listing. The company is enumerated — twenty-seven men named one by one, with patronymics, birthplaces and the months of their deaths — so it is twenty-seven folders and not one, by docs/CORPUS.md §10.1. Nothing in the corpus answers to any of these surnames: a grep of `saints/` for all twenty-seven returned nothing, and no folder mentions Kharkov except `meletius-of-kharkov`, a bishop of the eighteen-hundreds. His own head line reads «Αγιος Ιωαννης ο Ιερομαρτυς (1880 - 1938)», and his sentence in the page's list is quoted whole in the life. He is the fourth and last of the men called Ιωάννης in this list."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1880,
+      "latest": 1880,
+      "display": "1880",
+      "basis": "traditional",
+      "note": "saint.gr's head line and list for him: «Αγιος Ιωαννης ο Ιερομαρτυς (1880 - 1938)»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιερομάρτυς Ιωάννης Αντρέεβιτς Κονονένκο, ο οποίος γεννήθηκε στις 7 Ιανουαρίου 1880 στο χωριό Σολόχι της επαρχίας του Χάρκωβ και μαρτύρησε τον Απρίλιο του 1938.»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

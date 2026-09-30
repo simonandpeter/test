@@ -1,0 +1,9 @@
+# Cornelius of Komel
+
+Cornelius of Komel was born at Rostov in Russia in 1455, of the noble boyar family of the Kryukovs. His brother Loukianos served at the court of the great prince of Moscow, Basil Vasilyevich Temny, and when Loukianos decided to withdraw to the monastery of Saint Cyril of the White Lake, that decision carried Cornelius with him, for he already loved the monastic life. He followed his brother into the house and there began a hard ascesis: even in the monastery bakery, where he served, he wore heavy chains in order to labour the more, and he copied church books.
+
+A little later he went to the monastery of Saint Gennadius at Novgorod, but preferring the life of stillness he withdrew in the end to the forest of Komel in 1497. There, in 1501, he raised a wooden church in honour of the Mother of God, and soon after Metropolitan Simon appointed him hieromonk of the monastery. As the number of monks grew, Cornelius built a new church as well and wrote a monastic rule on the basis of the Typikon of Saint Joseph of Volokolamsk and of [Nilus of Sora](/saints/nilus-of-sora).
+
+saint.gr singles out his love for the suffering, the poor and orphans, and adds that he built a church in honour of [Anthony the Great](/saints/anthony-the-great), for whom he had a particular reverence and whom he was counted worthy to see in visions. He fell asleep in peace in 1537. The page prints no hymn to him.
+
+*After saint.gr's calendar for 19 Μαΐου — [the day](https://www.saint.gr/05/19/index.aspx) and [the life](https://www.saint.gr/1637/saint.aspx); read 30 September 2026.*

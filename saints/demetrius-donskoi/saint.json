@@ -1,0 +1,70 @@
+{
+  "slug": "demetrius-donskoi",
+  "display_name": "Demetrius Donskoi",
+  "sex": "male",
+  "types": [
+    "prince"
+  ],
+  "names": [
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαΐου, «Άγιος Δημήτριος Ντονσκόι, ο μεγάλος Πρίγκιπας», with the rank words left off and the by-name kept, as the page's own head prints it."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1350,
+      "latest": 1350,
+      "display": "1350",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε το 1350 μ.Χ.»."
+    },
+    "death": {
+      "earliest": 1389,
+      "latest": 1389,
+      "display": "1389",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη το 1389 μ.Χ.»."
+    }
+  },
+  "related": [
+    "alexis-of-moscow",
+    "sergius-of-radonezh"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Άγιος Δημήτριος Ντονσκόι, ο μεγάλος Πρίγκιπας»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same day as the listing, and adds «Ιερά Λείψανα: Τα Λείψανα του Αγίου βρίσκονται στον Καθεδρικό Ναό Αρχαγγέλλου Μιχαήλ Κρεμλίνου». He is not the Demetrius of Moscow whom saint.gr keeps on 15 Μαΐου and another reader has drafted as `demetrius-of-moscow`: that one is the τσάρεβιτς, the heir who died young at the end of the sixteenth century, and this one is the great prince who won the field of Kulikovo and died in 1389. The closed `types` list has no slug for a great prince, so `prince` is used alone. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

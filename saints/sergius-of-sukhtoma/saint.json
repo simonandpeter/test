@@ -1,0 +1,60 @@
+{
+  "slug": "sergius-of-sukhtoma",
+  "display_name": "Sergius of Sukhtoma",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Σέργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαΐου, «Όσιος Σέργιος της Σουχτόμα», with the rank word left off; the life page adds that his name in the world was Στέφανος."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1609,
+      "latest": 1609,
+      "display": "1609",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Σέργιος κοιμήθηκε με ειρήνη το 1609 μ.Χ.»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Όσιος Σέργιος της Σουχτόμα»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same day as the listing. He is none of the corpus's many men of this name; none of them is a Kazan-born pilgrim tonsured at Solovki in 1603. The page gives him a tonsuring year and a death year and nothing else datable, and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

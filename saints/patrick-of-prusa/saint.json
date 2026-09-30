@@ -6,6 +6,11 @@
       "form": "Patrichie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 mai, «Sfântul Sfințit Mucenic Patrichie, Episcopul Prusei»."
+    },
+    {
+      "form": "Πατρίκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαΐου, «Άγιοι Πατρίκιος επίσκοπος Προύσας, Ακάκιος, Μένανδρος και Πολύαινος», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 19 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Άγιοι Πατρίκιος επίσκοπος Προύσας, Ακάκιος, Μένανδρος και Πολύαινος»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps him on, and the identification is the plainest on this day: the same see, Prusa, the same governor examining him, and the same three companions by name — «Ακάκιος, Μένανδρος και Πολύαινος», the Acacius, Menander and Polyaenus whom the folder's Romanian life already names as the three priests beheaded with him. The Greek names the governor «Ιουλιανό τον Υπατικό», Julian the Consular, where the Romanian life has Julius governor of Bithynia; the difference is the sources' and is not resolved here. saint.gr gives the four no year, so the folder's empty `dates` is left empty. Three hymns are added, one of them the common of martyrs printed as «Έτερον Ἀπολυτίκιον»."
     },
     {
       "church": "serbian",
@@ -59,6 +74,57 @@
       },
       "english": {
         "text": "Your martyrs, O Lord, in their contest received from You, our God, the crowns of incorruption; for having Your strength they overthrew their tormentors and broke the powerless insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Τετράς θεοφόρητος, Ἱεραρχῶν ἱερῶν, Τριάδα τὴν ἂκτιστον, κατ’ ἐναντίον ἐχθρῶν, πανσόφως ἐκήρυξε, Πατρίκιος ὁ τῆς Προύσης, θεηγόρος ποιμάντωρ, Ἀκάκιος σὺν Μενάνδρῳ, καὶ Πολύαινος ἃμα· διὸ καὶ ὡς ἀθλήσαντες, δόξης ἠξιώθησαν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχύ προκατάλαβε, on the page of «Άγιος Πατρίκιος επίσκοπος Προύσας»",
+        "url": "https://www.saint.gr/1631/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A God-bearing four of holy hierarchs preached the uncreated Trinity in all wisdom in the face of their enemies: Patrick, the God-speaking shepherd of Prusa, Acacius together with Menander, and Polyaenus with them; and so, having contended, they were counted worthy of glory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Οἱ Μάρτυρες σου Κύριε, ἐν τῇ ἀθλήσει αὐτῶν, τὸ στέφος ἐκομίσαντο τῆς ἀφθαρσίας, ἐκ σοῦ τοῦ Θεοῦ ἡμῶν· σχόντες γὰρ τὴν ἰσχύν σου, τοὺς τυράννους καθεῖλον· ἔθραυσαν καὶ δαιμόνων τὰ ἀνίσχυρα θράση. Αὐτῶν ταῖς ἱκεσίαις Χριστὲ ὁ Θεός, σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ’, Ταχύ προκατάλαβε, on the page of «Άγιος Πατρίκιος επίσκοπος Προύσας» — the common of martyrs",
+        "url": "https://www.saint.gr/1631/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, in their contest received the crown of incorruption from you, our God; for having your strength they brought the tyrants down, and shattered the powerless insolence of the demons. At their entreaties, Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ'.",
+      "model": "Ὡς ἀπαρχὰς.",
+      "text": "Ὡς ἱερὸν κειμήλιον, τοῦ Ἰησοῦ Πατρίκιε, ἡ Ἐκκλησία λαβοῦσα τὸ σῶμά σου, ἀγαλλομένη κράζει σοι. Διὰ σοὺ ἅπας κόσμος, ἐν εἰρήνῃ βαθεία διαφυλάττεται, ἐξ αἰρέσεως πάσης ἀλώβητος καὶ ἀήττητος.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Ὡς ἀπαρχὰς, on the page of «Άγιος Πατρίκιος επίσκοπος Προύσας»",
+        "url": "https://www.saint.gr/1631/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received your body as a sacred treasure of Jesus, O Patrick, the Church cries out to you in gladness: through you the whole world is kept in deep peace, unharmed by every heresy and unconquered.",
         "rendered": "site"
       }
     }

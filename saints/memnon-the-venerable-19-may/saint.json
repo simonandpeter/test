@@ -6,6 +6,11 @@
       "form": "Memnon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 mai, «Sfântul Cuvios Memnon»."
+    },
+    {
+      "form": "Μέμνων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαΐου, «Όσιος Μέμνων ο Θαυματουργός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's page for 19 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Όσιος Μέμνων ο Θαυματουργός»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps «Sfântul Cuvios Memnon» on, with the same bare personal name and the same monastic rank word, Όσιος for Cuvios — the ground on which this row is written. But the Greek page carries no life: it prints a distich and then «Βλέπε βιογραφία του στις 28 Απριλίου», see his biography on 28 April. That is the open question of the day and it is not decided here. The corpus keeps a second Memnon, `memnon-the-wonderworker`, on the Romanian 29 aprilie, with the same epithet ο Θαυματουργός; saint.gr's cross-reference would make the two one man kept twice, while this corpus keeps them apart on doxologia's two days. His row is left where it stands and nothing of his is touched. If a later reader opens saint.gr's 28 Απριλίου page and finds the two are one, this row is the one to revisit."
     },
     {
       "church": "serbian",

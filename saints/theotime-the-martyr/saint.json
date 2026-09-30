@@ -1,0 +1,50 @@
+{
+  "slug": "theotime-the-martyr",
+  "display_name": "Theotime",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Θεοτίμη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαΐου, «Αγία Θεοτίμη η Μάρτυρας», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Αγία Θεοτίμη η Μάρτυρας»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same day as the listing, and its whole account of her is one sentence and one couplet. She is not the corpus's `theotimus-of-tomis` or `theotimus-the-executioner`, who are men of a masculine form of the name and are kept on other days. No year, no place, no companions, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

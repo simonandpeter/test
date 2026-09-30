@@ -1,0 +1,60 @@
+{
+  "slug": "jeremiah-of-kantara",
+  "display_name": "Jeremiah of Kantara",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Ιερεμίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Μαΐου, «Άγιοι Ιωάννης, Κόνων, Ιερεμίας, Μάρκος, Κύριλλος, Θεόκτιστος, Βαρνάβας, Μάξιμος, Θεόγνωστος, Ιωσήφ, Γεννάδιος, Γεράσιμος και Γερμανός οι Οσιομάρτυρες και Ομολογητές της Μονής Καντάρας Κύπρου», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1231,
+      "latest": 1231,
+      "display": "1231",
+      "basis": "traditional",
+      "note": "saint.gr: «τους έκαψαν ζωντανούς την 19η Μάιου 1231 μ.Χ.», and each head line «(; - 1231)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Μαΐου — «Άγιοι Ιωάννης, Κόνων, Ιερεμίας, Μάρκος, Κύριλλος, Θεόκτιστος, Βαρνάβας, Μάξιμος, Θεόγνωστος, Ιωσήφ, Γεννάδιος, Γεράσιμος και Γερμανός οι Οσιομάρτυρες και Ομολογητές της Μονής Καντάρας Κύπρου»",
+        "url": "https://www.saint.gr/05/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Μαΐου εκάστου έτους», the same day as the listing. The company is enumerated — thirteen men named in the day's own line and again in the page's thirteen head lines, each «Οσιομάρτυρας Και Ομολογητης Της Μονης Κανταρας Κυπρου (; - 1231)» — so it is thirteen folders and not one, by docs/CORPUS.md §10.1. Nothing in the corpus answers to any of them: no folder mentions Kantara, and none of the corpus's men of these names is a thirteenth-century Cypriot. The page gives the thirteen one shared narrative, one death date, and no hymn; the life here is that shared narrative with a closing sentence for each man. His own head line reads «Αγιος Ιερεμιας Οσιομαρτυρας Και Ομολογητης Της Μονης Κανταρας Κυπρου (; - 1231)»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
