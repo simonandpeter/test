@@ -1,0 +1,103 @@
+{
+  "slug": "synesius-of-carpasia",
+  "display_name": "Synesius of Carpasia",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "hierarch",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Συνέσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιος Συνέσιος ο Επίσκοπος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαΐου — «Άγιος Συνέσιος ο Επίσκοπος»",
+        "url": "https://www.saint.gr/05/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Μαΐου εκάστου έτους», the same day as the listing. Nothing in the corpus answers to the name; the namesweep offered no candidate at all. **He is not the Synesius of Cyrene the site's own name-gloss mentions** — «Συγγραφέας από την Κυρήνη του 4ου μ.Χ. αιώνα» is the gloss on the *name*, not a statement about him, and it is not carried into the folder. **There is no `dates` object**: the page gives him no year at all, only that he succeeded Philon of Carpasia (24 Ιανουαρίου) and that Epiphanius counted the heresies of the time at over eighty. Philon has no folder, so he is named without a link. The page says plainly how thin its material is, «Πολύ φτωχές δυστυχώς είναι οι πληροφορίες», and carries no asterisk. Three hymns are copied, the second of them the common of a hierarch printed as «Έτερον Ἀπολυτίκιον»; the page's oikos and kathisma cannot be held by the schema's `kind` enum."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Καρπασέων τὸ κλέος καὶ Κυπρίων ἀγλάϊσμα, καὶ θαυματουργὸς ἀνεδείχθης, Ἱεράρχα Πατὴρ ἡμῶν Συνέσιε· διὸ τὴν χάριν τῶν θαυμάτων ἐξ οὐρανοῦ ἐδέξω μακάριε, θεραπεύειν τοὺς νοσοῦντας, καὶ τὰς ψυχὰς τῶν πίστει προστρεχόντων σοι. Δόξα τῷ δεδοκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, on the page of «Άγιος Συνέσιος ο Επίσκοπος»",
+        "url": "https://www.saint.gr/3940/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown the boast of the people of Carpasia and the adornment of the Cypriots and a wonderworker, hierarch and father of ours, Synesius; and so you received from heaven the grace of wonders, O blessed one, to heal the sick and the souls of those who run to you in faith. Glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ´.",
+      "text": "Κανόνα πίστεως καὶ εἰκόνα πραότητος, ἐγκρατείας διδάσκαλον, ἀνέδειξε σὲ τῇ ποίμνῃ σου, ἡ τῶν πραγμάτων ἀλήθεια. Διὰ τοῦτο ἐκτήσω τῇ ταπεινώσει τὰ ὑψηλά, τῇ πτωχείᾳ, τὰ πλούσια, πάτερ Ἱεράρχα Συνέσιε, πρέσβευε Χριστῷ τῷ Θεῷ σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ´, on the page of «Άγιος Συνέσιος ο Επίσκοπος» — the common of a hierarch",
+        "url": "https://www.saint.gr/3940/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things showed you to your flock as a rule of faith, an image of meekness and a teacher of self-restraint; and so by humility you gained the things that are high, and by poverty the things that are rich, father and hierarch Synesius. Intercede with Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Τῇ ὑπερμάχῳ καὶ θερμῇ ἀντιλήψει σου, προσφεύγομεν οἱ πιστοὶ πάτερ Συνέσιε, τοῦ λυτρωθῆναι διά σοῦ τῶν θλίψεων καὶ κινδύνων, ἀλλ᾿ ὡς ἔχων παῤῥησίαν πρὸς τὸν Κύριον, ἐκ παντοίων ἡμᾶς σῷζε περιστάσεων, ἵνα κράζωμεν, χαίροις πάτερ Συνέσιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ, on the page of «Άγιος Συνέσιος ο Επίσκοπος»",
+        "url": "https://www.saint.gr/3940/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "To your championing and fervent help we the faithful flee, father Synesius, to be delivered through you from afflictions and dangers; and since you have boldness before the Lord, save us from every kind of trouble, that we may cry: Rejoice, father Synesius.",
+        "rendered": "site"
+      },
+      "model": "Τῇ ὑπερμάχῳ."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

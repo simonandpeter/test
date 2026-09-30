@@ -1,0 +1,52 @@
+{
+  "slug": "damian-sent-to-britain",
+  "display_name": "Damian, sent to Britain",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "preacher"
+  ],
+  "names": [
+    {
+      "form": "Δαμιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαΐου, «Όσιοι Φουγάτιος και Δαμιανός», with the rank word left off; his own head line on the life page is «Οσιος Δαμιανος»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαΐου — «Όσιοι Φουγάτιος και Δαμιανός»",
+        "url": "https://www.saint.gr/05/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Μαΐου εκάστου έτους», the same day as the listing, and carries two head names, «Οσιος Δαμιανος» and «Οσιος Φουγατιος» — in that order, the reverse of the day line's — so it is two folders. It carries no asterisk. **There is no `dates` object for either of them**: the page gives a century and no year. Eleutherius of Rome, who sent them, has no folder and is named without a link. None of the corpus's eight men of this name is a second-century monk of Rome sent to England: `damian-of-rome`, `damian-the-healer`, `damian-of-asia`, `damian-of-agrafa`, `damian-of-esphigmenou` and `damian-disciple-of-polychronius` are all other men, and the display name keeps the mission because the page gives him nothing else."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

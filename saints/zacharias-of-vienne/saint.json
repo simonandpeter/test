@@ -1,0 +1,60 @@
+{
+  "slug": "zacharias-of-vienne",
+  "display_name": "Zacharias of Vienne",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Ζαχαρίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιος Ζαχαρίας ο Ιερομάρτυρας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 160,
+      "latest": 160,
+      "display": "160",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε υπέρ Χριστού το 160 μ.Χ.», and the head line «(; - 160)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαΐου — «Άγιος Ζαχαρίας ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/05/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Μαΐου εκάστου έτους», the same day as the listing, and its whole entry is one sentence: «Ο Άγιος Ιερομάρτυς Ζαχαρίας ήταν δεύτερος Επίσκοπος της Βιέννης και μαρτύρησε υπέρ Χριστού το 160 μ.Χ.». None of the corpus's men of this name is a bishop of Vienne: `zacharias-of-jerusalem`, `zacharias-of-arta`, `zacharias-father-of-the-forerunner` and the rest are other men. The Vienne meant is the see in Gaul, on the Rhône, not the Austrian city; the page does not say so, and the second-century date and the Latin world it belongs to are what make it plain. No hymn, no relics, no place of burial."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "priscus-martyr-at-besancon",
+  "display_name": "Priscus, martyred at Besançon",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Πρίσκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιος Πρίσκος ο Μάρτυρας και η συνοδεία αυτού», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 272,
+      "latest": 272,
+      "display": "272",
+      "basis": "traditional",
+      "note": "saint.gr: «Όλοι τελειώθηκαν μαρτυρικά το 272 μ.Χ.», and the head line «(; - 272)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαΐου — «Άγιος Πρίσκος ο Μάρτυρας και η συνοδεία αυτού»",
+        "url": "https://www.saint.gr/05/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Μαΐου εκάστου έτους», the same day as the listing. **He is not the corpus's `priscus-the-martyr`, whose `greek` row is already `venerated` on 21 Σεπτεμβρίου**, and §5 forbids touching it in any case: that Priscus is martyred by fire or by the sword with no place, no company and no century but the fourth, on the word of the Russian calendar; this one is a Roman senior officer serving at Besançon in Gaul under Aurelian, taken with his fellow-soldiers and dead in 272, his relics found by Germanus of Auxerre. Two entries on one calendar are two commemorations, so two men. **His company is not enumerated** — «η συνοδεία αυτού», «μαζί με τους συστρατιώτες του», and not one of them is named or even counted — so it is one folder. Germanus of Auxerre has no folder and is named without a link. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

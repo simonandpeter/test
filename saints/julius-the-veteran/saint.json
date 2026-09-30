@@ -6,6 +6,11 @@
       "form": "Iuliu Veteranul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 mai, «Sfântul Mucenic Iuliu Veteranul»."
+    },
+    {
+      "form": "Ιούλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιος Ιούλιος ο Μάρτυρας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαΐου — «Άγιος Ιούλιος ο Μάρτυρας»",
+        "url": "https://www.saint.gr/05/26/index.aspx",
+        "year": 2026
+      },
+      "note": "**saint.gr keeps him on 26 Μαΐου where doxologia.ro keeps him on 27 mai, one day apart, and the row records the day page that was read.** The identification is not in doubt: both accounts give a soldier of the Roman army at **Durostorum in Moesia**, brought before the governor **Maximus**, pressed to sacrifice, refusing, and beheaded; the folder's own life already has all four of those from the Romanian side. The Greek adds a flat year the Romanian page does not give, «καταδικάσθηκε στον δι' αποκεφαλισμού θάνατο το 302 μ.Χ., επί αυτοκράτορα Διοκλητιανού (284 - 305 μ.Χ.)», and the head line repeats it; **the folder's `dates` is left as it is**, an interval «between 284 and 311» that a reader does not replace from an upgrade file, and the Greek's 302 is recorded here and in the added paragraph so that a later reader can lift it with a citation. The Greek also links him to three saints of another day — «συνδεόταν με τους αγίους Πασικράτη, Βαλεντίωνα και Ησύχιο, που μαρτύρησαν νωρίτερα (τιμούνται 24 Απριλίου)» — and the corpus keeps none of the three, so none is linked. No hymn is printed."
     },
     {
       "church": "serbian",

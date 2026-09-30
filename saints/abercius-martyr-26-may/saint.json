@@ -6,6 +6,11 @@
       "form": "Averchie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 mai, «Sfântul Mucenic Averchie»."
+    },
+    {
+      "form": "Αβέρκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιος Αβέρκιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαΐου — «Άγιος Αβέρκιος»",
+        "url": "https://www.saint.gr/05/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps «Sfântul Mucenic Averchie» on, with the same bare name and the same rank — the Trofim ground. The Greek adds two things the Romanian line does not carry, and both are hedged on the synaxarists' authority rather than the page's own: «Στους Συναξαριστές αναφέρεται ότι ήταν γιος του Αποστόλου Αλφαίου (βλέπε ίδια ημέρα) και αφού τον άπλωσαν σε μελισσώνα, θανατώθηκε από τις μέλισσες» — that he was the son of the Apostle Alphaeus, kept on the same day, and that he was spread out in a beehive and killed by the bees. He is not the corpus's `abercius-of-hierapolis`. No year, no place, no hymn."
     },
     {
       "church": "serbian",
@@ -45,5 +60,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "alphaeus-the-apostle",
+    "helen-martyr-26-may"
+  ]
 }

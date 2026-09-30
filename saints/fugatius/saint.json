@@ -1,0 +1,52 @@
+{
+  "slug": "fugatius",
+  "display_name": "Fugatius",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "preacher"
+  ],
+  "names": [
+    {
+      "form": "Φουγάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαΐου, «Όσιοι Φουγάτιος και Δαμιανός», with the rank word left off; his own head line on the life page is «Οσιος Φουγατιος»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαΐου — «Όσιοι Φουγάτιος και Δαμιανός»",
+        "url": "https://www.saint.gr/05/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Μαΐου εκάστου έτους», the same day as the listing, and carries two head names, «Οσιος Δαμιανος» and «Οσιος Φουγατιος» — in that order, the reverse of the day line's — so it is two folders. It carries no asterisk. **There is no `dates` object for either of them**: the page gives a century and no year. Eleutherius of Rome, who sent them, has no folder and is named without a link. Nothing in the corpus answers to this name in any form; the namesweep offered no candidate at all."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

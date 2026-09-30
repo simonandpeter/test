@@ -1,0 +1,61 @@
+{
+  "slug": "augustine-of-canterbury",
+  "display_name": "Augustine of Canterbury",
+  "sex": "male",
+  "types": [
+    "archbishop",
+    "monk",
+    "preacher"
+  ],
+  "names": [
+    {
+      "form": "Αυγουστίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιος Αυγουστίνος Αρχιεπίσκοπος Καντουαρίας», with the rank word and the see left off; the life page prints the Latin-letter form beside it throughout, «τον Άγιο Augustine (Αυγουστίνο)»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 605,
+      "latest": 605,
+      "display": "605",
+      "basis": "traditional",
+      "note": "saint.gr's head line for him, «Αγιος Αυγουστινος Αρχιεπισκοπος Καντουαριας (; - 605)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαΐου — «Άγιος Αυγουστίνος Αρχιεπίσκοπος Καντουαρίας»",
+        "url": "https://www.saint.gr/05/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Μαΐου εκάστου έτους», the same day as the listing, and carries no asterisk. He is not the corpus's `augustine-of-hippo`. The page names many men around him and the corpus keeps none of them: Gregory the Great of Rome (12 Μαρτίου), Ethelbert king of Kent (24 Φεβρουαρίου, whom another reader has drafted as a new folder from saint.gr's 29 Μαΐου), Bede (27 Μαΐου), Mellitus of London (24 Απριλίου), Justus of Rochester (10 Νοεμβρίου), Paulinus of York (10 Οκτωβρίου), Rufinianus, Laurence, Peter, queen Bertha and the metropolitan Virgil of Arles. None is linked, because none has a folder yet. The forty monks who came with him are counted and not named, so they are no folders. Only the head line gives a year. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

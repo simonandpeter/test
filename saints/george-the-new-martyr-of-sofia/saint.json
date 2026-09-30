@@ -1,0 +1,50 @@
+{
+  "slug": "george-the-new-martyr-of-sofia",
+  "display_name": "George of Sofia",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιος Γεώργιος ο Νεομάρτυρας εκ Βουλγαρίας», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαΐου — «Άγιος Γεώργιος ο Νεομάρτυρας εκ Βουλγαρίας»",
+        "url": "https://www.saint.gr/05/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Μαΐου εκάστου έτους», the same day as the listing. **There is no `dates` object**: the page gives no year for his birth or his death and no year in its head line either, only the reign of «του σουλτάνου Σελίνα (1512 - 1520 μ.Χ.)» in the governor's promise, and a reign is not a death. Nothing in the corpus answers to a George of Sofia; the corpus keeps no folder that mentions Sofia at all. No hymn is printed. The display name carries the city rather than the country, because the page names Sofia for his birth and Sredets for the resting of his relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

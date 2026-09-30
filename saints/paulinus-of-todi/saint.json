@@ -1,0 +1,59 @@
+{
+  "slug": "paulinus-of-todi",
+  "display_name": "Paulinus of Todi",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Παυλίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιοι Φηλικίσσιμος, Ηρακλής και Παυλίνος οι Μάρτυρες», with the rank word left off; his own head line on the life page is «Αγιος Παυλινος ο Μαρτυρας (; - 303)»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησαν το 303 μ.Χ., επί αυτοκράτορα Διοκλητιανού (284 - 305 μ.Χ.), στην πόλη Τόντι», and each head line «(; - 303)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαΐου — «Άγιοι Φηλικίσσιμος, Ηρακλής και Παυλίνος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Μαΐου εκάστου έτους», the same day as the listing, and carries three head names, «Αγιος Ηρακλης ο Μαρτυρας (; - 303)», «Αγιος Παυλινος ο Μαρτυρας (; - 303)» and «Αγιος Φηλικισσιμος ο Μαρτυρας (; - 303)», so it is three folders. It carries no asterisk. The display names keep the city because the page gives the three of them nothing else to be told apart by. The corpus's `paulinus-of-athens` is another man, and the Paulinus of York named on this same day's Augustine page is a third."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

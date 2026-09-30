@@ -6,6 +6,11 @@
       "form": "Carp",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 mai, «Sfântul Apostol Carp»."
+    },
+    {
+      "form": "Κάρπος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιος Κάρπος ο Απόστολος από τους Εβδομήκοντα», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαΐου — «Άγιος Κάρπος ο Απόστολος από τους Εβδομήκοντα»",
+        "url": "https://www.saint.gr/05/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps «Sfântul Apostol Carp» on, with the same rank and the same place among the Seventy — and the Greek adds the same see argued two ways: «έγινε επίσκοπος στη Βάρνα της Θράκης (ο δε Σ. Ευστρατιάδης, αναφέρει Βέρροια της Θράκης)», Varna or Berroia of Thrace, the page naming Eustratiades for the second. **No `locations` object is proposed** on a see the source gives two names for. The page puts him in the reign of Nero, «(52 μ.Χ.)», which is a year inside a reign and not a year of his own, so the folder's empty `dates` is left empty. It rests his work at Troas on 2 Timothy 4,13, and says he died peacefully — he is therefore not the Carpus the corpus keeps as `carpus-of-thyatira`, a martyr with Papylus. Three hymns are added, the first of them the common of an apostle; the page's megalynarion and kathisma cannot be held by the schema's `kind` enum."
     },
     {
       "church": "serbian",
@@ -62,6 +77,56 @@
         "text": "Holy apostle Carpus, entreat the merciful God to grant our souls forgiveness of our sins.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Ἀπόστολε Ἅγιε Κάρπε, πρέβευε τῷ ἐλεήμονι Θεῷ , ἵνα πταισμάτων ἄφεσιν, παράσχῃ ταῖς ψυχαῖς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, on the page of «Άγιος Κάρπος ο Απόστολος από τους Εβδομήκοντα» — the common of an apostle",
+        "url": "https://www.saint.gr/3936/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy apostle Carpus, intercede with the merciful God that he may grant our souls forgiveness of our offences.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Θείας χάριτος, τῇ κοινωνίᾳ, ἐκοινώνησας, δεσμῶν τῷ Παύλῳ, θεομακάριστε Κάρπε Ἀπόστολε, καὶ κοινωνοὺς θείας δόξης ἀνέδειξας, τοὺς δεξαμένους τὸ φέγγος τῶν λόγων σου. Ὅθεν πρέσβευε, Χριστῷ τῷ Θεῷ πανεύφημε, δωρήσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος γ’, Θείας Πίστεως, on the page of «Άγιος Κάρπος ο Απόστολος από τους Εβδομήκοντα»",
+        "url": "https://www.saint.gr/3936/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharing in the fellowship of divine grace, you shared Paul's bonds as well, Carpus, apostle blessed of God, and showed those who received the radiance of your words to be sharers of the divine glory. Therefore intercede with Christ God, all-praised one, that the great mercy may be given us.",
+        "rendered": "site"
+      },
+      "model": "Θείας Πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Καρποφόρος πέφηνας, τῇ μυστικῇ γεωργίᾳ, ὡς κλεινὸς Ἀπόστολος, καὶ ὑπηρέτης τοῦ Λόγου· ὅθεν σου, ὁ τῶν ἀγώνων καρπὸς ὁ θεῖος, κάρπωμα, τερπνὸν προσήχθη τῷ Παντεπόπτῃ· ὃν ἱκέτευε ἀπαύστως, Κάρπε θεόφρον, ἐλεηθῆναι ἡμᾶς.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον, on the page of «Άγιος Κάρπος ο Απόστολος από τους Εβδομήκοντα»",
+        "url": "https://www.saint.gr/3936/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown fruitful in the mystical husbandry, a renowned apostle and a servant of the Word; and so the divine fruit of your labours was brought as a pleasing offering to him who beholds all things. Entreat him unceasingly, God-minded Carpus, that mercy may be shown us.",
+        "rendered": "site"
+      },
+      "model": "Ἡ Παρθένος σήμερον."
     }
   ],
   "text": {

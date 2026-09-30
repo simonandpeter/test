@@ -6,6 +6,11 @@
       "form": "Alfeu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 mai, «Sfântul Apostol Alfeu»."
+    },
+    {
+      "form": "Αλφαίος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιος Αλφαίος ο Απόστολος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαΐου — «Άγιος Αλφαίος ο Απόστολος»",
+        "url": "https://www.saint.gr/05/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps «Sfântul Apostol Alfeu» on, with the same bare name and the same rank. **The page does not know which Alphaeus he is and says so**: «Δεν υπάρχουν σαφή βιογραφικά του στοιχεία, γι' αυτό δεν μπορούμε να αποφανθούμε με βεβαιότητα ποιος Αλφαίος είναι» — and it then gives two answers, James the son of Alphaeus of the Twelve, brother of the Evangelist Matthew (16 Νοεμβρίου), on Nikodemos the Hagiorite's authority among others; or, which it calls the likelier, the Alphaeus or Cleopas who was husband of the Mary who was kinswoman of the Mother of God, and who lived with his wife and children working for the spreading of the Gospel. That is uncertainty about **who** he is and not about whether he existed, and the page carries no asterisk, so the row is written and the uncertainty is recorded rather than decided. Relics: «Απότμημα… βρίσκεται στην Ιερά Μονή Εσφιγμένου Αγίου Όρους». No hymn. Note that the same page's head is the ground on which saint.gr calls Abercius and Helen his son and daughter, and that both of those are upgraded here too."
     },
     {
       "church": "serbian",
@@ -45,5 +60,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "abercius-martyr-26-may",
+    "helen-martyr-26-may"
+  ]
 }

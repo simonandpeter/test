@@ -6,6 +6,11 @@
       "form": "Elena",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 mai, «Sfânta Muceniță Elena»."
+    },
+    {
+      "form": "Ελένη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαΐου, «Αγία Ελένη», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαΐου — «Αγία Ελένη»",
+        "url": "https://www.saint.gr/05/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps «Sfânta Muceniță Elena» on, with the same bare name and the same rank. The Greek adds a brother and a manner of death, both on the synaxarists' word: «Στους Συναξαριστές αναφέρεται ότι ήταν αδελφή του Αγίου Αβερκίου (βλέπε ίδια ημέρα) και μαρτύρησε δια λιθοβολισμού» — sister of the Abercius kept on the same day, martyred by stoning. She is therefore, on the same page's reckoning, a daughter of the Apostle Alphaeus. She is none of the corpus's other women of this name — not `helen-the-empress`, not `helen-of-sinope`, not `helen-martyr-1943`, and not the `helen-of-decani` drafted from saint.gr's 21 Μαΐου. No year, no place, no hymn."
     },
     {
       "church": "serbian",
@@ -45,5 +60,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "abercius-martyr-26-may",
+    "alphaeus-the-apostle"
+  ]
 }

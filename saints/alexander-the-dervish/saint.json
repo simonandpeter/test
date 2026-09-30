@@ -1,0 +1,95 @@
+{
+  "slug": "alexander-the-dervish",
+  "display_name": "Alexander of Thessalonica the Dervish",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιος Αλέξανδρος από την Θεσσαλονίκη ο Δερβίσης», with the rank word left off and the by-name kept, as the page's own head line prints it."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1794,
+      "latest": 1794,
+      "display": "1794",
+      "basis": "traditional",
+      "note": "saint.gr: «υπέμεινε με καρτερία το μαρτυρικό του θάνατο δι' αποκεφαλισμού, στις 26 Μαΐου 1794», and the head line «(; - 1794)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαΐου — «Άγιος Αλέξανδρος από την Θεσσαλονίκη ο Δερβίσης»",
+        "url": "https://www.saint.gr/05/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Μαΐου εκάστου έτους», and the page puts his beheading on that same 26 May of 1794, so the feast is the day of the death. None of the corpus's men of this name is a Thessalonian who apostatised at Smyrna, entered the order of the dervishes and came back. Two hymns are copied, both proper to him and naming Thessalonica; the megalynarion the page also prints cannot be held by the schema's `kind` enum. The page names Laodigia or Lagodiani, «σημερινή Λαοδηγήτρια», as his quarter, and no `locations` object is proposed for a quarter of a city."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "text": "Ἐν ἀθλήσει νομίμως Μάρτυς ἠρίστευσας, καὶ τὸν σὲ τρώσαντα πρῲην κατηγωνίσω ἐχθρὸν, καὶ Μαρτύρων κοινωνὸς ὤφθης Ἀλέξανδρε. Ὅθεν ὡς ἅγιον βλαστόν, Θεσσαλονίκη σὲ τιμᾷ, καὶ πόθῳ σοι ἀνακράζει· Μὴ διαλίπῃς πρεσβεύων, ἐλεηθῆναι τοὺς τιμῶντάς σε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον, on the page of «Άγιος Αλέξανδρος από την Θεσσαλονίκη ο Δερβίσης»",
+        "url": "https://www.saint.gr/3941/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You contended lawfully and excelled in the contest, O martyr, and overcame the enemy who had wounded you before, and were shown a companion of the martyrs, Alexander. Therefore Thessalonica honours you as a holy shoot and cries out to you with longing: do not cease from interceding, that mercy may be shown to those who honour you.",
+        "rendered": "site"
+      },
+      "model": "Τὸν συνάναρχον Λόγον."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Ἑορτάζει σήμερον, Θεσσαλονίκη ἡ πόλις, τὴν ἁγίαν μνήμην σου, Ἀλέξανδρε Νεομάρτυς· ταύτης γὰρ, γόνος καὶ βλάστημα θεῖον πέλων, ἤθλησας, ἐν Σμύρνῃ γνώμῃ ἀνδρειοτάτῃ, δι’ ἀγάπην τοῦ Κυρίου· ὅν ἐκδυσώπει σώζεσθαο ἅπαντας.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον, on the page of «Άγιος Αλέξανδρος από την Θεσσαλονίκη ο Δερβίσης»",
+        "url": "https://www.saint.gr/3941/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today the city of Thessalonica keeps your holy memory, Alexander the new martyr; for being her offspring and her divine shoot, you contended at Smyrna with a most manly resolve, for the love of the Lord. Entreat him that all may be saved.",
+        "rendered": "site"
+      },
+      "model": "Ἡ Παρθένος σήμερον."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
