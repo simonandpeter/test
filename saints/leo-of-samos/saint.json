@@ -1,0 +1,63 @@
+{
+  "slug": "leo-of-samos",
+  "display_name": "Leo of Samos",
+  "sex": "male",
+  "types": [
+    "monk",
+    "bishop",
+    "wonderworker"
+  ],
+  "office": "Bishop of Samos",
+  "names": [
+    {
+      "form": "Λέων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Απριλίου, «Άγιος Λέων Επίσκοπος Σάμου», with the rank word and the see left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Λέων έζησε κατά τον 9ο αιώνα μ.Χ.» No year of birth or of death is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Απριλίου — «Άγιος Λέων Επίσκοπος Σάμου»",
+        "url": "https://www.saint.gr/04/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Απριλίου εκάστου έτους», the same day as the listing. **The page records an older day and says the day has moved**: «Γνωρίζουμε ότι αρχικά η μνήμη του εορταζόταν στις 29 Απριλίου. Σήμερα όμως τιμάται από την τοπική Εκκλησία της Σάμου, της οποίας θεωρείται Επίσκοπος, στις 26 Απριλίου» — his memory was originally kept on 29 April, and today he is honoured on 26 April by the local Church of Samos, whose bishop he is held to have been. 26 April is the day both the listing and the page head give and is what this row records; 29 April is recorded here as the source's own history of the feast and is not a second row. The page gives only the ninth century and no year, so the `dates` interval is that century and nothing narrower. It prints no hymn and names no relic. The corpus's Hermogenes of Samos is another man, and its several men of Samosata are of another place."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

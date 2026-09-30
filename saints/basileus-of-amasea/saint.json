@@ -6,6 +6,11 @@
       "form": "Vasilevs",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 aprilie, «Sfântul Sfințit Mucenic Vasilevs, Episcopul Amasiei»."
+    },
+    {
+      "form": "Βασιλεύς",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for 26 Απριλίου, which heads him «Άγιος Βασιλέας Ιερομάρτυρας Επίσκοπος Αμασείας» and then writes the name throughout as Βασιλεύς — «Ο Άγιος Ιερομάρτυς Βασιλεύς έζησε κατά τους χρόνους του βασιλέως Λικινίου» — with the rank words and the see left off; the page glosses it «ΒΑΣΙΛΕΥΣ (βάσις + λαός) = ο θεμελιωτής της ευτυχίας του λαού»."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Απριλίου — «Άγιος Βασιλέας Ιερομάρτυρας Επίσκοπος Αμασείας»",
+        "url": "https://www.saint.gr/04/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him, and it is plainly the same man: bishop of Amasea in Pontus, the protector of Glaphyra against Licinius, beheaded at Nicomedia, his body thrown into the sea and drawn up in a fishing net off Sinope by Elpidophorus and the deacons Theotimus and Parthenius and carried back to Amasea. **The Greek adds three things the Romanian life did not have.** It dates Licinius's reign «(307-323 μ.Χ.)» and puts his persecuting measures in «το έτος 322 μ.Χ.», the year of the denunciation — no year of the martyrdom itself is printed anywhere on the page, so this folder's empty `dates` were left empty rather than reasoned out of those two figures, and the writer may want to look at them. It names the relics: «Η Κάρα του Αγίου βρίσκεται στη Μονή Δοχειαρίου Αγίου Όρους», the skull at Docheiariou on the Holy Mountain, «Μία εκ των χειρών του Αγίου βρίσκεται στη Μονή Ιβήρων Αγίου Όρους», one of his hands at Iviron, and a fragment at the Lavra of Saint Alexander Nevsky in Saint Petersburg. And it says his synaxis was kept at the Great Church, where part of his body may have been preserved. It prints one apolytikion, proper to him and naming him, which is stored here; the day page also carries a separate entry for the finding of his relics, which is not a folder. The corpus's Basiliscus of Amasea is another man."
     },
     {
       "church": "serbian",
@@ -50,5 +65,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Ὡς Λειτουργὸς τοῦ Βασιλέως τῆς δόξης, τῷ παρανόμῳ βασιλεῖ ἀντετάξω, Ἱερομάρτυς ἔνδοξε παμμάκαρ Βασιλεῦ, ὅθεν τὸν αὐχένα σου, ἐκτμηθεῖς διὰ ξίφους, χαίρων προσεχώρησας, πρὸς οὐράνιον λῆξιν, ἧς καὶ ἠμᾶς δυσώπει μετασχεῖν, τοὺς εὐφημούντας τὴν ἔνθεον μνήμην σου.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ, on the page of «Άγιος Βασιλέας Ιερομάρτυρας Επίσκοπος Αμασείας»",
+        "url": "https://www.saint.gr/340/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a minister of the King of glory thou didst set thyself against the lawless king, O glorious hieromartyr, all-blessed Basileus; wherefore, thy neck cut through by the sword, thou didst pass over rejoicing to the heavenly portion. Entreat that we too may have a share in it, who praise thy godly memory.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

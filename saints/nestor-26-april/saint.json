@@ -1,0 +1,52 @@
+{
+  "slug": "nestor-26-april",
+  "display_name": "Nestor (26 April)",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Νέστωρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Απριλίου, «Όσιος Νέστωρ», with the rank word left off."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Απριλίου — «Όσιος Νέστωρ»",
+        "url": "https://www.saint.gr/04/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Απριλίου εκάστου έτους», the same day as the listing, and its whole body is one sentence: «Ο Όσιος Νέστωρ αφού εγκατέλειψε τους γονείς του, έγινε μοναχός και απεβίωσε ειρηνικά». The paragraph above it, under the heading ΝΕΣΤΩΡ, is an etymological gloss about the Homeric Nestor, son of Neleus and Chloris and king of Pylos, and nothing in it is a claim about this monk; it is not used here. No century, no country and no monastery are printed, so there is no `dates` object and no `locations`. It prints no hymn and names no relic. The corpus's four other Nestors are the martyr of 2 March, the martyr of Thessalonica, Nestor of Maghid and the Nestor of 21 September who is one of the company of Eusebius and Nestabus — all martyrs or on other days, and none of them a monk who died in peace on 26 April."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

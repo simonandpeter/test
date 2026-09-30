@@ -1,0 +1,51 @@
+{
+  "slug": "justa",
+  "display_name": "Justa",
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Ιούστα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Απριλίου, «Οσία Ιούστα», with the rank word left off."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Απριλίου — «Οσία Ιούστα»",
+        "url": "https://www.saint.gr/04/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Απριλίου εκάστου έτους», the same day as the listing, and its whole body is one sentence: «Η Οσία Ιούστα, αφού ασκήτεψε θεοφιλώς, κοιμήθηκε με ειρήνη». No century, no country, no monastery and no kindred are printed, so there is no `dates` object and no `locations`. It prints no hymn and names no relic. The corpus's Justina of Antioch is a virgin-martyr on another day and its two Justuses are men; nothing in the corpus reads as this woman."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "slug": "stephen-of-perm",
+  "display_name": "Stephen of Perm",
+  "sex": "male",
+  "types": [
+    "monk",
+    "bishop"
+  ],
+  "office": "Bishop of Perm",
+  "names": [
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Απριλίου, «Άγιος Στέφανος Επίσκοπος Περμ», with the rank word and the see left off."
+    }
+  ],
+  "related": [
+    "sergius-of-radonezh"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1345,
+      "latest": 1345,
+      "display": "1345",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Άγιος Στέφανος Επίσκοπος Περμ (1345 - 1395)» and says «γεννήθηκε το έτος 1345 στην πόλη Ούστιουγκ της επαρχίας Βολογκντά της Ρωσίας»."
+    },
+    "death": {
+      "earliest": 1395,
+      "latest": 1395,
+      "display": "1395",
+      "basis": "traditional",
+      "note": "saint.gr: «Το έτος 1395 ο Άγιος Στέφανος πήγε πάλι στη Μόσχα για υποθέσεις του ποιμνίου του. Εκεί ασθένησε και μετά από λίγες ημέρες κοιμήθηκε με ειρήνη», and the page heads him «(1345 - 1395)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). saint.gr's whole account is of a Russian saint and the Russian calendar is very likely to keep him, but that page was not read and this row does not guess it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Απριλίου — «Άγιος Στέφανος Επίσκοπος Περμ»",
+        "url": "https://www.saint.gr/04/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Απριλίου εκάστου έτους», the same day as the listing. The page calls him «Φωτιστής της πόλεως Περμ και Απόστολος των Ζυριανών», born 1345 at Ustyug in the province of Vologda to the priest Symeon and to Mary; tonsured at the monastery of Gregory the Theologian at Rostov, where he learned Greek for the sake of reading the Fathers in their own language; ordained deacon by Arsenius bishop of Rostov, whose episcopate it dates 1374 to 1380, for having devised an alphabet for the Zyrian tongue and translated church books into it; sent off in 1379 with the blessing of Gerasimus bishop of Kolomna, who ordained him presbyter and gave him an antimension, holy myrrh and service books, while the great prince Dimitri gave him a safe-conduct; bishop of Perm from 1383; founder of the monasteries of the Saviour in the desert of Ulyanov, of Stephanov, and of the Archangel at Ust-Vym and at Yarensk; dead at Moscow in 1395, his relics laid in the church of the Transfiguration in the Kremlin and never given back to Perm. **Its one anecdote of a living saint is the exchange of greetings at ten kilometres' distance with Sergius of Radonezh in 1390**, which is why his is the only `related` row here. The corpus's Gerasimus, Jonas and Pitirim of Great Perm are the three hierarchs who followed him in that see and are other men. It prints no hymn; the relic whereabouts it gives are the Transfiguration church in the Kremlin."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Glafira",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 aprilie, «Sfânta Cuvioasă Glafira»."
+    },
+    {
+      "form": "Γλαφυρή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Απριλίου, «Αγία Γλαφυρή», with the rank word left off; the page's couplet and the page for Basileus write the name Γλαφύρα."
     }
   ],
   "sex": "female",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Απριλίου — «Αγία Γλαφυρή»",
+        "url": "https://www.saint.gr/04/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps her, and it is plainly the same woman: the maidservant of Constantia the wife of Licinius, sent away from Licinius's designs by the empress herself, a wanderer in the East, and at last at Amasea with the bishop Basileus, to whom she gave her money for the building of a church, and where she died in peace. **What the Greek puts differently is who sent her away and what she carried.** Here it is the empress who removes her «αφού την εφοδίασε με πολλά χρήματα», having furnished her with a great deal of money, and Glaphyra's own money is what builds the church; the flight in men's clothes, which the Romanian life has, is on saint.gr's page for Basileus rather than on hers, and that page also says she was already dead before Licinius could reach her. It parenthesizes the bishop's own feast, «στον επίσκοπο της πόλης αυτής Βασιλέα (εορτάζει στις 26 Απριλίου)». It gives no year, so this folder's empty `dates` were left empty. It prints no hymn and names no relic."
     },
     {
       "church": "serbian",
