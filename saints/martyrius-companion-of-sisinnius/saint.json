@@ -1,0 +1,65 @@
+{
+  "slug": "martyrius-companion-of-sisinnius",
+  "display_name": "Martyrius, companion of Sisinnius",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μαρτύριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Μαΐου, «Άγιος Σισίννιος ο Ιερομάρτυρας και οι συν αυτόν Μαρτύριος και Αλέξανδρος οι Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 397,
+      "latest": 397,
+      "display": "397",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Μάρτυρες Σισίννιος ο διάκονος, Μαρτύριος και Αλέξανδρος, μαρτύρησαν το 397 μ.Χ., στο Μιλάνο της Ιταλίας από τους ειδωλολάτρες.» The page's own heading for him is «Αγιος Μαρτυριος ο Μαρτυρας (; - 397)», with no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαΐου — «Άγιος Σισίννιος ο Ιερομάρτυρας και οι συν αυτόν Μαρτύριος και Αλέξανδρος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Μαΐου εκάστου έτους», the same day as the listing, and prints a separate heading for each of the three companions, so the enumerated company is one folder per man. He is none of the corpus's other Martyriuses: not the companion of Marcian kept with him, not Martyrius of Novgorod, of Zelenets or Kirichenko. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "sisinnius-of-milan",
+    "alexander-companion-of-sisinnius",
+    "ambrose-of-milan",
+    "jerome-of-stridon"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

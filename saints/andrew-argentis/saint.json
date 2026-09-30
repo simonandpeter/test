@@ -1,0 +1,60 @@
+{
+  "slug": "andrew-argentis",
+  "display_name": "Andrew Argentis",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ανδρέας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Μαΐου, «Άγιος Ανδρέας ο Αργέντης», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1465,
+      "latest": 1465,
+      "display": "1465",
+      "basis": "traditional",
+      "note": "saint.gr: «καταγόταν από την Χίο και υπέστη μαρτυρικό θάνατο στην Κωνσταντινούπολη το 1465 μ.Χ.» The page's own heading is «Άγιος Ανδρέας ο Αργέντης (; - 1465)», with no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαΐου — «Άγιος Ανδρέας ο Αργέντης»",
+        "url": "https://www.saint.gr/05/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Μαΐου εκάστου έτους», the same day as the listing. The whole life is three sentences, and Argentis is a Chiot family name, not a rank. He is none of the Andrews the corpus keeps. The page also files him under «Σύναξη των Αγίων Νεομαρτύρων των μετά την άλωση της Κωνσταντινουπόλεως μαρτυρησάντων», a heading that names nobody here. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

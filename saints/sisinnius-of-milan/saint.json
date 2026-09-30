@@ -1,0 +1,66 @@
+{
+  "slug": "sisinnius-of-milan",
+  "display_name": "Sisinnius of Milan",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Σισίννιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Μαΐου, «Άγιος Σισίννιος ο Ιερομάρτυρας και οι συν αυτόν Μαρτύριος και Αλέξανδρος οι Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 397,
+      "latest": 397,
+      "display": "397",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Μάρτυρες Σισίννιος ο διάκονος, Μαρτύριος και Αλέξανδρος, μαρτύρησαν το 397 μ.Χ., στο Μιλάνο της Ιταλίας από τους ειδωλολάτρες.» The page's own headings repeat the year for each of the three, «(; - 397)», and give no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαΐου — «Άγιος Σισίννιος ο Ιερομάρτυρας και οι συν αυτόν Μαρτύριος και Αλέξανδρος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/05/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Μαΐου εκάστου έτους», the same day as the listing. **The company is enumerated** — the page prints a separate heading for each of the three, «Αγιος Αλεξανδρος ο Μαρτυρας (; - 397)», «Αγιος Μαρτυριος ο Μαρτυρας (; - 397)», «Αγιος Σισιννιος ο Ιερομαρτυρας (; - 397)» — so it is one folder per man, with the one life they share. The day's line calls Sisinnius hieromartyr and the life calls him the deacon of the three; `deacon` is his order and is recorded beside it. The corpus keeps no Sisinnius, and its Martyrius and Alexander folders are all other men. No hymn is printed for any of the three."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "martyrius-companion-of-sisinnius",
+    "alexander-companion-of-sisinnius",
+    "ambrose-of-milan",
+    "jerome-of-stridon"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

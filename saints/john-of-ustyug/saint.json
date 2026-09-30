@@ -1,0 +1,60 @@
+{
+  "slug": "john-of-ustyug",
+  "display_name": "John of Ustyug",
+  "sex": "male",
+  "types": [
+    "fool-for-christ",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Μαΐου, «Άγιος Ιωάννης ο διά Χριστόν σαλός», with the rank word and the clause «ο διά Χριστόν σαλός» left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1494,
+      "latest": 1494,
+      "display": "1494",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το 1494 μ.Χ. και ενταφιάσθηκε κοντά στον καθεδρικό ναό της Κοιμήσεως της Θεοτόκου.» The page's heading is «Άγιος Ιωάννης ο Δια Χριστον Σαλος (; - 1494)» and gives no year of birth; it says only that he was born «τον 15ο αιώνα μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). saint.gr makes him a saint of Ustyug, so the Russian calendar is very likely to keep him, and this row is the honest state of what was read and not a statement that it does not."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαΐου — «Άγιος Ιωάννης ο διά Χριστόν σαλός»",
+        "url": "https://www.saint.gr/05/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Μαΐου εκάστου έτους», the same day as the listing. He is a Russian saint the Greek calendar keeps: born at the village of Pukhovo in the country of Ustyug, son of Savva and Maria, and buried by the cathedral of the Dormition. He is not the corpus's John the Hairy of Rostov, nor any other of its Johns. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

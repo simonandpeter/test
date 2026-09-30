@@ -1,0 +1,63 @@
+{
+  "slug": "theodosia-of-constantinople",
+  "display_name": "Theodosia of Constantinople",
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "monastic"
+  ],
+  "names": [
+    {
+      "form": "Θεοδοσία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Μαΐου, «Αγία Θεοδοσία η Οσιομάρτυς η Κωνσταντινουπολίτισσα», with the rank word and the epithet of the city left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 730,
+      "latest": 730,
+      "display": "730",
+      "basis": "traditional",
+      "note": "saint.gr: «Την δε Θεοδοσία, αφού την κακοποίησαν, την οδήγησαν στην τοποθεσία του Βοός και την κατέσφαξαν, αφού διαπέρασαν το λαιμό της με κέρατο κριού (730 μ.Χ.).» The page gives no year of birth; it puts it in the reign of «του αυτοκράτορα Θεοδοσίου του Αδραμυττηνού», which is not a year, so no birth interval is recorded."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαΐου — «Αγία Θεοδοσία η Οσιομάρτυς η Κωνσταντινουπολίτισσα»",
+        "url": "https://www.saint.gr/05/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Μαΐου εκάστου έτους», the same day as the listing. She is not the Theodosia of Tyre whom the same day page also prints: that one is a virgin of Phoenicia drowned under Diocletian's governor Ourbanos, this one a Constantinopolitan nun killed in the first iconoclast persecution under Leo the Isaurian, and the two entries stand side by side on the one day. The corpus's other Theodosia, the mother of Procopius, is a third. saint.gr prints no hymn for her."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "germanus-of-constantinople"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

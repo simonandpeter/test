@@ -1,0 +1,51 @@
+{
+  "slug": "jeremiah-the-damascene",
+  "display_name": "Jeremiah the Damascene",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ιερεμίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Μαΐου, «Όσιος Ιερεμίας ο Δαμασκηνός», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαΐου — «Όσιος Ιερεμίας ο Δαμασκηνός»",
+        "url": "https://www.saint.gr/05/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Μαΐου εκάστου έτους», the same day as the listing. The whole life is two sentences and carries no year, so the folder has no `dates` object. He is none of the corpus's Jeremiahs: not the prophet, not Jeremiah the Egyptian, and not Jeremias I of Constantinople, who is a sixteenth-century patriarch kept on 13 January. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

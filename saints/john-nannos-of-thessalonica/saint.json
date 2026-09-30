@@ -1,0 +1,65 @@
+{
+  "slug": "john-nannos-of-thessalonica",
+  "display_name": "John Nannos of Thessalonica",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Μαΐου, «Άγιος Ιωάννης ο Νάννος από τη Θεσσαλονίκη», with the rank word left off."
+    },
+    {
+      "form": "Νάννος",
+      "lang": "el",
+      "note": "The by-name the same page prints and explains: he was called Ιωάννης because he was born on the eve of the Nativity of the Forerunner, and «για να διακρίνεται όμως από τον πατέρα του, τον φώναζαν Νάννο» — to tell him from his father, who was also John, they called him Nannos."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1802,
+      "latest": 1802,
+      "display": "1802",
+      "basis": "attested",
+      "note": "saint.gr: «Έτσι, στις 29 Μαΐου του 1802 μ.Χ. και ημέρα Πέμπτη, ο Ιωάννης οδηγήθηκε στο Σοάν Παζάρι, τόπο των θανατικών εκτελέσεων.» The same page dates his feigned apostasy to «στις 3 Μαΐου του 1802 μ.Χ.» and his confession to «στις 25 Μαΐου και ημέρα Κυριακή» of the same year. It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαΐου — «Άγιος Ιωάννης ο Νάννος από τη Θεσσαλονίκη»",
+        "url": "https://www.saint.gr/05/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Μαΐου εκάστου έτους», the same day as the listing, and the day is the day of his beheading. He is none of the Johns the corpus keeps: a shoemaker's son of Thessalonica who worked at Smyrna and was put to death there in 1802. The page also lists him under «Σύναξη των Αγίων Νεομαρτύρων των μετά την άλωση της Κωνσταντινουπόλεως μαρτυρησάντων», the synaxis of the new martyrs after the fall of the City, which is a heading and names nobody on this page. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

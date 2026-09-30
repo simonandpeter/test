@@ -1,0 +1,59 @@
+{
+  "slug": "ethelbert-the-king",
+  "display_name": "Ethelbert",
+  "sex": "male",
+  "types": [
+    "king"
+  ],
+  "names": [
+    {
+      "form": "Εθελμπέρτος",
+      "lang": "el",
+      "note": "The Greek form saint.gr prints in the body of the life, «Ο Άγιος Ethelbert (Εθελμπέρτος)»; the calendar's own line for 29 Μαΐου spells the name in Latin letters, «Άγιος Ethelbert ο βασιλεύς», with the rank word left off here."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 794,
+      "latest": 794,
+      "display": "794",
+      "basis": "traditional",
+      "note": "saint.gr: «δολοφονήθηκε όμως το 794 μ.Χ., πριν το γάμο, από ανθρώπους της βασίλισσας, η οποία φιλοδοξούσε να προσαρτήσει το βασίλειό του στο δικό τους.» The page says he lived in the eighth century and reigned forty-four years, but gives no year of birth and no year of accession, so no birth interval is recorded."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Μαΐου — «Άγιος Ethelbert ο βασιλεύς»",
+        "url": "https://www.saint.gr/05/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Μαΐου εκάστου έτους», the same day as the listing. The page calls him only «βασιλέας» and never a martyr, although it says he was murdered, so `types` carries `king` alone and no reading of passion-bearer or martyr is put into the folder. It names no kingdom of his: the only kingdom it names is Mercia, which was his intended father-in-law Offa's. The corpus keeps no other Ethelbert. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
