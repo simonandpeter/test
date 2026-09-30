@@ -1,0 +1,66 @@
+{
+  "slug": "basil-kadomsky",
+  "display_name": "Basil (Kadomsky)",
+  "sex": "male",
+  "types": [
+    "fool-for-christ"
+  ],
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαΐου, «Άγιος Βασίλειος ο διά Χριστόν σαλός», with the rank word and the epithet left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1775,
+      "latest": 1780,
+      "display": "between 1775 and 1780",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Βασίλειος, κατά κόσμον Βασίλειος Πέτροβιτς Καντόμσκιυ, γεννήθηκε μεταξύ των ετών 1775 - 1780 μ.Χ. στην περιοχή του Ριαζάν της Ρωσίας.» The five-year interval is the page's own."
+    },
+    "death": {
+      "earliest": 1848,
+      "latest": 1848,
+      "display": "1848",
+      "basis": "traditional",
+      "note": "saint.gr: «Ακολούθησε τη σκληρή ασκητική οδό της σαλότητας και κοιμήθηκε με ειρήνη το 1848 μ.Χ.», and the page heads him «(; - 1848)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Μαΐου — «Άγιος Βασίλειος ο διά Χριστόν σαλός»",
+        "url": "https://www.saint.gr/05/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Μαΐου εκάστου έτους», the same day as the listing, and the whole of the notice is two sentences: born Vasily Petrovich Kadomsky between 1775 and 1780 in the region of Ryazan in Russia, he followed the hard ascetic road of folly for Christ and fell asleep in peace in 1848. **The display name follows the corpus's own habit for Russian surnames in brackets** — `maria-korepova-confessor`, `michael-martyr-1937-18-august` and the rest — because a bare Basil could not be told from the fourteen the corpus already holds, none of whom is a fool for Christ of Ryazan: not `basil-of-novgorod`, not `basil-solovski`, not `basil-the-great`. The page transliterates his surname into Greek as Καντόμσκιυ and prints no Cyrillic, so no Russian name form is recorded here. No hymn, no relic, no act of his told."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

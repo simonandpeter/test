@@ -1,0 +1,64 @@
+{
+  "slug": "hesperus",
+  "display_name": "Hesperus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Έσπερος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαΐου, «Άγιοι Έσπερος, Ζωή και τα τέκνα τους Κυριάκος και Θεόδουλος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "zoe-wife-of-hesperus",
+    "cyriacus-son-of-hesperus",
+    "theodulus-son-of-hesperus"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 125,
+      "latest": 125,
+      "display": "125",
+      "basis": "traditional",
+      "note": "saint.gr heads each of the four «(; - 125)» and dates the occasion of the martyrdom: «Όταν δε, το 125 μ.Χ., ο Κάταλλος απέκτησε γιο, θέλησε να εορτάσουν το γεγονός όλοι οι δούλοι του.» It also places them «στο χρόνια του αυτοκράτορα Αδριανού (117 - 138 μ.Χ.)». No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Μαΐου — «Άγιοι Έσπερος, Ζωή και τα τέκνα τους Κυριάκος και Θεόδουλος»",
+        "url": "https://www.saint.gr/05/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Μαΐου εκάστου έτους», the same day as the listing. **This is a company the page enumerates by name**, all four of them, each with his own head line and his own year, so it is four folders and not one: Hesperus, Zoe his wife, and their children Cyriacus and Theodulus. The corpus holds no Hesperus at all, and its Cyriaci and Theoduli are all placed elsewhere; the one Zoe it holds is `zoe-18-december` and is not of Pamphylia. The page names their owners, the Roman Catallus and his wife Petradia, and it records that the emperor Justinian (527–565) raised a church to the martyr Zoe near the church of Saint Anna at the Deuteron of Constantinople, and that Basil I (867–886) rebuilt it from the foundations after it fell — a dedication, and not a relation. It prints no hymn for any of the four and no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

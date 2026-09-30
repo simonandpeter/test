@@ -1,0 +1,11 @@
+# Zoe, wife of Hesperus
+
+Zoe, the wife of [Hesperus](/saints/hesperus) and mother of [Cyriacus](/saints/cyriacus-son-of-hesperus) and [Theodulus](/saints/theodulus-son-of-hesperus), lived in the second century, saint.gr says, in the years of the emperor Hadrian. The family came of Pamphylia and belonged as slaves to a Roman named Catallus and his wife Petradia, who forbade the Christian household to pray and to hymn its Creator, and at other times ordered them to do work that went against the spirit of the Gospel.
+
+Her synaxarion, the page says, tells how she used to go in the evening to the guard who kept the masters' house and tell him to go and sleep, because he was tired, and take his duty in his place. Outside the gates of the great house there were dogs that tore at any poor man who came to ask for help or charity; and she would take the bread given her for her family's daily keep, throw a little to the dogs to quiet them, and share out the rest among the poor, saying to them: become Christians, servants of Christ, for He alone is the Saviour of the world.
+
+When in the year 125 Catallus had a son, he wanted all his slaves to keep the occasion, and ordered them to a common table to eat their fill of meat offered to idols, and wine. Zoe and her husband and children kept to dry food; and when their master noticed and ordered them to eat by force, every one of them refused and said that they were sorry that this once they would not obey him. Beside himself with rage, Catallus had a great furnace lit, and when it was thoroughly hot he threw the four martyrs into it. But when they opened the furnace in the morning they found all four dead and their bodies unburnt: the Lord of life and of death had granted them incorruption and the glory of heaven.
+
+The emperor Justinian raised a church to the martyr Zoe near the church of Saint Anna at the Deuteron of Constantinople, and the emperor Basil I rebuilt it from the foundations, because it had fallen. The page prints no hymn and names no relic; its couplet for her and her husband says that fire deprived Hesperus and Zoe together of life, who longed for the one life that has no evening.
+
+*After saint.gr's calendar for 2 Μαΐου — [the day](https://www.saint.gr/05/02/index.aspx) and [the life](https://www.saint.gr/1477/saint.aspx); read 30 September 2026.*

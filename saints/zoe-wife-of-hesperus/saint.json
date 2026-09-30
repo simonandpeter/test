@@ -1,0 +1,64 @@
+{
+  "slug": "zoe-wife-of-hesperus",
+  "display_name": "Zoe, wife of Hesperus",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ζωή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαΐου, «Άγιοι Έσπερος, Ζωή και τα τέκνα τους Κυριάκος και Θεόδουλος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "hesperus",
+    "cyriacus-son-of-hesperus",
+    "theodulus-son-of-hesperus"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 125,
+      "latest": 125,
+      "display": "125",
+      "basis": "traditional",
+      "note": "saint.gr heads each of the four «(; - 125)» and dates the occasion of the martyrdom: «Όταν δε, το 125 μ.Χ., ο Κάταλλος απέκτησε γιο, θέλησε να εορτάσουν το γεγονός όλοι οι δούλοι του.» It also places them «στο χρόνια του αυτοκράτορα Αδριανού (117 - 138 μ.Χ.)». No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Μαΐου — «Άγιοι Έσπερος, Ζωή και τα τέκνα τους Κυριάκος και Θεόδουλος»",
+        "url": "https://www.saint.gr/05/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Μαΐου εκάστου έτους», the same day as the listing; it enumerates all four by name with a head line each, so this is one of four folders and not a company in one. **She is the member the page says most about**, and the only one it says anything about apart from the household: the night watches she took over from the tired guard, and the bread she threw to the dogs and shared among the poor. The one Zoe the corpus holds is `zoe-18-december`, who is not of Pamphylia and not of this family. **The display name keeps the kinship clause** because a bare Zoe would not tell her from that one; the corpus keeps about sixty such clauses and they are how the source names the person. The church Justinian raised to her near Saint Anna at the Deuteron of Constantinople, rebuilt from the foundations by Basil I, is a dedication and not a relation. No hymn, no relic, no year of birth."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

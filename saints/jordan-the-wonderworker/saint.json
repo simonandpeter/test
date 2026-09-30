@@ -1,0 +1,51 @@
+{
+  "slug": "jordan-the-wonderworker",
+  "display_name": "Jordan (2 May)",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ιορδάνης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαΐου, «Όσιος Ιορδάνης ο Θαυματουργός», with the rank word and the epithet left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Μαΐου — «Όσιος Ιορδάνης ο Θαυματουργός»",
+        "url": "https://www.saint.gr/05/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Μαΐου εκάστου έτους», the same day as the listing, and the whole of it is two sentences: «Ο Όσιος Ιορδάνης ο Θαυματουργός κοιμήθηκε με ειρήνη. Δεν έχουμε περισσότερες λεπτομέρειες για τον βίο του Οσίου.» **He is not the corpus's `jordan-the-martyr-2-february`**, who is a martyr of 1650 or 1651 kept by the Greek calendar on 2 February; this man is Όσιος, fell asleep in peace, and is kept on 2 May. A martyr and a monk who died in his bed on a different day are two men, and the corpus holds no other Jordan. **The display name is `Jordan (2 May)`** because `wonderworker` is one of this folder's `types` and `lib/honorific.js` composes the rank, so the page's epithet cannot go in the name. No year, no place, no hymn, no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

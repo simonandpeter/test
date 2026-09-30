@@ -6,6 +6,11 @@
       "form": "Matrona din Moscova",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 mai, «Sfânta Matrona din Moscova»."
+    },
+    {
+      "form": "Ματρώνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαΐου, «Οσία Ματρώνα εκ Ρωσίας», with the rank word and the origin left off."
     }
   ],
   "sex": "female",
@@ -54,8 +59,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 2 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Μαΐου — «Οσία Ματρώνα εκ Ρωσίας»",
+        "url": "https://www.saint.gr/05/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps her, and it is plainly the same woman: born 1881 at Sebino in the government of Tula of Dimitri and Natalia, blind from birth, paralysed from seventeen and so for fifty years, foreseeing and clairvoyant, dead in 1952. It agrees with both years the folder holds, so `dates` is untouched. **The Greek adds four things**: the names of her parents and her three siblings, Ivan, Michael and Maria; the dream of the eyeless bird with a human face that stopped her parents giving her to the Golitsyn orphanage; the words of John of Kronstadt when she was fourteen, «Ματρώνα, έλα εδώ ... Αυτή θα είναι η διάδοχός μου. Αυτή είναι ο όγδοος στύλος της Ρωσίας», which is the folder's existing `related` row said in the Greek's own words; and the relics, «Τα Λείψανα της Αγίας βρίσκονται στη Μονή Αγίας Σκέπης Μόσχας», the monastery of the Holy Protection in Moscow, although the page's own last sentence buries her in the cemetery of the Danilov monastery, and both are printed and neither is reconciled here. **The one apolytikion, Ἦχος πλ. α’, is proper and names her** and is stored; the folder's Romanian troparion is a different text and not a translation of it."
     },
     {
       "church": "serbian",
@@ -77,6 +92,22 @@
       },
       "english": {
         "text": "Her who has lately shone forth in Russia by patience in many sufferings, by love towards God and towards those who suffer, by humility, by dispassion and by watchfulness, let us praise with chosen songs — the God-bearing Matrona — and ask with reverence her unwearying prayers to Christ the Master.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "text": "Ἀδιάσειστον στῦλον Ῥωσίας ὄγδοον, τὴν στερουμένην ὀμμάτων ἐκ γενετῆς, εὐλαβῶς ἀνυμνήσωμεν Ματρώναν τὴν ἀοίδιμον, ὡς σκεῦος θείων δωρεῶν καὶ ἀγάπης ἀκραιφνοῦς πρὸς πάντας ἐμπεριστάτους βοῶντες σκέδασον ζόφον παθῶν ἡμῶν φωτὶ σῆς χάριτος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’, on the page of «Οσία Ματρώνα εκ Ρωσίας»",
+        "url": "https://www.saint.gr/1482/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us reverently hymn the unshaken eighth pillar of Russia, her who was deprived of eyes from birth, Matrona the renowned, as a vessel of divine gifts and of unalloyed love towards all who are in distress, crying: Scatter the gloom of our passions by the light of thy grace.",
         "rendered": "site"
       }
     }

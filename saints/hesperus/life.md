@@ -1,0 +1,11 @@
+# Hesperus
+
+Hesperus, his wife [Zoe](/saints/zoe-wife-of-hesperus) and their children [Cyriacus](/saints/cyriacus-son-of-hesperus) and [Theodulus](/saints/theodulus-son-of-hesperus) lived in the second century, saint.gr says, in the years of the emperor Hadrian. They came of Pamphylia, and they belonged as slaves to a Roman named Catallus and his wife Petradia, who forbade the Christian household to pray and to hymn its Creator, and at other times ordered them to do work that went against the spirit of the Gospel.
+
+Their synaxarion tells, the page says, how Zoe used to go in the evening to the guard who kept the masters' house and tell him to go and sleep, because he was tired, and take his duty in his place. Outside the gates of the great house there were dogs that tore at any poor man who came to ask for help or charity; and Zoe would take the bread given her for her family's daily keep, throw a little to the dogs to quiet them, and share out the rest among the poor, saying to them: become Christians, servants of Christ, for He alone is the Saviour of the world.
+
+When in the year 125 Catallus had a son, he wanted all his slaves to keep the occasion, and ordered them to a common table to eat their fill of meat offered to idols, and wine. Hesperus and his family kept to dry food. Their Roman master noticed and ordered them to eat by force, and every one of them refused and said that they were sorry that this once they would not obey their master. Beside himself with rage, Catallus had a great furnace lit, and when it was thoroughly hot he threw the four martyrs into it. But when they opened the furnace in the morning they found all four of them dead and their bodies unburnt: the Lord of life and of death had granted them incorruption and the glory of heaven.
+
+Hesperus is the father, and the day's listing names him first. The page gives no year for his birth, no account of him apart from the household, and no hymn; its couplet for him and his wife says only that fire deprived Hesperus and Zoe together of life, who longed for the one life that has no evening.
+
+*After saint.gr's calendar for 2 Μαΐου — [the day](https://www.saint.gr/05/02/index.aspx) and [the life](https://www.saint.gr/1477/saint.aspx); read 30 September 2026.*

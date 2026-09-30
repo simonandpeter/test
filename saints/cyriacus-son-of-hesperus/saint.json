@@ -1,0 +1,64 @@
+{
+  "slug": "cyriacus-son-of-hesperus",
+  "display_name": "Cyriacus, son of Hesperus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Κυριάκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαΐου, «Άγιοι Έσπερος, Ζωή και τα τέκνα τους Κυριάκος και Θεόδουλος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "hesperus",
+    "zoe-wife-of-hesperus",
+    "theodulus-son-of-hesperus"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 125,
+      "latest": 125,
+      "display": "125",
+      "basis": "traditional",
+      "note": "saint.gr heads each of the four «(; - 125)» and dates the occasion of the martyrdom: «Όταν δε, το 125 μ.Χ., ο Κάταλλος απέκτησε γιο, θέλησε να εορτάσουν το γεγονός όλοι οι δούλοι του.» It also places them «στο χρόνια του αυτοκράτορα Αδριανού (117 - 138 μ.Χ.)». No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Μαΐου — «Άγιοι Έσπερος, Ζωή και τα τέκνα τους Κυριάκος και Θεόδουλος»",
+        "url": "https://www.saint.gr/05/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Μαΐου εκάστου έτους», the same day as the listing; it enumerates all four by name with a head line each, so this is one of four folders. **He is not any of the corpus's other Cyriaci**: the anchorite (29 September), the commoner of Alexandria and the attendant of Faustus (both 6 September, both of Alexandria under Decius), of Bisericani and of Tazlău (Romanian monastics), none of them a child of Pamphylia under Hadrian. The page says nothing of him apart from the household and the furnace, and the display name keeps the kinship clause for that reason. Its couplet for the two brothers asks the Saviour to receive two boiling loaves just now cast out of the oven. No hymn, no relic, no year of birth."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

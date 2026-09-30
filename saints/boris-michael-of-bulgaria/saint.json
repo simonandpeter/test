@@ -1,0 +1,64 @@
+{
+  "slug": "boris-michael-of-bulgaria",
+  "display_name": "Boris-Michael of Bulgaria",
+  "sex": "male",
+  "types": [
+    "equal-to-the-apostles",
+    "prince",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Μιχαήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαΐου, «Άγιος Boris - Μιχαήλ ο πρίγκιπας, Ισαπόστολος και Φωτιστής», with the rank words and the epithets left off. The page prints the first name in Latin letters, Boris, and glosses only the baptismal Μιχαήλ."
+    }
+  ],
+  "related": [
+    "photius-of-constantinople"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 907,
+      "latest": 907,
+      "display": "907",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Βόρις-Μιχαήλ κοιμήθηκε με ειρήνη το 907 μ.Χ.», and the page heads him «(; - 907)». No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Μαΐου — «Άγιος Boris - Μιχαήλ ο πρίγκιπας, Ισαπόστολος και Φωτιστής»",
+        "url": "https://www.saint.gr/05/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Μαΐου εκάστου έτους», the same day as the listing. He is the tsar of Bulgaria baptised Michael at the end of 864 or the beginning of 865 by the bishop Joseph, abdicated in 888, recalled to depose his son Vladimir, dead 907. **He is not the Boris of the two Russian passion-bearers**: the corpus's `gleb-prince-and-passion-bearer` and his brother died in 1015, and the same 2 Μαΐου listing carries the translation of their relics separately, at `/2072/`, which sends their life to 24 Ιουλίου — two different entries on one day. Nor is he `boris-bogolepov`, a martyr of 1937. **`related` goes only to Photius of Constantinople**, whom the page names as having sent catechists to Bulgaria at Michael's request and as having answered the doctrinal questions put to him; the uncle «Άγιος Μποϋάν (τιμάται 28 Μαρτίου)» who prophesied his missionary work, the monk Theodore Kouphara who first sowed the Gospel in him, his sister, and his sons Vladimir and Symeon have no folders. **`types` follows the listing's own words**: Ισαπόστολος is equal-to-the-apostles, πρίγκιπας prince, and the page has him enter a monastery twice; Φωτιστής, enlightener, has no slug in the corpus's closed vocabulary and none was added. It prints no hymn and names no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

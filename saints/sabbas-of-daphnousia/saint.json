@@ -1,0 +1,51 @@
+{
+  "slug": "sabbas-of-daphnousia",
+  "display_name": "Sabbas of Daphnousia",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "office": "Bishop of Daphnousia",
+  "names": [
+    {
+      "form": "Σάββας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Μαΐου, «Όσιος Σάββας Επίσκοπος Δαφνουσίας», with the rank word and the see left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Μαΐου — «Όσιος Σάββας Επίσκοπος Δαφνουσίας»",
+        "url": "https://www.saint.gr/05/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Μαΐου εκάστου έτους», the same day as the listing. It says plainly where he is and is not recorded — «Η μνήμη του Οσίου Σάββα, αγνοείται στο Συναξαριστή του Αγίου Νικόδημου και τα έντυπα Μηναία. Αναφέρεται στον Συναξαριστή Delehaye, αλλά χωρίς βιογραφικό σημείωμα» — and then prints in full the memorandum of the Lavriotic Codex I 70 f. 2026, which is positive and specific: virtuous from infancy in all reverence and modesty and fear of God, made bishop of Daphnousia by synodal vote for the virtue that was in him, took the helm of the throne and trained everyone to abide in the true and reverent faith, turned many of the idolaters and baptised them, and so having lived well and in a way pleasing to God departed to the Lord whom he had longed for from infancy. **The see is what tells him from the corpus's twelve other Sabbases**, none of whom is a bishop of Daphnousia, and from the bare «Άγιος Σάββας» of 1 Μαΐου, who has no see, no place and no epithet and was deliberately left undrafted. The page gives no year, no hymn and no relic, and the codex gives none either."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
