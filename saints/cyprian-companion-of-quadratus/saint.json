@@ -6,6 +6,11 @@
       "form": "Ciprian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 martie, «Sfântul Mucenic Ciprian»."
+    },
+    {
+      "form": "Κυπριανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Μαρτίου, «Άγιοι Κοδράτος, Ανεκτός, Παύλος, Διονύσιος, Κυπριανός και Κρήσκης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -47,8 +52,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαρτίου — «Άγιοι Κοδράτος, Ανεκτός, Παύλος, Διονύσιος, Κυπριανός και Κρήσκης»",
+        "url": "https://www.saint.gr/03/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The page enumerates the six friends and puts their martyrdom at Corinth «κατά τον διωγμό των αυτοκρατόρων Δεκίου (249-251 μ.Χ.) ή Ουαλεριανού (253-259 μ.Χ.)», under the governor of Greece Jason, leaving the choice of persecution open. It quotes the Menologion of Basil II for Quadratus's birth in the mountains and gives Dionysius a paragraph of his own, in which he is stabbed with a knife rather than beheaded. It prints a distich for each pair of them and gives no year."
     },
     {
       "church": "serbian",
@@ -70,6 +85,40 @@
       },
       "english": {
         "text": "Your martyrs, O Lord, in their contests received from you, our God, the crowns of incorruption. For having your strength, they overthrew the tormentors and broke the feeble insolence of the demons. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τὸν τάφον σου Σωτὴρ.",
+      "text": "Ἐξάριθμος χορός, τῶν Χριστοῦ Ἀθλοφόρων, ὑμνείσθω εὐσεθῶς, μελωδίαις ᾀσμάτων, Κοδράτος καὶ Ἄνεκτος, Παῦλος καὶ Διονύσιος, καὶ σὺν Κρήσκεντι, Κυπριανὸς ὁ θεόφρων τὴν Τριάδα γάρ, διηνεκῶς δυσωπούσιν, ὑπὲρ τῶν ψυχῶν ἠμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Τὸν τάφον σου Σωτὴρ, on the page of Άγιοι Κοδράτος, Ανεκτός, Παύλος, Διονύσιος, Κυπριανός και Κρήσκης. It names all six. The page prints a second apolytikion in Ἦχος δ’, «Ὁ Μάρτυς σου Κύριε», which is the common of a single martyr and names nobody; it is not taken. The page's «εὐσεθῶς» for «εὐσεβῶς» is the reading it prints.",
+        "url": "https://www.saint.gr/1257/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let the six-numbered choir of the victory-bearers of Christ be hymned in piety with melodies of song — Quadratus and Anectus, Paul and Dionysius, and with Crescens, Cyprian of godly mind; for they entreat the Trinity without ceasing for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ὡς λαμπάς ἑξάφωτος ἐν τῇ Κορίνθῳ, καρτερῶς ἀθλήσαντες, ὤφθητε Μάρτυρες σοφοί, φωταγωγοῦντες ταῖς χάρισι, τῆς Ἐκκλησίας ἀπαύστως τό πλήρωμα.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the same page, which keeps the six together as one lamp of six lights at Corinth.",
+        "url": "https://www.saint.gr/1257/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a lamp of six lights at Corinth you were seen, wise martyrs, contending with endurance and lighting up the fullness of the Church unceasingly with your graces.",
         "rendered": "site"
       }
     }

@@ -1,0 +1,66 @@
+{
+  "slug": "anectus-companion-of-quadratus",
+  "display_name": "Anectus, companion of Quadratus of Corinth",
+  "names": [
+    {
+      "form": "Άνεκτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Μαρτίου, «Άγιοι Κοδράτος, Ανεκτός, Παύλος, Διονύσιος, Κυπριανός και Κρήσκης», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαρτίου — «Άγιοι Κοδράτος, Ανεκτός, Παύλος, Διονύσιος, Κυπριανός και Κρήσκης»",
+        "url": "https://www.saint.gr/03/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The page enumerates the six friends and puts their martyrdom at Corinth «κατά τον διωγμό των αυτοκρατόρων Δεκίου (249-251 μ.Χ.) ή Ουαλεριανού (253-259 μ.Χ.)», under the governor of Greece Jason, leaving the choice of persecution open. It quotes the Menologion of Basil II for Quadratus's birth in the mountains and gives Dionysius a paragraph of his own, in which he is stabbed with a knife rather than beheaded. It prints a distich for each pair of them and gives no year. The corpus keeps another Anectus, a martyr of the Romanian 27 June who was tied to four oxen under Diocletian; this is the Anectus of the Corinthian six."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 259,
+      "display": "under Decius or Valerian (249–259)",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησαν κατά τον διωγμό των αυτοκρατόρων Δεκίου (249-251 μ.Χ.) ή Ουαλεριανού (253-259 μ.Χ.) στην Κόρινθο, όταν ηγεμόνας της Ελλάδος ήταν ο Ιάσων». The page names no year and leaves the two persecutions as alternatives, so the interval is both reigns it prints."
+    }
+  },
+  "related": [
+    "quadratus-of-corinth",
+    "cyprian-companion-of-quadratus",
+    "dionysius-companion-of-quadratus",
+    "paul-companion-of-quadratus",
+    "crescens-companion-of-quadratus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

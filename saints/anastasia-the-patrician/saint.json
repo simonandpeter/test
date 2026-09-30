@@ -1,0 +1,62 @@
+{
+  "slug": "anastasia-the-patrician",
+  "display_name": "Anastasia the Patrician",
+  "names": [
+    {
+      "form": "Αναστασία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Μαρτίου, «Οσία Αναστασία η Πατρικία», with the rank word left off. The page adds that abba Daniel renamed her Αναστάσιος when he dressed her as a man."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "ascetic",
+    "hermit"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαρτίου — «Οσία Αναστασία η Πατρικία»",
+        "url": "https://www.saint.gr/03/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The page puts her among the most God-fearing women of Byzantium in the years of Justinian the Great «(527 - 565 μ.Χ.)», makes her the first lady in waiting of the empress Theodora and says Justinian gave her the title of patrician; then Alexandria, the monastery she built at a place called Πέμπτον, the Skete of abba Daniel, the man's clothes and the name Αναστάσιος, and twenty-eight years shut in a cave. It gives no year of birth or death and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 527,
+      "latest": 565,
+      "display": "under Justinian the Great (527–565)",
+      "basis": "traditional",
+      "note": "saint.gr: «ήταν μια από τις πιο θεοφοβούμενες κόρες του Βυζαντίου, στα χρόνια του Ιουστινιανού του μεγάλου (527 - 565 μ.Χ.)». The page gives no year of her own, so the interval is the reign it prints."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

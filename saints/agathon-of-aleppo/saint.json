@@ -1,0 +1,53 @@
+{
+  "slug": "agathon-of-aleppo",
+  "display_name": "Agathon of Aleppo",
+  "names": [
+    {
+      "form": "Αγάθων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Μαρτίου, «Όσιος Αγάθων», with the rank word left off. The epithet of the English name is taken from the one thing the page says of him, that he was an ascetic at the monastery of St Symeon near Aleppo in Syria; the Greek line carries no epithet at all."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Μαρτίου — «Όσιος Αγάθων»",
+        "url": "https://www.saint.gr/03/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The page holds one sentence about him, «Ο Όσιος Αγάθων ασκήτεψε στη μονή του Αγίου Συμεών κοντά στο Χαλέπιον της Συρίας και κοιμήθηκε με ειρήνη», and gives no year and no hymn. The corpus keeps another Agathon on the Greek 8 January, the ascetic of the Gerontikon, to whom the page gives no place, and a pope Agathon of Rome on the Romanian 20 February; this is the Agathon of the Greek 10 March, whom his own page puts in Syria."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

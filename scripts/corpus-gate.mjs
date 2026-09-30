@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'παυλοσ paul-brother-of-pausirius paul-companion-of-quadratus paul-disciple-of-dionysius-of-alexandria paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-simonov paul-of-zographou paul-the-martyr-3-february paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
+    'Fourteen now. The new one is the companion of Quadratus on 10 March; the other thirteen are read in the el-03-01 entry for this name form.',
+  'αναστασια anastasia-andreyevna anastasia-the-patrician':
+    'Two women: Anastasia Andreyevna on 1 March and Anastasia the Patrician on 10 March.',
+  'αγαθων agathon-of-aleppo agathon-of-alexandria agathon-of-rome agathon-of-the-desert agathon-of-the-kiev-caves':
+    'Five men. The new one is Agathon of Aleppo on 10 March; the other four are read in the el-02-20 entry for this name form, where 20 February keeps the pope and the Kiev Caves ascetic as two lines.',
   'βιταλιοσ vitalis vitalis-of-sicily':
     'Two men: the Vitalis of 11 January, whom the Romanian calendar keeps too, and Vitalis of Sicily on 9 March.',
   'σιλβανοσ silvanus-8-march silvanus-of-palestine':
