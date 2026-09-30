@@ -1,0 +1,9 @@
+# John Vladimir
+
+saint.gr says he was born in the tenth century at Vladimir in Bulgaria, the son of Neeman, who was the son of Symeon the first king of Ochrid, and of Anna, both of them most devout Orthodox Christians. From childhood he was brought up in the discipline and admonition of the Lord by his parents and by Nicholas, bishop of Ochrid. Samuel-Stephen, tsar of the Bulgarians, wanting to bring him into subjection, put him in prison; and there an angel of the Lord appeared to him and disclosed that his martyr's end was not far off.
+
+As part of his diplomacy the tsar married him to his daughter Korsara, but the saint kept his virginity. When he had become an independent ruler of the Serbs he gave himself with greater zeal to spreading and settling the Orthodox faith, appointing teachers and preachers for that purpose and founding monasteries, churches and hospitals at the same time. Among the houses he founded was a chapel standing in a wood, to which he went every day to pray. He was gentle, just, brave and devout, and out of love for God he helped the Church in her work against the heretics, and against the Bogomils above all.
+
+His abstinence from any bodily union with the queen his wife, and his daily absences for prayer, bred in her the suspicion that he had to do with other women. On that account she slandered him to her brother, who resolved to kill him. When Samuel-Stephen died his son Radomir was crowned tsar, and the new tsar's twin brother, John Vladislav, misled the saint and invited him to visit; and on that visit, in 1015, John was murdered by treachery. After his death his wife went to live in a monastery, where she built up a church; and the saint, saint.gr says, went on after his martyrdom benefiting those who ran to him in faith and healing the sick.
+
+*After saint.gr's calendar for 22 Μαΐου — [the day](https://www.saint.gr/05/22/index.aspx) and [the life](https://www.saint.gr/1741/saint.aspx); read 30 September 2026.*

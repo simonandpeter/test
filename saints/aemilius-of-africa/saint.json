@@ -1,0 +1,62 @@
+{
+  "slug": "aemilius-of-africa",
+  "display_name": "Aemilius the African",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "castus-of-africa"
+  ],
+  "names": [
+    {
+      "form": "Αιμίλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Μαΐου, «Άγιοι Αιμίλιος και Κάστος οι Αφρικανοί», with «Άγιοι» left off; the life page's own head line for him reads «Αγιος Αιμιλιος ο Αφρικανος»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 251,
+      "latest": 251,
+      "display": "251",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Μάρτυρες Κάστος και Αιμίλιος μαρτύρησαν το 251 μ.Χ. στην Καρχηδόνα επί Σεπτιμίου Σεβήρου.» The page's year and the reign it names do not agree, and neither is corrected here; the year is what it prints, and its head line repeats it as «(; - 251)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Μαΐου — «Άγιοι Αιμίλιος και Κάστος οι Αφρικανοί»",
+        "url": "https://www.saint.gr/05/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Μαΐου εκάστου έτους», the same day as the listing, and carries both men under two head lines, so this is a company of two named men and therefore two folders. The corpus keeps no Aemilius of Africa: its `emilian-of-durostorum`, `emilian-of-trebia`, `emilian-the-confessor` and `emilia-mother-of-basil-the-great` are other people on other days. The page says the account of the martyrdom comes from Saint Cyprian and from Augustine; that is a citation and not an association, so no `related` row is made for either of them. No hymn, no relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

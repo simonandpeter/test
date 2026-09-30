@@ -1,0 +1,50 @@
+{
+  "slug": "codrus-22-may",
+  "display_name": "Codrus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Κόδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Μαΐου, «Άγιος Κόδρος», with the rank word left off. The life page gives a second form for the same man: «Ο Άγιος Μάρτυρας Κόδρος (ή Κοδράτος)»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Μαΐου — «Άγιος Κόδρος»",
+        "url": "https://www.saint.gr/05/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Μαΐου εκάστου έτους», the same day as the listing, and gives one sentence and a distich and nothing else. He is none of the corpus's other men of this name: `quadratus-the-apostle` is of the Seventy and kept on 21 September, `quadratus-of-corinth` is the physician martyred with Cyprian and Dionysius, and the Codratus of Nicomedia on the Greek 7 May was beheaded after the proconsul Perinios dragged him through three cities. This one dies on 22 May, dragged along the ground by wild horses, and the page gives him no place, no year and no companions. No hymn, no relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

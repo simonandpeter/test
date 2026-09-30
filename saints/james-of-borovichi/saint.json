@@ -1,0 +1,50 @@
+{
+  "slug": "james-of-borovichi",
+  "display_name": "James of Borovichi",
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "names": [
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Μαΐου, «Άγιος Ιάκωβος ο Δίκαιος», with «Άγιος» and the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Μαΐου — «Άγιος Ιάκωβος ο Δίκαιος»",
+        "url": "https://www.saint.gr/05/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Μαΐου εκάστου έτους», the same day as the listing. **He is not the corpus's `james-the-brother-of-the-lord`, who is the James called the Just in the New Testament**: this one is a Russian, «που καταγόταν από το Μποροβίτσι της περιοχής του Νόβγκοροντ», which is where the English form of the name comes from, and the page attaches to him nothing of the Lord's brother. The page says outright that there is not enough hagiological material for him — «Δεν υπάρχουν επαρκείς αγιολογικές πληροφορίες» — which is a want of information and not saint.gr's own asterisked refusal to vouch for an entry, so the folder is made and the life says what the page says. The finding of his relics fell «την Τρίτη της Διακαινησίμου το 1540 μ.Χ.», a Tuesday of Bright Week, which is reckoned from Pascha and which the schema cannot hold, and the page sends the translation of the relics to 23 October; both are left in the report. **No `dates`**: 1540 is the year his relics were found and not a year of his life, and the page gives no other. No hymn, no place of burial named."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

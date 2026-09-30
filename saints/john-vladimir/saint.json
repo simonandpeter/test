@@ -1,0 +1,68 @@
+{
+  "slug": "john-vladimir",
+  "display_name": "John Vladimir",
+  "sex": "male",
+  "types": [
+    "king",
+    "martyr",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης ο Βλαδίμηρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Μαΐου, «Άγιος Ιωάννης ο Βλαδίμηρος ο βασιλεύς και θαυματουργός», with «Άγιος» and the two rank words left off; the second name is kept because the page's own body carries it — «Ο Άγιος Μάρτυς Ιωάννης του Βλαδιμήρου»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 901,
+      "latest": 1000,
+      "display": "10th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Μάρτυς Ιωάννης του Βλαδιμήρου γεννήθηκε τον 10ο αιώνα μ.Χ. στο Βλαδιμίρ της Βουλγαρίας και έζησε κατά τους χρόνους του αυτοκράτορα Βασιλείου Α' του Μακεδόνος (867 - 886 μ.Χ.).» The page's own two statements do not agree — a tenth-century birth cannot fall in a reign it dates to 867-886 — and neither is corrected here."
+    },
+    "death": {
+      "earliest": 1015,
+      "latest": 1015,
+      "display": "1015",
+      "basis": "traditional",
+      "note": "saint.gr: «Κατά την επίσκεψή του ο Άγιος Ιωάννης δολοφονήθηκε με ύπουλο τρόπο το 1015 μ.Χ.», and its head line reads «(; - 1015)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Μαΐου — «Άγιος Ιωάννης ο Βλαδίμηρος ο βασιλεύς και θαυματουργός»",
+        "url": "https://www.saint.gr/05/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Μαΐου εκάστου έτους», the same day as the listing. The corpus keeps no folder for him: its fourteen Vladimirs are Russian, `vladimir-the-great` of Kyiv among them, and none is this ruler of the Serbs killed in 1015. The page calls him βασιλεύς and θαυματουργός in its line and Άγιος Μάρτυς in its body, names his father Neeman son of Symeon the first king of Ochrid and his mother Anna, and names Nicholas bishop of Ochrid as his teacher, Bishop Eulogius nowhere; none of those three has a folder. No hymn, no relics named."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

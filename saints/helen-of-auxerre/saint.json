@@ -1,0 +1,56 @@
+{
+  "slug": "helen-of-auxerre",
+  "display_name": "Helen of Auxerre",
+  "sex": "female",
+  "names": [
+    {
+      "form": "Ελένη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Μαΐου, «Αγία Ελένη της Ωξέρρης», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 418,
+      "latest": null,
+      "display": "after 418",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε μετά το 418 μ.Χ.» The page gives no birth year and no closing bound."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Μαΐου — «Αγία Ελένη της Ωξέρρης»",
+        "url": "https://www.saint.gr/05/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Μαΐου εκάστου έτους», the same day as the listing, and gives two sentences and nothing else. She is none of the four Helens the corpus keeps — `helen-the-empress`, `helen-of-sinope`, `helen-martyr-26-may` and `helen-martyr-1943` — and the Agapitus whose writings she is named in, «Αγαπητού της Ωξέρρης (τιμάται 1 Μαΐου)», has no folder either; the corpus's three Agapiti are of Synnada, of the Kyiv Caves and the deacon, so he is named in the life in plain words and gets no link and no `related` row. **No `types`**: the page calls her Αγία and gives her no rank word, no office and no monastic state, so nothing in the vocabulary is attested for her. No hymn, no relics, no place beyond the see her name carries."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

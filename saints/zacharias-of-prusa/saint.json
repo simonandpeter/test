@@ -1,0 +1,68 @@
+{
+  "slug": "zacharias-of-prusa",
+  "display_name": "Zacharias of Prusa",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Ζαχαρίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Μαΐου, «Άγιος Ζαχαρίας ο Νέος ο Ιερομάρτυρας του Προυσκέως», with «Άγιος» and the rank words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1764,
+      "latest": 1764,
+      "display": "1764",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Ζαχαριας ο Νεος ο Ιερομαρτυρας Του Προυσκεως (1764 - 1802)», and the body gives his age at death: «Έτσι αποκεφαλίσθηκε το 1802 μ.Χ., σε ηλικία τριάντα οκτώ ετών»."
+    },
+    "death": {
+      "earliest": 1802,
+      "latest": 1802,
+      "display": "1802",
+      "basis": "traditional",
+      "note": "saint.gr: «Έτσι αποκεφαλίσθηκε το 1802 μ.Χ., σε ηλικία τριάντα οκτώ ετών»; the same page dates his denial to 1801 — «αρνήθηκε τον Χριστό το 1801 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Μαΐου — «Άγιος Ζαχαρίας ο Νέος ο Ιερομάρτυρας του Προυσκέως»",
+        "url": "https://www.saint.gr/05/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Μαΐου εκάστου έτους», the same day as the listing. He is none of the twelve Zachariases the corpus keeps, and none of the three saints of Prusa it keeps — `timothy-of-prusa`, `patrick-of-prusa`, `argyra-of-prusa` — is he. The page's line calls him «του Προυσκέως» and its body says plainly «γεννήθηκε στην Προύσα», which is where the English form of the name comes from. The page places him under the general synaxis of the new-martyrs after the fall of Constantinople and prints no hymn to him and no relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

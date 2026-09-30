@@ -115,6 +115,32 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σιμων simon-of-moscow simon-of-suzdal simon-of-vladimir simon-of-zographou simon-the-martyr-3-february simon-the-zealot':
+    'Six now. The new one is on 23 May; the others are read in the el-05-10 entry for this name form.',
+  'πατρικιοσ patricius-of-bayeux patrick-of-ireland patrick-of-prusa':
+    'Three men: Patrick of Prusa on 19 May, Patricius of Bayeux on 23 May and Patrick of Ireland on 17 March.',
+  'παισιοσ paisius-8-january paisius-fool-for-christ-of-kyiv paisius-moskot paisius-of-galich':
+    'Four men: the fool for Christ of Kyiv on 17 April, Paisius Moskot of the Slobodskaya twenty-seven on 19 May, Paisius of Galich on 23 May, and the Paisius of the el-01-19 entry.',
+  'ιουλιανοσ helianus-of-the-forty-martyrs julian-companion-of-euboulos julian-companion-of-modestus julian-companion-of-pamphilus julian-of-africa julian-of-antinoopolis julian-of-emesa julian-of-kandavla julian-of-samosata julian-the-deacon-of-aegina julian-the-martyr-18-may':
+    'Eleven now. The new one is Julian of Africa on 23 May; the others are read in the el-05-18 entry for this name form.',
+  'δαμιανοσ damian-disciple-of-polychronius damian-of-agrafa damian-of-esphigmenou damian-of-georgia damian-of-pavia':
+    'Five now. The new one is Damian of Georgia on 23 May; the others are read in the el-04-12 entry for this name form.',
+  'σελευκοσ seleucus-23-may seleucus-of-cappadocia seleucus-of-tomis':
+    'Three men: the Seleucus of 23 May, Seleucus of Cappadocia of the Pamphilus company on 16 February, and the Seleucus of the el-09-13 entry.',
+  'ευφροσυνη euphrosyne-of-lesvos euphrosyne-of-polotsk':
+    'Two women: Euphrosyne of Lesvos on 11 May and Euphrosyne of Polotsk on 23 May.',
+  'δεσιδεριοσ desiderius-of-langres desiderius-of-vienne':
+    'Two men on one day, printed as two entries of the 23 May page: Desiderius of Langres and Desiderius of Vienne, two Gallic bishops whom saint.gr keeps together and parts by their sees.',
+  'βασιλειοσ basil-companion-of-euphrasius basil-kadomsky basil-martyr-6-february basil-of-ancyra basil-of-braga basil-of-mangazeya basil-of-mirozh basil-of-moldovita basil-of-novgorod basil-of-ostrog basil-of-poiana-marului basil-of-rostov basil-of-thessalonica basil-ratishvili basil-the-confessor basil-the-new-of-latros basil-uncle-of-eustratius':
+    'Seventeen now. The new one is Basil of Braga on 23 May; the others are read in the el-05-02 entry for this name form.',
+  'ζαχαριασ zacharias-father-of-the-forerunner zacharias-of-arta zacharias-of-corinth zacharias-of-jerusalem zacharias-of-prusa zacharias-son-of-barachias zacharias-son-of-carion zacharias-the-faster':
+    'Eight now. The new one is Zacharias of Prusa on 22 May; the others are read in the el-03-30 entry for this name form.',
+  'παυλοσ paul-brother-of-pausirius paul-companion-of-andrew paul-companion-of-quadratus paul-disciple-of-dionysius-of-alexandria paul-krasnokutsky paul-of-cordoba paul-of-corinth paul-of-crete paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-vilnius paul-of-zographou paul-the-martyr-3-february paul-the-peloponnesian paul-the-russian paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
+    'Twenty-three now. The new one is Paul the Peloponnesian on 22 May; the others are read in the el-05-18 entry for this name form.',
+  'ιακωβοσ jacob-of-nimouzan jacob-the-hermit james-companion-of-emilian james-matynenko james-of-borovichi james-of-bryleyevo james-of-cyrrhus james-of-nisibis james-of-pharatha james-of-samosata james-of-serbia james-of-stromyn james-of-zheleznyi-borok james-of-zographou-the-first james-of-zographou-the-second james-redozubov james-son-of-zebedee james-the-confessor':
+    'Eighteen now. The new one is James of Borovichi on 22 May; the others are read in the el-05-19 entry for this name form.',
+  'ελενη helen-of-auxerre helen-of-decani helen-the-empress':
+    'Three women: Helen the Empress on 21 May, Helen of Dečani on 21 May as a second entry, and Helen of Auxerre on 22 May.',
   'ευτυχιοσ eutychius-27-march eutychius-companion-of-bassus eutychius-companion-of-januarius eutychius-martyred-in-africa eutychius-of-constantinople eutychius-of-mesopotamia eutychius-of-the-forty-martyrs eutychius-the-subdeacon':
     'Eight now. The new one is the Eutychius martyred in Africa on 21 May; the others are read in the el-05-08 entry for this name form.',
   'παχωμιοσ pachomius-6-may pachomius-companion-of-papyrinus pachomius-kedrov pachomius-of-keno pachomius-of-nerekhta pachomius-the-great pachomius-the-new-of-usaki':
