@@ -6,6 +6,11 @@
       "form": "Celestin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 mai, «Sfântul Mucenic Celestin»."
+    },
+    {
+      "form": "Κελεστίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Μαΐου, «Άγιος Κελεστίνος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Μαΐου — «Άγιος Κελεστίνος»",
+        "url": "https://www.saint.gr/05/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps «Sfântul Mucenic Celestin» on, with the same bare personal name and the same rank word — the Trofim ground, a bare line on one calendar and a named entry on the same menologion day of another. The Greek adds the one fact either source gives about how he died: «τον θανάτωσαν με πυρακτωμένο σίδερο», they put him to death with red-hot iron, which the synaxarion couplet turns into the heel pierced with irons, «Πτέρνας σιδήροις εμπαρείς Kελεστίνος, Tον πτερνοτήρην συντρίβει πατών όφιν». **No `dates` object is proposed**: the page gives no year and no emperor at all, and its opening clause — that he belonged «στην ηρωική φάλαγγα της σταυρικής πορείας του Ιησού προς τον Γολγοθά», the heroic phalanx of Jesus's way of the Cross to Golgotha — is the site's rhetoric and not a date. The page also commemorates «Άγιος Παγχάριος» with him, on a page of his own that says nothing about him; Pancharius is a new folder in `el-05-25`. No hymn is printed for Celestine."
     },
     {
       "church": "serbian",

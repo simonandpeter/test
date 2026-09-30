@@ -115,6 +115,36 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ζαχαριασ zacharias-father-of-the-forerunner zacharias-of-arta zacharias-of-corinth zacharias-of-jerusalem zacharias-of-prusa zacharias-of-vienne zacharias-son-of-barachias zacharias-son-of-carion zacharias-the-faster':
+    'Nine now. The new one is on 26 May; the others are read in the el-05-22 entry for this name form.',
+  'συνεσιοσ synesius-of-carpasia synesius-of-irkutsk synesius-of-lysi':
+    'Three men: Synesius of Lysi on 1 March, the Synesius of 10 May and the Synesius of 26 May.',
+  'πρισκοσ priscus-martyr-at-besancon priscus-of-the-forty-martyrs':
+    'Three men, and the third is a reader’s deliberate second folder: Priscus of the Forty of Sebaste on 9 March, `priscus-the-martyr` whom the Greek keeps on 21 Σεπτεμβρίου, and Priscus martyred at Besançon on 26 May. The reader argued the third in its row and named it as the one to merge if the author disagrees.',
+  'παυλινοσ paulinus-of-athens paulinus-of-todi':
+    'Two men: Paulinus of Athens on 18 May and the Paulinus of 26 May.',
+  'ηρακλησ heracles-companion-of-terentius heracles-of-carthage heracles-of-todi':
+    'Three men: the companion of Terentius on 10 April, Heracles of Carthage on 11 March and the Heracles of 26 May.',
+  'george sofia george-of-sofia george-the-new-martyr-of-sofia':
+    'Two men of Sofia: George of Sofia on 26 March and George the New Martyr of Sofia on 26 May, two of saint.gr’s own days and two entries.',
+  'γεωργιοσ george-konissky george-of-alikianos george-of-amastris george-of-azkuri george-of-develtos george-of-diipion george-of-kratovo george-of-maleon george-of-megara george-of-mytilene george-of-nea-ephesus george-of-pisidian-antioch george-of-rapsani george-of-samothrace-a george-of-samothrace-b george-of-shenkursk george-of-sofia george-of-vladimir george-paizanos-of-mytilene george-the-chozebite george-the-cypriot george-the-hungarian george-the-iberian george-the-iberian-2-january george-the-new-martyr-of-sofia george-the-persian george-the-sinaite george-the-trophy-bearer':
+    'Twenty-eight now. The new one is George the New Martyr of Sofia on 26 May; the others are read in the el-04-23 entry for this name form, where three stand on 23 April.',
+  'δαμιανοσ damian-disciple-of-polychronius damian-of-agrafa damian-of-esphigmenou damian-of-georgia damian-of-pavia damian-sent-to-britain':
+    'Six now. The new one is the Damian sent to Britain with Augustine on 26 May; the others are read in the el-05-23 entry for this name form.',
+  'αυγουστινοσ augustine-of-canterbury augustine-of-hippo augustinus-brother-of-augustus':
+    'Three men: Augustinus the brother of Augustus on 7 May, Augustine of Canterbury on 26 May, and the Augustine of Hippo the corpus keeps from the Romanian year.',
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-companion-of-barbarus alexander-companion-of-terentius alexander-companion-of-thalaleus alexander-martyr-1-april alexander-of-cartagena alexander-of-kentoukellai alexander-of-kharkov alexander-of-oshevensk alexander-of-pydna alexander-of-rome-pope alexander-of-the-forty-martyrs alexander-of-voskiy alexander-the-dervish alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Eighteen now. The new one is Alexander the Dervish on 26 May; the others are read in the el-05-20 entry for this name form.',
+  'βικτωρινοσ victorinus-companion-of-agapitus victorinus-martyred-at-evreux':
+    'Two men: Victorinus the companion of Agapitus on 18 February and the Victorinus martyred at Évreux on 25 May.',
+  'θεκλα thecla-of-alexandria thecla-of-aza thecla-of-pereyaslavl thekla-companion-of-peter':
+    'Four women: Alexandria on 6 September, Aza on 26 September, the companion of Peter on 26 March and Thecla of Pereyaslavl on 25 May.',
+  'παγχαριοσ pancharius pancharius-25-may':
+    'Two men: Pancharius of 19 March and the Pancharius of 25 May, whose page gives him no `types` at all.',
+  'μαξιμοσ maximus-30-april maximus-7-may maximus-brother-of-dometius maximus-companion-of-asklepiodote maximus-companion-of-fausta maximus-companion-of-olympias maximus-companion-of-terentius maximus-martyred-at-evreux maximus-of-jerusalem maximus-of-kantara maximus-of-kapsokalyvia maximus-of-marcianopolis maximus-of-ozovia maximus-of-totma maximus-of-ungrovlachia maximus-son-of-paul-and-tatta maximus-venerable-martyr-6-march':
+    'Seventeen now. The new one is the Maximus martyred at Évreux on 25 May; the others are read in the el-05-09 entry for this name form.',
+  'διονυσιοσ dionysius-8-may dionysius-companion-of-agapius dionysius-companion-of-agapius-second dionysius-companion-of-quadratus dionysius-companion-of-socrates dionysius-companion-of-terentius dionysius-kagovets dionysius-martyr-1-april dionysius-of-alexandria dionysius-of-lampsacus dionysius-of-milan dionysius-of-pereyaslavl dionysius-of-radonezh dionysius-reader-of-alexandria dionysius-the-merciful':
+    'Fifteen now. The new one is Dionysius of Milan on 25 May; the others are read in the el-05-12 entry for this name form.',
   'σεργιοσ sergius-martyr-2-january sergius-of-russia sergius-of-sukhtoma sergius-of-the-twelve-tribunes sergius-of-zographou sergius-the-confessor sergius-zipulin':
     'Nine now. The new one is one of the twelve tribunes the 24 May page names with Meletius the Stratelates; the others are read in the el-05-19 entry for this name form.',
   'φωτεινοσ photinos-son-of-photini photinus-of-the-twelve-tribunes':

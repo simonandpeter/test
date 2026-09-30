@@ -1,0 +1,60 @@
+{
+  "slug": "dionysius-of-milan",
+  "display_name": "Dionysius of Milan",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Διονύσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Μαΐου, «Άγιος Διονύσιος Επίσκοπος Μιλάνου», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 359,
+      "latest": 359,
+      "display": "359",
+      "basis": "traditional",
+      "note": "saint.gr: «εξορίσθηκε… στην Καππαδοκία… και κοιμήθηκε εκεί το 359 μ.Χ.», and the head line «(; - 359)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Μαΐου — «Άγιος Διονύσιος Επίσκοπος Μιλάνου»",
+        "url": "https://www.saint.gr/05/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Μαΐου εκάστου έτους», the same day as the listing. None of the corpus's many men of this name is a bishop of Milan; `sisinnius-of-milan`, whom another reader has drafted from saint.gr's 29 Μαΐου, is a different man of the same city. `confessor` is used because the page says he was exiled for his stout stand against the heretics and died in the exile, and does not call his death a martyrdom. The page names a place of exile, Cappadocia, and a see, and no city of birth, so no `locations` object is proposed. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "victorinus-martyred-at-evreux",
+  "display_name": "Victorinus, martyred at Évreux",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Βικτωρίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Μαΐου, «Άγιοι Μάξιμος και Βικτωρίνος οι Ιερομάρτυρες», with the rank word left off; his own head line on the life page is «Αγιος Βικτωρινος ο Ιερομαρτυρας (; - 384)»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 384,
+      "latest": 384,
+      "display": "384",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησαν στην πόλη Εβρέ της Γαλλίας κατά το 384 μ.Χ.», and the head line «(; - 384)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Μαΐου — «Άγιοι Μάξιμος και Βικτωρίνος οι Ιερομάρτυρες»",
+        "url": "https://www.saint.gr/05/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Μαΐου εκάστου έτους», the same day as the listing, and carries two head names, «Αγιος Μαξιμος ο Ιερομαρτυρας (; - 384)» and «Αγιος Βικτωρινος ο Ιερομαρτυρας (; - 384)», so it is two folders. It carries no asterisk, though it does hedge the two ranks with «Σύμφωνα με την παράδοση». None of the corpus's men of either name is a martyr of Évreux; note that `anastasius-of-brescia`, a new folder of 05-20, is of the same city and another century. The day page's line calls both of them Ιερομάρτυρες and the body calls them Μάρτυρες, which is why `types` carries `hieromartyr` — the rank the head lines give them. The page makes him the deacon of the pair, «ο Άγιος Βικτωρίνος διάκονος», under the same «Σύμφωνα με την παράδοση», so `deacon` is in his `types` on the page's own hedged word. The corpus keeps two other men of this name and neither is he: `victorinus-companion-of-agapitus`, a soldier-martyr kept on the Greek 18 Φεβρουαρίου and known only from a mention in Agapitus of Synnada's memoir, and `victorinus-of-corinth`."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

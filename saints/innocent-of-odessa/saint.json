@@ -6,6 +6,11 @@
       "form": "Inochentie al Odessei",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 mai, «Sfântul Ierarh Inochentie al Odessei»."
+    },
+    {
+      "form": "Ιννοκέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Μαΐου, «Άγιος Ιννοκέντιος ο Επίσκοπος Χερσώνος», with the rank word and the see left off; the life page adds that his name in the world was Ιωάννης Αλεξέεβιτς Μπορίσωφ."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Μαΐου — «Άγιος Ιννοκέντιος ο Επίσκοπος Χερσώνος»",
+        "url": "https://www.saint.gr/05/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Μαΐου εκάστου έτους», the same civil day the Romanian calendar keeps «Sfântul Inochentie al Odessei» on, and the identification is the see: saint.gr calls him bishop of Kherson, and Kherson and all Taurida was the diocese seated at Odessa, which the folder's Romanian line names him by. The Greek adds a whole life the Romanian line does not carry — the name in the world, the parents, the schools, the successive sees and the Crimean War. He is not the corpus's `innocent-of-moscow`. **The folder's `dates` is left empty for the writer to fill or leave**: the page gives «γεννήθηκε στις 15 Δεκεμβρίου 1800 μ.Χ.» and «κοιμήθηκε με ειρήνη το 1857 μ.Χ.», both flat and both repeated in its head line «(1800 - 1857)», so these are recordable years — but a reader does not replace a folder's `dates` from an upgrade file in this wave, and the years are set down here and in the added paragraph instead. Its `types` are also short of the Greek: the folder says `hierarch`, and the page says bishop of Chigirin, then Vologda, then Kharkov, then Kherson. No hymn is printed."
     },
     {
       "church": "serbian",

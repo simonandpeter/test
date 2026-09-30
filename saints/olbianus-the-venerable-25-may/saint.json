@@ -1,0 +1,51 @@
+{
+  "slug": "olbianus-the-venerable-25-may",
+  "display_name": "Olbianus (25 May)",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ολβιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Μαΐου, «Όσιος Ολβιανός», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Μαΐου — «Όσιος Ολβιανός»",
+        "url": "https://www.saint.gr/05/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Μαΐου εκάστου έτους», the same day as the listing. **This is a deliberate second folder and not an upgrade of `olbianus`, and the ground is this.** The corpus's `olbianus` holds doxologia.ro's bare line for 29 mai, «Sfântul Sfinţit Mucenic Olivian», a hieromartyr with no life at all — and the 05-29 reader of this same Greek wave has already drafted an upgrade for him in `.tmp/el-drafts/up-05-29.json`, out of saint.gr's own 29 Μαΐου line «Άγιος Ολβιανός επίσκοπος Ανέων και οι αυτού μαθητές», a bishop of Aneon with disciples. So saint.gr keeps an Ολβιανός on 25 Μαΐου and another on 29 Μαΐου, four days apart, and the two entries differ in everything the pages give: this one is Όσιος, an ascetic who died in peace, with no see and no disciples and no martyrdom, and that one is a bishop and a martyr. **Two entries on one calendar are two commemorations, so two men** — the corpus's settled rule — and the day is carried in the display name so that a reader can tell which is meant. If the writer judges otherwise, this is the folder of the day to drop, and the 29 Μαΐου upgrade is the one that stands."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

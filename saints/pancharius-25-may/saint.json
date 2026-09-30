@@ -1,0 +1,48 @@
+{
+  "slug": "pancharius-25-may",
+  "display_name": "Pancharius (25 May)",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Παγχάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Μαΐου, «Άγιος Παγχάριος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Μαΐου — «Άγιος Παγχάριος»",
+        "url": "https://www.saint.gr/05/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Μαΐου εκάστου έτους», the same day as the listing, and its whole entry is two sentences: that the Church commemorates him together with the martyr Celestine, and that «Δεν έχουμε όμως πληροφορίες για τον βίο του» — we have no information about his life. It carries no asterisk: an absence of material, not a refusal to vouch. **The folder carries no `types`**: the page gives him only «Άγιος» and does not extend Celestine's rank of martyr to him, and the closed list has no slug for a bare saint. Nothing in the corpus answers to the name in any form. Because the page gives nothing at all to distinguish him by, the display name carries the day. `celestine-martyr-25-may`, whom he is commemorated with, is upgraded in `up-05-25.json`; he is named in the life without a link, since no `related` row can be added from a reader's new-folder draft to a folder whose own life does not name him back."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

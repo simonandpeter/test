@@ -1,0 +1,63 @@
+{
+  "slug": "zenobius-of-florence",
+  "display_name": "Zenobius of Florence",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ζηνόβιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Μαΐου, «Άγιος Ζηνόβιος Επίσκοπος Φλωρεντίας», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 390,
+      "latest": 390,
+      "display": "390",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη το 390 μ.Χ. επί του αυτοκράτορα της Δύσεως Ονωρίου», and the head line «(; - 390)»."
+    }
+  },
+  "related": [
+    "ambrose-of-milan"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Μαΐου — «Άγιος Ζηνόβιος Επίσκοπος Φλωρεντίας»",
+        "url": "https://www.saint.gr/05/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Μαΐου εκάστου έτους», the same day as the listing, and carries no asterisk. Neither of the corpus's men of this name is a bishop of Florence. **The page contradicts itself over the year:** it closes his life in 390 «επί του αυτοκράτορα της Δύσεως Ονωρίου», under Honorius, who did not reign in the West until 393; and it has Damasus of Rome, whose years it gives as 366 to 384, send him to Constantinople. The stated year is recorded and the emperor is set down as the page has him rather than corrected. Ambrose of Milan, his spiritual friend, has a folder and is linked; Damasus of Rome has none and is named without a link. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

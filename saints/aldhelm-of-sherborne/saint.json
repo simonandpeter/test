@@ -1,0 +1,59 @@
+{
+  "slug": "aldhelm-of-sherborne",
+  "display_name": "Aldhelm of Sherborne",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Aldhelm",
+      "lang": "el",
+      "note": "The page prints his name in Latin letters and in no Greek form at all, both in the day's line, «Άγιος Aldhelm», and in its own head line, «Αγιος Aldhelm». The form is copied as printed; nothing is transliterated."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Aldhelm έζησε τον 6ο αιώνα μ.Χ.» — the century the page states, and the only dating it gives him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Μαΐου — «Άγιος Aldhelm»",
+        "url": "https://www.saint.gr/05/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Μαΐου εκάστου έτους», the same day as the listing, and its whole entry is one sentence. **It carries no asterisk**, unlike seven of the Western entries another reader met on 16 Μαΐου, so it is drafted. Nothing in the corpus answers to the name. The `names` entry is the one oddity of this folder: saint.gr gives him no Greek form whatever, printing «Aldhelm» in Latin letters on the day page and on his own, and that is what is recorded — a copied script form, as the rule requires, even though the script is not Greek. `lang` is still `el`, because the form is read out of the Greek page's own line. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

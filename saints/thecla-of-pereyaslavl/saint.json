@@ -1,0 +1,60 @@
+{
+  "slug": "thecla-of-pereyaslavl",
+  "display_name": "Thecla of Pereyaslavl",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "names": [
+    {
+      "form": "Θέκλα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Μαΐου, «Οσία Θέκλα του Περεγιασλάβλ», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1401,
+      "latest": 1600,
+      "display": "15th–16th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Οσία Θέκλα έζησε στη Ρωσία κατά τον 15ο και 16ο αιώνα μ.Χ.» — the two centuries the page states, and the only dating it gives her."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Μαΐου — «Οσία Θέκλα του Περεγιασλάβλ»",
+        "url": "https://www.saint.gr/05/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Μαΐου εκάστου έτους», the same day as the listing. None of the corpus's women of this name is a Russian nun of Pereyaslavl: `thecla-the-protomartyr`, `thecla-of-aza`, `thecla-of-alexandria` and `thecla-of-gaza` are all of them ancient and eastern. Her son, Daniel of Pereyaslavl, whom the page keeps on 7 Απριλίου, has no folder, so he is named without a link. The page's «Κόρη του Αυτοκράτορα Θεόφιλου» is the site's gloss on the *name* Thecla and not a statement about her, and is not carried into the folder. No year, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
