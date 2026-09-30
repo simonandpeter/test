@@ -1,0 +1,50 @@
+{
+  "slug": "victor-of-thessalonica",
+  "display_name": "Victor of Thessalonica",
+  "names": [
+    {
+      "form": "Βίκτωρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Μαρτίου, «Άγιος Βίκτωρ», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Μαρτίου — «Άγιος Βίκτωρ»",
+        "url": "https://www.saint.gr/03/30/index.aspx",
+        "year": 2026
+      },
+      "note": "One sentence: «Ο Άγιος Βίκτωρ μαρτύρησε στη Θεσσαλονίκη επί Μαξιμιανού, μαζί με έντεκα άλλους μάρτυρες» — martyred at Thessalonica under Maximian, together with eleven other martyrs. The page gives no year, no manner of death, no relic and no hymn, and it names none of the eleven and gives them no entry of their own, so they have no folder. Maximian's reign is not put in years by the page and none is inferred, so this folder carries no `dates`. The calendar line gives him no epithet at all; Thessalonica comes from the body of the page and is what tells him from the Victors of Corinth, Chalcedon, Damascus and Marseille that the corpus already keeps."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

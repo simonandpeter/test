@@ -1,0 +1,67 @@
+{
+  "slug": "sophronius-of-irkutsk",
+  "display_name": "Sophronius of Irkutsk",
+  "names": [
+    {
+      "form": "Σωφρόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Μαρτίου, «Άγιος Σωφρόνιος Επίσκοπος Ιρκούτσκ», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Irkutsk",
+  "types": [
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Μαρτίου — «Άγιος Σωφρόνιος Επίσκοπος Ιρκούτσκ»",
+        "url": "https://www.saint.gr/03/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(1703 - 1771)», gives his name in the world as «Στέφανος Κρισταλέφσκιυ», his birth on 25 December 1703 in Ukraine near the district of Chernigov, his repose in 1771 on the second day of Pascha, the six months his body lay unburied and undecayed while the Holy Synod's decision was awaited, the rescue of the relics from the fire that destroyed the cathedral of Irkutsk on 18 April 1917, and the proclamation of his canonisation by the Russian Church on 23 April 1918. It links him to the Synaxis of all the Saints of Siberia and prints no hymn. A Russian saint recorded here only from a Greek source."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1703,
+      "latest": 1703,
+      "display": "1703",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε στις 25 Δεκεμβρίου 1703 μ.Χ. στην Ουκρανία, κοντά στην περιοχή του Τσέρνιγκωφ, από ευσεβείς γονείς», and the page heads him «(1703 - 1771)»."
+    },
+    "death": {
+      "earliest": 1771,
+      "latest": 1771,
+      "display": "1771",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Σωφρόνιος κοιμήθηκε με ειρήνη το έτος 1771 μ.Χ., κατά την Δευτέρα ημέρα του Πάσχα», and the page heads him «(1703 - 1771)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Euvula",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 martie, «Sfânta Cuvioasă Euvula, mama Sfântului Pantelimon»."
+    },
+    {
+      "form": "Ευβουλή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Μαρτίου, «Αγία Ευβουλή», with the rank word left off. The page's own Greek form is Ευβουλή."
     }
   ],
   "sex": "female",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Μαρτίου — «Αγία Ευβουλή»",
+        "url": "https://www.saint.gr/03/30/index.aspx",
+        "year": 2026
+      },
+      "note": "One sentence: «Η Αγία Ευβουλή ήταν μητέρα του Άγιου Παντελεήμονα (βλέπε 27 Ιουλίου) και απεβίωσε ειρηνικά» — she was the mother of St Panteleimon, whose day it puts at 27 July, and she died peacefully. The page's Greek form of her name is Ευβουλή; it gives no year, no place, no relic and no hymn. The line itself carries no epithet, and the motherhood is the whole of the identification, which is what this folder's display name already says."
     },
     {
       "church": "serbian",

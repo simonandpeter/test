@@ -6,6 +6,11 @@
       "form": "Ioan Scărarul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 martie, «Sfântul Cuvios Ioan Scărarul»."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Μαρτίου, «Άγιος Ιωάννης συγγραφέας της Κλίμακος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Μαρτίου — «Άγιος Ιωάννης συγγραφέας της Κλίμακος»",
+        "url": "https://www.saint.gr/03/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(523 - 606)» with both years hedged in its own prose — «γεννήθηκε πιθανότατα το 523 μ.Χ. στη Συρία», most probably, and «Εκοιμήθη εν ειρήνη περί το 606 μ.Χ.», about — and those hedges are why the `dates` added here are traditional and say probably and about. It names the relics: part of the skull at the monastery of the Great Meteoron, and portions at the monasteries of the Panagia of Damasta in Phthiotis and of the Panagia Tourliani on Mykonos. It names his teacher, the anchorite Martyrius, the four years of ascesis before his tonsure, his gift of wonderworking, his epithet the Sinaite, his abbacy of Sinai after the previous abbot's death and at the brethren's demand, and his return to the desert; and it names the two writings, «Κλίμακα» and «Λόγον προς τον Ποιμένα», and describes the thirty discourses. It prints two apolytikia and a kontakion; the first apolytikion is the proper and is added to this folder, the second is the common of an ascetic father, «Ταῖς τῶν δακρύων σου ῥοαῖς», and is not, and the kontakion's own text was cut off in the reading and is therefore not taken."
     },
     {
       "church": "serbian",
@@ -60,9 +75,41 @@
         "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with miracles, O John our father. Pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ'. Θείας πίστεως.",
+      "text": "Θεῖον κλίμακα, ὑποστηρίξας, τὴν τῶν λόγων σου, μέθοδον πάσι, Μοναστῶν ὑφηγητὴς ἀναδέδειξαι, ἐκ πρακτικῆς Ἰωάννη καθάρσεως, πρὸς θεωρίας ἀνάγων τὴν ἔλαμψιν. Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr — Άγιος Ιωάννης συγγραφέας της Κλίμακος, Ἀπολυτίκιον. Recorded with kind troparion, which is the schema's word for it. The page prints a second apolytikion after it, the common of an ascetic father, which is not taken.",
+        "url": "https://www.saint.gr/145/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having set a divine ladder under the method of your words for all, you were shown forth as the instructor of monastics, O John, leading them up from the purification that is in practice to the radiance of contemplation. Venerable Father, entreat Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 523,
+      "latest": 523,
+      "display": "probably 523",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιωάννης της Κλίμακας γεννήθηκε πιθανότατα το 523 μ.Χ. στη Συρία», and the page heads him «(523 - 606)». The page's «πιθανότατα», most probably, is why the display says probably; this folder held no `dates` before."
+    },
+    "death": {
+      "earliest": 606,
+      "latest": 606,
+      "display": "about 606",
+      "basis": "traditional",
+      "note": "saint.gr: «Εκοιμήθη εν ειρήνη περί το 606 μ.Χ. και άφησε δύο σπουδαιότατα συγγράμματα, την «Κλίμακα» και τον «Λόγον προς τον Ποιμένα»», and the page heads him «(523 - 606)». The page's «περί», about, is why the display says about 606."
+    }
   }
 }

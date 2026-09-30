@@ -6,6 +6,11 @@
       "form": "Ioad",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 martie, «Sfântul Proroc Ioad»."
+    },
+    {
+      "form": "Ιωήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Μαρτίου, «Προφήτης Ιωήλ», with the rank word left off. The same page says «Ιωάδ κατά μερικούς συναξαριστές», Joad according to some synaxaristae, which is why this Greek form is recorded on the folder the corpus already keeps as Joad; only the form the page prints is stored."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Μαρτίου — «Προφήτης Ιωήλ»",
+        "url": "https://www.saint.gr/03/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The Greek calendar prints this prophet's name as Ιωήλ, Joel, and the page itself explains why that is the same man as the Romanian Ioad: «Ο Προφήτης Ιωήλ (Ιωήλ κατά την Β΄Παραλειπομένων (Θ΄29), Ιωάδ κατά μερικούς συναξαριστές)» — Joel according to 2 Chronicles 9:29, Joad according to some synaxaristae. It then closes by warning that the prophet Joel commemorated on 19 October is another man. So this row is put on this folder on the page's own identification, and the Greek name form is recorded beside the Romanian one rather than in place of it. The page gives no year and prints no hymn."
     },
     {
       "church": "serbian",

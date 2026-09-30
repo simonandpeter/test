@@ -1,0 +1,62 @@
+{
+  "slug": "zacharias-of-corinth",
+  "display_name": "Zacharias of Corinth",
+  "names": [
+    {
+      "form": "Ζαχαρίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Μαρτίου, «Άγιος Ζαχαρίας Μητροπολίτης Κορίνθου», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Metropolitan of Corinth",
+  "types": [
+    "hieromartyr",
+    "metropolitan",
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Μαρτίου — «Άγιος Ζαχαρίας Μητροπολίτης Κορίνθου»",
+        "url": "https://www.saint.gr/03/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1684)» and dates the beheading exactly: «αποκεφαλίστηκε στην Κόρινθο, 30 Μαρτίου 1684 μ.Χ., Κυριακή της Σταυροπροσκύνησης» — at Corinth on 30 March 1684, the Sunday of the Veneration of the Cross. That Sunday is the page's way of naming the historical day; the feast itself it marks «Σταθερή», fixed on 30 March, and that is what is recorded. It calls him «ο νέος ιερομάρτυρας», links him to the Synaxis of the New Martyrs who suffered after the fall of Constantinople, and names a service of his own without printing a hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1684,
+      "latest": 1684,
+      "display": "1684",
+      "basis": "attested",
+      "note": "saint.gr: «Έτσι ο νέος ιερομάρτυρας Ζαχαρίας αποκεφαλίστηκε στην Κόρινθο, 30 Μαρτίου 1684 μ.Χ., Κυριακή της Σταυροπροσκύνησης», and the page heads him «(; - 1684)», leaving the year of his birth a question mark."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

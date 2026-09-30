@@ -1,0 +1,51 @@
+{
+  "slug": "john-of-jerusalem",
+  "display_name": "John of Jerusalem",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Μαρτίου, «Άγιος Ιωάννης Πατριάρχης Ιεροσολύμων», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Patriarch of Jerusalem",
+  "types": [
+    "patriarch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Μαρτίου — «Άγιος Ιωάννης Πατριάρχης Ιεροσολύμων»",
+        "url": "https://www.saint.gr/03/30/index.aspx",
+        "year": 2026
+      },
+      "note": "One sentence: «Ο Άγιος Ιωάννης ήταν από τους πρώτους Πατριάρχες Ιεροσολύμων και απεβίωσε ειρηνικά» — he was one of the first patriarchs of Jerusalem, and he died peacefully. The page gives no year, no number in the succession, no act and no hymn, so this folder carries no `dates`; the see is the only thing that distinguishes him, which is why the display name carries it. He is not the John whom the same page keeps as the hermit of the well on the same day, nor the John of the Ladder above him in the same list."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
