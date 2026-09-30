@@ -1590,7 +1590,26 @@ test('the row loads what is on screen before what is off it, a few at a time', a
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await expect(page.locator('.cx-card').first()).toBeVisible();
-  await page.waitForTimeout(1200);
+  /*
+   * **Waited for, not slept through.** A flat 1,200 ms was enough on a desk
+   * and not on the CI runner, where the band ahead had been handed no source
+   * yet and the premise guard below read as a defect. What the test needs is
+   * that the queue has reached past the screen, so that is what it waits for.
+   */
+  await expect
+    .poll(
+      () =>
+        page.evaluate(() => {
+          const track = document.querySelector('[data-carousel-track]');
+          const box = track.getBoundingClientRect();
+          return [...track.querySelectorAll('.cx-media img[data-cx-seq]')].filter((img) => {
+            const r = img.getBoundingClientRect();
+            return !(r.right > box.left && r.left < box.right);
+          }).length;
+        }),
+      { timeout: 15_000, message: 'the queue never reached a picture off screen' },
+    )
+    .toBeGreaterThan(0);
 
   const seen = await page.evaluate(() => {
     const track = document.querySelector('[data-carousel-track]');

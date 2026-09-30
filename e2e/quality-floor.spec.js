@@ -23,6 +23,15 @@ test.beforeEach(async ({ page }) => {
 
 for (const [label, path, prepare] of ROUTES) {
   test(`no axe violations: ${label}`, async ({ page }) => {
+    /*
+     * **Three times the budget on the carousel, since 2026-10-01.** The track
+     * holds the whole run rather than a screenful — 536 columns over 3,288
+     * saints — and an axe pass over that took 31 s on the CI runner against a
+     * 30 s test budget, which read as a quality-floor failure and was a
+     * stopwatch. The scan itself is the point of this test, so the budget
+     * moves and not the scan.
+     */
+    if (label.includes('carousel')) test.slow();
     if (prepare) await prepare(page);
     await ready(page);
     await page.goto(path, { waitUntil: 'networkidle' });
@@ -39,6 +48,7 @@ for (const [label, path, prepare] of ROUTES) {
    *
    */
   test(`no axe violations in vigil mode: ${label}`, async ({ page }) => {
+    if (label.includes('carousel')) test.slow();
     await page.emulateMedia({ colorScheme: 'dark' });
     if (prepare) await prepare(page);
     await ready(page);
