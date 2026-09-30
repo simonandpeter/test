@@ -95,13 +95,39 @@ const centuryRange = (a, b) => fill(STRINGS.dates.centuryRange, { a: numeral(a),
 
 const MODIFIER = { early: 'centuryEarly', late: 'centuryLate', 'mid-': 'centuryMid' };
 
+/*
+ * The same modifiers written as prose, which the readers do as often as not:
+ * "end of the 14th century" beside "late 14th century", "mid 3rd century"
+ * without its hyphen, and the two halves, which no modifier covered.
+ */
+const PHRASE = {
+  early: 'centuryEarly',
+  late: 'centuryLate',
+  'mid-': 'centuryMid',
+  mid: 'centuryMid',
+  'beginning of': 'centuryEarly',
+  'end of': 'centuryLate',
+  'middle of': 'centuryMid',
+  'first half of': 'centuryFirstHalf',
+  'second half of': 'centurySecondHalf',
+};
+const PHRASES = Object.keys(PHRASE).sort((a, b) => b.length - a.length).join('|');
+
 /* ---- the pieces, each returning null when it does not apply ------------- */
 
-/** `3rd century`, with an optional `early`/`late`/`mid-` in front. */
+/**
+ * `3rd century`, with any of `PHRASE`'s modifiers in front of it and an
+ * optional `the` on either side of them — `the end of the 1st century` and
+ * `late 1st century` are one shape to a reader.
+ */
 function readCentury(text) {
-  const m = /^(early |late |mid-)?(\d+)(?:st|nd|rd|th) century$/.exec(text);
+  // `mid-9th century` writes the modifier with a hyphen and no space; every
+  // other phrase in `PHRASE` is words, so the hyphen is normalised here rather
+  // than doubling the pattern.
+  const said = text.replace(/^(the )?mid-/, '$1mid ');
+  const m = new RegExp(`^(?:the )?(?:(${PHRASES}) (?:the )?)?(\\d+)(?:st|nd|rd|th) century$`).exec(said);
   if (!m) return null;
-  return century(Number(m[2]), m[1] ? MODIFIER[m[1].trim() === 'mid-' ? 'mid-' : m[1].trim()] : 'century');
+  return century(Number(m[2]), m[1] ? PHRASE[m[1]] : 'century');
 }
 
 /** A bare ordinal, which only ever appears as the left half of `4th or 5th century`. */
@@ -111,9 +137,9 @@ function readOrdinal(text, which = 'century') {
   return { n: Number(m[2]), modifier: m[1] ? MODIFIER[m[1].trim() === 'mid-' ? 'mid-' : m[1].trim()] : which };
 }
 
-/** `12th–13th century`. */
+/** `12th–13th century`, and the same pair written out: `the 12th and 13th centuries`. */
 function readCenturyRange(text) {
-  const m = /^(\d+)(?:st|nd|rd|th)[–-](\d+)(?:st|nd|rd|th) century$/.exec(text);
+  const m = /^(?:the )?(\d+)(?:st|nd|rd|th)\s*(?:[–-]|and)\s*(\d+)(?:st|nd|rd|th) centur(?:y|ies)$/.exec(text);
   return m ? centuryRange(Number(m[1]), Number(m[2])) : null;
 }
 
@@ -132,6 +158,17 @@ function readFullDate(text) {
   const at = new Date(Date.UTC(2000, month, Number(m[1])));
   at.setUTCFullYear(Number(m[3]));
   return dateFormatter({ day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(at);
+}
+
+/** `May 925` — a month the source gives without a day. */
+function readMonthYear(text) {
+  const m = /^([A-Z][a-z]+) (\d{1,4})$/.exec(text);
+  if (!m) return null;
+  const month = MONTHS.indexOf(m[1]);
+  if (month < 0) return null;
+  const at = new Date(Date.UTC(2000, month, 1));
+  at.setUTCFullYear(Number(m[2]));
+  return dateFormatter({ month: 'long', year: 'numeric', timeZone: 'UTC' }).format(at);
 }
 
 const MONTHS = [
@@ -162,8 +199,9 @@ function readEra(text) {
  * end of it, and one place reading it is the only way that stays true.
  */
 function readNumber(text) {
-  // `about 1228` is the same claim as `c. 1228` and readers write both.
-  const m = /^(c\. |about )?(\d+)(?:[–-](\d+))?$/.exec(text);
+  // `about 1228` is the same claim as `c. 1228` and readers write both, and
+  // `1121 to 1130` the same range as `1121–1130`.
+  const m = /^(c\. |about )?(\d+)(?:\s*(?:[–-]|to)\s*(\d+))?$/.exec(text);
   if (!m) return null;
   const out = m[3] ? fill(STRINGS.dates.yearRange, { a: m[2], b: m[3] }) : m[2];
   return m[1] ? fill(STRINGS.dates.circa, { when: out }) : out;
@@ -180,6 +218,7 @@ function readTerm(text, carry) {
     readCenturyRange(text) ??
     readCentury(text) ??
     readFullDate(text) ??
+    readMonthYear(text) ??
     readNumber(text) ??
     readEra(text) ??
     null
@@ -207,6 +246,18 @@ export function translateDisplay(display) {
     probably = true;
     body = body.slice('probably '.length);
   }
+  /*
+   * `about` is `c.` in words, and a reader writes it in front of a whole
+   * phrase as often as in front of a year: "about the end of the 1st century".
+   * Taken off here for the same reason `probably` is — it wraps the phrase
+   * rather than belonging to any part of it. `readNumber` keeps its own
+   * `about` for the bare year, which reaches it by other routes.
+   */
+  let about = false;
+  if (body.startsWith('about ')) {
+    about = true;
+    body = body.slice('about '.length);
+  }
   let mark = null;
   const marked = /^(.*)( BC| AD)$/.exec(body);
   if (marked) {
@@ -218,13 +269,30 @@ export function translateDisplay(display) {
     let out = said;
     if (mark === 'BC') out = fill(STRINGS.dates.bc, { when: out });
     else if (mark === 'AD') out = fill(STRINGS.dates.ad, { when: out });
+    /*
+     * `c.` sits in front of a year and a phrase wants the word: «ок. конец I
+     * в.» reads as an abbreviation dropped in front of a noun in the wrong
+     * case, and «примерно конец I в.» is what the language says.
+     */
+    if (about) {
+      out = fill(STRINGS.dates[/^\d+$/.test(body) ? 'circa' : 'circaPhrase'], { when: out });
+    }
     return probably ? fill(STRINGS.dates.probably, { when: out }) : out;
   };
 
-  if (body.startsWith('before ') || body.startsWith('after ')) {
-    const which = body.startsWith('before ') ? 'before' : 'after';
-    const rest = readTerm(body.slice(which.length + 1), null);
-    if (rest !== null) return dress(fill(STRINGS.dates[which], { y: rest }));
+  /*
+   * The bounds, longest first so `not before 885` is not read as a `before`
+   * with the word `not` left over.
+   */
+  const bound = [
+    ['not before ', 'notBefore'],
+    ['soon after ', 'soonAfter'],
+    ['before ', 'before'],
+    ['after ', 'after'],
+  ].find(([word]) => body.startsWith(word));
+  if (bound) {
+    const rest = readTerm(body.slice(bound[0].length), null);
+    if (rest !== null) return dress(fill(STRINGS.dates[bound[1]], { y: rest }));
     /*
      * Not a bound this can compose: "before the middle of the 5th century" has a
      * tail no term reads, and the packs carry it whole. Falling through to the era
@@ -247,6 +315,31 @@ export function translateDisplay(display) {
   }
 
   /*
+   * A year the source gives beside the other reckonings' years for the same
+   * event: «1383, or 1373 by another reckoning». The tail is prose and belongs
+   * to the pair, so it is read here rather than in a term, and the alternatives
+   * are read one by one — one of them offers two.
+   */
+  const reckoned =
+    /^(.+?), or (?:by (another|other) accounts? (.+)|(.+) by (?:(another) reckoning|(other) reckonings))$/.exec(body);
+  if (reckoned) {
+    // The year the source prefers can itself be a pair — «1707 or 1708» — so
+    // the left side is read as a list, exactly as the tail is.
+    const first = reckoned[1].split(' or ').map((part) => readTerm(part, null));
+    const when = first.every((term) => term !== null) ? first.join(STRINGS.dates.or) : null;
+    const one = (reckoned[2] ?? reckoned[5]) === 'another';
+    const others = (reckoned[3] ?? reckoned[4]).split(' or ').map((part) => readTerm(part, null));
+    if (when !== null && others.every((other) => other !== null)) {
+      return dress(
+        others.length === 1 && one
+          ? fill(STRINGS.dates.byAnotherReckoning, { when, other: others[0] })
+          : fill(STRINGS.dates.byOtherReckonings, { when, others: others.join(STRINGS.dates.or) }),
+      );
+    }
+    return display;
+  }
+
+  /*
    * A recorded phrase is tried whole before it is taken apart, because one of
    * them has an `or` inside it that is not a join at all: "under Hadrian or
    * Antoninus" is one reign-or-the-other, and splitting it hands the second
@@ -261,7 +354,13 @@ export function translateDisplay(display) {
    * "late 9th or 10th century" each say century once and mean it twice. A left
    * half that is a bare ordinal takes it; anything else stands on its own.
    */
-  const parts = body.split(' or ');
+  /*
+   * A comma is the same join where a source lists years: `82, 85 or 86`. The
+   * `, or ` of `about 1640, or 1664` is one join and not two, so it is spelled
+   * out first — splitting on the comma alone left `or 1664` standing, which
+   * nothing reads.
+   */
+  const parts = body.split(/,\s*or\s+|,\s*|\s+or\s+/);
   const said = [];
   let carry = null;
   for (let i = parts.length - 1; i >= 0; i -= 1) {
