@@ -740,6 +740,7 @@ export const ru = {
     'Archbishop of Antioch': 'Архиепископ Антиохийский',
     'Archbishop of Antioch the Great': 'Архиепископ Антиохии Великой',
     'Archbishop of Arles': 'Архиепископ Арльский',
+    'Archbishop of Belorussia': 'Архиепископ Белорусский',
     'Archbishop of Boguchar': 'Архиепископ Богучарский',
     'Archbishop of Corfu': 'Архиепископ Керкирский',
     'Archbishop of Caesarea in Cappadocia': 'Архиепископ Кесарии Каппадокийской',

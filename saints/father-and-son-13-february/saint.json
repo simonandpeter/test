@@ -1,0 +1,50 @@
+{
+  "slug": "father-and-son-13-february",
+  "display_name": "The Father and Son (13 February)",
+  "names": [
+    {
+      "form": "Πατήρ και Υιός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Φεβρουαρίου, «Άγιοι Πατήρ και Υιός», with the rank word left off. The page gives neither of them a personal name; on its own page it heads them separately, «Αγιος Πατηρ» and «Αγιος Υιος», and still names neither."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Φεβρουαρίου — «Άγιοι Πατήρ και Υιός»",
+        "url": "https://www.saint.gr/02/13/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr names neither of the two — its page heads them «Αγιος Πατηρ» and «Αγιος Υιος», the holy Father and the holy Son, and gives no name, no place, no year and no persecutor. One entry for the pair, because there is nothing to make two of."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

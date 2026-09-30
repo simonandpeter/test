@@ -1,0 +1,68 @@
+{
+  "slug": "george-konissky",
+  "display_name": "George (Konissky)",
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Φεβρουαρίου, «Άγιος Γεώργιος Αρχιεπίσκοπος Λευκορωσίας», with the rank word and the see left off. The page gives his civil name too: «κατά κόσμο Γρηγόριος Ιωσήφοβιτς Κονίσκιυ»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "office": "Archbishop of Belorussia",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Φεβρουαρίου — «Άγιος Γεώργιος Αρχιεπίσκοπος Λευκορωσίας»",
+        "url": "https://www.saint.gr/02/13/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr heads him «(1717 - 1795)» and gives the birth as 20 November 1717 at Nezhin. His civil name, Gregory Iosifovich Konissky, is what the display name keeps; the Greek form on the page is only the monastic one."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1717,
+      "latest": 1717,
+      "display": "20 November 1717",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε στις 20 Νοεμβρίου 1717 στην πόλη Νεζίν», and its heading «(1717 - 1795)»."
+    },
+    "death": {
+      "earliest": 1795,
+      "latest": 1795,
+      "display": "1795",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη το έτος 1795», and its heading «(1717 - 1795)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

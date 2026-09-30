@@ -721,6 +721,7 @@ export const ro = {
     'Archbishop of Antioch': 'Arhiepiscop al Antiohiei',
     'Archbishop of Antioch the Great': 'Arhiepiscop al Antiohiei celei Mari',
     'Archbishop of Arles': 'Arhiepiscop de Arles',
+    'Archbishop of Belorussia': 'Arhiepiscop al Belarusiei',
     'Archbishop of Boguchar': 'Arhiepiscop de Boguciar',
     'Archbishop of Corfu': 'Arhiepiscop de Corfu',
     'Archbishop of Caesarea in Cappadocia': 'Arhiepiscop de Cezareea Capadociei',

@@ -6,6 +6,11 @@
       "form": "Evloghie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 februarie."
+    },
+    {
+      "form": "Ευλόγιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Φεβρουαρίου, «Άγιος Ευλόγιος Αρχιεπίσκοπος Αλεξάνδρειας», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Φεβρουαρίου — «Άγιος Ευλόγιος Αρχιεπίσκοπος Αλεξάνδρειας»",
+        "url": "https://www.saint.gr/02/13/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr heads him «(; - 607)», gives his years in the see as 579–607, and calls him archbishop where this folder's types say patriarch. It also lists what survives of his writing: seven chapters of «Περί των δύο φύσεων του Κυρίου και Θεού και Σωτήρος ημών Ιησού Χριστού», fragments of a discourse on the Trinity and the divine economy, and a homily on the palms and the colt whose authenticity it calls doubtful."
     },
     {
       "church": "serbian",
@@ -46,5 +61,17 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 607,
+      "latest": 607,
+      "display": "607",
+      "basis": "traditional",
+      "note": "saint.gr: «παρέδωσε την αγία του ψυχή στα χέρια Του το 607 μ.Χ.», its heading «(; - 607)», and its years for the see, «στα χρόνια 579 - 607 μ.Χ.»"
+    }
+  },
+  "related": [
+    "john-the-merciful-of-alexandria"
+  ]
 }

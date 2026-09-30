@@ -1,0 +1,67 @@
+{
+  "slug": "seraphima-of-sezenovo",
+  "display_name": "Seraphima of Sezenovo",
+  "names": [
+    {
+      "form": "Σεραφείμα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Φεβρουαρίου, «Οσία Σεραφείμα εκ Ρωσίας», with the rank word left off. The page gives her civil name too: «κατά κόσμο Ευθυμία Εφίμοβα Μοργκατσέβα»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Φεβρουαρίου — «Οσία Σεραφείμα εκ Ρωσίας»",
+        "url": "https://www.saint.gr/02/13/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr heads her «(1806 - 1877)». The day's line gives her only «εκ Ρωσίας», from Russia; the epithet here is the monastery her page names, Sezenovo, since her birthplace and her house are two different places in it."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1806,
+      "latest": 1806,
+      "display": "14 September 1806",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε στις 14 Σεπτεμβρίου 1806 στο χωριό Νίνζε-Λομώφ της επαρχίας Ριαζάν», and its heading «(1806 - 1877)»."
+    },
+    "death": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "1877",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1877», and its heading «(1806 - 1877)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

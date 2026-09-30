@@ -6,6 +6,11 @@
       "form": "Priscila",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 februarie."
+    },
+    {
+      "form": "Πρίσκιλλα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Φεβρουαρίου, «Άγιοι Ακύλας και Πρίσκιλλα οι Απόστολοι», with the rank words left off. The hymn on the same page spells it Πρισκίλλα."
     }
   ],
   "sex": "female",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Φεβρουαρίου — «Άγιοι Ακύλας και Πρίσκιλλα οι Απόστολοι»",
+        "url": "https://www.saint.gr/02/13/index.aspx",
+        "year": 2026
+      },
+      "note": "She and Aquila share one page and one hymn, which names both. The page's closing note gives a second day to Aquila alone, 14 July, and none to her; the distich it prints turns on her death coming first — «Τμηθὲν γύναιον, Ἀκύλας φησί, βλέπων, Οὐκ ἀνδριοῦμαι πρὸς τομὴν ἀνὴρ κάρας;»"
     },
     {
       "church": "serbian",
@@ -49,5 +64,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Χριστὸν ἀγαπήσαντες καὶ φωτισθέντες τὸν νοῦν, τὴ πίστει ἐνούμενοι καὶ συζυγία σεμνή, Ἀκύλας καὶ Πρισκίλλα ἤσαν μὲν προεστῶτες ἐκκλησίας κατ’ οἶκον, Παύλου δὲ τοῦ φωστῆρος συνεργοὶ καὶ προστᾶται. Διὸ αὐτοὺς τιμήσωμεν καὶ μιμησώμεθα.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε, on the page of Άγιος Ακύλας ο Απόστολος and Αγία Πρίσκιλλα. One hymn for the pair, naming both, so it stands on both folders; the itacism «τὴ πίστει» is the page's own.",
+        "url": "https://www.saint.gr/709/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved Christ and been enlightened in mind, united in the faith and in an honourable marriage, Aquila and Priscilla were heads of a church in their own house, and fellow workers and protectors of Paul the light-giver. Therefore let us honour them and imitate them.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -722,6 +722,7 @@ export const el = {
     'Archbishop of Antioch': 'Αρχιεπίσκοπος Αντιοχείας',
     'Archbishop of Antioch the Great': 'Αρχιεπίσκοπος Αντιοχείας της Μεγάλης',
     'Archbishop of Arles': 'Αρχιεπίσκοπος Άρλης',
+    'Archbishop of Belorussia': 'Αρχιεπίσκοπος Λευκορωσίας',
     'Archbishop of Boguchar': 'Αρχιεπίσκοπος Μπογκουτσάρ',
     'Archbishop of Corfu': 'Αρχιεπίσκοπος Κερκύρας',
     'Archbishop of Caesarea in Cappadocia': 'Αρχιεπίσκοπος Καισαρείας Καππαδοκίας',

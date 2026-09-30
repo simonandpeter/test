@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'γεωργιοσ george-konissky george-of-alikianos george-of-develtos george-of-kratovo george-of-megara george-of-vladimir george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian':
+    'ten now. The new one is George Konissky, archbishop of Belorussia, kept on 13 Φεβρουαρίου; the other nine are read in the el-02-11 entry for this name form. Ten men on ten Greek days.',
   'βασιανοσ bassian-of-rostov vassian-of-uglich':
     'two men, and the spellings are the corpus own: Vassian of Uglich, dead 1509, on 12 Φεβρουαρίου, against Bassian of Rostov, dead 1516, written in this wave on 25 Ιανουαρίου. Seven years and two towns apart, and a third of the name, bassian-of-rostov-23-march, is drafted for the Greek 23 Μαρτίου with a death in 1481 — that one is the author question, because two Bassians of one town is what a doubled commemoration looks like.',
   'προχοροσ prochorus-of-georgia prochorus-of-vranski prochorus-the-lebednik':

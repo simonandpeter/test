@@ -6,6 +6,11 @@
       "form": "Simeon Izvorâtorul de Mir",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 februarie."
+    },
+    {
+      "form": "Συμεών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Φεβρουαρίου, «Όσιος Συμεών Κτήτορας της Μονής Χιλανδαρίου Αγίου Όρους», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -50,6 +55,40 @@
         "text": "Enlightened by grace, thou showest us the brightness of thy life even after death, for thou pourest out myrrh in abundance upon those who come to thy honoured icon, and guidest them all to the knowledge of God. Most venerable Father Simeon, pray to Christ God to grant us great mercy.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείαν ἄσκησιν, ἐπιποθήσας, τὴν βασίλειον, ἔλιπες δόξαν, Συμεὼν καὶ ἰσαγγέλως ἐβίωσας, τῶν ἐν τῷ Ἄθῳ Ὁσίων ὡράϊσμα, καὶ τῆς Σερβίας κλεινὸν σεμνολόγημα. Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως, on the page of Όσιος Συμεών Κτήτορας της Μονής Χιλανδαρίου Αγίου Όρους",
+        "url": "https://www.saint.gr/712/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Longing for the divine ascesis, thou didst leave the royal glory, O Simeon, and didst live as the equal of the angels — the ornament of the venerable ones on Athos and the famed boast of Serbia. O venerable father, entreat Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Βασιλείαν πρόσκαιρον, λιπὼν ἐμφρόνως, Συμεὼν ὡς ἄγγελος, ἐπολιτεύσω ἐπὶ γῆς· διὸ καὶ βλύζειν ἠξίωσαι, ἀπὸ τοῦ τάφου σου μύρα πανεύοσμα.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of Όσιος Συμεών Κτήτορας της Μονής Χιλανδαρίου Αγίου Όρους",
+        "url": "https://www.saint.gr/712/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having wisely left a kingdom that passes, O Simeon, thou didst live upon earth as an angel; wherefore thou wast counted worthy to pour out from thy tomb myrrh of all sweetness.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
@@ -74,8 +113,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Φεβρουαρίου — «Όσιος Συμεών Κτήτορας της Μονής Χιλανδαρίου Αγίου Όρους»",
+        "url": "https://www.saint.gr/02/13/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr heads him «(; - 1200)» and names him in the world Stephen I Nemanja — «στις Βυζαντινές πηγές Νεεμάν». It dates the abdication to 1196 and the translation of the relics by his son Sava to 1208, which is when the myrrh flowed and the by-name was earned; the translation is not a second commemoration on this page."
     },
     {
       "church": "serbian",
