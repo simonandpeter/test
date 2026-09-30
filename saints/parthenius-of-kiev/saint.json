@@ -1,0 +1,67 @@
+{
+  "slug": "parthenius-of-kiev",
+  "display_name": "Parthenius of Kiev",
+  "names": [
+    {
+      "form": "Παρθένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Μαρτίου, «Όσιος Παρθένιος του Κιέβου», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Μαρτίου — «Όσιος Παρθένιος του Κιέβου»",
+        "url": "https://www.saint.gr/03/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(1790 - 1855)», gives his name in the world as «Πέτρος Ιβάνοβιτς Κρασνοπέβκεφ», his birth on 24 August 1790 in the village of Σόμοβο under the government of Tula, his ascesis in the Lavra of the Caves of Kiev and his taking of the great schema in 1838. It prints no hymn. saint.gr is a Greek source for a Russian saint, and the Russian calendar was not read for this row."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1790,
+      "latest": 1790,
+      "display": "1790",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε στις 24 Αυγούστου 1790 μ.Χ. στο χωριό Σόμοβο, που υπαγόταν στο κυβερνείο της Τούλα», and the page heads him «(1790 - 1855)»."
+    },
+    "death": {
+      "earliest": 1855,
+      "latest": 1855,
+      "display": "1855",
+      "basis": "attested",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1855 μ.Χ.», and the page heads him «(1790 - 1855)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

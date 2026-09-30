@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'τιμων timon-of-nadeyev timon-the-hermit':
+    'Two men: Nadeyev on 21 January and the hermit on 25 March.',
+  'θεοδοσια theodora-of-amisos theodosia-of-caesarea-in-palestine':
+    'Two women, and they fold together because one of them is recorded with both names: Theodora of Amisos on 20 March and Theodosia of Caesarea in Palestine on 25 March.',
+  'πελαγια pelagia-of-caesarea-in-palestine pelagia-of-diveyevo':
+    'Two women: Caesarea in Palestine on 25 March and Diveyevo on 30 January.',
+  'παρθενιοσ parthenius-of-kiev parthenius-of-lampsacus parthenius-of-zographou parthenius-the-third':
+    'Four men on four Greek days: Kiev on 25 March, Lampsacus on 7 February, Zographou on 22 September and the patriarch Parthenius III on 24 March.',
   'στεφανοσ stephen-27-february stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-placidianae stephen-xylinites':
     'Six now, and the two new ones share 24 March as two entries of the page, Stephen of Kazan and Stephen Xylinites; the others are read in the el-02-27 entry for this name form.',
   'σεκουνδοσ secundus-brother-of-romylus secundus-companion-of-perpetua':

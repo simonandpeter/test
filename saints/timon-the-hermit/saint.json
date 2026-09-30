@@ -1,0 +1,59 @@
+{
+  "slug": "timon-the-hermit",
+  "display_name": "Timon the Hermit",
+  "names": [
+    {
+      "form": "Τίμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Μαρτίου, «Όσιος Τίμων ο Ερημίτης», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Μαρτίου — «Όσιος Τίμων ο Ερημίτης»",
+        "url": "https://www.saint.gr/03/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives one sentence — that he lived and practised ascesis in the tenth century and fell asleep in peace — and marks the feast «Σταθερή. Εορτάζει στις 25 Μαρτίου εκάστου έτους», fixed, kept on 25 March every year. It prints no hymn, no place and no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 901,
+      "latest": 1000,
+      "display": "10th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Τίμων έζησε και ασκήτεψε κατά τον 10ο αιώνα μ.Χ.» The page gives no year for his birth and none for his repose, so the interval recorded is the century it names."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

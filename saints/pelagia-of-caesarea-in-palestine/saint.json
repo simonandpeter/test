@@ -1,0 +1,62 @@
+{
+  "slug": "pelagia-of-caesarea-in-palestine",
+  "display_name": "Pelagia of Caesarea in Palestine",
+  "names": [
+    {
+      "form": "Πελαγία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Μαρτίου, «Αγίες Πελαγία και Θεοδοσία», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Μαρτίου — «Αγίες Πελαγία και Θεοδοσία»",
+        "url": "https://www.saint.gr/03/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads her «(; - 361)» and gives the pair a single sentence of narrative: martyrdom at Caesarea in Palestine in the year 361, perfected by the sword. It prints the menaion's couplet for the two of them and no hymn. The two women share one life page, https://www.saint.gr/95/saint.aspx, whose «Ημερομηνία Εορτής» is the same 25 March."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 361,
+      "display": "361",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Αγίες Μάρτυρες Πελαγία και Θεοδοσία, μαρτύρησαν στην Καισάρεια της Παλαιστίνης το έτος 361 μ.Χ. και τελειώθηκαν διά ξίφους», and the page heads her «(; - 361)», leaving the year of her birth a question mark."
+    }
+  },
+  "related": [
+    "theodosia-of-caesarea-in-palestine"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
