@@ -1,0 +1,52 @@
+{
+  "slug": "ethelbert-of-kent",
+  "display_name": "Ethelbert of Kent",
+  "sex": "male",
+  "types": [
+    "king"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Φεβρουαρίου — «Άγιος Ethelbert βασιλιάς της Αγγλίας»",
+        "url": "https://www.saint.gr/02/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line calls him king of England and the body corrects that to Kent: «Αγγλοσάξονας βασιλεύς του Κεντ με έδρα το Καντέρμπουρυ», an Anglo-Saxon king of Kent with his seat at Canterbury. The page heads him «(; - 616)», names his wife Bertha, a Christian out of France, and the monk Augustine at the head of the missionaries out of Rome, and lists the churches he founded."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 616,
+      "latest": 616,
+      "display": "616",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Ethelbert κοιμήθηκε με ειρήνη το έτος 616 μ.Χ.», and the page heads him «(; - 616)», leaving the year of his birth a question mark."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

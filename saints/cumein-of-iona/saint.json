@@ -1,0 +1,43 @@
+{
+  "slug": "cumein-of-iona",
+  "display_name": "Cumein of Iona",
+  "sex": "male",
+  "types": [
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Φεβρουαρίου — «Άγιος Cumein»",
+        "url": "https://www.saint.gr/02/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is one sentence: «Ο Άγιος Cumein ήταν ηγούμενος στο μοναστήρι της Iona» — he was abbot at the monastery of Iona. No year, no country, no relic and no hymn; the page's one outward link is to the Archdiocese of Thyateira and Great Britain. saint.gr writes the name in Latin letters and gives no Greek form of it, so no name form is recorded here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

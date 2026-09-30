@@ -1,0 +1,61 @@
+{
+  "slug": "boisil-of-melrose",
+  "display_name": "Boisil of Melrose",
+  "names": [
+    {
+      "form": "Μποϊζίλ",
+      "lang": "el",
+      "note": "saint.gr writes the name in Latin letters in its line for 24 Φεβρουαρίου, «Όσιος Boisil εκ Σκωτίας», and gives its own Greek rendering in brackets in the body, «ο Όσιος Boisil (Μποϊζίλ)». That bracketed form is the only Greek one the page prints and is the one taken."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Φεβρουαρίου — «Όσιος Boisil εκ Σκωτίας»",
+        "url": "https://www.saint.gr/02/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 664)» and puts his tonsure at the monastery of Melrose by the river Tweed, in Scotland. It prints his last counsels to the brethren in full and gives no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 664,
+      "latest": 664,
+      "display": "664",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Όσιος Boisil κοιμήθηκε με ειρήνη το έτος 664 μ.Χ.», and the page heads him «(; - 664)», leaving the year of his birth a question mark."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
