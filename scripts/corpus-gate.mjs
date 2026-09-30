@@ -115,6 +115,24 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'πλατων plato-of-megara plato-the-venerable platon-kulbusch platon-of-banja-luka':
+    'Four men: Platon of Banja Luka on 22 April and the three read in the el-01-01 entry for this name form.',
+  'θεοδωροσ mstislav-of-kiev theodore-companion-of-pausolypius theodore-companion-of-stephen theodore-companion-of-terentius theodore-founder-of-chora theodore-of-kama-the-philosopher theodore-of-kandavla theodore-of-moscow theodore-of-novgorod theodore-of-pentapolis theodore-of-perga theodore-of-samothrace theodore-of-sykeon theodore-of-tamasos theodore-of-tomsk theodore-prince-of-yaroslavl theodore-stratelates theodore-the-byzantine theodore-the-envoy-of-nicomedia theodore-the-recruit theodore-the-silent theodore-trichinas':
+    'Nineteen now. The new one is on 21 April; the others are read in the el-04-15 entry for this name form.',
+  'μαξιμιανοσ maximian-of-constantinople maximian-of-ravenna':
+    'Two men: Maximian of Constantinople, the patriarch, on 21 April and the Maximian of the el-02-21 entry, the archbishop of Ravenna.',
+  'ιακωβοσ jacob-of-nimouzan jacob-the-hermit james-companion-of-emilian james-of-bryleyevo james-of-cyrrhus james-of-nisibis james-of-pharatha james-of-samosata james-of-serbia james-of-stromyn james-of-zheleznyi-borok james-of-zographou-the-first james-of-zographou-the-second james-the-confessor':
+    'Fourteen now. The new one is James of Stromyn on 21 April; the others are read in the el-04-11 entry for this name form, where two stand on 11 April.',
+  'ισαακιοσ isaac-the-recluse-of-the-kyiv-caves isaacius-companion-of-alexandra':
+    'Two men: the companion of Alexandra on 21 April and the Isaacius of the el-02-14 entry.',
+  'φαυστοσ faustus-companion-of-januarius faustus-disciple-of-dionysius-of-alexandria faustus-martyr-6-february':
+    'Three men: the companion of Januarius on 21 April and the two read in the el-05-24 draft reading, which is another day and another company.',
+  'ευτυχιοσ eutychius-27-march eutychius-companion-of-bassus eutychius-companion-of-januarius eutychius-of-constantinople eutychius-of-mesopotamia eutychius-of-the-forty-martyrs eutychius-the-subdeacon':
+    'Seven now. The new one is the companion of Januarius on 21 April; the others are read in the el-04-09 entry for this name form.',
+  'κοδρατοσ codratus-companion-of-alexandra codratus-the-executioner quadratus-of-corinth quadratus-of-the-east':
+    'Four men: the companion of Alexandra on 21 April, the executioner of 4 March, Quadratus of Corinth on 10 March and Quadratus of the East on 26 March.',
+  'απολλωσ apollos-companion-of-alexandra apollos-under-julian':
+    'Two men: the companion of Alexandra on 21 April and the Apollos of the el-03-31 reading.',
   'ζωτικοσ zoticus-20-april zoticus-companion-of-rogatus zoticus-of-tomis':
     'Three men: the Zoticus of 20 April, the companion of Rogatus on 12 January and Zoticus of Tomis on 13 September.',
   'ζηνων zeno-20-april zeno-companion-of-terentius zeno-companion-of-zoilus zeno-of-diospolis zeno-the-courier zeno-the-faster-of-kiev':

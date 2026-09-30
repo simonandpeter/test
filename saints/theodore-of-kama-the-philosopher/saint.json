@@ -1,0 +1,60 @@
+{
+  "slug": "theodore-of-kama-the-philosopher",
+  "display_name": "Theodore of Kama the Philosopher",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Απριλίου, «Άγιος Θεόδωρος της Κάμα ο Φιλόσοφος», with the rank word left off; the life page heads him «Αγιος Θεοδωρος Της Καμα ο Φιλοσοφος (; - 1323)»."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1323,
+      "latest": 1323,
+      "display": "1323",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε το έτος 1323 μ.Χ. από τους Μογγόλους», and the page heads him «(; - 1323)»; no year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Απριλίου — «Άγιος Θεόδωρος της Κάμα ο Φιλόσοφος»",
+        "url": "https://www.saint.gr/04/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Απριλίου εκάστου έτους», the same day as the listing. The whole body of the page is one sentence: «Ο Άγιος Μάρτυς Θεόδωρος της Κάμα, ο επονομαζόμενος Φιλόσοφος, μαρτύρησε το έτος 1323 μ.Χ. από τους Μογγόλους». It gives no country beyond the epithet της Κάμα, no city, no manner of death, no relic and no hymn, and no couplet. The many Theodores this corpus keeps are other men on other days; none is a martyr under the Mongols."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

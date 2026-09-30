@@ -1,0 +1,61 @@
+{
+  "slug": "maximian-of-constantinople",
+  "display_name": "Maximian of Constantinople",
+  "sex": "male",
+  "types": [
+    "patriarch"
+  ],
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Μαξιμιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Απριλίου, «Άγιος Μαξιμιανός Πατριάρχης Κωνσταντινούπολης», with the rank word and the see left off; the life page heads him «Αγιος Μαξιμιανος Πατριαρχης Κωνσταντινουπολης (; - 434)»."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 434,
+      "latest": 434,
+      "display": "434",
+      "basis": "attested",
+      "note": "saint.gr: «απεβίωσε ειρηνικά στις 12 Απριλίου 434 μ.Χ.», and the page heads him «(; - 434)»; no year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Απριλίου — «Άγιος Μαξιμιανός Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/04/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Απριλίου εκάστου έτους», the same day as the listing. The page's own dates for him are of events and not of his life: the reign of Theodosius II the Younger, 408 to 450; his ordination priest by the patriarch Sisinnius, whose patriarchate it dates 426 to 427; the patriarchate of the heretic Nestorius, 428 to 431, against whose doctrines he reacted strongly; his own accession by the vote of emperor and people on 25 October 431; two years and five months of peaceful government; and his peaceful death on 12 April 434. **The day the page gives for his death is 12 April and the day it keeps his memory on is 21 April**, and it does not say why; the row records the day page that was read. It adds that his synaxis is held at the Holy Apostles. It prints no hymn and names no relic. The corpus holds no other Maximian."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

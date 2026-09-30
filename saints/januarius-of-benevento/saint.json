@@ -7,6 +7,11 @@
       "form": "Ianuarie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 aprilie, «Sfântul Sfințit Mucenic Ianuarie, Episcop de Benevent»."
+    },
+    {
+      "form": "Ιανουάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Απριλίου, «Άγιος Ιανουάριος ο Επίσκοπος και οι Πρόκουλος, Σώσσος και Φαύστος οι Διάκονοι, Δισιδέριος ο Αναγνώστης, Ακούτιος και Ευτύχιος», with the rank words left off; the life page heads him «Αγιος Ιανουαριος ο Επισκοπος (; - 305)»."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Απριλίου — «Άγιος Ιανουάριος ο Επίσκοπος και οι Πρόκουλος, Σώσσος και Φαύστος οι Διάκονοι, Δισιδέριος ο Αναγνώστης, Ακούτιος και Ευτύχιος»",
+        "url": "https://www.saint.gr/04/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him. **The see it gives him is Naples, not Benevento**: «Ο Άγιος Ιανουάριος ήταν επίσκοπος στη Νεάπολη της Ιταλίας», and under «Ιερά Λείψανα» it puts the relics in the Roman Catholic cathedral of Naples that bears his name. This folder's `office` was left as it stood and the disagreement is recorded here. The page heads him «(; - 305)» and sets the persecution «στα χρόνια του Διοκλητιανού (284-304)», naming Timothy as prefect of the region; it gives no year of birth, and the folder's `dates` were left untouched. It enumerates six fellow workers with him — the deacons Proculus, whom it also calls Proklos, Sossus and Faustus, the reader Desiderius, and Acutius and Eutychius — each of whom now has a folder. It tells how he was thrown into the fire and left unharmed, how his sinews were then cut, how he refused to be rescued by the Christians of Naples and promised to be the protector of their city, which proclaimed him its patron, and how the widow Maximina's only son was raised by his icon. It prints two apolytikia and a kontakion: the first apolytikion and the kontakion are proper and name all seven, and they are stored here, while the second apolytikion, «Καί τρόπων μέτοχος, καί θρόνων διάδοχος», is the common of a hieromartyr and was left."
     },
     {
       "church": "serbian",
@@ -61,9 +76,51 @@
         "text": "O God of our fathers, who deal with us always according to your gentleness: take not your mercy from us, but by their prayers guide our life in peace.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Ὡς Ἱεράρχης καὶ σοφὸς θεηγόρος, τύπος ἐγένου πρὸς ἀθλήσεως πόνους, Πάτερ Ἰανουάριε τοὶς περὶ σεαυτόν. Σῶσος γὰρ καὶ Πρόκουλος, Δισιδέριος Φαῦστος, καὶ σὺν Ἀκουτίωνι, ὁ Εὐτύχιος ἅμα, σὺν σοῖ ἀθλούσι μάκαρ εὐσεβῶς, μεθ' ὧν δυσώπει, ὑπὲρ τῶν ψυχῶν ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ, on the page of «Άγιος Ιανουάριος ο Επίσκοπος και οι Πρόκουλος, Σώσσος και Φαύστος οι Διάκονοι, Δισιδέριος ο Αναγνώστης, Ακούτιος και Ευτύχιος». It is proper to the company and names all seven.",
+        "url": "https://www.saint.gr/321/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a hierarch and a wise speaker of divine things, thou wast made a pattern for the labours of contest, father Januarius, to those about thee; for Sossus and Proculus, Desiderius and Faustus, and Eutychius together with Acutius, contend piously with thee, O blessed one. With them, entreat for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ἐν τῷ κόσμῳ λάμψαντες, ὥσπερ λυχνία, μυστικῶς ἑπτάφωτος, καταφωτίζετε ἡμᾶς, Ἰανουάρις ἔνδοξε, σὺν τοῖς συνάθλοις, μεθ᾽ὧν εὐφημοῦμέν σε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of «Άγιος Ιανουάριος ο Επίσκοπος και οι Πρόκουλος, Σώσσος και Φαύστος οι Διάκονοι, Δισιδέριος ο Αναγνώστης, Ακούτιος και Ευτύχιος». It counts the company as a seven-branched lampstand.",
+        "url": "https://www.saint.gr/321/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having shone in the world as a lampstand mystically of seven lights, you give us light, O glorious Januarius with thy fellow contenders, with whom we praise thee.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "proculus-companion-of-januarius",
+    "sossus-companion-of-januarius",
+    "faustus-companion-of-januarius",
+    "desiderius-companion-of-januarius",
+    "acutius-companion-of-januarius",
+    "eutychius-companion-of-januarius"
+  ]
 }

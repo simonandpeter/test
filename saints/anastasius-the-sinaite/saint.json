@@ -6,6 +6,11 @@
       "form": "Anastasie Sinaitul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 aprilie, «Sfântul Cuvios Anastasie Sinaitul»."
+    },
+    {
+      "form": "Αναστάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Απριλίου, «Όσιος Αναστάσιος ο Σιναΐτης», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Απριλίου — «Όσιος Αναστάσιος ο Σιναΐτης»",
+        "url": "https://www.saint.gr/04/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him. That answers a question the day before raised: saint.gr's 20 Απριλίου lists only «Άγιος Αναστάσιος Ιερομάρτυρας, επίσκοπος Αντιοχείας», so the Sinaite's Greek day is this one and not that. The page agrees with the years this folder already holds and does not sharpen them: «έζησε τον 7ο αιώνα μ.Χ.» and «Αφού έφτασε σε βαθιά γεράματα, απεβίωσε ειρηνικά στις αρχές του 8ου αιώνος μ.Χ.», so the `dates` were left untouched. It adds that he was of a noble family, that he went as a pilgrim to Jerusalem and ended at Sinai in the monastery of St Catherine, of which he was abbot, that he stayed there among the ascetics as their subordinate and servant, and that for his humility he received from God the gift of knowledge and much wisdom, with which he wrote lives of holy fathers and composed soul-profiting discourses. It then lists six of his works by title and quotes a passage of his on not judging. It prints no hymn and names no relic."
     },
     {
       "church": "serbian",

@@ -1,0 +1,68 @@
+{
+  "slug": "proculus-companion-of-januarius",
+  "display_name": "Proculus, companion of Januarius",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Πρόκουλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Απριλίου, «Άγιος Ιανουάριος ο Επίσκοπος και οι Πρόκουλος, Σώσσος και Φαύστος οι Διάκονοι, Δισιδέριος ο Αναγνώστης, Ακούτιος και Ευτύχιος», with the rank words left off; the life page heads him «Αγιος Πρόκουλος (; - 305)»."
+    }
+  ],
+  "related": [
+    "januarius-of-benevento",
+    "sossus-companion-of-januarius",
+    "faustus-companion-of-januarius",
+    "desiderius-companion-of-januarius",
+    "acutius-companion-of-januarius",
+    "eutychius-companion-of-januarius"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 305,
+      "display": "305",
+      "basis": "traditional",
+      "note": "saint.gr heads each of the seven «(; - 305)»; its narrative sets them «στα χρόνια του Διοκλητιανού (284-304)», and no year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Απριλίου — «Άγιος Ιανουάριος ο Επίσκοπος και οι Πρόκουλος, Σώσσος και Φαύστος οι Διάκονοι, Δισιδέριος ο Αναγνώστης, Ακούτιος και Ευτύχιος»",
+        "url": "https://www.saint.gr/04/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Απριλίου εκάστου έτους», the same day as the listing. Seven people are named and enumerated on the page, and the first of them, Januarius, already has a folder in this corpus off the Romanian calendar's 21 aprilie, so his Greek row is an upgrade and the other six are the arrivals. The page heads each of the seven «(; - 305)», and the death year is taken from that heading; the narrative sets them instead «στα χρόνια του Διοκλητιανού (284-304)», in the years of Diocletian, whose reign it dates 284 to 304 here, and names the prefect of the region Timothy. It gives the six no country of their own, no separate trial and no separate death: the whole account is Januarius's, and they stand in it as his fellow workers. **The see the Greek gives Januarius is Naples**, «ήταν επίσκοπος στη Νεάπολη της Ιταλίας», not the Benevento of this corpus's existing folder, and under «Ιερά Λείψανα» it puts the relics in the Roman Catholic cathedral of Naples named after him. The page prints two apolytikia and a kontakion; the first apolytikion and the kontakion are proper to the seven and name them all, and they are stored on Januarius's folder, while the second apolytikion is the common of a hieromartyr and was left."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

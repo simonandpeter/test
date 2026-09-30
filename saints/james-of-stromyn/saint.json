@@ -1,0 +1,61 @@
+{
+  "slug": "james-of-stromyn",
+  "display_name": "James of Stromyn",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Απριλίου, «Όσιος Ιάκωβος», with the rank word left off; the life page heads him «Οσιος Ιακωβος (; - 1392)». The day's line gives him no epithet; the monastery in the English form here is the one the page names."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1392,
+      "latest": 1392,
+      "display": "about 1392",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη περί το έτος 1392 μ.Χ.» — the page says about that year, and heads him «(; - 1392)»; no year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Απριλίου — «Όσιος Ιάκωβος»",
+        "url": "https://www.saint.gr/04/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Απριλίου εκάστου έτους», the same day as the listing. The whole body of the page is two sentences: «Ο Όσιος Ιάκωβος έζησε τον 14ο αιώνα μ.Χ. και ασκήτεψε στη μονή της Κοιμήσεως της Θεοτόκου του Στρομύν, κοντά στη Μόσχα. Κοιμήθηκε με ειρήνη περί το έτος 1392 μ.Χ.» The day's line gives him no epithet at all, so the monastery was taken into the English form to tell him from the many others of the name; the corpus keeps eight, none of them Russian or of this date. The page names no parentage, no elder, no relic and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

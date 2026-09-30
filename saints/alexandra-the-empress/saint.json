@@ -6,6 +6,11 @@
       "form": "Alexandra",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 aprilie, «Sfânta Muceniță Alexandra, Împărăteasa»."
+    },
+    {
+      "form": "Αλεξάνδρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Απριλίου, «Αγία Αλεξάνδρα η βασίλισσα και οι ακόλουθοι της Απολλώς, Ισαάκιος και Κοδράτος», with the rank word and the title left off; the life page heads her «Αγια Αλεξανδρα η Βασιλισσα (; - 303)»."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Απριλίου — «Αγία Αλεξάνδρα η βασίλισσα και οι ακόλουθοι της Απολλώς, Ισαάκιος και Κοδράτος»",
+        "url": "https://www.saint.gr/04/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps her. It heads her «(; - 303)» and puts her death «Δυο μέρες πριν από τη θανάτωση του Μεγαλομάρτυρος Γεωργίου, το 303 μ.Χ.», two days before the death of George the Trophy-bearer; this folder had no `dates` and that year is taken. It makes her the wife of Diocletian, quite unlike him in temper, and says that she was moved to confess Christ during George's torments, first begging the emperor to stop the tortures and then, when he reviled the Name of Christ, declaring aloud before the true God against the persecutors of the Christians; that Diocletian tried twice to read her confession as derangement, and then ordered her carried off and imprisoned; and that she died there, having prayed not to be the cause of adding her own murder to her husband's guilt. **The death it gives her is in prison and not by execution**, and this folder's existing `types` already call her martyr, which is what the Greek calendar's own rank word does too. It enumerates three followers with her — Apollos, Isaacius and Codratus — each of whom now has a folder, and it prints no hymn."
     },
     {
       "church": "serbian",
@@ -46,5 +61,20 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "saint.gr: «Δυο μέρες πριν από τη θανάτωση του Μεγαλομάρτυρος Γεωργίου, το 303 μ.Χ., παρέδιδε την τελευταία της πνοή στη φυλακή», and the page heads her «(; - 303)»; no year of birth is printed."
+    }
+  },
+  "related": [
+    "apollos-companion-of-alexandra",
+    "isaacius-companion-of-alexandra",
+    "codratus-companion-of-alexandra",
+    "george-the-trophy-bearer"
+  ]
 }

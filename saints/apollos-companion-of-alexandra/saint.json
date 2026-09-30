@@ -1,0 +1,65 @@
+{
+  "slug": "apollos-companion-of-alexandra",
+  "display_name": "Apollos, companion of Alexandra",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Απολλώς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Απριλίου, «Αγία Αλεξάνδρα η βασίλισσα και οι ακόλουθοι της Απολλώς, Ισαάκιος και Κοδράτος», with the rank word left off; the life page heads him «Αγιος Απολλώς (; - 303)»."
+    }
+  ],
+  "related": [
+    "alexandra-the-empress",
+    "george-the-trophy-bearer",
+    "isaacius-companion-of-alexandra",
+    "codratus-companion-of-alexandra"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "saint.gr heads each of the four «(; - 303)» and puts the empress's death «Δυο μέρες πριν από τη θανάτωση του Μεγαλομάρτυρος Γεωργίου, το 303 μ.Χ.»; the three followers died after her and the page gives them no separate year, and no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Απριλίου — «Αγία Αλεξάνδρα η βασίλισσα και οι ακόλουθοι της Απολλώς, Ισαάκιος και Κοδράτος»",
+        "url": "https://www.saint.gr/04/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Απριλίου εκάστου έτους», the same day as the listing. Four people are named and enumerated on the page, and the first, the empress Alexandra, already has a folder in this corpus off the Romanian calendar's 21 aprilie, so her Greek row is an upgrade and the three followers are the arrivals. The page heads each of the four «(; - 303)» and says that Alexandra died in prison two days before the death of [George the Trophy-bearer](/saints/george-the-trophy-bearer), in 303, and that the three followed her example afterwards; it makes Diocletian order their deaths, Codratus beheaded and Apollos and Isaacius killed by hunger and thirst. The three are called «ακόλουθοι», followers, and «Τίμιοι και ενάρετοι υπηρέτες», honourable and virtuous servants, of the empress. Its couplet spells Codratus's name in the vocative Κορδᾶτε where the day's line and the heading have Κοδράτος. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
