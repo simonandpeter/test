@@ -1,0 +1,60 @@
+{
+  "slug": "audiesius-of-persia",
+  "display_name": "Audiesius, with the martyrs who suffered with him",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αυδιήσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Απριλίου, «Άγιος Αυδιήσιος και οι συν αυτόν μάρτυρες», with the rank word left off. The page's own heading prints the name in the form «Αυδιησους» in its couplet: «Ὢν αἰχμάλωτος Αὐδιησοῦς τὴν τύχην»."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 355,
+      "latest": 355,
+      "display": "355",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Αυδιησιος Και Οι Συν Αυτον Μαρτυρες (; - 355)», and its prose puts the sack of Byzate in which the company was taken «κατά το 30ο έτος της βασιλείας» of Shapur II, whose reign the same page gives as «(325 - 379 μ.Χ.)» — a thirtieth year that agrees with the heading. The page gives no birth year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Απριλίου — «Άγιος Αυδιήσιος και οι συν αυτόν μάρτυρες»",
+        "url": "https://www.saint.gr/04/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 355)». The entry is one line for him and the martyrs with him, and its narrative names three of them — the bishop Heliodorus and the presbyters Desan and Mariab — without enumerating the company, which the page never numbers; so this is one folder, as the corpus already does for a heading whose narrative names some and lists none. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

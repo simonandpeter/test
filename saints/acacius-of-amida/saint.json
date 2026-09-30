@@ -1,0 +1,61 @@
+{
+  "slug": "acacius-of-amida",
+  "display_name": "Acacius of Amida",
+  "sex": "male",
+  "office": "Bishop of Amida",
+  "types": [
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Ακάκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Απριλίου, «Όσιος Ακάκιος επίσκοπος Αμίδης», with the rank word and the see left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "floruit": {
+      "earliest": 421,
+      "latest": 422,
+      "display": "421–422",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ακάκιος εξαγόρασε 7.000 χριστιανούς αιχμαλώτους, αφού εκποίησε εκκλησιαστικά σκεύη, κατά τον Βυζαντινοπερσικό πόλεμο (421 - 422 μ.Χ.)». The years are the war's, which is the only thing the page dates; it gives neither a birth nor a death year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Απριλίου — «Όσιος Ακάκιος επίσκοπος Αμίδης»",
+        "url": "https://www.saint.gr/04/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Απριλίου εκάστου έτους», the same day as the listing, and gives him no years in its heading at all. The whole body is one sentence. He is not any of the seven other Acaciuses the corpus holds: none of them is a bishop of Amida and none is set in the Byzantine-Persian war of 421 to 422. The page prints no couplet, no relic and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Eupsihie din Cezareea Capadociei",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 aprilie, «Sfântul Mucenic Eupsihie din Cezareea Capadociei»."
+    },
+    {
+      "form": "Ευψύχιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Απριλίου, «Άγιος Ευψύχιος που μαρτύρησε στην Καισαρεία», with the rank word and the clause naming where he was martyred left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Απριλίου — «Άγιος Ευψύχιος που μαρτύρησε στην Καισαρεία»",
+        "url": "https://www.saint.gr/04/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Απριλίου εκάστου έτους», the same day as the listing, and gives no years at all: it sets him only «στα χρόνια του Ιουλιανού του Παραβάτη», in the years of Julian the Apostate, so no `dates` were taken. Its third couplet names the day — «Φάσγανον ἀμφ' ἐνάτην Εὐψυχίου ἔκταμε λαιμόν», the sword cut Eupsychius's neck about the ninth. The same site keeps a second Eupsychius of Caesarea, under Hadrian, whom the corpus holds separately with a Greek row on 7 Σεπτεμβρίου; this is the one under Julian, as both the day's line and the page's own narrative of the idol of Fortune show."
     },
     {
       "church": "serbian",
@@ -57,6 +72,40 @@
       },
       "english": {
         "text": "Thy martyr Eupsychius, O Lord, in his struggle has won from Thee, our God, the crown of incorruption; for having Thy strength, he overthrew his tormentors and broke the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Εὐψύχως ἤνυσας, δρόμον τὸν ἔνθεον, καὶ καταβέβληκας, ἐχθρὸν τὸν δόλιον, τὴν πανοπλίαν τοῦ Σταυροῦ, παμμάκαρ ἐνδεδυμένος ὅθεν συνηρίθμησαι, τῶν Μαρτύρων ταὶς τάξεσι, δόξαν αἰωνίζουσαν, κεκτημένος Εὐψύχιε. Ἀλλὰ μὴ διαλείπῃς πρεσβεύων, σώσαι ἠμᾶς τοὺς σὲ τιμώντας.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Τὴν ὡραιότητα, on the page of Άγιος Ευψύχιος που μαρτύρησε στην Καισαρεία. It is his own and names him.",
+        "url": "https://www.saint.gr/217/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "With good courage thou didst finish the godly course and cast down the crafty enemy, being clothed, O all-blessed one, in the whole armour of the Cross; whence thou wast numbered with the ranks of the martyrs and hast gained everlasting glory, O Eupsychius. But cease not to intercede for the saving of us who honour thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τοῖς τῶν αἱμάτων σου.",
+      "text": "Ὡς εὐσεβείας θεόδμητον ἄγαλμα, τῆς ἀσεβείας καθεῖλες τὸ ἳδρυμα, καὶ εὒψυχος ὤφθης πρὸς ἄθλησιν, ἐν εὐψυχίᾳ τμηθείς τὸν αὐχένα σου· διό σε ὑμνοῦμεν Εὐψύχιε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος β’, Τοῖς τῶν αἱμάτων σου, on the page of Άγιος Ευψύχιος που μαρτύρησε στην Καισαρεία. It is his own, names him, and turns on the idol he pulled down.",
+        "url": "https://www.saint.gr/217/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a statue of piety built by God thou didst pull down the edifice of impiety, and wast shown of good courage for the contest, thy neck being cut through in good courage; therefore we hymn thee, O Eupsychius.",
         "rendered": "site"
       }
     }

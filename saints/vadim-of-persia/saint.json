@@ -7,6 +7,11 @@
       "form": "Vadim",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 aprilie, «Sfântul Cuvios Vadim, arhimandritul»."
+    },
+    {
+      "form": "Βάδιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Απριλίου, «Άγιος Βάδιμος οσιομάρτυρας και οι επτά Μαθητές του», with the rank word and the clause naming his disciples left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Απριλίου — «Άγιος Βάδιμος οσιομάρτυρας και οι επτά Μαθητές του»",
+        "url": "https://www.saint.gr/04/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 376)». The line names his seven disciples only as his seven, and the page names not one of them, so no folder was drafted for them; the companionship stands in his own life. It names their executioner, Nirsan, who had denied Christ before the torments and was afterwards killed with a knife by an idolater who grew angry with him."
     },
     {
       "church": "serbian",
@@ -48,5 +63,20 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": null,
+      "latest": null,
+      "display": null,
+      "basis": "unknown"
+    },
+    "death": {
+      "earliest": 376,
+      "latest": 376,
+      "display": "376",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Βαδιμος Οσιομαρτυρας Και Οι Επτα Μαθητες Του (; - 376)». The page's prose gives no year of its own, setting him only in the reign of «Σαπώρ ο Β' (325 - 379 μ.Χ.)», within which the heading's year falls."
+    }
   }
 }
