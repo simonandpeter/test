@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδοσιοσ theodosius-companion-of-paisius theodosius-of-antioch theodosius-of-chernigov theodosius-of-the-kyiv-caves theodosius-of-totma theodosius-of-trebizond theodosius-of-triglia theodosius-the-cenobiarch':
+    'eight now, and two arrive on this 5 Φεβρουαρίου: Theodosius of Antioch, whose page gives no year, and Theodosius of Chernigov, dead 1696, whose Russian row is 9 September and whose Greek day is this one. The other six are read in the el-01-11 and el-01-12 entries for this name form.',
+  'σαββασ sabbas-of-sicily sabbas-of-zographou sabbas-the-spiritual sava-of-serbia':
+    'four now. The new one is Sabbas of Sicily, dead 995, kept on 5 Φεβρουαρίου; the other three are read in the el-02-03 entry for this name form, where the fourth and fifth of the name are also named — Sava II of Serbia is drafted for 8 Φεβρουαρίου and is not any of these.',
+  'πολυευκτοσ polyeuctus-of-constantinople polyeuctus-of-megara polyeuctus-of-melitene':
+    'three men. The new one is Polyeuctus, patriarch of Constantinople, dead 970, kept on 5 Φεβρουαρίου; the other two are read in the el-02-01 entry for this name form, the martyr of Megara and the soldier of Melitene.',
+  'αντωνιοσ anthony-of-georgia anthony-of-krasnokholmsk anthony-of-novgorod anthony-of-vologda anthony-of-zadonsk anthony-of-zographou anthony-the-great antonius-the-presbyter antony-son-of-john-of-syracuse antony-the-athenian':
+    'ten now. The new one is Antony the Athenian, a new-martyr of 1774, kept on 5 Φεβρουαρίου; the other nine are read in the el-02-01 entry for this name form.',
   'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-of-japan nicholas-of-spetses nicholas-of-valaam nicholas-the-studite':
     'five now. The new one is Nicholas the Studite, dead 868, kept on 4 Φεβρουαρίου; the other four are read in the el-02-03 entry for this name form.',
   'ιωσηφ joseph-of-aleppo joseph-of-lythrodontas':

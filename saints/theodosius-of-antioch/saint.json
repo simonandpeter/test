@@ -1,0 +1,51 @@
+{
+  "slug": "theodosius-of-antioch",
+  "display_name": "Theodosius of Antioch",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Θεοδόσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Φεβρουαρίου, «Όσιος Θεοδόσιος ὁ ἐξ Ἀντιοχείας», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Φεβρουαρίου — «Όσιος Θεοδόσιος ὁ ἐξ Ἀντιοχείας»",
+        "url": "https://www.saint.gr/02/05/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

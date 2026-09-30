@@ -1,0 +1,59 @@
+{
+  "slug": "antony-the-athenian",
+  "display_name": "Antony the Athenian",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αντώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Φεβρουαρίου, «Άγιος Αντώνιος ο Αθηναίος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1774,
+      "latest": 1774,
+      "display": "1774",
+      "basis": "attested",
+      "note": "saint.gr: «δέχθηκε το αμαράντινο στέφανο της δόξας, αποκεφαλισθείς το έτος 1774 μ.Χ, ημέρα Τετάρτη, στην περιοχή Ακ - Σεράι της Κωνσταντινουπόλεως», with the page's own head «(; - 1774)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Φεβρουαρίου — «Άγιος Αντώνιος ο Αθηναίος»",
+        "url": "https://www.saint.gr/02/05/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

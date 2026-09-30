@@ -6,6 +6,11 @@
     {
       "form": "Феодосий Черниговский",
       "lang": "ru"
+    },
+    {
+      "form": "Θεοδόσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Φεβρουαρίου, «Όσιος Θεοδόσιος εκ Ρωσίας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Φεβρουαρίου — «Όσιος Θεοδόσιος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/02/05/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

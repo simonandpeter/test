@@ -1,0 +1,67 @@
+{
+  "slug": "sabbas-of-sicily",
+  "display_name": "Sabbas of Sicily",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Σάββας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Φεβρουαρίου, «Όσιος Σάββας ἐκ Σικελίας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 901,
+      "latest": 950,
+      "display": "first half of the 10th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Σάββας γεννήθηκε κατά το πρώτο ήμισυ του 10ου αιώνα μ.Χ. στη Σικελία από γονείς ευσεβείς και ενάρετους, τον Χριστόφορο και την Καλή» — the page gives no year of birth."
+    },
+    "death": {
+      "earliest": 995,
+      "latest": 995,
+      "display": "995",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Σάββας κοιμήθηκε με ειρήνη το έτος 995 μ.Χ.», with the page's own head «(; - 995)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Φεβρουαρίου — «Όσιος Σάββας ἐκ Σικελίας»",
+        "url": "https://www.saint.gr/02/05/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

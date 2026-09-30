@@ -1,0 +1,62 @@
+{
+  "slug": "polyeuctus-of-constantinople",
+  "display_name": "Polyeuctus",
+  "office": "Patriarch of Constantinople",
+  "sex": "male",
+  "types": [
+    "patriarch"
+  ],
+  "names": [
+    {
+      "form": "Πολύευκτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Φεβρουαρίου, «Όσιος Πολύευκτος Πατριάρχης Κωνσταντινουπόλεως», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 970,
+      "latest": 970,
+      "display": "970",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Πολύευκτος κοιμήθηκε με ειρήνη το έτος 970 μ.Χ.», with the page's own head «(; - 970)»; the same page has him made patriarch after Theophylact died in April 956."
+    }
+  },
+  "related": [
+    "olga-of-kyiv"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Φεβρουαρίου — «Όσιος Πολύευκτος Πατριάρχης Κωνσταντινουπόλεως»",
+        "url": "https://www.saint.gr/02/05/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

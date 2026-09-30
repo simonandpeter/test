@@ -1,0 +1,11 @@
+# Antony the Athenian
+
+Antony was born at Athens of poor and obscure parents, Mitros and Kalomoira. At twelve he began to work, to help his family, for Turks who had come from Albania. At sixteen his masters sold him to some Agarenes of the Peloponnese, who bought him meaning to torture him into Islam; and when they could not make him change his faith they sold him on to other, harsher Turks. Sold five times over to harsher masters, in one place after another, he stayed always faithful to the godliness of his fathers with a spiritual courage and a bravery of soul.
+
+At last an Orthodox Christian bought him for four hundred piastres, and so he settled at Constantinople. In the workshop where he worked he was recognised by a Turk who had once owned him as a slave, and who accused him of having accepted Islam before and now renouncing it. They arrested him and brought him before the judge Murat Mullah, who tried with flatteries and threats to make him change his faith. Antony answered him: do not imagine that you will turn me from my faith in Christ by your intimidations; so torture me, scourge me, cut my body in pieces, and invent some other newer and more terrible death — for it is likelier that you should become a Christian than that I should deny Christ and stop confessing him Son of God and true God.
+
+The judge, moved by the neomartyr's plain speech, tried to acquit him; but fearing the false witnesses he sent him on to the vizier Mehmet Pasha with word of the saint's innocence. The vizier, persuaded of it, gave order that he be imprisoned, to avoid the fury of the crowd. But the raging crowd accused the vizier of bribery before the sultan Abdul Hamid I, and he gave order that the saint be beheaded. The martyr, having declared his faith in Christ once more, received the unfading crown of glory, beheaded in the year 1774, on a Wednesday, in the Ak-Serai quarter of Constantinople.
+
+The page prints no hymn for him. Its couplet says that Antony, slaughtered like a sheep, stood before Christ as a sheep that follows him.
+
+*After saint.gr's calendar for 5 Φεβρουαρίου — [the day](https://www.saint.gr/02/05/index.aspx) and [the life](https://www.saint.gr/3583/saint.aspx); read 30 September 2026.*

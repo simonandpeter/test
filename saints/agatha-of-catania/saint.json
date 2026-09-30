@@ -6,6 +6,11 @@
       "form": "Agata",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 februarie, «Sfânta Muceniță Agata»."
+    },
+    {
+      "form": "Αγάθη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Φεβρουαρίου, «Αγία Αγάθη», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -27,6 +32,40 @@
       },
       "english": {
         "text": "Thy lamb Agatha, O Jesus, cries out with a loud voice: Thee, my Bridegroom, do I love, and seeking Thee I suffer; I am crucified with Thee and buried with Thee in Thy Baptism; I suffer for Thee that I may reign in Thee; I die for Thee that I may live in Thee. Receive me as an unblemished sacrifice, offered to Thee with love. At her prayers, O Merciful One, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Ῥόδον εὔοσμον τῆς παρθενίας, νύμφη ἄφθορος τοῦ Ζωοδότου, ἀνεδέδειξαι Ἀγαθὴ πανεύφημε· τῶν ἀγαθῶν τὴν πηγὴν γὰρ ποθήσασα, μαρτυρικῶς ἐν τῷ κόσμῳ διέπρεψας· μάρτυς ἔνδοξε, λιταῖς σου θείαις ἀγάθυνον τοὺς πόθῳ μεγαλύνοντας τοὺς ἄθλους σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Αγάθη, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3580/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A sweet-smelling rose of virginity, an undefiled bride of the Giver of life, you were shown to be, all-praised Agatha; for having longed for the fountain of good things you were distinguished in the world by martyrdom. Glorious martyr, by your divine prayers make good those who magnify your contests with longing.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Στολιζέσθω σήμερον, ἡ Ἐκκλησία, πορφυρίδα ἔνδοξον, καταβαφεῖσαν ἐξ ἁγνῶν, ῥύθρων Ἀγάθης τῆς Μάρτυρος· Χαῖρε, βοῶσα, Κατάνης τό καύχημα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Αγάθη, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/3580/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let the Church be clothed today in a glorious purple robe, dyed from the pure streams of Agatha the martyr, crying: rejoice, boast of Catania.",
         "rendered": "site"
       }
     }
@@ -54,8 +93,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Φεβρουαρίου — «Αγία Αγάθη»",
+        "url": "https://www.saint.gr/02/05/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -65,5 +113,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 251,
+      "latest": 251,
+      "display": "251",
+      "basis": "traditional",
+      "note": "saint.gr: «Παρέδωσε το πνεύμα της το 251 μ.Χ. μετά από φρικτά βασανιστήρια και ενώ βρισκόταν στη φυλακή», with the page's own head «(; - 251)» and «Έζησε και μεγαλούργησε στο χρόνια του αυτοκράτορα Δέκιου (249 - 251 μ.Χ.)»."
+    }
   }
 }
