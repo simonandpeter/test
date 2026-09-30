@@ -7,6 +7,11 @@
       "form": "Leon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 februarie, «Sfântul Ierarh Leon, Episcopul Cataniei»."
+    },
+    {
+      "form": "Λέων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Φεβρουαρίου, «Άγιος Λέων ο Θαυματουργός Επίσκοπος Κατάνης», with the rank word, the epithet and the see left off."
     }
   ],
   "sex": "male",
@@ -29,6 +34,56 @@
       },
       "english": {
         "text": "The truth of things showed thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence. Wherefore thou hast gained the heights by humility and riches by poverty; O Father and Hierarch Leo, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Ἱερέων ἀκρότης, εὐσεβείας διδάσκαλος καὶ θαυματουργὸς ἀνεδείχθης, ἱεράρχα πανόλβιε· ἠθῶν γὰρ οὐρανίων τῷ φωτί, τοῦ Πνεύματος πλουτήσας τὴν ἰσχύν, θεραπεύεις τοὺς νοσοῦντας καὶ τὰς ψυχάς, Λέων, τῶν προσιόντων σοι. Δόξα τῷ σὲ δοξάσαντι, δόξα, τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Λέων ο Θαυματουργός Επίσκοπος Κατάνης, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3760/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Summit of priests, teacher of piety, you were shown a wonderworker too, all-blessed hierarch; for by the light of a heavenly manner of life you grew rich in the strength of the Spirit, and you heal the sick, and the souls of those who come to you, Leo. Glory to him who has glorified you; glory to him who has crowned you; glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Κανόνα πίστεως, καὶ εἰκόνα πραότητος, ἐγκρατείας διδάσκαλον, ἀνέδειξε σε τῇ ποίμνῃ σου, ἡ τῶν πραγμάτων ἀλήθεια· διὰ τοῦτο ἐκτήσω τῇ ταπεινώσει τὰ ὑψηλά, τῇ πτωχείᾳ τὰ πλούσια. Πάτερ Ἱεράρχα Λέων, πρέσβευε Χριστῷ τῷ θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Λέων ο Θαυματουργός Επίσκοπος Κατάνης, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον. This is the common of a hierarch, printed under his name with his name in it, as his own service.",
+        "url": "https://www.saint.gr/3760/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown you to your flock a rule of faith, an image of gentleness, a teacher of self-restraint; therefore you gained the heights by humility and riches by poverty. Father and hierarch Leo, intercede with Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τήν ἐν πρεσβείαις.",
+      "text": "Τόν ἀπό βρέφους Κυρίῳ ἀνατεθέντα, καί ἐκ σπαργάνων τήν χάριν ἀνειληφότα, πάντες τοῖς ᾄσμασι στεφανώσωμεν, Λέοντα τόν φωστῆρα τῆς Ἐκκλησίας καί πρόμαχον· αὐτῆς γάρ ὑπάρχει τὸ στήριγμα.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Λέων ο Θαυματουργός Επίσκοπος Κατάνης, Λειτουργικά κείμενα: Κοντάκιον. Its Oikos and a Kathisma follow it on the page and are not copied here, the corpus keeping no kind for either.",
+        "url": "https://www.saint.gr/3760/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us all crown with songs him who was dedicated to the Lord from infancy and received grace from his swaddling clothes — Leo, the luminary and the champion of the Church; for he is her support.",
         "rendered": "site"
       }
     }
@@ -55,8 +110,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Φεβρουαρίου — «Άγιος Λέων ο Θαυματουργός Επίσκοπος Κατάνης»",
+        "url": "https://www.saint.gr/02/20/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

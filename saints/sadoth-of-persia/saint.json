@@ -1,0 +1,57 @@
+{
+  "slug": "sadoth-of-persia",
+  "display_name": "Sadoth of Persia",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Σαδώκ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Φεβρουαρίου, «Άγιος Σαδώκ ο Ιερομάρτυρας και οι μαζί μ' αυτόν Εκατόν εικοσιοκτώ μάρτυρες», with the rank word left off."
+    },
+    {
+      "form": "Σαδώθ",
+      "lang": "el",
+      "note": "The other form the same page prints, in its own referral: «βλέπε στις 19 Οκτωβρίου όπου επαναλαμβάνεται η μνήμη τους σαν Άγιος Σαδώθ ο επίσκοπος και οι Εκατόν είκοσι Μάρτυρες από την Περσία»."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "saint.gr keeps him twice. Its 20 Φεβρουαρίου page carries no life and refers the reader on: «βλέπε στις 19 Οκτωβρίου όπου επαναλαμβάνεται η μνήμη τους σαν Άγιος Σαδώθ ο επίσκοπος και οι Εκατόν είκοσι Μάρτυρες από την Περσία». One attestation row per church is the schema, so the row is the day page this folder was read from and the second day is recorded here; the two entries also differ on the number of his companions, a hundred and twenty-eight in February and a hundred and twenty in October. Read 30 September 2026."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Φεβρουαρίου — «Άγιος Σαδώκ ο Ιερομάρτυρας και οι μαζί μ' αυτόν Εκατόν εικοσιοκτώ μάρτυρες»",
+        "url": "https://www.saint.gr/02/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

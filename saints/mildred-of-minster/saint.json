@@ -1,0 +1,63 @@
+{
+  "slug": "mildred-of-minster",
+  "display_name": "Mildred of Minster",
+  "sex": "female",
+  "office": "Abbess of Minster",
+  "types": [
+    "venerable",
+    "abbess"
+  ],
+  "names": [
+    {
+      "form": "Μιλδρέδη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Φεβρουαρίου, «Οσία Μιλδρέδη», with the rank word left off. The page glosses it once with the English «(Mildred)»."
+    }
+  ],
+  "related": [
+    "theodore-of-tarsus-archbishop-of-canterbury"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 700,
+      "latest": 700,
+      "display": "700",
+      "basis": "attested",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 700 μ.Χ.», and its heading prints «(; - 700)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Φεβρουαρίου — «Οσία Μιλδρέδη»",
+        "url": "https://www.saint.gr/02/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

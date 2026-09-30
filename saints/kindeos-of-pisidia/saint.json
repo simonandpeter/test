@@ -1,0 +1,57 @@
+{
+  "slug": "kindeos-of-pisidia",
+  "display_name": "Kindeos of Pisidia",
+  "sex": "male",
+  "office": "Bishop of Pisidia",
+  "types": [
+    "venerable",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Κινδέος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Φεβρουαρίου, «Όσιος Κινδέος Επίσκοπος Πισιδίας», with the rank word and the see left off."
+    },
+    {
+      "form": "Κινδαῖος",
+      "lang": "el",
+      "note": "The variant the same page allows in its own sentence: «Ο Όσιος Κινδέος ή Κινδαίος ήταν Επίσκοπος Πισιδίας»."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Φεβρουαρίου — «Όσιος Κινδέος Επίσκοπος Πισιδίας»",
+        "url": "https://www.saint.gr/02/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

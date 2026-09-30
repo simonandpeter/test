@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'πλωτινοσ plotinus-20-february plotinus-companion-of-saturninus':
+    'Two men: the one saint.gr keeps alone on 20 February, and the companion of Saturninus on 12 February.',
+  'μακαριοσ macarius-companion-of-eudoxius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-metropolitan-of-moscow macarius-of-ierissos macarius-of-kios macarius-of-paphos macarius-of-pisma macarius-of-valaam macarius-of-zhabyn macarius-the-confessor':
+    'Twelve now. The two new ones are Valaam on 20 February and the Confessor on 19 February, whom the Romanian calendar keeps there too; the other ten are read in the el-02-16 entry for this name form, where the two 6 September men are the companion of Eudoxius and the magistrate of Alexandria.',
+  'αγαθων agathon-of-alexandria agathon-of-rome agathon-of-the-desert agathon-of-the-kiev-caves':
+    'Four men, and two share 20 February as two lines on the page: Agathon of Rome, the pope, whom the Romanian calendar keeps there too, and Agathon of the Kiev Caves. The others are 14 February at Alexandria and 8 January in the desert.',
   'θεοδοτοσ theodotus-1-january theodotus-companion-of-asklepiodote theodotus-of-marcianopolis theodotus-of-the-monastery-of-publius':
     'Four men on four Greek days: 1 January, 19 February, 17 September and 25 January. The 19 February and 17 September pair is the Marcianopolis question read in the entry for the name form ασκληπιοδοτη.',
   'νικητασ nicetas-of-epirus nicetas-of-pythia':

@@ -1,0 +1,53 @@
+{
+  "slug": "potamius-of-cyprus",
+  "display_name": "Potamius of Cyprus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ποτάμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Φεβρουαρίου, «Άγιοι Δίδυμος, Νεμέσιος και Ποτάμιος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "didymus-of-cyprus",
+    "nemesius-of-cyprus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Φεβρουαρίου — «Άγιοι Δίδυμος, Νεμέσιος και Ποτάμιος»",
+        "url": "https://www.saint.gr/02/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

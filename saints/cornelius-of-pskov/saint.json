@@ -1,0 +1,71 @@
+{
+  "slug": "cornelius-of-pskov",
+  "display_name": "Cornelius of Pskov",
+  "sex": "male",
+  "office": "Abbot of the Pskov Caves monastery",
+  "types": [
+    "hieromartyr",
+    "abbot",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Κορνήλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Φεβρουαρίου, «Άγιος Κορνήλιος ο Ιερομάρτυρας εκ Ρωσίας», with the rank word and the provenance left off."
+    }
+  ],
+  "related": [
+    "john-the-merciful-of-alexandria"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1501,
+      "latest": 1501,
+      "display": "1501",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Ιερομάρτυς Κορνήλιος γεννήθηκε το έτος 1501 μ.Χ. στη Ρωσία από εύπορη και ευγενή οικογένεια»."
+    },
+    "death": {
+      "earliest": 1570,
+      "latest": 1570,
+      "display": "1570",
+      "basis": "attested",
+      "note": "saint.gr: «αποκεφαλίσθηκε από τον τσάρο Ιβάν τον Τρομερό το έτος 1570 μ.Χ., σε ηλικία 69 ετών, όπως μας πληροφορεί το Χρονικό που συνέταξε ο ιεροδιάκονος Πιτιρίμ»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Φεβρουαρίου — «Άγιος Κορνήλιος ο Ιερομάρτυρας εκ Ρωσίας»",
+        "url": "https://www.saint.gr/02/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "macarius-of-valaam",
+  "display_name": "Macarius of Valaam",
+  "sex": "male",
+  "office": "Abbot of Valaam",
+  "types": [
+    "venerable-martyr",
+    "abbot",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Φεβρουαρίου, «Άγιος Μακάριος ο Οσιομάρτυρας και ο συν αυτώ αναιρεθέντες», with the rank word and the clause about his companions left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1578,
+      "latest": 1578,
+      "display": "1578",
+      "basis": "attested",
+      "note": "saint.gr: «ανηρέθη μαζί με 34 δόκιμους μοναχούς της μονής από τους Λατίνους το έτος 1578 μ.Χ.», and its heading prints «(; - 1578)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Φεβρουαρίου — «Άγιος Μακάριος ο Οσιομάρτυρας και ο συν αυτώ αναιρεθέντες»",
+        "url": "https://www.saint.gr/02/20/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

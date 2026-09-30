@@ -7,6 +7,11 @@
       "form": "Agaton",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 februarie, «Sfântul Ierarh Agaton, Episcopul Romei»."
+    },
+    {
+      "form": "Αγάθων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Φεβρουαρίου, «Άγιος Αγάθων Πάπας Ρώμης», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Φεβρουαρίου — «Άγιος Αγάθων Πάπας Ρώμης»",
+        "url": "https://www.saint.gr/02/20/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -49,5 +63,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 682,
+      "latest": 682,
+      "display": "682",
+      "basis": "attested",
+      "note": "saint.gr: «Εκοιμήθη οσιακά το 682 μ.Χ.», and its heading prints «(; - 682)»."
+    }
   }
 }

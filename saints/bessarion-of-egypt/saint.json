@@ -6,6 +6,11 @@
       "form": "Visarion",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 februarie, «Sfântul Cuvios Visarion»."
+    },
+    {
+      "form": "Βησσαρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Φεβρουαρίου, «Όσιος Βησσαρίων», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Φεβρουαρίου — «Όσιος Βησσαρίων»",
+        "url": "https://www.saint.gr/02/20/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -66,5 +80,18 @@
         "rendered": "site"
       }
     }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 351,
+      "latest": 450,
+      "display": "late 4th – early 5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην Αίγυπτο, στην πόλη Μισήρι και έζησε περί τα τέλη του 4ου και αρχές του 5ου αιώνα μ.Χ.». The page gives no year of birth and no year of death."
+    }
+  },
+  "related": [
+    "elisha-the-prophet",
+    "elijah-the-tishbite"
   ]
 }
