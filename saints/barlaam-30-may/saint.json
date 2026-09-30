@@ -6,6 +6,11 @@
       "form": "Varlaam",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 mai, «Sfântul Cuvios Varlaam»."
+    },
+    {
+      "form": "Βαρλαάμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Μαΐου, «Όσιος Βαρλαάμ», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Μαΐου — «Όσιος Βαρλαάμ»",
+        "url": "https://www.saint.gr/05/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and the Greek entry is as bare as the Romanian one: «Ο Όσιος Βαρλαάμ απεβίωσε ειρηνικά», he died peacefully, with no epithet, no place and no year. It is the same entry on the same day of the same menologion, with the same rank and the same absence of everything else, and that is the ground for the row; the folder's slug keeps the day for exactly this reason, there being four other Barlaams in the corpus and nothing on either page to tell this one apart by. No `dates`, and no hymn — only the distich «Tον Bαρλαάμ έγνωκε και τα γης άκρα, Άκρως ενασκήσαντα μέχρι γην έδυ.», which the folder does not take as a service."
     },
     {
       "church": "serbian",

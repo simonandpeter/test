@@ -1,0 +1,53 @@
+{
+  "slug": "romanus-30-may",
+  "display_name": "Romanus (30 May)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ρωμανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Μαΐου, «Άγιοι Ρωμανός, Τελέτιος και Χριστίνα και το πλήθος των εν Νικομήδεια καέντων αγίων», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Μαΐου — «Άγιοι Ρωμανός, Τελέτιος και Χριστίνα και το πλήθος των εν Νικομήδεια καέντων αγίων»",
+        "url": "https://www.saint.gr/05/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Μαΐου εκάστου έτους», the same day as the listing, and prints a separate heading for Romanus and for Teletius, so those two are one folder each. **Two parts of the same line are refused.** The Christina of the line is left out because the page itself will not vouch for her — «Σημείωση : Η Αγία Χριστίνα η μάρτυρας δεν αναφέρεται σε όλα τα συναξάρια», she is not mentioned in all the synaxaria — and «το πλήθος των εν Νικομήδεια καέντων αγίων», the multitude burned at Nicomedia, is named by no name and counted by no number. The page gives no year, so this folder has no `dates`. He is none of the corpus's ten other Romanuses: this one dies by the sword at Nicomedia with Teletius, and the slug carries the day because the page gives nothing else to tell him apart by. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "teletius"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

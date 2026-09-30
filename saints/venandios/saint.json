@@ -1,0 +1,62 @@
+{
+  "slug": "venandios",
+  "display_name": "Venandios",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Βενάνδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Μαΐου, «Όσιος Βενάνδιος», with the rank word left off. The English form chosen here is a plain transcription of that, and deliberately not the Latin Venantius, which the page never prints and which would identify him with a saint of that name."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 500,
+      "display": "4th and 5th centuries",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Βενάνδιος γεννήθηκε στη Γαλλία και έζησε τον 4ο και 5ο αιώνα μ.Χ.» The two centuries are the page's own span, and it gives no year of birth and no year of death, so the interval is recorded as a floruit and not as either."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Μαΐου — «Όσιος Βενάνδιος»",
+        "url": "https://www.saint.gr/05/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Μαΐου εκάστου έτους», the same day as the listing. The whole life is two sentences. The two companions it names are the page's own cross-references: «Όσιος Καρπάσιος (τιμάται 1 Ιουνίου)», for whom the corpus has no folder, and «Άγιος Ονωράτος (τιμάται 16 Ιανουαρίου)», whom the page's own links identify as «Όσιος Ονωράτος Αρχιεπίσκοπος Αρελάτης» — Honoratus, archbishop of Arles, whom the corpus keeps and who is read into the `related` row on that identification. No `locations` are entered: the page names Gaul for his birth and Greece for his death and no place in either. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "honoratus-of-arles"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

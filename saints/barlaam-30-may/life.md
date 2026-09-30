@@ -4,4 +4,6 @@ Doxologia.ro's calendar names him and gives no life. Its line for 30 mai reads �
 
 The rank in the line is the whole of what is stated: a monastic saint kept on 30 May. He is entered here under the day, and not under a place or a country, because the source names none; the corpus keeps two other men of this name, the metropolitan of Moldavia on 30 August and Barlaam of Sikisk on 5 October, and nothing on this page identifies him with either of them. No year is recorded, because the page gives none.
 
-*After doxologia.ro's calendar for 30 mai — [the day](https://doxologia.ro/30-mai) and [his page](https://doxologia.ro/sfantul-cuvios-varlaam); read 24 September 2026.*
+The Greek calendar keeps him on the same day and is as brief as the Romanian. The venerable Barlaam, saint.gr says, died peacefully. Its distich adds only that the ends of the earth knew Barlaam, who lived the ascetic life to the utmost until he went down into the earth; and it gives, as doxologia gave, no place, no century, no year and no monastery.
+
+*After doxologia.ro's calendar for 30 mai — [the day](https://doxologia.ro/30-mai) and [his page](https://doxologia.ro/sfantul-cuvios-varlaam); read 24 September 2026; and saint.gr's calendar for 30 Μαΐου — [the day](https://www.saint.gr/05/30/index.aspx) and [the life](https://www.saint.gr/429/saint.aspx), read 30 September 2026.*

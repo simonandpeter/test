@@ -1,0 +1,53 @@
+{
+  "slug": "teletius",
+  "display_name": "Teletius",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Τελέτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Μαΐου, «Άγιοι Ρωμανός, Τελέτιος και Χριστίνα και το πλήθος των εν Νικομήδεια καέντων αγίων», with the rank words left off. The body of the page allows a second reading of the name, «Τελέτιος (ή Μελέτιος)»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Μαΐου — «Άγιοι Ρωμανός, Τελέτιος και Χριστίνα και το πλήθος των εν Νικομήδεια καέντων αγίων»",
+        "url": "https://www.saint.gr/05/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Μαΐου εκάστου έτους», the same day as the listing, and gives him his own heading, «Αγιος Τελετιος ο Μαρτυρας», beside Romanus's. **The page offers a variant of his name**, «Τελέτιος (ή Μελέτιος)», and the form recorded here is the one the calendar's own line prints; the alternative is quoted in the name note and is not entered as a second form, because the page presents it as another reading of one name and not as a form it prints for him. The corpus's Meletiuses are all other men on other days. No year and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "romanus-30-may"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

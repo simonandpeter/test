@@ -6,6 +6,11 @@
       "form": "Isaachie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 mai, «Sfântul Cuvios Isaachie Mărturisitorul»; the life page spells it «Isachie» throughout."
+    },
+    {
+      "form": "Ισαάκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Μαΐου, «Όσιος Ισαάκιος ο Ομολογητής ηγούμενος Μονής Δαλμάτων», with the rank words and the monastery left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Μαΐου — «Όσιος Ισαάκιος ο Ομολογητής ηγούμενος Μονής Δαλμάτων»",
+        "url": "https://www.saint.gr/05/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and it is the same man: the abbot of the monastery of the Dalmatians and confessor under Valens. **The page says his memory is repeated on another day**: «Η μνήμη του Οσίου Ισαάκιου επαναλαμβάνεται και στις 3 Αυγούστου», which is also the day it gives for his successor Dalmatius, «τον Όσιο Δαλμάτιο (τιμάται 3 Αυγούστου)». One row per church is the schema, so the 3 August commemoration is this note and not a second row. **The Greek is where the folder's biography comes from**, doxologia having given the rank and the monastery only: Syria for his origin, the reign of Valens, the Ostrogoths encamped in Thrace, the seizing of the emperor's bridle and the prophecy, the fall at Adrianople on 9 August 378 and Valens burned alive in a barn, the Second Ecumenical Council of 381, the appointment of Dalmatius and the repose in deep old age in 396. `dates` are added where the folder had none. The corpus keeps no Dalmatius, so none is linked. **Two hymns are added, both proper and both naming him**; the megalynarion is left in the source, and the apolytikion's «δωρήσασθαο» is the page's own spelling, copied as printed."
     },
     {
       "church": "serbian",
@@ -62,9 +77,52 @@
         "text": "In thee, O father, was carefully preserved that which is according to the image; for taking up the cross thou didst follow Christ, and by thy work thou didst teach us to overlook the flesh, because it passes away, and to care for the soul, a thing immortal. Therefore thy spirit rejoices together with the angels, most venerable father Isaac.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Τύπος πέφηνας, τῆς ἐγκρατείας, καὶ ἑδραίωμα, τῆς Ἐκκλησίας, Ἰσαάκιε Πατέρων ἀγλάϊσμα· ἐν ἀρεταῖς γὰρ φαιδρύνας τὸν βίον σου, Ὀρθοδοξίας τὸν λόγον ἐτράνωσας. Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαο ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως, on the page of «Όσιος Ισαάκιος ο Ομολογητής ηγούμενος Μονής Δαλμάτων»",
+        "url": "https://www.saint.gr/431/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown forth as a pattern of temperance and a foundation of the Church, O Isaakios, adornment of the Fathers; for having made thy life bright with virtues, thou didst make plain the word of Orthodoxy. Venerable Father, entreat Christ God that great mercy be granted unto us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ.",
+      "text": "Ὡς τῶν Ὁσίων ἀκριβέστατον ὑπόδειγμα· καὶ εὐσεβείας πρακτικώτατον ἐκφάντορα· ἀνυμνοῦμέν σε οἱ δούλοι σου θεοφόρε. Ἀλλ’ ὡς χάριτος τῆς θείας καταγώγιον, ναοὺς ἔργασθαι ἡμᾶς φωτὸς τοῦ Πνεύματος, τοὺς βοῶντάς σοι, χαίροις Πάτερ Ἰσαάκιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ, on the page of «Όσιος Ισαάκιος ο Ομολογητής ηγούμενος Μονής Δαλμάτων»",
+        "url": "https://www.saint.gr/431/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the most exact example of the venerable fathers and the most practical expounder of godliness, we thy servants hymn thee, O God-bearer. But as a dwelling-place of the divine grace, make us temples of the light of the Spirit, who cry to thee: Rejoice, Father Isaakios.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 396,
+      "latest": 396,
+      "display": "396",
+      "basis": "traditional",
+      "note": "saint.gr: «Προαισθανόμενος το τέλος του, αφού διόρισε διάδοχό του τον Όσιο Δαλμάτιο (τιμάται 3 Αυγούστου), κοιμήθηκε με ειρήνη σε βαθύ γήρας το 396 μ.Χ.» The page's own heading is «Όσιος Ισαάκιος ο Ομολογητής ηγούμενος Μονής Δαλμάτων (; - 396)» and it gives no year of birth, only that he lived «στα χρόνια του βασιλιά Ουάλη (364 μ. Χ.)» and died in deep old age."
+    }
   }
 }

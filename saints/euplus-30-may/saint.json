@@ -1,0 +1,50 @@
+{
+  "slug": "euplus-30-may",
+  "display_name": "Euplus (30 May)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Εύπλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Μαΐου, «Άγιος Εύπλος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Μαΐου — «Άγιος Εύπλος»",
+        "url": "https://www.saint.gr/05/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Μαΐου εκάστου έτους», the same day as the listing. **He is not the corpus's Euplus the Archdeacon**, and what makes that sure is that saint.gr keeps the two separately: its 11 Αυγούστου day page prints «Άγιος Εύπλος ο Διάκονος, ο Μεγαλομάρτυρας», which is the deacon of Catania beheaded in 304 whom the folder already holds on the Romanian, Russian and Serbian 11 August, while this 30 Μαΐου entry carries no order, no see and a different death — sewn in an ox-hide and left out in the burning sun. Two entries on one calendar are two commemorations, so two men. The page gives no year, so the folder has no `dates`, and the slug carries the day because nothing else on the page tells him apart. No hymn is printed for him, only the distich «Φλέγουσι βυρσέλικτον Eύπλον ηλίω, Oι φως νοητού μη βλέποντες ηλίου.»"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

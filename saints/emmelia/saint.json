@@ -1,0 +1,78 @@
+{
+  "slug": "emmelia",
+  "display_name": "Emmelia",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "names": [
+    {
+      "form": "Εμμέλεια",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Μαΐου, «Αγία Εμμελεία», with the rank word left off. The body of the same page spells it «Ἐμμέλεια» in the apolytikion and «Εμμελεία» in the prose."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Μαΐου — «Αγία Εμμελεία»",
+        "url": "https://www.saint.gr/05/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Μαΐου εκάστου έτους», the same day as the listing. **She is not the Macrina the Elder the corpus keeps on the Romanian 30 May**: Macrina the Elder is the grandmother of Basil the Great, this is his mother, and the Greek day page prints Emmelia and no Macrina at all, so nothing is owed to that folder from this day. The page gives no year of any kind, so the folder has no `dates`; it says only that her father «αναδείχθηκε σε Μάρτυρα κατά τους τελευταίους διωγμούς», and it does not name him. The apolytikion names her husband Basil, whom the prose leaves unnamed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "basil-the-great",
+    "gregory-of-nyssa",
+    "peter-of-sebaste",
+    "macrina-sister-of-basil-the-great",
+    "naucratius-brother-of-basil",
+    "basil-the-elder"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Σωφρόνως τὸν βίον σου κατ' ἐναντίον Θεοῦ, ἐτέλεσας πρότερον σὺν Βασιλείω σεμνῶ, Ἐμμέλεια πάνσεμνε, εἴτα δὲ ἐν ἐρήμῳ, ἀναβάσεις διέθου ἅμα τοὶς σοὶς ἐκγόνοις, ὡς τὰ ἄνω ποθοῦσα, διὸ σὲ ὁ Χριστὸς πανοικοί, ὑπερεδόξασε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε, the only hymn on the page of «Αγία Εμμελεία»",
+        "url": "https://www.saint.gr/425/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Chastely didst thou accomplish thy life before God, first with the honourable Basil, O all-honoured Emmelia, and afterwards in the wilderness thou didst set out on ascents together with thine own offspring, longing for the things above; wherefore Christ has exceedingly glorified thee with all thy house.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

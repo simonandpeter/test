@@ -1,0 +1,48 @@
+{
+  "slug": "cyprian-30-may",
+  "display_name": "Cyprian (30 May)",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Κυπριανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Μαΐου, «Άγιος Κυπριανός ο εξ Αντιοχείας», with the rank word and the clause about Antioch left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Μαΐου — «Άγιος Κυπριανός ο εξ Αντιοχείας»",
+        "url": "https://www.saint.gr/05/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Μαΐου εκάστου έτους», the same day as the listing. **He is not the corpus's Cyprian of Antioch**, although the day's line calls him «ο εξ Αντιοχείας»: that folder is a hieromartyr and bishop whose Greek row saint.gr itself sets on 2 October, and its man is the one who died a martyr, while this entry's one sentence says «κοιμήθηκε με ειρήνη», he fell asleep in peace. Two entries on one calendar are two commemorations, so two men. **`types` is empty on purpose**: the page gives him no rank at all beyond «Άγιος», and a death in peace is not a rank the corpus's vocabulary holds — `venerable` would be `Όσιος`, which the page does not print. The page gives no year, so the folder has no `dates`, and the slug carries the day because the see-name is already taken by the other man. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
