@@ -6,6 +6,11 @@
       "form": "Teodor Tiron",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 februarie, «Sfântul Mare Mucenic Teodor Tiron»."
+    },
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Άγιος Θεόδωρος ο Τήρων», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -27,6 +32,39 @@
       },
       "english": {
         "text": "Great are the works of faith! In the spring of the flame, as in water of rest, the holy Martyr Theodore rejoiced; for being burned whole in the fire, he was offered up as sweet bread to the Most Holy Trinity. By his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Μεγάλα τά τῆς πίστεως κατορθώματα! ἐν τῇ πηγῇ τῆς φλογός, ὡς ἐπί ὕδατος ἀναπαύσεως, ὁ ἅγιος Μάρτυς Θεόδωρος ἠγάλλετο· πυρί γάρ ὁλοκαυτωθείς, ὡς ἄρτος ἡδύς, τῇ Τριάδι προσήνεκται. Ταῖς αὐτοῦ ἱκεσίαις, Χριστέ ὁ Θεός, σῶσον τάς ψυχάς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Θεόδωρος ο Τήρων, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2378/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Great are the achievements of faith! In the spring of the flame, as at the water of rest, the holy martyr Theodore rejoiced; for burnt whole with fire, he was offered to the Trinity like sweet bread. At his entreaties, Christ our God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Αὐτόμελον.",
+      "text": "Πίστιν Χριστοῦ ὡσεί θώρακα, ἔνδον λαβών ἐν καρδίᾳ σου, τάς ἐναντίας δυνάμεις κατεπάτησας πολύαθλε, καί στέφει οὐρανίῳ ἐστέφθης, αἰωνίως ὡς ἀήττητος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Θεόδωρος ο Τήρων, Λειτουργικά κείμενα: Κοντάκιον",
+        "url": "https://www.saint.gr/2378/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having taken the faith of Christ within your heart as a breastplate, you trampled down the opposing powers, much-contending one, and were crowned eternally with a heavenly crown, as one unconquered.",
         "rendered": "site"
       }
     }
@@ -53,8 +91,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Φεβρουαρίου — «Άγιος Θεόδωρος ο Τήρων»",
+        "url": "https://www.saint.gr/02/17/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -64,5 +111,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 307,
+      "latest": 307,
+      "display": "307",
+      "basis": "traditional",
+      "note": "saint.gr heads his page «Άγιος Θεόδωρος ο Τήρων (; - 307)» and gives no year in the life itself, only the reigns of Maximian, Galerius and Maximinus."
+    }
   }
 }

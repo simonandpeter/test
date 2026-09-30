@@ -6,6 +6,11 @@
       "form": "Marcian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 februarie, «Sfântul Împărat Marcian»."
+    },
+    {
+      "form": "Μαρκιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Άγιοι Μαρκιανός και Πουλχερία οι βασιλείς», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -14,7 +19,9 @@
     "king"
   ],
   "related": [
-    "pulcheria-the-empress"
+    "pulcheria-the-empress",
+    "flavian-of-constantinople",
+    "cyril-of-alexandria"
   ],
   "attestations": [
     {
@@ -38,8 +45,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Φεβρουαρίου — «Άγιοι Μαρκιανός και Πουλχερία οι βασιλείς»",
+        "url": "https://www.saint.gr/02/17/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -49,5 +65,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 457,
+      "latest": 457,
+      "display": "457",
+      "basis": "attested",
+      "note": "saint.gr: «Η Αγία Πουλχερία κοιμήθηκε με ειρήνη στις 10 Σεπτεμβρίου 453 μ.Χ. και ο Άγιος Μαρκιανός το έτος 457 μ.Χ.» Its heading for him reads «Άγιος Μαρκιανός ο Βασιλιάς (; - 457)»."
+    }
   }
 }

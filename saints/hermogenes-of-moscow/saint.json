@@ -7,6 +7,11 @@
       "form": "Ermoghen",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 februarie, «Sfântul Ierarh Ermoghen, Patriarhul Moscovei»."
+    },
+    {
+      "form": "Ερμογένης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Άγιος Ερμογένης ο Ιερομάρτυρας Πατριάρχης Μόσχας», with the rank words and the see left off. The page gives his baptismal name in Greek as «Ερμόλαος»; no Russian form is printed on it, and none is invented here."
     }
   ],
   "sex": "male",
@@ -53,8 +58,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "saint.gr adds a second Greek day of its own at the end of his page — «Η μνήμη του Αγίου Ερμογένη επαναλαμβάνεται στις 12 Μαΐου» — his memory is repeated on 12 May (https://www.saint.gr/1570/saint.aspx, read 30 September 2026); the 12 May Greek day page was not read. The same page dates his death to 17 January 1612, which is neither of the two days it keeps him on."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Φεβρουαρίου — «Άγιος Ερμογένης ο Ιερομάρτυρας Πατριάρχης Μόσχας»",
+        "url": "https://www.saint.gr/02/17/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

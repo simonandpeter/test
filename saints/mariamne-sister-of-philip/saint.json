@@ -6,6 +6,11 @@
       "form": "Mariamna",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 februarie, «Sfânta Cuvioasă Mariamna»."
+    },
+    {
+      "form": "Μαριάμνη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Αγία Μαριάμνη η Ισαπόστολος αδελφή του Αγίου Φιλίππου του Αποστόλου», with the rank word, the title and the kinship left off."
     }
   ],
   "sex": "female",
@@ -14,7 +19,8 @@
     "preacher"
   ],
   "related": [
-    "bartholomew-the-apostle"
+    "bartholomew-the-apostle",
+    "philip-the-apostle"
   ],
   "attestations": [
     {
@@ -38,8 +44,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Φεβρουαρίου — «Αγία Μαριάμνη η Ισαπόστολος αδελφή του Αγίου Φιλίππου του Αποστόλου»",
+        "url": "https://www.saint.gr/02/17/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -49,5 +64,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ἄμνω ἠκολούθησας τῆς σωτηρίας Χριστῷ, ἀμνὰς ὥσπερ ἄμωμος σὺν ἀποσταλῶ κλεινῶ, Φιλίππω ὀμαίμονι, πάνσεπτε Μαριάμνη, ἀλογήσασα πάντων, ὅθεν πολλοὶς ἐγένου, τῶν ψυχῶν εὐεργέτις, ζωὴν ἀνακηρύττουσα, τὴν ἐπουράνιον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Μαριάμνη η Ισαπόστολος, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2380/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You followed Christ the Lamb of salvation as a spotless ewe-lamb, with the renowned apostle Philip your own brother, all-venerable Mariamne, setting no store by anything; and so you became to many a benefactress of souls, proclaiming the life that is of heaven.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -1,0 +1,62 @@
+{
+  "slug": "auxibius-of-soloi",
+  "display_name": "Auxibius of Soloi",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Αυξίβιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Άγιος Αυξίβιος Επίσκοπος Σόλων Κύπρου», with the rank word and the see left off."
+    },
+    {
+      "form": "Ευξίφιος",
+      "lang": "el",
+      "note": "The second form saint.gr's life page allows for him: «Ο Άγιος Αυξίβιος (ή κατ' άλλους Ευξίφιος) ο πρώτος Επίσκοπος Σόλων»."
+    }
+  ],
+  "related": [
+    "mark-the-evangelist",
+    "barnabas-the-apostle",
+    "paul-the-apostle",
+    "heraclides-of-tamasos"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Φεβρουαρίου — «Άγιος Αυξίβιος Επίσκοπος Σόλων Κύπρου»",
+        "url": "https://www.saint.gr/02/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

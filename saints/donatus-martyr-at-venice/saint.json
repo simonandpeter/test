@@ -1,0 +1,62 @@
+{
+  "slug": "donatus-martyr-at-venice",
+  "display_name": "Donatus, martyred at Venice",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δονάτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Άγιοι Ρωμύλος, Σεκουνδιανός και Δονάτος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "romylos-martyr-at-venice",
+    "secundianus-martyr-at-venice"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "attested",
+      "note": "saint.gr: «Οι Άγιοι Μάρτυρες Ρωμύλος, Σεκουνδιανός και Δονάτος μαρτύρησαν στη Βενετία το έτος 304 μ.Χ. επί αυτοκρατορων Διοκλητιανού (284 - 305 μ.Χ.) και Μαξιμιανού (285 - 305 μ.Χ.).» Its headings give each man's first date as a question mark and his last as 304."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Φεβρουαρίου — «Άγιοι Ρωμύλος, Σεκουνδιανός και Δονάτος»",
+        "url": "https://www.saint.gr/02/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Teodor Bizantinul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 februarie, «Sfântul Teodor Bizantinul»."
+    },
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Άγιος Θεόδωρος ο Νεομάρτυρας ο Βυζαντινός», with the rank words and the epithet left off."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "saint.gr gives his year two ways and this corpus's Romanian row keeps the second: «Εκεί υπέστη τον δι' αγχόνης θάνατον το 1774 μ.Χ. (ή κατά άλλους το 1795 μ.Χ.)» — he suffered death by hanging in 1774, or by others in 1795 (https://www.saint.gr/2384/saint.aspx, read 30 September 2026). The day is not in question on either page."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Φεβρουαρίου — «Άγιος Θεόδωρος ο Νεομάρτυρας ο Βυζαντινός»",
+        "url": "https://www.saint.gr/02/17/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -54,5 +69,27 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "macarius-notaras"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Το πάντιμον λείψανον του Θεοδώρου, πιστοί, ενδόξως τιμήσωμεν ως θησαυρών τιμαλφή, και πάντες βοήσωμεν, Σώσον εκ των κινδύνων τους πιστώς σε υμνούντας, ως πότε σύ ερρύσω εκ πανώλους την πόλιν και πάντας περιφρούρησον ταις ικεσίαις σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Θεόδωρος ο Νεομάρτυρας ο Βυζαντινός, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/2384/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us, the faithful, honour the all-honoured relic of Theodore with glory, as the most precious of treasures, and let us all cry out: save from dangers those who faithfully hymn you, as once you delivered the city from the plague; and guard us all about by your entreaties.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

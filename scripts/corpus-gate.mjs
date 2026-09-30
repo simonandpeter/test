@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδουλοσ theodulus-companion-of-pamphilus theodulus-of-caesarea-17-february theodulus-of-myropolis theodulus-son-of-nilus theodulus-the-executioner':
+    'Five men, and the close pair is read in the 17 February folder itself: the company of Pamphilus is crucified at Caesarea in Palestine under Diocletian on 16 February, while the 17 February Theodulus is martyred in the same city under Maximinus in 308. saint.gr keeps them on two of its own days and gives the reign as the ground of the distinction, so two folders stand and the shared city is recorded as an open question in ro-run/FINDINGS.md. The others are 12 September, 14 January and 4 September.',
+  'ρωμανοσ romanus-of-karpenisi romanus-of-lacedaemon romanus-of-samosata romanus-of-tarnovo romanus-of-uglich romanus-the-cilician':
+    'Six men on six Greek days: 5 January, 6 January, 29 January, 17 February, 3 February and 9 February.',
+  'μιχαηλ michael-companion-of-platon-of-reval michael-mavroeidis michael-of-klops':
+    'Three men on three Greek days: 1 January with Platon of Reval, 17 February (Mavroeidis) and 11 January at Klops.',
+  'αγαθαγγελοσ agathangelus agathangelus-of-florina':
+    'Two men: the martyr with Clement of Ancyra on 23 January, and the neomartyr of Florina on 17 February.',
   'μακαριοσ macarius-companion-of-eudoxius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-metropolitan-of-moscow macarius-of-ierissos macarius-of-kios macarius-of-paphos macarius-of-pisma macarius-of-zhabyn':
     'Ten men. Two share 6 September and the page prints them as two lines, the companion of Eudoxius and the magistrate of Alexandria, so they are two commemorations. The rest are 18 January, 8 January, 16 February, 19 January, 6 October, 8 February, 10 January and 22 January. The 16 February man is the metropolitan of Moscow whose page says only that it has no details of his life; the corpus keeps several Macarii of Russian sees from Russian sources and none of them on this day, so nothing here identifies him with one of those and he stands as his own folder.',
   'θεοδουλοσ theodulus-companion-of-pamphilus theodulus-of-myropolis theodulus-son-of-nilus theodulus-the-executioner':

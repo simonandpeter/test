@@ -1,0 +1,68 @@
+{
+  "slug": "barnabas-of-gethsemane",
+  "display_name": "Barnabas of Gethsemane",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Βαρνάβας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Όσιος Βαρνάβας της Γεθσημανή», with the rank word and the place left off. The page gives his baptismal name in Greek letters as «Βασίλειος Ίλιτς Μέρκουλωφ»; no Russian form of either name is printed on the page, and none is invented here."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 1831,
+      "latest": 1831,
+      "display": "1831",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε στις 24 Ιανουαρίου 1831 μ.Χ. στο χωριό Προυντίσκι της επαρχίας Τούλα της Ρωσίας»."
+    },
+    "death": {
+      "earliest": 1906,
+      "latest": 1906,
+      "display": "1906",
+      "basis": "attested",
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη το έτος 1906 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Φεβρουαρίου — «Όσιος Βαρνάβας της Γεθσημανή»",
+        "url": "https://www.saint.gr/02/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "michael-mavroeidis",
+  "display_name": "Michael Mavroeidis",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Μιχαήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Άγιος Μιχαήλ ο Μαυροειδής από την Αδριανούπολη», with the rank word left off. The epithet is kept in the English form because the page's own note turns on which of two epithets he carries."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1490,
+      "latest": 1490,
+      "display": "1490",
+      "basis": "attested",
+      "note": "saint.gr: «Παρά τις υποσχέσεις και τις απειλές ο Μάρτυρας παρέμεινε ακλόνητος στην πίστη του στον Χριστό, γι' αυτό και αποκεφαλίσθηκε το έτος 1490 μ.Χ.» Its heading leaves the first date a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "saint.gr's page for him prints a disagreement about the day, and it is the source's and not the reader's: «Ο Άγιος Νικόδημος ο Αγιορείτης καλεί τον Μάρτυρα Μαυρουδή και ορίζει την μνήμη του στις 10 Μαρτίου, ενώ ο Παρισινός Κώδικας καλεί αυτόν Μαυροειδή και σημειώνει τη μνήμη του στις 17 Φεβρουαρίου» — Nikodemos the Hagiorite calls him Mavroudis and sets his memory on 10 March, while the Paris codex calls him Mavroeidis and notes it on 17 February (https://www.saint.gr/2385/saint.aspx, read 30 September 2026). The site lists him on 17 February, which is the day page quoted here; neither 10 March nor the 21 March page named in the same note was read."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Φεβρουαρίου — «Άγιος Μιχαήλ ο Μαυροειδής από την Αδριανούπολη»",
+        "url": "https://www.saint.gr/02/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

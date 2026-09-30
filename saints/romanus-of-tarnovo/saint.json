@@ -1,0 +1,60 @@
+{
+  "slug": "romanus-of-tarnovo",
+  "display_name": "Romanus of Tarnovo",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Ρωμανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Όσιος Ρωμανός ο εκ Τυρνόβου», with the rank word left off. No Bulgarian or Slavonic form is printed on the page, and none is invented here."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1370,
+      "latest": 1370,
+      "display": "about 1370",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη περί το έτος 1370 μ.Χ.» — about the year 1370; its heading gives the first date as a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Φεβρουαρίου — «Όσιος Ρωμανός ο εκ Τυρνόβου»",
+        "url": "https://www.saint.gr/02/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

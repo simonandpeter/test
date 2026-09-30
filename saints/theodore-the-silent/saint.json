@@ -6,6 +6,11 @@
       "form": "Teodor cel Tăcut",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 februarie, «Sfântul Cuvios Teodor cel Tăcut de la Lavra Peșterilor din Kiev»."
+    },
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Όσιος Θεόδωρος ο Σιωπηλός», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Φεβρουαρίου — «Όσιος Θεόδωρος ο Σιωπηλός»",
+        "url": "https://www.saint.gr/02/17/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

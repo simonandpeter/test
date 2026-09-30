@@ -1,0 +1,78 @@
+{
+  "slug": "agathangelus-of-florina",
+  "display_name": "Agathangelus of Florina",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Αγαθάγγελος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Άγιος Αγαθάγγελος ο Νεομάρτυρας εκ Φλωρίνης», with the rank words left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1727,
+      "latest": 1727,
+      "display": "1727",
+      "basis": "attested",
+      "note": "saint.gr: «τον αποκεφάλισαν στις 17 Φεβρουαρίου του 1727 μ.Χ.», and the inscription it quotes from his reliquary repeats the year: «ὅστις ἐμαρτύρησε εἰς 1727». Its heading leaves the first date a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Φεβρουαρίου — «Άγιος Αγαθάγγελος ο Νεομάρτυρας εκ Φλωρίνης»",
+        "url": "https://www.saint.gr/02/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄.",
+      "model": "Ὁ ὑψωθείς.",
+      "text": "Εὐαγγελίου πληρωτὴς ἀνεδείχθης, καλῶς ἀθλήσας, Ἀγαθάγγελε μάρτυς, τήν πλάνην τὴν ψυχώλεθρον τῆς Ἄγαρ καθελών ὅθεν καθικέτευε, τὸν Δεσπότην δοθῆναι, πᾶσι τοῖς τιμῶσί σου, τὴν ὑπέρφωτον μνήμην, ἀειφλεγῆ ἀγάπην πρὸς Αὐτόν, καὶ σωτηρίαν, αἰώνιον Ἅγιε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Αγαθάγγελος ο Νεομάρτυρας εκ Φλωρίνης, Λειτουργικά κείμενα: Ἀπολυτίκιον, which the page attributes to the hieromonk Athanasius of Simonopetra («Ποίημα Ἱερομ. Ἀθανασίου Σιμωνοπετρίτου»).",
+        "url": "https://www.saint.gr/4489/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown a fulfiller of the Gospel, having contended well, martyr Agathangelus, pulling down the soul-destroying error of Hagar; whence beseech the Master to grant to all who honour your more than radiant memory an ever-burning love towards him, and salvation everlasting, holy one.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "theodulus-of-caesarea-17-february",
+  "display_name": "Theodulus of Caesarea (17 February)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Θεόδουλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Άγιος Θεόδουλος», with the rank word left off. The line gives him no epithet; the English form carries the day and the city to keep him apart from the several others of the name this corpus holds."
+    }
+  ],
+  "related": [
+    "theodulus-companion-of-pamphilus"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 308,
+      "latest": 308,
+      "display": "308",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Μάρτυς Θεόδουλος μαρτύρησε επί αυτοκράτορα Μαξιμίνου (307 - 313 μ.Χ.), το έτος 308 μ.Χ., στην Καισάρεια της Παλαιστίνης.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Φεβρουαρίου — «Άγιος Θεόδουλος»",
+        "url": "https://www.saint.gr/02/17/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
