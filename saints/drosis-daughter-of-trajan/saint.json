@@ -6,6 +6,11 @@
       "form": "Drosida",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 martie, «Sfânta Muceniță Drosida, fiica împăratului Traian»."
+    },
+    {
+      "form": "Δροσίδα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Μαρτίου, «Αγία Δροσίδα και των συν αυτη πέντε Παρθένων», with the rank word and the companions left off."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Μαρτίου — «Αγία Δροσίδα και των συν αυτη πέντε Παρθένων»",
+        "url": "https://www.saint.gr/03/22/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Μαρτίου εκάστου έτους.» The Greek line keeps five virgins with her — «και των συν αυτη πέντε Παρθένων» — and the page calls them the five κανονικαί and names none of them, so they are part of her entry here and not folders of their own. The page also gives her a different end from the one a reader might expect of a martyr: she escaped the palace and fell asleep in peace eight days later while praying, which is what its couplet on her says too."
     },
     {
       "church": "serbian",
@@ -45,5 +60,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 98,
+      "latest": 117,
+      "display": "98–117",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Δροσίδα, ήταν κόρη του αυτοκράτορα Τραϊανού (98-117), ο οποίος βασάνιζε και θανάτωνε πολλούς χριστιανούς» — the reign is the interval the page prints, and it gives no year for her own death. doxologia.ro gave no year at all."
+    }
   }
 }

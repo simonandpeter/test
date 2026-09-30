@@ -1,0 +1,65 @@
+{
+  "slug": "sophia-of-kyiv",
+  "display_name": "Sophia of Kyiv",
+  "office": "Abbess of a monastery in Kyiv",
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "abbess"
+  ],
+  "names": [
+    {
+      "form": "Σοφία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Μαρτίου, «Αγία Σοφία η Οσιομάρτυς», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [
+    "demetrius-ivanov"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησε το έτος 1941. Δεν έχουμε περισσότερες λεπτομέρειες για τον βίο και το μαρτύριο της Αγίας», and the page heads her «(; - 1941)», leaving the first date a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). Her abbacy at Kyiv makes a Russian or Ukrainian row likely, and it has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Μαρτίου — «Αγία Σοφία η Οσιομάρτυς»",
+        "url": "https://www.saint.gr/03/22/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Μαρτίου εκάστου έτους.» The page heads her «(; - 1941)», names no monastery of Kyiv in particular, and carries no asterisk and no disclaimer; what it says it does not know is her life and the manner of her martyrdom. She is none of the Sophias the corpus already keeps. The same day keeps her father, and the two entries name each other."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

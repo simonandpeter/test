@@ -1,0 +1,70 @@
+{
+  "slug": "basil-of-mangazeya",
+  "display_name": "Basil of Mangazeya",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop",
+    "wonderworker"
+  ],
+  "office": "Bishop of Mangazeya in Siberia",
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Μαρτίου, «Άγιος Βασίλειος ο Ιερομάρτυρας και Θαυματουργός Επίσκοπος Μανγκαζίας Σιβηρίας», with the rank words and the see left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 1583,
+      "latest": 1583,
+      "display": "1583",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιερομάρτυς Βασίλειος γεννήθηκε στην πόλη του Γιαροσλάβ της Ρωσίας το έτος 1583 μ.Χ.», and the page heads him «(1583 - 1602)»."
+    },
+    "death": {
+      "earliest": 1602,
+      "latest": 1602,
+      "display": "1602",
+      "basis": "traditional",
+      "note": "saint.gr: «Εξελέγη Επίσκοπος Μανγκαζίας της Σιβηρίας και μαρτύρησε το έτος 1602 μ.Χ.», and the page heads him «(1583 - 1602)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The Greek page makes him a Russian of Yaroslavl and a Siberian bishop, so a Russian row is likely and has not been read — and it is the calendar that would test the page's own claim about his rank."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Μαρτίου — «Άγιος Βασίλειος ο Ιερομάρτυρας και Θαυματουργός Επίσκοπος Μανγκαζίας Σιβηρίας»",
+        "url": "https://www.saint.gr/03/22/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Μαρτίου εκάστου έτους.» The page heads him «(1583 - 1602)» — nineteen years between the two figures, which is what it prints and what is recorded. It adds that the Church keeps the finding of his relics on 6 Ιουνίου and their translation from Mangazeya to Turukhansk on 10 Μαΐου, both of which are separate commemorations and no folders, and it sets beside him «Σύναξη πάντων των εν Σιβηρία Αγίων», the synaxis of all the saints of Siberia. The rank and see are the page's own words and are recorded as it gives them; nothing has been supplied or corrected from elsewhere."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

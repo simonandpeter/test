@@ -6,6 +6,11 @@
       "form": "Eftimie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 martie, «Sfântul Cuvios Mucenic Eftimie»."
+    },
+    {
+      "form": "Ευθύμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Μαρτίου, «Άγιος Ευθύμιος ο Πελοποννήσιος», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Μαρτίου — «Άγιος Ευθύμιος ο Πελοποννήσιος»",
+        "url": "https://www.saint.gr/03/22/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Μαρτίου εκάστου έτους.» The page's epithet for him is ο Πελοποννήσιος where doxologia's was of Dimitsana, and it agrees on the year, 22 March 1814, so nothing in the dates field has been changed. It names three relics — the head at the monastery of Panteleimon on the Holy Mountain, part at the Skete of the Forerunner, a portion at the monastery of Dionysiou — and it says «Η Εκκλησία τιμά την μνήμη του Οσιομάρτυρος Ευθυμίου και την 1η Μαΐου, μαζί με τους συναθλητές του Ιγνάτιο και Ακάκιο», that the Church honours him on 1 Μαΐου as well with his fellow-athletes Ignatius and Acacius. One row per church is the schema, so that second Greek day is recorded here and he does not render on it."
     },
     {
       "church": "serbian",
@@ -57,5 +72,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος δ'.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Ιδρώσιν ασκήσεως προστομωθείς Αθλητά, τους πόνους υπήνεγκας του μαρτυρίου στερρώς, Ευθύμιε ένδοξε` έδραμες γαρ ως γίγας, αποθέσθαι την πλάνην, φέρων εν ταις χερσί σου τον Σταυρόν και Βάϊα, , μεθ ων και στεφανηφόρος Χριστώ, χαίρων παρίστασαι.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ήχος δ', Ταχύ προκατάλαβε, on the page of Άγιος Ευθύμιος ο Πελοποννήσιος. It names him and names the cross and the palms he carried to the vizier, so it is his own. The page's polytonic marks are missing throughout and its doubled comma before «μεθ ων» is its own; both are copied as printed. A Κάθισμα follows the kontakion, attributed on the page to Cyril the Protosyncellus, and is not taken here.",
+        "url": "https://www.saint.gr/70/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Tempered by the sweat of asceticism, O prizewinner, thou didst bear the pains of martyrdom steadfastly, O glorious Euthymius; for thou didst run like a giant to put off thy error, carrying in thy hands the Cross and the palms, with which, wearing the crown, thou dost stand rejoicing before Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος γ'.",
+      "model": "Η Παρθένος σήμερον.",
+      "text": "Του Σταυρού το τρόπαιον, και τα βαΐα, κατέχων, εν χερσί Ευθύμιε, κριτή ανόμω παρέστης, ήσχυνας ψευδοπροφήτην εν παρρησία` εύφρανας τους Ορθοδόξους Θεόν τρανώσας, τον Χριστόν, προς ον πρεσβεύεις, υπέρ απάντων των σε υμνούντων πιστώς.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ήχος γ', Η Παρθένος σήμερον, on the page of Άγιος Ευθύμιος ο Πελοποννήσιος. It names him and the lawless judge he stood before.",
+        "url": "https://www.saint.gr/70/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holding in thy hands the trophy of the Cross and the palms, O Euthymius, thou didst stand before a lawless judge and didst put the false prophet to shame with boldness; thou didst gladden the Orthodox by proclaiming Christ to be God, before whom thou dost intercede for all who faithfully hymn thee.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

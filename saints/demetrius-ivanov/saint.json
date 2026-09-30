@@ -1,0 +1,63 @@
+{
+  "slug": "demetrius-ivanov",
+  "display_name": "Demetrius (Ivanov)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Μαρτίου, «Άγιος Δημήτριος ο Ιερομάρτυρας», with the rank word left off. Its life page gives the surname in Greek letters, «Ο Άγιος Ιερομάρτυρας Δημήτριος (Ιβανώφ)»."
+    }
+  ],
+  "related": [
+    "sophia-of-kyiv"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1934,
+      "latest": 1934,
+      "display": "1934",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησε το 1934, χωρίς να έχουμε παρισσότερες λεπτομέρειες για το μαρτύριο του Αγίου», and the page heads him «(; - 1934)», leaving the first date a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The page's surname and his daughter's abbacy at Kyiv make a Russian or Ukrainian row likely, and it has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Μαρτίου — «Άγιος Δημήτριος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/03/22/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Μαρτίου εκάστου έτους.» The page heads him «(; - 1934)» and carries no asterisk and no disclaimer; what it says it does not know is the manner of the martyrdom. The same day keeps his daughter, and the two entries name each other."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

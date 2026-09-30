@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σοφια sophia-martyr-18-september sophia-of-kyiv':
+    'Two women: the martyr of 18 September and Sophia of Kyiv on 22 March.',
+  'δημητριοσ demetrius-ivanov demetrius-of-chios demetrius-of-constantinople demetrius-of-georgia demetrius-of-prilutsk demetrius-the-skeuophylax demetrius-tornaras':
+    'Seven now. The new one is Demetrius Ivanov on 22 March; the others are read in the el-03-19 entry for this name form.',
+  'βασιλισσα basilissa-of-antinoopolis basilissa-of-galatia':
+    'Two women: Antinoopolis on 8 January and Galatia on 22 March.',
+  'βασιλειοσ basil-companion-of-euphrasius basil-martyr-6-february basil-of-ancyra basil-of-mangazeya basil-of-mirozh basil-of-novgorod basil-of-rostov basil-of-thessalonica basil-the-confessor basil-uncle-of-eustratius':
+    'Ten now, and two of them are on the Greek 22 March as two entries: Basil of Ancyra the presbyter, whom the Romanian keeps there too, and Basil of Mangazeya, the Siberian. The others are read in the el-03-14 entry for this name form.',
   'φιλημων philemon-companion-of-domninus philemon-companion-of-fortunianus philemon-of-gaza philemon-of-karpathos':
     'Four men on four Greek days: the companion of Domninus on 21 March, the companion of Fortunianus on 27 September, Gaza on 14 February and Karpathos on 24 January.',
   'companion domninus philemon domninus-companion-of-philemon philemon-companion-of-domninus':

@@ -1,0 +1,62 @@
+{
+  "slug": "callinice-of-galatia",
+  "display_name": "Callinice of Galatia",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Καλλινίκη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Μαρτίου, «Οι Αγίες Καλλίνικη και Βασίλισσα», with the rank word left off."
+    }
+  ],
+  "related": [
+    "basilissa-of-galatia"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 252,
+      "latest": 252,
+      "display": "252",
+      "basis": "traditional",
+      "note": "saint.gr: «Το μαρτύριο των Αγίων Μαρτύρων Βασιλίσσης και Καλλινίκης έγινε το έτος 252 μ.Χ. επί αυτοκράτορα Γάλλου (251-253 μ.Χ.)», and the page heads her «(; - 252)». The year is inside the reign of Gallus the page names beside it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Μαρτίου — «Οι Αγίες Καλλίνικη και Βασίλισσα»",
+        "url": "https://www.saint.gr/03/22/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Μαρτίου εκάστου έτους.» The two share one line and one page, and the page gives each of them a heading and a date of her own, «(; - 252)» apiece, so they are two folders. The corpus keeps several men called Callinicus and no woman of the name; nothing on this page identifies her with any of them."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
