@@ -5,6 +5,7 @@ import { monthsBySlugFor } from '../src/views/index/search.js';
 import { saintName } from '../src/lib/honorific.js';
 import { readCorpus, feastIndex, onCivilDay, CHURCH_IDS } from '../scripts/corpus-index.mjs';
 import { greatFeast } from '../src/lib/liturgy.js';
+import { chooseLanguage, ensureAllPacks } from '../src/lib/i18n.js';
 
 /**
  * The fixtures every browser spec shares: the routes the suite keeps returning
@@ -49,6 +50,21 @@ export const countInRange = (from, to, rangeMode) =>
  * the corpus this week.
  */
 export const leaderBySort = (sort) => saintName(applyFilters(CARDS, { sort }).matched[0]);
+
+/**
+ * The same, as a reader of `language` is shown it: `saintName` chooses among the
+ * forms the folder records and falls back to the English where that language
+ * has none, which is the corpus's own rule and not a defect. A typed Serbian
+ * name here went red when Job the Long-Suffering took the head of the earliest
+ * order — he has no Serbian form, so the page rightly prints his English.
+ */
+await ensureAllPacks();
+export const leaderBySortIn = (sort, language) => {
+  chooseLanguage(language);
+  const said = saintName(applyFilters(CARDS, { sort }).matched[0]);
+  chooseLanguage('en');
+  return said;
+};
 
 /** The first `n` of an order, as a set: which cards belong at the top of the grid. */
 export const leadersBySort = (sort, n) =>

@@ -10,6 +10,7 @@ import {
   countInRange,
   countInMonth,
   leaderBySort,
+  leaderBySortIn,
   leadersBySort,
   emptyRange,
   facet,
@@ -635,7 +636,20 @@ test('the Index speaks the chosen language, saints included', async ({ page }) =
    * saint — counted against the churches that do keep them, the coverage is
    * 393/393 Russian, 331/344 Greek, 116/122 Romanian, 116/129 Serbian.
    */
-  await expect.poll(() => leaders(page)).toBe('Пророк Мојсеј Боговидац');
+  /*
+   * **Read as the pack would read it, not typed.** This said «Пророк Мојсеј
+   * Боговидац» until Job the Long-Suffering took the head of the earliest order
+   * on 1 October: he has no Serbian form recorded, so the page prints his
+   * English — which is the rule this comment states, met in the wild.
+   * `leaderBySortIn` chooses the form the way `lib/saint-name.js` does.
+   */
+  await expect.poll(() => leaders(page)).toBe(leaderBySortIn('earliest', 'sr'));
+  /*
+   * And a form really is chosen where one exists: Moses is «Мојсеј» in the
+   * Serbian the corpus recorded, and searching his Serbian name finds his card.
+   */
+  await page.locator('[data-query]').fill('Мојсеј');
+  await expect(page.locator('.index-card').filter({ has: page.locator('a[href="/saints/moses-the-prophet"]') })).toHaveCount(1);
 });
 
 /* ---- the 2026-08-24 evening round: rows, one bookmark, the narrow header -- */

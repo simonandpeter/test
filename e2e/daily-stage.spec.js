@@ -786,7 +786,15 @@ test('the page comes back to the line it was left on, without a jump', async ({ 
           );
           return card ? Math.round(card.getBoundingClientRect().top) : null;
         }, pinned.name),
-      { timeout: 4000, message: `${pinned.name} never came back to the grid` },
+      /*
+       * **Ten seconds, not four, since 1 October.** The grid repaints its
+       * window from the scroll event the landing dispatches, and at 3,724
+       * folders that repaint is long enough on the CI runner to spend four
+       * seconds with this card still unmounted — twice on one run, once as a
+       * failure and once as a retry that passed. The claim is that the card
+       * comes back to the same place, not how many frames it takes.
+       */
+      { timeout: 10000, message: `${pinned.name} never came back to the grid` },
     )
     .toBeCloseTo(pinned.top, -1);
 
