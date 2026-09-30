@@ -7,6 +7,11 @@
       "form": "Anastasie Sinaitul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 aprilie, «Sfântul Anastasie Sinaitul, Patriarhul Antiohiei»."
+    },
+    {
+      "form": "Αναστάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Απριλίου, «Άγιος Αναστάσιος Ιερομάρτυρας, επίσκοπος Αντιοχείας», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Απριλίου — «Άγιος Αναστάσιος Ιερομάρτυρας, επίσκοπος Αντιοχείας»",
+        "url": "https://www.saint.gr/04/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Απριλίου εκάστου έτους», the same day as the listing. It is the same day the Romanian calendar keeps him, and it agrees with the Romanian on the year of his death, 599. The Greek adds the shape of his career: that he was an ascetic on mount Sinai at the beginning of the sixth century, went from Sinai to Antioch and became the representative there of the Church of Alexandria, that on the death of bishop Domnus of Antioch clergy and people raised him to that throne in 559, that the emperor Justin exiled him in 570 to Jerusalem on the pretext that he had squandered the Church's property, that he stayed there studying and writing until 593, when he returned to his throne, and that he died about 599. It opens by saying «Δυστυχώς για τον Άγιο Αναστάσιο έχουμε πολύ λίγες πληροφορίες για τη ζωή του» — unhappily we have very little information about his life — and it closes by refusing one thing the synaxarists assert: «Τώρα όσον άφορα το τέλος του, που οι Συναξαριστές σημειώνουν μαρτυρικό, ότι δηλαδή μαρτύρησε δια ξίφους, θετικές πληροφορίες δεν έχουμε», we have no positive information about the martyric end by the sword that the synaxarists note. That refusal is quoted here and no rank of martyr was added to this folder's `types` on the strength of it; the day's line still calls him Ιερομάρτυρας. The page's own 559, 570 and 593 are dates of events and were not made dates of the man. It prints no hymn."
     },
     {
       "church": "serbian",

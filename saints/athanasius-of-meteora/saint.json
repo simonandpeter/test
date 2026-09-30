@@ -6,6 +6,11 @@
       "form": "Atanasie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 aprilie, «Sfântul Cuvios Atanasie»; the icons on his page and on Joasaph's are titled «Cuviosul Atanasie de la Meteor» and «Sfinții Cuvioși Atanasie și Ioasaf de la Meteora»."
+    },
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Απριλίου, «Όσιος Αθανάσιος κτήτωρ Μονής Μετεώρου», with the rank word and the office left off; the life page gives Andronikos as his name in the world."
     }
   ],
   "sex": "male",
@@ -23,7 +28,14 @@
       "latest": 1310,
       "display": "1310",
       "basis": "attested",
-      "note": "doxologia.ro: «Acest cuvios Atanasie s-a născut în anul 1310»."
+      "note": "doxologia.ro: «Acest cuvios Atanasie s-a născut în anul 1310». saint.gr's page for 20 Απριλίου reckons otherwise, «το 1305 μ.Χ. (ή σύμφωνα με άλλες πηγές το 1303 μ.Χ.)», and this reading was left as it stood rather than widened."
+    },
+    "death": {
+      "earliest": 1373,
+      "latest": 1383,
+      "display": "1383, or 1373 by another reckoning",
+      "basis": "traditional",
+      "note": "saint.gr: «αφού έζησε 78 ετών, απεβίωσε ειρηνικά το 1383 μ.Χ. (κατά άλλους το 1373 μ.Χ.)» — the page prints both years and settles neither, so the interval carries both."
     }
   },
   "attestations": [
@@ -48,8 +60,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Απριλίου — «Όσιος Αθανάσιος κτήτωρ Μονής Μετεώρου»",
+        "url": "https://www.saint.gr/04/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Απριλίου εκάστου έτους», the same day as the listing. It is the same day the Romanian calendar keeps him. The Greek is much the fuller account: Andronikos in the world, born at New Patras, the present Ypati, near mount Molyvion; orphaned of his father and given to an uncle's care; leaving for Thessalonica and then Athos when the Franks took his homeland in 1319; refused on the Mountain as a beardless youth and wandering many places, meeting Gregory the Sinaite at Constantinople and going to Crete; returning at thirty to a region of the monastery of Iviron, where the fathers Gregory the Constantinopolitan and Moses gave him the monastic habit; fleeing the Turkish raids westward with Gregory and Gabriel and reaching the Skete of Veroia in 1340; hearing from Jacob, bishop of Servia, of the towering rocks further south, and settling at Stagoi, on the rock he named Meteoron, where he built a church and then the coenobium of the Transfiguration; and dying at seventy-eight. **The Greek's year of birth disagrees with the one this folder already holds**: saint.gr says «το 1305 μ.Χ. (ή σύμφωνα με άλλες πηγές το 1303 μ.Χ.)», where doxologia.ro says 1310, so the existing birth was left untouched and only the death year, which this folder had none of, was added — «απεβίωσε ειρηνικά το 1383 μ.Χ. (κατά άλλους το 1373 μ.Χ.)», both of which the interval carries. Under «Ιερά Λείψανα» it puts his skull at the monastery of the Great Meteoron. It prints no hymn."
     },
     {
       "church": "serbian",

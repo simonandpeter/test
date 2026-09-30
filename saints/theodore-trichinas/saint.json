@@ -6,6 +6,11 @@
       "form": "Teodor Trihina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 aprilie, «Sfântul Cuvios Teodor Trihina»."
+    },
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Απριλίου, «Όσιος Θεόδωρος ο Τριχινάς», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Απριλίου — «Όσιος Θεόδωρος ο Τριχινάς»",
+        "url": "https://www.saint.gr/04/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Απριλίου εκάστου έτους», the same day as the listing. It is the same day the Romanian calendar keeps him, and the two accounts agree that he was of Constantinople, of rich and devout parents, that he wore hair garments and was named Trichinas for them, and that myrrh flowed from his tomb. The Greek adds what he did with the abstinence: that he gave his whole life to the service of the poor and the sick, that he urged rich men to give what they could and distributed what they gave with discernment, first to orphans, poor widows and sick heads of households, and that he did good to the last day of his life; and it names the monastery as the one called of Trichinas after him. It gives no year, so no `dates` were taken. It prints two apolytikia and a kontakion: the first apolytikion and the kontakion are proper to him and are stored here, and the second, «Ἐν σοί Πάτερ ἀκριβῶς διεσώθη τό κατ᾽ εἰκόνα», is the common of a venerable father and was left."
     },
     {
       "church": "serbian",
@@ -59,6 +74,40 @@
       },
       "english": {
         "text": "With the streams of your tears you worked the barren desert, and with sighs from the depths you made your labours bear fruit a hundredfold; and you became a light to the world, shining with wonders, Theodore our father. Pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Δῶρον ἔνθεον, τῆς ἐγκρατείας, σκεῦος ἔμψυχον, τῆς ἀπαθείας, ἀνεδείχθης θεοφόρε Θεόδωρε, τὸν γὰρ Θεὸν θεραπεύσας τοὶς ἔργοις σου, τῶν παρ' αὐτῶν δωρημάτων ἠξίωσαι. Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως, on the page of «Όσιος Θεόδωρος ο Τριχινάς»",
+        "url": "https://www.saint.gr/315/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A gift of God thou wast shown to be, a living vessel of abstinence and of dispassion, O God-bearing Theodore; for having served God by thy works, thou wast counted worthy of His gifts. Venerable father, entreat Christ God to grant us His great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τὸν τάφον σου Σωτὴρ.",
+      "text": "Φωτός καταστολήν, ἱερῶς ἐξυφαίνων, τριχίνῳ σεαυτόν, περιέστελλες ῥάκει, Θεόδωρε πανόσιε, Παρακλήτου κειμήλιον· ὅθεν χάριτος ὑπερφυοῦς ἠξιώθης, μύρον εὔοσμον, ἀπό τοῦ τάφου βλυστάνων, ψυχῶν καθαρτήριον.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος α’, Τὸν τάφον σου Σωτὴρ, on the page of «Όσιος Θεόδωρος ο Τριχινάς»",
+        "url": "https://www.saint.gr/315/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Weaving in holiness a garment of light, thou didst wrap thyself in a rag of hair, all-venerable Theodore, treasure of the Comforter; wherefore thou wast counted worthy of grace beyond nature, welling up from thy tomb a fragrant myrrh that cleanses souls.",
         "rendered": "site"
       }
     }

@@ -6,6 +6,11 @@
       "form": "Ioasaf",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 aprilie, «Sfântul Cuvios Ioasaf»; the icons on his page are titled «Sfinții Cuvioși Atanasie și Ioasaf de la Meteora»."
+    },
+    {
+      "form": "Ιωάσαφ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Απριλίου, «Όσιος Ιωάσαφ ο Μετεωρίτης», with the rank word and the epithet left off; the life page gives his name before the habit as Ἰωάννης Οὔρεσης Παλαιολόγος."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Απριλίου — «Όσιος Ιωάσαφ ο Μετεωρίτης»",
+        "url": "https://www.saint.gr/04/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Απριλίου εκάστου έτους», the same day as the listing. It is the same day the Romanian calendar keeps him, and the Greek page is where this folder's years come from, for it had none. saint.gr says plainly that no biography of him was found and that everything it has is drawn from the life of Athanasius and from various official documents. It names him «Ἰωάννης Οὔρεσης Παλαιολόγος, ὁ διὰ τοῦ θείου καὶ ἀγγελικοῦ σχήματος ἐπικληθεὶς Ἰωάσαφ μοναχός», son of Symeon Uroš Palaiologos, the Greek-Serbian king of Epirus and Great Wallachia — that is Thessaly — seated at Trikala, whose reign it dates 1359 to 1370, and of Thomais, daughter of John II Orsini, despot of Epirus; makes him co-emperor at Kastoria at ten in 1359-1360, his father's successor about 1370, a monk at the Meteoron between November 1372 and June 1373 at about twenty-two, Athanasius's appointed successor, absent at Thessalonica about 1379-1380, returned after Athanasius's repose, at Ioannina at the turn of 1384-1385 to support his sister Maria Angelina after the murder of Thomas Preljubović, a refugee at Vatopedi on Athos after Bayezid I's invasion of Thessaly in 1393-1394, and dead in peace about 1423. Under «Ιερά Λείψανα» it puts his skull at the monastery of the Great Meteoron. It prints no hymn."
     },
     {
       "church": "serbian",
@@ -49,5 +64,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1349,
+      "latest": 1350,
+      "display": "1349 or 1350",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Ιωάννης γεννήθηκε κατά το 1349 - 1350 μ.Χ.» — the page gives the two years and settles neither."
+    },
+    "death": {
+      "earliest": 1423,
+      "latest": 1423,
+      "display": "1423",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ιωάσαφ εκοιμήθηκε με ειρήνη κατά το 1423 μ.Χ.», and the page heads him «(; - 1423)»."
+    }
   }
 }

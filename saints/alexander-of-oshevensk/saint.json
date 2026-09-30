@@ -1,0 +1,70 @@
+{
+  "slug": "alexander-of-oshevensk",
+  "display_name": "Alexander of Oshevensk",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Απριλίου, «Όσιος Αλέξανδρος εκ Ρωσίας», with the rank word left off; the life page heads him «Οσιος Αλεξανδρος Εκ Ρωσιας (1427 - 1479)» and calls him «ο Όσιος Αλέξανδρος του Όσεβεν», with Alexis as his name in the world."
+    }
+  ],
+  "related": [
+    "cyril-of-the-white-lake"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1427,
+      "latest": 1427,
+      "display": "1427",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε στις 17 Μαρτίου 1427 μ.Χ. στην περιοχή Βυζεοζέρο της Ρωσίας», and the page heads him «(1427 - 1479)»."
+    },
+    "death": {
+      "earliest": 1479,
+      "latest": 1479,
+      "display": "1479",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Όσιος Αλέξανδρος έζησε ακόμα είκοσι επτά χρόνια στο μοναστήρι που ίδρυσε και κοιμήθηκε με ειρήνη το έτος 1479 μ.Χ.»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Απριλίου — «Όσιος Αλέξανδρος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/04/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Απριλίου εκάστου έτους», the same day as the listing. The day's line calls him only «εκ Ρωσίας», of Russia; the body of the page calls him «του Όσεβεν», of Oshevensk, after the village his father founded on the river Kuryuga, and that is the epithet taken for the English form. The page names his parents Nikephoros and Photine, his name in the world Alexis, his birthplace the Vyzeozero region, the monastery of Cyril of the White Lake where he was a novice six years and was tonsured, the prince John of Novgorod who gave his father leave to found the village, and the vision of the servant Mark after his death, in which the elders helping were said to be St Nicholas and St Cyril and the young one the sacristan Maximus, who the page says would be abbot until 1525. Which Nicholas the vision means the page does not say, so no link was made for him. It prints no hymn and names no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

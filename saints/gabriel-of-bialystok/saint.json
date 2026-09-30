@@ -1,0 +1,67 @@
+{
+  "slug": "gabriel-of-bialystok",
+  "display_name": "Gabriel of Białystok",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Γαβριήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Απριλίου, «Άγιος Γαβριήλ ο Μάρτυρας», with the rank word left off; the life page heads him «Αγιος Γαβριηλ ο Μαρτυρας (1684 - 1690)». The day's line gives him no epithet; the city in the English form here is the one the page names as the place of his martyrdom and of his relics."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 1684,
+      "latest": 1684,
+      "display": "1684",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε το έτος 1684 μ.Χ. στο χωριό Ζβιέρκιυ», and the page heads him «(1684 - 1690)»."
+    },
+    "death": {
+      "earliest": 1690,
+      "latest": 1690,
+      "display": "1690",
+      "basis": "attested",
+      "note": "saint.gr: «Όταν ο Άγιος ήταν σε ηλικία 6 ετών, απήχθηκε και οδηγήθηκε στην πόλη Μπιαλιστόκ, όπου και μαρτύρησε, το έτος 1690»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Απριλίου — «Άγιος Γαβριήλ ο Μάρτυρας»",
+        "url": "https://www.saint.gr/04/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Απριλίου εκάστου έτους», the same day as the listing. The page names the village Zvierki, south of Białystok in the district of Zabłudów, his age of six at his abduction, the year 1690 of his death, the opening of his tomb in the eighteenth century and the incorrupt relic found there, its keeping at Białystok until the Second World War, its removal then to Russia, to the church of the Protection of the Mother of God at Grodno, and its translation back to Białystok on 21 September 1992 with the blessing of the Russian metropolitan Philaret. It names no judge and no manner of death, calling his killers only «τους εχθρούς της Εκκλησίας», the enemies of the Church, in the setting of the persecutions and discriminations against the Orthodox Church by the Uniates in Poland. It prints no hymn. The corpus keeps many saints named Gabriel; none of them is a child of this date or this country."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

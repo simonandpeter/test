@@ -1,0 +1,71 @@
+{
+  "slug": "theonas-20-april",
+  "display_name": "Theonas (20 April)",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Θεωνάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Απριλίου, «Άγιοι Βίκτωρ, Ζωτικός, Ακίνδυνος, Καισάριος, Σεβηριανός, Χριστόφορος, Ζήνων, Θεωνάς και Αντωνίνος», with the rank word left off; the life page heads him «Αγιος Θεωνάς (; - 303)»."
+    }
+  ],
+  "related": [
+    "george-the-trophy-bearer",
+    "victor-20-april",
+    "acindynus-20-april",
+    "zoticus-20-april",
+    "zeno-20-april",
+    "severian-20-april",
+    "christopher-20-april",
+    "caesarius-20-april",
+    "antoninus-20-april"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "saint.gr heads each of the nine «(; - 303)» and closes its account of them «Ήταν το έτος 303 μ.Χ.»; no year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Απριλίου — «Άγιοι Βίκτωρ, Ζωτικός, Ακίνδυνος, Καισάριος, Σεβηριανός, Χριστόφορος, Ζήνων, Θεωνάς και Αντωνίνος»",
+        "url": "https://www.saint.gr/04/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Απριλίου εκάστου έτους», the same day as the listing. Nine people are named and enumerated on the page, and this corpus makes one folder for each. The page divides them: Victor, Acindynus, Zoticus, Zeno and Severian confessed when they saw [George the Trophy-bearer](/saints/george-the-trophy-bearer) left unhurt on the wheel and were beheaded at once, while Christopher, Theonas, Caesarius and Antoninus were the king's own guards and confessed when they saw George raise a dead man by prayer. It heads each of the nine «(; - 303)» and closes «Ήταν το έτος 303 μ.Χ.», so the death year is taken and no year of birth. It sets them all in the reign of Diocletian, which it dates 284 to 305. The corpus's other bearers of these names — Acindynus and Severian of Nicomedia on 22 August, Christopher on 9 May, Theonas of Thessalonica on 4 April, Victor of Chalcedon on 16 September and the rest — are other men on other days, and none of their lives names George. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

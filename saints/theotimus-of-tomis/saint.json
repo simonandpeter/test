@@ -7,6 +7,11 @@
       "form": "Teotim",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 aprilie, «Sfântul Ierarh Teotim, Episcopul Tomisului»."
+    },
+    {
+      "form": "Θεότιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Απριλίου, «Άγιος Θεότιμος Επίσκοπος Ρουμανίας», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -49,8 +54,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Απριλίου — «Άγιος Θεότιμος Επίσκοπος Ρουμανίας»",
+        "url": "https://www.saint.gr/04/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Απριλίου εκάστου έτους», the same day as the listing. It is the same day the Romanian calendar keeps him. The Greek calls him bishop of Tomis or Tomi in Lesser Scythia at the end of the fourth century, says that the barbarian Huns dwelling about the Danube, marvelling at his virtue, called him the god of the Romans, and reports from Jerome that he wrote in dialogues «Ομιλίας βραχείας και κομματικάς», short and sectioned homilies, fragments of which survive in the Parallels of John of Damascus. **Its year is more precise than the one this folder holds**: «Ο Άγιος Θεότιμος κοιμήθηκε με ειρήνη το έτος 407 μ.Χ.», where doxologia.ro gives only the end of the first decade of the fifth century, which this folder records as 401-410. The existing interval contains 407 and was left as it stood rather than narrowed by a reader; the narrowing is a reading for somebody else to make. Note too that the day's line calls his see «Ρουμανίας», of Romania, which is the modern country and not the page's own «Τόμεως ή Τόμων της Μικράς Σκυθίας». It prints no hymn."
     },
     {
       "church": "serbian",

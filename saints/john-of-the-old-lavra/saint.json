@@ -6,6 +6,11 @@
       "form": "Ioan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 aprilie, «Sfântul Cuvios Ioan de la Lavra Veche»."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Απριλίου, «Όσιος Ιωάννης ο Παλαιολαυρίτης», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Απριλίου — «Όσιος Ιωάννης ο Παλαιολαυρίτης»",
+        "url": "https://www.saint.gr/04/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Απριλίου εκάστου έτους», the same day as the listing. **The Greek keeps him a day after the Romanian**, which prints him on 19 aprilie; the folder's Romanian row stands where it is and this row records the day page that was read. The two accounts are plainly one man's: the Greek calls him ο Παλαιολαυρίτης, of the Old Lavra, and says that he was received at the last by the monastery of Chariton, which is that lavra. The Greek adds his childhood — that he kept in his own family all the virtues Scripture enjoins on children, honoured his father and mother, obeyed their wishes and was a pattern of love and mutual help among his brothers — and that he wandered through many places before entering the monastic life and went as a pilgrim to Jerusalem. Under «Ιερά Λείψανα» it puts a portion of his relic at the monastery of the Panagia Tourliani on Mykonos. It gives no year, so no `dates` were taken, and it prints no hymn."
     },
     {
       "church": "serbian",

@@ -6,6 +6,11 @@
       "form": "Zaheu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 aprilie, «Sfântul Apostol Zaheu»."
+    },
+    {
+      "form": "Ζακχαῖος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Απριλίου, «Άγιος Ζακχαίος ο Απόστολος», with the rank words left off; the day's line spells him Ζακχαίος and the page's couplet Ζακχαῖε, and the accented form of the nominative is stored here as the couplet has it."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Απριλίου — «Άγιος Ζακχαίος ο Απόστολος»",
+        "url": "https://www.saint.gr/04/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Απριλίου εκάστου έτους», the same day as the listing. It is the same day the Romanian calendar keeps him. The page refers the reader to Luke 19:1-10 for the whole story, calls him the well-known chief publican of Jericho who climbed the sycamore because his height did not favour him, and adds, with «Λέγεται» — it is said — that after the Ascension of the Lord he followed the apostle Peter, by whom he was afterwards ordained bishop of Caesarea. It gives no year, so no `dates` were taken, and it prints no hymn. The page's couplet turns the Gospel's word round: not come down, but come up, Christ says to thee, Zacchaeus, calling thee to the vault of heaven."
     },
     {
       "church": "serbian",
