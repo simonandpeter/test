@@ -1,0 +1,65 @@
+{
+  "slug": "stephen-of-vladimir",
+  "display_name": "Stephen of Vladimir",
+  "sex": "male",
+  "types": [
+    "monk",
+    "abbot",
+    "bishop"
+  ],
+  "office": "Bishop of Vladimir",
+  "names": [
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Απριλίου, «Άγιος Στέφανος Επίσκοπος Βλαντιμίρ», with the rank word and the see left off."
+    }
+  ],
+  "related": [
+    "theodosius-of-the-kyiv-caves"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1094,
+      "latest": 1094,
+      "display": "1094",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Στέφανος ποίμανε θεοφιλώς το ποίμνιό του και κοιμήθηκε με ειρήνη το έτος 1094», and the page heads him «(; - 1094)» with the year of birth left as a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The whole of saint.gr's account is of a saint of the Kyiv Caves and the Russian calendar is very likely to keep him, but that page was not read and this row does not guess it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Απριλίου — «Άγιος Στέφανος Επίσκοπος Βλαντιμίρ»",
+        "url": "https://www.saint.gr/04/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Απριλίου εκάστου έτους», the same day as the listing. The page puts him in Russia in the eleventh century, an ascetic of the Lavra of Kyiv who became abbot of the monastery of the Caves after the falling asleep of Theodosius, whose feast it gives parenthetically as 3 May — the same 3 May the corpus already holds for `theodosius-of-the-kyiv-caves`, which is what makes that `related` row safe. It has him driven out of the abbacy by a faction of the brethren, founder of a new monastery at Klov with a stone church dedicated to the Deposition of the Honourable Robe of the Mother of God, and consecrated bishop of Vladimir in 1091 by John metropolitan of Kyiv, when the previous bishop fell asleep; dead in peace in 1094. It gives no year of birth. He is not the corpus's Stephen of Perm, whom the same calendar keeps the day before on 26 April, nor any of its other Stephens. It prints no hymn and names no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

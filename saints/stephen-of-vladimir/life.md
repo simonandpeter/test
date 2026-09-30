@@ -1,0 +1,9 @@
+# Stephen of Vladimir
+
+Stephen lived in Russia in the eleventh century and carried on his ascetic struggle in the Lavra of Kyiv. After the falling asleep of [Theodosius](/saints/theodosius-of-the-kyiv-caves) he became abbot of the holy monastery of the Caves of Kyiv, and in that place he was very active: he took careful thought for the completion of the monastery's buildings, and at the same time for the spiritual growth of the monks. He appointed that the Divine Liturgy should be celebrated daily in the monastery for the repose of the blessed founders and of the brethren who had fallen asleep, and for the salvation of the living brethren and of all Orthodox Christians.
+
+But the treacherous devil envied Stephen's godly zeal, saint.gr says, and stirred some of the brethren up against their own abbot, making a great disturbance in the brotherhood. Stephen withdrew from the abbacy and was driven out of the monastery without cause; and he bore it all without a murmur, without complaint and without holding it against anyone. God so blessed His faithful servant that Stephen was counted worthy to build a new monastery at Klov, with a stone church dedicated to the Deposition of the Honourable Robe of the Most Holy Mother of God.
+
+His virtue drew many devout souls, who came to him and received the monastic habit from his honourable hands, and his fame spread through the whole Russian land. So when the bishop of Vladimir fell asleep in the year 1091, Stephen was consecrated hierarch and his successor at Vladimir by John, metropolitan of Kyiv. He shepherded his flock in a way pleasing to God, and fell asleep in peace in the year 1094.
+
+*After saint.gr's calendar for 27 Απριλίου — [the day](https://www.saint.gr/04/27/index.aspx) and [the life](https://www.saint.gr/341/saint.aspx); read 30 September 2026.*

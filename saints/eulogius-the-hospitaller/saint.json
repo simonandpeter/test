@@ -1,0 +1,51 @@
+{
+  "slug": "eulogius-the-hospitaller",
+  "display_name": "Eulogius the Hospitaller",
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "names": [
+    {
+      "form": "Ευλόγιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Απριλίου, «Άγιος Ευλόγιος ο Ξενοδόχος», with the rank word left off; the page explains the epithet itself, that he was called Ξενοδόχος because the whole care and delight of his life was to receive strangers in his house."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Απριλίου — «Άγιος Ευλόγιος ο Ξενοδόχος»",
+        "url": "https://www.saint.gr/04/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Απριλίου εκάστου έτους», the same day as the listing. It places him in the parts of the Thebaid in Egypt, makes his trade that of a quarryman or stonecutter, and says he lived more than a hundred years and died in peace; **it gives no year at all, so there is no `dates` object.** The line «Βυζαντινός γραμματικός του 5ου μ.Χ. αιώνα» that stands under the name heading is saint.gr's gloss on the *name* Ευλόγιος, about a Byzantine grammarian of the fifth century, and is not a statement about this saint; it is not used here. The corpus's three other men of the name are other people — Eulogius of Palestine is a martyr of 5 March who went about Palestine as a beggar, and Eulogius of Alexandria and Eulogius of Edessa are hierarchs. It prints no hymn and names no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

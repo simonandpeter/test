@@ -6,6 +6,11 @@
       "form": "Simeon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 aprilie, «Sfântul Sfințit Mucenic Simeon, ruda Domnului»."
+    },
+    {
+      "form": "Συμεών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Απριλίου, «Άγιος Συμεών ο Αδελφόθεος Επίσκοπος Ιεροσολύμων», with the rank word, the epithet and the see left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Απριλίου — «Άγιος Συμεών ο Αδελφόθεος Επίσκοπος Ιεροσολύμων»",
+        "url": "https://www.saint.gr/04/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him, and it is plainly the same man: successor of James the Brother of the Lord in Jerusalem, crucified under Trajan. **The Greek adds four things.** It heads him «(-12 - 107)» and says he was crucified «το έτος 107 μ.Χ., σε ηλικία εκατόν είκοσι ετών», in 107 at the age of a hundred and twenty; only the 107 is recorded in `dates`, because the head's negative year is the page's arithmetic from that age and not a stated year of birth. It sets out the two accounts of his kindred side by side — «Κατά τον Ηγήσιππο ήταν υιός του Κλωπά, αδελφού του Ιωσήφ, και αδελφός του Ιούδα· κατ άλλη δε εκδοχή ήταν υιός του Ιωσήφ του Μνήστορος και αδελφός του Αγίου Ιακώβου του Αδελφοθέου» — by Hegesippus a son of Clopas the brother of Joseph and brother of Judas, by another account a son of Joseph the Betrothed and brother of James. It dates the succession to the destruction of Jerusalem by the Romans in 70 and James's death to 62, dates Trajan 98 to 117, and names the consul Atticus to whom he was denounced, insisting that the accusers were Jews and not Christian heretics and that the charge had two heads, his descent from David and his being a Christian. And **it records a second day and disowns it**: «Ορισμένοι Συναξαριστές περιττώς επαναλαμβάνουν τη μνήμη του και στις 18 Σεπτεμβρίου» — some synaxaristes needlessly repeat his memory on 18 September; 27 April is the day both the listing and the page head give and is what this row records, and the 18 September is noted here in the source's own dismissive words and is not a second row. It adds that a service for him by the hymnographer Theophanes is in the Paris codices. It prints one apolytikion and two kontakia, all three naming Symeon and so all three proper to him, which are stored here; its megalynarion is neither of the two kinds this corpus holds and was left."
     },
     {
       "church": "serbian",
@@ -48,5 +63,70 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 107,
+      "latest": 107,
+      "display": "107",
+      "basis": "traditional",
+      "note": "saint.gr: «Αφού συνελήφθη, βασανίσθηκε σκληρά και στη συνέχεια οδηγήθηκε σε σταυρικό θάνατο, το έτος 107 μ.Χ., σε ηλικία εκατόν είκοσι ετών» — crucified in the year 107 at the age of a hundred and twenty. The page heads him «(-12 - 107)»; that first figure is the page's own subtraction from the age of a hundred and twenty and not a year it states anywhere in its text, so no year of birth is recorded here."
+    }
+  },
+  "related": [
+    "james-the-brother-of-the-lord"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Χορὸς Ἀγγελικός.",
+      "text": "Χριστοῦ σε συγγενῆ, Συμεὼν Ἱεράρχα, καὶ Μάρτυρα στεῤῥόν, ἱερῶς εὐφημοῦμεν, τὴν πλάνην ὀλέσαντα, καὶ τὴν πίστιν τηρήσαντα· ὅθεν σήμερον, τήν παναγίαν σου μνήμην, ἑορτάζοντες, ἁμαρτημάτων τὴν λύσιν, εὐχαῖς σου λαμβάνομεν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Χορὸς Ἀγγελικός, on the page of «Άγιος Συμεών ο Αδελφόθεος Επίσκοπος Ιεροσολύμων»",
+        "url": "https://www.saint.gr/348/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thee, the kinsman of Christ, O hierarch Symeon, and a steadfast martyr, we praise in holy fashion, who didst destroy error and keep the faith; wherefore, as we keep thy all-holy memory today, we receive by thy prayers the loosing of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν.",
+      "text": "Τῆς ἄνω Σιών, πολίτης γενόμενος, τῆς κάτω Σιών, τὸν θρόνον ἐγκεχείρισαι· καὶ καλῶς τό ποίμνιον, ὁδηγήσας πρὸς μάνδραν οὐράνιον, ἐσταυρώθης Χριστῷ Συμεών, τό θεῖον πάθος αὐτοῦ μιμησάμενος.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν, on the page of «Άγιος Συμεών ο Αδελφόθεος Επίσκοπος Ιεροσολύμων»",
+        "url": "https://www.saint.gr/348/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having become a citizen of the Sion above, thou wast entrusted with the throne of the Sion below; and having guided the flock well towards the heavenly fold, thou wast crucified for Christ, O Symeon, imitating His divine passion.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ὡς ἀστέρα μέγιστον ἡ Ἐκκλησία, κεκτημένη σήμερον, τὸν θεηγόρον Συμεών, φωταγωγεῖται κραυγάζουσα· χαίροις Μαρτύρων σεπτὸν ἀκροθίνιον.",
+      "source": {
+        "text": "saint.gr, Έτερον Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of «Άγιος Συμεών ο Αδελφόθεος Επίσκοπος Ιεροσολύμων»",
+        "url": "https://www.saint.gr/348/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Church, possessing today as her greatest star the God-speaking Symeon, is led into the light and cries out: rejoice, O honoured first-fruits of the martyrs.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

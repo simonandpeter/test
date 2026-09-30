@@ -1,0 +1,72 @@
+{
+  "slug": "john-the-confessor-of-kathara",
+  "display_name": "John of Kathara",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "confessor"
+  ],
+  "office": "Abbot of the monastery of the Kathara",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Απριλίου, «Όσιος Ιωάννης ο Ομολογητής ηγούμενος Μονής Καθαρών», with the rank word, the epithet and the office left off."
+    }
+  ],
+  "related": [
+    "tarasius-of-constantinople"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 778,
+      "latest": 778,
+      "display": "about 778",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ιωάννης γεννήθηκε περί το 778 μ.Χ. στην Ειρηνούπολη» — about the year 778 — and the page heads him «(778 - 839)». The single year is the page's; the hedge «περί» is the page's too and is kept in the display."
+    },
+    "death": {
+      "earliest": 839,
+      "latest": 839,
+      "display": "probably 839",
+      "basis": "traditional",
+      "note": "saint.gr: «Εκεί ο Όσιος Ιωάννης, μετά από δυόμισι χρόνια, πιθανώς το έτος 839 μ.Χ., κοιμήθηκε με ειρήνη» — probably in the year 839 — and the page heads him «(778 - 839)». The «πιθανώς» is the page's own and is kept in the display."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Απριλίου — «Όσιος Ιωάννης ο Ομολογητής ηγούμενος Μονής Καθαρών»",
+        "url": "https://www.saint.gr/04/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Απριλίου εκάστου έτους», the same day as the listing. It is a long and circumstantial notice: born about 778 at Irenoupolis in the Decapolis of Coele-Syria to Theodore and Gregoria; a monk who went with his own abbot to Nicaea in 787 for the Seventh Ecumenical Council and thence to Constantinople, where the empress Irene and the patriarch Tarasius noticed them both, his elder becoming abbot of the monastery of the Dalmatoi and he being ordained presbyter; abbot of the monastery called of the Kathara under the emperor Nikephoros, whose reign it dates 802 to 811; imprisoned and exiled under Leo V, who took the throne in 813, first in a dependency of his own monastery, then in a fortress called Pentadaktylo in the land of Lampe for eighteen months, then, after the new patriarch Theodotus I Melissenus Kassiteras (815 to 821) had failed with him too, for two years in the fortress Kriotauros of the Boukellarioi; released under Michael II but forbidden Constantinople and confined to Chalcedon; and when in 836, under Theophilus, who succeeded in 829, he tried to enter the city, exiled by the patriarch John VII the Grammarian (836 to 842) to the island of Aphousia, where he died in peace about two and a half years later, probably in 839. **The only saint of the corpus the page names is Tarasius**, which is why his is the only `related` row: the empress Irene here is Irene of Athens and is not the corpus's Irene the Empress, the nun Xenia, who was the wife of John II Komnenos. It prints no hymn and names no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "lollion-the-new",
+  "display_name": "Lollion the New",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Λολλίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Απριλίου, «Άγιος Λολλίων ο Νέος», with the rank word left off and the epithet kept, because it is the whole of what the source gives to tell him by."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Απριλίου — «Άγιος Λολλίων ο Νέος»",
+        "url": "https://www.saint.gr/04/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Απριλίου εκάστου έτους», the same day as the listing, and its whole body is one sentence: «Ο Άγιος Λολλίων μαρτύρησε αφού βίαια τον έσυραν κατά γης» — he was martyred after being violently dragged along the ground. No century, no place, no persecutor, so there is no `dates` object and no `locations`. It prints no hymn and names no relic. Nothing in the corpus reads as this man; the name does not occur in it at all."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

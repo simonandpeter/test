@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'κυριλλοσ cyril-bishop-in-africa cyril-companion-of-photius cyril-of-alexandria cyril-of-astrakhan cyril-of-heliopolis cyril-of-jerusalem cyril-of-kazan cyril-of-the-forty-martyrs cyril-of-the-white-lake cyril-of-turov cyril-of-zographou cyril-vi-of-constantinople':
+    'Twelve now. The new one is Cyril of Turov on 28 April; the others are read in the el-04-18 entry for this name form.',
+  'αυξιβιοσ auxibius-28-april auxibius-of-soloi':
+    'Two men, and the pair is settled and written up in ro-run/FINDINGS.md. The 17 February Auxibius is the **first** bishop of Soloi, a Roman whom Mark the Evangelist catechised, baptised and ordained on Cyprus in the apostolic age and who held the high priesthood fifty years; this one is a Cypriot of the **fourth century** whose whole record is that he signed the acts of Sardica in 343, first among twelve Cypriot bishops, and had been at Nicaea in 325. Two centuries apart in one see, and the 17 February life names a third besides — the villager of Solopotamion he baptised and left his throne to.',
+  'θεοφιλοσ theophilus-martyr-6-february theophilus-of-brescia theophilus-of-caesarea theophilus-of-crete theophilus-of-rome theophilus-of-the-forty-martyrs theophilus-the-deacon-of-libya theophilus-the-new':
+    'Eight now. The new one is Theophilus of Brescia on 27 April; the others are read in the el-03-31 entry for this name form.',
+  'στεφανοσ stephen-27-february stephen-bekh stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-perm stephen-of-placidianae stephen-of-triglia stephen-of-vladimir stephen-xylinites':
+    'Ten now. The new one is Stephen of Vladimir on 27 April; the others are read in the el-04-26 entry for this name form.',
+  'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-kalita john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kazan john-of-lycopolis john-of-manglisi john-of-rouphinianai john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-old-lavra john-of-the-well john-of-verkhoturye john-of-vilnius john-of-yuryevets john-philosopher-of-georgia john-son-of-xenophon john-the-bulgarian john-the-confessor-of-kathara john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-with-minas-and-david':
+    'Thirty-seven now. The new one is John the Confessor of the Kathara on 27 April; the others are read in the el-04-16 entry for this name form.',
+  'ευλογιοσ eulogius-of-alexandria eulogius-of-cordoba eulogius-of-georgia eulogius-of-palestine eulogius-the-hospitaller':
+    'Five men on five Greek days: Alexandria on 13 February, Cordoba on 11 March, Georgia on 1 April, Palestine on 5 March and Eulogius the Hospitaller on 27 April.',
   'στεφανοσ stephen-27-february stephen-bekh stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-perm stephen-of-placidianae stephen-of-triglia stephen-xylinites':
     'Nine now. The new one is Stephen of Perm on 26 April; the others are read in the el-04-13 entry for this name form.',
   'νεστωρ nestor-26-april nestor-father-of-conon nestor-of-maghid nestor-the-martyr-2-march':

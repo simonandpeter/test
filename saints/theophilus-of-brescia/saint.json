@@ -1,0 +1,61 @@
+{
+  "slug": "theophilus-of-brescia",
+  "display_name": "Theophilus of Brescia",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "office": "Bishop of Brescia",
+  "names": [
+    {
+      "form": "Θεόφιλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Απριλίου, «Άγιος Θεόφιλος Επίσκοπος Βρεσκίας», with the rank word and the see left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Θεόφιλος έζησε τον 5ο αιώνα μ.Χ. και χειροτονήθηκε Επίσκοπος της πόλεως Βρεσκίας της Λομβαρδίας.» No year of birth or of death is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Απριλίου — «Άγιος Θεόφιλος Επίσκοπος Βρεσκίας»",
+        "url": "https://www.saint.gr/04/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Απριλίου εκάστου έτους», the same day as the listing, and its whole body is one sentence: «Ο Άγιος Θεόφιλος έζησε τον 5ο αιώνα μ.Χ. και χειροτονήθηκε Επίσκοπος της πόλεως Βρεσκίας της Λομβαρδίας». The century is the page's and is all the dating it gives; no `locations` was written even though the city is named, because nothing is said about where he lived or died beyond the see. None of the corpus's many Theophiluses is of this see or this century in the west. It prints no hymn and names no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
