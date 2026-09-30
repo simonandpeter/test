@@ -1,0 +1,59 @@
+{
+  "slug": "sabbas-the-spiritual",
+  "display_name": "Sabbas the Spiritual",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Σάββας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Όσιος Σάββας ο Πνευματικός», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1505,
+      "latest": 1505,
+      "display": "1505",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Σάββας κοιμήθηκε με ειρήνη το 1505 μ.Χ.», with the page's own head «Οσιος Σαββας ο Πνευματικος (; - 1505)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Φεβρουαρίου — «Όσιος Σάββας ο Πνευματικός»",
+        "url": "https://www.saint.gr/02/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "eubulus-of-caesarea",
+  "display_name": "Eubulus of Caesarea",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Εύβουλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Άγιοι Αδριανός και Εύβουλος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "adrian-of-caesarea"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Φεβρουαρίου — «Άγιοι Αδριανός και Εύβουλος»",
+        "url": "https://www.saint.gr/02/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

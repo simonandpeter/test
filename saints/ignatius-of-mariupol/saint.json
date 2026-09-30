@@ -6,6 +6,11 @@
       "form": "Ignatie de Marioupolis",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 februarie, «Sfântul Ierarh Ignatie de Marioupolis»."
+    },
+    {
+      "form": "Ιγνάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Άγιος Ιγνάτιος Επίσκοπος Μαριουπόλεως», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Φεβρουαρίου — «Άγιος Ιγνάτιος Επίσκοπος Μαριουπόλεως»",
+        "url": "https://www.saint.gr/02/03/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

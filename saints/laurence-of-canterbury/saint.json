@@ -1,0 +1,59 @@
+{
+  "slug": "laurence-of-canterbury",
+  "display_name": "Laurence of Canterbury",
+  "office": "Archbishop of Canterbury",
+  "sex": "male",
+  "types": [
+    "archbishop"
+  ],
+  "names": [
+    {
+      "form": "Λαυρέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Άγιος Λαυρέντιος Αρχιεπίσκοπος Καντουαρίας», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 619,
+      "latest": 619,
+      "display": "619",
+      "basis": "traditional",
+      "note": "saint.gr: «παρέμεινε στον θρόνο μέχρι της κοιμήσεώς του, το έτος 619 μ.Χ.», and the page's own head «Αγιος Λαυρεντιος Αρχιεπισκοπος Καντουαριας (; - 619)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Φεβρουαρίου — «Άγιος Λαυρέντιος Αρχιεπίσκοπος Καντουαρίας»",
+        "url": "https://www.saint.gr/02/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

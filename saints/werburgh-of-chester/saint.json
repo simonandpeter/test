@@ -1,0 +1,58 @@
+{
+  "slug": "werburgh-of-chester",
+  "display_name": "Werburgh",
+  "sex": "female",
+  "types": [
+    "abbess"
+  ],
+  "names": [
+    {
+      "form": "Βερβούργα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Αγία Βερβούργα», with the rank word left off; the page's life also prints the Latin-letter forms «(Werburga ή Werburgh ή Wereburga ή Wereburg ή Verbourg)»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 699,
+      "latest": 707,
+      "display": "between 699 and 707",
+      "basis": "traditional",
+      "note": "saint.gr: «Γεννήθηκε στο Staffordshire τον έβδομο αιώνα μ.Χ. και κοιμήθηκε στο Trentham, στις 3 Φεβρουαρίου μεταξύ των ετών 699 μ.Χ. και 707 μ.Χ.» — the page itself gives the death as a span."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Φεβρουαρίου — «Αγία Βερβούργα»",
+        "url": "https://www.saint.gr/02/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -7,6 +7,11 @@
       "form": "Ansgar",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 februarie, «Sfântul Ansgar, luminătorul Danemarcei și al Suediei». The life on the same site adds that he is also called Anskar or Oscar."
+    },
+    {
+      "form": "Ανσέριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Όσιος Ανσέριος Απόστολος της Δανίας και της Σκανδιναβίας», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -71,8 +76,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Φεβρουαρίου — «Όσιος Ανσέριος Απόστολος της Δανίας και της Σκανδιναβίας»",
+        "url": "https://www.saint.gr/02/03/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

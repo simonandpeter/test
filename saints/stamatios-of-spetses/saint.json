@@ -1,0 +1,70 @@
+{
+  "slug": "stamatios-of-spetses",
+  "display_name": "Stamatios of Spetses",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Σταμάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Άγιοι Σταμάτιος και Ιωάννης οι αυτάδελφοι και ο συνοδίτης αυτών Νικόλαος οι Νεομάρτυρες εκ Σπετσών», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1804,
+      "latest": 1804,
+      "display": "1804",
+      "basis": "traditional",
+      "note": "saint.gr's page head: «Αγιος Σταματιος ο Νεομαρτυρας Εκ Σπετσων (1804 - 1822)»; its narrative says he was beheaded «σε ηλικία 18 ετών»."
+    },
+    "death": {
+      "earliest": 1822,
+      "latest": 1822,
+      "display": "1822",
+      "basis": "attested",
+      "note": "saint.gr: «μαρτήρησαν υπέρ του Ονόματος του Χριστού στη Χίο, το έτος 1822 μ.Χ.»."
+    }
+  },
+  "related": [
+    "john-of-spetses",
+    "nicholas-of-spetses"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Φεβρουαρίου — «Άγιοι Σταμάτιος και Ιωάννης οι αυτάδελφοι και ο συνοδίτης αυτών Νικόλαος οι Νεομάρτυρες εκ Σπετσών»",
+        "url": "https://www.saint.gr/02/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

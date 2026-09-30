@@ -6,12 +6,18 @@
       "form": "Nicolae al Japoniei",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 februarie, «Sfântul Ierarh Nicolae al Japoniei»."
+    },
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Άγιος Νικόλαος Κασάτκιν Επίσκοπος Ιαπωνίας ο Ισαπόστολος», with the rank words, the see and the epithet left off."
     }
   ],
   "sex": "male",
   "types": [
     "hierarch",
-    "bishop"
+    "bishop",
+    "equal-to-the-apostles"
   ],
   "attestations": [
     {
@@ -36,8 +42,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Φεβρουαρίου — «Άγιος Νικόλαος Κασάτκιν Επίσκοπος Ιαπωνίας ο Ισαπόστολος»",
+        "url": "https://www.saint.gr/02/03/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -47,5 +62,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1836,
+      "latest": 1836,
+      "display": "1836",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε την 1η Αυγούστου 1836 μ.Χ. στο χωριό Μπεργιοζόβσκυ του Μπελσκ, κοντά στην περιοχή του Σμολένσκ»."
+    },
+    "death": {
+      "earliest": 1912,
+      "latest": 1912,
+      "display": "1912",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Νικόλαος κοιμήθηκε με ειρήνη το έτος 1912 μ.Χ.», with the page's own head «(1836 - 1912)»."
+    }
   }
 }

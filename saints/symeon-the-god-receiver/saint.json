@@ -6,6 +6,11 @@
       "form": "Simeon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 februarie, «Sfântul și Dreptul Simeon, primitorul de Dumnezeu»."
+    },
+    {
+      "form": "Συμεών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Δίκαιος Συμεών ο Θεοδόχος και Άννα η Προφήτιδα», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -40,8 +45,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Φεβρουαρίου — «Δίκαιος Συμεών ο Θεοδόχος και Άννα η Προφήτιδα»",
+        "url": "https://www.saint.gr/02/03/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -51,5 +65,40 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Τὸν Ὕπερθεον Λόγον σάρκα γενόμενον, ἐνηγκαλίσω ὡς βρέφος ἐν τῷ Ναῷ τοῦ Θεοῦ, Θεοδόχε Συμεὼν Πρεσβῦτα ἔνδοξε, ὅθεν καὶ Ἄννα ἡ σεπτή, ἀνθομολόγησιν αὐτῶ, προσήγαγεν ὠς Προφήτις, ὅθεν ὑμᾶς εὐφημοῦμεν, οἴα Χριστοῦ θείους θεράποντος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Δίκαιος Συμεών ο Θεοδόχος και Άννα η Προφήτιδα, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/1198/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Word who is above God, become flesh, you took into your arms as an infant in the temple of God, glorious elder Symeon who received God; whence Anna the revered also brought him her thanksgiving as a prophetess. Therefore we praise you both, as divine servants of Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Ὁ μήτραν παρθενικὴν ἁγιάσας τῷ τόκῳ σου, καὶ χεῖρας τοῦ Συμεὼν εὐλογήσας ὡς ἔπρεπε, προφθάσας καὶ νῦν ἔσωσας ἠμᾶς Χριστὲ ὁ Θεός. Ἀλλ' εἰρήνευσον ἐν πολέμοις τὸ πολίτευμα, καὶ κραταίωσον Βασιλεῖς οὓς ἠγάπησας, ὁ μόνος φιλάνθρωπος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Δίκαιος Συμεών ο Θεοδόχος και Άννα η Προφήτιδα, Λειτουργικά κείμενα: Κοντάκιον. This is the kontakion of the Meeting of the Lord, addressed to Christ and naming Symeon's hands; saint.gr prints it on his page and no other kontakion for him.",
+        "url": "https://www.saint.gr/1198/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You who sanctified the virgin womb by your birth, and blessed the hands of Symeon as was fitting, have come beforehand and saved us also now, Christ our God. Give peace in wars to our commonwealth, and strengthen the rulers whom you have loved, only lover of mankind.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

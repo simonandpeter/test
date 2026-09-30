@@ -1,0 +1,65 @@
+{
+  "slug": "romanus-of-uglich",
+  "display_name": "Romanus of Uglich",
+  "sex": "male",
+  "types": [
+    "prince"
+  ],
+  "names": [
+    {
+      "form": "Ρωμανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Άγιος Ρωμανός ο Πρίγκιπας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1235,
+      "latest": 1235,
+      "display": "1235",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ρωμανός του Ούγκλιχ ήταν υιός του ηγεμόνα Βλαντιμήρ Κωνσταντίνοβιτς και γεννήθηκε το 1235 στη Ρωσία»."
+    },
+    "death": {
+      "earliest": 1285,
+      "latest": 1285,
+      "display": "1285",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1285 μ.Χ.», and the page's own head «Αγιος Ρωμανος ο Πριγκιπας (1235 - 1285)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Φεβρουαρίου — «Άγιος Ρωμανός ο Πρίγκιπας»",
+        "url": "https://www.saint.gr/02/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

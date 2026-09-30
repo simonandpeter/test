@@ -1,0 +1,62 @@
+{
+  "slug": "paul-of-simonov",
+  "display_name": "Paul of Simonov",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Όσιος Παύλος εκ Ρωσίας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1825,
+      "latest": 1825,
+      "display": "1825",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Παύλος, μαθητής του Αγίου Παϊσίου (Βελιτσκόφσκυ) ασκήτεψε στη μονή Σιμονώφ της Ρωσίας και κοιμήθηκε με ειρήνη το έτος 1825 μ.Χ.», with the page's own head «Οσιος Παυλος Εκ Ρωσιας (; - 1825)»."
+    }
+  },
+  "related": [
+    "paisius-of-neamt"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Φεβρουαρίου — «Όσιος Παύλος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/02/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

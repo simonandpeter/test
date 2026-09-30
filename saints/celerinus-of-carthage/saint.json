@@ -1,0 +1,59 @@
+{
+  "slug": "celerinus-of-carthage",
+  "display_name": "Celerinus of Carthage",
+  "sex": "male",
+  "types": [
+    "deacon",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Κελερίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Άγιος Κελερίνος ο Μάρτυρας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 249,
+      "latest": 253,
+      "display": "249–253",
+      "basis": "traditional",
+      "note": "saint.gr dates him by two reigns and not by his own years: «Κατά τον διωγμό των Χριστιανών επί αυτοκράτορα Δεκίου (249-251 μ.Χ.) βρισκόταν στην Ρώμη» and «Ο Πάπας Ρώμης Κορνήλιος (251-253 μ.Χ.) και ο ιερός Αυγουστίνος εγκωμιάζουν τον Άγιο Κελερίνο, ο οποίος είναι άγνωστο πότε κοιμήθηκε»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Φεβρουαρίου — «Άγιος Κελερίνος ο Μάρτυρας»",
+        "url": "https://www.saint.gr/02/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

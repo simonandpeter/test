@@ -115,6 +115,28 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'συμεων simeon-of-tver simeon-the-elder symeon-the-god-receiver symeon-the-new-of-mytilene':
+    'four now. The new one is Simeon of Tver, dead 1289, kept on 3 Φεβρουαρίου — the day of Symeon the God-Receiver, whose own row the wave left alone. The other two are read in the el-02-01 entry for this name form, the Elder of 26 Ιανουαρίου and the New of Mytilene.',
+  'σαββασ sabbas-of-zographou sabbas-the-spiritual sava-of-serbia':
+    'three men. The new one is Sabbas the Spiritual, dead 1505, kept on 3 Φεβρουαρίου; the corpus keeps Sava of Serbia, upgraded in this wave on the Greek 14 January, and Sabbas of Zographou among the Athonite martyrs of the 1270s. A second Serbian Sava — Sava II, dead 1271 — is drafted for the Greek 8 Φεβρουαρίου and is not this man either.',
+  'ρωμανοσ romanus-of-karpenisi romanus-of-lacedaemon romanus-of-samosata romanus-of-uglich':
+    'four men. The new one is Romanus of Uglich, dead 1285, kept on 3 Φεβρουαρίου; the other three are the new-martyr of Karpenisi and the hieromonk of Lacedaemon, read in the el-01-06 entry for this name form, and Romanus of Samosata among the seven of 29 Ιανουαρίου.',
+  'ιακωβοσ jacob-the-hermit james-of-nisibis james-of-samosata james-of-serbia james-of-zographou-the-first james-of-zographou-the-second':
+    'six men. The new one is James of Serbia, of the thirteenth century, kept on 3 Φεβρουαρίου; the corpus keeps Jacob the hermit and James of Nisibis, both upgraded in this wave, James of Samosata among the seven the Greek 29 Ιανουαρίου keeps, and the two Jameses of Zographou, whom the corpus already numbers the first and the second because the Athonite company held two of the name.',
+  'σιμων simon-of-zographou simon-the-martyr-3-february':
+    'two men. saint.gr keeps a bare martyr Simon with no year on 3 Φεβρουαρίου; the corpus keeps Simon of Zographou among the Athonite martyrs of 1275 to 1282, on the Romanian 10 October and the Greek 22 September.',
+  'παυλοσ paul-brother-of-pausirius paul-disciple-of-dionysius-of-alexandria paul-of-damascus paul-of-obnora paul-of-simonov paul-of-zographou paul-the-martyr-3-february':
+    'seven now, and two arrive on this 3 Φεβρουαρίου: Paul of Simonov, dead 1825, and a bare martyr Paul with no year. The other five are read in the el-01-10 and el-01-24 entries for this name form.',
+  'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-of-japan nicholas-of-spetses nicholas-of-valaam':
+    'four now, and two of them are on this 3 Φεβρουαρίου: Nicholas of Japan, dead 1912, whom the Romanian calendar keeps on the day too, and Nicholas of Spetses, dead 1822. The other two are read in the el-01-06 entry for this name form.',
+  'λαυρεντιοσ laurence-martyr-9-january laurence-of-canterbury laurence-of-turov':
+    'three men. The new one is Laurence of Canterbury, dead 619, kept on 3 Φεβρουαρίου; the other two are read in the el-01-29 entry for this name form, the bishop of Turov dead 1194 and the bare martyr of 9 Ιανουαρίου.',
+  'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-mauropous john-of-edessa john-of-kazan john-of-spetses john-of-syracuse john-son-of-xenophon john-the-hut-dweller':
+    'nine now. The new one is John of Spetses, dead 1822, one of the two the island keeps with Nicholas; the other eight are read in the el-01-22, el-01-24, el-01-26 and el-01-31 entries for this name form.',
+  'κλαυδιοσ claudius-of-corinth claudius-venerable-3-february':
+    'two men, and the states of life differ. saint.gr keeps a venerable Claudius with no year on 3 Φεβρουαρίου; the corpus keeps Claudius one of the seven martyrs of Corinth, upgraded in this wave on 31 Ιανουαρίου. A monastic and a martyr of a named company.',
+  'αδριανοσ adrian-of-caesarea adrian-of-canterbury adrian-of-megara':
+    'three men. The new one is Adrian of Caesarea, whose page gives no year, kept on 3 Φεβρουαρίου; the other two are read in the el-02-01 entry for this name form, the martyr of Megara and the English abbot of the Greek 9 January.',
   'ευθυμιοσ euthymius-kereselidze euthymius-of-tarnovo euthymius-of-zographou euthymius-the-man-of-god':
     'four now. The new one is Euthymius Kereselidze, the Georgian hymnographer, kept on 2 Φεβρουαρίου; the other three are read in the el-01-20 entry for this name form — the patriarch of Tarnovo dead 1402, the Athonite martyr of the 1270s, and the Georgian professor of 1863 to 1953. Two Georgians among the four and two different centuries, and saint.gr keeps them on two days.',
   'τιμοθεοσ timothy-1-february timothy-disciple-of-babylas timothy-of-ephesus':

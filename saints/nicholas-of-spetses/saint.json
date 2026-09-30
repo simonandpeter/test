@@ -1,0 +1,63 @@
+{
+  "slug": "nicholas-of-spetses",
+  "display_name": "Nicholas of Spetses",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Άγιοι Σταμάτιος και Ιωάννης οι αυτάδελφοι και ο συνοδίτης αυτών Νικόλαος οι Νεομάρτυρες εκ Σπετσών», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1822,
+      "latest": 1822,
+      "display": "1822",
+      "basis": "attested",
+      "note": "saint.gr: «μαρτήρησαν υπέρ του Ονόματος του Χριστού στη Χίο, το έτος 1822 μ.Χ.». The page's head also prints «(1800 - 1822)» for him, which does not sit with its own narrative, where he is «ο γέροντας πλοίαρχος», the old captain; no year of birth is taken here."
+    }
+  },
+  "related": [
+    "stamatios-of-spetses",
+    "john-of-spetses"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Φεβρουαρίου — «Άγιοι Σταμάτιος και Ιωάννης οι αυτάδελφοι και ο συνοδίτης αυτών Νικόλαος οι Νεομάρτυρες εκ Σπετσών»",
+        "url": "https://www.saint.gr/02/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
