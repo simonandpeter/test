@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδοτοσ theodotus-1-january theodotus-companion-of-asklepiodote theodotus-of-marcianopolis theodotus-of-the-monastery-of-publius':
+    'Four men on four Greek days: 1 January, 19 February, 17 September and 25 January. The 19 February and 17 September pair is the Marcianopolis question read in the entry for the name form ασκληπιοδοτη.',
+  'νικητασ nicetas-of-epirus nicetas-of-pythia':
+    'Two men: Epirus on 19 February, and Pythia on 4 February.',
+  'μαξιμοσ maximus-brother-of-dometius maximus-companion-of-asklepiodote maximus-companion-of-fausta maximus-of-kapsokalyvia maximus-of-marcianopolis maximus-of-totma maximus-of-ungrovlachia maximus-son-of-paul-and-tatta':
+    'Eight men on eight Greek days: 19 January, 19 February, 6 February, 13 January, 17 September, 16 January, 18 January and 25 September. The 19 February and 17 September pair is the Marcianopolis question read in the entry for the name form ασκληπιοδοτη.',
+  'μαρια maria-6-january maria-of-olonets mary-called-marinos mary-of-aza mary-sister-of-lykarion mary-wife-of-xenophon':
+    'Six women on six Greek days: 6 January, 19 February (Olonets), 12 February, 26 September, 8 February and 26 January.',
+  'asklepiodote companion maximus asklepiodote-companion-of-maximus maximus-companion-of-asklepiodote':
+    'Two of the four on the 19 February line, each named after the other in the display name, which is what folds them. A man and a woman, martyred together on one page.',
+  'ασκληπιοδοτη asclepiodote-of-marcianopolis asklepiodote-companion-of-maximus':
+    'The 19 February four and the Marcianopolis trio share three names and nothing else. saint.gr keeps Maximus, Theodotus and Asclepiodote of Marcianopolis on 17 September, where the corpus has them from the Russian calendar as leading citizens tried under Tiris, governor of Thrace, in the persecution of Maximian Galerius; its 19 February page prints «Άγιοι Μάξιμος, Θεόδοτος, Ησύχιος και Ασκληπιοδότη» and gives one account for all four with no homeland, no city, no emperor and no century, the three men cast into a furnace and the woman beheaded. Two entries on one Greek calendar are two commemorations by the settled rule, and the September row is already venerated and not a readers to move, so both companies stand — but the coincidence of three names in one company is strong and the pair is an open question in ro-run/FINDINGS.md.',
   'θεοδουλοσ theodulus-companion-of-agapitus theodulus-companion-of-pamphilus theodulus-of-caesarea-17-february theodulus-of-myropolis theodulus-son-of-nilus theodulus-the-executioner':
     'Six men on six Greek days: 18 February in the company of Agapitus, 16 February in the company of Pamphilus, 17 February at Caesarea under Maximinus, 12 September, 14 January and 4 September. The 16 and 17 February pair is read in the el-02-17 entry for this name form and is an open question in ro-run/FINDINGS.md for the city they share.',
   'παρηγοριοσ paregorius-of-patara paregorius-of-samosata':

@@ -6,6 +6,11 @@
       "form": "Arhip",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 februarie, «Sfântul Apostol Arhip»."
+    },
+    {
+      "form": "Άρχιππος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Φεβρουαρίου, «Άγιος Άρχιππος ο Απόστολος», with the rank word and the title left off."
     }
   ],
   "sex": "male",
@@ -28,6 +33,56 @@
       },
       "english": {
         "text": "O holy Apostles, entreat the merciful God to grant our souls forgiveness of sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Ἀπόστολε ἅγιε Ἄρχιππε, πρέσβευε τῷ ἐλεήμονι Θεῷ, ἵνα πταισμάτων ἄφεσιν, παράσχῃ ταῖς ψυχαῖς ἡμῶν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Άρχιππος ο Απόστολος, Λειτουργικά κείμενα: Ἀπολυτίκιον. This is the common of an apostle, printed under his name with his name in it, as his own service.",
+        "url": "https://www.saint.gr/3751/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy apostle Archippus, intercede with the merciful God, that he grant our souls forgiveness of offences.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὃ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Ὡς προσπελάσας ὁλικὴ διαθέσει, τῷ τῶν ἀρρήτων μυητῆ καὶ ἐπόπτη, τῶν Ἀποστόλων σύσκηνος ἐδείχθης σοφέ, ὅθεν τὸν τῆς πίστεως, θεῖον λόγον κηρύξας, ἔτεμες τοὶς τρόποις σου, τὰ φυτὰ τῆς κακίας, καὶ ἐναθλήσας Ἄρχιππε στερρῶς, δικαιοσύνης ἐδέξω τὸν στέφανον.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Άρχιππος ο Απόστολος, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3751/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having drawn near with your whole disposition to him who was initiated into things unspeakable and beheld them, you were shown, wise one, a tent-fellow of the apostles; whence, having preached the divine word of the faith, you cut down by your manner of life the plants of wickedness, and having contended firmly, Archippus, you received the crown of righteousness.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ὡς ἀστέρα μέγαν σε, ἡ Ἐκκλησία, κεκτημένη Ἄρχιππε, ταῖς τῶν θαυμάτων σου βολαῖς, φωτιζομένη κραυγάζει σοι· Σῶσον τούς πίστει, τιμῶντας τὴν μνήμην σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Άγιος Άρχιππος ο Απόστολος, Λειτουργικά κείμενα: Κοντάκιον. Its Oikos and a Kathisma follow it on the page and are not copied here, the corpus keeping no kind for either.",
+        "url": "https://www.saint.gr/3751/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having you for a great star, Archippus, the Church, lit by the beams of your wonders, cries out to you: save those who honour your memory in faith.",
         "rendered": "site"
       }
     }
@@ -55,8 +110,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Φεβρουαρίου — «Άγιος Άρχιππος ο Απόστολος»",
+        "url": "https://www.saint.gr/02/19/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -66,5 +130,10 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "paul-the-apostle",
+    "philemon-the-apostle",
+    "apphia-wife-of-philemon"
+  ]
 }

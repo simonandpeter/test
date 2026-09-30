@@ -1,0 +1,51 @@
+{
+  "slug": "sophronius-bishop-19-february",
+  "display_name": "Sophronius (19 February)",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Σωφρόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Φεβρουαρίου, «Όσιος Σωφρόνιος», with the rank word left off. The line gives him no epithet and no see; the English form carries the day, because this corpus holds several of the name."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "saint.gr says where it gets him and how thin the ground is: «Δεν υπάρχουν πληροφορίες για τη ζωή του Οσίου. Η μνήμη του αναφέρεται από τον Παρισινό Κώδικα 1578 και τον Delehaye, όπου καλείται επίσκοπος» — there is no information about the venerable one's life; his memory is mentioned by the Paris Codex 1578 and by Delehaye, where he is called bishop (https://www.saint.gr/3756/saint.aspx, read 30 September 2026). The rank in this folder is that mention and nothing else."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Φεβρουαρίου — «Όσιος Σωφρόνιος»",
+        "url": "https://www.saint.gr/02/19/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "rabbulas-of-samosata",
+  "display_name": "Rabbulas of Samosata",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "monk",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Ραβουλάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Φεβρουαρίου, «Όσιος Ραβουλάς», with the rank word left off. The line gives him no epithet; the English form carries the birthplace the life page gives him."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Φεβρουαρίου — «Όσιος Ραβουλάς»",
+        "url": "https://www.saint.gr/02/19/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

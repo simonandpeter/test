@@ -6,6 +6,16 @@
       "form": "Filoteea din Atena",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 februarie, «Sfânta Cuvioasă Filoteea din Atena»."
+    },
+    {
+      "form": "Φιλοθέη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Φεβρουαρίου, «Αγία Φιλοθέη η Αθηναία», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Ρηγούλα",
+      "lang": "el",
+      "note": "The name saint.gr gives her before her tonsure: «Έτσι η Ρηγούλα (ή Ρεβούλα, δηλαδή Παρασκευούλα), αυτό ήταν το όνομά της προτού γίνει μοναχή» — Rigoula, or Revoula, that is Paraskevoula."
     }
   ],
   "sex": "female",
@@ -52,8 +62,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Φεβρουαρίου — «Αγία Φιλοθέη η Αθηναία»",
+        "url": "https://www.saint.gr/02/19/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -63,5 +82,54 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὅσιων τὴν ἔλλαμψιν, εἰσδεδεγμένη σεμνή, τὴν πάλιν ἐφαίδρυνας, τῶν Ἀθηναίων τὴ σῆ, ἀσκήσει καὶ χάριτι, σὺ γὰρ ἐν εὐποιίαις, διαλάμπουσα Μῆτερ, ἤθλησας δι' ἀγάπην, εὐσεβῶς τοῦ πλησίον διὸ σὲ ὢ Φιλοθέη, Χριστὸς ἐδόξασε.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Φιλοθέη η Αθηναία, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/3757/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the shining of the venerable, reverend one, you made glad again the city of the Athenians by your ascesis and your grace; for shining out, mother, in good works, you contended devoutly for love of your neighbour — and therefore Christ has glorified you, Philothei.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἀθηνῶν τῶν κλεινῶν τε νῦν καὶ πάλαι τὸ βλάστημα καὶ τῶν χθὲς καὶ πρώην ὁσίων τὸ ἀρίζηλον καύχημα τιμήσωμεν ἐν ὕμνοις οἱ πιστοί, ὁσίαν Φιλοθέην εὐλαβῶς ὅτι τὸν Χριστὸν εὐτόνως πάντων τῶν γεηρῶν ἀντήλλαξεν. Ἔχουσα οὗν συμπρεσβευτὴν τὸν παμμέγαν Διονύσιον, σῶζε τοὺς προσκυνούντας, εὐσεβῶς τὸ πάνσεπτον σκῆνος σου.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Φιλοθέη η Αθηναία, Λειτουργικά κείμενα: Έτερον Ἀπολυτίκιον. The page prints no ἦχος over this one.",
+        "url": "https://www.saint.gr/3757/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful honour in hymns the offspring of renowned Athens, now and of old, and the most conspicuous boast of the venerable of yesterday and of long before — venerable Philothei, reverently, because she strenuously took Christ in exchange for all earthly things. Having therefore the all-great Dionysius to intercede with you, save those who devoutly venerate your all-honoured body.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἀθηναίων ἡ πόλις ἡ περιώνυμος Φιλοθέην τιμᾷ τὴν ὁσιομάρτυρα καὶ ἀσπάζεται αὐτῆς τὸ θεῖον λείψανον, ὅτι ἐβίωσε σεμνῶς καὶ μετήλλαξε τὸ ζῆν ἀθλήσει καὶ μαρτυρίῳ, καὶ πρεσβεύει πρὸς τὸν Σωτῆρα, διδόναι πᾶσι τὸ θεῖον ἔλεος.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Αγία Φιλοθέη η Αθηναία, Λειτουργικά κείμενα: a third Έτερον Ἀπολυτίκιον. The page prints no ἦχος over this one either.",
+        "url": "https://www.saint.gr/3757/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The renowned city of the Athenians honours Philothei the venerable martyr and kisses her divine relic, because she lived reverently and exchanged this life by contest and by martyrdom; and she intercedes with the Saviour to give the divine mercy to all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

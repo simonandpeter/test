@@ -6,6 +6,11 @@
       "form": "Macarie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 februarie, «Sfântul Cuvios Mărturisitor Macarie»."
+    },
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Φεβρουαρίου, «Όσιοι Ευγένιος και Μακάριος οι Ομολογητές», with the rank word and the title left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Φεβρουαρίου — «Όσιοι Ευγένιος και Μακάριος οι Ομολογητές»",
+        "url": "https://www.saint.gr/02/19/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -46,5 +60,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "eugenius-the-confessor"
+  ]
 }

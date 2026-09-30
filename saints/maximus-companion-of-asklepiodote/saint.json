@@ -1,0 +1,55 @@
+{
+  "slug": "maximus-companion-of-asklepiodote",
+  "display_name": "Maximus, companion of Asklepiodote",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "preacher"
+  ],
+  "names": [
+    {
+      "form": "Μάξιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Φεβρουαρίου, «Άγιοι Μάξιμος, Θεόδοτος, Ησύχιος και Ασκληπιοδότη», with the rank word left off. Beside the gloss the page prints a note that is not about a saint at all: a philosopher of Tyre of the second century after Christ, and a philosopher of the fourth century before."
+    }
+  ],
+  "related": [
+    "theodotus-companion-of-asklepiodote",
+    "hesychius-companion-of-asklepiodote",
+    "asklepiodote-companion-of-maximus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Φεβρουαρίου — «Άγιοι Μάξιμος, Θεόδοτος, Ησύχιος και Ασκληπιοδότη»",
+        "url": "https://www.saint.gr/02/19/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

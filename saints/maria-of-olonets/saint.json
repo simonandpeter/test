@@ -1,0 +1,61 @@
+{
+  "slug": "maria-of-olonets",
+  "display_name": "Maria of Olonets",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "ascetic",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Μαρία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Φεβρουαρίου, «Οσία Μαρία του Όλονετς», with the rank word and the place left off. No Russian form is printed on the page, and none is invented here; her father's name it gives in Greek letters as «Βασίλειος Σωφρόνωφ»."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1860,
+      "latest": 1860,
+      "display": "1860",
+      "basis": "attested",
+      "note": "saint.gr: «Η ψυχή της χωρίσθηκε από το σώμα της Αγίας το έτος 1860 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Φεβρουαρίου — «Οσία Μαρία του Όλονετς»",
+        "url": "https://www.saint.gr/02/19/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
