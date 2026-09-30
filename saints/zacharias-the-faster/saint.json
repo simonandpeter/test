@@ -6,6 +6,11 @@
       "form": "Zaharia Postitorul de la Lavra Peșterilor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 martie."
+    },
+    {
+      "form": "Ζαχαρίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Μαρτίου, «Όσιος Ζαχαρίας ο εν τη Λαύρα του Κιέβου ασκήσας», with the rank word and the clause of place left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Μαρτίου — «Όσιος Ζαχαρίας ο εν τη Λαύρα του Κιέβου ασκήσας»",
+        "url": "https://www.saint.gr/03/24/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Μαρτίου εκάστου έτους.» The whole entry is one sentence, and it disagrees with the century the corpus holds: saint.gr says «Ο Όσιος Ζαχαρίας έζησε τέλη του 11ου και αρχές του 12ου αιώνα μ.Χ. και ασκήτεψε στην Λαύρα των Σπηλαίων του Κιέβου», the end of the eleventh and the beginning of the twelfth century, where the corpus's floruit, read from the Russian sources, is the thirteenth and fourteenth. The place and the day are the same and the identification rests on them; the dates field has not been touched, and the disagreement is recorded here. The same day keeps the other Zacharias of the Egyptian skete, and the two lines are told apart by this one's «ο εν τη Λαύρα του Κιέβου ασκήσας»."
     },
     {
       "church": "serbian",

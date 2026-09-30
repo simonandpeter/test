@@ -1,0 +1,53 @@
+{
+  "slug": "romylus-brother-of-secundus",
+  "display_name": "Romylus, brother of Secundus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ρωμύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Μαρτίου, «Άγιοι Ρωμύλος και Σεκούνδος οι αυτάδελφοι Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "related": [
+    "secundus-brother-of-romylus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Μαρτίου — «Άγιοι Ρωμύλος και Σεκούνδος οι αυτάδελφοι Μάρτυρες»",
+        "url": "https://www.saint.gr/03/24/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Μαρτίου εκάστου έτους.» The two share one line and one page, and the page gives each of them a heading of his own — «Αγιος Ρωμυλος ο Μαρτυρας» and «Αγιος Σεκουνδος ο Μαρτυρας» — so they are two folders. The whole entry is one sentence and it gives no emperor and no year, so there is no dates object. The day's line calls them αυτάδελφοι, brothers by the same parents, and that is the only thing said of their kinship. He is not the corpus's Romylos of Ravanica, the Sinaite of the Serbian lands whose greek row stands on 18 Σεπτεμβρίου."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

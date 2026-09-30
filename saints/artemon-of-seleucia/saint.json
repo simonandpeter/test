@@ -7,6 +7,11 @@
       "form": "Artemon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 martie, «Sfântul Ierarh Artemon, Episcopul Seleuciei»."
+    },
+    {
+      "form": "Αρτέμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Μαρτίου, «Όσιος Αρτέμων επίσκοπος Σελευκείας της Πισιδίας», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Μαρτίου — «Όσιος Αρτέμων επίσκοπος Σελευκείας της Πισιδίας»",
+        "url": "https://www.saint.gr/03/24/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Μαρτίου εκάστου έτους.» The same 24 Μαρτίου keeps a second Artemon, the hieromartyr and presbyter of Laodicea, on a page of his own, and the corpus keeps him too; the see in this line — Σελευκείας της Πισιδίας — is what tells the two apart, and neither row has been written from the other's page. This page gives no year, only «στους αποστολικούς χρόνους», in the apostolic times, so no dates object has been written from it."
     },
     {
       "church": "serbian",
@@ -47,5 +62,27 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "paul-the-apostle"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θεία Χάριτη ιερατεύσας, φύσιν άλογον, τω ρήματί σου, υπακούουσαν έσχηκας, Άγιε, και εναθλήσας Αρτέμων στερρότατα, διπλών στεφάνων θεόθεν ηξίωσαι, Πάτερ Όσιε, Χριστόν τον θεόν ικέτευε, δωρήσασθαι ημίν το μέγα έλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως, on the page of Όσιος Αρτέμων επίσκοπος Σελευκείας της Πισιδίας. It names him and is the only hymn the page prints; its accents are copied as the page has them. Two things in it the page's own life does not say — that a brute beast obeyed his word, and that he contended and won a double crown — which is the language of a martyrdom, and this page's Artemon dies in peace. The text is taken whole as his service because it stands under his name, and the discrepancy is recorded here rather than mended.",
+        "url": "https://www.saint.gr/82/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having served as priest by divine grace, thou hadst a brute nature obedient to thy word, O holy one; and having contended most steadfastly, O Artemon, thou wast counted worthy from God of a double crown. O venerable father, entreat Christ God to grant us great mercy.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

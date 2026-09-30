@@ -6,6 +6,11 @@
       "form": "Zaharia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 martie, «Sfântul Cuvios Zaharia»."
+    },
+    {
+      "form": "Ζαχαρίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Μαρτίου, «Όσιος Ζαχαρίας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Μαρτίου — «Όσιος Ζαχαρίας»",
+        "url": "https://www.saint.gr/03/24/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Μαρτίου εκάστου έτους.» The Greek line is bare — «Όσιος Ζαχαρίας», with no patronymic and no country — and what identifies it as this folder rather than the day's other Zacharias, the ascetic of the Lavra of the Caves at Kyiv, is that saint.gr's own page for it links «Όσιος Καρίων» beside him, and that its account is the story of the abba Zacharias of the Egyptian skete: Macarius and Moses coming to him for his words, and abba Isidore speaking at his death. The page gives no year."
     },
     {
       "church": "serbian",

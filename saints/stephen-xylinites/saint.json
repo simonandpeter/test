@@ -1,0 +1,52 @@
+{
+  "slug": "stephen-xylinites",
+  "display_name": "Stephen Xylinites",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Μαρτίου, «Όσιος Στέφανος ο Ξυλινίτης», with the rank word left off. The epithet Ξυλινίτης is kept in the slug and in the English form and left out of the recorded name."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Μαρτίου — «Όσιος Στέφανος ο Ξυλινίτης»",
+        "url": "https://www.saint.gr/03/24/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Μαρτίου εκάστου έτους.» The entry is one sentence, carries no asterisk and no disclaimer, and gives no year and no place, so there is no dates object. The same day keeps a second Stephen, one of the two martyrs of Kazan, and the two lines are told apart by this one's epithet."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

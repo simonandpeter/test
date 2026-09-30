@@ -115,6 +115,22 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'στεφανοσ stephen-27-february stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-placidianae stephen-xylinites':
+    'Six now, and the two new ones share 24 March as two entries of the page, Stephen of Kazan and Stephen Xylinites; the others are read in the el-02-27 entry for this name form.',
+  'σεκουνδοσ secundus-brother-of-romylus secundus-companion-of-perpetua':
+    'Two men: the brother of Romylus on 24 March and the companion of Perpetua on 1 February.',
+  'brother romylus secundus romylus-brother-of-secundus secundus-brother-of-romylus':
+    'The two brothers the 24 March page names together, each named after the other, which is what folds them.',
+  'ρωμυλοσ romylos-martyr-at-venice romylus-brother-of-secundus romylus-companion-of-agapius':
+    'Three men: the martyr at Venice on 17 February, the brother of Secundus on 24 March and the companion of Agapius on 15 March.',
+  'πετροσ peter-abesalamites peter-companion-of-aphrodisius peter-companion-of-leucius peter-companion-of-manuel peter-disciple-of-dionysius-of-alexandria peter-of-bulgaria peter-of-capitolias peter-of-damascus peter-of-galatia peter-of-kazan peter-of-monevata peter-of-sebaste peter-of-tobolsk peter-son-of-john-of-syracuse peter-the-egyptian peter-the-gaoler peter-the-peloponnesian peter-the-sign-bearer':
+    'Eighteen now. The new one is Peter of Kazan on 24 March; the others are read in the el-03-14 entry for this name form.',
+  'παρθενιοσ parthenius-of-lampsacus parthenius-of-zographou parthenius-the-third':
+    'Three men: Lampsacus on 7 February, Zographou on 22 September and Parthenius the Third, the patriarch, on 24 March.',
+  'μαρτινοσ martin-of-the-thebaid martin-the-martyr-22-september':
+    'Two men: the Thebaid on 24 March and the martyr of 22 September.',
+  'αβρααμ abraham-of-latros abraham-of-pechenga':
+    'Two men: Latros on 24 March and Pechenga on 4 February.',
   'παχωμιοσ pachomius-companion-of-papyrinus pachomius-of-nerekhta':
     'Two men: the companion of Papyrinus on 13 January and Pachomius of Nerekhta on 23 March.',
   'νικων nikon-companion-of-mark-the-shepherd nikon-of-the-kyiv-caves':

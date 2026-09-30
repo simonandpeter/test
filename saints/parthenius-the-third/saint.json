@@ -1,0 +1,68 @@
+{
+  "slug": "parthenius-the-third",
+  "display_name": "Parthenius III",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "patriarch",
+    "new-martyr"
+  ],
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Παρθένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Μαρτίου, «Άγιος Παρθένιος ο Γ (ή Παρθενάκης) Πατριάρχης Κωνσταντινούπολης», with the rank word, the numeral and the see left off."
+    },
+    {
+      "form": "Παρθενάκης",
+      "lang": "el",
+      "note": "The second form saint.gr's own line offers in its parenthesis, «Άγιος Παρθένιος ο Γ (ή Παρθενάκης)» — Parthenius III, or Parthenakis. Read out of its calendar line for 24 Μαρτίου."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1657,
+      "latest": 1657,
+      "display": "1657",
+      "basis": "traditional",
+      "note": "saint.gr: «Τότε το Σάββατο του Λαζάρου, στις 24 Μαρτίου 1657, τον κρέμασαν στην Καγκελωτή πύλη Παρμάκ - Καπού», and the page heads him «(; - 1657)», leaving the first date a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Μαρτίου — «Άγιος Παρθένιος ο Γ (ή Παρθενάκης) Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/03/24/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Μαρτίου εκάστου έτους.» The page heads him «(; - 1657)» and its account of the hanging names the day twice over — «το Σάββατο του Λαζάρου, στις 24 Μαρτίου 1657», Lazarus Saturday and 24 March, which fell together in the year he died but are two different things in the calendar; the fixed 24 Μαρτίου is what saint.gr's day page keeps him on and what this row records. It sets beside him the synaxis of all the saints of Lesbos, the synaxis of the archbishops and patriarchs of Constantinople and the synaxis of the new martyrs after the taking of Constantinople, all of which are companies and no folders, and says that Meletius Syrigos wrote his martyrdom."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

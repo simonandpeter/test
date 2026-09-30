@@ -1,0 +1,52 @@
+{
+  "slug": "martin-of-the-thebaid",
+  "display_name": "Martin of the Thebaid",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Μαρτίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Μαρτίου, «Όσιος Μαρτίνος ο Θηβαίος», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Μαρτίου — «Όσιος Μαρτίνος ο Θηβαίος»",
+        "url": "https://www.saint.gr/03/24/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Μαρτίου εκάστου έτους.» The entry is one sentence, carries no asterisk and no disclaimer, and gives no year, so there is no dates object. He is neither of the two men of the name the corpus already keeps — not Martin pope of Rome, kept on 20 Σεπτεμβρίου, and not the Martin of 22 Σεπτεμβρίου."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

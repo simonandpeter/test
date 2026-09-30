@@ -6,6 +6,11 @@
       "form": "Artemon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 aprilie, «Sfântul Sfințit Mucenic Artemon preotul, din Laodiceea»."
+    },
+    {
+      "form": "Αρτέμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Μαρτίου, «Άγιος Αρτέμων Ιερομάρτυρας, πρεσβύτερος Λαοδικείας», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Μαρτίου — «Άγιος Αρτέμων Ιερομάρτυρας, πρεσβύτερος Λαοδικείας»",
+        "url": "https://www.saint.gr/03/24/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Μαρτίου εκάστου έτους.» The same 24 Μαρτίου keeps a second Artemon, the bishop of Seleucia in Pisidia, on a page of his own, and the corpus keeps him too; the see in this line — πρεσβύτερος Λαοδικείας — is what tells the two apart. This page is the longest of the day and sets two traditions of his end side by side without choosing: the best-known synaxaria (the Synaxarion of Constantinople, the Menologion of Basil) have him repose in Asia Minor at a place called Balbine, while an old full Life (BHG³ 175) in an eleventh-century Cypriot manuscript has him ordained bishop there and then carried by a shining cloud across to cape Kormakitis in Cyprus, where he drove the demons from Aulon, made a spring rise and was buried by disciples who had come from Laodicea. The page adds that this second tradition has recently been partly corroborated by the remains of a basilica with a mosaic floor and a small baptistery at ancient Aulon, dated to the end of the fourth or the beginning of the fifth century, and by a fourteenth-century Cypriot typikon fragment from Stavrovouni recording his relic «ἐν τῷ Αὐλῶνι τῆς Σολίας, ἤγουν τῆς Κύπρου» and his feast on the island on 13 April. Neither tradition and neither date has been preferred here, and the 13 April is recorded as the page's own report and not as a row. It names a portion of the relic in an old wooden reliquary at the monastery of Kykkos, now in its museum."
     },
     {
       "church": "serbian",

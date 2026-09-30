@@ -1,0 +1,62 @@
+{
+  "slug": "peter-of-kazan",
+  "display_name": "Peter of Kazan",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Μαρτίου, «Άγιοι Πέτρος και Στέφανος οι Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "related": [
+    "stephen-of-kazan"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1552,
+      "latest": 1552,
+      "display": "1552",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Μάρτυρες Πέτρος και Στέφανος μαρτύρησαν το έτος 1552 στην περιοχή Καζάν, από τους Μογγόλους», and the page heads him «(; - 1552)», leaving the first date a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The Greek page puts the martyrdom in the district of Kazan, so a Russian row is likely and has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Μαρτίου — «Άγιοι Πέτρος και Στέφανος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/03/24/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Μαρτίου εκάστου έτους.» The two share one line and one page, and the page gives each of them a heading and a date of his own, «(; - 1552)» apiece, so they are two folders. The whole entry is one sentence: «Οι Άγιοι Μάρτυρες Πέτρος και Στέφανος μαρτύρησαν το έτος 1552 στην περιοχή Καζάν, από τους Μογγόλους» — martyred in 1552 in the district of Kazan, by the Mongols. It says nothing of any kinship between them."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
