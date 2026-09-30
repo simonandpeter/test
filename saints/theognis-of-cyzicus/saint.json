@@ -6,6 +6,11 @@
       "form": "Teognid",
       "lang": "ro",
       "note": "Read out of the life doxologia.ro prints for 29 aprilie under the line «Sfinții 9 Mucenici din Cizic», which names the nine: «Teognid, Ruf, Antipatru, Teostih, Artema, Magn, Teodot, Tavmasie și Filimon»."
+    },
+    {
+      "form": "Θεόγνις",
+      "lang": "el",
+      "note": "Read out of saint.gr's heading on the page of «Άγιοι Εννέα Μάρτυρες εν Κυζίκω», «Άγιος Θεόγνις Μάρτυρας Εν Κυζίκω», with the rank word and the place left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Απριλίου — «Άγιοι Εννέα Μάρτυρες εν Κυζίκω»",
+        "url": "https://www.saint.gr/04/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page is one entry for all nine and heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Απριλίου εκάστου έτους», the same day as the listing — **a day earlier than the 29 April the Romanian row on this folder already carries**, which is the Greek calendar's own reckoning of the same company and not a correction of it. It is plainly the same nine: the day's line is «Άγιοι Εννέα Μάρτυρες εν Κυζίκω», the page's own list names Theognis, Rufus, Antipater, Theostichus, Artemas, Magnus, Theodotus, Thaumasius and Philemon, and it has them from different places, seized together at Cyzicus, imprisoned without water or bread, and beheaded on the governor's order. The Greek adds an apolytikion of the nine, which the Romanian source did not print and which is stored here; it gives no year and no emperor, so this folder's empty `dates` were left empty, and it names no relic, where the Romanian life has the finding of the nine bodies under Constantine. The paragraph saint.gr prints under his name, about a considerable lyric poet from Megara who lived from 560 to 500 before Christ, is its gloss on the name Θεόγνις and is not about the martyr."
     },
     {
       "church": "serbian",
@@ -55,5 +70,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ'.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείας πίστεως, τὴ συμφωνία, ἐννεάριθμος, Μαρτύρων δῆμος, ἐν Κυζίκῳ ἱερῶς ἠνδραγάθησε, τὸν γὰρ Ὑπέρθεον Λόγον κηρύξαντες, ὑπὲρ αὐτοῦ ὡς ἀμνοὶ σφαγιάζονται, ὅθεν ἄφεσιν, αἰτοῦνται ἠμὶν καὶ ἔλεος, τοὶς μέλπουσιν αὐτῶν τὴν θείαν ἄθλησιν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ', Θείας πίστεως, on the page of «Άγιοι Εννέα Μάρτυρες εν Κυζίκω»",
+        "url": "https://www.saint.gr/355/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the concord of divine faith the nine-numbered company of martyrs did valiantly and in holy fashion at Cyzicus; for having preached the supremely divine Word, they are slaughtered like lambs for His sake. Wherefore they ask forgiveness and mercy for us who sing their divine contest.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

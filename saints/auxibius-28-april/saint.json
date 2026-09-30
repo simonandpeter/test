@@ -1,0 +1,61 @@
+{
+  "slug": "auxibius-28-april",
+  "display_name": "Auxibius (28 April)",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "office": "Bishop of Soloi",
+  "names": [
+    {
+      "form": "Αυξίβιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Απριλίου, «Όσιος Αυξίβιος», with the rank word left off; the see is not in the line and is taken from the page's own sentence, «Ήταν Επίσκοπος Σόλων»."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "floruit": {
+      "earliest": 325,
+      "latest": 343,
+      "display": "4th century",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Όσιος Αυξίβιος καταγόταν από την Κύπρο και έζησε κατά τον 4ο αιώνα μ.Χ.» — the fourth century — and the two years it gives are acts of his: «υπογράφει πρώτος, μεταξύ δώδεκα Κυπρίων Επισκόπων, τα Πρακτικά της Συνόδου της Σαρδικής, το 343 μ.Χ., ενώ νωρίτερα, το έτος 325 μ.Χ., είχε λάβει μέρος και στην Α' Οικουμενική Σύνοδο, που συνήλθε στη Νίκαια». The interval is those two attested years and not the whole century; no year of birth or of death is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Απριλίου — «Όσιος Αυξίβιος»",
+        "url": "https://www.saint.gr/04/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Απριλίου εκάστου έτους», the same day as the listing, and its whole body is three sentences: he was from Cyprus, lived in the fourth century, was bishop of Soloi, signed the acts of the Council of Sardica in 343 first among twelve Cypriot bishops, had earlier taken part in the First Ecumenical Council at Nicaea in 325, and fell asleep in peace. **No `locations` was written** even though Cyprus and the see are named, because a located saint with an interval as wide as this brings `map-span.test.mjs` into play and the page says nothing about where he lived or died. It prints no hymn and names no relic. The corpus holds nobody of this name. **This is not the Auxibius saint.gr keeps on 17 Φεβρουαρίου**, «Άγιος Αυξίβιος Επίσκοπος Σόλων Κύπρου», whom that page calls «ο πρώτος Επίσκοπος Σόλων», the first bishop of Soloi, a Roman by birth, brother of Themistagoras and a contemporary of Mark and Barnabas; another reader of this wave has drafted that man as `auxibius-of-soloi` from 17 February. The two notices are not compatible — a first bishop of the apostolic age against a bishop of the same see who signs at Nicaea in 325 and at Sardica in 343 — and two entries on one calendar are two commemorations, so this is a second man of the same name and see. The slug and the display name are dated rather than epithet-bearing for that reason, and the pair is flagged in the reader's report for the writer to look at before either is written."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

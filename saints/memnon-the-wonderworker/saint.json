@@ -6,6 +6,11 @@
       "form": "Memnon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 aprilie, «Sfântul Cuvios Memnon, făcătorul de minuni»."
+    },
+    {
+      "form": "Μέμνων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Απριλίου, «Όσιος Μέμνων ο Θαυματουργός», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Απριλίου — «Όσιος Μέμνων ο Θαυματουργός»",
+        "url": "https://www.saint.gr/04/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Απριλίου εκάστου έτους», **a day earlier than the 29 April the Romanian row on this folder already carries**, and it is plainly the same man: «Όσιος Μέμνων ο Θαυματουργός», a monk from his youth who subjected the flesh to the spirit, was granted the gift of wonderworking, drove locust swarms off the villagers' fields by his prayer, and became abbot of his monastery. The Greek adds two things the Romanian life did not have — that whenever the farming people of his district fell into great straits he brought them help out of the monastery's savings, and that he went to other cities collecting contributions with which he made up the relief of the suffering — and it has men, women and children running to follow his funeral with the warmest tears. **It also records a second day, and it is a day this corpus already keeps for a second Memnon**: «Σε μερικούς συναξαριστές η μνήμη του Οσίου επαναλαμβάνεται και στις 19 Μαΐου» — in some synaxaristes his memory is repeated on 19 May — which is the day of the corpus's `memnon-the-venerable-19-may`, a folder the Romanian pass made from doxologia's «Sfântul Cuvios Memnon» for 19 mai. Whether those two folders are one man is a question for the writer and is named in the reader's report; nothing is moved or merged here, and 28 April is the day this row records. The page gives no year, no country and no monastery by name, so the empty `dates` were left empty. **It prints no apolytikion and no kontakion**: the one hymn on the page is headed «Κάθισμα», a kathisma in Ἦχος πλ. δ΄ to the model «Τὴν Σοφίαν καὶ Λόγον», which is neither of the two kinds this corpus holds, so no hymn was taken."
     },
     {
       "church": "serbian",

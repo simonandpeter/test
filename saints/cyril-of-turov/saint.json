@@ -1,0 +1,70 @@
+{
+  "slug": "cyril-of-turov",
+  "display_name": "Cyril of Turov",
+  "sex": "male",
+  "types": [
+    "monk",
+    "stylite",
+    "bishop"
+  ],
+  "office": "Bishop of Turov",
+  "names": [
+    {
+      "form": "Κύριλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Απριλίου, «Όσιος Κύριλλος Επίσκοπος Τούρωφ», with the rank word and the see left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 1121,
+      "latest": 1130,
+      "display": "1121 to 1130",
+      "basis": "traditional",
+      "note": "The page disagrees with itself by a year or two and the interval records the disagreement: it heads him «Όσιος Κύριλλος Επίσκοπος Τούρωφ (1130 - 1183)», while its text says «Ο Όσιος Κύριλλος γεννήθηκε από πλούσιους γονείς την τρίτη δεκαετία του 12ου αιώνα μ.Χ. στην πόλη Τούρωφ» — born in the third decade of the twelfth century. The bounds are that decade and the head's 1130."
+    },
+    "death": {
+      "earliest": 1183,
+      "latest": 1183,
+      "display": "1183",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Κύριλλος κοιμήθηκε με ειρήνη το έτος 1183», and the page heads him «(1130 - 1183)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). saint.gr's whole account is of a Russian saint and the Russian calendar is very likely to keep him, but that page was not read and this row does not guess it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Απριλίου — «Όσιος Κύριλλος Επίσκοπος Τούρωφ»",
+        "url": "https://www.saint.gr/04/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Απριλίου εκάστου έτους», the same day as the listing. The page has him born of rich parents at Turov on the river Pripyat, a reader of the sacred books and the Fathers from very early and a student of Greek; tonsured at the monastery of Saints Boris and Gleb at Turov, where he taught obedience and said that a monk who does not obey his abbot does not complete his monastic promise and so cannot be saved, and where three of his writings on the monastic life survive; afterwards a stylite; elected bishop of Turov for the holiness of his life; a critic, at a synod in 1169, of the bishop Theodore who held the see of Vladimir and Suzdalia and wished to be separated from the canonical jurisdiction of the metropolitan district of Kyiv; a man who resigned the episcopal throne out of love for stillness and solitude and gave himself to asceticism and writing; dead in peace in 1183, held by his contemporaries to be the Chrysostom of the Church of Russia, though he wrote of himself «Δεν είμαι θεριστής, παρά μαζεύω τα δεμάτια των σιτηρών», I am no reaper, I only gather up the sheaves of the corn. **The monastery of Boris and Gleb is a dedication and not a relation**, and being called a Chrysostom is a comparison, so there are no `related` rows. The corpus's other Cyrils are of Alexandria, Kazan, the White Lake, Zographou and Axiopolis, and its `laurence-of-turov` is another man of the same see. It prints no hymn and names no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
