@@ -6,6 +6,11 @@
       "form": "Anania din Creta",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 aprilie, «Sfântul Cuvios Anania din Creta»."
+    },
+    {
+      "form": "Ανανίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Απριλίου, «Όσιος Ανανίας εκ Μαλλών Κρήτης», with the rank word and the place left off; the page calls him Χατζη-Ανανίας and gives Αντώνιος Μπαρμπεράκης as his name in the world."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Απριλίου — «Όσιος Ανανίας εκ Μαλλών Κρήτης»",
+        "url": "https://www.saint.gr/04/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Απριλίου εκάστου έτους», the same day as the listing. **The identification here rests on the day, the rank and the island, and on nothing else.** doxologia.ro's line for 22 aprilie is «Sfântul Cuvios Anania din Creta» and its page prints no life, no troparion and no notice of any kind; saint.gr's entry for the same day is «Όσιος Ανανίας εκ Μαλλών Κρήτης (1837 - 1907)», Hadji-Ananias, Antonios Barberakis in the world, of Malles in Ierapetra. Both are venerable, both of Crete, both on 22 April, and neither calendar keeps a second Cretan Ananias; the corpus's other Ananias is the apostle of the Seventy who baptized Paul, kept on 1 October. If the Romanian line were meant of an older man, nothing on its page says so. The Greek page supplies everything this folder lacked: his parents John and Athena; his refusal of the breast on Wednesdays and Fridays as an infant; his flight from home at fourteen to the monastery of the Forerunner of Kapsa in Sitia, where he was tonsured and became the disciple and fellow monk of Joseph Gerontogiannis, who named him his successor; his election as abbot after Joseph's death in 1870 and his flight to Jerusalem under slanders, from which he has the title Hadji; his return to Malles in 1877 and the rebuilding of the monastery of the Panagia Exakousti, finished by the inscription of 21 August 1882; the icon of the Mother of God he had found as a shepherd boy in the cave there, after seeing her twice in a dream; his abbacy until 1895 and his stewardship again from 7 April 1898 to 3 February 1899; the dissolution of the monastery under the Cretan State's law 276/1900 and its restoration in 1903; and his holy death on the night of Pascha, 22 April 1907, at the very hour of the Resurrection service. **This folder had no `dates` and now has both years.** It prints no hymn."
     },
     {
       "church": "serbian",
@@ -45,5 +60,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1837,
+      "latest": 1837,
+      "display": "1837",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε το έτος 1837 μ.Χ. στις Μαλλες Ιεράπετρας», and the page heads him «(1837 - 1907)»."
+    },
+    "death": {
+      "earliest": 1907,
+      "latest": 1907,
+      "display": "1907",
+      "basis": "attested",
+      "note": "saint.gr: «ο ίδιος ο Ηγούμενος Ανανίας εκοιμήθη οσιακά τη νύκτα του Πασχα, στις 22 Απριλίου του 1907 μ.Χ., την ώρα μάλιστα της τελετής της Αναστάσεως»."
+    }
   }
 }

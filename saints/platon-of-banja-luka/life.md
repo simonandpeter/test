@@ -1,0 +1,13 @@
+# Platon of Banja Luka
+
+Platon, Milivoje Jovanović in the world, was born on 29 September 1874 at Belgrade, the son of Ilija Jovanović and Jelka Sokolović. After his general schooling he took up the monastic life and was tonsured a monk, and a little later was ordained deacon and then priest. In 1896 he was sent to study at the theological academy of Moscow, and on his return from Russia in 1901, his studies finished, he was appointed superior of the monastery of Rakovica and a teacher.
+
+During the First World War the archimandrite Platon enrolled in the corps of military chaplains, and when the war was over he gave his ministry to the care of orphans and of the wounded. In 1938 he was elected bishop of Ohrid, and in 1939 he was transferred to the diocese of Banja Luka in the northern part of Bosnia.
+
+When Hitler, in the course of the Second World War, took the kingdom of Yugoslavia in 1941, he set up a pro-Nazi government in Croatia. That government demanded that all the Orthodox Serbs — about three million of the faithful, the page says — should embrace Roman Catholicism in order to count as Croats, or else leave their country so as not to be murdered. The authorities asked bishop Platon, because he came from Belgrade, to leave the region and go off with his flock into Serbia.
+
+He refused, saying that his election had been made by the Church according to the canons and the spiritual law, and that he was therefore bound to stay beside his flock and to give his soul for it if that were needed. The authorities compelled him all the same to leave his diocese; the bishop asked for two or three days to prepare for his departure, and did not get them. The Ustaše seized him, together with the priest Dušan Subotić, and executed him.
+
+They threw the holy relic of the hieromartyr Platon into the river Vrbanja. A few days later some Christians of the village of Kumsale recovered it and buried it in the military cemetery of Banja Luka; and in 1973 his honoured relics were translated to the cathedral of Banja Luka. The canonical act of his glorification was performed by the Holy Synod of the Church of Serbia in 1998.
+
+*After saint.gr's calendar for 22 Απριλίου — [the day](https://www.saint.gr/04/22/index.aspx) and [the life](https://www.saint.gr/1353/saint.aspx); read 30 September 2026.*

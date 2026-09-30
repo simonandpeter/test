@@ -6,6 +6,11 @@
     {
       "form": "Гаий",
       "lang": "ru"
+    },
+    {
+      "form": "Γάιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Απριλίου, «Άγιος Γάιος Επίσκοπος Ρώμης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Απριλίου — «Άγιος Γάιος Επίσκοπος Ρώμης»",
+        "url": "https://www.saint.gr/04/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Απριλίου εκάστου έτους», the same day as the listing. **The corpus already keeps him off the Russian calendar's 11 August, old style, and the Greek keeps him here**; the folder's Russian row stands where it is and this row records the day page that was read. That the two are one man rests on the see and the year: the Russian row makes him Gaius pope of Rome dead in 296, and saint.gr says «εξελέγη Επίσκοπος Ρώμης το έτος 283 μ.Χ.» and «Κοιμήθηκε με ειρήνη το έτος 296 μ.Χ.», and this corpus keeps no second pope of the name. The Greek adds that he came from Dalmatia, that he suffered many persecutions and ill-usage in the years of Diocletian and for a time had to take refuge in a cave far from Rome, and — as the opinion of «ορισμένους ερευνητές», certain researchers, and not as its own — that he was a kinsman of the emperor Diocletian and the brother of the martyr Gabinus, whom it cross-references to 19 Φεβρουαρίου; this folder already carries a `related` row to Gabinius the presbyter. The page calls him Ιερομάρτυρας in its heading while saying he fell asleep in peace, and that contradiction is the page's own; no rank was added to this folder's `types` on the strength of it. The folder's existing 296 agrees with the page and was left untouched. It prints no hymn."
     },
     {
       "church": "serbian",

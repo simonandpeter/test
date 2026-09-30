@@ -7,6 +7,11 @@
       "form": "Teodor Sicheotul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 aprilie, «Sfântul Ierarh Teodor Sicheotul, Episcopul Anastasiopolei»."
+    },
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Απριλίου, «Όσιος Θεόδωρος ο Συκεώτης επίσκοπος Αναστασιουπόλεως», with the rank word, the epithet and the see left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Απριλίου — «Όσιος Θεόδωρος ο Συκεώτης επίσκοπος Αναστασιουπόλεως»",
+        "url": "https://www.saint.gr/04/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Απριλίου εκάστου έτους», the same day as the listing. It is the same day the Romanian calendar keeps him, and it is the fuller account by far. It names his village Sykea or Sykeon of Anastasioupolis, first city of the province of the Ancyrans; his mother Maria, whom it calls a harlot, and his father Cosmas, a courier of the emperor Justinian; the bishop Theodosius of Anastasioupolis who blessed his monastic life; the monastery of the Mother of God of Choziba where he took the habit; the appearance of George the Trophy-bearer to him at twelve, telling him «Σήκω, Θεόδωρε, έφθασε ο όρθρος, πάμε να προσευχηθούμε», and again at the Lavra of St Sabbas, with a staff and the order to go back to his diocese; his mother's aunt Despoinia, her mother Elpidia and his sister Blatta, who would not be parted from him; the death of bishop Timothy and his own forcible election by the metropolitan Paul of Ancyra; his enthronement by Amiantos, bishop of Kinna; his resignation, allowed by the patriarch Cyriacus at the emperor's urging and sweetened with the omophorion of the see; his retreat to the church of the Archangel at Akrina near the village Pidros; his two visits to Constantinople, the second in 610 under the patriarch Thomas, at whose death he was present, and his honouring by the patriarch Sergius; and his peaceful death in 613. **This folder had no `dates` and now has a death year from that last sentence.** Under «Ιερά Λείψανα» it puts a portion of his relic at the Lavra of St Alexander Nevsky in St Petersburg. It prints two apolytikia and a kontakion; the first apolytikion and the kontakion are proper to him and are stored here, and the second, «Ἐν σοί Πάτερ ἀκριβῶς διεσώθη τό κατ᾽ εἰκόνα», is the common of a venerable father and was left."
     },
     {
       "church": "serbian",
@@ -62,9 +77,55 @@
         "text": "Known from your swaddling clothes as one sanctified, and shown to be full of graces, you lit up the world with wonders and drove off multitudes of demons, O worker of holiness, father and hierarch Theodore. Therefore pray to the Lord for us.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Ἐκ σπάργανων ἐπλήσθης τῆς θείας χάριτος, καὶ τῷ Θεῷ ἀνετέθης ὡς Σαμουὴλ ὁ κλεινός, τὴν ὑπέρτιμον στολὴν Πάτερ κληρούμενος, ὅθεν θαυμάτων αὐτουργός, καὶ Χριστοῦ μυσταγωγός, Θεόδωρε ἀνεδείχθης, θεοδωρήτως ἐκλάμπων, τᾶς ψυχοτρόφους δωρεᾶς τοὶς πιστοίς.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον, on the page of «Όσιος Θεόδωρος ο Συκεώτης επίσκοπος Αναστασιουπόλεως»",
+        "url": "https://www.saint.gr/1352/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy swaddling clothes thou wast filled with divine grace, and wast dedicated to God like the famous Samuel, being allotted the most honourable robe, O father; wherefore thou wast shown, Theodore, a worker of wonders and an initiator into the mysteries of Christ, shining forth as God's own gift with gifts that nourish the souls of the faithful.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον.",
+      "text": "Ὡς πυρίνῳ ἅρματι, ταῖς ἀρεταῖς Θεοφόρε, ἐπιβὰς ἀνέδραμες, εἰς οὐρανίους οἰκήσεις, Ἄγγελος μετά ἀνθρώπων συμβιοτεύων, ἄνθρωπος σὺν τοῖς Ἀγγέλοις περιχορεύων· διά τοῦτο ἀνεδείχθης, θαυμάτων θεῖον, δοχεῖον Θεόδωρε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον, on the page of «Όσιος Θεόδωρος ο Συκεώτης επίσκοπος Αναστασιουπόλεως»",
+        "url": "https://www.saint.gr/1352/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Mounted as on a chariot of fire upon the virtues, O God-bearer, thou didst run up to the heavenly dwellings — an angel living among men, a man dancing with the angels; and therefore thou wast shown to be a divine vessel of wonders, O Theodore.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 613,
+      "latest": 613,
+      "display": "613",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Θεόδωρος κοιμήθηκε με ειρήνη το έτος 613 μ.Χ.», and the page heads him «(; - 613)»; no year of birth is printed, though the page dates his second visit to Constantinople to 610."
+    }
+  },
+  "related": [
+    "george-the-trophy-bearer"
+  ]
 }

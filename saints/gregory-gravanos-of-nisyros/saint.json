@@ -1,0 +1,63 @@
+{
+  "slug": "gregory-gravanos-of-nisyros",
+  "display_name": "Gregory Gravanos of Nisyros",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Γρηγόριος Γραβανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Απριλίου, «Άγιος Γρηγόριος Γραβανός ο Νισύριος», with the rank word and the epithet ο Νισύριος left off; the surname Γραβανός is kept because the page explains it — «το Γραβανός προέρχεται από το μέρος αυτό», it comes from the place on Patmos called Γραβά."
+    }
+  ],
+  "related": [
+    "macarius-notaras"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1812,
+      "latest": 1812,
+      "display": "1812",
+      "basis": "traditional",
+      "note": "saint.gr: «αναγκάστηκε να εγκαταλείψει την Πάτμο για την Ικαρία, όπου και κοιμήθηκε το 1812 μ.Χ.», and the page heads him «(; - 1812)»; no year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Απριλίου — «Άγιος Γρηγόριος Γραβανός ο Νισύριος»",
+        "url": "https://www.saint.gr/04/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Απριλίου εκάστου έτους», the same day as the listing. The page makes him a member of the Kollyvades movement, scattered from the Holy Mountain to the islands of the Aegean when the movement outgrew Athos; it takes him to Patmos and then to Lipsi, where he built a hermitage in honour of the Mother of God, and back to Patmos after pirate raids, where he met Macarius Notaras — whom it cross-references to 17 Απριλίου — at the Kathisma of All Saints that Macarius had made on the hill of Koumana. It says he stayed with Macarius a while and then went to another part of the island called Grava, from which his surname comes; that he became widely known as a spiritual father, and that there is a tradition that even the patriarch of Constantinople visited him; and that at some point he had to leave Patmos for Ikaria, where he fell asleep in 1812. It calls him «Άγιος» in the day's line and gives him no rank word beyond that, and prints no hymn and no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

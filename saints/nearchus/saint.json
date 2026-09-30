@@ -1,0 +1,53 @@
+{
+  "slug": "nearchus",
+  "display_name": "Nearchus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Νέαρχος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Απριλίου, «Άγιος Νέαρχος», with the rank word left off; the life page heads him «Αγιος Νεαρχος», with no years."
+    }
+  ],
+  "related": [
+    "polyeuctus-of-melitene"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Απριλίου — «Άγιος Νέαρχος»",
+        "url": "https://www.saint.gr/04/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Απριλίου εκάστου έτους», the same day as the listing. The page asserts one thing about him flatly — «Ο Άγιος Μάρτυς Νέαρχος τελειώθηκε διά πυρός», he was perfected by fire — and offers everything else as conjecture: «Εικάζεται ότι ήταν φίλος του Αγίου Μάρτυρα Πολυεύκτου (βλέπε 9 Ιανουαρίου). Εάν θεωρηθεί ότι αυτό είναι αληθές, τότε ο Άγιος Νέαρχος πρέπει να μαρτύρησε κατά τους χρόνους των αυτοκρατόρων Δεκίου (249 - 251 μ.Χ.) και Ουαλεριανού (251 - 259 μ.Χ.)» — it is surmised that he was the friend of the martyr Polyeuctus, and if that is held true then he must have been martyred in the reigns of Decius and Valerian. Because the years hang on that conjecture, **no `dates` were taken**; the corpus's Polyeuctus of Melitene, kept on 9 January, carries the same reigns as an interval off his own Romanian life. This entry carries no asterisk and no sentence of the site's standing disclaimer — the one on this day that does is Victorinus, who was refused. The page prints no hymn, no couplet beyond the one below and no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

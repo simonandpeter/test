@@ -1,0 +1,70 @@
+{
+  "slug": "platon-of-banja-luka",
+  "display_name": "Platon of Banja Luka",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop",
+    "new-martyr"
+  ],
+  "office": "Bishop of Banja Luka",
+  "names": [
+    {
+      "form": "Πλάτων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Απριλίου, «Άγιος Πλάτων ο Ιερομάρτυρας επίσκοπος Μπάνια Λούκα», with the rank words and the see left off; the page gives his name in the world as Milivoje Jovanović, in Greek letters."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 1874,
+      "latest": 1874,
+      "display": "1874",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε στις 29 Σεπτεμβρίου 1874 μ.Χ. στο Βελιγράδι», and the page heads him «(1874 - 1941)»."
+    },
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "attested",
+      "note": "saint.gr: «Οι Ουστάτσι τον συνέλαβαν μαζί με τον ιερέα Δουσάν (Σούμποτιτς) και τον εκτέλεσαν», in the year 1941 of the German occupation which the page has just dated, and it heads him «(1874 - 1941)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Απριλίου — «Άγιος Πλάτων ο Ιερομάρτυρας επίσκοπος Μπάνια Λούκα»",
+        "url": "https://www.saint.gr/04/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Απριλίου εκάστου έτους», the same day as the listing. The page is a full and dated life: born 29 September 1874 at Belgrade to Ilija Jovanović and Jelka Sokolović; a monk, then deacon and priest; sent in 1896 to the theological academy of Moscow and back in 1901 as superior of the monastery of Rakovica and a teacher; a military chaplain in the First World War and afterwards a carer for orphans and the wounded; elected bishop of Ohrid in 1938 and moved in 1939 to Banja Luka in northern Bosnia; refusing in 1941 to leave his flock when the pro-Nazi Croatian government demanded that the Orthodox Serbs convert or go; seized by the Ustaše with the priest Dušan Subotić and executed, his body thrown into the river Vrbanja and recovered a few days later by Christians of the village of Kumsale, who buried it in the military cemetery of Banja Luka; his relics translated in 1973 to the cathedral of Banja Luka; and his canonisation by the Holy Synod of the Church of Serbia in 1998. **The Serbian row here is still `undocumented`**, although the page names the Serbian synod as the body that canonised him: the row records what was read, and pravoslavno.rs was not read. The corpus keeps several saints named Plato or Platon — of Ancyra, of Megara, the venerable, Aivazidis and Kulbusch — and none of them is this bishop. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
