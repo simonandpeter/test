@@ -5,6 +5,16 @@
     {
       "form": "Sfântul Cuvios Amfilohie Makris din Patmos",
       "lang": "ro"
+    },
+    {
+      "form": "Αμφιλόχιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Απριλίου, «Όσιος Αμφιλόχιος Μακρής της Ιεράς Νήσου Πάτμου», with the rank word and the place left off. The page gives his name in the world too: «κατά κόσμον Αθανάσιος Μακρής»."
+    },
+    {
+      "form": "Μακρής",
+      "lang": "el",
+      "note": "The surname saint.gr prints in the same line for 16 Απριλίου, «Όσιος Αμφιλόχιος Μακρής της Ιεράς Νήσου Πάτμου»."
     }
   ],
   "sex": "male",
@@ -35,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 19 September (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Απριλίου — «Όσιος Αμφιλόχιος Μακρής της Ιεράς Νήσου Πάτμου»",
+        "url": "https://www.saint.gr/04/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(1889 - 1970)»; the day is the day of his falling asleep, «Ο Γέροντας Αμφιλόχιος Μακρής εκοιμήθη την Πέμπτη 16 Απριλίου του 1970 μ.Χ.». His canonisation is recent: «Στην αγιοκατάταξη του γέροντα Αμφιλοχίου Μακρή της Πάτμου, προχώρησε στις 29 Αυγούστου 2018 μ.Χ. η Αγία και Ιερά Σύνοδος του Οικουμενικού Πατριαρχείου». This folder's life was already written out of this same saint.gr page on 6 September 2026, and the page is already cited in it, so this upgrade adds no paragraph and no source clause — only the row that was missing and the Greek forms of the name. The page's couplet names the day, «Δεκάτῃ ἀμφὶ τῇ ἕκτῃ Ἀμφιλόχιος Μακρῆς ἔβυν παράδεισον εὐρύν». It links to an akolouthia but prints no apolytikion or kontakion in the body of the page, so no hymn is taken."
     },
     {
       "church": "serbian",

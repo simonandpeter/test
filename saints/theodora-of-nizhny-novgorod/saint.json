@@ -1,0 +1,60 @@
+{
+  "slug": "theodora-of-nizhny-novgorod",
+  "display_name": "Theodora of Nizhny Novgorod",
+  "sex": "female",
+  "types": [
+    "monastic",
+    "princess"
+  ],
+  "names": [
+    {
+      "form": "Θεοδώρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Απριλίου, «Οσία Θεοδώρα η πριγκίπισσα», with the rank word and the office left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1347,
+      "latest": 1347,
+      "display": "1347",
+      "basis": "traditional",
+      "note": "saint.gr: «Από αγάπη προς τον Θεό έγινε μοναχή και κοιμήθηκε με ειρήνη το έτος 1347», and its heading has «Οσια Θεοδωρα η Πριγκιπισσα (; - 1347)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Απριλίου — «Οσία Θεοδώρα η πριγκίπισσα»",
+        "url": "https://www.saint.gr/04/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Απριλίου εκάστου έτους», the same day as the listing, and heads her «(; - 1347)». saint.gr keeps a second Theodora on this same 16 April, among the seven women drowned with Leonides off the Peloponnese under Decius: two entries on one day are two commemorations, so two women, and this is the Russian princess. The corpus holds seven others of this name and none of them is of Nizhny Novgorod. The page prints no hymn and no couplet."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

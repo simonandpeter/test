@@ -1,0 +1,53 @@
+{
+  "slug": "nounechia-companion-of-leonides",
+  "display_name": "Nounechia, companion of Leonides",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Νουνεχία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Απριλίου, «Άγιος Λεωνίδης και οι Αγίες Χάρισσα, Νίκη, Γαλήνη, Καλλίδα, Νουνεχία, Βασίλισσα και Θεοδώρα», with the rank word left off."
+    }
+  ],
+  "related": [
+    "leonides-of-epidaurus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Απριλίου — «Άγιος Λεωνίδης και οι Αγίες Χάρισσα, Νίκη, Γαλήνη, Καλλίδα, Νουνεχία, Βασίλισσα και Θεοδώρα»",
+        "url": "https://www.saint.gr/04/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Απριλίου εκάστου έτους», the same day as the listing. Eight names in one line, each with a couplet of its own, so eight folders; hers is «Eις την Nουνεχίαν». The page gives no year: it sets them only «στα χρόνια του βασιλιά Δεκίου (249 - 251 μ.Χ.)», a reign and not a date, so there is no `dates` object. The corpus holds nobody of this name. The page prints no hymn in full."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

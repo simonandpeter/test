@@ -6,6 +6,11 @@
       "form": "Agapia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 aprilie, «Sfintele Mucenițe fecioare Agapia, Irina și Hionia»."
+    },
+    {
+      "form": "Αγάπη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Απριλίου, «Αγίες Αγάπη, Ειρήνη και Χιονία», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Απριλίου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Απριλίου — «Αγίες Αγάπη, Ειρήνη και Χιονία»",
+        "url": "https://www.saint.gr/04/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps the three sisters on, and it names the same three: the persecution under Maximian, the flight to a high mountain, the arrest in 304 and the trial before the ruler Dulcitius. **The two calendars disagree about where they belonged.** saint.gr calls them «πνευματικά βλαστάρια της Εκκλησίας της Θεσσαλονίκης», spiritual shoots of the Church of Thessalonica, where the Romanian notice on which this folder's display name rests has them of Aquileia; the source's reading is recorded here and the corpus's own name and dates are left alone. saint.gr gives the year of the arrest, 304, and the page's heading repeats it beside each name as «(; - 304)». saint.gr has Agape and Chionia die in the fire and Irene by a soldier's arrow after being shut in a brothel, which is not quite the Romanian notice's order; the source's reading is in the life paragraph and neither account has been made to yield to the other. The corpus holds eight folders whose names fold onto Agape and none of them is this woman."
     },
     {
       "church": "serbian",
@@ -62,6 +77,56 @@
       },
       "english": {
         "text": "Thy martyrs, O Lord, in their struggles have won from Thee, our God, the crowns of incorruption; for having Thy strength, they overthrew their tormentors and broke the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Ὡς αὐτάδελφοι Κόραι καὶ οὐρανόφρονες, πρὸς εὐσέβειας ἀγῶνας ὁμονοούσαι καλῶς, τὸν ἀρχέκακον ἐχθρὸν κατεπαλαίσατε, Χιονὶα ἡ σεμνή, σὺν Ἀγάπη τὴ κλυτή, Εἰρήνη ἡ πανολβία. Καὶ νῦν Χριστὸν δυσωπεῖτε, ἐλεηθήναι τᾶς ψυχᾶς ἠμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον, on the page of Αγίες Αγάπη, Ειρήνη και Χιονία. It is the three sisters' own and names all three.",
+        "url": "https://www.saint.gr/276/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As sisters born of one womb and heavenly-minded maidens, being rightly of one mind in the struggles for godliness, you wrestled down the enemy who is the author of evil: Chionia the modest, with Agape the renowned, and Irene the all-blessed. And now entreat Christ that our souls may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "text": "Τά θαύματα τῶν ἁγίων σου Μαρτύρων, τεῖχος ἀκαταμάχητον ῆμῖν δωρησάμενος, Χριστέ ὁ Θεός, ταῖς αὐτῶν ἱκεσίαις, βουλάς ἐθνῶν διασκέδασον, τῆς βασιλείας τά σκῆπτρα κραταίωσον, ὡς μόνος ἀγαθός καὶ φιλάνθρωπος.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος πλ. α’, on the page of Αγίες Αγάπη, Ειρήνη και Χιονία. This is the common apolytikion of martyrs and names nobody; the page prints it under their names, so it is copied whole as the page has it.",
+        "url": "https://www.saint.gr/276/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having given us the wonders of thy holy martyrs as an unassailable wall, O Christ God, at their supplications scatter the counsels of the nations and strengthen the sceptres of the kingdom, as thou alone art good and the lover of mankind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον.",
+      "text": "Παρθενίας έσοπτρα, φωτοειδή πεφυκυίαι, νοερώς ηστράψατε, αθλητικάς λαμπηδόνας, πάσαν μέν, την Εκκλησίαν αγλαϊζούσας, νύκτα δέ, των νοσημάτων απελαυνούσας, Χιονία και Αγάπη, συν τη Ειρήνη, Χριστού κειμήλια.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον, on the page of Αγίες Αγάπη, Ειρήνη και Χιονία. It is their own and names all three.",
+        "url": "https://www.saint.gr/276/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being mirrors of virginity and shining with light, you flashed out spiritually the brightnesses of the contest, which make the whole Church glorious and drive away the night of sicknesses: Chionia and Agape, with Irene, treasures of Christ.",
         "rendered": "site"
       }
     }

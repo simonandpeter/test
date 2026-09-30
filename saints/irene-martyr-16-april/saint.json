@@ -1,0 +1,53 @@
+{
+  "slug": "irene-martyr-16-april",
+  "display_name": "Irene (16 April)",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ειρήνη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Απριλίου, «Αγία Ειρήνη», with the rank word left off."
+    }
+  ],
+  "related": [
+    "leonides-of-epidaurus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Απριλίου — «Αγία Ειρήνη»",
+        "url": "https://www.saint.gr/04/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Απριλίου εκάστου έτους», the same day as the listing. **This is the second Irene saint.gr keeps on 16 April**, and she is not the third of the three sisters of Thessalonica whom the corpus holds as Irene of Aquileia on the same day: this one's page says «Η Αγία αυτή μαρτύρησε τον ίδιο καιρό και στον ίδιο τόπο, που μαρτύρησαν ο Άγιος Λεωνίδης και οι μαζί μ' αυτόν Άγιες Γυναίκες», she was martyred at the same time and in the same place as Leonides and the women with him, and she died by the sword after her tongue was cut out and her teeth drawn, where the sister of Agape and Chionia died by a soldier's arrow in Thessalonica. Two entries on one calendar are two commemorations, so two women. She is not one of the seven women listed with Leonides either; the page lists her on her own and names no Irene among them. It gives her no year at all, so there is no `dates` object, and it prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

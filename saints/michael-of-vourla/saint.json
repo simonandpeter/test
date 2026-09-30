@@ -1,0 +1,67 @@
+{
+  "slug": "michael-of-vourla",
+  "display_name": "Michael of Vourla",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Μιχαήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Απριλίου, «Άγιος Μιχαήλ ο Βουρλιώτης», with the rank word and the epithet left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1754,
+      "latest": 1754,
+      "display": "1754",
+      "basis": "traditional",
+      "note": "saint.gr's heading has «Αγιος Μιχαηλ ο Βουρλιωτης (1754 - 1772)»; its prose gives no year of birth, only that he was eighteen when he was made a Muslim by a trick."
+    },
+    "death": {
+      "earliest": 1772,
+      "latest": 1772,
+      "display": "1772",
+      "basis": "traditional",
+      "note": "saint.gr: «Αποκεφαλίστηκε το 1772 και το ιερό λείψανό του ρίχθηκε στη θάλασσα», and its heading has «(1754 - 1772)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Απριλίου — «Άγιος Μιχαήλ ο Βουρλιώτης»",
+        "url": "https://www.saint.gr/04/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(1754 - 1772)». saint.gr keeps a second Michael on its 16 April, Μιχαήλ ο Μαυρουδής, a new martyr burnt at Thessalonica in the sixteenth century whose feast that page reckons from Pascha; they are two men and not one. The page prints no hymn for this Michael."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "slug": "eutychia-confessor-of-thessalonica",
+  "display_name": "Eutychia of Thessalonica",
+  "sex": "female",
+  "types": [
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Ευτυχία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Απριλίου, «Άγιοι Αγάθων, Ευτυχία, Κασία και Φιλίππα οι Ομολογητές», with the rank word left off."
+    }
+  ],
+  "related": [
+    "agathon-confessor-of-thessalonica",
+    "kasia-confessor-of-thessalonica",
+    "philippa-confessor-of-thessalonica"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Απριλίου — «Άγιοι Αγάθων, Ευτυχία, Κασία και Φιλίππα οι Ομολογητές»",
+        "url": "https://www.saint.gr/04/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Απριλίου εκάστου έτους», the same day as the listing. Four names in one line, so four folders; the page's own heading calls her «Αγια Ευτυχια η Ομολογητρια». It states one year, 304, for the arrest, and none for her; they were imprisoned and not killed, so there is no `dates` object. The corpus holds nobody of this name. The page prints no hymn and no couplet."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

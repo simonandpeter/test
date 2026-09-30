@@ -1,0 +1,60 @@
+{
+  "slug": "john-of-verkhoturye",
+  "display_name": "John of Verkhoturye",
+  "sex": "male",
+  "types": [
+    "fool-for-christ",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Απριλίου, «Άγιος Ιωάννης ο διά Χριστόν σαλός», with the rank word and the epithet left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1701,
+      "latest": 1701,
+      "display": "1701",
+      "basis": "traditional",
+      "note": "saint.gr's heading has «Αγιος Ιωαννης ο Δια Χριστον Σαλος (; - 1701)». Its prose gives no year: «Ο Άγιος Ιωάννης του Βερχοτούρε έζησε στη Ρωσία μεταξύ του 17ου και 18ου αιώνα μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Απριλίου — «Άγιος Ιωάννης ο διά Χριστόν σαλός»",
+        "url": "https://www.saint.gr/04/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1701)». The day's line and the page's heading call him a fool for Christ, while the prose calls him only an ascetic, «Ασκήτεψε θεοφιλώς στη μονή του Αγίου Νικολάου στην περιοχή του Βερχοτούρε», so both are in `types`. It is the page and not the day's line that gives him his place: the prose names him «Ο Άγιος Ιωάννης του Βερχοτούρε», John of Verkhoturye, and links him to the synaxis of all the saints of Siberia. He is not the fool for Christ John the Hairy of Rostov, whom saint.gr keeps on 3 September and whose folder is already in this corpus. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

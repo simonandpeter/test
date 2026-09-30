@@ -1,0 +1,59 @@
+{
+  "slug": "leonides-of-epidaurus",
+  "display_name": "Leonides of Epidaurus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Λεωνίδης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Απριλίου, «Άγιος Λεωνίδης και οι Αγίες Χάρισσα, Νίκη, Γαλήνη, Καλλίδα, Νουνεχία, Βασίλισσα και Θεοδώρα», with the rank word and the companions' clause left off."
+    }
+  ],
+  "related": [
+    "charissa-companion-of-leonides",
+    "nike-companion-of-leonides",
+    "galene-companion-of-leonides",
+    "kallida-companion-of-leonides",
+    "nounechia-companion-of-leonides",
+    "basilissa-companion-of-leonides",
+    "theodora-companion-of-leonides"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Απριλίου — «Άγιος Λεωνίδης και οι Αγίες Χάρισσα, Νίκη, Γαλήνη, Καλλίδα, Νουνεχία, Βασίλισσα και Θεοδώρα»",
+        "url": "https://www.saint.gr/04/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Απριλίου εκάστου έτους», the same day as the listing. Eight names in one line, each with a couplet of its own, so eight folders. The page gives no year: it sets them only «στα χρόνια του βασιλιά Δεκίου (249 - 251 μ.Χ.)», a reign and not a date, so there is no `dates` object. It dates the martyrdom itself to Great Saturday — «μια ήμερα προ του Αγίου Πάσχα δηλαδή το Μεγάλο Σάββατο» — while keeping the feast on a fixed 16 April; the page does not reconcile the two and neither does this row. The epithet is the apolytikion's, which the page quotes as calling him «Μέγας πρόμαχος Επιδαύρου». The corpus holds three others who fold onto this name — Leonides kept on 2 September, Leonidas of Egypt and Leonides the father of Origen — and a bishop of Athens of the same name whom saint.gr keeps on 15 April; none of them is this man. The page prints no hymn in full."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "slug": "christopher-of-adrianople",
+  "display_name": "Christopher of Adrianople",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Χριστόφορος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Απριλίου, «Άγιος Χριστόφορος ο Οσιομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Χριστόδουλος",
+      "lang": "el",
+      "note": "His name in the world, which saint.gr's page for 16 Απριλίου prints: «κατά κόσμον ονομαζόταν Χριστόδουλος»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1795,
+      "latest": 1795,
+      "display": "1795",
+      "basis": "traditional",
+      "note": "saint.gr's heading has «Αγιος Χριστοφορος ο Οσιομαρτυρας (1795 - 1818)»; its prose gives no year of birth, only that he came to the monastery of Dionysiou at nineteen."
+    },
+    "death": {
+      "earliest": 1818,
+      "latest": 1818,
+      "display": "16 April 1818",
+      "basis": "traditional",
+      "note": "saint.gr: «Έτσι στις 16 Απριλίου 1818, ήμερα Τρίτη Διακαινησίμου και ώρα 8.00 αποκεφαλίστηκε ψάλλοντας το «Χριστός Ανέστη»», and its heading has «(1795 - 1818)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Απριλίου — «Άγιος Χριστόφορος ο Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/04/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(1795 - 1818)». The day of his beheading, 16 April 1818, was the Tuesday of Bright Week that year, but the page keeps the feast as a fixed 16 April and not as a Pascha reckoning. The corpus holds two others of this name — the great martyr Christopher, whom the Greek calendar keeps on 9 May, and Christopher Papoulakos — and neither is this monk of Dionysiou. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

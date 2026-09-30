@@ -1,0 +1,55 @@
+{
+  "slug": "agathon-confessor-of-thessalonica",
+  "display_name": "Agathon of Thessalonica",
+  "sex": "male",
+  "types": [
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Αγάθων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Απριλίου, «Άγιοι Αγάθων, Ευτυχία, Κασία και Φιλίππα οι Ομολογητές», with the rank word left off."
+    }
+  ],
+  "related": [
+    "eutychia-confessor-of-thessalonica",
+    "kasia-confessor-of-thessalonica",
+    "philippa-confessor-of-thessalonica"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Απριλίου — «Άγιοι Αγάθων, Ευτυχία, Κασία και Φιλίππα οι Ομολογητές»",
+        "url": "https://www.saint.gr/04/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Απριλίου εκάστου έτους», the same day as the listing. Four names in one line, so four folders. The page states one year for the arrest, 304, and none for the confessors themselves; they were not put to death but imprisoned, so there is no year of death and no `dates` object. The same page names the governor Dulcitius, before whom the three sisters Agape, Chionia and Irene were tried on this same day and in the same year; the corpus holds two other Agathons, of Rome and of the desert, and neither is this one. The page prints no hymn and no couplet."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

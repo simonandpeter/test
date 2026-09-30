@@ -1,0 +1,54 @@
+{
+  "slug": "galene-companion-of-leonides",
+  "display_name": "Galene, companion of Leonides",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Γαλήνη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Απριλίου, «Άγιος Λεωνίδης και οι Αγίες Χάρισσα, Νίκη, Γαλήνη, Καλλίδα, Νουνεχία, Βασίλισσα και Θεοδώρα», with the rank word left off. The page's own heading spells it «Γαληνη» and its gloss «ΓΑΛΛΗΝΗ»."
+    }
+  ],
+  "related": [
+    "leonides-of-epidaurus",
+    "nike-companion-of-leonides"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Απριλίου — «Άγιος Λεωνίδης και οι Αγίες Χάρισσα, Νίκη, Γαλήνη, Καλλίδα, Νουνεχία, Βασίλισσα και Θεοδώρα»",
+        "url": "https://www.saint.gr/04/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Απριλίου εκάστου έτους», the same day as the listing. Eight names in one line, so eight folders; she shares a couplet with Nike, «Eις την Γαληνήν και Nίκην», and the two are told apart by their names in it. The page gives no year: it sets them only «στα χρόνια του βασιλιά Δεκίου (249 - 251 μ.Χ.)», a reign and not a date, so there is no `dates` object. The corpus holds nobody of this name. The page prints no hymn in full."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
