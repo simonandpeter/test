@@ -1,0 +1,65 @@
+{
+  "slug": "maximus-of-jerusalem",
+  "display_name": "Maximus of Jerusalem",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch",
+    "confessor"
+  ],
+  "office": "Patriarch of Jerusalem",
+  "names": [
+    {
+      "form": "Μάξιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαΐου, «Άγιος Μάξιμος Πατριάρχης Ιεροσολύμων», with the rank word and the see left off."
+    }
+  ],
+  "related": [
+    "athanasius-of-alexandria"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 350,
+      "latest": 350,
+      "display": "350",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Μάξιμος κοιμήθηκε με ειρήνη το 350 μ.Χ.», and the head line of the same page gives «(; - 350)». The page gives no year for his birth, only that he became patriarch in 333."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαΐου — «Άγιος Μάξιμος Πατριάρχης Ιεροσολύμων»",
+        "url": "https://www.saint.gr/05/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Μαΐου εκάστου έτους», the same day as the listing. **He is none of the twenty-odd Maximi the corpus keeps**, all raised by the name sweep on the name alone: this one held the see of Jerusalem from 333 until his death in 350. `confessor` is the page's own account and not an inference — under Maximinus he was condemned to the mines, where his right eye was put out and his left foot maimed. **His predecessor Macarius has no folder** («διαδέχθηκε στον θρόνο τον Πατριάρχη Μακάριο (314 - 333 μ.Χ.)»), so he is named in the life without a link. **`athanasius-of-alexandria` is joined to him by the page's own two sentences**: he sat at the Synod of Tyre in 335 and did not sign the condemnation of Athanasius, and in 349 he received Athanasius back from exile with great joy. No relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

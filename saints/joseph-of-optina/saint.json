@@ -6,6 +6,11 @@
       "form": "Iosif de la Optina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 mai, «Sfântul Iosif de la Optina»."
+    },
+    {
+      "form": "Ιωσήφ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαΐου, «Όσιος Ιωσήφ της Όπτινα», with the rank word left off. No Russian form is recorded: saint.gr prints his worldly name only in Greek letters, «Ιβάν Ευθύμοβιτς Λιτόφκιν», and a Cyrillic form would be a transliteration."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαΐου — «Όσιος Ιωσήφ της Όπτινα»",
+        "url": "https://www.saint.gr/05/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and the head line «(1837 - 1911)» fixes him as the elder of Optina and not one of the name sweep's many Josephs. **`dates` are added where the folder had none**: the page gives the day of his birth, «γεννήθηκε στις 2 Νοεμβρίου 1837», and the year of his repose, 1911, and no day for the latter. **The Greek adds what the folder lacked**: his name in the world, Ivan Evfimovich Litovkin; his village Gorodishche in the district of Starobelsk in the province of Kharkov; his parents Euthymius Emilianovich and Maria Vasilievna and all six of their children; the sister Alexandra who became the nun Leonida and told of his childhood; the loss of both parents to cholera when he was four; the tonsures of 15 April and 16 July 1872 and the two names, John and then Joseph; the diaconate in 1877 and the priesthood from Bishop Vladimir of Kaluga in October 1884; the elder Ambrose choosing him as successor; the gift of foresight; his rule about obediences and his eight counsels to a nun on bearing a brother's sins; his teaching of the Jesus prayer aloud before the prayer of the mind; the daily alms at his cell; the last Liturgy at the Dormition of 1905 and the six years of illness after it; and his death holding a small white wooden cross with the relic of the Great Martyr Barbara laid on his breast. **`ambrose-of-optina` is joined to him by the page's own account** and gets a `related` row. No hymn on the page. `types` are not changed, though the page has him ordained deacon and priest: `hieromonk` is a rank the corpus holds and adding it here would rest on the Greek alone, which is a reading for a report and not a silent change."
     },
     {
       "church": "serbian",
@@ -46,5 +61,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1837,
+      "latest": 1837,
+      "display": "1837",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στις 2 Νοεμβρίου 1837 μ.Χ. στο χωριό Γκοροντίστσα της περιοχής Στάρομπελσκ της επαρχίας Καρκώφ», and the head line of the same page gives «(1837 - 1911)»."
+    },
+    "death": {
+      "earliest": 1911,
+      "latest": 1911,
+      "display": "1911",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Θεός όμως παρέτεινε την ζωή του Οσίου, που ήταν πολύτιμη για όλους, μέχρι το 1911 μ.Χ.», and the head line of the same page gives «(1837 - 1911)». The page gives no day of the month for his repose."
+    }
+  },
+  "related": [
+    "ambrose-of-optina"
+  ]
 }

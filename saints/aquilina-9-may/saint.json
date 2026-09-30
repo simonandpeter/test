@@ -1,0 +1,63 @@
+{
+  "slug": "aquilina-9-may",
+  "display_name": "Aquilina (9 May)",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ακυλίνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαΐου, «Αγίες Ακυλίνα και Καλλινίκη», with the rank word left off; the page's own head line for her is «Αγια Ακυλινα (; - 251)»."
+    }
+  ],
+  "related": [
+    "callinike-9-may",
+    "christopher"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 251,
+      "latest": 251,
+      "display": "251",
+      "basis": "traditional",
+      "note": "saint.gr gives the year only in the head line over her name, «Αγια Ακυλινα (; - 251)», and the body of the page gives none: it says only that the two were sent by the emperor Decius, whose reign ended in 251."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαΐου — «Αγίες Ακυλίνα και Καλλινίκη»",
+        "url": "https://www.saint.gr/05/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Μαΐου εκάστου έτους», the same day as the listing, **and gives each of the two her own head line** — «Αγια Ακυλινα» and «Αγια Καλλινικη» — so a pair the page enumerates is two folders. **She is none of the three Aquilinas the corpus keeps**: of Byblos, of Zagliveri, and the martyr of 7 April; this one is one of two women sent by Decius to Christopher, whose day this also is. **The tie to `christopher` is the page's own**: «Πόρνες που στάλθηκαν από τον βασιλιά Δέκιο, για να δελεάσουν και να ελκύσουν στην ειδωλολατρία τον μάρτυρα Χριστόφορο. Πίστεψαν όμως στον Χριστό δια του Αγίου Χριστόφορου». No place, no judge of her own, no relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

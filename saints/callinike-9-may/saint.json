@@ -1,0 +1,63 @@
+{
+  "slug": "callinike-9-may",
+  "display_name": "Callinike (9 May)",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Καλλινίκη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαΐου, «Αγίες Ακυλίνα και Καλλινίκη», with the rank word left off; the page's own head line for her is «Αγια Καλλινικη (; - 251)»."
+    }
+  ],
+  "related": [
+    "aquilina-9-may",
+    "christopher"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 251,
+      "latest": 251,
+      "display": "251",
+      "basis": "traditional",
+      "note": "saint.gr gives the year only in the head line over her name, «Αγια Καλλινικη (; - 251)», and the body of the page gives none: it says only that the two were sent by the emperor Decius, whose reign ended in 251."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαΐου — «Αγίες Ακυλίνα και Καλλινίκη»",
+        "url": "https://www.saint.gr/05/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Μαΐου εκάστου έτους», the same day as the listing, and gives her her own head line beside Aquilina's, which is why the pair is two folders. **She is not `kalloni-mother-of-gregory-palamas`**, whom the name sweep raised on the fold of the name, and not one of the corpus's male Callinici of Caesarea, Cilicia or Edessa: this is a woman, one of two sent by Decius to Christopher, whose day this also is. No place, no judge of her own, no relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

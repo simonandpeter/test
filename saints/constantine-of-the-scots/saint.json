@@ -1,0 +1,61 @@
+{
+  "slug": "constantine-of-the-scots",
+  "display_name": "Constantine of the Scots",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "king",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Κωνσταντίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαΐου, «Άγιος Κωνσταντίνος ο Μάρτυρας, βασιλέας των Σκώτων», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 576,
+      "latest": 576,
+      "display": "576",
+      "basis": "traditional",
+      "note": "saint.gr: «ίδρυσε μονή και μαρτύρησε από τους ειδωλολάτρες το 576 μ.Χ.», and the head line of the same page gives «(; - 576)». The page gives no year for his birth, only that he lived in the sixth century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαΐου — «Άγιος Κωνσταντίνος ο Μάρτυρας, βασιλέας των Σκώτων»",
+        "url": "https://www.saint.gr/05/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Μαΐου εκάστου έτους», the same day as the listing. **The page itself hedges the whole account**: «Λέγεται ότι ήταν Βρετανός βασιλέας» — it is said that he was a British king — and the page's own name gloss goes on to list the other famous Constantines, so the epithet «των Σκώτων» in the day line and «Βρετανός» in the body are the page's two words for the same man and are not reconciled there. `king` is stored because the line and the body both give it; **the display name keeps «of the Scots» and not «king»**, which `types` carries. **He is none of the corpus's many Constantines**, and `constantine-the-new-emperor`, the name sweep's one strong row, is a Byzantine emperor. **Two saints are named on the page and handled differently**: Columba, «τιμάται 9 Ιουνίου», has no folder in this corpus and is named in the life without a link; the monastery of Saint David, patron of Wales, is a **dedication and not a relation**, so `david-of-wales` gets no `related` row and no link, on `docs/CORPUS.md` §3's rule. **`locations` are left out**: the page names Wales, Scotland and the Picts and locates him at none of them precisely. No relics, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

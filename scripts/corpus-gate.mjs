@@ -115,6 +115,30 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'συνεσιοσ synesius-of-irkutsk synesius-of-lysi':
+    'Two men: the Synesius of 10 May and Synesius of Lysi on 1 March.',
+  'σιμων simon-of-moscow simon-of-vladimir simon-of-zographou simon-the-martyr-3-february simon-the-zealot':
+    'Five now. The new one is Simon of Vladimir on 10 May; the others are read in the el-04-30 entry for this name form.',
+  'φιλημων philemon-companion-of-domninus philemon-companion-of-fortunianus philemon-disciple-of-passarion philemon-of-cyzicus philemon-of-gaza philemon-of-karpathos':
+    'Six now. The new one is the disciple of Passarion on 10 May; the others are read in the el-03-21 entry for this name form.',
+  'ονησιμοσ onesimus-10-may onesimus-the-apostle':
+    'Two men: the Onesimus of 10 May and Onesimus the Apostle, whom the Greek keeps on 15 February.',
+  'ισιδωροσ isidore-10-may isidore-8-january isidore-of-antioch isidore-of-cordoba isidore-of-pelusium isidore-of-samtavisi isidore-of-seville':
+    'Seven now. The new one is the Isidore of 10 May; the others are read in the el-04-30 entry for this name form.',
+  'αγαπιοσ agapius-disciple-of-babylas agapius-disciple-of-passarion agapius-martyr-1-march agapius-of-apamea agapius-of-colciu agapius-of-numidia':
+    'Six now. The new one is the disciple of Passarion on 10 May; the others are read in the el-04-29 entry for this name form.',
+  'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-katopinos nicholas-of-corinth nicholas-of-japan nicholas-of-magnesia nicholas-of-pskov nicholas-of-spetses nicholas-of-the-forty-martyrs nicholas-of-trebizond nicholas-of-valaam nicholas-of-vounena nicholas-patriarch-of-georgia nicholas-the-studite nicholas-velimirovich':
+    'Twelve now. The new one is on 9 May; the others are read in the el-04-24 entry for this name form.',
+  'μαξιμοσ maximus-30-april maximus-7-may maximus-brother-of-dometius maximus-companion-of-asklepiodote maximus-companion-of-fausta maximus-companion-of-olympias maximus-companion-of-terentius maximus-of-jerusalem maximus-of-kapsokalyvia maximus-of-marcianopolis maximus-of-ozovia maximus-of-totma maximus-of-ungrovlachia maximus-son-of-paul-and-tatta maximus-venerable-martyr-6-march':
+    'Fifteen now. The new one is Maximus of Jerusalem on 9 May; the others are read in the el-05-07 entry for this name form.',
+  'γορδιανοσ gordian-9-may gordian-of-tomis':
+    'Two men: the Gordian of 9 May and the Gordian of the el-09-13 entry.',
+  'κωνσταντινοσ constantine-of-cornwall constantine-of-strathclyde constantine-of-the-scots':
+    'Three men: Cornwall on 9 March, Strathclyde on 11 March and Constantine of the Scots on 9 May.',
+  'καλλινικη callinice-of-galatia callinike-9-may':
+    'Two women: the Callinike of 9 May and Callinice of Galatia on 22 March.',
+  'ακυλινα aquilina-9-may aquilina-the-martyr-7-april':
+    'Two women: the Aquilina of 9 May and Aquilina the martyr of 7 April.',
   'ζωσιμασ zosimas-24-january zosimas-of-carthage zosimas-of-kumurdo zosimas-of-palestine zosimas-of-solovki zosimas-of-volokolamsk zosimas-of-vorbozom':
     'Seven now. The new one is on 8 May; the others are read in the el-05-01 entry for this name form.',
   'ελλαδιοσ helladius-of-auxerre helladius-the-layman':

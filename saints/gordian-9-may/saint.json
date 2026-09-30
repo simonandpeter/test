@@ -1,0 +1,62 @@
+{
+  "slug": "gordian-9-may",
+  "display_name": "Gordian (9 May)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Γορδιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαΐου, «Άγιοι Επίμαχος και Γορδιανός», with the rank word left off; the page's own head line for him is «Αγιος Γορδιανος»."
+    }
+  ],
+  "related": [
+    "epimachus-9-may"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "249–251",
+      "basis": "traditional",
+      "note": "saint.gr gives a reign and no year: «κατάγονταν από την Ρώμη και άθλησαν επί αυτοκράτορα Δεκίου (249-251 μ.Χ.)». The interval is that reign as the page prints it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαΐου — «Άγιοι Επίμαχος και Γορδιανός»",
+        "url": "https://www.saint.gr/05/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Μαΐου εκάστου έτους», the same day as the listing, **and gives each of the two his own head line and his own distich**, so the pair is two folders; the companion is the corpus's `epimachus-9-may`, which gets a Greek row of its own from this same page. **He is not `gordian-of-tomis`**, the corpus's only other Gordian, who is of Tomis and not of Rome. **The page gives him a second day and it is recorded here as a note, not as a second row**: «Η μνήμη τους επαναλαμβάνεται στις 31 Οκτωβρίου» — their memory is repeated on 31 October. One attestation row per church is the schema, and the row records the day page read. **The page also gives what is not stored as a location**: the relics were laid in one grave, a considerable part of them is kept at the Benedictine abbey at Kempten in Bavaria, and their synaxis was held in the church of the holy martyr Stratonikos. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

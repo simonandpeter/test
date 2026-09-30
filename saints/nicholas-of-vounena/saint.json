@@ -1,0 +1,97 @@
+{
+  "slug": "nicholas-of-vounena",
+  "display_name": "Nicholas of Vounena",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "soldier",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαΐου, «Άγιος Νικόλαος ο εν Βουνένοις», with the rank word and the place left off. The same page also calls him «ο Νέος» and «ο εξ Ανατολής»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 720,
+      "latest": 720,
+      "display": "720",
+      "basis": "traditional",
+      "note": "saint.gr: «Αφού τον κατατρύπησαν με το ίδιο το κοντάρι του στη συνέχεια απέκοψαν την Τιμία Του Κεφαλή στις 9 Μαΐου του 720 μ.Χ.», and the head line of the same page gives «(; - 720)». The page gives no year for his birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαΐου — «Άγιος Νικόλαος ο εν Βουνένοις»",
+        "url": "https://www.saint.gr/05/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Μαΐου εκάστου έτους», the same day as the listing, and the day is the day of his beheading, which the page states. **His twelve soldiers are not named** — «συνοδευόμενος από δώδεκα στρατιώτες του», and the Avars «τους κατέσφαξαν» — so they are no folders. **He is none of the corpus's many Nicholases**, all of whom the name sweep raised on the name alone; this one is a duke of the imperial army under Leo the Isaurian who became an ascetic at Vounena in Thessaly and was killed by the Avars there. **Two apolytikia and two kontakia are on the page and the first of each is stored**, both proper and both naming him; the second apolytikion, the second kontakion, a Κάθισμα, two Μεγαλυνάρια and a whole Ἀκολουθία and Παρακλητικός Κανών are left in the source. **`locations` are left out** although Vounena in Thessaly is named: the page places him there only for his asceticism and death, and `uncertainty_km` for a village the page does not locate further would be a guess."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὡς τῶν αἰχμαλώτων.",
+      "text": "Ως τῶν νοσούντων ὁ ἄμισθος ἰατρός, καὶ τῶν ἐν κινδύνοις ἀπροσμάχητος βοηθός, θλιβομένων τε θερμὸς ὑπερασπιστής, καὶ τῶν ἐν παντοίαις ἀνάγκαις ὑπέρμαχος, Ὁσιομάρτυς ἐξ ἑῴας Νικόλαε‧ πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ὡς τῶν αἰχμαλώτων, the first of two on the page of «Άγιος Νικόλαος ο εν Βουνένοις»",
+        "url": "https://www.saint.gr/1498/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the unpaid physician of the sick, and the unconquerable helper of those in danger, the warm defender of the afflicted and the champion of those in every kind of need, O venerable martyr Nicholas from the east, intercede with Christ our God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Εξ ἑῴας σήμερον ἀναφανέντα, ὡς ἀστέρα πάμφωτον, καὶ τῆς Ἑλλάδος εἰς δυσμὰς , ὑπὲρ Χριστοῦ ἐναθλήσαντά, σε ἀνυμνοῦμεν τὸν Νέον Νικόλαον.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, the first of two on the page of «Άγιος Νικόλαος ο εν Βουνένοις»",
+        "url": "https://www.saint.gr/1498/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thee who hast appeared today out of the east like an all-radiant star, and who didst contend for Christ in the west of Greece, we hymn, O Nicholas the New.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

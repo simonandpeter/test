@@ -6,6 +6,11 @@
       "form": "Epimah",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 mai, «Sfântul Mucenic Epimah»."
+    },
+    {
+      "form": "Επίμαχος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαΐου, «Άγιοι Επίμαχος και Γορδιανός», with the rank word left off; the page's own head line for him is «Αγιος Επιμαχος»."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαΐου — «Άγιοι Επίμαχος και Γορδιανός»",
+        "url": "https://www.saint.gr/05/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and gives each of the pair his own head line and distich. **He is not `epimachus-of-pelusium`**, who is the Egyptian martyr of another day; this one is of Rome and is joined on the page to Gordian, who is drafted as `gordian-9-may` from this same page. **The page gives the pair a second day and it is recorded as a note, not as a second row**: «Η μνήμη τους επαναλαμβάνεται στις 31 Οκτωβρίου». One attestation row per church is the schema, and the row records the day page read. **`dates` are added where the folder had none**, as the reign the page prints and nothing narrower. **The Greek adds what the folder lacked**: Rome as their country, the magistrate's pressure, the torture and the beheading, the single grave, the considerable part of the relics kept at the Benedictine abbey at Kempten in Bavaria, and the synaxis in the church of the holy martyr Stratonikos. No hymn."
     },
     {
       "church": "serbian",
@@ -45,5 +60,17 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "249–251",
+      "basis": "traditional",
+      "note": "saint.gr gives a reign and no year: «κατάγονταν από την Ρώμη και άθλησαν επί αυτοκράτορα Δεκίου (249-251 μ.Χ.)». The interval is that reign as the page prints it."
+    }
+  },
+  "related": [
+    "gordian-9-may"
+  ]
 }

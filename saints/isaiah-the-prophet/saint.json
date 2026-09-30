@@ -6,6 +6,11 @@
       "form": "Isaia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 mai, «Sfântul Proroc Isaia»."
+    },
+    {
+      "form": "Ησαΐας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαΐου, «Προφήτης Ησαΐας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαΐου — «Προφήτης Ησαΐας»",
+        "url": "https://www.saint.gr/05/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and it is the Isaiah of the prophetic book, whom the page calls «ο πρώτος μεταξύ των τεσσάρων μεγάλων Προφητών». **He is none of the Isaiahs the name sweep raised** — of Kykkos, of Valaam, the Egyptian. **`dates` are added where the folder had none**, as a birth about 774 BC: the head line gives «(-774 - ;)» and the body «γεννήθηκε στα Ιεροσόλυμα περί το 774 π.Χ.», and the page gives no year at all for his death, only that he was sawn in two under Manasseh, so no death interval is recorded. **The Greek adds what the folder lacked**: his father Amos; Jerusalem as his birthplace; the Hebrew form of the name and its sense, «ο Θεός σώζει»; the rabbinic traditions about his kinship with Amaziah and Manasseh, which the page itself calls «θρύλοι μάλλον και όχι ιστορικές αλήθειες»; his marriage and his two sons and the meaning of their symbolic names, Jasoub and Maher-shalal-hash-baz; his call in 738 BC in the last year of Uzziah and the first of Jotham; the vision in the temple and the coal from the altar; the reigns his work spanned; the wooden saw; the title «Ευαγγελικός Προφήτης»; the translation of his relic to Constantinople under Theodosius II and its laying in the church of the martyr Laurence near the Blachernae; and a fragment of his skull at the monastery of Chilandar on Athos. **Two hymns are stored, both proper and both naming him**; the page prints a second apolytikion in Ἦχος β’ as well, which is left in the source. `types` are not changed: the kontakion's «προφητομάρτυς» is a hymn's word and the corpus's `prophet` is what the calendars give."
     },
     {
       "church": "serbian",
@@ -59,9 +74,52 @@
         "text": "Keeping the memory of thy prophet Isaiah, O Lord, we entreat thee through him: save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὡς σάλπιγξ πανεύσημος, μεγαλοφώνω φθογγή, τῷ κόσμῳ προήγγειλας, τὴν παρουσίαν Χριστοῦ, Προφῆτα θεσπέσιε, σὺ γὰρ τοῦ Παρακλήτου, ἑλλαμφθεῖς τὴ δυνάμει, κάλαμος ὀξυγράφος, τῶν μελλόντων ἐδείχθης, διὸ σὲ Ἠσαΐα, ὕμνοις γεραίρομεν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε, the second of two on the page of «Προφήτης Ησαΐας»; the first, in Ἦχος β’, is the general one for a prophet and is left in the source",
+        "url": "https://www.saint.gr/1495/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As an all-glorious trumpet, with a great-voiced sound, thou didst announce beforehand to the world the coming of Christ, O divinely-speaking Prophet; for being illumined by the power of the Comforter thou wast shown to be a swift-writing reed of things to come, and therefore we honour thee, O Isaiah, with hymns.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τήν ἐν πρεσβείαις ἀκοίμητον.",
+      "text": "Τῆς Προφητείας τὸ χάρισμα δεδεγμένος, προφητομάρτυς Ἡσαΐα θεοκήρυξ, πᾶσιν ἐτράνωσας τοῖς ὑφ᾽ ἤλιον, τὴν τοῦ Θεοῦ φωνήσας μεγαλοφώνως σάρκωσιν· Ἱδοὺ ἡ Παρθένος ἐν γαστρὶ λήψεται.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τήν ἐν πρεσβείαις ἀκοίμητον, on the page of «Προφήτης Ησαΐας»",
+        "url": "https://www.saint.gr/1495/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the gift of prophecy, O prophet-martyr Isaiah, herald of God, thou didst make plain to all that are under the sun the incarnation of God, crying it with a great voice: behold, the Virgin shall conceive in her womb.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": -774,
+      "latest": -774,
+      "display": "about 774 BC",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Προφήτης Ησαΐας, υιός του Αμώς, γεννήθηκε στα Ιεροσόλυμα περί το 774 π.Χ.», and the head line of the same page gives «(-774 - ;)». The page gives no year for his death and leaves that half of the head line blank, so no death interval is recorded."
+    }
   }
 }

@@ -7,6 +7,11 @@
       "form": "Ieronim Simonopetritul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 ianuarie."
+    },
+    {
+      "form": "Ιερώνυμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Μαΐου, «Όσιος Ιερώνυμος ο Σιμωνοπετρίτης», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -52,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Ιανουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Μαΐου — «Όσιος Ιερώνυμος ο Σιμωνοπετρίτης»",
+        "url": "https://www.saint.gr/05/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Μαΐου εκάστου έτους», and the head line «(1871 - 1957)» and the opening sentence — born at the village of Reiz-Dere in the district of Krini in Asia Minor in 1871, of poor and pious parents, Nikolaos Diakogiorgis and Maria — are the same man as the folder's, whose Romanian life gives «Ioan Diakoghorghis, s-a născut în anul 1871, la Reiz-Dere din Asia Mică». **The two calendars keep him on two different days and both are recorded**: the Romanian row is 7 January, which doxologia gives as the day of his repose, «pe 7 ianuarie 1957 (ajunul Sărbătorii Nașterii Domnului, după calendarul vechi)», and the Greek keeps him on 9 Μαΐου. Nothing about the Romanian row changes, and the Greek row records the day page read. **`dates` are not touched**: the folder already has 1871 and 1957 off doxologia and the Greek head line agrees with both. **What is added from the Greek is the childhood the Romanian life did not give**: the village five kilometres north-east of Alatsata and two and a half from the sea, whose people were farmers and vine-growers come from Crete and the Peloponnese; the baptismal name John; his standing as a pupil, so that his teacher sent him to teach in a nearby town as soon as he had finished the elementary school; the church that became the centre of his life; two healings by Saint Demetrius, for pains in his legs and for chickenpox, with forty days' fasting in that saint's church each time; his knowing the Salutations of the Mother of God by heart from the age of seven; and the monastic names of his family — his mother Melane, his brother Maximos, his three sisters Magdalene, Melane and Kassiane. **This reader did not read the whole page.** It is very long and `elbody.mjs` cut some forty-three thousand characters out of its middle, so the years between his youth and his repose are not recorded here from the Greek at all; nothing is claimed about them. The page also lists an Ἀκολουθία of his and the patriarchal act of his canonisation, which were not opened."
     },
     {
       "church": "serbian",
