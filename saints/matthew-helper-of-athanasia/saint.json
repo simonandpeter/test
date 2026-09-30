@@ -1,0 +1,59 @@
+{
+  "slug": "matthew-helper-of-athanasia",
+  "display_name": "Matthew, helper of Athanasia of Aegina",
+  "sex": "male",
+  "types": [
+    "ascetic",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ματθαίος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Απριλίου, «Όσιος Ματθαίος», with the rank word left off."
+    },
+    {
+      "form": "Ματθίας",
+      "lang": "el",
+      "note": "The alternative form saint.gr prints in the body of the same page: «Ο Όσιος Ματθαίος (ή Ματθίας) έζησε κατά τον 9ο αιώνα μ.Χ.»"
+    }
+  ],
+  "related": [
+    "athanasia-of-aegina"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Απριλίου — «Όσιος Ματθαίος»",
+        "url": "https://www.saint.gr/04/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Απριλίου εκάστου έτους», the same day as the listing. The day's line is bare, «Όσιος Ματθαίος», and it is the page that ties him to anybody: «συνέδεσε τον βίο του με την Οσία Αθανασία (βλέπε 18 Απριλίου )», the Athanasia of Aegina whom the same calendar keeps on this day and whom the corpus already holds. The page gives him the ninth century and no year, so there is no `dates` object. The corpus holds two folders whose names fold onto Matthew, the Apostle and a monk martyred in 1918, and neither is this man."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

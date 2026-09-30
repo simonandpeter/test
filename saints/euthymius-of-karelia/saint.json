@@ -1,0 +1,65 @@
+{
+  "slug": "euthymius-of-karelia",
+  "display_name": "Euthymius of Karelia",
+  "sex": "male",
+  "types": [
+    "abbot",
+    "ascetic",
+    "preacher"
+  ],
+  "names": [
+    {
+      "form": "Ευθύμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Απριλίου, «Όσιος Ευθύμιος ο Φωτιστής της Καρελίας», with the rank word, the epithet and the place left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1435,
+      "latest": 1435,
+      "display": "1435",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ευθύμιος κοιμήθηκε με ειρήνη το έτος 1435 μ.Χ.», and its heading has «Οσιος Ευθυμιος ο Φωτιστης Της Καρελιας (; - 1435)». For his birth the page gives only «γεννήθηκε το δεύτερο ήμισυ του 14ου αιώνα μ.Χ.», and no `birth` interval is taken from a half-century stated that loosely."
+    }
+  },
+  "related": [
+    "antony-of-korel",
+    "felix-of-korel"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Απριλίου — «Όσιος Ευθύμιος ο Φωτιστής της Καρελίας»",
+        "url": "https://www.saint.gr/04/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1435)». **Two things the page says are its own and are quoted rather than mended.** It puts his monastery «στις όχθες της Μαύρης Θάλασσας, στην Καρελία (Φινλανδία)», on the shores of the Black Sea, in Karelia in Finland, which is where the page has it. And it names his companions in the Alaskan calendar as «μαζί με τους Αγίους Αντώνιο και Ευτύχη», Antony and Eutyches, where saint.gr's own separate entry for the same 18 April calls the pair Antony and Felix of Korel; the two pages disagree on the second name and neither is made to yield. It names three disciples buried with him, Stephen the Ascetic, Isaiah and Nikanor, and none of them has a folder here. saint.gr keeps a second Euthymius on this same 18 April, «ο Θαυματουργός», of no century at all: two entries on one day are two commemorations, so two men. The page prints no couplet and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

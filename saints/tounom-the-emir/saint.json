@@ -1,0 +1,95 @@
+{
+  "slug": "tounom-the-emir",
+  "display_name": "Tounom the Emir",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Τούνομ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Απριλίου, «Άγιος Τούνομ ο εμίρης, ο Μάρτυς», with the rank word left off; the page also spells it Τουνόμ in one of its captions. The epithet is kept because it is the whole of what distinguishes him."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1579,
+      "latest": 1579,
+      "display": "1579",
+      "basis": "inferred",
+      "note": "saint.gr's heading has «Αγιος Τουνομ ο Εμιρης, ο Μαρτυς (; - 1579)», but the page says plainly that the year is its own reckoning and not a source's: «Τα συγγράμματα που αναφέρονται στο γεγονός δεν προσδιορίζουν το ακριβές έτος» — the writings that mention the event do not fix the exact year — and it arrives at 1579 by crossing the tenures of the patriarchs Sophronius, Jeremias, Silvester and Joachim with the reign of sultan Murad III, «προκύπτει ότι το μοναδικό έτος που συνέπεσε η διοίκηση των πέντε αντρών είναι το 1579 μ.Χ.». `basis` is `inferred` for that reason."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Απριλίου — «Άγιος Τούνομ ο εμίρης, ο Μάρτυς»",
+        "url": "https://www.saint.gr/04/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Απριλίου εκάστου έτους», the same day as the listing. **The page gives two accounts of how he died and does not choose between them**: the Turks killed him so that the wonder should not become known, or, «σύμφωνα με άλλη εκδοχή», he cried out to the crowd «Αυτή είναι η αληθινή πίστη» and was burnt alive for changing his religion. Both are in the life paragraph as the page has them. It says his bones are kept at the monastery of the Megali Panagia in Jerusalem. It prints an apolytikion and a kontakion, which are copied, and a megalynarion, which the schema has no kind for and which is therefore not. The corpus holds nobody of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α΄.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Ὡς ληστὴν μνήσθητί μου Χριστε, κραυγάσαντα τὴν ἐνδεκάτην τὴν ὥραν, καὶ εἰς τὴν πίστιν τοῦ Χριστοῦ προσχωρήσαντα, Εμίρην Τούνομ ἄσμασι Μάρτυρα ὥσπερ ἱερὸν ἐν τῇ ὥρα τῆς ἀφῆς τῶν λαμπάδων τῶν Ορθοδόξων ὑπὸ Φωτὸς τοῦ Ἁγίου στεῤῥῶς, ἀθλήσαντα τιμῶμεν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος πλ. α΄, Τὸν συνάναρχον Λόγον, on the page of Άγιος Τούνομ ο εμίρης, ο Μάρτυς. It is his own and names him.",
+        "url": "https://www.saint.gr/4115/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "We honour in songs the emir Tounom, who like the thief cried out «remember me, O Christ» at the eleventh hour and came over to the faith of Christ, and who contended steadfastly as a holy martyr at the hour of the lighting of the Orthodox lamps by the Holy Light.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ΄.",
+      "model": "Τῇ ὑπερμάχῳ.",
+      "text": "Τὸν θεασάμενον ὡς πῦρ τὸ Φῶς τὸ ἅγιον, ἐπ’ ὀρθοδόξους καταβαῖνον ξένως μέλψωμεν, ἐκ Ναοῦ τῆς Ἀναστάσεως πύλης στύλου, καὶ καλῶς ἀλλοιωθέντα ὥσπερ κήρυκα, τοῦ Χριστοῦ καὶ ἐνδεκάτης ὥρας Μάρτυρα, πόθῳ κράζοντες· Χαίροις Τούνομ μακάριε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος πλ. δ΄, Τῇ ὑπερμάχῳ, on the page of Άγιος Τούνομ ο εμίρης, ο Μάρτυς. It is his own, names him and names the column of the gate.",
+        "url": "https://www.saint.gr/4115/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us sing of him who saw the Holy Light as fire coming down strangely upon the Orthodox out of the column of the gate of the church of the Resurrection, and who was changed for the good and became a herald of Christ and a martyr of the eleventh hour, crying to him with longing: rejoice, blessed Tounom.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

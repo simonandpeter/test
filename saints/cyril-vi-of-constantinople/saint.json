@@ -1,0 +1,67 @@
+{
+  "slug": "cyril-vi-of-constantinople",
+  "display_name": "Cyril VI (Serpetzoglou)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "patriarch",
+    "new-martyr"
+  ],
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Κύριλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Απριλίου, «Άγιος Κύριλλος ο ΣΤ' ο Ιερομάρτυρας», with the rank word left off; the numeral is kept because it is what distinguishes him."
+    },
+    {
+      "form": "Σερπεντζόγλου",
+      "lang": "el",
+      "note": "His name in the world, which saint.gr's page for 18 Απριλίου gives: «το κοσμικό του όνομα ήταν Κωνσταντίνος Σερπεντζόγλου». The same sentence spells the surname a second way, «ο επιλεγόμενος Σεραπετζόγλου», and the page does not choose between them."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1821,
+      "latest": 1821,
+      "display": "1821",
+      "basis": "traditional",
+      "note": "saint.gr: «όπου υπέστη μαζί με άλλους είκοσι επτά κληρικούς και προύχοντες τον διά αγχόνης θάνατο, το έτος 1821 μ.Χ.», and its heading has «Αγιος Κυριλλος ο Στ' ο Ιερομαρτυρας (; - 1821)». The page gives no year of birth, and dates his consecration to 1803, his translation to Adrianople to 1810, his election as patriarch to 4 March 1813 and his deposition to 13 December 1818."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Απριλίου — «Άγιος Κύριλλος ο ΣΤ' ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/04/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 1821)». It says he was hanged with twenty-seven other clergy and notables; none of them is named, so they have no folders. The twenty-seven and the firman the page quotes whole are the page's own words, and the firman's Greek is kept in the life paragraph as it prints it. The corpus holds twelve folders whose names fold onto Cyril and none of them is a patriarch of Constantinople. The page prints no couplet and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

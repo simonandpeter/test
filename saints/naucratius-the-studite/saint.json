@@ -1,0 +1,61 @@
+{
+  "slug": "naucratius-the-studite",
+  "display_name": "Naucratius the Studite",
+  "sex": "male",
+  "types": [
+    "abbot",
+    "confessor"
+  ],
+  "office": "Abbot of the Studion",
+  "names": [
+    {
+      "form": "Ναυκράτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Απριλίου, «Όσιος Ναυκράτιος ο Στουδίτης», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 847,
+      "latest": 847,
+      "display": "847",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ναυκράτιος κοιμήθηκε με ειρήνη το έτος 847 μ.Χ.», and its heading has «Οσιος Ναυκρατιος ο Στουδιτης (; - 847)». The page gives no year of birth and dates his election as abbot to 842."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Απριλίου — «Όσιος Ναυκράτιος ο Στουδίτης»",
+        "url": "https://www.saint.gr/04/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Απριλίου εκάστου έτους», the same day as the listing, and heads him «(; - 847)». The corpus holds one folder whose name folds onto this one, Naucratius the brother of Basil the Great, who is of the fourth century and is not this Studite. The page prints no couplet and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

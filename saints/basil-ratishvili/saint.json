@@ -1,0 +1,56 @@
+{
+  "slug": "basil-ratishvili",
+  "display_name": "Basil (Ratishvili)",
+  "sex": "male",
+  "types": [
+    "ascetic",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Απριλίου, «Όσιος Βασίλειος ο Θαυματουργός εκ Γεωργίας», with the rank word, the epithet and the country left off."
+    },
+    {
+      "form": "Ρατισχβίλι",
+      "lang": "el",
+      "note": "The surname saint.gr prints in the body of the same page: «Ο Όσιος Βασίλειος (Ρατισχβίλι), ο Θαυματουργός»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Απριλίου — «Όσιος Βασίλειος ο Θαυματουργός εκ Γεωργίας»",
+        "url": "https://www.saint.gr/04/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Απριλίου εκάστου έτους», the same day as the listing. **Its one date does not construe and no `dates` are taken from it**: «έζησε μεταξύ του 18ου και του 9ου αιώνα μ.Χ. στη Γεωργία» — he lived between the eighteenth and the ninth century — which is the page's own reading, quoted here rather than corrected in either direction. saint.gr keeps another Βασίλειος ο Θαυματουργός on 15 Απριλίου, the abbot of Moldovița in Moldavia; that page places him in Moldavia and this one in Georgia and at the monastery of Kabeni, so they are two men. The corpus holds some thirty folders of this name and none of them is a Georgian ascetic. The page prints no couplet and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "euthymius-the-wonderworker",
+  "display_name": "Euthymius the Wonderworker",
+  "sex": "male",
+  "types": [
+    "abbot",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ευθύμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Απριλίου, «Όσιος Ευθύμιος ο Θαυματουργός», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Απριλίου — «Όσιος Ευθύμιος ο Θαυματουργός»",
+        "url": "https://www.saint.gr/04/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Απριλίου εκάστου έτους», the same day as the listing. **The page says where it got him and where it did not**: «Ο Όσιος Ευθύμιος είναι άγνωστος στον Συναξαριστή του Αγίου Νικόδημου και τα Μηναία. Συναντάται στον Συναξαριστή Delehaye, αλλά χωρίς βιογραφικά στοιχεία. Στο Λαυριωτικό Κώδικα Ι 70 φ. 1526 όμως, υπάρχουν τα βιογραφικά στοιχεία του» — unknown to Nikodemos's Synaxarist and to the Menaia, in Delehaye without biographical matter, and with it only in the Lavriotic codex I 70. That is a statement about its sources, not a doubt of the entry, and the entry carries no asterisk. It gives no century and no year of any kind, so there is no `dates` object. The page's epithet Θαυματουργός is carried in the display name and left out of `types` for that reason. saint.gr keeps a second Euthymius on this same 18 April, the Enlightener of Karelia who died in 1435: two entries on one day are two commemorations, so two men. The corpus holds fourteen folders whose names fold onto this one and none of them is undated in this way."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "antony-of-korel",
+  "display_name": "Antony of Korel",
+  "sex": "male",
+  "types": [
+    "ascetic",
+    "monk",
+    "preacher"
+  ],
+  "names": [
+    {
+      "form": "Αντώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Απριλίου, «Όσιοι Αντώνιος και Φήλικας οι αυτάδελφοι» as the day prints it — «Όσιοι Αντώνιος και Φήλικας» — with the rank word left off. The page's prose supplies the place: «Οι Όσιοι Αντώνιος και Φήλικας του Κορέλ»."
+    }
+  ],
+  "related": [
+    "felix-of-korel",
+    "euthymius-of-karelia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Απριλίου — «Όσιοι Αντώνιος και Φήλικας»",
+        "url": "https://www.saint.gr/04/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Απριλίου εκάστου έτους», the same day as the listing. Two names in one line, so two folders. The page gives them a century and no year — «έζησαν κατά τον 15ο αιώνα μ.Χ.» — and a bare century stated of a pair with nothing else is not turned into an interval here, so there is no `dates` object. saint.gr's own entry for Euthymius of Karelia on this same day calls the pair «Αντώνιο και Ευτύχη», Antony and Eutyches, where this one calls them Antony and Felix; the disagreement is recorded and not resolved. The corpus holds nobody of this name and place."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

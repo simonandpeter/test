@@ -1,0 +1,56 @@
+{
+  "slug": "felix-of-korel",
+  "display_name": "Felix of Korel",
+  "sex": "male",
+  "types": [
+    "ascetic",
+    "monk",
+    "preacher"
+  ],
+  "names": [
+    {
+      "form": "Φήλικας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Απριλίου, «Όσιοι Αντώνιος και Φήλικας», with the rank word left off. The page's prose supplies the place: «Οι Όσιοι Αντώνιος και Φήλικας του Κορέλ»."
+    }
+  ],
+  "related": [
+    "antony-of-korel",
+    "euthymius-of-karelia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Απριλίου — «Όσιοι Αντώνιος και Φήλικας»",
+        "url": "https://www.saint.gr/04/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Απριλίου εκάστου έτους», the same day as the listing. Two names in one line, so two folders. The page gives them a century and no year — «έζησαν κατά τον 15ο αιώνα μ.Χ.» — so there is no `dates` object. **saint.gr does not agree with itself about his name**: its entry for Euthymius of Karelia on this same day names the two commemorated with him as «Αντώνιο και Ευτύχη», Antony and Eutyches, while this entry calls them Antony and Felix. This folder follows the name on the entry whose page it is and records the other reading here. The corpus holds four folders whose names fold onto Felix — among them Felix the bishop and Felix of Apollonia — and none of them is a fifteenth-century Russian ascetic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
