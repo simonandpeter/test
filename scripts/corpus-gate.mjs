@@ -115,6 +115,28 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ταρασιοσ tarasius-martyr-7-june tarasius-of-constantinople tarasius-of-lycaonia':
+    'Three men: Tarasius of Constantinople on 25 February, Tarasius of Lycaonia on 7 May, and the Tarasius of 7 June.',
+  'στεφανοσ stefan-brancoveanu stephen-27-february stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-khirsa stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-the-presbyter-7-june stephen-xylinites':
+    'Seventeen now. The new one is on 7 June; the others are read in the el-05-24 entry for this name form.',
+  'ιωαννησ john-arnaoutogiannis john-companion-of-barouchius john-companion-of-basilides john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-meletius john-companion-of-peter john-companion-of-tarasius john-disciple-of-limnaeus john-fedorov-of-krasnokutsk john-feodorov-of-tambov john-iii-scholasticus john-kalfas john-kalita john-kaloktenes john-kononenko john-koulakiotis john-mauropous john-nannos-of-thessalonica john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kantara john-of-kazan john-of-lycopolis john-of-manglisi john-of-monagria john-of-nea-moni john-of-rouphinianai john-of-santa-cruz john-of-serres john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-old-lavra john-of-the-well john-of-ustyug john-of-verkhoturye john-of-vilnius john-of-yuryevets john-of-zedazeni john-philosopher-of-georgia john-psychaites john-son-of-xenophon john-the-bulgarian john-the-confessor-of-kathara john-the-goldsmith-of-shumen john-the-hut-dweller john-the-iberian john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-the-wallachian john-timonov john-with-minas-and-david':
+    'Fifty-seven now. The new one is on 7 June; the others are read in the el-06-04 entry for this name form.',
+  'βασιλειδησ basilides-companion-of-gerontius basilides-the-soldier':
+    'Two men: Basilides the companion of Gerontius the canonarch on 1 April and the Basilides of 7 June.',
+  'αντωνιοσ anthony-meskhi anthony-of-constantinople anthony-of-georgia anthony-of-krasnokholmsk anthony-of-martkopi anthony-of-novgorod anthony-of-radonezh anthony-of-tobolsk anthony-of-vologda anthony-of-zadonsk anthony-of-zographou anthony-the-great antonius-the-presbyter antony-companion-of-bassus antony-gorban antony-of-korel antony-of-novgorod antony-of-valaam antony-of-vilnius antony-son-of-john-of-syracuse antony-the-athenian antony-the-martyr-1-march':
+    'Twenty-one now. The new one is on 7 June; the others are read in the el-05-12 entry for this name form.',
+  'μαρθα maria-of-vladimir martha-of-aza martha-of-caesarea martha-of-monemvasia martha-sister-of-lazarus martha-sister-of-lykarion':
+    'Five women. The new one is on 6 June; the others are read in the el-05-05 entry for this name form.',
+  'μαρια maria-6-january maria-methymopoula maria-of-caesarea maria-of-olonets maria-of-vladimir mary-called-marinos mary-of-aza mary-of-cleopas mary-sister-of-lazarus mary-sister-of-lykarion mary-wife-of-xenophon':
+    'Nine now. The new one is on 6 June; the others are read in the el-05-01 entry for this name form.',
+  'κυρια kyria-companion-of-doule kyria-of-caesarea':
+    'Two women: Kyria the companion of Doule on 5 April and the Kyria of 6 June.',
+  'ιωνασ jonah-bishop-6-june jonah-martyr-29-march jonah-of-kyiv jonah-of-moscow jonah-of-odessa jonah-of-the-lavra-of-pskov jonas-of-great-perm jonas-the-lerian':
+    'Eight now. The new one is on 6 June; the others are read in the el-05-17 entry for this name form.',
+  'ατταλοσ attalus-of-lyons attalus-of-niculitel attalus-the-wonderworker':
+    'Two men: Attalus of Niculițel, upgraded on 4 June, and the Attalus of 6 June.',
+  'ανδρονικοσ andronicus-of-perm andronicus-the-apostle':
+    'Three men. The new one is Andronicus of Perm on 6 June, whose folder relates John of Kronstadt and Nicholas of Japan because his own life names both — `tests/life-links.test.mjs` asked for the rows. The others are read in the el-05-17 entry for this name form.',
   'θεοδωροσ mstislav-of-kiev theodore-companion-of-pausolypius theodore-companion-of-stephen theodore-companion-of-terentius theodore-founder-of-chora theodore-of-kama-the-philosopher theodore-of-kandavla theodore-of-kythera theodore-of-moscow theodore-of-murom theodore-of-novgorod theodore-of-pavia theodore-of-pentapolis theodore-of-perga theodore-of-samothrace theodore-of-sykeon theodore-of-tamasos theodore-of-the-twelve-tribunes theodore-of-tomsk theodore-of-vrsac theodore-prince-of-yaroslavl theodore-stratelates theodore-the-byzantine theodore-the-envoy-of-nicomedia theodore-the-recruit theodore-the-silent theodore-trichinas theodore-yaroslavich':
     'Twenty-eight now. The new one is Theodore Yaroslavich on 5 June, whose folder relates Alexander Nevsky because his own life names him as his younger brother — `tests/life-links.test.mjs` asked for the row. The others are read in the el-05-24 entry for this name form.',
   'μαρκοσ mark-of-arethusa mark-of-byblos mark-of-chios mark-of-kantara mark-of-the-lavra-of-pskov mark-the-ascetic mark-the-cretan-of-smyrna mark-the-deaf mark-the-evangelist mark-the-hermit-20-may mark-the-shepherd':

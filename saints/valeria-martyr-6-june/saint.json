@@ -6,6 +6,11 @@
       "form": "Valeria",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 iunie, «Sfânta Muceniță Valeria»."
+    },
+    {
+      "form": "Βαρέρια",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιουνίου, «Αγια Βαρερια η Παρθενα», with the rank word left off. The day's line gives the second form beside it, «Βαρέρια (ή Βαλερία)», which is the one the folder's English name follows."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Ιουνίου — «Αγίες πέντε Παρθένες, Μάρθα, Μαρία, Κυρία, Βαρέρια και Μαρκία»",
+        "url": "https://www.saint.gr/06/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Ιουνίου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row, and carries all five virgins on one page with a head line for each. The day's line gives this one two forms, «Βαρέρια (ή Βαλερία)», and the head line uses the first: «Αγια Βαρερια η Παρθενα». The other four of the five have no folder in the corpus and are drafted new in `el-06-06`. The page gives no year, no emperor and no judge's name, so the folder's dateless reading stands. No hymn is printed."
     },
     {
       "church": "serbian",
@@ -45,5 +60,11 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "martha-of-caesarea",
+    "maria-of-caesarea",
+    "kyria-of-caesarea",
+    "marcia-of-caesarea"
+  ]
 }

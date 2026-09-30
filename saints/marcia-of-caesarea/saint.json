@@ -1,0 +1,57 @@
+{
+  "slug": "marcia-of-caesarea",
+  "display_name": "Marcia of Caesarea",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Μαρκία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιουνίου, «Αγια Μαρκια η Παρθενα», with the rank word left off. The day's line names the five together, «Αγίες πέντε Παρθένες, Μάρθα, Μαρία, Κυρία, Βαρέρια και Μαρκία», and the life page heads each of them separately."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Ιουνίου — «Αγίες πέντε Παρθένες, Μάρθα, Μαρία, Κυρία, Βαρέρια και Μαρκία»",
+        "url": "https://www.saint.gr/06/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Ιουνίου εκάστου έτους», the same day as the listing, and carries all five women on the one page with a head line for each: «Αγια Μαρθα η Παρθενα», «Αγια Μαρια η Παρθενα», «Αγια Κυρια η Παρθενα», «Αγια Βαρερια η Παρθενα», «Αγια Μαρκια η Παρθενα». The day's line names them in order and gives two of them a second form: «Κυρία (ή Κυρά)» and «Βαρέρια (ή Βαλερία)». The corpus already keeps the fourth of them as `valeria-martyr-6-june`, from doxologia, and she takes her Greek row as an upgrade rather than a folder; the other four are new here. The page gives no year, no emperor and no judge's name, so there is no `dates` object. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "martha-of-caesarea",
+    "maria-of-caesarea",
+    "kyria-of-caesarea",
+    "valeria-martyr-6-june"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

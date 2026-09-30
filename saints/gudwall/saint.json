@@ -1,0 +1,48 @@
+{
+  "slug": "gudwall",
+  "display_name": "Gudwall",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Gudwall",
+      "lang": "en",
+      "note": "Read out of saint.gr's line for 6 Ιουνίου, «Άγιος Gudwall (Ουαλός)», which prints the name in Latin letters; the life page gives the Greek rendering in brackets, «του Αγίου Gudwall (Γκουντγουώλ)». The parenthesis «(Ουαλός)» in the day's line is the page's word for Welsh and is not part of the name."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Ιουνίου — «Άγιος Gudwall (Ουαλός)»",
+        "url": "https://www.saint.gr/06/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Ιουνίου εκάστου έτους», the same day as the listing, and then consists of a single sentence saying that it has nothing: «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου Gudwall (Γκουντγουώλ)». That is a want of knowledge and not saint.gr's asterisked refusal to vouch for an entry; the page carries no asterisk and no «Δεν είναι διασταυρωμένη» sentence. Because the page gives no rank word at all beyond «Άγιος», no `types` are set; and because it gives no century, there is no `dates` object. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

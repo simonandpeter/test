@@ -1,0 +1,51 @@
+{
+  "slug": "anub-the-sign-bearer",
+  "display_name": "Anub the Sign-bearer",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ανούβ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιουνίου, «Όσιος Ανούβ ο σημειοφόρος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Ιουνίου — «Όσιος Ανούβ ο σημειοφόρος»",
+        "url": "https://www.saint.gr/06/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Ιουνίου εκάστου έτους», the same day as the listing. It gives three lines of its own and then quotes Nikodemos the Hagiorite's synaxarion at length, which sends the reader to the Lausiac History. The page gives no century and no year, so there is no `dates` object, and it names no place but the desert. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

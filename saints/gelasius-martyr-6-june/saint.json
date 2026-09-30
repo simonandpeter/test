@@ -6,6 +6,11 @@
       "form": "Ghelasie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 iunie, «Sfântul Mucenic Ghelasie»."
+    },
+    {
+      "form": "Γελάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιουνίου, «Άγιος Γελάσιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Ιουνίου — «Άγιος Γελάσιος»",
+        "url": "https://www.saint.gr/06/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Ιουνίου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row, and it is plainly the same man: the layman who gave away his goods, put on white and went to the martyrs, and was beheaded for it. The page gives no year and no emperor, so the folder's dateless reading stands. No hymn is printed."
     },
     {
       "church": "serbian",

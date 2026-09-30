@@ -1,0 +1,9 @@
+# Anub the Sign-bearer
+
+saint.gr says he was one of the famous ascetics of the desert, whose wise sayings are found in the Lausiac History and in the Euergetinos, and that he died in peace; it gives him no century and names no place but the desert. The page's couplet says that Anub, though dead, shows the living to this day the grace of working signs as though he were alive.
+
+The rest of the page is a long quotation from the synaxarion of Nikodemos the Hagiorite. It says that the abbas Sourus, Isaiah and Paul went and found abba Anub, and that meeting them he told them what he reckoned his truly wonderful achievements: that from the time he began to name the name of the Master Christ no lie came out of his mouth; that from the time he went into the desert he ate no human food but only what an angel of the Lord brought him; that he desired nothing in the world but God alone; that whatever happened upon the earth God made known to him; and that sleep and rest, by day and by night, were to him the seeking of the enjoyment of God, and that whatever he asked of God was given him.
+
+The same passage says he came into an ecstasy and saw many myriads of saints standing before God — choirs of martyrs, ranks of the righteous, orders of the venerable and of ascetics, all of them praising God with one accord and with unspeakable gladness — and that he saw Satan handed over to the eternal fire with all his servants. He told, too, how much rejoicing those will have in Paradise who keep the commandments of the Lord. After three days, it ends, he gave up his soul into the hands of God, and the fathers above heard the hymns of the angels who received his holy soul; and many of his sayings are written in the Paradise of the Fathers and in the Euergetinos.
+
+*After saint.gr's calendar for 6 Ιουνίου — [the day](https://www.saint.gr/06/06/index.aspx) and [the life](https://www.saint.gr/487/saint.aspx); read 30 September 2026.*

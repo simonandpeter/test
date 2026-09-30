@@ -1,0 +1,73 @@
+{
+  "slug": "andronicus-of-perm",
+  "display_name": "Andronicus of Perm",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "archbishop"
+  ],
+  "office": "Archbishop of Perm",
+  "names": [
+    {
+      "form": "Ανδρόνικος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιουνίου, «Άγιος Ανδρόνικος ο Ιερομάρτυς», with the rank word left off. The life page gives the name he was baptised with: «Στο Άγιο Βάπτισμα έλαβε το όνομα Βλαδίμηρος»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1870,
+      "latest": 1870,
+      "display": "1870",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Αγιος Ανδρονικος ο Ιερομαρτυς (1870 - 1918)», and the body gives the day: «γεννήθηκε την 1η Αυγούστου του 1870 μ.Χ. στο χωριό Ποβόντνεβο της επαρχίας Γιαροσλάβ»."
+    },
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "traditional",
+      "note": "saint.gr: «Στις 6 Ιουνίου του 1918 μ.Χ. όργανα του αθεϊστικού καθεστώτος, αφού τον σκέπαζαν ζωντανό με χώμα στον τάφο, πυροβόλησαν μερικές φορές τον γενναίο αθλητή της πίστεως αρχιεπίσκοπο Ανδρόνικο»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Ιουνίου — «Άγιος Ανδρόνικος ο Ιερομάρτυς»",
+        "url": "https://www.saint.gr/06/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Ιουνίου εκάστου έτους», the same day as the listing and the day of his death. He is none of the corpus's existing Andronici — of Antioch, of Atroa, of Tarsus, the apostle, `andronicus-lukash` or `andronicus-monk-martyr-1938`: saint.gr's man here is the archbishop of Perm killed by the Soviet authorities on this day in 1918. The page is long and carries a detailed account of the arrest, hour by hour, under its own heading. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "john-of-kronstadt",
+    "nicholas-of-japan"
+  ]
+}

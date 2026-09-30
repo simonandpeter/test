@@ -6,6 +6,11 @@
       "form": "Ilarion cel Nou",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 iunie, «Sfântul Cuvios Ilarion cel Nou, egumenul Mănăstirii Dalmaților»."
+    },
+    {
+      "form": "Ιλαρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιουνίου, «Όσιος Ιλαρίων ο νέος, ηγούμενος Μονής Δαλμάτων», with the rank word left off. The epithet and the office in the day's line are left off the stored form."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Ιουνίου — «Όσιος Ιλαρίων ο νέος, ηγούμενος Μονής Δαλμάτων»",
+        "url": "https://www.saint.gr/06/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Ιουνίου εκάστου έτους», the same day as the listing and the same day as the folder's Romanian row, and dates him «(775 - 845)». It is plainly the same man: abbot of the monastery of the Dalmatians, a confessor under the iconoclast Leo the Armenian. saint.gr prints two apolytikia and a kontakion; the first apolytikion is taken. The kontakion, Ἦχος α', Τὸν τάφον σου Σωτήρ, addresses a martyr who was not burnt in the fire and calls him «Ἰλάριε», a different form of the name; it is left where it is and not copied, because the folder's man was not tried by fire."
     },
     {
       "church": "serbian",
@@ -62,9 +77,42 @@
         "text": "With the streams of thy tears thou didst till the barren desert, and with sighs out of the deep thou didst make thy labours bear fruit a hundredfold; and thou wast made a light to the world, shining with wonders, Hilarion our father. Pray Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τοῦ λίθου σφραγισθέντος.",
+      "text": "Τῶν λόγων τοῦ Κυρίου τὴν χάριν γεωργήσας, ἤνθησας καθάπερ ἔλαια, παμμάκαρ Ἰλαρίων, ἐλαίω τῶν θείων ἀρετῶν, καὶ τῆς ὁμολογίας σου σοφέ, ἰλαρύνων τᾶς καρδίας καὶ τᾶς ψυχᾶς, τῶν πίστει σοὶ ἐκβοώντων δόξα τῷ δεδωκότι σοὶ ἰσχύν, δόξα τῷ σὲ στεφανώσαντη, δόξα τῷ ἐνεργούντι διά σου, πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Τοῦ λίθου σφραγισθέντος, the first of two apolytikia on the page of «Όσιος Ιλαρίων ο νέος, ηγούμενος Μονής Δαλμάτων»",
+        "url": "https://www.saint.gr/491/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having tilled the grace of the words of the Lord, you blossomed like an olive tree, all-blessed Hilarion, with the oil of the divine virtues and of your confession, O wise one, gladdening the hearts and the souls of those who cry out to you in faith: glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all men through you.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 775,
+      "latest": 775,
+      "display": "775",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Οσιος Ιλαριων ο Νεος, Ηγουμενος Μονης Δαλματων (775 - 845)», and the body repeats it: «Ο Όσιος Ιλαρίων γεννήθηκε το 775 μ.Χ. και καταγόταν από την Καππαδοκία.»"
+    },
+    "death": {
+      "earliest": 845,
+      "latest": 845,
+      "display": "845",
+      "basis": "traditional",
+      "note": "saint.gr: «επέστρεψε στη Μονή του, έζησε τρία ακόμη χρόνια και εκοιμήθη ειρηνικά σε ηλικία 70 ετών, το 845 μ.Χ.»"
+    }
   }
 }
