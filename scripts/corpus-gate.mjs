@@ -115,6 +115,22 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'μακαριοσ macarius-companion-of-eudoxius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-metropolitan-of-moscow macarius-of-ierissos macarius-of-kios macarius-of-paphos macarius-of-pisma macarius-of-zhabyn':
+    'Ten men. Two share 6 September and the page prints them as two lines, the companion of Eudoxius and the magistrate of Alexandria, so they are two commemorations. The rest are 18 January, 8 January, 16 February, 19 January, 6 October, 8 February, 10 January and 22 January. The 16 February man is the metropolitan of Moscow whose page says only that it has no details of his life; the corpus keeps several Macarii of Russian sees from Russian sources and none of them on this day, so nothing here identifies him with one of those and he stands as his own folder.',
+  'θεοδουλοσ theodulus-companion-of-pamphilus theodulus-of-myropolis theodulus-son-of-nilus theodulus-the-executioner':
+    'Four men on four Greek days: 16 February in the Pamphilus company, 12 September at Myropolis, 14 January as the son of Nilus, and 4 September the executioner.',
+  'πορφυριοσ porphyrius-companion-of-baptos porphyrius-servant-of-pamphilus':
+    'Two men: 10 February with Baptos, and 16 February, where the page calls him the servant of Pamphilus.',
+  'ιουλιανοσ julian-companion-of-modestus julian-companion-of-pamphilus julian-of-antinoopolis julian-of-emesa julian-of-kandavla julian-of-samosata julian-the-deacon-of-aegina':
+    'Seven men on seven Greek days: 12 February, 16 February (the Pamphilus company), 8 January, 6 February, 4 September, 29 January and 7 January.',
+  'ιερεμιασ jeremiah-the-egyptian jeremias-i-of-constantinople':
+    'Two men: the Egyptian of the Pamphilus company on 16 February, and the Ecumenical Patriarch on 13 January.',
+  'ησαιασ isaiah-of-valaam isaiah-the-egyptian':
+    'Two men: Valaam on 8 January, and the Egyptian named in Pamphilus of Caesarea company on 16 February.',
+  'φλαβιανοσ flavian-of-constantinople flavian-the-recluse':
+    'Two men on one day, and saint.gr prints them as two lines on 16 February: the archbishop of Constantinople, whom the Romanian calendar keeps there too, and «Όσιος Φλαβιανός» the recluse, whose page gives no see and only the sixty years he passed shut in a cell on a mountain summit. Two entries on one calendar are two commemorations.',
+  'ηλιασ elias-martyr-with-patermuthius elias-nikolayevich-hieromartyr elias-of-heliopolis elias-the-cave-dweller-of-calabria elias-the-egyptian':
+    'Five men. Two share 16 February and the day page separates them itself: Elias the Egyptian is named in the company of Pamphilus of Caesarea, martyred under Diocletian at Caesarea in Palestine, and Elias Nikolayevich is the Moscow hieromartyr of the Soviet years, born in the nineteenth century and shot after his 1932 arrest. The other three are 17 September with Patermuthius, 1 February at Heliopolis and 11 September in Calabria.',
   'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-koulakiotis john-mauropous john-of-edessa john-of-irenopolis john-of-kazan john-of-lycopolis john-of-spetses john-of-syracuse john-son-of-xenophon john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-sinaite-venerable-martyr':
     'Fifteen men on fifteen Greek days: 6 October, 22 January, 15 February (Koulakiotis, the neomartyr saint.gr keeps there), 5 October, 31 January, 4 February, 24 January, 6 February, 3 February, 23 September, 26 January, 15 January, 10 February, 6 February and 12 February. The two 6 February entries are Lycopolis and the prophet of Gaza, two lines on one day page, so two commemorations and two men by the settled rule.',
   'ουαλεντινοσ valentine-of-interamna valentine-of-rome':

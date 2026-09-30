@@ -1,0 +1,51 @@
+{
+  "slug": "macarius-metropolitan-of-moscow",
+  "display_name": "Macarius of Moscow (16 February)",
+  "sex": "male",
+  "types": [
+    "metropolitan",
+    "hierarch"
+  ],
+  "names": [
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Φεβρουαρίου, «Άγιος Μακάριος Μητροπολίτης Μόσχας», with the rank word and the see left off. No Russian form is printed on the page, and none is invented here."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). This is the row that would be expected to carry a metropolitan of Moscow; it was not read, and no absence is claimed."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Φεβρουαρίου — «Άγιος Μακάριος Μητροπολίτης Μόσχας»",
+        "url": "https://www.saint.gr/02/16/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

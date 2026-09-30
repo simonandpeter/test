@@ -1,0 +1,65 @@
+{
+  "slug": "tanco-of-verden",
+  "display_name": "Tanco of Verden",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Τάνκο",
+      "lang": "el",
+      "note": "saint.gr prints the name in Latin letters in its line, «Άγιος Tanco Επίσκοπος Βέρντεν», and gives the Greek form on the life page: «Ο Άγιος Tanco (Τάνκο) ή Tancho ή Tatta». The rank word and the see are left off."
+    },
+    {
+      "form": "Tanco",
+      "lang": "la",
+      "note": "The Latin-letter form saint.gr's own line prints, «Άγιος Tanco Επίσκοπος Βέρντεν». Its life page allows «Tancho» and «Tatta» beside it."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 815,
+      "latest": 815,
+      "display": "815",
+      "basis": "attested",
+      "note": "saint.gr: «Εξελέγη Επίσκοπος της πόλεως Βέρντεν και μαρτύρησε το έτος 815 μ.Χ.» Its heading gives the first date as a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Φεβρουαρίου — «Άγιος Tanco Επίσκοπος Βέρντεν»",
+        "url": "https://www.saint.gr/02/16/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

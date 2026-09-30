@@ -1,0 +1,53 @@
+{
+  "slug": "marouthas-of-martyropolis",
+  "display_name": "Marouthas of Martyropolis",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Μαρουθάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Φεβρουαρίου, «Όσιος Μαρουθάς ο επίσκοπος συν των Αγίων Μαρτύρων εν Μαρτυροπόλει», with the rank word, the see and the martyrs beside him left off."
+    }
+  ],
+  "related": [
+    "martyrs-of-martyropolis"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Φεβρουαρίου — «Όσιος Μαρουθάς ο επίσκοπος συν των Αγίων Μαρτύρων εν Μαρτυροπόλει»",
+        "url": "https://www.saint.gr/02/16/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -7,6 +7,11 @@
       "form": "Flavian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 februarie, «Sfântul Ierarh Flavian, Arhiepiscopul Constantinopolului»."
+    },
+    {
+      "form": "Φλαβιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Φεβρουαρίου, «Άγιος Φλαβιανός Πατριάρχης Κωνσταντινουπόλεως», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "revised-julian",
+        "note": "saint.gr closes his page with a note of its own about the day: «Σημείωση: Μέχρι τον 12ο αιώνα μ.Χ. ο Άγιος Φλαβιανός εορταζόταν στις 18 Φεβρουαρίου» — until the twelfth century St Flavian was kept on 18 February (https://www.saint.gr/3726/saint.aspx, read 30 September 2026). That is a former day, not a second one; the site keeps him on 16 February now, which is the day page quoted here."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Φεβρουαρίου — «Άγιος Φλαβιανός Πατριάρχης Κωνσταντινουπόλεως»",
+        "url": "https://www.saint.gr/02/16/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -57,5 +72,10 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "proclus-of-constantinople",
+    "pulcheria-the-empress",
+    "flavian-the-recluse"
+  ]
 }

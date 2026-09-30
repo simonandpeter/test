@@ -6,6 +6,11 @@
       "form": "Pavel",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 februarie, «Sfântul Mucenic Pavel»."
+    },
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for the company listed on 16 Φεβρουαρίου as «Άγιος Πάμφιλος και οι συν αυτώ Μάρτυρες», which names its twelve one by one; the rank word is left off. Beside the gloss the page prints a note that is not about a saint at all: besides the foremost Apostle Paul, it says, many hierarchs and rulers took the name."
     }
   ],
   "sex": "male",
@@ -14,7 +19,15 @@
   ],
   "related": [
     "pamphilus-of-caesarea",
-    "valens-the-deacon"
+    "valens-the-deacon",
+    "daniel-the-egyptian",
+    "elias-the-egyptian",
+    "isaiah-the-egyptian",
+    "jeremiah-the-egyptian",
+    "samuel-the-egyptian",
+    "theodulus-companion-of-pamphilus",
+    "julian-companion-of-pamphilus",
+    "porphyrius-servant-of-pamphilus"
   ],
   "attestations": [
     {
@@ -38,8 +51,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Φεβρουαρίου — «Άγιος Πάμφιλος και οι συν αυτώ Μάρτυρες»",
+        "url": "https://www.saint.gr/02/16/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -49,5 +71,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "284–305",
+      "basis": "traditional",
+      "note": "saint.gr for the company: «Οι Άγιοι Μάρτυρες Πάμφιλος, Δανιήλ, Hλίας, Ησαΐας, Θεόδουλος, Ιερεμίας, Ιουλιανός, Ουάλης, Παύλος, Πορφύριος, Σαμουήλ και Σέλευκος, μαρτύρησαν επί αυτοκράτορα Διοκλητιανού (284 - 305 μ.Χ.).» The page gives the reign and no year within it."
+    }
   }
 }

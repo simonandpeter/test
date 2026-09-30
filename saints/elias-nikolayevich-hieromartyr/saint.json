@@ -1,0 +1,61 @@
+{
+  "slug": "elias-nikolayevich-hieromartyr",
+  "display_name": "Elias (Nikolayevich)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Ηλίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Φεβρουαρίου, «Άγιος Ηλίας ο Ιερομάρτυρας», with the rank words left off. The life page adds the patronymic in a parenthesis: «Ο Άγιος Ιερομάρτυς Ηλίας (Νικολάγιεβιτς)». No Russian form of either name is printed on the page, and none is invented here."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1934,
+      "latest": 1934,
+      "display": "1934",
+      "basis": "attested",
+      "note": "saint.gr heads his page «Άγιος Ηλίας ο Ιερομάρτυρας (; - 1934)». The life itself gives no year for the fire, only the 1932 arrest and a visit two years after it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). This is the row that would be expected to carry him, since saint.gr's own account is of a Moscow priest under the Soviet police; it was not read, and no absence is claimed."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Φεβρουαρίου — «Άγιος Ηλίας ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/02/16/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
