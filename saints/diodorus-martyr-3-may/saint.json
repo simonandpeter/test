@@ -6,6 +6,11 @@
       "form": "Diodor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 mai, «Sfântul Mucenic Diodor»."
+    },
+    {
+      "form": "Διόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαΐου, «Άγιοι Διόδωρος και Ροδοπιανός ο Διάκονος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαΐου — «Άγιοι Διόδωρος και Ροδοπιανός ο Διάκονος»",
+        "url": "https://www.saint.gr/05/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and it pairs him with the deacon Rodopianus exactly as doxologia does, which is what makes him the same man. **The Greek adds the year and the place**: «Οι Άγιοι αυτοί έζησαν στα χρόνια του βασιλιά Διοκλητιανού (302 μ.Χ.)» and the soldiers of «της πόλης Αφροδισίας της Καριάς», the city of Aphrodisias in Caria, of which it gives its own gloss — the region of Asia Minor occupying its south-western corner, opposite the stretch between Samos and Rhodes. **The year 302 is now in `dates`**, and it is the page's only year; it is printed as the date of Diocletian's reign rather than of the martyrdom, and the note says so rather than claiming more. **The `related` row to Rodopianus is new** and rests on the page naming the two of them in one line and one sentence. It prints no hymn and names no relic."
     },
     {
       "church": "serbian",
@@ -45,5 +60,17 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 302,
+      "latest": 302,
+      "display": "302",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι αυτοί έζησαν στα χρόνια του βασιλιά Διοκλητιανού (302 μ.Χ.) και ... Τελικά λιθοβολήθηκαν». The page prints 302 as the year of the reign it places them in and gives no separate year for the stoning; nothing narrower is claimed here."
+    }
+  },
+  "related": [
+    "rodopianus"
+  ]
 }

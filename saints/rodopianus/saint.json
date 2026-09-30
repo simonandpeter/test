@@ -6,6 +6,11 @@
       "form": "Rodopian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 mai, «Sfântul Mucenic Rodopian, diaconul»."
+    },
+    {
+      "form": "Ροδοπιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαΐου, «Άγιοι Διόδωρος και Ροδοπιανός ο Διάκονος», with the rank word and the order left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαΐου — «Άγιοι Διόδωρος και Ροδοπιανός ο Διάκονος»",
+        "url": "https://www.saint.gr/05/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and it calls him ο Διάκονος and pairs him with Diodorus exactly as doxologia does, which is what makes him the same man. **The Greek adds the year and the place**: the reign of Diocletian, given as 302, and the soldiers of Aphrodisias in Caria, with the page's own gloss on where Caria is. The year is now in `dates` and is the page's only one. **The `related` row to Diodorus is new**, on the strength of the two of them standing in one line and one sentence. `rodopianus` and `rodianus` are one letter apart in the corpus and are two men; `rodianus` is not paired with a Diodorus and not of Aphrodisias. No hymn, no relic."
     },
     {
       "church": "serbian",
@@ -46,5 +61,17 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 302,
+      "latest": 302,
+      "display": "302",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι αυτοί έζησαν στα χρόνια του βασιλιά Διοκλητιανού (302 μ.Χ.) και ... Τελικά λιθοβολήθηκαν». The page prints 302 as the year of the reign it places them in and gives no separate year for the stoning; nothing narrower is claimed here."
+    }
+  },
+  "related": [
+    "diodorus-martyr-3-may"
+  ]
 }

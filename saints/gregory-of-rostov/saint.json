@@ -1,0 +1,61 @@
+{
+  "slug": "gregory-of-rostov",
+  "display_name": "Gregory of Rostov",
+  "sex": "male",
+  "types": [
+    "archbishop",
+    "abbot"
+  ],
+  "office": "Archbishop of Rostov",
+  "names": [
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαΐου, «Άγιος Γρηγόριος Αρχιεπίσκοπος Ροστώβ, Γιαροσλάβλ και Λευκής Λίμνης», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1416,
+      "latest": 1416,
+      "display": "1416",
+      "basis": "traditional",
+      "note": "saint.gr: «Εξελέγη Αρχιεπίσκοπος της πόλεως Ροστώβ και κοιμήθηκε με ειρήνη το 1416 μ.Χ.», and the page heads him «(; - 1416)». For his birth it says only «γεννήθηκε στη Ρωσία κατά τον 14ο αιώνα μ.Χ.» and gives no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαΐου — «Άγιος Γρηγόριος Αρχιεπίσκοπος Ροστώβ, Γιαροσλάβλ και Λευκής Λίμνης»",
+        "url": "https://www.saint.gr/05/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Μαΐου εκάστου έτους», the same day as the listing, and the body is one sentence and a half: born in Russia in the fourteenth century, abbot of the monastery of the Transfiguration of the Saviour on the island of Kamenny in lake Kubenskoe near the country of Vologda, elected archbishop of the city of Rostov, dead 1416. **`office` keeps only Rostov**, which is what the body gives; the listing's fuller style, Ροστώβ, Γιαροσλάβλ και Λευκής Λίμνης — Rostov, Yaroslavl and the White Lake — is the see's later three-part title and is recorded here rather than put in the folder, because the body names the election to Rostov alone. The see and the year tell him from the corpus's thirty-odd other Gregories, of whom only `gregory-of-novgorod` and `gregory-of-pelshma` are Russian and neither is of Rostov. Its `NEARSLUG` neighbour `gregory-of-argos` is a fifteenth-century Greek hierarch of a Peloponnesian see and a different man. No hymn, no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

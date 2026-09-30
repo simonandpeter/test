@@ -1,0 +1,49 @@
+{
+  "slug": "pambos-of-georgia",
+  "display_name": "Pambos of Georgia",
+  "sex": "male",
+  "types": [],
+  "office": "Catholicos of Georgia",
+  "names": [
+    {
+      "form": "Πάμβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαΐου, «Άγιος Πάμβος «Καθολικός Γεωργίας»», with the rank word and the office left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαΐου — «Άγιος Πάμβος «Καθολικός Γεωργίας»»",
+        "url": "https://www.saint.gr/05/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Μαΐου εκάστου έτους», the same day as the listing, and the whole of its body is a citation and nothing else: «Η μνήμη του Αγίου Πάμβου αναφέρεται στο Ιεροσολυμιτικόν Κανονάριον σελ. 88.» **This is the thinnest entry of the three days read** and it is drafted with `types` left empty on purpose. The listing's office is in saint.gr's own quotation marks — «Καθολικός Γεωργίας» — and a catholicos has no slug in the corpus's closed `types` vocabulary; `patriarch` would be an equation the page does not make, and adding a slug is a code commit. So the folder records a name, a day, and an office in the source's own scare quotes, and nothing else. **If the run would rather have no folder than this one, this is the row to drop**; the reader's judgement was that the office is data and the entry is a person, and that a folder saying plainly that the Jerusalem Kanonarion page 88 is the whole record is worth more than silence. He is not `pambo-of-egypt` or `pamvo-of-nitria`, both Egyptian ascetics. No year, no century, no hymn, no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

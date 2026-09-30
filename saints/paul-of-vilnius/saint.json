@@ -1,0 +1,59 @@
+{
+  "slug": "paul-of-vilnius",
+  "display_name": "Paul of Vilnius",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαΐου, «Άγιος Παύλος ο Μάρτυρας εκ Ρωσίας», with the rank word and the origin left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1601,
+      "latest": 1700,
+      "display": "17th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Μάρτυς Παύλος έζησε κατά τον 17ο αιώνα μ.Χ. και μαρτύρησε στο Βίλνγιους της Ρωσίας κατά την περίοδο της μοναρχίας των Λιθουανών.» The page gives no year and no head-line years."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαΐου — «Άγιος Παύλος ο Μάρτυρας εκ Ρωσίας»",
+        "url": "https://www.saint.gr/05/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Μαΐου εκάστου έτους», the same day as the listing, and the whole of its body is one sentence: he lived in the seventeenth century and was martyred at Vilnius «της Ρωσίας» in the period of the Lithuanian monarchy. **The page's own geography does not hold together** — it puts Vilnius in Russia and the martyrdom under the Lithuanian monarchy in one clause — and both are printed here without being reconciled; the place name is what the folder is named from, since a bare Paul could not be told from the twelve the corpus already holds. None of those is martyred at Vilnius: neither `paul-of-obnora` nor `paul-of-simonov`, the two other Russians, nor the brother of Pausirius, the disciple of Dionysius, the bishop of Nicaea, or Paul of Damascus. No year, no manner of death, no hymn, no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

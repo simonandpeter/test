@@ -1,0 +1,60 @@
+{
+  "slug": "philip-of-worms",
+  "display_name": "Philip of Worms",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Φίλιππος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαΐου, «Όσιος Φίλιππος ο εν Βόρμς», with the rank word and the place left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 770,
+      "latest": 770,
+      "display": "770",
+      "basis": "traditional",
+      "note": "saint.gr: «ασκήτεψε, ως ερημίτης, κατά τόο 8ο αιώνα μ.Χ. στην περιοχή της πόλεως Βόρμς της Γερμανίας. Κοιμήθηκε με ειρήνη το 770 μ.Χ.», and the page heads him «(; - 770)». No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαΐου — «Όσιος Φίλιππος ο εν Βόρμς»",
+        "url": "https://www.saint.gr/05/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Μαΐου εκάστου έτους», the same day as the listing, and the whole of its body is two sentences: an Anglo-Saxon by origin, a hermit in the eighth century in the region of the city of Worms in Germany, dead in peace in 770. The place is what tells him from the corpus's ten other Philips — the apostle, the deacon, of Heraclea, of Nicomedia, of Moscow, of Niculițel and the four twentieth-century martyrs — none of whom is a Rhineland hermit. **The page's own text carries a typographical slip**, «κατά τόο 8ο αιώνα», which is the source's and is left alone. No year of birth, no monastery, no name for his hermitage, no wonder, no relic and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

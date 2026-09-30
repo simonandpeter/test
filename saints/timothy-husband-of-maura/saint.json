@@ -6,6 +6,11 @@
       "form": "Timotei",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 mai, «Sfântul Mucenic Timotei»."
+    },
+    {
+      "form": "Τιμόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαΐου, «Άγιοι Τιμόθεος και Μαύρα», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαΐου — «Άγιοι Τιμόθεος και Μαύρα»",
+        "url": "https://www.saint.gr/05/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps him, and it is plainly the same man: reader and preacher of the Gospel in the church of Panapea in the Thebaid of Egypt, denounced to the prefect Arrianos twenty days after his marriage to Maura, crucified with her. **The Greek adds the place and the trade**: the little town of Panapea in the Thebaid, and that he was ἀναγνώστης, a reader, which is a minor order the corpus's closed `types` vocabulary has no slug for, so nothing was added to `types`; and it adds the detail that the two of them hung nine days on the cross before they died, «Μετά από εννιά μέρες παρέδωσαν και οι δύο την ψυχή τους στον Κύριο». It prints **no year at all** for either of them, so `dates` is untouched and stays absent. **Two of the page's five apolytikia and one of its two kontakia are stored, and they are the joint service of the pair**: the Ἦχος δ’ «Ὡς ζεῦγος ὁμόζυγον» and the Ἦχος δ' kontakion «Τοὺς πολυτρόπους αἰκισμοὺς» both name Timothy and Maura together and are stored on both folders; the Ἦχος α' «Δεῦτε πάντων φιλεόρτων», the second Ἦχος δ' «Τιμόθεον σήμερον», the Ἦχος δ' «Μαρτύρων σύλλογος», the second kontakion, three megalynaria and an oikos were left. The page's relic and patronage notes belong to Maura, not to him."
     },
     {
       "church": "serbian",
@@ -60,6 +75,40 @@
       },
       "english": {
         "text": "Thy martyrs, O Lord, in their struggles have won from Thee, our God, the crowns of incorruption; for having Thy strength, they overthrew their tormentors and broke the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὡς ζεῦγος ὁμόζυγον, καὶ ξυνωρὶς θαυμαστή, Τιμόθεε πάνσοφε, καὶ Μαῦρα νύμφη Χριστοῦ, ἐνθέως ἠθλήσατε, σύμμορφοι γὰρ ὀφθέντες, τῶν παθῶν τοῦ Κυρίου, δόξης ἀκατάλυτου, ἠξιώθητε ἄμφω, πρεσβεύοντες τῷ Σωτήρι, ὑπὲρ τῶν ψυχῶν ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε, on the page of «Άγιοι Τιμόθεος και Μαύρα» — the joint apolytikion of the pair, which names both",
+        "url": "https://www.saint.gr/880/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a yoked pair and a wondrous couple, all-wise Timothy and Maura the bride of Christ, ye contended divinely; for being made conformable to the sufferings of the Lord, ye were both counted worthy of indissoluble glory, interceding with the Saviour for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ.",
+      "text": "Τοὺς πολυτρόπους αἰκισμοὺς ἐνεγκόντες, καὶ τοὺς στεφάνους ἐκ Θεοῦ εἰληφότες, ὑπὲρ ἡμῶν πρεσβεύσατε πρὸς Κύριον, μνήμην τὴν πανίερον, τὴν ὑμῶν ἐκτελούντων, μέγιστε Τιμόθεε, καὶ ἀοίδιμε Μαύρα, τοῦ εἰρηνεῦσαι πόλιν καὶ λαόν· αὐτός ἐστι γάρ, πιστῶν τὸ κραταίωμα.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ', Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ, on the page of «Άγιοι Τιμόθεος και Μαύρα» — the joint kontakion of the pair, which names both",
+        "url": "https://www.saint.gr/880/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having borne torments of every kind and received your crowns from God, intercede with the Lord for us who keep your all-holy memory, O greatest Timothy and renowned Maura, that city and people may have peace; for He is the strength of the faithful.",
         "rendered": "site"
       }
     }

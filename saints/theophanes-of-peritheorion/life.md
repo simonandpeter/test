@@ -1,0 +1,9 @@
+# Theophanes of Peritheorion
+
+Theophanes served as abbot of the monastery of Vatopedi, and he was bound to Maximos Kausokalyvites, whose biographer he was. He seems to have known the wider country of the Kausokalyvia well, saint.gr says, since he knew the place-names, and the fellow-ascetics of Maximos, and the other virtuous elders, considerable hesychasts of the fourteenth century, whom he names, giving their places, and with whom he was probably connected, as his fine biography suggests. That biography became the source for all the later biographers and hymnographers of Maximos.
+
+According to the prophecy of Maximos, whose disciple he had been, Theophanes later became abbot of Vatopedi and after that bishop of Peritheorion of Xanthi; he is recorded as bishop of Peritheorion about the year 1350. Near Peritheorion was the mountain of Papikion, known for its monasteries and its ascetics. Since Maximos charged him to write about him after his falling asleep, the life he wrote probably circulated after 1365, which is given as the year of Maximos's death, and Theophanes himself fell asleep towards the end of the fourteenth century.
+
+His enrolment among the saints came very late and the page dates it exactly: by act 3401 of the Ecumenical Patriarchate of 11 April 2000, at the instance of the metropolitan Panteleimon of Xanthi and Peritheorion and of the Great Monastery of Vatopedi, and his entry into the calendar was made known by encyclical 2692 of the Holy Synod of the Church of Greece of 18 May 2000. Icons of him have been painted recently and a service composed. The page prints none of it, and names no relic.
+
+*After saint.gr's calendar for 3 Μαΐου — [the day](https://www.saint.gr/05/03/index.aspx) and [the life](https://www.saint.gr/4085/saint.aspx); read 30 September 2026.*

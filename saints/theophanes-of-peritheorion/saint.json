@@ -1,0 +1,62 @@
+{
+  "slug": "theophanes-of-peritheorion",
+  "display_name": "Theophanes of Peritheorion",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "abbot",
+    "hymnographer"
+  ],
+  "office": "Metropolitan of Peritheorion",
+  "names": [
+    {
+      "form": "Θεοφάνης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαΐου, «Άγιος Θεοφάνης Μητροπολίτης Περιθεωρίου», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1365,
+      "latest": 1400,
+      "display": "end of the 14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «ο βίος που έγραψε κυκλοφόρησε πιθανόν μετά το 1365 μ.Χ., όπου ορίζεται ως έτος της κοιμήσεως του οσίου Μαξίμου. Ο Άγιος Θεοφάνης τότε εκοιμήθη στα τέλη του 14ου αιώνος μ.Χ.» The page gives no year; it names 1350 as the date at which he is recorded as bishop of Peritheorion, and 1365 as the year of Maximos's death, after which his life of him circulated."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαΐου — «Άγιος Θεοφάνης Μητροπολίτης Περιθεωρίου»",
+        "url": "https://www.saint.gr/05/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Μαΐου εκάστου έτους», the same day as the listing. He is closely placed: abbot of Vatopedi, disciple and biographer of Maximos Kausokalyvites, recorded as bishop of Peritheorion of Xanthi about 1350, dead at the end of the fourteenth century. **It records his canonisation by document and date**, which is unusual and is what makes the folder safe against the corpus's nine other Theophanes: «διά της υπ' αρ. 3401 της 11.4.2000 Πράξεως του Οικουμενικού Πατριαρχείου έγινε η αγιοκατάταξη του αγίου Θεοφάνη και διά της Εγκυκλίου 2692 της 18.5.2000 της Ιεράς Συνόδου της Εκκλησίας της Ελλάδος έγινε γνωστή η ένταξή του στο Αγιολόγιο», at the instance of the metropolitan Panteleimon of Xanthi and Peritheorion and of the monastery of Vatopedi, with icons painted and a service composed recently. **`types` includes `hymnographer` only because the page credits him with the life of Maximos that became the source for all his later biographers and hymnographers**, and calls his biography «ωραία»; it is the writer the page attests, and if that reads as too strong a slug the row should be read again. **Maximos Kausokalyvites, whose 13 Ιανουαρίου the page gives, has no folder in the corpus**, so there is no `related` row for the one man this life is about. No hymn is printed and no relic named."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "slug": "peter-of-argos",
+  "display_name": "Peter of Argos",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "hierarch",
+    "ascetic",
+    "wonderworker"
+  ],
+  "office": "Bishop of Argos",
+  "names": [
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαΐου, «Άγιος Πέτρος ο Θαυματουργός Αρχιεπίσκοπος Άργους και Ναυπλίου», with the rank word, the epithet and the see left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 840,
+      "latest": 860,
+      "display": "mid-9th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Πέτρος κατάγονταν από την Κωνσταντινούπολη και γεννήθηκε περί τα μέσα του 9ου αιώνα μ.Χ.» The page gives no year; the bounds are the middle of that century and no narrower claim is made."
+    },
+    "death": {
+      "earliest": 925,
+      "latest": 925,
+      "display": "c. 925",
+      "basis": "traditional",
+      "note": "saint.gr: «Με την προσευχή και το σημείο του Σταυρού κοιμήθηκε με ειρήνη περί το 925 μ.Χ.» The «περί» is the page's own."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαΐου — «Άγιος Πέτρος ο Θαυματουργός Αρχιεπίσκοπος Άργους και Ναυπλίου»",
+        "url": "https://www.saint.gr/05/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Μαΐου εκάστου έτους», the same day as the listing, marks him «Πολιούχος: Άργος», and records the relics: «Μέρος των Λειψάνων του Αγίου βρίσκεται στον ομώνυμο Μητροπολιτικό Ναό Άργους.» **The listing and the body do not agree about the rank**: the head calls him Αρχιεπίσκοπος Άργους και Ναυπλίου while the body says only «ο Άγιος αποφασίζει ... αποδέχεται τη θέση του Επισκόπου Άργους», bishop of Argos, a see that depended on the metropolis of Corinth. `office` and `types` follow the body, which is the narrative, and the listing's word is recorded here. The corpus's twenty-odd other Peters are none of them this man, and the nearest by slug, `gregory-of-argos`, is a different name. **None of the men the page names has a folder**: his brothers Paul (its 27 Μαρτίου, metropolitan of Corinth), Dionysius and Plato, and the Patriarch Nicholas the Mystic (its 16 Μαΐου) who twice pressed the episcopate on him; and Photius the Great, whom the page names only as the model of his studies, is not an association and takes no row. **The apolytikion in Ἦχος γ’ and the kontakion in Ἦχος δ’ are both proper and name him** and are stored; the megalynarion was left. The seven surviving homilies the page credits him with are not a relation either."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Πέτρα ἄρρηκτος, τῆς Ἐκκλησίας, ποιμὴν ἄριστος, πόλεως Ἄργους, ἀνεδείχθης Ἱεράρχα πανεύφημε. Ὡς οὒν πιστὸς οἰκονόμος τῆς χάριτος, παντοίων νόσων ἠμᾶς ἐλευθέρωσαν, Πέτρε Ὅσιε, Χριστὸν τὸν Θεὸν αἰτούμενος, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως, on the page of «Άγιος Πέτρος ο Θαυματουργός Αρχιεπίσκοπος Άργους και Ναυπλίου»",
+        "url": "https://www.saint.gr/878/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "An unbroken rock of the Church and a most excellent shepherd of the city of Argos wast thou shown to be, O all-praised hierarch. As a faithful steward of grace, therefore, set us free from sicknesses of every kind, O venerable Peter, asking Christ our God to grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ.",
+      "text": "Τῷ Κορυφαίῳ τῶν σοφῶν Ἀποστόλων, συνωνύμησας εὐκλεῶς Πάτερ Πέτρε, τῶν τούτων κατετρύφησας ἁγίων δωρεῶν· ζήλῳ γὰρ τῆς πίστεως, εὐσεβῶς διαπρέψας, θαύμασιν ἐκόσμησας, τὸν σὸν ἔνθεον βίον· Ἱερουργὲ τῆς δόξης τοῦ Χριστοῦ, τοὺς σὲ τιμῶντας, κινδύνων διάσωζε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ, on the page of «Άγιος Πέτρος ο Θαυματουργός Αρχιεπίσκοπος Άργους και Ναυπλίου»",
+        "url": "https://www.saint.gr/878/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst share gloriously the name of the chief of the wise apostles, O father Peter, and thou didst delight in his holy gifts; for having shone in piety by the zeal of thy faith, thou didst adorn thy godly life with wonders. O celebrant of the glory of Christ, save from dangers those who honour thee.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,6 +115,42 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'νικητασ nicetas-alfanov nicetas-of-apollonias nicetas-of-epirus nicetas-of-medikion nicetas-of-pythia':
+    'Five now. The new one is Nicetas Alfanov on 4 May; the others are read in the el-02-19 entry for this name form.',
+  'νικηφοροσ nicephorus-alfanov nicephorus-martyr-1-march nicephorus-martyr-8-february nicephorus-of-antioch nicephorus-of-corinth nicephorus-of-crete nicephorus-of-the-svir-desert nikephoros-of-chios':
+    'Eight now. The new one is Nicephorus Alfanov on 4 May; the others are read in the el-05-01 entry for this name form. **A reader has left `nicephorus-4-may` open** against a `nicephorus-13-may` drafted from a bare Romanian line nine days off; that pair is in ro-run/FINDINGS.md and neither day settles it.',
+  'ισαακ isaac-alfanov isaac-the-martyr-22-september':
+    'Two men: Isaac Alfanov on 4 May and the Isaac of the el-04-21 entry.',
+  'κυριλλοσ cyril-alfanov cyril-bishop-in-africa cyril-companion-of-photius cyril-of-alexandria cyril-of-astrakhan cyril-of-heliopolis cyril-of-jerusalem cyril-of-kazan cyril-of-the-forty-martyrs cyril-of-the-white-lake cyril-of-turov cyril-of-zographou cyril-vi-of-constantinople':
+    'Thirteen now. The new one is Cyril Alfanov on 4 May; the others are read in the el-04-28 entry for this name form.',
+  'κλημησ clement-alfanov clement-martyr-23-february clement-of-ancyra clement-of-mount-sagmation clement-the-hymnographer':
+    'Five now. The new one is Clement Alfanov, one of the five brothers the 4 May page names; the others are read in the el-04-30 entry for this name form.',
+  'μακροβιοσ macrobius-of-scythopolis macrobius-of-tomis':
+    'Two men: Macrobius of Scythopolis on 4 May and the Macrobius of the el-09-13 entry.',
+  'λεοντιοσ leontius-24-april leontius-of-scythopolis leontius-of-the-forty-martyrs':
+    'Three men: the Leontius of 24 April, Leontius of Scythopolis on 4 May, and `leontius-the-canonarch` of 17 Ιουνίου, whom a reader answered against `gerontius-the-canonarch` as another man.',
+  'αφροδισιοσ aphrodisius-companion-of-peter aphrodisius-of-alexandria aphrodisius-of-scythopolis':
+    'Three men: the companion of Peter on 14 March, Alexandria on 30 April and Aphrodisius of Scythopolis on 4 May.',
+  'αντωνινοσ antoninus-20-april antoninus-of-ramas antoninus-of-scythopolis':
+    'Three men: the Antoninus of 20 April, Antoninus of Scythopolis on 4 May, and the Antoninus of the el-01-23 entry.',
+  'φιλιπποσ philip-of-moscow philip-of-worms':
+    'Two men: Philip of Worms on 3 May and the Philip of the el-10-11 entry.',
+  'παυλοσ paul-brother-of-pausirius paul-companion-of-quadratus paul-disciple-of-dionysius-of-alexandria paul-of-cordoba paul-of-corinth paul-of-crete paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-vilnius paul-of-zographou paul-the-martyr-3-february paul-the-russian paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
+    'Twenty now. The new one is Paul of Vilnius on 3 May; the others are read in the el-04-30 entry for this name form.',
+  'μαμασ mamas-companion-of-hermogenes mamas-of-georgia':
+    'Two men: Mamas of Georgia on 3 May and the Mamas of the el-09-02 entry. **A reader has read a third** in the trio the Greek keeps on 6 Μαΐου with Hilarion and Pachomius; that day is not written yet.',
+  'γρηγοριοσ gregory-of-akritas gregory-of-assos gregory-of-constantia gregory-of-moesia gregory-of-nicomedia gregory-of-novgorod gregory-of-nyssa gregory-of-rostov gregory-of-sinai gregory-the-dialogist gregory-the-elder gregory-the-hesychast-of-athos gregory-the-recluse-of-the-caves gregory-the-wonderworker-of-the-caves gregory-uncle-of-eustratius gregory-v-of-constantinople':
+    'Sixteen now. The new one is Gregory of Rostov on 3 May; the others are read in the el-04-06 entry for this name form.',
+  'θεοφανησ theophan-the-recluse theophanes-of-peritheorion theophanes-of-sigriane theophanes-the-merciful-of-gaza':
+    'Four men: Theophanes of Peritheorion on 3 May and the three read in the el-03-12 entry for this name form. **A reader has flagged a fifth**, the Cypriot myrrh-streamer of 17 Μαΐου against the Meteora brother the Romanian keeps as «Teofan»; that pair is a question for the author and is in ro-run/FINDINGS.md.',
+  'πετροσ peter-abesalamites peter-companion-of-aphrodisius peter-companion-of-leucius peter-companion-of-manuel peter-companion-of-marcian peter-disciple-of-dionysius-of-alexandria peter-of-argos peter-of-bulgaria peter-of-capitolias peter-of-damascus peter-of-galatia peter-of-kazan peter-of-monevata peter-of-sebaste peter-of-tobolsk peter-son-of-john-of-syracuse peter-the-egyptian peter-the-gaoler peter-the-peloponnesian peter-the-sign-bearer':
+    'Twenty now. The new one is Peter of Argos on 3 May; the others are read in the el-04-10 entry for this name form.',
+  'μιχαηλ boris-michael-of-bulgaria macarius-notaras michael-companion-of-platon-of-reval michael-mavroeidis michael-of-cyprus-of-samothrace michael-of-georgia michael-of-klops michael-of-vourla michael-the-russian-1-april michael-the-wonderworker':
+    'Ten now. The new one is Michael of Georgia on 3 May; the others are read in the el-05-01 entry for this name form.',
+  'arsenius companion michael arsenius-of-georgia michael-of-georgia':
+    'The pair the 3 May page names together, each named after the other, which is what folds them.',
+  'αρσενιοσ arsenios-of-paros arsenius-bishop-of-tver arsenius-companion-of-elias-speleotes arsenius-of-corfu arsenius-of-elassona arsenius-of-georgia arsenius-of-ikalto arsenius-of-rostov':
+    'Eight now. The new one is Arsenius of Georgia on 3 May; the others are read in the el-04-13 entry for this name form.',
   'θεοδουλοσ theodulus-companion-of-agapitus theodulus-companion-of-agathopodes theodulus-companion-of-eventius theodulus-companion-of-pamphilus theodulus-of-caesarea-17-february theodulus-of-myropolis theodulus-of-the-forty-martyrs theodulus-son-of-hesperus theodulus-son-of-nilus theodulus-the-executioner theodulus-the-sinaite':
     'Ten now. The new one is on 2 May; the others are read in the el-03-17 entry for this name form.',
   'σαββασ sabbas-companion-of-jonah sabbas-of-daphnousia sabbas-of-sicily sabbas-of-sourozh sabbas-of-the-kyiv-caves sabbas-of-tver sabbas-of-zographou sabbas-stratelates sabbas-the-spiritual sava-brancovici-of-transylvania sava-of-serbia sava-the-second':

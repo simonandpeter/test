@@ -1,0 +1,104 @@
+{
+  "slug": "xenia-of-kalamata",
+  "display_name": "Xenia of Kalamata",
+  "sex": "female",
+  "types": [
+    "great-martyr",
+    "virgin",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ξενία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαΐου, «Αγία Ξενία η Μεγαλομάρτυρας και θαυματουργή», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 291,
+      "latest": 291,
+      "display": "291",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Ξενία γεννήθηκε στην Καλαμάτα της Πελοποννήσου το 291 μ.Χ.», and the page heads her «(291 - 318)»."
+    },
+    "death": {
+      "earliest": 318,
+      "latest": 318,
+      "display": "318",
+      "basis": "traditional",
+      "note": "saint.gr: «τελικά την αποκεφάλισε στις 3 Μαΐου του έτους 318 μ.Χ.», and the page heads her «(291 - 318)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαΐου — «Αγία Ξενία η Μεγαλομάρτυρας και θαυματουργή»",
+        "url": "https://www.saint.gr/05/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Μαΐου εκάστου έτους», the same day as the listing, and it names the very day of her death — «την αποκεφάλισε στις 3 Μαΐου του έτους 318 μ.Χ.» — which is the strongest form this run has met of a page confirming its own day. **She is none of the corpus's three other Xenias**: `xenia-18-january`, `xenia-of-rome` and `xenia-of-saint-petersburg`; this one is of Kalamata in the Peloponnese, born 291 of Nicholas and Despoina, Christians out of the eastern parts of Italy who fled the persecutions and settled on a farm outside the town because her father was a farmer, and beheaded by the prefect Dometianos whose wife she would not become. **The couplet and the body do not agree about the manner of death**: «Ξενία τρίτῃ καμίνῳ βλήθη τμηθεῖσα» has her cast into a furnace as well as beheaded, and the body says only the beheading; both are printed and the life says so. **The apolytikion in Ἦχος δ' and the kontakion in Ἦχος β' are proper and name her** and are stored; a megalynarion, an oikos and a kathisma were left. Her parents have no folders. The church raised to her west of Kalamata in 1993 is a dedication."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Βαφαῖς τῶν αἱμάτων σου φαιδρὰν στολὴν σε αυτῇ, Ξενία ἐπέχρωσας, παρισταμένη Χριστῷ ὡς νύμφη πανάσπιλος, εἴληφας δὲ τὴν χάριν, μαγγανείας τοῦ λύειν, δαίμονας ἐκδιώκειν, καὶ τὰς νόσους ἰᾶσθαι· διὸ ἱκέτευε ἐκτενῶς, ὑπὲρ τῶν ψυχῶν ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ', Ταχὺ προκατάλαβε, on the page of «Αγία Ξενία η Μεγαλομάρτυρας και θαυματουργή»",
+        "url": "https://www.saint.gr/874/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the dyes of thy blood thou didst colour a bright robe for thyself, O Xenia, standing before Christ as an all-unstained bride; and thou didst receive the grace to undo sorceries, to drive out demons and to heal diseases. Therefore pray earnestly for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β'.",
+      "model": "Τὰ ἄνω ζητῶν.",
+      "text": "Αἱμάτων ῥοαῖς τῶν σῶν ἐχθρὸν ἀπέπνιξας, Ξενία τὸ πῦρ, τῆς πλάνης ἐναπέσβεσας, καὶ Χριστῷ παρίστασαι· ὅθεν πόθῳ πάντες σοὶ κράζομεν· ἐκτενῶς μὴ παύσῃ ἀεί, πρεσβεύουσα Μάρτυς ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β', Τὰ ἄνω ζητῶν, on the page of «Αγία Ξενία η Μεγαλομάρτυρας και θαυματουργή»",
+        "url": "https://www.saint.gr/874/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy blood thou didst drown the enemy, O Xenia, and didst quench the fire of error, and thou standest before Christ. Wherefore we all cry to thee with longing: cease not ever to intercede earnestly, O martyr, for us all.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

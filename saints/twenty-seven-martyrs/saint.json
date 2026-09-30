@@ -1,0 +1,50 @@
+{
+  "slug": "twenty-seven-martyrs",
+  "display_name": "The Twenty-seven Martyrs",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Άγιοι Είκοσιεπτά Μάρτυρες",
+      "lang": "el",
+      "note": "Read whole out of saint.gr's line for 3 Μαΐου; the company has no member named anywhere on the page, so there is no personal name to strip a rank from."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαΐου — «Άγιοι Είκοσιεπτά Μάρτυρες»",
+        "url": "https://www.saint.gr/05/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Μαΐου εκάστου έτους», the same day as the listing, and the whole of it is one sentence: «Οι Άγιοι αυτοί Μάρτυρες μαρτύρησαν δια πυρός» — these holy martyrs were martyred by fire. **This is a company that names nobody, so it is one folder and not twenty-seven**, which is `CORPUS.md` §10.1's test read the other way from the enumerated family of 2 Μαΐου: there the page gave four head lines and four years, and here it gives none. The corpus already holds four such unnamed companies of this shape — `six-martyrs-21-september`, `six-martyrs-of-melitene`, `six-martyrs-of-phrygia`, `four-martyrs-of-perge` — and this folder follows their form, including `sex: unknown` and a `names` form kept whole rather than stripped. No place, no year, no emperor, no hymn, no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

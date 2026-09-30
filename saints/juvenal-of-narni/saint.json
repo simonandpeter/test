@@ -1,0 +1,60 @@
+{
+  "slug": "juvenal-of-narni",
+  "display_name": "Juvenal of Narni",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "office": "Bishop of Narnia",
+  "names": [
+    {
+      "form": "Ιουβενάλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαΐου, «Άγιος Ιουβενάλιος Επίσκοπος Ναρνί», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 377,
+      "latest": 377,
+      "display": "377",
+      "basis": "traditional",
+      "note": "saint.gr: «αφού είλκυσε πολλούς από τους εθνικούς στην πίστη του Χριστού, κοιμήθηκε με ειρήνη το 377 μ.Χ.», and the page heads him «(; - 377)». No year of birth is printed; his consecration is placed inside the episcopate of Damasus of Rome, which the page gives as 366–384."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαΐου — «Άγιος Ιουβενάλιος Επίσκοπος Ναρνί»",
+        "url": "https://www.saint.gr/05/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Μαΐου εκάστου έτους», the same day as the listing, and the whole of its body is one sentence: «Ο Άγιος Ιουβενάλιος χειροτονήθηκε από τον Επίσκοπο Ρώμης Δάμασο (366 - 384 μ.Χ.) Επίσκοπος Ναρνίας και αφού είλκυσε πολλούς από τους εθνικούς στην πίστη του Χριστού, κοιμήθηκε με ειρήνη το 377 μ.Χ.» The see is what tells him from the corpus's other two Juvenals, of Jerusalem and of Alaska. **The listing spells the see Ναρνί and the body Ναρνίας**; `office` follows the body's fuller form, Narnia, which is the ancient town in Umbria, and the display name uses the modern Narni that the listing gives. Damasus of Rome has no folder in the corpus, so there is no `related` row. No hymn, no relic, and nothing of his origin."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

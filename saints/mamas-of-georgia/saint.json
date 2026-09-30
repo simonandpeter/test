@@ -1,0 +1,65 @@
+{
+  "slug": "mamas-of-georgia",
+  "display_name": "Mamas of Georgia",
+  "sex": "male",
+  "types": [
+    "patriarch"
+  ],
+  "office": "Patriarch of Georgia",
+  "names": [
+    {
+      "form": "Μάμας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαΐου, «Όσιος Μάμας Πατριάρχης Γεωργίας», with the rank word and the office left off."
+    },
+    {
+      "form": "Μαμάι",
+      "lang": "el",
+      "note": "The alternative form saint.gr prints on his life page: «Ο Όσιος Μάμας (ή Μαμάι) έζησε κατά τον 8ο αιώνα μ.Χ.»"
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 744,
+      "latest": 744,
+      "display": "744",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Μάμας (ή Μαμάι) έζησε κατά τον 8ο αιώνα μ.Χ. και διετέλεσε Πατριάρχης της Γεωργίας. Κοιμήθηκε με ειρήνη το 744 μ.Χ.», and the page heads him «(; - 744)». No year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαΐου — «Όσιος Μάμας Πατριάρχης Γεωργίας»",
+        "url": "https://www.saint.gr/05/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Μαΐου εκάστου έτους», the same day as the listing, and the whole body is two sentences. The office and the year tell him from the corpus's three other Mamases — `mamas-6-may`, `mamas-of-caesarea` and the companion of Hermogenes — none of whom is a Georgian patriarch of the eighth century. **`types` is `patriarch`** because the listing's own word is Πατριάρχης; the corpus's closed vocabulary has no slug for a catholicos and the page does not use that word for him. Both name forms the page prints are recorded and neither is transliterated. No hymn, no relic, no place, nothing of what he did."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

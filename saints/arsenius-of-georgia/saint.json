@@ -1,0 +1,63 @@
+{
+  "slug": "arsenius-of-georgia",
+  "display_name": "Arsenius, companion of Michael",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Αρσένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαΐου, «Όσιοι Μιχαήλ και Αρσένιος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "michael-of-georgia"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Όσιοι Μιχαήλ και Αρσένιος κατάγονταν από τη Γεωργία και έζησαν τον 9ο αιώνα μ.Χ.» The page gives no year of birth or of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαΐου — «Όσιοι Μιχαήλ και Αρσένιος»",
+        "url": "https://www.saint.gr/05/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Μαΐου εκάστου έτους», the same day as the listing, and its whole body is two sentences: of Georgia, of the ninth century, ascetics in a monastery of Mount Olympus in Bithynia. **The page names two men and so it is two folders**, each with a head line of its own and each carrying a `related` row to the other. **He is not `arsenius-of-ikalto`**, the corpus's other Georgian Arsenius, nor of Corfu, Komel, Cappadocia, Paros, the Great, the wonderworker, or the companion of Elias Speleotes; what tells him from them is Olympus of Bithynia and the fellow he is named with, and the companionship clause in the display name carries it. No year, no hymn, no relic, no name for the monastery."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

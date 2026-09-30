@@ -1,0 +1,63 @@
+{
+  "slug": "michael-of-georgia",
+  "display_name": "Michael, companion of Arsenius",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Μιχαήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαΐου, «Όσιοι Μιχαήλ και Αρσένιος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "arsenius-of-georgia"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Όσιοι Μιχαήλ και Αρσένιος κατάγονταν από τη Γεωργία και έζησαν τον 9ο αιώνα μ.Χ.» The page gives no year of birth or of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαΐου — «Όσιοι Μιχαήλ και Αρσένιος»",
+        "url": "https://www.saint.gr/05/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Μαΐου εκάστου έτους», the same day as the listing, and its whole body is two sentences: «Οι Όσιοι Μιχαήλ και Αρσένιος κατάγονταν από τη Γεωργία και έζησαν τον 9ο αιώνα μ.Χ. Ασκήτεψαν σε μονή του όρους Όλυμπος της Βιθυνίας της Μικράς Ασίας.» **The page names two men and so it is two folders**, each with a head line of its own and each carrying a `related` row to the other on the strength of that one sentence. **The display name keeps the companionship clause**, as the corpus keeps about sixty such, because a bare Michael would not be told from the eleven the corpus already holds — of Kyiv, of Chernigov, of Klops, Maleinos and the rest — nor from the `michael-the-wonderworker` of 1 Μαΐου drafted two days before this one, who is likewise almost unplaced. What separates the two is that this Michael has an origin, a century and a mountain, and that one has a Paris codex and nothing else. No year, no hymn, no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Mavra",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 mai, «Sfânta Muceniță Mavra»."
+    },
+    {
+      "form": "Μαύρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Μαΐου, «Άγιοι Τιμόθεος και Μαύρα», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Μαΐου — «Άγιοι Τιμόθεος και Μαύρα»",
+        "url": "https://www.saint.gr/05/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Μαΐου εκάστου έτους», the same day the Romanian calendar keeps her, and it is plainly the same woman: of Panapea in the Thebaid, married twenty days when her husband was denounced, tortured and crucified with him. It prints **no year**, so `dates` stays absent. **The Greek is much fuller about her than about him** — the hair torn out, the fingers cut off, the cauldron of boiling water that did not scald her, the prefect's hand dissolved by the water she threw on it from her own palm, the devil's cup of milk and honey and then the river of milk and honey, both refused with «Δεν πρόκειται να πιώ απ' αυτά. Θα πιώ από το ουράνιο ποτήρι που μου πρόσφερε ο Χριστός», and the angel who showed her a throne, a white robe and a crown, and then a higher throne and robe and crown for her husband, «Η διαφορά του τόπου δηλώνει το γεγονός ότι ο άντρας σου υπήρξε η αιτία της σωτηρίας σου»; and the nine days the two of them hung on the cross. **It adds her relics and her patronage**: «Η Κάρα της Αγίας βρίσκεται στον ομώνυμο Ναό Κοιλανίου Λεμεσού Κύπρου», with fragments at Kykkos in Cyprus and at the church of Saint George of the Greeks in Venice, and «Πολιούχος: Λευκάδα (Πόλη) (Αγία Μαύρα), Ρουπάκι Ηλείας». It tells at length how her veneration reached Lefkada, which was itself called Αγία Μαύρα: the Angevin lords who took the island in 1331 came from a town of Sainte Maure in France and named the island after it and built a Latin chapel, and in the mid-fifteenth century Helen Palaiologina, daughter of Thomas Palaiologos and wife of the despot Lazar Vuković, vowed a church to her in a storm on the way to her daughter's wedding to Duke Leonardo III Tocco, and built it. **Those are dedications and not relations**, and none of the persons in that account has a folder. Two apolytikia and one kontakion of the page's eight hymns are the joint service of the pair and are stored on both folders; the rest were left."
     },
     {
       "church": "serbian",
@@ -60,6 +75,40 @@
       },
       "english": {
         "text": "Thy martyrs, O Lord, in their struggles have won from Thee, our God, the crowns of incorruption; for having Thy strength, they overthrew their tormentors and broke the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὡς ζεῦγος ὁμόζυγον, καὶ ξυνωρὶς θαυμαστή, Τιμόθεε πάνσοφε, καὶ Μαῦρα νύμφη Χριστοῦ, ἐνθέως ἠθλήσατε, σύμμορφοι γὰρ ὀφθέντες, τῶν παθῶν τοῦ Κυρίου, δόξης ἀκατάλυτου, ἠξιώθητε ἄμφω, πρεσβεύοντες τῷ Σωτήρι, ὑπὲρ τῶν ψυχῶν ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε, on the page of «Άγιοι Τιμόθεος και Μαύρα» — the joint apolytikion of the pair, which names both",
+        "url": "https://www.saint.gr/880/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a yoked pair and a wondrous couple, all-wise Timothy and Maura the bride of Christ, ye contended divinely; for being made conformable to the sufferings of the Lord, ye were both counted worthy of indissoluble glory, interceding with the Saviour for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ.",
+      "text": "Τοὺς πολυτρόπους αἰκισμοὺς ἐνεγκόντες, καὶ τοὺς στεφάνους ἐκ Θεοῦ εἰληφότες, ὑπὲρ ἡμῶν πρεσβεύσατε πρὸς Κύριον, μνήμην τὴν πανίερον, τὴν ὑμῶν ἐκτελούντων, μέγιστε Τιμόθεε, καὶ ἀοίδιμε Μαύρα, τοῦ εἰρηνεῦσαι πόλιν καὶ λαόν· αὐτός ἐστι γάρ, πιστῶν τὸ κραταίωμα.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ', Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ, on the page of «Άγιοι Τιμόθεος και Μαύρα» — the joint kontakion of the pair, which names both",
+        "url": "https://www.saint.gr/880/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having borne torments of every kind and received your crowns from God, intercede with the Lord for us who keep your all-holy memory, O greatest Timothy and renowned Maura, that city and people may have peace; for He is the strength of the faithful.",
         "rendered": "site"
       }
     }
