@@ -6,6 +6,11 @@
       "form": "Ilirie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 aprilie, «Sfântul Cuvios Ilirie»."
+    },
+    {
+      "form": "Ιλλυριός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Απριλίου, «Όσιος Ιλλυριός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Απριλίου — «Όσιος Ιλλυριός»",
+        "url": "https://www.saint.gr/04/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Απριλίου εκάστου έτους», the same day as the listing. Its whole account is one sentence, «Ο Όσιος Ιλλυριός ασκήτεψε στο όρος του Μυρσινώνος και απεβίωσε ειρηνικά», which names the mountain of Myrsinon and gives no year, no monastery and no country. The couplet spells the place Μυρσιῶνος and the prose Μυρσινώνος."
     },
     {
       "church": "serbian",

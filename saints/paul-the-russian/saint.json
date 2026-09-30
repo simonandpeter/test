@@ -1,0 +1,60 @@
+{
+  "slug": "paul-the-russian",
+  "display_name": "Paul the Russian",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Απριλίου, «Άγιος Παύλος ο Ρώσος ο Απελεύθερος», with the rank word and the two epithets left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1683,
+      "latest": 1683,
+      "display": "1683",
+      "basis": "attested",
+      "note": "saint.gr: «Αφού κήρυξε και πάλι την πίστη του στον Χριστό μπροστά στο βεζίρη, τη Μεγάλη Παρασκευή του έτους 1683 μ.Χ., οδηγήθηκε δέσμιος στον ιππόδρομο Ατμεϊντάν, όπου του απέκοψαν την τίμια κεφαλή του.» The page's heading has «(; - 1683)» and it names the man who wrote his martyrion, John Karyophylles."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Απριλίου — «Άγιος Παύλος ο Ρώσος ο Απελεύθερος»",
+        "url": "https://www.saint.gr/04/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Απριλίου εκάστου έτους», the same day as the listing, although the page puts his death on Great Friday, which is moveable; the fixed 3 April is what the calendar keeps."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

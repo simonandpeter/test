@@ -6,6 +6,11 @@
       "form": "Iosif",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 aprilie, «Sfântul Cuvios Iosif, scriitorul de cântări»."
+    },
+    {
+      "form": "Ιωσήφ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Απριλίου, «Όσιος Ιωσήφ ο Υμνογράφος», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -17,7 +22,10 @@
     "confessor"
   ],
   "related": [
-    "bartholomew-the-apostle"
+    "bartholomew-the-apostle",
+    "gregory-the-decapolite",
+    "john-disciple-of-gregory-the-decapolite",
+    "photius-of-constantinople"
   ],
   "dates": {
     "death": {
@@ -50,8 +58,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Απριλίου — «Όσιος Ιωσήφ ο Υμνογράφος»",
+        "url": "https://www.saint.gr/04/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The Greek calendar keeps him on 3 April, a day earlier than the Romanian 4 April this folder already records; the life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Απριλίου εκάστου έτους», so the two calendars keep him on two neighbouring days. The page also heads him «(816 - 886)» and closes «Κοιμήθηκε με ειρήνη το έτος 886 μ.Χ.», which disagrees with the 883 doxologia.ro gives and this folder already holds; the corpus's date is left as it stands and saint.gr's reading is recorded here."
     },
     {
       "church": "serbian",
@@ -73,6 +91,23 @@
       },
       "english": {
         "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with miracles, O Joseph our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Τὸ δωδεκάχορδον τοῦ Λόγου ὄργανον, τὴν παναρμόνιον λύραν τῆς χάριτος, τὸ Ὑμνογράφον Ἰωσὴφ τιμήσωμεν ἐπαξίως• οὗτος γὰρ ἀνύμνησε, μελιχροὶς μελωδήμασι, Πνεύματι κινούμενος, τῶν Ἁγίων πᾶν σύστημα. Μεθ' ὧν καὶ ἱκετεύει ἀπαύστως, δοῦναι ἠμὶν πταισμάτων λύσιν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Τὴν ὡραιότητα, on the page of Όσιος Ιωσήφ ο Υμνογράφος. It names him and his calling.",
+        "url": "https://www.saint.gr/3802/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us worthily honour Joseph the Hymnographer, the twelve-stringed instrument of the Word, the all-harmonious lyre of grace; for moved by the Spirit he hymned with honeyed melodies the whole company of the saints, with whom he entreats unceasingly that release from our offences be given us.",
         "rendered": "site"
       }
     }

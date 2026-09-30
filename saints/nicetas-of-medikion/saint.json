@@ -6,6 +6,11 @@
       "form": "Nichita Mărturisitorul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 aprilie, «Sfântul Cuvios Nichita Mărturisitorul»."
+    },
+    {
+      "form": "Νικήτας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Απριλίου, «Όσιος Νικήτας ο Ομολογητής Ηγούμενος Μονής Μηδικίου», with the rank word, the epithet and the office left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Απριλίου — «Όσιος Νικήτας ο Ομολογητής Ηγούμενος Μονής Μηδικίου»",
+        "url": "https://www.saint.gr/04/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Απριλίου εκάστου έτους», the same day as the listing. It says «έζησε τον 8ο αιώνα μ.Χ.», that he lived in the eighth century, but its own narrative carries him past that: abbot under the patriarch Tarasios «(784 - 806 μ.Χ.)», exiled under Leo V «(813 - 820 μ.Χ.)» and again in 815, and back in Constantinople under Michael II the Stammerer «(820 - 829 μ.Χ.)», where he reposed. It gives no year for his death, so no dates are recorded from it here."
     },
     {
       "church": "serbian",
@@ -63,9 +78,62 @@
         "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with miracles, O Nicetas our father. Pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ὀρθοδοξίας ὁδηγέ, εὐσεβείας Διδάσκαλε καί σεμνότητος, τῆς Οἰκουμένης ὁ φωστήρ, τῶν Μοναζόντων θεόπνευστον ἐγκαλλώπισμα, Νικήτα σοφέ, ταῖς διδαχαῖς σου πάντας ἐφώτισας, λύρα τοῦ Πνεύματος. Πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τάς ψυχάς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος πλ. δ’, on the page of Όσιος Νικήτας ο Ομολογητής Ηγούμενος Μονής Μηδικίου. This is the common apolytikion of a venerable confessor and teacher, with his name set into it; the page prints it first under his name, so it is copied whole as the page has it.",
+        "url": "https://www.saint.gr/3801/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Guide of Orthodoxy, teacher of piety and of reverence, luminary of the world, God-inspired adornment of monastics, O wise Nicetas, by thy teachings thou hast enlightened all, O lyre of the Spirit. Intercede with Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὡς νίκης ἐπώνυμος τῶν θεοσδώτων θεσμῶν φρουρὸς ἀπερίτρεπτος καὶ στῦλος ὤφθης στερρός, Νικήτα μακάριε· σὺ γὰρ τῆς ἀπαθείας κοσμηθεὶς ταῖς ἀκτῖσιν αἴγλης ὁμολογίας τὸν σὸν βίον φαιδρύνεις. καὶ νῦν τῶν σοὶ προσιόντων δέχου τὴν αἴνεσιν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε, on the page of Όσιος Νικήτας ο Ομολογητής Ηγούμενος Μονής Μηδικίου. It is his own and plays on his name, νίκης ἐπώνυμος, named for victory.",
+        "url": "https://www.saint.gr/3801/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Named for victory, thou wast seen as an unturning guardian of the God-given ordinances and as a steadfast pillar, O blessed Nicetas; for adorned with the rays of dispassion thou dost make thy life bright with the splendour of confession. And now receive the praise of those who come to thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ.",
+      "text": "Ὡς ἡσυχίας ὑποφήτης, πρακτικώτατος, τῆς ποιμανσίας ὀφθαλμός ὤφθης ἀκοίμητος τῆς Μονῆς καθηγησάμενος Μηδικίου· Ἀλλ᾽ὡς φύλαξ τῶν ἐνθέων παραδόσεων διαρρύθμισον Νικήτα θείῳ Πνεύματι τοὺς βοῶντάς σοι, χαίροις Πάτερ τρισόλβιε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ, on the page of Όσιος Νικήτας ο Ομολογητής Ηγούμενος Μονής Μηδικίου. It names him and names his monastery, Μηδικίου.",
+        "url": "https://www.saint.gr/3801/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a most practised interpreter of stillness, thou wast seen to be a sleepless eye of the shepherd's charge, having led the monastery of Medikion. But as a guardian of the God-filled traditions, set in order by the divine Spirit, O Nicetas, those who cry to thee: Rejoice, thrice-blessed Father.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "theodore-the-studite"
+  ]
 }

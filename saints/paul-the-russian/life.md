@@ -1,0 +1,9 @@
+# Paul the Russian
+
+saint.gr says the new martyr Paul came from Russia. He was taken captive as a child by the Tatars, and a Christian of Constantinople bought him from them and set him free — which is what the day's line means by calling him ο Απελεύθερος, the freedman. In the City he married a Russian woman who had herself first been a captive, and the two lived a devout and God-loving life together.
+
+Paul suffered from the falling sickness. Once, in the hour of a fit, while his neighbours were taking him to the church of the Mother of God called of Moglounion, he met some Turks on the road and began to beg help of them and to cry out «Είμαι Αγαρηνός» — I am a Hagarene. The Turks reported what had happened to the vizier, who ordered Paul and the priests of that church seized.
+
+When he came to himself out of the crisis of his illness he was brought before the governor, who required him to confess Islam formally, promising him wealth and honours and threatening him with torture and death. Paul, strengthened also by his wife, confessed the name of Christ with boldness; so they threw him in prison and tortured him. Having preached his faith in Christ before the vizier once more, on Great Friday of the year 1683 he was led bound to the hippodrome of Atmeydan, where they struck off his honourable head. The page says John Karyophylles wrote the account of his martyrdom, gives him no year of birth and no village in Russia, and prints no hymn under his name; it links beside him the synaxis of the new martyrs who suffered after the taking of Constantinople, which is a company and not a person and is not kept here.
+
+*After saint.gr's calendar for 3 Απριλίου — [the day](https://www.saint.gr/04/03/index.aspx) and [the life](https://www.saint.gr/3806/saint.aspx); read 30 September 2026.*

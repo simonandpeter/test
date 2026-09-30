@@ -1,0 +1,62 @@
+{
+  "slug": "nectarius-of-bezhetsk",
+  "display_name": "Nectarius of Bezhetsk",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Νεκτάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Απριλίου, «Όσιος Νεκτάριος του Μπεζέτσκ», with the rank word left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1492,
+      "latest": 1492,
+      "display": "1492",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Νεκτάριος κοιμήθηκε με ειρήνη το έτος 1492 μ.Χ.», and the page's heading has «(; - 1492)». It puts his withdrawal to the forest «Στα μέσα του 15ου αιώνος μ.Χ.», in the middle of the fifteenth century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Απριλίου — «Όσιος Νεκτάριος του Μπεζέτσκ»",
+        "url": "https://www.saint.gr/04/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Απριλίου εκάστου έτους», the same day as the listing. This is a Russian saint on the Greek calendar; the Greek page is the only source read for him here, and the Russian calendar has not been checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

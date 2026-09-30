@@ -6,6 +6,11 @@
       "form": "Elpidifor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 aprilie, «Sfântul Mucenic Elpidifor»."
+    },
+    {
+      "form": "Ελπιδηφόρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Απριλίου, «Άγιος Ελπιδηφόρος», with the rank word left off. The life page gives «Ελπιδοφόρος» as a second spelling of the same name."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Απριλίου — «Άγιος Ελπιδηφόρος»",
+        "url": "https://www.saint.gr/04/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Απριλίου εκάστου έτους», the same day as the listing. Its whole account of him is one clause, «Ο Άγιος Ελπιδηφόρος (ή Ελπιδοφόρος) μαρτύρησε δια ξίφους» — he was martyred by the sword — with the second spelling of the name given beside the first. No year, no place, no emperor, no relics, no hymn."
     },
     {
       "church": "serbian",
