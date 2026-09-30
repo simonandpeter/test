@@ -1,0 +1,51 @@
+{
+  "slug": "john-of-rouphinianai",
+  "display_name": "John of Rouphinianai",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαρτίου, «Όσιος Ιωάννης ο ἐν Ρουφιαναῖς», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαρτίου — «Όσιος Ιωάννης ο ἐν Ρουφιαναῖς»",
+        "url": "https://www.saint.gr/03/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is one sentence, «Ο Όσιος Ιωάννης απεβίωσε ειρηνικά» — he died peacefully — with two lines of verse and the calendar's usual note on the name John. The epithet «ο ἐν Ρουφιαναῖς», in Rouphinianai, is in the line and is the only thing that places him. There is no year and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

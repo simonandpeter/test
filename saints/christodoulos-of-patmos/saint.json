@@ -6,6 +6,11 @@
       "form": "Hristodul din Patmos",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 martie."
+    },
+    {
+      "form": "Χριστόδουλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαρτίου, «Όσιος Χριστόδουλος ο θαυματουργός, «ὁ ἐν Πάτμῳ»», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαρτίου — «Όσιος Χριστόδουλος ο θαυματουργός, «ὁ ἐν Πάτμῳ»»",
+        "url": "https://www.saint.gr/03/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(1020 - 1093)» — the corpus's 1020 for his birth comes from doxologia and stands — and records a relic: «Το Λείψανο του Αγίου βρίσκεται αδιάφθορο στη Μονή Αγίου Ιωάννου του Θεολόγου Πάτμου», his relic lies incorrupt in the monastery of St John the Theologian on Patmos. It gives his worldly name as John, puts his birth in a small town near Nicaea in Bithynia, and calls him ο Λατρηνός from mount Latros. It prints an apolytikion and several more hymns for him."
     },
     {
       "church": "serbian",
@@ -62,5 +77,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Tῆς Νικαίας τὸν γόνον καὶ τῆς Πάτμου τὸ καύχημα καὶ τῶν μοναζόντων τὸ κλέος θεοφόρον Χριστόδουλον τιμήσωμεν ἐν ὕμνοις ἀδελφοί, τὸ σκῆνος προσπτυσσόμενοι αὐτοῦ, ἵνα λάβωμεν τὴν ἴασιν τῶν ψυχῶν καὶ τῶν σωμάτων κράζοντες. Δόξα τῷ δεδοκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης, on the page of Όσιος Χριστόδουλος ο θαυματουργός, «ὁ ἐν Πάτμῳ». It names him, Nicaea and Patmos. The page prints several more hymns for him, in Ἦχος β’, Ἦχος γ’, Ἦχος πλ. δ’ and Ἦχος δ’, with an oikos of chairetismoi; the first apolytikion is the one taken.",
+        "url": "https://www.saint.gr/3423/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Brethren, let us honour in hymns the child of Nicaea and the boast of Patmos and the glory of monastics, the God-bearing Christodoulos, embracing his body that we may receive the healing of souls and bodies, and crying: glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

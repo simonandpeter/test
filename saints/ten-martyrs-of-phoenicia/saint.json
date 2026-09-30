@@ -1,0 +1,51 @@
+{
+  "slug": "ten-martyrs-of-phoenicia",
+  "display_name": "The Ten Martyrs of Phoenicia",
+  "names": [
+    {
+      "form": "Άγιοι Δέκα μάρτυρες οι ἐν Φοινίκῃ",
+      "lang": "el",
+      "note": "saint.gr gives no name for any of the ten, so its line for 16 Μαρτίου is kept whole, as the corpus keeps «Άγιοι Έξι Μάρτυρες» for another nameless company."
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαρτίου — «Άγιοι Δέκα μάρτυρες οι ἐν Φοινίκῃ»",
+        "url": "https://www.saint.gr/03/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is one sentence, «Οι Άγιοι αυτοί Δέκα μάρτυρες, μαρτύρησαν δια ξίφους» — these ten holy martyrs were martyred by the sword — with two lines of verse. It names nobody, enumerates nobody, gives no year and prints no hymn, so the company is kept as one entry."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

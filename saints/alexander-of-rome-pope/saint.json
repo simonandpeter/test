@@ -1,0 +1,66 @@
+{
+  "slug": "alexander-of-rome-pope",
+  "display_name": "Alexander of Rome",
+  "names": [
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαρτίου, «Άγιος Αλέξανδρος ο Ιερομάρτυρας πάπας Ρώμης», with the rank words left off. The page adds that the Synaxarist of Nikodemos and the Menaia call him «Αλεξανδρίων», a form it rejects as the name of no pope of Rome."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Rome",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαρτίου — «Άγιος Αλέξανδρος ο Ιερομάρτυρας πάπας Ρώμης»",
+        "url": "https://www.saint.gr/03/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The page corrects the name it inherits: «Από τον Συναξαριστή του Αγίου Νικόδημου και τα Μηναία, καλείται Αλεξανδρίων. Αλλά με τέτοιο όνομα πάπας Ρώμης δεν υπήρξε ποτέ. Πρόκειται λοιπόν για τον πάπα Αλέξανδρο τον Α' (105 - 115 μ.Χ.)» — the Synaxarist of Nikodemos and the Menaia call him Alexandrion, but no pope of Rome ever bore such a name, so this is pope Alexander I. It then says he was elected bishop of Rome in 105, that Eusebius, reworking a notice of Irenaeus of Lyon, makes him fifth in order of the bishops of Rome, and that he was martyred under the emperor Hadrian (117–138) — which does not agree with the 105–115 of its own bracket, and both readings are recorded and neither resolved. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 117,
+      "latest": 138,
+      "display": "under Hadrian (117–138)",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησε επί αυτοκράτορα Αδριανού (117 - 138 μ.Χ.)». The same page brackets the pope it identifies him with as «Αλέξανδρο τον Α' (105 - 115 μ.Χ.)», which ends before that reign begins; the interval taken is the reign the page gives for the martyrdom, and the disagreement is left in the note as the page's own."
+    }
+  },
+  "related": [
+    "eventius-companion-of-theodulus",
+    "theodulus-companion-of-eventius",
+    "irenaeus-of-lyon"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

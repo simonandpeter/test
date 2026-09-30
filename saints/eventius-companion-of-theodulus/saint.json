@@ -1,0 +1,64 @@
+{
+  "slug": "eventius-companion-of-theodulus",
+  "display_name": "Eventius, companion of Theodulus",
+  "names": [
+    {
+      "form": "Εβέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαρτίου, «Άγιοι Εβέντιος και Θεόδουλος οι Ιερομάρτυρες», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαρτίου — «Άγιοι Εβέντιος και Θεόδουλος οι Ιερομάρτυρες»",
+        "url": "https://www.saint.gr/03/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is one sentence, «Οι Άγιοι Ιερομάρτυρες Εβέντιος και Θεόδουλος ήταν πρεσβύτεροι στην Εκκλησία της Ρώμης και μαρτύρησαν επί αυτοκράτορα Αδριανού (117 - 138 μ.Χ.), μαζί με τον Επίσκοπο Ρώμης Αλέξανδρο (βλέπε ίδια ημέρα)» — they were presbyters of the Church of Rome and were martyred under Hadrian together with Alexander, bishop of Rome, whom the calendar keeps on the same day. It gives no year within the reign, no manner of death and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 117,
+      "latest": 138,
+      "display": "under Hadrian (117–138)",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησαν επί αυτοκράτορα Αδριανού (117 - 138 μ.Χ.), μαζί με τον Επίσκοπο Ρώμης Αλέξανδρο». The page gives no year, so the interval is the reign it prints."
+    }
+  },
+  "related": [
+    "theodulus-companion-of-eventius",
+    "alexander-of-rome-pope"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

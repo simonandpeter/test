@@ -6,6 +6,11 @@
       "form": "Roman",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 martie."
+    },
+    {
+      "form": "Ρωμανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαρτίου, «Άγιος Ρωμανός ο ἐν τῷ Παρίῳ», with the rank words left off. The page's epithet «ο ἐν τῷ Παρίῳ», in Parion, is left out of the stored form and kept in the life."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαρτίου — «Άγιος Ρωμανός ο ἐν τῷ Παρίῳ»",
+        "url": "https://www.saint.gr/03/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives him an epithet the Romanian line does not, «ο ἐν τῷ Παρίῳ», in Parion, and one sentence, «Ο Άγιος Ρωμανός μαρτύρησε δια ξίφους» — he was martyred by the sword. It adds two lines of verse, gives no year and prints no hymn."
     },
     {
       "church": "serbian",

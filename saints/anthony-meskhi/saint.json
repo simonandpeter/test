@@ -1,0 +1,63 @@
+{
+  "slug": "anthony-meskhi",
+  "display_name": "Anthony Meskhi",
+  "names": [
+    {
+      "form": "Αντώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαρτίου, «Άγιος Αντώνιος εκ Γεωργίας», with the rank words left off. The page's body gives the surname, «Ο Άγιος Αντώνιος (Μέσχι)», which the English name keeps because the corpus holds many men called Anthony."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "preacher"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαρτίου — «Άγιος Αντώνιος εκ Γεωργίας»",
+        "url": "https://www.saint.gr/03/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The whole of the page is one sentence, «Ο Άγιος Αντώνιος (Μέσχι) έζησε κατά τον 13ο μ.Χ. αιώνα στη Γεωργία στα χρόνια του ηγεμόνα Δημητρίου του Β' (1271 - 1289 μ.Χ.). Εργάστηκε ιεραποστολικά και κοιμήθηκε με ειρήνη» — he lived in thirteenth-century Georgia in the years of the ruler Demetrius II, worked as a missionary and fell asleep in peace. The page gives him no rank word beyond Άγιος, so `types` carries only the missionary work it names. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1271,
+      "latest": 1289,
+      "display": "under Demetrius II of Georgia (1271–1289)",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησε κατά τον 13ο μ.Χ. αιώνα στη Γεωργία στα χρόνια του ηγεμόνα Δημητρίου του Β' (1271 - 1289 μ.Χ.)». The page gives no year of his own, so the interval is the reign it prints."
+    }
+  },
+  "related": [
+    "demetrius-of-georgia",
+    "poimen-of-georgia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

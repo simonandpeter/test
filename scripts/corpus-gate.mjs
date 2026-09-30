@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδουλοσ theodulus-companion-of-agapitus theodulus-companion-of-eventius theodulus-companion-of-pamphilus theodulus-of-caesarea-17-february theodulus-of-myropolis theodulus-of-the-forty-martyrs theodulus-son-of-nilus theodulus-the-executioner':
+    'Eight now. The new one is the companion of Eventius on 16 March; the others are read in the el-02-18 entry for this name form, where the 16 and 17 February pair is the open Caesarea question in ro-run/FINDINGS.md.',
+  'ποιμην poimen-of-georgia poimen-of-novgorod':
+    'Two men: Georgia on 16 March and Novgorod on 10 February.',
+  'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-kazan john-of-lycopolis john-of-rouphinianai john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-yuryevets john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-sinaite-venerable-martyr':
+    'Twenty-three now. The new one is John of Rouphinianai on 16 March; the others are read in the el-03-14 entry for this name form.',
+  'companion eventius theodulus eventius-companion-of-theodulus theodulus-companion-of-eventius':
+    'The pair the 16 March page names together, each named after the other, which is what folds them.',
+  'αντωνιοσ anthony-meskhi anthony-of-constantinople anthony-of-georgia anthony-of-krasnokholmsk anthony-of-novgorod anthony-of-vologda anthony-of-zadonsk anthony-of-zographou anthony-the-great antonius-the-presbyter antony-companion-of-bassus antony-of-novgorod antony-son-of-john-of-syracuse antony-the-athenian antony-the-martyr-1-march':
+    'Fifteen now. The new one is Anthony Meskhi on 16 March; the others are read in the el-02-14 entry for this name form.',
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-of-cartagena alexander-of-pydna alexander-of-rome-pope alexander-of-the-forty-martyrs alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Nine now. The new one is Alexander of Rome, the pope, on 16 March; the others are read in the el-03-15 entry for this name form, where the company of Agapius holds two of the name.',
   'ρωμυλοσ romylos-martyr-at-venice romylus-companion-of-agapius':
     'Two men: the martyr at Venice on 17 February and the companion of Agapius on 15 March.',
   'μανουηλ manuel-of-adrianople manuel-of-sphakia':

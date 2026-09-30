@@ -6,6 +6,11 @@
       "form": "Anin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 martie."
+    },
+    {
+      "form": "Ανίνας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαρτίου, «Όσιος Ανίνας ο Θαυματουργός», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαρτίου — «Όσιος Ανίνας ο Θαυματουργός»",
+        "url": "https://www.saint.gr/03/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The Greek calendar sets him on 16 March while the Romanian, which this folder already carried, keeps him on 18 March. The page's account is this folder's: the desert of Mesopotamia, the monk Maioumas, the taming of the wild beasts, the water carried from the Euphrates and the cistern filled at his prayer, the pack animal given him by Patrikios, bishop of Caesarea, and given away again to a poor debtor, ninety-five years in the one cell, a brotherhood gathered, a successor appointed, and his repose at a hundred and ten. It prints no hymn. The same site keeps an «Ανανίας ο Θαυματουργός» on 18 Μαρτίου whose page agrees with this life in some things and not in others; that is a separate question and no row is put on this folder for it."
     },
     {
       "church": "serbian",

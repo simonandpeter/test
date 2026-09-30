@@ -6,6 +6,11 @@
       "form": "Sabin Egipteanul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 martie."
+    },
+    {
+      "form": "Σαβίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Μαρτίου, «Άγιος Σαβίνος ο Αιγύπτιος», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Μαρτίου — «Άγιος Σαβίνος ο Αιγύπτιος»",
+        "url": "https://www.saint.gr/03/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 287)» and closes «έλαβε το στέφανο του μαρτυρίου το 287 μ.Χ.», while it opens the account with the persecution of Diocletian «(284 - 305 μ.Χ.)»; the corpus's interval is that reign, from doxologia, and is left as it stands, with the page's year recorded here. It names the eparch Arrianos, has the Christians of the place persuade him to hide outside Hermoupolis for the good of the church, and drowns him with a stone about his neck in the Nile — the same death saint.gr gives Abibus of Hermoupolis on 13 Μαρτίου, of whom that page says «Ίσως είναι το ίδιο πρόσωπο με τον Άγιο Σαβίνο τον Αιγύπτιο». The perhaps is the source's and is not acted on."
     },
     {
       "church": "serbian",
@@ -66,6 +81,40 @@
       },
       "english": {
         "text": "Thy martyr Sabinus, O Lord, in his contest received the crown of incorruption from Thee, our God; for having Thy power, he cast down the tormentors and broke the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τὸν τάφον σου Σωτήρ.",
+      "text": "Κηρύξας εὐσεβῶς, ἀσεβῶν ἐναντίων, τῶν πάντων Ποιητήν, σαρκωθέντα ἀτρέπτως, Σαβῖνε παμμακάριστε, ἱερῶς ἠνδραγάθησας· ὅθεν ἔφθασας, πρός ἀφθαρσίας χειμάῤῥουν, τέλος ἅγιον, ἐν ποταμῷ δεδεγμένος· διὸ εὐφημοῦμέν σε.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος α’, Τὸν τάφον σου Σωτήρ, on the page of Άγιος Σαβίνος ο Αιγύπτιος. It names him and turns on the river. The page prints a kontakion in Ἦχος β´ and a kathisma in Ἦχος γ’ beside it.",
+        "url": "https://www.saint.gr/3895/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having preached in piety, against the impious, the Maker of all things made flesh without change, all-blessed Sabinus, you did valiantly in a holy way; and so you came to the torrent of incorruption, receiving a holy end in a river. Therefore we praise you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β´.",
+      "model": "Τά ἄνω ζητῶν.",
+      "text": "Πρός ὕδωρ ζωῆς, καὶ πέλαγος χρηστότητος, ἰθύνθης σαφῶς, ἱστίῳ τῷ τοῦ Πνεύματος, ποταμίοις ὕδασι, προσριφείς Σαβῖνε πανεύφημε· διὸ λύσιν ἁμαρτιῶν, ὀμβρίζεις ἀπαύστως, προσευχαῖς σου ἡμῖν.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος β´, Τά ἄνω ζητῶν, on the same page.",
+        "url": "https://www.saint.gr/3895/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Cast into the waters of a river, you were steered plainly to the water of life and the sea of kindness by the sail of the Spirit, all-praised Sabinus; and so you rain down on us without ceasing the loosing of sins by your prayers.",
         "rendered": "site"
       }
     }
