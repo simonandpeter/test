@@ -1,0 +1,60 @@
+{
+  "slug": "fortunatus-1-june",
+  "display_name": "Fortunatus (1 June)",
+  "sex": "male",
+  "types": [
+    "presbyter",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Φορτουνάτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιος Φορτουνάτος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 400,
+      "latest": 400,
+      "display": "400",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη, το 400 μ.Χ.» The page's heading is «Άγιος Φορτουνάτος (; - 400)» and gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιος Φορτουνάτος»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing. **He is not the corpus's Fortunatus the martyr**, whose Greek row saint.gr itself sets on 30 August: that one is a martyr, this one a presbyter of Territa near Spoleto who fell asleep in peace in 400. Two entries on one calendar are two commemorations, so two men, and the slug takes the day because the name alone is already used. `presbyter` and `wonderworker` are both the page's own words; it does not call him venerable or martyr. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

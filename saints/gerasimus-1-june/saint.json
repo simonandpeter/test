@@ -1,0 +1,48 @@
+{
+  "slug": "gerasimus-1-june",
+  "display_name": "Gerasimus (1 June)",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Γεράσιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιος Γεράσιμος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιος Γεράσιμος»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing. The whole life is two sentences and one of them is a disclaimer: «Η μνήμη του αναφέρεται στον υπ' αριθμ. 53 Κώδικα της Μονής Βλατέων. Καμία άλλη πληροφορία δεν έχουμε για τη ζωή του Αγίου αυτού.» That is an absence of information and not the self-doubt that refuses an entry: the page states positively where his memory is recorded. **`types` is empty on purpose** — the page gives him no rank at all beyond «Άγιος», not even Όσιος — and the display name takes the day, there being seven other Gerasimuses in the corpus and nothing here to tell this one apart by. No `dates`, no `locations`, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

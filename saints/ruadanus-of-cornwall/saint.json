@@ -1,0 +1,60 @@
+{
+  "slug": "ruadanus-of-cornwall",
+  "display_name": "Ruadanus of Cornwall",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ρουαδανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Όσιος Ρουαδανός της Κορνουάλης», with the rank word and the place left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ρουαδανός καταγόταν από τη Βρετάνη και έζησε τον 6ο αιώνα μ.Χ.» The century is the whole of what the page dates, and it gives neither a year of birth nor a year of death, so it is recorded as a floruit."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Όσιος Ρουαδανός της Κορνουάλης»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing. The display name keeps the calendar's own epithet, της Κορνουάλης, although the page makes him a Breton who died in Brittany and puts his ascetic life in three places at once — «στην περιοχή του Ταβίστοκ, της Κορνουάλης και της Βρετάνης» — because that is how the calendar names him; the tension is quoted in the life. No `locations` are entered for the same reason. The corpus keeps no other Ruadanus. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

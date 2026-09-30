@@ -1,0 +1,60 @@
+{
+  "slug": "sios-of-gareji",
+  "display_name": "Sios of Gareji",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Σίος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιος Σίος ο οσιομάρτυρας ο εκ Γεωργίας», with the rank word and the clause about Georgia left off. The body of the page adds the by-name in brackets, «Ο Άγιος Σίος (Γκαρεγκέλι)», which is the form the display name follows."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1700,
+      "latest": 1700,
+      "display": "1700",
+      "basis": "traditional",
+      "note": "saint.gr: «Ασκήτεψε θεοφιλώς στην έρημο του Οσίου Δαβίδ στην ανατολική Γεωργία και τελειώθηκε μαρτυρικά από τους Μουσουλμάνους του Καυκάσου, το 1700 μ.Χ.» The page's heading is «Άγιος Σίος ο Οσιομαρτυρας ο Εκ Γεωργιας (; - 1700)» and gives no year of birth, only that he lived in the seventeenth and eighteenth centuries."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιος Σίος ο οσιομάρτυρας ο εκ Γεωργίας»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing. The «έρημος του Οσίου Δαβίδ» in eastern Georgia is the Gareji desert of the corpus's David of Gareji, and the by-name the page gives him in brackets, Γκαρεγκέλι, says the same; the display name rests on those two together. **No `related` row is written to David of Gareji or to the six thousand martyrs of that desert**, because the page names the place and not the men, and a place named for a saint is not an association with him. The corpus keeps no other Sios. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

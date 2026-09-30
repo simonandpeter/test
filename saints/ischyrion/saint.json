@@ -1,0 +1,60 @@
+{
+  "slug": "ischyrion",
+  "display_name": "Ischyrion",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Ισχυρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιος Ισχυρίων ο μάρτυρας και οι συν αυτώ», with the rank words and the clause about his companions left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησε, το 250 μ.Χ., επί αυτοκράτορος Δεκίου (249 - 251 μ.Χ.), μαζί με πέντε από τους στρατιώτες του, επειδή ομολόγησαν την πίστη τους στον Χριστό.» The page's heading is «Άγιος Ισχυρίων ο Μαρτυρας (; - 250)» and gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιος Ισχυρίων ο μάρτυρας και οι συν αυτώ»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing. **The page says his memory is kept on a second day**: «Η Εκκλησία τιμά, επίσης, τη μνήμη του στις 22 Δεκεμβρίου.» One row per church is the schema, so the December commemoration is this note and not a second row, and the row records the day page that was read. **His five soldiers get no folder**: the page gives them a heading of their own, «Αγιοι Μαρτυρες Που Μαρτυρησαν Μαζι Με Τον Αγιο Ισχυριων», which names nobody, and the number appears only inside his sentence and not as the company's own title — unlike the Five Martyrs of Ascalon on 31 Μαΐου, whose number is in the calendar's line. They are named in the reader's report instead. `soldier` rests on «ήταν αξιωματικός» and on the five being his own soldiers. The corpus keeps no other Ischyrion. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

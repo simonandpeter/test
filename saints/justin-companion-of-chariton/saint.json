@@ -6,6 +6,11 @@
       "form": "Iustin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 iunie, «Sfântul Mucenic Iustin»."
+    },
+    {
+      "form": "Ιουστίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιοι Ιούστος, Ιουστίνος, Χαρίτων, Χαρίτω η παρθένος, Ευέλπιστος, Ιέραξ, Παίων και Λιβεριανός», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -15,7 +20,11 @@
   "related": [
     "chariton-companion-of-justin",
     "valerian-companion-of-justin",
-    "justin-the-philosopher"
+    "justin-the-philosopher",
+    "charito",
+    "euelpistus",
+    "hierax-1-june",
+    "paion"
   ],
   "attestations": [
     {
@@ -39,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιοι Ιούστος, Ιουστίνος, Χαρίτων, Χαρίτω η παρθένος, Ευέλπιστος, Ιέραξ, Παίων και Λιβεριανός»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day the Romanian calendar keeps him, and it is the same company of which the corpus already held four. **He is not the Justin the same day page keeps as philosopher and apologist**, whom the corpus holds as `justin-the-philosopher`: saint.gr prints the two as separate entries, and its company page says these eight suffered «μαζί με τον φιλόσοφο και απολογητή Ιουστίνο (βλέπε ίδια ημέρα)», with him and not as him. The Greek adds the persecution under Marcus Aurelius, the phalanx of Rome and the beheading, and four further members of the company drafted in `el-06-01-1`. No year, so no `dates`; no hymn."
     },
     {
       "church": "serbian",

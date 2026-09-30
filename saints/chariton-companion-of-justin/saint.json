@@ -6,6 +6,11 @@
       "form": "Hariton",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 iunie, «Sfântul Mucenic Hariton»."
+    },
+    {
+      "form": "Χαρίτων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιοι Ιούστος, Ιουστίνος, Χαρίτων, Χαρίτω η παρθένος, Ευέλπιστος, Ιέραξ, Παίων και Λιβεριανός», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -14,7 +19,12 @@
   ],
   "related": [
     "justin-companion-of-chariton",
-    "valerian-companion-of-justin"
+    "valerian-companion-of-justin",
+    "charito",
+    "euelpistus",
+    "hierax-1-june",
+    "paion",
+    "justin-the-philosopher"
   ],
   "attestations": [
     {
@@ -38,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιοι Ιούστος, Ιουστίνος, Χαρίτων, Χαρίτω η παρθένος, Ευέλπιστος, Ιέραξ, Παίων και Λιβεριανός»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day the Romanian calendar keeps him, and it is the same company. **He is not Charito**, the virgin whose name stands next to his in the line and who is drafted as her own folder in `el-06-01-1`: the page gives the two separate headings and one shared epigram — «Θείος Xαρίτων και Xαριτώ παρθένος, Tμηθέντες ευμοιρούσι θείων χαρίτων» — and marks her a virgin and him not. The Greek adds the persecution under Marcus Aurelius, the phalanx of Rome, the beheading and Justin the apologist beside them. No year, so no `dates`; no hymn."
     },
     {
       "church": "serbian",

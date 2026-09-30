@@ -1,0 +1,63 @@
+{
+  "slug": "paul-companion-of-reverianus",
+  "display_name": "Paul, companion of Reverianus",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιοι Ρεβεριανός και Παύλος και οι συν αυτοίς», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 272,
+      "latest": 272,
+      "display": "272",
+      "basis": "traditional",
+      "note": "saint.gr: «Συνελήφθησαν στην περιοχή του Αουτούν και μαρτύρησαν, το 272 μ.Χ., μαζί με άλλους Χριστιανούς, επί αυτοκράτορος Αυρηλιανού (270 - 275 μ.Χ.).» The page's heading for him is «Άγιος Παύλος (; - 272)» and gives no year of birth, only that he lived in the third century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιοι Ρεβεριανός και Παύλος και οι συν αυτοίς»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing, and gives him his own heading beside Reverianus's, so the two named men are one folder each. He is none of the corpus's thirty-odd Pauls: this one is a presbyter of Italian birth sent to Gaul and killed near Autun in 272, and the display name takes his companion because the page gives him nothing else. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "reverianus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

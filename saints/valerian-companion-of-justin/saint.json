@@ -6,6 +6,11 @@
       "form": "Valerian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 iunie, «Sfântul Mucenic Valerian»."
+    },
+    {
+      "form": "Λιβεριανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιοι Ιούστος, Ιουστίνος, Χαρίτων, Χαρίτω η παρθένος, Ευέλπιστος, Ιέραξ, Παίων και Λιβεριανός», with the rank words left off. The page's body adds «Λιβεριανός (κατ' άλλους Βαλλεριανός)», by others Valerianus, which is the name the folder already carries from the Romanian calendar; the alternative is quoted here and not entered as a second Greek form."
     }
   ],
   "sex": "male",
@@ -14,7 +19,12 @@
   ],
   "related": [
     "justin-companion-of-chariton",
-    "chariton-companion-of-justin"
+    "chariton-companion-of-justin",
+    "charito",
+    "euelpistus",
+    "hierax-1-june",
+    "paion",
+    "justin-the-philosopher"
   ],
   "attestations": [
     {
@@ -38,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιοι Ιούστος, Ιουστίνος, Χαρίτων, Χαρίτω η παρθένος, Ευέλπιστος, Ιέραξ, Παίων και Λιβεριανός»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "**This row rests on an identification the page itself makes.** saint.gr's line for 1 Ιουνίου ends with Λιβεριανός and not with a Valerian, and no eighth name on it answers to the folder's; but the body of the page says «Λιβεριανός (κατ' άλλους Βαλλεριανός)» — Liberianus, by others Valerianus — and the folder's Valerian came from doxologia's 1 iunie line for the same company on the same day. So the Greek's Liberianus is this corpus's Valerian, and the Greek form is added as his name rather than a ninth folder being made for him. Without that parenthesis the sweep would have read the Greek line as having one member the corpus lacks and the corpus as having one the Greek lacks, and a duplicate would have followed. The Greek adds the persecution under Marcus Aurelius, the phalanx of Rome, the beheading and Justin the apologist beside them, and four further members drafted in `el-06-01-1`. No year, so no `dates`; no hymn."
     },
     {
       "church": "serbian",

@@ -1,0 +1,60 @@
+{
+  "slug": "crescentianus",
+  "display_name": "Crescentianus",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Κρεσκεντιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιος Κρεσκεντιανός ο μάρτυρας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 287,
+      "latest": 287,
+      "display": "287",
+      "basis": "traditional",
+      "note": "saint.gr: «ήταν στρατιώτης και μαρτύρησε, το 287 μ.Χ., επί αυτοκράτορος Διοκλητιανού (284 - 305 μ.Χ.), στην πόλη Σάλντο της Ιταλίας, κοντά στο Καστέλλο.» The page's heading is «Άγιος Κρεσκεντιανός ο Μαρτυρας (; - 287)», with no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιος Κρεσκεντιανός ο μάρτυρας»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing. **He is not any of the corpus's three men called Crescens** — not the Apostle of the Seventy, not Crescens of Myra, and not the Crescens of Sardinia drafted from the 31 Μαΐου page — his name being a different name and his day, his emperor and his country all different. No `locations` are entered: «στην πόλη Σάλντο της Ιταλίας, κοντά στο Καστέλλο» answers to no place the corpus can put a point on without guessing. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "reverianus",
+  "display_name": "Reverianus",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Ρεβεριανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιοι Ρεβεριανός και Παύλος και οι συν αυτοίς», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 272,
+      "latest": 272,
+      "display": "272",
+      "basis": "traditional",
+      "note": "saint.gr: «Συνελήφθησαν στην περιοχή του Αουτούν και μαρτύρησαν, το 272 μ.Χ., μαζί με άλλους Χριστιανούς, επί αυτοκράτορος Αυρηλιανού (270 - 275 μ.Χ.).» The page's heading for him is «Άγιος Ρεβεριανός (; - 272)» and gives no year of birth, only that he lived in the third century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιοι Ρεβεριανός και Παύλος και οι συν αυτοίς»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing, and gives Reverianus and Paul each his own heading, so the two named men are one folder each. **The companions are not**: the page prints a third heading for them, «Αγιοι Μαρτυρες Που Μαρτυρησαν Μαζι Με Τους Ρεβεριανο Και Παυλο», and that heading names nobody and counts nobody — «μαζί με άλλους Χριστιανούς» — so no folder is made for them and they are named in the reader's report instead. Αουτούν is Autun in Burgundy. No `locations` are entered: the page names Italy for their origin and Autun for their arrest, and settles neither as a seat. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "paul-companion-of-reverianus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

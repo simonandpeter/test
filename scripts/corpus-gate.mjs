@@ -115,6 +115,24 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σιοσ shio-of-mgvime sios-of-gareji':
+    'Two men: Sios of Gareji on 1 June and `shio-of-mgvime`, whose `greek` row is already venerated on 4 Φεβρουαρίου and whom saint.gr lists again on 7 Μαΐου — a second Greek day a reader reported and did not draft, and §5 leaves that row alone.',
+  'σεκουνδοσ secundus-brother-of-romylus secundus-companion-of-perpetua secundus-of-amelia':
+    'Three men: the brother of Romylus on 24 March, the companion of Perpetua on 1 February and Secundus of Amelia on 1 June.',
+  'προκλοσ proclus-companion-of-apollonius proclus-of-bologna':
+    'Two men: Proclus of Bologna on 1 June and the Proclus of the el-11-20 entry.',
+  'παυλοσ paul-brother-of-pausirius paul-companion-of-andrew paul-companion-of-quadratus paul-companion-of-reverianus paul-disciple-of-dionysius-of-alexandria paul-krasnokutsky paul-martyr-28-may paul-of-cordoba paul-of-corinth paul-of-crete paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-vilnius paul-of-zographou paul-the-martyr-3-february paul-the-peloponnesian paul-the-russian paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
+    'Twenty-five now. The new one is the companion of Reverianus on 1 June; the others are read in the el-05-28 entry for this name form.',
+  'φορτουνατοσ fortunatus-1-june fortunatus-the-martyr':
+    'Two men: Fortunatus of Africa on 21 February and the Fortunatus of 1 June.',
+  'πυρροσ pyrrhus-1-june pyrrhus-of-breti':
+    'Two men: the Pyrrhus of 1 June and the Pyrrhus of the el-08-01 reading.',
+  'νεων neon-1-june neon-24-april neon-companion-of-mark-the-shepherd neon-of-corfu':
+    'Four men: the Neon of 24 April, Neon of Corfu on 29 April, the Neon of 1 June and the Neon of the el-01-16 entry.',
+  'γερασιμοσ gerasimus-1-june gerasimus-of-boltinsk gerasimus-of-great-perm gerasimus-of-kantara gerasimus-of-the-jordan gerasimus-of-vologda gerasimus-the-byzantine':
+    'Seven now. The new one is the Gerasimus of 1 June; the others are read in the el-05-01 entry for this name form.',
+  'διονυσιοσ dionysius-8-may dionysius-companion-of-agapius dionysius-companion-of-agapius-second dionysius-companion-of-quadratus dionysius-companion-of-socrates dionysius-companion-of-terentius dionysius-kagovets dionysius-martyr-1-april dionysius-of-alexandria dionysius-of-glushitsa dionysius-of-lampsacus dionysius-of-milan dionysius-of-pereyaslavl dionysius-of-radonezh dionysius-reader-of-alexandria dionysius-the-merciful':
+    'Sixteen now. The new one is Dionysius of Glushitsa on 1 June; the others are read in the el-05-25 entry for this name form.',
   'φιλοθεοσ philotheus-of-antioch philotheus-of-meteora philotheus-of-samosata philotheus-of-tobolsk philotheus-the-presbyter':
     'Five now. The new one is Philotheus of Tobolsk on 31 May; the others are read in the el-02-14 entry for this name form.',
   'φιλοσοφοσ philosophos-of-alexandria philosophos-ornatsky':

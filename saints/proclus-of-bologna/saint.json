@@ -1,0 +1,59 @@
+{
+  "slug": "proclus-of-bologna",
+  "display_name": "Proclus of Bologna",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Πρόκλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιος Πρόκλος ο μάρτυρας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "saint.gr: «ήταν Ρωμαίος αξιωματούχος και μαρτύρησε, το 304 μ.Χ., επί αυτοκράτορος Μαξιμιανού (285 - 305 μ.Χ.), στην πόλη Μπολόνια της Ιταλίας.» The page's heading is «Άγιος Πρόκλος ο Μαρτυρας (; - 304)», with no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιος Πρόκλος ο μάρτυρας»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing. He is neither of the corpus's other men of the name — not Proclus the patriarch of Constantinople, nor Proclus of Callippi, nor the Proclus who is Apollonius's companion — this one being a Roman official put to death at Bologna. The page's `types` word is only μάρτυρας; «Ρωμαίος αξιωματούχος», a Roman official, is not `soldier` and is left in the life rather than entered as a type. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

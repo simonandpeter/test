@@ -1,0 +1,61 @@
+{
+  "slug": "charito",
+  "display_name": "Charito",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Χαριτώ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιοι Ιούστος, Ιουστίνος, Χαρίτων, Χαρίτω η παρθένος, Ευέλπιστος, Ιέραξ, Παίων και Λιβεριανός», with the rank words and the epithet η παρθένος left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026). The corpus's four folders from this company came from doxologia's 1 iunie, which prints Justus, Justin, Chariton and Valerian and not this woman; that is the Romanian day page and not a statement about her."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιοι Ιούστος, Ιουστίνος, Χαρίτων, Χαρίτω η παρθένος, Ευέλπιστος, Ιέραξ, Παίων και Λιβεριανός»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing. **The company is enumerated, so it is one folder per member**: the page prints a separate heading for each of the eight and a separate epigram for each name. Four of the eight the corpus already keeps from doxologia's 1 iunie — Justus, Justin, Chariton and Valerian — and this Charito is the first of the four it did not. **She is not Chariton.** The two names stand side by side in the one line, the page's own epigram treats them as two — «Θείος Xαρίτων και Xαριτώ παρθένος, Tμηθέντες ευμοιρούσι θείων χαρίτων» — and the calendar marks her a virgin and him not. No year is given for the company, so the folder has no `dates`; the page dates the persecution only by naming Marcus Aurelius. No hymn is printed for any of the eight."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "justus-1-june",
+    "justin-companion-of-chariton",
+    "chariton-companion-of-justin",
+    "valerian-companion-of-justin",
+    "justin-the-philosopher",
+    "euelpistus",
+    "hierax-1-june",
+    "paion"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

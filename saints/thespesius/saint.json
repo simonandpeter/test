@@ -1,0 +1,59 @@
+{
+  "slug": "thespesius",
+  "display_name": "Thespesius",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Θεσπέσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιος Θεσπέσιος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 222,
+      "latest": 222,
+      "display": "222",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Θεσπέσιος έζησε στα χρόνια του βασιλιά Αλεξάνδρου Σεβήρου, το έτος 222, και καταγόταν από την Καππαδοκία.» The page gives that year for his life and not for his death, and the beheading it narrates afterwards carries no year of its own, so the year is recorded as a floruit and nothing is inferred for the death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιος Θεσπέσιος»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing. The corpus keeps no other Thespesius. No `locations` are entered: Cappadocia is a region the page names for his origin and it names no city. No hymn is printed for him, only the distich «Tωόντι Θεσπέσιος εκ των πραγμάτων, Mάρτυς δέδειξαι Θεσπέσιε τω ξίφει.»"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

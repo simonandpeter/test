@@ -1,0 +1,65 @@
+{
+  "slug": "karpasios",
+  "display_name": "Karpasios",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Καρπάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Όσιος Καρπάσιος», with the rank word left off. The body of the same page twice spells it «Καρπάθιος» instead; the form recorded here is the calendar's own and the variant is left in the source."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 430,
+      "latest": 430,
+      "display": "430",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Καρπάθιος, αφού έζησε θεοφιλώς, κοιμήθηκε με ειρήνη, το 430 μ.Χ.» The page's heading is «Όσιος Καρπάσιος (; - 430)» and gives no year of birth, only that he lived in Gaul in the fourth and fifth centuries."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Όσιος Καρπάσιος»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing, and it is the Karpasios the 30 Μαΐου page cross-refers to from Venandios — «Συνδέθηκε πνευματικά με τον Όσιο Καρπάσιο (τιμάται 1 Ιουνίου)» — so the two pages name each other. **This page adds a kinship the other lacked**: it calls Venandios the elder brother of Honoratus, «τον Όσιο Ονωράτο (βλέπε 16 Ιανουαρίου) και το μεγαλύτερο αδελφό του Όσιο Βενάνδιο (βλέπε 30 Μαΐου)», which the Venandios page does not say; it is recorded here, where it is printed, and named in the reader's report for the Venandios folder. The Honoratus meant is identified by the page's own link, «Όσιος Ονωράτος Αρχιεπίσκοπος Αρελάτης». `abbot` is on the page's word that Honoratus installed him as abbot of the monastery he founded. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "honoratus-of-arles",
+    "venandios"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "wistan",
+  "display_name": "Wistan",
+  "sex": "male",
+  "types": [
+    "king"
+  ],
+  "names": [
+    {
+      "form": "Ουϊστάνος",
+      "lang": "el",
+      "note": "The Greek form saint.gr prints in the body of the life, «Ο Άγιος Ουϊστάνος (Wistan)»; the calendar's own line for 1 Ιουνίου has «Άγιος Ουϊστάν ο βασιλεύς», with the rank word left off here. The page gives the Latin spelling in brackets and the display name follows it."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 849,
+      "latest": 849,
+      "display": "849",
+      "basis": "traditional",
+      "note": "saint.gr: «τον δολοφόνησαν, το 849 μ.Χ., κατά τη στιγμή που εκείνος πλησίαζε τον ξάδελφό του, για να τον χαιρετήσει.» The page's heading is «Άγιος Ουϊστάν (; - 849)» and gives no year of birth; it dates the regent Berhtwulf's rule 840 to 852."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιος Ουϊστάν ο βασιλεύς»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing. The page calls him king and never martyr, although it says he was murdered, so `types` carries `king` alone and no reading of passion-bearer is put into the folder — the same course the 29 Μαΐου Ethelbert took. It names Mercia as his grandfather's kingdom and no kingdom of his own, so no `locations` are entered. The corpus keeps no other Wistan. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

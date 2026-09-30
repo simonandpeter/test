@@ -6,6 +6,11 @@
       "form": "Firm",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 iunie, «Sfântul Mucenic Firm»."
+    },
+    {
+      "form": "Φίρμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιος Φίρμος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιος Φίρμος»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day the Romanian calendar keeps him, and the Greek gives the folder everything doxologia's bare line lacked: the reign of Maximian, the year of his arrest, the torments in order and the beheading. `dates` are added where the folder had none. **The page is unsure what the Μάγος before whom he was taken is**: «οδηγήθηκε στον Μάγο (ίσως το κύριο όνομα του ηγεμόνα)» — perhaps the governor's own name — and that uncertainty is the page's and is quoted in the life rather than settled. No hymn is printed, only the distich «Πολλάς ο Φίρμος υπομείνας βασάνους, Πολλάς και εύρεν ανταμείψεις εν πόλω.»"
     },
     {
       "church": "serbian",
@@ -45,5 +60,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 299,
+      "latest": 299,
+      "display": "299",
+      "basis": "traditional",
+      "note": "saint.gr's heading is «Άγιος Φίρμος (; - 299)», and its body dates the arrest and not the death: «Το έτος 299 μ.Χ., συνελήφθη διότι ομολογούσε τον Χριστό». The beheading follows in the same paragraph with no second year, so the page's own heading year is taken for the death and the distinction is recorded here."
+    }
   }
 }

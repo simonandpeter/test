@@ -1,0 +1,52 @@
+{
+  "slug": "pyrrhus-1-june",
+  "display_name": "Pyrrhus (1 June)",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "bishop",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Πύρρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Όσιος Πύρρος ο Επίσκοπος ο Παρθένος», with the rank word, the order and the epithet ο Παρθένος left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Όσιος Πύρρος ο Επίσκοπος ο Παρθένος»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing. **He is not the corpus's Pyrrhus of Breti**, a Georgian monk and disciple of John of Zedazeni; this one is called bishop and virgin and nothing else. `types` takes all three of the page's words, and the display name therefore carries none of them and takes the day instead. The whole life is one sentence, «Ο Όσιος Πύρρος απεβίωσε ειρηνικά», and it names no see, so no `dates` and no `locations` are entered. No hymn is printed, only the distich «Έστησε Πύρρος πύργον αγνείας μέγαν, Δι' ου θεωρεί τον Θεόν χούν θεις κάτω.»"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

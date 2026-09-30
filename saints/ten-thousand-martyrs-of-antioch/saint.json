@@ -1,0 +1,50 @@
+{
+  "slug": "ten-thousand-martyrs-of-antioch",
+  "display_name": "The Ten Thousand Martyrs of Antioch",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δέκα Χιλιάδες Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιοι Δέκα Χιλιάδες Μάρτυρες», with the rank word left off. The company is named on the calendar as a company by its number alone; the place is added to the display name from the page's own first sentence and not from the calendar's line."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιοι Δέκα Χιλιάδες Μάρτυρες»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing. **The company names nobody**, so it is one folder and not ten thousand. The page notes an absence and two presences: «Η μνήμη των Αγίων δεν αναφέρεται στον Συναξαριστή του Αγίου Νικόδημου, αναγράφεται όμως σ' αυτόν του Delehaye και στον υπ' αριθ. 53 Κώδικα των Βλατέων» — not in Nikodemos's synaxarion, but written in Delehaye's and in Codex 53 of Vlatades. That is a positive attestation with a noted gap and not a refusal to vouch for the entry. **No `dates` are entered although Decius is named**, because the page gives no year and the reign is not quoted with years on this page; that they are men is the calendar's grammatical gender and nothing more. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

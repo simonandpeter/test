@@ -7,6 +7,11 @@
       "form": "Iustin Popovici",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 iunie, «Sfântul Iustin Popovici»."
+    },
+    {
+      "form": "Ιουστίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιος Ιουστίνος Πόποβιτς», with the rank word left off; the surname as the same page spells it in Greek is Πόποβιτς."
     }
   ],
   "sex": "male",
@@ -52,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιος Ιουστίνος Πόποβιτς»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day the corpus already keeps him on, and its heading «(1894 - 1979)» agrees with the folder's own dates, which are therefore not replaced. It is unmistakably the same man: born at Vranje in southern Serbia on 25 March 1894, baptised Evangelos, son of Spyridon and Anastasia, of a priestly family, tonsured at Skodra in 1916, buried at the monastery of Celije. **This page is very long and was read capped**, so any hymn it prints below the cut was not read and none is stored; the page also carries a link headed «Ύμνοι από την Ασματική Ακολουθία του Αγίου Ιουστίνου Πόποβιτς», which was not opened. That is a gap in this reading and not a statement that the calendar prints no service for him."
     },
     {
       "church": "serbian",

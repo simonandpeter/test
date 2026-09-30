@@ -1,0 +1,60 @@
+{
+  "slug": "hierax-1-june",
+  "display_name": "Hierax (1 June)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιέραξ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιοι Ιούστος, Ιουστίνος, Χαρίτων, Χαρίτω η παρθένος, Ευέλπιστος, Ιέραξ, Παίων και Λιβεριανός», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026). doxologia's 1 iunie gave the corpus four of this company and not him; that is the Romanian day page and not a statement about him."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιοι Ιούστος, Ιουστίνος, Χαρίτων, Χαρίτω η παρθένος, Ευέλπιστος, Ιέραξ, Παίων και Λιβεριανός»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing, and prints a separate heading and a separate epigram for each of the eight, so the enumerated company is one folder per member. **He is not the corpus's Hierax, son of Terence**, who is one of the children of Terence and Neonilla kept on another day; nothing but the name is shared, and the slug carries the day because the page gives him nothing else to be told apart by. No year is given for the company, so the folder has no `dates`, and no hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "justus-1-june",
+    "justin-companion-of-chariton",
+    "chariton-companion-of-justin",
+    "valerian-companion-of-justin",
+    "justin-the-philosopher",
+    "charito",
+    "euelpistus",
+    "paion"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

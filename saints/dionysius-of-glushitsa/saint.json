@@ -1,0 +1,69 @@
+{
+  "slug": "dionysius-of-glushitsa",
+  "display_name": "Dionysius of Glushitsa",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "wonderworker",
+    "iconographer"
+  ],
+  "names": [
+    {
+      "form": "Διονύσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Όσιος Διονύσιος του Γλουσέτσκ ο Θαυματουργός», with the rank word, the place and the epithet left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1362,
+      "latest": 1362,
+      "display": "probably 1362",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε, πιθανόν το 1362 μ.Χ., στα προάστια της πόλεως Βολογκντά της Ρωσίας» — the page's own «πιθανόν», probably, is why the basis is traditional; its heading gives the year without the qualification, «(1362 - 1437)»."
+    },
+    "death": {
+      "earliest": 1437,
+      "latest": 1437,
+      "display": "1437",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Διονύσιος κοιμήθηκε με ειρήνη, το 1437 μ.Χ., σε ηλικία εβδομήντα πέντε ετών.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). saint.gr makes him a Russian abbot of the Vologda country, so the Russian calendar is very likely to keep him; this row says what was read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Όσιος Διονύσιος του Γλουσέτσκ ο Θαυματουργός»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing. He is none of the corpus's other Dionysiuses, all of whom are Greek, Egyptian or Romanian; this one is the fifteenth-century founder on the Glushitsa river. `iconographer` is on the page's own word, «Κατείχε, επίσης, το χάρισμα του αγιογράφου», and `abbot` on its account of the two houses he built and governed. No `locations` are entered although the page names several places, because it names them as a route and not as one seat. No hymn is printed for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

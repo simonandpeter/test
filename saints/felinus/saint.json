@@ -1,0 +1,63 @@
+{
+  "slug": "felinus",
+  "display_name": "Felinus",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Φελινός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιοι Φελινός και Γρατινιανός οι Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
+      "basis": "traditional",
+      "note": "saint.gr: «ήταν στρατιώτες του Ρωμαϊκού στρατού και μαρτύρησαν στην Περούτζια της Ιταλίας, το 250 μ.Χ., επί αυτοκράτορος Δεκίου (249 - 251 μ.Χ.).» The page's heading for him is «Άγιος Φελινός ο Μαρτυρας (; - 250)», with no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιοι Φελινός και Γρατινιανός οι Μάρτυρες»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing, and prints a separate heading for each of the two, so the enumerated pair is one folder each. `soldier` is the page's own word. The corpus keeps no other Felinus. No `locations` are entered: Perugia is where they suffered and Arona where their relics went, and the page says nothing about where either man lived. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "gratinianus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

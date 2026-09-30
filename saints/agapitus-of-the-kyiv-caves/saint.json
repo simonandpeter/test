@@ -6,6 +6,11 @@
       "form": "Agapit",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 iunie, «Sfântul Cuvios Agapit de la Lavra Pecerska»."
+    },
+    {
+      "form": "Αγαπητός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Όσιος Αγαπητός ο εν τω σπηλαίω ο Ανάργυρος και Ιαματικός ο εκ Ρωσσίας», with the rank word and the three epithets left off."
     }
   ],
   "sex": "male",
@@ -50,8 +55,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Όσιος Αγαπητός ο εν τω σπηλαίω ο Ανάργυρος και Ιαματικός ο εκ Ρωσσίας»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day the corpus already keeps him on, and it is plainly the same man: «έζησε στη Ρωσία περί τον 11ο αιώνα μ.Χ. και ασκήτεψε στη Μεγάλη Λαύρα του Κιέβου στα χρόνια του Οσίου Αντωνίου», which is the folder's own century and monastery, and the unmercenary physician the folder's `types` already carry. **The Greek adds the one patient it names**: «θεράπευσε και τον πρίγκιπα του Τσέρνιγκωφ Βλαδίμηρο Βσεβολόντοβιτς, ο οποίος αργότερα έγινε μεγάλος πρίγκιπας του Κιέβου με την επωνυμία «Μονομάχος»», and the resting place of the relics in the cave of Saint Anthony. `dates` are not replaced: the folder's eleventh century is the same reading this page gives, and the page adds no year. The Anthony it cross-refers to on 10 July is the folder's existing `related` row. No hymn is printed for him."
     },
     {
       "church": "serbian",

@@ -6,6 +6,11 @@
       "form": "Iust",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 iunie, «Sfântul Mucenic Iust»."
+    },
+    {
+      "form": "Ιούστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιοι Ιούστος, Ιουστίνος, Χαρίτων, Χαρίτω η παρθένος, Ευέλπιστος, Ιέραξ, Παίων και Λιβεριανός», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιοι Ιούστος, Ιουστίνος, Χαρίτων, Χαρίτω η παρθένος, Ευέλπιστος, Ιέραξ, Παίων και Λιβεριανός»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day the Romanian calendar keeps him, and it is the same company: doxologia's 1 iunie gave the corpus Justus, Justin, Chariton and Valerian, and saint.gr's line gives eight, adding Charito the virgin, Euelpistus, Hierax and Paion, who are drafted as folders of their own in the batch `el-06-01-1`. **The Greek adds three things the Romanian lacked**: the persecution is named — under Marcus Aurelius — the company is joined to Justin the philosopher and apologist, kept on the same day, and the death is beheading. It gives no year, so the folder still has no `dates`, and it prints no hymn for any of the eight."
     },
     {
       "church": "serbian",
@@ -45,5 +60,12 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "charito",
+    "euelpistus",
+    "hierax-1-june",
+    "paion",
+    "justin-the-philosopher"
+  ]
 }

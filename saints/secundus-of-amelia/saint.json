@@ -1,0 +1,59 @@
+{
+  "slug": "secundus-of-amelia",
+  "display_name": "Secundus of Amelia",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Σεκούνδος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιος Σεκούνδος ο Μάρτυρας», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Μάρτυς Σεκούνδος άθλησε το 304 μ.Χ., επί αυτοκράτορος Διοκλητιανού (284 - 305 μ.Χ.), αφού τον έριξαν στον ποταμό Τίβερη κοντά στην πόλη Αμέλια της Ουμβρίας της Ιταλίας.» The page's heading is «Άγιος Σεκούνδος ο Μαρτυρας (; - 304)», with no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουνίου — «Άγιος Σεκούνδος ο Μάρτυρας»",
+        "url": "https://www.saint.gr/06/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Ιουνίου εκάστου έτους», the same day as the listing. He is neither of the corpus's other men of the name — not Secundus the companion of Perpetua, nor Secundus the son of Jerusalem of Beroea — this one being drowned in the Tiber near Amelia in Umbria, and the display name takes the town because the page names it plainly. No `locations` are entered even so: the town is where the river ran by, and the page says nothing of where he lived. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
