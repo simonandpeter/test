@@ -1,0 +1,59 @@
+{
+  "slug": "abbanus",
+  "display_name": "Abbanus",
+  "sex": "male",
+  "types": [
+    "preacher"
+  ],
+  "names": [
+    {
+      "form": "Αββανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαΐου, «Άγιος Αββανός», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 101,
+      "latest": 200,
+      "display": "2nd century",
+      "basis": "traditional",
+      "note": "saint.gr: «καταγόταν από την Ιρλανδία και έζησε στην Αγγλία κατά το 2ο αιώνα μ.Χ. Βαπτίσθηκε το 165 μ.Χ.» — the century is the page's and the only firm year it gives is the baptism of 165."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαΐου — «Άγιος Αββανός»",
+        "url": "https://www.saint.gr/05/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Μαΐου εκάστου έτους», the same day as the listing. **The display name is the page's own form transliterated and nothing more**: saint.gr writes «Αββανός» and gives him no epithet, no see and no Latin form, so no Irish or English spelling is supplied here. **`preacher` is the only `types` entry** because preaching the word of God at Abingdon is the only thing the page says he did; it does not call him monk, bishop or abbot, and «Κοιμήθηκε οσίως με ειρήνη» is not an office. **The `dates` object holds only the century the page states**, with the baptism year in its note; the page gives no birth or death year. **Nothing in the corpus reads as him**: the namesweep printed no row for the name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

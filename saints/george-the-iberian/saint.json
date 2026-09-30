@@ -6,6 +6,11 @@
       "form": "Gheorghe Ivirul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 mai, «Sfântul Cuvios Gheorghe Ivirul»."
+    },
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαΐου, «Όσιος Γεώργιος ο Ίβηρας», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -50,8 +55,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαΐου — «Όσιος Γεώργιος ο Ίβηρας»",
+        "url": "https://www.saint.gr/05/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on — and the Romanian row already carries a note that doxologia.ro's own page for him names three days and settles on this one. saint.gr adds no fourth day. **He is none of the corpus's many other Georges**, which the namesweep flagged and which were read; the office settles it. **The Greek entry is one sentence long** and it is the one thing the corpus wanted: «εξελέγη ηγούμενος της μονής των Ιβήρων του Αγίου Όρους μετά την παραίτηση του Οσίου Ευθυμίου και κοιμήθηκε με ειρήνη» — elected abbot of Iviron after the resignation of the venerable Euthymius, and asleep in peace. **Note the word «παραίτηση», resignation**: Euthymius's own page on the same day says he died at Constantinople in 1028 and says nothing of resigning, and saint.gr is not reconciled here — the difference is recorded and nothing is inferred from it. **No year at all**, so the existing `dates` object is not touched and nothing is added to it. **Euthymius is linked.** No hymn is printed."
     },
     {
       "church": "serbian",

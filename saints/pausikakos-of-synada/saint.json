@@ -1,0 +1,62 @@
+{
+  "slug": "pausikakos-of-synada",
+  "display_name": "Pausikakos of Synada",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "physician"
+  ],
+  "office": "Bishop of Synada",
+  "names": [
+    {
+      "form": "Παυσίκακος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαΐου, «Όσιος Παυσίκακος Επίσκοπος Συνάδων», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 595,
+      "latest": 620,
+      "display": "early 7th century",
+      "basis": "traditional",
+      "note": "saint.gr gives no year of death and says only «Απεβίωσε ειρηνικά, μοχθώντας για την επισκοπή του μέχρι τελευταίας του πνοής»; the bracket here is what the page's own two reigns allow — he lived «στα χρόνια του βασιλιά Μαυρικίου (582 - 602 μ.Χ.)» and was made bishop by the patriarch Kyriakos «(595 - 606 μ.Χ.)», so his episcopate begins no earlier than 595."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαΐου — «Όσιος Παυσίκακος Επίσκοπος Συνάδων»",
+        "url": "https://www.saint.gr/05/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Μαΐου εκάστου έτους», the same day as the listing. **Nothing in the corpus reads as him**: the namesweep printed no row for the name at all. **`physician` is in `types`** on the page's own «σπούδασε όχι μόνο Θεολογία, αλλά και ιατρική για να την εξασκήσει δωρεάν υπέρ των φτωχών» — he studied medicine to practise it free for the poor — and on the emperor Maurice's cure. **The `dates` bracket is the page's own two reigns and nothing else**, and its `note` says so; the page gives no year of birth or death. **No `locations` object**, although Apamea in Bithynia and Synada are named. No hymn is printed; the page's couplet promises a strange ceasing of ills to whoever runs to his relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

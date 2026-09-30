@@ -6,6 +6,11 @@
       "form": "Eftimie Ivirul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 mai, «Sfântul Cuvios Eftimie Ivirul»."
+    },
+    {
+      "form": "Ευθύμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαΐου, «Όσιος Ευθύμιος ο Νέος κτήτορας της Μονής Ιβήρων Αγίου Όρους», with the rank word, the epithet and the house left off."
     }
   ],
   "sex": "male",
@@ -17,7 +22,8 @@
   ],
   "related": [
     "john-the-iberian",
-    "george-the-iberian"
+    "george-the-iberian",
+    "athanasius-the-athonite"
   ],
   "dates": {
     "death": {
@@ -50,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαΐου — «Όσιος Ευθύμιος ο Νέος κτήτορας της Μονής Ιβήρων Αγίου Όρους»",
+        "url": "https://www.saint.gr/05/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on, and it is plainly the same man: the son of John Varasvatse, second abbot of Iviron, and the page says he died on 13 May. **He is none of the corpus's twenty-odd other Euthymii**, which the namesweep flagged and which were read. **The Greek dates his death to 1028 at Constantinople** — «Το 1028 μ.Χ. πήγε στην Κωνσταντινούπολη για Αγιορείτικες υποθέσεις, όπου και πέθανε στις 13 Μαΐου» — with the head line «(; - 1028)», and the existing `dates` object is **not** touched; the year is recorded here and in the added paragraph so a later reader can lift it with this citation. **It names his birthplace**, the city of Tao in Iberia, which the corpus may not hold. **Three men are linked and one is not**: his father [John the Iberian](/saints/john-the-iberian) and [Athanasius the Athonite](/saints/athanasius-the-athonite), by whose Lavra the Georgians first settled, both have folders; Basil II, with whose help Iviron was founded and who offered Euthymius the archbishopric of Cyprus, has none. No hymn is printed."
     },
     {
       "church": "serbian",

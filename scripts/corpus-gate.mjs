@@ -115,6 +115,32 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'νικητασ nicetas-alfanov nicetas-of-apollonias nicetas-of-epirus nicetas-of-medikion nicetas-of-novgorod nicetas-of-pythia nicetas-the-sinaite':
+    'Seven now. The new one is on 14 May; the others are read in the el-05-12 entry for this name form.',
+  'μαρκοσ mark-of-arethusa mark-of-byblos mark-of-the-lavra-of-pskov mark-the-ascetic mark-the-cretan-of-smyrna mark-the-deaf mark-the-evangelist mark-the-shepherd':
+    'Seven now. The new one is on 14 May; the others are read in the el-03-29 entry for this name form.',
+  'λεοντιοσ leontius-24-april leontius-of-scythopolis leontius-of-the-forty-martyrs leontius-patriarch-of-jerusalem':
+    'Four men: the Leontius of 24 April, Scythopolis on 4 May, the Leontius of 14 May, and `leontius-the-canonarch` of 17 Ιουνίου.',
+  'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-kalita john-kaloktenes john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kazan john-of-lycopolis john-of-manglisi john-of-rouphinianai john-of-serres john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-old-lavra john-of-the-well john-of-verkhoturye john-of-vilnius john-of-yuryevets john-of-zedazeni john-philosopher-of-georgia john-psychaites john-son-of-xenophon john-the-bulgarian john-the-confessor-of-kathara john-the-goldsmith-of-shumen john-the-hut-dweller john-the-iberian john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-the-wallachian john-with-minas-and-david':
+    'Forty-four now. The new one is John the Goldsmith of Shumen on 14 May; the others are read in the el-05-12 entry for this name form.',
+  'ισιδωροσ isidore-10-may isidore-8-january isidore-of-antioch isidore-of-chios isidore-of-cordoba isidore-of-pelusium isidore-of-rostov isidore-of-samtavisi isidore-of-seville':
+    'Nine now, and **two of them stand on 14 May** as two entries: Isidore of Chios, whom the Romanian keeps there too, and Isidore of Rostov. The others are read in the el-05-10 entry for this name form.',
+  'βαρβαροσ barbarus-6-may barbarus-companion-of-alexander':
+    'Two men: the companion of Alexander on 14 May and `barbarus-6-may`, whom this wave upgraded on 6 May — and whom a reader reads as the same man as the Pentapolite of 23 June, where saint.gr contradicts its own dating. That pair is in ro-run/FINDINGS.md.',
+  'ανδρεασ andrew-6-january andrew-abbot-of-tobolsk andrew-of-mytilene andrew-of-raphailovo':
+    'Four men: the Andrew of 6 January, Mytilene on 21 February, Raphailovo on 14 March and the abbot of Tobolsk on 14 May.',
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-companion-of-barbarus alexander-companion-of-terentius alexander-martyr-1-april alexander-of-cartagena alexander-of-kentoukellai alexander-of-kharkov alexander-of-oshevensk alexander-of-pydna alexander-of-rome-pope alexander-of-the-forty-martyrs alexander-of-voskiy alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Sixteen now, and **two of the new ones share 14 May**: the companion of Barbarus, one of the three that page names, and Alexander of Kentoukellai. The others are read in the el-05-11 entry for this name form.',
+  'acoluthus alexander barbarus companion acoluthus-the-martyr alexander-companion-of-barbarus barbarus-companion-of-alexander':
+    'The three the 14 May page names together, each named after the others, which is what folds them.',
+  'ουαλεριανοσ valerian-4-may valerian-of-auxerre valerian-of-trebizond':
+    'Three men: Valerian of Auxerre on 13 May and the two read in the el-05-04 entry for this name form.',
+  'ονησιμοσ onesimus-10-may onesimus-of-soissons onesimus-the-apostle':
+    'Three men: the Onesimus of 10 May, the Apostle on 15 February and Onesimus of Soissons on 13 May.',
+  'νικηφοροσ nicephorus-13-may nicephorus-alfanov nicephorus-martyr-1-march nicephorus-martyr-8-february nicephorus-of-antioch nicephorus-of-corinth nicephorus-of-crete nicephorus-of-the-svir-desert nikephoros-of-chios':
+    'Nine now, and the new one is the open pair a reader left: `nicephorus-13-may`, drafted from a bare Romanian line, against `nicephorus-4-may`, whom this wave upgraded nine days earlier. Neither page names the other and the reader drafted them as two men; it is in ro-run/FINDINGS.md for the author. The rest are read in the el-05-04 entry for this name form.',
+  'γλυκερια glyceria-of-novgorod glyceria-of-traianopolis':
+    'Two women on one day, printed as two entries of the 13 May calendar: Glyceria of Traianopolis, the second-century martyr whom the Romanian keeps there too, and Glyceria of Novgorod. The Novgorod folder says so in its own words and now relates the martyr, which `tests/life-links.test.mjs` asked for.',
   'φιλιπποσ philip-of-moscow philip-of-sicily philip-of-worms':
     'Three men: Worms on 3 May, Philip of Sicily on 12 May and the Philip of the el-10-11 entry.',
   'παγκρατιοσ pancratius-of-tauromenium pancratius-the-martyr-12-may pancratius-the-recluse-of-the-caves':

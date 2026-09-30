@@ -1,0 +1,51 @@
+{
+  "slug": "nicephorus-13-may",
+  "display_name": "Nicephorus (13 May)",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Νικηφόρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαΐου, «Όσιος Νικηφόρος ο Πρεσβύτερος», with the rank word and the priestly title left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαΐου — «Όσιος Νικηφόρος ο Πρεσβύτερος»",
+        "url": "https://www.saint.gr/05/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Μαΐου εκάστου έτους», the same day as the listing, and then says that it is unknown in what age he lived. **The display name carries the day and not the epithet**: the calendar calls him ο Πρεσβύτερος, which `types` would repeat, and the page's own account makes him abbot of a monastery, so «of Ephapsis» would be a name saint.gr never gives him. **No year of any kind, so no `dates` object.** **He is none of the corpus's fifteen Nicephori**, which the namesweep flagged and which were read; none of them is the abbot of Ephapsis and none is kept on 13 May. **The dupscan's one near-slug is answered here**: `nicephorus-4-may` is a bare Romanian line, «Sfantul Cuvios Nichifor» on 4 mai, with no life, no century, no country and no monastery, so nothing about him can be matched against this one except the name — and the days are nine apart, which is neither the same day nor a style conversion. Drafted as another man on the standing rule that a name alone is never a match; if the writer judges otherwise, this is the folder of the day to turn into an upgrade. **The page names a companion the corpus cannot hold**: «Ορισμένοι Συναξαριστές μαζί του, αναφέρουν και τη μνήμη κάποιου Οσίου Αγαπίου» — some synaxaria commemorate a venerable Agapios with him — and that is all it says of the man, so no folder is made for him and he is named in the life without a link."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

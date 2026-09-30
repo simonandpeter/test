@@ -6,6 +6,11 @@
       "form": "Serghie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 mai, «Sfântul Cuvios Serghie Mărturisitorul»."
+    },
+    {
+      "form": "Σέργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαΐου, «Όσιος Σέργιος ο Ομολογητός», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαΐου — «Όσιος Σέργιος ο Ομολογητός»",
+        "url": "https://www.saint.gr/05/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on, and it is plainly the same man: the confessor dispossessed and exiled under the iconoclast Theophilos. **He is none of the corpus's ten other Sergii**, which the namesweep flagged and which were read; this one is told apart by his family, and the family is what the Greek adds. **The page names three of his own and the corpus keeps two**: his son Photius, «τιμάται 6 Φεβρουαρίου», and his brother the patriarch Tarasius (784–806), both linked; his wife Irene, exiled with him, has no folder and is named without a link. **No year of any kind**, so the folder is given no `dates` object; the only dates on the page are the two reigns. **No hymn**, and the page's couplet is a dialogue — how do you end your life, Sergius? I have died a common death, and I am alive to you."
     },
     {
       "church": "serbian",
@@ -46,5 +61,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "photius-of-constantinople",
+    "tarasius-of-constantinople"
+  ]
 }

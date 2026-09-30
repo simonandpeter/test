@@ -6,6 +6,11 @@
       "form": "Ioan Ivirul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 mai, «Sfântul Cuvios Ioan Ivirul»."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαΐου, «Όσιος Ιωάννης ο Ίβηρας», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -16,7 +21,8 @@
   ],
   "related": [
     "euthymius-the-iberian",
-    "george-the-iberian"
+    "george-the-iberian",
+    "athanasius-the-athonite"
   ],
   "attestations": [
     {
@@ -40,8 +46,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαΐου — «Όσιος Ιωάννης ο Ίβηρας»",
+        "url": "https://www.saint.gr/05/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on, and it is plainly the same man: John Varasvatse, founder of Iviron, father of Euthymius. **He is none of the corpus's very many other Johns**, which the namesweep flagged and which were read; the surname the page gives him, and the son, settle it. **The Greek adds his lay offices and the years of his death**: counsellor to David Kouropalates, governor of Iberia, toparch of Iberian Meskhia and a title-holder of Byzantium, and «Κοιμήθηκε με ειρήνη μεταξύ των ετών 998-1003 μ.Χ.» — asleep in peace between 998 and 1003, which Euthymius's page on the same day repeats as «Το 998 μ.Χ. (κατ' άλλους το 1003 μ.Χ.)». The folder carries no `dates` object and is not given one here; the bracket stands in this note and in the added paragraph. **It adds a stage the corpus may not hold**: before the Holy Mountain he withdrew to Olympus in Mysia, and he went to Athos only after fetching from Constantinople his young son Euthymius, who had been handed over as a hostage by David of Iberia. **Two men are linked**, his son [Euthymius](/saints/euthymius-the-iberian) and [Athanasius the Athonite](/saints/athanasius-the-athonite), in whose Lavra he practised asceticism with some disciples. No hymn is printed."
     },
     {
       "church": "serbian",

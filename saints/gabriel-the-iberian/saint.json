@@ -6,6 +6,11 @@
       "form": "Gavriil Ivirul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 mai, «Sfântul Cuvios Gavriil Ivirul»."
+    },
+    {
+      "form": "Γαβριήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαΐου, «Όσιος Γαβριήλ ο Ίβηρας», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαΐου — «Όσιος Γαβριήλ ο Ίβηρας»",
+        "url": "https://www.saint.gr/05/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps him on, and it is plainly the same man: the Iberian ascetic who drew the Portaitissa out of the sea. **He is none of the corpus's other Gabriels**, which the namesweep flagged and which were read. **The Greek dates the finding exactly** — the Tuesday of Renewal Week, that is of Bright Week, in 829 — and places his cave above the boundary of the monasteries of Xeropotamou and Saint Panteleimon; the existing `dates` object is **not** touched and that year is recorded here and in the added paragraph instead. **The finding itself is a feast the schema cannot hold on that wording**, being reckoned from Pascha, and it is not recorded as one: the row holds only the fixed 13 May that saint.gr keeps him on. **It says where the icon is now**, in the church of the Dormition near Iviron and to its east, and that a devout Christian of Nicaea had committed it to the sea to save it from the fury of the iconoclasts. **It adds a relic**: a portion of his relic is at New Thebaid on the Holy Mountain. No person on the page has a folder, so nothing is linked. No hymn is printed."
     },
     {
       "church": "serbian",

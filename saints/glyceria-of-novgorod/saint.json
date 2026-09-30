@@ -1,0 +1,63 @@
+{
+  "slug": "glyceria-of-novgorod",
+  "display_name": "Glyceria of Novgorod",
+  "sex": "female",
+  "types": [
+    "righteous",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Γλυκερία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαΐου, «Αγία Γλυκερία του Νόβγκοροντ», with the rank word and the city left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1522,
+      "latest": 1522,
+      "display": "1522",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησε κατά τον 15ο και 16ο αιώνα μ.Χ.… Η Αγία κοιμήθηκε με ειρήνη το 1522 μ.Χ.», and its head line reads «Αγια Γλυκερια Του Νοβγκοροντ (; - 1522)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The saint is a Russian one and saint.gr is the source read here; the Russian calendar's own day for her was not looked at."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαΐου — «Αγία Γλυκερία του Νόβγκοροντ»",
+        "url": "https://www.saint.gr/05/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Μαΐου εκάστου έτους», the same day as the listing. **She is neither of the corpus's two Glycerias**, and this is the one real identity question of the day, read both ways: the corpus's [Glyceria of Traianopolis](/saints/glyceria-of-traianopolis) is the second-century martyr whom saint.gr also keeps on this same 13 May with a page of her own, and Glyceria of Adrianople is a martyr kept on 22 October, while this one is the daughter of Panteleimon, a municipal officer of Novgorod, who died in peace in 1522 — a different millennium and a peaceful death. **The page's own footer links a separate commemoration of the finding of her relics**, «Ανακομιδή Ιερών Λειψάνων της Αγίας Γλυκερίας του Νόβγκοροντ», which was not read and is not recorded as a feast here; the finding is dated 14 July 1572 in the body of this page. **`righteous` and `virgin` are in `types`** on the page's peaceful death and on its silence about any marriage or monastic habit; if `virgin` reads as more than the page says, it is the one word in this folder to strike. **No `locations` object.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "glyceria-of-traianopolis"
+  ]
+}

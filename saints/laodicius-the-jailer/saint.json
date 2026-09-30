@@ -1,0 +1,53 @@
+{
+  "slug": "laodicius-the-jailer",
+  "display_name": "Laodicius the Jailer",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Λαοδίκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαΐου, «Άγιος Λαοδίκιος ο δεσμοφύλακας», with the rank word left off."
+    }
+  ],
+  "related": [
+    "glyceria-of-traianopolis"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαΐου — «Άγιος Λαοδίκιος ο δεσμοφύλακας»",
+        "url": "https://www.saint.gr/05/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Μαΐου εκάστου έτους», the same day as the listing. **Nothing in the corpus reads as him** — the namesweep returned no row at all for the name, and the folders whose slugs carry «laodicea» are a place, not this man. **He is corroborated from the other side by Glyceria's page on the same day**, which says she catechised her jailer Laodicius in prison and that he then confessed his faith and was martyred; she is linked. **No year, so no `dates` object**, although Glyceria's page dates her own passion under Antoninus Pius (138–161). **No `locations` object**, although Traianopolis in Thrace is named. The page prints no hymn; the display name keeps «ο δεσμοφύλακας», the jailer, because that is the whole of what distinguishes him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

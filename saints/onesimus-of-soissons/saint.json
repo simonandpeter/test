@@ -1,0 +1,61 @@
+{
+  "slug": "onesimus-of-soissons",
+  "display_name": "Onesimus of Soissons",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop of Soissons",
+  "names": [
+    {
+      "form": "Ονήσιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαΐου, «Άγιος Ονήσιμος εκ Γαλλίας», with the rank word and the country left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 361,
+      "display": "361",
+      "basis": "traditional",
+      "note": "saint.gr: «εξελέγη το 350 μ.Χ. Επίσκοπος της πόλεως Σουασσώ της Γαλλίας. Κοιμήθηκε με ειρήνη το 361 μ.Χ.», and its head line reads «Αγιος Ονησιμος Εκ Γαλλιας (; - 361)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαΐου — «Άγιος Ονήσιμος εκ Γαλλίας»",
+        "url": "https://www.saint.gr/05/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Μαΐου εκάστου έτους», the same day as the listing. **He is not the corpus's `onesimus-the-apostle`**, Philemon's slave of the Epistle: this one is a fourth-century Gaul elected bishop of Soissons in 350 and dead in 361. **The display name takes the see and not the page's «εκ Γαλλίας»**, because the see is what the page's own sentence gives him and what tells him from the apostle. **No `locations` object**, although Soissons is named. The page prints no hymn, no relics and nothing of his episcopate beyond its two years."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

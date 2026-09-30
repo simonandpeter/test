@@ -1,0 +1,65 @@
+{
+  "slug": "servatus-of-tongeren",
+  "display_name": "Servatus of Tongeren",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "confessor"
+  ],
+  "office": "Bishop of Tongeren",
+  "names": [
+    {
+      "form": "Σαρβάτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαΐου, «Άγιος Σαρβάτος Επίσκοπος Τονγκρέ Βελγίου», with the rank word, the see and the country left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 384,
+      "latest": 384,
+      "display": "384",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το 384 μ.Χ.», and its head line reads «Αγιος Σαρβατος Επισκοπος Τονγκρε Βελγιου (; - 384)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαΐου — «Άγιος Σαρβάτος Επίσκοπος Τονγκρέ Βελγίου»",
+        "url": "https://www.saint.gr/05/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Μαΐου εκάστου έτους», the same day as the listing. **Nothing in the corpus reads as him**: the namesweep printed no row for the name. **The display name follows the page's own Greek form Σαρβάτος**, with the see beside it. **`confessor` is in `types`** on the page's account of what he did: he sheltered Athanasius the Great in his exile in the West and defended him and the Orthodox faith, particularly at the synod of Sardica in 343. **Athanasius the Great has a folder and is linked**; Arius, named as the heresiarch whose followers drove the exile, is named without a link. **No `locations` object**, although Tongeren in Belgium is named. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "athanasius-of-alexandria"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

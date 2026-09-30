@@ -6,6 +6,11 @@
       "form": "Glicheria",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 mai, «Sfânta Muceniță Glicheria»."
+    },
+    {
+      "form": "Γλυκερία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαΐου, «Αγία Γλυκερία», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Μαΐου (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαΐου — «Αγία Γλυκερία»",
+        "url": "https://www.saint.gr/05/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Μαΐου εκάστου έτους», the same civil day the Romanian calendar already keeps her on, and its synaxarion verse agrees: «Ἐν τριτάτῃ δεκάτῃ δάκε καὶ κτάνε θὴρ Γλυκερίαν». It is plainly the same woman, the virgin martyr of Traianopolis thrown to the beasts. **She is not the day's other Glyceria**: saint.gr keeps on this same 13 May a Glyceria of Novgorod, daughter of a municipal officer, dead in peace in 1522, who is a new folder in batch `el-05-13`; and the corpus's Glyceria of Adrianople is a third woman on 22 October. **The Greek adds the years the corpus does not hold**: «(; - 141)» in its head line, a birth at Traianopolis in the second century under Antoninus Pius (138–161), and a consul father named Makarios. The existing folder carries no `dates` object and it is not given one here; the years stand in this note and in the added paragraph. **It names her jailer**, Laodicius, whom the same day keeps and who is a new folder in the same batch; he is linked. **It names the bishop who took up her relic**, Domitios of Heraclea, who has no folder and is named without a link. **Two apolytikia stand on the page and only one is taken**: the first, Ἦχος γ’ Τὴν ὡραιότητα, names her — «χαίροις θεόφρον Γλυκερία» — and is copied; the Έτερον in Ἦχος δ’ is «Ἡ ἀμνάς σου Ἰησοῦ», the common of a woman martyr, and is left, the folder needing no second hymn to say the same thing. Neither is a mis-hang. The page also gives her as patron of Galatsi in Attica."
     },
     {
       "church": "serbian",
@@ -60,9 +75,29 @@
         "text": "Thy lamb, O Jesus, Glyceria, cries out with a loud voice: Thee, my Bridegroom, I love, and seeking Thee I am in torment; I am crucified with Thee and buried with Thee in Thy baptism; I suffer for Thee that I may reign in Thee, and I die for Thee that I may live for Thee. Receive me as a spotless sacrifice, who offer myself to Thee in love. At her prayers, O merciful one, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’",
+      "model": "Τὴν ὡραιότητα",
+      "text": "Τὴν καλλιπάρθενον, Χριστοῦ τιμήσωμεν, τὴν ἀριστεύσασαν πόνοις ἀθλήσεως, καὶ ἀσθενείᾳ τῆς σαρκός, τὸν ὄφιν καταβαλοῦσαν· πόθω γὰρ τοῦ Κτίσαντος, τῶν βασάνων τὴν ἔφοδον, παρ’ οὐδὲν ἡγήσατο, καὶ θεόθεν δεδόξασται· πρὸς ἣν ἀναβοήσωμεν πάντες, χαίροις θεόφρον Γλυκερία.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Τὴν ὡραιότητα, on the page of Αγία Γλυκερία",
+        "url": "https://www.saint.gr/1573/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour Christ's fair virgin, who excelled in the labours of her contest and, in the weakness of the flesh, threw down the serpent; for out of longing for her Maker she counted the onset of the torments as nothing, and has been glorified by God. To her let us all cry aloud: rejoice, God-minded Glyceria.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "laodicius-the-jailer"
+  ]
 }
