@@ -1,0 +1,50 @@
+{
+  "slug": "eutychius-27-march",
+  "display_name": "Eutychius (27 March)",
+  "names": [
+    {
+      "form": "Ευτύχιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαρτίου, «Όσιος Ευτύχιος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαρτίου — «Όσιος Ευτύχιος»",
+        "url": "https://www.saint.gr/03/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives one sentence, «Ο Όσιος Ευτύχιος απεβίωσε ειρηνικά», and a couplet, and nothing else: no place, no year, no office, no hymn. The line carries no epithet either, so the day is all that distinguishes him; the display name says so. Checked against every Eutychius the corpus holds — of Constantinople, of Melitene, of Nursia, of the Forty of Sebaste, the companion of Bassus, the martyr of 2 September and the subdeacon of 26 March — and none of them is a venerable kept on 27 March with no other data."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

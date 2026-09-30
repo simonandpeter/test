@@ -1,0 +1,51 @@
+{
+  "slug": "alexander-of-voskiy",
+  "display_name": "Alexander of Voskiy",
+  "names": [
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαρτίου, «Όσιος Αλέξανδρος του Βόσκιϋ», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαρτίου — «Όσιος Αλέξανδρος του Βόσκιϋ»",
+        "url": "https://www.saint.gr/03/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The page says outright that it has nothing: «Δεν έχουμε λεπτομέριες για τον βίο του Ρώσου μοναχού Αλέξανδρου» — we have no details of the life of the Russian monk Alexander. So the entry gives a rank, a nation and a place name, Βόσκιϋ, and no year, no house and no hymn. The place is recorded only in saint.gr's Greek spelling; no Russian source was read for it, and the English form of the epithet here follows that spelling and is not taken from a Russian page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

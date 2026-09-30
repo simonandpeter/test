@@ -6,6 +6,11 @@
       "form": "Filit",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 martie, «Sfântul Mucenic Filit, cu cei patru fii ai săi»; the same site's page for his wife spells him «Filet Sincliticul»."
+    },
+    {
+      "form": "Φιλητός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαρτίου, «Άγιοι Φιλητός ο Συγκλητικός, Λυδία σύζυγος αυτού, Θεοπρέπιος και Μακεδόνας τα τέκνα αυτών, Αμφιλόχιος ο Δούκας και Κρονίδης ο κομενταρήσιος οι Μάρτυρες», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -13,7 +18,11 @@
     "martyr"
   ],
   "related": [
-    "lydia-wife-of-philetus"
+    "lydia-wife-of-philetus",
+    "theoprepius-son-of-philetus",
+    "macedon-son-of-philetus",
+    "amphilochius-the-duke",
+    "cronides-the-commentarisius"
   ],
   "attestations": [
     {
@@ -37,8 +46,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαρτίου — «Άγιοι Φιλητός ο Συγκλητικός, Λυδία σύζυγος αυτού, Θεοπρέπιος και Μακεδόνας τα τέκνα αυτών, Αμφιλόχιος ο Δούκας και Κρονίδης ο κομενταρήσιος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/03/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The page names all six of the company where doxologia.ro names two, puts the persecution «(125 μ.Χ.)» under Hadrian «(117 - 138 μ.Χ.)», gives the duke's province as Slavonia, and ends by having the emperor set the survivors free so that they «τελείωσαν τον βίο τους προσευχόμενοι», ended their lives praying. Its couplet for the couple agrees with that ending — «καὶ μετ' εἰρήνης τέλος», and their end was in peace — while its couplet for the two sons says that they died. The page reconciles neither, and nothing on this folder is changed on the strength of it. No hymn is printed."
     },
     {
       "church": "serbian",
@@ -48,5 +67,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 125,
+      "latest": 125,
+      "display": "125",
+      "basis": "traditional",
+      "note": "saint.gr: «Σε καιρό διωγμού (125 μ.Χ.), και όταν αυτοκράτορας ήταν ο Αδριανός (117 - 138 μ.Χ.), ο Φιλητός με τη σύζυγο του Λυδία και τα δυο τους παιδιά, συνελήφθησαν» — the year the page gives for the persecution in which the family was seized. The same page then has the emperor set them free, so this is not recorded as a year of death."
+    }
   }
 }

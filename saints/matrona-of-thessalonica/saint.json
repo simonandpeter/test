@@ -6,6 +6,11 @@
       "form": "Matrona din Tesalonic",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 martie; the troparion page spells her «Matroana»."
+    },
+    {
+      "form": "Ματρώνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαρτίου, «Αγία Ματρώνα η εν Θεσσαλονίκη», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαρτίου — «Αγία Ματρώνα η εν Θεσσαλονίκη»",
+        "url": "https://www.saint.gr/03/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives the fullest account of her on any calendar the corpus has read: the name of her mistress, Παντίλλα or Παυτίλλα, wife of the commander of the garrison of Thessalonica; the informer among the household slaves; the three imprisonments; the fourteen days of hunger; the oaken stocks; Στρατόνικος, who was ordered to wrap the body in a hide and throw it outside the walls; the burial beside the Egnatian Way; the translation into the city by Alexander, bishop of Thessalonica, who built a church for her; a monastery of hers outside the walls; and the removal of the body to Barcelona under Frankish rule, to a church destroyed in the Second World War. It gives no year, and the second couplet it prints fixes only the day, «Εἰκάδι ἑβδομάτῃ θάνε Ματρῶνα ἑνὶ εἱρκτῇ» — on the twenty-seventh Matrona died in prison. It prints an apolytikion, which is added to this folder."
     },
     {
       "church": "serbian",
@@ -57,6 +72,22 @@
       },
       "english": {
         "text": "Thy ewe-lamb, O Jesus, Matrona, cries out with a loud voice: Thee, my Bridegroom, I love, and seeking Thee I am in torment; I am crucified with Thee and buried with Thee in Thy baptism; I suffer for Thee, that I may reign in Thee; I die for Thee, that I may live for Thee. Receive me, then, as an unblemished sacrifice, who offer myself to Thee in love. At her prayers, since Thou art merciful, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’. Τὴν ὡραιότητα.",
+      "text": "Γνώμην ἀήττητον, Ματρώνα φέρουσα, πίστιν τὴν ἔνθεον, ἄσυλον ἔσωσας, μὴ δουλωθεῖσα τὴν ψυχήν, Ἑβραίων τὴ ἀπηνεία ὅθεν ἀριστεύσασα, καὶ τὸν δόλιον κτείνασα, μυστικῶς νενύμφευσαι, τῷ Δεσπότῃ τῆς κτίσεως. Αὐτὸν οὒν ἐκτενῶς ἐκδυσώπει, πάσης ἠμᾶς ρυσθήναι βλάβης.",
+      "source": {
+        "text": "saint.gr — Αγία Ματρώνα η εν Θεσσαλονίκη, Ἀπολυτίκιον. Recorded with kind troparion, which is the schema's word for it.",
+        "url": "https://www.saint.gr/1268/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Bearing an unconquered mind, O Matrona, you kept the faith that is of God inviolate, not enslaving your soul to the harshness of the Hebrews; wherefore, having proved yourself valiant and slain the deceiver, you were mystically betrothed to the Master of creation. Entreat him earnestly, then, that we may be delivered from every hurt.",
         "rendered": "site"
       }
     }

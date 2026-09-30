@@ -1,0 +1,60 @@
+{
+  "slug": "anthony-of-tobolsk",
+  "display_name": "Anthony of Tobolsk",
+  "names": [
+    {
+      "form": "Αντώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαρτίου, «Άγιος Αντώνιος Μητροπολίτης Τομπόλσκ», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Metropolitan of Tobolsk",
+  "types": [
+    "metropolitan"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαρτίου — «Άγιος Αντώνιος Μητροπολίτης Τομπόλσκ»",
+        "url": "https://www.saint.gr/03/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1740)» and then says it has nothing: «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου.» It links him to the Synaxis of all the Saints of Siberia and gives no hymn. The see and the year of death are the whole of the record."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1740,
+      "latest": 1740,
+      "display": "1740",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Αντωνιος Μητροπολιτης Τομπολσκ (; - 1740)». The year is in the page's heading only; the body of the page says it has no details of his life, so nothing corroborates the year on the page itself."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

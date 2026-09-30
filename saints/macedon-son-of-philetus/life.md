@@ -1,0 +1,9 @@
+# Macedon, son of Philetus and Lydia
+
+saint.gr's calendar for 27 Μαρτίου prints one line for a household and the two officers who tried it: «Άγιοι Φιλητός ο Συγκλητικός, Λυδία σύζυγος αυτού, Θεοπρέπιος και Μακεδόνας τα τέκνα αυτών, Αμφιλόχιος ο Δούκας και Κρονίδης ο κομενταρήσιος οι Μάρτυρες». Macedon is the second of the two children of [Philetus](/saints/philetus-the-senator) the senator and [Lydia](/saints/lydia-wife-of-philetus) his wife, and the page gives him no word and no act that is his alone.
+
+It sets the whole story in a time of persecution in the year 125, under the emperor Hadrian. Father, mother and both sons were seized and required to deny Christ, and all four held to their confession; unable to withstand the wisdom of Philetus, their accusers handed the family to [Amphilochius](/saints/amphilochius-the-duke), duke in Slavonia, who hung the parents on a tree and flayed them. Seeing it, [Cronides](/saints/cronides-the-commentarisius) the commentarisius believed and was imprisoned with them; in the night angels came to the singing prisoners and gave them courage.
+
+The next day the duke had them thrown into a bronze cauldron of oil and resin, which went cold at the sign of the Cross; he then believed, cast himself in and was answered by a voice from heaven. The narrative ends with the emperor setting the survivors free, so that they ended their lives in prayer. The couplet the page prints for the brothers says instead that they died — «Θνῄσκει Θεοπρέπιος σὺν Μακεδόνι, Θεοπρεπῶς ᾄδοντες ὕμνους Κυρίῳ», [Theoprepius](/saints/theoprepius-son-of-philetus) dies together with Macedon, singing hymns to the Lord as befits God. Both readings are the page's own and it settles neither.
+
+*After saint.gr's calendar for 27 Μαρτίου — [the day](https://www.saint.gr/03/27/index.aspx) and [the life](https://www.saint.gr/1266/saint.aspx); read 30 September 2026.*

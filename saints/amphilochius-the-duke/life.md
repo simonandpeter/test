@@ -1,0 +1,9 @@
+# Amphilochius the Duke
+
+Amphilochius was duke in Slavonia, and saint.gr's calendar for 27 Μαρτίου keeps him among the martyrs of a household he was set to try. In a time of persecution in the year 125, under the emperor Hadrian, [Philetus](/saints/philetus-the-senator) the senator, his wife [Lydia](/saints/lydia-wife-of-philetus) and their sons [Theoprepius](/saints/theoprepius-son-of-philetus) and [Macedon](/saints/macedon-son-of-philetus) were seized and required to deny Christ. Because their accusers could not stand against the wisdom of Philetus, the family was handed over to the duke; and he hung Philetus and Lydia on a tree and flayed them.
+
+At that sight [Cronides](/saints/cronides-the-commentarisius) the commentarisius, an officer of the court, believed in Christ, and was shut up in prison with the rest. In the night, while the prisoners sang and prayed, angels came and gave them courage for the struggle. The next day the duke had them brought out again and ordered them thrown into a bronze cauldron, heated and filled with oil and resin; but as soon as the saints made the sign of the Cross the cauldron went cold.
+
+Seeing it, Amphilochius believed in Christ and threw himself into the cauldron, saying «Κύριε, βοήθησε με» — Lord, help me. A voice came from heaven: «Άκουσα την δέησή σου, ανέβα προς Εμένα με χαρά» — I have heard your prayer; come up to me with joy. The couplet the page prints sets his death beside Cronides's: «Δοὺξ συντελευτᾷ τῷ Κομενταρησίῳ, Ἐξουσιάζων ἐξυπηρετουμένῳ» — the duke ends his life together with the commentarisius, the man in authority with the man who served him. The page gives him no year of birth, no family, no see of office beyond Slavonia, no relic and no hymn.
+
+*After saint.gr's calendar for 27 Μαρτίου — [the day](https://www.saint.gr/03/27/index.aspx) and [the life](https://www.saint.gr/1266/saint.aspx); read 30 September 2026.*

@@ -6,6 +6,11 @@
       "form": "Anania",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 martie, «Sfântul Proroc Anania»."
+    },
+    {
+      "form": "Ανανί",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαρτίου, «Προφήτης Ανανί», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαρτίου — «Προφήτης Ανανί»",
+        "url": "https://www.saint.gr/03/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The page puts him «στα χρόνια του βασιλιά Ιούδα (955 π.Χ.)», which is the same reckoning doxologia.ro gives, and cites the scriptural place, 2 Chronicles 16:7-10. It prints a couplet and no hymn."
     },
     {
       "church": "serbian",

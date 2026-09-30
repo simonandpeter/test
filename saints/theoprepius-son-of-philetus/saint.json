@@ -1,0 +1,57 @@
+{
+  "slug": "theoprepius-son-of-philetus",
+  "display_name": "Theoprepius, son of Philetus and Lydia",
+  "names": [
+    {
+      "form": "Θεοπρέπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαρτίου, «Άγιοι Φιλητός ο Συγκλητικός, Λυδία σύζυγος αυτού, Θεοπρέπιος και Μακεδόνας τα τέκνα αυτών, Αμφιλόχιος ο Δούκας και Κρονίδης ο κομενταρήσιος οι Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαρτίου — «Άγιοι Φιλητός ο Συγκλητικός, Λυδία σύζυγος αυτού, Θεοπρέπιος και Μακεδόνας τα τέκνα αυτών, Αμφιλόχιος ο Δούκας και Κρονίδης ο κομενταρήσιος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/03/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The page names him as one of the two children of Philetus and Lydia, gives the six of them one narrative, and puts the persecution «(125 μ.Χ.)» under Hadrian. He has no years of his own. The couplet it prints for the two brothers says they died; the narrative's last sentence says the emperor set the company free and they ended their lives praying, and the page does not reconcile the two. It gives no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "philetus-the-senator",
+    "lydia-wife-of-philetus",
+    "macedon-son-of-philetus",
+    "amphilochius-the-duke",
+    "cronides-the-commentarisius"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

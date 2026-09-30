@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'παυλοσ paul-brother-of-pausirius paul-companion-of-quadratus paul-disciple-of-dionysius-of-alexandria paul-of-corinth paul-of-crete paul-of-damascus paul-of-jamnia paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-zographou paul-the-martyr-3-february paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
+    'Seventeen now. The new one is Paul of Corinth on 27 March; the others are read in the el-03-17 entry for this name form.',
+  'εφραιμ ephraim-of-antioch ephraim-of-katounakia ephraim-of-rostov ephraim-of-the-kyiv-caves ephraim-of-tomis ephrem-of-kiev ephrem-of-novotorzhsk ephrem-the-syrian':
+    'Eight now. The new one is Ephraim of Rostov on 27 March; the others are read in the el-03-23 entry for this name form.',
+  'αντωνιοσ anthony-meskhi anthony-of-constantinople anthony-of-georgia anthony-of-krasnokholmsk anthony-of-novgorod anthony-of-tobolsk anthony-of-vologda anthony-of-zadonsk anthony-of-zographou anthony-the-great antonius-the-presbyter antony-companion-of-bassus antony-of-novgorod antony-son-of-john-of-syracuse antony-the-athenian antony-the-martyr-1-march':
+    'Sixteen now. The new one is Anthony of Tobolsk on 27 March; the others are read in the el-03-16 entry for this name form.',
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-of-cartagena alexander-of-pydna alexander-of-rome-pope alexander-of-the-forty-martyrs alexander-of-voskiy alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Ten now. The new one is Alexander of Voskiy on 27 March; the others are read in the el-03-16 entry for this name form.',
+  'κρονιδησ cronides-deacon-of-alexandria cronides-the-commentarisius':
+    'Two men: the deacon of Alexandria on 13 September and Cronides the commentarisius on 27 March.',
+  'barouchius companion john barouchius-companion-of-john john-companion-of-barouchius':
+    'The pair the 27 March page names together, each named after the other, which is what folds them.',
   'θεκλα thecla-of-alexandria thecla-of-aza thekla-companion-of-peter':
     'Three women: Alexandria on 6 September, Aza on 26 September and the companion of Peter on 26 March.',
   'πετροσ peter-abesalamites peter-companion-of-aphrodisius peter-companion-of-leucius peter-companion-of-manuel peter-companion-of-marcian peter-disciple-of-dionysius-of-alexandria peter-of-bulgaria peter-of-capitolias peter-of-damascus peter-of-galatia peter-of-kazan peter-of-monevata peter-of-sebaste peter-of-tobolsk peter-son-of-john-of-syracuse peter-the-egyptian peter-the-gaoler peter-the-peloponnesian peter-the-sign-bearer':

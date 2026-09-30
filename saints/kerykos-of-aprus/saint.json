@@ -1,0 +1,50 @@
+{
+  "slug": "kerykos-of-aprus",
+  "display_name": "Kerykos of Aprus",
+  "names": [
+    {
+      "form": "Κήρυκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαρτίου, «Όσιος Κήρυκος «ὁ ἐν Ἄπρῳ»», with the rank word left off. The page spells the name with eta, Κήρυκος, and not Κύρικος."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαρτίου — «Όσιος Κήρυκος «ὁ ἐν Ἄπρῳ»»",
+        "url": "https://www.saint.gr/03/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives one sentence — he practised ascesis in Thrace, near the city of Aprus, and fell asleep in peace — with no year at all, and a couplet addressed to him as Father. It prints no hymn. He is not the Cyricus son of Julitta whom the corpus keeps in July; this page's spelling is Κήρυκος, with eta."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

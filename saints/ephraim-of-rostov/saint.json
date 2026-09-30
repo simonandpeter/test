@@ -1,0 +1,72 @@
+{
+  "slug": "ephraim-of-rostov",
+  "display_name": "Ephraim of Rostov",
+  "names": [
+    {
+      "form": "Εφραίμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαρτίου, «Άγιος Εφραίμ Αρχιεπίσκοπος Ροστώβ της Ρωσίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Archbishop of Rostov",
+  "types": [
+    "archbishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαρτίου — «Άγιος Εφραίμ Αρχιεπίσκοπος Ροστώβ της Ρωσίας»",
+        "url": "https://www.saint.gr/03/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1454)». It says the Church honours his memory also on 23 May, «εορτή της Συνάξεως των Αγίων του Ροστώβ και Γιαροσλάβ», the Synaxis of the Saints of Rostov and Yaroslavl; one row per church is the schema, so that second day is recorded here and not as a second row. It places the Varnitsy monastery of the Trinity and St Sergius «στο Πσκωφ», at Pskov, which does not sit with the rest of its own sentence about the house of St Sergius's father; the reading is the page's and is left as it stands. No hymn is printed. saint.gr carries him a second time, on its 29 Μαρτίου day page and at https://www.saint.gr/1288/saint.aspx, with the same heading «(; - 1454)», the same consecration by Metropolitan Photius on 13 April 1427 and the same Varnitsy monastery, so it is one man on two of the calendar's days. That second page adds that he «κόσμησε τον αρχιερατικό θρόνο του Ροστώβ από το έτος 1427 μ.Χ. μέχρι το 1454 μ.Χ.» and that he was a friend and protector of monks and a co-helper of «του Αγίου Ασκητού Γρηγορίου της Πάλμα». One row per church is the schema, so this row records the 27 March page that was read first and the 29 March listing is noted here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1375,
+      "latest": 1400,
+      "display": "late 14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Εφραίμ γεννήθηκε περί τα τέλη του 14οι αιώνος μ.Χ. στη Ρωσία» — the page's «περί τα τέλη», about the end, is why the interval is the last quarter of the century and not a year."
+    },
+    "death": {
+      "earliest": 1454,
+      "latest": 1454,
+      "display": "1454",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Εφραίμ κοιμήθηκε με ειρήνη το έτος 1454 μ.Χ. και ενταφιάσθηκε στον καθεδρικό ναό του Ροστώβ», and the page heads him «(; - 1454)»."
+    }
+  },
+  "related": [
+    "photius-of-kyiv",
+    "jonah-of-moscow",
+    "sergius-of-radonezh"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

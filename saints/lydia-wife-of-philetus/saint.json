@@ -6,6 +6,11 @@
       "form": "Lidia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 martie, «Sfânta Muceniţă Lidia»."
+    },
+    {
+      "form": "Λυδία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαρτίου, «Άγιοι Φιλητός ο Συγκλητικός, Λυδία σύζυγος αυτού, Θεοπρέπιος και Μακεδόνας τα τέκνα αυτών, Αμφιλόχιος ο Δούκας και Κρονίδης ο κομενταρήσιος οι Μάρτυρες», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -13,7 +18,11 @@
     "martyr"
   ],
   "related": [
-    "philetus-the-senator"
+    "philetus-the-senator",
+    "theoprepius-son-of-philetus",
+    "macedon-son-of-philetus",
+    "amphilochius-the-duke",
+    "cronides-the-commentarisius"
   ],
   "attestations": [
     {
@@ -37,8 +46,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαρτίου — «Άγιοι Φιλητός ο Συγκλητικός, Λυδία σύζυγος αυτού, Θεοπρέπιος και Μακεδόνας τα τέκνα αυτών, Αμφιλόχιος ο Δούκας και Κρονίδης ο κομενταρήσιος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/03/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The page names her as «Λυδία σύζυγος αυτού», his wife, and gives her no act apart from her husband: she was seized with him and the two sons, kept the confession, and was hung on a tree and flayed with him. It puts the persecution «(125 μ.Χ.)» under Hadrian «(117 - 138 μ.Χ.)» and ends by having the emperor free the survivors, so that they ended their lives praying; its couplet for the couple says their end was in peace. It prints no hymn."
     },
     {
       "church": "serbian",
@@ -48,5 +67,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 125,
+      "latest": 125,
+      "display": "125",
+      "basis": "traditional",
+      "note": "saint.gr: «Σε καιρό διωγμού (125 μ.Χ.), και όταν αυτοκράτορας ήταν ο Αδριανός (117 - 138 μ.Χ.), ο Φιλητός με τη σύζυγο του Λυδία και τα δυο τους παιδιά, συνελήφθησαν» — the year the page gives for the persecution in which the family was seized. The same page then has the emperor set them free, so this is not recorded as a year of death."
+    }
   }
 }

@@ -1,0 +1,57 @@
+{
+  "slug": "amphilochius-the-duke",
+  "display_name": "Amphilochius the Duke",
+  "names": [
+    {
+      "form": "Αμφιλόχιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαρτίου, «Άγιοι Φιλητός ο Συγκλητικός, Λυδία σύζυγος αυτού, Θεοπρέπιος και Μακεδόνας τα τέκνα αυτών, Αμφιλόχιος ο Δούκας και Κρονίδης ο κομενταρήσιος οι Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαρτίου — «Άγιοι Φιλητός ο Συγκλητικός, Λυδία σύζυγος αυτού, Θεοπρέπιος και Μακεδόνας τα τέκνα αυτών, Αμφιλόχιος ο Δούκας και Κρονίδης ο κομενταρήσιος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/03/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The page makes him the persecutor who becomes a martyr: duke in Slavonia, the judge to whom the family was handed over, who flayed Philetus and Lydia, then saw the cauldron go cold at the sign of the Cross, believed and threw himself into it. Its couplet pairs his death with the commentarisius's. He has no years of his own; the persecution is put «(125 μ.Χ.)» under Hadrian. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "philetus-the-senator",
+    "lydia-wife-of-philetus",
+    "theoprepius-son-of-philetus",
+    "macedon-son-of-philetus",
+    "cronides-the-commentarisius"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

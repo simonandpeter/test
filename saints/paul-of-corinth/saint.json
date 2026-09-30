@@ -1,0 +1,52 @@
+{
+  "slug": "paul-of-corinth",
+  "display_name": "Paul of Corinth",
+  "names": [
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαρτίου, «Όσιος Παύλος Επίσκοπος Κορίνθου», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Corinth",
+  "types": [
+    "venerable",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαρτίου — «Όσιος Παύλος Επίσκοπος Κορίνθου»",
+        "url": "https://www.saint.gr/03/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives him no years at all: born at Constantinople of pious parents who themselves took the monastic life, brother of St Peter, bishop of Argos, whose memory it puts on 3 May, an ascetic with his brother at Corinth, afterwards elected bishop of Corinth, fallen asleep in peace. It prints a couplet on the brotherhood and no hymn. The corpus holds no folder for Peter of Argos, so the brother is named in the life without a link."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

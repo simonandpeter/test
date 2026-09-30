@@ -1,0 +1,53 @@
+{
+  "slug": "john-companion-of-barouchius",
+  "display_name": "John, companion of Barouchius",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Μαρτίου, «Άγιοι Ιωάννης και Βαρούχιος οι Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Μαρτίου — «Άγιοι Ιωάννης και Βαρούχιος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/03/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives the pair one sentence — «Οι Άγιοι Μάρτυρες Βαρούχιος και Ιωάννης τελειώθηκαν διά ξίφους» — with no year, no place and no hymn, and a couplet comparing their courage. The companionship is the only thing that tells this John from the many others of the name, which is why the display name carries it."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "barouchius-companion-of-john"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
