@@ -1,0 +1,53 @@
+{
+  "slug": "seven-women-of-sebaste",
+  "display_name": "The Seven Women of Sebaste",
+  "names": [
+    {
+      "form": "Επτά Γυναίκες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Φεβρουαρίου, «Άγιες Επτά Γυναίκες», with the rank word left off. The page gives none of them a personal name."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Φεβρουαρίου — «Άγιες Επτά Γυναίκες»",
+        "url": "https://www.saint.gr/02/11/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr names none of the seven, so this is one entry for the seven of them and not seven folders. The prefect Agricola is named; the place and the year are Blaise's — his page gives 316 at Sebaste — and are not stated of them."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "blaise-of-sebaste"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

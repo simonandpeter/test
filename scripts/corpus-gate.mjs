@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'γεωργιοσ george-of-alikianos george-of-develtos george-of-kratovo george-of-megara george-of-vladimir george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian':
+    'nine now. The new one is George of Kratovo, kept on 11 Φεβρουαρίου; the other eight are read in the el-02-07 entry for this name form.',
+  'γαβριηλ gabriel-companion-of-sionios gabriel-of-georgia gabriel-of-lesnovo gabriel-of-novgorod-and-saint-petersburg gabriel-of-saint-stephens-jerusalem gabriel-the-martyr-2-february gabriel-vsevolod-of-novgorod':
+    'seven now. The new one is Gabriel Vsevolod of Novgorod, the prince, kept on 11 Φεβρουαρίου; the others are read in the el-01-26 entry for this name form, with the martyr Gabriel whom this wave upgraded on 2 Φεβρουαρίου.',
+  'δημητριοσ demetrius-of-chios demetrius-of-constantinople demetrius-of-prilutsk demetrius-the-skeuophylax':
+    'four now. The new one is Demetrius of Prilutsk, kept on 11 Φεβρουαρίου; the other three are read in the el-01-29 entry for this name form.',
+  'κασσιανοσ cassian-of-axylou cassian-of-bosoi':
+    'two men. saint.gr keeps Cassian of Bosoi, dead 1532, on 11 Φεβρουαρίου; the corpus keeps Cassian of Axylou, with no year on his page, on the Greek 6 October. A sixteenth-century Russian and an undated Byzantine, on two days four months apart.',
   'ζηνων zeno-of-diospolis zeno-the-courier zeno-the-faster-of-kiev':
     'three men. The new one is Zeno the Courier, whose page gives no year, kept on 10 Φεβρουαρίου; the other two are read in the el-01-30 entry for this name form, one of them an apostle of the seventy.',
   'προχοροσ prochorus-of-vranski prochorus-the-lebednik':

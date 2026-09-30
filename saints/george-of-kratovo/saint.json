@@ -1,0 +1,78 @@
+{
+  "slug": "george-of-kratovo",
+  "display_name": "George of Kratovo",
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Φεβρουαρίου, «Άγιος Γεώργιος ο Νεομάρτυρας εκ Σερβίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Φεβρουαρίου — «Άγιος Γεώργιος ο Νεομάρτυρας εκ Σερβίας»",
+        "url": "https://www.saint.gr/02/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line calls him «εκ Σερβίας», of Serbia, which is where he was born; his page puts his death at Sofia in Bulgaria, and the epithet here follows the town it names, Kratovo. The serbian row below is undocumented and not not-venerated: a Serbian-born neomartyr may well stand in the Ohrid Prologue, and that book has not been read here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1515,
+      "latest": 1515,
+      "display": "1515",
+      "basis": "traditional",
+      "note": "saint.gr: «υπέστη τον διά πυράς θάνατο, το έτος 1515 μ.Χ. στη Σόφια της Βουλγαρίας», and its heading for him, «(; - 1515)». It places his flight from Serbia in the reign of Bayezid II (1481–1512)."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείω Πνεύματι, ἀνακηρύξας, τὴν τοῦ Κτίσαντος, οἰκονομίαν, ἀθλητικῶς ἠγωνίσω Γεώργιε καὶ τοῦ πυρὸς ἐνεγκῶν τὴν κατάφλεξιν, καταδροσίζεις ἠμᾶς θείαις χάρισι. Μάρτυς ἔνδοξε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως, on the page of Άγιος Γεώργιος ο Νεομάρτυρας εκ Σερβίας. The itacisms are the page's own.",
+        "url": "https://www.saint.gr/3640/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having proclaimed by the Divine Spirit the dispensation of the Creator, thou didst contend as an athlete, O George, and having borne the burning of the fire thou dost refresh us with divine graces. O glorious martyr, entreat Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

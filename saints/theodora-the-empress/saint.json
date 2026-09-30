@@ -6,6 +6,11 @@
       "form": "Teodora",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 februarie."
+    },
+    {
+      "form": "Θεοδώρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Φεβρουαρίου, «Αγία Θεοδώρα η Βασίλισσα», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Φεβρουαρίου — «Αγία Θεοδώρα η Βασίλισσα»",
+        "url": "https://www.saint.gr/02/11/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr heads her «(815 - 867)» and says her incorrupt relic is in the church of the Panagia Speliotissa on Corfu. It also has her tonsured a nun at the end, shut up in the monastery of Gastria by her own son Michael and her brother Bardas."
     },
     {
       "church": "serbian",
@@ -45,5 +60,40 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 815,
+      "latest": 815,
+      "display": "815",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην Έβεσσα της Παφλαγονίας, το 815 μ.Χ.», and its heading «(815 - 867)»."
+    },
+    "death": {
+      "earliest": 867,
+      "latest": 867,
+      "display": "867",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε οσίως με ειρήνη το έτος 867 μ.Χ.», and its heading «(815 - 867)»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Δωρεῶν τῶν ἐνθέων οὖσα ἐπώνυμος, τὴν Ἐκκλησίαν φαιδρύνεις βασιλικαὶς δωρεαίς, ὡς θεόγλυπτος εἰκὼν θείας φρονήσεως, τῶν γὰρ Εἰκόνων τῶν σεπτῶν, τὴν τιμὴν ὡς σχετικήν, ἐτράνωσας Θεοδώρα, τῶν Βασιλίδων ἄκρατης, τῶν Ὀρθοδόξων ἐγκαλλώπισμα.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον, on the page of Αγία Θεοδώρα η Βασίλισσα. The reading «τῶν Βασιλίδων ἄκρατης» is the page's own.",
+        "url": "https://www.saint.gr/3639/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Bearing the name of the gifts that are of God, thou dost brighten the Church with royal gifts, as a God-carved image of divine good sense; for thou didst make plain, O Theodora, that the honour of the venerable icons is a relative honour — thou crown of empresses, adornment of the Orthodox.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

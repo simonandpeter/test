@@ -1,0 +1,53 @@
+{
+  "slug": "two-youths-of-sebaste",
+  "display_name": "The Two Youths of Sebaste",
+  "names": [
+    {
+      "form": "Δυο παίδες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Φεβρουαρίου, «Άγιοι Δυο παίδες», with the rank word left off. The page gives neither of them a personal name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Φεβρουαρίου — «Άγιοι Δυο παίδες»",
+        "url": "https://www.saint.gr/02/11/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr names neither of the two, so this is one entry for the pair and not two folders. The place and the year are Blaise's — his page gives 316 at Sebaste — and are not stated of them."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "blaise-of-sebaste"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

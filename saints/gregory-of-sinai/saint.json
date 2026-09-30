@@ -6,6 +6,11 @@
       "form": "Grigorie Sinaitul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 aprilie, «Sfântul Cuvios Grigorie Sinaitul»."
+    },
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Φεβρουαρίου, «Όσιος Γρηγόριος ο Σιναΐτης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -19,12 +24,19 @@
     "romylos-of-ravanica"
   ],
   "dates": {
+    "birth": {
+      "earliest": 1255,
+      "latest": 1255,
+      "display": "1255",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him on the 11 Φεβρουαρίου page, «Οσιος Γρηγοριος ο Σιναϊτης (1255 - 1347)». doxologia.ro, cited on this folder's Romanian row, gave no year of birth."
+    },
     "death": {
       "earliest": 1346,
       "latest": 1346,
       "display": "1346",
       "basis": "attested",
-      "note": "doxologia.ro: «Sfântul Grigorie a trecut la Domnul pe 27 noiembrie 1346 și este prăznuit pe 6 aprilie.»"
+      "note": "doxologia.ro: «sfântul Grigorie a trecut la Domnul pe 27 noiembrie 1346 și este prăznuit pe 6 aprilie.» saint.gr's heading on its 11 Φεβρουαρίου page gives «(1255 - 1347)» and argues for neither year; the attested day and year are kept and the disagreement is recorded rather than averaged into an interval."
     }
   },
   "attestations": [
@@ -50,8 +62,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Απριλίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Φεβρουαρίου — «Όσιος Γρηγόριος ο Σιναΐτης»",
+        "url": "https://www.saint.gr/02/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The page saint.gr serves on this day is a stub: it heads him «Οσιος Γρηγοριος ο Σιναϊτης (1255 - 1347)», declares the feast fixed on 11 Φεβρουαρίου, and for the life sends the reader elsewhere — «Βλέπε βιογραφικό του σημείωμα στις 6 Απριλίου». 6 April is the day this folder's Romanian row already keeps him on, off doxologia.ro. This row records the Greek day page read; whether saint.gr's 6 April is a second Greek commemoration or only where it files the life has not been established here, and no second row is made for it."
     },
     {
       "church": "serbian",

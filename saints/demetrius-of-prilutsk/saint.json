@@ -1,0 +1,63 @@
+{
+  "slug": "demetrius-of-prilutsk",
+  "display_name": "Demetrius of Prilutsk",
+  "names": [
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Φεβρουαρίου, «Όσιος Δημήτριος εκ Ρωσίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Φεβρουαρίου — «Όσιος Δημήτριος εκ Ρωσίας»",
+        "url": "https://www.saint.gr/02/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line gives him only «εκ Ρωσίας», from Russia; his page gives the house that tells him apart, «Ο Όσιος Δημήτριος του Πριλούκ». It does not use the word abbot of him, but has him found two monasteries and rule the first coenobitic house of the Russian north."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1392,
+      "latest": 1392,
+      "display": "1392",
+      "basis": "traditional",
+      "note": "saint.gr: «ο Όσιος Δημήτριος κοιμήθηκε σε βαθύ γήρας το έτος 1392 μ.Χ.», and its heading for him, «(; - 1392)». It puts his birth in the fourteenth century without a year."
+    }
+  },
+  "related": [
+    "sergius-of-radonezh"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

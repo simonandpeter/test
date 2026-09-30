@@ -8,4 +8,6 @@ An attack of the Hagarenes drove him out of the Holy Mountain, and he spent a lo
 
 He departed to the Lord on 27 November 1346, and is kept on 6 April. The page's Tropar tab for him is a video recording with no printed text, so no hymn is taken from it here.
 
-*After doxologia.ro's calendar for 6 aprilie — [the day](https://doxologia.ro/6-aprilie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-grigorie-sinaitul); read 19 September 2026.*
+The Greek calendar keeps him too, on 11 February, and the page it serves for that day carries no life at all: it heads him «(1255 - 1347)», says the feast falls on 11 Φεβρουαρίου every year, and for the life sends the reader to 6 April — which is the day the Romanian calendar prints him on. So the Greek row on this folder records 11 February, the day page read, and the two calendars' days stand side by side without being reconciled here. The Greek heading also gives him a year of birth, 1255, and a year of death, 1347, where doxologia.ro gave 27 November 1346 and no birth; that disagreement is recorded in the dates rather than decided.
+
+*After doxologia.ro's calendar for 6 aprilie — [the day](https://doxologia.ro/6-aprilie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-grigorie-sinaitul); read 19 September 2026; and saint.gr's calendar for 11 Φεβρουαρίου — [the day](https://www.saint.gr/02/11/index.aspx) and [his page there](https://www.saint.gr/1829/saint.aspx), which prints no life, read 30 September 2026.*

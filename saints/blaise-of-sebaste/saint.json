@@ -6,6 +6,11 @@
       "form": "Vlasie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 februarie."
+    },
+    {
+      "form": "Βλάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Φεβρουαρίου, «Άγιος Βλάσιος επίσκοπος Σεβαστείας», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -28,6 +33,56 @@
       },
       "english": {
         "text": "Sharer of their ways and successor to the thrones of the apostles, thou didst find in action, O God-inspired one, a way of ascent to the vision of things on high. Therefore, rightly dividing the word of truth, thou didst contend for the faith unto blood, O Hieromartyr Blaise: pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Φερωνύμως βλαστήσας, ὡς δένδρον εὔκαρπον, ἱεράρχα Κυρίου Βλάσιε ἔνδοξε, μαρτυρίου τοὺς καρποὺς κόσμῳ προήγαγες καὶ θαυμάτων δωρεάς ἀναβλύζεις δαψιλῶς, ὡς θεῖος ἱερομάρτυς τοῖς καταφεύγουσι πάτερ τῇ ἀντιλήψει τῆς πρεσβείας σου.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον, the first of two the page prints, on the page of Άγιος Βλάσιος επίσκοπος Σεβαστείας",
+        "url": "https://www.saint.gr/3635/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having sprouted true to thy name, like a tree bearing good fruit, O glorious Blaise, hierarch of the Lord, thou didst bring forth for the world the fruits of martyrdom, and thou pourest out the gifts of miracles in abundance, as a divine hieromartyr, O father, on those who take refuge in the help of thy intercession.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Καί τρόπων μέτοχος, καί θρόνων διάδοχος, τῶν Ἀποστόλων γενόμενος, τήν πρᾶξιν εὗρες θεόπνευστε, εἰς θεωρίας ἐπίβασιν· διά τοῦτο τόν λόγον τῆς ἀληθείας ὀρθοτομῶν, καί τῇ πίστει ἐνήθλησας μέχρις αἵματος, Ἱερομάρτυς Βλάσιε· πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τάς ψυχάς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος πλ. δ’, the second of two the page prints, on the page of Άγιος Βλάσιος επίσκοπος Σεβαστείας. It is the common of a hieromartyr, with his name in the last clause.",
+        "url": "https://www.saint.gr/3635/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having become a partaker of the ways and a successor of the thrones of the apostles, thou didst find the practice, O God-inspired one, to be the ascent to contemplation; therefore, rightly dividing the word of truth, thou didst contend for the faith even unto blood, O hieromartyr Blaise. Intercede with Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τά ἄνω ζητῶν.",
+      "text": "Ὁ θεῖος βλαστός, τό ἄνθος τό ἀμάραντον, ἀμπέλου Χριστοῦ, τό κλῆμα τό πολύφορον, θεοφόρε Βλάσιε, τούς ἐν πίστει τιμῶντας τήν μνήμην σου, εὐφροσύνης πλήρωσον τῆς σῆς, πρεσβεύων ἀπαύστως ὑπέρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος β’, Τά ἄνω ζητῶν, on the page of Άγιος Βλάσιος επίσκοπος Σεβαστείας. A Κάθισμα follows it on the page and is not copied here.",
+        "url": "https://www.saint.gr/3635/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "O divine shoot, unfading flower, fruitful branch of the vine of Christ, God-bearing Blaise: fill with thy gladness those who honour thy memory in faith, interceding without ceasing for us all.",
         "rendered": "site"
       }
     }
@@ -54,8 +109,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Φεβρουαρίου — «Άγιος Βλάσιος επίσκοπος Σεβαστείας»",
+        "url": "https://www.saint.gr/02/11/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr heads him «(; - 316)» and places him under Licinius (308–323). The same day separately keeps two youths he baptised in prison and seven women beheaded at his martyrdom, which his own page names too. A Κάθισμα follows the kontakion on the page and is not copied to this folder, the corpus having no kind for it."
     },
     {
       "church": "serbian",
@@ -65,5 +130,18 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 316,
+      "latest": 316,
+      "display": "316",
+      "basis": "traditional",
+      "note": "saint.gr: «Εξοργισθέντες τότε οι εχθροί της πίστεως τον αποκεφάλισαν το 316 μ.Χ.», and its heading «(; - 316)». It places his life under the emperor Licinius (308–323)."
+    }
+  },
+  "related": [
+    "two-youths-of-sebaste",
+    "seven-women-of-sebaste"
+  ]
 }

@@ -1,0 +1,60 @@
+{
+  "slug": "gabriel-vsevolod-of-novgorod",
+  "display_name": "Gabriel (Vsevolod Mstislavich)",
+  "names": [
+    {
+      "form": "Γαβριήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Φεβρουαρίου, «Άγιος Γαβριήλ ο βασιλέας», with the rank word left off. His page adds the civil name in parentheses: «Ο Άγιος Γαβριήλ (Βσεβολόδος Μστισλάβιτς)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prince",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Φεβρουαρίου — «Άγιος Γαβριήλ ο βασιλέας»",
+        "url": "https://www.saint.gr/02/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line calls him «ο βασιλέας», the king, and his page prince of Novgorod, «ως Πρίγκιπας του Νόβγκοροντ»; the folder follows the page. The glorification date it gives, 1549, is four hundred years after his repose and is not a feast."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1138,
+      "latest": 1138,
+      "display": "1138",
+      "basis": "traditional",
+      "note": "saint.gr: «Μετά την κοίμηση αυτού, το έτος 1138 μ.Χ., η Ρωσική Εκκλησία τον ανακήρυξε Άγιο και θαυματουργό το έτος 1549 μ.Χ.», and its heading for him, «(; - 1138)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

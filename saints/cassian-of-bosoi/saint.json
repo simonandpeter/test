@@ -1,0 +1,63 @@
+{
+  "slug": "cassian-of-bosoi",
+  "display_name": "Cassian of Bosoi",
+  "names": [
+    {
+      "form": "Κασσιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Φεβρουαρίου, «Όσιος Κασσιανός εκ Ρωσίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Φεβρουαρίου — «Όσιος Κασσιανός εκ Ρωσίας»",
+        "url": "https://www.saint.gr/02/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line gives him only «εκ Ρωσίας», from Russia; his page gives the by-name that tells him apart, «Ο Όσιος Κασσιανός του Μποσόι», and the house, Volokolamsk. He is not the Cassian the Greek or either of the two Cypriot Cassians this corpus already keeps."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1532,
+      "latest": 1532,
+      "display": "1532",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Κασσιανός κοιμήθηκε με ειρήνη το έτος 1532 μ.Χ.», and its heading for him, «(; - 1532)»."
+    }
+  },
+  "related": [
+    "joseph-the-wonderworker-of-volokolamsk"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
