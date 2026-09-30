@@ -1,0 +1,59 @@
+{
+  "slug": "anastasius-of-nauplion",
+  "display_name": "Anastasius of Nauplion",
+  "names": [
+    {
+      "form": "Αναστάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Φεβρουαρίου, «Άγιος Αναστάσιος ο Νεομάρτυρας εκ Ναυπλίου», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "iconographer"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1654,
+      "latest": 1655,
+      "display": "1654 or 1655",
+      "basis": "traditional",
+      "note": "saint.gr: «Έτσι ετελειώθη την 1η Φεβρουαρόυ 1655 μ.Χ. (κατά άλλους το 1654 μ.Χ.)». Its heading dates him «(; - 1655)»; the interval holds both readings the page gives. It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Φεβρουαρίου — «Άγιος Αναστάσιος ο Νεομάρτυρας εκ Ναυπλίου»",
+        "url": "https://www.saint.gr/02/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

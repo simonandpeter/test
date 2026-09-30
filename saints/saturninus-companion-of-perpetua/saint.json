@@ -1,0 +1,65 @@
+{
+  "slug": "saturninus-companion-of-perpetua",
+  "display_name": "Saturninus, companion of Perpetua",
+  "names": [
+    {
+      "form": "Σατουρνίλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's own heading for him on the page for 1 Φεβρουαρίου, «Αγιος Σατουρνιλος ο Μαρτυρας», with the rank word left off; the day's line keeps the six of them together as «Άγιοι Περπέτουα, Σάτυρος, Ρευκάτος, Σατουρνίλος, Σεκούνδος και Φιλικητάτη οι Μάρτυρες». The page's own caption to its illustration spells some of the six differently."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "satyrus-companion-of-perpetua",
+    "revocatus-companion-of-perpetua",
+    "secundus-companion-of-perpetua",
+    "perpetua-of-carthage",
+    "felicitas-of-carthage"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 203,
+      "latest": 203,
+      "display": "203",
+      "basis": "traditional",
+      "note": "saint.gr's own heading for him on the page dates him «(; - 203)», and its account puts the arrest and the deaths in that year: «Καταγγέλθηκε το 203 μ.Χ. στον χιλίαρχο της πατρίδας της». It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Φεβρουαρίου — «Άγιοι Περπέτουα, Σάτυρος, Ρευκάτος, Σατουρνίλος, Σεκούνδος και Φιλικητάτη οι Μάρτυρες»",
+        "url": "https://www.saint.gr/02/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "david-of-mytilene",
+  "display_name": "David of Mytilene",
+  "names": [
+    {
+      "form": "Δαβίδ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Φεβρουαρίου, «Άγιοι Γεώργιος Αρχιεπίσκοπος Μυτιλήνης, Συμεών ο Νέος Στυλίτης και Δαβίδ ο Μοναχός», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter"
+  ],
+  "related": [
+    "symeon-the-new-of-mytilene"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 717,
+      "latest": 718,
+      "display": "717 or 718",
+      "basis": "traditional",
+      "note": "saint.gr: «Πρωτότοκος ήταν ο Δαβίδ, που γεννήθηκε το έτος 717 ή 718 μ.Χ.» For his death it gives no year, only «πέθανε ο Δαβίδ σε ηλικία εξήντα εξ ετών» — at sixty-six — and no year is inferred here from that."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Φεβρουαρίου — «Άγιοι Γεώργιος Αρχιεπίσκοπος Μυτιλήνης, Συμεών ο Νέος Στυλίτης και Δαβίδ ο Μοναχός»",
+        "url": "https://www.saint.gr/02/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

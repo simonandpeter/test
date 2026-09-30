@@ -1,0 +1,59 @@
+{
+  "slug": "peter-skipetrov",
+  "display_name": "Peter (Skipetrov)",
+  "names": [
+    {
+      "form": "Πέτρος Σκιπετρώφ",
+      "lang": "el",
+      "note": "Read out of saint.gr's own sentence on his page for 1 Φεβρουαρίου, «Ο Άγιος Πέτρος (Σκιπετρώφ) ήταν Πρεσβύτερος»; the day's line gives him only as «Άγιος Πέτρος ο Ιερομάρτυρας»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Πέτρος (Σκιπετρώφ) ήταν Πρεσβύτερος και μαρτύρησε το έτος 1918 μ.Χ.»; the page's heading dates him «(; - 1918)». It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Φεβρουαρίου — «Άγιος Πέτρος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/02/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

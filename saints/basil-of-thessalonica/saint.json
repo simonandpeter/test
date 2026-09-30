@@ -7,6 +7,11 @@
       "form": "Vasile",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 februarie, «Sfântul Vasile, Episcopul Tesalonicului»."
+    },
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Φεβρουαρίου, «Όσιος Βασίλειος Α' ο Ομολογητής Αρχιεπίσκοπος Θεσσαλονίκης», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Φεβρουαρίου — «Όσιος Βασίλειος Α' ο Ομολογητής Αρχιεπίσκοπος Θεσσαλονίκης»",
+        "url": "https://www.saint.gr/02/01/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

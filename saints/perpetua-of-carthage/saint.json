@@ -6,6 +6,11 @@
       "form": "Perpetua",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 februarie, «Sfânta Muceniță Perpetua». The life gives her full name as Vibia Perpetua."
+    },
+    {
+      "form": "Περπέτουα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Φεβρουαρίου, «Άγιοι Περπέτουα, Σάτυρος, Ρευκάτος, Σατουρνίλος, Σεκούνδος και Φιλικητάτη οι Μάρτυρες», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -13,7 +18,11 @@
     "martyr"
   ],
   "related": [
-    "felicitas-of-carthage"
+    "felicitas-of-carthage",
+    "satyrus-companion-of-perpetua",
+    "revocatus-companion-of-perpetua",
+    "saturninus-companion-of-perpetua",
+    "secundus-companion-of-perpetua"
   ],
   "dates": {
     "death": {
@@ -65,8 +74,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Φεβρουαρίου — «Άγιοι Περπέτουα, Σάτυρος, Ρευκάτος, Σατουρνίλος, Σεκούνδος και Φιλικητάτη οι Μάρτυρες»",
+        "url": "https://www.saint.gr/02/01/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

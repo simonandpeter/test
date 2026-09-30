@@ -1,0 +1,11 @@
+# Anastasius of Nauplion
+
+Anastasius was born and bred at Nauplion, saint.gr says, and was a skilful painter by trade. He became engaged there to the daughter of a Christian, and within a few days heard of certain faults in his betrothed and left her. Her relatives worked magic on him so that he should love her and take her; and after a while, under the working of it, the young man lost his reason and wandered about here and there.
+
+When the Turks saw him in that strange state they made him change his religion. But God had pity on him and in a few days gave him back his health; and coming to himself he understood that he was a Turk and that he was wearing a white turban on his head. He threw it on the ground at once and began to shout in a loud voice, boldly, in the middle of the crowd of Turks, that he had been, was, and would always be a Christian.
+
+When the Turks saw that he had repented they ran at him, and beating and shoving him brought him before the judge. The judge tried by various devices, flattering him and then threatening him, to make him deny the Christian faith; but the martyr took no account of any of it and said boldly, unshaken, that he did not deny the Lord Jesus Christ, the true God, but believed in him and worshipped him as his maker and saviour, while faith in Allah he had no need of and turned away from. Hearing that, the judge ordered him beheaded.
+
+But the Turks did not wait for it: as soon as he was brought out of the court they rushed at him as the Jews once did at the first martyr Stephen, some with sticks, some with swords, some with knives, and pierced the martyr's body through until they had cut it into small pieces. So the blessed Anastasius was made perfect on 1 February 1655, or by other accounts 1654, and received the crown of martyrdom. He is the patron of Nauplion; by a royal decree of 14 November 1935 the first of February was established there as a day on which the shops close entirely, and services for him were composed by Neilos Smyrniotopoulos, formerly metropolitan of Karpathos and Kasos, and by the hymnographer Gerasimos Mikragiannanitis.
+
+*After saint.gr's calendar for 1 Φεβρουαρίου — [the day](https://www.saint.gr/02/01/index.aspx) and [the life](https://www.saint.gr/563/saint.aspx); read 30 September 2026.*

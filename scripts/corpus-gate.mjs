@@ -115,6 +115,26 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'τιμοθεοσ timothy-1-february timothy-disciple-of-babylas timothy-of-ephesus':
+    'three men, none of them with a year on his page, on three days of one calendar: the bare Timothy of 1 Φεβρουαρίου, the disciple of Babylas of Sicily on the 24th, and Timothy of Ephesus the apostle on the 22nd, the last two upgraded earlier in this wave. Three entries, three commemorations.',
+  'πολυευκτοσ polyeuctus-of-megara polyeuctus-of-melitene':
+    'two men. saint.gr keeps Polyeuctus of Megara, whose page gives no year, on 1 Φεβρουαρίου — one of the company the town keeps with Adrian, George and Plato — and the corpus keeps Polyeuctus of Melitene, martyred 249 to 259, on the Romanian and Greek 9 January. A martyr of Megara is not the soldier of Melitene.',
+  'συμεων simeon-the-elder symeon-the-new-of-mytilene':
+    'two men. saint.gr keeps Symeon the New of Mytilene on 1 Φεβρουαρίου with David, and Simeon the Elder on 26 Ιανουαρίου, written earlier in this wave. The calendar own epithets, the Elder and the New, are what keep them apart and neither page gives a year.',
+  'δαβιδ david-of-mytilene david-son-of-prince-theodore':
+    'two men. saint.gr keeps David of Mytilene, whose page gives no year, on 1 Φεβρουαρίου with Symeon the New; the corpus keeps David the son of prince Theodore, dead 1321, on the Russian and Greek 19 September.',
+  'πλατων plato-of-megara platon-kulbusch':
+    'two men. saint.gr keeps Plato of Megara, whose page gives no year, on 1 Φεβρουαρίου; the corpus keeps Platon Kulbusch of Reval, shot in 1919, on the Greek 1 January and the Romanian 14 January. A martyr of Megara and a bishop of the Soviet years, twenty centuries apart at the outside.',
+  'γεωργιοσ george-of-develtos george-of-megara george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian':
+    'six now. The new one is George of Megara, whose page gives no year, kept on 1 Φεβρουαρίου with Adrian and Plato of the same town; the other five are read in the el-01-28 entry for this name form.',
+  'ηλιασ elias-martyr-with-patermuthius elias-of-heliopolis elias-the-cave-dweller-of-calabria':
+    'three men. The new one is Elias of Heliopolis, dead 799, kept on 1 Φεβρουαρίου; the corpus keeps the Elias martyred with Patermuthius, 305 to 311, on three calendars on 17 September, and the cave-dweller of Calabria of the ninth century on the Greek 11 September. Three days, three centuries.',
+  'αντωνιοσ anthony-of-georgia anthony-of-krasnokholmsk anthony-of-novgorod anthony-of-vologda anthony-of-zadonsk anthony-of-zographou anthony-the-great antonius-the-presbyter antony-son-of-john-of-syracuse':
+    'nine now. The new one is Anthony of Georgia, of the sixth century, kept on 1 Φεβρουαρίου; the other eight are read in the el-01-17 and el-01-08 entries for this name form, four of them standing together on the great Anthony own day.',
+  'αναστασιοσ anastasius-8-january anastasius-of-nauplion':
+    'two men. saint.gr keeps Anastasius of Nauplion, a new-martyr dead 1654 or 1655, on 1 Φεβρουαρίου, and a bare Anastasius with no year on 8 Ιανουαρίου; both were written in this wave. An early-modern new-martyr under the Turks is not a bare January line.',
+  'αδριανοσ adrian-of-canterbury adrian-of-megara':
+    'two men. saint.gr keeps Adrian of Megara, whose page gives no year, on 1 Φεβρουαρίου; the corpus keeps Adrian of Canterbury, the abbot written in this wave on the Greek 9 January. A martyr of Megara is not an English abbot.',
   'θεοδοτη theodote-daughter-of-athanasia theodote-mother-of-the-unmercenaries':
     'two women, and each is named on her page by her kin: the Theodote whom saint.gr names with her mother Athanasia on 31 Ιανουαρίου, and Theodote the mother of the Unmercenaries, written in this wave on the Greek 2 Ιανουαρίου, whose page sends the reader to 1 November for her sons. A daughter and a mother, two days and two households apart.',
   'ζηνων zeno-of-diospolis zeno-the-faster-of-kiev':

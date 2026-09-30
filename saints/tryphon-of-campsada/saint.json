@@ -5,6 +5,11 @@
     {
       "form": "Sfântul Mucenic Trifon",
       "lang": "ro"
+    },
+    {
+      "form": "Τρύφων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Φεβρουαρίου, «Άγιος Τρύφων ο Μάρτυρας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr’s 29 Σεπτεμβρίου entry «Άγιοι Τρύφων, Τρόφιμος και Δορυμέδων» does not say whether its Tryphon is this martyr, and its page for 1 February was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 1 Φεβρουαρίου — «Άγιος Τρύφων ο Μάρτυρας»",
+        "url": "https://www.saint.gr/02/01/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
