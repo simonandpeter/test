@@ -395,8 +395,15 @@ const WITH_UNHYMNED_COMPANY = HYMNED.findIndex((card) =>
   [...(card.related ?? []), ...(card.mentionedIn ?? [])].some((slug) => !IN_HYMNAL.has(slug)),
 );
 
-/** A hymned saint with an icon: the picture frame, the credit and the lede. */
-const WITH_PICTURE = HYMNED.findIndex((card) => card.image);
+/**
+ * Every hymned saint with an icon, by their place in the book: the picture
+ * frame, the credit and the lede. **A list and not the first of them**, because
+ * a long enough life is the other half of that test's premise and the manifest
+ * does not carry it — eighty-eight of the hymnal's 887 saints have an icon and
+ * they are scattered through it, so the test walks the list rather than the
+ * saints between them.
+ */
+const WITH_PICTURE = HYMNED.map((card, at) => (card.image ? at : null)).filter((at) => at !== null);
 
 /**
  * The feast index this year, built the same way the page builds it — one walk
@@ -411,6 +418,18 @@ const dayOf = (slug, church) => {
   }
   return null;
 };
+
+/**
+ * A hymned saint the reader's calendar keeps **with somebody else** on his day:
+ * the same-day aside's premise. Read off the feast index above rather than
+ * looked for in the first eight saints of the hymnal, which on 1 October 2026
+ * had no company between them — the Greek wave put a run of solitary
+ * neomartyrs at the head of the book.
+ */
+const WITH_SAME_DAY = HYMNED.findIndex((card) => {
+  const iso = dayOf(card.slug, CHURCH);
+  return iso !== null && (INDEX.get(iso) ?? []).filter((e) => e.church === CHURCH).length > 1;
+});
 
 /**
  * A hymned saint the Russian and Greek calendars put on different civil days —
@@ -753,13 +772,8 @@ test('the two faces are two drawings, not two class names', async ({ page }) => 
 test('every name in a margin opens something past 1024 px', async ({ page }) => {
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
-  /*
-   * Stepped to rather than assumed, for the reason the next test states: whom
-   * the hymnal opens on is not a saint with company on his day any more.
-   */
-  for (let i = 0; i < 8 && !(await page.locator(`#hy-sameday ${ROW}`).count()); i += 1) {
-    if (i > 0) await stepTo(page, 1);
-  }
+  // Stepped to off the manifest: see `WITH_SAME_DAY`.
+  await stepTo(page, WITH_SAME_DAY);
   await expect(page.locator(`#hy-sameday ${ROW}`).first()).toBeVisible();
 
   const hymned = new Set(HYMNED.map((c) => c.slug));
@@ -805,21 +819,10 @@ test('every name in a margin opens something past 1024 px', async ({ page }) => 
 test('a name the hymnal does not hold opens that saint’s own page', async ({ page }) => {
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
-  /*
-   * **Stepped to, not assumed.** Whether the saint the page opens on has
-   * company on his day is a fact about the corpus, and on 2026-09-30 it stopped
-   * being true: the hymnal's first saint is Abachum, son of Marius and Martha,
-   * and the Greek wave put him at the head of it. The walk below already treats
-   * the same fact that way; this is the same reading, one line earlier.
-   */
-  const sameDayRow = async () => {
-    for (let i = 0; i < 8; i += 1) {
-      if (i > 0) await stepTo(page, 1);
-      if (await page.locator(`#hy-sameday ${ROW}`).count()) return true;
-    }
-    return false;
-  };
-  expect(await sameDayRow(), 'one of the first eight has company on his day').toBe(true);
+  // Stepped to off the manifest: see `WITH_SAME_DAY`.
+  expect(WITH_SAME_DAY, 'the corpus holds a hymned saint with company on his day').toBeGreaterThanOrEqual(0);
+  await stepTo(page, WITH_SAME_DAY);
+  await expect(page.locator(`#hy-sameday ${ROW}`).first()).toBeVisible();
 
   /* The first dimmed row in either column, found by walking: which saints have
      un-hymned company is a fact about the corpus and not a literal. */
@@ -854,21 +857,10 @@ test('a name the hymnal does not hold opens that saint’s own page', async ({ p
 test('a tile with no icon has no box, and one with an icon has a 3:2 plate', async ({ page }) => {
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
-  /*
-   * **Stepped to, not assumed.** Whether the saint the page opens on has
-   * company on his day is a fact about the corpus, and on 2026-09-30 it stopped
-   * being true: the hymnal's first saint is Abachum, son of Marius and Martha,
-   * and the Greek wave put him at the head of it. The walk below already treats
-   * the same fact that way; this is the same reading, one line earlier.
-   */
-  const sameDayRow = async () => {
-    for (let i = 0; i < 8; i += 1) {
-      if (i > 0) await stepTo(page, 1);
-      if (await page.locator('#hy-sameday .day-tile').count()) return true;
-    }
-    return false;
-  };
-  expect(await sameDayRow(), 'one of the first eight has company on his day').toBe(true);
+  // Stepped to off the manifest: see `WITH_SAME_DAY`.
+  expect(WITH_SAME_DAY, 'the corpus holds a hymned saint with company on his day').toBeGreaterThanOrEqual(0);
+  await stepTo(page, WITH_SAME_DAY);
+  await expect(page.locator('#hy-sameday .day-tile').first()).toBeVisible();
 
   /* A walk, because whether the day in hand holds both a pictured and an
      unpictured saint is a fact about the corpus. */
@@ -914,11 +906,8 @@ test('a tile in the same-day column prints the day, not the lifespan', async ({ 
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
   const aside = page.locator('#hy-sameday');
-  // Stepped to: whom the hymnal opens on is not a saint with company on his day
-  // since the Greek wave, which the two tests above this one say as well.
-  for (let i = 0; i < 8 && !(await aside.locator('.day-tile').count()); i += 1) {
-    if (i > 0) await stepTo(page, 1);
-  }
+  // Stepped to off the manifest: see `WITH_SAME_DAY`.
+  await stepTo(page, WITH_SAME_DAY);
   await expect(aside.locator('.day-tile').first()).toBeVisible();
   await expect.poll(() => aside.getAttribute('data-iso')).not.toBeNull();
 
@@ -1035,17 +1024,23 @@ test('the saint in hand wears the mockup’s hymn, preview and credit', async ({
   await expect(page.locator('.hy-saint')).toBeVisible();
 
   /*
-   * A card with a picture, a life long enough to fill the preview, and a hymn —
-   * stepped to off the manifest rather than looked for in the first twelve,
-   * which since the Greek wave hold no icon between them. The walk searches on
-   * from there, because how long a life is is not in the manifest.
+   * A card with a picture, a life long enough to fill the preview, and a hymn.
+   * The saints with icons are listed off the manifest and stepped to one by
+   * one, because the twelve at the head of the hymnal hold no icon between them
+   * since the Greek wave, and how long a life is is not in the manifest.
    */
-  expect(WITH_PICTURE, 'the corpus holds a hymned saint with an icon').toBeGreaterThanOrEqual(0);
-  await stepTo(page, WITH_PICTURE);
+  expect(WITH_PICTURE.length, 'the corpus holds hymned saints with icons').toBeGreaterThan(0);
   let found = false;
-  for (let i = 0; i < 12 && !found; i += 1) {
-    if (i > 0) await stepTo(page, 1);
+  for (const at of WITH_PICTURE.slice(0, 12)) {
+    if (found) break;
+    await page.goto(PRAYER, { waitUntil: 'networkidle' });
+    /* The card has to be on the page before the arrow is pressed: `#hy-next`
+       exists in the markup from the first paint and does nothing until the
+       hymnal behind it is built, so a press before this line is swallowed and
+       the walk reads the first saint twelve times over. */
     await expect(page.locator('.hy-saint')).toBeVisible();
+    await stepTo(page, at);
+    await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', HYMNED[at].slug);
     found = await page
       .locator('.hy-saint .hy-pic-frame')
       .count()
@@ -1061,7 +1056,7 @@ test('the saint in hand wears the mockup’s hymn, preview and credit', async ({
       );
     }
   }
-  expect(found, 'no hymned saint from the first with an icon on has a long life too').toBe(true);
+  expect(found, 'none of the first twelve hymned saints with an icon has a long life too').toBe(true);
 
   const read = () =>
     page.evaluate(() => {
@@ -1146,6 +1141,8 @@ test('the saint in hand wears the mockup’s hymn, preview and credit', async ({
 test('every name in a margin is a keyboard stop, and Enter opens it', async ({ page }) => {
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
+  // Stepped to off the manifest: see `WITH_SAME_DAY`.
+  await stepTo(page, WITH_SAME_DAY);
   await expect(page.locator(`#hy-sameday ${ROW}`).first()).toBeVisible();
 
   const stops = await page.evaluate(() => {
@@ -1387,6 +1384,8 @@ test('below the desk the margins open on the names and keep the row they had', a
   await phone(page);
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
+  // Stepped to off the manifest: see `WITH_SAME_DAY`.
+  await stepTo(page, WITH_SAME_DAY);
   await expect(page.locator('#hy-sameday .hy-link').first()).toBeVisible();
 
   await expect(page.locator('#hy-views [data-hy-view="rows"]')).toHaveAttribute('aria-pressed', 'true');
