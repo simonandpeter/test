@@ -6,6 +6,11 @@
       "form": "Antonie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 februarie."
+    },
+    {
+      "form": "Αντώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Άγιος Αντώνιος Αρχιεπίσκοπος Κωνσταντινουπόλεως», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Φεβρουαρίου — «Άγιος Αντώνιος Αρχιεπίσκοπος Κωνσταντινουπόλεως»",
+        "url": "https://www.saint.gr/02/12/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr heads him «(; - 901)» and identifies him as Anthony II Kaulveas. It then prints a ΣΗΜΕΙΩΣΗ against its own identification: «Σύμφωνα με τον Άγιο Νικόδημο τον Αγιορείτη, ο εορταζόμενος Πατριάρχης Αντώνιος, είναι ο Γ' ο Στουδίτης (974 - 980 μ.Χ.)» — that the patriarch kept on this day is Anthony III the Studite, a different man seventy years later. The page leaves the two standing side by side and this row records both rather than choosing."
     },
     {
       "church": "serbian",
@@ -47,5 +62,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 901,
+      "latest": 901,
+      "display": "901",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 901 μ.Χ.», and its heading «(; - 901)», both of Anthony II Kaulveas, whom it identifies as this day's saint. Its own closing note reports Nicodemus the Hagiorite's view that the day belongs instead to Anthony III the Studite (974–980), which would make this year the wrong man's; no year is recorded for that alternative here."
+    },
+    "birth": {
+      "earliest": null,
+      "latest": 830,
+      "display": "before 830",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε προ του 830 μ.Χ. στην Κωνσταντινούπολη». The page gives only the upper bound, and the null lower bound is that finding and not an omission."
+    }
   }
 }

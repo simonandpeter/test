@@ -115,6 +115,28 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'βασιανοσ bassian-of-rostov vassian-of-uglich':
+    'two men, and the spellings are the corpus own: Vassian of Uglich, dead 1509, on 12 Φεβρουαρίου, against Bassian of Rostov, dead 1516, written in this wave on 25 Ιανουαρίου. Seven years and two towns apart, and a third of the name, bassian-of-rostov-23-march, is drafted for the Greek 23 Μαρτίου with a death in 1481 — that one is the author question, because two Bassians of one town is what a doubled commemoration looks like.',
+  'προχοροσ prochorus-of-georgia prochorus-of-vranski prochorus-the-lebednik':
+    'three men. The new one is Prochorus of Georgia, dead 1066, kept on 12 Φεβρουαρίου; the other two are read in the el-02-10 entry for this name form.',
+  'companion plotinus saturninus plotinus-companion-of-saturninus saturninus-companion-of-plotinus':
+    'one line folded onto itself. saint.gr names Saturninus and Plotinus together on 12 Φεβρουαρίου and the synaxis ruling makes that two folders, each display name carrying the other.',
+  'μοδεστοσ modestus-companion-of-julian modestus-companion-of-zoticus':
+    'two men, and each is named on his page by the man he suffered with: the Modestus of 12 Φεβρουαρίου with Julian, and the Modestus of 12 Ιανουαρίου with Zoticus, Rogatus and Castulus, written in this wave. Two entries, one month apart, two companies.',
+  'μελετιοσ meletius-of-antioch meletius-of-kharkov meletius-of-lardos meletius-of-ryazan':
+    'four men. The new one is Meletius of Lardos, whom the Romanian calendar keeps on 12 februarie too; the corpus keeps Meletius of Antioch, whose day this also is, Meletius of Kharkov, and Meletius of Ryazan, written in this wave on 14 Ιανουαρίου.',
+  'μαρια maria-6-january mary-called-marinos mary-of-aza mary-sister-of-lykarion mary-wife-of-xenophon':
+    'five now. The new one is the Mary who lived as the monk Marinos, of the fifth or seventh century, kept on 12 Φεβρουαρίου with her father Eugenius; the others are read in the el-01-06 entry for this name form, with Mary the sister of Lykarion and Mary the wife of Xenophon, both upgraded in this wave.',
+  'ιουλιανοσ julian-companion-of-modestus julian-of-antinoopolis julian-of-emesa julian-of-kandavla julian-of-samosata julian-the-deacon-of-aegina':
+    'six now. The new one is the Julian of the 12 Φεβρουαρίου line with Modestus; the others are read in the el-01-08 entry for this name form, with Julian of Emesa and Julian of Samosata, both upgraded in this wave.',
+  'companion julian modestus julian-companion-of-modestus modestus-companion-of-julian':
+    'one line folded onto itself, the eighth of its kind in this wave. saint.gr names Julian and Modestus together on 12 Φεβρουαρίου and the synaxis ruling makes that two folders, each display name carrying the other.',
+  'ιωαννησ john-companion-of-hilarion-the-new john-companion-of-manuel john-mauropous john-of-edessa john-of-irenopolis john-of-kazan john-of-lycopolis john-of-spetses john-of-syracuse john-son-of-xenophon john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-sinaite-venerable-martyr':
+    'fourteen now. The new one is John the Sinaite, a venerable-martyr dead 1091, kept on 12 Φεβρουαρίου; the other thirteen are read in the el-02-10 entry for this name form.',
+  'ευγενιοσ eugene-of-trebizond eugene-son-of-paul-and-tatta eugenius-father-of-mary-called-marinos':
+    'three men. The new one is Eugenius, the father whose daughter lived as the monk Marinos, kept on 12 Φεβρουαρίου; the corpus keeps Eugene of Trebizond, upgraded in this wave on 21 Ιανουαρίου, and the son of Paul and Tatta.',
+  'αλεξιοσ alexis-of-moscow alexis-of-voronezh':
+    'two men. saint.gr keeps Alexis of Voronezh, dead 1930, on 12 Φεβρουαρίου — the day of Alexis of Moscow, whose own row the corpus already held. A metropolitan shot under the Soviets and the fourteenth-century metropolitan of Moscow, on one day and two entries.',
   'γεωργιοσ george-of-alikianos george-of-develtos george-of-kratovo george-of-megara george-of-vladimir george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian':
     'nine now. The new one is George of Kratovo, kept on 11 Φεβρουαρίου; the other eight are read in the el-02-07 entry for this name form.',
   'γαβριηλ gabriel-companion-of-sionios gabriel-of-georgia gabriel-of-lesnovo gabriel-of-novgorod-and-saint-petersburg gabriel-of-saint-stephens-jerusalem gabriel-the-martyr-2-february gabriel-vsevolod-of-novgorod':

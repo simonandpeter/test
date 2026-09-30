@@ -6,6 +6,11 @@
       "form": "Alexie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 februarie."
+    },
+    {
+      "form": "Αλέξιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Όσιος Αλέξιος ο Θαυματουργός Αρχιεπίσκοπος Μόσχας», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -50,8 +55,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Φεβρουαρίου — «Όσιος Αλέξιος ο Θαυματουργός Αρχιεπίσκοπος Μόσχας»",
+        "url": "https://www.saint.gr/02/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line calls him Όσιος and Αρχιεπίσκοπος Μόσχας, where this folder's types say metropolitan; his own page uses Μητροπολίτης throughout, so the line and the page disagree and neither is changed here. Its heading «(1300 - 1378)» gives a year of birth that does not sit with doxologia.ro's «vârsta lui era de 85 de ani» at death in 1378, which would put the birth about 1293; this folder's dates are left as the Romanian reading made them and the disagreement is recorded here. The same day keeps another Alexis, the hieromartyr bishop of Voronezh who died in 1930, and three men called Meletius; none is joined to him on the page."
     },
     {
       "church": "serbian",

@@ -6,6 +6,16 @@
       "form": "Meletie din Lardos",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 februarie."
+    },
+    {
+      "form": "Μελέτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Όσιος Μελέτιος ο εν Υψενή», with the rank word left off."
+    },
+    {
+      "form": "Εμμανουήλ",
+      "lang": "el",
+      "note": "His baptismal name, which saint.gr prints on his own page: «ονομάστηκε κατά το άγιο Βάπτισμα Εμμανουήλ», before the angelic habit and the renaming to Meletius."
     }
   ],
   "sex": "male",
@@ -45,8 +55,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Φεβρουαρίου — «Όσιος Μελέτιος ο εν Υψενή»",
+        "url": "https://www.saint.gr/02/12/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr gives the date of his canonisation: «Στην αγιοκατάταξη του Οσίου Μελετίου προχώρησε η Αγία και Ιερά Σύνοδος του Οικουμενικού Πατριαρχείου, κατά την συνεδρίαση της 27ης Νοεμβρίου 2013 μ.Χ.» — that is a glorification and not a feast. A Μεγαλυνάριον and an Οἶκος follow the hymns on the page and are not copied to this folder, the corpus having no kind for either. The same day keeps Meletius of Antioch and Meletius of Kharkov, who are other men."
     },
     {
       "church": "serbian",
@@ -56,5 +76,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α΄.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τὸν φωστῆρα τῆς Λάρδου, Ῥοδονήσου τὸ καύχημα, καὶ τῆς Ὑψενῆς τοῦ σεμνείου, θεοφόρον δομήτορα, Μελέτιον τιμήσωμεν πιστοί, ὡς σκεῦος οὐρανίων ἀρετῶν· πρυτανεύει γὰρ θαυμάτων τὰς δωρεάς, τοῖς πόθῳ ἀναβοῶσι· Δόξα τῷ σέ δοξάσαντι Χριστῷ, δόξα τῷ σὲ θαυμαστώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ, πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος α΄, Τῆς ἐρήμου πολίτης, on the page of Όσιος Μελέτιος ο εν Υψενή",
+        "url": "https://www.saint.gr/4181/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful honour Meletius, the light-giver of Lardos, the boast of the isle of Rhodes and the God-bearing builder of the holy house of Ypseni, as a vessel of heavenly virtues; for he dispenses the gifts of miracles to those who cry out with longing: glory to Christ who glorified thee, glory to him who made thee wonderful, glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ΄.",
+      "model": "Τῇ Ὑπερμάχῳ.",
+      "text": "῾Ως βιοτῆς ἀσκητικῆς ῥόδον μυρίπνοον, καὶ ἀρετῶν θεοειδῶν σκεῦος πολύτιμον, εὐφημοῦμέν σε Μελέτιε γηθοσύνως. Ἀλλ᾿ ὡς ἔχων παῤῥησίαν πρὸς τὸν Κύριον, ἐκ παντοίων συμφορῶν ἡμᾶς διάσωσον, τοὺς βοῶντάς σοι· Χαίροις Πάτερ ἰσάγγελε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος πλ. δ΄, Τῇ Ὑπερμάχῳ, on the page of Όσιος Μελέτιος ο εν Υψενή. A Μεγαλυνάριον and an Οἶκος follow it on the page and are not copied here.",
+        "url": "https://www.saint.gr/4181/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a sweet-breathing rose of the ascetic life and a most precious vessel of godlike virtues, we praise thee joyfully, O Meletius. But as one having boldness before the Lord, save us from every kind of calamity, who cry to thee: rejoice, father equal to the angels.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

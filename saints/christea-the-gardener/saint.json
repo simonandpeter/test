@@ -6,6 +6,11 @@
       "form": "Hristea",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 februarie."
+    },
+    {
+      "form": "Χρήστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Άγιος Χρήστος ο Κηπουρός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -60,8 +65,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Φεβρουαρίου — «Άγιος Χρήστος ο Κηπουρός»",
+        "url": "https://www.saint.gr/02/12/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr heads him «(; - 1748)» and gives the day of the martyrdom as 12 February 1748 at Constantinople, so the Greek feast is the day of death. It also names the man who wrote the account: the learned Caesarius Dapontes, who was in the same prison and watched the tortures."
     },
     {
       "church": "serbian",

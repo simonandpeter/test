@@ -1,0 +1,59 @@
+{
+  "slug": "john-the-sinaite-venerable-martyr",
+  "display_name": "John the Sinaite",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Άγιος Ιωάννης ο Σιναΐτης ο Οσιομάρτυρας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Φεβρουαρίου — «Άγιος Ιωάννης ο Σιναΐτης ο Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/02/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The page prints no life beyond the year: «Δεν έχουμε περισσότερες λεπτομέρειες για τον Βίο του Αγίου». The epithet ο Σιναΐτης and the year 1091 are what tell him apart, and he is not John of the Ladder, whom this corpus keeps on 30 March, nor Gregory of Sinai, nor Anastasius the Sinaite."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1091,
+      "latest": 1091,
+      "display": "1091",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ιωάννης μαρτύρησε το έτος 1091 μ.Χ.», and its heading for him, «(; - 1091)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

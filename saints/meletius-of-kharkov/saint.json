@@ -1,0 +1,68 @@
+{
+  "slug": "meletius-of-kharkov",
+  "display_name": "Meletius of Kharkov",
+  "names": [
+    {
+      "form": "Μελέτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Όσιος Μελέτιος Επίσκοπος Χαρκώβ», with the rank word left off. The page gives his civil name too: «κατά κόσμο Μιχαήλ Ιβάνοβιτς Λεοντόβιτς»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop of Chigirinsk",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Φεβρουαρίου — «Όσιος Μελέτιος Επίσκοπος Χαρκώβ»",
+        "url": "https://www.saint.gr/02/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The page closes with a second day: «Η Εκκλησία τιμά την μνήμη του και στις 28 Φεβρουαρίου» — his memory is honoured also on 28 February. One attestation row is one feast, so the row records the day read and the second day stands here as a note. The day's line calls him bishop of Kharkov, where he was buried; the page says he was elected bishop of Chigirinsk of Kiev, and `office` follows the page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1784,
+      "latest": 1784,
+      "display": "6 November 1784",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε στις 6 Νοεμβρίου 1784 μ.Χ. στη Ρωσία», and its heading «(1784 - 1840)»."
+    },
+    "death": {
+      "earliest": 1840,
+      "latest": 1840,
+      "display": "1840",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him, «Οσιος Μελετιος Επισκοπος Χαρκωβ (1784 - 1840)». The body of the page says only «Κοιμήθηκε με ειρήνη» without repeating the year."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

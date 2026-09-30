@@ -1,0 +1,53 @@
+{
+  "slug": "eugenius-father-of-mary-called-marinos",
+  "display_name": "Eugenius, father of Mary called Marinos",
+  "names": [
+    {
+      "form": "Ευγένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Όσιος Ευγένιος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Φεβρουαρίου — «Όσιος Ευγένιος»",
+        "url": "https://www.saint.gr/02/12/index.aspx",
+        "year": 2026
+      },
+      "note": "His page prints no life: «Δεν έχουμε λεπτομέρειες για τον βίου του Οσίου». He is kept for his daughter's sake, and the only fact about him anywhere on the day — that he had been left a widower and fled to a monastery with her — is on her page and not his."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "mary-called-marinos"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

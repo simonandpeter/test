@@ -779,6 +779,7 @@ export const el = {
     'Bishop of Cetatea Albă-Ismail': 'Επίσκοπος Τσετάτεα Άλμπα-Ισμαήλ',
     'Bishop of Catania': 'Επίσκοπος Κατάνης',
     'Bishop of Chernigov': 'Επίσκοπος Τσερνίγκοφ',
+    'Bishop of Chigirinsk': 'Επίσκοπος Τσιγκιρίνσκ',
     'Bishop of Chytri in Cyprus': 'Επίσκοπος Χύτρων Κύπρου',
     'Bishop of Comana': 'Επίσκοπος Κομάνων',
     'Bishop of Constantia in Cyprus': 'Επίσκοπος Κωνσταντίας της Κύπρου',

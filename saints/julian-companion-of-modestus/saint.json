@@ -1,0 +1,53 @@
+{
+  "slug": "julian-companion-of-modestus",
+  "display_name": "Julian, companion of Modestus",
+  "names": [
+    {
+      "form": "Ιουλιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Άγιοι Ιουλιανός και Μόδεστος οι Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Φεβρουαρίου — «Άγιοι Ιουλιανός και Μόδεστος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/02/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The two share one page, which prints no life: «Οι Άγιοι Μάρτυρες Ιουλιανός και Μόδεστος μαρτύρησαν στην Καρθαγένη. Δεν έχουμε περισσότερες λεπτομέρειες για τον βίο των Αγίων». The same day keeps another pair martyred at Carthage, Plotinus and Saturninus, on a separate page and with a different spelling of the city, Καρχηδόνα; nothing on either page joins the four."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "modestus-companion-of-julian"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

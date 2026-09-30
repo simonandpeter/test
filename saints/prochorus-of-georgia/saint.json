@@ -1,0 +1,60 @@
+{
+  "slug": "prochorus-of-georgia",
+  "display_name": "Prochorus of Georgia",
+  "names": [
+    {
+      "form": "Πρόχορος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Όσιος Πρόχορος εκ Γεωργίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Φεβρουαρίου — «Όσιος Πρόχορος εκ Γεωργίας»",
+        "url": "https://www.saint.gr/02/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line gives him only «εκ Γεωργίας», from Georgia, which is the nation of the monks among whom he lived rather than a place he is said to have come from; his page puts his whole life at Jerusalem. He is not the deacon Prochorus of the Seventy, nor Prochorus of Vranski, whom this corpus already keeps."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1066,
+      "latest": 1066,
+      "display": "1066",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε οσίως με ειρήνη το έτος 1066 μ.Χ.», and its heading for him, «(; - 1066)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

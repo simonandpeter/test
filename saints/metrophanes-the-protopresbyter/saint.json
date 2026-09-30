@@ -1,0 +1,61 @@
+{
+  "slug": "metrophanes-the-protopresbyter",
+  "display_name": "Metrophanes (12 February)",
+  "names": [
+    {
+      "form": "Μητροφάνης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Άγιος Μητροφάνης ο Ιερομάρτυρας εκ Ρωσίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Φεβρουαρίου — «Άγιος Μητροφάνης ο Ιερομάρτυρας εκ Ρωσίας»",
+        "url": "https://www.saint.gr/02/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The page prints no life beyond the rank and the year: «ήταν πρωτοπρεσβύτερος και μαρτύρησε το έτος 1931 μ.Χ. Δεν έχουμε περισσότερες λεπτομέρειες». It gives him no city and no see, so the year is what tells him apart; he is neither Mitrophan of Voronezh nor Mitrophan of Constantinople."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1931,
+      "latest": 1931,
+      "display": "1931",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε το έτος 1931 μ.Χ.», and its heading for him, «(; - 1931)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

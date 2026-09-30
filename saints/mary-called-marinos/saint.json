@@ -1,0 +1,62 @@
+{
+  "slug": "mary-called-marinos",
+  "display_name": "Mary, called Marinos",
+  "names": [
+    {
+      "form": "Μαρία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Οσία Μαρία η μετονομασθείς Μαρίνος», with the rank word left off. The page prints the second name in the same line, «η μετονομασθείς Μαρίνος», the one renamed Marinos."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Φεβρουαρίου — «Οσία Μαρία η μετονομασθείς Μαρίνος»",
+        "url": "https://www.saint.gr/02/12/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr calls her story «ιερός θρύλος», a sacred legend, and gives two incompatible readings of her century and country — the fifth in northern Lebanon on the Maronite tradition, the seventh in Egypt — without choosing between them. Her father Eugenius is kept on the same day on a page of his own."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 700,
+      "display": "5th or 7th century",
+      "basis": "unknown",
+      "note": "The interval is saint.gr's own disagreement, not a finding: «θεωρούν ότι έζησε τον 5ο αιώνα μ.Χ., με βάση ουσιαστικά τη Μαρωνιτική παράδοση… και άλλοι τον 7ο αιώνα μ.Χ. και σε Αιγυπτιακή περιοχή». The page argues for neither."
+    }
+  },
+  "related": [
+    "eugenius-father-of-mary-called-marinos"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

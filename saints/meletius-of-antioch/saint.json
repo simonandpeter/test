@@ -6,6 +6,11 @@
       "form": "Meletie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 februarie."
+    },
+    {
+      "form": "Μελέτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Άγιος Μελέτιος Αρχιεπίσκοπος Αντιοχείας», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -19,7 +24,8 @@
     "john-chrysostom",
     "babylas-of-antioch",
     "symeon-the-stylite",
-    "gregory-the-theologian"
+    "gregory-the-theologian",
+    "gregory-of-nyssa"
   ],
   "attestations": [
     {
@@ -43,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Φεβρουαρίου — «Άγιος Μελέτιος Αρχιεπίσκοπος Αντιοχείας»",
+        "url": "https://www.saint.gr/02/12/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr heads him «(; - 381)» and gives a dense chronology: born about 310 at Melitene, bishop of Sebaste 358, patriarch of Antioch 360, exiled three times, back in 379, president of the Second Ecumenical Council in 381, dead of illness before its sessions closed. Its second kontakion has him put the apostate Macedonius to flight, which its own life never mentions."
     },
     {
       "church": "serbian",
@@ -54,5 +70,73 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 310,
+      "latest": 310,
+      "display": "about 310",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε περί το 310 μ.Χ. στην Μελιτηνή της Μικράς Αρμενίας». The page's own «περί», about, is the whole of its precision."
+    },
+    "death": {
+      "earliest": 381,
+      "latest": 381,
+      "display": "381",
+      "basis": "traditional",
+      "note": "saint.gr's heading «(; - 381)», with the life: he was called to preside at the Second Ecumenical Council, summoned to Constantinople in 381, and «εκοιμήθηκε λόγω ασθενείας, πριν ολοκληρωθούν οι εργασίες της Συνόδου»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας Πίστεως.",
+      "text": "Νόμον ἔνθεον, ἐμμελετήσας, τὴν οὐράνιον, γνῶσιν ἐκλάμπεις, τὴ Ἐκκλησία Ἱεράρχα Μελέτιε, τὴν γὰρ Τριάδα κηρύττων ὁμότιμον, αἱρετικῶν διαλύεις τᾶς φάλαγγας. Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας Πίστεως, the first of two the page prints, on the page of Άγιος Μελέτιος Αρχιεπίσκοπος Αντιοχείας. The itacisms are the page's own; the hymn plays on his name, μελετῶ, to study.",
+        "url": "https://www.saint.gr/1227/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having studied the law that is of God, thou dost shine out heavenly knowledge upon the Church, O hierarch Meletius; for preaching the Trinity equal in honour, thou dost break up the phalanxes of the heretics. O venerable father, entreat Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’",
+      "text": "Κανόνα πίστεως, καὶ εἰκόνα πραότητος, ἐγκρατείας διδάσκαλον, ἀνέδειξε σε τῇ ποίμνῃ σου, ἡ τῶν πραγμάτων ἀλήθεια· διὰ τοῦτο ἐκτήσω τῇ ταπεινώσει τὰ ὑψηλά, τῇ πτωχείᾳ τὰ πλούσια. Πάτερ Ἱεράρχα Μελέτιε, πρέσβευε Χριστῷ τῷ θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος α’, the second of two the page prints, on the page of Άγιος Μελέτιος Αρχιεπίσκοπος Αντιοχείας. It is the common of a hierarch, with his name in the last clause.",
+        "url": "https://www.saint.gr/1227/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A rule of faith and an image of gentleness, a teacher of temperance, the truth of things declared thee to thy flock; therefore thou didst gain the heights by humility and riches by poverty. Father and hierarch Meletius, intercede with Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τοὶς τῶν αἱμάτων σου ρείθροις.",
+      "text": "Ὀρθοδοξίας τοὶς τρόποις κοσμούμενος, τῆς Ἐκκλησίας προστάτης καὶ πρόβολος, ἐδείχθης παμμάκαρ Μελέτιε, καταπυρσεύων τὰ πέρατα δόγμασι, λαμπτὴρ Ἐκκλησίας φαεινότατε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος β’, Τοὶς τῶν αἱμάτων σου ρείθροις, the first of two the page prints, on the page of Άγιος Μελέτιος Αρχιεπίσκοπος Αντιοχείας",
+        "url": "https://www.saint.gr/1227/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with the ways of orthodoxy, thou wast shown to be the Church's champion and bulwark, O all-blessed Meletius, setting the ends of the earth alight with doctrine — most shining lamp of the Church.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

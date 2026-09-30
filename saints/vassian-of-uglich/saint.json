@@ -1,0 +1,60 @@
+{
+  "slug": "vassian-of-uglich",
+  "display_name": "Vassian of Uglich",
+  "names": [
+    {
+      "form": "Βασιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Άγιος Βασιανός του Ούγκλιχ», with the rank word left off. The see-name «του Ούγκλιχ» is left off the form and kept in the slug."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Φεβρουαρίου — «Άγιος Βασιανός του Ούγκλιχ»",
+        "url": "https://www.saint.gr/02/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's line gives him the epithet «του Ούγκλιχ» and his page a village, a district, an age and a year. The corpus's existing `bassian-the-venerable` is a bare Romanian line on 10 October with no place and no year; this man is the specified one and the day is not the same, but the two names fold together and a reader should know it."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1509,
+      "latest": 1509,
+      "display": "1509",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1509 μ.Χ.», and its heading for him, «(; - 1509)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

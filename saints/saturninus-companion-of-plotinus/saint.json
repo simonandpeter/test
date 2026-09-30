@@ -1,0 +1,53 @@
+{
+  "slug": "saturninus-companion-of-plotinus",
+  "display_name": "Saturninus, companion of Plotinus",
+  "names": [
+    {
+      "form": "Σατορνίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Άγιοι Πλωτίνος και Σατορνίνος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Φεβρουαρίου — «Άγιοι Πλωτίνος και Σατορνίνος»",
+        "url": "https://www.saint.gr/02/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The two share one page and one distich, and the page prints one sentence of life: «Οι Άγιοι Πλωτίνος και Σατορνίνος μαρτύρησαν δια ξίφους στην Καρχηδόνα». Its distich spells the first name «Πλουτίνου» where the line has Πλωτίνος; the name form here follows the day's line. No year is given."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "plotinus-companion-of-saturninus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

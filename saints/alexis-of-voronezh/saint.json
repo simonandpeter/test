@@ -1,0 +1,62 @@
+{
+  "slug": "alexis-of-voronezh",
+  "display_name": "Alexis of Voronezh",
+  "names": [
+    {
+      "form": "Αλέξιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Άγιος Αλέξιος ο Ιερομάρτυρας Επίσκοπος Βορονέζ», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop",
+    "new-martyr"
+  ],
+  "office": "Bishop of Voronezh",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Φεβρουαρίου — «Άγιος Αλέξιος ο Ιερομάρτυρας Επίσκοπος Βορονέζ»",
+        "url": "https://www.saint.gr/02/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The page prints no life beyond the year: «Δεν έχουμε περισσότερες λεπτομέρειες για τον Βίο του Αγίου». He is not Mitrophan of Voronezh, the seventeenth-century bishop of that see whom this corpus keeps, and nothing on the page joins them."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1930,
+      "latest": 1930,
+      "display": "1930",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτήρησε το έτος 1930 μ.Χ.», and its heading for him, «(; - 1930)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
