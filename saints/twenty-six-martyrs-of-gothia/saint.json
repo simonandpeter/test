@@ -6,6 +6,11 @@
       "form": "Cei 26 de Mucenici din Goția/Dacia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 martie, «Sfinții 26 de Mucenici din Goția/Dacia»."
+    },
+    {
+      "form": "Είκοσι Έξι Μάρτυρες οι εν Γοτθία μαρτυρήσαντες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαρτίου, «Άγιοι Είκοσι Έξι Μάρτυρες οι εν Γοτθία μαρτυρήσαντες», with the rank word left off."
     }
   ],
   "sex": "unknown",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαρτίου — «Άγιοι Είκοσι Έξι Μάρτυρες οι εν Γοτθία μαρτυρήσαντες»",
+        "url": "https://www.saint.gr/03/26/index.aspx",
+        "year": 2026
+      },
+      "note": "Unlike doxologia.ro, saint.gr names all twenty-six, twice over: once in its list of the saints commemorated and again in a closing paragraph that sorts them into two presbyters with the two sons and three daughters of one of them, a monk, eleven laymen and seven women, and offers a variant spelling for nine of the names. The two lists agree with each other and with the number. The page puts the martyrdom «μεταξύ των ετών 375 - 383 μ.Χ.», under the Gothic king Iungourichos and the emperor Gratian, and gives no hymn. Whether an enumerated company of twenty-six should be twenty-six folders under `docs/CORPUS.md` §10.1 is not a reader's decision and is left open; this row records the Greek day on the one folder that exists."
     },
     {
       "church": "serbian",
@@ -45,5 +60,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 375,
+      "latest": 383,
+      "display": "375–383",
+      "basis": "traditional",
+      "note": "saint.gr: «Το μαρτύριό τους συνέβη μεταξύ των ετών 375 - 383 μ.Χ.», and it puts them «κατά τους χρόνους του βασιλέως των Γότθων Ιουγγουρίχου και του αυτοκράτορα Γρατιανού (375 - 383 μ.Χ.)» — the years the page gives are the reign it names, not a year of death."
+    }
   }
 }

@@ -1,0 +1,62 @@
+{
+  "slug": "basil-the-new-of-latros",
+  "display_name": "Basil the New of Latros",
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαρτίου, «Όσιος Βασίλειος ο Νέος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαρτίου — «Όσιος Βασίλειος ο Νέος»",
+        "url": "https://www.saint.gr/03/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives three facts and no more: that he was the brother of the venerable Paul «ἐν τῷ Λάτρῳ», whose memory it puts on 15 December; that he practised ascesis on Mount Latros; and that he fell asleep in peace «το έτος 944 ή 952 μ.Χ.», in 944 or 952. It prints no hymn. The Greek calendar also keeps a Basil the New at Constantinople, and this page's Basil the New is identified only by Latros and by his brother."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 944,
+      "latest": 952,
+      "display": "944 or 952",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 944 ή 952 μ.Χ.» The page offers the two years and does not choose between them, so the interval keeps both."
+    }
+  },
+  "related": [
+    "paul-of-latros"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

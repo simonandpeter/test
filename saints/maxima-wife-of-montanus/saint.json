@@ -6,6 +6,11 @@
       "form": "Maxima",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 martie, «Sfânta Muceniţă Maxima, soţia Sfântului Mucenic Montanus, preotul»."
+    },
+    {
+      "form": "Μαξίμη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαρτίου, «Άγιοι Μοντανός ο Ιερομάρτυρας και Μαξίμη η σύζυγός του», with the rank word left off. The page's own Greek form of her name is Μαξίμη and not Μαξίμα."
     }
   ],
   "sex": "female",
@@ -57,8 +62,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαρτίου — «Άγιοι Μοντανός ο Ιερομάρτυρας και Μαξίμη η σύζυγός του»",
+        "url": "https://www.saint.gr/03/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads both «(; - 304)» and names her only as the wife of Montanus, «Μαξίμη η σύζυγός του». It puts the martyrdom under Diocletian, names the governor Probus, and has the two of them drowned in the river Savus with a stone tied to the neck of each. It gives no hymn."
     },
     {
       "church": "serbian",

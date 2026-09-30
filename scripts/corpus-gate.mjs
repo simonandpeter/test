@@ -115,6 +115,36 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεκλα thecla-of-alexandria thecla-of-aza thekla-companion-of-peter':
+    'Three women: Alexandria on 6 September, Aza on 26 September and the companion of Peter on 26 March.',
+  'πετροσ peter-abesalamites peter-companion-of-aphrodisius peter-companion-of-leucius peter-companion-of-manuel peter-companion-of-marcian peter-disciple-of-dionysius-of-alexandria peter-of-bulgaria peter-of-capitolias peter-of-damascus peter-of-galatia peter-of-kazan peter-of-monevata peter-of-sebaste peter-of-tobolsk peter-son-of-john-of-syracuse peter-the-egyptian peter-the-gaoler peter-the-peloponnesian peter-the-sign-bearer':
+    'Nineteen now. The new one is the companion of Marcian on 26 March; the others are read in the el-03-24 entry for this name form.',
+  'μαρκιανοσ marcian-companion-of-peter marcian-of-constantinople marcian-of-cyrrhus marcian-the-emperor':
+    'Four men: the companion of Peter on 26 March, Constantinople on 10 January, Cyrrhus on 18 January and the emperor on 17 February.',
+  'companion marcian peter marcian-companion-of-peter peter-companion-of-marcian':
+    'Two of the company the 26 March page names together, each named after the other, which is what folds them.',
+  'ιωαννησ john-companion-of-barouchius john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-peter john-disciple-of-limnaeus john-iii-scholasticus john-kalfas john-koulakiotis john-mauropous john-of-beverley john-of-edessa john-of-irenopolis john-of-kazan john-of-lycopolis john-of-rouphinianai john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-yuryevets john-son-of-xenophon john-the-bulgarian john-the-hut-dweller john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-sinaite-venerable-martyr':
+    'Twenty-five now. The new one is the companion of Peter on 26 March; the others are read in the el-03-16 entry for this name form.',
+  'κασσιανοσ cassian-companion-of-peter cassian-of-axylou cassian-of-bosoi john-cassian':
+    'Four men: the companion of Peter on 26 March, Axylou on 6 October, Bosoi on 11 February, and John Cassian, whom the Romanian keeps on 29 februarie and the Greek on 28 Φεβρουαρίου.',
+  'θεοδοσιοσ theodosius-companion-of-paisius theodosius-of-antioch theodosius-of-chernigov theodosius-of-the-east theodosius-of-the-kyiv-caves theodosius-of-totma theodosius-of-trebizond theodosius-of-triglia theodosius-the-cenobiarch':
+    'Nine now. The new one is Theodosius of the East on 26 March; the others are read in the el-01-11 entry for this name form.',
+  'θεοδωροσ theodore-companion-of-stephen theodore-founder-of-chora theodore-of-kandavla theodore-of-moscow theodore-of-novgorod theodore-of-pentapolis theodore-of-tamasos theodore-of-tomsk theodore-prince-of-yaroslavl theodore-stratelates theodore-the-byzantine theodore-the-envoy-of-nicomedia theodore-the-recruit theodore-the-silent':
+    'Fourteen now. The new one is Theodore of Pentapolis on 26 March; the others are read in the el-02-17 entry for this name form.',
+  'σεραπιων serapion-disciple-of-cronides serapion-of-alexandria serapion-of-pentapolis serapion-venerable-21-march':
+    'Four men on four Greek days: the disciple of Cronides on 13 September, Alexandria on 28 February, Pentapolis on 26 March and the venerable of 21 March.',
+  'μανουηλ manuel-of-adrianople manuel-of-sphakia manuel-of-the-east':
+    'Three men: Adrianople on 22 January, Sphakia on 15 March and Manuel of the East on 26 March.',
+  'γεωργιοσ george-konissky george-of-alikianos george-of-amastris george-of-develtos george-of-diipion george-of-kratovo george-of-megara george-of-rapsani george-of-sofia george-of-vladimir george-paizanos-of-mytilene george-the-chozebite george-the-hungarian george-the-iberian-2-january george-the-persian george-the-sinaite':
+    'Sixteen now. The new one is George of Sofia on 26 March; the others are read in the el-03-11 entry for this name form.',
+  'ευτυχιοσ eutychius-27-march eutychius-companion-of-bassus eutychius-of-mesopotamia eutychius-of-the-forty-martyrs eutychius-the-subdeacon':
+    'Five men on five Greek days: 27 March, the companion of Bassus on 20 January, Mesopotamia on 14 March, one of the Forty on 9 March and the subdeacon on 26 March.',
+  'κοδρατοσ codratus-the-executioner quadratus-of-corinth quadratus-of-the-east':
+    'Three men: the executioner of 4 March, Quadratus of Corinth on 10 March and Quadratus of the East on 26 March.',
+  'βασιλειοσ basil-companion-of-euphrasius basil-martyr-6-february basil-of-ancyra basil-of-mangazeya basil-of-mirozh basil-of-novgorod basil-of-rostov basil-of-thessalonica basil-the-confessor basil-the-new-of-latros basil-uncle-of-eustratius':
+    'Eleven now. The new one is Basil the New of Latros on 26 March; the others are read in the el-03-22 entry for this name form, where 22 March keeps Ancyra and Mangazeya as two lines.',
+  'αμμωνιοσ ammonius-10-january ammonius-of-pentapolis':
+    'Two men: the Ammonius of 10 January and Ammonius of Pentapolis on 26 March.',
   'τιμων timon-of-nadeyev timon-the-hermit':
     'Two men: Nadeyev on 21 January and the hermit on 25 March.',
   'θεοδοσια theodora-of-amisos theodosia-of-caesarea-in-palestine':

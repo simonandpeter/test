@@ -1,0 +1,54 @@
+{
+  "slug": "forty-martyrs-of-the-east",
+  "display_name": "The Forty Martyrs of the East",
+  "names": [
+    {
+      "form": "Τεσσαράκοντα Μάρτυρες από την Ανατολή",
+      "lang": "el",
+      "note": "Read out of saint.gr's own heading for the entry on the life page for 26 Μαρτίου, «Αγιοι Τεσσαρακοντα Μαρτυρες Απο Την Ανατολη», with the rank word left off."
+    }
+  ],
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαρτίου — «Άγιοι Κοδράτος, Θεοδόσιος, Μανουήλ και άλλοι Τεσσαράκοντα μάρτυρες από την Ανατολή»",
+        "url": "https://www.saint.gr/03/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The page carries them as an entry of their own, «Αγιοι Τεσσαρακοντα Μαρτυρες Απο Την Ανατολη», with a distich of their own, and it names not one of the forty. It gives no year and no hymn. One folder, because the source enumerates nobody: it is a company and not a list."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "quadratus-of-the-east",
+    "theodosius-of-the-east",
+    "manuel-of-the-east"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

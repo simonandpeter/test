@@ -1,0 +1,59 @@
+{
+  "slug": "george-of-sofia",
+  "display_name": "George of Sofia",
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαρτίου, «Άγιος Γεώργιος από τη Σόφια της Βουλγαρίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαρτίου — «Άγιος Γεώργιος από τη Σόφια της Βουλγαρίας»",
+        "url": "https://www.saint.gr/03/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 1437)» and dates the burning exactly: «τη Μεγάλη Τρίτη στις 26 Μαρτίου 1437 μ.Χ., τον έκαψαν ζωντανό σε ηλικία 30 ετών» — on Great Tuesday, 26 March 1437, they burned him alive at the age of thirty. It puts the confession at Adrianople in Thrace, at a Turkish bowyer's, and gives no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1437,
+      "latest": 1437,
+      "display": "1437",
+      "basis": "attested",
+      "note": "saint.gr: «Τελικά τη Μεγάλη Τρίτη στις 26 Μαρτίου 1437 μ.Χ., τον έκαψαν ζωντανό σε ηλικία 30 ετών», and the page heads him «(; - 1437)». It gives no year of birth; the age of thirty is the page's and is not turned into one here."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

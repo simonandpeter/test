@@ -6,6 +6,11 @@
       "form": "Ștefan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 martie, «Sfântul Cuvios Ștefan, făcătorul de minuni»."
+    },
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαρτίου, «Όσιος Στέφανος ο Ομολογητής, ηγούμενος Τριγλίας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαρτίου — «Όσιος Στέφανος ο Ομολογητής, ηγούμενος Τριγλίας»",
+        "url": "https://www.saint.gr/03/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The Greek calendar keeps him on 26 March, two days before the Romanian 28 martie already recorded on this folder; saint.gr's own page repeats 26 March as its «Ημερομηνία Εορτής» and marks the feast «Σταθερή», fixed. The page agrees with doxologia on the man — abbot of Triglia under Leo the Armenian, 813 to 820, imprisoned and exiled for the icons, dead in exile — and adds that he left the monastery and went down into the city to strengthen the persecuted. It prints no hymn."
     },
     {
       "church": "serbian",

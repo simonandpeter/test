@@ -1,0 +1,64 @@
+{
+  "slug": "theodore-of-pentapolis",
+  "display_name": "Theodore of Pentapolis",
+  "names": [
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαρτίου, «Άγιοι Θεόδωρος ο Ιερομάρτυρας, Ειρηναίος ο Διάκονος, Σεραπίων και Αμμώνιος οι αναγνώστες», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαρτίου — «Άγιοι Θεόδωρος ο Ιερομάρτυρας, Ειρηναίος ο Διάκονος, Σεραπίων και Αμμώνιος οι αναγνώστες»",
+        "url": "https://www.saint.gr/03/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads all four «(; - 304)» and gives one sentence: «Ο Άγιος Ιερομάρτυς Θεόδωρος μαρτύρησε το έτος 304 μ.Χ. στην Πεντάπολη της Λιβύης μετά του Διακόνου του Ειρηναίου και των αναγνωστών Σεραπίωνος και Αμμωνίου.» It gives no manner of death and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ιερομάρτυς Θεόδωρος μαρτύρησε το έτος 304 μ.Χ. στην Πεντάπολη της Λιβύης», and the page heads him «(; - 304)», leaving the year of his birth a question mark."
+    }
+  },
+  "related": [
+    "irenaeus-of-pentapolis",
+    "serapion-of-pentapolis",
+    "ammonius-of-pentapolis"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

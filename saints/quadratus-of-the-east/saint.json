@@ -1,0 +1,55 @@
+{
+  "slug": "quadratus-of-the-east",
+  "display_name": "Quadratus of the East",
+  "names": [
+    {
+      "form": "Κοδράτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαρτίου, «Άγιοι Κοδράτος, Θεοδόσιος, Μανουήλ και άλλοι Τεσσαράκοντα μάρτυρες από την Ανατολή», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαρτίου — «Άγιοι Κοδράτος, Θεοδόσιος, Μανουήλ και άλλοι Τεσσαράκοντα μάρτυρες από την Ανατολή»",
+        "url": "https://www.saint.gr/03/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The page lists him with Theodosius, Manuel and the forty on one life page, https://www.saint.gr/3861/saint.aspx, whose «Ημερομηνία Εορτής» is the same 26 March and whose feast it marks «Σταθερή», fixed. It heads him with no years at all, prints a separate distich for him, and gives no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "theodosius-of-the-east",
+    "manuel-of-the-east",
+    "forty-martyrs-of-the-east"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

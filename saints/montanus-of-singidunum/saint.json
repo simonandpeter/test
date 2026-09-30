@@ -7,6 +7,11 @@
       "form": "Montanus",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 martie, «Sfântul Mucenic Montanus, preotul»."
+    },
+    {
+      "form": "Μοντανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαρτίου, «Άγιοι Μοντανός ο Ιερομάρτυρας και Μαξίμη η σύζυγός του», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -59,8 +64,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαρτίου — «Άγιοι Μοντανός ο Ιερομάρτυρας και Μαξίμη η σύζυγός του»",
+        "url": "https://www.saint.gr/03/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads both «(; - 304)», puts the martyrdom under Diocletian, has him leave Singidunum for Sirmium when the persecution began, and names the governor of Lower Pannonia who tried him, Probus. It calls him πρεσβύτερος and ἱερομάρτυς and gives no hymn."
     },
     {
       "church": "serbian",

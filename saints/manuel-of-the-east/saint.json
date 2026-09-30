@@ -1,0 +1,55 @@
+{
+  "slug": "manuel-of-the-east",
+  "display_name": "Manuel of the East",
+  "names": [
+    {
+      "form": "Μανουήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαρτίου, «Άγιοι Κοδράτος, Θεοδόσιος, Μανουήλ και άλλοι Τεσσαράκοντα μάρτυρες από την Ανατολή», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαρτίου — «Άγιοι Κοδράτος, Θεοδόσιος, Μανουήλ και άλλοι Τεσσαράκοντα μάρτυρες από την Ανατολή»",
+        "url": "https://www.saint.gr/03/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The page names him third in the company, heads him with no years, prints a distich of his own — which does not construe as it stands, and is left as the page has it — and gives no hymn. Its «Ημερομηνία Εορτής» is the same 26 March."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "quadratus-of-the-east",
+    "theodosius-of-the-east",
+    "forty-martyrs-of-the-east"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

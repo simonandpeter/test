@@ -1,0 +1,56 @@
+{
+  "slug": "marcian-companion-of-peter",
+  "display_name": "Marcian, companion of Peter",
+  "names": [
+    {
+      "form": "Μαρκιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαρτίου, «Άγιοι Πέτρος, Μαρκιανός, Ιωάννης, Θέκλα, Κασσιανός οι Μάρτυρες και οι συν αυτών μαρτυρήσαντες», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαρτίου — «Άγιοι Πέτρος, Μαρκιανός, Ιωάννης, Θέκλα, Κασσιανός οι Μάρτυρες και οι συν αυτών μαρτυρήσαντες»",
+        "url": "https://www.saint.gr/03/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The page gives the five of them two sentences and no years at all: martyrdom at Rome, and «Δεν έχουμε περισσότερες λεπτομέρειες για τον βίο και το μαρτύριο των Αγίων». It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "peter-companion-of-marcian",
+    "john-companion-of-peter",
+    "thekla-companion-of-peter",
+    "cassian-companion-of-peter"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

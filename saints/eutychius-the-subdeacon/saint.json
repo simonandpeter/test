@@ -1,0 +1,62 @@
+{
+  "slug": "eutychius-the-subdeacon",
+  "display_name": "Eutychius the Subdeacon",
+  "names": [
+    {
+      "form": "Ευτύχιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Μαρτίου, «Άγιος Ευτύχιος ο Μάρτυρας ο υποδιάκονος», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Μαρτίου — «Άγιος Ευτύχιος ο Μάρτυρας ο υποδιάκονος»",
+        "url": "https://www.saint.gr/03/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The page heads him «(; - 356)» and gives one sentence: subdeacon in the church of the Alexandrians, champion of the dogmas of the First Council of Nicaea, greatly honoured by Athanasius the Great, martyred by the Arian heretics and by the heretical bishop George in the year 356. It prints no hymn. The corpus has no `types` slug for a subdeacon, so the office is said in the life."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 356,
+      "latest": 356,
+      "display": "356",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε από τους αιρετικούς Αρειανούς και τον αιρετικό Επίσκοπο Γεώγιο το έτος 356 μ.Χ.», and the page heads him «(; - 356)», leaving the year of his birth a question mark."
+    }
+  },
+  "related": [
+    "athanasius-of-alexandria"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
