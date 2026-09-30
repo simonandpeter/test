@@ -6,6 +6,11 @@
       "form": "Valerie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 aprilie, «Sfântul Mucenic Valerie»."
+    },
+    {
+      "form": "Ουαλέριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Απριλίου, «Άγιος Ουαλέριος ο Μάρτυρας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 23 Απριλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Απριλίου — «Άγιος Ουαλέριος ο Μάρτυρας»",
+        "url": "https://www.saint.gr/04/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Απριλίου εκάστου έτους», the same day as the listing and the same day the Romanian calendar keeps him. The whole body of the page is one sentence: «Ο Άγιος Μάρτυς Ουαλέριος τελειώθηκε διά ξίφους» — he was perfected by the sword; and that is one fact more than the Romanian calendar gave, which named him and no more. The page gives no year, so the folder's empty `dates` were left empty; it names no country, no city and no judge, and prints no hymn and no relic. It stands among the entries of the great martyr George's day, but — unlike the pages of Anatolius, Protoleon and Glycerius — it says nothing to tie him to George's passion, and nothing of the kind was supplied. The corpus's other Valerius is one of the Forty of Sebaste."
     },
     {
       "church": "serbian",

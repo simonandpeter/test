@@ -1,0 +1,53 @@
+{
+  "slug": "athanasius-once-a-magician",
+  "display_name": "Athanasius, once a magician",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Απριλίου, «Άγιος Αθανάσιος ο από μάγων», with the rank word left off; the epithet «ο από μάγων», from among the magicians, is kept in the English form because it is all that tells him from the corpus's other men of the name."
+    }
+  ],
+  "related": [
+    "george-the-trophy-bearer"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Απριλίου — «Άγιος Αθανάσιος ο από μάγων»",
+        "url": "https://www.saint.gr/04/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Απριλίου εκάστου έτους», the same day as the listing. **George's own page carries a different feast type**: «Ειδικός υπολογισμός. Εορτάζει στις 23 Απριλίου εκάστου έτους. Εάν όμως η εορτή πέσει πρίν το Πάσχα, τότε εορτάζει την επόμενη μέρα του Πάσχα (Δευτέρα της Δικαινησίμου)» — a fixed 23 April which is transferred to Bright Monday in a year when it would fall before Pascha. The companions' own pages carry the plain fixed type. The whole body of the page is one sentence: «Ο Άγιος Μάρτυς Αθανάσιος τελειώθηκε διά ξίφους» — he was perfected by the sword. Everything else is in the day's line, which calls him ο από μάγων, and in the couplet, which calls him φαρμακός, a sorcerer, and says that in the cutting off of his head he found a strange medicine for a sick soul. The page places him among the entries of George's day and links to George, but its own text does not say that he confessed at George's martyrdom, as the pages of Anatolius and Protoleon do of them, so no such claim is made here. It gives no year, no country and no judge, and prints no hymn and no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

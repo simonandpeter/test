@@ -115,6 +115,38 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θωμασ thomas-companion-of-terentius thomas-of-constantinople thomas-of-zographou thomas-the-apostle thomas-the-fool-for-christ':
+    'Five now. The new one is Thomas the fool for Christ on 24 April; the others are read in the el-04-10 entry for this name form.',
+  'μελιτων meliton-of-beirut meliton-of-the-forty-martyrs mellitus-of-canterbury':
+    'Three men: Mellitus of Canterbury on 24 April, whose Greek form folds with theirs, and the two read in the el-03-09 entry for this name form.',
+  'αλεξιοσ alexios-the-recluse-of-kyiv alexis-of-goloseevo alexis-of-moscow alexis-of-voronezh alexis-the-man-of-god':
+    'Five now. The new one is Alexios the Recluse of Kyiv on 24 April; the others are read in the el-03-17 entry for this name form.',
+  'σαββασ sabbas-companion-of-jonah sabbas-of-sicily sabbas-of-sourozh sabbas-of-the-kyiv-caves sabbas-of-tver sabbas-of-zographou sabbas-stratelates sabbas-the-spiritual sava-brancovici-of-transylvania sava-of-serbia sava-the-second':
+    'Nine now. The new one is Sabbas the Stratelates on 24 April; the others are read in the el-04-02 entry for this name form.',
+  'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-katopinos nicholas-of-corinth nicholas-of-japan nicholas-of-magnesia nicholas-of-pskov nicholas-of-spetses nicholas-of-the-forty-martyrs nicholas-of-trebizond nicholas-of-valaam nicholas-patriarch-of-georgia nicholas-the-studite nicholas-velimirovich':
+    'Eleven now. The new one is on 24 April; the others are read in the el-02-28 entry for this name form.',
+  'νεων neon-24-april neon-companion-of-mark-the-shepherd':
+    'Two men: the Neon of 24 April and the Neon of the el-01-16 entry.',
+  'λογγινοσ longinus-24-april longinus-of-koryazhemka':
+    'Two men: the Longinus of 24 April and the Longinus of the el-10-16 reading.',
+  'λεοντιοσ leontius-24-april leontius-of-the-forty-martyrs':
+    'Two men: the Leontius of 24 April and `leontius-the-canonarch`, whom a reader drafted for 17 Ιουνίου and answered against `gerontius-the-canonarch` as another man.',
+  'ευσεβιοσ eusebius-24-april eusebius-companion-of-bassus eusebius-disciple-of-dionysius-of-alexandria eusebius-of-syria':
+    'Four men: the Eusebius of 24 April and the three read in the el-01-20 entry for this name form.',
+  'δημητριοσ demetrius-24-april demetrius-ivanov demetrius-of-chios demetrius-of-constantinople demetrius-of-georgia demetrius-of-prilutsk demetrius-the-peloponnesian demetrius-the-skeuophylax demetrius-tornaras demos-the-fisherman':
+    'Ten now. The new one is the Demetrius of 24 April; the others are read in the el-04-14 entry for this name form.',
+  'χριστοφοροσ christopher christopher-20-april christopher-24-april christopher-of-adrianople christopher-of-saint-sabbas':
+    'Five now. The new one is the Christopher of 24 April; the others are read in the el-04-20 entry for this name form.',
+  'λαζαροσ lazarus-companion-of-jonah lazarus-of-murom lazarus-of-tripoli-in-the-peloponnese lazarus-the-shepherd':
+    'Four men: the companion of Jonah on 29 March, Murom on 8 March, Tripoli in the Peloponnese on 23 February and Lazarus the shepherd of 23 April.',
+  'γεωργιοσ george-konissky george-of-alikianos george-of-amastris george-of-azkuri george-of-develtos george-of-diipion george-of-kratovo george-of-maleon george-of-megara george-of-mytilene george-of-nea-ephesus george-of-pisidian-antioch george-of-rapsani george-of-samothrace-a george-of-samothrace-b george-of-shenkursk george-of-sofia george-of-vladimir george-paizanos-of-mytilene george-the-chozebite george-the-cypriot george-the-hungarian george-the-iberian-2-january george-the-persian george-the-sinaite george-the-trophy-bearer':
+    'Twenty-six now, and **three of them stand on the Greek 23 April** as three entries: George the Trophy-bearer, the great martyr whom the Romanian keeps there too; George the Cypriot; and George of Shenkursk, the Russian whose folder relates the Trophy-bearer because his own life names him as his patron. The others are read in the el-04-05 entry for this name form.',
+  'δονατοσ donatus-23-april donatus-martyr-at-venice':
+    'Two men: the Donatus of 23 April and the Donatus a reader drafted for 6 Μαΐου, whom that reader answered as another man — the pair is named in ro-run/FINDINGS.md.',
+  'αθανασιοσ athanasius-martyr-13-january athanasius-of-alexandria athanasius-of-attaleia athanasius-of-kargopol athanasius-of-meteora athanasius-of-murom athanasius-of-the-forty-martyrs athanasius-of-vologda athanasius-once-a-magician athanasius-the-confessor':
+    'Ten now. The new one is Athanasius once a magician, converted at George the Trophy-bearer’s trial on 23 April; the others are read in the el-03-08 entry for this name form.',
+  'ανατολιοσ anatolius-of-odessa anatolius-of-optina-25-january anatolius-of-raithu anatolius-the-general':
+    'Four men: Odessa on 23 January, Optina on 25 January, Raithu on 21 February and Anatolius the general, one of those the 23 April page names with George the Trophy-bearer.',
   'πλατων plato-of-megara plato-the-venerable platon-kulbusch platon-of-banja-luka':
     'Four men: Platon of Banja Luka on 22 April and the three read in the el-01-01 entry for this name form.',
   'θεοδωροσ mstislav-of-kiev theodore-companion-of-pausolypius theodore-companion-of-stephen theodore-companion-of-terentius theodore-founder-of-chora theodore-of-kama-the-philosopher theodore-of-kandavla theodore-of-moscow theodore-of-novgorod theodore-of-pentapolis theodore-of-perga theodore-of-samothrace theodore-of-sykeon theodore-of-tamasos theodore-of-tomsk theodore-prince-of-yaroslavl theodore-stratelates theodore-the-byzantine theodore-the-envoy-of-nicomedia theodore-the-recruit theodore-the-silent theodore-trichinas':

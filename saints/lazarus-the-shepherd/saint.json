@@ -1,0 +1,86 @@
+{
+  "slug": "lazarus-the-shepherd",
+  "display_name": "Lazarus the Shepherd",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Λάζαρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Απριλίου, «Άγιος Λάζαρος ο Βοσκός από τη Βουλγαρία», with the rank word and the country left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "birth": {
+      "earliest": 1774,
+      "latest": 1774,
+      "display": "1774",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Λαζαρος ο Βοσκος Απο Τη Βουλγαρια (1774 - 1802)»; the body of the page gives no year of birth but says he died «σε ηλικία είκοσι οκτώ ετών», at twenty-eight, which agrees with the heading."
+    },
+    "death": {
+      "earliest": 1802,
+      "latest": 1802,
+      "display": "1802",
+      "basis": "attested",
+      "note": "saint.gr: «ο Άγιος συνελήφθη στις 7 Απριλίου του 1802 μ.Χ.» and he was hanged after the torments that followed; the page heads him «(1774 - 1802)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Απριλίου — «Άγιος Λάζαρος ο Βοσκός από τη Βουλγαρία»",
+        "url": "https://www.saint.gr/04/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Απριλίου εκάστου έτους», the same day as the listing. The page makes him a native of the town of Gabrovo in Bulgaria who went to Soma near Pergamon and became a shepherd; gives 7 April 1802 as the date of his arrest and twenty-eight as his age at death; names the aga who took a thousand piastres' promise from the woman's relatives; and says that a service for this new martyr was composed by the hieromonk Nikephoros of Chios. Under «Ιερά Λείψανα» it puts portions of his relic at the monastery of Leimonos on Lesbos and at the chapel of Xenia the Russian at Mandra in Attica. It prints a kontakion, two megalynaria and an oikos; the kontakion is stored here and the others are neither of the two kinds this corpus holds. The corpus's Lazarus of Mount Galesion and Lazarus the Iconographer are other men on other days."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἤχος δ'.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ἐξ ἑώας ἔλαμψας, ὡς φαεινὸς ἑωσφόρος, τῶν λαμπρῶν ἀγώνων σου ταῖς νοηταῖς μαρμαρυγαῖς, καταφωτίζων τοῦς χαῖρέ σοι, ἀναβοῶντας, πολύαθλε Λάζαρε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἤχος δ', Ἐπεφάνης σήμερον, on the page of «Άγιος Λάζαρος ο Βοσκός από τη Βουλγαρία»",
+        "url": "https://www.saint.gr/1357/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Out of the east thou hast shone as a bright morning star, with the spiritual flashings of thy splendid contests giving light to those who cry out Rejoice to thee, O Lazarus of many struggles.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

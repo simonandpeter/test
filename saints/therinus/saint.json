@@ -1,0 +1,53 @@
+{
+  "slug": "therinus",
+  "display_name": "Therinus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Θερινός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Απριλίου, «Άγιοι Δονάτος και Θερινός οι Μάρτυρες», with the rank word left off; the life page heads him «Αγιος Θερινός ο Μαρτυρας»."
+    }
+  ],
+  "related": [
+    "donatus-23-april"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Απριλίου — «Άγιοι Δονάτος και Θερινός οι Μάρτυρες»",
+        "url": "https://www.saint.gr/04/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Απριλίου εκάστου έτους», the same day as the listing. The whole body of the page is one sentence: «Οι Άγιοι Δονάτος και Θερινός μαρτύρησαν δια ξίφους» — Donatus and Therinus were martyred by the sword. Two people are named and enumerated, so this corpus makes a folder for each. The page heads Therinus first and the day's line Donatus first. It gives them no year, no country, no city and no judge, and prints no hymn and no relic; and unlike the pages of Anatolius and Protoleon it does not tie them to George's passion, so nothing of the kind is claimed here. The corpus's Donatus of Cibalae and Donatus of Euroea are other men on other days."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

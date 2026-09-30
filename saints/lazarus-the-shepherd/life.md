@@ -1,0 +1,9 @@
+# Lazarus the Shepherd
+
+Lazarus came from the town of Gabrovo in Bulgaria and was born of devout and God-loving parents. Having left Bulgaria he came to the town of Soma, near Pergamon, and became a shepherd. One day, while he was pasturing his flock, he fell asleep; and it happened that an Ottoman woman was passing at that hour, whom the flock's dog attacked, tearing her clothes a little. As soon as she got home she showed her torn clothes to her husband and slandered Lazarus, saying that he had violated her.
+
+The Turk was enraged and ran off at once to find Lazarus. Instead of him he found a friend of the saint's, whom he wounded; and when he learned that the man he had wounded was not Lazarus, he asked the aga for Lazarus's punishment. So the saint was arrested on 7 April 1802 and shut in prison. His innocence was proved; but the woman's relatives promised the aga a thousand piastres if he could bring about the martyr's conversion to Islam or his death, and avarice led the ruler to put him to dreadful torments.
+
+The executioners heated iron rods and with them burned every limb of his body one by one, while forcing him to confess faith in Mohammed. When at the last they had burned his tongue too, they urged him — speechless now — to show by nods or by a movement of the head that he consented to their wish that he change his faith. But neither the fearful tortures, nor the heavy stones laid on his chest, nor the beatings with rods were enough to shift him; and so for the love of Christ he accepted death by hanging, at the age of twenty-eight. The service for this new martyr, the page adds, was composed by the hieromonk Nikephoros of Chios.
+
+*After saint.gr's calendar for 23 Απριλίου — [the day](https://www.saint.gr/04/23/index.aspx) and [the life](https://www.saint.gr/1357/saint.aspx); read 30 September 2026.*

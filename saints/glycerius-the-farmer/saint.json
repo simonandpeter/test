@@ -1,0 +1,53 @@
+{
+  "slug": "glycerius-the-farmer",
+  "display_name": "Glycerius the Farmer",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Γλυκέριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Απριλίου, «Άγιος Γλυκέριος ο γεωργός», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [
+    "george-the-trophy-bearer"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Απριλίου — «Άγιος Γλυκέριος ο γεωργός»",
+        "url": "https://www.saint.gr/04/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Απριλίου εκάστου έτους», the same day as the listing. **George's own page carries a different feast type**: «Ειδικός υπολογισμός. Εορτάζει στις 23 Απριλίου εκάστου έτους. Εάν όμως η εορτή πέσει πρίν το Πάσχα, τότε εορτάζει την επόμενη μέρα του Πάσχα (Δευτέρα της Δικαινησίμου)» — a fixed 23 April which is transferred to Bright Monday in a year when it would fall before Pascha. The companions' own pages carry the plain fixed type. The page says outright where it gets him: «Ο Άγιος Μάρτυς Γλυκέριος αναφέρεται στο Συναξάρι του Μεγαλομάρτυρα Γεωργίου» — he is mentioned in the synaxarion of the great martyr George. It gives him no year, no country, no city and no judge, and prints no hymn and no relic. The corpus's Glycerius of Nicomedia is a different man on a different day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "protoleon-the-general",
+  "display_name": "Protoleon the General",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Πρωτολέων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Απριλίου, «Άγιος Πρωτολέων ο στρατηλάτης», with the rank word and the epithet left off."
+    }
+  ],
+  "related": [
+    "george-the-trophy-bearer"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Απριλίου — «Άγιος Πρωτολέων ο στρατηλάτης»",
+        "url": "https://www.saint.gr/04/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Απριλίου εκάστου έτους», the same day as the listing. **George's own page carries a different feast type**: «Ειδικός υπολογισμός. Εορτάζει στις 23 Απριλίου εκάστου έτους. Εάν όμως η εορτή πέσει πρίν το Πάσχα, τότε εορτάζει την επόμενη μέρα του Πάσχα (Δευτέρα της Δικαινησίμου)» — a fixed 23 April which is transferred to Bright Monday in a year when it would fall before Pascha. The companions' own pages carry the plain fixed type. The whole body of the page is one sentence, and it is the same sentence for Anatolius and for Protoleon: that he was a soldier, that seeing George's martyrdom he confessed Christ, and that he was martyred by the sword. It gives no year, no country, no city and no judge, and prints no hymn and no relic. Protoleon's page adds one textual note of its own, that the Synaxaristes of the Dionysiou monastery reads «Ώσπερ αλκίμων λέων» in the couplet where this page has «ώσπερ αλκαία λέων». The corpus's other men of these names are on other days; none of them is a general of George's company."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "polychronia-mother-of-george",
+  "display_name": "Polychronia, mother of George the Trophy-bearer",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Πολυχρονία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Απριλίου, «Αγία Πολυχρονία», with the rank word left off; the life page heads her «Αγια Πολυχρονια»."
+    }
+  ],
+  "related": [
+    "george-the-trophy-bearer"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Απριλίου — «Αγία Πολυχρονία»",
+        "url": "https://www.saint.gr/04/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Απριλίου εκάστου έτους», the same day as the listing. **George's own page carries a different feast type**: «Ειδικός υπολογισμός. Εορτάζει στις 23 Απριλίου εκάστου έτους. Εάν όμως η εορτή πέσει πρίν το Πάσχα, τότε εορτάζει την επόμενη μέρα του Πάσχα (Δευτέρα της Δικαινησίμου)» — a fixed 23 April which is transferred to Bright Monday in a year when it would fall before Pascha. The companions' own pages carry the plain fixed type. The page makes her the mother of the great martyr George, of the city of Lydda — Diospolis — in Palestine, of a famous and lordly family, and names her husband Gerontios, whose household it calls idolatrous. It gives her no year at all, so no `dates` were taken, although George's own page dates him 275 to 303. It tells her interrogation by Diocletian and her answer, her hanging on a piece of wood, the tearing of her flesh with iron claws until her entrails showed, the burning of her wounds with lighted torches and the red-hot iron shoes put on her with tongs, and says that she gave up her soul in peace under them; and that the Christians took her body secretly and buried it. The corpus holds nobody else of this name. It prints no hymn and no relic."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

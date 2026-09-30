@@ -1,0 +1,11 @@
+# Polychronia, mother of George the Trophy-bearer
+
+Polychronia was the mother of [George the Trophy-bearer](/saints/george-the-trophy-bearer), saint.gr says, and came from the city of Lydda — Diospolis — in Palestine, of a famous and lordly family. She was modest and brave and full of chastity, kindness and sweetness; and above everything her soul loved God, and prayer, and humility. Her time went by in the reading of the divine Scriptures and in prayer, and she joined abstinence and fasting to her prayers and her vigils, so that her mind, drawn off from the earth, rose to heaven and was sunk in the contemplation of God.
+
+So she changed the place around her, and let the delightful scent of a spiritual fragrance spread through the idolatrous household of her husband Gerontios. She brought her son up secretly in the teaching and admonition of the Lord, passing on to him her own warm love for Christ and her deep reverence; and when he faced martyrdom for the love of Christ she was continually beside him, in the prison and at the places of torment, always taking care to strengthen him with the immaculate Mysteries.
+
+When the emperor Diocletian saw her speaking to the saint he called her over and asked who she was; and she answered with spiritual courage: «Με λένε Πολυχρονία και είμαι Χριστιανή, όπως και ο υιός μου Γεώργιος, που νομίζεις ότι τιμωρείς, ενώ αυτός στεφανώνεται από τον Βασιλέα Χριστό» — my name is Polychronia and I am a Christian, as my son George is, whom you think you are punishing while he is being crowned by Christ the King.
+
+Enraged, Diocletian ordered her tortured at once. They hung her on a piece of wood and did worse to her: they tore the flesh of her body with iron claws until her entrails showed, and then took lighted torches and began to burn her wounds. She stayed unshaken in her faith and manly in her mind; and the executioners went on, putting red-hot iron shoes on her with tongs. With the Comforter's consolation, the page says, she overcame the pains and gave up her holy soul in peace into the hands of God, and the Christians took her honoured body secretly and buried it, glorifying God.
+
+*After saint.gr's calendar for 23 Απριλίου — [the day](https://www.saint.gr/04/23/index.aspx) and [the life](https://www.saint.gr/1365/saint.aspx); read 30 September 2026.*

@@ -6,6 +6,11 @@
       "form": "Gheorghe, Purtătorul de biruință",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 aprilie, «Sfântul Mare Mucenic Gheorghe, Purtătorul de biruință»."
+    },
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Απριλίου, «Άγιος Γεώργιος ο Μεγαλομάρτυρας και Τροπαιοφόρος», with the rank word and the epithets left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 23 Απριλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Απριλίου — «Άγιος Γεώργιος ο Μεγαλομάρτυρας και Τροπαιοφόρος»",
+        "url": "https://www.saint.gr/04/23/index.aspx",
+        "year": 2026
+      },
+      "note": "**The feast type on his page is not the plain fixed one**: «Ειδικός υπολογισμός. Εορτάζει στις 23 Απριλίου εκάστου έτους. Εάν όμως η εορτή πέσει πρίν το Πάσχα, τότε εορτάζει την επόμενη μέρα του Πάσχα (Δευτέρα της Δικαινησίμου)» — a special reckoning: he is kept on 23 April every year, but if the feast should fall before Pascha then he is kept on the day after Pascha, Bright Monday. The fixed 23 April is the day the listing and the page both give and is what this row records; the Paschal transfer is a rule about particular years and has no field in this schema. It is the same day the Romanian calendar keeps him. **This folder had no `dates` and now has both years** off the page's heading «(275 - 303)» and its opening sentence. The page names Cappadocia for his birth and Palestine for his mother's country and estates, makes his father die a martyr when he was ten, has him enlist at eighteen and rise to the title of count under Diocletian, who esteemed him. Under «Πολιούχος» it lists twelve Greek towns that hold him patron, and under «Ιερά Λείψανα» ten resting places of portions of his relics, on Athos at Iviron, Xenophontos and Zographou, at the monastery of St George of Pheneos in Corinthia, at the metropolis of Thebes and Levadeia, at the church of St George of the Greeks in Venice, at the Trinity–St Sergius and St Alexander Nevsky Lavras, and at three Roman Catholic houses in Venice and Ferrara and at Velabro in Rome. The day's other entries tie eight more people to his passion, and each of them now has a folder. It prints one apolytikion and one kontakion, both proper to him, and both are stored here."
     },
     {
       "church": "serbian",
@@ -60,9 +75,67 @@
         "text": "As a deliverer of the captive and a protector of the poor, a physician to the sick and a helper of kings, trophy-bearing Great Martyr George, pray to Christ God that our souls be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ὡς τῶν αἰχμαλώτων ἐλευθερωτής, καὶ τῶν πτωχῶν ὑπερασπιστής, ἀσθενούντων ἰατρός, βασιλέων ὑπέρμαχος, Τροπαιοφόρε Μεγαλομάρτυς Γεώργιε, πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, on the page of «Άγιος Γεώργιος ο Μεγαλομάρτυρας και Τροπαιοφόρος»",
+        "url": "https://www.saint.gr/66/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the liberator of captives and the defender of the poor, the physician of the sick and the champion of kings, O trophy-bearing great martyr George, intercede with Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθείς ἐν τῷ Σταυρῷ.",
+      "text": "Γεωργηθείς ὑπό Θεοῦ ἀνεδείχθης, τῆς εὐσεβείας γεωργός Τιμιώτατος, τῶν ἀρετῶν τὰ δράγματα συλλέξας σεαυτῷ· σπείρας γὰρ ἐν δάκρυσιν, εὐφροσύνῃ θερίζεις· ἀθλήσας δὲ δι᾽ αἵματος, τὸν Χριστόν ἐκομίσω· καὶ ταῖς πρεσβείαις Ἅγιε ταῖς σαῖς, πᾶσι παρέχεις πταισμάτων συγχώρησιν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ὁ ὑψωθείς ἐν τῷ Σταυρῷ, on the page of «Άγιος Γεώργιος ο Μεγαλομάρτυρας και Τροπαιοφόρος»",
+        "url": "https://www.saint.gr/66/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being tilled by God thou wast shown a most honourable husbandman of piety, gathering to thyself the sheaves of the virtues; for having sown in tears thou reapest in gladness, and having contended through thy blood thou hast won Christ. And by thine intercessions, O holy one, thou grantest to all the forgiveness of their trespasses.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 275,
+      "latest": 275,
+      "display": "about 275",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε περίπου το 275 μ.Χ. στην Καππαδοκία, από γονείς χριστιανούς», and the page heads him «(275 - 303)»; the page's own word is περίπου, about."
+    },
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Γεωργιος ο Μεγαλομαρτυρας Και Τροπαιοφορος (275 - 303)»."
+    }
+  },
+  "related": [
+    "polychronia-mother-of-george",
+    "glycerius-the-farmer",
+    "anatolius-the-general",
+    "protoleon-the-general",
+    "athanasius-once-a-magician",
+    "alexandra-the-empress",
+    "george-of-shenkursk"
+  ]
 }

@@ -1,0 +1,9 @@
+# Anatolius the General
+
+saint.gr's whole account of him is one sentence. Anatolius was a soldier — «Ο Άγιος Ανατόλιος ήταν στρατιωτικός» — who, seeing the martyrdom of George, confessed Christ and at the last was martyred by the sword. The martyrdom meant is the one the calendar keeps on this same day, and the confession is made in the sight of it: seeing what George endured, he declared himself a Christian, and was beheaded for it.
+
+The couplet the page sets over him is the only other thing it gives: Anatolius, having set like the sun by the cutting off of his head, saw the eastern light of the Lord that is known by the mind. Beyond the word στρατιωτικός, soldier, and the epithet στρατηλάτης that the day's line adds, it says nothing of his rank, his legion, his country or his years, and it names no judge and no relic.
+
+The page prints no hymn for him. What it does print is a link back to [George the Trophy-bearer](/saints/george-the-trophy-bearer), whose passion is the occasion of his own, and that is where the whole of his story is.
+
+*After saint.gr's calendar for 23 Απριλίου — [the day](https://www.saint.gr/04/23/index.aspx) and [the life](https://www.saint.gr/1364/saint.aspx); read 30 September 2026.*

@@ -1,0 +1,60 @@
+{
+  "slug": "george-the-cypriot",
+  "display_name": "George the Cypriot",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Απριλίου, «Άγιος Γεώργιος ο Κύπριος ο Νεομάρτυρας», with the rank word and the second epithet left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1752,
+      "latest": 1752,
+      "display": "1752",
+      "basis": "attested",
+      "note": "saint.gr: «Τότε ο κριτής διέταξε, το έτος 1752 μ.Χ., τον θάνατό του», and the page heads him «(; - 1752)»; no year of birth is printed."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Απριλίου — «Άγιος Γεώργιος ο Κύπριος ο Νεομάρτυρας»",
+        "url": "https://www.saint.gr/04/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Απριλίου εκάστου έτους», the same day as the listing. The page makes him a Cypriot who served a European consul at Ptolemais in Palestine, the present Acre; names no judge but the ιεροδικαστής; gives 1752 as the year of the sentence; and reports the storm that rose off the sea after his death and drove the Turks from his body, which the Christians then buried in the church of Ptolemais. Under «Ιερά Λείψανα» it puts part of his relics in the church of St John at Nicosia, part of his skull at the monastery of Mega Spileo at Kalavryta and a portion at the monastery of Agathon in Phthiotis, and in the body of the page it dates the translation to Nicosia to 13 April 1967. Its couplet sets him beside the great martyr of the day: George now together with George, the new ranked here with the old. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

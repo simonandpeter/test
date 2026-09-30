@@ -4,4 +4,6 @@ doxologia.ro's calendar names him and gives no life. Its line for 23 aprilie rea
 
 Nothing further about him is printed there. His country is not named, no century is given, and the manner of his martyrdom is not told. The word «Mucenic» in the line is the whole of what the calendar says about how he died.
 
-*After doxologia.ro's calendar for 23 aprilie — [the day](https://doxologia.ro/23-aprilie) and [his page](https://doxologia.ro/sfantul-mucenic-valerie), which prints no life; read 24 September 2026.*
+The Greek calendar keeps him on the same day, and gives one fact more than the Romanian. The whole body of saint.gr's page is a single sentence: «Ο Άγιος Μάρτυς Ουαλέριος τελειώθηκε διά ξίφους» — the holy martyr Valerius was perfected by the sword. Its couplet says the same thing twice over, that an evil head, the executioner, took away the divine head of Valerius by the sword. No year, no country, no city, no judge and no relic are given, and the page prints no hymn. His entry stands among those of the great martyr George's day, but nothing on it ties him to George's passion as the pages of Anatolius, Protoleon and Glycerius tie those three, and nothing of the kind has been supplied here.
+
+*After doxologia.ro's calendar for 23 aprilie — [the day](https://doxologia.ro/23-aprilie) and [his page](https://doxologia.ro/sfantul-mucenic-valerie), which prints no life; read 24 September 2026; and saint.gr's calendar for 23 Απριλίου — [the day](https://www.saint.gr/04/23/index.aspx) and [the life](https://www.saint.gr/1360/saint.aspx), read 30 September 2026.*

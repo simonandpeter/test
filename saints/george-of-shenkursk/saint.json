@@ -1,0 +1,54 @@
+{
+  "slug": "george-of-shenkursk",
+  "display_name": "George of Shenkursk",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Απριλίου, «Όσιος Γεώργιος του Σενκούρσκ», with the rank word left off; the day's line spells the place Σενκούρσκ and the body of the page Σενκούρκ."
+    }
+  ],
+  "related": [
+    "george-the-trophy-bearer"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Απριλίου — «Όσιος Γεώργιος του Σενκούρσκ»",
+        "url": "https://www.saint.gr/04/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Απριλίου εκάστου έτους», the same day as the listing. The whole body of the page is three sentences. It makes him a contemporary of Barlaam of Vazhsk and Shenkursk, whom it cross-references to 19 Ιουνίου — **a saint this corpus does not hold**; its five Barlaam folders are kept on 30 May, 6 November, 19 November, 5 October and 30 August, and none of them is that man, so no link and no `related` row was made. It says that he practised asceticism in a God-pleasing way and that, according to the tradition, he fell asleep in peace on the feast day of his own patron the great martyr George, which is why the calendar keeps him here; and it describes his icon — in ragged clothes, barefoot, with his hands raised in prayer. It gives no year at all, so no `dates` were taken, and it names no monastery, no relic and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
