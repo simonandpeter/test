@@ -1,0 +1,52 @@
+{
+  "slug": "aquila-the-eparch",
+  "display_name": "Aquila the Eparch",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "office": "Eparch",
+  "names": [
+    {
+      "form": "Ακύλας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαρτίου, «Άγιος Ακύλας ο Έπαρχος», with the rank word and the office left off."
+    }
+  ],
+  "related": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαρτίου — «Άγιος Ακύλας ο Έπαρχος»",
+        "url": "https://www.saint.gr/03/20/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαρτίου εκάστου έτους.» The entry is one sentence and a couplet, with no asterisk and no disclaimer, and it gives no year, so there is no dates object. He is not the corpus's Aquila, the apostle and husband of Priscilla, whom the Romanian calendar keeps on 13 februarie and again on 14 iulie, nor Aquila of Trebizond."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -7,6 +7,11 @@
       "form": "Cuthbert",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 martie, «Sfântul Ierarh Cuthbert»."
+    },
+    {
+      "form": "Κουθβέρτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's life page for 20 Μαρτίου, «Ο Όσιος Cuthbert (Κουθβέρτος) γεννήθηκε στο Λάντερντεϊλ» — the Greek form the page gives in its own parenthesis. Its calendar line and its heading spell him Cuthbert, in Latin letters."
     }
   ],
   "sex": "male",
@@ -18,7 +23,8 @@
     "wonderworker"
   ],
   "related": [
-    "aidan-of-lindisfarne"
+    "aidan-of-lindisfarne",
+    "theodore-of-tarsus-archbishop-of-canterbury"
   ],
   "dates": {
     "birth": {
@@ -58,8 +64,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαρτίου — «Όσιος Cuthbert»",
+        "url": "https://www.saint.gr/03/20/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαρτίου εκάστου έτους.» The page prints his name in Latin letters and glosses it once as Κουθβέρτος. It heads him «(634 - 687)» and has him die at fifty-three, which agrees with the corpus's years from doxologia, so nothing in the dates field has been changed. Its birthplace is Lauderdale, where doxologia gave only the north of England."
     },
     {
       "church": "serbian",

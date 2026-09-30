@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδωρα theodora-of-amisos theodora-of-arta theodora-the-empress':
+    'Three women: Amisos on 20 March, Arta on 11 March and the Empress on 11 February.',
+  'μυρων myron-of-heraklion myron-of-tamasos':
+    'Two men: Heraklion on 20 March and Tamasos on 17 September.',
+  'ιουλιανη juliana-of-amisos juliana-of-lazarevo juliana-of-ptolemais':
+    'Three women: Amisos on 20 March, Lazarevo on 2 January and Ptolemais on 4 March.',
+  'ευφροσυνοσ euphrosynus-of-sinozero euphrosynus-of-tver euphrosynus-the-martyr-6-march':
+    'Three men: Sinozero on 20 March, Tver on 2 March and the martyr of 6 March.',
+  'ευφρασια euphrasia-of-amisos euphrasia-of-nicomedia euphrasia-of-the-thebaid':
+    'Three women: Amisos on 20 March, Nicomedia on 19 January and the Thebaid on 13 March.',
+  'ακυλασ aquila aquila-of-trebizond aquila-the-eparch':
+    'Three men: the Aquila of 13 February, Trebizond on 21 January and the eparch on 20 March.',
   'μαρθα maria-of-vladimir martha-of-aza martha-sister-of-lykarion':
     'Three women: Maria of Vladimir, whose second recorded name this is, on 19 March; Martha of Aza on 26 September; and the sister of Lykarion on 8 February.',
   'μαρια maria-6-january maria-of-olonets maria-of-vladimir mary-called-marinos mary-of-aza mary-sister-of-lykarion mary-wife-of-xenophon':

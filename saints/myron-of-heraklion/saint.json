@@ -1,0 +1,61 @@
+{
+  "slug": "myron-of-heraklion",
+  "display_name": "Myron of Heraklion",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Μύρων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαρτίου, «Άγιος Μύρων ο Νεομάρτυρας από το Ηράκλειο Κρήτης», with the rank words and the city left off."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1793,
+      "latest": 1793,
+      "display": "1793",
+      "basis": "traditional",
+      "note": "saint.gr: «Αφού έλαβε την ευχή του προσήλθε προ των δημίων και μετά από λίγο δέχθηκε το στέφανο του μαρτυρίου. Ήταν το έτος 1793 μ.Χ.», and the page heads him «(; - 1793)», leaving the first date a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαρτίου — «Άγιος Μύρων ο Νεομάρτυρας από το Ηράκλειο Κρήτης»",
+        "url": "https://www.saint.gr/03/20/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαρτίου εκάστου έτους.» The page heads him «(; - 1793)», cites the Apostoliki Diakonia of the Church of Greece and the Archdiocese of Crete, and files him under «Σύναξη των Αγίων Νεομαρτύρων των μετά την άλωση της Κωνσταντινουπόλεως μαρτυρησάντων», the synaxis of the new martyrs after the taking of Constantinople, which is a company and no folder and is the page's own ground for the new-martyr type here. He is not the corpus's Myron of Crete, the bishop the Romanian calendar keeps on 8 august."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

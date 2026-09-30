@@ -1,0 +1,62 @@
+{
+  "slug": "euphrosynus-of-sinozero",
+  "display_name": "Euphrosynus of Sinozero",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Ευφρόσυνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαρτίου, «Άγιος Ευφρόσυνος ο Ιερομάρτυρας εκ Ρωσίας», with the rank word and the country left off. Its life page adds the surname and the name in the world: «Ο Ιερομάρτυρας Ευφρόσυνος (Σινοζέρσκιυ), κατά κόσμο Εφραίμ»."
+    }
+  ],
+  "related": [],
+  "dates": {
+    "death": {
+      "earliest": 1612,
+      "latest": 1612,
+      "display": "1612",
+      "basis": "traditional",
+      "note": "saint.gr sets the Polish raid in which he was killed in 1612 — «Το έτος 1612 μ.Χ. τα Πολωνικά στρατεύματα λεηλατούσαν την Ρωσία» — and puts the attack on his hermitage on «Την επόμενη ημέρα, 20 Μαρτίου». It gives no year of birth, only «κατά το δεύτερο ήμισυ του 16ου αιώνα μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαρτίου — «Άγιος Ευφρόσυνος ο Ιερομάρτυρας εκ Ρωσίας»",
+        "url": "https://www.saint.gr/03/20/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαρτίου εκάστου έτους.» The page says he was buried with honour on 28 Μαρτίου and that his relics were moved under the bell-tower of the church on 25 Μαρτίου 1655 with the blessing of Macarius, metropolitan of Novgorod; beside him it sets «Μετακομιδή του Ιερού λειψάνου του Αγίου Ευφρόσυνου», the translation of his relic, which is a separate commemoration and no folder."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

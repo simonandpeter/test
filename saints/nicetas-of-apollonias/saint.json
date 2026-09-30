@@ -7,6 +7,11 @@
       "form": "Nichita Mărturisitorul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 martie, «Sfântul Ierarh Nichita Mărturisitorul, Episcopul Apoloniadei»."
+    },
+    {
+      "form": "Νικήτας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαρτίου, «Όσιος Νικήτας ο Ομολογητής επίσκοπος Απολλωνιάδος», with the rank word, the epithet and the see left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαρτίου — «Όσιος Νικήτας ο Ομολογητής επίσκοπος Απολλωνιάδος»",
+        "url": "https://www.saint.gr/03/20/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαρτίου εκάστου έτους.» The page places his see: Apollonias was a city of Bithynia under the metropolis of Nicomedia. It gives no year, so no dates object has been written from it."
     },
     {
       "church": "serbian",

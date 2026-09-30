@@ -1,0 +1,68 @@
+{
+  "slug": "euphemia-of-amisos",
+  "display_name": "Euphemia of Amisos",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Ευφημία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Μαρτίου, «Αγίες Αλεξανδρία, Κλαυδία, Ευφρασία, Ματρώνα, Ιουλιανή, Ευφημία και Θεοδώρα που μαρτύρησαν στην Αμινσό», with the rank word and the clause of martyrdom left off. Her own heading on the life page is «Αγια Ευφημια Που Μαρτυρησε Στην Αμινσο»."
+    }
+  ],
+  "related": [
+    "alexandria-of-amisos",
+    "claudia-of-amisos",
+    "euphrasia-of-amisos",
+    "matrona-of-amisos",
+    "juliana-of-amisos",
+    "theodora-of-amisos"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 305,
+      "display": "303–305",
+      "basis": "traditional",
+      "note": "saint.gr: «Το μαρτύριό τους έγινε μεταξύ των ετών 303 - 305 μ.Χ.» — the page gives the interval itself and does not choose a year within it. It also names the reign, «του ασεβούς αυτοκράτορα Μαξιμιανού (286 - 305 μ.Χ.)», which is wider than the interval it states."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Μαρτίου — «Αγίες Αλεξανδρία, Κλαυδία, Ευφρασία, Ματρώνα, Ιουλιανή, Ευφημία και Θεοδώρα που μαρτύρησαν στην Αμινσό»",
+        "url": "https://www.saint.gr/03/20/index.aspx",
+        "year": 2026
+      },
+      "note": "«Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Μαρτίου εκάστου έτους.» The day's line names all seven and the life page gives each of them a heading of her own, so the entry enumerates its members and is seven folders. The company is of Amisos in Pontus and is not the seven virgins of Ancyra the corpus keeps on 18 mai, who suffered in another city with other companions and out of another life."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
