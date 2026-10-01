@@ -1,0 +1,50 @@
+{
+  "slug": "agapius-22-november",
+  "display_name": "Agapius (22 November)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αγάπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Άγιος Αγάπιος», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Νοεμβρίου — «Άγιος Αγάπιος»",
+        "url": "https://www.saint.gr/11/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3071/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Νοεμβρίου εκάστου έτους», the same day as the listing. None of the corpus's fourteen Agapius folders is this man: they are kept on other days and none is set in Cappadocia. The display name takes the day. The Cappadocian origin is the page's own, on the authority it cites: «Στον Παρισινό Κώδικα 1578 σημειώνεται, ότι ήταν από την Καππαδοκία». The page gives no year and no emperor, so no `dates` object is proposed, and no `locations`, because a province is all it names. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

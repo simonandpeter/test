@@ -1,0 +1,82 @@
+{
+  "slug": "tiburtius-brother-of-valerian",
+  "display_name": "Tiburtius, brother of Valerian",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Τιβούρτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Άγιοι Κικιλία, Βαλεριανός και Τιβούρτιος», with the rank words left off."
+    }
+  ],
+  "related": [
+    "valerian-husband-of-cecilia",
+    "cecilia-of-rome"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian (284–305)",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Κικιλία έζησε τον 3ο μ.Χ. αιώνα» and «Κατά τον επί Διοκλητιανού διωγμού η Κικιλία, ο Βαλέριος και ο Τιβούρτιος συνέχιζαν να δηλώνουν την πίστη τους». The page gives no year; the interval is the reign it names for the persecution, and its own century for her life stands beside it in the life."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Θείων τρόπων σου, τὴ ἐπιλάμψει, πρὸς ἀείζωον, εἴλκυσας φέγγος, τὴν αὐτάδελφον δυάδα καὶ σύναυλον καὶ σὺν αὐτοὶς Κικιλία ἀθλήσασα, τῆς θείας δόξης ὁμοῦ ἠξιώθητε. Μεθ' ὧν πρέσβευε, δοθήναι τοὶς εὐφημούσι σέ, πταισμάτων ἱλασμὸν καὶ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the first hymn on the page of «Άγιοι Κικιλία, Βαλεριανός και Τιβούρτιος». It names Cecilia and calls the two men «τὴν αὐτάδελφον δυάδα καὶ σύναυλον», the pair of brothers who shared her house, and names no other saint. The readings «τὴ», «αὐτοὶς», «δοθήναι» and «τοὶς» are the page's own and are copied as they stand.",
+        "url": "https://www.saint.gr/3059/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the shining of your godly ways you drew to the ever-living light the pair of brothers who shared your house; and contending with them, Cecilia, you were all together counted worthy of the divine glory. With them, intercede that forgiveness of offences and great mercy be given to those who praise you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Νοεμβρίου — «Άγιοι Κικιλία, Βαλεριανός και Τιβούρτιος»",
+        "url": "https://www.saint.gr/11/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3059/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Νοεμβρίου εκάστου έτους», the same day as the listing. The line enumerates three by name, so there is a folder for each, and they share one life; the third of them, `cecilia-of-rome`, the corpus already keeps and takes a `greek` row by upgrade. Nothing in the corpus answers to this name. The page's Ἀπολυτίκιον names Cecilia and calls these two «τὴν αὐτάδελφον δυάδα καὶ σύναυλον», the pair of brothers of her household, and no other saint, so it is their service and is copied here as it is onto her folder; the Κοντάκιον and the Οἶκος speak of Cecilia alone and are not drafted here. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

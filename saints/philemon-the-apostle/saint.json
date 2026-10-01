@@ -6,6 +6,11 @@
       "form": "Filimon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 noiembrie, «Sfântul Apostol Filimon și soția sa, Apfia», with the rank words left off."
+    },
+    {
+      "form": "Φιλήμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Άγιοι Φιλήμων ο Απόστολος, Άρχιππος, Ονήσιμος και Απφία», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Νοεμβρίου — «Άγιοι Φιλήμων ο Απόστολος, Άρχιππος, Ονήσιμος και Απφία»",
+        "url": "https://www.saint.gr/11/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3058/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Νοεμβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: the Christian of Colossae whom Paul addresses in the epistle, husband of Apphia, master of Onesimus. The page says in its own closing sentence that two of the four are kept apart on their own days — «ο Aπόστολος Oνήσιμος εορτάζεται χωριστά στις 15 Φεβρουαρίου και ο Aπόστολος Άρχιππος εορτάζεται χωριστά στις 19 Φεβρουαρίου. Σήμερα, εορτάζεται κυρίως ο Άγιος Aπόστολος Φιλήμων και η Aπφία» — and the corpus keeps `onesimus-the-apostle` and `archippus-the-apostle` with venerated Greek rows on exactly those days, so neither row is touched and the second day is a line in the reader's report. The hymn taken is the page's Ἀπολυτίκιον (Κατέβασμα), which names all four of them and no other saint and gives both its ἦχος and its model; the «Έτερον Ἀπολυτίκιον», «Ἀπόστολοι Ἅγιοι», is the common of apostles and carries a tone but no model, and the Κάθισμα, which does name Philemon, is neither a troparion nor a kontakion, so neither is drafted. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -48,7 +63,8 @@
   "related": [
     "apphia-wife-of-philemon",
     "archippus-the-apostle",
-    "paul-the-apostle"
+    "paul-the-apostle",
+    "onesimus-the-apostle"
   ],
   "hymns": [
     {
@@ -66,6 +82,23 @@
         "text": "Holy Apostles, entreat the merciful God to grant our souls forgiveness of offences.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Tετρὰς ἡ θεοσύλλεκτος τῶν ἀποστόλων Χριστοῦ Φιλήμων καὶ Ἄρχιππος καὶ σὺν Ἀπφίᾳ ὁμοῦ, ὁ θεῖος Ὀνήσιμος· λάμψαντες τοῖς ἐν σκότει ἀληθείας τὴν γνῶσιν, ἤθλησαν ὁμοφρόνως καὶ τὴν πλάνην καθεῖλον· καὶ νῦν ἐξευμενίζονται πᾶσι τὸν Κύριον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχύ προκατάλαβε — the first hymn on the page of «Άγιοι Φιλήμων ο Απόστολος, Άρχιππος, Ονήσιμος και Απφία». It names the four of them and no other saint. The initial Latin T of «Tετρὰς» is the page's own.",
+        "url": "https://www.saint.gr/3058/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The four gathered by God out of the apostles of Christ — Philemon and Archippus, and together with Apphia the divine Onesimus — shining the knowledge of the truth upon those in darkness, contended with one mind and pulled down error; and now they make the Lord merciful to all.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχύ προκατάλαβε."
     }
   ],
   "text": {

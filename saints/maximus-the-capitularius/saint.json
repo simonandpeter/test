@@ -1,0 +1,54 @@
+{
+  "slug": "maximus-the-capitularius",
+  "display_name": "Maximus the Capitularius",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μάξιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Άγιος Μάξιμος ο Καπιτουλάριος», with the rank words left off."
+    }
+  ],
+  "related": [
+    "valerian-husband-of-cecilia",
+    "cecilia-of-rome"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Νοεμβρίου — «Άγιος Μάξιμος ο Καπιτουλάριος»",
+        "url": "https://www.saint.gr/11/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3060/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Νοεμβρίου εκάστου έτους», the same day as the listing. None of the corpus's many Maximus folders is this man: they are kept on other days and none is a jailer at Rome. The epithet in the display name is the page's own «ο Καπιτουλάριος», which it then explains as «δεσμοφύλακας», a prison guard; it is not a rank the corpus holds and nothing is put in `types` from it. The page gives no year and no emperor, so no `dates` object is proposed, although the saints through whom it says he believed are set under Diocletian on their own page of the same day. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "mark-22-november-second",
+  "display_name": "Mark (22 November, the second of the name)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μάρκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Άγιοι Μάρκος, Στέφανος και Μάρκος», with the rank words left off."
+    }
+  ],
+  "related": [
+    "mark-22-november",
+    "stephen-22-november"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 290,
+      "latest": 290,
+      "display": "290",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Μάρκος, Στέφανος και Μάρκος μαρτύρησαν στα χρόνια του βασιλιά Διοκλητιανού και ηγεμόνα Μάγου το έτος 290 μ.Χ.», and the page's heading carries «(; - 290)» against each name. It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Νοεμβρίου — «Άγιοι Μάρκος, Στέφανος και Μάρκος»",
+        "url": "https://www.saint.gr/11/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3061/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Νοεμβρίου εκάστου έτους», the same day as the listing. The line enumerates three men by name, so there is a folder for each, and the three share one life. This is the second of the two Marks the page's line names, kept apart from the first on the corpus's own pattern for `alexander-companion-of-agapius-second`. The page distinguishes them only by printing the name twice and by the couplet's «σὺν Μάρκοις δύω», with two Marks; which of the two is which it does not say, and the folders take the order of the line. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

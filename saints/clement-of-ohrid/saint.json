@@ -7,6 +7,11 @@
       "form": "Clement",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 iulie, «Sfântul Clement, Arhiepiscopul Ohridei», with the rank and the see left off."
+    },
+    {
+      "form": "Κλήμης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Άγιος Κλήμης ο Θαυματουργός επίσκοπος Αχρίδας της Βουλγαρίας», with the rank word, the epithet and the see left off."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Νοεμβρίου — «Άγιος Κλήμης ο Θαυματουργός επίσκοπος Αχρίδας της Βουλγαρίας»",
+        "url": "https://www.saint.gr/11/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3073/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Νοεμβρίου εκάστου έτους», and the man is the folder's own: ordained bishop for Bulgaria by Methodius, builder of the monastery of Saint Panteleimon at Ohrid where his relics were laid. **The folder's Romanian row keeps him on 27 July and this Greek row keeps him on 22 November, and that is not a second commemoration being invented**: they are two churches' days, one row each, which is the schema. The folder's existing death interval from doxologia is not replaced; the page gives no year of its own, only the reign of the emperor Michael, 842 to 867, son of Theophilos the iconoclast. The page adds that the saint's head is at the monastery of the Honourable Forerunner at Veroia. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -57,5 +72,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "methodius-of-moravia"
+  ]
 }

@@ -6,6 +6,11 @@
       "form": "Apfia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 noiembrie, «Sfântul Apostol Filimon și soția sa, Apfia»."
+    },
+    {
+      "form": "Απφία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Άγιοι Φιλήμων ο Απόστολος, Άρχιππος, Ονήσιμος και Απφία», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Νοεμβρίου — «Άγιοι Φιλήμων ο Απόστολος, Άρχιππος, Ονήσιμος και Απφία»",
+        "url": "https://www.saint.gr/11/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3058/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Νοεμβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the woman is the folder's own: Philemon's wife, a Christian of Colossae. The page says that today it is mainly Philemon and Apphia who are kept — «Σήμερα, εορτάζεται κυρίως ο Άγιος Aπόστολος Φιλήμων και η Aπφία» — and that Onesimus and Archippus are kept apart on 15 and 19 February, where the corpus already keeps them with venerated Greek rows; neither of those rows is touched. The couplet the page sets over her has her struck down stretched out on the ground, with the eye of her heart in heaven. The hymn taken is the Ἀπολυτίκιον (Κατέβασμα), which names her among the four and no other saint. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -45,9 +60,29 @@
   ],
   "related": [
     "philemon-the-apostle",
-    "archippus-the-apostle"
+    "archippus-the-apostle",
+    "paul-the-apostle"
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Tετρὰς ἡ θεοσύλλεκτος τῶν ἀποστόλων Χριστοῦ Φιλήμων καὶ Ἄρχιππος καὶ σὺν Ἀπφίᾳ ὁμοῦ, ὁ θεῖος Ὀνήσιμος· λάμψαντες τοῖς ἐν σκότει ἀληθείας τὴν γνῶσιν, ἤθλησαν ὁμοφρόνως καὶ τὴν πλάνην καθεῖλον· καὶ νῦν ἐξευμενίζονται πᾶσι τὸν Κύριον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχύ προκατάλαβε — the first hymn on the page of «Άγιοι Φιλήμων ο Απόστολος, Άρχιππος, Ονήσιμος και Απφία». It names the four of them and no other saint. The initial Latin T of «Tετρὰς» is the page's own.",
+        "url": "https://www.saint.gr/3058/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The four gathered by God out of the apostles of Christ — Philemon and Archippus, and together with Apphia the divine Onesimus — shining the knowledge of the truth upon those in darkness, contended with one mind and pulled down error; and now they make the Lord merciful to all.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχύ προκατάλαβε."
+    }
+  ]
 }

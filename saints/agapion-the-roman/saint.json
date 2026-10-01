@@ -1,0 +1,50 @@
+{
+  "slug": "agapion-the-roman",
+  "display_name": "Agapion the Roman",
+  "sex": "male",
+  "types": [
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Αγαπίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Άγιος Αγαπίων ο Ρωμαίος», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Νοεμβρίου — «Άγιος Αγαπίων ο Ρωμαίος»",
+        "url": "https://www.saint.gr/11/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3070/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Νοεμβρίου εκάστου έτους», the same day as the listing. The name the page prints is Αγαπίων, not Αγάπιος, and it is kept as the page spells it; the second Agapius of this same day, `agapius-22-november`, is the other line and the other page. No folder in the corpus answers to Αγαπίων. **He is given `types: [\"confessor\"]` and not `martyr`**, because the page says he came out of the beasts unharmed and died in peace. No year, no hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Iacov Tsalikis",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 noiembrie, «Sfântul Cuvios Iacov Tsalikis», with the rank words left off."
+    },
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Όσιος Ιάκωβος (Τσαλίκης), ο Θεοφόρος, καθηγούμενος της Ιεράς Μονής Οσίου Δαυΐδ του εν Ευβοία», with the rank word, the epithet and the office left off; the surname the page puts in brackets, Τσαλίκης, is not part of the stored form."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Νοεμβρίου — «Όσιος Ιάκωβος (Τσαλίκης), ο Θεοφόρος, καθηγούμενος της Ιεράς Μονής Οσίου Δαυΐδ του εν Ευβοία»",
+        "url": "https://www.saint.gr/11/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/4442/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Νοεμβρίου εκάστου έτους» and «Οσιος Ιακωβος (τσαλικησ), ο Θεοφόρος, Καθηγουμενος Της Ιερας Μονης Οσιου Δαυιδ Του Εν Ευβοια (1920 - 1991)», the same day the folder's Romanian row already carries, and the dates and the abbacy are the folder's own. The folder's existing date intervals from doxologia are not replaced; the page's heading carries the same two years. **The page is very long — some ninety thousand characters — and it was read only in its opening and closing stretches**, which is why the paragraph added to the life takes only the childhood the Romanian life passes over quickly and says so; the reader's report names the limit. No hymn is drafted: the page's hymnody is linked out as separate services and is not printed on it. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",

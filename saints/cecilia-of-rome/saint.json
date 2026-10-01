@@ -6,6 +6,11 @@
       "form": "Cecilia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 noiembrie, «Sfânta Muceniță Cecilia», with the rank words left off."
+    },
+    {
+      "form": "Κικιλία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Άγιοι Κικιλία, Βαλεριανός και Τιβούρτιος», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Νοεμβρίου — «Άγιοι Κικιλία, Βαλεριανός και Τιβούρτιος»",
+        "url": "https://www.saint.gr/11/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3059/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Νοεμβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the woman is the folder's own: the noble girl of the third century baptised against her idolatrous parents' religion, married to Valerian, beheaded in the persecution under Diocletian. The page's line enumerates two more by name, Valerian and Tiburtius, and both are new folders in this day's batch; the same day keeps `maximus-the-capitularius`, who the page says believed through her and Valerian. A death interval is proposed from the reign the page names, where the folder had none. Both hymns name her and no other saint and both carry an ἦχος and a model: the Ἀπολυτίκιον also calls the two men «τὴν αὐτάδελφον δυάδα καὶ σύναυλον» and is drafted onto their folders too, and the Κοντάκιον, which names the prefect Almachius, is hers alone. The page's Οἶκος is neither a troparion nor a kontakion and is not drafted. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -60,9 +75,57 @@
         "text": "Your ewe-lamb Cecilia cries out to you with a loud voice, O Jesus: you, my Bridegroom, I love, and seeking you I suffer; with you I am crucified and with you buried in your baptism; and I suffer for your sake, that I may reign in you; and I die for you, that I may live for you. Receive me, then, as a spotless sacrifice, offered to you in love. At her prayers, as you are merciful, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Θείων τρόπων σου, τὴ ἐπιλάμψει, πρὸς ἀείζωον, εἴλκυσας φέγγος, τὴν αὐτάδελφον δυάδα καὶ σύναυλον καὶ σὺν αὐτοὶς Κικιλία ἀθλήσασα, τῆς θείας δόξης ὁμοῦ ἠξιώθητε. Μεθ' ὧν πρέσβευε, δοθήναι τοὶς εὐφημούσι σέ, πταισμάτων ἱλασμὸν καὶ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the first hymn on the page of «Άγιοι Κικιλία, Βαλεριανός και Τιβούρτιος». It names her and calls the two men «τὴν αὐτάδελφον δυάδα καὶ σύναυλον», the pair of brothers who shared her house, and names no other saint. The readings «τὴ», «αὐτοὶς», «δοθήναι» and «τοὶς» are the page's own and are copied as they stand.",
+        "url": "https://www.saint.gr/3059/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the shining of your godly ways you drew to the ever-living light the pair of brothers who shared your house; and contending with them, Cecilia, you were all together counted worthy of the divine glory. With them, intercede that forgiveness of offences and great mercy be given to those who praise you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τὴν νυμφευθεῖσαν, τῷ Χριστῷ ἑκουσίως, καὶ στολισθεῖσαν, ἀρεταῖς τὴν καρδίαν, θεοπρεπῶς ὑμνήσωμεν Πιστῶν ἡ πληθύς· αὕτη γὰρ κατήσχυνεν, Ἀλμακίου τὸ θράσος, λάμψασα ὡς ἥλιος, μέσον τῶν ἐκζητούντων, καὶ μετὰ ταῦτα ὤφθη τοῖς ἐν γῇ, στήριγμα θεῖον, τὴν πίστιν κρατύνασα.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ — on the page of «Άγιοι Κικιλία, Βαλεριανός και Τιβούρτιος». It speaks of her alone, names no other saint, and names the prefect Almachius, whom the page's own narrative does not.",
+        "url": "https://www.saint.gr/3059/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us, the multitude of the faithful, sing as befits God of her who was wedded to Christ by her own will and whose heart was arrayed in the virtues; for she put the insolence of Almachius to shame, shining like the sun in the midst of those who sought her out, and afterwards was shown to those on earth a divine support, having made the faith strong.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian (284–305)",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Κικιλία έζησε τον 3ο μ.Χ. αιώνα» and «Κατά τον επί Διοκλητιανού διωγμού η Κικιλία, ο Βαλέριος και ο Τιβούρτιος συνέχιζαν να δηλώνουν την πίστη τους στον Ιησού Χριστό». The page gives no year; the interval is the reign it names for the persecution, and its own century for her life is the wider claim beside it."
+    }
+  },
+  "related": [
+    "valerian-husband-of-cecilia",
+    "tiburtius-brother-of-valerian",
+    "maximus-the-capitularius"
+  ]
 }

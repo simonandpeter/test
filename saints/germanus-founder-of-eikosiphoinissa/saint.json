@@ -1,0 +1,59 @@
+{
+  "slug": "germanus-founder-of-eikosiphoinissa",
+  "display_name": "Germanus, founder of the monastery of Eikosiphoinissa",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Γερμανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Όσιος Γερμανός Ιδρυτής Ιεράς Μονής Εικοσιφοινίσσης», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 880,
+      "latest": 880,
+      "display": "about 880",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Γερμανός έζησε περί το 880 μ.Χ. Δεν υπάρχουν περισσότερες λεπτομέρειες για τον βίο του Αγίου.» The year is written «περί», about, and the page gives no year of birth or of death, so it is recorded as a floruit."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Νοεμβρίου — «Όσιος Γερμανός Ιδρυτής Ιεράς Μονής Εικοσιφοινίσσης»",
+        "url": "https://www.saint.gr/11/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3074/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Νοεμβρίου εκάστου έτους», the same day as the listing. None of the corpus's nine Germanus folders is this man: they are kept on other days and none is the founder of Eikosiphoinissa. The clause in the display name is the page's own «Ιδρυτής Ιεράς Μονής Εικοσιφοινίσσης», which the corpus keeps on the pattern of `stephen-of-chenolakkos`. The page's own name-gloss names a general of Justinian as a famous bearer of the name; that is the site's gloss on any name and nothing of it is recorded. The same day's listing carries a synaxis of the Panagia of Eikosiphoinissa, which is an icon and not a person and is not drafted. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

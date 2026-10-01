@@ -1,0 +1,61 @@
+{
+  "slug": "callistus-ii-of-constantinople",
+  "display_name": "Callistus II of Constantinople",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "patriarch"
+  ],
+  "names": [
+    {
+      "form": "Κάλλιστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Όσιος Κάλλιστος ο Β', Πατριάρχης Κωνσταντινούπολης», with the rank words left off."
+    }
+  ],
+  "office": "Patriarch of Constantinople",
+  "dates": {
+    "floruit": {
+      "earliest": 1397,
+      "latest": 1397,
+      "display": "1397",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Κάλλιστος ανέβηκε στον πατριαρχικό θρόνο το έτος 1397 μ.Χ.» The page gives no year of birth and no year of death, so the one year it prints is recorded as a floruit and not as either."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Νοεμβρίου — «Όσιος Κάλλιστος ο Β', Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/11/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3066/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Νοεμβρίου εκάστου έτους», the same day as the listing. He is not the corpus's `callistus-of-constantinople`, Callistus I, who is kept on 20 June, nor `callistus-angelikoudes`; the page's own «ο Β'», the second, and the year 1397 are what tell them apart. The numeral and the see stand in the display name as the corpus prints Callistus I's. The page gives only the year of his accession, not of his birth or death, so the interval recorded is a floruit. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

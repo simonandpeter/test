@@ -115,6 +115,24 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σισινιοσ sisinius-of-the-forty-martyrs sisinnius-22-november sisinnius-of-constantinople':
+    'Three men. The new one is the Sisinnius of 22 November, a hieromartyr; the others are Sisinius of the Forty Martyrs on 9 March and Sisinnius patriarch of Constantinople on 11 October.',
+  'γερμανοσ germanos-of-stolobnoe germanus-companion-of-peregrinus germanus-companion-of-zebinas germanus-founder-of-eikosiphoinissa germanus-maroules germanus-of-constantinople germanus-of-dobrogea germanus-of-kantara germanus-of-novgorod germanus-of-sagmata germanus-of-valaam herman-of-alaska':
+    'Twelve now. The new one is Germanus, founder of the monastery of Eikosiphoinissa, on 22 November; the others are read in the el-10-11 entry for this name form.',
+  'αγαπιοσ agapius-2-november agapius-22-november agapius-disciple-of-babylas agapius-disciple-of-passarion agapius-martyr-1-march agapius-metaxas agapius-of-apamea agapius-of-colciu agapius-of-dimitsana agapius-of-galatista agapius-of-gaza agapius-of-numidia agapius-son-of-bassa':
+    'Thirteen now. The new one is the Agapius of 22 November; the others are read in the el-11-06 entry for this name form.',
+  'θαδδαιοσ thaddeus-22-november thaddeus-apostle-of-the-seventy thaddeus-of-stepantsminda':
+    'Three men. The new one is the Thaddeus of 22 November; the others are Thaddeus of the Seventy, whom four calendars keep, and Thaddeus of Stepantsminda on 7 May.',
+  'στεφανοσ stefan-brancoveanu stephen-12-august stephen-21-october stephen-22-november stephen-27-february stephen-31-october stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-ii-of-constantinople stephen-martyr-8-february stephen-milutin stephen-of-chenolakkos stephen-of-hungary stephen-of-kazan stephen-of-khirsa stephen-of-makhrishche stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-pope-of-rome stephen-the-great stephen-the-presbyter-7-june stephen-the-sabbaite stephen-xylinites':
+    'Thirty now. The new one is the Stephen of 22 November, martyred with the two Marks of that day; the others are read in the el-08-20 entry for this name form.',
+  'μενιγνοσ menignus menignus-the-fuller':
+    'Two men. The new one is Menignus the Fuller on 22 November; the other is the Menignus of 4 July.',
+  'μαξιμοσ maximus-30-april maximus-7-may maximus-brother-of-dometius maximus-companion-of-asklepiodote maximus-companion-of-fausta maximus-companion-of-olympias maximus-companion-of-polychronius maximus-companion-of-terentius maximus-martyred-at-evreux maximus-of-jerusalem maximus-of-kantara maximus-of-kapsokalyvia maximus-of-marcianopolis maximus-of-moscow maximus-of-ozovia maximus-of-totma maximus-of-ungrovlachia maximus-patriarch-17-november maximus-son-of-paul-and-tatta maximus-the-capitularius maximus-the-soldier maximus-venerable-martyr-6-march':
+    'Twenty-two now. The new one is Maximus the Capitularius on 22 November, of the company around Cecilia of Rome; the others are read in the el-11-17 entry for this name form.',
+  'μαρκοσ mark-22-november mark-22-november-second mark-companion-of-mokianos mark-companion-of-soterichus mark-martyr-11-august mark-martyr-8-june mark-of-apollonias mark-of-arethusa mark-of-byblos mark-of-chios mark-of-kantara mark-of-the-lavra-of-pskov mark-the-ascetic mark-the-cretan-of-smyrna mark-the-deaf mark-the-evangelist mark-the-hermit-20-may mark-the-shepherd':
+    'Eighteen now, and two of them are new on one day: the page’s line for 22 November names Mark twice, and nothing in it parts them, so the second is surnamed by that — two entries, two men. The others are read in the el-07-03 entry for this name form.',
+  'καλλιστοσ callistus-ii-of-constantinople callistus-of-constantinople':
+    'Two men. The new one is Callistus II, patriarch of Constantinople, on 22 November; the other is Callistus of Constantinople on 20 June, whose day the Romanian calendar keeps too.',
   'προκοπιοσ procopius-of-decapolis procopius-of-jerusalem procopius-of-ustyug procopius-of-usya procopius-of-vyatka procopius-the-martyr-25-june procopius-the-palestinian':
     'Six men. The new one is Procopius of Vyatka on 21 November, a fool for Christ whose folder relates Tryphon of Vyatka; the others are read in the el-07-08 entry for this name form, where three stand on 8 July. His second day is a note in his life and no row is moved.',
   'θεσπεσιοσ thespesius thespesius-20-november':
