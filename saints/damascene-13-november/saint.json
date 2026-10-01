@@ -6,11 +6,18 @@
       "form": "Damaschin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 noiembrie, «Sfântul Cuvios Damaschin»."
+    },
+    {
+      "form": "Δαμασκηνός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Νοεμβρίου, «Άγιος Δαμασκηνός ο Νέος Οσιομάρτυρας ο Κωνσταντινουπολίτης», with the rank words left off. The page's own head line is «Αγιος Δαμασκηνος ο Νεος Οσιομαρτυρας ο Κωνσταντινουπολιτης (; - 1681)»; the epithets are left out of the bare form."
     }
   ],
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "venerable-martyr",
+    "new-martyr"
   ],
   "attestations": [
     {
@@ -35,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Νοεμβρίου — «Άγιος Δαμασκηνός ο Νέος Οσιομάρτυρας ο Κωνσταντινουπολίτης»",
+        "url": "https://www.saint.gr/11/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Νοεμβρίου εκάστου έτους», the same menologion day the folder already keeps for the Romanian church. **The identification is this upgrade's one open question and the writer should rule on it.** The folder exists because doxologia.ro printed a bare «Damaschin» on 13 noiembrie with no life and no tab, and its own Romanian row says in so many words that «which Damascene this is, the source does not say». saint.gr's entry on the very same menologion day names a Damascene fully: «ο Νέος Οσιομάρτυρας ο Κωνσταντινουπολίτης», head line «(; - 1681)», of Galata in Constantinople, born Diamantis to the pious Kyriakos and Kyriaki, orphaned young, forced into Islam to escape Turkish anger over some fault of his, repentant, twelve years a monk of the Megiste Lavra under the name Damascene, come back to the City with the departing patriarch Dionysios, preaching Christ openly, taken for a madman at first, then arrested, tortured and beheaded before the door of the Patriarchate on 13 November 1681, his relic buried in the church of the Mother of God on Chalki, and the doors of the workshop opposite the Patriarchate gate, stained with his blood, bought and kept by Makarios, abbot of the monastery of Mavros Molos. A second folder for a man of one name on one menologion day is the failure `BRIEF.md` §3 calls the worst this job has, so the row is proposed here rather than a new folder — but nothing in the Romanian line itself identifies him, and if the writer judges them two men this entry must become a folder of its own instead. `dates` are proposed, because this page states a year of death outright where the folder has none. No `locations`. The page prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -46,5 +63,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1681,
+      "latest": 1681,
+      "display": "1681",
+      "basis": "traditional",
+      "note": "saint.gr: «τον αποκεφάλισαν μπροστά στην πόρτα του Πατριαρχείου στις 13 Νοεμβρίου 1681 μ.Χ.», and the head line «(; - 1681)». The page gives no year of birth."
+    }
   }
 }
