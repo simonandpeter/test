@@ -5,6 +5,11 @@
     {
       "form": "Св. праотац Аврам",
       "lang": "sr"
+    },
+    {
+      "form": "Αβραάμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Οκτωβρίου, «Δικαίων Αβραάμ και Λωτ του ανεψιού του», with the rank word left off; the page's own heading for him is «Δικαιος Αβρααμ»."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 21 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Οκτωβρίου — «Δικαίων Αβραάμ και Λωτ του ανεψιού του»",
+        "url": "https://www.saint.gr/10/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Οκτωβρίου εκάστου έτους», and the Greek calendar keeps him with his nephew in one entry, «Δικαίων Αβραάμ και Λωτ του ανεψιού του». The page is a long retelling of Genesis — Terah, Nahor and Harran, Ur of the Chaldeans, Sarah, Isaac by Sarah, Ishmael by Hagar and six sons by Keturah, with chapter and verse throughout — and gives no year at all, so no `dates` object is proposed. It prints no hymn for him, only distichs for him and for Lot. Lot is drafted as a new folder in batch el-10-09. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The folder's Serbian row keeps him on 21 August and is untouched."
     },
     {
       "church": "serbian",
@@ -45,5 +60,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "lot"
+  ]
 }

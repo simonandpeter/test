@@ -1,0 +1,52 @@
+{
+  "slug": "lot",
+  "display_name": "Lot, nephew of Abraham",
+  "names": [
+    {
+      "form": "Λωτ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Οκτωβρίου, «Δικαίων Αβραάμ και Λωτ του ανεψιού του», with the rank word left off; the page's own heading for him is «Δικαιος Λωτ»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "related": [
+    "abraham-the-patriarch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Οκτωβρίου — «Δικαίων Αβραάμ και Λωτ του ανεψιού του»",
+        "url": "https://www.saint.gr/10/09/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

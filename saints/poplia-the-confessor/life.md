@@ -1,0 +1,9 @@
+# Poplia of Antioch
+
+saint.gr's calendar for 9 Οκτωβρίου names Poplia the Confessor and makes her a pattern of the Christian wife, who knows how to keep the harmony of a household by obedience and by love. She was born and lived at Antioch, the page says, under the emperors from Constantine the Great down to Julian the Transgressor, whose year it gives as 361. How well she brought up her only son John is witnessed, it says, by the conduct in which he shone and was shown excellent among the excellent.
+
+He was so modest and so exceedingly humble-minded that when the bishopric of Antioch fell vacant and they pressed him to take it, John would not bend, and remained a simple priest. After his ordination and the death of his father, his mother Poplia took pious orphan maidens into her house. She governed them with affection, passed on to them her own warm faith, and taught them to be pure and, if it should be needed, to become heroines of the cross and martyrs of the Gospel.
+
+When Julian came to Antioch to encourage the idolaters he passed by Poplia's house, and she and the maidens with her sang out loudly, «The idols of the nations are silver and gold, the works of men's hands». Julian was irritated and sent word that she was not to do it again; and when he passed the house a second time she sang out «Let God arise, and let his enemies be scattered». He then gave the order and she was cruelly scourged, but because she was an old woman he did not kill her. So Poplia continued her work of mercy until her righteous soul was given up to Christ the giver of crowns. The page prints no hymn. The page carries no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου», so the site vouches for the entry as it stands.
+
+*After saint.gr's calendar for 9 Οκτωβρίου — [the day](https://www.saint.gr/10/09/index.aspx) and [the life](https://www.saint.gr/1030/saint.aspx); read 1 October 2026.*

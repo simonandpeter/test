@@ -1,0 +1,60 @@
+{
+  "slug": "peter-from-the-soldiers",
+  "display_name": "Peter from the Soldiers",
+  "names": [
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Οκτωβρίου, «Όσιος Πέτρος «ο από στρατιωτών»», with the rank word left off; the epithet «ο από στρατιωτών» is the page's own. It glosses the name from πέτρα, the rock."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "soldier"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 829,
+      "latest": 867,
+      "display": "829–867",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησε στα χρόνια του βασιλιά Θεοφίλου του εικονομάχου (829 μ.Χ.)», and «ο βασιλιάς Βασίλειος ο Μακεδών, το έτος 867 μ.Χ., τον έπεισε να κατοικήσει στο μοναστήρι του Αγίου Φωκά»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Οκτωβρίου — «Όσιος Πέτρος «ο από στρατιωτών»»",
+        "url": "https://www.saint.gr/10/09/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Atanasia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 octombrie."
+    },
+    {
+      "form": "Αθανασία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Οκτωβρίου, «Όσιοι Ανδρόνικος και Αθανασία η συμβία του», with the rank word left off; the page calls her «η συμβία του», his wife."
     }
   ],
   "sex": "female",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for the corresponding day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Οκτωβρίου — «Όσιοι Ανδρόνικος και Αθανασία η συμβία του»",
+        "url": "https://www.saint.gr/10/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Οκτωβρίου εκάστου έτους», and the entry is the same couple: the well-off husband and wife of Antioch in Syria, he a money-changer, who lost their two children, went on pilgrimage to the Holy Land and then to Egypt, and by common decision became monastics — he in the monastery of the abba Daniel, she in the women's monastery of the Tabennesiotes — and fell asleep in peace. The page states «έζησαν κατά το έτος 540 μ.Χ.», so a `dates` object is proposed from its own words. It records a portion of the relics of each of them at the monastery of Kykkos in Cyprus. The page prints a proper apolytikion that names them both, taken here, and an «Έτερον Ἀπολυτίκιον», the common «Τῆς ἐρήμου πολίτης», which names Andronicus alone and is taken for his folder only. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -48,5 +63,33 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 540,
+      "latest": 540,
+      "display": "540",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησαν κατά το έτος 540 μ.Χ.»"
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Σωφροσύνης τὴν χλαῖναν τὴν θεούφαντον, κατεποικίλατε χρόαις τῶν ἱερῶν ἀρετῶν, ὁμοφρόνως ἐν σπουδῇ ἄμφω ἀσκήσαντες, ὅθεν ὑμῶν τὴν σιωπήν, ἡ τρισάγιος ᾠδή, ἐδέξατο ἐν ὑψίστοις, Ἀνδρόνικε σὺν τὴ θεία, Ἀθανασία τὴ Θεόφρονι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον — the first hymn on the page of «Όσιοι Ανδρόνικος και Αθανασία η συμβία του», and it names them both.",
+        "url": "https://www.saint.gr/1031/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You embroidered the God-woven mantle of chastity with the colours of the sacred virtues, both of you living in asceticism with one mind and with zeal; and so the thrice-holy song received your silence in the highest, Andronicus, with the divine and God-minded Athanasia.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον."
+    }
+  ]
 }

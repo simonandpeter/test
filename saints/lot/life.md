@@ -1,0 +1,9 @@
+# Lot, nephew of Abraham
+
+saint.gr's calendar for 9 Οκτωβρίου keeps one entry for two men of the book of Genesis, «Δικαίων Αβραάμ και Λωτ του ανεψιού του» — the righteous Abraham and Lot his nephew — and gives them one long page out of Scripture. Lot is the nephew of [Abraham](/saints/abraham-the-patriarch), and the page's distich for him reads «Ὑπῆρξε τῷ Λὼτ οὐρανός Σηγὼρ νέα, / Εἰς ὃν φθάσας, πέφευγεν ὡς πῦρ τὸν βίον» — Zoar was a new heaven to Lot, and reaching it he fled his life as from fire.
+
+The page says that after the death of his brother Nahor, Abraham left Ur of the Chaldeans with his family, his father and his nephew Lot, for Harran in Mesopotamia; and it follows Lot to Sodom. When God destroyed the cities of the plain, the page says, Lot's wife disobeyed the angel's warning and looked back to see what was happening, and became at once a pillar of salt; smoke went up from the whole region out of the earth as out of a furnace; and when God destroyed the cities where Lot had lived he remembered Abraham and saved Lot from the destruction, citing Genesis 19.1–29.
+
+Lot was afraid to stay at Zoar, the page goes on, and left it to live in the mountains, in a cave, with his two daughters; and there one day his daughters made him drunk and lay with him and bore children by him. The elder bore a son and called him Moab, who was the forefather of the Moabites, and the younger bore a son and called him Ammon, the forefather of the Ammonites, at Genesis 19.30–38. saint.gr gives no year for him and prints no hymn. The page carries no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου», so the site vouches for the entry as it stands.
+
+*After saint.gr's calendar for 9 Οκτωβρίου — [the day](https://www.saint.gr/10/09/index.aspx) and [the page Abraham and Lot share](https://www.saint.gr/1028/saint.aspx); read 1 October 2026.*

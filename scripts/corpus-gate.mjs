@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'πετροσ peter-abesalamites peter-companion-of-aphrodisius peter-companion-of-leucius peter-companion-of-manuel peter-companion-of-marcian peter-disciple-of-athenogenes peter-disciple-of-dionysius-of-alexandria peter-doroshenko peter-from-the-soldiers peter-martyr-2-june peter-of-argos peter-of-bulgaria peter-of-capitolias peter-of-damascus peter-of-galatia peter-of-gortyna peter-of-kazan peter-of-lampsacus peter-of-monevata peter-of-murom peter-of-sebaste peter-of-sinope peter-of-the-brazen-gate peter-of-tobolsk peter-ordynsky-of-rostov peter-son-of-john-of-syracuse peter-the-apostle peter-the-athonite peter-the-egyptian peter-the-gaoler peter-the-patrician peter-the-peloponnesian peter-the-sign-bearer':
+    'The new one is Peter, who came from the soldiers, on 9 October; the rest of the fold is read in the el-07-16 entry for this name form.',
   'πελαγια pelagia-of-antioch pelagia-of-caesarea-in-palestine pelagia-of-diveyevo pelagia-of-tarsus pelagia-of-tinos pelagia-the-virgin-of-antioch':
     'Six now, and **two Pelagias of Antioch stand on 8 October**, which is the distinction the page itself draws and not a duplicate: Pelagia the penitent, whom the Romanian keeps there too and whose Greek row this batch adds, and Pelagia the virgin martyr of the same city, new here. Two entries, two women. The others are read in the el-03-25 entry for this name form, with Tarsus on 4 May and Tinos on 23 July.',
   'τρυφων tryphon-companion-of-trophimus tryphon-of-campsada tryphon-of-constantinople tryphon-of-vyatka':
