@@ -1,0 +1,85 @@
+{
+  "slug": "hermias-companion-of-isaurus",
+  "display_name": "Hermias, companion of Isaurus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 283,
+      "latest": 284,
+      "display": "283–284",
+      "basis": "traditional",
+      "note": "saint.gr: «Όλοι αγωνίστηκαν για τον Χριστό στην Απολλωνία, όταν αυτοκράτορας ήταν ο Νουμεριανός (283-284 μ. Χ.)» — the page dates the contest by that reign and gives no year of death."
+    }
+  },
+  "names": [
+    {
+      "form": "Ερμείας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιουνίου, «Άγιος Ίσαυρος και οι συν αυτώ Βασίλειος, Ιννοκέντιος, Ερμείας, Φιλήκας και Περεγρίνος», with the rank word left off. The page's apolytikion spells the name «Ἐρμείας» as well; the form above is the one the day's line prints."
+    }
+  ],
+  "related": [
+    "isaurus-the-deacon",
+    "innocent-of-apollonia",
+    "felix-of-apollonia",
+    "peregrinus-of-apollonia",
+    "basil-companion-of-isaurus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιουνίου — «Άγιος Ίσαυρος και οι συν αυτώ Βασίλειος, Ιννοκέντιος, Ερμείας, Φιλήκας και Περεγρίνος»",
+        "url": "https://www.saint.gr/06/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The entry names six men, so it is one folder per member: «Άγιος Ίσαυρος και οι συν αυτώ Βασίλειος, Ιννοκέντιος, Ερμείας, Φιλήκας και Περεγρίνος». Four of them the corpus already keeps from the Romanian pass — `isaurus-the-deacon`, `innocent-of-apollonia`, `felix-of-apollonia` and `peregrinus-of-apollonia`, all on the Romanian 17 June — and doxologia's shared life names Hermias in passing but gives him no line and does not name Basil at all, so these two have no folder. The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Ιουνίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. He is not `hermias-of-comana`, the martyr of Comana kept on 31 May: this Hermias is named only in Isaurus's company. doxologia's shared life for that company names him in passing, spelling him Hermias, and gives him no line of its own."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "ᾌχος γ’.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Ὡς ἐννεάριθμον, τοῦ Λόγου σύνταγμα, ἐχθρῶν τὰς φάλαγγας, κατετροπώσαντο, Ἰσαυρος Φήλιξ σὺν αὐτοῖς, Ἐρμείας καὶ Περεγρῖνος, ἅμα Ἰννοκέντιος, Μανουὴλ καὶ Βασίλειος, Ἰσμαὴλ ὁ ἔνδοξος, καὶ Σαβὲλ ὁ μακάριος· διὸ καὶ τὰ βραβεῖα τῆς νίκης, εὗρον ὡς Μάρτυρες Κυρίου.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), ᾌχος γ’, Τὴν ὡραιότητα — printed on the page of «Άγιος Ίσαυρος» and again on that of the three Persians; a service of nine which names all six of Apollonia and all three brothers",
+        "url": "https://www.saint.gr/596/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a nine-numbered company of the Word they routed the phalanxes of the enemy — Isaurus, Felix with them, Hermias and Peregrinus, together with Innocent, Manuel and Basil, Ismael the glorious and Sabel the blessed; and therefore they found the prizes of victory as martyrs of the Lord.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

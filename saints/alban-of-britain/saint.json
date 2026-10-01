@@ -10,6 +10,11 @@
       "form": "Alban din Verulamul Britaniei",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 iunie, «Sfântul Mucenic Alban din Verulamul Britaniei»."
+    },
+    {
+      "form": "Αλβανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιουνίου, «Άγιος Αλβανός πρωτομάρτυς Βρεταννίας», with the rank word and the country left off. The page prints the Latin form «Alban» beside it in brackets."
     }
   ],
   "sex": "male",
@@ -47,8 +52,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 23 August (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιουνίου — «Άγιος Αλβανός πρωτομάρτυς Βρεταννίας»",
+        "url": "https://www.saint.gr/06/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Ιουνίου εκάστου έτους», the same day as the listing. It is plainly the same martyr: the protomartyr of Britain, killed at Verulamium, the Saint Albans of today, in Diocletian's persecution in 303 or 304 — or, some say, under Septimius Severus about 209, which is the same disagreement the folder's dates already record. The Romanian row keeps him on 22 June and the Serbian on the Julian 23 August; the Greek day recorded here is the day page read. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

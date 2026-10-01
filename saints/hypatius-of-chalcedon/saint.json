@@ -6,6 +6,11 @@
       "form": "Ipatie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 februarie, «Sfântul Mucenic Ipatie»."
+    },
+    {
+      "form": "Υπάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιουνίου, «Όσιος Υπάτιος ο εν Ρουφινιαναίς», with the rank word and the monastery left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιουνίου — «Όσιος Υπάτιος ο εν Ρουφινιαναίς»",
+        "url": "https://www.saint.gr/06/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Ιουνίου εκάστου έτους», the same day as the listing. It is plainly the same man: born in Phrygia under Arcadius and Honorius, a monk in Thrace at eighteen, who cleared and refounded the derelict monastery of Rufinus at Chalcedon and was afterwards its abbot, and died in peace in old age — the life the folder already carries from doxologia for 25 February. Рουφινιαναί is that monastery. The page ends by noting that certain synaxaristes repeat his memory on 29 May, which it calls superfluous; the day recorded here is the day page read. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

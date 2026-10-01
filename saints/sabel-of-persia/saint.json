@@ -6,6 +6,11 @@
       "form": "Savel",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 iunie, «Sfinții Mucenici Manuil, Savel și Ismail»."
+    },
+    {
+      "form": "Σαβέλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιουνίου, «Άγιοι Μανουήλ, Σαβέλ και Ισμαήλ», and its page head «Άγιος Σαβέλ (; - 362)», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιουνίου — «Άγιοι Μανουήλ, Σαβέλ και Ισμαήλ»",
+        "url": "https://www.saint.gr/06/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Ιουνίου εκάστου έτους», the same day as the listing. It is plainly the same martyr: one of the three brothers out of Persia beheaded under Julian, whom the folder's Romanian row already keeps on 17 June, and saint.gr's page head gives the year 362. The page also prints an apolytikion of nine which names these three together with the six of Apollonia whom the same day keeps; that shared text is recorded on the Apollonia folders and not here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -62,6 +77,39 @@
       },
       "english": {
         "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength, they overthrew the tormentors and broke also the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "ᾌχος δ´.",
+      "text": "Οἱ τῆς εὐσεβείας ὑπέρμαχοι, καὶ τῆς ἀσεβείας ἀντίπαλοι, Μανουὴλ θεόπνευστε, καὶ Ἰσμαὴλ θαυμάσιε, καὶ Σαβὲλ ἀξιάγαστε, παῥῥησίᾳ τὸν Χριστὸν, Υἱὸν Θεοῦ κηρύξαντες, τὸ αἷμα ὑμῶν ὑπὲρ Αὐτοῦ ἐξεχέατε· ὃν δυσωποῦντες μὴ παύσητε, τοῦ σωθῆναι τὰς ψυχάς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, ᾌχος δ´ — the third of three apolytikia on the page of «Άγιοι Μανουήλ, Σαβέλ και Ισμαήλ», and the one that names all three",
+        "url": "https://www.saint.gr/597/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "O champions of piety and adversaries of impiety, God-inspired Manuel, wondrous Ismael and admirable Sabel, having proclaimed Christ boldly as the Son of God, you poured out your blood for him; cease not to entreat him, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "ᾌχος δ´.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Οἱ τρεῖς θεῖοι Μάρτυρες οἱ ἐκ Περσίδος, τὸν Σταυρὸν ἀράμενοι, οὐκ ἐδειλίασαν ποινὰς, ἀλλ’ ἐν σταδίῳ ἐκήρυξαν, τὸν ἐν Μονάδι Θεὸν Τρισυπόστατον.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, ᾌχος δ´, Ἐπεφάνης σήμερον — the second of two kontakia on the page of «Άγιοι Μανουήλ, Σαβέλ και Ισμαήλ», naming the three out of Persia",
+        "url": "https://www.saint.gr/597/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The three divine martyrs out of Persia took up the Cross and did not flinch at the punishments, but in the arena proclaimed God, one in unity and three in person.",
         "rendered": "site"
       }
     }

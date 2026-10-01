@@ -6,6 +6,11 @@
       "form": "Isavru",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 iunie, «Sfântul Mucenic Isavru»."
+    },
+    {
+      "form": "Ίσαυρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιουνίου, «Άγιος Ίσαυρος και οι συν αυτώ Βασίλειος, Ιννοκέντιος, Ερμείας, Φιλήκας και Περεγρίνος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -16,7 +21,9 @@
   "related": [
     "innocent-of-apollonia",
     "felix-of-apollonia",
-    "peregrinus-of-apollonia"
+    "peregrinus-of-apollonia",
+    "basil-companion-of-isaurus",
+    "hermias-companion-of-isaurus"
   ],
   "attestations": [
     {
@@ -40,8 +47,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιουνίου — «Άγιος Ίσαυρος και οι συν αυτώ Βασίλειος, Ιννοκέντιος, Ερμείας, Φιλήκας και Περεγρίνος»",
+        "url": "https://www.saint.gr/06/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Ιουνίου εκάστου έτους», the same day as the listing. It is plainly the same martyr, of the company beheaded at Apollonia under the eparch Tripontius, whom the folder's Romanian row already keeps on 17 June. saint.gr's entry names six where doxologia's line gave four: it adds Basil, whom doxologia does not name at all, and gives Hermias a place in the heading. The page dates the contest by the reign of Numerian, 283–284, and gives no year of death. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -63,6 +80,23 @@
       },
       "english": {
         "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength, they overthrew the tormentors and broke also the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "ᾌχος γ’.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Ὡς ἐννεάριθμον, τοῦ Λόγου σύνταγμα, ἐχθρῶν τὰς φάλαγγας, κατετροπώσαντο, Ἰσαυρος Φήλιξ σὺν αὐτοῖς, Ἐρμείας καὶ Περεγρῖνος, ἅμα Ἰννοκέντιος, Μανουὴλ καὶ Βασίλειος, Ἰσμαὴλ ὁ ἔνδοξος, καὶ Σαβὲλ ὁ μακάριος· διὸ καὶ τὰ βραβεῖα τῆς νίκης, εὗρον ὡς Μάρτυρες Κυρίου.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), ᾌχος γ’, Τὴν ὡραιότητα — printed on the page of «Άγιος Ίσαυρος» and again on that of the three Persians; a service of nine which names all six of Apollonia and all three brothers",
+        "url": "https://www.saint.gr/596/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a nine-numbered company of the Word they routed the phalanxes of the enemy — Isaurus, Felix with them, Hermias and Peregrinus, together with Innocent, Manuel and Basil, Ismael the glorious and Sabel the blessed; and therefore they found the prizes of victory as martyrs of the Lord.",
         "rendered": "site"
       }
     }

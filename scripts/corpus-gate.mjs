@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ιωσηφ joseph-of-alaverdi joseph-of-aleppo joseph-of-astrakhan joseph-of-bisericani joseph-of-kantara joseph-of-lythrodontas joseph-of-nea-moni joseph-of-optina joseph-of-thessalonica-1821 joseph-the-anchorite joseph-the-hymnographer':
+    'Eleven now. The new one is on 17 June; the others are read in the el-06-03 entry for this name form.',
+  'ερμειασ hermias-companion-of-isaurus hermias-of-comana':
+    'Two men: Hermias of Comana, upgraded on 31 May, and the Hermeias of 17 June.',
+  'βασιλειοσ basil-companion-of-euphrasius basil-companion-of-isaurus basil-kadomsky basil-martyr-6-february basil-of-ancyra basil-of-braga basil-of-chernigov basil-of-georgia basil-of-mangazeya basil-of-mirozh basil-of-moldovita basil-of-novgorod basil-of-ostrog basil-of-poiana-marului basil-of-rostov basil-of-thessalonica basil-ratishvili basil-the-confessor basil-the-new-of-latros basil-uncle-of-eustratius':
+    'Nineteen now. The new one is on 17 June; the others are read in the el-05-27 entry for this name form.',
   'σαββασ sabbas-companion-of-jonah sabbas-of-daphnousia sabbas-of-sicily sabbas-of-sourozh sabbas-of-stagira sabbas-of-the-kyiv-caves sabbas-of-tver sabbas-of-zographou sabbas-stratelates sabbas-the-spiritual sabbas-the-vatopedine sava-brancovici-of-transylvania sava-of-serbia sava-the-second':
     'Fourteen now. The new one is on 15 June; the others are read in the el-06-10 entry for this name form.',
   'ιωνασ jonah-bishop-6-june jonah-martyr-29-march jonah-of-kyiv jonah-of-moscow jonah-of-odessa jonah-of-pesonsa jonah-of-the-lavra-of-pskov jonas-of-great-perm jonas-the-lerian':
