@@ -1,0 +1,47 @@
+{
+  "slug": "modwena-the-irish",
+  "display_name": "Modwena",
+  "sex": "female",
+  "names": [
+    {
+      "form": "Modwena",
+      "lang": "la",
+      "note": "Read out of saint.gr's line for 5 Ιουλίου, «Αγία Modwena», with the rank word left off. saint.gr prints the name in Latin letters and gives no Greek form of it anywhere on the day page or on the life page."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Ιουλίου — «Αγία Modwena»",
+        "url": "https://www.saint.gr/07/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Ιουλίου εκάστου έτους», the same day as the listing, and gives no year. Its whole account is «Δεν έχουμε λεπτομέριες για τον βίο της Ιρλανδής Αγίας Modwena» — a want of detail, not the site's own «Δεν είναι διασταυρωμένη» refusal, which is absent here and carries no asterisk on her line. The entry gives no `types` because the source gives her no rank beyond Αγία, and no `names` form in Greek because the page prints none. The corpus keeps nobody of this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

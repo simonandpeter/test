@@ -11,6 +11,11 @@
       "form": "Avramie",
       "lang": "ro",
       "note": "His baptismal name, read out of the life: «Numele pruncului din botez a fost Avramie»."
+    },
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Ιουλίου, «Όσιος Αθανάσιος ο εν Άθω και οι συν αυτώ έξι μαθητές του», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -19,7 +24,8 @@
     "abbot"
   ],
   "related": [
-    "six-disciples-of-athanasius-the-athonite"
+    "six-disciples-of-athanasius-the-athonite",
+    "michael-maleinos"
   ],
   "attestations": [
     {
@@ -43,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Ιουλίου — «Όσιος Αθανάσιος ο εν Άθω και οι συν αυτώ έξι μαθητές του»",
+        "url": "https://www.saint.gr/07/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the day's line keeps him together with his six disciples exactly as doxologia does. The page dates the founding of the Great Lavra «(963 μ.Χ.)» but gives no year for his birth or his death, so the folder is left without a `dates` object. A portion of his relic, it says, is at the monastery of Kykkos in Cyprus. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -66,6 +82,40 @@
       },
       "english": {
         "text": "The ranks of angels marvelled at your life in the flesh: how, being in the body, you went out to the unseen battles, ever-glorious one, and wounded the hosts of the demons. For this, holy Athanasius, Christ repaid you with rich gifts. Therefore, father, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Τὴν ἐν σαρκὶ ζωήν, σοῦ κατεπλάγησαν, Ἀγγέλων τάγματα, πῶς μετὰ σώματος, πρὸς ἀοράτους συμπλοκάς, ἐχώρησας πανεύφημε, καὶ κατετραυμάτισας, τῶν δαιμόνων, τὰς φάλαγγας· ὅθεν Ἀθανάσιε, ὁ Χριστὸς σὲ ἠμείψατο, πλουσίαις δωρεαῖς· διὸ Πάτερ, πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Τὴν ὡραιότητα — the only apolytikion on the page of «Όσιος Αθανάσιος ο εν Άθω και οι συν αυτώ έξι μαθητές του», and it names him",
+        "url": "https://www.saint.gr/2003/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The ranks of the angels were astonished at your life in the flesh: how, while still in a body, you went out to invisible wrestlings, O all-praised one, and wounded the companies of the demons. And so, Athanasius, Christ repaid you with rich gifts. Therefore, Father, intercede with Christ our God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ.",
+      "text": "Ὡς τῶν ἀϋλων οὐσιῶν θεωρὸν ἄριστον, καὶ πρακτικὸν ὑφηγητὴν παναληθέστατον, εὐφημοῦμέν σε ἡ ποίμνη σου, καὶ βοῶμεν, Μὴ ἐλλίπης ἱκετεύειν πρὸς τὸν Κύριον, λυτρωθῆναι πειρασμῶν καὶ περιστάσεων, τοὺς βοώντάς σοι, Χαίροις Πάτερ, Ἀθανάσιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ — on the page of «Όσιος Αθανάσιος ο εν Άθω και οι συν αυτώ έξι μαθητές του», and it names him",
+        "url": "https://www.saint.gr/2003/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the best of beholders of the bodiless natures and the truest of practical teachers, we your flock praise you and cry out: do not cease to entreat the Lord that those who cry to you be delivered from trials and from hard straits. Rejoice, Father Athanasius.",
         "rendered": "site"
       }
     }

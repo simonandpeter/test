@@ -6,6 +6,11 @@
       "form": "Cei șase cuvioși ucenici ai Sfântului Atanasie Athonitul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 iulie. The company is named on the calendar as a company; of the six only one name is given on the page, «Daniil»."
+    },
+    {
+      "form": "Έξι Μαθητές του Οσίου Αθανασίου του εν Άθω",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Ιουλίου, «Όσιος Αθανάσιος ο εν Άθω και οι συν αυτώ έξι μαθητές του», and out of the life page's own heading for them; the company is named on the calendar as a company and saint.gr names none of the six."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Ιουλίου — «Όσιος Αθανάσιος ο εν Άθω και οι συν αυτώ έξι μαθητές του»",
+        "url": "https://www.saint.gr/07/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries. The company stays one folder because saint.gr enumerates nobody: its heading for them is «Αγιοι Εξι Μαθητες Του Οσιου Αθανασιου Του Εν Αθω» and its couplet «Ἀθανασίῳ καὶ μαθητῶν ἑξάδι, / Ναοὶ λύονται σωμάτων ναοῦ λύσει», and not one of the six is named anywhere on the page — not even the Daniel the Romanian life names. The page gives no year. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",

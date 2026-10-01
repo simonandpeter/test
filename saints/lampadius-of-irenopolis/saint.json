@@ -6,6 +6,11 @@
       "form": "Lampadie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 iulie, «Sfântul Cuvios Lampadie»."
+    },
+    {
+      "form": "Λαμπαδός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Ιουλίου, «Όσιος Λαμπαδός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Ιουλίου — «Όσιος Λαμπαδός»",
+        "url": "https://www.saint.gr/07/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and it gives the same man: a venerable one who shone in the world and then took to the ascetic life, to whose cell many came and found their moral health again. saint.gr gives him no see and no place, so it does not repeat the folder's Irenopolis; it gives no year either. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -59,6 +74,23 @@
       },
       "english": {
         "text": "In you, father, that which was made in God's image was saved with diligence; for taking up the cross you followed Christ, and by your works you taught us to overlook the flesh, since it passes away, and to care for the soul, a thing immortal. Therefore your spirit rejoices with the angels, most venerable father Lampadius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος δ'.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Ως βίον ισάγγελον, από παιδός εσχηκώς, λαμπάσι των έργων σου, λαμπαδουχίαν ηθών, εκφαίνεις τοις πέρασι, συ γαρ της απάθειας την αυγήν κεκτημένος, λύεις παθών τη νύκτα, Λαμπαδέ θεοφόρε, τοις πόθω προσιούσι, Πάτερ τη πρεσβεία σου.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος δ', Ταχύ προκατάλαβε — the only apolytikion on the page of «Όσιος Λαμπαδός», and it names him",
+        "url": "https://www.saint.gr/2004/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having held from childhood a life like an angel's, by the lamps of your works you show out to the ends of the earth a lamp-bearing of manners; for having gained the dawn of dispassion, you undo the night of the passions, O God-bearing Lampadios, for those who come to you with longing, Father, by your intercession.",
         "rendered": "site"
       }
     }

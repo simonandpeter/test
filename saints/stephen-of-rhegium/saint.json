@@ -1,0 +1,51 @@
+{
+  "slug": "stephen-of-rhegium",
+  "display_name": "Stephen of Rhegium",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "names": [
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Ιουλίου, «Άγιος Στέφανος Μητροπολίτης Ρηγίου της Καλαβρίας», with the rank word and the see left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Ιουλίου — «Άγιος Στέφανος Μητροπολίτης Ρηγίου της Καλαβρίας»",
+        "url": "https://www.saint.gr/07/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Ιουλίου εκάστου έτους», the same day as the listing, and gives no year. All it has besides the name is the citation «Η μνήμη του αναφέρεται στον Συναξαριστή Delehaye (Synaxaria Selecta σελ. 800, 52 και 804, 37). Δεν έχουμε άλλες λεπτομέρειες για τον βίο του.» — a want of detail, not the site's own «Δεν είναι διασταυρωμένη» refusal, which is absent here and carries no asterisk on his line. The same day's listing carries a separate entry for the dedication of his church, which is not a folder. The corpus keeps no Stephen of Rhegium and nobody at all of Calabria."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

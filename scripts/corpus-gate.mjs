@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'στεφανοσ stefan-brancoveanu stephen-27-february stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-khirsa stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-the-great stephen-the-presbyter-7-june stephen-xylinites':
+    'Twenty now. The new one is Stephen of Rhegium on 5 July; the others are read in the el-06-30 entry for this name form.',
   'θεοφιλοσ theophilus-hieromartyr-4-july theophilus-martyr-6-february theophilus-of-brescia theophilus-of-caesarea theophilus-of-crete theophilus-of-rome theophilus-of-the-forty-martyrs theophilus-the-deacon-of-libya theophilus-the-new':
     'Nine now. The new one is the hieromartyr Theophilus of 4 July; the others are read in the el-04-27 entry for this name form.',
   'θεοδοτοσ theodotus-1-january theodotus-3-july theodotus-companion-of-asklepiodote theodotus-martyr-4-july theodotus-of-ancyra theodotus-of-cyzicus theodotus-of-kyrenia theodotus-of-marcianopolis theodotus-of-the-monastery-of-publius':

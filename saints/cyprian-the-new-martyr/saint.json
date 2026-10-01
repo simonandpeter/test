@@ -6,6 +6,11 @@
       "form": "Ciprian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 iulie, «Sfântul Cuvios Mucenic Ciprian»."
+    },
+    {
+      "form": "Κυπριανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Ιουλίου, «Άγιος Κυπριανός ο νέος οσιομάρτυρας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Ιουλίου — «Άγιος Κυπριανός ο νέος οσιομάρτυρας»",
+        "url": "https://www.saint.gr/07/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and it is the same man: born of Christian parents «στο χωριό Κλειστό (ή Κλειτσός ή Κλητζός) των Άγραφων», a monk and priest of the cell of Saint George near Koutloumousiou, beheaded at the Phanar. Its heading reads «(; - 1679)» and it dates the death «στις 5 Ιουλίου του 1679 μ.Χ. ήμερα Σάββατο», a Saturday, where doxologia's life calls the same 5 July 1679 a Sunday; the folder's `dates` already hold the year from doxologia and are left untouched, and the discrepancy is in the report. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -55,5 +70,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ΄.",
+      "model": "Τὴν ἐν σαρκὶ ζωήν.",
+      "text": "Τὸν θεῖον ἔρωτα τὸν τοῦ Κυρίου σου καὶ τὴν ἐκζήτησιν τοῦ μαρτυρίου σου ᾿Αγγέλων δῆμοι καὶ πιστοὶ ἐθαύμασαν, πανεύφημε· διά τῆς ἀσκήσεως καὶ πολλῆς παῤῥησίας σου ἐν ὁμολογίᾳ τε καὶ φοινίξει αἱμάτων σου, Κυπριανὲ ἀθλοφόρε, πρέσβευε Χριστῷ τῷ Θεῷ σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ΄, Τὴν ἐν σαρκὶ ζωήν — the only apolytikion on the page of «Άγιος Κυπριανός ο νέος οσιομάρτυρας», and it names him",
+        "url": "https://www.saint.gr/2007/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The companies of the angels and the faithful marvelled at your divine love for your Lord and at your seeking after martyrdom, O all-praised one. By your asceticism and your great boldness, in your confession and in the reddening of your blood, O Cyprian, victor in the contest, intercede with Christ our God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τῆς Κορίτσης βλάστημα Εὐρυτανίας τὸ θεῖον, τοῦ Κλειστοῦ τὸ στήριγμα, Κουτλουμουσίου τὸ κλέος, Κυπριανὸν μακαρίσωμεν, Μαρτύρων νέων καὶ νέον ἀγλάϊσμα.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον — on the page of «Άγιος Κυπριανός ο νέος οσιομάρτυρας», printed without a tone, and it names him",
+        "url": "https://www.saint.gr/2007/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us call blessed Cyprian, the divine shoot of Koritsa in Eurytania, the stay of Kleisto, the glory of Koutloumousiou, the new adornment also of the new martyrs.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
