@@ -1,0 +1,50 @@
+{
+  "slug": "nicholas-of-novgorod",
+  "display_name": "Nicholas of Novgorod",
+  "sex": "male",
+  "types": [
+    "fool-for-christ"
+  ],
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Ιουλίου, «Άγιος Νικόλαος του Νόβγκοροντ», with the rank word and the place left off. The page glosses the name as the victor out of the people, the victory of the people."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). The Greek page itself calls him a Russian saint, so the Russian calendar is very likely to keep him; that is a reading somebody must do, not an absence this row asserts."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Ιουλίου — «Άγιος Νικόλαος του Νόβγκοροντ»",
+        "url": "https://www.saint.gr/07/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Ιουλίου εκάστου έτους», the same day as the listing. He is not `nicholas-of-pskov`, the only other fool-for-Christ of the name in the corpus, who is kept on 28 February and belongs to another town; and he is none of the corpus's many other men of the name, none of whom is a Russian fool-for-Christ of Novgorod. The one type is the one thing the page states: «ήταν δια Χριστόν σαλός», he was a fool for Christ. No asterisk and no «Δεν είναι διασταυρωμένη» sentence; the page gives no year at all, so there is no `dates` object, and it prints no hymn and no distich."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

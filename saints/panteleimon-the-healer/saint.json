@@ -14,6 +14,11 @@
       "form": "Pantelimon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 iulie, «Sfântul Mare Mucenic și Tămăduitor Pantelimon», with the rank words left off."
+    },
+    {
+      "form": "Παντελέων",
+      "lang": "el",
+      "note": "The name he bore before his martyrdom, as the same page gives it: «Ο Άγιος Παντελεήμων (Παντελέων το πρότερον όνομα)». The page says a voice from heaven at his beheading called him no longer Παντελέων but Παντελεήμων, which is the form the folder already holds."
     }
   ],
   "sex": "male",
@@ -67,8 +72,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Ιουλίου — «Άγιος Παντελεήμων ο Μεγαλομάρτυς και Ιαματικός»",
+        "url": "https://www.saint.gr/07/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries and the same menologion day as its Russian row; the Greek calendar reckons in revised-julian, so its 27 July is the civil day. The man is the folder's own: «Αγιος Παντελεημων ο Μεγαλομαρτυς Και Ιαματικος (; - 305)», of Nicomedia, physician, great-martyr and healer, and the folder's existing `greek` name form «Παντελεήμων» came from this calendar already. The Greek page adds a great deal the folder did not have: his earlier name Παντελέων, his father Eustorgios the pagan whom his son's admonitions made a Christian, his mother Euboule whom the same calendar keeps on 30 Μαρτίου, Euphrosynos who trained him in medicine, the priest Hermolaus of Nicomedia who catechised and baptised him and whom the same calendar keeps on 26 Ιουλίου, the raising of the young man killed by a viper, the voice from heaven that called him not Panteleon but Panteleimon, the sword that bent and the iron that melted like wax, the soldiers who became Christians at the sight, the milk instead of blood and the olive tree that suddenly bore fruit. It also names Florina and Tilos as the towns that keep him as patron. The year on the head line, 305, and the reign of Maximian it dates «(286 - 305 μ.Χ.)» agree with the folder's existing `dates`, which are therefore not touched. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints an apolytikion and a kontakion, both of which name him and both of which are taken, and also a μεγαλυνάριον, an οἶκος and a κάθισμα, which the schema's `kind` enum cannot hold and which are therefore not drafted."
     },
     {
       "church": "serbian",
@@ -79,5 +94,44 @@
   "historicity": "traditional",
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "euboula-mother-of-panteleimon",
+    "hermolaus-of-nicomedia",
+    "blind-man-healed-by-panteleimon"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Ἀθλοφόρε Ἅγιε, καὶ ἰαματικὲ Παντελεῆμον, πρέσβευε τῷ ἐλεήμονι Θεῷ, ἵνα πταισμάτων ἄφεσιν, παράσχῃ ταῖς ψυχαῖς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’ — on the page of «Άγιος Παντελεήμων ο Μεγαλομάρτυς και Ιαματικός». It names him with his byname of healer, so it is his own proper; the page names no automelon for it",
+        "url": "https://www.saint.gr/2075/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy prize-winner and healer Panteleimon, intercede with the merciful God, that he may grant our souls the forgiveness of their offences.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "text": "Μιμητὴς ὑπάρχων τοῦ ἐλεήμονος, καὶ ἰαμάτων τὴν χάριν παρ᾽αὐτοῦ κομισάμενος, ἀθλοφόρε καὶ Μάρτυς Χριστοῦ τοῦ Θεοῦ, ταῖς εὐχαῖς σου τὰς ψυχικὰς ἡμῶν νόσους θεράπευσον, ἀπελαύνων τοῦ ἀεί, πολεμίου τὰ σκάνδαλα, ἐκ τῶν βοώντων ἀπαύστως· Σῶσον ἡμᾶς Κύριε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. α’ — the second hymn on the page of «Άγιος Παντελεήμων ο Μεγαλομάρτυς και Ιαματικός». It turns on his name, the imitator of the Merciful One, and on his gift of healings, so it is his own proper",
+        "url": "https://www.saint.gr/2075/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being an imitator of the Merciful One and having received from him the grace of healings, prize-winner and martyr of Christ our God, heal by your prayers the sicknesses of our souls, driving off the stumbling-blocks of the everlasting enemy from those who cry out unceasingly: save us, O Lord.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

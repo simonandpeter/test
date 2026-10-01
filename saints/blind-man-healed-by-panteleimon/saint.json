@@ -1,0 +1,46 @@
+{
+  "slug": "blind-man-healed-by-panteleimon",
+  "display_name": "The Blind Man healed by Panteleimon",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Ιουλίου — «Άγιος Τυφλός»",
+        "url": "https://www.saint.gr/07/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Ιουλίου εκάστου έτους», the same day as the listing, and the Greek calendar keeps him as a separate entry with a page of his own, linked to and from the page of Panteleimon. **He has no recorded name**: «Τυφλός» is the Greek for blind and is the only thing the calendar calls him, so there is no `names` array at all rather than an epithet stored as a name form. The English display name says who he is, which is the only way a reader can find him. The corpus keeps no other nameless blind martyr, and he is not `agapitus-the-blind`, a named saint of another day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence; the page gives no year, no place, no emperor and no judge, and prints no hymn. The year 305 that Panteleimon's own page gives is not written here, because this page gives none."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "panteleimon-the-healer"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

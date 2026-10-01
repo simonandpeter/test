@@ -6,11 +6,18 @@
       "form": "Antuza",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 iulie, «Sfânta Cuvioasă Antuza», with the rank word left off."
+    },
+    {
+      "form": "Ανθούσα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Ιουλίου, «Οσία Ανθούσα η ομολογήτρια», with the rank word and the byname left off."
     }
   ],
   "sex": "female",
   "types": [
-    "venerable"
+    "venerable",
+    "confessor",
+    "virgin"
   ],
   "attestations": [
     {
@@ -34,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Ιουλίου — «Οσία Ανθούσα η ομολογήτρια»",
+        "url": "https://www.saint.gr/07/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the Greek line is the bare Romanian one with a byname added — «Οσία Ανθούσα η ομολογήτρια» against «Sfânta Cuvioasă Antuza». The corpus's other woman of the name, `anthousa-mother-of-john-chrysostom`, is a different woman of another century and another day. The Greek page gives the whole life the Romanian line did not: the reign of Constantine Copronymus, her parents Strategios and Phebronia, her staying a virgin in spite of the offers of marriage, the two monasteries she raised, her torture in the iconoclast persecution, the prophecy of the empress's twins and her peaceful death. The byname and that persecution are the warrant for `types_add: [\"confessor\"]`, and «έμεινε παρθένος» for `virgin`; the page's «(741 μ. Χ.)» is the warrant for the `floruit` this upgrade proposes where the folder had no `dates`. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn."
     },
     {
       "church": "serbian",
@@ -45,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 741,
+      "latest": 741,
+      "display": "741",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Οσία Ανθούσα η ομολογήτρια έζησε στα χρόνια του αυτοκράτορα Κωνσταντίνου του Κοπρώνυμου (741 μ. Χ.)» — the one year the page prints, set against the beginning of that reign. It gives no year of her birth and none of her death, which it says was peaceful. The folder's Romanian source gave no year at all."
+    }
   }
 }

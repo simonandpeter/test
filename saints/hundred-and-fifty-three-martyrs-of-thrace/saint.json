@@ -1,0 +1,50 @@
+{
+  "slug": "hundred-and-fifty-three-martyrs-of-thrace",
+  "display_name": "The Hundred and Fifty-three Martyrs of Thrace",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Εκατό πενήντα τρεις Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Ιουλίου, «Άγιοι Εκατό πενήντα τρείς Μάρτυρες από τη Θράκη», with the rank word and the place left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Ιουλίου — «Άγιοι Εκατό πενήντα τρείς Μάρτυρες από τη Θράκη»",
+        "url": "https://www.saint.gr/07/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Ιουλίου εκάστου έτους», the same day as the listing. **The entry enumerates nobody**: it gives a number, a country and a manner of death and not one name, so it is one folder for the company and not one per member, which is the corpus's rule for a heading that names no members. It is not `hundred-and-fifty-martyrs-of-palestine`, which the per-day sweep offered: that is a different number, a different country and a different day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence; the page gives no year, no emperor and no judge, and prints no hymn. Thrace is named and `locations` is left out, the page naming no town and no coast."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

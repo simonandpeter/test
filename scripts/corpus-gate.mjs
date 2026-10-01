@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-efimov nicholas-katopinos nicholas-kedrov nicholas-migulin nicholas-of-corinth nicholas-of-japan nicholas-of-magnesia nicholas-of-metsovo nicholas-of-novgorod nicholas-of-pskov nicholas-of-spetses nicholas-of-the-forty-martyrs nicholas-of-trebizond nicholas-of-valaam nicholas-of-vounena nicholas-patriarch-of-georgia nicholas-son-of-philosophos nicholas-the-bulgarian-17-may nicholas-the-mystikos nicholas-the-studite nicholas-velimirovich nicholas-zagorovsky':
+    'Twenty-three now. The new one is Nicholas of Novgorod on 27 July; the others are read in the el-05-31 entry for this name form.',
+  'χριστοδουλοσ christodoulos-26-february christodoulos-of-kassandra christodoulos-of-patmos christopher-of-adrianople':
+    'Four now. The new one is Christodoulos of Kassandra on 27 July; the others are read in the el-04-15 entry for this name form.',
   'συμεων simeon-of-persia simeon-of-tver simeon-the-elder simeon-the-fool-for-christ simeon-the-myrrh-streaming symeon-4-january symeon-beyond-the-anaplous symeon-kinsman-of-the-lord symeon-of-novgorod symeon-of-the-wonderful-mountain symeon-the-barefoot symeon-the-god-receiver symeon-the-new-of-mytilene symeon-the-newly-appeared symeon-the-pentaglot symeon-the-pious symeon-with-theonas-and-pherbinus':
     'Seventeen now. The new one is Symeon beyond the Anaplous on 26 July, whose page says he is unknown to Nikodemos and carried in three codices with no biographical note — which is record-absence and not the page doubting him, so no asterisk and a folder. The others are read in the el-07-24 entry for this name form.',
   'ιερουσαλημ jerusalem-companion-of-horaiozele jerusalem-of-beroea':

@@ -1,0 +1,60 @@
+{
+  "slug": "christodoulos-of-kassandra",
+  "display_name": "Christodoulos of Kassandra",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Χριστόδουλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Ιουλίου, «Άγιος Χριστόδουλος ο εκ Kασσάνδρας που μαρτύρησε στη Θεσσαλονίκη», with the rank word and the two clauses of place left off. The page glosses the name from Χριστός and δούλος, the one devoted to Christ."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1777,
+      "latest": 1777,
+      "display": "1777",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Χριστοδουλος ο Εκ Kασσανδρας Που Μαρτυρησε Στη Θεσσαλονικη (; - 1777)». The head line is the only year on the page; the body gives none, and gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Ιουλίου — «Άγιος Χριστόδουλος ο εκ Kασσάνδρας που μαρτύρησε στη Θεσσαλονίκη»",
+        "url": "https://www.saint.gr/07/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Ιουλίου εκάστου έτους», the same day as the listing. He is neither of the corpus's two other men of the name: `christodoulos-of-patmos` is the eleventh-century founder of the monastery on Patmos, and `christodoulos-26-february` is kept on another day; this one is a tailor of Thessalonica hanged in 1777. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn. Valta in Kassandra and Thessalonica are both named, and `locations` is left out, since the corpus does not place a saint on the strength of a notice this short."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
