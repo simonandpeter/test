@@ -1,0 +1,51 @@
+{
+  "slug": "pierius-of-antioch",
+  "display_name": "Pierius of Antioch",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Πιέριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Ιουνίου, «Άγιος Πιέριος Ιερομάρτυρας Πρεσβύτερος Αντιοχείας», with the rank words and the see left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Ιουνίου — «Άγιος Πιέριος Ιερομάρτυρας Πρεσβύτερος Αντιοχείας»",
+        "url": "https://www.saint.gr/06/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Ιουνίου εκάστου έτους», the same day as the listing. The corpus holds no other Pierius in any spelling. The page adds that certain synaxaria commemorate with him his brother Isidore — «Ορισμένοι Συναξαριστές, μαζί με τη μνήμη του Αγίου Πιερίου, αναφέρουν και αυτή του αδελφού του Ισιδώρου» — but the day's own line names only Pierius and saint.gr keeps no entry for the brother, so no folder is proposed for him and he is named in the reader's report. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "marcius-the-martyr",
+  "display_name": "Marcius",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μάρκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Ιουνίου, «Άγιοι Μάρκιος και Μαρκία», with the rank word left off."
+    }
+  ],
+  "related": [
+    "marcia-companion-of-marcius"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Ιουνίου — «Άγιοι Μάρκιος και Μαρκία»",
+        "url": "https://www.saint.gr/06/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Ιουνίου εκάστου έτους», the same day as the listing, and the entry names both saints, so it is one folder each. This pair is also the pair saint.gr's asterisked entry for 26 Ιουνίου points to: that entry, «Άγιοι Θεράπων, Μακάριος, Μάρκιος και Μαρκία», carries the «Δεν είναι διασταυρωμένη» sentence and is refused, and its own note says that Nikodemos commemorates Marcius and Marcia on 27 June, «Μόνο, κατά την 27η Ιουνίου μνημονεύονται οι Μάρκιος και Μαρκία δια ξίφους τελειωθέντες». The 27 Ιουνίου page carries no asterisk and no such sentence, which is why this day is drafted and that one is not. The corpus holds no other Marcius."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

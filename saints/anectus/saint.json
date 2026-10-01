@@ -6,6 +6,11 @@
       "form": "Anect",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 iunie, «Sfântul Mucenic Anect»."
+    },
+    {
+      "form": "Ανεκτός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Ιουνίου, «Άγιος Ανεκτός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Ιουνίου — «Άγιος Ανεκτός»",
+        "url": "https://www.saint.gr/06/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and its heading reads «Αγιος Ανεκτος (; - 298)». It is the same martyrdom, told with different particulars: the folder's Romanian life has him arrested under Diocletian, bound to four oxen and stretched, beaten with rods and pierced with spears before being beheaded, while saint.gr places him at Caesarea of Cappadocia, names the city's governor Urbanus and the year 298, and has him beaten with rods, his sides torn with iron claws, his ankles pierced and his wounds burned with lit torches before the beheading. Both agree on the rods and the beheading, and 298 falls inside Diocletian's reign. He is not the corpus's Anectus the companion of Quadratus of Corinth, who is kept on another day. No `dates` object is proposed, because 298 comes from this second source alone. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",

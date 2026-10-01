@@ -1,0 +1,50 @@
+{
+  "slug": "luke-27-june",
+  "display_name": "Luke (27 June)",
+  "sex": "male",
+  "types": [
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Λουκάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Ιουνίου, «Όσιος Λουκάς ο ερημίτης», with the rank word and the epithet left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Ιουνίου — «Όσιος Λουκάς ο ερημίτης»",
+        "url": "https://www.saint.gr/06/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Ιουνίου εκάστου έτους», the same day as the listing. The page gives him no country, no century and no desert, so he is told from the corpus's thirteen other Lukes by the day alone, which is why the slug and the display name carry it; none of them is kept on 27 June in any calendar. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

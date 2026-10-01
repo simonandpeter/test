@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'μαρκια marcia-companion-of-marcius marcia-of-caesarea':
+    'Two women: Marcia of Caesarea on 6 June and Marcia, the companion of Marcius, on 27 June.',
+  'λουκασ luke-27-june luke-companion-of-terentius luke-of-corleone luke-of-crimea luke-of-emesa luke-of-hellas luke-of-novgorod':
+    'Seven now. The new one is the Luke of 27 June; Luke of Crimea joined the fold without a reading of its own, and the other five are read in the el-04-10 entry for this name form.',
   'διονυσιοσ dionysius-8-may dionysius-companion-of-agapius dionysius-companion-of-agapius-second dionysius-companion-of-lucillian dionysius-companion-of-quadratus dionysius-companion-of-socrates dionysius-companion-of-terentius dionysius-kagovets dionysius-martyr-1-april dionysius-of-alexandria dionysius-of-athos dionysius-of-glushitsa dionysius-of-lampsacus dionysius-of-milan dionysius-of-pereyaslavl dionysius-of-radonezh dionysius-of-suzdal dionysius-reader-of-alexandria dionysius-the-merciful':
     'Nineteen now. The new one is Dionysius of Suzdal on 26 June, whose page also prints him on 15 Οκτωβρίου — that day is unread and the second feast is a note on his row, not a row of its own. The others are read in the el-06-01 entry for this name form.',
   'δαβιδ david-brother-of-tarichan david-of-gareji david-of-kydonies david-of-mytilene david-of-thessalonica david-of-wales david-son-of-prince-theodore david-with-minas-and-john':

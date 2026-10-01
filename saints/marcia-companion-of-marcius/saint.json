@@ -1,0 +1,53 @@
+{
+  "slug": "marcia-companion-of-marcius",
+  "display_name": "Marcia, companion of Marcius",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μαρκία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Ιουνίου, «Άγιοι Μάρκιος και Μαρκία», with the rank word left off."
+    }
+  ],
+  "related": [
+    "marcius-the-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Ιουνίου — «Άγιοι Μάρκιος και Μαρκία»",
+        "url": "https://www.saint.gr/06/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Ιουνίου εκάστου έτους», the same day as the listing, and the entry names both saints, so it is one folder each. The page says of her only «Η Αγία Μαρκία μαρτύρησε δια ξίφους». She is not the corpus's Marcia of Caesarea, who is kept on another day. This pair is also the pair saint.gr's asterisked entry for 26 Ιουνίου points to; that entry carries the «Δεν είναι διασταυρωμένη» sentence and is refused, while this day's page carries no asterisk and no such sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

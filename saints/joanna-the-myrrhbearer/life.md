@@ -8,4 +8,6 @@ In Luke, from the fifty-fifth verse of the twenty-third chapter to the eleventh 
 
 The Church keeps her on 27 June, and also on the Sunday of the Myrrhbearers. The calendar prints no year and no hymn for her, and none is recorded here.
 
-*After doxologia.ro's calendar for 27 iunie — [the day](https://doxologia.ro/27-iunie) and [the life](https://doxologia.ro/viata-sfintei-ioana-mironosita); read 24 September 2026.*
+The Greek calendar keeps her on the same day, 27 June, and says of her what the Gospel says and little more. saint.gr's entry is «Αγία Ιωάννα η Μυροφόρος», and the page behind it holds a single sentence: that the holy Joanna the myrrhbearer died in peace, that she was the wife of Chuza, Herod's steward, and that she ministered to the Lord together with the other women, for which it cites Luke 8:3 and 24:10. Above the sentence stands a couplet of the synaxarion: «Oύπερ παρέστης Iωάννα τω τάφω, Tούτου παρέστης έσχατον και τω θρόνω» — you who stood by his tomb, Joanna, stood at the last by his throne as well. The page gives no year, no country and no hymn, and it does not repeat the tradition the Romanian life carries about the head of the Forerunner.
+
+*After doxologia.ro's calendar for 27 iunie — [the day](https://doxologia.ro/27-iunie) and [the life](https://doxologia.ro/viata-sfintei-ioana-mironosita); read 24 September 2026; and saint.gr's calendar for 27 Ιουνίου — [the day](https://www.saint.gr/06/27/index.aspx) and [the life](https://www.saint.gr/635/saint.aspx); read 1 October 2026.*

@@ -6,6 +6,11 @@
       "form": "Ioana",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 iunie, «Sfânta Ioana Mironosița»; the form is the bare name, «Mironosița» being the title the calendar gives her, the myrrhbearer."
+    },
+    {
+      "form": "Ιωάννα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Ιουνίου, «Αγία Ιωάννα η Μυροφόρος», with the rank word and the epithet left off."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Ιουνίου — «Αγία Ιωάννα η Μυροφόρος»",
+        "url": "https://www.saint.gr/06/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and it identifies her exactly as the folder does: «Ήταν γυναίκα του Χουζά, επιτρόπου του Ηρώδη και διακονούσε τον Κύριο μαζί με τις άλλες γυναίκες (Λουκά η' 3, κδ' 10)», the wife of Chuza, Herod's steward. The page says she died in peace, gives no year and prints no hymn, and it does not repeat the Romanian life's tradition about the Forerunner's head. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",

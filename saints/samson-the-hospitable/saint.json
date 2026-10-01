@@ -6,6 +6,11 @@
       "form": "Samson",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 iunie, «Sfântul Cuvios Samson, primitorul de străini»; the form is the bare name, the rest of the line being rank and the byname the calendar gives him, the receiver of strangers."
+    },
+    {
+      "form": "Σαμψών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Ιουνίου, «Άγιος Σαμψών ο Ξενοδόχος», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Ιουνίου — «Άγιος Σαμψών ο Ξενοδόχος»",
+        "url": "https://www.saint.gr/06/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and the story is the same story: born at Rome of wealthy parents, a physician who took no fee, the hospital at Constantinople. saint.gr adds what the Romanian life does not name — the patriarch Menas, who ordained him presbyter, and Justinian, whose grave illness he healed by prayer and who built the hospital in gratitude — and records portions of his relic at the Great Lavra of the Holy Mountain and at the monastery of Kremasti in Elis. It gives no year, so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -58,6 +73,40 @@
       },
       "english": {
         "text": "In patience thou didst gain thy reward, O venerable father, enduring unceasingly in prayer, loving the poor and satisfying their need. Wherefore, O blessed and merciful Samson, pray Christ God for the salvation of our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὁ φέρων τὴν μίμησιν, τῶν τοῦ Θεοῦ οἰκτιρμῶν, ἐνθέου χρηστότητας, ἀναβλυστάνεις κρουνούς, Σαμψῶν Ἱερώτατε, σὺ γὰρ θεομιμήτω, ἑλλαμφθεῖς συμπάθεια, ὤφθης τῶν τεθλιμμένων, καὶ πασχόντων ἀκέστωρ, παρέχων ἐνὶ ἐκάστω, ρώσιν καὶ ἔλεος.",
+      "source": {
+        "text": "saint.gr, the apolytikion on his own page, Ἦχος δ’, Ταχὺ προκατάλαβε — it names him, «Σαμψῶν Ἱερώτατε», and calls him a healer of the afflicted",
+        "url": "https://www.saint.gr/639/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Bearing the imitation of the compassions of God, most sacred Samson, you make springs of God-given kindness well up; for, lit with a sympathy that imitates God, you were seen as a healer of the afflicted and the suffering, giving to each one strength and mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Ὡς ἀπαρχὰς τῆς φύσεως.",
+      "text": "Ὡς ἰατρὸν πανάριστον, καὶ πρεσβευτὴν εὐπρόσδεκτον, οἱ τῇ σορῷ σου τῇ θείᾳ προστρέχοντες, Σαμψὼν θεόφρον Ὅσιε, συνελθόντες σε ὕμνοις, καὶ ψαλμοῖς ἀνυμνοῦμεν, Χριστὸν δοξάζοντες, τὸν τοιαύτην σοι χάριν παρέχοντα τῶν ἰάσεων.",
+      "source": {
+        "text": "saint.gr, the kontakion on his own page, Ἦχος πλ. δ’, Ὡς ἀπαρχὰς τῆς φύσεως — it names him, «Σαμψὼν θεόφρον Ὅσιε»",
+        "url": "https://www.saint.gr/639/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a physician of the very best and an intercessor gladly received, we who run to your divine coffin, venerable Samson of godly mind, gathering together praise you with hymns and psalms, glorifying Christ, who gives you such grace of healings.",
         "rendered": "site"
       }
     }

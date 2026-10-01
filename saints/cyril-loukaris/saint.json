@@ -1,0 +1,103 @@
+{
+  "slug": "cyril-loukaris",
+  "display_name": "Cyril Loukaris",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "patriarch"
+  ],
+  "names": [
+    {
+      "form": "Κύριλλος Λούκαρις",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Ιουνίου, «Άγιος Κύριλλος Λούκαρις Πατριάρχης Κωνσταντινουπόλεως», with the rank word and the see left off. The family name is kept because the page uses it throughout, «ο Λούκαρις»; his baptismal name, the page says, was Κωνσταντίνος."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1572,
+      "latest": 1572,
+      "display": "1572",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε στον Χάνδακα της Κρήτης στις 13 Νοεμβρίου 1572 μ.Χ.», and the page's heading reads «(1572 - 1638)»."
+    },
+    "death": {
+      "earliest": 1638,
+      "latest": 1638,
+      "display": "1638",
+      "basis": "attested",
+      "note": "saint.gr: «στις 27 Ιουνίου 1638 μ.Χ. … τον μετέφεραν στην παραλία του Αγίου Στεφάνου, όπου τον θανάτωσαν με στραγγαλισμό.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Ιουνίου — «Άγιος Κύριλλος Λούκαρις Πατριάρχης Κωνσταντινουπόλεως»",
+        "url": "https://www.saint.gr/06/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Ιουνίου εκάστου έτους», the same day as the listing, and its own heading reads «Αγιος Κυριλλος Λουκαρις Πατριαρχης Κωνσταντινουπολεως (1572 - 1638)». The page records that he was honoured as a saint and martyr immediately after his death, that Eugene of Aetolia composed a service for his memory, and that the formal canonisation was made by the Synod of the Patriarchate of Alexandria on 6 October 2009. None of the corpus's Cyrils is of Constantinople or died in 1638. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "῏Ηχος α΄.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τὸν φωστῆρα τῆς Κρήτης, ᾿Αγκαράθου τὸν ὄρπηκα, τῆς Ἀλεξανδρείας ποιμένα, Βυζαντίου τὸν πρόεδρον, τὸν θεῖον δεῦτε Κύριλλον πιστοί, ὡς πρόμαχον τῆς πίστεως στεῤῥόν, καὶ Μαρτύρων θεοδόξαστον κοινωνόν, τιμήσωμεν ἐκβοῶντες· Δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σὲ θαυμαστώσαντι, δόξα τῷ ἐν ὑψίστοις εὐκλεῶς, δοξάσαντί σε ῞Αγιε.",
+      "source": {
+        "text": "saint.gr, the first of two apolytikia on his own page, ῏Ηχος α΄, Τῆς ἐρήμου πολίτης — it names him, «τὸν θεῖον δεῦτε Κύριλλον», with Crete, Angarathos, Alexandria and Byzantium; the second apolytikion is another proper of his and is not duplicated here",
+        "url": "https://www.saint.gr/4188/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Come, faithful, let us honour the light-giver of Crete, the shoot of Angarathos, the shepherd of Alexandria, the president of Byzantium, the divine Cyril, as a firm champion of the faith and a companion of the martyrs glorified by God, crying out: glory to him who gave you strength, glory to him who made you wonderful, glory to him who gloriously glorified you in the highest, O holy one.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "῏Ηχος πλ. δ΄.",
+      "model": "Τῇ ὑπερμάχῳ.",
+      "text": "᾿Εν Πατριάρχαις ἀθλητὴς ἀκαταγώνιστος, θανατωθεὶς ᾿Αγαρηνῶν χερσὶ φονόεσσαις, ἀναδέδειξαι, ὦ Κύριλλε, θεηγόρε. ῞Οθεν στέφος ἀφθαρσίας κομισάμενος, ἱκεσίαις σου μὴ παύσῃ προϊστάμενος, τῶν βοώντων σοι· Χαίροις, Πάτερ πολύαθλε.",
+      "source": {
+        "text": "saint.gr, the kontakion on his own page, ῏Ηχος πλ. δ΄, Τῇ ὑπερμάχῳ — it names him, «ὦ Κύριλλε, θεηγόρε», and names the manner of his death",
+        "url": "https://www.saint.gr/4188/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown among the patriarchs an unconquerable contender, put to death by the murderous hands of the sons of Agar, O Cyril who spoke of God. Therefore, having received the crown of incorruption, do not cease to stand before God with your prayers for those who cry to you: rejoice, father of many contests.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
