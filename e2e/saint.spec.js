@@ -584,7 +584,7 @@ test('an icon taken from the Menologion prints a real source and a credit', asyn
   await ready(page);
   await page.goto('/saints/theodora-of-alexandria', { waitUntil: 'networkidle' });
   const img = page.locator('.saint-media img, main img').first();
-  await expect(img).toHaveAttribute('src', /theodora-of-alexandria\/images\/icon\.jpg/);
+  await expect(img).toHaveAttribute('src', /theodora-of-alexandria\/images\/icon-hero\.jpg/);
   const credit = page.locator('[data-credit]');
   await expect(credit).toContainText('Public domain');
   await expect(credit).not.toContainText('example.invalid');
@@ -592,7 +592,40 @@ test('an icon taken from the Menologion prints a real source and a credit', asyn
   // and the plate that carries a company gives each of them the same icon
   await page.goto('/saints/urban-child-martyr', { waitUntil: 'networkidle' });
   await expect(page.locator('.saint-media img, main img').first())
-    .toHaveAttribute('src', /urban-child-martyr\/images\/icon\.jpg/);
+    .toHaveAttribute('src', /urban-child-martyr\/images\/icon-hero\.jpg/);
+});
+
+test('the picture is a derivative sized for the box, never the original as fetched', async ({ page }) => {
+  /*
+   * **The original is 283 kB at the median and 1.04 MB at the worst, and the
+   * figure is 328 CSS px wide** — measured on the production build, where the
+   * hero completed 2.0 s after the 560 card at the median and 5.1 s after it
+   * at the largest icon in the corpus. So the page names three derivatives
+   * and lets the browser choose.
+   *
+   * The assertion is on `currentSrc`, which is the file the browser actually
+   * went and got, rather than on the attributes that offered it the choice:
+   * a `sizes` that silently fails to parse leaves the markup looking right
+   * and sends the reader the widest candidate every time.
+   */
+  await ready(page);
+  await page.goto('/saints/theodora-of-alexandria', { waitUntil: 'networkidle' });
+  const chosen = await page.locator('.saint-media img').evaluate((i) => ({
+    src: i.currentSrc,
+    candidates: i.srcset.split(',').length,
+    natural: i.naturalWidth,
+    box: Math.round(i.getBoundingClientRect().width * devicePixelRatio),
+  }));
+  expect(chosen.candidates).toBeGreaterThan(1);
+  expect(chosen.src).not.toMatch(/icon\.jpg$/);
+  expect(chosen.src).toMatch(/icon-(card|card-sm|hero)\.jpg$/);
+  /*
+   * And the file it chose covers the box it is drawn in. A candidate list
+   * whose descriptors were long edges rather than widths passes every
+   * attribute check and hands a portrait icon a third of the pixels it needs,
+   * which is the bug this is here to catch.
+   */
+  expect(chosen.natural).toBeGreaterThanOrEqual(Math.min(chosen.box, 1000) - 1);
 });
 
 test('the Greek calendar’s saints past the runway are in the corpus but not yet on a day', async ({ page }) => {
@@ -934,7 +967,7 @@ test('the icon the author supplied is on the page, with the licence Commons stat
   await ready(page);
   await page.goto('/saints/phanourios', { waitUntil: 'networkidle' });
   const img = page.locator('.saint-media img, main img').first();
-  await expect(img).toHaveAttribute('src', /phanourios\/images\/icon\.jpg/);
+  await expect(img).toHaveAttribute('src', /phanourios\/images\/icon-hero\.jpg/);
   const credit = page.locator('[data-credit]');
   await expect(credit).toContainText('Public domain');
   await expect(credit).not.toContainText('example.invalid');

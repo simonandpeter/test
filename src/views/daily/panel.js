@@ -15,6 +15,7 @@ import { allEntriesFor, dayRecordFor, entriesFor, reachInWords } from './entries
 import { fillSaintHymns, hymnsMarkup, readingsMarkup } from './record.js';
 import { state } from './state.js';
 import { isWide } from '../../lib/viewport.js';
+import { srcsetFor } from '../../lib/picture.js';
 
 /* The site's base path, declared per file as every other view does: it is a
    build-time constant, not shared state. */
@@ -635,9 +636,15 @@ function heroPicture(hero, desk = false) {
   /*
    * **Past 1024 px the picture is the column's width in its own shape, no
    * taller than A4** (`../mockup-review/REVIEW.md` finding 3), with its credit
-   * under it. The file is the card derivative (`CARD_MAX_PX` in
-   * make_thumbs.py), which covers the column's width without upscaling; the
-   * original is kept for the phone, whose picture this does not touch.
+   * under it.
+   *
+   * **Which file that is stopped being this branch's business on 2026-10-01.**
+   * It named the card derivative here and left the phone the original — a
+   * median 283 kB for a box measured at 328 CSS px — so both arms now carry
+   * the same `srcset` and the browser chooses. `sizes` is measured, not read
+   * off the sheet: 320 from 1024, where the column draws 187 to 311 px; 300
+   * between 620 and 1024, where it draws 255 to 285; the column itself below
+   * that.
    */
   const column = desk && hero.image ? columnCrop(hero.image) : null;
   const media = hero.image
@@ -645,7 +652,9 @@ function heroPicture(hero, desk = false) {
         <a class="hero-media" href="${state.router.href(`/saints/${hero.slug}`)}"
           data-prefetch="${hero.slug}" aria-hidden="true" tabindex="-1"
           style="background-image:url('${BASE + hero.image.lqip}'); --hero-shape:${column ? column.aspect : shape}; --hero-focus:${column ? column.focus : crop.focus}">
-          <img src="${BASE + (column ? hero.image.card : hero.image.src)}" alt="" width="${hero.image.w}" height="${hero.image.h}"
+          <img src="${BASE + (hero.image.hero ?? hero.image.src)}" srcset="${srcsetFor(hero.image, BASE)}"
+            sizes="(min-width: 1024px) 320px, (min-width: 620px) 300px, calc(100vw - 32px)"
+            alt="" width="${hero.image.w}" height="${hero.image.h}"
             style="view-transition-name:s-${hero.slug}-image" loading="eager" decoding="async" />
         </a>
       </div>${column ? '<p class="hero-credit utility" data-hero-credit hidden></p>' : ''}`

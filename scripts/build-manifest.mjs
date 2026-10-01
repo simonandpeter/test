@@ -64,6 +64,16 @@ const cardFor = (file) => file.replace(/\.(jpe?g|png)$/i, '') + '-card.jpg';
 const cardSmFor = (file) => file.replace(/\.(jpe?g|png)$/i, '') + '-card-sm.jpg';
 
 /**
+ * The picture the saint page and the Daily hero paint (2026-10-01). Those two
+ * were being handed `src`, the original as fetched: a median of 283 kB at 939
+ * px to draw a figure 328 CSS px wide, which on a 1.6 Mbps link completes 2.0
+ * s after the 560 card does and 5.1 s after it at the largest icon in the
+ * corpus. `HERO_W_PX` in make_thumbs.py has the cap and why it is on the
+ * width.
+ */
+const heroFor = (file) => file.replace(/\.(jpe?g|png)$/i, '') + '-hero.jpg';
+
+/**
  * The two caps make_thumbs.py writes the card derivatives at, on the *longer*
  * edge. Repeated here rather than read, because the script is Python and this
  * is the only arithmetic that needs them; `tests/manifest-image.test.mjs`
@@ -72,6 +82,9 @@ const cardSmFor = (file) => file.replace(/\.(jpe?g|png)$/i, '') + '-card-sm.jpg'
  */
 const CARD_MAX_PX = 560;
 const CARD_SM_MAX_PX = 280;
+
+/** The hero cap, which is on the width — make_thumbs.py's `HERO_W_PX`. */
+const HERO_W_PX = 1000;
 
 /** The width a derivative capped at `longest` on its long edge really has. */
 const derivedWidth = (width, height, longest) =>
@@ -213,7 +226,7 @@ export async function build({ saintsDir = SAINTS_DIR, dataDir = DATA_DIR, write 
         fail(folder, `image "${img.file}" is referenced but does not exist`);
         continue;
       }
-      for (const derived of [thumbFor(img.file), cardFor(img.file), cardSmFor(img.file)]) {
+      for (const derived of [thumbFor(img.file), cardFor(img.file), cardSmFor(img.file), heroFor(img.file)]) {
         if (!existsSync(path.join(dir, derived))) {
           fail(folder, `image "${img.file}" has no derivative "${derived}" — run: npm run thumbs`);
         }
@@ -437,10 +450,12 @@ function toCard(saint, dir) {
       src: base + file,
       lqip: base + thumbFor(file),
       /*
-       * The picture a *card* shows. `src` stays the original, which is what
-       * the saint's own page and the hero draw; `w`/`h` stay the original's
-       * too, because their job is the aspect ratio that reserves the box
-       * before a byte arrives, and the derivative preserves it exactly.
+       * The picture a *card* shows. `src` stays the original — nothing paints
+       * it since 2026-10-01, and it stays in the manifest because it is the
+       * file the folder holds and the one a licence note points at; `w`/`h`
+       * stay the original's too, because their job is the aspect ratio that
+       * reserves the box before a byte arrives, and every derivative
+       * preserves it exactly.
        */
       card: base + cardFor(file),
       // The narrow half of the card's `srcset`. `CARD_SM_MAX_PX` in
@@ -458,6 +473,10 @@ function toCard(saint, dir) {
        */
       cardW: derivedWidth(width, height, CARD_MAX_PX),
       cardSmW: derivedWidth(width, height, CARD_SM_MAX_PX),
+      // The hero's cap is on the width, so its descriptor needs no shape
+      // arithmetic — only the refusal to upscale that `heroFor` shares.
+      hero: base + heroFor(file),
+      heroW: Math.min(width, HERO_W_PX),
       w: width,
       h: height,
       aspect: Math.round((width / height) * 10000) / 10000,

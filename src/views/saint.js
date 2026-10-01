@@ -47,6 +47,7 @@ import { lastSearch } from './index/place.js';
 import { facetGroups } from './index/controls.js';
 import { monthsBySlugFor } from './index/search.js';
 import { EMPTY_FILTERS, applyFilters, facetsOf } from '../lib/index-filters.js';
+import { srcsetFor } from '../lib/picture.js';
 
 const BASE = import.meta.env.BASE_URL;
 
@@ -165,9 +166,18 @@ export function render(el, { data, params, router, cameFrom }) {
 function shell(card, backLabel) {
   /* The picture, and *not* its licence: that line stands at the foot with the
      sources. `docs/SRC-DECISIONS.md § src/views/saint.js — the caption` */
+  /*
+   * **`sizes` is a promise about the box, and the box was measured** on the
+   * production build: `calc(100vw - 32px)` below 760, where the figure is the
+   * column; 260 from 760, where `saint.css` clamps `minmax(200px, 260px)`;
+   * 352 from 1024. Overstating it costs bytes and understating it draws a
+   * soft picture, so it is read off the page rather than off the stylesheet.
+   */
   const media = card.image
     ? `<figure class="saint-media" style="aspect-ratio:${card.image.aspect};background-image:url('${BASE + card.image.lqip}')">
-        <img src="${BASE + card.image.src}" alt="" width="${card.image.w}" height="${card.image.h}"
+        <img src="${BASE + (card.image.hero ?? card.image.src)}" srcset="${srcsetFor(card.image, BASE)}"
+          sizes="(min-width: 1024px) 352px, (min-width: 760px) 260px, calc(100vw - 32px)"
+          alt="" width="${card.image.w}" height="${card.image.h}"
           style="view-transition-name:s-${esc(card.slug)}-image" decoding="async" />
       </figure>`
     : '';

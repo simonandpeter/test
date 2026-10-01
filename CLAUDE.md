@@ -280,7 +280,8 @@ engine and its image queue), `panel-control.js` (both chooser disclosures),
 pick, interval display), `i18n.js` (language, `PACK_ONLY`), `date-display.js` (a
 recorded date in the reader's language), `honorific.js` / `saint-name.js` (which
 name to print), `map-view.js` / `map-labels.js` / `map-track.js` / `mercator.js`
-(the map's whole arithmetic), `index-filters.js`, `virtual-grid.js`,
+(the map's whole arithmetic), `index-filters.js`, `virtual-grid.js`, `picture.js` (a manifest image's
+`srcset`),
 `name-lines.js`, `liturgy.js`, `feasts.js`, `computus.js`, `router.js`,
 `store.js`, `settings.js`, `motion.js` (`reducedMotion`, and `DUR`/`EASE` — the
 JS half of the motion scale, held to `tokens.css` by a test).

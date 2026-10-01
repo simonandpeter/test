@@ -1,8 +1,9 @@
-"""Generates seven derivatives next to each image in saints/*/images/.
+"""Generates eight derivatives next to each image in saints/*/images/.
 
-`-thumb.jpg` is the blurred low-quality placeholder a card paints instantly
-before the full-res image decodes. `-card.jpg` is the picture a *card* actually
-shows. Run as `npm run thumbs`; the manifest build fails loudly on any image
+`-hero.jpg` is the picture the saint page and the Daily hero paint; see
+`HERO_W_PX`. `-thumb.jpg` is the blurred low-quality placeholder a card paints
+instantly before the full-res image decodes. `-card.jpg` is the picture a
+*card* actually shows. Run as `npm run thumbs`; the manifest build fails loudly on any image
 missing either of them.
 
 The thumb deliberately uses the v3 PSD pipeline's exact quarter-size + blur
@@ -125,8 +126,34 @@ WEBP_METHOD = 6
 # itself.
 ROW_SHORT_PX = 144
 
+# **The hero derivative (2026-10-01), and its cap is on the WIDTH.**
+#
+# Three markup sites paint `image.src` -- the original as fetched -- and two of
+# them draw it large: the saint page's figure and the Daily hero. Measured on
+# the production build, both are 328 CSS px wide at 360 and 352 at 1024 and
+# above, and the file they are handed has a median of 283 kB at 939x742. On a
+# 1.6 Mbps link that picture completes 2.0 s after the 560 `-card.jpg` does at
+# the median and 5.1 s after it at the largest icon in the corpus -- which is
+# the whole reason this exists.
+#
+# The cap is 1000 because 328 CSS px at three device pixels is 984, so the
+# densest phone is served exactly and nothing is served more. And it is on the
+# width, not the long edge: the figure fits the box's width and takes its
+# height from the picture's own shape, so a 556x1721 portrait needs 984 px
+# across and a long-edge cap would hand it 323. `pulcheria-the-empress` is
+# that shape, and under a long-edge cap it measured 13.4 dB against the
+# original at render size where every other icon measured near 30.
+#
+# No resolution is lost at any density the site can be read at, so the saving
+# is the encode alone: **41% of `icon.jpg` at the median** (115 kB against 283
+# kB), at 32.0 dB median and 26.9 dB worst against the original resampled to
+# the 984 px the page paints -- the same grade as the card derivatives, which
+# measured 32.5 dB at this quality.
+HERO_W_PX = 1000
+
 GENERATED = (
     "-thumb.jpg",
+    "-hero.jpg",
     "-card.jpg",
     "-card-sm.jpg",
     "-row.jpg",
@@ -181,6 +208,21 @@ def write_card_sm_webp(src, dst):
     write_card_webp_at(src, dst, CARD_SM_MAX_PX)
 
 
+def hero_sized(src, widest):
+    """The original with its *width* at `widest` -- see `HERO_W_PX` for why the
+    width and not the long edge."""
+    im = Image.open(src).convert("RGB")
+    scale = min(1.0, widest / im.width)
+    if scale < 1.0:
+        size = (max(1, round(im.width * scale)), max(1, round(im.height * scale)))
+        im = im.resize(size, Image.LANCZOS)
+    return im
+
+
+def write_hero(src, dst):
+    hero_sized(src, HERO_W_PX).save(dst, "JPEG", quality=CARD_QUALITY, optimize=True, progressive=True)
+
+
 def row_sized(src, shortest):
     """The original with its *short* edge at `shortest` — see `ROW_SHORT_PX`
     for why a row caps the short edge where a card caps the long one."""
@@ -213,6 +255,7 @@ for folder in sorted(os.listdir(ROOT)):
         base, _ = os.path.splitext(fname)
         for suffix, write in (
             ("-thumb.jpg", write_thumb),
+            ("-hero.jpg", write_hero),
             ("-card.jpg", write_card),
             ("-card-sm.jpg", write_card_sm),
             ("-row.jpg", write_row),

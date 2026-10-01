@@ -188,6 +188,7 @@ test('image dimensions and aspect are emitted into the manifest', async () => {
     await writeFile(path.join(dir, 'test-saint', 'images', 'icon-thumb.jpg'), png);
     await writeFile(path.join(dir, 'test-saint', 'images', 'icon-card.jpg'), png);
     await writeFile(path.join(dir, 'test-saint', 'images', 'icon-card-sm.jpg'), png);
+    await writeFile(path.join(dir, 'test-saint', 'images', 'icon-hero.jpg'), png);
     await writeFile(
       path.join(dir, 'test-saint', 'saint.json'),
       JSON.stringify(saint({ images: [{ file: 'images/icon.png' }] })),
@@ -212,6 +213,13 @@ test('image dimensions and aspect are emitted into the manifest', async () => {
       cardSm: 'saints/test-saint/images/icon-card-sm.jpg',
       cardW: 8,
       cardSmW: 8,
+      /*
+       * The hero, 2026-10-01: the file the saint page and the Daily hero
+       * paint, and the only cap of the three that is on the *width*, so its
+       * descriptor is `min(width, 1000)` with no shape arithmetic at all.
+       */
+      hero: 'saints/test-saint/images/icon-hero.jpg',
+      heroW: 8,
       w: 8,
       h: 10,
       aspect: 0.8,
@@ -260,8 +268,16 @@ test('the srcset widths the manifest declares are the widths the files really ha
       if (!icon) continue;
       const base = icon.replace(/\.[^.]+$/, '');
       if (!files.includes(`${base}-card.jpg`) || !files.includes(`${base}-card-sm.jpg`)) continue;
+      if (!files.includes(`${base}-hero.jpg`)) continue;
       const { width, height } = await imageSizeFromFile(path.join(dir, icon));
       if (width > height === wantPortrait) continue;
+      /*
+       * The portrait pass wants one taller than the hero cap, because that is
+       * the only shape where a cap on the width and a cap on the long edge
+       * give different numbers — and telling those apart is what the hero
+       * assertions below are for.
+       */
+      if (wantPortrait && height <= 1000) continue;
       return { folder, dir, icon, base, width, height };
     }
     return null;
@@ -271,12 +287,17 @@ test('the srcset widths the manifest declares are the widths the files really ha
     const found = await findOne(portrait);
     // The corpus is 130 icons and both shapes are in it; if one ever is not,
     // say so rather than passing on an empty loop.
-    assert.ok(found, `no ${portrait ? 'portrait' : 'landscape'} icon with both card derivatives in the corpus`);
+    assert.ok(
+      found,
+      portrait
+        ? 'no portrait icon taller than the 1000 px hero cap in the corpus, so the cap axis is unpinned'
+        : 'no landscape icon with the card derivatives in the corpus',
+    );
 
     const dir = await mkdtemp(path.join(os.tmpdir(), 'saints-srcset-'));
     try {
       await mkdir(path.join(dir, 'test-saint', 'images'), { recursive: true });
-      for (const suffix of ['', '-thumb.jpg', '-card.jpg', '-card-sm.jpg']) {
+      for (const suffix of ['', '-thumb.jpg', '-card.jpg', '-card-sm.jpg', '-hero.jpg']) {
         const from = suffix ? `${found.base}${suffix}` : found.icon;
         const to = suffix ? `icon${suffix}` : found.icon;
         await writeFile(path.join(dir, 'test-saint', 'images', to), await readFile(path.join(found.dir, from)));
@@ -291,12 +312,24 @@ test('the srcset widths the manifest declares are the widths the files really ha
       const real = {
         card: await imageSizeFromFile(path.join(dir, 'test-saint', 'images', 'icon-card.jpg')),
         cardSm: await imageSizeFromFile(path.join(dir, 'test-saint', 'images', 'icon-card-sm.jpg')),
+        hero: await imageSizeFromFile(path.join(dir, 'test-saint', 'images', 'icon-hero.jpg')),
       };
       const where = `${found.folder} (${found.width}x${found.height}, ${portrait ? 'portrait' : 'landscape'})`;
       assert.equal(image.cardW, real.card.width, `cardW is not the card file's own width — ${where}`);
       assert.equal(image.cardSmW, real.cardSm.width, `cardSmW is not the small card's own width — ${where}`);
       // And the small one really is smaller, or the srcset offers one file twice.
       assert.ok(real.cardSm.width < real.card.width, `the two card derivatives are the same width — ${where}`);
+      /*
+       * The hero is the one derivative capped on its width, and the portrait
+       * pass is what that is here for: under a long-edge cap a 556x1721 icon
+       * comes out 323 px wide for a box that asks 984 of it, which measured
+       * 13.4 dB against the original where every other icon measured near 30.
+       */
+      assert.equal(image.heroW, real.hero.width, `heroW is not the hero file's own width — ${where}`);
+      assert.ok(
+        real.hero.width >= Math.min(found.width, 1000),
+        `the hero is capped on its long edge, not its width — ${where}`,
+      );
     } finally {
       await rm(dir, { recursive: true, force: true });
     }
@@ -321,6 +354,7 @@ test('a licence that obliges attribution warns until it has some; one that does 
       await writeFile(path.join(dir, 'test-saint', 'images', 'icon-thumb.jpg'), png);
       await writeFile(path.join(dir, 'test-saint', 'images', 'icon-card.jpg'), png);
     await writeFile(path.join(dir, 'test-saint', 'images', 'icon-card-sm.jpg'), png);
+    await writeFile(path.join(dir, 'test-saint', 'images', 'icon-hero.jpg'), png);
       await writeFile(path.join(dir, 'test-saint', 'images', 'icon.meta.json'), JSON.stringify(meta));
       await writeFile(
         path.join(dir, 'test-saint', 'saint.json'),
