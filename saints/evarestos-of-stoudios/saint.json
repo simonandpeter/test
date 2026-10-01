@@ -1,0 +1,52 @@
+{
+  "slug": "evarestos-of-stoudios",
+  "display_name": "Evarestos of Stoudios",
+  "names": [
+    {
+      "form": "Ευάρεστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Δεκεμβρίου, «Όσιος Ευάρεστος», with the rank word left off. The by-name in the English form is the page's own monastery and not a form the page prints."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Δεκεμβρίου — «Όσιος Ευάρεστος»",
+        "url": "https://www.saint.gr/12/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/2797/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Δεκεμβρίου εκάστου έτους», the same day as the listing. **No `dates` object is drafted, because the page's own two dating clauses cannot both stand.** It brings him to Constantinople «επί Λέοντος του Ισαύρου (813 - 820 μ.Χ.)» — the years are those of Leo V the Armenian and the by-name is the page's own slip — and then has the patrician Bryennios, who was keeping him, sent as ambassador to the Bulgarians «από τη βασίλισσα Θεοδώρα», the empress Theodora, whose regency is a generation later. The page gives his age at death, seventy-nine, and no year. It names Galatia as his origin, Skopelos where he met the elder who tonsured him, the Monastery of Stoudios where he shone as a strict ascetic, and the monastery of Kokourouvion, or Kokkorovion, where his relic was laid; no coordinate is proposed. He is not `evaristus-of-the-ten-of-crete`, a martyr of the Greek 23 December. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

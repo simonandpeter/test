@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ευαρεστοσ evarestos-of-stoudios evaristus-of-the-ten-of-crete':
+    'Two men. The new one is Evarestos of Stoudios on 26 December; the other is Evaristus of the Ten of Crete, whose day is the 23rd and whom this wave upgraded there.',
+  'κωνσταντινοσ constantine-brancoveanu constantine-from-the-jews constantine-i-of-constantinople constantine-leichoudes constantine-of-cornwall constantine-of-kappoua constantine-of-murom constantine-of-novotorzhanin constantine-of-rhodes-new-martyr constantine-of-strathclyde constantine-of-the-scots constantine-the-great constantine-the-hagarene cyril-the-philosopher':
+    'Fourteen now. The new one is the Constantine the page calls from the Jews on 26 December, a monk; the others are read in the el-08-09 entry for this name form.',
   'αγαπιοσ agapius-2-november agapius-22-november agapius-disciple-of-babylas agapius-disciple-of-passarion agapius-martyr-1-march agapius-metaxas agapius-of-apamea agapius-of-colciu agapius-of-dimitsana agapius-of-galatista agapius-of-gaza agapius-of-numidia agapius-son-of-bassa agapius-the-younger':
     'Fourteen now. The new one is Agapius the Younger on 24 December — and the reading would not swear he is not the teacher of Agapius of Dimitsana, one town, one surname and one monastic name between them, so no relation is recorded and it is in ro-run/FINDINGS.md. The others are read in the el-11-22 entry for this name form.',
   'φιλιπποσ philip-father-of-eugenia philip-of-gortyna philip-of-moscow philip-of-nicomedia philip-of-sicily philip-of-worms philip-ordinets philip-the-apostle philip-the-deacon philip-the-first-of-moscow philippus-of-niculitel':

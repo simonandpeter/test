@@ -1,0 +1,9 @@
+# Evarestos of Stoudios
+
+saint.gr's calendar for 26 December keeps the venerable Evarestos, and gives him a life of a few sentences. He came of Galatia, of parents glorious and notable in that country; and having been well and piously brought up at home he went with his father to Constantinople, where their kinsman the patrician Bryennios kept them as his guests. The page dates that journey by a reign, and its dating is one of two in the entry that will not sit together.
+
+When Bryennios was sent as ambassador to the Bulgarians he took Evarestos along with him; and when they came to the place called Skopelos, Evarestos met there an old ascetic, attached himself to him, and was tonsured a monk. The elder, seeing how high the young man's spiritual bent was, sent him with a letter of recommendation to the Monastery of Stoudios, where Evarestos shone out as a strict ascetic.
+
+There he lived the rest of the years of his life in holiness, and died in peace at the age of seventy-nine; and his honourable relic was laid in the monastery of Kokourovion, which the page also writes Kokkorovion. No year is set down here for any of it: the page brings him to Constantinople under a Leo whose years it gives as 813 to 820, and then makes Bryennios the ambassador of the empress Theodora, who is of the next generation, and the two cannot both be right. The distich above the life says that Evarestos hastened in deed and word, until his end, to be well-pleasing to the Word — which is the play his name invites. The page prints no hymn, carries no asterisk, and does not carry the sentence by which saint.gr marks an entry it will not vouch for.
+
+*After saint.gr's calendar for 26 Δεκεμβρίου — [the day](https://www.saint.gr/12/26/index.aspx) and [the life](https://www.saint.gr/2797/saint.aspx); read 2 October 2026.*

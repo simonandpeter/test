@@ -1,0 +1,60 @@
+{
+  "slug": "konstantios-the-russian",
+  "display_name": "Konstantios the Russian",
+  "names": [
+    {
+      "form": "Κωνστάντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Δεκεμβρίου, «Άγιος Κωνστάντιος ο Ρώσος, ο Νέος Ιερομάρτυρας», with the rank words left off. The page prints no Russian form of the name, so none is stored."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "hieromartyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1742,
+      "latest": 1743,
+      "display": "1742",
+      "basis": "attested",
+      "note": "saint.gr: «οι Τούρκοι πήραν τον μάρτυρα και τον αποκεφάλισαν μπροστά στ' ανάκτορα του Σουλτάνου το 1742 μ.Χ. (ή 1743 μ.Χ.)», with the page's head «(; - 1742)». The head's year is taken as the display and the page's own alternative sets the upper bound. No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026). He is a Russian of Novgorod tonsured at the Kyiv Caves, so the Russian wave may well find him; nothing of that is decided from this page."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Δεκεμβρίου — «Άγιος Κωνστάντιος ο Ρώσος, ο Νέος Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/12/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/2798/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Δεκεμβρίου εκάστου έτους», the same day as the listing, and «Αγιος Κωνσταντιος ο Ρωσος, ο Νεος Ιερομαρτυρας (; - 1742)». It names Novgorod as his birthplace, the Lavra of the Caves of Kyiv where he was tonsured — the page writes Kyiv here in full, which the 20 Δεκεμβρίου page of the archimandrite Ignatius of the same house does not — Hagia Sophia of Kyiv and the Russian embassy church at Constantinople where he served, the Great Lavra of Athos where he lived during the Russo-Turkish war, and the palace of the Sultan where he was beheaded; no coordinate is proposed for any of them. The two men it says he was joined with on Athos, the former bishop of Arta Neophytos and his biographer papa-Ionas Kausokalyvites, have no folders in this corpus and are not `related` rows; the corpus's `acacius-the-kausokalyvite` is another man of that place. The page states plainly that it does not know why he fell out with the Russian ambassador — «άγνωστο για ποιους λόγους». The denial and the repentance are the page's own and are told in the life as it tells them. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
