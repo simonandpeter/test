@@ -1,0 +1,72 @@
+{
+  "slug": "photini-the-cypriot",
+  "display_name": "Photini the Cypriot",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "virgin",
+    "ascetic",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Φωτεινή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Αυγούστου, «Οσία Φωτεινή η Κυπρία», with the rank word left off. The page adds that in Cyprus she is also known as «Αγία Φώτου η θαυματουργός», and that the carved inscription over her relic reads «Φωτεινή Παρθένος Νύμφη Χριστού»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Αυγούστου — «Οσία Φωτεινή η Κυπρία»",
+        "url": "https://www.saint.gr/08/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Αυγούστου εκάστου έτους», the same day as the listing. The page opens by saying what it does not know: «Πότε έζησε ακριβώς η Οσία Φωτεινή (γνωστή στην Κύπρο και σαν Αγία Φώτου η θαυματουργός) και ποια ήταν η καταγωγή της, δεν γνωρίζουμε» — when exactly she lived and what her origin was we do not know — so there is no `dates` object. The years it does print, «γύρω στα 1718 - 32 μ.Χ.», are the finding of her relic in the cave and not years of her life. She is not the corpus's `photini-the-samaritan`: this is the Cypriot ascetic of Rizokarpaso whose hermitage is at the village of Agios Andronikos and a portion of whose relic is at the monastery of Kykkos. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints one apolytikion, which names her, and it is taken."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Καρηασέων τὸ κλέος καὶ Κυπρίων ἀγλάισμα καὶ τῶν ἀσθενούντων ἡ ρώσις, τῶν πεπηρωμένων ἀνάβλεψις, τῶν πρὸς σὲ πιστῶς προστρεχόντων ἐν τῷ θείῳ ναῶ σου, πανένδοξε, τᾶς ἰάσεις παράσχου τοὶς δούλοις σου πάντοτε, ἶνα εὐχαρίστως κράζωμεν, Φωτεινὴ Ὁσία νύμφη Χριστοῦ καλλιπάρθενε. Δόξα τῷ σὲ δοξάσαντι, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διὰ σοῦ πασιν Ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’ — the only hymn on the page of «Οσία Φωτεινή η Κυπρία», and it names her, «Φωτεινὴ Ὁσία νύμφη Χριστοῦ». The page prints no model for the tone",
+        "url": "https://www.saint.gr/2198/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The glory of the Karpasians and the splendour of the Cypriots, the strengthening of the sick and the recovery of sight for the maimed who run to you in faith in your holy church: all-glorious one, grant healings to your servants always, that we may cry out in thanksgiving, Photini, venerable bride of Christ, fair virgin. Glory to him who glorified you, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

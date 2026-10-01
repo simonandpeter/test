@@ -1,0 +1,50 @@
+{
+  "slug": "phocas-2-august",
+  "display_name": "Phocas (2 August)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Φωκάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Αυγούστου, «Άγιος Φωκάς», with the rank word left off. The page glosses it from φώκη, the seal: the one affectionate towards his homeland and his own as the seal is."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Αυγούστου — «Άγιος Φωκάς»",
+        "url": "https://www.saint.gr/08/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Αυγούστου εκάστου έτους», the same day as the listing. The whole notice is one sentence: «Για τον Άγιο Φωκά δεν έχουμε κανένα βιογραφικό του στοιχείο, απλά αναφέρεται σαν Άγιος της Εκκλησίας» — of Saint Phocas we have no biographical datum at all; he is simply mentioned as a saint of the Church. The couplet the page prints beside it calls him a martyr, «Φωκᾶς ὁ μάρτυς», and that word is the only ground for the `martyr` type; there is no manner of death, no country, no century, no year and no hymn. The three men of this name the corpus already keeps are on other days and the page says nothing that would join him to any of them, so the folder is marked by its day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

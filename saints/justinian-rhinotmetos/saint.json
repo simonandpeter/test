@@ -1,0 +1,60 @@
+{
+  "slug": "justinian-rhinotmetos",
+  "display_name": "Justinian Rhinotmetos",
+  "sex": "male",
+  "types": [
+    "king"
+  ],
+  "office": "Emperor of the East",
+  "names": [
+    {
+      "form": "Ιουστινιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Αυγούστου, «Άγιος Ιουστινιανός Β' ο βασιλιάς», with the rank word, the numeral and the office left off. The bynames are the page's own: «τον Ιουστινιανό Β' τον νέο τον Ρινότμητο», the New and the Slit-nosed."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Αυγούστου — «Άγιος Ιουστινιανός Β' ο βασιλιάς»",
+        "url": "https://www.saint.gr/08/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Αυγούστου εκάστου έτους», the same day as the listing. **This is not the corpus's `justinian-the-great`, and the resemblance is the trap of this day.** That folder is Justinian I, drafted from doxologia.ro's 2 august line «Binecredinciosul Împărat Justinian cel Mare», reigning 527–565 and born 483. saint.gr's entry for the same civil day says in its one sentence of prose: «Πρόκειται για τον Ιουστινιανό Β' τον νέο τον Ρινότμητο, που βασίλευσε από το έτος 685 μ.Χ. έως το έτος 695 μ.Χ. και τάφηκε στους Αγίους Αποστόλους» — Justinian II the New, the Slit-nosed, who reigned from 685 to 695 and was buried at the Holy Apostles. Two different emperors, two centuries apart, kept by two calendars on one civil day; so this is a new folder and not an upgrade, and `justinian-the-great` is not touched. The page's name-gloss block does mention «Μέγας αυτοκράτωρας του Βυζαντίου (482 - 564 μ.Χ.) που ανήγειρε τον Ναό της Άγια - Σοφιάς», but that is its standing gloss on the name Ιουστινιανός and not its account of this saint, whose own sentence names the later reign. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 685,
+      "latest": 695,
+      "display": "685–695",
+      "basis": "traditional",
+      "note": "saint.gr: «που βασίλευσε από το έτος 685 μ.Χ. έως το έτος 695 μ.Χ.». The page gives no year of birth and none of death; the bounds are the reign it prints."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

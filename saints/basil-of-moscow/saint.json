@@ -1,0 +1,70 @@
+{
+  "slug": "basil-of-moscow",
+  "display_name": "Basil of Moscow",
+  "sex": "male",
+  "types": [
+    "fool-for-christ",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Αυγούστου, «Άγιος Βασίλειος ο δια Χριστόν σαλός και θαυματουργός στη Μόσχα», with the rank word and the clauses after the name left off. The page prints no Russian form of the name and none is supplied here."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Αυγούστου — «Άγιος Βασίλειος ο δια Χριστόν σαλός και θαυματουργός στη Μόσχα»",
+        "url": "https://www.saint.gr/08/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Αυγούστου εκάστου έτους», the same day as the listing. Its head line reads «Αγιος Βασιλειος ο Δια Χριστον Σαλος Και Θαυματουργος Στη Μοσχα (1468 - 1557)» and the notice gives the birth year and the reign it fell in, «γεννήθηκε στη Μόσχα το 1468 μ.Χ. επί βασιλείας του Ιβάν Γ'», and his age at death, eighty-eight. The russian row is left `undocumented`, as every row this reader did not read is: days.pravoslavie.ru certainly keeps him and was not consulted, and the Greek page is the only source quoted here. The page's own source line is «Πηγή: Eμπαίζοντες...Υμεις μωροί δια Χριστόν (Ίκαρος Πετρίδης)». It prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1468,
+      "latest": 1468,
+      "display": "1468",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Βασίλειος ο δια Χριστόν σαλός γεννήθηκε στη Μόσχα το 1468 μ.Χ. επί βασιλείας του Ιβάν Γ' από φτωχούς και τίμιους ευσεβείς γονείς», and its head line «(1468 - 1557)»."
+    },
+    "death": {
+      "earliest": 1557,
+      "latest": 1557,
+      "display": "1557",
+      "basis": "traditional",
+      "note": "saint.gr's head line «(1468 - 1557)». The prose gives no year of death, only «Λίγο πριν πεθάνει σε ηλικία 88 χρονών», shortly before he died at the age of eighty-eight."
+    }
+  },
+  "related": [
+    "nicodemus-of-lake-kozha"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

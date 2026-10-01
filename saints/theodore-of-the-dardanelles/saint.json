@@ -1,0 +1,59 @@
+{
+  "slug": "theodore-of-the-dardanelles",
+  "display_name": "Theodore of the Dardanelles",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Αυγούστου, «Άγιος Θεόδωρος ο Νεομάρτυρας που μαρτύρησε στα Δαρδανέλια», with the rank word and the clause about his martyrdom left off. The page glosses the name as the gift of God."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Αυγούστου — «Άγιος Θεόδωρος ο Νεομάρτυρας που μαρτύρησε στα Δαρδανέλια»",
+        "url": "https://www.saint.gr/08/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Αυγούστου εκάστου έτους», the same day as the listing. Its head line reads «Αγιος Θεοδωρος ο Νεομαρτυρας Που Μαρτυρησε Στα Δαρδανελια (; - 1690)» and the notice names the day and the hour: «Τελικά στις 2 Αυγούστου 1690 μ.Χ., στις 3.00 μ.μ. τον αποκεφάλισαν». It says his skull is at the church of Hosia Xene at Nikaia in Piraeus, carried there in 1922 out of the family homes by the priest Father Konstantinos Oikonomou with some countrymen. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The page prints six megalynaria and no apolytikion and no kontakion at all, so this folder takes no hymn**: a megalynarion is not a kind the schema holds and it is not drafted."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1690,
+      "latest": 1690,
+      "display": "1690",
+      "basis": "attested",
+      "note": "saint.gr: «Τελικά στις 2 Αυγούστου 1690 μ.Χ., στις 3.00 μ.μ. τον αποκεφάλισαν», and its head line «(; - 1690)». The page gives no year of birth, only that he was barely twenty years old."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
