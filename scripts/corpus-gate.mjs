@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σατορνινοσ satorninus-7-may saturninus-companion-of-plotinus saturninus-of-corfu saturninus-son-of-juliana':
+    'Four men of this Greek form. The new one is on 22 June; the others are read in the el-04-29 entry for this name form.',
+  'ιουλιανη juliana-mother-of-saturninus juliana-of-amisos juliana-of-lazarevo juliana-of-ptolemais':
+    'Four women. The new one is on 22 June; the others are read in the el-03-20 entry for this name form.',
+  'νικητασ nicetas-alfanov nicetas-of-apollonias nicetas-of-chalcedon nicetas-of-epirus nicetas-of-medikion nicetas-of-nisyros nicetas-of-novgorod nicetas-of-pythia nicetas-the-sinaite nicetas-the-stylite-of-pereslavl nikitas-of-nea-moni':
+    'Ten now. The new one is on 21 June; the others are read in the el-05-24 entry for this name form.',
+  'αναστασια anastasia-andreyevna anastasia-of-rome-15-april anastasia-of-serbia anastasia-of-uglich anastasia-the-patrician':
+    'Four women. The new one is on 21 June; the others are read in the el-04-10 entry for this name form.',
   'ζωσιμοσ zosimas-brother-of-alexander zosimus-of-syracuse zosimus-the-soldier':
     'Two men whose Greek forms differ by a letter from the Ζωσιμᾶς fold: the Zosimus of 19 June and the Zosimus read beside him there.',
   'ζηνων zeno-20-april zeno-companion-of-terentius zeno-companion-of-zoilus zeno-disciple-of-silvanus zeno-of-corfu zeno-of-diospolis zeno-of-ikalto zeno-the-courier zeno-the-faster-of-kiev zenon-12-june':

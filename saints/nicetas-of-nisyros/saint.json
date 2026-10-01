@@ -1,0 +1,102 @@
+{
+  "slug": "nicetas-of-nisyros",
+  "display_name": "Nicetas of Nisyros",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Νικήτας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιουνίου, «Άγιος Νικήτας ο Νισύριος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1716,
+      "latest": 1716,
+      "display": "1716",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην κωμόπολη Μανδράκι της Νισύρου το 1716» — the page's own year, and its heading repeats it as «(1716 - 1732)»."
+    },
+    "death": {
+      "earliest": 1732,
+      "latest": 1732,
+      "display": "1732",
+      "basis": "traditional",
+      "note": "saint.gr: «τον αποκεφάλισε ο ίδιος ο Κριμλής στις 21 Ιουνίου 1732, σε ηλικία 17 χρονών στη Χίο» — beheaded on 21 June 1732 at Chios, aged seventeen."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιουνίου — «Άγιος Νικήτας ο Νισύριος»",
+        "url": "https://www.saint.gr/06/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Ιουνίου εκάστου έτους», the same day as the listing, and the narrative gives the same day for his death. He is none of the corpus's eleven other men of the name: this is the eighteenth-century new martyr of Mandraki on Nisyros, beheaded at Chios in 1732 at seventeen, whose head the page says is at Iviron on Athos. The page calls him the patron of Nisyros. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄.",
+      "model": "Ἀσκητικῶς προγυμνασθείς.",
+      "text": "Ἀκαταγώνιστος ὀφθεὶς Ἀθλοφόρε, τῶν ἐκ τῆς Ἄγαρ μηχανὰς ἐτροπώσω, καὶ ἐναθλήσας ἔνδοξε στεῤῥότατα, ξίφος κατεπάλαισας, δυσμενῶν ἀοράτων, ὅθεν τὸ διάδημα, ἀνεπλέξω τῆς νίκης, ὑπὲρ ἡμῶν ἱκέτευε Χριστὸν, νέε Νικήτα τῶν πίστει τιμώντων σε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ΄, Ἀσκητικῶς προγυμνασθείς — the only apolytikion on the page of «Άγιος Νικήτας ο Νισύριος», and it names him as the new Nicetas",
+        "url": "https://www.saint.gr/605/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shown unconquerable, O prize-winner, you turned back the devices of the sons of Hagar, and having contended most steadfastly, O glorious one, you overcame the sword and the unseen enemies; whence you wove for yourself the crown of victory. Intercede with Christ for us who honour you in faith, O new Nicetas.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄.",
+      "model": "Ὁ Ὑψωθεὶς ἐν τῷ Σταυρῷ.",
+      "text": "Νεοφανὴς ὥσπερ ἀστὴρ ἀθλοφόρε, ἐξανατείλας τῇ σεπτῇ Ἐκκλησίᾳ, τῶν εὐσεβῶν κατηύγασας τὰ πρόσωπα, πόθῳ εὐφημούντων σε, καὶ τελούντων Νικήτα, σῆς στεῤῥᾶς ἀθλήσεως, τὴν ὑπέρλαμπρον μνήμην, καὶ ἐκβοώντων· δόξα σοι Χριστὲ, τῷ τὸν ὁπλίτην τὸν σὸν στεφανώσαντι.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ΄, Ὁ Ὑψωθεὶς ἐν τῷ Σταυρῷ — the only kontakion on the page of «Άγιος Νικήτας ο Νισύριος», and it names him",
+        "url": "https://www.saint.gr/605/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Risen like a newly-appeared star over the venerable Church, O prize-winner, you have lit up the faces of the devout who praise you with longing and who keep, O Nicetas, the most radiant memory of your steadfast contest, and who cry aloud: glory to you, O Christ, who have crowned your man-at-arms.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

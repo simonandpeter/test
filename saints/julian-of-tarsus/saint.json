@@ -6,6 +6,11 @@
       "form": "Iulian din Tars",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 iunie, «Sfântul Mucenic Iulian din Tars»."
+    },
+    {
+      "form": "Ιουλιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιουνίου, «Άγιος Ιουλιανός από την Κιλικία», with the rank word and the country left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιουνίου — «Άγιος Ιουλιανός από την Κιλικία»",
+        "url": "https://www.saint.gr/06/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries. It is plainly the same man, and against nine other Julians in the corpus the details settle it: a pagan senator father and a Christian mother who brought him up by the Gospel, a confession before the eparch Marcian at eighteen, the mother sent to talk him out of it and telling him instead to stand fast, and death in a sack of poisonous snakes thrown into the deepest part of the sea. saint.gr calls his city Diocaesarea of Cilicia where doxologia.ro's life has Anazarbus with his mother afterwards at Tarsus; both are in Cilicia, the difference is the sources', and no `dates` are proposed because saint.gr gives no year. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -60,6 +75,23 @@
       },
       "english": {
         "text": "Thy martyr Julian, O Lord, in his contest received the crown of incorruption from Thee our God; for having Thy strength he overcame the tormentors and broke the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Μητρικαὶς ὑποθήκαις μυσταγωγούμενος, πανευκλεὴς στρατιώτης ὤφθης Χριστοῦ τοῦ Θεοῦ, παντευχίαν μυστικὴν περιζωσάμενος• ὅθεν καθεῖλες τὸν ἔχθρον, ὡς γενναῖος ἀριστεύς, καὶ ἤθλησας θεοφρόνως, Ἰουλιανὲ θεόφρον, ὑπὲρ ἠμῶν ἀεὶ πρεσβεύων Θεῶ.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον — the only apolytikion on the page of «Άγιος Ιουλιανός από την Κιλικία», and it names him and his mother's counsels",
+        "url": "https://www.saint.gr/608/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Initiated by a mother's counsels, you were shown an all-glorious soldier of Christ our God, having girded on the whole mystical armour; whence you brought down the enemy like a noble champion and contended with a godly mind, O God-minded Julian, ever interceding with God for us.",
         "rendered": "site"
       }
     }

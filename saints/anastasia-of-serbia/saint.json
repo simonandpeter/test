@@ -1,0 +1,53 @@
+{
+  "slug": "anastasia-of-serbia",
+  "display_name": "Anastasia of Serbia",
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Αναστασία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιουνίου, «Οσία Αναστασία της Σερβίας», with the rank word left off."
+    }
+  ],
+  "related": [
+    "sava-of-serbia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιουνίου — «Οσία Αναστασία της Σερβίας»",
+        "url": "https://www.saint.gr/06/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Ιουνίου εκάστου έτους», the same day as the listing, and gives no year at all. The whole of what it says of her is that she was the mother of Sava, whom it sends the reader to find on 14 Ιανουαρίου — the day the corpus's `sava-of-serbia` already carries on its Greek row — and that no other details of her life are known. She is none of the corpus's seven other Anastasias, all of whom are Roman, Serbian-unrelated or twentieth-century. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

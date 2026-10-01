@@ -6,6 +6,11 @@
       "form": "Afrodisie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 iunie, «Sfântul Mucenic Afrodisie»."
+    },
+    {
+      "form": "Αφροδίσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιουνίου, «Άγιος Αφροδίσιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιουνίου — «Άγιος Αφροδίσιος»",
+        "url": "https://www.saint.gr/06/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and it is the only Aphrodisius in the corpus. The details match the folder's life: Cilicia, the ruler Dionysius, the burning with heated iron, and death crushed between two great stones. The page puts his martyrdom in a year the folder does not carry — its heading reads «(; - 65)» and its narrative «Το 65 μ.Χ., ο άρχοντας Διονύσιος … τον καταδίκασε σε θάνατο» — and it adds a wonder the folder's life does not have, that he was first thrown to a lioness in the amphitheatre and that the hungry beast stopped a few paces short of him and passed him by. No `dates` object is proposed here, because a year the second source alone gives is a reading for the report and not a correction of the first. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn under his line."
     },
     {
       "church": "serbian",
