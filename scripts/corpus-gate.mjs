@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σαβινοσ sabinus-25-october sabinus-of-cyprus sabinus-of-hermopolis':
+    'Three men: Sabinus of Hermopolis on 16 March, Sabinus of Cyprus on 15 October and the Sabinus of 25 October.',
+  'παππιασ papias pappias-companion-of-peregrinus pappias-of-attaleia':
+    'Three now. The new one is Pappias of Attaleia on 25 October, who heads the company with Claudianus and Diodorus; the others are read in the el-07-07 entry for this name form.',
+  'μαρτυριοσ martyrius-25-june martyrius-companion-of-marcian martyrius-companion-of-sisinnius martyrius-of-novgorod martyrius-of-zelenets martyrius-the-deacon martyrius-the-recluse':
+    'Seven now, and three stand on 25 October: Martyrius the companion of Marcian, whose day it is on both calendars and whose Greek row this batch adds, and Martyrius the deacon and Martyrius the recluse, new here. Three entries, three men. The others are read in the el-06-25 entry for this name form.',
+  'διοδωροσ diodorus-companion-of-andromachus diodorus-companion-of-pappias diodorus-martyr-3-may diodorus-of-corinth diodorus-of-emesa diodorus-of-the-twenty-four-martyrs diodorus-the-presbyter':
+    'Seven now. The new one is Diodorus, of the same company of 25 October; the others are read in the el-10-12 entry for this name form.',
+  'κλαυδιανοσ claudianus claudianus-companion-of-pappias':
+    'Two men: the Claudianus of 27 January and Claudianus, one of the company Pappias of Attaleia heads on 25 October.',
+  'αναστασιοσ anastasius-25-october anastasius-8-january anastasius-of-antioch anastasius-of-brescia anastasius-of-nauplion anastasius-of-radovishte anastasius-of-thessalonica anastasius-patriarch-of-jerusalem anastasius-the-furrier anastasius-the-sinaite':
+    'Ten now. The new one is the Anastasius of 25 October; the others are read in the el-08-08 entry for this name form.',
   'ακακιοσ acacius-24-october acacius-companion-of-patrick acacius-of-amida acacius-of-apollonia acacius-of-gaul acacius-of-latros acacius-of-melitene acacius-of-the-forty-martyrs acacius-of-tver acacius-the-centurion acacius-the-executioner acacius-the-kausokalyvite acacius-the-new-of-neochorion akakios-of-lete-and-rentina':
     'Fourteen now. The new one is the Acacius of 24 October; the rest of the fold is read in the el-08-16 entry for this name form.',
   'νικηφοροσ nicephorus-13-may nicephorus-23-october nicephorus-alfanov nicephorus-companion-of-zebinas nicephorus-martyr-1-march nicephorus-martyr-8-february nicephorus-of-antioch nicephorus-of-corinth nicephorus-of-crete nicephorus-of-the-svir-desert nikephoros-of-chios nikephoros-patriarch-of-constantinople':

@@ -1,0 +1,50 @@
+{
+  "slug": "two-martyrs-of-thrace",
+  "display_name": "The Two Martyrs of Thrace",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Άγιοι Δύο Μάρτυρες από τη Θράκη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Οκτωβρίου, «Άγιοι Δύο Μάρτυρες από τη Θράκη». The page names neither of the two, so the form is the line itself."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Οκτωβρίου — «Άγιοι Δύο Μάρτυρες από τη Θράκη»",
+        "url": "https://www.saint.gr/10/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2814/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Οκτωβρίου εκάστου έτους», the same day as the listing. **The two are anonymous on the page**, so no name form can be read for either and the entry is kept as one folder for the pair; `sex` is `unknown` for the same reason. Thrace is named without a year, so no `dates` object and no coordinate. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

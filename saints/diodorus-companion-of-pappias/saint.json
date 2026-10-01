@@ -1,0 +1,63 @@
+{
+  "slug": "diodorus-companion-of-pappias",
+  "display_name": "Diodorus, companion of Pappias",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Διόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Οκτωβρίου, «Άγιοι Παππίας, Διόδωρος και Κλαυδιανός», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "between 249 and 251",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Παππίας, Διόδωρος και Κλαυδιανός μαρτύρησαν στα χρόνια του Δεκίου (249 - 251 μ.Χ.)» — the page gives the reign and no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Οκτωβρίου — «Άγιοι Παππίας, Διόδωρος και Κλαυδιανός»",
+        "url": "https://www.saint.gr/10/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2808/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Οκτωβρίου εκάστου έτους», the same day as the listing, and tells one story for the three. It dates them by the reign — «μαρτύρησαν στα χρόνια του Δεκίου (249 - 251 μ.Χ.)» — and gives no year, so the `dates` object is that interval. Attaleia in Pamphylia is named as their home and no coordinate is proposed. The corpus's `papias` is another man, venerated on the Greek 28 Ιουνίου, and its `claudianus` another again, on 27 Ιανουαρίου; none of its six Diodorus folders is of this company. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "pappias-of-attaleia",
+    "claudianus-companion-of-pappias"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

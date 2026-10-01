@@ -6,6 +6,11 @@
       "form": "Martirie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 octombrie, «Sfântul Mucenic Martirie»."
+    },
+    {
+      "form": "Μαρτύριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Οκτωβρίου, «Άγιοι Μαρκιανός και Μαρτύριος οι νοτάριοι», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -15,7 +20,8 @@
   ],
   "related": [
     "marcian-companion-of-martyrius",
-    "john-chrysostom"
+    "john-chrysostom",
+    "paul-the-confessor"
   ],
   "attestations": [
     {
@@ -39,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Οκτωβρίου — «Άγιοι Μαρκιανός και Μαρτύριος οι νοτάριοι»",
+        "url": "https://www.saint.gr/10/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2800/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Οκτωβρίου εκάστου έτους», the same day the folder already keeps for the Romanian church, and the pair is the same: the two notaries and secretaries of Paul the Confessor, patriarch of Constantinople, killed with a knife for refusing the Arians. Its heading prints «(; - 355)» for each of them, so a `dates` object with the death year alone is proposed; the reign it names, «του Αρειανού βασιλέως Κωνσταντίου (337 - 349 μ.Χ.)», is wider than that and is quoted in the note rather than turned into an interval. Paul is cross-referenced to 6 Νοεμβρίου and has a folder, `paul-the-confessor`, so he is linked and gets a `related` row. Its Ἀπολυτίκιον, Ἦχος γ’, and its Κοντάκιον, Ἦχος δ’, both name the two of them and are taken for both folders; the Οἶκος, which also names them, is not a kind the schema holds. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -64,9 +80,52 @@
         "text": "Thy martyrs, O Lord, in their contests received from Thee our God the crowns of incorruption; for having Thy strength they brought the torturers low, and broke the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’",
+      "model": "Θείας πίστεως",
+      "text": "Ζῆλον ἔνθεον ἀναλαβόντες, ἠμαυρώσατε Ἀρείου πλάνην ὁμοούσιον Τριάδα κηρύττοντες, Μαρκιανὲ καὶ θέοφρων Μαρτύριε, ὀρθοδοξίας οἱ ἄσειστοι πρόβολοι, θεῖοι μάρτυρες, Χριστῷ τῷ Θεῷ πρεσβεύσατε δωρίσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, «Άγιοι Μαρκιανός και Μαρτύριος οι νοτάριοι» — Ἀπολυτίκιον, Ἦχος γ’. Θείας πίστεως",
+        "url": "https://www.saint.gr/2800/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having taken up a godly zeal, you darkened the error of Arius by preaching the Trinity of one essence, Marcian and God-minded Martyrius, unshaken bulwarks of orthodoxy, divine martyrs: entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "model": "Ὁ ὑψωθεὶς",
+      "text": "Ἀγωvισάμενοι καλῶς ἀπὸ βρέφους, Μαρκιανὲ σὺv τῷ σοφῷ Μαρτυρίῳ, τὸv ἀποστάτηv Ἄρειοv καθείλετε, ἄτρωτον τηρήσαντες, τὴν ὀρθόδοξοv πίστιν, Παύλῳ ἐφεπόμενοι, τῷ σοφῷ διδασκάλῳ, ὅθεν σὺv τούτῳ εὔρατε ζωήv, ὡς τῆς Τριάδος ὑπέρμαχοι ἄριστοι.",
+      "source": {
+        "text": "saint.gr, «Άγιοι Μαρκιανός και Μαρτύριος οι νοτάριοι» — Κοντάκιον, Ἦχος δ’. Ὁ ὑψωθεὶς (copied as the page prints it, Latin v for ν and all)",
+        "url": "https://www.saint.gr/2800/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having contended well from infancy, Marcian with the wise Martyrius, you pulled down the apostate Arius and kept the Orthodox faith unwounded, following Paul your wise teacher; and so with him you found life, as the best champions of the Trinity.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 355,
+      "latest": 355,
+      "display": "355",
+      "basis": "traditional",
+      "note": "saint.gr heads both notaries «(; - 355)»; the narrative gives no year of death and dates their service by «τα χρόνια του Αρειανού βασιλέως Κωνσταντίου (337 - 349 μ.Χ.)»."
+    }
   }
 }

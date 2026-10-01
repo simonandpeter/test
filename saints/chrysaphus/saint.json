@@ -6,6 +6,11 @@
       "form": "Hrisaf",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 octombrie, «Sfântul Mucenic Hrisaf»."
+    },
+    {
+      "form": "Χρυσάφιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Οκτωβρίου, «Άγιοι Ουαλλέριος και Χρυσάφιος», with the rank word left off; the life page adds the alternative form «Xρύσαφος» in its own parentheses."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Οκτωβρίου — «Άγιοι Ουαλλέριος και Χρυσάφιος»",
+        "url": "https://www.saint.gr/10/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2804/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Οκτωβρίου εκάστου έτους», the same day the folder already keeps for the Romanian church, and its whole narrative is one sentence: «Οι Άγιοι Ουαλλέριος (ή Oυαλλερίνος) και Χρυσάφιος (ή Xρύσαφος) μαρτύρησαν διά ξίφους». **The page's own parentheses matter twice.** They make «Ουαλλερίνος» an alternative form of Ουαλλέριος, which is why the separate entry on the same listing, «Άγιος Ουαλλερίνος» (`https://www.saint.gr/2802/saint.aspx`), is not drafted as a second man — its couplet differs, but the identification is the page's own and no new folder is proposed against it. And they make «Χρύσαφος» an alternative form of Χρυσάφιος, which is the name the day's refused entry «Αγία Χρυσάνθη» (`https://www.saint.gr/2815/saint.aspx`) calls her husband's. No year, no place, no hymn; no asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -46,5 +61,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "valerian-25-october"
+  ]
 }

@@ -1,0 +1,53 @@
+{
+  "slug": "martyrius-the-deacon",
+  "display_name": "Martyrius the Deacon",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Μαρτύριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Οκτωβρίου, «Όσιοι Μαρτύριος ο Έγκλειστος και Μαρτύριος ο διάκονος», with the rank word and the epithet «διάκονος» left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Οκτωβρίου — «Όσιοι Μαρτύριος ο Έγκλειστος και Μαρτύριος ο διάκονος»",
+        "url": "https://www.saint.gr/10/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2616/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Οκτωβρίου εκάστου έτους», the same day as the listing, and its whole text is «Δεν έχουμε λεπτομέρειες για τους βίους των Ρώσων Οσίων» — we have no details of the lives of the Russian venerable ones. That they were Russian is the only fact the page gives beyond the two names and the two epithets, and nothing here supplies a monastery it does not name. No year, so no `dates` object; no place, so no coordinate; no couplet and no hymn. The corpus's seven Martyrius folders are other men: the notary of this same day, who is upgraded in `up-10-25.json`, and six others on other days. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "martyrius-the-recluse"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

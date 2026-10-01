@@ -6,6 +6,11 @@
       "form": "Tavita",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 octombrie, «Sfânta Cuvioasă Tavita»; its life glosses the name «Tavita (Căprioara)»."
+    },
+    {
+      "form": "Ταβιθά",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Οκτωβρίου, «Αγία Ταβιθά», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Οκτωβρίου — «Αγία Ταβιθά»",
+        "url": "https://www.saint.gr/10/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2805/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Οκτωβρίου εκάστου έτους», the same day the folder already keeps for the Romanian church, and the entry is the same woman: the Dorcas of Acts 9.36–40, raised by Peter at Joppa. The page glosses the Syriac name as Δορκάς, a gazelle, makes her a skilled weaver who made tunics and garments, sold them and kept poor people, widows and orphans out of the proceeds, and says that she lived a good many years afterwards and died in deep old age. It gives no year at all, so no `dates` object is proposed, and Joppa and Lydda are named without coordinates. No hymn is printed; the couplet asks where her Peter is now, since if he were here again he would raise her from this death as he did from the first. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
