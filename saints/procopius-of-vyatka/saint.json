@@ -1,0 +1,71 @@
+{
+  "slug": "procopius-of-vyatka",
+  "display_name": "Procopius of Vyatka",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "fool-for-christ",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Προκόπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Νοεμβρίου, «Όσιος Προκόπιος της Βιάτκα ο δια Χριστόν σαλός», with the rank word, the place and the epithet left off. The page prints no Russian form of the name."
+    }
+  ],
+  "related": [
+    "tryphon-of-vyatka"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1568,
+      "latest": 1568,
+      "display": "1568",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Προκόπιος γεννήθηκε το 1568 μ.Χ. στο χωριό Κοριανκισκόι στη Ρωσική πόλη Βιάτκα», and the page's heading carries «(1568 - 1627)»."
+    },
+    "death": {
+      "earliest": 1627,
+      "latest": 1627,
+      "display": "1627",
+      "basis": "traditional",
+      "note": "saint.gr: «Έτσι έζησε με την άσκηση της σαλότητας για 30 χρόνια, μέχρι την ειρηνική κοίμησή του στις 21 Δεκεμβρίου 1627 μ. Χ.» The page's own heading carries the same year; the day it gives in that sentence, 21 December, is not the day on which it keeps him, and the discrepancy is recorded in the Greek row's note and not resolved here."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Νοεμβρίου — «Όσιος Προκόπιος της Βιάτκα ο δια Χριστόν σαλός»",
+        "url": "https://www.saint.gr/11/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2499/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Νοεμβρίου εκάστου έτους» and «Οσιος Προκοπιος Της Βιατκα ο Δια Χριστον Σαλος (1568 - 1627)», the same day as the listing. **The narrative on that same page dates his repose to 21 December 1627**, «μέχρι την ειρηνική κοίμησή του στις 21 Δεκεμβρίου 1627 μ. Χ.», which is neither the day the page keeps him on nor thirteen days from it: the row records the day page that was read, the December date stands here in the page's own words, and nothing is moved on the strength of it. None of the corpus's seven Procopius folders is this man: they are kept on other days and none is of Vyatka. The page's own name-gloss names the historian Procopius under Justinian as a famous bearer; that is the site's gloss on any name and nothing of it is recorded. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'προκοπιοσ procopius-of-decapolis procopius-of-jerusalem procopius-of-ustyug procopius-of-usya procopius-of-vyatka procopius-the-martyr-25-june procopius-the-palestinian':
+    'Six men. The new one is Procopius of Vyatka on 21 November, a fool for Christ whose folder relates Tryphon of Vyatka; the others are read in the el-07-08 entry for this name form, where three stand on 8 July. His second day is a note in his life and no row is moved.',
   'θεσπεσιοσ thespesius thespesius-20-november':
     'Two men. The new one is the Thespesius of 20 November, of the company with Eustathius and Anatolius; the other is the Thespesius of 1 June.',
   'θεοκτιστοσ theoctistus-20-november theoctistus-brother-of-stephen-milutin theoctistus-of-kantara theoctistus-of-st-sabbas theoctistus-the-martyr':
