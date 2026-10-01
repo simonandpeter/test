@@ -1,0 +1,56 @@
+{
+  "slug": "diomedes-of-cyprus",
+  "display_name": "Diomedes of Cyprus",
+  "names": [
+    {
+      "form": "Διομήδης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Όσιος Διομήδης», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "related": [
+    "neophytos-the-recluse",
+    "triphyllius-of-leucosia",
+    "spyridon-of-trimythous"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Οκτωβρίου — «Όσιος Διομήδης»",
+        "url": "https://www.saint.gr/10/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Οκτωβρίου εκάστου έτους», the same day as the listing, and that is the day recorded here. The page closes with a note of its own against that day: «Ο Παρισινός Κώδικας 1589 φ. 91α αναφέρει την μνήμη του Οσίου Διομήδη στις 29 Οκτωβρίου ως εξής: Τῇ αὑτῇ ἡμέρᾳ μνήμη τοῦ Ἁγίου Διομήδους, μαθητοῦ τοῦ ἐν ἁγίοις πατρὸς ἡμῶν Τριφυλλίου ἐπισκόπου Λευκωσίας». One row per church is the schema, so the codex's 29 October is this note and not a second row. The page also argues against its own chronology, and therefore no `dates` object is proposed: it reasons that the Arab raids on Cyprus began about the middle of the seventh century, so this Diomedes cannot have been a disciple of Triphyllius, who lived about the fifth. The corpus's six other Diomedes are all martyrs or a physician and none of them an ascetic of Cyprus; the painter's own words on this page, «Μάρτυρα Διομήδη, ἐπίσταμαι. Ὅσιον Διομήδη ὅμως οὔτε γινώσκω», make the distinction the page's and not this reader's. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

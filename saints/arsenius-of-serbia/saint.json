@@ -1,0 +1,52 @@
+{
+  "slug": "arsenius-of-serbia",
+  "display_name": "Arsenius of Serbia",
+  "names": [
+    {
+      "form": "Αρσένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Άγιος Αρσένιος Αρχιεπίσκοπος Σερβίας», with the rank words and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "office": "Archbishop of Serbia",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Οκτωβρίου — «Άγιος Αρσένιος Αρχιεπίσκοπος Σερβίας»",
+        "url": "https://www.saint.gr/10/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Οκτωβρίου εκάστου έτους», the same day as the listing, and its whole notice is «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου». So the see and the rank are all the page gives: no year, so no `dates` object, and no place beyond Serbia. He is kept on the same day as two patriarchs of Constantinople of the same name, Arsenios Autoreianos among them, and nothing on the page joins him to either. The corpus holds no archbishop of Serbia of this name. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026). The Serbian calendar is the one that would say most about this entry and it has not been read here."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

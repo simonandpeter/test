@@ -1,0 +1,65 @@
+{
+  "slug": "cyriacus-of-jerusalem",
+  "display_name": "Cyriacus of Jerusalem",
+  "names": [
+    {
+      "form": "Κυριάκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Άγιος Κυριάκος ο Ιερομάρτυρας», with the rank words left off. The page glosses the name from κύριος, the one dedicated to the Lord."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop of Jerusalem",
+  "related": [
+    "helen-the-empress",
+    "anna-mother-of-cyriacus"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 361,
+      "display": "361",
+      "basis": "traditional",
+      "note": "saint.gr: «Όταν το 361 μ.Χ. ο Ιουλιανός ο Παραβάτης εκστράτευσε κατά των Περσών και πέρασε από την Ιερουσαλήμ, έμαθε για τον Κυριάκο…» — the page's year for Julian's passage through Jerusalem, and the arrest, the torments and the death follow in the same notice with no further date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Οκτωβρίου — «Άγιος Κυριάκος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/10/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Οκτωβρίου εκάστου έτους», the same day as the listing. The man is identified by what the page says of him and not by his name: he showed the Precious Cross to Saint Helen and was afterwards bishop of Jerusalem, and he suffered under Julian the Apostate in 361. The corpus keeps eleven other Cyriacuses and none of them is a bishop of Jerusalem, and no folder held an office of Jerusalem of that name before this one. His mother Anna is kept on the same day and is a folder of this batch. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

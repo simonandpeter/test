@@ -1,0 +1,82 @@
+{
+  "slug": "nicholas-of-melambes",
+  "display_name": "Nicholas of Melambes",
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Άγιοι Νεομάρτυρες Αγγελής, Μανουήλ, Γεώργιος και Νικόλαος «ἐκ Μελάμπων Κρήτης»», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "related": [
+    "angelis-of-melambes",
+    "manuel-of-melambes",
+    "george-of-melambes"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1824,
+      "latest": 1824,
+      "display": "1824",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him, «Αγιος Νικολαος ο Νεομαρτυρας «εκ Μελαμπων Κρητησ» (; - 1824)», and in the notice «Τελικά στις 28 Οκτωβρίου 1824 μ.Χ. τους αποκεφάλισαν μπροστά στη «Μεγάλη Πόρτα» του Ρεθύμνου». No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Οκτωβρίου — «Άγιοι Νεομάρτυρες Αγγελής, Μανουήλ, Γεώργιος και Νικόλαος «ἐκ Μελάμπων Κρήτης»»",
+        "url": "https://www.saint.gr/10/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Οκτωβρίου εκάστου έτους», the same day as the listing. The entry enumerates its company — four named men, each with his own heading and his own father named — so there is one folder for each; this Nicholas is the son of a John Retzepis other than the father of Angelis and Manuel. The apolytikion the page prints names all four and is carried in each of the four folders. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τῆς Κρήτης γεννήματα καὶ Λάμπῃς θρέμματα, τοὺς τετραρίθμους Νεομάρτυρας ἀνευφημήσωμεν, Γεώργιον, Ἀγγελήν, Μανουὴλ καὶ Νικόλαον, οὗτοι γὰρ διὰ πίστιν τοῦ Κυρίου σφαγέντες, τὸ αἷμα αὐτῶν ἐθελουσίως ἐν τὴ Ρεθύμνη ἐξέχεαν, διὸ καὶ παρρησίαν ἔχοντες πρὸς Χριστόν, πρεσβεύουσιν ἀεί, ὑπὲρ τῶν ψυχῶν ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’ — the one hymn on the page of «Άγιοι Νεομάρτυρες Αγγελής, Μανουήλ, Γεώργιος και Νικόλαος «ἐκ Μελάμπων Κρήτης»». It names the four of them and no other saint. The page gives the tone and no model.",
+        "url": "https://www.saint.gr/2827/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Children of Crete and nurslings of Lampe, let us sing the praise of the four Neomartyrs, George, Angelis, Manuel and Nicholas; for these, slain for faith in the Lord, poured out their blood willingly at Rethymno, and therefore, having boldness before Christ, they intercede for ever for our souls.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Teofil",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 octombrie, «Sfântul Cuvios Teofil cel Nebun pentru Hristos»."
+    },
+    {
+      "form": "Θεόφιλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Άγιος Ιερομάρτυρας Θεόφιλος, της Λαύρας των Σπηλαίων Κιέβου», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -52,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 28 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Οκτωβρίου — «Άγιος Ιερομάρτυρας Θεόφιλος, της Λαύρας των Σπηλαίων Κιέβου»",
+        "url": "https://www.saint.gr/10/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Οκτωβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the whole notice is «Ο Άγιος Ιερομάρτυρας Θεόφιλος, της Λαύρας των Σπηλαίων Κιέβου έζησε σαν Δια Χριστόν σαλός. Δεν έχουμε άλλες λεπτομέρειες για τον βίο του Αγίου.» Three things identify him as this folder's man: the day, the Caves Lavra of Kyiv, and the folly for Christ. One difference is recorded and not resolved: saint.gr's line calls him Ιερομάρτυρας where the folder's types have him a hieromonk and the Romanian calendar does not make him a martyr. The folder's existing dates are left untouched because this page gives no year. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",

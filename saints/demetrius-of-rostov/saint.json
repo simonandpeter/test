@@ -16,6 +16,11 @@
       "form": "Dimitrie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 octombrie, «Sfântul Ierarh Dimitrie, Mitropolitul Rostovului»."
+    },
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Άγιος Δημήτριος Μητροπολίτης Ροστόφ», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -72,8 +77,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not on saint.gr’s list for 4 Οκτωβρίου (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Οκτωβρίου — «Άγιος Δημήτριος Μητροπολίτης Ροστόφ»",
+        "url": "https://www.saint.gr/10/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Οκτωβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is unmistakably the folder's own: «Αγιος Δημητριος Μητροπολιτης Ροστοφ (1651 - 1709)», Daniel Savvich Tuptalo, author of the Chetyi-Minei. The Greek day is the day of his repose, which the page gives as 28 October 1709, while the folder's Russian and Serbian rows keep him on the Julian 21 September, the day the page gives for the finding of his relics in 1752. The folder's existing dates are left untouched: they already hold 1651 and 1709, which is what this page gives. No hymn is printed here. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",

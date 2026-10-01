@@ -1,0 +1,68 @@
+{
+  "slug": "athanasius-i-of-constantinople",
+  "display_name": "Athanasius I of Constantinople",
+  "names": [
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Όσιος Αθανάσιος Α' Πατριάρχης Κωνσταντινούπολης», with the rank words and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "patriarch"
+  ],
+  "office": "Patriarch of Constantinople",
+  "dates": {
+    "birth": {
+      "earliest": 1235,
+      "latest": 1235,
+      "display": "c. 1235",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην Αδριανούπολη της Θράκης (ή κατά άλλες πηγές στην Ανδρούσα της Μεσσηνίας περί το 1235 μ.Χ.)» — the page's own «περί», about, and it attaches the year to the second of the two birthplaces it offers."
+    },
+    "death": {
+      "earliest": 1323,
+      "latest": 1323,
+      "display": "c. 1323",
+      "basis": "traditional",
+      "note": "saint.gr: «όπου απεβίωσε ειρηνικά σε ηλικία 100 χρονών (περί το 1323 μ.Χ.)» — the page's own «περί», about."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Οκτωβρίου — «Όσιος Αθανάσιος Α' Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/10/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Οκτωβρίου εκάστου έτους», the same day as the listing. The corpus holds forty-two patriarchs of Constantinople and no Athanasius I among them; the only Athanasius of that see it keeps is Athanasius III Patelarios, a man of the seventeenth century. No location is recorded because the page offers two birthplaces, Adrianople in Thrace and Androusa in Messenia, and settles neither. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

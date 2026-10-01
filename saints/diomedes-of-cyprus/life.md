@@ -1,0 +1,15 @@
+# Diomedes of Cyprus
+
+saint.gr's calendar for 28 Οκτωβρίου names «Όσιος Διομήδης», and his page is one of the long ones, drawn from the encomium that [Neophytos the Recluse](/saints/neophytos-the-recluse) wrote for him. Diomedes was born in Cyprus, the page says, though where exactly, and who his parents were, is not known; Neophytos says only that this wonderful athlete was given to Christ «ἐξ ἁπαλῶν ὀνύχων», from infancy, which presupposes parents not merely Christian but deeply believing.
+
+In time, the page continues, [Triphyllius](/saints/triphyllius-of-leucosia), the great bishop of Leukoupolis — Nicosia — met the boy and came to know him, and took him to himself without hesitation; and together with his own teacher [Spyridon of Trimythous](/saints/spyridon-of-trimythous) he carried on the work the boy's devout parents had begun. Beside those two the young man grew, the page says, and became a faithful copy of them.
+
+How many years he lived the page does not know. When he died, the faithful who followed him and his disciples, who were many, buried his body with tears in the cave where he had lived; above it a church was built later, and many cells around it, and in them a great number of chosen souls gathered and lived the angelic life.
+
+Then comes the story of his icon. A monk was sent to Constantinople to have one painted, and the painter answered him in astonishment: «Μάρτυρα Διομήδη, ἐπίσταμαι. Ὅσιον Διομήδη ὅμως οὔτε γινώσκω, οὔτε ἰστορῆσαι ἰκανῶ» — a martyr Diomedes I know, but a venerable Diomedes I neither know nor am able to paint. The monk prayed all that night; and that same night the saint stood over the painter in his sleep and told him to listen to the monk and paint the man he was asked for. When the icon was done the monk knew it at once, and the painter told him the dream, and the two of them gave glory to God with tears.
+
+The page then argues against its own account. Since the Arab raids on Cyprus began about the middle of the seventh century and lasted to the middle of the tenth, it says, the venerable Diomedes cannot have been a disciple of Triphyllius, who lived much earlier, about the fifth. What joins the two is something another chronicler reports: that in one of those raids the Saracens dug up Triphyllius's tomb and cut the head from the incorrupt body, and that an ascetic who lived in a cave near the Nicosia suburb of Leukomiatis — Diomedes — snatched the holy head away and was pursued by some five hundred Saracens. Because the page unsettles its own chronology in this way, no year is recorded in this folder.
+
+A note at the foot of the page adds that Paris Codex 1589 f. 91a puts his memory on 29 October, calling him the disciple of Triphyllius bishop of Nicosia, while the page's own heading keeps him on 28 October, which is the day read here. It prints no hymn, and it carries no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου».
+
+*After saint.gr's calendar for 28 Οκτωβρίου — [the day](https://www.saint.gr/10/28/index.aspx) and [his life](https://www.saint.gr/2833/saint.aspx); read 1 October 2026.*

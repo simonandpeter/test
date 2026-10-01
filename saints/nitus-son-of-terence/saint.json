@@ -6,6 +6,11 @@
       "form": "Nitul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's life for 28 octombrie, «şi au avut şapte fii: Sarvil, Fota, Teodul, Vila, Ierax, Nitul şi Eunichie»."
+    },
+    {
+      "form": "Νίτας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Άγιοι Τερέντιος και Νεονίλλη οι σύζυγοι και τα παιδιά τους Σάρβηλος, Νίτας, Ιέραξ, Θεόδουλος, Φώτιος, Βήλη και Ευνίκη», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 28 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Οκτωβρίου — «Άγιοι Τερέντιος και Νεονίλλη οι σύζυγοι και τα παιδιά τους Σάρβηλος, Νίτας, Ιέραξ, Θεόδουλος, Φώτιος, Βήλη και Ευνίκη»",
+        "url": "https://www.saint.gr/10/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Οκτωβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the entry enumerates the same household the corpus already keeps as nine folders; «Αγιος Νιτας» has his own heading on the page. No year is given, so no `dates` object. The apolytikion names the seven children as a company and is taken into all nine folders; the Κάθισμα is neither a troparion nor a kontakion and is not drafted. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -70,6 +85,23 @@
         "text": "Your martyrs, O Lord, in their contests received from you, our God, the crowns of incorruption; for possessing your strength they overthrew their torturers and broke the feeble daring of the demons. By their prayers save our souls, O Christ God.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Νόμω φύσεως, συνδεδεμένοι, κράτος πίστεως, ἐνδεδυμένοι, μαρτυρίου τὴν ὁδὸν διηνύσατε, σὺν Νεονίλλη θεόφρον Τερέντιε, καὶ ἡ τῶν Παίδων ὑμῶν ἑπτὰς ἔνθεος. Καὶ νῦν ἄφεσιν, αἰτήσασθε παμμακάριστοι, τοὶς μέλπουσιν ὑμῶν τὴν θείαν ἄθλησιν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the first hymn on the page of «Άγιοι Τερέντιος και Νεονίλλη οι σύζυγοι και τα παιδιά τους Σάρβηλος, Νίτας, Ιέραξ, Θεόδουλος, Φώτιος, Βήλη και Ευνίκη». It names Terence and Neonilla and their godly seven children, and no other saint.",
+        "url": "https://www.saint.gr/2821/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Bound together by the law of nature, and clothed with the strength of faith, you finished the road of martyrdom, Terence of godly mind, with Neonilla and the godly seven of your children. And now, all-blessed ones, ask forgiveness for those who sing of your divine contest.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
     }
   ],
   "text": {

@@ -7,6 +7,11 @@
       "form": "Firmilian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 octombrie, «Sfântul Firmilian, Episcopul Cezareei Capadociei»."
+    },
+    {
+      "form": "Φιρμιλιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Όσιοι Φιρμιλιανός Αρχιεπίσκοπος Καισαρείας και Μελχίων Πρεσβύτερος Αντιοχείας», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -15,7 +20,9 @@
     "bishop"
   ],
   "related": [
-    "cyprian-of-carthage"
+    "cyprian-of-carthage",
+    "melchion-of-antioch",
+    "basil-the-great"
   ],
   "dates": {
     "death": {
@@ -48,8 +55,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 28 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Οκτωβρίου — «Όσιοι Φιρμιλιανός Αρχιεπίσκοπος Καισαρείας και Μελχίων Πρεσβύτερος Αντιοχείας»",
+        "url": "https://www.saint.gr/10/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Οκτωβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: the archbishop of Caesarea whom Basil the Great mentions, and who convoked the synod at Iconium on the baptism of the Novatians. saint.gr calls him Αρχιεπίσκοπος Καισαρείας where the folder's office says Bishop of Caesarea in Cappadocia, and the folder's existing dates are left untouched because this page gives no year. His companion on the page, Melchion presbyter of Antioch, is a new folder of this day's batch. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",

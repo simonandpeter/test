@@ -1,0 +1,56 @@
+{
+  "slug": "melchion-of-antioch",
+  "display_name": "Melchion of Antioch",
+  "names": [
+    {
+      "form": "Μελχίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Όσιοι Φιρμιλιανός Αρχιεπίσκοπος Καισαρείας και Μελχίων Πρεσβύτερος Αντιοχείας», with the rank words and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter"
+  ],
+  "office": "Presbyter of Antioch",
+  "related": [
+    "firmilian-of-caesarea-in-cappadocia",
+    "basil-the-great"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Οκτωβρίου — «Όσιοι Φιρμιλιανός Αρχιεπίσκοπος Καισαρείας και Μελχίων Πρεσβύτερος Αντιοχείας»",
+        "url": "https://www.saint.gr/10/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Οκτωβρίου εκάστου έτους», the same day as the listing. The page carries one notice for the two men and almost all of it belongs to Firmilian, whose folder the corpus already keeps; of Melchion it gives the city whose presbyter he was, that he contended against the heretics, and the epigram's «Εἰρηνικῶς θνῄσκουσιν εἰρήνης τέκνα, Φιρμιλιανὸς καὶ σὺν αὐτῷ Μελχίων». No year, so no `dates` object. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "anna-mother-of-cyriacus",
+  "display_name": "Anna, mother of Cyriacus",
+  "names": [
+    {
+      "form": "Άννα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Αγία Άννα μητέρα του Αγίου Κυριακού», with the rank word left off. The page glosses the name from the Hebrew Hannah, favour and grace."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "cyriacus-of-jerusalem"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Οκτωβρίου — «Αγία Άννα μητέρα του Αγίου Κυριακού»",
+        "url": "https://www.saint.gr/10/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Οκτωβρίου εκάστου έτους», the same day as the listing. She is identified only as the mother of the Cyriacus kept on the same day — «βλέπε ίδια ημέρα» is the page's own cross-reference — and the corpus's ten other Annas are none of them hers. The page gives her no year, so no `dates` object is proposed; her son's notice dates his own passion to 361 and hers carries no date at all. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

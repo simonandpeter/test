@@ -1,0 +1,50 @@
+{
+  "slug": "febronia-daughter-of-heraclius",
+  "display_name": "Febronia, daughter of Heraclius",
+  "names": [
+    {
+      "form": "Φεβρωνία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Αγία Φεβρωνία», with the rank word left off. The page glosses the name from the Latin februo, to purify."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "righteous"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Οκτωβρίου — «Αγία Φεβρωνία»",
+        "url": "https://www.saint.gr/10/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Οκτωβρίου εκάστου έτους», the same day as the listing. The notice is three lines: «Η Αγία Φεβρωνία ήταν κόρη του βασιλιά του Βυζαντίου Ηρακλείου (610 - 641 μ.Χ.). Αφού έζησε με πνεύμα Θεού, απεβίωσε ειρηνικά.» The only years on the page are her father's reign, not hers, so no `dates` object is proposed. The corpus keeps two other Febronias, of Murom and of Sivapol, both on 25 June; this is neither. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
