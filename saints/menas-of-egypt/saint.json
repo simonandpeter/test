@@ -6,6 +6,11 @@
       "form": "Mina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 noiembrie."
+    },
+    {
+      "form": "Μηνάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Νοεμβρίου, «Άγιος Μηνάς «ὁ ἐν τῷ Κοτυαείῳ» ο Μεγαλομάρτυρας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Νοεμβρίου — «Άγιος Μηνάς «ὁ ἐν τῷ Κοτυαείῳ» ο Μεγαλομάρτυρας»",
+        "url": "https://www.saint.gr/11/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the Egyptian soldier of the Roman cavalry, the great martyr, with the Greek epithet «ὁ ἐν τῷ Κοτυαείῳ», he of Kotyaeion. The page is long — some 16,000 characters — and the paragraph added to the life takes only its opening, its head line and its note of the cities whose patron he is; the rest has not been read. Its first apolytikion, which names him, is taken here, together with the common apolytikion of the three martyrs of this day which the page also prints; the other hymn sections are not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -59,9 +74,52 @@
         "text": "Thy martyr Menas, O Lord, in his contest received from Thee, our God, the crown of incorruption; for having Thy power he overthrew the tormentors, and broke the powerless presumption of the demons. By his prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Στρατείαν κατέλιπες τὴν κοσμικήν, ἀθλητά, οὐράνιον εἴληφας τὴν κληρουχίαν, σοφέ, καὶ στέφος ἀμάραντον, δόξαν ἀποδιώξας βασιλέως γηϊνου, ἄθλους δὲ διανύσας μαρτυρίου γενναίου. Διό, μεγαλομάρτυς Μηνᾷ, πρέσβευε σωθήναι ἠμᾶς.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the first hymn on the page of «Άγιος Μηνάς «ὁ ἐν τῷ Κοτυαείῳ» ο Μεγαλομάρτυρας», and it names him.",
+        "url": "https://www.saint.gr/2978/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You left the warfare of this world, contender, and received a heavenly inheritance, wise one, and an unfading crown, having driven off the glory of an earthly king and run through the contests of a brave martyrdom. Therefore, great martyr Menas, intercede that we be saved.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Tρισάριθμον σύνταγμα τῶν ἀθλητῶν τοῦ Χριστοῦ συμφώνως τιμήσωμεν ὡς καθαιρέτας ἐχθροῦ, Μηνᾶν τὸν ἀοίδημον, Βίκτωρα τὸν γενναῖον καὶ Βικέντιον ἅμα, τούτοις συνευφημοῦντες στεφανίδα τὴν θείαν. Αὐτῶν, Χριστέ, ἱκεσίαις πάντας ἐλέησον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the hymn of the three martyrs of 11 Νοεμβρίου, printed on his page and on those of Victor, Vincent and Stephanida; it names all four.",
+        "url": "https://www.saint.gr/2978/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour with one voice the company of three of Christ's contenders, as those who pulled the enemy down — the renowned Menas, the brave Victor and Vincent with them — praising together with these the divine Stephanida. At their entreaties, Christ, have mercy on us all.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "saint.gr's own head line for him: «Αγιος Μηνας «ο Εν Τω Κοτυαειω» ο Μεγαλομαρτυρας (; - 304)». The same page puts his birth «στα μέσα περίπου του 3ου αιώνα μ.Χ.»."
+    }
   }
 }

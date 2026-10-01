@@ -6,6 +6,11 @@
       "form": "Ştefanida",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 noiembrie."
+    },
+    {
+      "form": "Στεφανίδα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Νοεμβρίου, «Αγία Στεφανίδα», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Νοεμβρίου — «Αγία Στεφανίδα»",
+        "url": "https://www.saint.gr/11/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same woman, the soldier's widow who called Victor blessed as he was tortured and was torn in two between two palm trees. The page puts her in Italy under Antoninus in 160, the same reign and country it gives Victor. Its apolytikion is the common of the three martyrs of the day, which names her last of the four, and is taken. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -62,9 +77,35 @@
         "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke the powerless presumption of the demons. By their prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Tρισάριθμον σύνταγμα τῶν ἀθλητῶν τοῦ Χριστοῦ συμφώνως τιμήσωμεν ὡς καθαιρέτας ἐχθροῦ, Μηνᾶν τὸν ἀοίδημον, Βίκτωρα τὸν γενναῖον καὶ Βικέντιον ἅμα, τούτοις συνευφημοῦντες Στεφανίδα τὴν θείαν. Αὐτῶν, Χριστέ, ἱκεσίαις πάντας ἐλέησον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the hymn on the page of «Αγία Στεφανίδα»; it is the hymn of the three martyrs of this day and names her with Menas, Victor and Vincent.",
+        "url": "https://www.saint.gr/2981/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour with one voice the company of three of Christ's contenders, as those who pulled the enemy down — the renowned Menas, the brave Victor and Vincent with them — praising together with these the divine Stephanida. At their entreaties, Christ, have mercy on us all.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 160,
+      "latest": 160,
+      "display": "160",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Στεφανίδα ήταν γυναίκα ενός στρατιωτικού στην Ιταλία το 160 μ.Χ., όταν βασιλιάς ήταν ο Αντωνίνος» — the year the page gives for her and her husband; it gives no year for her death as such."
+    }
   }
 }

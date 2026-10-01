@@ -1,0 +1,59 @@
+{
+  "slug": "dracon-the-martyr",
+  "display_name": "Dracon",
+  "names": [
+    {
+      "form": "Δράκωνας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Νοεμβρίου, «Άγιος Δράκωνας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 284,
+      "latest": 304,
+      "display": "284–304",
+      "basis": "traditional",
+      "note": "saint.gr: «Αναφέρεται στον Κώδικα 76 της Μεσσήνης, όπου λέγεται ότι έζησε επί Διοκλητιανού (284 - 304 μ.Χ.) και Δεκίου, ηγεμόνα Νικαίας» — the reign the page names for him; it gives him no year of his own."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Νοεμβρίου — «Άγιος Δράκωνας»",
+        "url": "https://www.saint.gr/11/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Νοεμβρίου εκάστου έτους», the same day as the listing. The page says he is unknown to the synaxarion of Nikodemos of the Holy Mountain and is recorded in Codex 76 of Messina, which it names as its source; it carries no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου», and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

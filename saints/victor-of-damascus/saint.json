@@ -6,6 +6,11 @@
       "form": "Victor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 noiembrie."
+    },
+    {
+      "form": "Βίκτωρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Νοεμβρίου, «Άγιος Βίκτωρ ο Μεγαλομάρτυρας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Νοεμβρίου — «Άγιος Βίκτωρ ο Μεγαλομάρτυρας»",
+        "url": "https://www.saint.gr/11/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same commemoration: the martyr of the second century under Antoninus whom Stephanida blessed as she watched him tortured, and who is kept with Menas and Vincent in one hymn. One thing on the page does not agree with the folder: it puts the stage of his service and his passion in Italy — «Οι υπηρεσίες του υπέρ του Ευαγγελίου, είχαν σαν στάδιο την Ιταλία» — where the folder's display name, from doxologia, makes him Victor of Damascus. The name is left as it stands and the page's word is recorded here. Its apolytikion is the common of the three martyrs of the day, which names him, and is taken; the «Έτερον Ἀπολυτίκιον», a second version of the same hymn, is not drafted."
     },
     {
       "church": "serbian",
@@ -63,9 +78,35 @@
         "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke the powerless presumption of the demons. By their prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Tρισάριθμον σύνταγμα τῶν ἀθλητῶν τοῦ Χριστοῦ συμφώνως τιμήσωμεν ὡς καθαιρέτας ἐχθροῦ, Μηνᾶν τὸν ἀοίδημον, Βίκτωρα τὸν γενναῖον καὶ Βικέντιον ἅμα, τούτοις συνευφημοῦντες στεφανίδα τὴν θείαν. Αὐτῶν, Χριστέ, ἱκεσίαις πάντας ἐλέησον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — on the page of «Άγιος Βίκτωρ ο Μεγαλομάρτυρας»; it is the hymn of the three martyrs of this day and names him with Menas, Vincent and Stephanida.",
+        "url": "https://www.saint.gr/2979/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour with one voice the company of three of Christ's contenders, as those who pulled the enemy down — the renowned Menas, the brave Victor and Vincent with them — praising together with these the divine Stephanida. At their entreaties, Christ, have mercy on us all.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 160,
+      "latest": 160,
+      "display": "160",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Βίκτωρ ανήκει στο μαρτυρικό χορό, που με το αίμα του πότισε το ζωηφόρο δένδρο της χριστιανικής πίστης τον δεύτερο αιώνα μετά Χριστόν, όταν βασιλιάς ήταν ο Αντωνίνος (160 μ.Χ.)» — the year the page attaches to the reign it places him in; it gives him no year of his own."
+    }
   }
 }

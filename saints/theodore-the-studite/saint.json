@@ -6,6 +6,11 @@
       "form": "Teodor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 noiembrie, «Sfântul Cuvios Teodor Studitul»; the bare personal name, without the epithet."
+    },
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Νοεμβρίου, «Όσιος Θεόδωρος ο Ομολογητής ηγούμενος Μονής Στουδίου», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Νοεμβρίου — «Όσιος Θεόδωρος ο Ομολογητής ηγούμενος Μονής Στουδίου»",
+        "url": "https://www.saint.gr/11/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: born at Constantinople in 759, abbot of Sakkoudion and then of the Studios, three times exiled, dead in exile in 826. Its head line «(759 - 826)» supplies the years the folder did not hold. Its first apolytikion, which names him, is taken here; the «Έτερον Ἀπολυτίκιον» in Ἦχος πλ. δ’ and the other hymn sections are not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -65,9 +80,42 @@
         "text": "Guide of Orthodoxy, teacher of the right worship of God and of purity, light of the world, God-inspired adornment of monks, wise father Theodore: by thy teachings thou hast enlightened all. O spiritual harp, pray to Christ God that our souls be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Δώρων μέτοχος, τῆς ἀφθαρσίας, δῶρον ἄσυλον, τῆς Ἐκκλησίας, φερωνύμως ἀνεδείχθης Θεόδωρε, τοὶς ἱεροὶς γὰρ ἑπόμενος δόγμασιν, ὁμολογίας φωστὴρ ἐχρημάτισας. Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν Ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the first hymn on the page of «Όσιος Θεόδωρος ο Ομολογητής ηγούμενος Μονής Στουδίου», and it names him and plays on his name as a gift.",
+        "url": "https://www.saint.gr/2983/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A sharer in the gifts of incorruption, you were shown forth, true to your name, as an inviolable gift of the Church, Theodore; for following the sacred doctrines you became a beacon of confession. Venerable father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 759,
+      "latest": 759,
+      "display": "759",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Θεόδωρος γεννήθηκε στην Κωνσταντινούπολη το 759 μ.Χ.», with the page's own head «(759 - 826)»."
+    },
+    "death": {
+      "earliest": 826,
+      "latest": 826,
+      "display": "826",
+      "basis": "traditional",
+      "note": "saint.gr: «Πέθανε στην εξορία το 826 μ.Χ. σε ηλικία 67 ετών, στη χερσόνησο του Ακρίτα του Αγίου Τρύφωνα»."
+    }
   }
 }
