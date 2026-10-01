@@ -7,6 +7,11 @@
       "form": "Crescent",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 iulie, «Sfinții Apostoli Sila, Silvan, Crescent, Epenet și Andronic», with the rank words left off."
+    },
+    {
+      "form": "Κρήσκης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Ιουλίου, «Άγιοι Σίλας, Σιλουανός, Επαινετός, Κρήσκης και Ανδρόνικος οι Απόστολοι», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Ιουλίου — «Άγιοι Σίλας, Σιλουανός, Επαινετός, Κρήσκης και Ανδρόνικος οι Απόστολοι»",
+        "url": "https://www.saint.gr/07/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the entry is the same company of five the Romanian line names: «Οι Άγιοι Σίλας, Σιλουανός, Επαινετός, Κρήσκης και Ανδρόνικος, ήταν πέντε από τούς εβδομήκοντα μαθητές του Κυρίου». Four of the five take a greek row in this batch. The fifth, Andronicus, is the corpus's `andronicus-the-apostle`, whose greek row is already venerated on 17 May from saint.gr's own «Άγιοι Ανδρόνικος και Ιουνία οι Απόστολοι»; that row is not touched and this second Greek day of his is reported rather than drafted. The page gives no year or century for any of the five, so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. On his see the two calendars disagree: the folder's Romanian source makes him bishop of Galatia, and saint.gr says «ο Κρήσκης, τέλος, έγινε επίσκοπος Καρχιδονίας», bishop of Carchedon, that is Carthage, which is also the see its same sentence-group gives Epaenetus. The disagreement is recorded in the life and the `office` is left as the folder has it; neither page is corrected by the other. The page's first apolytikion and first kontakion are of the five together and are taken here; the second of each names Silas alone. Its megalynaria and kathisma are kinds the schema does not hold and are not drafted."
     },
     {
       "church": "serbian",
@@ -85,6 +100,40 @@
       },
       "english": {
         "text": "O You who were lifted up on the Cross...\n\nYou were shown to be branches of the vine of Christ, O wise ones, bringing forth grapes in good works and pouring out for us the wine of salvation. Receiving it we are filled with gladness, keeping your honoured memory; on it pray for the forgiveness of our sins, O Apostles of the Lord.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Οἱ θεῖοι Ἀπόστολοι, ὡς οὐρανοὶ λογικοί, τὴν δόξαν ἀστράψαντες, τοῦ κενωθέντος ἐν γῇ, συμφώνως ὑμνείσθωσαν, Κρήσκης Σιλουναὸς τέ, καὶ ὁ ἔνθεος Σίλας, ἅμα σὺν Ἀνδρονίκω, Ἐπαινετὸς ὁ θεόφρων Χριστὸν γὰρ ἰκετεύουσι, σώζεσθαι ἅπαντας.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε — the first hymn on the page of the five apostles «Άγιοι Σίλας, Σιλουανός, Επαινετός, Κρήσκης και Ανδρόνικος οι Απόστολοι», and it names all five of them. The page spells Silouanos «Σιλουναὸς» here and the reading is copied as it stands",
+        "url": "https://www.saint.gr/746/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The divine Apostles, as rational heavens flashing out the glory of him who emptied himself upon earth, let them be hymned with one voice — Crescens and Silouanos, and the godly Silas together with Andronicus, and Epaenetus of godly mind; for they entreat Christ that all may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τοῖς τῶν αἱμάτων σου.",
+      "text": "Εἰς τὰ τοῦ κόσμου δραμόντες πληρώματα, θεογνωσίας τὸν λόγον ἐσπείρατε· καὶ στάχυν πολύχουν δρεψάμενοι, τῷ Βασιλεῖ τῶν ἁπάντων προσήξατε, Ἀπόστολοι Χριστοῦ παναοίδιμοι.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τοῖς τῶν αἱμάτων σου — the first kontakion on the page of the five apostles «Άγιοι Σίλας, Σιλουανός, Επαινετός, Κρήσκης και Ανδρόνικος οι Απόστολοι». It names none of them singly and addresses the company, so it is the common of the five under whose names it is printed",
+        "url": "https://www.saint.gr/746/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Running out to the ends of the world, you sowed the word of the knowledge of God; and having reaped a harvest of many ears, you brought it to the King of all, all-renowned Apostles of Christ.",
         "rendered": "site"
       }
     }

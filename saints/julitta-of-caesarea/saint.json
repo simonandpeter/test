@@ -6,6 +6,11 @@
       "form": "Iulita",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 iulie, «Sfânta Muceniță Iulita», with the rank words left off."
+    },
+    {
+      "form": "Ιουλίττη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Ιουλίου, «Αγία Ιουλίττη από την Καισαρεία», with the rank word and the place clause left off."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Ιουλίου — «Αγία Ιουλίττη από την Καισαρεία»",
+        "url": "https://www.saint.gr/07/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the woman is the folder's own: a rich woman of Caesarea in Cappadocia, warred upon over her property by a powerful man who denounced her as a Christian, condemned, thrown into the fire, and her body found whole. The two calendars set her under different emperors — doxologia under «decrees of the emperor Diocletian», saint.gr «τα διατάγματα του Ιουλιανού» and in the days of Basil the Great, who wrote to Palladius on her behalf — and neither is corrected by the other; the disagreement is recorded in the life. The page gives no year, so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. It prints no hymn."
     },
     {
       "church": "serbian",
@@ -45,5 +60,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "basil-the-great"
+  ]
 }
