@@ -1,0 +1,87 @@
+{
+  "slug": "daniel-of-meteora",
+  "display_name": "Daniel of Meteora",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Δανιήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Αυγούστου, «Όσιος Δανιήλ ο Μετεωρίτης», with the rank word and the epithet left off. The page glosses the name as a Hebrew word, the judgement of God."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Αυγούστου — «Όσιος Δανιήλ ο Μετεωρίτης»",
+        "url": "https://www.saint.gr/08/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Αυγούστου εκάστου έτους», the same day as the listing. The notice opens by saying what it has not got: «Δεν γνωρίζουμε βιογραφικά ή κάποια άλλα στοιχεία του Οσίου Δανιήλ. Ίσως έζησε τον 16ο αιώνα μ.Χ.» — we know no biographical or other data of the venerable Daniel; perhaps he lived in the sixteenth century. **That century is marked as a guess with the page's own «Ίσως», so this folder carries no `dates` object at all.** What the page says it knows for certain is his birthplace and his monastery: «Γνωρίζουμε όμως με βεβαιότητα ότι πατρίδα του είναι το Τσιότι (Φαρκαδόνα) των Τρικάλων και ότι μόνασε στα Μετέωρα». Relics: his honoured skull is kept at the monastery of the Great Meteoron in a gilt reliquary inscribed «+ ΔΑΝΙΗΛ ΜΕΤΕΟΡ ΤΟΥ ΚΑΙ ΕΚ ΤΖΙΟΤΙΟ. 1786». It adds that on the first Saturday of the Fast the skull is carried to Pharkadona for veneration and procession and stays there until the Sunday of Orthodoxy, which is a procession reckoned from Pascha and not a feast of its own; that a wall painting of him was made at the monastery of Saint Stephen of Meteora by Vlasios Tsotsonis in 1995; and that a service and a supplicatory canon in his honour were composed by Georgios Militsis, a retired schoolmaster, in 1995. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. It prints an apolytikion and a kontakion, both naming him, and both are taken; it also prints a megalynarion, an oikos and a kathisma, none of which is a kind this corpus records, and none is drafted."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α΄.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τσιοτίου τὸν γόνον καὶ Τρικκαίων τὸ καυχημα, μονῆς Μετεώρου τὸ κλέος, καὶ Ἑλλάδος τὸ σέμνωμα, Δανιὴλ εὐφημήσωμεν πιστοί, τὸν μέγαν τοῦ Σωτῆρος ἀθλητήν, τὸν παρέχοντα ἰάσεις παντοδαπάς, τοῖς πίστει ἀνακράζουσι· Δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ σὲ θαυμαστώσαντι, δόξα τῷ δωρήσαντι ἡμῖν, τὴν πάντιμον κάραν σου.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α΄, Τῆς ἐρήμου πολίτης — the first hymn on the page of «Όσιος Δανιήλ ο Μετεωρίτης», and it names him and his village and his monastery",
+        "url": "https://www.saint.gr/792/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful praise Daniel, the offspring of Tsioti and the boast of Trikala, the glory of the monastery of Meteoron and the ornament of Greece, the great contender of the Saviour, who grants healings of every kind to those who cry out in faith: Glory to Christ who glorified you, glory to him who made you wondrous, glory to him who has given us your all-honoured head.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ὡς ἀστὴρ ἀνέτειλας ἐκ Τσιοτίου, καὶ πιστοὺς ἐδίδαξας διὰ τοῦ βίου σου σοφέ, ὑπομονὴν καὶ ἐγκράτειαν. Χαίροις θεόφρον, Δανιὴλ μακάριε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ΄, Ἐπεφάνης σήμερον — the second hymn on the page of «Όσιος Δανιήλ ο Μετεωρίτης», and it names him and his village",
+        "url": "https://www.saint.gr/792/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You rose like a star out of Tsioti, and by your life you taught the faithful patience and self-restraint, O wise one. Hail, God-minded Daniel, blessed one.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

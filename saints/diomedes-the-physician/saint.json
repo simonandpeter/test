@@ -14,6 +14,11 @@
       "form": "Diomid",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 august."
+    },
+    {
+      "form": "Διομήδης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Αυγούστου, «Άγιος Διομήδης», with the rank word left off. The page glosses the name as Δίος + μήδος, counsel, the one set forth by God."
     }
   ],
   "sex": "male",
@@ -61,8 +66,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Αυγούστου — «Άγιος Διομήδης»",
+        "url": "https://www.saint.gr/08/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Αυγούστου εκάστου έτους», the same day as the listing. The Russian, Romanian and Serbian rows already keep him on this menologion day, and the Greek entry is the same physician. Its head line reads «Αγιος Διομηδης (; - 288)» — a year the folder's «298», taken from days.pravoslavie.ru, does not match; **the folder's date is left as it stands and the ten years' difference is named in the reader's report.** The notice makes him born at Tarsus of Cilicia, a student of medicine who practised it without fee, preaching the Gospel to his patients as he healed them, and carried by his zeal as far as Nicaea of Bithynia; and it ends with a thing the other calendars do not print: that when Diocletian's persecution broke out and his activity was denounced, God called him before the soldiers arrived, so that they found him dead — «Και όμως, έτσι νεκρό τον αποκεφάλισαν!», and dead as he was, they beheaded him even so. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. It prints one hymn, an apolytikion in the first tone to the model Τῆς ἐρήμου πολίτης, which names him; it is added."
     },
     {
       "church": "serbian",
@@ -127,6 +142,23 @@
       },
       "english": {
         "text": "Your martyr Diomedes, O Lord, in his struggle received from You our God the crown of incorruption; for having Your strength he overthrew the torturers and broke the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τῶν σωμάτων τᾶς νόσους θεραπεύων Διόμηδες, καὶ ψυχῶν τὴν ρώσιν ἐν λόγῳ, ἀληθείας ἐβράβευες, τὴν θείαν εἰληφῶς γὰρ δωρεάν, τοὶς πάσχουσι ποικίλως βοηθεῖς, καὶ Μαρτύρων ταὶς ἀκτίσι καταυγασθεῖς, σῴζεις τοὺς ἐκβοώντας σοι, δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διὰ σοῦ πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Τῆς ἐρήμου πολίτης — the only hymn on the page of «Άγιος Διομήδης», and it names him and his physician's calling",
+        "url": "https://www.saint.gr/807/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Healing the sicknesses of bodies, Diomedes, you bestowed also the strength of souls by the word of truth; for having received the divine gift you help those who suffer in every kind of way, and lit up by the rays of the martyrs you save those who cry out to you: Glory to Christ who glorified you, glory to him who crowned you, glory to him who works healings through you for all.",
         "rendered": "site"
       }
     }

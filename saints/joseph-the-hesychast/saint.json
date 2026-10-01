@@ -5,11 +5,18 @@
     {
       "form": "Sfântul Cuvios Iosif Isihastul",
       "lang": "ro"
+    },
+    {
+      "form": "Ιωσήφ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Αυγούστου, «Όσιος Ιωσήφ ο Ησυχαστής ο και Σπηλαιώτης», with the rank word and the two epithets left off. The page gives his name in the world as Φραγκίσκος."
     }
   ],
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "ascetic",
+    "monk"
   ],
   "attestations": [
     {
@@ -33,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 28 August (saint.gr, checked 2026-08-22); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Αυγούστου — «Όσιος Ιωσήφ ο Ησυχαστής ο και Σπηλαιώτης»",
+        "url": "https://www.saint.gr/08/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Αυγούστου εκάστου έτους», the same day as the listing. **This folder's `greek` row was `undocumented` with the note «Not in the Orthodox Synaxaristis for 28 August (saint.gr, checked 2026-08-22); no other day checked». It is on saint.gr, on 16 Αυγούστου, and this row is that reading.** The man is the same: head line «Οσιος Ιωσηφ ο Ησυχαστης ο Και Σπηλαιωτης (1898 - 1959)», born at Leukes on Paros, worldly name Φραγκίσκος, son of George and Maria, Piraeus and Athens in trade, the Holy Mountain, Katounakia under the elder Daniel, the elder Arsenios his lifelong fellow-ascetic, the elder Ephraim of the hut of the Annunciation, the Skete of Saint Basil, the caves of Little Saint Anne from 1938 to 1947, the New Skete from 1951, and the sixty-five letters published by the monastery of Philotheou. **Two readings differ from the folder's and neither is changed here. The Greek page puts his repose on 15 August 1959, the feast of the Dormition, where the folder's Romanian life has 28 August 1959 — thirteen days apart, which is the style conversion, and the folder's `dates` note quotes the Romanian reading; and the Romanian row keeps him on 28 august where the Greek calendar keeps him on 16 August, the same two days under the two styles. Both are named in the reader's report.** The page also hedges his birth: «γεννήθηκε το έτος 1898 μ.Χ. (κατά άλλους στις 12 Φεβρουαρίου 1897 μ.Χ.)». No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. It prints two apolytikia and a kontakion, all three naming him, and all three are added; it also prints a megalynarion, an oikos, four kathismata and four idiomela of the Liti, none of which is a kind this corpus records, and none is drafted."
     },
     {
       "church": "serbian",
@@ -72,5 +89,58 @@
       "basis": "attested",
       "note": "Gave his soul to God at the New Skete on 28 August 1959, as the entry’s own life says; recorded 2026-09-06."
     }
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α΄.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Τὴν ψυχὴν ἐκκαθάρας συντόνοις σκάμμασι, σκληραγωγίᾳ, νηστείᾳ, ἀδιαλείπτῳ εὐχῇ, ἀγρυπνίᾳ καὶ πεντάδος τῶν αἰσθήσεων θεοφρουρήτῳ φυλακῇ ἄρτι, μάκαρ Ἰωσήφ, ἀπῆλθες Χριστῷ συνεῖναι, Ὃν δυσωπεῖς ὑπὲρ πάντων, Ἡσυχαστά, νῦν εὐφημούντων σε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α΄, Τὸν συνάναρχον Λόγον — the first of two apolytikia on the page of «Όσιος Ιωσήφ ο Ησυχαστής ο και Σπηλαιώτης», and it names him and his calling, «μάκαρ Ἰωσήφ … Ἡσυχαστά»",
+        "url": "https://www.saint.gr/322/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having cleansed your soul by strenuous contests, by hard living, by fasting, by unceasing prayer, by vigil and by the God-guarded keeping of the five senses, blessed Joseph, you have now departed to be with Christ, whom you entreat on behalf of all who praise you, O Hesychast.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α΄.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Ἡσυχίαν φιλοῦντα, προσευχὴν ἀδιάλειπτον, σιωπήν, ἀμεριμνισίαν, νῆψιν καὶ κακοπάθειαν τιμήσωμεν θεόπνουν Ἰωσήφ, ὡς Ἄθωνος νεόφωτον φανόν, καὶ ἀλείπτην μονοτρόπων πρὸς Φωτοδότου θέαν ἀνακράζοντες· Δόξα, τῷ σὲ δοξάσαντι Χριστῷ, δόξα, τῷ σὲ στεφανώσαντι, δόξα τῷ δεδωκότι σοι ἡμῖν πρέσβυν ἀκοίμητον.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος α΄, Τῆς ἐρήμου πολίτης — the second apolytikion on the page of «Όσιος Ιωσήφ ο Ησυχαστής ο και Σπηλαιώτης», and it names him, «θεόπνουν Ἰωσήφ, ὡς Ἄθωνος νεόφωτον φανόν»",
+        "url": "https://www.saint.gr/322/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour God-breathing Joseph, the lover of stillness, of unceasing prayer, of silence, of freedom from care, of watchfulness and of hardship, as the newly kindled lamp of Athos and the trainer of solitaries towards the vision of the Giver of light, crying out: Glory to Christ who glorified you, glory to him who crowned you, glory to him who has given you to us as a sleepless intercessor.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ΄.",
+      "model": "Τῇ Ὑπερμάχῳ.",
+      "text": "Τὸν σπηλαιώτην Ἰωσὴφ ἐγκωμιάσωμεν, Ἡσυχαστὴν ὡς ἀφανῆ καὶ ταπεινόφρονα, ἐργασάμενον ἐν ὄρει εὐχὴν τοῦ Ἄθω νοερὰν ἀδιαλείπτως καὶ γενόμενον μονοτρόπων ὑφηγήτορα πρὸς θέωσιν πόθῳ ψάλλοντες· Χαίροις, Πάτερ ἰσάγγελε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ΄, Τῇ Ὑπερμάχῳ — the kontakion on the page of «Όσιος Ιωσήφ ο Ησυχαστής ο και Σπηλαιώτης», and it names him by both epithets, the cave-dweller and the hesychast",
+        "url": "https://www.saint.gr/322/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise Joseph the cave-dweller, the Hesychast, as one unseen and humble-minded, who worked the prayer of the mind unceasingly on the mountain of Athos and became a guide of solitaries towards deification, singing to him with longing: Hail, father equal to the angels.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

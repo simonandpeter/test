@@ -1,0 +1,60 @@
+{
+  "slug": "nikodemos-of-meteora",
+  "display_name": "Nikodemos of Meteora",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Νικόδημος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Αυγούστου, «Άγιος Νικόδημος ο Μοναχός, ο εκ Μετεώρων», with the rank word, the station and the place left off. The page glosses the name as νίκη + δήμος, the victor of the people."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Αυγούστου — «Άγιος Νικόδημος ο Μοναχός, ο εκ Μετεώρων»",
+        "url": "https://www.saint.gr/08/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Αυγούστου εκάστου έτους», the same day as the listing. The whole notice is two sentences: «Ο νέος Οσιομάρτυρας Νικόδημος, από τα Μετέωρα, μαρτύρησε για την ευσέβεια του στις 16 Αυγούστου 1551 μ.Χ. Δεν έχουμε περισσότερες λεπτομέρειες για τον βίο του Οσιομάρτυρα» — the new venerable-martyr Nikodemos, from Meteora, was martyred for his piety on 16 August 1551; we have no further details of his life. Its head line reads «Αγιος Νικοδημος ο Μοναχος, ο Εκ Μετεωρων (; - 1551)». The `venerable-martyr` type is the page's own «Οσιομάρτυρας» and `monk` is the line's «ο Μοναχός»; there is no manner of death, no place of death and no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1551,
+      "latest": 1551,
+      "display": "1551",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε για την ευσέβεια του στις 16 Αυγούστου 1551 μ.Χ.», and its head line «(; - 1551)». The page gives no year of birth."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

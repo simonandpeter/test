@@ -1,0 +1,67 @@
+{
+  "slug": "akakios-of-lete-and-rentina",
+  "display_name": "Akakios of Lete and Rentina",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "office": "Bishop of Lete and Rentina",
+  "names": [
+    {
+      "form": "Ακάκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Αυγούστου, «Άγιος Ακάκιος Επίσκοπος Λητής και Ρεντίνης», with the rank word and the see left off. The page glosses the name as α privative + κακός, the one without malice."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Αυγούστου — «Άγιος Ακάκιος Επίσκοπος Λητής και Ρεντίνης»",
+        "url": "https://www.saint.gr/08/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Αυγούστου εκάστου έτους», the same day as the listing. The notice dates him by the century and by one journey: «Ο Άγιος Ακάκιος έζησε στα τέλη του 15ου αιώνα μ.Χ.», and in 1486 the patriarch Niphon sent him to Egypt. It makes him consecrated bishop of the historic bishopric of Lete and Rentina by Niphon, then metropolitan of Thessalonica and afterwards patriarch of Constantinople, to whom he was bound spiritually; the elder of Theophilos the Myrrh-streamer, whom he ordained priest, «διότι εὗρε τόν Ἀκάκιον εὐλαβῆ καί ἐνάρετον»; and through him the link between Theophilos and the whole company about Niphon. It follows him to Egypt with Theophilos and a party of clergy, carrying Niphon's letter to the patriarch of Alexandria Joachim the Great; then to Sinai, the desert, Jerusalem, Tabor, Damascus and back to Jerusalem, where «αἰφνιδίως ασθένησε» and «ἐκοιμήθη ἐν Κυρίῳ», and was buried by his disciple Theophilos, probably somewhere humble, as he would have wished, who signed himself «ὁ ταπεινός ἐπίσκοπος Λητῆς καί Ρεντίνης». The see goes in `office` as **Bishop of Lete and Rentina**, which is the line's own words. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion — only a two-line address, «Χορήγει τά κρείττονα, τοῖς εὐλαβῶς εὐφηµοῦσί σε, ὡς ἔνθεον φίλον τοῦ Σωτῆρος, ἱερέ Ἀκάκιε» — so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1451,
+      "latest": 1500,
+      "display": "late 15th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ακάκιος έζησε στα τέλη του 15ου αιώνα μ.Χ.». The one year the page gives is 1486, when Niphon sent him to Egypt; his death at Jerusalem is placed after that journey and is given no year."
+    }
+  },
+  "related": [
+    "niphon-patriarch-of-constantinople",
+    "theophilus-the-myrrh-streamer",
+    "macarius-disciple-of-niphon",
+    "joachim-i-pany-of-alexandria",
+    "maximus-the-greek"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

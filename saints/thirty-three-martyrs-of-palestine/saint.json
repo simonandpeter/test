@@ -5,6 +5,11 @@
     {
       "form": "Мученики 33 Палестинские",
       "lang": "ru"
+    },
+    {
+      "form": "Τριακοντατρείς Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Αυγούστου, «Άγιοι Τριακοντατρείς Μάρτυρες από την Παλαιστίνη», with the rank word and the clause naming their country left off."
     }
   ],
   "sex": "unknown",
@@ -33,8 +38,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Αυγούστου — «Άγιοι Τριακοντατρείς Μάρτυρες από την Παλαιστίνη»",
+        "url": "https://www.saint.gr/08/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Αυγούστου εκάστου έτους», the same day as the listing. The Russian row already keeps the company on this menologion day and the Greek calendar keeps it on the revised-julian 16 August, with the same number and the same country in the line itself. The whole Greek notice is one sentence — «Μαρτύρησαν όλοι δια ξίφους», they were all martyred by the sword — above the couplet «Στερρὸς στρατός τε καὶ συνασπισμὸς μέγας, / Ξίφει πεσών, στράτευμα δαιμόνων πρέπει». **The entry enumerates nobody: it gives not one of the thirty-three a name, so the company stays one folder and no member is split out of it.** There is no century, no emperor, no year and no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so no hymn is added."
     },
     {
       "church": "serbian",

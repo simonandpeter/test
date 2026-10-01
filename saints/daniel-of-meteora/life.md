@@ -1,0 +1,9 @@
+# Daniel of Meteora
+
+saint.gr's calendar for 16 Αυγούστου begins its notice of the venerable Daniel by saying that it knows no biographical or other data of him, and that perhaps he lived in the sixteenth century — a guess the page marks as one, and no year is recorded here on the strength of it. What it says it knows with certainty is two things: that his birthplace is Tsioti, which is Pharkadona, in the district of Trikala, and that he was a monk at Meteora.
+
+At the monastery of the Great Meteoron, the page goes on, his honoured skull is kept in a gilt reliquary bearing the inscription «+ ΔΑΝΙΗΛ ΜΕΤΕΟΡ ΤΟΥ ΚΑΙ ΕΚ ΤΖΙΟΤΙΟ. 1786». On the first Saturday of the Fast the holy skull is carried to Pharkadona, his Tsioti, for veneration and procession, and stays there until the Sunday of Orthodoxy. A wall painting of him was made not long ago at the monastery of Saint Stephen of Meteora by the hand of Vlasios Tsotsonis, in 1995; and a service and a supplicatory canon in honour of the venerable Daniel the Meteorite were composed in the same year by Georgios Militsis, a retired schoolmaster.
+
+The couplet of the synaxarion the page prints says the little that his life amounts to, in four lines: «Ἐκ Τσιοτίου ἀπῆλθες θεοφόρε, / Καὶ ἐν τῷ βράχῳ ἀνῆλθες θεηγόρε, / ἔνθα θεοφιλῶς ἠσκήθης ἀπαύστως, / διὸ σὺ ἔλαβες στεφάνους ἐσχάτως» — you went out from Tsioti, God-bearer, and went up on the rock, speaker of God, where you trained yourself unceasingly in the love of God, and so at the last you received the crowns. The rock is Meteora, and the apolytikion the page prints calls him the glory of its monastery and the ornament of Greece.
+
+*After saint.gr's calendar for 16 Αυγούστου — [the day](https://www.saint.gr/08/16/index.aspx) and [the life](https://www.saint.gr/792/saint.aspx); read 1 October 2026.*

@@ -5,6 +5,11 @@
     {
       "form": "Св. муч. Стамат",
       "lang": "sr"
+    },
+    {
+      "form": "Σταμάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Αυγούστου, «Άγιος Σταμάτιος από τον Βόλο», with the rank word and the clause naming his town left off. The page glosses the name from σταματώ, the one who stops something."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not found among the names read off saint.gr for 29 Αυγούστου 2026 (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Αυγούστου — «Άγιος Σταμάτιος από τον Βόλο»",
+        "url": "https://www.saint.gr/08/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Αυγούστου εκάστου έτους», the same day as the listing. The Serbian row already keeps him on the Julian 16 August as «Св. муч. Стамат», and the Greek calendar keeps him on the revised-julian 16 August, the same menologion number. The Greek page is where the story is: a new martyr from the village of Agios Georgios of Volos in the province of Demetrias; an agha who collected the head-tax oppressively; a deputation to the Sublime Porte of which Stamatios was one; the vizier, a friend of the tax-collector, who had them thrown out; the false witness that Stamatios had turned Turk and was now passing for a Christian; the judge's «Κι αν δεν έγινες, γίνε τώρα» and his answer; the prison and the torture; and the beheading «στις 16 Αυγούστου 1680 μ.Χ. ημέρα Δευτέρα, μπροστά στο βασιλικό παλάτι, στην Αγία Σοφία», which confirms the folder's 1680 exactly and adds the day of the week and the place. It names the account's author and where it is kept: the monk Iakovos the Athonite, 1680, in codex 805 of the monastery of Vatopedi, folios 12a–14. Relics: «Απότμημα του Ιερού Λειψάνου του Αγίου βρίσκεται στη Μονή Ταξιαρχών Πηλίου Μαγνησίας». No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. It prints one hymn, an apolytikion in the third tone with no model given, which names him; it is added."
     }
   ],
   "text": {
@@ -52,5 +67,23 @@
       "display": "1680",
       "basis": "traditional"
     }
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Ὁ μάρτυς Σταμάτιος ἐν τῆ ἀθλήσει αὐτοῦ, ἡμᾶς συνεκάλεσε μέλψαι την μνήμην αὐτοῦ, την θείαν ἐν ἄσμασιν, οὗτος γάρ ὁ γενναῖος, τοῦ Σωτῆρος ὁπλίτης, ἤσχυνε τούς τῆς Ἄγαρ ἀσεβεῖς ἀποτόμως, διό καί διά ξίφους ἀπήλειφε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’ — the only hymn on the page of «Άγιος Σταμάτιος από τον Βόλο», and it names him, «ὁ μάρτυς Σταμάτιος»; the page prints the tone and no model",
+        "url": "https://www.saint.gr/796/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The martyr Stamatios in his contest has called us together to sing his divine memory in hymns; for this brave soldier of the Saviour put the impious sons of Hagar sharply to shame, and therefore was wiped out by the sword.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

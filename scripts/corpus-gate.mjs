@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'τιμοθεοσ timothy-1-february timothy-companion-of-diogenes timothy-companion-of-terentius timothy-disciple-of-babylas timothy-husband-of-maura timothy-martyred-in-africa timothy-of-caesarea timothy-of-ephesus timothy-of-euripos timothy-of-konstamonitou timothy-of-prokonnesos timothy-of-prusa timothy-of-pskov timothy-of-symbola timothy-the-stylite':
+    'Fifteen now. The new one is Timothy bishop of Euripos on 16 August; the others are read in the el-08-01 entry for this name form.',
+  'νικοδημοσ nicodemus-of-elbasan nicodemus-of-lake-kozha nicodemus-of-serbia nicodemus-of-the-cave nicodemus-of-tismana nicodemus-of-vatopedi nikodemos-of-meteora':
+    'Seven now. The new one is Nikodemos of Meteora on 16 August; the others are read in the el-07-11 entry for this name form.',
+  'μακαριοσ macarius-archbishop-16-august macarius-companion-of-eudoxius macarius-companion-of-terentius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-martyr-11-august macarius-metropolitan-of-moscow macarius-new-hieromartyr-1944 macarius-notaras macarius-of-ierissos macarius-of-kalyazin macarius-of-kios macarius-of-kyiv macarius-of-paphos macarius-of-pelecete macarius-of-pisma macarius-of-rome macarius-of-the-altai macarius-of-valaam macarius-of-zhabyn macarius-of-zheltovodsk macarius-the-confessor':
+    'Twenty-three now. The new one is the Macarius of 16 August, an archbishop whose see the page does not state, so his folder records none; the others are read in the el-08-11 entry for this name form.',
+  'δανιηλ daniel-of-achinsk daniel-of-meteora daniel-of-moscow daniel-of-pereslavl daniel-of-the-castle-of-patras daniel-the-egyptian':
+    'Six now. The new one is Daniel of Meteora on 16 August, who stands with Nikodemos of Meteora; the others are read in the el-06-23 entry for this name form.',
+  'ακακιοσ acacius-companion-of-patrick acacius-of-amida acacius-of-apollonia acacius-of-gaul acacius-of-latros acacius-of-melitene acacius-of-the-forty-martyrs acacius-of-tver acacius-the-centurion acacius-the-executioner acacius-the-kausokalyvite acacius-the-new-of-neochorion akakios-of-lete-and-rentina':
+    'The new one is Akakios of Lete and Rentina on 16 August; the rest of the fold is read in the el-07-28 entry for this name form.',
   'συμεων simeon-of-persia simeon-of-tver simeon-the-elder simeon-the-fool-for-christ simeon-the-myrrh-streaming symeon-4-january symeon-beyond-the-anaplous symeon-kinsman-of-the-lord symeon-of-novgorod symeon-of-the-wonderful-mountain symeon-the-barefoot symeon-the-god-receiver symeon-the-goldsmith-of-trebizond symeon-the-new-of-mytilene symeon-the-newly-appeared symeon-the-pentaglot symeon-the-pious symeon-with-theonas-and-pherbinus':
     'Eighteen now. The new one is Symeon the Goldsmith of Trebizond on 14 August; the others are read in the el-07-26 entry for this name form.',
   'λουκιοσ lucius-of-africa lucius-the-soldier-14-august':

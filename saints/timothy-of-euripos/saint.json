@@ -1,0 +1,68 @@
+{
+  "slug": "timothy-of-euripos",
+  "display_name": "Timothy of Euripos",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "bishop"
+  ],
+  "office": "Bishop of Euripos",
+  "names": [
+    {
+      "form": "Τιμόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Αυγούστου, «Όσιος Τιμόθεος επίσκοπος Ευρίπου κτίτορας της Ιεράς Μονής Πεντέλης», with the rank word, the see and the clause about his foundation left off. The page glosses the name as τιμώ + Θεός, the one who honours God."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Αυγούστου — «Όσιος Τιμόθεος επίσκοπος Ευρίπου κτίτορας της Ιεράς Μονής Πεντέλης»",
+        "url": "https://www.saint.gr/08/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Αυγούστου εκάστου έτους», the same day as the listing. Its head line reads «Οσιος Τιμοθεος Επισκοπος Ευριπου Κτιτορας Της Ιερας Μονης Πεντελης (1510 - 1590)», and the notice follows him year by year: born at the village of Kalamos in Attica in 1510, son of a priest; schooled in Athens with the help of the then bishop of Oropos, who ordained him deacon and then priest; his successor in that see; later elected archbishop of Euripos, that is Chalkis; driven by the difficulties of the time to take refuge in 1575 at Kalamos; withdrawn to the mountain of Penteli, where in 1578 he built the monastery of the Dormition of the Theotokos, which afterwards took his own name; and in 1590 gone to the island of Kea, Tzia, where on 16 August he gave up his spirit in peace. Relics: «Η Κάρα και μέρος των Λειψάνων του Αγίου βρίσκονται στη Μονή Πεντέλης Αττικής». The see goes in `office` as **Bishop of Euripos**, which is the line's own word; the page's own narrative raises him to archbishop of the same see, and that is in the life. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1510,
+      "latest": 1510,
+      "display": "1510",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Όσιος Τιμόθεος γεννήθηκε στο χωριό Κάλαμος Αττικής το έτος 1510», and its head line «(1510 - 1590)»."
+    },
+    "death": {
+      "earliest": 1590,
+      "latest": 1590,
+      "display": "1590",
+      "basis": "attested",
+      "note": "saint.gr: «Το 1590 πήγε στο νησί Κέα (Τζια), όπου στις 16 Αυγούστου παρέδωσε ειρηνικά το πνεύμα του», and its head line «(1510 - 1590)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

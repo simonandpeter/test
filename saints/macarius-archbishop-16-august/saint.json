@@ -1,0 +1,50 @@
+{
+  "slug": "macarius-archbishop-16-august",
+  "display_name": "Macarius (16 August)",
+  "sex": "male",
+  "types": [
+    "archbishop"
+  ],
+  "names": [
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Αυγούστου, «Άγιος Μακάριος Αρχιεπίσκοπος», with the rank word and the office left off. The page glosses the name as ο ευτυχής, the happy one."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Αυγούστου — «Άγιος Μακάριος Αρχιεπίσκοπος»",
+        "url": "https://www.saint.gr/08/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Αυγούστου εκάστου έτους», the same day as the listing. The whole notice is two sentences and both of them are about what is not known: «Η μνήμη του αναφέρεται στο Ιεροσολυμιτικό Κανονάριο (σελ. 103), χωρίς να δηλώνεται η αρχιεπισκοπή του. Ίσως να ήταν κάποιος από τους Αρχιεπισκόπους του Ιεροσολυμιτικού θρόνου» — his memory is mentioned in the Jerusalem Kanonarion, page 103, without his archbishopric being stated; perhaps he was one of the archbishops of the throne of Jerusalem. So the folder carries the `archbishop` type, which the line itself gives, and **no `office`, because the page declines to name the see and its guess is marked as a guess.** There is no century, no year, no manner of death and no hymn. The page does vouch for the memory and names the book it stands in; it carries no asterisk and not a word of the «Δεν είναι διασταυρωμένη» sentence. The page prints no apolytikion and no kontakion, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
