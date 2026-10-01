@@ -1,0 +1,50 @@
+{
+  "slug": "forty-roman-martyrs",
+  "display_name": "The Forty Roman Martyrs",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Σαράντα Μάρτυρες οι Ρωμαίοι",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Ιουνίου, «Άγιοι Σαράντα Μάρτυρες οι Ρωμαίοι», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Ιουνίου — «Άγιοι Σαράντα Μάρτυρες οι Ρωμαίοι»",
+        "url": "https://www.saint.gr/06/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Ιουνίου εκάστου έτους», the same day as the listing. The entry enumerates no member, so it is one folder for the company. They are not the Forty Martyrs of Sebaste, whom the corpus keeps as forty named folders on 9 March, nor `forty-thousand-martyrs`, `forty-five-martyrs-of-nicopolis`, `forty-two-martyrs-of-amorion`, `forty-virgins-of-adrianople` or `forty-martyrs-with-john-the-egyptian`: these forty are Roman and died by fire. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

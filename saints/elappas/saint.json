@@ -1,0 +1,47 @@
+{
+  "slug": "elappas",
+  "display_name": "Elappas",
+  "sex": "male",
+  "names": [
+    {
+      "form": "Ελάππας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Ιουνίου, «Άγιος Ελάππας», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Ιουνίου — «Άγιος Ελάππας»",
+        "url": "https://www.saint.gr/06/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Ιουνίου εκάστου έτους», the same day as the listing. The page gives him no rank beyond «Άγιος» and no story at all, only that he is mentioned epigrammatically in the Small Euchologion or Hagiasmatarion of the Apostoliki Diakonia, 1959 edition, «χωρίς άλλες πληροφορίες. Πουθενά αλλού δεν αναφέρεται η μνήμη του» — nowhere else is his memory mentioned. That is a statement about the thinness of the attestation and not saint.gr's own refusal to vouch: the entry carries no asterisk and not the «Δεν είναι διασταυρωμένη» sentence. No types are given because the page gives no rank word the corpus's vocabulary could take."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

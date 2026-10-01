@@ -1,0 +1,55 @@
+{
+  "slug": "mnemonius-of-amathus",
+  "display_name": "Mnemonius of Amathus",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Μνημόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Ιουνίου, «Άγιος Μνημόνιος επίσκοπος Αμαθούντος Κύπρου», with the rank word and the see left off."
+    }
+  ],
+  "office": "Bishop of Amathus in Cyprus",
+  "related": [
+    "tikhon-of-amathus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Ιουνίου — «Άγιος Μνημόνιος επίσκοπος Αμαθούντος Κύπρου»",
+        "url": "https://www.saint.gr/06/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Ιουνίου εκάστου έτους», the same day as the listing. The corpus keeps no Mnemonius. He is the predecessor of `tikhon-of-amathus` in that see, whom the same day's listing keeps and whose life on saint.gr names him; the page gives no year. Under the picture it prints «Η αγιογραφία παρατίθεται με επιφύλαξη», a reservation about the image and not about the entry. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

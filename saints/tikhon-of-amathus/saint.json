@@ -7,6 +7,11 @@
       "form": "Tihon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 iunie, «Sfântul Ierarh Tihon, Episcopul Amatundei»."
+    },
+    {
+      "form": "Τύχων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Ιουνίου, «Άγιος Τύχων ο Θαυματουργός επίσκοπος», with the rank and epithet left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Ιουνίου — «Άγιος Τύχων ο Θαυματουργός επίσκοπος»",
+        "url": "https://www.saint.gr/06/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Ιουνίου εκάστου έτους», the same day as the listing. It is plainly the same hierarch: the wonderworking bishop of Amathus in Cyprus, ordained deacon by Mnemonius and his successor in that see, whom the folder's Romanian row already keeps on 16 June. The page gives no year, only the reigns of Arcadius and Honorius. He is not `tikhon-of-zadonsk`, `tikhon-of-moscow` or `tikhon-the-russian`. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -62,9 +77,46 @@
         "text": "A dweller of the wilderness and an angel in the body and a wonderworker thou wast shown to be, O God-bearing father Tikhon; by fasting, by vigil and by prayer receiving heavenly gifts, thou healest the sick and the souls of those who run to thee with faith. Glory to him who gave thee power; glory to him who crowned thee; glory to him who works healings for all through thee.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "ᾌχος α’.",
+      "model": "Τοῦ λίθου σφαγισθέντος.",
+      "text": "Τῆς ἐρήμου πολίτης καὶ ἐν σώματι ἄγγελος, καὶ θαυματουργὸς ἀνεδείχθης, θεοφόρε Τύχων Πατὴρ ἡμῶν· νηστείᾳ ἀγρυπνίᾳ προσευχῇ, οὐράνια χαρίσματα λαβών, θεραπεύεις τοὺς νοσοῦντας, καὶ τὰς ψυχὰς τῶν πίστει προστρεχόντων σοι. Δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, ᾌχος α’, Τοῦ λίθου σφαγισθέντος — the first of two apolytikia on the page of «Άγιος Τύχων ο Θαυματουργός επίσκοπος», and it names him",
+        "url": "https://www.saint.gr/1873/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A citizen of the desert and an angel in the body and a wonderworker wast thou shown to be, our God-bearing father Tychon; by fasting, vigil and prayer thou didst receive heavenly gifts, and thou healest the sick and the souls of those who run to thee in faith. Glory to him who gave thee strength, glory to him who crowned thee, glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "ᾌχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον.",
+      "text": "Ἐν ἀσκήσει Ἁγιε, θεοφιλεῖ διαπρέψας, Παρακλήτου δύναμιν, ἐξ ὕψους καθυπεδέξω, ξόανα, καθαιρεῖν πλάνης, λαούς δε σώζειν, δαίμονας, ἀποδιώκειν, νόσους ἰᾶσθαι· διὰ τοῦτο σε τιμῶμεν, ὡς Θεοῦ φίλον, Τύχων μακάριε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, ᾌχος γ’, Ἡ Παρθένος σήμερον — on the page of «Άγιος Τύχων ο Θαυματουργός επίσκοπος», and it names him",
+        "url": "https://www.saint.gr/1873/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Excelling, holy one, in ascesis dear to God, thou didst receive from on high the power of the Comforter, to pull down the idols of error, to save peoples, to drive off demons and to heal diseases. Therefore we honour thee as a friend of God, blessed Tychon.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "mnemonius-of-amathus"
+  ]
 }
