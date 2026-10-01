@@ -1,0 +1,63 @@
+{
+  "slug": "donald-of-scotland",
+  "display_name": "Donald",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Donald",
+      "lang": "en",
+      "note": "saint.gr prints the name in Latin letters and not in Greek, both in its line for 15 Ιουλίου, «Άγιος Donald και οι Εννέα κόρες του», and in its page heading, «Αγιος Donald». No Greek form of it appears on either."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 701,
+      "latest": 750,
+      "display": "early 8th century",
+      "basis": "traditional",
+      "note": "saint.gr gives no year and only the stretch of time he lived in: «Ο Άγιος Donald έζησε στις αρχές του 8ου αιώνα μ.Χ.» — he lived at the beginning of the eighth century AD. The interval is the first half of that century, and it is recorded on the birth because the page gives nothing at all for his death beyond that his daughters outlived him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιουλίου — «Άγιος Donald και οι Εννέα κόρες του»",
+        "url": "https://www.saint.gr/07/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Ιουλίου εκάστου έτους», the same day as the listing, and carries two headings, his own and «Αγιες Εννεα Κορες Του Αγιου Donald». The page links the entry to «Σύναξη των εν Σκωτία διαλαμψάντων Αγίων», the synaxis of the saints who shone in Scotland, and credits the Archdiocese of Thyateira and Great Britain, the same provenance as the corpus's `donnan-of-eigg`. saint.gr prints his name in Latin letters and gives no Greek form of it, and none is supplied here. The sentence that places him is defective as the page prints it — «έζησε στις αρχές του 8ου αιώνα μ.Χ. στο της Σκωτίας», with a word missing after «στο» — so Scotland is recorded as the country the page names and no narrower place is taken, and there is no `locations`. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn and no year."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "nine-daughters-of-donald"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

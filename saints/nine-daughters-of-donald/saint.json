@@ -1,0 +1,54 @@
+{
+  "slug": "nine-daughters-of-donald",
+  "display_name": "The Nine Daughters of Donald",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Εννέα Κόρες του Αγίου Donald",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Ιουλίου, «Άγιος Donald και οι Εννέα κόρες του», and its page heading «Αγιες Εννεα Κορες Του Αγιου Donald», with the rank word left off. The father's name stands in Latin letters on the page, as it does throughout, and is left so. The page also gives the names the nine were known by at Abernethy, «οι Εννέα Κορών, ή οι Εννέα Αγίες Παρθένες»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιουλίου — «Άγιος Donald και οι Εννέα κόρες του»",
+        "url": "https://www.saint.gr/07/15/index.aspx",
+        "year": 2026
+      },
+      "note": "A company that is numbered but not named: the page gives the nine a heading of their own, «Αγιες Εννεα Κορες Του Αγιου Donald», and the collective names they were known by, but it names no one of them, so this is one folder for the nine and not nine folders — the corpus already holds `nine-martyrs-12-march` and `nine-martyrs-with-abda` on the same footing. The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Ιουλίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page gives no year for them and no hymn; Abernethy is named as the monastery they entered after their father's repose, but as a bare name with nothing else, so there is no `locations`. The father's dating, «στις αρχές του 8ου αιώνα μ.Χ.», is said of him and not of them, so no `dates` object is recorded here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "donald-of-scotland"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Iulita",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 iulie, «Sfinții Mucenici Chiric și Iulita», with the rank words left off."
+    },
+    {
+      "form": "Ιουλίττα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Ιουλίου, «Άγιοι Κήρυκος και Ιουλίττα η μητέρα του», with the rank word and the kinship clause left off. The page's summary verse spells it «Ἰουλίττα» and «Ἰουλίτταν»; its first narrative sentence writes «Η Αγία Ιουλίτα» with one tau."
     }
   ],
   "sex": "female",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιουλίου — «Άγιοι Κήρυκος και Ιουλίττα η μητέρα του»",
+        "url": "https://www.saint.gr/07/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and pairs mother and son exactly as the Romanian line does. The woman is the folder's own: Julitta of Iconium, mother of Cyricus, tortured before her child and dying shortly after him. The Greek page adds Iconium, the flight to Seleucia and Tarsus, the governor Alexander, and a long list of her relics — a forearm with flesh at the monastery of Pantokrator on Athos, portions at the Great Lavra, at Palaiokastritsa on Corfu and at Kykkos on Cyprus. No year is printed; the only mark of time is «έζησε κατά την εποχή του αυτοκράτορα Διοκλητιανού», the reign undated, so nothing is proposed for `dates`. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints one apolytikion, which names both mother and son, and it is taken onto both folders."
     },
     {
       "church": "serbian",
@@ -60,6 +75,23 @@
       },
       "english": {
         "text": "Your martyrs, O Lord, in their contest won from You, our God, the crowns of incorruption; for having Your strength they overthrew their tormentors and broke the powerless insolence of the demons. At their prayers, Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Ἡ καλλιμάρτυς τοῦ Χρίστου Ἰουλίττα, σὺν τριετεῖ ἀμνῶ αὐτῆς τῷ Κηρύκῳ, δικαστοὺ πρὸ βήματος παρέστησαν φαιδρῶς, εὔτολμοι κηρύττοντες. τὴν χριστώνυμον κλῆσιν, ἄμφω μὴ πτοούμενοι, ἀπειλᾶς τῶν τυρράνων καὶ στεφηφόροι νῦν ἐν οὐρανοίς, ἀγαλλιώνται. Χριστῷ παριστάμενοι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ', Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ — the only hymn on the page of «Άγιοι Κήρυκος και Ιουλίττα η μητέρα του», and it names both of them",
+        "url": "https://www.saint.gr/2178/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Julitta, the fair martyr of Christ, together with Cyricus her three-year-old lamb, stood brightly before the judge's seat, preaching with courage the name of Christians; neither of them was dismayed at the threats of the tyrants, and now, crowned, they rejoice in the heavens, standing before Christ.",
         "rendered": "site"
       }
     }

@@ -1,0 +1,48 @@
+{
+  "slug": "swithn",
+  "display_name": "Swithn",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Swithn",
+      "lang": "en",
+      "note": "saint.gr prints the name in Latin letters and not in Greek, both in its line for 15 Ιουλίου, «Άγιος Swithn», and in its page heading, «Αγιος Swithn». No Greek form of it appears on either, and none is supplied here."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιουλίου — «Άγιος Swithn»",
+        "url": "https://www.saint.gr/07/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Ιουλίου εκάστου έτους», the same day as the listing, and its whole notice is one sentence: «Δεν έχουμε λεπτομέρειες για τον βίο του Αγγλοσάξωνα Αγίου» — we have no details of the life of this Anglo-Saxon saint. That is the only thing the page says about him, so there is no `dates` object, no `locations`, no `types` (the page states no rank at all, not even Ὅσιος or Ἱερομάρτυς beyond the bare Άγιος) and no hymn. The spelling «Swithn» is the page's own and is kept exactly; it reads like a clipped form of the English name Swithun, whose western feast falls on this same 15 July, but saint.gr neither writes it that way nor says one word that would identify the man, so nothing is asserted here beyond what it prints. The corpus holds no folder whose name reads like this one."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

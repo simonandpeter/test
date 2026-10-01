@@ -7,6 +7,11 @@
       "form": "Vladimir",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 iulie, «Sfântul Vladimir, Luminătorul Rusiei», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Βλαδίμηρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Ιουλίου, «Άγιος Βλαδίμηρος ο Ισαπόστολος βασιλιάς των Ρώσων», with the rank word, the title and the style left off."
     }
   ],
   "sex": "male",
@@ -15,12 +20,19 @@
     "prince"
   ],
   "dates": {
+    "birth": {
+      "earliest": 958,
+      "latest": 958,
+      "display": "958",
+      "basis": "attested",
+      "note": "saint.gr: «Γεννήθηκε το έτος 958 μ.Χ.», and its heading «Αγιος Βλαδιμηρος ο Ισαποστολος Βασιλιας Των Ρωσων (958 - 1015)». doxologia.ro, the folder's other source, gave no year of birth."
+    },
     "death": {
       "earliest": 1015,
       "latest": 1015,
       "display": "1015",
       "basis": "attested",
-      "note": "doxologia.ro's life: «iar de la întruparea lui Dumnezeu Cuvântul, 1015». The same page reckons thirty-five years of his rule at Kiev, eight before his baptism and twenty-seven and some months after it, his death falling in the twenty-eighth."
+      "note": "doxologia.ro's life: «iar de la întruparea lui Dumnezeu Cuvântul, 1015». The same page reckons thirty-five years of his rule at Kiev, eight before his baptism and twenty-seven and some months after it, his death falling in the twenty-eighth. saint.gr agrees and adds the day: «Απεβίωσε ειρηνικά στις 15 Ιουλίου του έτους 1015 μ.Χ.»"
     }
   },
   "attestations": [
@@ -45,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιουλίου — «Άγιος Βλαδίμηρος ο Ισαπόστολος βασιλιάς των Ρώσων»",
+        "url": "https://www.saint.gr/07/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and heads him «(958 - 1015)». The man is the folder's own, and the Greek line gives him the same title the Romanian one does, Ἰσαπόστολος, equal to the apostles. The page adds what doxologia did not: the year of his birth, 958; his father Svyatoslav, prince of Kiev; his mother Malousha, who had first been servant to Saint Olga, his grandmother and the first in Russia to become a Christian; the many wives, twelve sons and eleven daughters of his pagan years; the marriage to Anna, sister of the emperor Basil II; the pulling down of all the idols in the land, the baptism of most of the Russians and the two churches he built at Kiev. Its year of death, «Απεβίωσε ειρηνικά στις 15 Ιουλίου του έτους 1015 μ.Χ.», agrees with the folder's own, so the `dates` object is proposed with the existing death interval and note carried over word for word and the birth added from this page. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
     },
     {
       "church": "serbian",
@@ -74,5 +96,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "olga-of-kyiv"
+  ]
 }

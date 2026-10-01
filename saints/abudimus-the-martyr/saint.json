@@ -6,6 +6,11 @@
       "form": "Avudin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 iulie, «Sfântul Mucenic Avudin», with the rank word left off."
+    },
+    {
+      "form": "Αβούδιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Ιουλίου, «Άγιος Αβούδιμος», with the rank word left off. The summary verse over the notice has the dative «Ἀβουδίμῳ»."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιουλίου — «Άγιος Αβούδιμος»",
+        "url": "https://www.saint.gr/07/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Ιουλίου εκάστου έτους». That is one day before the 16 iulie the folder's Romanian row carries off doxologia: the two calendars keep him a day apart, each row records its own source, and nothing is moved. The man is the folder's own — the martyr of the Diocletian persecution whom doxologia calls Avudin — and the Greek page adds the island of Tenedos as his home, the beating, the tearing of his sides with iron claws, his one answer «Είμαι Χριστιανός», I am a Christian, and his beheading. It gives no year: «στον τότε διωγμό κατά της Εκκλησίας επί Διοκλητιανού», the persecution under Diocletian and no date for it, so the folder's `dates`, read off doxologia as 303-305, are left as they stand and nothing is proposed for them. He is not `eudemus-of-georgia` or `vadim-of-persia`, which the name sweep raised: both carry other names on other days. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
     },
     {
       "church": "serbian",
