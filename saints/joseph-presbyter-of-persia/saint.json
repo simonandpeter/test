@@ -6,6 +6,11 @@
       "form": "Iosif",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 noiembrie, «Sfântul Mucenic Iosif, preotul»."
+    },
+    {
+      "form": "Ιωσήφ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Νοεμβρίου, «Άγιοι Ακεψιμάς, Ιωσήφ και Αειθαλάς», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 3 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Νοεμβρίου — «Άγιοι Ακεψιμάς, Ιωσήφ και Αειθαλάς»",
+        "url": "https://www.saint.gr/11/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Νοεμβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: «ο Ιωσήφ πρεσβύτερος», stoned to death under Shapur II. A `dates` object is proposed from the page's «περί το 330 μ.Χ.» where the folder had none. The apolytikion names all three and is taken; the kontakion names Acepsimas alone and is not taken here; the «Έτερον Ἀπολυτίκιον» is the common of martyrs and the Κάθισμα is neither a troparion nor a kontakion, and neither is drafted. The third of the company, Aithalas the deacon, is reported and not touched because his folder already carries a venerated Greek row on 2 September. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -64,9 +79,35 @@
         "text": "Thy martyrs, O Lord, in their contests received incorruptible crowns from Thee our God; for possessing Thy strength they overthrew their torturers, and broke the feeble daring of the demons. By their prayers save Thou our souls, O Christ God.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ὡς θεράποντες, τῆς εὐσέβειας, στῦλοι ὤφθητε, τῆς Ἐκκλησίας, πυρσολατρῶν καθελόντες τὸ φρύαγμα, Ἀκεψιμᾶ Ἱεράρχα πολύαθλε, Ἀειθαλᾶ Ἰωσὴφ τὲ μακάριοι. Ἀλλ' αἰτήσασθε, Χριστὸν τὸν Θεὸν πανεύφημοι, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως — the first hymn on the page of «Άγιοι Ακεψιμάς, Ιωσήφ και Αειθαλάς». It names all three of them and no other saint. The page's second apolytikion is the common of martyrs and is not taken.",
+        "url": "https://www.saint.gr/2869/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As servants of godliness you were shown to be pillars of the Church, pulling down the arrogance of the fire-worshippers — Acepsimas the much-contending hierarch, and blessed Aithalas and Joseph. All-praised ones, ask Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 330,
+      "latest": 330,
+      "display": "about 330",
+      "basis": "traditional",
+      "note": "saint.gr: «Και οι τρεις μαρτύρησαν για το Χριστό, όταν βασιλιάς της Περσίας ήταν ο Σαπώρ ο Β' (περί το 330 μ.Χ.)» — the page's own year, written «περί», about, for the reign it sets the martyrdom in. No year of birth is given."
+    }
   }
 }

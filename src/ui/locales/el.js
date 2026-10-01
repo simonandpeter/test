@@ -1156,6 +1156,7 @@ export const el = {
     'first half of the 16th century': 'πρώτο μισό του 16ου αι.',
     'first half of the 5th century': 'πρώτο μισό του 5ου αι.',
     'from about 454': 'από περ. 454',
+    'in the reign of Theodosius the Great': 'επί της βασιλείας Θεοδοσίου του Μεγάλου',
     'in the reign of Theodosius the Younger': 'επί της βασιλείας Θεοδοσίου του Νέου',
     'late 10th and early 11th century': 'τέλη 10ου και αρχές 11ου αι.',
     'late 11th and early 12th century': 'τέλη 11ου και αρχές 12ου αι.',

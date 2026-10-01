@@ -1,0 +1,50 @@
+{
+  "slug": "nine-martyrs-3-november",
+  "display_name": "The Nine Martyrs (3 November)",
+  "names": [
+    {
+      "form": "Εννέα Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Νοεμβρίου, «Άγιοι Εννέα Μάρτυρες», with the rank word left off, in the shape the corpus already uses for a company whose members it cannot name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Νοεμβρίου — «Άγιοι Εννέα Μάρτυρες»",
+        "url": "https://www.saint.gr/11/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Νοεμβρίου εκάστου έτους», the same day as the listing, and the whole notice is «Οι Άγιοι Εννέα Μάρτυρες μαρτύρησαν δια ξίφους». The entry names none of the nine and numbers them only, so it is one folder for the company. `sex` is male because the epigram says «ἄνδρες ἐννέα», nine men. The display name takes the day because saint.gr keeps a different company of nine martyrs on 30 Οκτωβρίου, and that one it marks «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου» and this reading refuses; the two are not to be run together. No `dates` object, no location. No hymn. No asterisk on this page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

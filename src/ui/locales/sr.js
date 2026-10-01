@@ -1157,6 +1157,7 @@ export const sr = {
     'first half of the 16th century': 'прва половина XVI в.',
     'first half of the 5th century': 'прва половина V в.',
     'from about 454': 'од ок. 454',
+    'in the reign of Theodosius the Great': 'у време Теодосија Великог',
     'in the reign of Theodosius the Younger': 'у време Теодосија Млађег',
     'late 10th and early 11th century': 'крај X и почетак XI в.',
     'late 11th and early 12th century': 'крај XI и почетак XII в.',

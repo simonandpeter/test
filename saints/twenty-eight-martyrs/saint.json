@@ -1,0 +1,50 @@
+{
+  "slug": "twenty-eight-martyrs",
+  "display_name": "The Twenty-eight Martyrs",
+  "names": [
+    {
+      "form": "Εικοσιοκτώ Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Νοεμβρίου, «Άγιοι Εικοσιοκτώ Μάρτυρες», with the rank word left off, in the shape the corpus already uses for a company whose members it cannot name. The page's notice writes the number apart, «Οι Άγιοι Εικοσι οκτώ Μάρτυρες»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Νοεμβρίου — «Άγιοι Εικοσιοκτώ Μάρτυρες»",
+        "url": "https://www.saint.gr/11/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Νοεμβρίου εκάστου έτους», the same day as the listing, and the whole notice is «Οι Άγιοι Εικοσι οκτώ Μάρτυρες μαρτύρησαν δια πυρός». The entry names none of them, so it is one folder for the company. `sex` is male because the epigram says «ἄνδρας». **One oddity of the page is recorded and not resolved**: the epigram reads «Φλέγουσιν ἄνδρας πέντε δὶς καὶ δὶς δύο, οἷς συμφλέγουσι πέντε δὶς καὶ δὶς δύο», and saint.gr glosses each half «(ήτοι δεκατέσσαρας)» — fourteen men burned and fourteen burned with them, which is how its twenty-eight are reached. No `dates` object, no location. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

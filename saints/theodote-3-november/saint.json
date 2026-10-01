@@ -1,0 +1,56 @@
+{
+  "slug": "theodote-3-november",
+  "display_name": "Theodote (3 November)",
+  "names": [
+    {
+      "form": "Θεοδότη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Νοεμβρίου, «Άγιοι Δάσιος, Σέβηρος, Άνδρωνας, Θεόδοτος και Θεοδότη», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "dasius-3-november",
+    "severus-3-november",
+    "andron",
+    "theodotus-3-november"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Νοεμβρίου — «Άγιοι Δάσιος, Σέβηρος, Άνδρωνας, Θεόδοτος και Θεοδότη»",
+        "url": "https://www.saint.gr/11/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Νοεμβρίου εκάστου έτους», the same day as the listing, and the whole notice is one sentence. The entry enumerates five, each with a heading, so it is five folders; the page's epigram makes this one the woman of the company, «Σύμμαρτυς ἔστω καὶ γυνὴ τοῖς ἀνδράσι». The corpus's «theodote-companion-of-theodotus» is a different pair on a different day. No `dates` object, no location. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

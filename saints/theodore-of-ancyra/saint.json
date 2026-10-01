@@ -1,0 +1,53 @@
+{
+  "slug": "theodore-of-ancyra",
+  "display_name": "Theodore of Ancyra",
+  "names": [
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Νοεμβρίου, «Όσιος Θεόδωρος ο Ομολογητής επίσκοπος Άγκυρας», with the rank words and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "confessor"
+  ],
+  "office": "Bishop of Ancyra",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Νοεμβρίου — «Όσιος Θεόδωρος ο Ομολογητής επίσκοπος Άγκυρας»",
+        "url": "https://www.saint.gr/11/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Νοεμβρίου εκάστου έτους», the same day as the listing, and the whole notice is one hedged sentence: «Ο Όσιος Θεόδωρος μάλλον υπήρξε υπέρμαχος των αγίων εικόνων και ίσως έδωσε και το αίμα του για τη σωστή θέση τους στην Ορθοδοξία» — he was probably a champion of the holy icons and perhaps gave his blood as well. `confessor` is the day line's own word for him and is recorded; `martyr` is not, because the page only says «ίσως», perhaps. No year, so no `dates` object. The corpus keeps a Theodotus of Ancyra, who is a different man of a different name; it holds no Theodore of that see. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "acepsimas-3-november",
+  "display_name": "Acepsimas (3 November)",
+  "names": [
+    {
+      "form": "Ακεψιμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Νοεμβρίου, «Όσιος Ακεψιμάς», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 379,
+      "latest": 395,
+      "display": "in the reign of Theodosius the Great (379–395)",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ακεψιμάς έζησε τον 4ο αιώνα μ.Χ. κατά την εποχή του αυτοκράτορα Θεοδοσίου Α' του Μεγάλου» — the page names the century and the reign and gives no year, so the interval is that reign."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Νοεμβρίου — «Όσιος Ακεψιμάς»",
+        "url": "https://www.saint.gr/11/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Νοεμβρίου εκάστου έτους», the same day as the listing. **The same day's listing keeps a second Acepsimas**, the bishop of Naeson in Persia, whose folder the corpus already has and which is upgraded from its own page in this batch. The two are separate entries with separate pages: that one is a hieromartyr of the Persian persecution, this one a hermit of the fourth century under Theodosius the Great who died in peace, and the corpus's settled rule is that two entries on one calendar are two commemorations. The display name takes the day for that reason, since both men bear it. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

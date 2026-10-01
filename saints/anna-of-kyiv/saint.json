@@ -1,0 +1,60 @@
+{
+  "slug": "anna-of-kyiv",
+  "display_name": "Anna of Kyiv",
+  "names": [
+    {
+      "form": "Άννα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Νοεμβρίου, «Οσία Άννα του Κιέβου», with the rank word and the city left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "princess"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1112,
+      "latest": 1116,
+      "display": "1112, or 1113 or 1116 by other reckonings",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε ειρηνικά το 1112 μ.Χ. (ή 1113 μ.Χ. ή 1116 μ.Χ.)», and its heading «(; - 1112)». The page prints three years and settles none, so the interval carries all three and the display keeps the heading's year first. No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). This is the calendar that would say most about a daughter of a Grand Prince of Kyiv, and it has not been read here."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Νοεμβρίου — «Οσία Άννα του Κιέβου»",
+        "url": "https://www.saint.gr/11/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Νοεμβρίου εκάστου έτους», the same day as the listing. The corpus keeps ten other Annas and none of them is of Kyiv; the nearest, Anna of Novgorod, is another Rus princess on another day. `princess` is recorded because the page makes her the daughter of the Grand Prince of Kyiv, Vsevolod Yaroslavich, whose reign it dates 1078 to 1093 and whose wife it makes a daughter of the emperor Constantine Monomachos. No abbacy is recorded, because the page says she established the cenobitic rule in all the monasteries of Kyiv without calling her the abbess of any. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

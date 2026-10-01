@@ -1,0 +1,61 @@
+{
+  "slug": "george-of-neapolis",
+  "display_name": "George of Neapolis",
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Νοεμβρίου, «Άγιος Γεώργιος ο νέος Ιερομάρτυρας, ο Νεαπολίτης», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1797,
+      "latest": 1797,
+      "display": "1797",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him, «Αγιος Γεωργιος ο Νεος Ιερομαρτυρας, ο Νεαπολιτης (; - 1797)», and in the notice «Κατά το 1797 μ.Χ. προσκλήθηκε από τους χριστιανούς του χωρίου Μαλακωτή να Ιερουργήσει», with the beheading following in the same paragraph. No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Νοεμβρίου — «Άγιος Γεώργιος ο νέος Ιερομάρτυρας, ο Νεαπολίτης»",
+        "url": "https://www.saint.gr/11/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Νοεμβρίου εκάστου έτους», the same day as the listing. The same day keeps the translation of the relics of George the Great Martyr and the dedication of his church at Lydda, which is a feast and not this man; nothing on either page connects the two beyond the name. The Neapolis of his epithet is the one in Asia Minor, «που τούρκικα λέγεται Νέβ Σεχήρ», and the corpus keeps no George of it. No location is recorded even so, because the page's places are a parish, a road and two churches rather than a seat. It records his relic incorrupt in the church of Saint Eustathios at Perissos in Attica, where it was taken in 1924. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

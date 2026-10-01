@@ -1155,6 +1155,7 @@ export const ro = {
     'first half of the 16th century': 'prima jumătate a sec. al XVI-lea',
     'first half of the 5th century': 'prima jumătate a sec. al V-lea',
     'from about 454': 'din cca 454',
+    'in the reign of Theodosius the Great': 'în vremea lui Teodosie cel Mare',
     'in the reign of Theodosius the Younger': 'în vremea lui Teodosie cel Tânăr',
     'late 10th and early 11th century': 'sfârșitul sec. al X-lea și începutul sec. al XI-lea',
     'late 11th and early 12th century': 'sfârșitul sec. al XI-lea și începutul sec. al XII-lea',

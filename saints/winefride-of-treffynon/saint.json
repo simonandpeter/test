@@ -1,0 +1,50 @@
+{
+  "slug": "winefride-of-treffynon",
+  "display_name": "Winefride of Treffynon",
+  "names": [
+    {
+      "form": "Winefride",
+      "lang": "la",
+      "note": "saint.gr prints her name in Latin letters and in no Greek form at all: the day's line and the page's heading both read «Αγία Winefride του Treffynon», with the rank word and the place in Greek and the name and the place-name in Latin script. The form is entered as `la` because that is the script the page gives and the corpus has no Welsh language in its registry; nothing here is transliterated."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "righteous"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Νοεμβρίου — «Αγία Winefride του Treffynon»",
+        "url": "https://www.saint.gr/11/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Νοεμβρίου εκάστου έτους», the same day as the listing, and its whole notice is «Δεν έχουμε λεπτομέρειες για τον βίο της Αγίας». So the name and the place are all it gives: no year, so no `dates` object, and no location, because Treffynon is the epithet the page attaches to her and not a place it puts her in. `righteous` is recorded because the page gives her no rank word beyond Αγία, and that is the rank this corpus prints for a saint with no distinctive one; a writer who finds another calendar calling her a virgin martyr should change it. The corpus holds no saint of this name. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "achaemenides",
+  "display_name": "Achaemenides",
+  "names": [
+    {
+      "form": "Αχαιμενίδης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Νοεμβρίου, «Άγιος Αχαιμενίδης», with the rank word left off. The page's own epigram spells him «Aχεμενίδης»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 410,
+      "latest": 410,
+      "display": "about 410",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησε στα χρόνια του βασιλιά του Βυζαντίου Θεοδοσίου του μικρού και του Ισθιγέρδου βασιλιά των Περσών (περί το 410 μ.Χ.)» — the page's own year, written «περί», about, for the two reigns it sets him in. It gives no year for his birth or his death, and says he died in peace."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Νοεμβρίου — «Άγιος Αχαιμενίδης»",
+        "url": "https://www.saint.gr/11/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Νοεμβρίου εκάστου έτους», the same day as the listing. The corpus holds no saint of this name and the namesweep returned nothing for it. `confessor` is the rank the page's own account requires and the only one it allows: he was tortured and publicly humiliated for the faith, and then let go on condition that he left Persia, and «απεβίωσε εν ειρήνη», died in peace — so he is not a martyr. No location is recorded although the page names Persia, because it names no city. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
