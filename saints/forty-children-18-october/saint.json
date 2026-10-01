@@ -1,0 +1,50 @@
+{
+  "slug": "forty-children-18-october",
+  "display_name": "The Forty Children (18 October)",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Σαράντα Παιδιά",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Οκτωβρίου, «Άγια Σαράντα Παιδιά», with the rank words left off. The form recorded is the company's whole designation as the line prints it, because the page names not one of the forty."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Οκτωβρίου — «Άγια Σαράντα Παιδιά»",
+        "url": "https://www.saint.gr/10/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Οκτωβρίου εκάστου έτους», the same day as the listing. The whole notice is one sentence — «Τα Άγια Σαράντα Παιδιά μαρτύρησαν δια ξίφους» — and it names nobody, so this is **one entry and one folder** and not forty, on `BRIEF.md` §4's test. **It is not the corpus's `forty-children`**: that folder is the company kept with Melasippus, Kassine and Antonius on 7 Νοεμβρίου, whose `greek` row is already `venerated` on that day, and the settled rule is that two entries on one calendar are two commemorations. The slug carries the day for that reason. No `dates`, no `locations`, no hymn: the page gives none of the three. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

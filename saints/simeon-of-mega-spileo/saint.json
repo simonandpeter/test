@@ -6,6 +6,11 @@
       "form": "Simeon de la Mega Spileo",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 octombrie."
+    },
+    {
+      "form": "Συμεών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Οκτωβρίου, «Όσιοι Συμεών, Θεόδωρος κτήτορες της Ιεράς Μονής του «Μεγάλου Σπηλαίου» οι θαυματουργοί και Ευφροσύνη η ποιμενίδα η θαυματουργός», with the rank words left off. The line keeps all three together; the bare personal name is taken out of it."
     }
   ],
   "sex": "male",
@@ -49,8 +54,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Οκτωβρίου — «Όσιοι Συμεών, Θεόδωρος κτήτορες της Ιεράς Μονής του «Μεγάλου Σπηλαίου» οι θαυματουργοί και Ευφροσύνη η ποιμενίδα η θαυματουργός»",
+        "url": "https://www.saint.gr/10/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Οκτωβρίου εκάστου έτους», the same day as the listing. One line keeps all three, and they are the three the corpus already holds: «Οι Όσιοι Συμεών, Θεόδωρος και Ευφροσύνη οι θαυματουργοί είναι άγνωστοι στους Συναξαριστές» — unknown to the synaxarists — Simeon and Theodore brothers in the flesh and founders of the monastery of Mega Spileo, born at the beginning of the fourth century and dying in peace, and Euphrosyne the one who found the icon of the Mother of God which tradition says the Apostle Luke painted and which is kept at Mega Spileo in the Peloponnese to this day; all of it, the page says, according to the Service of the saints published at Venice in 1706, at Athens in 1840 and again in 1911. The page records that the skull and right hand of Euphrosyne and the skulls of Theodore and of Simeon are at the monastery. **No `dates` proposed**: the page's «Γεννήθηκαν στις αρχές του 4ου αιώνα μ.Χ.» agrees with the `birth` the folders already carry from doxologia.ro and adds nothing to replace it with, and it gives Euphrosyne no year at all; the 362 beside one of the page's pictures is a caption and not the life. The page prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

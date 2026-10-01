@@ -1,0 +1,55 @@
+{
+  "slug": "isidore-of-vali",
+  "display_name": "Isidore of Vali",
+  "sex": "male",
+  "types": [
+    "presbyter",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ισίδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Οκτωβρίου, «Άγιος Ισίδωρος και τα τέκνα αυτού Γεώργιος και Ειρήνη», with the rank words left off. The line enumerates the three; the bare personal name is taken out of it."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Οκτωβρίου — «Άγιος Ισίδωρος και τα τέκνα αυτού Γεώργιος και Ειρήνη»",
+        "url": "https://www.saint.gr/10/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Οκτωβρίου εκάστου έτους», the same day as the listing. The line enumerates its members — the priest Isidore and his children George and Irene — so it is a folder for each of the three and each relates the other two, on `docs/CORPUS.md` §10.1. The page says they were martyred by the Ottomans inside the church where Isidore was serving the Liturgy, that they were beheaded and their heads thrown away, that pious Christians gathered them and buried them at the feet of the bodies, where they were found on the day of the exhumation, and that the saints made known the manner of their martyrdom and the place of their burial by appearing in dreams to many. **No `dates` proposed**: the only year on the page is 1953, the year of the translation of the relics at Vali — «Η ανακομιδή τους έγινε στις 18 Οκτωβρίου 1953 μ.Χ., στο Βαλή» — and the page gives no year for the martyrdom itself, so none is inferred from it. No `locations`, the folders being undated, and no hymn: the page prints none. The source given at the foot of the page is the Metropolis of Gortyna and Arkadia. The «of Vali» in Isidore's display name is the place the page puts his church, his tomb and the translation of the relics — it is not a see, and no `office` is recorded, because the page names no church of his beyond the one he was serving the Liturgy in when he was killed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "related": [
+    "george-son-of-isidore",
+    "irene-daughter-of-isidore"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "mnason-of-cyprus",
+  "display_name": "Mnason of Cyprus",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "martyr"
+  ],
+  "office": "Bishop of Cyprus",
+  "names": [
+    {
+      "form": "Μνάσων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Οκτωβρίου, «Άγιος Μνάσων επίσκοπος Κύπρου», with the rank words left off. The see is left to `office`."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Οκτωβρίου — «Άγιος Μνάσων επίσκοπος Κύπρου»",
+        "url": "https://www.saint.gr/10/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Οκτωβρίου εκάστου έτους», the same day as the listing. The whole notice is one sentence and a conjecture: «Ο Άγιος Μνάσων επίσκοπος Κύπρου μαρτύρησε δια ξίφους» and then «Είναι πιθανόν να είναι ο ίδιος Άγιος που εορτάζει στις 19 Οκτωβρίου σαν Άγιος Μνάσων ο αρχαίος μαθητής, παρόλο που εκείνος κοιμήθηκε εν ειρήνη» — it is possible he is the same saint kept on 19 October as Mnason the ancient disciple, although that one fell asleep in peace. **The page's own guess is recorded and not acted on**: the corpus's settled rule is that two entries on one calendar are two commemorations, the two notices disagree about the manner of death, and the 19 October entry is drafted as its own folder, so the two are kept apart and the conjecture is a question for the writer and a line in the reader's report. No `dates`, no `locations` and no hymn: the page gives no year, no place beyond the see and no text. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

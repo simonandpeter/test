@@ -6,6 +6,11 @@
       "form": "Iulian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 octombrie, «Sfântul Cuvios Iulian»; the life calls him «Iulian, cel de lângă râul Eufratului»."
+    },
+    {
+      "form": "Ιουλιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Οκτωβρίου, «Όσιος Ιουλιανός «ὁ ἐν τῷ Εὐφράτῃ ποταμῷ»», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Οκτωβρίου — «Όσιος Ιουλιανός «ὁ ἐν τῷ Εὐφράτῃ ποταμῷ»»",
+        "url": "https://www.saint.gr/10/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Οκτωβρίου εκάστου έτους», the same day as the listing. The entry is the same ascetic of the Euphrates: the child of a poor family, unlettered, famous while still a young monk, his cell on the banks of the river, a season of asceticism on Sinai and a return to the river, a comfort to many under Julian the Apostate, and praised by Chrysostom as having a name brighter than a king's; he died in peace. `dates` **are** proposed and only because the page states a century for his life outright — «έζησε τον 4ο αιώνα μ.Χ.» — as a `floruit` and nothing more. The page prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -50,5 +65,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Παιδί φτωχής οικογένειας ο Όσιος Ιουλιανός, έζησε τον 4ο αιώνα μ.Χ.» The page gives no year of birth or of death."
+    }
   }
 }

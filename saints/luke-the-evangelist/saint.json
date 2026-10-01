@@ -6,6 +6,11 @@
       "form": "Luca",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 octombrie, «Sfântul Apostol și Evanghelist Luca»."
+    },
+    {
+      "form": "Λουκάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Οκτωβρίου, «Άγιος Λουκάς ο Ευαγγελιστής», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Οκτωβρίου — «Άγιος Λουκάς ο Ευαγγελιστής»",
+        "url": "https://www.saint.gr/10/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Οκτωβρίου εκάστου έτους», the same day as the listing. The entry is the evangelist: of Antioch in Syria, Greek by nationality, a physician who also knew the painter's art, to whom the first icons of the Mother of God with the infant Christ are ascribed — «μία υπάρχει μέχρι σήμερα στη Μονή του Μεγάλου Σπηλαίου» — and those of the Apostles Peter and Paul; catechised by Paul, whom he met at Thebes, and the writer of the third Gospel and of the Acts. **No `dates` proposed**: the page gives him no year of birth or death — «Λέγεται ότι πέθανε με μαρτυρικό θάνατο (κατ' άλλους ειρηνικά σε ηλικία 80 ετών)» is a manner of death and an age, not a year, and the 357 it does give is the translation of his relics to the church of the Holy Apostles in Constantinople. The first Ἀπολυτίκιον and the Κοντάκιον are taken and both name him; the three «Έτερον Ἀπολυτίκιον» (one of them composed by Metropolitan Synesios of Thebes, 1912–1944) and the Οἶκος are not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -62,6 +77,39 @@
         "text": "O holy Apostle and Evangelist Luke, entreat the merciful God to grant our souls forgiveness of sins.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἀπόστολε Ἅγιε, καὶ Εὐαγγελιστὰ Λουκᾶ, πρέσβευε τῷ ἐλεήμονι Θεῷ, ἵνα πταισμάτων ἄφεσιν, παράσχῃ ταῖς ψυχαῖς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’ — the first hymn on the page of «Άγιος Λουκάς ο Ευαγγελιστής», and it names him.",
+        "url": "https://www.saint.gr/2759/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy Apostle and Evangelist Luke, intercede with the merciful God, that he may grant our souls the forgiveness of our offences.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Μαθητὴς γεvόμενος τοῦ Θεοῦ Λόγου, σὺν τῷ Παύλῳ ἅπασαν, ἐφωταγώγησας τὴv γῆν, καὶ τὴν ἀχλὺν ἀπεδίωξας, τὸ θεῖον γράψας, Χριστοῦ Εὐαγγέλιον.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’. Ἐπεφάνης σήμερον — on the page of «Άγιος Λουκάς ο Ευαγγελιστής», and it names him.",
+        "url": "https://www.saint.gr/2759/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having become a disciple of God the Word, together with Paul you gave light to all the earth and drove the mist away, writing the divine Gospel of Christ.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον."
     }
   ],
   "text": {
