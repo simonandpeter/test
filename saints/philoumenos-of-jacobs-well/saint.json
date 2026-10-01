@@ -6,6 +6,11 @@
       "form": "Filumen de la Fântâna lui Iacov",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 noiembrie, «Sfântul Sfințit Mucenic Filumen de la Fântâna lui Iacov», with the rank words left off."
+    },
+    {
+      "form": "Φιλούμενος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Νοεμβρίου, «Άγιος Φιλούμενος ο Νεοιερομάρτυρας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -52,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Νοεμβρίου — «Άγιος Φιλούμενος ο Νεοιερομάρτυρας»",
+        "url": "https://www.saint.gr/11/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Νοεμβρίου εκάστου έτους», the same day as the listing. The head line gives him «(; - 1979)», and the folder already carries both a `birth` and a `death`, so **no `dates` are proposed**. The entry is plainly him: of the village of Orounta in the district of Morphou, twin son of Magdalene and George Oroundiotis, taught piety by his grandmother Loxandra, set alight by reading the life of John the Hut-burner, gone with his twin Elpidios to the monastery of Stavrovouni and after five years to the Holy Land, forty-six years in the service of the Patriarchate's brotherhood, and cut down at the hour of vespers at Jacob's Well. **The day needs the writer's eye.** The page itself writes «Στις 16 Νοεμβρίου 1979 μ.Χ. (29 Νοεμβρίου με το νέο ημερολόγιο)» — 16 November by the old calendar, 29 November by the new — and the corpus already keeps his Romanian feast on **29 November**, which is these thirteen days. So the Greek day page and the Romanian row are one commemoration reckoned two ways, not two commemorations; the row recorded here is the day page that was read, per BRIEF-GREEK §8, and whether the Greek row should instead read 29/11 to match is a question for the writer and not a reader's to settle. No `locations` and no hymn: the page prints none. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

@@ -1,0 +1,51 @@
+{
+  "slug": "iphigenia-the-virgin-martyr",
+  "display_name": "Iphigenia",
+  "sex": "female",
+  "types": [
+    "virgin",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιφιγένεια",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Νοεμβρίου, «Αγία Ιφιγένεια η Παρθενομάρτυς», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Νοεμβρίου — «Αγία Ιφιγένεια η Παρθενομάρτυς»",
+        "url": "https://www.saint.gr/11/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Νοεμβρίου εκάστου έτους», the same day as the listing. The whole notice is two sentences, and both are about the thinness of the record: «Η μνήμη της Αγίας Ιφιγένειας αναφέρεται επιγραμματικά στο «Μικρόν Ευχολόγιον ή Αγιασματάριον» έκδοση Αποστολικής Διακονίας 1956 μ.Χ., χωρίς άλλες πληροφορίες» and «Πουθενά αλλού δεν αναφέρεται η μνήμη της» — her memory is mentioned in one line in that book and nowhere else at all. **This is not a §10 refusal**: the page carries no asterisk and not the «Δεν είναι διασταυρωμένη» sentence, and what it says is where it found the commemoration, not that it doubts the saint; the distinction is recorded here so that a later reader does not have to guess which it was. The rank is the line's own, Παρθενομάρτυς, which gives `virgin` and `martyr`. **No `dates`, no `locations`, no `related` and no hymn**: the page gives none of them, and the single book it cites it does not quote."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
