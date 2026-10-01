@@ -6,6 +6,11 @@
       "form": "Zotic",
       "lang": "ro",
       "note": "Read out of the life doxologia.ro links from its calendar for 23 decembrie, which names the ten: «Teodul, Satornic, Evpor, Ghelasie și Evnichian erau din cetatea Gortiniei; Zotic din Hios, Pompie și Agatopul din Epinia, Vasilid din Chidonia și Evarest din Iracleea»"
+    },
+    {
+      "form": "Ζωτικός",
+      "lang": "el",
+      "note": "Read out of saint.gr's head line for this man on the page of «Άγιοι Δέκα Μάρτυρες που μαρτύρησαν στην Κρήτη», 23 Δεκεμβρίου, with the rank word and the clause about Crete left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 23 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Δεκεμβρίου — «Άγιοι Δέκα Μάρτυρες που μαρτύρησαν στην Κρήτη», whose life page gives this man a head line of his own, «Αγιος Ζωτικός Που Μαρτυρησε Στην Κρητη»",
+        "url": "https://www.saint.gr/12/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3313/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps for the Romanian, and it is the same company: the ten martyred in Crete under the prefect who shared the emperor Decius's name. **The ten are enumerated**, by the page's own text and again by its second apolytikion, so each man keeps his folder and the nine others are already his `related` rows from the Romanian pass; nothing is added there. The page states a century, «τον 3ο αιώνα μ.Χ.», so a `dates` object is drafted where the folder had none. **No `locations` is drafted** although the page names this man's home: a saint located and dated across a whole century is what `map-span.test.mjs` exists to catch, and the home town is recorded in the life instead. Two apolytikia are printed with their ἦχος and their automelon, both of them the company's own, and both are copied into each of the ten; the Κάθισμα is a kind the schema does not hold and is left out. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -56,5 +71,50 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι άγιοι Δέκα μάρτυρες μαρτύρησαν τον 3ο αιώνα μ.Χ., όταν αυτοκράτορας ήταν ο Δέκιος.» The century is the page's own; the reign is not converted into years here, and no year of birth is given. The folder held no `dates` before this."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τὴν πολυθαύμαστον Κρήτην τιμήσωμεν, τὴν ἐξανθήσασαν ἄνθη τὰ τίμια, τοὺς μαργαρίτας τοῦ Χριστοῦ, Μαρτύρων τοὺς ἀκρέμονας. Δέκα γὰρ ὑπάρχοντες, ἀριθμῷ οἱ μακάριοι, δύναμιν μυρίοπλον τῶν δαιμόνων κατήσχυναν· διὸ καὶ τοὺς στεφάνους ἐδέξαντο, Μάρτυρες Χριστοῦ οἱ καρτερόψυχοι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Τὴν ὡραιότητα — the first hymn on the page of «Άγιοι Δέκα Μάρτυρες που μαρτύρησαν στην Κρήτη». It is the company's own, speaking of the ten in the plural and naming their number, and it is therefore copied into each of the ten folders.",
+        "url": "https://www.saint.gr/3313/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour Crete, the land of many wonders, which put forth precious blossoms, the pearls of Christ, the topmost shoots of the martyrs. For being ten in number, the blessed ones put to shame the ten-thousandfold power of the demons, and so they received their crowns, the stout-souled martyrs of Christ.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Τὴν ὡραιότητα."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Κρήτης τα εύοσμα άνθη τιμήσωμεν, τα διαπνέοντα, οσμήν την ένθεον, Θεόδουλον και Ζωτικόν, Γελάσιον, Σατορνίνον, Εύπορον Ευάρεστον, Αγαθόποδα Πόμπιον, Ευνικιανόν ομού, Βασιλειάδην τε ένδοξον, βοώντες αυτούς αυτούς ομοφρόνως, χαίρε Δεκάς η των μαρτύρων.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ήχος γ’, Την ωραιότητα — the second hymn on the page of «Άγιοι Δέκα Μάρτυρες που μαρτύρησαν στην Κρήτη». It calls all ten by name and is copied into each of the ten folders. Copied as printed: the site repeats «αυτούς αυτούς», which is its own text and not a reading.",
+        "url": "https://www.saint.gr/3313/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour the sweet-scented blossoms of Crete, which breathe out a fragrance that is of God — Theodoulos and Zotikos, Gelasios, Satorninos, Euporos, Euarestos, Agathopous, Pompios, Eunikianos together, and glorious Basileiades — crying out to them with one mind: rejoice, you ten of the martyrs.",
+        "rendered": "site"
+      },
+      "tone": "Ήχος γ’.",
+      "model": "Την ωραιότητα."
+    }
+  ]
 }

@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'χρυσογονοσ chrysogonus chrysogonus-eparch-of-thessalonica':
+    'Two men. The new one is Chrysogonus, eparch of the city of Thessalonica, on 23 December, who carries no `types` because the vocabulary has no word for a civil governor; the other is the Chrysogonus whom the Romanian keeps on 22 December and the Greek on 24 November.',
   'ζωιλοσ zoilus-companion-of-zeno zoilus-martyr-22-december zoilus-the-roman':
     'Three men, and the trio is a reading the author owes a ruling on: the Zoilus of 22 December, drafted here from the company around Anastasia and Chrysogonus, against the companion of Zeno on 3 March and Zoilus the Roman on 13 April — whose own notes each say no namesake exists, which is now false. It is in ro-run/FINDINGS.md; `el-dupscan.mjs` does not propose the three.',
   'νεοφυτοσ neophytos-martyr-11-august neophytos-of-docheiariou neophytos-of-machairas neophytos-the-sinaite neophytus-5-may neophytus-martyr-7-december neophytus-of-knossos neophytus-of-nicaea neophytus-servant-of-anthousa':

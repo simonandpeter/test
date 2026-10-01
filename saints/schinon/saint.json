@@ -1,0 +1,50 @@
+{
+  "slug": "schinon",
+  "display_name": "Schinon",
+  "names": [
+    {
+      "form": "Σχίνων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Δεκεμβρίου, «Άγιος Σχίνων», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Δεκεμβρίου — «Άγιος Σχίνων»",
+        "url": "https://www.saint.gr/12/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3309/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Δεκεμβρίου εκάστου έτους», the same day as the listing, and its whole account is five words: «Ο Άγιος Σχίνων μαρτύρησε δια ξίφους» — he was martyred by the sword. The distich above it addresses him by name and says the same, that his head was cut off. No year, no place, no emperor, no persecutor and no hymn, so there is no `dates` object and no `locations`. The name is rare and the corpus holds nothing like it; the namesweep returns no folder on this stem. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1035,6 +1035,7 @@ export const ro = {
     'Empress': 'Împărăteasă',
     'Empress of the Romans, regent for her son Constantine VI': 'Împărăteasă a romanilor, regentă pentru fiul ei Constantin VI',
     'Eparch': 'Eparh',
+    'Eparch of the city of Thessalonica': 'Eparh al cetății Tesalonicului',
     'Father of monasticism': 'Părintele monahismului',
     'First Archbishop of Serbia': 'Primul arhiepiscop al Serbiei',
     'First Bishop of Estonia': 'Primul episcop al Estoniei',

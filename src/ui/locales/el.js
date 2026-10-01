@@ -1036,6 +1036,7 @@ export const el = {
     'Empress': 'Αυτοκράτειρα',
     'Empress of the Romans, regent for her son Constantine VI': 'Αυτοκράτειρα των Ρωμαίων, αντιβασίλισσα για τον γιο της Κωνσταντίνο ΣΤ΄',
     'Eparch': 'Έπαρχος',
+    'Eparch of the city of Thessalonica': 'Έπαρχος της πόλεως Θεσσαλονίκης',
     'Father of monasticism': 'Πατέρας του μοναχισμού',
     'First Archbishop of Serbia': 'Πρώτος Αρχιεπίσκοπος Σερβίας',
     'First Bishop of Estonia': 'Πρώτος επίσκοπος Εσθονίας',

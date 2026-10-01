@@ -1,0 +1,48 @@
+{
+  "slug": "chrysogonus-eparch-of-thessalonica",
+  "display_name": "Chrysogonus, Eparch of Thessalonica",
+  "names": [
+    {
+      "form": "Χρυσογόνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Δεκεμβρίου, «Άγιος Χρυσογόνος», with the rank word left off. The codex the page quotes has him in the genitive, «Χρυσογόνου ἔπαρχου πόλεως Θεσσαλονίκης»."
+    }
+  ],
+  "sex": "male",
+  "office": "Eparch of the city of Thessalonica",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Δεκεμβρίου — «Άγιος Χρυσογόνος»",
+        "url": "https://www.saint.gr/12/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3307/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Δεκεμβρίου εκάστου έτους», the same day as the listing, and its whole content is a note on the source: «Ο Άγιος Χρυσογόνος είναι άγνωστος στους Συναξαριστές και τα έντυπα Μηναία. Η μνήμη του αναφέρεται στον Σαβαϊτικό Κώδικα 635 την ήμερα αυτή, ως εξής: \"Χρυσογόνου ἔπαρχου πόλεως Θεσσαλονίκης\" (βλ. Δημητριεύσκη, Τυπικά, τόμος Β', σελ. 365).» **This is not the Chrysogonus of 22 Δεκεμβρίου**, whom the same calendar keeps on the day before and whom the corpus holds as `chrysogonus`: that one is of Rome, the teacher of Anastasia the Pharmakolytria, beheaded under Diocletian, and nothing on either page joins the two. Two entries on one calendar are two commemorations, which is why this is a folder and not a second row on his. **No `types` is drafted**: the page says only that he was eparch of the city, and it does not say he was a martyr, a bishop or a monk; nothing in the corpus's vocabulary fits an eparch. No year and no hymn, so no `dates` object; Thessalonica is named as the city he governed and no coordinate is proposed. The page is explicit that the synaxaristes and the printed Menaia do not know him, but it vouches for the memory with a named codex and a page reference, and it carries no asterisk and not the «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

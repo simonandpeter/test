@@ -1037,6 +1037,7 @@ export const sr = {
     'Empress': 'Царица',
     'Empress of the Romans, regent for her son Constantine VI': 'Царица Ромеја, намесница за свога сина Константина VI',
     'Eparch': 'Епарх',
+    'Eparch of the city of Thessalonica': 'Епарх града Солуна',
     'Father of monasticism': 'Отац монаштва',
     'First Archbishop of Serbia': 'Први архиепископ српски',
     'First Bishop of Estonia': 'Први епископ Естоније',
