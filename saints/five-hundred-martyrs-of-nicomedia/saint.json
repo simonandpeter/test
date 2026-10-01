@@ -1,0 +1,53 @@
+{
+  "slug": "five-hundred-martyrs-of-nicomedia",
+  "display_name": "The Five Hundred Martyrs of Nicomedia",
+  "names": [
+    {
+      "form": "Πεντακόσιοι Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Δεκεμβρίου, «Άγιοι Πεντακόσιοι Μάρτυρες», with the rank word left off. The page names not one of them."
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "juliana-of-nicomedia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Δεκεμβρίου — «Άγιοι Πεντακόσιοι Μάρτυρες»",
+        "url": "https://www.saint.gr/12/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/2817/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Δεκεμβρίου εκάστου έτους», the same day as the listing, and its whole account is one sentence: «Οι Άγιοι αυτοί Μάρτυρες πίστεψαν στον Χριστό δια της Αγίας Ιουλιανής (βλέπε ίδια ημέρα) και κατόπιν όλοι μαρτύρησαν δια ξίφους.» **The company enumerates nobody**, so it is held as one entry on the corpus's standing rule for a synaxis that names no member. The place is the page's own, out of the distich above the life: «Πεντακοσίους εἶδεν ἐκτετμημένους, / Ἡ Νικομήδους Μάρτυρας νικηφόρους» — Nicomedia saw five hundred victorious martyrs cut down. No year, no emperor and no hymn, so no `dates` object; no coordinate is proposed for Nicomedia. The reference to Juliana is the page's own and is the `related` row. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

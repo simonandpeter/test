@@ -1,0 +1,53 @@
+{
+  "slug": "hundred-and-thirty-women-martyrs",
+  "display_name": "The Hundred and Thirty Women",
+  "names": [
+    {
+      "form": "Εκατόν τριάντα γυναίκες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Δεκεμβρίου, «Αγίες Εκατόν τριάντα γυναίκες», with the rank word left off. The page names not one of them."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "juliana-of-nicomedia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Δεκεμβρίου — «Αγίες Εκατόν τριάντα γυναίκες»",
+        "url": "https://www.saint.gr/12/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/2818/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Δεκεμβρίου εκάστου έτους», the same day as the listing, and its whole account is one sentence: «Οι γυναίκες αυτές πίστεψαν στον Χριστό δια της Αγίας Ιουλιανής (βλέπε ίδια ημέρα) και στη συνέχεια όλες μαρτύρησαν δια αποκεφαλισμού.» **The company enumerates nobody**, so it is held as one entry. Unlike the same day's five hundred martyrs, whose distich names Nicomedia, this distich names no place — «Σὺν πενταπλῇ προὔτεινεν εἰκάδι ξίφει, / Τριπλῇ γυναικῶν μαρτύρων δεκὰς κάρας» — so no place is drafted, and nothing on either page says these women were of the same city or the same hour as those men. No year, no emperor and no hymn, so no `dates` object. The reference to Juliana is the page's own and is the `related` row. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

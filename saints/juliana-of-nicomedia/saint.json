@@ -6,6 +6,11 @@
       "form": "Iuliana din Nicomidia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 decembrie, «Sfânta Muceniță Iuliana din Nicomidia»."
+    },
+    {
+      "form": "Ιουλιανή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Δεκεμβρίου, «Αγία Ιουλιανή», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Δεκεμβρίου — «Αγία Ιουλιανή»",
+        "url": "https://www.saint.gr/12/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/2816/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps for the Romanian, and the entry is the same woman: the virgin martyr who refused Eleusios, was burned in the face with heated iron and beheaded. **The two sources differ about the city.** The Romanian form the folder holds, and the English display name with it, call her of Nicomedia; saint.gr makes Eleusios «κάποιο διακεκριμένο αξιωματούχο της Αντιόχειας», a distinguished official of Antioch, and names no city of hers at all. That is recorded, not resolved, and the display name is left as it stands. The same page keeps her synaxis «στο μαρτύριο αυτής, πλησίον της μάρτυρος Ευφημίας στο Πέτριο» — at her martyrion near the martyr Euphemia at Petrion, which is a place and not a relation, so no `related` row is made to any of the corpus's four Euphemias. No years are given anywhere on the page, so no `dates` key is drafted and the folder's null is left alone. One apolytikion is printed with its ἦχος and its automelon and names her; it is taken. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -46,5 +61,28 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "five-hundred-martyrs-of-nicomedia",
+    "hundred-and-thirty-women-martyrs"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ὡς νύμφη πανάμωμος καὶ ἀθληφόρος σεμνή, τῷ Λόγῳ νενύμφευσαι τοῦ ἀθανάτου Πατρός, Ἰουλιανὴ ἔνδοξε, σὺ γὰρ φθαρτὸν μνηστήρα παριδοῦσα, ἐμφρόνως ἤθλησας ὑπὲρ φύσιν καὶ τὸν ὄφιν καθεῖλες· καὶ νῦν ταῖς τοῦ νυμφίου σου τρυφᾶς φαιδρότησι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the one hymn on the page of «Αγία Ιουλιανή», and it names her.",
+        "url": "https://www.saint.gr/2816/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a bride wholly without blemish and a modest bearer of the contest, you were betrothed to the Word of the immortal Father, glorious Juliana; for having passed over a perishable suitor you contended wisely beyond nature and brought the serpent down, and now you delight in the splendours of your bridegroom.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
+    }
+  ]
 }
