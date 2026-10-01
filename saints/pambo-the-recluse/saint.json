@@ -1,0 +1,63 @@
+{
+  "slug": "pambo-the-recluse",
+  "display_name": "Pambo the Recluse",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Παμβώ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιουλίου, «Όσιος Παμβώ ο Έγκλειστος», with the rank word left off. The byname the page gives him is «ο Έγκλειστος», the recluse, and it is kept in the English display name because it is the one thing that tells him from the other Pambo the same Greek calendar keeps on the same day."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1241,
+      "latest": 1241,
+      "display": "1241",
+      "basis": "attested",
+      "note": "saint.gr heads him «Οσιος Παμβω ο Εγκλειστος (; - 1241)», with no year of birth, and repeats the year in its narrative: «Πέθανε το 1241 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). The Tatar captivity the page describes places him in the Russian lands, so a Russian row is likely to be findable, but it has not been looked for."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιουλίου — «Όσιος Παμβώ ο Έγκλειστος»",
+        "url": "https://www.saint.gr/07/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page /2621/ heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Ιουλίου εκάστου έτους», the same day as the listing. He is a second Pambo on the same Greek day and must be kept apart from the first: the day's other entry, /2151/ «Όσιος Παμβώ», is the corpus's `pamvo-of-nitria`, the ascetic of the mountain of Nitria, a contemporary of Melania and Isidore whose disciples were Dioscorus, Ammon and John, who never fell ill and died painlessly — while this one is a confessor taken captive by the Tatars, tortured for years and carried back to his cell as if by a miracle, dead in 1241. Two entries on one day page are two commemorations, and here the two notices contradict each other in every particular, which settles it. Nor is he `pambo-of-egypt`, one of the ten martyrs in Egypt on 5 Ιουνίου. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on this page; the day's «Άγιος Ιωάννης Θ' Πατριάρχης Κωνσταντινούπολης *» does carry it and is refused. The page names no monastery and no place at all, so there is no `locations`, and it prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "pamvo-of-nitria"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

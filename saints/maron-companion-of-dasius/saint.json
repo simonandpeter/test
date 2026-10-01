@@ -1,0 +1,53 @@
+{
+  "slug": "maron-companion-of-dasius",
+  "display_name": "Maron, companion of Dasius",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μάρων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιουλίου, «Άγιοι Δάσιος και Μάρων», with the rank word left off; the page's own heading for him is «Αγιος Μαρων»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιουλίου — «Άγιοι Δάσιος και Μάρων»",
+        "url": "https://www.saint.gr/07/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page /2150/ heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Ιουλίου εκάστου έτους», the same day as the listing, and gives the pair one sentence: they were martyred by the sword. He is not the corpus's `maron-the-hermit`, whose Greek and Romanian rows both stand on 14 Φεβρουαρίου and who is a hermit and wonderworker dated before the fifth century, not a martyr by the sword on this day. The page's etymology box for the name remarks that a Μάρων was a priest from Thrace, the son of Euanthes who gave wine to Odysseus; that is the site's note on the name out of Homer and not a statement about this saint, and nothing of it is recorded here as his. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on this page; the day's «Άγιος Ιωάννης Θ' Πατριάρχης Κωνσταντινούπολης *» does carry it and is refused. No year, no place and no judge is printed, so there is no `dates` object and no `locations`, and the page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "dasius-companion-of-maron"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

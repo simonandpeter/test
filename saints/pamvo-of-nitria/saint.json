@@ -6,6 +6,11 @@
       "form": "Pamvo",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 iulie, «Sfântul Cuvios Pamvo», with the rank words left off."
+    },
+    {
+      "form": "Παμβώ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιουλίου, «Όσιος Παμβώ», with the rank word left off. The Greek calendar keeps a second Παμβώ on the same day, «Όσιος Παμβώ ο Έγκλειστος», who carries a byname where this one has none."
     }
   ],
   "sex": "male",
@@ -14,7 +19,8 @@
     "hermit"
   ],
   "related": [
-    "anthony-the-great"
+    "anthony-the-great",
+    "pambo-the-recluse"
   ],
   "attestations": [
     {
@@ -38,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιουλίου — «Όσιος Παμβώ»",
+        "url": "https://www.saint.gr/07/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page /2151/ heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: the ascetic of Nitria. He is not `pambo-of-egypt`, one of the ten martyrs in Egypt whose rows stand on 5 Ιουνίου, and he is not the second Pambo the same Greek day keeps, «Όσιος Παμβώ ο Έγκλειστος» at /2621/, a confessor taken by the Tatars who died in 1241 and who is drafted as a new folder in batch el-07-18-2 — two entries on one day page are two commemorations, and these two notices agree in nothing. The Greek page adds to the folder what doxologia did not have: that he was the ornament of the ascetics of the mountain of Nitria and a contemporary of Saint Melania and Saint Isidore; the catalogue of what he was great in; the names of the disciples he raised up, the bishop Dioscorus, Ammon, and John the nephew of Dracontius; that for all his abstinence and hard living he was in vigorous health and was never ill in his life; and that his death was quiet, painless and glad, and that his spiritual children buried him glorifying God. It gives no year, so nothing is proposed for `dates`. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
     },
     {
       "church": "serbian",

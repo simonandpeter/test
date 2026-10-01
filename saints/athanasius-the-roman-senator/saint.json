@@ -1,0 +1,48 @@
+{
+  "slug": "athanasius-the-roman-senator",
+  "display_name": "Athanasius the Roman Senator",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιουλίου, «Άγιος Αθανάσιος ο Ρωμαίος Συγκλητικός, ο εν Κλύσματι», with the rank word left off. The bynames the page gives him are «ο Ρωμαίος Συγκλητικός», the Roman senator, and «ο εν Κλύσματι», the one at Klysma; the first is kept in the English display name and the second is not, because the page says nothing at all about the place."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιουλίου — «Άγιος Αθανάσιος ο Ρωμαίος Συγκλητικός, ο εν Κλύσματι»",
+        "url": "https://www.saint.gr/07/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Ιουλίου εκάστου έτους», the same day as the listing, and its whole notice is one sentence: «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου» — we have no details of the life of this saint. So there is no `dates` object, no `locations`, no `types` (the page states no rank beyond the bare Άγιος, and senator is an office in the world and not one of this corpus's type slugs) and no hymn. He is none of the corpus's many men of this name: none stands on 18 Ιουλίου in any calendar, and none is a Roman senator. Klysma is the only place the page attaches to him and it attaches it as a byname with nothing said about it, so no location is taken. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on this page; the day's «Άγιος Ιωάννης Θ' Πατριάρχης Κωνσταντινούπολης *» does carry it and is refused."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

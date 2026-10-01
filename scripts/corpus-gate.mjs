@@ -115,6 +115,28 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'στεφανοσ stefan-brancoveanu stephen-27-february stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-ii-of-constantinople stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-khirsa stephen-of-makhrishche stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-the-great stephen-the-presbyter-7-june stephen-the-sabbaite stephen-xylinites':
+    'Twenty-three now. The new one is Stephen II of Amasea, archbishop of Constantinople, dead 928 — not Stephen of Constantinople, the patriarch of 867 to 893 whom the Greek keeps on 18 May, which the near-slug scan raised. The others are read in the el-07-14 entry for this name form.',
+  'παμβω pambo-the-recluse pamvo-of-nitria':
+    'Two men on one day, and the page says so itself: it keeps «δύο Παμβώ» on 18 July — Pamvo of Nitria, the Egyptian the corpus already kept and this batch upgraded, and «Όσιος Παμβώ ο Έγκλειστος», the recluse taken captive by the Tatars who died in 1241. A thousand years and two countries apart on one line.',
+  'μαρων maron-companion-of-dasius maron-the-hermit':
+    'Two men: Maron the Hermit, whom the Greek and Romanian keep on 14 February, and Maron the companion of Dasius on 18 July.',
+  'μαρκελλοσ marcellus-18-july marcellus-of-sicily marcellus-of-the-twelve-tribunes marcellus-the-martyr-1-march':
+    'Four now. The new one is the Marcellus of 18 July; the others are read in the el-05-24 entry for this name form.',
+  'ιωαννησ john-arnaoutogiannis john-companion-of-barouchius john-companion-of-basilides john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-meletius john-companion-of-peter john-companion-of-tarasius john-disciple-of-limnaeus john-fedorov-of-krasnokutsk john-feodorov-of-tambov john-iii-scholasticus john-kalfas john-kalita john-kaloktenes john-kononenko john-koulakiotis john-mauropous john-nannos-of-thessalonica john-of-beverley john-of-chalcedon john-of-chaldia john-of-edessa john-of-gothia john-of-irenopolis john-of-jerusalem john-of-kantara john-of-kazan john-of-lycopolis john-of-manglisi john-of-monagria john-of-moscow john-of-nea-moni john-of-peking john-of-rouphinianai john-of-santa-cruz john-of-serres john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-old-lavra john-of-the-well john-of-tobolsk john-of-ustyug john-of-verkhoturye john-of-vilnius john-of-yuryevets john-of-zedazeni john-philosopher-of-georgia john-psychaites john-son-of-anna-of-larissa john-son-of-xenophon john-the-bulgarian john-the-confessor-of-kathara john-the-goldsmith-of-shumen john-the-hut-dweller john-the-iberian john-the-new-of-suceava john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-the-soldier-12-june john-the-wallachian john-timonov john-with-minas-and-david':
+    'Sixty-seven now. The new one is John metropolitan of Chalcedon on 18 July, whom the page names with Stephen II; the others are read in the el-07-03 entry for this name form.',
+  'companion dasius maron dasius-companion-of-maron maron-companion-of-dasius':
+    'Not one man drafted twice: Dasius and Maron are the two the 18 July page names together, and each folder is surnamed for the other, which is what folds their display names.',
+  'βαρλααμ barlaam-30-may barlaam-of-sikisk barlaam-of-vazsky barlaam-the-anchorite':
+    'Four now. The new one is Barlaam the Anchorite on 18 July; the others are read in the el-06-18 entry for this name form.',
+  'αθανασιοσ athanasius-martyr-13-january athanasius-of-alexandria athanasius-of-attaleia athanasius-of-christianoupolis athanasius-of-corinth athanasius-of-kargopol athanasius-of-meteora athanasius-of-murom athanasius-of-paros athanasius-of-the-forty-martyrs athanasius-of-vologda athanasius-once-a-magician athanasius-the-athonite athanasius-the-confessor athanasius-the-pentaschoinites athanasius-the-reader athanasius-the-roman-senator athanasius-the-wonderworker':
+    'Eighteen now. The new one is Athanasius the Roman senator on 18 July; the others are read in the el-07-10 entry for this name form.',
+  'φωτιοσ photius-companion-of-cyril photius-of-akapniou photius-of-constantinople photius-of-kyiv photius-of-the-alamanoi photius-of-yuriev':
+    'Six now. The new one is Photius, one of the nine Alamanoi of 18 July; the others are read in the el-07-09 entry for this name form.',
+  'παφνουτιοσ paphnutius-of-borovsk paphnutius-of-the-alamanoi paphnutius-the-recluse-of-the-kyiv-caves':
+    'Three men: Paphnutius of Borovsk on 1 May, Paphnutius the recluse of the Kyiv Caves on 15 February, and Paphnutius one of the nine Alamanoi on 18 July.',
+  'ονησιφοροσ onesiphorus-of-anarita onesiphorus-of-colophon onesiphorus-of-the-alamanoi':
+    'Three now. The new one is Onesiphorus, one of the nine Alamanoi of 18 July; the others are read in the el-07-13 entry for this name form.',
   'κυριακοσ cyriacus-attendant-of-faustus cyriacus-brother-of-orentius cyriacus-of-eurychou cyriacus-son-of-hesperus cyriacus-the-executioner cyriacus-the-infant cyril-of-thessalonica':
     'Seven now. The new one is Cyriacus the Executioner on 16 July; the others are read in the el-07-06 entry for this name form, where the fold gained a member who is not a Cyriacus at all.',
   'αναστασιοσ anastasius-8-january anastasius-of-antioch anastasius-of-brescia anastasius-of-nauplion anastasius-of-thessalonica anastasius-patriarch-of-jerusalem anastasius-the-furrier anastasius-the-sinaite':

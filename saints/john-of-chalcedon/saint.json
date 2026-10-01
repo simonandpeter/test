@@ -1,0 +1,56 @@
+{
+  "slug": "john-of-chalcedon",
+  "display_name": "John of Chalcedon",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "office": "Metropolitan of Chalcedon",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιουλίου, «Άγιοι Στέφανος Β' από την Αμάσεια Αρχιεπίσκοπος Κωνσταντινούπολης και Ιωάννης Μητροπολίτης Χαλκηδόνας», with the rank word and the see left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιουλίου — «Άγιοι Στέφανος Β' από την Αμάσεια Αρχιεπίσκοπος Κωνσταντινούπολης και Ιωάννης Μητροπολίτης Χαλκηδόνας»",
+        "url": "https://www.saint.gr/07/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Ιουλίου εκάστου έτους», the same day as the listing, and heads him «Αγιος Ιωαννης Μητροπολιτης Χαλκηδονας» with no years at all beside his name, where it gives Stephen II a bracket. It is explicit that it has no life for him: «δεν έχουμε βιογραφικά του στοιχεία». What follows is the page's own chain of inference and is recorded here rather than acted on: the synaxaria mention him as a preacher, «σαν ομιλητής», from which the page concludes he must have lived in the years of the iconoclasts, and therefore that he must be the man of whom Theodore the Studite said «λαμπρὸν τὸν τῆς ὁμολογίας ἀπενεγκάμενος στέφανον», having carried off the bright crown of confession. Because that is the page reasoning and not the page attesting, there is no `dates` object and `confessor` is not added to `types`. He is none of the corpus's other men of this name: `john-archbishop-of-constantinople` died in 520 and stands on 25 Αυγούστου, and the day's own «Άγιος Ιωάννης Θ' Πατριάρχης Κωνσταντινούπολης *» at /2155/ is a twelfth-century patriarch, carries the asterisk and the «Δεν είναι διασταυρωμένη» sentence, and is refused. This page carries neither. Chalcedon is his see and not a place of life the page states, so there is no `locations`, and it prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "stephen-ii-of-constantinople",
+    "theodore-the-studite"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

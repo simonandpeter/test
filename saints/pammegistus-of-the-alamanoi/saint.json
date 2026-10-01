@@ -1,0 +1,48 @@
+{
+  "slug": "pammegistus-of-the-alamanoi",
+  "display_name": "Pammegistus, one of the Three Hundred Alamanoi",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Παμμέγιστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιουλίου, «Άγιοι Ονησιφόρος, Παμμέγιστος, Παμφοδίτης, Παφνούτιος, Πηγών, Πολέμιος, Σωζόμενος, Σωτήριχος και Φώτιος», with the rank word left off; its page heading for him is «Αγιος Παμμεγιστος». The company's own name as the page gives it is «οι 300 Άγιοι Αλαμανοί», and the English epithet in the display name is that company, which the page is the authority for."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιουλίου — «Άγιοι Ονησιφόρος, Παμμέγιστος, Παμφοδίτης, Παφνούτιος, Πηγών, Πολέμιος, Σωζόμενος, Σωτήριχος και Φώτιος»",
+        "url": "https://www.saint.gr/07/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Ιουλίου εκάστου έτους», the same day as the listing, and gives each of the nine a heading of its own — his is «Αγιος Παμμεγιστος» — so this is a synaxis that enumerates its members and is nine folders and not one. What the page says about them it says once, under all nine names: «Άγιοι της Εκκλησίας της Κύπρου, που συμπεριλαμβάνονται στους 300 Αγίους Αλαμανούς» — saints of the Church of Cyprus, who are counted among the three hundred holy Alamanoi. That is the whole of it. The corpus holds no other saint of this name under any spelling. No corpus folder of this name stands on 18 Ιουλίου in any calendar: the corpus keeps only `john-the-long-suffering` on this civil day and four more on the menologion's 18/7, and none of them belongs to this company. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on this page — the day's «Άγιος Ιωάννης Θ' Πατριάρχης Κωνσταντινούπολης *», /2155/, does carry it and is refused. The page gives no year, no birthplace, no rank beyond Άγιος, no manner of death and no hymn, so there is no `dates` object, no `locations` and no `types`; the only further thing it prints is a relic note, and that is for Onesiphorus and not for him, «Απότμημα του Ιερού Λειψάνου του Αγίου Ονησιφόρου βρίσκεται στη Μονή Κύκκου Κύπρου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
