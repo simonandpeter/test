@@ -6,6 +6,11 @@
     {
       "form": "Лаврентий Калужский",
       "lang": "ru"
+    },
+    {
+      "form": "Λαυρέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Αυγούστου, «Άγιος Λαυρέντιος της Καλούγας», with the rank word and the place left off. The page glosses the name: «(Από το λαύρα) = ο φλογερός»."
     }
   ],
   "sex": "male",
@@ -43,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Αυγούστου — «Άγιος Λαυρέντιος της Καλούγας»",
+        "url": "https://www.saint.gr/08/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Αυγούστου εκάστου έτους», the same day the folder's Russian row already carries, and it is the same man: a Russian saint of Kaluga who was a fool for Christ, which is this folder's one type. The whole of the page is that sentence — «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου, παρά μόνο ότι ήταν δια Χριστόν σαλός» — so it adds no year, no place and no hymn of any kind, and no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

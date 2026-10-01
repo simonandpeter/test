@@ -1,0 +1,51 @@
+{
+  "slug": "agathonike-of-carthage",
+  "display_name": "Agathonike of Carthage",
+  "sex": "female",
+  "types": [
+    "virgin",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αγαθονίκη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Αυγούστου, «Αγία Αγαθονίκη η Παρθενομάρτυς η εν Καρχηδόνι», with the rank words and the place left off. The page glosses the masculine of the name rather than hers: «ΑΓΑΘΟΝΙΚΟΣ (αγαθός + νίκη) = ένδοξος νικητής»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Αυγούστου — «Αγία Αγαθονίκη η Παρθενομάρτυς η εν Καρχηδόνι»",
+        "url": "https://www.saint.gr/08/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Αυγούστου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The whole of the page is one sentence saying that nothing is known, «Δεν έχουμε λεπτομέρειες για τον βίο της Αγίας Αγαθονίκης», and it prints no distich, no year and no hymn. The corpus already keeps `agathonica-sister-of-papylas`, who is kept on another day and is named by her brother and not by a city; this entry is the virgin martyr at Carthage, and no folder for her was found. The listing calls her «Παρθενομάρτυς», which the corpus holds as the two types virgin and martyr and not as one."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

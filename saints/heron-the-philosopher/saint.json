@@ -5,6 +5,11 @@
     {
       "form": "Св. Ирон, хришћански философ",
       "lang": "sr"
+    },
+    {
+      "form": "Ήρων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Αυγούστου, «Άγιος Ήρων ο φιλόσοφος», with the rank word and the epithet left off. The page glosses the name from Hera or from ἥρως, «ισχυρώς και ωραίος, όπως η Ήρα», and remarks that a famous mathematician of Alexandria in the first century before Christ bore it."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not found among the names read off saint.gr for 23 Αυγούστου 2026 (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Αυγούστου — «Άγιος Ήρων ο φιλόσοφος»",
+        "url": "https://www.saint.gr/08/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Αυγούστου εκάστου έτους», the same day the folder's Serbian row already carries, and it is the same man: a philosopher who reposed in peace, whom the page connects, as this folder already does, with the Heron to whom Gregory the Theologian addressed a whole oration. saint.gr is careful that the connection is a guess and not a fact — «Ίσως είναι ο φιλόσοφος Ήρων, προς τον οποίον γράφει ολόκληρο Λόγο ο Άγιος Γρηγόριος ο Θεολόγος», perhaps he is the philosopher Heron — and that caution is carried into the life here. The page gives no year, so no `dates` object is proposed, and it prints no hymn of any kind. It notes that some menologia set beside him the memory of a martyr Heraïs, «Ορισμένα Αγιολόγια, αναφέρουν και τη μνήμη κάποιου μάρτυρος Ηραΐδου»; that Heraïs is not a line of the day listing and no folder is proposed for her here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     }
   ],
   "text": {

@@ -15,6 +15,11 @@
       "form": "Xist",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 august, «Sfântul Sfințit Mucenic Xist, Episcopul Romei», with the rank words and the office left off. The life page behind that line spells the name Sixt."
+    },
+    {
+      "form": "Ξύστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Αυγούστου, «Άγιοι Λαυρέντιος αρχιδιάκονος, Ξύστος πάπας Ρώμης και Ιππόλυτος», with the rank word and the see left off. The life page offers «Σίξτος» in parenthesis as an alternative, «Ξύστος (ή Σίξτος) ο Β'», which is not recorded as a second form here because the page gives it as an alternative and not as a form of its own."
     }
   ],
   "sex": "male",
@@ -63,8 +68,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Αυγούστου — «Άγιοι Λαυρέντιος αρχιδιάκονος, Ξύστος πάπας Ρώμης και Ιππόλυτος»",
+        "url": "https://www.saint.gr/08/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The second of the three the one listing line names, with his own head line on the shared page, «Αγιος Ξυστος Παπας Ρωμης (; - 253)», and his own distich, «Τέλους ἀθλητῶν καὶ κλέους τυχεῖν θέλων, / Ἤθλησας ἆθλον, Ξύστε, τὸν διὰ ξίφους». The page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Αυγούστου εκάστου έτους», the same day the folder's other rows already carry. It adds one fact the folder does not hold, that he came from Athens, «ο πάπας Ρώμης Ξύστος (ή Σίξτος) ο Β', που καταγόταν από την Αθήνα», and gives the Greek form of the name as Ξύστος with Σίξτος in parenthesis. **The page's year disagrees with the folder's**, 253 against the 258 of days.pravoslavie.ru, so the `dates` object is left as it stands and the disagreement is recorded here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page's apolytikion and kontakion both name Lawrence the archdeacon and neither names Sixtus, so **no hymn is taken for this folder**: a proper that names somebody else is not this saint's hymn."
     },
     {
       "church": "serbian",

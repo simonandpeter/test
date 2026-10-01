@@ -1,0 +1,50 @@
+{
+  "slug": "six-martyrs-of-vizye",
+  "display_name": "The Six Martyrs of Vizye",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Έξι Μάρτυρες οι εν Βιζύη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Αυγούστου, «Άγιοι Έξι Μάρτυρες οι εν Βιζύη», with the rank word «Άγιοι» left off. «Μάρτυρες» is kept because nothing of the company's designation would remain without it; the page names none of the six."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Αυγούστου — «Άγιοι Έξι Μάρτυρες οι εν Βιζύη»",
+        "url": "https://www.saint.gr/08/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Αυγούστου εκάστου έτους», the same day as the listing. A company of six the page does not enumerate — it names none of the six — so by the rule that a company naming nobody is one entry this is one folder and not six. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, but the page does disagree with itself about where they suffered: the listing and its own head line put them at Vizye in Thrace, «οι εν Βιζύη», while its closing note reports that the synaxaristes of the monastery of Dionysiou writes that the six suffered in Libya, «Στον Συναξαριστή της Mονής του Διονυσίου γράφεται, ότι οι Έξι Μάρτυρες μαρτύρησαν στην Λιβύη». The place in the listing is what this folder's name records, because the listing is the source being quoted, and the other reading is set down in the life and named in the reader's report. No `locations` object is proposed for the same reason. The page gives no year and no hymn of any kind."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

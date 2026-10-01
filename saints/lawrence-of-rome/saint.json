@@ -15,6 +15,11 @@
       "form": "Laurențiu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 august, «Sfântul Mucenic Laurențiu Arhidiaconul», with the rank word and the office left off."
+    },
+    {
+      "form": "Λαυρέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Αυγούστου, «Άγιοι Λαυρέντιος αρχιδιάκονος, Ξύστος πάπας Ρώμης και Ιππόλυτος», with the rank word and the office left off. The page glosses the name: «(Από το λαύρα) = ο φλογερός»."
     }
   ],
   "sex": "male",
@@ -63,8 +68,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Αυγούστου — «Άγιοι Λαυρέντιος αρχιδιάκονος, Ξύστος πάπας Ρώμης και Ιππόλυτος»",
+        "url": "https://www.saint.gr/08/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Αυγούστου εκάστου έτους», the same day the folder's other rows already carry, and saint.gr serves one page for the three men the listing line names, enumerating them in its head lines: «Αγιος Λαυρεντιος Αρχιδιακονος (; - 253)», «Αγιος Ξυστος Παπας Ρωμης (; - 253)», «Αγιος Ιππολυτος (; - 253)». It is the same company and the same archdeacon: the manager of the Roman church's property, the wagons full of the poor, the orphans and the crippled offered as the Church's treasure, and the iron grid. **The page's year disagrees with the folder's.** saint.gr says «μαρτύρησαν το 253 μ.Χ.» and the folder's dates give 258 out of days.pravoslavie.ru; a reader does not reconcile two calendars' years, so the `dates` object is left exactly as it stands and the disagreement is recorded here and named in the reader's report. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints an apolytikion and a kontakion, both of which name Lawrence the archdeacon and neither of which names Sixtus or Hippolytus, so both are taken for this folder alone; it also prints an oikos, which is not a kind the schema holds and is not drafted. It records relics: the greater part at the Roman Catholic church of his name outside the walls at Rome, and portions at the monasteries of Panteleimon on the Holy Mountain and of Kykkos in Cyprus."
     },
     {
       "church": "serbian",
@@ -150,6 +165,40 @@
       },
       "english": {
         "text": "Your martyr Lawrence, O Lord, in his struggle received from you, our God, the crown of incorruption; for having your strength he overthrew his torturers and broke the powerless insolence of the demons. At his prayers, Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Τῷ θείῳ Πνεύματι, καταυγαζόμενος, ὡς ἄνθραξ ἔφλεξας, πλάνης τὴν ἄκανθαν, Ἀρχιδιάκονε Χριστοῦ, Λαυρέντιε Ἀθλοφόρε, ὅθεν ὡς θυμίαμα, λογικὸν ὁλοκαύτωσαι, τῷ σὲ μεγαλύναντι, τῷ πυρὶ τελειούμενος, διό τούς σὲ τιμώντας θεόφρον, σκέπε ἐκ πάσης ἐπήρειας.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Τὴν ὡραιότητα — on the page of «Άγιοι Λαυρέντιος αρχιδιάκονος, Ξύστος πάπας Ρώμης και Ιππόλυτος», and it names Lawrence the archdeacon alone of the three",
+        "url": "https://www.saint.gr/776/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Illumined by the divine Spirit, like a burning coal you consumed the thorn of error, archdeacon of Christ, Lawrence the victorious martyr; and so you were offered up whole, as a reasonable incense, to him who magnified you, being perfected by the fire. Therefore, O God-minded one, shelter from every assault those who honour you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν.",
+      "text": "Πυρὶ θεϊκῷ, φλεχθεὶς τὴν καρδίαν σου, τὸ πῦρ τῶν παθῶν, εἰς τέλος ἀπετέφρωσας, ἀθλητῶν ἑδραίωμα, θεοφόρε Μάρτυς Λαυρέντιε, καὶ ἀθλών ἐβόας πιστῶς, Οὐδὲν με χωρίσει τῆς ἀγάπης Χριστοῦ.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — on the page of «Άγιοι Λαυρέντιος αρχιδιάκονος, Ξύστος πάπας Ρώμης και Ιππόλυτος», and it names Lawrence alone of the three. The page's own reading has «Οὐδὲν με χωρίσει» in the kontakion and «Οὐδεὶς με χωρίσει» in the oikos beneath it, and the kontakion is copied as the page has it",
+        "url": "https://www.saint.gr/776/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your heart set ablaze with the fire of God, you burned the fire of the passions utterly to ashes, O foundation of contenders, God-bearing martyr Lawrence; and as you contended you cried out in faith: nothing shall separate me from the love of Christ.",
         "rendered": "site"
       }
     }
