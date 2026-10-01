@@ -1,0 +1,60 @@
+{
+  "slug": "wulfhilda-of-barking",
+  "display_name": "Wulfhilda of Barking",
+  "names": [
+    {
+      "form": "Γουλχίλντα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Δεκεμβρίου, «Αγία Γουλχίλντα», with the rank word left off. The same page gives the western form in brackets, «(Wulhilda)», and the English display name follows that rather than a transliteration of the Greek."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "abbess",
+    "monastic"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1000,
+      "latest": 1000,
+      "display": "about 1000",
+      "basis": "traditional",
+      "note": "saint.gr: «Εκοιμήθη περί το 1000 μ.Χ. αφήνοντας αγαθή μνήμη» — about the year 1000. The same page's «γεννήθηκε μετά το 986 μ.Χ.», born after 986, is not drafted as a birth: it has no upper bound, and it cannot stand beside the page's own account of King Edgar falling in love with her while she was a novice, Edgar having died in 975. The disagreement is the page's and is recorded rather than resolved."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Δεκεμβρίου — «Αγία Γουλχίλντα»",
+        "url": "https://www.saint.gr/12/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Δεκεμβρίου εκάστου έτους», the same day as the listing. The page gives the western form of her name itself, «(Wulhilda)», and names the house, Barking, and the king, Edgar, in Latin letters, so the English display name is copied rather than transliterated. **Its two dates will not stand together**: born after 986 and courted as a novice by King Edgar, who died in 975. Only the repose, «περί το 1000», is drafted, and the difficulty is named in the report. The corpus holds nobody of this name. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

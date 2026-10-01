@@ -1,0 +1,50 @@
+{
+  "slug": "sositheus",
+  "display_name": "Sositheus",
+  "names": [
+    {
+      "form": "Σωσίθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Δεκεμβρίου, «Άγιος Σωσίθεος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Δεκεμβρίου — «Άγιος Σωσίθεος»",
+        "url": "https://www.saint.gr/12/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Δεκεμβρίου εκάστου έτους», the same day as the listing, and its whole life is «Ο Άγιος Σωσίθεος μαρτύρησε δια ξίφους». No year, so no `dates` object. The site's gloss under the name — a tragic poet of Alexandria of the third century before Christ — is its standing note on the name itself and not on the saint. The corpus holds nobody of this name. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

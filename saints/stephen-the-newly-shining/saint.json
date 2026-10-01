@@ -1,0 +1,68 @@
+{
+  "slug": "stephen-the-newly-shining",
+  "display_name": "Stephen the Newly Shining",
+  "names": [
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Δεκεμβρίου, «Όσιος Στέφανος ο νεολαμπής «ὁ ἐν τῷ Ἁγίῳ Ἀντίπᾳ κειμένου»», with the rank word left off. The by-name and the church he lies in are left off the stored form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter",
+    "confessor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 838,
+      "latest": 838,
+      "display": "838",
+      "basis": "traditional",
+      "note": "saint.gr's head line, «Οσιος Στεφανος ο Νεολαμπης (838 - 912)», read with the same page's «Απεβίωσε όταν έκλεισε το εβδομηκοστό τρίτο έτος της ηλικίας του» — he died when he completed his seventy-third year, which agrees with the head. The page's own body says «έζησε τον 8ον αιώνα μ.Χ.», the eighth century, which disagrees with its head and with everything else it tells: Theophilos the iconoclast, the empress Theodora and the patriarch Methodios are all of the ninth. The head is followed here and the contradiction is recorded."
+    },
+    "death": {
+      "earliest": 912,
+      "latest": 912,
+      "display": "912",
+      "basis": "traditional",
+      "note": "saint.gr's head line, «(838 - 912)», with the same page's «Απεβίωσε όταν έκλεισε το εβδομηκοστό τρίτο έτος της ηλικίας του»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Δεκεμβρίου — «Όσιος Στέφανος ο νεολαμπής «ὁ ἐν τῷ Ἁγίῳ Ἀντίπᾳ κειμένου»»",
+        "url": "https://www.saint.gr/12/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Δεκεμβρίου εκάστου έτους», the same day as the listing. **The page disagrees with itself about his century**: its head gives «(838 - 912)» and it says he died in his seventy-third year, but its first sentence says he lived in the eighth century, while the men it names round him — Theophilos the iconoclast, the empress Theodora, the patriarch Methodios — belong to the ninth. The head is followed, the eighth-century sentence is recorded in the `dates` notes, and the disagreement is named in the report. The corpus keeps `stephen-the-new`, the martyr under Constantine Copronymus; that is another entry on another day and another man. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

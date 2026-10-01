@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'στεφανοσ stefan-brancoveanu stephen-12-august stephen-21-october stephen-22-november stephen-27-february stephen-31-october stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-ii-of-constantinople stephen-martyr-8-february stephen-milutin stephen-of-chenolakkos stephen-of-hungary stephen-of-kazan stephen-of-khirsa stephen-of-makhrishche stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-pope-of-rome stephen-the-great stephen-the-new stephen-the-newly-shining stephen-the-presbyter-7-june stephen-the-sabbaite stephen-xylinites':
+    'Thirty-two now. The new one is Stephen the Newly Shining on 9 December, a presbyter and confessor; the others are read in the el-08-20 entry for this name form.',
+  'βασσα bassa-of-edessa bassa-of-jerusalem':
+    'Two women. The new one is Bassa of Jerusalem on 9 December, an abbess; the other is Bassa of Edessa on 21 August, whom four calendars keep.',
   'παρθενιοσ parthenius-martyr-1-april parthenius-of-chios parthenius-of-kiev parthenius-of-koudoumas parthenius-of-lampsacus parthenius-of-radovisdi parthenius-of-zographou parthenius-the-third':
     'Eight now. The new one is Parthenius of Chios on 8 December; the others are read in the el-07-10 entry for this name form.',
   'επαφροδιτοσ epaphroditus-of-the-alamanoi epaphroditus-the-apostle':

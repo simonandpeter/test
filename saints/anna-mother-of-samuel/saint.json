@@ -6,6 +6,11 @@
       "form": "Ana",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 decembrie, «Sfânta Prorociță Ana, mama Prorocului Samuel», with the rank word and the kinship clause left off."
+    },
+    {
+      "form": "Άννα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Δεκεμβρίου, «Δικαία Άννα η προφήτιδα Μητέρα του προφήτη Σαμουήλ», with the rank word and the description left off."
     }
   ],
   "sex": "female",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Δεκεμβρίου — «Δικαία Άννα η προφήτιδα Μητέρα του προφήτη Σαμουήλ»",
+        "url": "https://www.saint.gr/12/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same woman: the wife of Elkanah and mother of the prophet Samuel. Where doxologia.ro named her and gave no life, this page gives one, so the folder gains its first narrative. It gives no year and no era, so no `dates` object. The same day's calendar also prints «Σύλληψη της Αγίας Άννης», the conception of Saint Anna the mother of the Mother of God; that is a feast and another woman, it is not drafted, and nothing of it is written here. No hymn is printed for the prophetess. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
