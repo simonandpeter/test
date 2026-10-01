@@ -1,0 +1,63 @@
+{
+  "slug": "copris-17-december",
+  "display_name": "Copris (17 December)",
+  "names": [
+    {
+      "form": "Κόπρις",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Δεκεμβρίου, «Άγιοι Πατερμούθιος, Κόπρις και Αλέξανδρος οι Οσιομάρτυρες», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 363,
+      "display": "between 361 and 363",
+      "basis": "attested",
+      "note": "saint.gr dates the martyrdom by the reign and by the campaign: «αποκεφαλίστηκαν με διαταγή του Ιουλιανού του παραβάτη (361 - 363 μ.Χ.), όταν αυτός εκστράτευε κατά των Περσών». No year of birth is given and no year within the reign."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Δεκεμβρίου — «Άγιοι Πατερμούθιος, Κόπρις και Αλέξανδρος οι Οσιομάρτυρες»",
+        "url": "https://www.saint.gr/12/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The entry enumerates its company — three named men — so it is a folder each, and each relates the other two.** The page's whole narrative is three sentences: Christians full of piety and zeal were tortured and at last beheaded by order of Julian the Transgressor, whose years it gives as 361 to 363, when he was campaigning against the Persians; Copris, a young man, lost his nerve a little at first, but Patermuthius strengthened him with his warm words; and all three underwent the martyr's death chanting hymns to Christ. It names no place at all, so no coordinate is proposed, and it prints no hymn. **The corpus already keeps a `patermuthius-the-martyr` and a `copris-of-palestine`, and neither is one of these: that Patermuthius is the nobleman who suffered on 17 Σεπτεμβρίου with Elias and the bishops Peleus and Nilus under the earlier persecution, and that Copris is a venerable of 24 Σεπτεμβρίου. Two entries on one calendar are two commemorations, and these three are under Julian.** The page carries two epigrams, one in which Copris cries to Patermuthius that he has been made sharer of his life and of his sword, and one which gives Alexander a double crown for ascesis and for the blade; nothing is drafted from them."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "patermuthius-17-december",
+    "alexander-17-december"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

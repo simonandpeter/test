@@ -1,0 +1,50 @@
+{
+  "slug": "iacchus-of-trigleia",
+  "display_name": "Iacchus of Trigleia",
+  "names": [
+    {
+      "form": "Ίακχος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Δεκεμβρίου, «Άγιος Ίακχος», with the rank word left off. The page gives this name no gloss."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Δεκεμβρίου — «Άγιος Ίακχος»",
+        "url": "https://www.saint.gr/12/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The whole of the page's text is one sentence: «Ο Άγιος Ίακχος ήταν από την Τρίγλια και μαρτύρησε δια ξίφους.»** It gives no year, no reign, no judge and no circumstance beyond the sword, lists no relic and prints no hymn. Trigleia is the only place it names and no coordinate is proposed. The page carries an epigram addressing him, «῎Ιακχε, κρατύνθητι· καὶ τμηθεὶς κάραν, τμηθεῖσιν ἐγγράφηθι, καὶ στέφου κάραν», from which nothing is drafted."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

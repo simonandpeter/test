@@ -1,0 +1,50 @@
+{
+  "slug": "nicetas-the-new",
+  "display_name": "Nicetas the New",
+  "names": [
+    {
+      "form": "Νικήτας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Δεκεμβρίου, «Άγιος Νικήτας ο Νέος», with the rank word and the by-name left off. The page glosses the name itself, «ο νικητής»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Δεκεμβρίου — «Άγιος Νικήτας ο Νέος»",
+        "url": "https://www.saint.gr/12/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The whole of the page's text is a statement that there is no life: «Δεν σώζονται βιογραφικά του στοιχεία, μόνο κάποιος λόγος του μέγα λογοθέτη Θεοδώρου Μουζάλων, που αναφέρεται σ' αυτόν και βρίσκεται στη Μεγίστη Λαύρα του Αγίου Όρους.»** That is a statement about what survives and not a refusal to vouch for the man: no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου…», and the feast type is plainly «Σταθερή». No year, no place, no relic, no hymn. **`types` carries only `martyr`:** the page's epigram calls him «ἀθλητής… ἐν χρόνοις νέος», an athlete new in time and equal to the old in his contests, which is what the by-name «ο Νέος» answers to, but the page says nothing further and `new-martyr` is not asserted on an epigram. The line «Στρατηγός του Βυζαντίου του 7ου μ.Χ. αιώνα» on the page belongs to its gloss of the name and names a secular general, not this saint."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

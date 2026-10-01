@@ -6,6 +6,11 @@
       "form": "Misail",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 decembrie, «Sfântul Proroc Daniel și Sfinții trei tineri Anania, Azaria și Misail», with the rank words left off."
+    },
+    {
+      "form": "Μισαήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Δεκεμβρίου, «Προφήτης Δανιήλ και οι Άγιοι Τρεις Παίδες Ανανίας, Αζαρίας και Μισαήλ», with the rank word left off. The page gives this name no gloss, and prints the rank as «Αγιος Μισαηλ (αγιοι Τρεις Παιδες)»."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Δεκεμβρίου — «Προφήτης Δανιήλ και οι Άγιοι Τρεις Παίδες Ανανίας, Αζαρίας και Μισαήλ»",
+        "url": "https://www.saint.gr/12/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Δεκεμβρίου εκάστου έτους», the same day the corpus already keeps for them, and the entry is the same four: Daniel renamed Belteshazzar and the three Hebrew youths who would not worship Nebuchadnezzar's golden image. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. saint.gr adds that Daniel is one of the four major prophets, that he was of the tribe of Judah and of royal descent, that he was born at Upper Bethara, that he was taken captive to Babylon as an infant with his parents, that he and the three were schooled at the imperial court by Nebuchadnezzar's provision and given great place in the state when they came of age, and that he died in deep old age most probably at Susa. **It dates him to the end of the seventh and the beginning of the sixth century before Christ**, which is recorded in `dates` only where the folder had none. It names Upper Bethara, Babylon and Susa; no coordinate is proposed, because the page itself says «πιθανότατα» of Susa. It prints an apolytikion naming all four, which is taken into each of the four folders; a kontakion naming Daniel alone, which is taken into his; a second kontakion addressed to the three in the furnace, which is taken into theirs; and an oikos and a kathisma, which are kinds the schema does not hold. **The same day page also keeps «Άγιος Μισαήλ του Αμπαλάσκ», a Russian saint who died in 1797; two entries on one calendar day are two commemorations, and he is drafted as a new folder, `misael-of-abalatsk`, and is not this Babylonian youth.**"
     },
     {
       "church": "serbian",
@@ -62,6 +77,39 @@
       },
       "english": {
         "text": "Great are the achievements of faith: in the midst of the fountain of flame, as in restful water, the three holy Youths rejoiced, and the prophet Daniel was shown to be a shepherd of lions as of sheep. By their prayers, O Christ God, have mercy on us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Μεγάλα τὰ τῆς πίστεως κατορθώματα! ἐν τῇ πηγῇ τῆς φλογός, ὡς ἐπὶ ὕδατος ἀναπαύσεως, οἱ ἅγιοι τρεῖς παῖδες ἠγάλλοντο· καὶ ὁ Προφήτης Δανιήλ, λεόντωv ποιμήv, ὡς προβάτων ἐδείκνυτο. Ταῖς αὐτῶν ἰκεσίαις, Χριστὲ ὁ Θεός, ἐλέησον ἡμᾶς.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος β’, printed without a model. It names the Three Youths and Daniel together, so it is the service of all four and is taken into each of the four folders, on the page of «Προφήτης Δανιήλ και οι Άγιοι Τρεις Παίδες Ανανίας, Αζαρίας και Μισαήλ».",
+        "url": "https://www.saint.gr/3282/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Great are the achievements of faith! In the spring of the flame, as at the water of rest, the holy Three Youths rejoiced; and the prophet Daniel was shown to be a shepherd of lions, as though of sheep. At their entreaties, O Christ God, have mercy on us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. β’",
+      "model": "Αὐτόμελον.",
+      "text": "Χειρόγραφον εἰκόνα μὴ σεβασθέντες, ἀλλ᾽ ἀγράφῳ οὐσίᾳ θωρακισθέvτες, τρισμακάριοι ἐν τῷ σκάμματι, τοῦ πυρὸς ἐδοξάσθητε· ἐν μέσῳ δὲ φλογός, ἀvυποστάτου ἱστάμεvοι, Θεὸν ἐπεκαλεῖσθε· Τάχυνοv ὦ οἰκτίρμωv, καὶ σπεῦσον ὡς ἐλεήμωv, εἰς τὴv βοήθειαν ἡμῶv, ὅτι δύνασαι βουλόμενος.",
+      "source": {
+        "text": "saint.gr — Έτερον Κοντάκιον, Ἦχος πλ. β’, Αὐτόμελον. It addresses the three thrice-blessed ones in the furnace and not Daniel, so it is taken into the three youths' folders only, on the page of «Προφήτης Δανιήλ και οι Άγιοι Τρεις Παίδες Ανανίας, Αζαρίας και Μισαήλ».",
+        "url": "https://www.saint.gr/3282/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Not revering the hand-made image, but armoured with the Essence that is not drawn, O thrice-blessed ones, you were glorified in the arena of the fire; and standing in the midst of a flame that had no power over you, you called upon God: hasten, O compassionate one, and come quickly, as you are merciful, to our help, for you can do as you will.",
         "rendered": "site"
       }
     }

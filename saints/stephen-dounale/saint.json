@@ -1,0 +1,66 @@
+{
+  "slug": "stephen-dounale",
+  "display_name": "Stephen Dounale",
+  "names": [
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Δεκεμβρίου, «Όσιος Στέφανος ο Ομολογητής πρώην ονομαζόμενος Δουναλέ», with the rank word and the clause about his earlier name left off. The page glosses the name itself, «(από το στέφανος) = ο αθλοφόρος, ο άξιος στεφάνου νίκης»."
+    },
+    {
+      "form": "Δουναλέ",
+      "lang": "el",
+      "note": "The name saint.gr says he bore before his tonsure, printed on the same line for 17 Δεκεμβρίου and again in the body: «έγινε μοναχός με το όνομα Στέφανος, από Δουναλέ»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "monk"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 919,
+      "latest": 919,
+      "display": "919",
+      "basis": "attested",
+      "note": "The one year saint.gr gives him, for his coming to Constantinople: «το ίδιο έκανε και όταν στη συνέχεια πήγε στην Κωνσταντινούπολη το 919 μ.Χ.» Everything else in the page is undated, and no year of birth and no year of death is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Δεκεμβρίου — «Όσιος Στέφανος ο Ομολογητής πρώην ονομαζόμενος Δουναλέ»",
+        "url": "https://www.saint.gr/12/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page names an island near Gadeira in Spain, called Nivertis or, by others, Berroe, as his homeland; then Rome, Constantinople, the Holy Places and Egypt. **It gives the homeland two names and says so, «από ένα νησί που ονομαζόταν Nιβερτίς ή κατ' άλλους Bερρόη», and it is a place this reading cannot locate, so no coordinate is proposed.** The Amir who had him imprisoned and the two priests who escaped with him it does not name, so no `related` row is made. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

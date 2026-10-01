@@ -6,6 +6,21 @@
       "form": "Hagi-Gheorghe",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 decembrie, «Sfântul Cuvios Hagi-Gheorghe Athonitul», with the rank words left off."
+    },
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Δεκεμβρίου, «Όσιος Γεώργιος Χατζηγεώργης ο Αγιορείτης», with the rank word, the by-name and «ο Αγιορείτης» left off. The page glosses the name itself, «(εκ του γη + εργάζομαι) = ο καλλιεργητής της Γής»."
+    },
+    {
+      "form": "Χατζηγεώργης",
+      "lang": "el",
+      "note": "The by-name saint.gr prints with him on the same line for 17 Δεκεμβρίου, and which it says became proverbial on the Holy Mountain for a man who fasted much: «Αυτός είναι Χατζη-Γεώργης»."
+    },
+    {
+      "form": "Γαβριήλ",
+      "lang": "el",
+      "note": "The name saint.gr says he bore in the world, before the Holy Mountain: «Ο Γεώργιος γεννήθηκε το 1809 μ.Χ. στην Κερμίρα της Καισάρειας της Καππαδοκίας και κατά κόσμον ονομαζόταν Γαβριήλ»."
     }
   ],
   "sex": "male",
@@ -34,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Δεκεμβρίου — «Όσιος Γεώργιος Χατζηγεώργης ο Αγιορείτης»",
+        "url": "https://www.saint.gr/12/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps from doxologia's bare line, and the entry is the same man: the Cappadocian ascetic of the Holy Mountain called Hagi-George. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. **Where doxologia gave the folder a name and nothing else, saint.gr gives a whole life, and it also gives the folder its first years: «(1809 - 1886 μ.Χ.)» in the head and in the text, with the death dated «στην Κωνσταντινούπολη στις 17 Δεκεμβρίου 1886 μ.Χ.».** It names Kermira of Caesarea in Cappadocia as his birthplace, Gabriel as his name in the world, Iordanes and Maria as his parents, the Holy Mountain, Constantinople after his removal from it in 1882, and the church of the Life-giving Spring at Balikli as his burial place; no coordinate is proposed. **It states its own source for most of this and the page is explicit about it: the work «Ο Γέρων Χατζη-Γεώργης ο Αθωνίτης» of Paisios the Athonite, in which Paisios gathered the testimonies of Hagi-George's spiritual grandchildren, Cappadocians and Russian Athonites. It also records the canonisation: on 11 February 2026 the Holy Synod of the Ecumenical Patriarchate decided unanimously to enroll him, on 29 August 2026 the ceremony and the Patriarchal and Synodal Act, and his memory appointed for 17 December, the day of his falling asleep.** The spiritual brother Papa-Neophytos, whom the page names in its last tradition, has no folder in this corpus and no `related` row is made for him. It prints no hymn."
     },
     {
       "church": "serbian",
@@ -45,5 +70,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1809,
+      "latest": 1809,
+      "display": "1809",
+      "basis": "attested",
+      "note": "saint.gr, both in the page head «(1809 - 1886 μ.Χ.)» and in the text, «Ο Γεώργιος γεννήθηκε το 1809 μ.Χ. στην Κερμίρα της Καισάρειας της Καππαδοκίας». The folder held no dates before this reading."
+    },
+    "death": {
+      "earliest": 1886,
+      "latest": 1886,
+      "display": "1886",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Όσιος Γεώργιος Χατζηγεώργης εκοιμήθη στην Κωνσταντινούπολη στις 17 Δεκεμβρίου 1886 μ.Χ. και τάφηκε στο Μπαλουκλί, στον Ναό της Ζωοδόχου Πηγής», with the same year in the page head."
+    }
+  },
+  "related": [
+    "paisios-the-athonite"
+  ]
 }

@@ -1,0 +1,57 @@
+{
+  "slug": "misael-of-abalatsk",
+  "display_name": "Misael of Abalatsk",
+  "names": [
+    {
+      "form": "Μισαήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Δεκεμβρίου, «Άγιος Μισαήλ του Αμπαλάσκ», with the rank word and the place left off."
+    }
+  ],
+  "sex": "male",
+  "types": [],
+  "dates": {
+    "death": {
+      "earliest": 1797,
+      "latest": 1797,
+      "display": "1797",
+      "basis": "attested",
+      "note": "saint.gr's page head, which is the only year on the page: «Αγιος Μισαηλ Του Αμπαλασκ (; - 1797)». The text gives no year at all, and no year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Δεκεμβρίου — «Άγιος Μισαήλ του Αμπαλάσκ»",
+        "url": "https://www.saint.gr/12/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The whole of the page's text is one sentence: «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου.»** That is a refusal to tell the life and not a refusal to vouch for the man: no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου…». The only year is in the head and it is recorded. **`types` is empty: the page gives him no rank at all beyond «Άγιος», and no slug in this corpus's vocabulary is supported by the line.** Its related links name the synaxis of all the saints of Siberia and OCA's Feasts and Saints, neither of which was read. It names Abalatsk and no coordinate is proposed; it prints no hymn. The `russian` row is left `undocumented` although the page calls him a Russian saint, because days.pravoslavie.ru was not read. **The same day page also keeps «Άγιος Μισαήλ (άγιοι Τρεις Παίδες)», one of the Three Youths, whom the corpus keeps as `misael-of-the-three-youths`; two entries on one calendar day are two commemorations, and a Babylonian youth and an eighteenth-century Siberian are plainly not one man.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
