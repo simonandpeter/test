@@ -1,0 +1,57 @@
+{
+  "slug": "ignatius-of-loma",
+  "display_name": "Ignatius of Loma",
+  "names": [
+    {
+      "form": "Ιγνάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Δεκεμβρίου, «Άγιος Ιγνάτιος της Λόμα», with the rank left off. The page gives the place only in Greek transcription, Λόμα, and no Slavonic or Russian form of either the name or the place, so none is recorded."
+    }
+  ],
+  "sex": "male",
+  "types": [],
+  "dates": {
+    "death": {
+      "earliest": 1591,
+      "latest": 1591,
+      "display": "1591",
+      "basis": "attested",
+      "note": "saint.gr's head for the entry gives «Αγιος Ιγνατιος Της Λομα (; - 1591)» — no year of birth, and 1591 as the year of his death. The page has no text of its own about his life, so this year is the whole of what it says about it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026). saint.gr places him with the saints of Rostov and Yaroslavl, but that is saint.gr reporting and not the Russian calendar read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Δεκεμβρίου — «Άγιος Ιγνάτιος της Λόμα»",
+        "url": "https://www.saint.gr/12/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Δεκεμβρίου εκάστου έτους», the same day as the listing, and then declines to give a life: «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου.» That is a refusal of detail and not the sentence by which saint.gr marks an entry it cannot vouch for; there is no asterisk here and no «Δεν είναι διασταυρωμένη» sentence. `types` is left empty because the page gives him no rank at all beyond Άγιος — not Όσιος, not a martyr, not an office; what reads like a gloss under the name, «Βυζαντινός συγγραφέας», belongs to saint.gr's standing note on the name Ιγνάτιος and not to this man, who died in 1591. It names no place but Λόμα itself, and no coordinate is proposed. It prints no hymn. It sends the reader on to «Σύναξη πάντων των εν Ροστώβ και Γιαροσλάβλ διαλαμψάντων Αγίων», a synaxis heading that is not drafted."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

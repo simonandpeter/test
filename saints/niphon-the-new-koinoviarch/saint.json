@@ -1,0 +1,68 @@
+{
+  "slug": "niphon-the-new-koinoviarch",
+  "display_name": "Niphon the New, founder of Evangelistria",
+  "names": [
+    {
+      "form": "Νήφων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Δεκεμβρίου, «Όσιος Νήφων ο νέος Κοινοβιάρχης», with the rank and the by-names left off. The page also gives his name in the world, «γεννήθηκε κατά τον κόσμο Νικόλαος», which is recorded in the life and not stored as a second form of his monastic name."
+    }
+  ],
+  "sex": "male",
+  "office": "Founder of the monastery of the Evangelistria on Skiathos",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1736,
+      "latest": 1736,
+      "display": "1736",
+      "basis": "attested",
+      "note": "saint.gr: «ο οποίος γεννήθηκε το 1736 μ.Χ. στα Πατρικά της Χίου», and the page's head «(1736 - 1809)»."
+    },
+    "death": {
+      "earliest": 1809,
+      "latest": 1809,
+      "display": "1809",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Όσιος Νήφων κοιμήθηκε το 1809 μ.Χ.», and the page's head «(1736 - 1809)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Δεκεμβρίου — «Όσιος Νήφων ο νέος Κοινοβιάρχης»",
+        "url": "https://www.saint.gr/12/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Δεκεμβρίου εκάστου έτους», the same day as the listing. The corpus holds five other folders for a Niphon and this is none of them: the nearest by name, `niphon-the-athonite`, is kept on a Greek 14 June and is a different man of a different age, and `niphon-of-prodromou` on a Romanian 13 July. This one is dated by the page itself, 1736 to 1809. `types` carries `abbot` for the page's own word Κοινοβιάρχης, the head of a coenobium, which is what it calls him and the only rank it gives him; it does not say he was ordained. It names many places — Πατρικά on Chios, the Great Lavra and the skete of Pantokrator on the Holy Mountain, Patmos, Leipsoi, Ikaria and the site Λευκάδα there, and Skiathos — and no coordinate is proposed for any of them. It names the monk Γρηγόριος Χατζησταμάτης of Skiathos, who inherited a great property and persuaded him to build the new monastery; the corpus holds no folder this reading could attach to him. It prints no hymn. Its closing links send the reader to the synaxis of the saints of Euboea, to the two synaxes of the Panagia Evangelistria on Skiathos and on Ikaria, to the synaxis of the venerable Kollyvades fathers, and to Makarios archbishop of Corinth; those are headings and other entries, not statements about him, and none is drafted or related. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "babylas-28-december",
+  "display_name": "Babylas (28 December)",
+  "names": [
+    {
+      "form": "Βάβυλας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Δεκεμβρίου, «Όσιος Βαβύλας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Δεκεμβρίου — «Όσιος Βαβύλας»",
+        "url": "https://www.saint.gr/12/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Δεκεμβρίου εκάστου έτους», the same day as the listing, and then gives no life: «Ο Όσιος Βαβύλας απεβίωσε ειρηνικά. Δεν έχουμε άλλες λεπτομέρειες για τον βίο του.» That is a refusal of detail and not the sentence by which saint.gr marks an entry it cannot vouch for; there is no asterisk here and no «Δεν είναι διασταυρωμένη» sentence. The corpus holds three other folders for a Babylas and this is none of them: the Nicomedian teacher who suffered with eighty-four children, kept on 4 September in both the Russian and the Greek calendars; the Babylas of Antioch; and the Babylas of Sicily. This one is Όσιος and not a martyr, died in peace, and is kept on this day. The page gives no year, no place and no hymn; its distich, «Άπαν Bαβύλας υλικόν ρίψας βάρος, / Άυλος εις άυλον ήκει χωρίον», says only that he cast off every material weight and came immaterial to an immaterial place, which is the manner of an ascetic's end and no more."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

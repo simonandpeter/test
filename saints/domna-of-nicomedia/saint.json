@@ -5,6 +5,11 @@
     {
       "form": "Домна",
       "lang": "ru"
+    },
+    {
+      "form": "Δόμνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Δεκεμβρίου, «Αγία Δόμνα», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -43,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 3 September (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Δεκεμβρίου — «Αγία Δόμνα»",
+        "url": "https://www.saint.gr/12/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Δεκεμβρίου εκάστου έτους», the same menologion day on which the corpus already keeps this company through `twenty-thousand-martyrs-of-nicomedia`, whose `related` names her, and the entry is the same woman: the Domna of Nicomedia beheaded in Maximian's general slaughter. saint.gr gives her an entry of her own here, apart from the nine senators, and gives her a story the folder did not have: the priestess of the Twelve Gods converted by the letters of the Apostle Paul and baptised with her servant Indes by Kyrillos, bishop of Nicomedia — which is the bishop doxologia.ro names for the burning of the twenty thousand, where saint.gr's own page for that company names Anthimus. The corpus holds no folder for a Kyrillos of Nicomedia, so no `related` row is made for him. The folder's Russian row keeps her on a Julian 3 September with Anthimus, which is a different commemoration and is untouched here. The page adds «Η μνήμη της επαναλαμβάνεται στις 3 Δεκεμβρίου» — her memory is kept again on 3 December — and the 3 Δεκεμβρίου entry, `/249/`, is the one the 12-03 reader left undrafted; Δόμνα is one of the three of its six named members that 28 Δεκεμβρίου gives properly. The second day is recorded here as a note and nothing is moved. It also reports that a synaxarial source keeps with her the memory of Θεοφίλη the Virgin and Αγάπη the Superior; saint.gr prints the report and adds nothing to it, and no folder is made for either. The page gives no year. It prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -72,6 +87,8 @@
     }
   ],
   "related": [
-    "anthimus-of-nicomedia"
+    "anthimus-of-nicomedia",
+    "indes-of-nicomedia",
+    "twenty-thousand-martyrs-of-nicomedia"
   ]
 }

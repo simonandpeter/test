@@ -1,0 +1,50 @@
+{
+  "slug": "ploutodoros",
+  "display_name": "Ploutodoros",
+  "names": [
+    {
+      "form": "Πλουτόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Δεκεμβρίου, «Άγιος Πλουτόδωρος», with the rank word left off. The page's quotation from the Patmos codex gives the name in the genitive, «του αγίου μάρτυρος Πλουτοδώρου»; the nominative above is the form the page's own line prints."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Δεκεμβρίου — «Άγιος Πλουτόδωρος»",
+        "url": "https://www.saint.gr/12/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Δεκεμβρίου εκάστου έτους», the same day as the listing, and then says plainly that the synaxarists do not know him: «Ο Άγιος Πλουτόδωρος είναι άγνωστος στους Συναξαριστές. Η μνήμη του αναγράφεται στον Πατμιακό Κώδικα 256 ως εξής: «τη αύτη ήμερα άθλησις του αγίου μάρτυρος Πλουτοδώρου».» That is a statement about which books carry him and not a refusal to vouch for him: there is no asterisk here and no «Δεν είναι διασταυρωμένη» sentence, and the page names the manuscript that keeps the day. The codex's words give him the one thing recorded of him, that he was a martyr and that his contest fell on this day. There is no year, no place, no judge, no hymn and no distich."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Cei 20.000 de Mucenici arși în Nicomidia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 decembrie, «Sfinții 20.000 de Mucenici arși în Nicomidia»."
+    },
+    {
+      "form": "Δισμύριοι",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Δεκεμβρίου, «Άγιοι Δισμύριοι (20.000) μάρτυρες που κάηκαν στη Νικομήδεια». The page's name for the company is the one word Δισμύριοι, the twice-ten-thousand, and the rest of its line is a gloss on it; the rank word Άγιοι is left off."
     }
   ],
   "sex": "unknown",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Δεκεμβρίου — «Άγιοι Δισμύριοι (20.000) μάρτυρες που κάηκαν στη Νικομήδεια»",
+        "url": "https://www.saint.gr/12/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps on the Romanian calendar, and the entry is the same company: the Christians of Nicomedia burned in their church on the day of the Nativity under Diocletian and Maximian. **The two sources name a different bishop and the folder's life is therefore left as it stands.** doxologia.ro's life, which the folder follows, makes the bishop of Nicomedia Chiril; saint.gr makes him «Ο επίσκοπος Άνθιμος», who ordered the communion of the Mysteries to be given quickly and baptised the catechumens as the soldiers and the mob closed in — and the corpus holds `anthimus-of-nicomedia`, whom this folder already relates, on a Greek 3 September. Which bishop stood in the burning church is for the author to rule on. The page dates the setting «Τον 4ο αιώνα μ.Χ., επί Διοκλητιανού και Μαξιμιανού» and gives no year of its own for the burning, so no `dates` object is proposed and the folder's dateless state is unchanged. It prints an apolytikion which names the δισμύριοι Μάρτυρες and is taken. It names two places of relics, «Ογκώδες μίγμα Λειψάνων» at the monastery of Stavronikita and portions at Docheiariou, both on the Holy Mountain; neither is drafted as a location. It carries a refusal of its own, in a parenthesis: a synaxarial source keeps with these martyrs the memory of Demosthenes, Demokles and Demokritos, «Η ύπαρξη όμως των Αγίων αυτών είναι αμφίβολη, διότι τα ονόματά τους καθώς και βιογραφικά στοιχεία γι' αυτούς δεν αναφέρονται από καμία Αγιολογική πηγή. Ίσως είναι οι ίδιοι και συγχέονται με τους ομώνυμους τους Μάρτυρες της 10ης Απριλίου» — the existence of these saints is doubtful, no hagiological source gives their names or their lives, and perhaps they are the same as, and confused with, the martyrs of the same names on 10 April. No folder is made for the three. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the entry itself."
     },
     {
       "church": "serbian",
@@ -57,5 +72,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος γ'.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείον στράτευμα, πόλις αγία, περιούσιος λαός Κυρίου, ανεδείχθητε δισμύριοι Μάρτυρες, τη γαρ αγάπη αυτού δροσιζόμενοι, δια πυρός τον αγώνα ηνύσατε. Αλλ' αιτήσασθε, ελέους σοφοί τον πρύτανιν, δωρήσασθαι ημίν το μέγα έλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος γ', Θείας πίστεως — the only hymn on the page of «Άγιοι Δισμύριοι (20.000) μάρτυρες που κάηκαν στη Νικομήδεια», and it names them.",
+        "url": "https://www.saint.gr/553/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A divine army, a holy city, a people the Lord has made his own — so you were shown to be, twenty thousand martyrs; for bedewed with his love you finished your contest through fire. Ask, then, wise ones, of the Lord of mercy, that he grant us his great mercy.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -5,6 +5,11 @@
     {
       "form": "Зинон",
       "lang": "ru"
+    },
+    {
+      "form": "Ζήνων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Δεκεμβρίου, «Άγιοι Ίνδης, Γοργόνιος, Πέτρος, Ζήνων, Δωρόθεος ο Πρεπόσιτος, Μαρδόνιος, Γλυκέριος ο Πρεσβύτερος, Θεόφιλος ο Διάκονος και Μυγδόνιος οι συγκλητικοί», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -42,8 +47,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 3 September (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Δεκεμβρίου — «Άγιοι Ίνδης, Γοργόνιος, Πέτρος, Ζήνων, Δωρόθεος ο Πρεπόσιτος, Μαρδόνιος, Γλυκέριος ο Πρεσβύτερος, Θεόφιλος ο Διάκονος και Μυγδόνιος οι συγκλητικοί»",
+        "url": "https://www.saint.gr/12/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Δεκεμβρίου εκάστου έτους», the same menologion day on which the corpus already keeps this company through `twenty-thousand-martyrs-of-nicomedia`, whose `related` names all ten of them, and the entry is the same man: one of the nine senators of Nicomedia left outside the burned church. saint.gr's own line for him is «Άγιοι Ίνδης, Γοργόνιος, Πέτρος, Ζήνων, Δωρόθεος ο Πρεπόσιτος, Μαρδόνιος, Γλυκέριος ο Πρεσβύτερος, Θεόφιλος ο Διάκονος και Μυγδόνιος οι συγκλητικοί», and his rank in it is none beyond «Άγιος». The folder's Russian row keeps him on a Julian 3 September with the bishop Anthimus, which is a different commemoration and is untouched here. The page adds «Η μνήμη μερικών εξ αυτών επαναλαμβάνεται και στις 3 Δεκεμβρίου» — the memory of some of them is kept again on 3 December — and the 3 Δεκεμβρίου entry, `/249/`, is the one the 12-03 reader left undrafted; of its six named members, Ίνδης, Δόμνα and Γλυκέριος are the three this day gives properly, and Αγάπιος, Σέλευκος and Μάμας appear nowhere on 28 Δεκεμβρίου. The second day is recorded here as a note and nothing is moved. The page gives no year. It prints no hymn for the nine. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -65,6 +80,15 @@
     "life": "life.md"
   },
   "related": [
-    "anthimus-of-nicomedia"
+    "anthimus-of-nicomedia",
+    "indes-of-nicomedia",
+    "gorgonius-of-nicomedia",
+    "peter-of-nicomedia",
+    "dorotheus-of-nicomedia",
+    "mardonius-of-nicomedia",
+    "glycerius-of-nicomedia",
+    "theophilus-the-deacon-of-nicomedia",
+    "migdonius-of-nicomedia",
+    "twenty-thousand-martyrs-of-nicomedia"
   ]
 }

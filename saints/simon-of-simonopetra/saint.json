@@ -6,6 +6,11 @@
       "form": "Simon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 decembrie, «Sfântul Simon Izvorâtorul de mir, ctitorul Mănăstirii Simonos Petras», with the epithet and the office left off."
+    },
+    {
+      "form": "Σίμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Δεκεμβρίου, «Όσιος Σίμων ο Μυροβλήτης κτήτορας της Ιεράς Μονής Σιμωνόπετρας», with the rank, the by-name and the monastery left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Δεκεμβρίου — «Όσιος Σίμων ο Μυροβλήτης κτήτορας της Ιεράς Μονής Σιμωνόπετρας»",
+        "url": "https://www.saint.gr/12/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps on the Romanian calendar, and the entry is the same man: the founder of Simonopetra, led to the rock by a star on the night of the Nativity and a myrrh-streamer after his death. The page gives the death the folder had no year for — its head reads «(; - 1257)» and its text «τελείωσε τον βίο του σε προχωρημένη ηλικία στις 28 Δεκεμβρίου 1257 μ.Χ.», which is both the year and the day — and the `dates` object here is that and nothing more; no year of birth is given, only «προχωρημένη ηλικία». It prints two apolytikia and a kontakion, all three of which name him, and all three are taken; the second is marked «Έτερον Ἀπολυτίκιον» and the first is printed ending in a comma, copied as the page has it. Its megalynarion and its oikos are not kinds this schema holds and are left. It names the writers of his life and his services — Isaias, Nikephoros of Chios, the monks Theophilos and Raphael, Nikodemos the Hagiorite, and the archimandrite Hieronymos Simonopetrites, who published the service in 1924 — which is authorship and not a relation, so none of them is linked or related. It names the Serbian despot John Uglješa (died 1371), who enlarged and enriched the monastery after the saint healed his child; the corpus holds no folder this reading could attach to him. It says his relic and his tomb are today hidden and unknown. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -47,5 +62,66 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1257,
+      "latest": 1257,
+      "display": "1257",
+      "basis": "attested",
+      "note": "saint.gr: «τελείωσε τον βίο του σε προχωρημένη ηλικία στις 28 Δεκεμβρίου 1257 μ.Χ.», with the page's own head «(; - 1257)». No year of birth is given, only that he died at an advanced age."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ΄.",
+      "text": "Τὸν περιλάλητον πιστοὶ Μυροβλύτην, καὶ πανυπέρτιμον Χριστοῦ μαργαρίτην, καὶ μοναζόντων ἔρεισμα, καὶ θεῖον ἀσκητήν, πάντες εὐφημήσωμεν, πρὸς αὐτὸν ἐκβοῶντες· Σίμων μάκαρ φύλαττε, ἐξ ἐχθρῶν ἐπηρείας· ἣν ἐδομήσω νέαν Βηθλεέμ, ὁδηγηθεὶς δι’ ἀστέρος τρισόλβιε,",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ΄ — the first of two apolytikia on the page of «Όσιος Σίμων ο Μυροβλήτης κτήτορας της Ιεράς Μονής Σιμωνόπετρας», and it names him. The page prints no model for this one, and its text ends in a comma, copied as it stands.",
+        "url": "https://www.saint.gr/547/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Faithful, let us all praise the far-renowned myrrh-streamer, the all-precious pearl of Christ, the prop of monks and the divine ascetic, crying out to him: blessed Simon, guard from the malice of enemies the New Bethlehem you built, having been led by a star, thrice-blessed one,",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Τῇ ἀσκήσει ἐκλάμψας ἐν Ἄθῳ Ὅσιε, ὡς καθαρθεὶς τὴν καρδίαν τῶν ἀρετῶν τῷ φωτί, ἐδοξάσθης θαυμαστῶς Σίμων μακάριε· διὸ καὶ βλύζειν κρουνηδόν, μύρα εὔοσμα ἡμῖν, ἠξίωσαι μετὰ τέλος. Ἀλλὰ μὴ παύσῃ πρεσβεύων, ἐλεηθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον — the second of two apolytikia on the page of «Όσιος Σίμων ο Μυροβλήτης κτήτορας της Ιεράς Μονής Σιμωνόπετρας», and it names him.",
+        "url": "https://www.saint.gr/547/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining out in the ascetic life on Athos, venerable one, your heart cleansed by the light of the virtues, you were wonderfully glorified, blessed Simon; and so after your end you were counted worthy to pour out fragrant myrrh upon us in streams. Do not cease, then, to intercede that our souls may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ.",
+      "text": "Ὡς τῶν Ὁσίων ἀνυμνοῦμέν σε ἀκρέμονα καὶ Ἀποστόλων ὀπαδόν καὶ ἰσοστάσιον καὶ τοῦ Ἄθω σεμνολόγημα καὶ φωστῆρα· Δὸς οὖν Πάτερ καὶ ἡμῖν τὴν σὴν ἀντίληψιν Ὑπέρ πάντων ἐξαιτούμενος τὸν Κύριον Τῶν βοώντων σοι, χαίροις Σίμων τρισόλβιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ — printed under «Όσιος Σίμων ο Μυροβλήτης κτήτορας της Ιεράς Μονής Σιμωνόπετρας», and it names him.",
+        "url": "https://www.saint.gr/547/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "We hymn you as a chief branch among the venerable, a follower of the Apostles and their equal, the honour and the luminary of Athos. Give us too, father, your help, asking the Lord on behalf of all who cry to you: rejoice, thrice-blessed Simon.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

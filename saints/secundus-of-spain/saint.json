@@ -1,0 +1,60 @@
+{
+  "slug": "secundus-of-spain",
+  "display_name": "Secundus of Spain",
+  "names": [
+    {
+      "form": "Σεκούνδος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Δεκεμβρίου, «Άγιος Σεκούνδος», with the rank word left off. The page prints no Latin or Spanish form of the name, so none is recorded."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "preacher"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Αγίος Σεκούνδος, ο οποίος έζησε τον 1ο αιώνα μ.Χ.» — he lived in the first century. The page gives no year of birth, no year of death and no emperor, so the century is the whole of what it dates him by, and it is given as tradition, «Κατά την παράδοση»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Δεκεμβρίου — «Άγιος Σεκούνδος»",
+        "url": "https://www.saint.gr/12/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Δεκεμβρίου εκάστου έτους», the same day as the listing. The corpus holds four other folders for a Secundus — of Amelia, the brother of Romylus, the companion of Perpetua and the son of Jerusalem of Beroea — and this is none of them: none is sent to Spain and none is kept on this day. The page names Spain and the city it says is called Cadiz today, «στην πόλη της Ισπανίας η οποία ονομάζεται σήμερα Κάδιξ», but it gives no see and no place of death, and no coordinate is proposed. It prints no hymn. It does not say by what death he was martyred; only the distich over the entry says by the sword, «Γίνου Σεκούνδε και συ Mάρτυς εκ ξίφους». No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
