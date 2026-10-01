@@ -1,0 +1,50 @@
+{
+  "slug": "two-leontii-of-athos",
+  "display_name": "The Two Leontii of Athos",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Λεόντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Οκτωβρίου, «Όσιοι δύο Λεόντιοι οι εν Άθω», with the rank word and the place left off. The page's own list of celebrants prints «Οσιος Λεοντιος ο Εν Αθω» twice, word for word, and distinguishes the two men in no way at all, so one form serves for both."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Οκτωβρίου — «Όσιοι δύο Λεόντιοι οι εν Άθω»",
+        "url": "https://www.saint.gr/10/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2657/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Οκτωβρίου εκάστου έτους», the same day as the listing. **This is the one entry of the day the writer should look at twice.** `docs/CORPUS.md` §10.1 would make a company that names its members one folder per member, and these two are named — but with one and the same name, one and the same epithet and no biography at all, so there is nothing to put in two `display_name`s that the source supports. One folder for the pair is proposed, after `thirty-three-martyrs-of-heraclea`; splitting it would mean inventing a distinction the page does not make. No year, no coordinate, no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

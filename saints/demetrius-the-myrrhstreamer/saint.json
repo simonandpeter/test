@@ -6,6 +6,11 @@
       "form": "Dimitrie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 octombrie, «Sfântul Mare Mucenic Dimitrie, Izvorâtorul de mir»."
+    },
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Οκτωβρίου, «Άγιος Δημήτριος ο Μυροβλύτης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -14,7 +19,8 @@
     "wonderworker"
   ],
   "related": [
-    "lupus-the-martyr"
+    "lupus-the-martyr",
+    "nestor-of-thessalonica"
   ],
   "attestations": [
     {
@@ -39,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Οκτωβρίου — «Άγιος Δημήτριος ο Μυροβλύτης»",
+        "url": "https://www.saint.gr/10/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2649/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Οκτωβρίου εκάστου έτους», the same day the folder already keeps for the Romanian church, and the entry is the same man. **The page hedges both of his years and the `dates` object keeps the hedge**: «γεννήθηκε περί το 280 - 284 μ.Χ. και μαρτύρησε επί των αυτοκρατόρων Διοκλητιανού και Μαξιμιανού το 303 μ.Χ. ή το 305 μ.Χ. ή (το πιο πιθανό) το 306 μ.Χ.», with the heading «(; - 306)». It lists the fourteen towns and cities that keep him as their patron, beginning with Thessalonica; no coordinate is proposed from that. Nestor is cross-referenced to 27 Οκτωβρίου and has a folder, `nestor-of-thessalonica`, so he is linked and gets a `related` row. Its Ἀπολυτίκιον, Ἦχος γ’, and its Κοντάκιον, Ἦχος β’ αὐτόμελον, both name him and are taken; two Μεγαλυνάρια and a Κάθισμα are not kinds the schema holds. The same day's listing carries three entries that are not persons and are not drafted: «Μνήμη Μεγάλου Σεισμού», the memory of the great earthquake at Constantinople in 740 under Leo the Isaurian; «Μνήμη της μεταφοράς της εικόνας του Αγίου Δημητρίου στην Κωνσταντινούπολη»; and the translation of the relics of the new martyr George of Ioannina. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -50,5 +66,56 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 280,
+      "latest": 284,
+      "display": "between 280 and 284",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Δημήτριος γεννήθηκε περί το 280 - 284 μ.Χ.» — the page gives the interval and does not choose a year within it."
+    },
+    "death": {
+      "earliest": 303,
+      "latest": 306,
+      "display": "between 303 and 306",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε επί των αυτοκρατόρων Διοκλητιανού και Μαξιμιανού το 303 μ.Χ. ή το 305 μ.Χ. ή (το πιο πιθανό) το 306 μ.Χ.» — three years offered, the last of them preferred by the page; its heading prints «(; - 306)»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’",
+      "text": "Μέγαν εὕρατο ἐv τοῖς κιvδύvοις, σὲ ὑπέρμαχοv, ἡ οἰκουμένη, Ἀθλοφόρε τὰ ἔθνη τροπούμενον. Ὡς οὖν Λυαίου καθεῖλες τὴν ἔπαρσιν, ἐν τῷ σταδίῳ θαῤῥύvας τὸν Νέστορα, οὕτως Ἅγιε, Μεγαλομάρτυς Δημήτριε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, «Άγιος Δημήτριος ο Μυροβλύτης» — Ἀπολυτίκιον, Ἦχος γ’ (the page prints no model; copied as printed, Latin v for ν and all)",
+        "url": "https://www.saint.gr/2649/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The whole world has found you a great champion in its dangers, prize-winner, putting the nations to flight. As then you pulled down the arrogance of Lyaios and gave Nestor courage in the stadium, so now, holy great martyr Demetrius, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’",
+      "model": "Αὐτόμελον",
+      "text": "Τοῖς τῶv αἱμάτων σου ῥείθροις Δημήτριε, τὴv Ἐκκλησίαν Θεὸς ἐπορφύρωσεv, ὁ δούς σοι τὸ κράτος ἀήττητοv, καὶ περιέπωv τὴν πόλιv σου ἄτρωτοv· αὐτῆς γὰρ ὑπάρχεις τὸ στήριγμα.",
+      "source": {
+        "text": "saint.gr, «Άγιος Δημήτριος ο Μυροβλύτης» — Κοντάκιον, Ἦχος β’. Αὐτόμελον (copied as the page prints it, Latin v for ν and all)",
+        "url": "https://www.saint.gr/2649/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of your blood, Demetrius, God has made the Church purple, he who gave you unconquered strength and guards your city unwounded; for you are its support.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

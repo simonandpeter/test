@@ -1,0 +1,11 @@
+# Joasaph, disciple of Niphon
+
+saint.gr's calendar for 26 Οκτωβρίου names Joasaph, the new venerable-martyr, and says at once that his origin is unknown to it. He was probably attached to [Niphon](/saints/niphon-patriarch-of-constantinople), the page says, when Niphon was patriarch at Constantinople; he went with him and with his brother-disciple [Macarius](/saints/macarius-disciple-of-niphon) into Wallachia, preaching the word of God himself to a thirsty people, and he always, in Nicodemus the Hagiorite's words, «studied as much as he could to imitate the virtues and the struggles of his sacred teacher».
+
+Coming back from Wallachia, Niphon passed through Macedonia and through Monastiri, teaching and strengthening the Christians, with his disciple Joasaph beside him; they came at last to the monastery of Vatopedi and stayed there for some time, until the martyrdom of Macarius. After that the two of them left Vatopedi secretly and came to the monastery of Dionysiou. Joasaph, having reached perfect love towards God, wished to give his own life up to death for Christ by martyrdom, and revealed that purpose to his elder; and Niphon, knowing it to be God's will, told him beforehand that he would finish the contest of martyrdom at Constantinople.
+
+After Niphon's own repose in 1508 Joasaph, who longed for martyrdom, left and went to Constantinople, as his spiritual father had foretold. There, the page says, he preached to everybody with great boldness the mystery of the Holy Trinity and the mystery of the incarnate economy of the Son and Word of God and Father; and the Turks, hearing it, were greatly angered, tortured him harshly and at the last beheaded him. His martyrdom happened on 26 October 1516 — and not in 1536, the page insists, as is wrongly written, probably through an inaccurate copying.
+
+His memory is honoured on 26 October, the page ends, but at the monastery of Vatopedi it is kept particularly on 25 October, and he is honoured again with the other Vatopedi saints on 10 July. It prints no hymn for him, and two couplets, the second of which says that having mixed the contest with asceticism he receives a double crown.
+
+*After saint.gr's calendar for 26 Οκτωβρίου — [the day](https://www.saint.gr/10/26/index.aspx) and [the life](https://www.saint.gr/2655/saint.aspx); read 1 October 2026.*

@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοφιλοσ theophilus-companion-of-trophimus theophilus-hieromartyr-4-july theophilus-martyr-6-february theophilus-of-brescia theophilus-of-caesarea theophilus-of-crete theophilus-of-novgorod theophilus-of-rome theophilus-of-selention theophilus-of-the-forty-martyrs theophilus-of-zakynthos theophilus-the-deacon-of-libya theophilus-the-myrrh-streamer theophilus-the-new':
+    'Fourteen now. The new one is Theophilus of Novgorod on 26 October; the others are read in the el-10-10 entry for this name form.',
+  'λεοντιοσ leontios-dionysiatis leontius-24-april leontius-of-arabia leontius-of-perge leontius-of-scythopolis leontius-of-the-brazen-gate leontius-of-the-forty-martyrs leontius-of-tripoli leontius-patriarch-of-jerusalem leontius-the-canonarch leontius-the-hypatikos leontius-the-martyr-16-october leontius-the-shepherd two-leontii-of-athos':
+    'Fourteen now, and the new member is a company rather than a man: the two Leontii of Athos, whom the 26 October page prints twice on the same line with no epithet to part them, kept as one folder rather than split into two invented names. The others are read in the el-10-17 entry for this name form.',
+  'ιωασαφ joasaph-disciple-of-niphon joasaph-of-alaska joasaph-of-meteora joasaph-of-snetogorsk joasaph-of-zographou':
+    'Five now. The new one is Joasaph, the disciple of Niphon, on 26 October; the others are read in the entries recorded for this name form before it.',
+  'βασιλειοσ basil-companion-of-artemidorus basil-companion-of-euphrasius basil-companion-of-isaurus basil-kadomsky basil-martyr-6-february basil-martyr-6-july basil-of-ancyra basil-of-bathys-ryax basil-of-braga basil-of-chernigov basil-of-georgia basil-of-mangazeya basil-of-mirozh basil-of-moldovita basil-of-moscow basil-of-novgorod basil-of-ostrog basil-of-poiana-marului basil-of-rostov basil-of-ryazan basil-of-the-alamanoi basil-of-the-kyiv-caves basil-of-thessalonica basil-of-trebizond basil-of-yaroslavl basil-ratishvili basil-the-confessor basil-the-new-of-latros basil-uncle-of-eustratius':
+    'Twenty-nine now. The new one is Basil, the companion of Artemidorus on 26 October; the others are read in the el-10-20 entry for this name form.',
   'σαβινοσ sabinus-25-october sabinus-of-cyprus sabinus-of-hermopolis':
     'Three men: Sabinus of Hermopolis on 16 March, Sabinus of Cyprus on 15 October and the Sabinus of 25 October.',
   'παππιασ papias pappias-companion-of-peregrinus pappias-of-attaleia':

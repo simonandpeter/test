@@ -1,0 +1,51 @@
+{
+  "slug": "theophilus-of-novgorod",
+  "display_name": "Theophilus of Novgorod",
+  "sex": "male",
+  "types": [
+    "archbishop"
+  ],
+  "names": [
+    {
+      "form": "Θεόφιλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Οκτωβρίου, «Όσιος Θεόφιλος Αρχιεπίσκοπος Νόβγκοροντ», with the rank words and the see left off."
+    }
+  ],
+  "office": "Archbishop of Novgorod",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Οκτωβρίου — «Όσιος Θεόφιλος Αρχιεπίσκοπος Νόβγκοροντ»",
+        "url": "https://www.saint.gr/10/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2617/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Οκτωβρίου εκάστου έτους», the same day as the listing, and its whole text is the one sentence quoted in the life. No year, so no `dates` object; the see is recorded in `office` because the line gives it, and Novgorod gets no coordinate. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
