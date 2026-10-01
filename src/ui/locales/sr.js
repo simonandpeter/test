@@ -946,6 +946,7 @@ export const sr = {
     'Bishop of Seville': 'Епископ севиљски',
     'Bishop of Shlisselburg': 'Епископ шлиселбуршки',
     'Bishop of Sicily': 'Епископ сицилијски',
+    'Bishop of Seleucia': 'Епископ селевкијски',
     'Bishop of Sinope': 'Епископ синопски',
     'Bishop of Sirmium': 'Епископ сремски',
     'Bishop of Skepsis in Mysia': 'Епископ скепсијски у Мизији',

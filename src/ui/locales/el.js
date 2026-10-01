@@ -945,6 +945,7 @@ export const el = {
     'Bishop of Seville': 'Επίσκοπος Σεβίλλης',
     'Bishop of Shlisselburg': 'Επίσκοπος Σλίσελμπουργκ',
     'Bishop of Sicily': 'Επίσκοπος Σικελίας',
+    'Bishop of Seleucia': 'Επίσκοπος Σελευκείας',
     'Bishop of Sinope': 'Επίσκοπος Σινώπης',
     'Bishop of Sirmium': 'Επίσκοπος Σιρμίου',
     'Bishop of Skepsis in Mysia': 'Επίσκοπος Σκήψεως Μυσίας',

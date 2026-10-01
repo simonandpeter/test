@@ -1,0 +1,53 @@
+{
+  "slug": "kyntion-of-seleucia",
+  "display_name": "Kyntion of Seleucia",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "ascetic",
+    "wonderworker"
+  ],
+  "office": "Bishop of Seleucia",
+  "names": [
+    {
+      "form": "Κυντίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Νοεμβρίου, «Όσιος Κυντίων επίσκοπος Σελευκείας», with the rank words left off. The page gives four forms of the name and the listing's is the first: «Ο Όσιος Κυντίων (ή Κυντιρίων ή Κυντιανός ή Κυντιριανός)». Only the form the line prints is recorded; the see is left to `office`."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Νοεμβρίου — «Όσιος Κυντίων επίσκοπος Σελευκείας»",
+        "url": "https://www.saint.gr/11/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Νοεμβρίου εκάστου έτους», the same day as the listing. The whole notice is three sentences: he was one of the 318 Fathers of the First Ecumenical Council at Nicaea in Bithynia, he was ascetic and also a wonderworker, and he died in peace. The page offers four spellings of his name and only the one the day's line prints is recorded as a name form. **No `dates` proposed**: the page gives no year, and the council is not a year the page states for him. No `locations`, and **no `related`**: the 318 Fathers are a council and the corpus holds no folder for them. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

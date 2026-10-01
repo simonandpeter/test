@@ -6,6 +6,11 @@
       "form": "Samona",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 noiembrie, «Sfântul Mucenic Mărturisitor Samona»."
+    },
+    {
+      "form": "Σαμωνάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Νοεμβρίου, «Άγιοι Γουρίας, Σαμωνάς και Άβιβος οι Ομολογητές», with the rank words left off. The line keeps the three together; the bare personal name is taken out of it."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Νοεμβρίου — «Άγιοι Γουρίας, Σαμωνάς και Άβιβος οι Ομολογητές»",
+        "url": "https://www.saint.gr/11/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Νοεμβρίου εκάστου έτους», the same day as the listing. One line keeps the three confessors, and they are the three the corpus already holds from doxologia's 15 noiembrie. The page: Gurias and Samonas were taken by the governor Antoninus in the persecution under Diocletian and beheaded after many torments borne with wonderful patience; Abibus lived a few years later, came from a village of Edessa called Apothelsaia, was made hierodeacon in the reign of Licinius, the known rival of Constantine the Great, and was known for his piety and above all for his love of preaching — the page quotes 2 Timothy 4:2 over him — until the governor Lysanias, seeing him draw many idolaters by his preaching, hung him on a post, tore him with iron claws and then had him thrown into a fire outside the city. **No `dates` proposed**: the years on the page are reigns and governorships, Diocletian's and Licinius's, and no figure is given for any of the three. The Ἀπολυτίκιον names all three and the Κοντάκιον is their proper — it names Edessa and the maiden of their miracle — so both are copied onto all three folders; the Οἶκος and the Κάθισμα are not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -64,6 +79,40 @@
         "text": "Protectors and defenders of Edessa, who work great wonders in the world, who gave the young woman back into her mother's arms and showed the law-breaking Goth condemned by a righteous judgement: ask unceasingly for us, that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Tριάδος ἰσάριθμοι τῆς Ὑπερθέου, σαφῶς Γουρίας καὶ Ἄβιβος καὶ Σαμωνᾶς ὁ κλεινός, ἔνθεοι ὑπάρχοντες ταύτην τοῖς ἀσεβέσιν ὡμολόγησαν ἅμα ἄθλων τὴν τρικυμίαν ἀβλαβῶς διελθόντες· καὶ νῦν ἡμᾶς κυβερνῶσιν ὅρμον πρὸς ἄκλυστον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’. Ταχὺ προκατάλαβε — on the page of «Άγιοι Γουρίας, Σαμωνάς και Άβιβος οι Ομολογητές», and it names all three.",
+        "url": "https://www.saint.gr/2914/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Equal in number to the Trinity that is above all godhead — Gurias plainly, and Abibus, and the renowned Samonas — being filled with God they confessed her together before the ungodly, and passed unhurt through the heavy sea of their contests; and now they steer us towards a harbour where no wave breaks.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ἐξ ὕψους σοφοί, τὴν χάριν κομισάμενοι, τῶν ἐν πειρασμοῖς, προΐστασθε πανεύφημοι· διὸ κόρην Ἅγιοι, ἐκ θανάτου πικροῦ ἐῤῥύσασθε· ὑμεῖς γὰρ ὄντως ὑπάρχετε, Ἐδέσσης ἡ δόξα, καὶ τοῦ κόσμου χαρά.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’. Τὰ ἄνω ζητῶν — on the page of the three confessors. It names no one of them, but it is their proper and not a common: it names Edessa and the maiden their own miracle delivered.",
+        "url": "https://www.saint.gr/2914/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having carried grace down from on high, O wise ones, you stand before those in trials, all-praised; and so, O Saints, you delivered a maiden from a bitter death. For you are indeed the glory of Edessa and the joy of the world.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν."
     }
   ],
   "text": {

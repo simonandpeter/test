@@ -1,0 +1,54 @@
+{
+  "slug": "eupsychius-15-november",
+  "display_name": "Eupsychius (15 November)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ευψύχιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Νοεμβρίου, «Άγιοι Ευψύχιος, Νέαρχος και Καρτέριος», with the rank words left off. The line enumerates the three; the bare personal name is taken out of it."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Νοεμβρίου — «Άγιοι Ευψύχιος, Νέαρχος και Καρτέριος»",
+        "url": "https://www.saint.gr/11/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Νοεμβρίου εκάστου έτους», the same day as the listing. The whole notice is two sentences: «Η μνήμη των τριών αυτών μαρτύρων, αναφέρεται στον Παρισινό Κώδικα 1578 και στον Πατμιακό 266 μετά της συνοδείας αυτών» and «Περισσότερες πληροφορίες για τη ζωή τους δεν έχουμε» — the memory of these three martyrs is recorded in Paris codex 1578 and Patmos codex 266 together with their company, and we have no more information about their life. The line enumerates its three members, so each is a folder and each relates the other two, on `docs/CORPUS.md` §10.1; **the company the codices keep with them is named nowhere and gets no folder.** **No `dates`, no `locations`, no hymn and no rank beyond martyr**: the page gives none of them. The corpus holds other folders of all three names — `eupsychius-5-november` and the two of Caesarea, `nearchus` on the Greek 22 Απριλίου, `carterius-5-november`, `carterius-of-caesarea`, `carterius-of-sebasteia` — and **none of them is kept on 15 November in any calendar**; two entries on one calendar are two commemorations, so the slugs carry the day and the identifications are left open in the reader's report. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "related": [
+    "nearchus-15-november",
+    "carterius-15-november"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

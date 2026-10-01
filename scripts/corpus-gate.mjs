@@ -115,6 +115,24 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θωμασ thomas-companion-of-terentius thomas-ii-of-constantinople thomas-of-constantinople thomas-of-maleon thomas-of-zographou thomas-the-apostle thomas-the-fool-for-christ thomas-the-infant':
+    'Eight now. The new one is Thomas the Second, the New, patriarch of Constantinople, on 15 November; the others are read in the el-04-10 entry for this name form.',
+  'νεαρχοσ nearchus nearchus-15-november':
+    'Two men. The new one is the Nearchus of 15 November, of that day’s company; the other is the Nearchus of 22 April.',
+  'μαρκελλοσ marcellus-15-november marcellus-18-july marcellus-of-apamea marcellus-of-sicily marcellus-of-the-twelve-tribunes marcellus-the-martyr-1-march':
+    'Six men. The new one is the Marcellus of 15 November, of that day’s company of three; the others are read in the el-05-24 entry for this name form, with the Marcellus of 18 July.',
+  'ιουστινοσ justin-companion-of-chariton justin-of-thrace justin-popovich justin-the-philosopher':
+    'Four men. The new one is Justin of Thrace on 15 November, the emperor; the others are Justin the Philosopher and Justin the companion of Chariton on 1 June, and Justin Popovich.',
+  'ευστοχιοσ eustochius-15-november eustochius-the-presbyter':
+    'Two men. The new one is the Eustochius of 15 November, of that day’s company of three; the other is Eustochius the presbyter on 23 June.',
+  'ευψυχιοσ eupsychius-15-november eupsychius-5-november eupsychius-of-caesarea-under-julian':
+    'Three men. The new one is the Eupsychius of 15 November, of the company with Nearchus and Carterius, and not the Eupsychius of 5 November who also stands beside a Carterius; the third is Eupsychius of Caesarea on 9 April.',
+  'ελπιδιοσ elpidius-15-november elpidius-of-cherson elpidius-of-the-alamanoi':
+    'Three men. The new one is the Elpidius of 15 November, martyred with Marcellus and Eustochius; the others are Elpidius of Cherson on 7 March and Elpidius of the Alamanoi on 12 October.',
+  'δημητριοσ demetrios-of-samarina demetrius-15-november demetrius-24-april demetrius-donskoi demetrius-ivanov demetrius-klepinin demetrius-of-chios demetrius-of-constantinople demetrius-of-georgia demetrius-of-moscow demetrius-of-philadelphia demetrius-of-prilutsk demetrius-of-rostov demetrius-of-the-brazen-gate demetrius-the-myrrhstreamer demetrius-the-new-of-basarabov demetrius-the-peloponnesian demetrius-the-skeuophylax demetrius-tornaras demos-the-fisherman':
+    'Twenty now. The new one is the Demetrius of 15 November, whom the page keeps without a surname; the others are read in the el-07-20 entry for this name form.',
+  'καρτεριοσ carterius-15-november carterius-5-november carterius-of-caesarea carterius-of-sebasteia':
+    'Four men. The new one is the Carterius of 15 November, martyred with Eupsychius and Nearchus — a second company of that pairing ten days after the first, two entries and so other men; the others are read in the el-11-05 entry for this name form.',
   'παντελεημων panteleimon-3-january panteleimon-of-spetses panteleimon-the-healer':
     'Three now. The new one is Panteleimon of Spetses on 14 November, a new martyr; the others are Panteleimon the Healer on 27 July, whom four calendars keep, and the Panteleimon of 3 January, read in the el-01-03 entry for this name form.',
   'ευφημιανοσ anna-renamed-euphemianos euphemianos-of-lysi':

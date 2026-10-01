@@ -1,0 +1,50 @@
+{
+  "slug": "demetrius-15-november",
+  "display_name": "Demetrius (15 November)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Νοεμβρίου, «Άγιος Δημήτριος», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Νοεμβρίου — «Άγιος Δημήτριος»",
+        "url": "https://www.saint.gr/11/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Νοεμβρίου εκάστου έτους», the same day as the listing. The whole notice is three sentences: he came from the village of Davoudio, which was near the city of Amapasos; he was arrested in the years of the king Maximian and of the ruler Publius, in 298; and after many tortures for Christ he was beheaded at the last. **No `dates` proposed**: the 298 is given with the reign and the governor and not with the saint — «στα χρόνια του βασιλιά Μαξιμιανού και του άρχοντα Πουπλίου το 298 μ.Χ.» — which is exactly the formula this corpus refuses, on the `carterius-of-caesarea` precedent, and the year is in the life instead. No `locations`: Davoudio and Amapasos are names this reader could not place, and the folder is undated in any case. No hymn. The corpus holds many folders named Demetrius and none of them is kept on 15 November in any calendar, so the slug and the display name carry the day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

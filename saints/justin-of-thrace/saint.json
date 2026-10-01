@@ -1,0 +1,51 @@
+{
+  "slug": "justin-of-thrace",
+  "display_name": "Justin of Thrace",
+  "sex": "male",
+  "types": [
+    "king"
+  ],
+  "office": "Emperor",
+  "names": [
+    {
+      "form": "Ιουστίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Νοεμβρίου, «Άγιοι Ιουστίνος και Θεοδώρα οι ευσεβείς βασιλείς», with the rank words left off. The line keeps him with Theodora; the bare personal name is taken out of it and the rank left to `types` and `office`."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Νοεμβρίου — «Άγιοι Ιουστίνος και Θεοδώρα οι ευσεβείς βασιλείς»",
+        "url": "https://www.saint.gr/11/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Νοεμβρίου εκάστου έτους», the same day as the listing. **The page opens by saying it is confused about who is kept here** — «Εδώ τα πράγματα είναι λίγο συγκεχυμένα. Άλλες πήγες αναφέρουν αυτή τη μέρα τη μνήμη Ιουστινιανού και Θεοδώρας και άλλες Ιουστίνου και Ευφημίας»: other sources put the memory of Justinian and Theodora on this day and others that of Justin and Euphemia. It then settles on Justin — «Πάντως όσο αφορά τον Ιουστίνο» — and gives him a full account: of Thrace, before that a herdsman of sheep and swine, then a soldier, then a count, and at the last emperor in 518; his wife one Lupicia, whom he made Augusta and renamed **Euphemia**, and after her death another wife named Theodora; unlettered, but he set the state in order and was a very pious Christian king who helped the Church in every way; he reigned nine years and thirty-three days. **So Justin is drafted and Theodora is not.** The page's own confusion falls on her and not on him: it names three women for the day's second place, Theodora, Euphemia and Lupicia-renamed-Euphemia, and it does not say which the calendar keeps. The corpus already holds `theodora-the-empress` (Greek 11/2) and `justinian-the-great` (Romanian 2/8), and neither is proposed anything here. **No `dates` proposed**: 518 is the year of his accession, not of his birth or death, and the nine years and thirty-three days are a length of reign; nothing is inferred from either. No `locations` and no hymn. The display name takes Thrace because the page says he came from there and because the rank belongs in `types` and `office`. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

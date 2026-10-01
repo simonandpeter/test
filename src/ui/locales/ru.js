@@ -963,6 +963,7 @@ export const ru = {
     'Bishop of Seville': 'Епископ Севильский',
     'Bishop of Shlisselburg': 'Епископ Шлиссельбургский',
     'Bishop of Sicily': 'Епископ Сицилийский',
+    'Bishop of Seleucia': 'Епископ Селевкийский',
     'Bishop of Sinope': 'Епископ Синопский',
     'Bishop of Sirmium': 'Епископ Сирмийский',
     'Bishop of Skepsis in Mysia': 'Епископ Скепсийский в Мисии',

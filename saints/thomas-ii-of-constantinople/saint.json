@@ -1,0 +1,61 @@
+{
+  "slug": "thomas-ii-of-constantinople",
+  "display_name": "Thomas the Second, the New",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Θωμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Νοεμβρίου, «Άγιος Θωμάς ο Β' ο νέος, Πατριάρχης Κωνσταντινούπολης», with the rank words left off. The ordinal and the epithet «ο Β' ο νέος» are kept in the display name, which is what tells him from the Thomas of 21 Μαρτίου; the see is left to `office`."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Νοεμβρίου — «Άγιος Θωμάς ο Β' ο νέος, Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/11/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Νοεμβρίου εκάστου έτους», the same day as the listing. The head line gives him «(; - 669)». The page: deacon and chartophylax of Hagia Sophia, on Nikephoros Kallistos's word; elected patriarch of Constantinople in 667, by others in 665, succeeding Peter; held the throne until 669, governed it in a way pleasing to God and died in peace, citing Paris codex 259. `dates` record the `death` the page states twice, and the alternative 665 for the election is quoted in the note rather than widened into an interval, the election not being a date of his life. **He is not `thomas-of-constantinople`**, which the corpus keeps on 21/3 in both the Romanian and the Greek: that folder's own life makes its man the deacon and sakellarios appointed by John the Faster who became patriarch under the tyrant Phocas, two generations earlier, and this page calls its man **ο Β'**, the second, and **ο νέος**, the new. **A second and a third day, recorded and not acted on**: «Η μνήμη του, από ορισμένους Συναξαριστές, τοποθετείται και την 14η ή την 16η Νοεμβρίου» — some synaxarists put his memory also on 14 or 16 November. One attestation row per church is the schema, so the row is the day page that was read and the other two days are this note and a line in the reader's report. No `locations` and no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 669,
+      "latest": 669,
+      "display": "669",
+      "basis": "traditional",
+      "note": "saint.gr: «Παρέμεινε στο θρόνο μέχρι το 669 μ.Χ., τον όποιο θεάρεστα κυβέρνησε και απεβίωσε ειρηνικά (Παρισινός Κώδικας 259)», and the head line «(; - 669)». His election the page puts in 667, «κατ' άλλους το 665 μ.Χ.»; that is the year of an election and not of his life, and it is left here."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

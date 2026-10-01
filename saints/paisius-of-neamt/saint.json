@@ -6,6 +6,11 @@
       "form": "Paisie de la Neamț",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 noiembrie, «Sfântul Cuvios Paisie de la Neamț»."
+    },
+    {
+      "form": "Παΐσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Νοεμβρίου, «Όσιος Παΐσιος Βελιτσκόφσκυ», with the rank words left off. The surname the page prints in Greek letters, «Βελιτσκόφσκυ», is left out of the bare personal form."
     }
   ],
   "sex": "male",
@@ -53,8 +58,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Νοεμβρίου — «Όσιος Παΐσιος Βελιτσκόφσκυ»",
+        "url": "https://www.saint.gr/11/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Νοεμβρίου εκάστου έτους», the same day as the listing. The head line gives him «(1722 - 1794)», the same interval the folder already carries, so **no `dates` are proposed**. The entry is plainly him, and the page is a bare chronology, which it says so itself — «Επιγραμματικά και με χρονολογική σειρά αναφέρουμε τα σημαντικότερα γεγονότα της ζωής του Ρώσου Αγίου»: born 21 December 1722, entered the theological school of Kyiv in 1734, the monasteries of Lyubech and Medvedovsky near Kyiv in 1738, a rasophore monk renamed **Plato** in 1741, the skete of Wallachia with the elder Basil two years later, the Holy Mountain in 1746, tonsured by the elder Basil and renamed **Paisius** in 1750, coenobitic life with Bessarion in 1754, ordained priest and founder of the skete of the Prophet Elijah in 1758, Dragomirna in 1763, Secu in 1775, Neamț in 1779, archimandrite in 1790, dead on 15 November 1794; his incorrupt relic lies in the katholikon of the monastery of Neamț in Romania. The page calls him a **Russian** saint. No `locations` and no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

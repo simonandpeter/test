@@ -944,6 +944,7 @@ export const ro = {
     'Bishop of Seville': 'Episcop de Sevilla',
     'Bishop of Shlisselburg': 'Episcop de Șlisselburg',
     'Bishop of Sicily': 'Episcop al Siciliei',
+    'Bishop of Seleucia': 'Episcop de Seleucia',
     'Bishop of Sinope': 'Episcop de Sinope',
     'Bishop of Sirmium': 'Episcop de Sirmium',
     'Bishop of Skepsis in Mysia': 'Episcop de Skepsis în Misia',

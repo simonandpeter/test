@@ -1,0 +1,54 @@
+{
+  "slug": "marcellus-15-november",
+  "display_name": "Marcellus (15 November)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μάρκελλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Νοεμβρίου, «Άγιοι Ελπίδιος, Μάρκελλος και Ευστόχιος», with the rank words left off. The line enumerates the three; the bare personal name is taken out of it."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Νοεμβρίου — «Άγιοι Ελπίδιος, Μάρκελλος και Ευστόχιος»",
+        "url": "https://www.saint.gr/11/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Νοεμβρίου εκάστου έτους», the same day as the listing. The line enumerates its three members, so it is a folder for each and each relates the other two, on `docs/CORPUS.md` §10.1. The page: Elpidius was a member of the Senate and lived when the emperor was Julian the Apostate, who took him and told him to choose between denying Christ and a martyr's death, and he chose the second without turning aside; two colleagues and friends of his, Marcellus and Eustochius, went to martyrdom with him; boiling water was thrown on their flesh, the limbs of their bodies were broken with heavy iron rods, and in that state they were thrown into the fire. **No `dates` proposed**: the only year on the page hangs on a reign — «όταν αυτοκράτορας ήταν ο Ιουλιανός ο παραβάτης (361 μ.Χ.)» — which is the formula this corpus refuses, on the `carterius-of-caesarea` precedent; the reign is in the life instead. No `locations` and no hymn: the page gives neither. The corpus holds other folders of all three names, none of them kept on 15 November in any calendar, so the slugs carry the day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "related": [
+    "elpidius-15-november",
+    "eustochius-15-november"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
