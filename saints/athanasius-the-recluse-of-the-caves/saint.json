@@ -1,0 +1,52 @@
+{
+  "slug": "athanasius-the-recluse-of-the-caves",
+  "display_name": "Athanasius the Recluse of the Caves",
+  "names": [
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Δεκεμβρίου, «Όσιος Αθανάσιος ο Έγκλειστος “ἐν τῷ Σπηλαίῳ”», with the rank word left off. The two epithets in this folder's name are the page's own, «ὁ Ἔγκλειστος» and «ἐν τῷ Σπηλαίῳ»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Δεκεμβρίου — «Όσιος Αθανάσιος ο Έγκλειστος “ἐν τῷ Σπηλαίῳ”»",
+        "url": "https://www.saint.gr/12/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn, no distich and no year. Its whole entry is one sentence. The corpus keeps fifteen other folders of the Caves of Kyiv and none of them is this man; the page says «στην Λαύρα των Σπηλαίων», the Lavra of the Caves, and does not say which lavra, so the folder's name follows the page's own words and claims nothing more."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

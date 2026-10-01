@@ -1,0 +1,57 @@
+{
+  "slug": "john-of-oxyrhynchus",
+  "display_name": "John of Oxyrhynchus",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's own heading «Αγιος Ιωάννης ο Ερημιτης» in the «Άγιοι που εορτάζουν» block of the page of «Άγιοι Ιωάννης, Ηρακλείμων, Ανδρέας και Θεόφιλος οι Ερημίτες» for 2 Δεκεμβρίου, with the rank words left off. The epithet in this folder's name is the city the page gives the four of them."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "preacher"
+  ],
+  "related": [
+    "heracleimon-of-oxyrhynchus",
+    "andrew-of-oxyrhynchus",
+    "theophilus-of-oxyrhynchus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Δεκεμβρίου — «Άγιοι Ιωάννης, Ηρακλείμων, Ανδρέας και Θεόφιλος οι Ερημίτες»",
+        "url": "https://www.saint.gr/12/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn and gives no year. The entry is a company of four and the page names all four, giving each his own heading «ὁ Ἐρημίτης» in the «Άγιοι που εορτάζουν» block, so there is a folder for each of them and each relates the other three. Its couplet calls them a tetrad: «Ἀνδρῶν τετρακτὺς εἰς ἄλυπον χωρίον, Ἐκ θλίψεως γέμοντος ἦλθε χωρίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

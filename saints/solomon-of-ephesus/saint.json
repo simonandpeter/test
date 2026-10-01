@@ -7,6 +7,11 @@
       "form": "Solomon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 decembrie, «Sfântul Ierarh Solomon, Arhiepiscopul Efesului», with the rank word and the see left off."
+    },
+    {
+      "form": "Σολομών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Δεκεμβρίου, «Άγιος Σολομών Αρχιεπίσκοπος Εφέσου», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 2 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Δεκεμβρίου — «Άγιος Σολομών Αρχιεπίσκοπος Εφέσου»",
+        "url": "https://www.saint.gr/12/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it is the same man the Romanian calendar keeps on this day with the same rank and the same see. It adds nothing to the life: «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου (βλεπε και 1 Δεκεμβρίου)». That cross-reference is to the previous day's «Άγιοι Ανανίας και Σολόχων Αρχιεπίσκοποι Εφέσου», an entry the same site calls a probable misunderstanding, and no row or folder is made on it here. It prints no hymn."
     },
     {
       "church": "serbian",
@@ -47,5 +62,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "onesimus-of-ephesus"
+  ]
 }

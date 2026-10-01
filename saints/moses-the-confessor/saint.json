@@ -1,0 +1,50 @@
+{
+  "slug": "moses-the-confessor",
+  "display_name": "Moses (2 December)",
+  "names": [
+    {
+      "form": "Μωυσής",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Δεκεμβρίου, «Άγιος Μωυσής ο Ομολογητής», with the rank word left off. The same page gives «Μωσής» as an alternative spelling."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Δεκεμβρίου — «Άγιος Μωυσής ο Ομολογητής»",
+        "url": "https://www.saint.gr/12/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn, no distich and no year. It says itself that he is unknown to the Synaxarist of Saint Nikodemos and is commemorated as Confessor on 2 December in Delehaye's; and it raises, without settling, the possibility that he is the same as a Moses the Steward whom the Parisian Codex 1578 mentions on 3 December. That guess is recorded here and not acted on: no folder is made or claimed for the 3 December entry."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

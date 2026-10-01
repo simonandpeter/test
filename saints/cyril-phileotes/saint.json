@@ -6,6 +6,11 @@
       "form": "Chiril Fileotul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 decembrie, «Sfântul Chiril Fileotul», with the rank word left off; the line gives no rank beyond «Sfântul»."
+    },
+    {
+      "form": "Κύριλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Δεκεμβρίου, «Όσιος Κύριλλος ο Φιλεώτης», with the rank word left off. The page says his baptismal name was Κυριάκος and that Κύριλλος was his monastic name."
     }
   ],
   "sex": "male",
@@ -31,8 +36,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 2 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Δεκεμβρίου — «Όσιος Κύριλλος ο Φιλεώτης»",
+        "url": "https://www.saint.gr/12/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it is the same man: its heading reads «Οσιος Κυριλλος ο Φιλεωτης (1015 - 1110)». The folder it upgrades holds no dates, no types and no life beyond the Romanian line, so both years and the types are taken from this page. Its one Ἀπολυτίκιον names him and is taken here."
     },
     {
       "church": "serbian",
@@ -42,5 +57,40 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1015,
+      "latest": 1015,
+      "display": "1015",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Κύριλλος γεννήθηκε το 1015 μ.Χ. στο χωριό Φιλέα της επαρχίας Δέρκων της Θράκης», and its heading reads «(1015 - 1110)»."
+    },
+    "death": {
+      "earliest": 1110,
+      "latest": 1110,
+      "display": "1110",
+      "basis": "traditional",
+      "note": "saint.gr: «Έτσι οσιακά έζησε ο Κύριλλος και κοιμήθηκε ειρηνικά το 1110 μ.Χ.», and its heading reads «(1015 - 1110)»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ως ξένος και πάροικος, των επιγείων τερπνών, ζωήν την ισάγγελον, επολιτεύσω σαφώς, Πατήρ ημών Κύριλλε· όθεν τας ουρανίους, ειληφώς αντιδόσεις, πρέσβευε θεοφόρε, τω Σωτήρι των όλων, δοθήναι τοις σε τιμώσι, χάριν και έλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος δ'. Ταχύ προκατάλαβε — the only hymn on the page of «Όσιος Κύριλλος ο Φιλεώτης», and it names him.",
+        "url": "https://www.saint.gr/3129/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a stranger and a sojourner among the pleasant things of earth, you plainly lived the life of the angels, Cyril our father; and so, having received the heavenly recompense, intercede, God-bearer, with the Saviour of all, that grace and mercy be given to those who honour you.",
+        "rendered": "site"
+      },
+      "tone": "Ήχος δ'.",
+      "model": "Ταχύ προκατάλαβε."
+    }
+  ]
 }

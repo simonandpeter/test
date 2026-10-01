@@ -1,0 +1,60 @@
+{
+  "slug": "philaret-of-kyiv",
+  "display_name": "Philaret of Kyiv",
+  "names": [
+    {
+      "form": "Φιλάρετος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Δεκεμβρίου, «Άγιος Φιλάρετος Μητροπολίτης Κιέβου», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "metropolitan"
+  ],
+  "office": "Metropolitan of Kyiv",
+  "dates": {
+    "death": {
+      "earliest": 1857,
+      "latest": 1857,
+      "display": "1857",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him reads «Αγιος Φιλαρετος Μητροπολιτης Κιεβου (; - 1857)». The page gives no year of birth and no other date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Δεκεμβρίου — «Άγιος Φιλάρετος Μητροπολίτης Κιέβου»",
+        "url": "https://www.saint.gr/12/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn and no distich. Its whole entry is one sentence saying it has no details of the life of this Russian saint, plus the year in its heading and two links, one of them to the synaxis of all the saints of Siberia and one to an English-language site; neither was read for this folder. The corpus keeps three other folders whose personal name is Philaret — of Moscow, of New York, and Danilevsky — and none of them is a metropolitan of Kyiv."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

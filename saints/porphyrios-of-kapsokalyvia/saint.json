@@ -6,12 +6,18 @@
       "form": "Porfirie Kavsokalivitul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 decembrie, «Sfântul Cuvios Porfirie Kavsokalivitul», with the rank words left off."
+    },
+    {
+      "form": "Πορφύριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Δεκεμβρίου, «Όσιος Πορφύριος ο Καυσοκαλυβίτης ο διορατικός και θαυματουργός», with the rank word left off."
     }
   ],
   "sex": "male",
   "types": [
     "venerable",
-    "hieromonk"
+    "hieromonk",
+    "wonderworker"
   ],
   "dates": {
     "birth": {
@@ -51,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 2 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Δεκεμβρίου — «Όσιος Πορφύριος ο Καυσοκαλυβίτης ο διορατικός και θαυματουργός»",
+        "url": "https://www.saint.gr/12/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it is the same man the folder already keeps from doxologia.ro with the years 1906 and 1991. Its page is very long and this reader took only the day and the line; none of its prose was used, and its six Ἀπολυτίκια and four Κοντάκια were not read and are not drafted. They are named here so the next reader knows they are there."
     },
     {
       "church": "serbian",

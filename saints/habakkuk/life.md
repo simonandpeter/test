@@ -6,4 +6,8 @@ Once he had made a pottage and broken bread into a vessel, and said to those in 
 
 He prophesied also of the return of the people from Babylon, and of the birth of the Lord Christ and the ending of the old law; and he reposed two years before the people's return from captivity, and was buried in his own village.
 
-*After doxologia.ro's calendar for 2 decembrie — [the day](https://doxologia.ro/2-decembrie) and [the life](https://doxologia.ro/sfantul-proroc-avacum); read 25 September 2026.*
+The Greek calendar keeps him on the same day, and saint.gr gives him a father, a tribe and a span of years. His name means a warm embrace, it says; he was of the tribe of Simeon and the son of Saphat, and the time of his activity is placed between 672 and 650 before Christ. He was one of the twelve minor prophets of the Old Testament, and in his prophetic book, which is distinguished for its considerable literary grace, he reproves the Jewish people for having turned aside from the true religion into idolatry.
+
+It quotes him on how a man is to believe in God — «Ἐὰν ὑποστείληται, οὐκ εὐδοκεῖ ἡ ψυχή μου ἐν αὐτῷ· ὁ δὲ δίκαιος ἐκ πίστεώς μου ζήσεται. Ἐγὼ δὲ ἐν τῷ Κυρίῳ ἀγαλλιάσομαι» — and it says that the prophet Habakkuk died in peace and was buried in the place of his fathers. His couplet turns on the end of his book: God appoints your feet for you, Habakkuk, when you are dead, unto the consummation, just as you said.
+
+*After doxologia.ro's calendar for 2 decembrie — [the day](https://doxologia.ro/2-decembrie) and [the life](https://doxologia.ro/sfantul-proroc-avacum); read 25 September 2026; and after saint.gr's calendar for 2 Δεκεμβρίου — [the Greek day](https://www.saint.gr/12/02/index.aspx) and [its life](https://www.saint.gr/3123/saint.aspx), read 2 October 2026.*

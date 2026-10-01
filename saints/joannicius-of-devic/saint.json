@@ -1,0 +1,52 @@
+{
+  "slug": "joannicius-of-devic",
+  "display_name": "Joannicius of Devič",
+  "names": [
+    {
+      "form": "Ιωαννίκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Δεκεμβρίου, «Όσιος Ιωαννίκιος ο εν Σερβία», with the rank word left off. The page's own epithet is «ο εν Σερβία»; the monastery in this folder's name is the Devič it says holds his relics."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Δεκεμβρίου — «Όσιος Ιωαννίκιος ο εν Σερβία»",
+        "url": "https://www.saint.gr/12/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn and no distich. It carries no dates in this folder because the page contradicts itself about the century: it says «έζησε τον 13ο αιώνα μ.Χ.» and then has the despot Đurađ Branković, who ruled in the fifteenth, bring his sick daughter to the saint and build the monastery in thanks. One of the two is wrong and the page does not say which, so neither is recorded. The corpus keeps five other folders whose personal name is Joannicius and none of them is this Serb of Zeta."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
