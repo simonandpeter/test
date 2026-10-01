@@ -1,0 +1,54 @@
+{
+  "slug": "hilarion-companion-of-donatus",
+  "display_name": "Hilarion, companion of Donatus",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ιλαρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουλίου, «Άγιος Δονάτος επίσκοπος Λιβύης και Ιλαρίων οσιομάρτυρας», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουλίου — «Άγιος Δονάτος επίσκοπος Λιβύης και Ιλαρίων οσιομάρτυρας»",
+        "url": "https://www.saint.gr/07/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The listing names the two men in one line and the life page tells them both, so this is one folder each. The page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουλίου εκάστου έτους», the same day as the listing, and gives no year. The corpus's seventeen other men of this name are all on other days and none is the monk beaten to death with rods beside a bishop Donatus; the nearest by day, Hilarion (4 May), is a different month. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "donatus-bishop-4-july"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

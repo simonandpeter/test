@@ -1,0 +1,67 @@
+{
+  "slug": "jonah-the-athonite",
+  "display_name": "Jonah the Athonite",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "hieromonk"
+  ],
+  "names": [
+    {
+      "form": "Ιωνάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουλίου, «Άγιος Ιωνάς ο Αθωνίτης», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "20 July 1879",
+      "basis": "attested",
+      "note": "saint.gr: born «στις 20 Ιουλίου του 1879 μ.Χ., στο χωριό Σόλτσινο», and the page heads «Αγιος Ιωνας ο Αθωνιτης (1879 - 1938)»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "4 July 1938",
+      "basis": "attested",
+      "note": "saint.gr: «Ο ιερομόναχος Ιωνάς (Σανκόφ) εκτελέστηκε στις 4 Ιουλίου του 1938 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουλίου — «Άγιος Ιωνάς ο Αθωνίτης»",
+        "url": "https://www.saint.gr/07/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουλίου εκάστου έτους», the same day as the listing, and the day is the day of his execution in 1938. The page names him in the world Ιβάν Αντρέεβιτς Σανκόφ, so he is told apart from the corpus's eleven other men of the name: Jonah of Odessa (17 May) is a different man on a different day, and Jonah of Kyiv, of Moscow, of Pesonsa, of Yashezero, of the Lavra of Pskov, the Sabaite, the Prophet, Jonah (6 June) and Jonah (29 March) are none of them a hieromonk of the Russian dependency at Odessa shot at Butovo. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

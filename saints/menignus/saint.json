@@ -1,0 +1,50 @@
+{
+  "slug": "menignus",
+  "display_name": "Menignus",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Μένιγνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουλίου, «Όσιος Μένιγνος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουλίου — «Όσιος Μένιγνος»",
+        "url": "https://www.saint.gr/07/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουλίου εκάστου έτους», the same day as the listing, and gives no year. The corpus keeps nobody of this name under any spelling — the name sweep's rows for this line were Menas and Meletius folders, a different name — and the day's line gives him the rank Όσιος, not Μάρτυς. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

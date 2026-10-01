@@ -1,0 +1,89 @@
+{
+  "slug": "michael-choniates",
+  "display_name": "Michael Choniates",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "names": [
+    {
+      "form": "Μιχαήλ ο Χωνιάτης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουλίου, «Άγιος Μιχαήλ ο Χωνιάτης Μητροπολίτης Αθηνών», with the rank words and the see left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1138,
+      "latest": 1138,
+      "display": "1138",
+      "basis": "attested",
+      "note": "saint.gr heads the page «Αγιος Μιχαηλ ο Χωνιατης Μητροπολιτης Αθηνων (1138 - 1222)»."
+    },
+    "death": {
+      "earliest": 1222,
+      "latest": 1222,
+      "display": "1222",
+      "basis": "attested",
+      "note": "saint.gr: he went to the monastery of Saint John the Forerunner near Thermopylae «όπου και πέθανε, στα 1222 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουλίου — «Άγιος Μιχαήλ ο Χωνιάτης Μητροπολίτης Αθηνών»",
+        "url": "https://www.saint.gr/07/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουλίου εκάστου έτους», the same day as the listing. The corpus keeps no other Michael of Athens and no other Choniates; the page identifies him as the last metropolitan of Athens before the Frankish conquest (1182–1204) and the brother of the historian Niketas Choniates. The page adds that his memory is recorded together with Andrew of Crete's in the Vatopedi Codex with a common service, which is why both stand on this day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "andrew-of-crete"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Ἀρετῇ διαπρέψας καὶ ἁγιότητι, ποιμαντικῇ ἐπιστήμῃ καὶ ἀκραιφνεῖ βιοτῇ Ἀθηναίων στυλοβάτης ἐχρημάτισας, ὦ Χωνιᾶτα Μιχαήλ, ἱεράρχα κραταιὲ καὶ ἄριστε ποιμενάρχα· διὸ καὶ εἴληφας χάριν ὑπὲρ ἡμῶν πρεσβεύειν πάντοτε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον — the first of two apolytikia on the page of «Άγιος Μιχαήλ ο Χωνιάτης Μητροπολίτης Αθηνών», and it names him",
+        "url": "https://www.saint.gr/1998/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having shone in virtue and in holiness, in the science of a shepherd and in a life without alloy, you became the pillar that upholds the Athenians, O Michael Choniates, mighty hierarch and best of shepherds; and therefore you have received grace to intercede for us always.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

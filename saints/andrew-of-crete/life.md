@@ -10,4 +10,6 @@ The ship came as far as Mytilene and stopped there. Asking the name of the place
 
 Doxologia's life names his parents and the place of his death and gives no year, so none is recorded here.
 
-*After doxologia.ro's calendar for 4 iulie — [the day](https://doxologia.ro/4-iulie) and [the life](https://doxologia.ro/viata-sfantului-ierarh-andrei-arhiepiscopul-cretei); read 24 September 2026.*
+The Greek calendar keeps him on the same day, 4 July. saint.gr adds that he was born at Damascus of devout parents, George and Gregoria; that he was ordained deacon at Constantinople and set over the orphanage of Saint Paul before Crete had him as archbishop; and that as metropolitan he took part in the synod Philippikos Bardanes convoked in 712 and there supported Monophysitism, returning to the right faith after Bardanes's death. It says he died in 740 aboard ship on the way back from Constantinople and was buried at Eresos on Lesbos, that his skull is at Vatopedi on the Holy Mountain, and that the Great Canon — 261 troparia in nine odes — was probably written at Constantinople or at Eresos in his old age.
+
+*After doxologia.ro's calendar for 4 iulie — [the day](https://doxologia.ro/4-iulie) and [the life](https://doxologia.ro/viata-sfantului-ierarh-andrei-arhiepiscopul-cretei); read 24 September 2026; and saint.gr's calendar for 4 Ιουλίου — [the day](https://www.saint.gr/07/04/index.aspx) and [the life](https://www.saint.gr/1988/saint.aspx), read 1 October 2026.*

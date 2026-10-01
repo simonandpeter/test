@@ -1,0 +1,50 @@
+{
+  "slug": "theodotus-martyr-4-july",
+  "display_name": "Theodotus (4 July)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Θεόδοτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουλίου, «Άγιος Θεόδοτος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουλίου — «Άγιος Θεόδοτος»",
+        "url": "https://www.saint.gr/07/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουλίου εκάστου έτους», the same day as the listing, and gives no year. The corpus holds nine other men of this name and none of them is on 4 July: Theodotus (1 January), of Ancyra (18 May), of Cyzicus (28 April), of Kyrenia (2 March), of Marcianopolis, of the monastery of Publius, the father of Mamas, the companion of Asklepiodote, and Theodotus (Levchenko). No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

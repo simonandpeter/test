@@ -10,4 +10,6 @@ She went constantly to the church of God and never left off the church's order o
 
 Doxologia's life gives no year for her birth or her death, so none is recorded here.
 
-*After doxologia.ro's calendar for 4 iulie — [the day](https://doxologia.ro/4-iulie) and [the life](https://doxologia.ro/viata-sfintei-cuvioase-marta); read 24 September 2026.*
+The Greek calendar keeps her on the same day, 4 July, and saint.gr adds that her memory is borne also on 1 September. Its account says she was adorned with many Christian virtues and bore [Symeon](/saints/symeon-of-the-wonderful-mountain) after a promise from God himself; that she was charitable to a great degree and helped her neighbour without limit; and that when she reposed in peace she was buried at Daphne near Antioch. Later, it says, her son is said to have moved her holy relic to the pillar where he practised his asceticism, and there, by the prayers of her holy son, her grave worked wonders.
+
+*After doxologia.ro's calendar for 4 iulie — [the day](https://doxologia.ro/4-iulie) and [the life](https://doxologia.ro/viata-sfintei-cuvioase-marta); read 24 September 2026; and saint.gr's calendar for 4 Ιουλίου — [the day](https://www.saint.gr/07/04/index.aspx) and [the life](https://www.saint.gr/894/saint.aspx), read 1 October 2026.*

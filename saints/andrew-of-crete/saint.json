@@ -7,6 +7,11 @@
       "form": "Andrei Criteanul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 iulie, «Sfântul Ierarh Andrei Criteanul, Arhiepiscopul Cretei»."
+    },
+    {
+      "form": "Ανδρέας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιουλίου, «Άγιος Ανδρέας ο Ιεροσολυμίτης Αρχιεπίσκοπος Κρήτης», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Ιουλίου — «Άγιος Ανδρέας ο Ιεροσολυμίτης Αρχιεπίσκοπος Κρήτης»",
+        "url": "https://www.saint.gr/07/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries. Its heading reads «(; - 740)» and its narrative says he died on shipboard «(740μ.Χ.)» on the way back from Constantinople and was buried at Eresos on Lesbos, in the church of Saint Anastasia; the folder carries no `dates` object and the year is reported rather than written, because this is the first source to give one. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -59,6 +74,39 @@
       },
       "english": {
         "text": "Guide of Orthodoxy, teacher of the right worship of God and of purity, light of the world, God-inspired adornment of monks, wise hierarch Andrew: by your teachings you have given light to all. O spiritual lyre, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Κανόνα πίστεως, καὶ εἰκόνα πραότητος, ἐγκρατείας διδάσκαλον, ἀνέδειξε σε τῇ ποίμνῃ σου, ἡ τῶν πραγμάτων ἀλήθεια· διὰ τοῦτο ἐκτήσω τῇ ταπεινώσει τὰ ὑψηλά, τῇ πτωχείᾳ τὰ πλούσια. Πάτερ Ἱεράρχα Ἀνδρέα, πρέσβευε Χριστῷ τῷ θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’ — the first of five apolytikia on the page of «Άγιος Ανδρέας ο Ιεροσολυμίτης Αρχιεπίσκοπος Κρήτης»; it is the common of a hierarch, with his own name set into its last line",
+        "url": "https://www.saint.gr/1988/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown you to your flock as a rule of faith, an image of meekness and a teacher of self-restraint; therefore you have gained the heights by humility and riches by poverty. Father and hierarch Andrew, intercede with Christ our God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν.",
+      "text": "Σαλπίσας τρανῶς, τὰ θεῖα μελωδήματα, ἐδείχθης φωστήρ, τῷ κόσμῳ τηλαυγέστατος, τῷ φωτί λαμπόμενος, τῆς Τριάδος Ἀνδρέα Ὅσιε· ὅθεν πάντες βοῶμέν σοι, Μὴ παύσῃ πρεσβεύων ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — on the page of «Άγιος Ανδρέας ο Ιεροσολυμίτης Αρχιεπίσκοπος Κρήτης», and it names him",
+        "url": "https://www.saint.gr/1988/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sounding out the songs of God like a clear trumpet, you were shown to the world as a light seen from far off, shining with the light of the Trinity, O venerable Andrew. And so we all cry out to you: do not cease interceding for us all.",
         "rendered": "site"
       }
     }
