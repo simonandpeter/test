@@ -7,6 +7,11 @@
       "form": "Ioan cel Milostiv",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 noiembrie."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Νοεμβρίου, «Άγιος Ιωάννης ο Ελεήμονας Αρχιεπίσκοπος Αλεξανδρείας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Νοεμβρίου — «Άγιος Ιωάννης ο Ελεήμονας Αρχιεπίσκοπος Αλεξανδρείας»",
+        "url": "https://www.saint.gr/11/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the Cypriot of Amathus who became archbishop of Alexandria and was named the Merciful for his almsgiving. Its head line gives «(; - 620)», the year of his repose, which the folder did not hold. It prints an apolytikion and a kontakion that name him, both taken here; the Μεγαλυνάριον and the Κάθισμα it also prints are not kinds the schema holds and are not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -61,9 +76,51 @@
         "text": "In thy patience thou hast won thy reward, venerable father, persevering unceasingly in prayer; pray thou then to Christ God, blessed John the Merciful, that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἐν τῇ ὑπομονῇ σου ἐκτήσω τὸν μισθόν σου Πάτερ, Ὅσιε, ταῖς προσευχαῖς ἀδιαλείπτως ἐγκαρτερήσας, τοὺς πτωχοὺς ἀγαπήσας, καὶ τούτοις ἐπαρκέσας· Ἀλλὰ πρέσβευε Χριστῷ τῷ Θεῷ, Ἰωάννη Ἐλεῆμον μακάριε, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. δ’ — the first hymn on the page of «Άγιος Ιωάννης ο Ελεήμονας Αρχιεπίσκοπος Αλεξανδρείας», and it names him by his by-name.",
+        "url": "https://www.saint.gr/3009/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "In your patience you gained your reward, venerable father, persevering unceasingly in prayers, loving the poor and providing for them. But intercede with Christ our God, blessed John the Merciful, that our souls be saved.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τὸν πλοῦτον τὸν σόν, ἐσκόρπισας τοῖς πένησι, καὶ τῶν οὐρανῶν, τὸν πλοῦτον νῦν ἀπείληφας, Ἰωάννη πάνσοφε· διὰ τοῦτο πάντες σε γεραίρομεν, ἐκτελοῦντες τήν μνήμην σου, τῆς ἐλεημοσύνης ὦ ἐπώνυμε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — on the page of «Άγιος Ιωάννης ο Ελεήμονας Αρχιεπίσκοπος Αλεξανδρείας», and it names him.",
+        "url": "https://www.saint.gr/3009/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You scattered your wealth among the destitute, and now you have received the wealth of the heavens, all-wise John; and so we all honour you, keeping your memory, you who are named after mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 620,
+      "latest": 620,
+      "display": "620",
+      "basis": "traditional",
+      "note": "saint.gr: «Τελικά, ειρηνικά παρέδωσε την μακάρια ψυχή του στο Θεό το 620 μ.Χ.», with the page's own head «(; - 620)». The same page places his life «στα χρόνια του Βασιλιά Ηρακλείου (615 μ.Χ.)»."
+    }
   }
 }

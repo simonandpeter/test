@@ -6,6 +6,11 @@
       "form": "Nil Athonitul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 noiembrie; his life page is headed «Nil Athonitul, Izvorâtorul de Mir» and its text calls him «Sfântul Nil Izvorâtorul de Mir»."
+    },
+    {
+      "form": "Νείλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Νοεμβρίου, «Όσιος Νείλος ο Μυροβλύτης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -16,11 +21,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 1601,
-      "latest": 1700,
-      "display": "17th century",
+      "earliest": 1651,
+      "latest": 1651,
+      "display": "1651",
       "basis": "traditional",
-      "note": "doxologia.ro: «El s-a săvârșit către Domnul în veacul al șaptesprezecelea» — the page states the century of his death and gives no year, and no year of birth."
+      "note": "saint.gr's own head line for him: «Οσιος Νειλος ο Μυροβλυτης (; - 1651)». The page's text gives no year."
     }
   },
   "attestations": [
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Νοεμβρίου — «Όσιος Νείλος ο Μυροβλύτης»",
+        "url": "https://www.saint.gr/11/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man of Kynouria whose relic streamed myrrh at the Great Lavra. The page refers the reader to 7 Μαΐου for more, «όπου εορτάζουμε την εύρεση των τιμίων λειψάνων του» — the finding of his relics, which is a second commemoration and not a second feast of the man; it is recorded here as a note and the row keeps the day read. Its first apolytikion, which names him, is taken; the page prints no tone above it, so none is recorded, and the «Έτερον Ἀπολυτίκιον» in Ἦχος δ’ is not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -56,5 +71,22 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Μονάσας θεαρέστως ἐν τῷ Ἄθῳ τρισόλβιε, ἐν προσευχαῖς καὶ νηστείαις τὸν Θεὸν ἐξεζήτησας καὶ γέγονας δοχεῖον καθαρὸν τοῦ πνεύματος, ἀστράπτων τοῖς πιστοῖς ἀρετῶν τὰς λαμπηδόνας, δι΄ὧν φωτίζεις, Νεῖλε, τοὺς βοῶντάς σοι. Δόξα τῷ σε δοξάσαντι Χριστῷ, δωξα τῷ σε ἁγιάσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον — the first hymn on the page of «Όσιος Νείλος ο Μυροβλύτης», printed with no ἦχος above it, and it names him and Athos.",
+        "url": "https://www.saint.gr/3012/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lived as a monk in a manner pleasing to God on Athos, thrice-blessed one, you sought God out in prayers and fastings and became a pure vessel of the Spirit, flashing out upon the faithful the brightnesses of the virtues, by which you give light, Nilus, to those who cry to you. Glory to Christ who glorified you, glory to him who sanctified you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

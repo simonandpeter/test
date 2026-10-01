@@ -6,6 +6,11 @@
       "form": "Nil Pustnicul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 noiembrie."
+    },
+    {
+      "form": "Νείλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Νοεμβρίου, «Όσιος Νείλος ο Ασκητής», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Νοεμβρίου — «Όσιος Νείλος ο Ασκητής»",
+        "url": "https://www.saint.gr/11/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the eparch of Constantinople who went to Mount Sinai with his son Theodoulos, whose memory the page puts on 14 January. The page refuses its own century: quoting S. Eustratiades it gives the reign of Theodosius the Great (379 - 395), conjectures Theodosius II (408 - 450) instead, and says that Nikodemos's synaxarion, which puts him under Maurice (582 - 602), has it «οὐχὶ ὀρθῶς», not rightly — adding that if the translation of his bones under the emperor Justin (518 - 527) is true, the synaxarion's information cannot stand. Three readings and the page's own argument against one of them: no `dates` object is proposed, and the disagreement is recorded here. It prints an apolytikion and a kontakion that name him, both taken; the Οἶκος that follows them is not a kind the schema holds. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -61,6 +76,39 @@
         "text": "With the streams of thy tears thou didst till the barren desert, and with thy sighing from the depths thou madest thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with wonders, Nilus our father. Pray thou to Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ταῖς τῶν δακρύων σου ῥοαῖς, τῆς ἐρήμου τὸ ἄγονον ἐγεώργησας, καὶ τοῖς ἐκ βάθους στεναγμοῖς, εἰς ἑκατὸν τοὺς πόνους ἐκαρποφόρησας, καὶ γέγονας φωστήρ, τῇ οἰκουμένῃ λάμπων τοῖς θαύμασι, Νεῖλε Πατὴρ ἡμῶν, Ὅσιε, Πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. δ’ — the first hymn on the page of «Όσιος Νείλος ο Ασκητής», and it names him.",
+        "url": "https://www.saint.gr/3010/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of your tears you tilled the barren desert, and with your groanings from the depths you made your labours bear fruit a hundredfold; and you became a beacon, shining upon the inhabited world with wonders, Nilus our venerable father. Intercede with Christ our God that our souls be saved.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τὰς φρυγανώδεις τῶν παθῶν τῶν ἐκ τοῦ σώματος, ἐπαναστάσεις τιμητικῶς Νεῖλε Μακάριε, ἐν ἀγρύπνῳ σου συνέκοψας ἱκέσιᾳ. Ἀλλ᾽ ὡς ἔχων παῤῥησίαν πρὸς τὸν Κύριον, ἐκ παντοίων μὲ κινδύνων ἐλευθέρωσον, ἵνα κράζω σοι, Χαίροις Πάτερ παγκόσμιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ — on the page of «Όσιος Νείλος ο Ασκητής», and it names him.",
+        "url": "https://www.saint.gr/3010/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The brushwood risings of the passions that come from the body you cut down, blessed Nilus, by your sleepless entreaty. But having boldness before the Lord, set me free from every kind of danger, that I may cry to you: Rejoice, father of the whole world.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ."
     }
   ],
   "text": {

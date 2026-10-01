@@ -1,0 +1,61 @@
+{
+  "slug": "leo-styppes",
+  "display_name": "Leo Styppes",
+  "names": [
+    {
+      "form": "Λέων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Νοεμβρίου, «Άγιος Λέων Πατριάρχης Κωνσταντινούπολης», with the rank words left off. The page gives his by-name: «είναι αυτός που επονομάστηκε Στυππής»."
+    }
+  ],
+  "sex": "male",
+  "office": "Patriarch of Constantinople",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1143,
+      "latest": 1143,
+      "display": "1143",
+      "basis": "traditional",
+      "note": "saint.gr's own head line for him, «Αγιος Λεων Πατριαρχης Κωνσταντινουπολης (; - 1143)», and its text: «Πατριάρχευσε στα χρόνια του βασιλιά Ιωάννη Κομνηνού τα έτη 1134 - 1143 μ.Χ. κατά τον Μελέτιο»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Νοεμβρίου — «Άγιος Λέων Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/11/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Νοεμβρίου εκάστου έτους», the same day as the listing. The page attributes the years of his patriarchate to Meletios, naming the volume and page. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and it prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

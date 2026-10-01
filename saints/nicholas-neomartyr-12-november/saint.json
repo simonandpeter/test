@@ -1,0 +1,59 @@
+{
+  "slug": "nicholas-neomartyr-12-november",
+  "display_name": "Nicholas (12 November)",
+  "names": [
+    {
+      "form": "Νικόλας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Νοεμβρίου, «Άγιος Νικόλας ο Νεομάρτυρας από την Ενορία των Έξι Μαρμάρων», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1732,
+      "latest": 1732,
+      "display": "1732",
+      "basis": "attested",
+      "note": "saint.gr: «μαρτύρησε στην Κωνσταντινούπολη για την ευσέβεια του το έτος 1732 μ.Χ.», with the page's own head «(; - 1732)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Νοεμβρίου — «Άγιος Νικόλας ο Νεομάρτυρας από την Ενορία των Έξι Μαρμάρων»",
+        "url": "https://www.saint.gr/11/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Νοεμβρίου εκάστου έτους», the same day as the listing, and says the day was appointed for his memory — «Η μνήμη του καθιερώθηκε να γιορτάζεται στις 12 Νοεμβρίου» — rather than being the day of his death, which it does not give. The parish of the Six Marbles is the only place named for him. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

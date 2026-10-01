@@ -1,0 +1,61 @@
+{
+  "slug": "martin-of-tours",
+  "display_name": "Martin of Tours",
+  "names": [
+    {
+      "form": "Μαρτίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Νοεμβρίου, «Όσιος Μαρτίνος ο θαυματουργός επίσκοπος Φραγκιάς», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Tours",
+  "types": [
+    "bishop",
+    "wonderworker"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Μαρτίνος έζησε τον 4ο αιώνα μ.Χ. και καταγόταν από τη Σαβωρία της Παννονίας», and it says he died aged 81 at the village of Candes. The same page then gives another synaxaristic source whose account makes him a count and general under Trajan (98 - 117) and bishop of a city it calls Konstantinos of Gaul; that reading is two centuries off this one and is recorded in the attestation's note rather than in these dates."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Νοεμβρίου — «Όσιος Μαρτίνος ο θαυματουργός επίσκοπος Φραγκιάς»",
+        "url": "https://www.saint.gr/11/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Νοεμβρίου εκάστου έτους», the same day as the listing. The page sets two accounts of him side by side and says so: the first is the soldier of Sabaria in Pannonia who divided his cloak at Amiens and became bishop of Tours in the fourth century, and the second, «Άλλη συναξαριστική πηγή όμως, έχει διαφορετικό το βιογραφικό του σημείωμα», makes him a count and general under Trajan who became a monk and then bishop of a city of Gaul it calls Konstantinos. The life written here follows the page's first account and quotes the second as the page's own. The same day's calendar keeps a second Martin, the bishop of Tarakine, in a separate entry; that page says only that he is not the Martin of 10 November, and joins neither of them to this one, although both are called men of Sabaria in Pannonia. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

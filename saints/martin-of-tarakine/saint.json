@@ -1,0 +1,52 @@
+{
+  "slug": "martin-of-tarakine",
+  "display_name": "Martin of Tarakine",
+  "names": [
+    {
+      "form": "Μαρτίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Νοεμβρίου, «Όσιος Μαρτίνος ο Επίσκοπος Ταρακίνης», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Tarakine",
+  "types": [
+    "bishop",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Νοεμβρίου — «Όσιος Μαρτίνος ο Επίσκοπος Ταρακίνης»",
+        "url": "https://www.saint.gr/11/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Νοεμβρίου εκάστου έτους», the same day as the listing, and carries a caution of its own: «Ο Όσιος Μαρτίνος που εορτάζει σήμερα, δεν είναι ο ίδιος με τον Όσιο Μαρτίνο τον Επίσκοπο που εορτάζει στις 10 Νοεμβρίου» — he is not the Martin kept on 10 November. It says nothing about the other Martin kept on this same day, the wonderworking bishop of Frankia, although both are called Illyrians of Sabaria in Pannonia; nothing on either page joins them and the two are separate entries. The page gives no year, so there is no `dates` object. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

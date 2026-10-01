@@ -977,6 +977,7 @@ export const ru = {
     'Bishop of Syracuse': 'Епископ Сиракузский',
     'Bishop of Tamasos': 'Епископ Тамасский',
     'Bishop of Tamassos in Cyprus': 'Епископ Тамасский на Кипре',
+    'Bishop of Tarakine': 'Епископ Таракинский',
     'Bishop of Tarsus': 'Епископ Тарсийский',
     'Bishop of Tauromenium': 'Епископ Тавроменийский',
     'Bishop of Thessalonica': 'Епископ Фессалоникийский',

@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'μαρτινοσ martin-bishop-10-november martin-of-tarakine martin-of-the-thebaid martin-of-tours martin-the-martyr-22-september':
+    'Five men, and two are new on 12 November: Martin bishop of Tours and Martin bishop of Tarakine, a confessor. Two entries on the one day, so two men, and neither is the bishop of 10 November whose see the page does not name. The others are Martin of the Thebaid on 24 March and the Martin of 22 September.',
+  'λεων leo-companion-of-gervasius leo-companion-of-manuel leo-of-catania leo-of-mandra leo-of-methone leo-of-nicaea leo-of-patara leo-of-samos leo-styppes leo-the-great leo-the-hermit':
+    'Eleven now. The new one is Leo Styppes, patriarch of Constantinople, on 12 November; the others are read in the el-05-11 entry for this name form.',
+  'αρσακιοσ arsacius-martyr-12-november arsacius-of-constantinople':
+    'Two men. The new one is the Arsacius of 12 November; the other is Arsacius of Constantinople on 11 October.',
   'θεοστηρικτοσ theostericus-of-symbola theosteriktos-the-hymnographer':
     'Two men. The new one is Theostericus of Symbola on 10 November, a confessor; the other is Theosteriktos the hymnographer on 17 March.',
   'νοννοσ nonnos nonnus-the-bishop':

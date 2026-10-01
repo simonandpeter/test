@@ -958,6 +958,7 @@ export const ro = {
     'Bishop of Syracuse': 'Episcop de Siracuza',
     'Bishop of Tamasos': 'Episcop de Tamasos',
     'Bishop of Tamassos in Cyprus': 'Episcop de Tamasos în Cipru',
+    'Bishop of Tarakine': 'Episcop de Tarakina',
     'Bishop of Tarsus': 'Episcop de Tars',
     'Bishop of Tauromenium': 'Episcop de Tavromenia',
     'Bishop of Thessalonica': 'Episcop de Tesalonic',
