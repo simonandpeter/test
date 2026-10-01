@@ -1,0 +1,62 @@
+{
+  "slug": "gabriel-of-pec",
+  "display_name": "Gabriel of Peć",
+  "names": [
+    {
+      "form": "Γαβριήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Δεκεμβρίου, «Άγιος Γαβριήλ ο Ιερομάρτυρας Αρχιεπίσκοπος Πεκίου Σερβίας», with the rank words and the see left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Archbishop of Peć in Serbia",
+  "types": [
+    "hieromartyr",
+    "archbishop",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1659,
+      "latest": 1681,
+      "display": "1659 or 1681",
+      "basis": "attested",
+      "note": "**The page gives two dates for the martyrdom and says so.** Its own narrative: «δέχτηκε το στεφάνι του μαρτυρίου με απαγχονισμό στις 13 Δεκεμβρίου 1659 μ.Χ.», and its head «(; - 1659)»; then «Ο Otto Meinardus, τοποθετεί το μαρτύριο του νέου Ιερομάρτυρα αυτού, στις 13 Οκτωβρίου 1681 μ.Χ.» The interval records the disagreement. No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Δεκεμβρίου — «Άγιος Γαβριήλ ο Ιερομάρτυρας Αρχιεπίσκοπος Πεκίου Σερβίας»",
+        "url": "https://www.saint.gr/12/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The page's two dates for the martyrdom carry two different days — 13 Δεκεμβρίου 1659 in its own narrative and 13 Οκτωβρίου 1681 on Otto Meinardus's reckoning — and it does not choose between them.** This row records the day page that was read, which is 13 Δεκεμβρίου, and the disagreement is recorded in `dates`. He is a Serbian archbishop and the `serbian` row is nonetheless left `undocumented`, because the Serbian source was not read. The page names Peć, Wallachia, Russia, Serbia and Prousa; no coordinate is proposed. It prints no hymn. The deputy Maximos and the Vizier are not saints and no `related` row is made."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

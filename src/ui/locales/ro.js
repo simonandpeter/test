@@ -773,6 +773,7 @@ export const ro = {
     'Archbishop of Paphos': 'Arhiepiscop de Pafos',
     'Archbishop of Perm': 'Arhiepiscop de Perm',
     'Archbishop of Phanarion and Neochori': 'Arhiepiscop de Fanarion și Neohori',
+    'Archbishop of Peć in Serbia': 'Arhiepiscop de Peć în Serbia',
     'Archbishop of Ravenna': 'Arhiepiscop de Ravenna',
     'Archbishop of Rostov': 'Arhiepiscop de Rostov',
     'Archbishop of Seville': 'Arhiepiscop de Sevilla',

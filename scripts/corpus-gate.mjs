@@ -115,6 +115,20 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'προκοπιοσ procopius-24-november procopius-of-decapolis procopius-of-jerusalem procopius-of-ustyug procopius-of-usya procopius-of-vyatka procopius-the-martyr-25-june procopius-the-palestinian procopius-the-persian prokopios-of-machairas':
+    'Ten men. The new one is Prokopios of Machairas on 13 December, one of the four of that monastery; the others are read in the el-11-26 entry for this name form.',
+  'νεοφυτοσ neophytos-martyr-11-august neophytos-of-docheiariou neophytos-of-machairas neophytus-5-may neophytus-martyr-7-december neophytus-of-knossos neophytus-of-nicaea neophytus-servant-of-anthousa':
+    'Eight now. The new one is Neophytos of Machairas on 13 December, who heads the four of that monastery; the others are read in the el-12-07 entry for this name form.',
+  'νειλοσ neilos-of-machairas nilus-bishop-and-hieromartyr nilus-of-athos nilus-of-sora nilus-of-stolobnoe nilus-the-hermit-of-sinai nilus-the-sanctified':
+    'Seven men. The new one is Neilos of Machairas on 13 December, bishop of Tamasos and abbot of that house; the others are read in the el-12-06 entry for this name form.',
+  'μαρδαριοσ mardarius mardarius-the-recluse':
+    'Two men, and both stand on 13 December: Mardarius of the five of Sebaste, whose day the Romanian calendar keeps too and whose Greek row this batch adds, and Mardarius the Recluse of the Kyiv Caves, new here. Two entries, two men.',
+  'ιγνατιοσ ignatios-of-machairas ignatius-brianchaninov ignatius-of-constantinople ignatius-of-kios ignatius-of-mariupol ignatius-of-methymna ignatius-of-rostov ignatius-of-stara-zagora ignatius-the-sinaite ignatius-the-steironite ignatius-venerable-19-may ignatius-venerable-7-december':
+    'Twelve now. The new one is Ignatios of Machairas on 13 December, one of the four of that monastery; the others are read in the el-12-07 entry for this name form.',
+  'γαβριηλ gabriel-companion-of-sionios gabriel-of-bialystok gabriel-of-egypt gabriel-of-georgia gabriel-of-lesnovo gabriel-of-novgorod-and-saint-petersburg gabriel-of-pec gabriel-of-saint-stephens-jerusalem gabriel-patriarch-of-constantinople gabriel-protopopov gabriel-the-iberian gabriel-the-martyr-2-february gabriel-the-small gabriel-urgebadze gabriel-vsevolod-of-novgorod':
+    'Fifteen now. The new one is Gabriel archbishop of Peć on 13 December, a new martyr hanged by the Turks; the others are read in the el-12-03 entry for this name form.',
+  'αρσενιοσ arsenios-autoreianos arsenios-of-cappadocia arsenios-of-latros arsenios-of-paros arsenios-the-hagiopharangite arsenius-bishop-of-tver arsenius-companion-of-elias-speleotes arsenius-of-corfu arsenius-of-elassona arsenius-of-georgia arsenius-of-ikalto arsenius-of-konevits arsenius-of-novgorod arsenius-of-rostov arsenius-of-serbia arsenius-of-the-kyiv-caves arsenius-of-varnakova arsenius-of-veroia arsenius-the-great':
+    'Nineteen now. The new one is Arsenios of Latros on 13 December; the others are read in the el-10-28 entry for this name form.',
   'θεραπων therapon-of-cyprus therapon-of-lythrodontas therapon-of-monza therapon-of-the-white-lake':
     'Four men. The new one is Therapon of Monza on 12 December; the others are read in the el-10-30 entry for this name form.',
   'φοιβη phoebe-12-december phoebe-the-deaconess':

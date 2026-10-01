@@ -1,0 +1,60 @@
+{
+  "slug": "arsenios-of-latros",
+  "display_name": "Arsenios of Latros",
+  "names": [
+    {
+      "form": "Αρσένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Δεκεμβρίου, «Όσιος Αρσένιος που ασκήτευσε στο Λάτριο όρος», with the rank word and the clause naming the mountain left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 701,
+      "latest": 900,
+      "display": "8th to 9th century",
+      "basis": "inferred",
+      "note": "saint.gr: «Πότε ακριβώς έζησε ο Όσιος Αρσένιος δεν μας είναι γνωστό. Πάντως από τα βιογραφικά του στοιχεία συμπεραίνουμε ότι έζησε μεταξύ του 8ου και 9ου αιώνα μ.Χ.» The page states the inference as an inference, so the basis is `inferred` and not `attested`."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Δεκεμβρίου — «Όσιος Αρσένιος που ασκήτευσε στο Λάτριο όρος»",
+        "url": "https://www.saint.gr/12/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page names Constantinople, the locality called Ιερό, Mount Latros and the monastery of Κελλιβάρων, but it is plain about not knowing where he was first a monk, and no coordinate is proposed. It prints no hymn. Its epigram has «Tον Aρσένιον εκμιμούμενος Πάτερ» — he imitates Arsenius — which is a comparison with Arsenius the Great and not a companionship, so no `related` row is made from it."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

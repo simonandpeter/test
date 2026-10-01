@@ -1,0 +1,60 @@
+{
+  "slug": "mardarius-the-recluse",
+  "display_name": "Mardarius the Recluse",
+  "names": [
+    {
+      "form": "Μαρδάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Δεκεμβρίου, «Όσιος Μαρδάριος ο Έγκλειστος», with the rank word and the by-name left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1201,
+      "latest": 1300,
+      "display": "13th century",
+      "basis": "attested",
+      "note": "saint.gr, the whole of what it says of his dating: «Ο Όσιος Μαρδάριος ο Έγκλειστος μόνασε στην Λαύρα των Σπηλαίων τον 13ο αιώνα μ.Χ.» No year of birth and no year of death is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Δεκεμβρίου — «Όσιος Μαρδάριος ο Έγκλειστος»",
+        "url": "https://www.saint.gr/12/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The same day page also lists «Άγιοι Ευστράτιος, Αυξέντιος, Ευγένιος, Μαρδάριος και Ορέστης», whose Mardarius the corpus already keeps as `mardarius`; these are two entries on one calendar day and therefore two commemorations and two men,** and this one is the recluse of the Lavra of the Caves, dated by his own page to the thirteenth century. The page is two sentences long. It names the Lavra of the Caves and proposes no coordinate. It prints no hymn: it reports that his troparion calls him «μη-άπληστος», but does not print the troparion itself, so nothing is copied."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

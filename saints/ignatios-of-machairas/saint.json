@@ -1,0 +1,101 @@
+{
+  "slug": "ignatios-of-machairas",
+  "display_name": "Ignatios of Machairas",
+  "names": [
+    {
+      "form": "Ιγνάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Δεκεμβρίου, «Άγιοι Νεόφυτος, Ιγνάτιος, Προκόπιος και Νείλος, κτίτορες της Ιεράς Μονής Μαχαιρά», with the rank word and the founder's clause left off; the life page heads him «Άγιος Ιγνάτιος Κτίτορας της Ιεράς Μονής Μαχαιρά»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1101,
+      "latest": 1180,
+      "display": "12th century",
+      "basis": "attested",
+      "note": "saint.gr puts the finding of the icon «μέχρι τον 12ο αιώνα, όταν η Παναγία με θαυματουργικό τρόπο έδωσε ένα μαχαίρι στους οσίους ασκητές Νεόφυτο και Ιγνάτιο», and his journey to Constantinople in the reign of «τον αυτοκράτορα Μανουήλ Κομνηνό (1143 - 1180 μ.Χ.)». No year of birth and no year of death is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Δεκεμβρίου — «Άγιοι Νεόφυτος, Ιγνάτιος, Προκόπιος και Νείλος, κτίτορες της Ιεράς Μονής Μαχαιρά»",
+        "url": "https://www.saint.gr/12/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. **The entry enumerates its company — «Άγιοι Νεόφυτος, Ιγνάτιος, Προκόπιος και Νείλος, κτίτορες της Ιεράς Μονής Μαχαιρά» — so it is one folder per named member, and each relates the other three.** The page's narrative is largely the history of the monastery of the Panagia of Machairas rather than four lives; what it says of each man is in that man's life. It names the monastery's site — the eastern end of the Troodos range near the peak of Kionia, at 870 metres, above the Pedieos torrent — but no coordinate is proposed. It prints two apolytikia, both naming all four, which are taken, and a megalynarion, which is a kind the schema does not hold. The emperors Manuel Komnenos, Isaac and Alexios Angelos, and Ioakeim the abbot who followed Neilos, are not folders in this corpus and no `related` row is made for them."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Χριστοφόρου τετράδα τῶν Κτιτόρων τιμήσωμεν, οἱ τοῦ Μαχαιρὰ θείας μάνδρας μονασταὶ ὕμνοις λέγοντες, Νεόφυτε ἡ βάσις τῆς Μονῆς, Ἰγνάτιε ἀσκήσεως κανών, καὶ Προκόπιε θεόφρον, Νεῖλε σοφέ. Κυρίω ἱκετεύσατε, ὅπως χαρίσηται ἠμίν, δύναμιν τὴν τοῦ Πνεύματος, ἶνα φανῶμεν σὺν ὑμίν, τῆς Βασιλείας σύσκηνοι.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης, on the page of the four founders of the monastery of Machairas. It names all four, so it is taken into each of the four folders. The page's spellings «Κυρίω», «ἠμίν» and «ἶνα» are the readings the site publishes and are copied unchanged.",
+        "url": "https://www.saint.gr/3252/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour the Christ-bearing four of the founders, we the monks of the divine fold of Machairas, saying in hymns: Neophytos, foundation of the monastery; Ignatios, canon of ascetic labour; and Prokopios of godly mind; Neilos the wise. Entreat the Lord to grant us the power of the Spirit, that we may be shown to dwell together with you in the Kingdom.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Βάσις ἄσειστος, Μαχαιρὰ μάνδρας, ἀνεδείχθητε, σεπτοὶ Πατέρες καὶ θείας βιοτῆς χριστοπίνακες, θεῖε Νεόφυτε, τρισμάκαρ Ἰγνάτιε, γέρον Προκόπιε καὶ Νεῖλε πρωτόθρονε, χεῖρας ἄρατε, θεῶ σὺν τὴ θεομήτορι, πρεσβεύοντες σωθήναι τᾶς ψυχᾶς ἠμῶν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως, on the page of the four founders of the monastery of Machairas. It too names all four. The page also prints a megalynarion, for which this corpus's schema has no kind, and that is left out.",
+        "url": "https://www.saint.gr/3252/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "An unshaken foundation of the fold of Machairas were you shown to be, O revered fathers, and tablets of Christ for the divine life: divine Neophytos, thrice-blessed Ignatios, elder Prokopios, and Neilos the first-enthroned. Lift up your hands to God together with the Mother of God, interceding that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "related": [
+    "neophytos-of-machairas",
+    "prokopios-of-machairas",
+    "neilos-of-machairas"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

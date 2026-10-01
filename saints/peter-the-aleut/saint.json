@@ -5,6 +5,11 @@
     {
       "form": "Sfântul Mucenic Petru Aleutul",
       "lang": "ro"
+    },
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Δεκεμβρίου, «Άγιοι Ιουβενάλιος και Πέτρος και πάντες Άγιοι οι εν Αλάσκα», with the rank word left off. The page's apolytikion calls him «Πέτρον Νεομάρτυρα» of the Aleuts; the by-name is not stored as part of the form."
     }
   ],
   "sex": "male",
@@ -33,8 +38,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September 2026; its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Δεκεμβρίου — «Άγιοι Ιουβενάλιος και Πέτρος και πάντες Άγιοι οι εν Αλάσκα»",
+        "url": "https://www.saint.gr/12/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. **The entry names two of its company and leaves the rest unnamed — «και πάντες Άγιοι οι εν Αλάσκα» — so the two named men get a row each and the unnamed remainder gets nothing.** The page says plainly «Δεν έχουμε λεπτομέρειες για τους βίους των αγιών» and then prints, for Peter alone, a long passage out of Πέτρος Μπότσης's edition of «Ο Άγιος Γερμανός της Αλάσκας». It gives no year for either man, so `dates` are left untouched; it names California, Monterey and San Francisco in that passage and no coordinate is proposed. It prints one apolytikion, which names Peter the Aleut alone, and that is taken into his folder and not into Juvenal's."
     },
     {
       "church": "serbian",
@@ -60,5 +75,28 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "juvenal-of-alaska",
+    "herman-of-alaska"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α΄.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τῆς Ἀλάσκας τὸ κλέος, Ἀλεούτων τὸ καύχημα, Πέτρον Νεομάρτυρα θεῖον ἐν ᾠδαῖς εὐφημήσωμεν, ὡς σέλας πολικὸν γὰρ ἐν νυκτί, διέλυσεν αἱρέσεων ἀχλύν, μαρτυρίῳ ἐκκοπῆς τε χειρῶν ποδῶν, ὁμολογίας στέφανος· δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ σε ἐνισχύσαντι, δόξα τῷ ταπεινώσαντι διὰ σου ψεύδους τὴν ἔπαρσιν",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος α΄, Τῆς ἐρήμου πολίτης, on the page of «Άγιοι Ιουβενάλιος και Πέτρος και πάντες Άγιοι οι εν Αλάσκα». It names Peter the new martyr and the Aleuts and nobody else, so it is taken into his folder alone. The page prints it without a closing stop, and it is copied as printed.",
+        "url": "https://www.saint.gr/3253/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The glory of Alaska, the boast of the Aleuts, Peter the divine new martyr, let us praise in songs; for like the polar light in the night he scattered the mist of the heresies, and by the martyrdom of the cutting off of his hands and feet won the crown of confession. Glory to Christ who glorified thee, glory to him who strengthened thee, glory to him who through thee humbled the arrogance of falsehood",
+        "rendered": "site"
+      }
+    }
+  ]
 }

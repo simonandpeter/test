@@ -1,0 +1,9 @@
+# Ignatios of Machairas
+
+saint.gr's calendar for 13 December keeps four founders of the monastery of the Panagia of Machairas in Cyprus together, and Ignatios is the second of them. The monastery stands at the eastern end of the Troodos range near the peak of Kionia and at a height of 870 metres; it is called royal because it was built with royal help, and stavropegial because it became self-governing in church order. It is dedicated to the Panagia and keeps its own feast at the Entry of the Theotokos, on 21 November.
+
+By the oral tradition the page reports, the icon of the Panagia the Hagiosoritissa lay forgotten in a cave on that mountainside, with brambles grown over the entrance, until in the twelfth century the Mother of God gave a knife to the venerable ascetics [Neophytos](/saints/neophytos-of-machairas) and Ignatios so that they could cut the brambles away and find it. When Neophytos fell asleep, another aged monk, [Prokopios](/saints/prokopios-of-machairas), came to Ignatios.
+
+The two of them decided, once the brotherhood had grown numerous, to raise a monastery that would be run on the coenobitic pattern the great monastic centres of the time followed. For that they went to Constantinople, where they met the emperor Manuel Komnenos, whose reign the page dates 1143 to 1180, and laid their wish before him. He granted them the money they needed, gave the new monastery the mountain it was to be built on together with the country round it, gave it the stavropegion, and the privilege of being free and untaxed by the state and by private persons. Ignatios left [Neilos](/saints/neilos-of-machairas) his successor by a written ordinance.
+
+*After saint.gr's calendar for 13 Δεκεμβρίου — [the day](https://www.saint.gr/12/13/index.aspx) and [the life](https://www.saint.gr/3252/saint.aspx); read 2 October 2026.*

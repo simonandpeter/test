@@ -6,6 +6,11 @@
       "form": "Eustratie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 decembrie, «Sfântul Mare Mucenic Eustratie», with the rank words left off."
+    },
+    {
+      "form": "Ευστράτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Δεκεμβρίου, «Άγιοι Ευστράτιος, Αυξέντιος, Ευγένιος, Μαρδάριος και Ορέστης», with the rank word left off. The page glosses the name itself, «(από ευ + στρατός) = ο αρχηγός ένδοξου στρατού»."
     }
   ],
   "sex": "male",
@@ -41,8 +46,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Δεκεμβρίου — «Άγιοι Ευστράτιος, Αυξέντιος, Ευγένιος, Μαρδάριος και Ορέστης»",
+        "url": "https://www.saint.gr/12/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Δεκεμβρίου εκάστου έτους», the same day the corpus already keeps for the company, and the entry is the same five: the officer Eustratius and his fellows under Diocletian. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page names Λυσίας the duke and Ἀγρικόλας the eparch as their judges, and gives no year for the persecution beyond «επί Διοκλητιανού», so no `dates` are proposed from it. It lists at length where the relics are kept — Μεγίστη Λαύρα, Κουτλουμούσι, Ξηροπόταμος, Φιλοθέου, Καρακάλου and Κύκκου, Μικρόκαστρο of Siatista, Αρχάγγελος Μιχαήλ at Aridaia, and the greater part of all five at the church of the Holy Trinity and the Five Martyrs at Πολύστυλο of Kavala — which is not drafted. **A second entry on the same day page, «Όσιος Μαρδάριος ο Έγκλειστος» of the Lavra of the Caves, carries the same personal name as one of these five and is a different man; it is drafted as a new folder, `mardarius-the-recluse`.** The page prints an apolytikion naming all five, which is taken into each of the five folders, a kontakion naming Eustratius alone, which is taken into his, and a kathisma and an oikos, which are kinds the schema does not hold."
     },
     {
       "church": "serbian",
@@ -64,6 +79,40 @@
       },
       "english": {
         "text": "The steadfastness of the victory-bearers, five in number — the holy great martyrs Eustratius and Auxentius together with the rest of the contenders — boldly facing the fire and the other torments, received from Christ the crowns of glory; and to him they pray, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Ἡ πενταυγὴς τῶν ἀθλοφόρων χορεία, τῇ τῶν ἀγώνων νοητῇ δαδουχίᾳ, τὴν οἰκουμένην ἅπασαν αὐγάζει νοητῶς· ὁ σοφὸς Εὐστράτιος, σὺν Αὐξεντίῳ τῷ θείῳ, Ὀρέστης καὶ Μαρδάριος καὶ Εὐγένιος ἅμα, οὗς εὐφημοῦντες εἴπωμεν πιστοί· χαίροις μαρτύρων πεντάριθμε σύλλογε.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος δ’, Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ, on the page of the five martyrs. It names all five, so it is the company's own service and is taken into each of the five folders.",
+        "url": "https://www.saint.gr/3258/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The fivefold-shining choir of the prize-winners lights the whole inhabited world with the spiritual torch of their contests: the wise Eustratius with the divine Auxentius, Orestes and Mardarius and Eugene together. Praising them, let us the faithful say: Rejoice, O five-numbered company of martyrs.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τὴν ἐν πρεσβείαις.",
+      "text": "Φωστὴρ ἐφάνης λαμπρότατος Χριστοκήρυξ, τοῖς ἐν σκότει τῆς ἀγνωσίας καθημένοις· πίστιν ὡς δόρυ δὲ περιθέμενος, τῶν δυσμενῶν τὰ θράση, οὐκ ἐπτοήθης Εὐστράτιε, Ῥητόρων ὑπάρχων εὐγλωττότερος.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος β’, Τὴν ἐν πρεσβείαις, on the page of the five martyrs. It names Eustratius alone, so it is taken into his folder only and not into his companions'.",
+        "url": "https://www.saint.gr/3258/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst appear a most radiant light, a herald of Christ, to those sitting in the darkness of ignorance; and girding faith about thee as a spear, thou wast not dismayed at the insolence of the enemy, O Eustratius, who wast more eloquent than the orators.",
         "rendered": "site"
       }
     }

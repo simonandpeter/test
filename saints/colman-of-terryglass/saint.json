@@ -1,0 +1,68 @@
+{
+  "slug": "colman-of-terryglass",
+  "display_name": "Colman of Terryglass",
+  "names": [
+    {
+      "form": "Κόλμαν",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Δεκεμβρίου, «Άγιος Κόλμαν του Τέρρυ-Γκλας», with the rank word and the place left off. The page prints the place-name only in Greek letters, «Τέρρυ-Γκλας»; the English form Terryglass is a chosen rendering and is not stored as a name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "wonderworker"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 490,
+      "latest": 490,
+      "display": "490",
+      "basis": "attested",
+      "note": "saint.gr's page head, which is the only place either year appears: «Αγιος Κολμαν Του Τερρυ-γκλας (490 - 552)». The page's one-line text gives no year and names no source for these."
+    },
+    "death": {
+      "earliest": 552,
+      "latest": 552,
+      "display": "552",
+      "basis": "attested",
+      "note": "saint.gr's page head, which is the only place either year appears: «Αγιος Κολμαν Του Τερρυ-γκλας (490 - 552)». The page's one-line text gives no year and names no source for these."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Δεκεμβρίου — «Άγιος Κόλμαν του Τέρρυ-Γκλας»",
+        "url": "https://www.saint.gr/12/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The page is one line long and the life says so.** «Ο Άγιος Κόλμαν του Τέρρυ-Γκλας, ο θαυματουργός έζησε σαν ερημίτης και ήταν ιδρυτής 3 μοναστηριών.» It names the three monasteries not at all, names no country, and gives the two years only in its head, so no coordinate is proposed. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
