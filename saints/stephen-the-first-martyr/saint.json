@@ -6,6 +6,11 @@
       "form": "Ștefan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 decembrie, «Sfântul Apostol, Întâiul Mucenic și Arhidiacon Ștefan», with the ranks left off."
+    },
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Δεκεμβρίου, «Άγιος Στέφανος ο Πρωτομάρτυρας και Αρχιδιάκονος», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Δεκεμβρίου — «Άγιος Στέφανος ο Πρωτομάρτυρας και Αρχιδιάκονος»",
+        "url": "https://www.saint.gr/12/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps on the Romanian calendar, and the entry is plainly the same man: the first of the seven deacons, the first martyr, stoned outside the city. The page glosses his name, «ΣΤΕΦΑΝΟΣ (από το στέφανος) = ο αθλοφόρος, ο άξιος στεφάνου νίκης», and names Σκύδρα as the town that holds him patron — not drafted as a location, since no coordinate is proposed for a patronage. It gives no year at all, so the folder's dateless state is unchanged. It prints an apolytikion and a kontakion, both of which name him and are taken; its megalynarion, its oikos and its two kathismata are not kinds this schema holds and are left. It closes by naming «Ανακομιδή του Ιερού Λειψάνου του Αγίου Πρωτομάρτυρα Στεφάνου», the translation of his relic, which is a separate commemoration and no part of this row. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -67,6 +82,40 @@
       },
       "english": {
         "text": "Your head was crowned with a royal diadem for the contests you endured for Christ God, first among the martyrs in the struggle; for having convicted the madness of the Jews, you saw your Saviour at the right hand of the Father. Pray to him always for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Βασίλειον διάδημα, ἐστέφθη σὴ κορυφή, ἐξ ἄθλων ὧν ὑπέμεινας, ὑπὲρ Χριστοῦ τοῦ Θεοῦ, Μαρτύρων Πρωτόαθλε· σὺ γὰρ τὴν Ἰουδαίων, ἀπελέγξας μανίαν, εἶδες σου τὸν Σωτῆρα, τοῦ Πατρὸς δεξιόθεν. Αὐτὸν οὖν ἐκδυσώπει ἀεί, ὑπὲρ τῶν ψυχῶν ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the first hymn on the page of «Άγιος Στέφανος ο Πρωτομάρτυρας και Αρχιδιάκονος», and it names him.",
+        "url": "https://www.saint.gr/3153/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A royal diadem has crowned your head, out of the contests you endured for Christ God, first contender of the martyrs; for you, having confuted the madness of the Jews, saw your Saviour at the right hand of the Father. Entreat him, therefore, always, on behalf of our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον.",
+      "text": "Ὁ Δεσπότης χθὲς ἡμῖν, διὰ σαρκὸς ἐπεδήμει, καὶ ὁ δοῦλος σήμερον, ἀπὸ σαρκὸς ἐξεδήμει· χθὲς μὲν γάρ, ὁ Βασιλεύων σαρκὶ ἐτέχθη, σήμερον δέ, ὁ οἰκέτης λιθοβολεῖται· δι᾽ αὐτὸν καὶ τελειοῦται, ὁ Πρωτομάρτυς καὶ θεῖος Στέφανος.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον — printed under «Άγιος Στέφανος ο Πρωτομάρτυρας και Αρχιδιάκονος», and it names him.",
+        "url": "https://www.saint.gr/3153/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Yesterday the Master came to us in the flesh; today the servant departs out of the flesh. Yesterday he who reigns was born in the flesh; today the household servant is stoned. For his sake he is made perfect — the first martyr, the divine Stephen.",
         "rendered": "site"
       }
     }

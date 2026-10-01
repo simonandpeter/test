@@ -6,6 +6,11 @@
       "form": "Teodor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 decembrie, «Sfântul Cuvios Teodor Mărturisitorul», with the rank words left off."
+    },
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Δεκεμβρίου, «Άγιος Θεόδωρος ο Γραπτός», with the rank word left off and the by-name kept, as it is what distinguishes him."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Δεκεμβρίου — «Άγιος Θεόδωρος ο Γραπτός»",
+        "url": "https://www.saint.gr/12/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps on the Romanian calendar, and the entry is the same man: Theodore the Branded, brother of Theophanes, branded on the forehead by Theophilos and dead in exile at Apamea. The page's two cross-references both land on folders the corpus holds on exactly the Greek days it cites — his father «του Ιωνά (βλέπε 21 Σεπτεμβρίου)» and his brother «τον αδελφό του Θεοφάνη (βλέπε 11 Οκτωβρίου)» — which is what makes the two `related` rows. It gives no year for his death, only «Επί δε του Πατριάρχου Ιωάννου Ζ' (836 ή 837 μ.Χ.), εξορίστηκαν πάλι στην Απάμεια της Βιθυνίας, όπου ο Θεόδωρος πέθανε», so the folder's «before 842», which rests on the Romanian page, is left exactly as it stands. It adds that his relic was afterwards moved to Chalcedon and that a portion of it is now in the church of Saint Catherine at Thessaloniki; neither is drafted as a location. The second Theodore of this day, Θεόδωρος ο Α' Αρχιεπίσκοπος Κωνσταντινούπολης, is a separate entry and a separate man, drafted new in el-12-27. It prints an apolytikion, which names him and is taken. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -70,9 +85,30 @@
         "text": "Guide of Orthodoxy, teacher of the right worship of God and of purity, light of the world, God-inspired adornment of monks: wise father Saint Theodore, by your teachings you have enlightened all. Spiritual harp, pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείοις στίγμασι, σεσημασμένος, δῶρον ἔμψυχον, τῷ Ζωοδότῃ, προσηνέχθης θεοφόρε Θεόδωρε· Ἀσκητικαὶς δωρεαὶς γὰρ κοσμούμενος, ὁμολογίας Ἀγώσι διέλαμψας. Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the only hymn on the page of «Άγιος Θεόδωρος ο Γραπτός», and it names him.",
+        "url": "https://www.saint.gr/3152/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Marked with divine brandings, you were offered as a living gift to the Giver of life, God-bearing Theodore; for adorned with the gifts of the ascetic life, you shone out in the contests of confession. Venerable father, entreat Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "jonah-the-sabaite",
+    "theophanes-of-nicaea"
+  ]
 }

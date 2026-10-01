@@ -1,0 +1,61 @@
+{
+  "slug": "barlaam-of-tobolsk",
+  "display_name": "Barlaam of Tobolsk",
+  "names": [
+    {
+      "form": "Βαρλαάμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Δεκεμβρίου, «Άγιος Βαρλαάμ Αρχιεπίσκοπος Τομπόλσκ», with the rank and the see left off. The page prints the see in Greek transcription only, Τομπόλσκ, and no Slavonic or Russian form of the name, so none is recorded."
+    }
+  ],
+  "sex": "male",
+  "office": "Archbishop of Tobolsk",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1802,
+      "latest": 1802,
+      "display": "1802",
+      "basis": "attested",
+      "note": "saint.gr's head for the entry gives «Αγιος Βαρλααμ Αρχιεπισκοπος Τομπολσκ (; - 1802)» — no year of birth, and 1802 as the year of his death. The page has no text of its own beyond one sentence, so this year is the whole of what it says about his life's span."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026). saint.gr itself calls him a Russian saint and names the Orthodox Church in America's Feasts and Saints as its source, but that is saint.gr reporting and not the Russian calendar read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Δεκεμβρίου — «Άγιος Βαρλαάμ Αρχιεπίσκοπος Τομπόλσκ»",
+        "url": "https://www.saint.gr/12/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Δεκεμβρίου εκάστου έτους», the same day as the listing, and then declines to give a life: «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου.» That is a refusal of detail and not the sentence by which saint.gr marks an entry it cannot vouch for — there is no asterisk here and no «Δεν είναι διασταυρωμένη» sentence, so the entry itself stands. It names no place but the see, and no coordinate is proposed. It prints no hymn. It sends the reader on to «Σύναξη πάντων των εν Σιβηρία Αγίων», a synaxis heading that is not drafted, and credits «OCA - Feasts and Saints». The corpus holds seven other folders for a Barlaam and this is none of them: none of them is of Tobolsk and none is dated 1802."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
