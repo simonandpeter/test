@@ -6,6 +6,11 @@
       "form": "Irineu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 august, «Sfântul Mucenic Irineu», with the rank words left off."
+    },
+    {
+      "form": "Ειρηναίος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Αυγούστου, «Άγιοι Ειρηναίος, Ωρ και Ορόψις», with the rank word left off. The page glosses the name as the peaceful, the peacemaker."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Αυγούστου — «Άγιοι Ειρηναίος, Ωρ και Ορόψις»",
+        "url": "https://www.saint.gr/08/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Αυγούστου εκάστου έτους», the same day as the listing. The entry names three men and the corpus already kept two of them, Irenaeus and Or, so the third — Oropsis — is a new folder and the other two are upgrades in the same batch. Irenaeus is a priest, «διέπρεπε μεταξύ των ιερέων της Εκκλησίας του Χριστού»; Or and Oropsis are laymen who remonstrated with the eparch who was watching his tortures and were tortured with him. saint.gr gives no year, no city and no name for the eparch, so there is no `dates` object and no `locations` entry. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no hymn, only one distich for the three together."
     },
     {
       "church": "serbian",
@@ -46,5 +61,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "or-the-martyr-22-august",
+    "oropsis"
+  ]
 }

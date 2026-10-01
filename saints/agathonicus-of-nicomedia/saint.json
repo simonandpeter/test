@@ -14,6 +14,11 @@
       "form": "Agatonic",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 august, «Sfântul Mucenic Agatonic», with the rank words left off."
+    },
+    {
+      "form": "Αγαθόνικος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Αυγούστου, «Άγιος Αγαθόνικος και οι μαζί μ' αυτόν Ζωτικός, Ζήνων, Θεοπρέπιος, Ακίνδυνος και Σεβηριανός», with the rank word left off. The page glosses the name as a glorious victor, from ἀγαθός and νίκη, and its apolytikion plays on it."
     }
   ],
   "sex": "male",
@@ -60,8 +65,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 22 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Αυγούστου — «Άγιος Αγαθόνικος και οι μαζί μ' αυτόν Ζωτικός, Ζήνων, Θεοπρέπιος, Ακίνδυνος και Σεβηριανός»",
+        "url": "https://www.saint.gr/08/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Αυγούστου εκάστου έτους», the same day the folder's other venerated rows already carry, and the entry is the same company: the count Eutolmios returning from his circuit in Pontus, Zoticus and his disciples killed at Karpe, the prince of the city whom Agathonicus of Nicomedia had made a Christian, and the march to the king in Thrace. saint.gr gives no year, so no `dates` object is proposed and the folders keep the 305–311 they already have. Zeno is in the listing and in the page's head lines and in the distich of the three, and the corpus keeps him as «Zeno (22 August)» with no dates; nothing here changes that. Two people in the account are left unnamed by the page and are therefore no folders: the prince of the city, and the disciples killed with Zoticus. It records relics of Agathonicus — his skull at the church of the Forerunner at Kavala and a portion at the monastery of Mega Spilaio at Kalavryta. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints an apolytikion and a kontakion; both name Agathonicus and no one else, the kontakion adding only «σὺν τοῖς συνάθλοις», with his fellow contenders, so both are taken for his folder alone and none of the five companions is given a hymn on their strength. The page also prints an Οἶκος, which is not a kind the schema holds and is not drafted."
     },
     {
       "church": "serbian",
@@ -140,6 +155,40 @@
         "text": "Your martyrs, O Lord, in their struggles received crowns of incorruption from you, our God; for having your strength they overthrew the torturers, and shattered the feeble insolence of the demons. At their prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Νίκης τρόπαιον, κατὰ τῆς πλάνης, Ἀγαθόνικε, λαμπρὸν ἐγείρας, τῶν ἄφθαρτων ἀγαθῶν, κατηξίωσαι τοῦ γὰρ Δεσπότου ζηλώσας τὸν θάνατον, τῆς ἀθανάτου ζωῆς ὤφθης μέτοχος. Μάρτυς ἔνδοξε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως — the first hymn on the page of «Άγιος Αγαθόνικος και οι μαζί μ' αυτόν…», and it names him alone, «Ἀγαθόνικε».",
+        "url": "https://www.saint.gr/832/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having raised a bright trophy of victory against error, Agathonicus, you were counted worthy of the incorruptible good things; for having been zealous for the death of the Master you were shown to be a partaker of the immortal life. Glorious martyr, entreat Christ our God that he grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τὴν κλῆσιν ἀγαθήν, κεκτημένος θεόφρον, ἀνδρῶν τῶν πονηρῶν, ἀπεστράφης τὸ σέβας, μὴ πτήξας τὰ βάσανα, Ἀγαθόνικε ἔνδοξε· ὅθεν γέγονας, τῶν ἀγαθῶν κληρονόμος, καὶ ἀπείληφας, σὺν τοῖς συνάθλοις ἀξίως, τὸν ἄφθαρτον στέφανον.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος α’, Χορὸς Ἀγγελικὸς — the second hymn on the page of «Άγιος Αγαθόνικος και οι μαζί μ' αυτόν…». It names Agathonicus and refers to the rest only as «σὺν τοῖς συνάθλοις», his fellow contenders, so it is taken for his folder alone. The page also prints an Οἶκος, which is not a kind the schema holds and is not drafted.",
+        "url": "https://www.saint.gr/832/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Possessing a good name, God-minded one, you turned away from the worship of wicked men and did not shrink from the torments, glorious Agathonicus; therefore you became an heir of the good things, and worthily received, with your fellow contenders, the incorruptible crown.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Χορὸς Ἀγγελικὸς."
     }
   ],
   "images": [
@@ -152,6 +201,7 @@
     "zoticus-of-nicomedia",
     "theoprepius-of-nicomedia",
     "acindynus-of-nicomedia",
-    "severian-of-nicomedia"
+    "severian-of-nicomedia",
+    "zeno-the-martyr-22-august"
   ]
 }

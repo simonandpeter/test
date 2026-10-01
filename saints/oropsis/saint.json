@@ -1,42 +1,27 @@
 {
-  "slug": "or-the-martyr-22-august",
-  "display_name": "Or (22 August)",
-  "names": [
-    {
-      "form": "Or",
-      "lang": "ro",
-      "note": "Read out of doxologia.ro's line for 22 august, «Sfântul Mucenic Or», with the rank words left off."
-    },
-    {
-      "form": "Ωρ",
-      "lang": "el",
-      "note": "Read out of saint.gr's line for 22 Αυγούστου, «Άγιοι Ειρηναίος, Ωρ και Ορόψις», with the rank word left off."
-    }
-  ],
+  "slug": "oropsis",
+  "display_name": "Oropsis",
   "sex": "male",
   "types": [
     "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ορόψις",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Αυγούστου, «Άγιοι Ειρηναίος, Ωρ και Ορόψις», with the rank word left off. The page's own head line for him is «Αγιος Οροψις»."
+    }
   ],
   "attestations": [
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
     },
     {
       "church": "romanian",
-      "status": "venerated",
-      "feast": {
-        "day": 22,
-        "month": 8,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 august — «Sfântul Mucenic Or»",
-        "url": "https://doxologia.ro/22-august",
-        "year": 2026
-      },
-      "note": "The page doxologia's calendar links for him carries neither a Viață tab nor a Tropar tab; the calendar line is everything the source gives. The corpus holds no saint of this name on any day."
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
     },
     {
       "church": "greek",
@@ -56,14 +41,14 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
     }
+  ],
+  "related": [
+    "irenaeus-the-martyr-22-august",
+    "or-the-martyr-22-august"
   ],
   "text": {
     "life": "life.md"
-  },
-  "related": [
-    "irenaeus-the-martyr-22-august",
-    "oropsis"
-  ]
+  }
 }

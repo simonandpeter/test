@@ -10,6 +10,11 @@
       "form": "Severian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 august, «Sfântul Mucenic Severian», with the rank words left off."
+    },
+    {
+      "form": "Σεβηριανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Αυγούστου, «Άγιος Αγαθόνικος και οι μαζί μ' αυτόν Ζωτικός, Ζήνων, Θεοπρέπιος, Ακίνδυνος και Σεβηριανός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 22 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Αυγούστου — «Άγιος Αγαθόνικος και οι μαζί μ' αυτόν Ζωτικός, Ζήνων, Θεοπρέπιος, Ακίνδυνος και Σεβηριανός»",
+        "url": "https://www.saint.gr/08/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Αυγούστου εκάστου έτους», the same day the folder's other venerated rows already carry, and the entry is the same company: the count Eutolmios returning from his circuit in Pontus, Zoticus and his disciples killed at Karpe, the prince of the city whom Agathonicus of Nicomedia had made a Christian, and the march to the king in Thrace. saint.gr gives no year, so no `dates` object is proposed and the folders keep the 305–311 they already have. Zeno is in the listing and in the page's head lines and in the distich of the three, and the corpus keeps him as «Zeno (22 August)» with no dates; nothing here changes that. Two people in the account are left unnamed by the page and are therefore no folders: the prince of the city, and the disciples killed with Zoticus. It records relics of Agathonicus — his skull at the church of the Forerunner at Kavala and a portion at the monastery of Mega Spilaio at Kalavryta. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page's two hymns, an apolytikion and a kontakion, name Agathonicus alone — the kontakion adding only «σὺν τοῖς συνάθλοις», with his fellow contenders — so they are taken for his folder and not for this one, which therefore gains no hymn from this reading. The page also prints an Οἶκος, which is not a kind the schema holds and is not drafted."
     },
     {
       "church": "serbian",
@@ -92,6 +107,7 @@
     "agathonicus-of-nicomedia",
     "zoticus-of-nicomedia",
     "theoprepius-of-nicomedia",
-    "acindynus-of-nicomedia"
+    "acindynus-of-nicomedia",
+    "zeno-the-martyr-22-august"
   ]
 }
