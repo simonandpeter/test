@@ -115,6 +115,20 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'στεφανοσ stefan-brancoveanu stephen-27-february stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-khirsa stephen-of-makhrishche stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-the-great stephen-the-presbyter-7-june stephen-the-sabbaite stephen-xylinites':
+    'Twenty-two now. The new one is Stephen of Makhrishche on 14 July; the others are read in the el-07-05 entry for this name form.',
+  'πετροσ peter-abesalamites peter-companion-of-aphrodisius peter-companion-of-leucius peter-companion-of-manuel peter-companion-of-marcian peter-disciple-of-dionysius-of-alexandria peter-doroshenko peter-martyr-2-june peter-of-argos peter-of-bulgaria peter-of-capitolias peter-of-damascus peter-of-galatia peter-of-gortyna peter-of-kazan peter-of-lampsacus peter-of-monevata peter-of-murom peter-of-sebaste peter-of-sinope peter-of-tobolsk peter-ordynsky-of-rostov peter-son-of-john-of-syracuse peter-the-apostle peter-the-athonite peter-the-egyptian peter-the-gaoler peter-the-patrician peter-the-peloponnesian peter-the-sign-bearer':
+    'The new one is Peter of Gortyna on 14 July; the rest of the fold is read in the el-07-01 entry for this name form.',
+  'ονησιμοσ onesimus-10-may onesimus-6-july onesimus-of-soissons onesimus-the-apostle onesimus-the-wonderworker':
+    'Five now. The new one is Onesimus the Wonderworker on 14 July, eight days after the Onesimus of 6 July; the others are read in the el-07-06 entry for this name form.',
+  'ιλαριοσ hilarion-4-may hilarius-companion-of-aquila hilary-companion-of-proclus hilary-of-carcassonne hilary-of-poitiers':
+    'Five now. The new one is Hilarius, the companion of Aquila on 14 July; the others are read in the el-06-02 entry for this name form.',
+  'ηρακλειοσ heraclius-14-july heraclius-of-athens heraclius-of-the-forty-martyrs':
+    'Three now. The new one is the Heraclius of 14 July; the others are read in the el-05-17 entry for this name form.',
+  'αρσενιοσ arsenios-of-paros arsenios-the-hagiopharangite arsenius-bishop-of-tver arsenius-companion-of-elias-speleotes arsenius-of-corfu arsenius-of-elassona arsenius-of-georgia arsenius-of-ikalto arsenius-of-konevits arsenius-of-novgorod arsenius-of-rostov arsenius-of-the-kyiv-caves arsenius-of-varnakova arsenius-of-veroia arsenius-the-great':
+    'Fifteen now. The new one is Arsenios the Hagiopharangite on 14 July; the others are read in the el-06-12 entry for this name form.',
+  'ακυλασ aquila aquila-14-july aquila-of-trebizond aquila-the-eparch':
+    'Four now. The new one is the Aquila of 14 July, who stands with Hilarius; the others are read in the el-03-20 entry for this name form.',
   'ονησιφοροσ onesiphorus-of-anarita onesiphorus-of-colophon':
     'Two men: Onesiphorus of Colophon, the Apostle every calendar keeps, and Onesiphorus of Anarita in Cyprus on 13 July.',
   'σεραπιων serapion-disciple-of-cronides serapion-martyr-24-may serapion-of-alexandria serapion-of-pentapolis serapion-the-new serapion-venerable-21-march':

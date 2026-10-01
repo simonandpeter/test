@@ -1,0 +1,61 @@
+{
+  "slug": "stephen-of-makhrishche",
+  "display_name": "Stephen of Makhrishche",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "office": "Abbot of the monastery of Makhrishche",
+  "names": [
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιουλίου, «Όσιος Στέφανος ηγούμενος της Μονής Μάχριστσκ», with the rank word and the office left off. No Slavonic or Russian form is recorded because the page prints none; it writes the monastery in Greek letters as «Μάχριστσκ»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1406,
+      "latest": 1406,
+      "display": "1406",
+      "basis": "attested",
+      "note": "saint.gr's heading gives the year of repose and no year of birth: «Οσιος Στεφανος Ηγουμενος Της Μονης Μαχριστσκ (; - 1406)». The page states nothing else about his dates."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr calls him a Russian saint, so a Russian row is likely to be findable, but it has not been looked for."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιουλίου — «Όσιος Στέφανος ηγούμενος της Μονής Μάχριστσκ»",
+        "url": "https://www.saint.gr/07/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Ιουλίου εκάστου έτους», the same day as the listing, and its whole notice is one sentence: «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσσου Αγίου» — we have no details of the life of this Russian saint. The corpus keeps no abbot of this house under any spelling, and none of its many Stephens is a Russian abbot who died in 1406. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The English form of the monastery's name in `display_name` and `office` is the ordinary rendering of the Russian Махрищский, which the page writes in Greek letters as «Μάχριστσκ»; it is a chosen English form and no name form has been entered for any language the page does not print. The page gives no place beyond the monastery's name, so there is no `locations`, and it prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

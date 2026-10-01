@@ -1,0 +1,50 @@
+{
+  "slug": "heraclius-14-july",
+  "display_name": "Heraclius (14 July)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ηράκλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιουλίου, «Άγιος Ηράκλειος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιουλίου — «Άγιος Ηράκλειος»",
+        "url": "https://www.saint.gr/07/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Ιουλίου εκάστου έτους», the same day as the listing, and gives one sentence: «Ο Άγιος Ηράκλειος μαρτύρησε, αφού τον χτύπησαν και τον θανάτωσαν με ρόπαλα» — he was beaten and put to death with clubs. He is not the corpus's `heraclius-the-martyr`, whose Greek and Romanian rows both hold 31 Αυγούστου and who is named there with Andrew Stratelates, Faustus and Menas; nor `heraclius-of-athens` (18 Μαΐου, under Decius), nor `heraclius-of-the-forty-martyrs` (9 Μαρτίου), nor `heraclius-of-bessarabia`. Two entries on one calendar are two commemorations, and the name here is bare, so the day disambiguates the folder. The page's opening lines about «Περίφημος αυτοκράτορας του Βυζαντίου (575 - 641 μ.Χ.)» are saint.gr's note on the name itself, listing the emperor Heraclius as a famous bearer of it; that is not this martyr and no year of it is taken. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. No year, no place and no judge is given for the saint, so there is no `dates` object and no `locations`, and the page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

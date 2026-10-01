@@ -1,0 +1,53 @@
+{
+  "slug": "hilarius-companion-of-aquila",
+  "display_name": "Hilarius, companion of Aquila",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιλάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιουλίου, «Άγιοι Ακύλας και Ιλάριος», with the rank word left off. The couplet over the notice spells it «Iλάριον» in the accusative."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιουλίου — «Άγιοι Ακύλας και Ιλάριος»",
+        "url": "https://www.saint.gr/07/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page /704/ heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Ιουλίου εκάστου έτους», the same day as the listing, and gives the pair one sentence: they were martyred by stoning, with no other detail. He is not the corpus's `hilary-companion-of-proclus`, the Ἱλάριος of 12 Ιουλίου, whose Greek row this wave set two days ago: that man is paired with Proclus, suffers under Trajan and the governor Maximus, and is beheaded, while this one is stoned with Aquila on another day — two entries on one calendar are two commemorations. Nor is he any of the corpus's Ἱλαρίων folders, which carry the other name. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. No year, no place and no judge is printed, so there is no `dates` object and no `locations`, and the page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "aquila-14-july"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

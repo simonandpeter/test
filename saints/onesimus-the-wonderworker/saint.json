@@ -1,0 +1,54 @@
+{
+  "slug": "onesimus-the-wonderworker",
+  "display_name": "Onesimus the Wonderworker",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ονήσιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιουλίου, «Όσιος Ονήσιμος ο θαυματουργός», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιουλίου — «Όσιος Ονήσιμος ο θαυματουργός»",
+        "url": "https://www.saint.gr/07/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Ιουλίου εκάστου έτους», the same day as the listing. He is none of the corpus's four other men of the name, and the page says so itself in its first clause: «Ο Όσιος Ονήσιμος - εδώ δεν πρόκειται για τον απόστολο Ονήσιμο, τον μαθητή του Απόστολου Παύλου», this is not the apostle Onesimus, Paul's disciple, whom the corpus keeps on 15 Φεβρουαρίου. Nor is he `onesimus-6-july`, the martyr named with Philemon and Archippus, nor `onesimus-10-may`, the martyr with Erasmus under Decius, nor Onesimus of Soissons: this one is an ascetic who died in deep old age, not a martyr. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page names Karyne of Caesarea in Palestine as his birthplace, Ephesus as the place he became a monk and Magnesia as the place he founded a brotherhood and died, and gives no year anywhere; the only mark of time it prints is the emperor's name, «έζησε στα χρόνια του αυτοκράτορα Διοκλητιανού», and a reign the page does not date is not a year, so there is no `dates` object. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "onesimus-the-apostle"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

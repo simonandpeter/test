@@ -1,0 +1,76 @@
+{
+  "slug": "sosion-of-leucas",
+  "display_name": "Sosion of Leucas",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "First Bishop of Leucas",
+  "names": [
+    {
+      "form": "Σωσίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιουλίου, «Άγιοι Ακύλας, Παύλος, Ηρωδίων οι Απόστολοι και Άγιος Σωσίων, πρώτος Επίσκοπος Λευκάδος», with the rank word and the see left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιουλίου — «Άγιοι Ακύλας, Παύλος, Ηρωδίων οι Απόστολοι και Άγιος Σωσίων, πρώτος Επίσκοπος Λευκάδος»",
+        "url": "https://www.saint.gr/07/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page is the apostle Aquila's, /708/, which the day listing points all four names at; it heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Ιουλίου εκάστου έτους», the same day as the listing, and it gives Sosion no life at all. What it says is this: «Την ίδια ημέρα συνεορτάζονται από την τοπική Εκκλησία της Λευκάδος οι Άγιοι Απόστολοι Παύλος … και Ηρωδίων … και ο Άγιος Σωσίων, πρώτος Επίσκοπος Λευκάδος» — on the same day the local church of Leucas keeps together the apostles Paul and Herodion and Saint Sosion, first bishop of Leucas. The three apostles on that line are men the corpus already keeps with a venerated Greek row on another day each (Aquila 13 Φεβρουαρίου, Paul 29 Ιουνίου, Herodion 28 Μαρτίου), and the page itself sends the reader to those days; Sosion is the one name on the line the corpus does not hold, and he is a person, named, with a see. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no year for him and no place beyond Leucas, so there is no `dates` object and no `locations`. Of its five hymns, four are the apostle Aquila's own; the third apolytikion is the proper of the Leucadian saints and names Sosion by name and office, and it is the one taken here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γʹ.",
+      "model": "Θείας πίστεως.",
+      "text": "Πλάνην δύσθεον καταλιπόντες, Ἡρωδίωνος διδασκαλίᾳ καί Ἀκύλα παραινέσει ἐπώφθησαν, τῶν Λευκαδίων χοροί· οὕς μιμούμενοι τούς Ἀποστόλους ἐν ὕμνοις τιμήσωμεν καί Σωσίωνα Λευκάδος πρῶτον ἐπίσκοπον, οἵ Παύλου στοιχοῦντες ρήμασι φωτί τῆς Ἀληθείας ἡμᾶς ηὔγασαν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος γʹ, Θείας πίστεως — the third of five hymns on the page of «Άγιος Ακύλας ο Απόστολος», and the only one that names Sosion: it is the proper of the Leucadian saints and calls him «Σωσίωνα Λευκάδος πρῶτον ἐπίσκοπον»",
+        "url": "https://www.saint.gr/708/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Leaving behind the error that knows not God, the choirs of the Leucadians were brought to the light by the teaching of Herodion and the exhortation of Aquila; and imitating them, let us honour in hymns the Apostles, and Sosion the first bishop of Leucas, who, walking in the words of Paul, lit us with the light of the Truth.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "related": [
+    "aquila",
+    "paul-the-apostle",
+    "herodion-the-apostle"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

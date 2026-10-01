@@ -6,6 +6,11 @@
       "form": "Iust",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 iulie, «Sfântul Mucenic Iust», with the rank word left off."
+    },
+    {
+      "form": "Ιούστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιουλίου, «Άγιος Ιούστος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιουλίου — «Άγιος Ιούστος»",
+        "url": "https://www.saint.gr/07/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: a Roman soldier whom «ο Τριβούνος Κλαύδιος» tortured with heated irons and threw into the fire. doxologia gave the tribune Claudius and the reign of Magnentius; saint.gr gives the tribune Claudius and no reign and no year at all, so the folder's `dates`, which read the Magnentius reign off doxologia, are left as they stand and nothing is proposed for them. The Greek page adds the vision of the shining cross with the word «ἀκολούθει» around it, and the manner of his death. It is not the corpus's `justus-of-rome` or `justus-1-june`: both of those stand on other days, and this entry is on the same menologion day as the folder's Romanian row. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
     },
     {
       "church": "serbian",

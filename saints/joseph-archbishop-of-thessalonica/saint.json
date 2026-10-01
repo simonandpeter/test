@@ -7,12 +7,18 @@
       "form": "Iosif",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 iulie, «Sfântul Ierarh Iosif, Arhiepiscopul Tesalonicului», with the rank word left off."
+    },
+    {
+      "form": "Ιωσήφ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιουλίου, «Άγιος Ιωσήφ ο Ομολογητής, Αρχιεπίσκοπος Θεσσαλονίκης και αδελφός του Αγίου Θεοδώρου του Στουδίτου», with the rank words, the see and the kinship clause left off."
     }
   ],
   "sex": "male",
   "types": [
     "hierarch",
-    "archbishop"
+    "archbishop",
+    "confessor"
   ],
   "attestations": [
     {
@@ -36,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιουλίου — «Άγιος Ιωσήφ ο Ομολογητής, Αρχιεπίσκοπος Θεσσαλονίκης και αδελφός του Αγίου Θεοδώρου του Στουδίτου»",
+        "url": "https://www.saint.gr/07/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Ιουλίου εκάστου έτους», which is 14 July, one day before the 15 iulie the folder's Romanian row carries off doxologia; the two calendars keep him a day apart and each row records its own source. The man is the folder's own and the Greek line names him unmistakably — the Confessor, archbishop of Thessalonica, brother of Theodore the Studite. The Greek page supplies what the Romanian one withheld: the parents Photinos and Theoktiste, the reign of Leo V the Iconoclast (813-820), the recall to Constantinople, the confession of the icons before the emperor, the exile to an island, the harder imprisonments under Theophilos, and the year of death, «έφυγε για την αιώνια ζωή το 832 μ.Χ.», which is also in its heading as «(; - 832)». A `dates` object is proposed from that year, and `confessor` is added to `types` on the strength of «ο Ομολογητής» in the line. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints one apolytikion, which names him and his see, and it is taken."
     },
     {
       "church": "serbian",
@@ -47,5 +63,36 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 832,
+      "latest": 832,
+      "display": "832",
+      "basis": "attested",
+      "note": "saint.gr: «Έτσι μέσα στην πείνα και τη δίψα, και τις διάφορες θλίψεις, έφυγε για την αιώνια ζωή το 832 μ.Χ.», and its heading «Αγιος Ιωσηφ ο Ομολογητης, Αρχιεπισκοπος Θεσσαλονικης Και Αδελφος Του Αγιου Θεοδωρου Του Στουδιτου (; - 832)», which gives no year of birth. doxologia.ro, the folder's other source, gave no year at all."
+    }
+  },
+  "related": [
+    "theodore-the-studite"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Εἰκὼν πέλων ἔμψυχος, τῶν ἱερῶν ἀρετῶν, Εἰκόνα τὴν ἄχραντον, τοῦ Ζωοδότου Χριστοῦ, τιμᾶν ἀνεκήρυξας, ὅθεν ὁμολογίας, διαπρέψας ἀγώσιν, ὤφθης Θεσσαλονίκης, Ἰωσὴφ Ποιμενάρχης, διὸ σὲ ὁ Δεσπότης τῶν ὅλων ἐδόξασε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ', Ταχὺ προκατάλαβε — the only hymn on the page of «Άγιος Ιωσήφ ο Ομολογητής, Αρχιεπίσκοπος Θεσσαλονίκης», and it names him and his see",
+        "url": "https://www.saint.gr/705/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being a living image of the holy virtues, you proclaimed that the undefiled image of Christ the Giver of Life is to be honoured; and so, shining in the struggles of confession, you were shown forth as chief shepherd of Thessalonica, Joseph. Therefore the Master of all has glorified you.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

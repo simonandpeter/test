@@ -1,0 +1,64 @@
+{
+  "slug": "peter-of-gortyna",
+  "display_name": "Peter of Gortyna",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop of Gortyna",
+  "names": [
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιουλίου, «Άγιος Πέτρος επίσκοπος Γορτύνης ο νέος Ιερομάρτυς», with the rank words and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 312,
+      "display": "between 304 and 312",
+      "basis": "inferred",
+      "note": "saint.gr states no year of death. It puts him «στις αρχές του 4ου μ.Χ. αιώνος, κατά τους επί Διοκλητιανού τελευταίους μεγάλους διωγμούς» and then reasons the span of his episcopate from the men on either side of him in the see: «Θα πρέπει να ήταν διάδοχος του Αγίου Κυρίλλου του Ιερομάρτυρα … και προκάτοχος του Παύλου …, δηλαδή από το 304 - 311/12 μ.Χ., που τελειώνουν οι διωγμοί, διότι το 312 μ.Χ., είναι ήδη Επίσκοπος Γορτύνης ο Παύλος.» The interval is that span as the page prints it, and the basis is inferred because the page itself infers it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιουλίου — «Άγιος Πέτρος επίσκοπος Γορτύνης ο νέος Ιερομάρτυς»",
+        "url": "https://www.saint.gr/07/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Ιουλίου εκάστου έτους», the same day as the listing. The corpus keeps four other bishops of Gortyna — Cyril (14 Ιουνίου), Eumenius, Iconius and Basil — and no Peter of that see; the page's own argument is that he sits between Cyril and Paul in the succession, so he is not Cyril and he is a man the corpus does not hold. The byname «νέος Ἱερομάρτυς» is not a modern martyrdom: the page says much was written about it and calls those explanations unfounded, and gives the view of Archimandrite Chrysostomos Papadakis of the metropolis of Gortyna and Arkadia, that the two hieromartyr bishops of the one see had to be told apart. Paul of Gortyna, whom the page names, is kept «Α΄ Κυριακή Οκτωβρίου», the first Sunday of October, which is a feast this schema cannot hold; he is not drafted and the corpus holds no folder for him. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn and says his unpublished service supplies no further testimony."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "cyril-of-gortyna"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

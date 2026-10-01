@@ -1,0 +1,54 @@
+{
+  "slug": "arsenios-the-hagiopharangite",
+  "display_name": "Arsenios the Hagiopharangite",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Αρσένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιουλίου, «Όσιος Αρσένιος ο Αγιοφαραγγίτης», with the rank word and the byname left off. The byname as the page prints it is «ὁ Ἁγιοφαραγγίτης», of the Αγιοφάραγγο, the holy gorge in Crete."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιουλίου — «Όσιος Αρσένιος ο Αγιοφαραγγίτης»",
+        "url": "https://www.saint.gr/07/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Ιουλίου εκάστου έτους», the same day as the listing. He is none of the corpus's eighteen other Arsenii: the byname Αγιοφαραγγίτης ties him to the Agiofarango in the metropolis of Gortyna and Arkadia in Crete, and the page's whole substance is an extract from the Life of Gregory of Sinai (Moscow GIM Sin. 239 and Athos Lavra I 117, in the edition of Angeliki Delikari, Thessaloniki 2004, put into modern Greek by Emmanouil Andoulidakis) in which Gregory, in Crete, is taught the prayer of the mind by this Arsenios. The asterisk on the page is a footnote marker for that manuscript note; there is no «Δεν είναι διασταυρωμένη» sentence anywhere on it. The page gives no year, no birthplace and nothing of his death, so there is no `dates` object; it names the Agiofarango and the harbour of Kaloi Limenes, but as places in Gregory's journey rather than as a residence it states for Arsenios, so there is no `locations` either. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "gregory-of-sinai"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
