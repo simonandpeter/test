@@ -1,0 +1,55 @@
+{
+  "slug": "helenus-of-tarsus",
+  "display_name": "Helenus of Tarsus",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Ελένος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Νοεμβρίου, «Άγιος Ελένος επίσκοπος Ταρσού», with the rank words left off."
+    }
+  ],
+  "office": "Bishop of Tarsus",
+  "related": [
+    "ischyrion-the-bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Νοεμβρίου — «Άγιος Ελένος επίσκοπος Ταρσού»",
+        "url": "https://www.saint.gr/11/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3079/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Νοεμβρίου εκάστου έτους», the same day as the listing. Nothing in the corpus answers to this name. The see is the page's own and unhedged, so it is recorded in `office`; the same day's listing keeps `ischyrion-the-bishop`, of whom the page says only that he was «ίσως», perhaps, bishop of Tarsus. The page's own name-gloss is for ΕΛΕΝΗ, Helen, not for his name, and is the site's gloss on a name and not a statement about him. No year, no hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

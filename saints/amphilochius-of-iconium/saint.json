@@ -7,6 +7,11 @@
       "form": "Amfilohie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 noiembrie, «Sfântul Ierarh Amfilohie, Episcopul Iconiei», with the rank words left off."
+    },
+    {
+      "form": "Αμφιλόχιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Νοεμβρίου, «Άγιος Αμφιλόχιος Επίσκοπος Ικονίου», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 23 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Νοεμβρίου — «Άγιος Αμφιλόχιος Επίσκοπος Ικονίου»",
+        "url": "https://www.saint.gr/11/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3075/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Νοεμβρίου εκάστου έτους» and «Αγιος Αμφιλοχιος Επισκοπος Ικονιου (; - 394)», the same day the folder's Romanian row already carries, and the man is the folder's own: the Cappadocian friend of Basil the Great, bishop of Iconium, a father of the Second Ecumenical Council. A death interval is proposed from the page's own year where the folder had none; **the year it gives for his consecration, 344, is not recorded as a date**, because it is neither a birth nor a death nor a floruit the schema can hold alone and it sits oddly beside a death in 394, and it stands instead in the life in the page's own words. Both hymns name him and no other saint and both carry an ἦχος and a model, so both are taken; the Κάθισμα, which also names him, is neither a troparion nor a kontakion and is not drafted. The page adds relics at Saint Panteleimon on Athos, at Kykkos in Cyprus and in the Benaki Museum at Athens. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -65,9 +80,52 @@
         "text": "O God of our fathers, who deal with us always according to your gentleness, take not your mercy from us; but by their prayers guide our life in peace.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Σοφίας τὴν ἔλλαψιν ὡς καθαρὸς μυηθείς, δογμάτων ὀρθότητος φωτοειδεὶς ἀστραπὰς ἐκλάμπεις τοῖς πέρασι· σὺ γὰρ τὴν ἐν Τριάδι ὁμοούσιον φύσιν ἐκήρυξας, ἀσυγχύτως καθελῶν τὰς αἱρέσεις. Διό σε, ἱεράρχα Ἀμφιλόχιε, Χριστὸς ἐδόξασε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχύ προκατάλαβε — the first hymn on the page of «Άγιος Αμφιλόχιος Επίσκοπος Ικονίου». It names him and no other saint.",
+        "url": "https://www.saint.gr/3075/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Initiated, as one who was pure, into the shining of wisdom, you flash out to the ends of the earth the light-formed lightnings of right doctrine; for you proclaimed the nature in the Trinity to be of one essence, and pulled the heresies down without confusion. For which Christ glorified you, Amphilochius, hierarch.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχύ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ἡ θεία βροντή, ἡ σάλπιγξ ἡ τοῦ Πνεύματος, πιστῶν φυτουργέ, καὶ πέλεκυς τῶν αἱρέσεων, Ἱεράρχα, Ἀμφιλόχιε, τῆς Τριάδος θεράπον μέγιστε, σὺν Ἀγγέλοις πέλων ἀεί, πρεσβεύων μὴ παύσῃ ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — on the page of «Άγιος Αμφιλόχιος Επίσκοπος Ικονίου». It names him and no other saint.",
+        "url": "https://www.saint.gr/3075/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The divine thunder, the trumpet of the Spirit, planter of the faithful and axe of the heresies, hierarch Amphilochius, greatest servant of the Trinity, dwelling for ever with the Angels, do not cease to intercede for us all.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 394,
+      "latest": 394,
+      "display": "394",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Αγιος Αμφιλοχιος Επισκοπος Ικονιου (; - 394)» and the narrative closes with it: «Ο Αμφιλόχιος συνέταξε αρκετούς λόγους για την Ορθοδοξία μας, και πέθανε ειρηνικά το έτος 394 μ.Χ.» The page gives no year of birth; the year 344 it gives for his consecration to Iconium is not a date of his life and is not recorded as one."
+    }
   }
 }

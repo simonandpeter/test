@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σισινιοσ sisinius-of-the-forty-martyrs sisinnius-22-november sisinnius-of-constantinople sisinnius-of-cyzicus':
+    'Four men. The new one is Sisinnius of Cyzicus on 23 November, a confessor, and not the Sisinnius of the day before; the others are read in the el-11-22 entry for this name form.',
+  'ισχυριων ischyrion ischyrion-the-bishop':
+    'Two men. The new one is Ischyrion the Bishop on 23 November, kept with Helenus of Tarsus; the other is the Ischyrion of 1 June.',
+  'διονυσιοσ dionysius-8-may dionysius-companion-of-agapius dionysius-companion-of-agapius-second dionysius-companion-of-lucillian dionysius-companion-of-quadratus dionysius-companion-of-socrates dionysius-companion-of-terentius dionysius-i-of-constantinople dionysius-kagovets dionysius-martyr-1-april dionysius-of-alexandria dionysius-of-athos dionysius-of-ephesus dionysius-of-glushitsa dionysius-of-lampsacus dionysius-of-milan dionysius-of-pereyaslavl dionysius-of-radonezh dionysius-of-suzdal dionysius-reader-of-alexandria dionysius-the-merciful dionysius-the-monk-of-kastoria dionysius-the-philosopher dionysius-the-rhetor':
+    'Twenty-four now. The new one is Dionysius I, patriarch of Constantinople, on 23 November, whose folder relates Mark of Ephesus; the others are read in the el-10-10 entry for this name form.',
   'σισινιοσ sisinius-of-the-forty-martyrs sisinnius-22-november sisinnius-of-constantinople':
     'Three men. The new one is the Sisinnius of 22 November, a hieromartyr; the others are Sisinius of the Forty Martyrs on 9 March and Sisinnius patriarch of Constantinople on 11 October.',
   'γερμανοσ germanos-of-stolobnoe germanus-companion-of-peregrinus germanus-companion-of-zebinas germanus-founder-of-eikosiphoinissa germanus-maroules germanus-of-constantinople germanus-of-dobrogea germanus-of-kantara germanus-of-novgorod germanus-of-sagmata germanus-of-valaam herman-of-alaska':

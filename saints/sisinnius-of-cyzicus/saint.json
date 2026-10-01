@@ -1,0 +1,59 @@
+{
+  "slug": "sisinnius-of-cyzicus",
+  "display_name": "Sisinnius of Cyzicus",
+  "sex": "male",
+  "types": [
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Σισίνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Νοεμβρίου, «Όσιος Σισίνιος ο Ομολογητής», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 300,
+      "latest": 300,
+      "display": "about 300",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Σισίνιος διέπρεψε κατά τον διωγμό εναντίον των χριστιανών, όταν αυτοκράτορας ήταν ο Διοκλητιανός (300 μ.Χ.)». The page gives no year of birth and no year of death — his life runs on past Constantine's accession and into the Arian controversy — so the one year it prints is recorded as a floruit."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Νοεμβρίου — «Όσιος Σισίνιος ο Ομολογητής»",
+        "url": "https://www.saint.gr/11/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3077/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Νοεμβρίου εκάστου έτους», the same day as the listing. Neither of the corpus's two Sisinnius folders is this man — `sisinnius-of-constantinople` is kept on 11 October and `sisinnius-of-milan` on 29 May — and neither is the `sisinnius-22-november` of the day before, who is a hieromartyr killed by the sword and given no city. This one is placed by Cyzicus and by a life that runs from Diocletian's persecution into the Arian controversy. The `confessor` type is the page's own «ο Ομολογητής» and matches its account: he was imprisoned and beaten and then released, and the page does not say he was killed. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

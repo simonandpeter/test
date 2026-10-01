@@ -1,0 +1,43 @@
+{
+  "slug": "deiniol",
+  "display_name": "Deiniol",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Νοεμβρίου — «Άγιος Deiniol»",
+        "url": "https://www.saint.gr/11/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3086/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Νοεμβρίου εκάστου έτους», the same day as the listing. **No `names` row is recorded**: the page prints the name in Latin letters inside its Greek line, «Άγιος Deiniol», and gives no Greek form of it at all, so there is no Greek form to copy and none is invented. Nothing in the corpus answers to this name. The page's whole notice is one sentence, and it gives no year, so no `dates` object is proposed and no `types` beyond the rank word «Άγιος» can be read off it; `venerable` is taken from nothing but that word and is the weakest claim the folder makes. No hymn, no couplet, no relics. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

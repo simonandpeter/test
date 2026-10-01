@@ -6,6 +6,11 @@
     {
       "form": "Митрофан Воронежский",
       "lang": "ru"
+    },
+    {
+      "form": "Μητροφάνης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Νοεμβρίου, «Άγιος Μητροφάνης πρώτος επίσκοπος Βορονεζίας», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -52,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 4 September (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Νοεμβρίου — «Άγιος Μητροφάνης πρώτος επίσκοπος Βορονεζίας»",
+        "url": "https://www.saint.gr/11/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3082/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Νοεμβρίου εκάστου έτους» and «Αγιος Μητροφανης Πρωτος Επισκοπος Βορονεζιας (1623 - 1703)», and the dates and the see are the folder's own, so the man is the folder's. **The folder's Russian row keeps him on the Julian 4 September and this Greek row keeps him on 23 November, and that is one row per church and not a second commemoration invented.** The folder's existing date intervals are not replaced; the page's heading carries the same two years and adds the day of his birth, 8 November. The page gives him a second name — «(που μετονομάστηκε Μακάτιος)», who was renamed Makatios, which is the page's spelling of Makarios — and it is quoted in the life as it stands and not corrected, and no `names` row is made from it. The same day's listing carries a separate entry for the translation of his relics, which is not a person and is not drafted. No hymn on this page. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",

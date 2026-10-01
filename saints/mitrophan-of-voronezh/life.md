@@ -68,6 +68,8 @@ established in 1832. The Russian calendar keeps on 4 September (Julian) the
 second finding of his relics in 1964 and their translation in 1989, with a
 troparion and kontakion.
 
+The Greek calendar keeps him on 23 November, where the Russian keeps him on 4 September, and has almost nothing to add. saint.gr's whole notice is two sentences: that the holy Metrophanes — «που μετονομάστηκε Μακάτιος», who was renamed Makatios, as the page spells it — was the first bishop of Voronezh; that he was born on 8 November 1623 and fell asleep in 1703. The day of birth is the one fact in it the Romanian life does not give. The same listing keeps the translation of his relics as a separate entry of the same day.
+
 *After the life printed by the Sretensky calendar (days.pravoslavie.ru) —
 [the entry](https://days.pravoslavie.ru/Life/life3213.htm), read 5 September 2026 — this
-time whole; the earlier reading had stopped partway.*
+time whole; the earlier reading had stopped partway; and saint.gr's calendar for 23 Νοεμβρίου — [the day](https://www.saint.gr/11/23/index.aspx) and [his page](https://www.saint.gr/3082/saint.aspx), read 2 October 2026.*

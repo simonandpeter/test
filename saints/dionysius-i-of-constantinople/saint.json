@@ -1,0 +1,64 @@
+{
+  "slug": "dionysius-i-of-constantinople",
+  "display_name": "Dionysius I of Constantinople",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "names": [
+    {
+      "form": "Διονύσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Νοεμβρίου, «Άγιος Διονύσιος Α' Πατριάρχης Κωνσταντινούπολης», with the rank words left off."
+    }
+  ],
+  "office": "Patriarch of Constantinople",
+  "related": [
+    "mark-of-ephesus"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1492,
+      "latest": 1492,
+      "display": "1492",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Αγιος Διονυσιος Α' Πατριαρχης Κωνσταντινουπολης (; - 1492)» and the narrative repeats it: «μέχρι τον θάνατο του το 1492 μ.Χ.» It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Νοεμβρίου — «Άγιος Διονύσιος Α' Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/11/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3080/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Νοεμβρίου εκάστου έτους», the same day as the listing. Nothing in the corpus answers to this man: its Dionysius folders are kept on other days and none is a patriarch of Constantinople of the fifteenth century. The numeral «Α'» and the see are the page's own and stand in the display name as the corpus prints Callistus I's. The page dates his second patriarchate 1488 to 1490 and his death 1492, and gives no year of birth. No hymn is drafted: the page names two services written for him, by Manuel the Corinthian and by the protosyngellos Chrysanthos of Xanthi, but prints neither. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

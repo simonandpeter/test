@@ -1,0 +1,54 @@
+{
+  "slug": "ischyrion-the-bishop",
+  "display_name": "Ischyrion the Bishop",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Ισχυρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Νοεμβρίου, «Όσιος Ισχυρίων ο Επίσκοπος», with the rank words left off."
+    }
+  ],
+  "related": [
+    "helenus-of-tarsus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Νοεμβρίου — «Όσιος Ισχυρίων ο Επίσκοπος»",
+        "url": "https://www.saint.gr/11/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3078/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Νοεμβρίου εκάστου έτους», the same day as the listing. **This is not the corpus's `ischyrion`**, who carries a venerated Greek row on 1 June: that man is an Egyptian officer martyred in 250 under Decius with five of his own soldiers, while this one is a bishop who reposed in peace. Two entries on one calendar are two commemorations, so two men, and the 1 June row is left exactly where it is. **No `office` is recorded**, because the page's own claim is hedged — «ίσως ήταν επίσκοπος Ταρσού», perhaps he was bishop of Tarsus — and the same day's listing keeps `helenus-of-tarsus`, whom it calls bishop of Tarsus without a hedge; the hedge stands in the life in the page's own words. No year, no hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -7,6 +7,11 @@
       "form": "Grigorie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 noiembrie, «Sfântul Ierarh Grigorie, Episcopul Acragandandelor», with the rank words and the see left off."
+    },
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Νοεμβρίου, «Άγιος Γρηγόριος επίσκοπος Ακραγαντίνων», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 23 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Νοεμβρίου — «Άγιος Γρηγόριος επίσκοπος Ακραγαντίνων»",
+        "url": "https://www.saint.gr/11/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3076/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Νοεμβρίου εκάστου έτους» and «Αγιος Γρηγοριος Επισκοπος Ακραγαντινων (; - 690)», the same day the folder's Romanian row already carries, and the man is the folder's own: born at Akragas in Sicily, bishop of the Akragantines, slandered by two clerics and cleared. A death interval is proposed from the page's own year where the folder had none. **The page is internally awkward about its chronology** — it puts his ordination to the clergy in the reign of Justinian Rhinotmetos, which it dates 685 to 695, and then has him die in deep old age in 690 — and the two statements stand in the life in its own words, with no reconciliation attempted here. Both hymns name him and no other saint and both carry an ἦχος and a model, so both are taken; the Κάθισμα is neither a troparion nor a kontakion and is not drafted. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -61,9 +76,52 @@
         "text": "O God of our fathers, who deal with us always according to your gentleness, take not your mercy from us; but by their prayers guide our life in peace.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Γρηγορῶν ἐκ σπάργανων φερωνύμως Γρηγόριε, ἐν τοὶς δικαιώμασι Πάτερ τοῦ τῶν ὅλων δεσπόζοντος, ἐπλήσθης οὐρανίων δωρεῶν, ὡς γρήγορος ποιμὴν τῶν εὐσεβῶν διὰ τοῦτο πρὸς λειμῶνας ἀειθαλεῖς, Ἰθύνεις τοὺς βοώντας σοὶ δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διά σου, πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος ἀ’, Τῆς ἐρήμου πολίτης — the first hymn on the page of «Άγιος Γρηγόριος επίσκοπος Ακραγαντίνων». It names him and no other saint. The readings «τοὶς», «σοὶ» and the capital of «Ἰθύνεις» are the page's own and are copied as they stand.",
+        "url": "https://www.saint.gr/3076/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Watchful from your swaddling bands, Gregory, as your name says, you were filled with heavenly gifts in the ordinances of the Master of all things, father, being a watchful shepherd of the godly; and so you guide to ever-green pastures those who cry to you: glory to Christ who glorified you, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος ἀ’.",
+      "model": "Τῆς ἐρήμου πολίτης."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ὥσπερ μέγας ἥλιος, ἀνατολαῖς τῶν θαυμάτων, καταυγάζεις ἅπασαν, τὴν τοῦ Θεοῦ Ἐκκλησίαν, ἔσωσας ταῖς σαῖς πρεσβείαις πολλοὺς ἀνθρώπους, ἤλασας τοὺς κακοδόξους ἐκ τῆς σῆς ποίμνης· διὰ τοῦτό σε τιμῶμεν, θεόφρον Πάτερ, σοφὲ Γρηγόριε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον — on the page of «Άγιος Γρηγόριος επίσκοπος Ακραγαντίνων». It names him and no other saint.",
+        "url": "https://www.saint.gr/3076/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a great sun, by the risings of your wonders you light up the whole Church of God; you saved many men by your intercessions, and drove the wrong-believing out of your flock. For that we honour you, father of godly mind, wise Gregory.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 690,
+      "latest": 690,
+      "display": "690",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Αγιος Γρηγοριος Επισκοπος Ακραγαντινων (; - 690)» and the narrative closes with it: «Απεβίωσε ειρηνικά σε βαθιά γεράματα το 690 μ.Χ.» The page gives no year of birth, and the reign it names for his entry into the clergy, «Ιουστινιανού του Ρινότμητου (685 - 695 μ.Χ.)», does not sit easily with that death; both are the page's and neither is adjusted."
+    }
   }
 }

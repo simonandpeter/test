@@ -1,0 +1,13 @@
+# Columbanus of Bobbio
+
+saint.gr's calendar for 23 Νοεμβρίου names «Άγιος Columbanus απόστολος της Γαλλίας», printing the name in Latin letters and glossing it Κολουμβάνος, and heads his page 543 to 615. He was born in 543 in Leinster in Ireland, the page says, to noble parents who gave him a considerable classical education. Very early he longed for the monastic life, though the temptations of youth held him back from it: his exceptional beauty made many young women fall desperately in love with him.
+
+He asked the advice of an aged ascetic woman, who urged him to renounce his country and the things of this world. «Flee and be saved», she told him laconically; and he really did go, over his mother's objections, who tried to stop him. After a short stay at the monastery of Cluain Inis by Lough Erne he went to the famous monastery of Bangor at Carrickfergus, a great centre of teaching and of mission, where he was a pupil of its celebrated abbot, the holy [Comgall](/saints/comgall-of-bangor), who died in 602.
+
+In 590, burning with the longing for mission, he set out with twelve more monks for Europe. He crossed Britain and came to Gaul, a country with a Christian presence already but, through the upheavals of war and the negligence of its higher clergy, in a state of spiritual collapse and ecclesiastical disorder; and for many years he gave himself to the work of the Gospel, running the country from end to end, preaching the faith, calling men to repentance, teaching virtue and giving in his own life the example of humility and love.
+
+At the end of it he had to leave with his disciple Attalus for Italy. They crossed the Alps and came to Milan, where Agilulf, king of the Lombards, whose reign the page dates 590 to 615, received them warmly and granted them the district of Bobbio in the Apennines to found a monastery. There the saint lived his last years, building his monastery and fighting with his persuasive preaching the Arian heresy that had infected the Lombard people. He fell asleep in peace on 23 — or, the page adds, on 21 — November 615, and was buried at Bobbio, where many miracles were worked at his grave.
+
+The page closes with the fulfilment of a prophecy of his. A little earlier, in 613, Theuderic died at Metz, poisoned by the criminal Brunhilda; and she in her turn fell into the hands of her enemy Chlothar II of Neustria, who put her to death with horrible tortures after first slaughtering Theuderic's four sons, her own great-grandsons.
+
+*After saint.gr's calendar for 23 Νοεμβρίου — [the day](https://www.saint.gr/11/23/index.aspx) and [the life](https://www.saint.gr/3132/saint.aspx); read 2 October 2026.*

@@ -1,0 +1,64 @@
+{
+  "slug": "columbanus-of-bobbio",
+  "display_name": "Columbanus of Bobbio",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "preacher"
+  ],
+  "related": [
+    "comgall-of-bangor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 543,
+      "latest": 543,
+      "display": "543",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Αγιος Columbanus Αποστολος Της Γαλλιας (543 - 615)» and the narrative repeats it: «γεννήθηκε το 543 μ.Χ. στο Λάινστερ της Ιρλανδίας»."
+    },
+    "death": {
+      "earliest": 615,
+      "latest": 615,
+      "display": "615",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε ειρηνικά στις 23 (ή στις 21) Νοεμβρίου του 615 μ.Χ. και τάφηκε στο Μπόμπιο», and the page's heading carries the same year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Νοεμβρίου — «Άγιος Columbanus απόστολος της Γαλλίας»",
+        "url": "https://www.saint.gr/11/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3132/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Νοεμβρίου εκάστου έτους», the same day as the listing. **No `names` row is recorded**: the page prints the name in Latin letters inside its Greek line, «Άγιος Columbanus απόστολος της Γαλλίας», and the Greek form «Κολουμβάνος» it gives in the narrative is in brackets as a gloss on that Latin spelling, so nothing is copied as a recorded Greek form. **The page's own narrative offers a second day** — «Κοιμήθηκε ειρηνικά στις 23 (ή στις 21) Νοεμβρίου του 615 μ.Χ.» — and the row records the day page that was read, with the alternative in the page's own words here and in the reader's report. **The page is long and was read in its opening and closing stretches only**, some five thousand characters of the middle unread, and the life written from it says what it says and no more; the reader's report names the limit. Nothing in the corpus answers to this man. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
