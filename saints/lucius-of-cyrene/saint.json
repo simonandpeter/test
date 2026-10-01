@@ -1,0 +1,63 @@
+{
+  "slug": "lucius-of-cyrene",
+  "display_name": "Lucius of Cyrene",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Λούκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Αυγούστου, «Άγιος Λούκιος ο βουλευτής», with the rank word and the office left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Αυγούστου — «Άγιος Λούκιος ο βουλευτής»",
+        "url": "https://www.saint.gr/08/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Αυγούστου εκάστου έτους», the same day as the listing. He is not the Lucius the corpus already keeps from saint.gr's 23 Μαΐου, who died in Africa in 430 at the hands of the Arians with Quintianus and Julian; this one is a senator of Cyrene in Libya under Diocletian who was beheaded in Cyprus. The page gives the year inside the reign, «στα χρόνια του αυτοκράτορα Διοκλητιανού (299 μ.Χ.)», and that is what `dates.death` records. The display name takes his city rather than «ο βουλευτής», which is the `office`. He is drawn to the faith by the martyrdom of the hieromartyr Theodore, bishop of Cyrene — «βλέπε 4 Ιουλίου», the day the corpus already keeps that man on — who is linked from the life. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no hymn, only one distich."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "office": "Senator",
+  "dates": {
+    "death": {
+      "earliest": 299,
+      "latest": 299,
+      "display": "299",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Λούκιος ο βουλευτής φόρεσε το στεφάνι του μαρτυρίου στα χρόνια του αυτοκράτορα Διοκλητιανού (299 μ.Χ.)» — the year is the page's own, given inside the reign. No year of birth is given."
+    }
+  },
+  "related": [
+    "theodore-of-cyrene"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

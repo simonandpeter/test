@@ -10,6 +10,11 @@
       "form": "Sever",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 august, «Sfântul Mucenic Sever», with the rank words left off."
+    },
+    {
+      "form": "Σέβηρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Αυγούστου, «Άγιοι Σέβηρος και Μέμνων ο Κεντυρίων», with the rank word and the rank-epithet left off. The page's own head line for him is «Αγιος Σεβηρος»."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 20 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Αυγούστου — «Άγιοι Σέβηρος και Μέμνων ο Κεντυρίων»",
+        "url": "https://www.saint.gr/08/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Αυγούστου εκάστου έτους», the same day the folder's Russian, Romanian and Serbian rows already carry, and the entry is the same pair: Severus of Side in Pamphylia, son of Petronius the Thracian and of Mygdonia, who confessed at Philippopolis on seeing the Thirty-seven Martyrs contend, and Memnon, who confessed with the same boldness and was burned alive in a lit furnace. saint.gr gives no year, so no `dates` object is proposed and the folders keep the 304 they already have from days.pravoslavie.ru. The page cross-refers the Thirty-seven to 20 Αυγούστου, where their own entry prints two mutually disagreeing lists of their names — 37 in the Parisian Codex 1587 and 33 on 24 August in the Patmos Codex 266 — and that company is therefore refused by this reader and left in the report, not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no hymn, only one distich for each man."
     },
     {
       "church": "serbian",

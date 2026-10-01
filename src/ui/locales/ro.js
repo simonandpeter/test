@@ -1102,7 +1102,7 @@ export const ro = {
     'Recluse': 'Zăvorât',
     'Schema-archimandrite': 'Schiarhimandrit',
     'Schemamonk': 'Schimonah',
-    'Senator': 'Senator',
+    'Senator': 'Senator roman',
     'Stylite': 'Stâlpnic',
     'Tsar of Russia': 'Țar al Rusiei',
     'Venerable': 'Cuvios',

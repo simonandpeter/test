@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'στεφανοσ stefan-brancoveanu stephen-12-august stephen-27-february stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-ii-of-constantinople stephen-martyr-8-february stephen-of-chenolakkos stephen-of-hungary stephen-of-kazan stephen-of-khirsa stephen-of-makhrishche stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-pope-of-rome stephen-the-great stephen-the-presbyter-7-june stephen-the-sabbaite stephen-xylinites':
+    'Twenty-six now. The new one is Stephen of Hungary on 20 August; the others are read in the el-08-12 entry for this name form.',
+  'ρηγινοσ reginus-in-cyprus reginus-of-skopelos':
+    'Two men: Reginus of Skopelos on 25 February and Reginus in Cyprus on 20 August.',
+  'ορεστησ orestes-in-cyprus orestes-martyr-9-june':
+    'Two men: the Orestes of 9 June and Orestes in Cyprus on 20 August, who stands with Reginus.',
+  'λουκιοσ lucius-of-africa lucius-of-cyrene lucius-the-soldier-14-august':
+    'Three now. The new one is Lucius of Cyrene, a senator, on 20 August; the others are read in the el-08-14 entry for this name form.',
+  'ιεροθεοσ hierotheus-of-athens hierotheus-of-hungary hierotheus-of-lampe hierotheus-of-nikolsk':
+    'Four now. The new one is Hierotheus bishop of Hungary on 20 August, who stands with Stephen of Hungary; the others are read in the el-06-23 entry for this name form.',
   'ευτυχιανοσ eutychian-of-nicomedia eutychian-the-soldier':
     'Two men two days apart: Eutychian of Nicomedia on 17 August, whose row this wave added, and Eutychian the soldier on 19 August.',
   'σωφρονιοσ sophronius-bishop-19-february sophronius-companion-of-sylvester sophronius-of-bulgaria sophronius-of-irkutsk sophronius-of-jerusalem sophronius-of-soumela sophronius-of-vratsa sophronius-the-athonite sophronius-the-recluse sophrony-of-essex':

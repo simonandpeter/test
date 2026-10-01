@@ -1,0 +1,53 @@
+{
+  "slug": "dosas",
+  "display_name": "Dosas",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δοσάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Αυγούστου, «Άγιοι Ηλιόδωρος και Δοσάς», with the rank word left off. The page's body gives two further forms of the same name, «Δοσαί» and «Σοδάς»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Αυγούστου — «Άγιοι Ηλιόδωρος και Δοσάς»",
+        "url": "https://www.saint.gr/08/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Αυγούστου εκάστου έτους», the same day as the listing. The corpus already keeps Heliodorus on this menologion day and did not keep his companion, which is why this is a new folder; the entry names them both, so it is two folders. saint.gr gives the companion's name three ways — «Δοσάς (ή Δοσαί ή Σοδάς)» — and gives no year, only that the two lived under Sabor, king of the Persians, so there is no `dates` object. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no hymn, only one distich for the pair."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "heliodorus-the-martyr-20-august"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "slug": "reginus-in-cyprus",
+  "display_name": "Reginus in Cyprus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ρηγίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Αυγούστου, «Άγιοι Ρηγίνος και Ορέστης «οι εν Κύπρω»», with the rank word left off and the page's own epithet «ο εν Κύπρω» kept in the display name only."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Αυγούστου — «Άγιοι Ρηγίνος και Ορέστης «οι εν Κύπρω»»",
+        "url": "https://www.saint.gr/08/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Αυγούστου εκάστου έτους», the same day as the listing. The entry names both men, so it is two folders. The corpus's other men of these names — Reginus of Skopelos, Reginus the disciple of Athenogenes, Orestes of Tyana, Orestes the companion of Eustratius, Orestes kept on 9 June — are other days and other men; the epithet «οι εν Κύπρω» is the page's own and the display names keep it. The page is candid about its evidence: «Οι Άγιοι Ρηγίνος και Ορέστης είναι άγνωστοι στους Συναξαριστές», they are unknown to the synaxarists, and it names where it got what it has — their Service, published at Limassol in 1902, with a reference to Delehaye, *Les Saints de Chypre*, p. 271, and a pamphlet of the presbyter Charalambos Neophytou, Limassol 1995. That is a statement of sources, not the self-doubt sentence of §10: there is no asterisk on the entry and no «Δεν είναι διασταυρωμένη» sentence on the page. It also hedges their homeland itself — «Κατάγονταν από τη Χαλκηδόνα (μάλλον Καρχηδόνα)», from Chalcedon, more likely Carthage — which is why there is no `locations` entry. No year is given, so there is no `dates` object. The page prints an apolytikion and a kontakion, both of which name both martyrs, and a megalynarion besides, which is not a kind the schema holds and is not drafted."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "orestes-in-cyprus"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Μαρτύρων σύλλογος νῦν εὐφραίνεται, ἀγγέλων ἄσμα, μεγαλύνομεν τὴν μνήμην ὑμῶν ἅγιοι, ἅπαντες μελωδοῦντες καὶ πιστῶς ἐκβοῶντες, χαίροντες τῆς Τριάδος, Δυὰς μαρτύρων καὶ κλέος Ρηγίνε καὶ Ὀρέστα, ὑπὲρ ὑμῶν ἀεῖ πρεσβεύετε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, printed without a model — the first hymn on the page of «Άγιοι Ρηγίνος και Ορέστης «οι εν Κύπρω»». It names both martyrs, «Ρηγίνε καὶ Ὀρέστα», and is their joint service, so it is taken for both folders.",
+        "url": "https://www.saint.gr/2305/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The assembly of the martyrs now rejoices, the song of the angels; we magnify your memory, O holy ones, all of us making melody and crying out in faith and gladness: pair of martyrs and glory of the Trinity, Reginus and Orestes, intercede for us always.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ὡς θησαυρὸν πολυτελὴ ὁ Δεσπότης, καὶ κρήνην βρύουσα κρουνοὺς ἰαμάτων, τοὶς ἐπὶ γῆς παρέσχετο τὰ λείψανα ὑμῶν νόσους μὲν καθαίροντα, πάθημάτων ποικίλων χάριν βραβεύοντα, ταῖς ψυχαῖς ἀεννάως, διὸ συμφώνως Ρηγίνε τὴν ὑμῶν, Ὀρέστα πόθω τελοῦμεν πανήγυριν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, printed without an ἦχος — the second hymn on the page of «Άγιοι Ρηγίνος και Ορέστης «οι εν Κύπρω»». It names both martyrs and is taken for both folders. The page also prints a Μεγαλυνάριον, which is not a kind the schema holds and is not drafted.",
+        "url": "https://www.saint.gr/2305/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a costly treasure, and a fountain gushing streams of healing, the Master has granted your relics to those on earth: cleansing sicknesses, and awarding grace against sufferings of every kind, unceasingly, to our souls. Therefore with one voice, Reginus and Orestes, we keep your festival with longing.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

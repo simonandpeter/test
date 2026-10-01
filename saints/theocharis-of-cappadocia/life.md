@@ -8,4 +8,10 @@ Theocharis went to church to confess and to receive the Holy Mysteries, and then
 
 In 1923 his right hand was brought to Thessalonica and laid in the church of Saint Catherine, where it is to this day. The Orthodox Church keeps his memory on 20 August. Doxologia.ro prints no troparion for him.
 
-*After doxologia.ro's calendar for 20 august — [the day](https://doxologia.ro/20-august) and [the life](https://doxologia.ro/viata-sfantului-mucenic-teoharie); read 24 September 2026.*
+The Greek calendar keeps Theocharis on the same day, 20 August, and sets the martyrdom in a decree. saint.gr says that in the year 1740, under sultan Ahmet and Ibrahim Pasha the general governor of Asia Minor, an order was issued gathering the boys of the Christians into concentration camps, and that the orphan Theocharis was found among them. One day the judge of Neapolis — Nevşehir — in Cappadocia saw Theocharis in the camp, liked him, and took him into his house to look after his animals.
+
+His piety and his beauty made the judge propose that he become his son-in-law, provided he first became a Mohammedan. Theocharis answered with courage: «Αφέντη μου, εγώ γεννήθηκα χριστιανός, και δεν μπορώ να αρνηθώ την πίστη του Σωτήρα μου και των πατέρων μου» — my lord, I was born a Christian, and I cannot deny the faith of my Saviour and of my fathers. The Ottoman judge took the answer for an insult and threatened him with tortures; Theocharis ran to the church of Saint George and received the immaculate Mysteries.
+
+When the judge made the offer of his daughter again, Theocharis refused as steadily as before. Then, after hard tortures, they led him outside the city of Neapolis, stoned him, and afterwards hanged him, at midday on 20 August 1740. In 1923, the page ends, the relics of Saint Theocharis came to Thessalonica and were placed in the church of Saint Catherine, where they are to this day.
+
+*After doxologia.ro's calendar for 20 august — [the day](https://doxologia.ro/20-august) and [the life](https://doxologia.ro/viata-sfantului-mucenic-teoharie); read 24 September 2026; and saint.gr's calendar for 20 Αυγούστου — [the day](https://www.saint.gr/08/20/index.aspx) and [the life](https://www.saint.gr/2306/saint.aspx), read 1 October 2026.*

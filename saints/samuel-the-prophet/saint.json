@@ -14,6 +14,11 @@
       "form": "Samuel",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 august, «Sfântul Proroc Samuel», with the rank word left off."
+    },
+    {
+      "form": "Σαμουήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Αυγούστου, «Προφήτης Σαμουήλ», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -60,8 +65,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 20 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Αυγούστου — «Προφήτης Σαμουήλ»",
+        "url": "https://www.saint.gr/08/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Αυγούστου εκάστου έτους», the same day the folder's Russian, Romanian and Serbian rows already carry, and the entry is the same prophet: born at Armathaim Sipha on mount Ephraim of the tribe of Levi, son of Elkanah and Hannah, who anointed Saul and David and prophesied forty years. saint.gr gives no year, so no `dates` object is proposed and the folder keeps the eleventh century before Christ it already has. Three of the page's statements are its own and are reported in the life as its own: that Samuel wrote the first and second books of Kingdoms, that his horn with the oil David was anointed with was in Constantinople at the monastery called Myriokeraton, and that he founded the mystical order of the Essenes. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints one apolytikion."
     },
     {
       "church": "serbian",
@@ -181,6 +196,23 @@
         "text": "Keeping the memory of your prophet Samuel, O Lord, we entreat you through him: save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἐκ στείρας ἐβλάστησας, δικαιοσύνης καρπός, προφαίνων τὴν μέλλουσαν, εὐεργεσίαν ἠμίν, Σαμουὴλ θεσπέσιε ὅθεν ἱερατεύσας, παιδιόθεν Κυρίω, ἔχρισας ὡς Προφήτης, Βασιλεῖς θείω μύρω. Καὶ νῦν τῶν σὲ εὐφημούντων, μάκαρ μνημόνευε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε — the one hymn on the page of «Προφήτης Σαμουήλ», and it names him, «Σαμουὴλ θεσπέσιε».",
+        "url": "https://www.saint.gr/2299/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Out of a barren woman you sprang, a fruit of righteousness, foreshowing the benefit that was to come to us, divinely-spoken Samuel; and so, serving the Lord as a priest from childhood, you anointed kings with the divine oil as a prophet. And now, blessed one, remember those who praise you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
     }
   ],
   "images": [
